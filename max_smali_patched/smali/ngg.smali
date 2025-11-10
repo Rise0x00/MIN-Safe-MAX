@@ -1,154 +1,161 @@
-.class public final Lngg;
-.super Lm3f;
+.class public final synthetic Lngg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lnif;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final synthetic b:Logg;
 
-.field public final synthetic Z:Luxc;
-
-.field public final synthetic w0:Lvbg;
+.field public final synthetic c:Lec0;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Luxc;Lvbg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Logg;Lec0;I)V
     .locals 0
 
-    iput-object p1, p0, Lngg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iput p3, p0, Lngg;->a:I
 
-    iput-object p2, p0, Lngg;->Z:Luxc;
+    iput-object p1, p0, Lngg;->b:Logg;
 
-    iput-object p3, p0, Lngg;->w0:Lvbg;
+    iput-object p2, p0, Lngg;->c:Lec0;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lngg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lngg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lngg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lngg;
-
-    iget-object v0, p0, Lngg;->Z:Luxc;
-
-    iget-object v1, p0, Lngg;->w0:Lvbg;
-
-    iget-object v2, p0, Lngg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lngg;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;Luxc;Lvbg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/lang/Object;
     .locals 4
 
-    iget v0, p0, Lngg;->X:I
+    iget v0, p0, Lngg;->a:I
 
-    sget-object v1, Loyf;->a:Loyf;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lngg;->b:Logg;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Logg;->c:Lpf5;
 
-    if-ne v0, v2, :cond_0
+    check-cast v0, Ldld;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_1
+    new-instance v1, Lin9;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/16 v2, 0x15
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v3, p0, Lngg;->c:Lec0;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0, v2, v3}, Lin9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    throw p1
+    invoke-virtual {v0, v1}, Ldld;->y(Lbld;)Ljava/lang/Object;
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v0
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->M0:[Ltm7;
-
-    iget-object p1, p0, Lngg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->J0()Lhgg;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/util/Size;
-
-    iget-object v3, p0, Lngg;->Z:Luxc;
-
-    iget v3, v3, Luxc;->a:I
-
-    invoke-direct {v0, v3, v3}, Landroid/util/Size;-><init>(II)V
-
-    iget-object v3, p0, Lngg;->w0:Lvbg;
-
-    invoke-virtual {v3}, Lvbg;->getSurfaceProvider()Lppb;
-
-    move-result-object v3
-
-    iput v2, p0, Lngg;->X:I
-
-    iget-object p1, p1, Lhgg;->b:Lsbg;
-
-    check-cast p1, Lbfg;
-
-    invoke-virtual {p1, v0, v3, p0}, Lbfg;->m(Landroid/util/Size;Lppb;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_0
-    if-ne p1, v0, :cond_3
+    check-cast v0, Ljava/lang/Iterable;
 
     return-object v0
 
-    :cond_3
+    :pswitch_0
+    iget-object v0, p0, Lngg;->c:Lec0;
+
+    iget-object v1, p0, Lngg;->b:Logg;
+
+    iget-object v1, v1, Logg;->c:Lpf5;
+
+    check-cast v1, Ldld;
+
+    invoke-virtual {v1}, Ldld;->l()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+
+    :try_start_0
+    invoke-static {v2, v0}, Ldld;->w(Landroid/database/sqlite/SQLiteDatabase;Lec0;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ldld;->l()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v1
+
+    const-string v3, "SELECT 1 FROM events WHERE context_id = ? LIMIT 1"
+
+    invoke-virtual {v0}, Ljava/lang/Long;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    move-object v0, v1
+
+    :goto_0
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    :try_start_3
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
     :goto_1
-    return-object v1
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

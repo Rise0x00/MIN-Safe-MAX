@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final a:[Lzf5;
+.field public final a:[Lrj5;
 
 
 # direct methods
-.method public constructor <init>(Lag5;Lag5;)V
+.method public constructor <init>(Lsj5;Lsj5;)V
     .locals 17
 
     const-string v0, ".so"
@@ -17,7 +17,7 @@
 
     move-object/from16 v1, p1
 
-    iget-object v1, v1, Lzyf;->d:Landroid/content/Context;
+    iget-object v1, v1, Llcg;->d:Landroid/content/Context;
 
     new-instance v2, Ljava/io/File;
 
@@ -165,9 +165,9 @@
 
     move-object/from16 v6, v16
 
-    check-cast v6, Lzf5;
+    check-cast v6, Lrj5;
 
-    iget-object v6, v6, Li9f;->b:Ljava/lang/Object;
+    iget-object v6, v6, Lkh;->b:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/String;
 
@@ -217,13 +217,13 @@
 
     move-result-object v11
 
-    new-instance v12, Lzf5;
+    new-instance v12, Lrj5;
 
     new-instance v14, Ljava/io/File;
 
     invoke-direct {v14, v9, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-direct {v12, v13, v14, v11}, Lzf5;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v12, v13, v14, v11}, Lrj5;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -330,39 +330,39 @@
 
     move-result v0
 
-    new-array v0, v0, [Lzf5;
+    new-array v0, v0, [Lrj5;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lzf5;
+    check-cast v0, [Lrj5;
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/facebook/soloader/c;->a:[Lzf5;
+    iput-object v0, v1, Lcom/facebook/soloader/c;->a:[Lrj5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()[Li9f;
+.method public final l()[Lkh;
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/soloader/c;->a:[Lzf5;
+    iget-object v0, p0, Lcom/facebook/soloader/c;->a:[Lrj5;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/io/File;)V
+.method public final w(Ljava/io/File;)V
     .locals 8
 
     const v0, 0x8000
 
     new-array v0, v0, [B
 
-    iget-object v1, p0, Lcom/facebook/soloader/c;->a:[Lzf5;
+    iget-object v1, p0, Lcom/facebook/soloader/c;->a:[Lrj5;
 
     array-length v2, v1
 
@@ -375,28 +375,28 @@
 
     new-instance v5, Ljava/io/FileInputStream;
 
-    iget-object v6, v4, Lzf5;->o:Ljava/io/File;
+    iget-object v6, v4, Lrj5;->d:Ljava/io/File;
 
     invoke-direct {v5, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     :try_start_0
-    new-instance v6, Ldp5;
+    new-instance v6, Lht5;
 
     const/4 v7, 0x2
 
-    invoke-direct {v6, v4, v7, v5}, Ldp5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v6, v4, v7, v5}, Lht5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v5, 0x0
 
     :try_start_1
-    invoke-static {v6, v0, p1}, Lcom/facebook/soloader/e;->c(Ldp5;[BLjava/io/File;)V
+    invoke-static {v6, v0, p1}, Lcom/facebook/soloader/e;->c(Lht5;[BLjava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    invoke-virtual {v6}, Ldp5;->close()V
+    invoke-virtual {v6}, Lht5;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -413,7 +413,7 @@
     move-exception p1
 
     :try_start_3
-    invoke-virtual {v6}, Ldp5;->close()V
+    invoke-virtual {v6}, Lht5;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 

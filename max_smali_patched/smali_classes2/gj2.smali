@@ -2,130 +2,101 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxz6;
+
 
 # instance fields
-.field public final a:Lkya;
+.field public final X:Lvf5;
 
-.field public final b:Ljava/lang/String;
+.field public Y:Ltl2;
+
+.field public final Z:Ljv;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lb07;
+
+.field public final c:Lgpd;
+
+.field public final d:Lgpd;
+
+.field public final o:Lai3;
+
+.field public final s0:Ljv;
+
+.field public final t0:Ljv;
 
 
 # direct methods
-.method public constructor <init>(Lkya;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lb07;Lg52;Lgpd;Lvf5;Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgj2;->a:Lkya;
+    new-instance v0, Lai3;
 
-    iput-object p2, p0, Lgj2;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lgj2;->o:Lai3;
+
+    new-instance v0, Ljv;
+
+    invoke-direct {v0}, Ljv;-><init>()V
+
+    iput-object v0, p0, Lgj2;->Z:Ljv;
+
+    new-instance v0, Ljv;
+
+    invoke-direct {v0}, Ljv;-><init>()V
+
+    iput-object v0, p0, Lgj2;->s0:Ljv;
+
+    new-instance v0, Ljv;
+
+    invoke-direct {v0}, Ljv;-><init>()V
+
+    iput-object v0, p0, Lgj2;->t0:Ljv;
+
+    iput-object p1, p0, Lgj2;->b:Lb07;
+
+    iput-object p0, p1, Lb07;->i:Lxz6;
+
+    iget-object p1, p2, Lg52;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnmf;
+
+    check-cast p1, Lomf;
+
+    invoke-virtual {p1}, Lomf;->a()Lgpd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgj2;->c:Lgpd;
+
+    iput-object p3, p0, Lgj2;->d:Lgpd;
+
+    iput-object p4, p0, Lgj2;->X:Lvf5;
+
+    iput-object p5, p0, Lgj2;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final m()V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lk3;
 
-    goto :goto_1
+    const/16 v1, 0x8
 
-    :cond_0
-    instance-of v0, p1, Lgj2;
+    invoke-direct {v0, v1, p0}, Lk3;-><init>(ILjava/lang/Object;)V
 
-    if-nez v0, :cond_1
+    iget-object v1, p0, Lgj2;->d:Lgpd;
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
 
-    :cond_1
-    check-cast p1, Lgj2;
-
-    iget-object v0, p0, Lgj2;->a:Lkya;
-
-    iget-object v1, p1, Lgj2;->a:Lkya;
-
-    invoke-virtual {v0, v1}, Lkya;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lgj2;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lgj2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lgj2;->a:Lkya;
-
-    invoke-virtual {v0}, Lkya;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lgj2;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatMediaTabsViewState(avatarParams="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgj2;->a:Lkya;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgj2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

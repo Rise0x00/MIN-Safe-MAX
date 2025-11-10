@@ -1,85 +1,231 @@
-.class public final enum Liz9;
-.super Ljava/lang/Enum;
+.class public final Liz9;
+.super Lcmi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Liz9;
+# instance fields
+.field public final a:J
 
-.field public static final enum b:Liz9;
+.field public final b:J
 
-.field public static final enum c:Liz9;
+.field public final c:Ljava/lang/String;
 
-.field public static final synthetic o:[Liz9;
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Liz9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "GOOD"
+    iput-wide p1, p0, Liz9;->a:J
 
-    const/4 v2, 0x0
+    iput-wide p3, p0, Liz9;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p5, p0, Liz9;->c:Ljava/lang/String;
 
-    sput-object v0, Liz9;->a:Liz9;
+    iput-object p6, p0, Liz9;->d:Ljava/lang/String;
 
-    new-instance v1, Liz9;
+    iput-object p7, p0, Liz9;->e:Ljava/lang/String;
 
-    const-string v2, "MEDIUM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Liz9;->b:Liz9;
-
-    new-instance v2, Liz9;
-
-    const-string v3, "BAD"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Liz9;->c:Liz9;
-
-    filled-new-array {v0, v1, v2}, [Liz9;
-
-    move-result-object v0
-
-    sput-object v0, Liz9;->o:[Liz9;
+    iput-object p8, p0, Liz9;->f:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Liz9;
-    .locals 1
 
-    const-class v0, Liz9;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Liz9;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Liz9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Liz9;
+
+    iget-wide v3, p0, Liz9;->a:J
+
+    iget-wide v5, p1, Liz9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Liz9;->b:J
+
+    iget-wide v5, p1, Liz9;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Liz9;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Liz9;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Liz9;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Liz9;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Liz9;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Liz9;->e:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Liz9;->f:Ljava/lang/String;
+
+    iget-object p1, p1, Liz9;->f:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public static values()[Liz9;
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    sget-object v0, Liz9;->o:[Liz9;
+    iget-wide v0, p0, Liz9;->a:J
 
-    invoke-virtual {v0}, [Liz9;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Liz9;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Liz9;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Liz9;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Liz9;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Liz9;->f:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "AudioAttach(chatId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Liz9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Liz9;
+    const-string v1, ", attachLocalId="
+
+    iget-wide v2, p0, Liz9;->b:J
+
+    iget-object v4, p0, Liz9;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3, v1, v4, v0}, Lmb3;->f(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ", audioUrl="
+
+    const-string v2, ", attachTitle="
+
+    iget-object v3, p0, Liz9;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Liz9;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", attachSubtitle="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Liz9;->f:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lsfd;->i(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

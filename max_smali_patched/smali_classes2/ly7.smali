@@ -1,6 +1,8 @@
-.class public final Lly7;
+.class public abstract Lly7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lky7;
+
+# virtual methods
+.method public abstract a()J
+.end method

@@ -1,100 +1,89 @@
 .class public final Llx1;
-.super Ljava/lang/Object;
+.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Liw1;
 
 
 # instance fields
-.field public a:Lts1;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lws1;
+.field public b:Z
 
-.field public final c:Lb71;
+.field public final synthetic c:Lsx1;
 
 
 # direct methods
-.method public constructor <init>(Lb71;)V
-    .locals 2
+.method public constructor <init>(Lsx1;Ljava/lang/String;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llx1;->c:Lsx1;
 
-    new-instance v0, Lfx1;
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
-    const/4 v1, 0x1
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lfx1;-><init>(ILjava/lang/Object;)V
+    iput-boolean p1, p0, Llx1;->b:Z
 
-    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
-
-    move-result-object v0
-
-    iput-object v0, p0, Llx1;->b:Lws1;
-
-    iput-object p1, p0, Llx1;->c:Lb71;
+    iput-object p2, p0, Llx1;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+.method public final onCameraAvailable(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Llx1;->c:Lb71;
+    iget-object v0, p0, Llx1;->a:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v0, v0, Lb71;->a:I
+    move-result p1
 
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
-
-    move-result v0
+    if-nez p1, :cond_0
 
     goto :goto_0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :pswitch_1
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
-
-    move-result v0
-
-    :goto_0
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
 
     :cond_0
-    iget-object v0, p0, Llx1;->a:Lts1;
-
-    invoke-virtual {v0, p1}, Lts1;->b(Ljava/lang/Object;)Z
-
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Llx1;->b:Z
 
-    nop
+    iget-object p1, p0, Llx1;->c:Lsx1;
 
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget p1, p1, Lsx1;->R0:I
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1
+
+    iget-object p1, p0, Llx1;->c:Lsx1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lsx1;->J(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onCameraUnavailable(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Llx1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Llx1;->b:Z
+
+    return-void
 .end method

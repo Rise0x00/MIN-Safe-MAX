@@ -1,211 +1,82 @@
-.class public final Lwo5;
-.super Lilg;
+.class public final synthetic Lwo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic B0:[Ltm7;
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final A0:Lg65;
+.field public final synthetic a:Lxo5;
 
-.field public final X:J
+.field public final synthetic b:J
 
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Ljava/lang/String;
-
-.field public final w0:Lbp7;
-
-.field public final x0:Lbp7;
-
-.field public final y0:Lbp7;
-
-.field public final z0:Lbp7;
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lxo5;JJ)V
+    .locals 0
 
-    new-instance v0, Lut9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "downloadJob"
+    iput-object p1, p0, Lwo5;->a:Lxo5;
 
-    const-string v2, "getDownloadJob()Lkotlinx/coroutines/Job;"
+    iput-wide p2, p0, Lwo5;->b:J
 
-    const-class v3, Lwo5;
-
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lxxc;->a:Lyxc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltm7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lwo5;->B0:[Ltm7;
-
-    return-void
-.end method
-
-.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
-    .locals 5
-
-    sget-object v0, Lro5;->a:Lro5;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lr8f;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lln5;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lm0g;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v4, Lm13;
-
-    invoke-virtual {v0, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lilg;-><init>()V
-
-    iput-wide p1, p0, Lwo5;->b:J
-
-    iput-wide p3, p0, Lwo5;->c:J
-
-    iput-object p5, p0, Lwo5;->o:Ljava/lang/String;
-
-    iput-wide p6, p0, Lwo5;->X:J
-
-    iput-object p8, p0, Lwo5;->Y:Ljava/lang/String;
-
-    iput-object p9, p0, Lwo5;->Z:Ljava/lang/String;
-
-    iput-object v1, p0, Lwo5;->w0:Lbp7;
-
-    iput-object v2, p0, Lwo5;->x0:Lbp7;
-
-    iput-object v3, p0, Lwo5;->y0:Lbp7;
-
-    iput-object v0, p0, Lwo5;->z0:Lbp7;
-
-    invoke-static {}, Lqxd;->w()Lg65;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwo5;->A0:Lg65;
+    iput-wide p4, p0, Lwo5;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p()V
-    .locals 5
+.method public final call()Ljava/lang/Object;
+    .locals 10
 
-    sget-object v0, Lwo5;->B0:[Ltm7;
+    iget-object v0, p0, Lwo5;->a:Lxo5;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lxo5;->a:Lml;
 
-    aget-object v2, v0, v1
+    check-cast v0, Lona;
 
-    iget-object v3, p0, Lwo5;->A0:Lg65;
+    new-instance v1, Lru;
 
-    invoke-virtual {v3, p0, v2}, Lg65;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lona;->x()Lqxb;
 
     move-result-object v2
 
-    check-cast v2, Lji7;
+    check-cast v2, Lsxb;
 
-    const/4 v4, 0x0
+    iget-object v2, v2, Lsxb;->a:Le78;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v2}, Lztd;->k()J
 
-    invoke-interface {v2, v4}, Lji7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    move-result-wide v2
 
-    :cond_0
-    aget-object v0, v0, v1
+    const/4 v4, 0x5
 
-    invoke-virtual {v3, p0, v0, v4}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    iget-wide v5, p0, Lwo5;->b:J
 
-    return-void
-.end method
+    iget-wide v7, p0, Lwo5;->c:J
 
-.method public final q()Lxie;
-    .locals 3
+    const/4 v9, -0x1
 
-    iget-object v0, p0, Lwo5;->z0:Lbp7;
+    invoke-direct/range {v1 .. v9}, Lru;-><init>(JIJJI)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lona;->y()Lrnf;
 
     move-result-object v0
 
-    check-cast v0, Lm13;
+    const/16 v2, 0xc
 
-    iget-wide v1, p0, Lwo5;->b:J
+    const/4 v3, 0x0
 
-    check-cast v0, Lm23;
+    invoke-static {v0, v1, v3, v2}, Lrnf;->d(Lrnf;Lzm;ZI)J
 
-    invoke-virtual {v0, v1, v2}, Lm23;->N(J)Lsqc;
+    move-result-wide v0
 
-    move-result-object v0
-
-    iget-object v0, v0, Lsqc;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm82;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    invoke-static {v0}, Lgh5;->c(Lm82;)Lxie;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 

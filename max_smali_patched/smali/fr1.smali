@@ -1,109 +1,51 @@
-.class public final enum Lfr1;
-.super Ljava/lang/Enum;
+.class public final Lfr1;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lfr1;
+# instance fields
+.field public final synthetic X:Lhr1;
 
-.field public static final synthetic Y:[Lfr1;
+.field public Y:I
 
-.field public static final enum a:Lfr1;
+.field public d:Lhr1;
 
-.field public static final enum b:Lfr1;
-
-.field public static final enum c:Lfr1;
-
-.field public static final enum o:Lfr1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lhr1;Lp14;)V
+    .locals 0
 
-    new-instance v0, Lfr1;
+    iput-object p1, p0, Lfr1;->X:Lhr1;
 
-    const-string v1, "MIDDLE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfr1;->a:Lfr1;
-
-    new-instance v1, Lfr1;
-
-    const-string v2, "SMALL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfr1;->b:Lfr1;
-
-    new-instance v2, Lfr1;
-
-    const-string v3, "PIP"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lfr1;->c:Lfr1;
-
-    new-instance v3, Lfr1;
-
-    const-string v4, "PREVIEW"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lfr1;->o:Lfr1;
-
-    new-instance v4, Lfr1;
-
-    const-string v5, "BIG_AVATAR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lfr1;->X:Lfr1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lfr1;
-
-    move-result-object v0
-
-    sput-object v0, Lfr1;->Y:[Lfr1;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfr1;
-    .locals 1
 
-    const-class v0, Lfr1;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lfr1;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lfr1;->Y:I
 
-    check-cast p0, Lfr1;
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public static values()[Lfr1;
-    .locals 1
+    iput p1, p0, Lfr1;->Y:I
 
-    sget-object v0, Lfr1;->Y:[Lfr1;
+    iget-object p1, p0, Lfr1;->X:Lhr1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, v1, p0}, Lhr1;->d(JLp14;)Ljava/lang/Object;
 
-    check-cast v0, [Lfr1;
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

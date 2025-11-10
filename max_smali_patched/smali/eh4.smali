@@ -1,542 +1,355 @@
 .class public final Leh4;
-.super Lqb5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# instance fields
+.field public final a:Lsb6;
 
-# static fields
-.field private static volatile _thread:Ljava/lang/Thread;
+.field public final b:I
 
-.field private static volatile debugStatus:I
+.field public final c:I
 
-.field public static final w0:Leh4;
+.field public final d:I
 
-.field public static final x0:J
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:[Lm50;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lsb6;IIIIIII[Lm50;)V
+    .locals 0
 
-    new-instance v0, Leh4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lqb5;-><init>()V
+    iput-object p1, p0, Leh4;->a:Lsb6;
 
-    sput-object v0, Leh4;->w0:Leh4;
+    iput p2, p0, Leh4;->b:I
 
-    const/4 v1, 0x0
+    iput p3, p0, Leh4;->c:I
 
-    invoke-virtual {v0, v1}, Lrb5;->W(Z)V
+    iput p4, p0, Leh4;->d:I
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput p5, p0, Leh4;->e:I
 
-    const-wide/16 v1, 0x3e8
+    iput p6, p0, Leh4;->f:I
 
-    :try_start_0
-    const-string v3, "kotlinx.coroutines.DefaultExecutor.keepAlive"
+    iput p7, p0, Leh4;->g:I
 
-    invoke-static {v3, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+    iput p8, p0, Leh4;->h:I
 
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Leh4;->x0:J
+    iput-object p9, p0, Leh4;->i:[Lm50;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invokeOnTimeout(JLjava/lang/Runnable;Lw24;)Lvs4;
-    .locals 2
+.method public final a(ZLm20;I)Landroid/media/AudioTrack;
+    .locals 12
 
-    sget-object p4, Lsb5;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p4, p1, v0
-
-    if-gtz p4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-wide v0, 0x8637bd05af6L
-
-    cmp-long p4, p1, v0
-
-    if-ltz p4, :cond_1
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/32 v0, 0xf4240
-
-    mul-long/2addr v0, p1
-
-    :goto_0
-    const-wide p1, 0x3fffffffffffffffL    # 1.9999999999999998
-
-    cmp-long p1, v0, p1
-
-    if-gez p1, :cond_2
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide p1
-
-    new-instance p4, Lnb5;
-
-    add-long/2addr v0, p1
-
-    invoke-direct {p4, p3, v0, v1}, Lnb5;-><init>(Ljava/lang/Runnable;J)V
-
-    invoke-virtual {p0, p1, p2, p4}, Lqb5;->w0(JLob5;)V
-
-    return-object p4
-
-    :cond_2
-    sget-object p1, Lx2a;->a:Lx2a;
-
-    return-object p1
-.end method
-
-.method public final o()Ljava/lang/Thread;
-    .locals 2
-
-    sget-object v0, Leh4;->_thread:Ljava/lang/Thread;
-
-    if-nez v0, :cond_1
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-object v0, Leh4;->_thread:Ljava/lang/Thread;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/Thread;
-
-    const-string v1, "kotlinx.coroutines.DefaultExecutor"
-
-    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    sput-object v0, Leh4;->_thread:Ljava/lang/Thread;
-
-    const-class v1, Leh4;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setContextClassLoader(Ljava/lang/ClassLoader;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final r0(JLob5;)V
-    .locals 0
-
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
-
-    const-string p2, "DefaultExecutor was shut down. This error indicates that Dispatchers.shutdown() was invoked prior to completion of exiting coroutines, leaving coroutines in incomplete state. Please refer to Dispatchers.shutdown documentation for more details"
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final run()V
-    .locals 17
-
-    move-object/from16 v1, p0
-
-    sget-object v0, Logf;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    iget v1, p0, Leh4;->c:I
 
     const/4 v2, 0x0
 
+    const/4 v3, 0x1
+
     :try_start_0
-    monitor-enter p0
+    invoke-virtual {p0, p1, p2, p3}, Leh4;->b(ZLm20;I)Landroid/media/AudioTrack;
+
+    move-result-object p1
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
+    invoke-virtual {p1}, Landroid/media/AudioTrack;->getState()I
+
+    move-result v5
+
+    if-ne v5, v3, :cond_0
+
+    return-object p1
+
+    :cond_0
     :try_start_1
-    sget v0, Leh4;->debugStatus:I
+    invoke-virtual {p1}, Landroid/media/AudioTrack;->release()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    const/4 v3, 0x0
+    :catch_0
+    new-instance v4, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;
 
-    const/4 v4, 0x3
+    if-ne v1, v3, :cond_1
 
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    if-eq v0, v5, :cond_1
-
-    if-ne v0, v4, :cond_0
+    move v10, v3
 
     goto :goto_0
 
-    :cond_0
-    move v0, v3
-
-    goto :goto_1
-
     :cond_1
+    move v10, v2
+
     :goto_0
-    move v0, v6
+    const/4 v11, 0x0
 
-    :goto_1
-    if-eqz v0, :cond_2
+    iget v6, p0, Leh4;->e:I
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    iget v7, p0, Leh4;->f:I
 
-    sput-object v2, Leh4;->_thread:Ljava/lang/Thread;
+    iget v8, p0, Leh4;->h:I
 
-    invoke-virtual {v1}, Leh4;->x0()V
+    iget-object v9, p0, Leh4;->a:Lsb6;
 
-    invoke-virtual {v1}, Lqb5;->v0()Z
+    invoke-direct/range {v4 .. v11}, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;-><init>(IIIILsb6;ZLjava/lang/RuntimeException;)V
 
-    move-result v0
+    throw v4
 
-    if-nez v0, :cond_a
-
-    invoke-virtual {v1}, Leh4;->o()Ljava/lang/Thread;
-
-    return-void
-
-    :cond_2
-    :try_start_3
-    sput v6, Leh4;->debugStatus:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    monitor-exit p0
-
-    const-wide v7, 0x7fffffffffffffffL
-
-    move-wide v9, v7
-
-    :cond_3
-    :goto_2
-    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
-
-    invoke-virtual {v1}, Lqb5;->i0()J
-
-    move-result-wide v11
-
-    cmp-long v0, v11, v7
-
-    const-wide/16 v13, 0x0
-
-    if-nez v0, :cond_6
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v15
-
-    cmp-long v0, v9, v7
-
-    if-nez v0, :cond_4
-
-    sget-wide v9, Leh4;->x0:J
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    add-long/2addr v9, v15
-
-    goto :goto_3
-
-    :catchall_0
+    :catch_1
     move-exception v0
 
-    goto :goto_7
+    :goto_1
+    move-object p1, v0
 
-    :cond_4
-    :goto_3
-    sub-long v15, v9, v15
-
-    cmp-long v0, v15, v13
-
-    if-gtz v0, :cond_5
-
-    sput-object v2, Leh4;->_thread:Ljava/lang/Thread;
-
-    invoke-virtual {v1}, Leh4;->x0()V
-
-    invoke-virtual {v1}, Lqb5;->v0()Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    invoke-virtual {v1}, Leh4;->o()Ljava/lang/Thread;
-
-    return-void
-
-    :cond_5
-    cmp-long v0, v11, v15
-
-    if-lez v0, :cond_7
-
-    move-wide v11, v15
-
-    goto :goto_4
-
-    :cond_6
-    move-wide v9, v7
-
-    :cond_7
-    :goto_4
-    cmp-long v0, v11, v13
-
-    if-lez v0, :cond_3
-
-    :try_start_5
-    sget v0, Leh4;->debugStatus:I
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    if-eq v0, v5, :cond_9
-
-    if-ne v0, v4, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    move v0, v3
-
-    goto :goto_6
-
-    :cond_9
-    :goto_5
-    move v0, v6
-
-    :goto_6
-    if-eqz v0, :cond_b
-
-    sput-object v2, Leh4;->_thread:Ljava/lang/Thread;
-
-    invoke-virtual {v1}, Leh4;->x0()V
-
-    invoke-virtual {v1}, Lqb5;->v0()Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    invoke-virtual {v1}, Leh4;->o()Ljava/lang/Thread;
-
-    :cond_a
-    return-void
-
-    :cond_b
-    :try_start_6
-    invoke-static {v1, v11, v12}, Ljava/util/concurrent/locks/LockSupport;->parkNanos(Ljava/lang/Object;J)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    move-object v11, p1
 
     goto :goto_2
 
-    :catchall_1
+    :catch_2
     move-exception v0
 
-    :try_start_7
-    monitor-exit p0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    goto :goto_1
 
-    :try_start_8
-    throw v0
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+    :goto_2
+    new-instance v4, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;
 
-    :goto_7
-    sput-object v2, Leh4;->_thread:Ljava/lang/Thread;
+    if-ne v1, v3, :cond_2
 
-    invoke-virtual {v1}, Leh4;->x0()V
+    move v10, v3
 
-    invoke-virtual {v1}, Lqb5;->v0()Z
+    goto :goto_3
 
-    move-result v2
+    :cond_2
+    move v10, v2
 
-    if-nez v2, :cond_c
+    :goto_3
+    const/4 v5, 0x0
 
-    invoke-virtual {v1}, Leh4;->o()Ljava/lang/Thread;
+    iget v6, p0, Leh4;->e:I
 
-    :cond_c
-    throw v0
+    iget v7, p0, Leh4;->f:I
+
+    iget v8, p0, Leh4;->h:I
+
+    iget-object v9, p0, Leh4;->a:Lsb6;
+
+    invoke-direct/range {v4 .. v11}, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;-><init>(IIIILsb6;ZLjava/lang/RuntimeException;)V
+
+    throw v4
 .end method
 
-.method public final s0(Ljava/lang/Runnable;)V
-    .locals 2
+.method public final b(ZLm20;I)Landroid/media/AudioTrack;
+    .locals 9
 
-    sget v0, Leh4;->debugStatus:I
+    sget v0, Ljig;->a:I
 
-    const/4 v1, 0x4
+    const/16 v1, 0x1d
 
-    if-eq v0, v1, :cond_0
+    const/16 v2, 0x10
 
-    invoke-super {p0, p1}, Lqb5;->s0(Ljava/lang/Runnable;)V
+    const/4 v3, 0x3
 
-    return-void
+    const/4 v4, 0x1
 
-    :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    iget v6, p0, Leh4;->g:I
 
-    const-string v0, "DefaultExecutor was shut down. This error indicates that Dispatchers.shutdown() was invoked prior to completion of exiting coroutines, leaving coroutines in incomplete state. Please refer to Dispatchers.shutdown documentation for more details"
+    iget v7, p0, Leh4;->f:I
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    iget v8, p0, Leh4;->e:I
 
-    throw p1
-.end method
+    if-lt v0, v1, :cond_2
 
-.method public final shutdown()V
-    .locals 1
+    invoke-static {v8, v7, v6}, Lkh4;->e(III)Landroid/media/AudioFormat;
 
-    const/4 v0, 0x4
+    move-result-object v0
 
-    sput v0, Leh4;->debugStatus:I
+    if-eqz p1, :cond_0
 
-    invoke-super {p0}, Lqb5;->shutdown()V
+    new-instance v1, Landroid/media/AudioAttributes$Builder;
 
-    return-void
-.end method
+    invoke-direct {v1}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v1, v3}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
-    const-string v0, "DefaultExecutor"
+    move-result-object v1
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v2}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
 
-.method public final declared-synchronized x0()V
-    .locals 3
+    move-result-object v1
 
-    monitor-enter p0
+    invoke-virtual {v1, v4}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
-    :try_start_0
-    sget v0, Leh4;->debugStatus:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v1
 
-    const/4 v1, 0x2
+    invoke-virtual {v1}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
-    const/4 v2, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    if-ne v0, v2, :cond_0
+    move-result-object v1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p2}, Lm20;->a()Landroid/media/AudioAttributes;
+
+    move-result-object v1
+
+    :goto_0
+    new-instance v2, Landroid/media/AudioTrack$Builder;
+
+    invoke-direct {v2}, Landroid/media/AudioTrack$Builder;-><init>()V
+
+    invoke-virtual {v2, v1}, Landroid/media/AudioTrack$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/AudioTrack$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/media/AudioTrack$Builder;->setAudioFormat(Landroid/media/AudioFormat;)Landroid/media/AudioTrack$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/media/AudioTrack$Builder;->setTransferMode(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object v0
+
+    iget v1, p0, Leh4;->h:I
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioTrack$Builder;->setBufferSizeInBytes(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Landroid/media/AudioTrack$Builder;->setSessionId(I)Landroid/media/AudioTrack$Builder;
+
+    move-result-object v0
+
+    iget v1, p0, Leh4;->c:I
+
+    if-ne v1, v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    const/4 v4, 0x0
 
     :goto_1
-    if-nez v0, :cond_2
+    invoke-static {v0, v4}, Ly4;->e(Landroid/media/AudioTrack$Builder;Z)Landroid/media/AudioTrack$Builder;
 
-    monitor-exit p0
+    move-result-object v0
 
-    return-void
+    invoke-virtual {v0}, Landroid/media/AudioTrack$Builder;->build()Landroid/media/AudioTrack;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_2
-    :try_start_1
-    sput v2, Leh4;->debugStatus:I
+    const/16 v1, 0x15
 
-    sget-object v0, Lqb5;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    if-lt v0, v1, :cond_4
 
-    const/4 v1, 0x0
+    new-instance v0, Landroid/media/AudioTrack;
 
-    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz p1, :cond_3
 
-    sget-object v0, Lqb5;->Y:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    new-instance v1, Landroid/media/AudioAttributes$Builder;
 
-    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v1, v3}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
-    monitor-exit p0
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v1, v2}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
 
-    :catchall_0
-    move-exception v0
+    move-result-object v1
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v1, v4}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
-    throw v0
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Lm20;->a()Landroid/media/AudioAttributes;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-static {v8, v7, v6}, Lkh4;->e(III)Landroid/media/AudioFormat;
+
+    move-result-object v2
+
+    iget v3, p0, Leh4;->h:I
+
+    const/4 v4, 0x1
+
+    move v5, p3
+
+    invoke-direct/range {v0 .. v5}, Landroid/media/AudioTrack;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;III)V
+
+    return-object v0
+
+    :cond_4
+    iget v0, p2, Lm20;->c:I
+
+    invoke-static {v0}, Ljig;->w(I)I
+
+    move-result v1
+
+    if-nez p3, :cond_5
+
+    move v2, v1
+
+    new-instance v1, Landroid/media/AudioTrack;
+
+    iget v6, p0, Leh4;->h:I
+
+    const/4 v7, 0x1
+
+    iget v3, p0, Leh4;->e:I
+
+    iget v4, p0, Leh4;->f:I
+
+    iget v5, p0, Leh4;->g:I
+
+    invoke-direct/range {v1 .. v7}, Landroid/media/AudioTrack;-><init>(IIIIII)V
+
+    return-object v1
+
+    :cond_5
+    move v2, v1
+
+    new-instance v0, Landroid/media/AudioTrack;
+
+    iget v5, p0, Leh4;->h:I
+
+    const/4 v6, 0x1
+
+    iget v2, p0, Leh4;->e:I
+
+    iget v3, p0, Leh4;->f:I
+
+    iget v4, p0, Leh4;->g:I
+
+    move v7, p3
+
+    invoke-direct/range {v0 .. v7}, Landroid/media/AudioTrack;-><init>(IIIIIII)V
+
+    return-object v0
 .end method

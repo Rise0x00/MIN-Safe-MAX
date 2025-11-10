@@ -1,86 +1,87 @@
-.class public final La2c;
-.super Ldd0;
+.class public final synthetic La2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lp76;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(Lp76;I)V
+    .locals 0
 
-    const/16 v0, 0xf
+    iput p2, p0, La2c;->a:I
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
+    iput-object p1, p0, La2c;->b:Lp76;
 
-    iput-wide p1, p0, La2c;->b:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, La2c;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Ljava/lang/String;
 
-    :cond_0
-    instance-of v1, p1, La2c;
+    iget-object v0, p0, La2c;->b:Lp76;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    return v2
-
-    :cond_1
-    check-cast p1, La2c;
-
-    iget-wide v3, p0, La2c;->b:J
-
-    iget-wide v5, p1, La2c;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, La2c;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Search(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, La2c;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lb72;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v0, v0, Lb72;->b:Lp62;
+
+    invoke-virtual {v0, p1}, Lp62;->k(Ljava/lang/String;)V
+
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, La2c;->b:Lp76;
+
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lb72;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lb72;->b:Lp62;
+
+    invoke-virtual {v0, p1}, Lp62;->l(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -34,9 +34,9 @@
         "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Action;",
         "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;",
         "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;",
-        "Lru/ok/android/externcalls/sdk/api/OkApiService;",
-        "okApiService",
-        "Lo14;",
+        "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
+        "okApiServiceInternal",
+        "Lp34;",
         "cidProvider",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "providedParams",
@@ -53,41 +53,41 @@
         "",
         "isAnswer",
         "isCaller",
-        "Lpmc;",
+        "Lcwc;",
         "log",
-        "Lwg1;",
+        "Lrh1;",
         "callParams",
         "isFastStartEnabled",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/OkApiService;Lo14;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLpmc;Lwg1;Z)V",
-        "Lude;",
+        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lp34;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLcwc;Lrh1;Z)V",
+        "Ljqe;",
         "executeSimple",
-        "()Lude;",
+        "()Ljqe;",
         "",
         "T",
         "retryForApiCall",
-        "(Lude;)Lude;",
+        "(Ljqe;)Ljqe;",
         "",
         "initialJoinLink",
         "anonToken",
         "executeWithJoinLink",
-        "(Ljava/lang/String;Ljava/lang/String;)Lude;",
+        "(Ljava/lang/String;Ljava/lang/String;)Ljqe;",
         "isJoinByLink",
         "Lkotlin/Function0;",
-        "Lp1b;",
+        "Lp9b;",
         "apiRequest",
         "prepareImpl",
-        "(ZLve6;)Lude;",
+        "(ZLoi6;)Ljqe;",
         "getPrepareResult",
         "getPrepareResultWithoutInternalIds",
-        "(Lve6;)Lude;",
+        "(Loi6;)Ljqe;",
         "kotlin.jvm.PlatformType",
         "getPrepareResultWithInternalIds",
         "params",
         "execute",
-        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Lude;",
-        "Lru/ok/android/externcalls/sdk/api/OkApiService;",
-        "Lo14;",
+        "(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Ljqe;",
+        "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
+        "Lp34;",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;",
         "Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;",
@@ -95,8 +95,8 @@
         "Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;",
         "Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;",
         "Z",
-        "Lpmc;",
-        "Lwg1;",
+        "Lcwc;",
+        "Lrh1;",
         "Companion",
         "PrepareParams",
         "PrepareResult",
@@ -122,9 +122,9 @@
 
 
 # instance fields
-.field private final callParams:Lwg1;
+.field private final callParams:Lrh1;
 
-.field private final cidProvider:Lo14;
+.field private final cidProvider:Lp34;
 
 .field private final externalIdsResolver:Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;
 
@@ -136,9 +136,9 @@
 
 .field private final isFastStartEnabled:Z
 
-.field private final log:Lpmc;
+.field private final log:Lcwc;
 
-.field private final okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+.field private final okApiServiceInternal:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
 .field private final peerIdGenerator:Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;
 
@@ -157,21 +157,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$Companion;-><init>(Lfi4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->Companion:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lo14;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLpmc;Lwg1;Z)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lp34;Lru/ok/android/externcalls/sdk/api/ConversationParams;Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lru/ok/android/externcalls/sdk/id/peer/PeerIdGenerator;Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;ZZLcwc;Lrh1;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->okApiServiceInternal:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->cidProvider:Lo14;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->cidProvider:Lp34;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->providedParams:Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
@@ -189,35 +189,35 @@
 
     iput-boolean p10, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->isCaller:Z
 
-    iput-object p11, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lpmc;
+    iput-object p11, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lcwc;
 
-    iput-object p12, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->callParams:Lwg1;
+    iput-object p12, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->callParams:Lrh1;
 
     iput-boolean p13, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->isFastStartEnabled:Z
 
     return-void
 .end method
 
-.method public static final synthetic access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lo14;
+.method public static final synthetic access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lp34;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->cidProvider:Lo14;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->cidProvider:Lp34;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lpmc;
+.method public static final synthetic access$getLog$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lcwc;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lpmc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lcwc;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getOkApiService$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lru/ok/android/externcalls/sdk/api/OkApiService;
+.method public static final synthetic access$getOkApiServiceInternal$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->okApiServiceInternal:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
     return-object p0
 .end method
@@ -270,12 +270,12 @@
     return p0
 .end method
 
-.method private final executeSimple()Lude;
+.method private final executeSimple()Ljqe;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
@@ -287,19 +287,19 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Ll75;->a:Ll75;
+    sget-object v2, Lxa5;->a:Lxa5;
 
     invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;Ljava/util/Set;)V
 
-    invoke-static {v0}, Lude;->g(Ljava/lang/Object;)Lmda;
+    invoke-static {v0}, Ljqe;->g(Ljava/lang/Object;)Lah3;
 
     move-result-object v0
 
-    invoke-static {}, Lrd;->a()Lked;
+    invoke-static {}, Lie;->a()Lgpd;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lude;->i(Lked;)Lmee;
+    invoke-virtual {v0, v1}, Ljqe;->i(Lgpd;)Lbre;
 
     move-result-object v0
 
@@ -312,14 +312,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->prepareImpl(ZLve6;)Lude;
+    invoke-direct {p0, v1, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->prepareImpl(ZLoi6;)Ljqe;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Lude;
+.method private final executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Ljqe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -327,7 +327,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
@@ -337,29 +337,29 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->prepareImpl(ZLve6;)Lude;
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->prepareImpl(ZLoi6;)Ljqe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final getPrepareResult(ZLve6;)Lude;
+.method private final getPrepareResult(ZLoi6;)Ljqe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lve6;",
+            "Loi6;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->callParams:Lwg1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->callParams:Lrh1;
 
-    iget-object v0, v0, Lwg1;->C:Lug1;
+    iget-object v0, v0, Lrh1;->z:Lph1;
 
-    iget-boolean v0, v0, Lug1;->i:Z
+    iget-boolean v0, v0, Lph1;->k:Z
 
     if-eqz v0, :cond_1
 
@@ -370,44 +370,44 @@
     if-eqz p1, :cond_1
 
     :cond_0
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithoutInternalIds(Lve6;)Lude;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithoutInternalIds(Loi6;)Ljqe;
 
     move-result-object p1
 
     return-object p1
 
     :cond_1
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithInternalIds(Lve6;)Lude;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResultWithInternalIds(Loi6;)Ljqe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final getPrepareResultWithInternalIds(Lve6;)Lude;
+.method private final getPrepareResultWithInternalIds(Loi6;)Ljqe;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Loi6;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lffe;
+    check-cast p1, Lure;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->internalIdsResolver:Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->resolveIdsAndGetFailed()Lude;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/InternalIdsResolver;->resolveIdsAndGetFailed()Ljqe;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->retryForApiCall(Lude;)Lude;
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->retryForApiCall(Ljqe;)Ljqe;
 
     move-result-object v0
 
@@ -417,21 +417,19 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;->resolveIds(Ljava/util/List;)Lle3;
+    invoke-virtual {v1, v2}, Lru/ok/android/externcalls/sdk/id/ExternalIdsResolver;->resolveIds(Ljava/util/List;)Ljg3;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lcf3;
+    new-instance v2, Lah3;
 
     const/4 v3, 0x0
 
-    sget-object v4, Loyf;->a:Loyf;
+    invoke-direct {v2, v3, v1}, Lah3;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v2, v1, v3, v4}, Lcf3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->retryForApiCall(Lude;)Lude;
+    invoke-direct {p0, v2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->retryForApiCall(Ljqe;)Ljqe;
 
     move-result-object v1
 
@@ -453,15 +451,15 @@
 
     invoke-static {v2, v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    new-instance v4, Lkk2;
+    new-instance v4, Lvhd;
 
-    const/16 v5, 0x9
+    const/16 v5, 0xf
 
-    invoke-direct {v4, v5, v2}, Lkk2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v5, v2}, Lvhd;-><init>(ILjava/lang/Object;)V
 
     const/4 v2, 0x3
 
-    new-array v2, v2, [Lffe;
+    new-array v2, v2, [Lure;
 
     aput-object p1, v2, v3
 
@@ -473,61 +471,61 @@
 
     aput-object v1, v2, p1
 
-    new-instance p1, Lcf3;
+    new-instance p1, Lmk8;
 
-    const/4 v0, 0x7
+    const/16 v0, 0x8
 
-    invoke-direct {p1, v2, v0, v4}, Lcf3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, v2, v0, v4}, Lmk8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object p1
 .end method
 
-.method private final getPrepareResultWithoutInternalIds(Lve6;)Lude;
+.method private final getPrepareResultWithoutInternalIds(Loi6;)Ljqe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Loi6;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lude;
+    check-cast p1, Ljqe;
 
     sget-object v0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$getPrepareResultWithoutInternalIds$1;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$getPrepareResultWithoutInternalIds$1;
 
-    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
+    invoke-virtual {p1, v0}, Ljqe;->h(Lfj6;)Lsqe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final prepareImpl(ZLve6;)Lude;
+.method private final prepareImpl(ZLoi6;)Ljqe;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lve6;",
+            "Loi6;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResult(ZLve6;)Lude;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->getPrepareResult(ZLoi6;)Ljqe;
 
     move-result-object p1
 
-    invoke-static {}, Lrd;->a()Lked;
+    invoke-static {}, Lie;->a()Lgpd;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lude;->i(Lked;)Lmee;
+    invoke-virtual {p1, p2}, Ljqe;->i(Lgpd;)Lbre;
 
     move-result-object p1
 
@@ -535,25 +533,25 @@
 
     invoke-direct {p2, p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$prepareImpl$1;-><init>(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)V
 
-    new-instance v0, Lcf3;
+    new-instance v0, Lmk8;
 
-    const/4 v1, 0x6
+    const/4 v1, 0x5
 
-    invoke-direct {v0, p1, v1, p2}, Lcf3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, p2}, Lmk8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method private final retryForApiCall(Lude;)Lude;
+.method private final retryForApiCall(Ljqe;)Ljqe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lude;",
+            "Ljqe;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
@@ -561,18 +559,18 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lpmc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lcwc;
 
-    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiCallForIncoming(Lude;Lpmc;)Lude;
+    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiCallForIncoming(Ljqe;Lcwc;)Ljqe;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lpmc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->log:Lcwc;
 
-    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiCallForOutgoing(Lude;Lpmc;)Lude;
+    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/api/retry/RetryKt;->retryApiCallForOutgoing(Ljqe;Lcwc;)Ljqe;
 
     move-result-object p1
 
@@ -581,27 +579,27 @@
 
 
 # virtual methods
-.method public bridge synthetic execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Lude;
+.method public bridge synthetic execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ActionParams;)Ljqe;
     .locals 0
 
     .line 1
     check-cast p1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Lude;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Ljqe;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Lude;
+.method public execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;)Ljqe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareParams;",
             ")",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 
@@ -610,7 +608,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Lude;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Ljqe;
 
     move-result-object p1
 
@@ -635,7 +633,7 @@
     move-result-object p1
 
     .line 6
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Lude;
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeWithJoinLink(Ljava/lang/String;Ljava/lang/String;)Ljqe;
 
     move-result-object p1
 

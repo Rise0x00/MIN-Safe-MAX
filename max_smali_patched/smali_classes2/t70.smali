@@ -1,100 +1,92 @@
 .class public final Lt70;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lbp7;
-
-.field public final b:Lbp7;
+.field public final c:Lbt;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
+.method public constructor <init>(Lbt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt70;->a:Lbp7;
-
-    iput-object p2, p0, Lt70;->b:Lbp7;
+    iput-object p1, p0, Lt70;->c:Lbt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;ILm3f;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lt70;->a:Lbp7;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Lt70;
 
-    check-cast v0, Lqc;
-
-    const-string v1, "ACTION_AUTH_GET_CODE"
-
-    invoke-virtual {v0, v1}, Lqc;->e(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lt70;->b:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwga;
-
-    iget-object v0, v0, Lwga;->a:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lraf;
-
-    new-instance v1, Llt;
-
-    sget-object v2, Ln0b;->z0:Ln0b;
-
-    const/16 v3, 0xf
-
-    invoke-direct {v1, v2, v3}, Llt;-><init>(Ln0b;I)V
-
-    const-string v2, "phone"
-
-    invoke-virtual {v1, v2, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    if-eq p2, p1, :cond_1
-
-    const/4 p1, 0x2
-
-    if-ne p2, p1, :cond_0
-
-    const-string p1, "RESEND"
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
     :cond_1
-    const-string p1, "START_AUTH"
+    check-cast p1, Lt70;
+
+    iget-object v0, p0, Lt70;->c:Lbt;
+
+    iget-object p1, p1, Lt70;->c:Lbt;
+
+    invoke-virtual {v0, p1}, Llpe;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     :goto_0
-    const-string p2, "type"
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, p2, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    return p1
 
-    invoke-virtual {v0, v1, p3}, Lraf;->e(Li9f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lt70;->c:Lbt;
+
+    invoke-virtual {v0}, Llpe;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lt70;->c:Lbt;
+
+    invoke-static {v0}, Lxvc;->h(Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Response(tokenTypes=\'"
+
+    const-string v2, "\')"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

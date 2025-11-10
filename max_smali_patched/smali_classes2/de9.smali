@@ -1,66 +1,64 @@
-.class public final synthetic Lde9;
+.class public final Lde9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lgk9;
 
 
-# instance fields
-.field public final synthetic a:Lng9;
-
-.field public final synthetic b:Lvz;
-
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/String;
+# static fields
+.field public static final a:Lde9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lng9;Lvz;JLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lde9;
 
-    iput-object p1, p0, Lde9;->a:Lng9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lde9;->b:Lvz;
-
-    iput-wide p3, p0, Lde9;->c:J
-
-    iput-object p5, p0, Lde9;->o:Ljava/lang/String;
+    sput-object v0, Lde9;->a:Lde9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v2, p0, Lde9;->a:Lng9;
+    const/4 v0, 0x1
 
-    iget-object v7, v2, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    if-ne p0, p1, :cond_0
 
-    iget-object v8, v2, Lng9;->H0:Ly24;
+    return v0
 
-    new-instance v0, Lbf9;
+    :cond_0
+    instance-of p1, p1, Lde9;
 
-    const/4 v6, 0x0
+    if-nez p1, :cond_1
 
-    iget-object v1, p0, Lde9;->b:Lvz;
+    const/4 p1, 0x0
 
-    iget-wide v3, p0, Lde9;->c:J
+    return p1
 
-    iget-object v5, p0, Lde9;->o:Ljava/lang/String;
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct/range {v0 .. v6}, Lbf9;-><init>(Lvz;Lng9;JLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public final hashCode()I
+    .locals 1
 
-    sget-object v1, Lh34;->b:Lh34;
+    const v0, 0x43f6b71e
 
-    invoke-static {v7, v8, v1, v0}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "MessagePinned"
 
     return-object v0
 .end method

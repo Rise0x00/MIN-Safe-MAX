@@ -1,76 +1,68 @@
 .class public final Llae;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lnf6;
+.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Landroidx/constraintlayout/widget/ConstraintLayout;
+.field public final synthetic X:Luae;
 
-.field public synthetic Y:Luxa;
+.field public final synthetic Y:Z
 
-.field public final synthetic Z:Ltya;
-
-.field public final synthetic w0:Lwpa;
-
-.field public final synthetic x0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-.field public final synthetic y0:Lone/me/location/map/show/ShowLocationScreen;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ltya;Lwpa;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Luae;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Llae;->Z:Ltya;
+    iput-object p1, p0, Llae;->X:Luae;
 
-    iput-object p2, p0, Llae;->w0:Lwpa;
+    iput-boolean p2, p0, Llae;->Y:Z
 
-    iput-object p3, p0, Llae;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Llae;->y0:Lone/me/location/map/show/ShowLocationScreen;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
+    check-cast p1, Lg54;
 
-    check-cast p2, Luxa;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-object v5, p3
+    invoke-virtual {p0, p1, p2}, Llae;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v5, Lkotlin/coroutines/Continuation;
+    move-result-object p1
 
-    new-instance v0, Llae;
+    check-cast p1, Llae;
 
-    iget-object v3, p0, Llae;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-object v4, p0, Llae;->y0:Lone/me/location/map/show/ShowLocationScreen;
+    invoke-virtual {p1, p2}, Llae;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Llae;->Z:Ltya;
+    move-result-object p1
 
-    iget-object v2, p0, Llae;->w0:Lwpa;
+    return-object p1
+.end method
 
-    invoke-direct/range {v0 .. v5}, Llae;-><init>(Ltya;Lwpa;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-object p1, v0, Llae;->X:Landroidx/constraintlayout/widget/ConstraintLayout;
+    new-instance p1, Llae;
 
-    iput-object p2, v0, Llae;->Y:Luxa;
+    iget-object v0, p0, Llae;->X:Luae;
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget-boolean v1, p0, Llae;->Y:Z
 
-    invoke-virtual {v0, p1}, Llae;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Llae;-><init>(Luae;ZLkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
@@ -78,86 +70,97 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Llae;->o:I
 
-    iget-object p1, p0, Llae;->X:Landroidx/constraintlayout/widget/ConstraintLayout;
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Llae;->Y:Luxa;
+    if-eqz v0, :cond_1
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v1, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v2
-
-    invoke-interface {v2}, Luxa;->b()Lue0;
-
-    move-result-object v2
-
-    iget v2, v2, Lue0;->c:I
-
-    iget-object v3, p0, Llae;->Z:Ltya;
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iget-object v2, p0, Llae;->w0:Lwpa;
-
-    invoke-virtual {v1, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lwpa;->c(Luxa;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget-object v3, Lone/me/location/map/show/ShowLocationScreen;->F0:[Ltm7;
-
-    iget-object v3, p0, Llae;->y0:Lone/me/location/map/show/ShowLocationScreen;
-
-    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->E0:Lbp7;
-
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lktd;
-
-    check-cast v4, Lgjd;
-
-    invoke-virtual {v4}, Lgjd;->o()Ld16;
-
-    move-result-object v4
-
-    iget-object v5, p0, Llae;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    invoke-static {v5, v2, v4}, Lxa8;->b(Lcom/facebook/drawee/view/SimpleDraweeView;Landroid/content/Context;Ld16;)V
-
-    iget-object v2, v3, Lone/me/location/map/show/ShowLocationScreen;->B0:Lvo6;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v2}, Lone/me/location/map/show/ShowLocationScreen;->D0(Luxa;Lvo6;)V
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Luae;->A0:[Les7;
+
+    iget-object p1, p0, Llae;->X:Luae;
+
+    iget-object v0, p1, Luae;->d:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmk;
+
+    iget-object v2, v0, Lmk;->b:Lru7;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    check-cast v2, Ltq;
 
-    move-result-object v1
+    check-cast v2, Leig;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v3, "app.media.animoji.enabled"
 
-    invoke-static {p1, v0}, Lbx4;->c(Landroid/view/ViewGroup;Luxa;)V
+    iget-boolean v4, p0, Llae;->Y:Z
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v2, v3, v4}, Ly3;->f(Ljava/lang/String;Z)V
+
+    iget-object v2, v0, Lmk;->h:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v3, Lkk;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v0, v4, v5}, Lkk;-><init>(Lmk;ZLkotlin/coroutines/Continuation;)V
+
+    sget-object v4, Lj54;->b:Lj54;
+
+    invoke-static {v2, v5, v4, v3, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lmk;->i:Lpqe;
+
+    sget-object v4, Lmk;->k:[Les7;
+
+    const/4 v5, 0x0
+
+    aget-object v4, v4, v5
+
+    invoke-virtual {v3, v0, v4, v2}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    iput v1, p0, Llae;->o:I
+
+    invoke-static {p1, p0}, Luae;->u(Luae;Logf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

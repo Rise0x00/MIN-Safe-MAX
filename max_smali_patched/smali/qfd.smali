@@ -1,280 +1,230 @@
-.class public final Lqfd;
-.super Landroid/view/View;
+.class public abstract Lqfd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lnz1;
+# static fields
+.field public static final a:[I
 
-.field public b:Landroid/view/Window;
+.field public static final b:[I
 
-.field public c:Lpfd;
+.field public static final c:[I
+
+.field public static final d:[I
+
+.field public static final e:[I
+
+.field public static final f:Ljava/lang/String;
 
 
 # direct methods
-.method public static synthetic a(Lqfd;)F
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Lqfd;->getBrightness()F
+    const v0, 0x10100a7
+
+    filled-new-array {v0}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lqfd;->a:[I
+
+    const v1, 0x101009c
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lqfd;->b:[I
+
+    const v1, 0x10100a1
+
+    filled-new-array {v1, v0}, [I
+
+    move-result-object v2
+
+    sput-object v2, Lqfd;->c:[I
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lqfd;->d:[I
+
+    const v1, 0x101009e
+
+    filled-new-array {v1, v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lqfd;->e:[I
+
+    const-class v0, Lqfd;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lqfd;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/res/ColorStateList;[I)I
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v0
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result p1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    const/16 v0, 0xff
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lwb3;->i(II)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic b(Lqfd;F)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lqfd;->setBrightness(F)V
-
-    return-void
-.end method
-
-.method private getBrightness()F
-    .locals 2
-
-    iget-object v0, p0, Lqfd;->b:Landroid/view/Window;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "ScreenFlashView"
-
-    const-string v1, "setBrightness: mScreenFlashWindow is null!"
-
-    invoke-static {v0, v1}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/high16 v0, 0x7fc00000    # Float.NaN
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    return v0
-.end method
-
-.method private setBrightness(F)V
+.method public static b(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
     .locals 3
 
-    iget-object v0, p0, Lqfd;->b:Landroid/view/Window;
+    const/4 v0, 0x0
 
-    const-string v1, "ScreenFlashView"
+    if-eqz p0, :cond_1
 
-    if-nez v0, :cond_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string p1, "setBrightness: mScreenFlashWindow is null!"
+    const/16 v2, 0x1b
 
-    invoke-static {v1, p1}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-gt v1, v2, :cond_0
 
-    return-void
+    invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
+    move-result v1
+
+    invoke-static {v1}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lqfd;->e:[I
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
-    const-string p1, "setBrightness: value is NaN!"
-
-    invoke-static {v1, p1}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lqfd;->b:Landroid/view/Window;
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    iput p1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    iget-object p1, p0, Lqfd;->b:Landroid/view/Window;
-
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Brightness set to "
-
-    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private setScreenFlashUiInfo(Ln47;)V
-    .locals 4
-
-    iget-object v0, p0, Lqfd;->a:Lnz1;
-
-    if-nez v0, :cond_0
-
-    const-string p1, "ScreenFlashView"
-
-    const-string v0, "setScreenFlashUiInfo: mCameraController is null!"
-
-    invoke-static {p1, v0}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lofd;
-
-    sget-object v2, Lnfd;->b:Lnfd;
-
-    invoke-direct {v1, v2, p1}, Lofd;-><init>(Lnfd;Ln47;)V
-
-    invoke-virtual {v0}, Lnz1;->f()Lofd;
-
-    move-result-object p1
-
-    iget-object v3, v0, Lnz1;->C:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lnz1;->f()Lofd;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, p1}, Lofd;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {v0}, Lnz1;->r()V
-
-    :cond_1
-    return-void
-.end method
-
-
-# virtual methods
-.method public getScreenFlash()Ln47;
-    .locals 1
-
-    iget-object v0, p0, Lqfd;->c:Lpfd;
-
-    return-object v0
-.end method
-
-.method public getVisibilityRampUpAnimationDurationMillis()J
-    .locals 2
-
-    const-wide/16 v0, 0x3e8
-
-    return-wide v0
-.end method
-
-.method public setController(Lnz1;)V
-    .locals 1
-
-    invoke-static {}, Lkjd;->e()V
-
-    iget-object v0, p0, Lqfd;->a:Lnz1;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    if-eq v0, p1, :cond_0
+    sget-object v0, Lqfd;->f:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    const-string v1, "Use a non-transparent color for the default color as it will be used to finish ripple animations."
 
-    invoke-direct {p0, v0}, Lqfd;->setScreenFlashUiInfo(Ln47;)V
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iput-object p1, p0, Lqfd;->a:Lnz1;
-
-    if-nez p1, :cond_1
-
-    return-void
+    return-object p0
 
     :cond_1
-    invoke-static {}, Lkjd;->e()V
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    iget-object p1, p1, Lnz1;->d:Lo47;
+    move-result-object p0
 
-    invoke-virtual {p1}, Lo47;->H()I
-
-    move-result p1
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_3
-
-    iget-object p1, p0, Lqfd;->b:Landroid/view/Window;
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "No window set despite setting FLASH_MODE_SCREEN in CameraController"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    :goto_0
-    invoke-virtual {p0}, Lqfd;->getScreenFlash()Ln47;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lqfd;->setScreenFlashUiInfo(Ln47;)V
-
-    return-void
+    return-object p0
 .end method
 
-.method public setScreenFlashWindow(Landroid/view/Window;)V
-    .locals 1
+.method public static c([I)Z
+    .locals 8
 
-    invoke-static {}, Lkjd;->e()V
+    array-length v0, p0
 
-    iget-object v0, p0, Lqfd;->b:Landroid/view/Window;
+    const/4 v1, 0x0
 
-    if-eq v0, p1, :cond_1
+    move v2, v1
 
-    if-nez p1, :cond_0
+    move v3, v2
 
-    const/4 v0, 0x0
+    move v4, v3
+
+    :goto_0
+    const/4 v5, 0x1
+
+    if-ge v2, v0, :cond_4
+
+    aget v6, p0, v2
+
+    const v7, 0x101009e
+
+    if-ne v6, v7, :cond_0
+
+    move v3, v5
+
+    goto :goto_2
+
+    :cond_0
+    const v7, 0x101009c
+
+    if-ne v6, v7, :cond_1
+
+    :goto_1
+    move v4, v5
+
+    goto :goto_2
+
+    :cond_1
+    const v7, 0x10100a7
+
+    if-ne v6, v7, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const v7, 0x1010367
+
+    if-ne v6, v7, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lpfd;
+    :cond_4
+    if-eqz v3, :cond_5
 
-    invoke-direct {v0, p0}, Lpfd;-><init>(Lqfd;)V
+    if-eqz v4, :cond_5
 
-    :goto_0
-    iput-object v0, p0, Lqfd;->c:Lpfd;
+    return v5
 
-    :cond_1
-    iput-object p1, p0, Lqfd;->b:Landroid/view/Window;
-
-    invoke-virtual {p0}, Lqfd;->getScreenFlash()Ln47;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lqfd;->setScreenFlashUiInfo(Ln47;)V
-
-    return-void
+    :cond_5
+    return v1
 .end method

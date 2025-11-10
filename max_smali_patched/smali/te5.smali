@@ -1,154 +1,176 @@
-.class public final synthetic Lte5;
+.class public final Lte5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsx7;
+.implements Lye5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnrf;
 
-.field public final synthetic b:Lekb;
+.field public final b:Lkrf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lekb;I)V
-    .locals 0
+.method public constructor <init>(Lps8;Ljava/util/ArrayList;)V
+    .locals 6
 
-    iput p2, p0, Lte5;->a:I
+    instance-of v0, p1, Lhs8;
 
-    iput-object p1, p0, Lte5;->b:Lekb;
+    if-eqz v0, :cond_0
+
+    sget p1, Lhsc;->oneme_chatmedia_viewer_save_single_photo:I
+
+    new-instance v0, Lirf;
+
+    invoke-direct {v0, p1}, Lirf;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lns8;
+
+    if-eqz v0, :cond_1
+
+    sget p1, Lhsc;->oneme_chatmedia_viewer_save_single_video:I
+
+    new-instance v0, Lirf;
+
+    invoke-direct {v0, p1}, Lirf;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of p1, p1, Las8;
+
+    if-eqz p1, :cond_9
+
+    sget-object v0, Lnrf;->b:Lmrf;
+
+    :goto_0
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lea3;
+
+    instance-of v5, v4, Le97;
+
+    if-eqz v5, :cond_2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    instance-of v4, v4, Lzkg;
+
+    if-eqz v4, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-ne v2, p1, :cond_5
+
+    move v1, v5
+
+    goto :goto_2
+
+    :cond_5
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-ne v3, p1, :cond_6
+
+    move v1, v4
+
+    :cond_6
+    :goto_2
+    if-eq v1, v5, :cond_8
+
+    if-eq v1, v4, :cond_7
+
+    sget p1, Lhsc;->oneme_chatmedia_viewer_save_all_medias:I
+
+    goto :goto_3
+
+    :cond_7
+    sget p1, Lhsc;->oneme_chatmedia_viewer_save_all_videos:I
+
+    goto :goto_3
+
+    :cond_8
+    sget p1, Lhsc;->oneme_chatmedia_viewer_save_all_photos:I
+
+    :goto_3
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    new-instance v1, Lkrf;
+
+    invoke-static {p2}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-direct {v1, p1, p2}, Lkrf;-><init>(ILjava/util/List;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object v0, p0, Lte5;->a:Lnrf;
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lte5;->a:I
-
-    check-cast p1, Lukb;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-object v0, v0, Lekb;->i:Lqof;
-
-    iget-object v0, v0, Lqof;->Y:Ljava/lang/Object;
-
-    check-cast v0, Luof;
-
-    invoke-interface {p1, v0}, Lukb;->d0(Luof;)V
+    iput-object v1, p0, Lte5;->b:Lkrf;
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lte5;->b:Lekb;
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v0, v0, Lekb;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-interface {p1, v0}, Lukb;->I0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-object v0, v0, Lekb;->f:Landroidx/media3/exoplayer/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lukb;->B0(Landroidx/media3/common/PlaybackException;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-object v0, v0, Lekb;->o:Lgkb;
-
-    invoke-interface {p1, v0}, Lukb;->z0(Lgkb;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    invoke-virtual {v0}, Lekb;->l()Z
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Lukb;->q(Z)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget v0, v0, Lekb;->n:I
-
-    invoke-interface {p1, v0}, Lukb;->f(I)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-boolean v1, v0, Lekb;->l:Z
-
-    iget v0, v0, Lekb;->m:I
-
-    invoke-interface {p1, v0, v1}, Lukb;->i(IZ)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget v0, v0, Lekb;->e:I
-
-    invoke-interface {p1, v0}, Lukb;->k(I)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-boolean v1, v0, Lekb;->l:Z
-
-    iget v0, v0, Lekb;->e:I
-
-    invoke-interface {p1, v0, v1}, Lukb;->o(IZ)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Lte5;->b:Lekb;
-
-    iget-boolean v1, v0, Lekb;->g:Z
-
-    invoke-interface {p1, v1}, Lukb;->r(Z)V
-
-    iget-boolean v0, v0, Lekb;->g:Z
-
-    invoke-interface {p1, v0}, Lukb;->h(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

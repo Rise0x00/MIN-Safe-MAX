@@ -4,15 +4,13 @@
 
 
 # static fields
-.field public static final synthetic X:[Lwy1;
-
 .field public static final enum a:Lwy1;
 
 .field public static final enum b:Lwy1;
 
 .field public static final enum c:Lwy1;
 
-.field public static final enum o:Lwy1;
+.field public static final synthetic d:[Lwy1;
 
 
 # direct methods
@@ -21,7 +19,7 @@
 
     new-instance v0, Lwy1;
 
-    const-string v1, "PhotoDefault"
+    const-string v1, "OFF"
 
     const/4 v2, 0x0
 
@@ -31,7 +29,7 @@
 
     new-instance v1, Lwy1;
 
-    const-string v2, "PhotoTaking"
+    const-string v2, "ON"
 
     const/4 v3, 0x1
 
@@ -41,7 +39,7 @@
 
     new-instance v2, Lwy1;
 
-    const-string v3, "VideoDefault"
+    const-string v3, "AUTO"
 
     const/4 v4, 0x2
 
@@ -51,19 +49,17 @@
 
     new-instance v3, Lwy1;
 
-    const-string v4, "VideoRecording"
+    const-string v4, "TORCH"
 
     const/4 v5, 0x3
 
     invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lwy1;->o:Lwy1;
-
     filled-new-array {v0, v1, v2, v3}, [Lwy1;
 
     move-result-object v0
 
-    sput-object v0, Lwy1;->X:[Lwy1;
+    sput-object v0, Lwy1;->d:[Lwy1;
 
     return-void
 .end method
@@ -85,9 +81,9 @@
 .method public static values()[Lwy1;
     .locals 1
 
-    sget-object v0, Lwy1;->X:[Lwy1;
+    sget-object v0, Lwy1;->d:[Lwy1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lwy1;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

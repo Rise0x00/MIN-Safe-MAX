@@ -1,48 +1,42 @@
 .class public final Lld2;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:J
 
-.field public final synthetic Y:Lfa2;
+.field public b:Ljava/util/List;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:J
 
+.field public d:J
 
-# direct methods
-.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public e:J
 
-    iput-object p1, p0, Lld2;->Y:Lfa2;
+.field public f:J
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public g:J
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Ljd2;)V
     .locals 1
 
-    iput-object p1, p0, Lld2;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lld2;->b:Ljava/util/List;
 
-    iget p1, p0, Lld2;->X:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Ljava/util/ArrayList;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput p1, p0, Lld2;->X:I
+    iput-object v0, p0, Lld2;->b:Ljava/util/List;
 
-    iget-object p1, p0, Lld2;->Y:Lfa2;
+    :cond_0
+    iget-object v0, p0, Lld2;->b:Ljava/util/List;
 
-    const/4 v0, 0x0
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

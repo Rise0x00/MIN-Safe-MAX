@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Ljava/util/List;
-.end method
-
-.method public abstract b(Landroid/content/Context;)Ljava/lang/Object;
+.method public abstract createImageTranscoder(Lu97;Z)Lcb7;
 .end method

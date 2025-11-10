@@ -1,155 +1,134 @@
-.class public final synthetic Lb4d;
-.super Ljava/lang/Object;
+.class public final Lb4d;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lur7;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lc4d;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:J
+
+.field public final synthetic Z:[B
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lc4d;J[BLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lb4d;->a:I
+    iput-object p1, p0, Lb4d;->X:Lc4d;
 
-    iput-object p2, p0, Lb4d;->b:Ljava/lang/Object;
+    iput-wide p2, p0, Lb4d;->Y:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lb4d;->Z:[B
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lcs7;Ldr7;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lb4d;->a:I
+    check-cast p1, Lg54;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lb4d;->b:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lb4d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lum;
+    move-result-object p1
 
-    sget-object v0, Ldr7;->ON_START:Ldr7;
+    check-cast p1, Lb4d;
 
-    if-ne p2, v0, :cond_0
+    sget-object p2, Lybg;->a:Lybg;
 
-    const/4 p2, 0x1
+    invoke-virtual {p1, p2}, Lb4d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-boolean p2, p1, Lum;->e:Z
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Lb4d;
+
+    iget-wide v2, p0, Lb4d;->Y:J
+
+    iget-object v4, p0, Lb4d;->Z:[B
+
+    iget-object v1, p0, Lb4d;->X:Lc4d;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lb4d;-><init>(Lc4d;J[BLkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lb4d;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Ldr7;->ON_STOP:Ldr7;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-ne p2, v0, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 p2, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-boolean p2, p1, Lum;->e:Z
+    throw p1
 
     :cond_1
-    :goto_0
-    return-void
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    :pswitch_0
-    iget-object p1, p0, Lb4d;->b:Ljava/lang/Object;
+    move p1, v1
 
-    check-cast p1, Ld4d;
+    iget-object v1, p0, Lb4d;->X:Lc4d;
 
-    iget-object v0, p1, Ld4d;->e:Ljava/lang/ref/WeakReference;
+    iget-object v2, v1, Lc4d;->b:Lu2d;
 
-    sget-object v1, Lc4d;->$EnumSwitchMapping$0:[I
+    iput p1, p0, Lb4d;->o:I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    iget-wide v3, p0, Lb4d;->Y:J
 
-    move-result p2
+    iget-object v5, p0, Lb4d;->Z:[B
 
-    aget p2, v1, p2
+    move-object v6, p0
 
-    const/4 v1, 0x0
+    invoke-static/range {v1 .. v6}, Lc4d;->u(Lc4d;Lu2d;J[BLp14;)Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object p1
 
-    if-eq p2, v2, :cond_4
+    sget-object v0, Lh54;->a:Lh54;
 
-    const/4 v2, 0x2
+    if-ne p1, v0, :cond_2
 
-    if-eq p2, v2, :cond_2
-
-    goto :goto_1
+    return-object v0
 
     :cond_2
-    const/4 p2, 0x0
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    iput-boolean p2, p1, Ld4d;->g:Z
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p2, Landroidx/recyclerview/widget/RecyclerView;->K0:Z
-
-    if-eqz v0, :cond_3
-
-    move-object v1, p2
-
-    :cond_3
-    if-eqz v1, :cond_6
-
-    invoke-virtual {p1, v1}, Ld4d;->a(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_1
-
-    :cond_4
-    iput-boolean v2, p1, Ld4d;->g:Z
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    move-object v1, p2
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    invoke-virtual {p1, v1}, Ld4d;->b(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    :cond_6
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

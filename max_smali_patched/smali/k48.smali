@@ -1,38 +1,65 @@
-.class public interface abstract Lk48;
+.class public final Lk48;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/io/IOException;)V
+# static fields
+.field public static final c:Ljava/util/concurrent/atomic/AtomicLong;
+
+
+# instance fields
+.field public final a:Lec4;
+
+.field public final b:J
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    sput-object v0, Lk48;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    return-void
 .end method
 
-.method public abstract c(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lec4;)V
+    .locals 7
+
+    .line 1
+    iget-object v0, p1, Lec4;->a:Landroid/net/Uri;
+
+    .line 2
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    .line 3
+    invoke-direct/range {v1 .. v6}, Lk48;-><init>(Lec4;JJ)V
+
+    return-void
 .end method
 
-.method public abstract d(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+.method public constructor <init>(Lec4;JJ)V
+    .locals 0
 
-.method public abstract e(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    .line 5
+    iput-object p1, p0, Lk48;->a:Lec4;
 
-.method public abstract f(Ljava/lang/Exception;Ljava/lang/String;)V
-.end method
+    .line 6
+    iput-wide p2, p0, Lk48;->b:J
 
-.method public abstract h(I)Z
-.end method
-
-.method public abstract i(I)V
-.end method
-
-.method public abstract v(Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract w(Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-void
 .end method

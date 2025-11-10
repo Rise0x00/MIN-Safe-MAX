@@ -1,118 +1,40 @@
-.class public final synthetic Llsc;
+.class public abstract Llsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lmf6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static contact_list_call_contact_title:I = 0x7f130416
 
-.field public final synthetic b:Lnsc;
+.field public static contact_list_confirm_contact_block_action:I = 0x7f130417
 
+.field public static contact_list_confirm_contact_block_description:I = 0x7f130418
 
-# direct methods
-.method public synthetic constructor <init>(Lnsc;I)V
-    .locals 0
+.field public static contact_list_confirm_contact_block_title:I = 0x7f130419
 
-    iput p2, p0, Llsc;->a:I
+.field public static contact_list_confirm_contact_delete_action:I = 0x7f13041a
 
-    iput-object p1, p0, Llsc;->b:Lnsc;
+.field public static contact_list_confirm_contact_delete_title:I = 0x7f13041b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static contact_list_contact_block_snackbar_title:I = 0x7f13041c
 
-    return-void
-.end method
+.field public static contact_list_contact_delete_snackbar_title:I = 0x7f13041d
 
+.field public static contact_list_menu_item_add_contact:I = 0x7f13041e
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.field public static contact_list_search_hint:I = 0x7f13041f
 
-    iget v0, p0, Llsc;->a:I
+.field public static contact_list_search_hint_with_nick:I = 0x7f130420
 
-    packed-switch v0, :pswitch_data_0
+.field public static empty_contact_list_description:I = 0x7f130490
 
-    check-cast p1, Lasc;
+.field public static empty_contact_list_title:I = 0x7f130491
 
-    iget-object v0, p0, Llsc;->b:Lnsc;
+.field public static empty_search_contact_btn_title:I = 0x7f130494
 
-    iget-object v1, v0, Lnsc;->b:Lr63;
+.field public static empty_search_contact_disabled_description:I = 0x7f130495
 
-    check-cast v1, Lxid;
+.field public static empty_search_contact_enabled_description:I = 0x7f130496
 
-    invoke-virtual {v1}, Lxid;->k()J
+.field public static empty_search_contact_title:I = 0x7f130497
 
-    move-result-wide v1
-
-    iput-wide v1, p1, Lasc;->c:J
-
-    invoke-virtual {v0}, Lnsc;->b()Ldee;
-
-    move-result-object v0
-
-    new-instance v1, Ljsc;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p1}, Ljsc;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lme3;
-
-    invoke-direct {p1, v0, v2, v1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ldsc;
-
-    iget-object v0, p0, Llsc;->b:Lnsc;
-
-    invoke-virtual {v0}, Lnsc;->b()Ldee;
-
-    move-result-object v1
-
-    new-instance v2, Ljsc;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3, p1}, Ljsc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v3, Lyd8;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v1, v4, v2}, Lyd8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {p1, v1, v2}, Lisc;->a(Ldsc;J)Lasc;
-
-    move-result-object p1
-
-    new-instance v1, Lcf3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v3, v2, p1}, Lcf3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Llsc;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v0, v2}, Llsc;-><init>(Lnsc;I)V
-
-    new-instance v0, Lme3;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2, p1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static snackbar_self_title:I = 0x7f130d20

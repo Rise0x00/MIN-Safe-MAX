@@ -2,176 +2,185 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li9f;
+
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lbp7;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lbp7;
+.field public final c:Ltif;
+
+.field public d:I
+
+.field public e:I
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method public constructor <init>(Lru7;Lru7;Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbt6;->a:Lbp7;
+    iput-object p3, p0, Lbt6;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lbt6;->b:Lbp7;
+    const-class p3, Lbt6;
 
-    iput-object p3, p0, Lbt6;->c:Lbp7;
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lbt6;->b:Ljava/lang/String;
+
+    new-instance p3, Lxr;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p3, p0, p2, p1, v0}, Lxr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance p1, Ltif;
+
+    invoke-direct {p1, p3}, Ltif;-><init>(Loi6;)V
+
+    iput-object p1, p0, Lbt6;->c:Ltif;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lbt6;->d:I
+
+    iput p1, p0, Lbt6;->e:I
+
+    const-string p1, "Google Play Services"
+
+    iput-object p1, p0, Lbt6;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq49;)Z
-    .locals 5
+.method public final a()Z
+    .locals 3
 
-    iget-object v0, p0, Lbt6;->b:Lbp7;
+    iget v0, p0, Lbt6;->d:I
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v1, -0x1
 
-    move-result-object v0
+    if-ne v0, v1, :cond_0
 
-    check-cast v0, Llm5;
+    sget-object v0, Les6;->d:Les6;
 
-    check-cast v0, Lnm5;
+    iget-object v1, p0, Lbt6;->a:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lnm5;->p()Z
+    sget v2, Lfs6;->a:I
 
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lbt6;->c:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqp;
-
-    check-cast v0, Lsp;
-
-    invoke-virtual {v0}, Lsp;->w()Z
+    invoke-virtual {v0, v1, v2}, Lfs6;->c(Landroid/content/Context;I)I
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    goto :goto_2
+    iput v0, p0, Lbt6;->d:I
 
     :cond_0
-    invoke-virtual {p1}, Lq49;->r()Z
-
-    move-result v0
+    iget v0, p0, Lbt6;->d:I
 
     if-nez v0, :cond_1
 
-    goto :goto_2
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_1
-    :goto_0
-    invoke-virtual {p1}, Lq49;->r()Z
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b(Lakf;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-virtual {p0}, Lbt6;->a()Z
 
     move-result v0
 
-    iget-object v1, p1, Lq49;->F0:Lq49;
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x4
+    new-instance v0, Lild;
 
-    if-eqz v0, :cond_2
+    invoke-static {p1}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget v0, v1, Lq49;->Y0:I
+    move-result-object p1
 
-    if-eq v0, v2, :cond_2
+    invoke-direct {v0, p1}, Lild;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    move-object p1, v1
+    sget-object p1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Luxe;
 
-    goto :goto_0
+    const-class p1, Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    :cond_2
-    invoke-virtual {p1}, Lq49;->r()Z
+    monitor-enter p1
 
-    move-result v0
+    :try_start_0
+    invoke-static {}, Lsw5;->b()Lsw5;
 
-    if-nez v0, :cond_3
+    move-result-object v1
 
-    goto :goto_2
+    invoke-static {v1}, Lcom/google/firebase/messaging/FirebaseMessaging;->getInstance(Lsw5;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    :cond_3
-    iget-object v0, p0, Lbt6;->a:Lbp7;
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    monitor-exit p1
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Lm13;
+    new-instance p1, Lsof;
 
-    iget-wide v3, p1, Lq49;->E0:J
+    invoke-direct {p1}, Lsof;-><init>()V
 
-    check-cast v0, Lm23;
+    iget-object v2, v1, Lcom/google/firebase/messaging/FirebaseMessaging;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-virtual {v0, v3, v4}, Lm23;->O(J)Lsqc;
+    new-instance v3, Lax5;
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    iget-object v0, v0, Lsqc;->a:Lfoe;
+    invoke-direct {v3, v1, p1, v4}, Lax5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lsof;I)V
 
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    move-result-object v0
+    iget-object p1, p1, Lsof;->a:Lj1j;
 
-    check-cast v0, Lm82;
+    new-instance v1, Lgr4;
 
-    invoke-virtual {p1}, Lq49;->r()Z
+    const/16 v2, 0x10
 
-    move-result p1
+    invoke-direct {v1, p0, v0, v4, v2}, Lgr4;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    const/4 v3, 0x1
+    invoke-virtual {p1, v1}, Lj1j;->i(Luma;)Lj1j;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v0}, Lild;->a()Ljava/lang/Object;
 
-    iget p1, v1, Lq49;->R0:I
+    move-result-object p1
 
-    and-int/2addr p1, v2
+    return-object p1
 
-    if-ne p1, v2, :cond_4
+    :catchall_0
+    move-exception v0
 
-    goto :goto_1
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_4
-    if-eqz v0, :cond_6
+    throw v0
 
-    iget-object p1, v0, Lm82;->b:Lpc2;
+    :cond_0
+    new-instance p1, Lone/me/sdk/vendor/StoreServicesInfo$ServicesNotAvailableException;
 
-    iget-object p1, p1, Lpc2;->G:Lec2;
+    invoke-direct {p1}, Lone/me/sdk/vendor/StoreServicesInfo$ServicesNotAvailableException;-><init>()V
 
-    iget-boolean p1, p1, Lec2;->j:Z
-
-    if-ne p1, v3, :cond_6
-
-    :goto_1
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Lm82;->c0()Z
-
-    move-result p1
-
-    if-ne p1, v3, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    return v3
-
-    :cond_6
-    :goto_2
-    const/4 p1, 0x0
-
-    return p1
+    throw p1
 .end method

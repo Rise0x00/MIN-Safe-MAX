@@ -1,26 +1,26 @@
 .class public final Lt46;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Ly46;
 
-.field public final synthetic Y:Lone/me/folders/list/FoldersListScreen;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+.method public constructor <init>(Ly46;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lt46;->Y:Lone/me/folders/list/FoldersListScreen;
+    iput-object p1, p0, Lt46;->X:Ly46;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,75 +30,81 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lybg;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lt46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lt46;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lt46;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lt46;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Lt46;
+    new-instance p1, Lt46;
 
-    iget-object v1, p0, Lt46;->Y:Lone/me/folders/list/FoldersListScreen;
+    iget-object v0, p0, Lt46;->X:Ly46;
 
-    invoke-direct {v0, p2, v1}, Lt46;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+    invoke-direct {p1, v0, p2}, Lt46;-><init>(Ly46;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lt46;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Lt46;->o:I
 
-    iget-object p1, p0, Lt46;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Ljava/util/List;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lt46;->Y:Lone/me/folders/list/FoldersListScreen;
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, v0, Lone/me/folders/list/FoldersListScreen;->Y:Lmqc;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    sget-object v2, Lone/me/folders/list/FoldersListScreen;->Z:[Ltm7;
+    goto :goto_0
 
-    const/4 v3, 0x0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    aget-object v2, v2, v3
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw p1
 
-    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
+    iput v1, p0, Lt46;->o:I
 
-    move-result-object v1
+    iget-object p1, p0, Lt46;->X:Ly46;
 
-    check-cast v1, Lp46;
+    invoke-static {p1, p0}, Ly46;->b(Ly46;Lp14;)Ljava/lang/Object;
 
-    new-instance v2, Lge;
+    move-result-object p1
 
-    const/16 v3, 0x14
+    sget-object v0, Lh54;->a:Lh54;
 
-    invoke-direct {v2, v3, v0}, Lge;-><init>(ILjava/lang/Object;)V
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v1, p1, v2}, Lpw7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+    return-object v0
 
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

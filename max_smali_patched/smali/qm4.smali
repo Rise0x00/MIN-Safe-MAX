@@ -1,126 +1,60 @@
-.class public final synthetic Lqm4;
+.class public final Lqm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lus1;
+.implements Lfpd;
+
+
+# static fields
+.field public static final f:Ljava/util/logging/Logger;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lyn7;
 
-.field public final synthetic b:Lrm4;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lzq9;
+
+.field public final d:Lpf5;
+
+.field public final e:Loif;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrm4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lqm4;->a:I
+    const-class v0, Lj4g;
 
-    iput-object p1, p0, Lqm4;->b:Lrm4;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v0
+
+    sput-object v0, Lqm4;->f:Ljava/util/logging/Logger;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lzq9;Lyn7;Lpf5;Loif;)V
+    .locals 0
 
-# virtual methods
-.method public final o(Lts1;)Ljava/lang/String;
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lqm4;->a:I
+    iput-object p1, p0, Lqm4;->b:Ljava/util/concurrent/Executor;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p2, p0, Lqm4;->c:Lzq9;
 
-    iget-object v0, p0, Lqm4;->b:Lrm4;
+    iput-object p3, p0, Lqm4;->a:Lyn7;
 
-    iget-object v1, v0, Lrm4;->a:Ljava/lang/Object;
+    iput-object p4, p0, Lqm4;->d:Lpf5;
 
-    monitor-enter v1
+    iput-object p5, p0, Lqm4;->e:Loif;
 
-    :try_start_0
-    iput-object p1, v0, Lrm4;->f:Lts1;
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeferrableSurface-close("
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lqm4;->b:Lrm4;
-
-    iget-object v1, v0, Lrm4;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_2
-    iput-object p1, v0, Lrm4;->d:Lts1;
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "DeferrableSurface-termination("
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :catchall_1
-    move-exception p1
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

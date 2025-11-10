@@ -1,113 +1,103 @@
 .class public final Lud8;
-.super Loy5;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic X:Lone/me/android/MainActivity;
 
-.field public final c:[Lpe8;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>([Lpe8;I)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lud8;->b:I
+    iput-object p1, p0, Lud8;->X:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Lud8;->c:[Lpe8;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lyz5;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lud8;->b:I
+    check-cast p1, Lsz7;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lud8;->c:[Lpe8;
+    invoke-virtual {p0, p1, p2}, Lud8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    array-length v1, v0
+    move-result-object p1
 
-    sget v2, Loy5;->a:I
+    check-cast p1, Lud8;
 
-    if-gt v1, v2, :cond_0
+    sget-object p2, Lybg;->a:Lybg;
 
-    new-instance v2, Lge8;
+    invoke-virtual {p1, p2}, Lud8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2, v1}, Lge8;-><init>(I)V
+    return-object p2
+.end method
 
-    goto :goto_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lud8;
+
+    iget-object v1, p0, Lud8;->X:Lone/me/android/MainActivity;
+
+    invoke-direct {v0, v1, p2}, Lud8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lud8;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lud8;->o:Ljava/lang/Object;
+
+    check-cast p1, Lsz7;
+
+    sget v0, Lone/me/android/deeplink/LinkInterceptorActivity;->J0:I
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lone/me/android/deeplink/LinkInterceptorActivity;
+
+    iget-object v2, p0, Lud8;->X:Lone/me/android/MainActivity;
+
+    invoke-direct {v0, v2, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "link:result"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-virtual {v2, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    iget-object p1, v2, Lone/me/android/MainActivity;->a1:Lgye;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1, v0}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    new-instance v2, Lee8;
+    iput-object v0, v2, Lone/me/android/MainActivity;->a1:Lgye;
 
-    invoke-direct {v2}, Lee8;-><init>()V
+    sget-object p1, Lybg;->a:Lybg;
 
-    :goto_0
-    new-instance v3, Lfe8;
-
-    invoke-direct {v3, p1, v1, v2}, Lfe8;-><init>(Lcze;ILhe8;)V
-
-    invoke-interface {p1, v3}, Lcze;->d(Leze;)V
-
-    iget-object p1, v3, Lfe8;->X:Lay;
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_1
-    if-ge v2, v1, :cond_2
-
-    aget-object v4, v0, v2
-
-    iget-boolean v5, v3, Lfe8;->Z:Z
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-interface {v4, v3}, Lpe8;->a(Lke8;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    return-void
-
-    :pswitch_0
-    new-instance v0, Ltd8;
-
-    iget-object v1, p0, Lud8;->c:[Lpe8;
-
-    invoke-direct {v0, p1, v1}, Ltd8;-><init>(Lcze;[Lpe8;)V
-
-    invoke-interface {p1, v0}, Lcze;->d(Leze;)V
-
-    invoke-virtual {v0}, Ltd8;->d()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

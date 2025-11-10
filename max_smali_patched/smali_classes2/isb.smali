@@ -3,22 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lksb;
+.implements Ld5c;
 
 
-# static fields
-.field public static final a:Lisb;
+# instance fields
+.field public final a:Lirf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lirf;)V
+    .locals 0
 
-    new-instance v0, Lisb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lisb;->a:Lisb;
+    iput-object p1, p0, Lisb;->a:Lirf;
 
     return-void
 .end method
@@ -26,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -35,30 +33,154 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lisb;
+    instance-of v1, p1, Lisb;
 
-    if-nez p1, :cond_1
+    if-nez v1, :cond_1
 
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lisb;
+
+    iget-object v1, p0, Lisb;->a:Lirf;
+
+    iget-object p1, p1, Lisb;->a:Lirf;
+
+    invoke-virtual {v1, p1}, Lirf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_1
+    :cond_2
     return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Li28;)Z
+    .locals 4
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Li28;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lisb;->a:Lirf;
+
+    iget v0, v0, Lirf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/high16 v1, -0x7fff0000
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Li28;)Ljava/lang/Object;
     .locals 1
 
-    const v0, -0x8f69829
+    instance-of v0, p1, Llle;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lv5c;
+
+    check-cast p1, Llle;
+
+    iget-object p1, p1, Llle;->a:Lmzi;
+
+    invoke-direct {v0, p1}, Lv5c;-><init>(Lmzi;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/high16 v0, -0x7fff0000
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final q(Li28;)Z
+    .locals 0
 
-    const-string v0, "Counter"
+    invoke-virtual {p0, p1}, Lisb;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PlaceholderItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lisb;->a:Lirf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType=-2147418112)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

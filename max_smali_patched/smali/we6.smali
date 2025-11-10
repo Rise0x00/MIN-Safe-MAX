@@ -1,6 +1,19 @@
-.class public interface abstract Lwe6;
+.class public final Lwe6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqf6;
+
+# instance fields
+.field public final synthetic a:Landroidx/fragment/app/c;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/fragment/app/c;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwe6;->a:Landroidx/fragment/app/c;
+
+    return-void
+.end method

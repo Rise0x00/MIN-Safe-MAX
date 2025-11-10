@@ -1,236 +1,177 @@
-.class public abstract Lnjc;
-.super Ljava/lang/Object;
+.class public final Lnjc;
+.super Landroid/widget/FrameLayout;
+.source "SourceFile"
 
 
-# static fields
-.field public static channel_screen_confirmation_pin_title:I = 0x7f1302d5
+# instance fields
+.field public final a:I
 
-.field public static channel_screen_confirmation_replace_pin_title:I = 0x7f1302d6
+.field public final b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static channel_screen_message_send_error_delete_action:I = 0x7f1302d7
+.field public final c:Ljava/lang/Object;
 
-.field public static channel_screen_message_send_error_resend_action_multi:I = 0x7f1302d8
+.field public final d:Ljava/lang/Object;
 
-.field public static channel_screen_message_send_error_resend_action_solo:I = 0x7f1302d9
+.field public final o:Ljava/lang/Object;
 
-.field public static channel_screen_message_send_error_title:I = 0x7f1302da
+.field public final s0:Ljava/lang/Object;
 
-.field public static chat_screen__bot_cleared_history__subtitle:I = 0x7f13034f
 
-.field public static chat_screen__bot_cleared_history_state__title:I = 0x7f130350
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-.field public static chat_screen__bot_empty_state__subtitle:I = 0x7f130351
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-.field public static chat_screen__bot_empty_state__title:I = 0x7f130352
+    const/16 v0, 0x28
 
-.field public static chat_screen__bot_official_cleared_history_state__title:I = 0x7f130353
+    iput v0, p0, Lnjc;->a:I
 
-.field public static chat_screen__bot_official_empty_state__title:I = 0x7f130354
+    new-instance v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static chat_screen_action_copy:I = 0x7f13035e
+    invoke-direct {v0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
 
-.field public static chat_screen_action_copy_photo:I = 0x7f13035f
+    new-instance v1, Lv44;
 
-.field public static chat_screen_action_copy_photo_failed:I = 0x7f130360
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-.field public static chat_screen_action_copy_photo_success:I = 0x7f130361
+    move-result-object v2
 
-.field public static chat_screen_action_delete:I = 0x7f130362
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public static chat_screen_action_delete_for_all:I = 0x7f130363
+    move-result-object v2
 
-.field public static chat_screen_action_delete_for_me:I = 0x7f130364
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-.field public static chat_screen_action_edit:I = 0x7f130365
+    const/high16 v3, 0x40800000    # 4.0f
 
-.field public static chat_screen_action_forward:I = 0x7f130366
+    mul-float/2addr v2, v3
 
-.field public static chat_screen_action_mark_as_unread:I = 0x7f130367
+    invoke-direct {v1, v2}, Lv44;-><init>(F)V
 
-.field public static chat_screen_action_pin:I = 0x7f130368
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-.field public static chat_screen_action_reply:I = 0x7f130369
+    iput-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static chat_screen_action_report:I = 0x7f13036a
+    new-instance v1, Ltra;
 
-.field public static chat_screen_action_save_to_gallery:I = 0x7f13036b
+    const/16 v2, 0x13
 
-.field public static chat_screen_action_select:I = 0x7f13036c
+    invoke-direct {v1, p1, v2}, Ltra;-><init>(Landroid/content/Context;I)V
 
-.field public static chat_screen_action_share_externally:I = 0x7f13036d
+    const/4 v2, 0x3
 
-.field public static chat_screen_action_share_post:I = 0x7f13036e
+    invoke-static {v2, v1}, Llci;->i(ILoi6;)Lru7;
 
-.field public static chat_screen_action_share_post_success_copied:I = 0x7f13036f
+    move-result-object v1
 
-.field public static chat_screen_action_unpin:I = 0x7f130370
+    iput-object v1, p0, Lnjc;->c:Ljava/lang/Object;
 
-.field public static chat_screen_attach_file_deleted:I = 0x7f130371
+    new-instance v1, Lb6b;
 
-.field public static chat_screen_attach_file_downloading_status:I = 0x7f130372
+    const/16 v3, 0xb
 
-.field public static chat_screen_bot:I = 0x7f130373
+    invoke-direct {v1, p1, v3, p0}, Lb6b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static chat_screen_bot_official:I = 0x7f130374
+    invoke-static {v2, v1}, Llci;->i(ILoi6;)Lru7;
 
-.field public static chat_screen_confirmation_complain_body:I = 0x7f130376
+    move-result-object p1
 
-.field public static chat_screen_confirmation_complain_title:I = 0x7f130377
+    iput-object p1, p0, Lnjc;->d:Ljava/lang/Object;
 
-.field public static chat_screen_confirmation_delete_for_all:I = 0x7f130378
+    new-instance p1, Lmjc;
 
-.field public static chat_screen_confirmation_delete_for_me:I = 0x7f130379
+    const/4 v1, 0x0
 
-.field public static chat_screen_confirmation_pin_title:I = 0x7f13037a
+    invoke-direct {p1, p0, v1}, Lmjc;-><init>(Lnjc;I)V
 
-.field public static chat_screen_confirmation_pin_with_notify_button:I = 0x7f13037b
+    invoke-static {v2, p1}, Llci;->i(ILoi6;)Lru7;
 
-.field public static chat_screen_confirmation_pin_without_notify_button:I = 0x7f13037c
+    move-result-object p1
 
-.field public static chat_screen_confirmation_replace_pin:I = 0x7f13037d
+    iput-object p1, p0, Lnjc;->o:Ljava/lang/Object;
 
-.field public static chat_screen_confirmation_replace_pin_title:I = 0x7f13037e
+    new-instance p1, Lmjc;
 
-.field public static chat_screen_context_menu_toolbar_title:I = 0x7f13037f
+    const/4 v1, 0x1
 
-.field public static chat_screen_empty_dialog_state_subtitle:I = 0x7f130380
+    invoke-direct {p1, p0, v1}, Lmjc;-><init>(Lnjc;I)V
 
-.field public static chat_screen_empty_dialog_state_title:I = 0x7f130381
+    invoke-static {v2, p1}, Llci;->i(ILoi6;)Lru7;
 
-.field public static chat_screen_folder_link_error_caption:I = 0x7f130384
+    move-result-object p1
 
-.field public static chat_screen_folder_link_error_title:I = 0x7f130385
+    iput-object p1, p0, Lnjc;->s0:Ljava/lang/Object;
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_1:I = 0x7f130386
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_2:I = 0x7f130387
+    return-void
+.end method
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_3:I = 0x7f130388
 
-.field public static chat_screen_group_link_call_empty_state_title:I = 0x7f130389
+# virtual methods
+.method public final measureChildren(II)V
+    .locals 2
 
-.field public static chat_screen_message_audio_sender_self:I = 0x7f13038d
+    iget-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static chat_screen_message_audio_title:I = 0x7f13038e
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-.field public static chat_screen_message_call_subtitle_audio:I = 0x7f13038f
+    iget-object v0, p0, Lnjc;->d:Ljava/lang/Object;
 
-.field public static chat_screen_message_call_subtitle_video:I = 0x7f130390
+    invoke-interface {v0}, Lru7;->e()Z
 
-.field public static chat_screen_message_call_title_incoming:I = 0x7f130391
+    move-result v1
 
-.field public static chat_screen_message_call_title_missed:I = 0x7f130392
+    if-eqz v1, :cond_0
 
-.field public static chat_screen_message_call_title_outgoing:I = 0x7f130393
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-.field public static chat_screen_message_call_title_reject:I = 0x7f130394
+    move-result-object v0
 
-.field public static chat_screen_message_contact_subtitle_added:I = 0x7f130395
+    check-cast v0, Landroid/view/View;
 
-.field public static chat_screen_message_contact_subtitle_new:I = 0x7f130396
+    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-.field public static chat_screen_message_contact_subtitle_phone_book:I = 0x7f130397
+    :cond_0
+    return-void
+.end method
 
-.field public static chat_screen_message_contact_subtitle_you:I = 0x7f130398
+.method public final setDrawOverlay(Z)V
+    .locals 1
 
-.field public static chat_screen_message_geo_subtitle:I = 0x7f130399
+    iget-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static chat_screen_message_geo_title:I = 0x7f13039a
+    if-eqz p1, :cond_0
 
-.field public static chat_screen_message_group_call:I = 0x7f13039b
+    invoke-virtual {v0}, Lt15;->getHierarchy()Lq15;
 
-.field public static chat_screen_message_group_call_title:I = 0x7f13039c
+    move-result-object p1
 
-.field public static chat_screen_message_resend_media_permission_error:I = 0x7f13039d
+    check-cast p1, Lrn6;
 
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f13039e
+    iget-object v0, p0, Lnjc;->o:Ljava/lang/Object;
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f13039f
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f1303a0
+    move-result-object v0
 
-.field public static chat_screen_message_send_error_title:I = 0x7f1303a1
+    check-cast v0, Landroid/graphics/drawable/Drawable;
 
-.field public static chat_screen_message_unpinned_snackbar:I = 0x7f1303a2
+    invoke-virtual {p1, v0}, Lrn6;->k(Landroid/graphics/drawable/Drawable;)V
 
-.field public static chat_screen_new_messages_decor_title:I = 0x7f1303a3
+    return-void
 
-.field public static chat_screen_read_participants_not_read_header:I = 0x7f1303a4
+    :cond_0
+    invoke-virtual {v0}, Lt15;->getHierarchy()Lq15;
 
-.field public static chat_screen_read_participants_read_header:I = 0x7f1303a5
+    move-result-object p1
 
-.field public static chat_screen_save_to_gallery_completed_gif_title:I = 0x7f1303a7
+    check-cast p1, Lrn6;
 
-.field public static chat_screen_save_to_gallery_completed_photo_title:I = 0x7f1303a8
+    const/4 v0, 0x0
 
-.field public static chat_screen_save_to_gallery_completed_video_title:I = 0x7f1303a9
+    invoke-virtual {p1, v0}, Lrn6;->k(Landroid/graphics/drawable/Drawable;)V
 
-.field public static chat_screen_save_to_gallery_failed_title:I = 0x7f1303aa
-
-.field public static chat_screen_saved_messages_empty_state_subtitle:I = 0x7f1303ab
-
-.field public static chat_screen_saved_messages_empty_state_title:I = 0x7f1303ac
-
-.field public static chat_screen_service_notifications:I = 0x7f1303ae
-
-.field public static chat_screen_snackbar_report_success:I = 0x7f1303af
-
-.field public static chat_screen_toolbar_saved_messages_description:I = 0x7f1303b3
-
-.field public static message_link_forwarded:I = 0x7f1306b0
-
-.field public static message_link_reply_audio:I = 0x7f1306b1
-
-.field public static message_link_reply_audio_call:I = 0x7f1306b2
-
-.field public static message_link_reply_contact:I = 0x7f1306b3
-
-.field public static message_link_reply_location:I = 0x7f1306b4
-
-.field public static message_link_reply_video_call:I = 0x7f1306b5
-
-.field public static messages_list_bot_button_request_contact_confirm_action:I = 0x7f1306bc
-
-.field public static messages_list_bot_button_request_contact_confirm_description:I = 0x7f1306bd
-
-.field public static messages_list_bot_button_request_contact_confirm_title:I = 0x7f1306be
-
-.field public static messages_list_bot_official_button_request_contact_confirm_description:I = 0x7f1306bf
-
-.field public static messages_list_channel_description_admin_subtitle:I = 0x7f1306c0
-
-.field public static messages_list_channel_description_admin_title:I = 0x7f1306c1
-
-.field public static messages_list_channel_description_private_subscriber_subtitle:I = 0x7f1306c2
-
-.field public static messages_list_channel_description_public_subscriber_subtitle:I = 0x7f1306c3
-
-.field public static messages_list_chat_description_view_owner_subtitle:I = 0x7f1306c4
-
-.field public static messages_list_chat_description_view_owner_title:I = 0x7f1306c5
-
-.field public static messages_list_chat_description_view_subtitle:I = 0x7f1306c6
-
-.field public static messages_list_contact_removed:I = 0x7f1306c7
-
-.field public static messages_list_date_status_edit:I = 0x7f1306c8
-
-.field public static messages_list_message_content_level_chat_snackbar_text:I = 0x7f1306ca
-
-.field public static messages_list_message_content_level_chat_stub_text:I = 0x7f1306cb
-
-.field public static messages_list_message_copy_with_sender_name:I = 0x7f1306cc
-
-.field public static messages_list_message_error_open_channel_private:I = 0x7f1306cd
-
-.field public static messages_list_message_error_open_channel_removed:I = 0x7f1306ce
-
-.field public static messages_list_message_error_open_channel_unavailable:I = 0x7f1306cf
-
-.field public static messages_list_message_error_post_not_founded:I = 0x7f1306d0
-
-.field public static messages_list_new_geo_external_map:I = 0x7f1306d1
-
-.field public static messages_list_request_storage_permission_subtitle:I = 0x7f1306d2
-
-.field public static messages_list_request_storage_permission_title:I = 0x7f1306d3
+    return-void
+.end method

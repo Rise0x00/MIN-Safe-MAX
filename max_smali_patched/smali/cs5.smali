@@ -1,20 +1,64 @@
-.class public abstract Lcs5;
+.class public final Lcs5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/io/File;
+
+
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcs5;->a:Ljava/io/File;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
+    if-eqz p1, :cond_1
 
-    if-eqz v0, :cond_0
+    instance-of v0, p1, Lcs5;
 
-    check-cast p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
+    goto :goto_0
 
     :cond_0
-    return-void
+    check-cast p1, Lcs5;
+
+    iget-object p1, p1, Lcs5;->a:Ljava/io/File;
+
+    iget-object v0, p0, Lcs5;->a:Ljava/io/File;
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lcs5;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

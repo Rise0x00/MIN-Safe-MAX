@@ -1,220 +1,125 @@
 .class public final Lsbb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/os/Handler$Callback;
+
+
+# static fields
+.field public static final c:Ljava/util/concurrent/ExecutorService;
+
+.field public static final d:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic Y:Ljava/util/ArrayList;
-
-.field public final synthetic Z:Lubb;
-
-.field public final synthetic w0:Ljava/util/ArrayList;
+.field public final b:Lfwc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lubb;Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sput-object v0, Lsbb;->c:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v1, Lsbb;->d:Ljava/lang/ThreadLocal;
+
+    new-instance v1, Lqc;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2}, Lqc;-><init>(I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lfwc;)V
     .locals 0
 
-    iput-object p1, p0, Lsbb;->Y:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lsbb;->Z:Lubb;
+    iput-object p1, p0, Lsbb;->b:Lfwc;
 
-    iput-object p3, p0, Lsbb;->w0:Ljava/util/ArrayList;
+    sget-object p1, Lsbb;->c:Ljava/util/concurrent/ExecutorService;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lsbb;->a:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 5
 
-    check-cast p1, Le34;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lkth;
 
-    invoke-virtual {p0, p1, p2}, Lsbb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-boolean v0, p1, Lkth;->c:Z
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    check-cast p1, Lsbb;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Loyf;->a:Loyf;
+    goto :goto_0
 
-    invoke-virtual {p1, p2}, Lsbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    iget v0, p1, Lkth;->d:I
 
-    move-result-object p1
+    add-int/2addr v0, v1
 
-    return-object p1
-.end method
+    iput v0, p1, Lkth;->d:I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    iget-object v0, p0, Lsbb;->b:Lfwc;
 
-    new-instance v0, Lsbb;
+    sget-object v2, Lo0f;->u0:Lo0f;
 
-    iget-object v1, p0, Lsbb;->Z:Lubb;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lsbb;->w0:Ljava/util/ArrayList;
+    const-string v4, "rtc.long.executor.task."
 
-    iget-object v3, p0, Lsbb;->Y:Ljava/util/ArrayList;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v3, v1, v2, p2}, Lsbb;-><init>(Ljava/util/ArrayList;Lubb;Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
+    iget v4, p1, Lkth;->d:I
 
-    iput-object p1, v0, Lsbb;->X:Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lsbb;->X:Ljava/lang/Object;
-
-    check-cast v1, Le34;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v3, v0, Lsbb;->Y:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
+    iget-object v4, p1, Lkth;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v3, v4}, Lfwc;->log(Lo0f;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget p1, p1, Lkth;->d:I
+
+    const/4 v0, 0x4
+
+    if-lt p1, v0, :cond_1
+
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lhbb;
-
-    invoke-static {v1}, Lipe;->r(Le34;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    sget-object v1, Lb75;->a:Lb75;
-
-    return-object v1
-
-    :cond_0
-    iget-object v5, v0, Lsbb;->w0:Ljava/util/ArrayList;
-
-    iget-object v6, v0, Lsbb;->Z:Lubb;
-
-    invoke-static {v6, v4, v5}, Lubb;->p(Lubb;Lhbb;Ljava/util/List;)Lhbb;
-
-    move-result-object v5
-
-    iget-object v6, v4, Lhbb;->o:Ljava/lang/String;
-
-    if-eqz v5, :cond_4
-
-    iget-object v7, v5, Lhbb;->o:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Lhbb;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_1
-
-    goto :goto_0
+    return v1
 
     :cond_1
-    invoke-static {v7}, Lubb;->C(Ljava/lang/String;)Ljava/lang/Long;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v8
+    const-string v0, "No task duration check thread"
 
-    invoke-static {v6}, Lubb;->C(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v9
-
-    if-eqz v8, :cond_2
-
-    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v6, v7}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    iget v6, v5, Lhbb;->y0:I
-
-    goto :goto_1
-
-    :cond_3
-    iget v6, v4, Lhbb;->y0:I
-
-    :goto_1
-    new-instance v7, Lhbb;
-
-    iget-wide v8, v5, Lyi0;->a:J
-
-    iget-wide v10, v5, Lhbb;->b:J
-
-    iget v12, v4, Lhbb;->c:I
-
-    iget-object v13, v4, Lhbb;->o:Ljava/lang/String;
-
-    iget-wide v14, v5, Lhbb;->X:J
-
-    iget-object v5, v4, Lhbb;->Z:Ljava/lang/String;
-
-    iget-object v0, v4, Lhbb;->w0:Ljava/lang/String;
-
-    iget-object v4, v4, Lhbb;->x0:Ljava/lang/String;
-
-    invoke-static {v6}, Lqw1;->u(I)I
-
-    move-result v20
-
-    const/16 v16, 0x0
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v19, v4
-
-    move-object/from16 v17, v5
-
-    invoke-direct/range {v7 .. v20}, Lhbb;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    move-object/from16 v0, p0
-
-    goto :goto_0
-
-    :cond_5
-    return-object v2
+    throw p1
 .end method

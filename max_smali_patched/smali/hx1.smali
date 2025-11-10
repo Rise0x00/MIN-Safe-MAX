@@ -1,160 +1,224 @@
-.class public final Lhx1;
+.class public final synthetic Lhx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkx1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ljx1;
+.field public final synthetic X:Lsb0;
+
+.field public final synthetic Y:Ljava/util/List;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsx1;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Le7e;
+
+.field public final synthetic o:Ljhg;
 
 
 # direct methods
-.method public constructor <init>(Ljx1;)V
+.method public synthetic constructor <init>(Lsx1;Ljava/lang/String;Le7e;Ljhg;Lsb0;Ljava/util/List;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p7, p0, Lhx1;->a:I
 
-    iput-object p1, p0, Lhx1;->a:Ljx1;
+    iput-object p1, p0, Lhx1;->b:Lsx1;
+
+    iput-object p2, p0, Lhx1;->c:Ljava/lang/String;
+
+    iput-object p3, p0, Lhx1;->d:Le7e;
+
+    iput-object p4, p0, Lhx1;->o:Ljhg;
+
+    iput-object p5, p0, Lhx1;->X:Lsb0;
+
+    iput-object p6, p0, Lhx1;->Y:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Ljx7;
-    .locals 4
+.method public final run()V
+    .locals 8
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget v0, p0, Lhx1;->a:I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lhx1;->a:Ljx1;
+    iget-object v0, p0, Lhx1;->b:Lsx1;
 
-    iget-object v1, v1, Ljx1;->h:Ljava/util/ArrayList;
+    iget-object v2, p0, Lhx1;->c:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v3, p0, Lhx1;->d:Le7e;
+
+    iget-object v4, p0, Lhx1;->o:Ljhg;
+
+    iget-object v5, p0, Lhx1;->X:Lsb0;
+
+    iget-object v6, p0, Lhx1;->Y:Ljava/util/List;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v7, "Use case "
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " ACTIVE"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v7, 0x0
 
-    move-result v2
+    invoke-virtual {v0, v1, v7}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-eqz v2, :cond_0
+    iget-object v1, v0, Lsx1;->a:Ljfc;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, v1, Ljfc;->c:Ljava/lang/Object;
 
-    move-result-object v2
+    check-cast v1, Ljava/util/LinkedHashMap;
 
-    check-cast v2, Lkx1;
+    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v2, p1}, Lkx1;->a(Landroid/hardware/camera2/TotalCaptureResult;)Ljx7;
+    move-result-object v7
 
-    move-result-object v2
+    check-cast v7, Lhhg;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v7, :cond_0
 
-    goto :goto_0
+    new-instance v7, Lhhg;
+
+    invoke-direct {v7, v3, v4, v5, v6}, Lhhg;-><init>(Le7e;Ljhg;Lsb0;Ljava/util/List;)V
+
+    invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    invoke-static {v0}, Lpch;->c(Ljava/util/List;)Lvw7;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    iput-boolean v1, v7, Lhhg;->f:Z
 
-    new-instance v0, Lbx1;
+    iget-object v1, v0, Lsx1;->a:Ljfc;
 
-    const/4 v1, 0x2
+    invoke-virtual/range {v1 .. v6}, Ljfc;->M(Ljava/lang/String;Le7e;Ljhg;Lsb0;Ljava/util/List;)V
 
-    invoke-direct {v0, v1}, Lbx1;-><init>(I)V
+    invoke-virtual {v0}, Lsx1;->K()V
 
-    invoke-static {}, Lvb4;->j()Lgr4;
+    return-void
 
-    move-result-object v1
+    :pswitch_0
+    iget-object v0, p0, Lhx1;->b:Lsx1;
 
-    new-instance v2, Lzde;
+    iget-object v2, p0, Lhx1;->c:Ljava/lang/String;
 
-    const/16 v3, 0x12
+    iget-object v3, p0, Lhx1;->d:Le7e;
 
-    invoke-direct {v2, v3, v0}, Lzde;-><init>(ILjava/lang/Object;)V
+    iget-object v4, p0, Lhx1;->o:Ljhg;
 
-    invoke-static {p1, v2, v1}, Lpch;->Q(Ljx7;Lhu;Ljava/util/concurrent/Executor;)Lt42;
+    iget-object v5, p0, Lhx1;->X:Lsb0;
 
-    move-result-object p1
+    iget-object v6, p0, Lhx1;->Y:Ljava/util/List;
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final b()Z
-    .locals 2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lhx1;->a:Ljx1;
+    const-string v7, "Use case "
 
-    iget-object v0, v0, Ljx1;->h:Ljava/util/ArrayList;
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v7, " UPDATED"
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lkx1;
+    const/4 v7, 0x0
 
-    invoke-interface {v1}, Lkx1;->b()Z
+    invoke-virtual {v0, v1, v7}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v1
+    iget-object v1, v0, Lsx1;->a:Ljfc;
 
-    if-eqz v1, :cond_0
+    invoke-virtual/range {v1 .. v6}, Ljfc;->M(Ljava/lang/String;Le7e;Ljhg;Lsb0;Ljava/util/List;)V
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lsx1;->K()V
 
-    return v0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lhx1;->b:Lsx1;
+
+    iget-object v2, p0, Lhx1;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lhx1;->d:Le7e;
+
+    iget-object v4, p0, Lhx1;->o:Ljhg;
+
+    iget-object v5, p0, Lhx1;->X:Lsb0;
+
+    iget-object v6, p0, Lhx1;->Y:Ljava/util/List;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v7, "Use case "
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " RESET"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v0, v1, v7}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lsx1;->a:Ljfc;
+
+    invoke-virtual/range {v1 .. v6}, Ljfc;->M(Ljava/lang/String;Le7e;Ljhg;Lsb0;Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lsx1;->p()V
+
+    invoke-virtual {v0}, Lsx1;->D()V
+
+    invoke-virtual {v0}, Lsx1;->K()V
+
+    iget v1, v0, Lsx1;->R0:I
+
+    const/16 v2, 0x9
+
+    if-ne v1, v2, :cond_1
+
+    invoke-virtual {v0}, Lsx1;->B()V
 
     :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lhx1;->a:Ljx1;
-
-    iget-object v0, v0, Ljx1;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkx1;
-
-    invoke-interface {v1}, Lkx1;->c()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

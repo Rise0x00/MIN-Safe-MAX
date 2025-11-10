@@ -1,44 +1,40 @@
-.class public final Lbpc;
+.class public abstract Lbpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a077d
 
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a077e
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a077f
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a0780
 
-    iput-object p1, p0, Lbpc;->a:Landroid/content/Context;
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0781
 
-    return-void
-.end method
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a0782
 
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a0783
 
-# virtual methods
-.method public final a()I
-    .locals 2
+.field public static oneme_settings_container:I = 0x7f0a0784
 
-    iget-object v0, p0, Lbpc;->a:Landroid/content/Context;
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a078c
 
-    invoke-static {v0}, Li28;->u(Landroid/content/Context;)I
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a078d
 
-    move-result v0
+.field public static oneme_settings_toolbar:I = 0x7f0a0827
 
-    const/16 v1, 0x168
+.field public static oneme_settings_topbar:I = 0x7f0a0828
 
-    if-lt v0, v1, :cond_0
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a0829
 
-    const/16 v0, 0x20
+.field public static oneme_settings_topbar_container:I = 0x7f0a082a
 
-    return v0
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a082b
 
-    :cond_0
-    const/16 v0, 0x1c
+.field public static oneme_settings_topbar_name:I = 0x7f0a082c
 
-    return v0
-.end method
+.field public static oneme_settings_topbar_nick:I = 0x7f0a082d
+
+.field public static oneme_settings_topbar_phone:I = 0x7f0a082e

@@ -1,38 +1,49 @@
-.class public final synthetic Lxf;
-.super Ljava/lang/Object;
+.class public final Lxf;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$DurationScaleChangeListener;
 
 
 # instance fields
-.field public final synthetic a:Lr6d;
+.field public a:Ltjg;
 
+.field public b:Landroid/animation/AnimatorSet;
 
-# direct methods
-.method public synthetic constructor <init>(Lr6d;)V
-    .locals 0
+.field public c:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxf;->a:Lr6d;
-
-    return-void
-.end method
+.field public d:Lbt;
 
 
 # virtual methods
-.method public final onChanged(F)V
+.method public final getChangingConfigurations()I
     .locals 1
 
-    iget-object v0, p0, Lxf;->a:Lr6d;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lr6d;->b:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v0, Lzf;
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iput p1, v0, Lzf;->g:F
+    .line 1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v1, "No constant state support for SDK < 24."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "No constant state support for SDK < 24."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

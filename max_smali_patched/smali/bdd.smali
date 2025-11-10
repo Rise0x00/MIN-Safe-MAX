@@ -2,550 +2,993 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Set;
-.implements Lim7;
+
+# static fields
+.field public static final f:Landroid/graphics/PorterDuff$Mode;
+
+.field public static g:Lbdd;
+
+.field public static final h:Lfp0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/WeakHashMap;
 
-.field public final synthetic b:Lwt9;
+.field public final b:Ljava/util/WeakHashMap;
+
+.field public c:Landroid/util/TypedValue;
+
+.field public d:Z
+
+.field public e:Lzq5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwt9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lbdd;->a:I
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    iput-object p1, p0, Lbdd;->b:Lwt9;
+    sput-object v0, Lbdd;->f:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfp0;
+
+    const/4 v1, 0x6
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lfp0;-><init>(II)V
+
+    sput-object v0, Lbdd;->h:Lfp0;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget p1, p0, Lbdd;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    iget p1, p0, Lbdd;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final clear()V
+.method public constructor <init>()V
     .locals 2
 
-    iget v0, p0, Lbdd;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    const/4 v1, 0x0
 
-    const-string v1, "Operation is not supported for read-only collection"
+    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lbdd;->b:Ljava/util/WeakHashMap;
 
-    throw v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final contains(Ljava/lang/Object;)Z
+.method public static declared-synchronized b()Lbdd;
     .locals 2
 
-    iget v0, p0, Lbdd;->a:I
+    const-class v0, Lbdd;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    iget-object v0, p0, Lbdd;->b:Lwt9;
+    :try_start_0
+    sget-object v1, Lbdd;->g:Lbdd;
 
-    invoke-virtual {v0, p1}, Lwt9;->b(Ljava/lang/Object;)Z
+    if-nez v1, :cond_0
 
-    move-result p1
+    new-instance v1, Lbdd;
 
-    return p1
+    invoke-direct {v1}, Lbdd;-><init>()V
 
-    :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
+    sput-object v1, Lbdd;->g:Lbdd;
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
-    check-cast p1, Ljava/util/Map$Entry;
+    :goto_0
+    sget-object v1, Lbdd;->g:Lbdd;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lbdd;->b:Lwt9;
+    monitor-exit v0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public static declared-synchronized e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    .locals 4
+
+    const-class v0, Lbdd;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lbdd;->h:Lfp0;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v2, 0x1f
+
+    add-int v3, v2, p0
+
+    mul-int/2addr v3, v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcd8;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/PorterDuffColorFilter;
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    invoke-direct {v2, p0, p1}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v3
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0, v2}, Lcd8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/graphics/PorterDuffColorFilter;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-object v2
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 6
+
+    iget-object v0, p0, Lbdd;->c:Landroid/util/TypedValue;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    iput-object v0, p0, Lbdd;->c:Landroid/util/TypedValue;
+
+    :cond_0
+    iget-object v0, p0, Lbdd;->c:Landroid/util/TypedValue;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lwt9;->f(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p2, v0, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    iget v1, v0, Landroid/util/TypedValue;->assetCookie:I
+
+    int-to-long v1, v1
+
+    const/16 v3, 0x20
+
+    shl-long/2addr v1, v3
+
+    iget v3, v0, Landroid/util/TypedValue;->data:I
+
+    int-to-long v3, v3
+
+    or-long/2addr v1, v3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v3, p0, Lbdd;->b:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v3, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lic8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_1
+
+    monitor-exit p0
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_1
+    invoke-virtual {v3, v1, v2}, Lic8;->b(J)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/ref/WeakReference;
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v3}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_5
+
+    :cond_2
+    :try_start_2
+    invoke-virtual {v3, v1, v2}, Lic8;->f(J)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :cond_3
+    monitor-exit p0
+
+    :goto_0
+    if-eqz v4, :cond_4
+
+    return-object v4
+
+    :cond_4
+    iget-object v3, p0, Lbdd;->e:Lzq5;
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    sget v3, Lrmc;->abc_cab_background_top_material:I
+
+    if-ne p2, v3, :cond_6
+
+    new-instance v4, Landroid/graphics/drawable/LayerDrawable;
+
+    sget p2, Lrmc;->abc_cab_background_internal_bg:I
+
+    invoke-virtual {p0, p1, p2}, Lbdd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    sget v3, Lrmc;->abc_cab_background_top_mtrl_alpha:I
+
+    invoke-virtual {p0, p1, v3}, Lbdd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    filled-new-array {p2, v3}, [Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    invoke-direct {v4, p2}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    :cond_6
+    sget v3, Lrmc;->abc_ratingbar_material:I
+
+    if-ne p2, v3, :cond_7
+
+    sget p2, Lklc;->abc_star_big:I
+
+    invoke-static {p0, p1, p2}, Lzq5;->f(Lbdd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_7
+    sget v3, Lrmc;->abc_ratingbar_indicator_material:I
+
+    if-ne p2, v3, :cond_8
+
+    sget p2, Lklc;->abc_star_medium:I
+
+    invoke-static {p0, p1, p2}, Lzq5;->f(Lbdd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_8
+    sget v3, Lrmc;->abc_ratingbar_small_material:I
+
+    if-ne p2, v3, :cond_9
+
+    sget p2, Lklc;->abc_star_small:I
+
+    invoke-static {p0, p1, p2}, Lzq5;->f(Lbdd;Landroid/content/Context;I)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object v4
+
+    :cond_9
+    :goto_1
+    if-eqz v4, :cond_c
+
+    iget p2, v0, Landroid/util/TypedValue;->changingConfigurations:I
+
+    invoke-virtual {v4, p2}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
+
+    monitor-enter p0
+
+    :try_start_3
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_b
+
+    iget-object v0, p0, Lbdd;->b:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast v0, Lic8;
 
-    move-result-object p1
+    if-nez v0, :cond_a
 
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v0, Lic8;
 
-    move-result p1
+    const/4 v3, 0x0
 
-    :goto_0
-    return p1
+    invoke-direct {v0, v3}, Lic8;-><init>(Ljava/lang/Object;)V
 
-    nop
+    iget-object v3, p0, Lbdd;->b:Ljava/util/WeakHashMap;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v3, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_a
+    :goto_2
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v1, v2, p1}, Lic8;->e(JLjava/lang/Object;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    monitor-exit p0
+
+    goto :goto_3
+
+    :cond_b
+    monitor-exit p0
+
+    :goto_3
+    return-object v4
+
+    :goto_4
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw p1
+
+    :cond_c
+    return-object v4
+
+    :goto_5
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    throw p1
 .end method
 
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 4
+.method public final declared-synchronized c(ILandroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iget v0, p0, Lbdd;->a:I
+    monitor-enter p0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
+    :try_start_0
+    iget-boolean v0, p0, Lbdd;->d:Z
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    iput-boolean v0, p0, Lbdd;->d:Z
 
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lvlc;->abc_vector_test:I
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0, p2, v0}, Lbdd;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iget-object v2, p0, Lbdd;->b:Lwt9;
+    if-eqz v0, :cond_5
 
-    invoke-virtual {v2, v0}, Lwt9;->b(Ljava/lang/Object;)Z
+    instance-of v1, v0, Ltjg;
 
-    move-result v0
+    if-nez v1, :cond_1
 
-    if-nez v0, :cond_1
+    const-string v1, "android.graphics.drawable.VectorDrawable"
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_2
-    :goto_0
-    return v1
+    move-result-object v0
 
-    :pswitch_0
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_4
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p2, p1}, Lbdd;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map$Entry;
+    if-nez v0, :cond_2
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lbdd;->b:Lwt9;
-
-    invoke-virtual {v3, v2}, Lwt9;->f(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-static {p2, p1}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    goto :goto_1
 
-    move-result v0
+    :catchall_0
+    move-exception p1
 
-    if-nez v0, :cond_4
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0, p2, p1, p3, v0}, Lbdd;->g(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    invoke-static {v0}, Li15;->a(Landroid/graphics/drawable/Drawable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_4
+    monitor-exit p0
+
+    return-object v0
+
+    :cond_5
+    const/4 p1, 0x0
+
+    :try_start_1
+    iput-boolean p1, p0, Lbdd;->d:Z
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :goto_2
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0, p2, p1, v0}, Lbdd;->c(ILandroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lbdd;->a:Ljava/util/WeakHashMap;
 
     const/4 v1, 0x0
 
-    :cond_5
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyve;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p2}, Lyve;->b(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/res/ColorStateList;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Lbdd;->e:Lzq5;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0, p1, p2}, Lzq5;->h(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
     :goto_1
-    return v1
+    if-eqz v1, :cond_4
 
-    nop
+    iget-object v0, p0, Lbdd;->a:Ljava/util/WeakHashMap;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v0, :cond_2
 
-.method public final isEmpty()Z
-    .locals 1
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    iget v0, p0, Lbdd;->a:I
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    iput-object v0, p0, Lbdd;->a:Ljava/util/WeakHashMap;
 
-    iget-object v0, p0, Lbdd;->b:Lwt9;
+    :cond_2
+    iget-object v0, p0, Lbdd;->a:Ljava/util/WeakHashMap;
 
-    invoke-virtual {v0}, Lwt9;->h()Z
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    check-cast v0, Lyve;
 
-    :pswitch_0
-    iget-object v0, p0, Lbdd;->b:Lwt9;
+    if-nez v0, :cond_3
 
-    invoke-virtual {v0}, Lwt9;->h()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    iget v0, p0, Lbdd;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lcdd;
-
-    iget-object v1, p0, Lbdd;->b:Lwt9;
+    new-instance v0, Lyve;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcdd;-><init>(Lwt9;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2}, Lyve;-><init>(I)V
 
-    invoke-static {v0}, Lv4b;->u(Llf6;)Lrrd;
+    iget-object v2, p0, Lbdd;->a:Ljava/util/WeakHashMap;
 
-    move-result-object v0
+    invoke-virtual {v2, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    invoke-virtual {v0, p2, v1}, Lyve;->a(ILjava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_4
+    move-object v0, v1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_5
+    :goto_2
+    monitor-exit p0
 
     return-object v0
 
-    :pswitch_0
-    new-instance v0, Ladd;
+    :goto_3
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v1, p0, Lbdd;->b:Lwt9;
+    throw p1
+.end method
+
+.method public final g(Landroid/content/Context;IZLandroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 7
+
+    invoke-virtual {p0, p1, p2}, Lbdd;->f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Ly05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    iget-object p3, p0, Lbdd;->e:Lzq5;
+
+    if-nez p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget p3, Lrmc;->abc_switch_thumb_material:I
+
+    if-ne p2, p3, :cond_1
+
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    :cond_1
+    :goto_0
+    if-eqz v1, :cond_2
+
+    invoke-static {p1, v1}, Ly05;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_2
+    return-object p1
+
+    :cond_3
+    iget-object v0, p0, Lbdd;->e:Lzq5;
+
+    if-eqz v0, :cond_6
+
+    sget v0, Lrmc;->abc_seekbar_track_material:I
+
+    const v2, 0x102000d
+
+    const v3, 0x102000f
+
+    const/high16 v4, 0x1020000
+
+    if-ne p2, v0, :cond_4
+
+    move-object p2, p4
+
+    check-cast p2, Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-virtual {p2, v4}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    sget v0, Likc;->colorControlNormal:I
+
+    invoke-static {p1, v0}, Lftf;->c(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sget-object v1, Lro;->b:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {p3, v0, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p2, v3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    sget v0, Likc;->colorControlNormal:I
+
+    invoke-static {p1, v0}, Lftf;->c(Landroid/content/Context;I)I
+
+    move-result v0
+
+    invoke-static {p3, v0, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p2, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    sget p3, Likc;->colorControlActivated:I
+
+    invoke-static {p1, p3}, Lftf;->c(Landroid/content/Context;I)I
+
+    move-result p1
+
+    invoke-static {p2, p1, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    return-object p4
+
+    :cond_4
+    sget v0, Lrmc;->abc_ratingbar_material:I
+
+    if-eq p2, v0, :cond_5
+
+    sget v0, Lrmc;->abc_ratingbar_indicator_material:I
+
+    if-eq p2, v0, :cond_5
+
+    sget v0, Lrmc;->abc_ratingbar_small_material:I
+
+    if-ne p2, v0, :cond_6
+
+    :cond_5
+    move-object p2, p4
+
+    check-cast p2, Landroid/graphics/drawable/LayerDrawable;
+
+    invoke-virtual {p2, v4}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    sget v0, Likc;->colorControlNormal:I
+
+    invoke-static {p1, v0}, Lftf;->b(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sget-object v1, Lro;->b:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {p3, v0, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p2, v3}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    sget v0, Likc;->colorControlActivated:I
+
+    invoke-static {p1, v0}, Lftf;->c(Landroid/content/Context;I)I
+
+    move-result v0
+
+    invoke-static {p3, v0, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p2, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    sget p3, Likc;->colorControlActivated:I
+
+    invoke-static {p1, p3}, Lftf;->c(Landroid/content/Context;I)I
+
+    move-result p1
+
+    invoke-static {p2, p1, v1}, Lzq5;->i(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
+
+    return-object p4
+
+    :cond_6
+    iget-object v0, p0, Lbdd;->e:Lzq5;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ladd;-><init>(Lwt9;Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_d
 
-    invoke-static {v0}, Lv4b;->u(Llf6;)Lrrd;
+    sget-object v3, Lro;->b:Landroid/graphics/PorterDuff$Mode;
 
-    move-result-object v0
+    iget-object v4, v0, Lzq5;->a:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v4, [I
 
-    nop
+    invoke-static {p2, v4}, Lzq5;->a(I[I)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v4
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
+    const/4 v5, 0x1
 
-    iget p1, p0, Lbdd;->a:I
+    const/4 v6, -0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-eqz v4, :cond_7
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    sget p2, Likc;->colorControlNormal:I
 
-    const-string v0, "Operation is not supported for read-only collection"
+    :goto_1
+    move v4, v5
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :goto_2
+    move v0, v6
 
-    throw p1
+    goto :goto_4
 
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    :cond_7
+    iget-object v4, v0, Lzq5;->c:Ljava/lang/Object;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    check-cast v4, [I
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-static {p2, v4}, Lzq5;->a(I[I)Z
 
-    throw p1
+    move-result v4
 
-    nop
+    if-eqz v4, :cond_8
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    sget p2, Likc;->colorControlActivated:I
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
+    goto :goto_1
 
-    iget p1, p0, Lbdd;->a:I
+    :cond_8
+    iget-object v0, v0, Lzq5;->d:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast v0, [I
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-static {p2, v0}, Lzq5;->a(I[I)Z
 
-    const-string v0, "Operation is not supported for read-only collection"
+    move-result v0
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const v4, 0x1010031
 
-    throw p1
+    if-eqz v0, :cond_9
 
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    :goto_3
+    move p2, v4
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    throw p1
+    :cond_9
+    sget v0, Lrmc;->abc_list_divider_mtrl_alpha:I
 
-    nop
+    if-ne p2, v0, :cond_a
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const p2, 0x42233333    # 40.8f
 
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
+    invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
-    iget p1, p0, Lbdd;->a:I
+    move-result p2
 
-    packed-switch p1, :pswitch_data_0
+    const v0, 0x1010030
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    move v4, v0
 
-    const-string v0, "Operation is not supported for read-only collection"
+    move v0, p2
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move p2, v4
 
-    throw p1
+    move v4, v5
 
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    goto :goto_4
 
-    const-string v0, "Operation is not supported for read-only collection"
+    :cond_a
+    sget v0, Lrmc;->abc_dialog_material_background:I
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-ne p2, v0, :cond_b
 
-    throw p1
+    goto :goto_3
 
-    nop
+    :cond_b
+    move p2, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move v4, p2
 
-.method public final size()I
-    .locals 1
+    goto :goto_2
 
-    iget v0, p0, Lbdd;->a:I
+    :goto_4
+    if-eqz v4, :cond_d
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lbdd;->b:Lwt9;
+    move-result-object v2
 
-    iget v0, v0, Lwt9;->e:I
+    invoke-static {p1, p2}, Lftf;->c(Landroid/content/Context;I)I
 
-    return v0
+    move-result p1
 
-    :pswitch_0
-    iget-object v0, p0, Lbdd;->b:Lwt9;
-
-    iget v0, v0, Lwt9;->e:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lbdd;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 1
-    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 2
-    :pswitch_0
-    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lbdd;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p1, v3}, Lro;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 4
-    :pswitch_0
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    if-eq v0, v6, :cond_c
 
-    move-result-object p1
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    return-object p1
+    :cond_c
+    move v2, v5
 
-    nop
+    :cond_d
+    if-nez v2, :cond_e
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz p3, :cond_e
+
+    return-object v1
+
+    :cond_e
+    return-object p4
 .end method

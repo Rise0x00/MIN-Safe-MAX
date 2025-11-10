@@ -3,40 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lb15;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public final synthetic b:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
+.field public final synthetic b:Lmm5;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;)V
+.method public constructor <init>(Lmm5;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrs;->b:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
+    iput-object p1, p0, Lrs;->b:Lmm5;
+
+    iput p2, p0, Lrs;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lrs;->b:Lmm5;
 
-    iput-boolean v0, p0, Lrs;->a:Z
+    iget v1, p0, Lrs;->a:I
 
-    sget v0, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->o:I
+    invoke-virtual {v0, p1, v1}, Lmm5;->e(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lrs;->b:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object p1
+.end method
 
-    return-void
+.method public final j()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    iget-object v0, p0, Lrs;->b:Lmm5;
+
+    iget v1, p0, Lrs;->a:I
+
+    invoke-virtual {v0, v1}, Lmm5;->c(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
 .end method

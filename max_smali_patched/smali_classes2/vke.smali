@@ -1,562 +1,737 @@
-.class public final Lvke;
-.super Ljava/lang/Object;
+.class public Lvke;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Luke;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lt00;
 
-.field public final b:Landroid/content/Context;
+.field public final b:Landroid/graphics/Paint;
 
-.field public final c:Lwke;
+.field public final c:Landroid/graphics/Rect;
 
-.field public final d:Lkbh;
+.field public final d:Landroid/graphics/Matrix;
 
-.field public final e:Ls5f;
+.field public e:Landroid/animation/ValueAnimator;
+
+.field public f:Lske;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    const-class v0, Lvke;
+    new-instance v0, Lt00;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/16 v1, 0x15
 
-    move-result-object v0
+    invoke-direct {v0, v1, p0}, Lt00;-><init>(ILjava/lang/Object;)V
 
-    const-string v1, "(DEF_SSL)"
+    iput-object v0, p0, Lvke;->a:Lt00;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Landroid/graphics/Paint;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lvke;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object v0, p0, Lvke;->b:Landroid/graphics/Paint;
 
-    move-result-object p1
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-object p1, p0, Lvke;->b:Landroid/content/Context;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    new-instance p1, Lwke;
+    iput-object v0, p0, Lvke;->c:Landroid/graphics/Rect;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/graphics/Matrix;
 
-    iput-object p1, p0, Lvke;->c:Lwke;
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    new-instance v0, Lkbh;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, p1}, Lkbh;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lvke;->d:Lkbh;
-
-    new-instance p1, Lwzd;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p1, v0}, Lwzd;-><init>(I)V
-
-    new-instance v0, Ls5f;
-
-    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object v0, p0, Lvke;->e:Ls5f;
+    iput-object v0, p0, Lvke;->d:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ldie;
-    .locals 8
+.method public final a()V
+    .locals 1
 
-    sget-object v0, Ly38;->o:Ly38;
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lvke;->a:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    sget-object v2, Lox9;->j:Lqpa;
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
-    const/4 v3, 0x0
+    move-result v0
 
-    if-nez v2, :cond_0
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lvke;->f:Lske;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    iget-boolean v0, v0, Lske;->j:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final b(Lske;)V
+    .locals 6
+
+    iput-object p1, p0, Lvke;->f:Lske;
+
+    new-instance v0, Landroid/graphics/PorterDuffXfermode;
+
+    iget-object p1, p1, Lske;->k:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v0, p1}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+
+    iget-object p1, p0, Lvke;->b:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    invoke-virtual {p0}, Lvke;->e()V
+
+    iget-object p1, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->isStarted()Z
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2, v0}, Lqpa;->b(Ly38;)Z
+    move v1, v0
 
-    move-result v4
+    :goto_0
+    iget-object p1, p0, Lvke;->f:Lske;
 
-    if-eqz v4, :cond_1
+    if-nez p1, :cond_1
 
-    const-string v4, "createSocketFactory, host="
-
-    const-string v5, " ->"
-
-    invoke-static {v4, p1, v5}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v0, v1, v4, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 p1, 0x0
 
     :cond_1
-    :goto_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-object v2, p1, Lske;->q:Landroid/animation/ValueAnimator;
 
-    move-result-wide v1
+    if-nez v2, :cond_2
 
-    :try_start_0
-    new-instance v4, Ldie;
+    iget-wide v2, p1, Lske;->o:J
 
-    iget-object v5, p0, Lvke;->b:Landroid/content/Context;
+    iget-wide v4, p1, Lske;->n:J
 
-    invoke-direct {v4, v5, p1}, Ldie;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    div-long/2addr v2, v4
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    long-to-float v2, v2
 
-    move-result-wide v5
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    sub-long/2addr v5, v1
+    add-float/2addr v2, v3
 
-    iget-object p1, p0, Lvke;->c:Lwke;
+    const/4 v3, 0x2
 
-    const-wide/16 v1, 0x0
+    new-array v3, v3, [F
 
-    cmp-long v1, v5, v1
+    const/4 v4, 0x0
 
-    if-ltz v1, :cond_2
+    aput v4, v3, v0
 
-    iput-wide v5, p1, Lwke;->a:J
+    const/4 v0, 0x1
 
-    iget-wide v1, p1, Lwke;->b:J
+    aput v2, v3, v0
 
-    add-long/2addr v1, v5
-
-    iput-wide v1, p1, Lwke;->b:J
-
-    iget v1, p1, Lwke;->c:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p1, Lwke;->c:I
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_1
-    iget-object p1, p0, Lvke;->a:Ljava/lang/String;
-
-    sget-object v1, Lox9;->j:Lqpa;
-
-    if-nez v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v1, v0}, Lqpa;->b(Ly38;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    const-string v2, "<- createSocketFactory, took="
-
-    const-string v7, "ms"
-
-    invoke-static {v5, v6, v2, v7}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, p1, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v0, p1, Lske;->m:I
 
-    :cond_4
-    :goto_2
-    return-object v4
+    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->setRepeatMode(I)V
 
-    :catchall_0
-    move-exception p1
+    iget v0, p1, Lske;->l:I
 
-    goto :goto_3
+    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    :catch_0
-    move-exception p1
+    iget-wide v3, p1, Lske;->n:J
 
-    goto :goto_4
+    invoke-virtual {v2, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    :goto_3
-    new-instance v0, Ljavax/net/ssl/SSLException;
+    iget-object v0, p1, Lske;->p:Landroid/view/animation/Interpolator;
 
-    const-string v1, "Failed to create socket factory"
+    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    invoke-direct {v0, v1, p1}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object v2, p1, Lske;->q:Landroid/animation/ValueAnimator;
 
-    throw v0
+    :cond_2
+    iput-object v2, p0, Lvke;->e:Landroid/animation/ValueAnimator;
 
-    :goto_4
-    throw p1
+    iget-object p1, p0, Lvke;->a:Lt00;
+
+    invoke-virtual {v2, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    if-eqz v1, :cond_3
+
+    iget-object p1, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method
 
-.method public final b(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;)V
-    .locals 13
+.method public final c()V
+    .locals 2
 
-    sget-object v0, Ly38;->o:Ly38;
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lvke;->a:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    sget-object v2, Lox9;->j:Lqpa;
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
-    if-nez v2, :cond_0
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2, v0}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
-    move-result v4
+    move-result-object v0
 
-    if-eqz v4, :cond_1
+    if-eqz v0, :cond_1
 
-    const-string v4, "verifySocket, host="
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
 
-    const-string v5, " ->"
-
-    invoke-static {v4, p2, v5}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v0, v1, v4, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     :cond_1
     :goto_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    iget-object v4, p0, Lvke;->d:Lkbh;
-
-    iget-object v4, v4, Lkbh;->b:Ljava/lang/Object;
-
-    check-cast v4, Lwke;
-
-    const-string v5, "session is not valid "
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    const-wide/16 v8, 0x0
-
-    :try_start_0
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v10
-
-    invoke-interface {v10}, Ljavax/net/ssl/SSLSession;->isValid()Z
-
-    move-result v11
-
-    const/4 v12, 0x2
-
-    if-eqz v11, :cond_7
-
-    const-string v5, "SSL_NULL_WITH_NULL_NULL"
-
-    invoke-interface {v10}, Ljavax/net/ssl/SSLSession;->getCipherSuite()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v5, v10}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v5
-    :try_end_0
-    .catch Lone/me/net/ssl/api/InvalidSslSessionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    if-nez v5, :cond_6
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v10
-
-    sub-long/2addr v10, v6
-
-    cmp-long v5, v10, v8
-
-    if-ltz v5, :cond_2
-
-    iput-wide v10, v4, Lwke;->g:J
-
-    iget-wide v5, v4, Lwke;->h:J
-
-    add-long/2addr v5, v10
-
-    iput-wide v5, v4, Lwke;->h:J
-
-    iget v5, v4, Lwke;->i:I
-
-    add-int/lit8 v5, v5, 0x1
-
-    iput v5, v4, Lwke;->i:I
-
-    :cond_2
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    sub-long/2addr v4, v1
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    iget-object v6, p0, Lvke;->d:Lkbh;
-
-    iget-object v6, v6, Lkbh;->b:Ljava/lang/Object;
-
-    check-cast v6, Lwke;
-
-    const-string v7, "Failed to verify host="
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v8
-
-    :try_start_1
-    invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
-
-    move-result-object v10
-
-    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v11
-
-    invoke-interface {v10, p2, v11}, Ljavax/net/ssl/HostnameVerifier;->verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
-
-    move-result v10
-    :try_end_1
-    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eqz v10, :cond_5
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    sub-long/2addr p1, v8
-
-    invoke-virtual {v6, p1, p2}, Lwke;->a(J)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p1
-
-    sub-long/2addr p1, v1
-
-    iget-object v1, p0, Lvke;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v2, v0}, Lqpa;->b(Ly38;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    add-long/2addr v4, p1
-
-    const-string p1, "<- verifySocket, took="
-
-    const-string p2, "ms"
-
-    invoke-static {v4, v5, p1, p2}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v2, v0, v1, p1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_1
     return-void
+.end method
 
-    :cond_5
-    :try_start_2
-    new-instance v0, Ljavax/net/ssl/SSLPeerUnverifiedException;
+.method public final d()V
+    .locals 2
 
-    invoke-virtual {v7, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public draw(Landroid/graphics/Canvas;)V
+    .locals 9
+
+    iget-object v0, p0, Lvke;->b:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_0
 
-    throw v0
-    :try_end_2
-    .catch Ljavax/net/ssl/SSLPeerUnverifiedException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    return-void
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    iget-object v1, p0, Lvke;->f:Lske;
 
-    goto :goto_2
+    const/4 v2, 0x0
 
-    :catch_0
-    move-exception v0
+    if-nez v1, :cond_1
+
+    move-object v1, v2
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    float-to-double v3, v1
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->tan(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    iget-object v4, p0, Lvke;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    mul-float/2addr v6, v3
+
+    add-float/2addr v6, v5
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    mul-float/2addr v3, v7
+
+    add-float/2addr v3, v5
+
+    iget-object v5, p0, Lvke;->e:Landroid/animation/ValueAnimator;
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v5}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result v5
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v1
+
+    :goto_0
+    iget-object v7, p0, Lvke;->f:Lske;
+
+    if-nez v7, :cond_3
+
+    move-object v7, v2
+
+    :cond_3
+    iget v7, v7, Lske;->c:I
+
+    invoke-static {v7}, Lnx1;->v(I)I
+
+    move-result v7
+
+    if-eqz v7, :cond_7
+
+    const/4 v8, 0x1
+
+    if-eq v7, v8, :cond_6
+
+    const/4 v8, 0x2
+
+    if-eq v7, v8, :cond_5
+
+    const/4 v3, 0x3
+
+    if-ne v7, v3, :cond_4
+
+    neg-float v3, v6
+
+    invoke-static {v3, v6, v5, v6}, Lxjb;->i(FFFF)F
+
+    move-result v3
+
+    :goto_1
+    move v5, v3
+
+    move v3, v1
 
     goto :goto_3
 
-    :goto_2
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-wide v1
-
-    sub-long/2addr v1, v8
-
-    invoke-virtual {v6, v1, v2}, Lwke;->a(J)V
-
-    invoke-static {p1, p2}, Lio7;->g(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lvke;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1, v3}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
-
-    invoke-virtual {v7, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
-    :goto_3
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    :cond_5
+    neg-float v6, v3
 
-    move-result-wide v1
+    invoke-static {v6, v3, v5, v3}, Lxjb;->i(FFFF)F
 
-    sub-long/2addr v1, v8
+    move-result v3
 
-    invoke-virtual {v6, v1, v2}, Lwke;->a(J)V
+    :goto_2
+    move v5, v1
 
-    invoke-static {p1, p2}, Lio7;->g(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lvke;->a:Ljava/lang/String;
-
-    invoke-static {p2, p1, v3}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
+    goto :goto_3
 
     :cond_6
-    :try_start_3
-    new-instance p1, Lone/me/net/ssl/api/InvalidSslSessionException;
+    neg-float v3, v6
 
-    const-string p2, "Illegal session cipher suite"
+    invoke-static {v6, v3, v5, v3}, Lxjb;->i(FFFF)F
 
-    invoke-direct {p1, p2, v12}, Lone/me/net/ssl/api/InvalidSslSessionException;-><init>(Ljava/lang/String;I)V
+    move-result v3
 
-    throw p1
+    goto :goto_1
 
-    :catchall_1
-    move-exception p1
+    :cond_7
+    neg-float v6, v3
+
+    invoke-static {v3, v6, v5, v6}, Lxjb;->i(FFFF)F
+
+    move-result v3
+
+    goto :goto_2
+
+    :goto_3
+    iget-object v6, p0, Lvke;->d:Landroid/graphics/Matrix;
+
+    invoke-virtual {v6}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v7, p0, Lvke;->f:Lske;
+
+    if-nez v7, :cond_8
 
     goto :goto_4
 
-    :catch_1
-    move-exception p1
+    :cond_8
+    move-object v2, v7
+
+    :goto_4
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    div-float/2addr v2, v7
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    div-float/2addr v8, v7
+
+    invoke-virtual {v6, v1, v2, v8}, Landroid/graphics/Matrix;->setRotate(FFF)V
+
+    invoke-virtual {v6, v3, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v6}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+
+    invoke-virtual {p1, v4, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 13
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    if-eqz v1, :cond_c
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_7
+
+    :cond_0
+    iget-object v2, p0, Lvke;->f:Lske;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_1
+
+    move-object v2, v3
+
+    :cond_1
+    iget v4, v2, Lske;->f:I
+
+    if-lez v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v2, v2, Lske;->g:F
+
+    int-to-float v1, v1
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v4
+
+    :goto_0
+    iget-object v1, p0, Lvke;->f:Lske;
+
+    if-nez v1, :cond_3
+
+    move-object v1, v3
+
+    :cond_3
+    iget v1, v1, Lske;->h:F
+
+    int-to-float v0, v0
+
+    mul-float/2addr v1, v0
+
+    invoke-static {v1}, Lkhi;->c(F)I
+
+    move-result v0
+
+    iget-object v1, p0, Lvke;->f:Lske;
+
+    if-nez v1, :cond_4
+
+    move-object v2, v3
+
+    goto :goto_1
+
+    :cond_4
+    move-object v2, v1
+
+    :goto_1
+    iget v2, v2, Lske;->c:I
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    if-eq v2, v5, :cond_7
+
+    if-nez v1, :cond_5
+
+    move-object v1, v3
+
+    :cond_5
+    iget v1, v1, Lske;->c:I
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move v1, v6
+
+    goto :goto_3
+
+    :cond_7
+    :goto_2
+    const/4 v1, 0x1
+
+    :goto_3
+    if-eqz v1, :cond_8
+
+    move v4, v6
+
+    :cond_8
+    if-eqz v1, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    move v0, v6
+
+    :goto_4
+    new-instance v5, Landroid/graphics/LinearGradient;
+
+    int-to-float v8, v4
+
+    int-to-float v9, v0
+
+    iget-object v0, p0, Lvke;->f:Lske;
+
+    if-nez v0, :cond_a
+
+    move-object v1, v3
 
     goto :goto_5
 
-    :cond_7
-    new-instance p1, Lone/me/net/ssl/api/InvalidSslSessionException;
+    :cond_a
+    move-object v1, v0
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    :goto_5
+    iget-object v10, v1, Lske;->b:[I
 
-    invoke-direct {p2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2, v12}, Lone/me/net/ssl/api/InvalidSslSessionException;-><init>(Ljava/lang/String;I)V
-
-    throw p1
-    :try_end_3
-    .catch Lone/me/net/ssl/api/InvalidSslSessionException; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :goto_4
-    :try_start_4
-    new-instance p2, Lone/me/net/ssl/api/InvalidSslSessionException;
-
-    const-string v0, "Failed to check session"
-
-    invoke-direct {p2, v0, p1}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :catchall_2
-    move-exception p1
+    if-nez v0, :cond_b
 
     goto :goto_6
 
-    :goto_5
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    :cond_b
+    move-object v3, v0
 
     :goto_6
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object v11, v3, Lske;->a:[F
 
-    move-result-wide v0
+    sget-object v12, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    sub-long/2addr v0, v6
+    const/4 v6, 0x0
 
-    cmp-long p2, v0, v8
+    const/4 v7, 0x0
 
-    if-ltz p2, :cond_8
+    invoke-direct/range {v5 .. v12}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    iput-wide v0, v4, Lwke;->g:J
+    iget-object v0, p0, Lvke;->b:Landroid/graphics/Paint;
 
-    iget-wide v2, v4, Lwke;->h:J
+    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    add-long/2addr v2, v0
+    :cond_c
+    :goto_7
+    return-void
+.end method
 
-    iput-wide v2, v4, Lwke;->h:J
+.method public final getOpacity()I
+    .locals 3
 
-    iget p2, v4, Lwke;->i:I
+    iget-object v0, p0, Lvke;->f:Lske;
 
-    add-int/lit8 p2, p2, 0x1
+    const/4 v1, 0x0
 
-    iput p2, v4, Lwke;->i:I
+    if-nez v0, :cond_0
 
-    :cond_8
-    throw p1
+    move-object v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v0
+
+    :goto_0
+    iget-boolean v2, v2, Lske;->i:Z
+
+    if-nez v2, :cond_3
+
+    if-nez v0, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    iget-object v0, v0, Lske;->k:Landroid/graphics/PorterDuff$Mode;
+
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
+
+    if-ne v0, v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, -0x1
+
+    return v0
+
+    :cond_3
+    :goto_1
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result p1
+
+    iget-object v1, p0, Lvke;->c:Landroid/graphics/Rect;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v2, v0, p1}, Landroid/graphics/Rect;->set(IIII)V
+
+    invoke-virtual {p0}, Lvke;->e()V
+
+    invoke-virtual {p0}, Lvke;->a()V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,49 +1,88 @@
 .class public final Ln7c;
-.super Lnz3;
+.super Lmd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lp7c;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lp7c;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Ln7c;->X:Lp7c;
+    const/16 v0, 0xe
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+
+    iput-object p1, p0, Ln7c;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ln7c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ln7c;
+
+    iget-object v1, p0, Ln7c;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Ln7c;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Ln7c;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ln7c;->b:Ljava/lang/String;
 
-    iget p1, p0, Ln7c;->Y:I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Ln7c;->Y:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Ln7c;->X:Lp7c;
+    const-string v0, "SendLink(link="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-static {p1, v0, v0, p0}, Lp7c;->p(Lp7c;Lem5;Lql5;Lnz3;)Ljava/lang/Object;
+    iget-object v2, p0, Ln7c;->b:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

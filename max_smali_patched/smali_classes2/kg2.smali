@@ -1,100 +1,198 @@
 .class public final Lkg2;
-.super Lm3f;
+.super Lzm;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lonf;
+.implements Lwib;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final d:J
 
-.field public final synthetic Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
-    iput-object p2, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {p0, p1, p2}, Lzm;-><init>(J)V
 
-    const/4 p2, 0x2
+    iput-wide p3, p0, Lkg2;->d:J
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p5, p0, Lkg2;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c()I
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Lzm;->m()Lad2;
 
-    invoke-virtual {p0, p1, p2}, Lkg2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
+
+    iget-wide v1, p0, Lkg2;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lad2;->D(J)Lt92;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public final d()V
+    .locals 3
+
+    invoke-virtual {p0}, Lzm;->s()Lfpf;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lzm;->a:J
+
+    invoke-virtual {v0, v1, v2}, Lfpf;->d(J)V
+
+    return-void
+.end method
+
+.method public final e(Lmmf;)V
+    .locals 5
+
+    invoke-virtual {p0}, Lzm;->l()Liw0;
 
     move-result-object p1
 
-    check-cast p1, Lkg2;
+    new-instance v0, Llg2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-wide v1, p0, Lzm;->a:J
 
-    invoke-virtual {p1, p2}, Lkg2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v3, p0, Lkg2;->d:J
 
-    return-object p2
+    invoke-direct {v0, v1, v2, v3, v4}, Llg2;-><init>(JJ)V
+
+    invoke-virtual {p1, v0}, Liw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final f()[B
+    .locals 3
 
-    new-instance v0, Lkg2;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;
 
-    iget-object v1, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChannelLeave;-><init>()V
 
-    invoke-direct {v0, p2, v1}, Lkg2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    iget-wide v1, p0, Lzm;->a:J
 
-    iput-object p1, v0, Lkg2;->X:Ljava/lang/Object;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->requestId:J
+
+    iget-wide v1, p0, Lkg2;->d:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->chatId:J
+
+    iget-wide v1, p0, Lkg2;->o:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->chatServerId:J
+
+    invoke-static {v0}, Lud9;->toByteArray(Lud9;)[B
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final g()I
+    .locals 1
+
+    const v0, 0xf4240
+
+    return v0
+.end method
+
+.method public final getId()J
     .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lzm;->a:J
 
-    iget-object p1, p0, Lkg2;->X:Ljava/lang/Object;
+    return-wide v0
+.end method
 
-    check-cast p1, Ljava/lang/Number;
+.method public final getType()Lxib;
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    sget-object v0, Lxib;->y0:Lxib;
+
+    return-object v0
+.end method
+
+.method public final h()Lkh;
+    .locals 4
+
+    new-instance v0, Lbe2;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lbe2;-><init>(Lo8b;I)V
+
+    const-string v1, "chatId"
+
+    iget-wide v2, p0, Lkg2;->o:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lkh;->u(JLjava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final j(Lxlf;)V
+    .locals 5
+
+    iget-object p1, p1, Lxlf;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Lnse;->c(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "chat.not.found"
+
+    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    if-eqz p1, :cond_0
 
-    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Ljava/lang/Object;
+    invoke-virtual {p0}, Lzm;->l()Liw0;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    new-instance v0, Llg2;
 
-    check-cast v0, Lh00;
+    iget-wide v1, p0, Lzm;->a:J
 
-    const/16 v1, 0x64
+    iget-wide v3, p0, Lkg2;->d:J
 
-    int-to-float v1, v1
+    invoke-direct {v0, v1, v2, v3, v4}, Llg2;-><init>(JJ)V
 
-    mul-float/2addr p1, v1
+    invoke-virtual {p1, v0}, Liw0;->c(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lv63;->r0(F)I
+    :cond_0
+    invoke-virtual {p0}, Lkg2;->d()V
 
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :cond_1
+    return-void
 .end method

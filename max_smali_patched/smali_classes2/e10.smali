@@ -1,85 +1,67 @@
-.class public final enum Le10;
-.super Ljava/lang/Enum;
+.class public final Le10;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Le10;
+# instance fields
+.field public a:Lf10;
 
-.field public static final enum b:Le10;
+.field public b:J
 
-.field public static final enum c:Le10;
+.field public c:Ljava/util/Collection;
 
-.field public static final synthetic o:[Le10;
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:Lq10;
+
+.field public i:Ljava/lang/String;
+
+.field public j:Ljava/lang/String;
+
+.field public k:Z
+
+.field public l:I
+
+.field public m:J
+
+.field public n:J
+
+.field public o:Ljava/lang/String;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Le10;
-
-    const-string v1, "DEFAULT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Le10;->a:Le10;
-
-    new-instance v1, Le10;
-
-    const-string v2, "PROCESSING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Le10;->b:Le10;
-
-    new-instance v2, Le10;
-
-    const-string v3, "PROCESSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Le10;->c:Le10;
-
-    filled-new-array {v0, v1, v2}, [Le10;
-
-    move-result-object v0
-
-    sput-object v0, Le10;->o:[Le10;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Le10;
+# virtual methods
+.method public final a()Lg10;
     .locals 1
 
-    const-class v0, Le10;
+    iget-object v0, p0, Le10;->c:Ljava/util/Collection;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    new-instance v0, Ljava/util/ArrayList;
 
-    check-cast p0, Le10;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    return-object p0
-.end method
+    iput-object v0, p0, Le10;->c:Ljava/util/Collection;
 
-.method public static values()[Le10;
-    .locals 1
+    :cond_0
+    iget-object v0, p0, Le10;->a:Lf10;
 
-    sget-object v0, Le10;->o:[Le10;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0}, [Le10;->clone()Ljava/lang/Object;
+    sget-object v0, Lf10;->a:Lf10;
 
-    move-result-object v0
+    iput-object v0, p0, Le10;->a:Lf10;
 
-    check-cast v0, [Le10;
+    :cond_1
+    new-instance v0, Lg10;
+
+    invoke-direct {v0, p0}, Lg10;-><init>(Le10;)V
 
     return-object v0
 .end method

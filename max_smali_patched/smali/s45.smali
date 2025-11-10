@@ -1,48 +1,205 @@
 .class public final Ls45;
-.super Landroid/text/Editable$Factory;
+.super Lm40;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
-
-.field public static volatile b:Ls45;
-
-.field public static c:Ljava/lang/Class;
+# instance fields
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    iput p1, p0, Ls45;->c:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ls45;->a:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 2
+.method public final c(Ljava/lang/Object;)F
+    .locals 1
 
-    sget-object v0, Ls45;->c:Ljava/lang/Class;
+    iget v0, p0, Ls45;->c:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Ldje;
+    check-cast p1, Landroid/view/View;
 
-    invoke-direct {v1, v0, p1}, Ldje;-><init>(Ljava/lang/Class;Ljava/lang/CharSequence;)V
+    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
 
-    return-object v1
+    move-result p1
 
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    return p1
 
-    move-result-object p1
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    return-object p1
+    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_4
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_5
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_6
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_7
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getY()F
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Object;F)V
+    .locals 1
+
+    iget v0, p0, Ls45;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+
+    return-void
+
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+
+    return-void
+
+    :pswitch_4
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+
+    :pswitch_5
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
+
+    return-void
+
+    :pswitch_6
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+
+    :pswitch_7
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

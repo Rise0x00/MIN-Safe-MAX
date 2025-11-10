@@ -1,7 +1,8 @@
-.class public abstract Lwxf;
+.class public interface abstract Lwxf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Collection;
-.implements Lim7;
+
+# virtual methods
+.method public abstract onMenuItemClick(Landroid/view/MenuItem;)Z
+.end method

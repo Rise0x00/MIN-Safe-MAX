@@ -1,100 +1,122 @@
-.class public final Lpmf;
+.class public abstract Lpmf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
-
 
 # instance fields
-.field public final a:Lzwd;
+.field public final a:Landroid/content/Context;
 
-.field public b:I
+.field public final b:Lwh4;
+
+.field public final c:Lru7;
+
+.field public final d:Lru7;
+
+.field public final e:Lru7;
+
+.field public final f:Lru7;
+
+.field public final g:Lru7;
+
+.field public final h:Lru7;
+
+.field public final i:Ltif;
+
+.field public final j:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Lzwd;)V
+.method public constructor <init>(Landroid/content/Context;Lwh4;Lru7;Lru7;Lru7;Lru7;Lru7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpmf;->a:Lzwd;
+    iput-object p1, p0, Lpmf;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lpmf;->b:Lwh4;
+
+    iput-object p3, p0, Lpmf;->c:Lru7;
+
+    iput-object p5, p0, Lpmf;->d:Lru7;
+
+    iput-object p4, p0, Lpmf;->e:Lru7;
+
+    iput-object p6, p0, Lpmf;->f:Lru7;
+
+    invoke-interface {p7}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvo9;
+
+    iget-object p1, p1, Lvo9;->a:Lru7;
+
+    iput-object p1, p0, Lpmf;->g:Lru7;
+
+    invoke-interface {p7}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvo9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p7}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvo9;
+
+    iget-object p1, p1, Lvo9;->b:Lru7;
+
+    iput-object p1, p0, Lpmf;->h:Lru7;
+
+    new-instance p1, Loq;
+
+    move-object p2, p0
+
+    check-cast p2, Lqq;
+
+    const/4 p3, 0x2
+
+    invoke-direct {p1, p2, p3}, Loq;-><init>(Lqq;I)V
+
+    new-instance p3, Ltif;
+
+    invoke-direct {p3, p1}, Ltif;-><init>(Loi6;)V
+
+    iput-object p3, p0, Lpmf;->i:Ltif;
+
+    new-instance p1, Loq;
+
+    const/4 p3, 0x3
+
+    invoke-direct {p1, p2, p3}, Loq;-><init>(Lqq;I)V
+
+    new-instance p2, Ltif;
+
+    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
+
+    iput-object p2, p0, Lpmf;->j:Ltif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityPaused(Landroid/app/Activity;)V
+.method public final a()Lxya;
     .locals 1
 
-    iget p1, p0, Lpmf;->b:I
+    iget-object v0, p0, Lpmf;->e:Lru7;
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    sub-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lpmf;->b:I
+    check-cast v0, Lxya;
 
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lpmf;->a:Lzwd;
-
-    invoke-virtual {p1, v0}, Lzwd;->e(Z)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 1
-
-    iget p1, p0, Lpmf;->b:I
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lpmf;->a:Lzwd;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lzwd;->e(Z)V
-
-    :cond_0
-    iget p1, p0, Lpmf;->b:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lpmf;->b:I
-
-    return-void
-.end method
-
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
+.method public abstract b()Z
 .end method

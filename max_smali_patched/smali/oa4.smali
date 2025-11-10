@@ -1,61 +1,47 @@
-.class public abstract Loa4;
+.class public final Loa4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lmv0;
+# instance fields
+.field public final a:[I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Lec7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 17
+.method public constructor <init>(II[IIIIILec7;)V
+    .locals 0
 
-    new-instance v0, Lmv0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
+    iput p1, p0, Loa4;->b:I
 
-    invoke-direct {v0, v1}, Lmv0;-><init>(I)V
+    iput-object p3, p0, Loa4;->a:[I
 
-    sput-object v0, Loa4;->a:Lmv0;
+    iput p2, p0, Loa4;->c:I
 
-    const-string v15, "EEE, dd-MM-yyyy HH:mm:ss z"
+    iput p4, p0, Loa4;->e:I
 
-    const-string v16, "EEE MMM d yyyy HH:mm:ss z"
+    iput p5, p0, Loa4;->f:I
 
-    const-string v2, "EEE, dd MMM yyyy HH:mm:ss zzz"
+    iput p6, p0, Loa4;->g:I
 
-    const-string v3, "EEEE, dd-MMM-yy HH:mm:ss zzz"
+    iput p7, p0, Loa4;->d:I
 
-    const-string v4, "EEE MMM d HH:mm:ss yyyy"
-
-    const-string v5, "EEE, dd-MMM-yyyy HH:mm:ss z"
-
-    const-string v6, "EEE, dd-MMM-yyyy HH-mm-ss z"
-
-    const-string v7, "EEE, dd MMM yy HH:mm:ss z"
-
-    const-string v8, "EEE dd-MMM-yyyy HH:mm:ss z"
-
-    const-string v9, "EEE dd MMM yyyy HH:mm:ss z"
-
-    const-string v10, "EEE dd-MMM-yyyy HH-mm-ss z"
-
-    const-string v11, "EEE dd-MMM-yy HH:mm:ss z"
-
-    const-string v12, "EEE dd MMM yy HH:mm:ss z"
-
-    const-string v13, "EEE,dd-MMM-yy HH:mm:ss z"
-
-    const-string v14, "EEE,dd-MMM-yyyy HH:mm:ss z"
-
-    filled-new-array/range {v2 .. v16}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ljava/text/DateFormat;
+    iput-object p8, p0, Loa4;->h:Lec7;
 
     return-void
 .end method

@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lwa8;->a0(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Lyg8;->l(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
 

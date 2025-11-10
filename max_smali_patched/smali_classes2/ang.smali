@@ -1,128 +1,108 @@
-.class public final synthetic Lang;
-.super Lag6;
+.class public final Lang;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lpa5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic a:Lbng;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lbng;)V
-    .locals 8
+.method public constructor <init>(Lbng;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lang;->a:I
-
-    iput-object p1, p0, Lang;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lang;->b:Landroid/view/View;
-
-    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    .line 2
-    const-class v4, Lve7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Lzf6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqng;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
-    .locals 8
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lang;->a:I
-
-    iput-object p1, p0, Lang;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lang;->b:Landroid/view/View;
-
-    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
-
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    .line 1
-    const-class v4, Lve7;
-
-    const-string v6, "dispose"
-
-    move-object v1, p0
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v7}, Lzf6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Lang;->a:Lbng;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final e(Lone/video/exo/error/OneVideoExoPlaybackException;Lxwg;Lb8b;)V
+    .locals 0
 
-    iget v0, p0, Lang;->a:I
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string p3, "ERROR: "
 
-    iget-object v0, p0, Lns1;->receiver:Ljava/lang/Object;
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Landroid/view/ViewTreeObserver;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lang;->c:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v1, Lqng;
+    move-result-object p1
 
-    iget-object v2, p0, Lang;->b:Landroid/view/View;
+    iget-object p2, p0, Lang;->a:Lbng;
 
-    invoke-static {v1, v2, v0}, Lhx;->b(Lqng;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    invoke-static {p2, p1}, Lbng;->i(Lbng;Ljava/lang/String;)V
 
-    sget-object v0, Loyf;->a:Loyf;
+    return-void
+.end method
 
-    return-object v0
+.method public final i(Lb8b;)V
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lns1;->receiver:Ljava/lang/Object;
+    iget-object p1, p0, Lang;->a:Lbng;
 
-    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    const-string v0, "VIDEO FINISH"
 
-    iget-object v1, p0, Lang;->c:Ljava/lang/Object;
+    invoke-static {p1, v0}, Lbng;->i(Lbng;Ljava/lang/String;)V
 
-    check-cast v1, Landroid/view/ViewTreeObserver;
+    return-void
+.end method
 
-    iget-object v2, p0, Lang;->b:Landroid/view/View;
+.method public final j(Lb8b;)V
+    .locals 1
 
-    invoke-static {v0, v1, v2}, Lcng;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    iget-object v0, p0, Lang;->a:Lbng;
 
-    sget-object v0, Loyf;->a:Loyf;
+    invoke-virtual {v0, p1}, Lbng;->k(Lb8b;)V
 
-    return-object v0
+    return-void
+.end method
 
-    nop
+.method public final k(Lr7b;Ldxg;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p2, p0, Lang;->a:Lbng;
+
+    invoke-virtual {p2, p1}, Lbng;->k(Lb8b;)V
+
+    return-void
+.end method
+
+.method public final p(Lb8b;)V
+    .locals 1
+
+    iget-object v0, p0, Lang;->a:Lbng;
+
+    invoke-virtual {v0, p1}, Lbng;->k(Lb8b;)V
+
+    return-void
+.end method
+
+.method public final r(Lb8b;)V
+    .locals 1
+
+    iget-object v0, p0, Lang;->a:Lbng;
+
+    invoke-virtual {v0, p1}, Lbng;->k(Lb8b;)V
+
+    return-void
+.end method
+
+.method public final v(Lb8b;)V
+    .locals 1
+
+    iget-object v0, p0, Lang;->a:Lbng;
+
+    invoke-virtual {v0, p1}, Lbng;->k(Lb8b;)V
+
+    return-void
 .end method

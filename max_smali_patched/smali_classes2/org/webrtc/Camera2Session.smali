@@ -825,7 +825,7 @@
 
     const-string v1, "getCameraCharacteristics(): "
 
-    invoke-static {v1, v0}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

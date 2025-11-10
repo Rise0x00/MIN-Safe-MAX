@@ -1,109 +1,69 @@
-.class public abstract Lha5;
-.super Lw2;
+.class public final Lha5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly44;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final a:Lha5;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lha5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lha5;->a:Lha5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract B(Lh2f;Ljava/lang/Object;)V
+.method public final fold(Ljava/lang/Object;Lej6;)Ljava/lang/Object;
+    .locals 0
+
+    return-object p1
 .end method
 
-.method public final C(Ljava/lang/Iterable;)V
-    .locals 2
+.method public final get(Lx44;)Lw44;
+    .locals 0
 
-    invoke-virtual {p0}, Lw2;->f()Lh2f;
+    const/4 p1, 0x0
 
-    move-result-object v0
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lha5;->B(Lh2f;Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lh2f;->n0()J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    return-void
-
-    :goto_1
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    throw p1
+    return-object p1
 .end method
 
-.method public final D(Ljava/lang/Object;)V
+.method public final hashCode()I
     .locals 1
 
-    invoke-virtual {p0}, Lw2;->f()Lh2f;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    :try_start_0
-    invoke-virtual {p0, v0, p1}, Lha5;->B(Lh2f;Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lh2f;->n0()J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    throw p1
+    return v0
 .end method
 
-.method public final E(Ljava/lang/Object;)J
-    .locals 3
+.method public final minusKey(Lx44;)Ly44;
+    .locals 0
 
-    invoke-virtual {p0}, Lw2;->f()Lh2f;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public final plus(Ly44;)Ly44;
+    .locals 0
 
-    :try_start_0
-    invoke-virtual {p0, v0, p1}, Lha5;->B(Lh2f;Ljava/lang/Object;)V
+    return-object p1
+.end method
 
-    invoke-interface {v0}, Lh2f;->n0()J
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-wide v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v0, "EmptyCoroutineContext"
 
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    return-wide v1
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
-
-    throw p1
+    return-object v0
 .end method

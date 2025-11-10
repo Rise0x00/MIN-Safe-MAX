@@ -1,70 +1,61 @@
-.class public final synthetic Ls71;
+.class public final Ls71;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lu71;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lu71;I)V
-    .locals 0
-
-    iput p2, p0, Ls71;->a:I
-
-    iput-object p1, p0, Ls71;->b:Lu71;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lcwc;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final log(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 4
 
-    iget v0, p0, Ls71;->a:I
+    sget-object v0, Lcuh;->b:Lnxa;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Ls71;->b:Lu71;
+    goto :goto_0
 
-    iget-object v0, v0, Lu71;->R0:Landroidx/recyclerview/widget/b;
+    :cond_0
+    sget-object v1, La98;->d:La98;
 
-    return-object v0
+    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
 
-    :pswitch_0
-    iget-object v0, p0, Ls71;->b:Lu71;
+    move-result v2
 
-    iget-object v0, v0, Lu71;->T0:Lhbg;
+    if-eqz v2, :cond_1
 
-    return-object v0
+    const-string v2, "["
 
-    :pswitch_1
-    new-instance v0, Lvq6;
+    const-string v3, "] "
 
-    iget-object v1, p0, Ls71;->b:Lu71;
+    invoke-static {v2, p1, v3, p2}, Lcd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v2, v1, Lu71;->N0:Landroidx/viewpager2/widget/ViewPager2;
+    move-result-object p1
 
-    iget-object v1, v1, Lu71;->O0:Lzq6;
+    const/4 p2, 0x0
 
-    invoke-direct {v0, v2, v1}, Lvq6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lzq6;)V
+    const-string v2, "CallsSdk"
 
-    return-object v0
+    invoke-virtual {v0, v1, v2, p1, p2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    nop
+    :cond_1
+    :goto_0
+    return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    const-string v0, "[%s] %s"
+
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string p2, "CallsSdk"
+
+    invoke-static {p2, p3, v0, p1}, Lcuh;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
 .end method

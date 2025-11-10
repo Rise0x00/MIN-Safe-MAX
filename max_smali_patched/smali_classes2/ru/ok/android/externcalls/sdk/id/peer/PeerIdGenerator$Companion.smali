@@ -26,9 +26,9 @@
         "MAX_JS_SAFE_LONG",
         "J",
         "MIN_JS_SAFE_LONG",
-        "La78;",
+        "Lgc8;",
         "PEER_ID_RANGE",
-        "La78;",
+        "Lgc8;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Lfi4;)V
     .locals 0
 
     .line 1

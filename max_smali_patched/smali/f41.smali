@@ -1,208 +1,260 @@
-.class public final synthetic Lf41;
-.super Ljava/lang/Object;
+.class public final Lf41;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lgj6;
 
 
 # instance fields
-.field public final synthetic X:Ltt1;
+.field public synthetic X:Ljava/lang/Throwable;
 
-.field public final synthetic Y:Lc;
-
-.field public final synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lgme;
-
-.field public final synthetic o:Lj41;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JLgme;Lj41;Ltt1;Lc;I)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p8, p0, Lf41;->a:I
+    iput p3, p0, Lf41;->o:I
 
-    iput-object p1, p0, Lf41;->Z:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lf41;->b:J
-
-    iput-object p4, p0, Lf41;->c:Lgme;
-
-    iput-object p5, p0, Lf41;->o:Lj41;
-
-    iput-object p6, p0, Lf41;->X:Ltt1;
-
-    iput-object p7, p0, Lf41;->Y:Lc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lf41;->a:I
+    iget v0, p0, Lf41;->o:I
+
+    check-cast p1, Lgz5;
+
+    check-cast p2, Ljava/lang/Throwable;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lf41;->Z:Ljava/lang/Object;
+    new-instance p1, Lf41;
 
-    check-cast v0, Ljava/lang/String;
+    const/4 v0, 0x3
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    const/4 v1, 0x5
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->setLink(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object p1
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
 
-    iget-wide v0, p0, Lf41;->b:J
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-static {v0, v1}, Ln5b;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    iget-object v0, p0, Lf41;->c:Lgme;
-
-    iget-boolean v0, v0, Lgme;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    iget-object v0, p0, Lf41;->o:Lj41;
-
-    iget-object v0, v0, Lj41;->b:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lav1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    iget-object v0, p0, Lf41;->X:Ltt1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lxe6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    iget-object v0, p0, Lf41;->Y:Lc;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lxe6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 
     :pswitch_0
-    iget-object v0, p0, Lf41;->Z:Ljava/lang/Object;
+    new-instance p1, Lf41;
 
-    check-cast v0, Lorg/json/JSONObject;
+    const/4 v0, 0x3
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    const/4 v1, 0x4
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object v0
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v0, p0, Lf41;->b:J
+    return-object p2
 
-    invoke-static {v0, v1}, Ln5b;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    :pswitch_1
+    new-instance p1, Lf41;
 
-    move-result-object v0
+    const/4 v0, 0x3
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    const/4 v1, 0x3
 
-    move-result-object p1
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
 
-    iget-object v0, p0, Lf41;->c:Lgme;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-boolean v0, v0, Lgme;->b:Z
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    return-object p2
 
-    move-result-object p1
+    :pswitch_2
+    new-instance p1, Lf41;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    const/4 v0, 0x3
 
-    iget-object v0, p0, Lf41;->o:Lj41;
+    const/4 v1, 0x2
 
-    iget-object v0, v0, Lj41;->b:Lbp7;
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
 
-    move-result-object v0
+    sget-object p2, Lybg;->a:Lybg;
 
-    check-cast v0, Lav1;
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    return-object p2
 
-    move-result-object p1
+    :pswitch_3
+    new-instance p1, Lf41;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    const/4 v0, 0x3
 
-    iget-object v0, p0, Lf41;->X:Ltt1;
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lxe6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object p1
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-object v0, p0, Lf41;->Y:Lc;
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lxe6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    return-object p2
 
-    move-result-object p1
+    :pswitch_4
+    new-instance p1, Lf41;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    const/4 v0, 0x3
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-direct {p1, v0, p3, v1}, Lf41;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return-object p1
+    iput-object p2, p1, Lf41;->X:Ljava/lang/Throwable;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lf41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lf41;->o:I
+
+    const-string v1, "fail"
+
+    sget-object v2, Lybg;->a:Lybg;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    const-string v0, "ViewThemeUtils"
+
+    const-string v1, "fail to change theme for spans"
+
+    invoke-static {v0, v1, p1}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lusa;->a:Lusa;
+
+    invoke-virtual {v0}, Lusa;->d()Lvf5;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lvf5;->b(Lvf5;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-object v2
+
+    :pswitch_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    const-string v0, "MiniChatsUpdated"
+
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    const-string v0, "ChatVM/MissedContactsController"
+
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_3
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    const-string v0, "mv2"
+
+    const-string v1, "catch error in chatUpdateFlow"
+
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :pswitch_4
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf41;->X:Ljava/lang/Throwable;
+
+    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "CallChatRepositoryTag"
+
+    const-string v1, "fail no get chat"
+
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

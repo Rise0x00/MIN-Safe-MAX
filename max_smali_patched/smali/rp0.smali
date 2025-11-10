@@ -1,17 +1,27 @@
-.class public abstract Lrp0;
+.class public final Lrp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/graphics/Bitmap;
+
+.field public final b:Lkg6;
+
+.field public final c:Leq3;
+
+
 # direct methods
-.method public static a(ILjava/lang/Object;)Landroid/graphics/ColorFilter;
-    .locals 1
+.method public constructor <init>(Landroid/graphics/Bitmap;Lkg6;Leq3;)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/BlendModeColorFilter;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Landroid/graphics/BlendMode;
+    iput-object p1, p0, Lrp0;->a:Landroid/graphics/Bitmap;
 
-    invoke-direct {v0, p0, p1}, Landroid/graphics/BlendModeColorFilter;-><init>(ILandroid/graphics/BlendMode;)V
+    iput-object p2, p0, Lrp0;->b:Lkg6;
 
-    return-object v0
+    iput-object p3, p0, Lrp0;->c:Leq3;
+
+    return-void
 .end method

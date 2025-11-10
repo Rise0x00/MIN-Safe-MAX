@@ -22,26 +22,26 @@
         "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;",
         "params",
         "Lkotlin/Function0;",
-        "Loyf;",
+        "Lybg;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "promoteParticipant",
-        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Loi6;Lqi6;)V",
         "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;",
         "requestPromotion",
-        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;Loi6;Lqi6;)V",
         "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;",
         "acceptPromotion",
-        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;Loi6;Lqi6;)V",
         "Lkotlin/Function3;",
         "",
         "",
         "",
-        "Lsr1;",
+        "Lqs1;",
         "getHandsQueue",
-        "(Lnf6;Lxe6;)V",
+        "(Lgj6;Lqi6;)V",
         "AcceptPromotionParams",
         "PromoteParticipantParams",
         "RequestPromotionParams",
@@ -58,48 +58,48 @@
 
 
 # virtual methods
-.method public abstract acceptPromotion(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;Lve6;Lxe6;)V
+.method public abstract acceptPromotion(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$AcceptPromotionParams;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract getHandsQueue(Lnf6;Lxe6;)V
+.method public abstract getHandsQueue(Lgj6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnf6;",
-            "Lxe6;",
+            "Lgj6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract promoteParticipant(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Lve6;Lxe6;)V
+.method public abstract promoteParticipant(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$PromoteParticipantParams;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract requestPromotion(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;Lve6;Lxe6;)V
+.method public abstract requestPromotion(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutor$RequestPromotionParams;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation

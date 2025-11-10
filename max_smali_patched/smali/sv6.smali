@@ -1,82 +1,173 @@
 .class public final Lsv6;
-.super Lvv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:[B
+
+.field public static final h:[B
+
+
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:[B
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [B
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lsv6;->g:[B
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lsv6;->h:[B
+
+    return-void
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lsv6;->a:I
 
-    iput-boolean p1, p0, Lsv6;->a:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(I[BI)V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lsv6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-boolean v0, p0, Lsv6;->b:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lsv6;
+    sub-int/2addr p3, p1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lsv6;->f:[B
 
-    if-nez v1, :cond_1
+    array-length v1, v0
 
-    return v2
+    iget v2, p0, Lsv6;->d:I
 
-    :cond_1
-    check-cast p1, Lsv6;
+    add-int/2addr v2, p3
 
-    iget-boolean v1, p0, Lsv6;->a:Z
+    if-ge v1, v2, :cond_1
 
-    iget-boolean p1, p1, Lsv6;->a:Z
+    mul-int/lit8 v2, v2, 0x2
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lsv6;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Missing(isMissing="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lsv6;->a:Z
-
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lsv6;->f:[B
+
+    :cond_1
+    iget-object v0, p0, Lsv6;->f:[B
+
+    iget v1, p0, Lsv6;->d:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lsv6;->d:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lsv6;->d:I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lsv6;->b:Z
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Lsv6;->f:[B
+
+    array-length v1, v0
+
+    iget v2, p0, Lsv6;->d:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsv6;->f:[B
+
+    :cond_3
+    iget-object v0, p0, Lsv6;->f:[B
+
+    iget v1, p0, Lsv6;->d:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lsv6;->d:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lsv6;->d:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

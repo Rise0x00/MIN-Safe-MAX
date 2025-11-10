@@ -1,6 +1,3 @@
-.class public interface abstract Llu5;
-.super Ljava/lang/Object;
+.class public abstract Llu5;
+.super Lqu5;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;

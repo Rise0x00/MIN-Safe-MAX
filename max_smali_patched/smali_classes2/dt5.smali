@@ -1,224 +1,92 @@
-.class public final Ldt5;
+.class public final synthetic Ldt5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnwb;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lha3;
+.field public final synthetic b:Let5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lha3;)V
+.method public synthetic constructor <init>(Let5;I)V
     .locals 0
 
+    iput p2, p0, Ldt5;->a:I
+
+    iput-object p1, p0, Ldt5;->b:Let5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldt5;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ldt5;->b:Lha3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldt5;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldt5;
-
-    iget-object v1, p0, Ldt5;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Ldt5;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ldt5;->b:Lha3;
-
-    iget-object p1, p1, Ldt5;->b:Lha3;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ldt5;->a:I
 
-    int-to-long v0, v0
+    packed-switch v0, :pswitch_data_0
 
-    return-wide v0
-.end method
+    iget-object v0, p0, Ldt5;->b:Let5;
 
-.method public final h(Lww7;)Z
-    .locals 5
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    int-to-long v1, v0
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-interface {p1}, Lww7;->getItemId()J
+    const-string v1, "corner"
 
-    move-result-wide v3
-
-    cmp-long p1, v1, v3
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Ldt5;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Ldt5;->b:Lha3;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, v2, Lha3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final k(Lww7;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p1, Ldt5;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Ldxb;
-
-    check-cast p1, Ldt5;
-
-    iget-object p1, p1, Ldt5;->b:Lha3;
-
-    invoke-direct {v0, p1}, Ldxb;-><init>(Lha3;)V
-
-    return-object v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final q(Lww7;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ldt5;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FirstNameItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldt5;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldt5;->b:Lha3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ldt5;->b:Let5;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    const-string v1, "foreground"
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Ldt5;->b:Let5;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    const-string v1, "background"
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

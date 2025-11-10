@@ -1,89 +1,143 @@
 .class public final Lwh8;
-.super Ljava/lang/Object;
+.super Lie6;
 .source "SourceFile"
 
 
+# static fields
+.field public static final h:Ljava/lang/Object;
+
+
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final f:Ljava/lang/Object;
 
-.field public final b:Landroid/media/browse/MediaBrowser;
-
-.field public final c:Landroid/os/Bundle;
-
-.field public final d:Luh8;
-
-.field public final e:Lds;
-
-.field public f:Lrob;
-
-.field public g:Landroid/os/Messenger;
-
-.field public h:Lxs8;
+.field public final g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lalh;Landroid/os/Bundle;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    new-instance v0, Luh8;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Luh8;-><init>(Lwh8;)V
-
-    iput-object v0, p0, Lwh8;->d:Luh8;
-
-    new-instance v0, Lds;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lade;-><init>(I)V
-
-    iput-object v0, p0, Lwh8;->e:Lds;
-
-    iput-object p1, p0, Lwh8;->a:Landroid/content/Context;
-
-    new-instance v0, Landroid/os/Bundle;
-
-    if-eqz p4, :cond_0
-
-    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    :goto_0
-    iput-object v0, p0, Lwh8;->c:Landroid/os/Bundle;
-
-    const-string p4, "extra_client_version"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string p4, "extra_calling_pid"
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iput-object p0, p3, Lalh;->c:Ljava/lang/Object;
-
-    new-instance p4, Landroid/media/browse/MediaBrowser;
-
-    iget-object p3, p3, Lalh;->b:Ljava/lang/Object;
-
-    check-cast p3, Lvh8;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
-
-    iput-object p4, p0, Lwh8;->b:Landroid/media/browse/MediaBrowser;
+    sput-object v0, Lwh8;->h:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Lmvf;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lie6;-><init>(Lmvf;)V
+
+    iput-object p2, p0, Lwh8;->f:Ljava/lang/Object;
+
+    iput-object p3, p0, Lwh8;->g:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)I
+    .locals 1
+
+    sget-object v0, Lwh8;->h:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lwh8;->g:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    move-object p1, v0
+
+    :cond_0
+    iget-object v0, p0, Lie6;->e:Lmvf;
+
+    invoke-virtual {v0, p1}, Lmvf;->b(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final f(ILhvf;Z)Lhvf;
+    .locals 1
+
+    iget-object v0, p0, Lie6;->e:Lmvf;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmvf;->f(ILhvf;Z)Lhvf;
+
+    iget-object p1, p2, Lhvf;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lwh8;->g:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lwh8;->h:Ljava/lang/Object;
+
+    iput-object p1, p2, Lhvf;->b:Ljava/lang/Object;
+
+    :cond_0
+    return-object p2
+.end method
+
+.method public final l(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lie6;->e:Lmvf;
+
+    invoke-virtual {v0, p1}, Lmvf;->l(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lwh8;->g:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lwh8;->h:Ljava/lang/Object;
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final m(ILkvf;J)Lkvf;
+    .locals 1
+
+    iget-object v0, p0, Lie6;->e:Lmvf;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lmvf;->m(ILkvf;J)Lkvf;
+
+    iget-object p1, p2, Lkvf;->a:Ljava/lang/Object;
+
+    iget-object p3, p0, Lwh8;->f:Ljava/lang/Object;
+
+    invoke-static {p1, p3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lkvf;->q:Ljava/lang/Object;
+
+    iput-object p1, p2, Lkvf;->a:Ljava/lang/Object;
+
+    :cond_0
+    return-object p2
 .end method

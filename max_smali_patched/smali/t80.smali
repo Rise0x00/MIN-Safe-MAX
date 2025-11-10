@@ -3,20 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmaa;
+.implements Lzha;
 
 
 # static fields
 .field public static final a:Lt80;
 
-.field public static final b:Lfn5;
-
-.field public static final c:Lfn5;
+.field public static final b:Lmr5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     new-instance v0, Lt80;
 
@@ -24,51 +22,29 @@
 
     sput-object v0, Lt80;->a:Lt80;
 
-    new-instance v0, Lpx;
+    new-instance v0, Lny;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lpx;-><init>(I)V
+    invoke-direct {v0, v1}, Lny;-><init>(I)V
 
-    const-class v1, Lb6c;
+    const-class v1, Ljec;
 
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lnx1;->o(Ljava/lang/Class;Lny;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v3, "startMs"
+    new-instance v1, Lmr5;
 
-    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lt80;->b:Lfn5;
-
-    new-instance v0, Lpx;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lpx;-><init>(I)V
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
+    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    new-instance v1, Lfn5;
+    const-string v2, "storageMetrics"
 
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-direct {v1, v2, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result-object v0
-
-    const-string v2, "endMs"
-
-    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lt80;->c:Lfn5;
+    sput-object v1, Lt80;->b:Lmr5;
 
     return-void
 .end method
@@ -76,23 +52,17 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+    .locals 1
 
-    check-cast p1, Laif;
+    check-cast p1, Lur6;
 
-    check-cast p2, Lnaa;
+    check-cast p2, Laia;
 
-    sget-object v0, Lt80;->b:Lfn5;
+    sget-object v0, Lt80;->b:Lmr5;
 
-    iget-wide v1, p1, Laif;->a:J
+    iget-object p1, p1, Lur6;->a:Lf9f;
 
-    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
-
-    sget-object v0, Lt80;->c:Lfn5;
-
-    iget-wide v1, p1, Laif;->b:J
-
-    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
+    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
 
     return-void
 .end method

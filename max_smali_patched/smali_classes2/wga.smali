@@ -1,283 +1,299 @@
 .class public final Lwga;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public X:I
 
-.field public final b:Lbp7;
+.field public final synthetic Y:Laha;
 
-.field public final c:Lbp7;
+.field public final synthetic Z:J
 
-.field public final d:Lbp7;
+.field public o:Ljava/util/List;
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
+.method public constructor <init>(Laha;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwga;->Y:Laha;
 
-    iput-object p1, p0, Lwga;->a:Lbp7;
+    iput-wide p2, p0, Lwga;->Z:J
 
-    iput-object p2, p0, Lwga;->b:Lbp7;
+    iput-wide p4, p0, Lwga;->s0:J
 
-    iput-object p3, p0, Lwga;->c:Lbp7;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lwga;->d:Lbp7;
+    invoke-direct {p0, p1, p6}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lr63;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lwga;->b:Lbp7;
+    check-cast p1, Lg54;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lwga;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lr63;
+    move-result-object p1
+
+    check-cast p1, Lwga;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lwga;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
+
+    new-instance v0, Lwga;
+
+    iget-wide v2, p0, Lwga;->Z:J
+
+    iget-wide v4, p0, Lwga;->s0:J
+
+    iget-object v1, p0, Lwga;->Y:Laha;
+
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lwga;-><init>(Laha;JJLkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Ln58;)Ljava/lang/Object;
-    .locals 23
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lwga;->X:I
 
-    invoke-virtual {v0}, Lwga;->a()Lr63;
+    iget-object v1, p0, Lwga;->Y:Laha;
 
-    move-result-object v1
+    const/4 v2, 0x2
 
-    check-cast v1, Lxid;
+    const/4 v3, 0x1
 
-    invoke-virtual {v1}, Lxid;->m()J
+    const-string v4, "aha"
 
-    move-result-wide v1
+    sget-object v5, Lh54;->a:Lh54;
 
-    invoke-virtual {v0}, Lwga;->a()Lr63;
+    if-eqz v0, :cond_2
 
-    move-result-object v3
+    if-eq v0, v3, :cond_1
 
-    check-cast v3, Lxid;
+    if-ne v0, v2, :cond_0
 
-    iget-object v3, v3, Lh3;->g:Lep7;
+    iget-object v1, p0, Lwga;->o:Ljava/util/List;
 
-    const-string v4, "user.contactsLastSync"
+    :try_start_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-wide/16 v5, 0x0
+    goto/16 :goto_6
 
-    invoke-virtual {v3, v4, v5, v6}, Lep7;->getLong(Ljava/lang/String;J)J
+    :catchall_0
+    move-exception v0
 
-    move-result-wide v12
+    :goto_0
+    move-object p1, v0
 
-    invoke-virtual {v0}, Lwga;->a()Lr63;
+    goto/16 :goto_5
 
-    move-result-object v3
+    :catch_0
+    move-exception v0
 
-    check-cast v3, Lxid;
+    move-object p1, v0
 
-    const-string v4, "user.presenceLastSync"
+    goto/16 :goto_7
 
-    iget-object v3, v3, Lh3;->g:Lep7;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v3, v4, v5, v6}, Lep7;->getLong(Ljava/lang/String;J)J
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-wide v14
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-class v3, Lwga;
+    throw p1
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :cond_1
+    :try_start_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result-object v3
+    goto :goto_2
 
-    new-instance v4, Ljava/lang/Long;
+    :catchall_1
+    move-exception v0
 
-    invoke-direct {v4, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    move-object p1, v0
 
-    invoke-static {v4}, Lvr0;->z(Ljava/lang/Long;)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object v4
+    :catch_1
+    move-exception v0
 
-    new-instance v7, Ljava/lang/Long;
+    move-object p1, v0
 
-    invoke-direct {v7, v12, v13}, Ljava/lang/Long;-><init>(J)V
+    goto/16 :goto_8
 
-    invoke-static {v7}, Lvr0;->z(Ljava/lang/Long;)Ljava/lang/String;
+    :cond_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    move-result-object v7
+    iget-wide v8, p0, Lwga;->Z:J
 
-    new-instance v8, Ljava/lang/Long;
+    iget-wide v10, p0, Lwga;->s0:J
 
-    invoke-direct {v8, v14, v15}, Ljava/lang/Long;-><init>(J)V
+    :try_start_2
+    iget-object p1, v1, Laha;->b:Lru7;
 
-    invoke-static {v8}, Lvr0;->z(Ljava/lang/Long;)Ljava/lang/String;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object p1
 
-    const-string v9, ", contactLastSync = "
+    move-object v7, p1
 
-    const-string v10, ", presenceLastSync = "
+    check-cast v7, Lmp5;
 
-    const-string v11, "LoginTamTask: chatsLastSync = "
+    iput v3, p0, Lwga;->X:I
 
-    invoke-static {v11, v4, v9, v7, v10}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, v7, Lmp5;->a:Lpgd;
 
-    move-result-object v4
+    new-instance v6, Lkp5;
 
-    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v6 .. v11}, Lkp5;-><init>(Lmp5;JJ)V
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v6, p0}, Ljxi;->b(Lpgd;Lqi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object p1
+    :try_end_2
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    invoke-static {v3, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p1, v5, :cond_3
 
-    iget-object v3, v0, Lwga;->c:Lbp7;
+    goto :goto_3
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    :goto_1
+    const-string v0, "onSelfReadMarkChanged: failed to remove sent analytics entries"
 
-    move-result-object v4
+    invoke-static {v4, v0, p1}, Lcuh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v4, Lktd;
+    sget-object p1, Lna5;->a:Lna5;
 
-    check-cast v4, Lgjd;
+    :cond_3
+    :goto_2
+    check-cast p1, Ljava/util/List;
 
-    const-string v7, "hash"
+    :try_start_3
+    iget-object v0, v1, Laha;->d:Lru7;
 
-    iget-object v4, v4, Lh3;->g:Lep7;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    move-result-object v0
 
-    invoke-virtual {v4, v7, v8}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    check-cast v0, Lhha;
 
-    move-result-object v4
+    iput-object p1, p0, Lwga;->o:Ljava/util/List;
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    iput v2, p0, Lwga;->X:I
 
-    move-result-object v7
+    iget-object v1, v0, Lhha;->a:Lpgd;
 
-    check-cast v7, Lktd;
+    new-instance v2, Lma;
 
-    check-cast v7, Lgjd;
+    const/16 v3, 0x18
 
-    const/4 v9, 0x1
+    invoke-direct {v2, v0, v3, p1}, Lma;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v7, v7, Lh3;->g:Lep7;
+    invoke-static {v1, v2, p0}, Ljxi;->b(Lpgd;Lqi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v10, "version"
+    move-result-object v0
+    :try_end_3
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    invoke-virtual {v7, v10, v9}, Lep7;->getInt(Ljava/lang/String;I)I
+    if-ne v0, v5, :cond_4
 
-    move-result v7
+    :goto_3
+    return-object v5
 
-    const/4 v9, 0x6
+    :cond_4
+    move-object v1, p1
 
-    if-ge v7, v9, :cond_0
+    move-object p1, v0
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    goto :goto_6
 
-    move-result-object v1
-
-    check-cast v1, Lktd;
-
-    check-cast v1, Lgjd;
-
-    invoke-virtual {v1, v9, v10}, Lh3;->h(ILjava/lang/String;)V
-
-    move-wide v10, v5
-
-    move-object/from16 v16, v8
+    :goto_4
+    move-object v1, p1
 
     goto :goto_0
 
-    :cond_0
-    move-wide v10, v1
+    :catchall_2
+    move-exception v0
 
-    move-object/from16 v16, v4
+    goto :goto_4
 
-    :goto_0
-    new-instance v7, Ln48;
+    :goto_5
+    const-string v0, "onSelfReadMarkChanged: failed to remove tracker messages"
 
-    iget-object v1, v0, Lwga;->d:Lbp7;
+    invoke-static {v4, v0, p1}, Lcuh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    new-instance p1, Ljava/lang/Integer;
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    check-cast v1, Llp4;
+    invoke-direct {p1, v0}, Ljava/lang/Integer;-><init>(I)V
 
-    invoke-virtual {v1}, Llp4;->d()Z
+    :goto_6
+    check-cast p1, Ljava/lang/Number;
 
-    move-result v9
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {v0}, Lwga;->a()Lr63;
+    move-result p1
 
-    move-result-object v1
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    check-cast v1, Lxid;
+    move-result v0
 
-    const-string v2, "user.callsLastSync"
+    const-string v1, " analyticsEntries, "
 
-    iget-object v1, v1, Lh3;->g:Lep7;
+    const-string v2, " trackerMessages entries"
 
-    invoke-virtual {v1, v2, v5, v6}, Lep7;->getLong(Ljava/lang/String;J)J
+    const-string v3, "onSelfReadMarkChanged: removed "
 
-    move-result-wide v17
+    invoke-static {v3, v0, v1, p1, v2}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Lwga;->a()Lr63;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-static {v4, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v1, Lxid;
+    sget-object p1, Lybg;->a:Lybg;
 
-    const-string v2, "app.last.login.time"
+    return-object p1
 
-    iget-object v1, v1, Lh3;->g:Lep7;
+    :goto_7
+    throw p1
 
-    invoke-virtual {v1, v2, v5, v6}, Lep7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v19
-
-    invoke-virtual {v0}, Lwga;->a()Lr63;
-
-    move-result-object v1
-
-    check-cast v1, Lxid;
-
-    const-wide/16 v2, -0x1
-
-    iget-object v1, v1, Lh3;->g:Lep7;
-
-    const-string v4, "user.draftsLastSync"
-
-    invoke-virtual {v1, v4, v2, v3}, Lep7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v21
-
-    move-object/from16 v8, p1
-
-    invoke-direct/range {v7 .. v22}, Ln48;-><init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
-
-    iget-object v1, v0, Lwga;->a:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lraf;
-
-    move-object/from16 v2, p2
-
-    invoke-virtual {v1, v7, v2}, Lraf;->e(Li9f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    return-object v1
+    :goto_8
+    throw p1
 .end method

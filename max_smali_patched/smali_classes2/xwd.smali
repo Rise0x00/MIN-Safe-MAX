@@ -2,71 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lom3;
-
 
 # instance fields
-.field public final synthetic a:Lywd;
+.field public a:Lmv7;
 
+.field public b:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Lywd;)V
-    .locals 0
+.field public c:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:Ljava/util/List;
 
-    iput-object p1, p0, Lxwd;->a:Lywd;
+.field public e:Ljava/util/List;
 
-    return-void
-.end method
+.field public f:Ljava/util/List;
 
+.field public g:J
 
-# virtual methods
-.method public final a()V
-    .locals 2
+.field public h:I
 
-    const-string v0, "ywd"
+.field public i:Z
 
-    const-string v1, "onBackgroundDataEnabledChange"
+.field public j:J
 
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+.field public k:Ljava/util/List;
 
-    iget-object v0, p0, Lxwd;->a:Lywd;
+.field public l:Ljava/util/List;
 
-    iget-object v1, v0, Lywd;->j:Ljava/util/concurrent/atomic/AtomicReference;
+.field public m:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lywd;->b(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    const-string v0, "ywd"
-
-    const-string v1, "onConnectionTypeChange"
-
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lxwd;->a:Lywd;
-
-    iget-object v1, v0, Lywd;->j:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lywd;->b(Ljava/lang/String;)V
-
-    return-void
-.end method
+.field public n:Ljava/util/List;

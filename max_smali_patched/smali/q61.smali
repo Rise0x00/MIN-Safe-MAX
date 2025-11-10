@@ -1,48 +1,16 @@
-.class public final Lq61;
-.super Lnz3;
+.class public interface abstract Lq61;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Leg0;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lq61;->Y:Leg0;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ls61;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public getPriority()I
     .locals 1
 
-    iput-object p1, p0, Lq61;->o:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    iget p1, p0, Lq61;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lq61;->X:I
-
-    iget-object p1, p0, Lq61;->Y:Leg0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

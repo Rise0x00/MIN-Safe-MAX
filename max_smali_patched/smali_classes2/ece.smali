@@ -1,123 +1,121 @@
-.class public abstract synthetic Lece;
-.super Ljava/lang/Object;
+.class public final Lece;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic X:J
+
+.field public final synthetic o:Lgce;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgce;JLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lece;->o:Lgce;
+
+    iput-wide p2, p0, Lece;->X:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lece;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lece;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lece;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    invoke-static {}, Lnce;->values()[Lnce;
+    new-instance p1, Lece;
+
+    iget-object v0, p0, Lece;->o:Lgce;
+
+    iget-wide v1, p0, Lece;->X:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lece;-><init>(Lgce;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lece;->o:Lgce;
+
+    iget-object v0, p1, Lgce;->o:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lu23;
 
-    new-array v0, v0, [I
+    iget-wide v1, p0, Lece;->X:J
 
-    const/4 v1, 0x1
+    check-cast v0, Lw33;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1, v2}, Lw33;->R(J)Lt92;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
-    :catch_0
-    const/4 v2, 0x2
+    if-eqz v0, :cond_0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object p1, p1, Lgce;->x0:Laf5;
 
-    :catch_1
-    const/4 v1, 0x3
+    sget-object v1, Lcfe;->c:Lcfe;
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-wide v2, v0, Lt92;->a:J
 
-    :catch_2
-    const/4 v2, 0x4
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :catch_3
-    const/4 v1, 0x5
+    const-string v1, ":profile?id="
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :catch_4
-    const/4 v2, 0x6
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    const-string v1, "&type=local_chat&is_opened_from_dialog=false"
 
-    :catch_5
-    const/4 v1, 0x7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :catch_6
-    const/16 v2, 0x8
+    move-result-object v0
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-static {v0, p1}, Lcd0;->l(Ljava/lang/String;Laf5;)V
 
-    :catch_7
-    const/16 v1, 0x9
+    :cond_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    :try_start_8
-    aput v1, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    const/16 v1, 0xa
-
-    :try_start_9
-    aput v1, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    const/16 v1, 0xb
-
-    :try_start_a
-    aput v1, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    const/16 v1, 0xc
-
-    :try_start_b
-    aput v1, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    sput-object v0, Lece;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object p1
 .end method

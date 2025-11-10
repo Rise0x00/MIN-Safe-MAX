@@ -1,128 +1,129 @@
-.class public final synthetic Ljy0;
+.class public final Ljy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lfz0;
+.field public final b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfz0;I)V
+.method public constructor <init>(JLjava/util/ArrayList;)V
     .locals 0
 
-    iput p2, p0, Ljy0;->a:I
-
-    iput-object p1, p0, Ljy0;->b:Lfz0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ljy0;->a:J
+
+    iput-object p3, p0, Ljy0;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Ljy0;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Ljy0;->b:Lfz0;
+    :cond_0
+    instance-of v0, p1, Ljy0;
 
-    iget-object v0, v0, Lfz0;->k0:Ldq1;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0}, Ldq1;->x()Lwlf;
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljy0;
+
+    iget-wide v0, p0, Ljy0;->a:J
+
+    iget-wide v2, p1, Ljy0;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Ljy0;->b:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Ljy0;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ljy0;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ljy0;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CacheState(totalSizeBytes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ljy0;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", items="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljy0;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->C0:Lyd1;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->J0:Lgp1;
-
-    iget-object v0, v0, Lgp1;->i:Ly61;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->h:Ldce;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->h:Ldce;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->k0:Ldq1;
-
-    invoke-virtual {v0}, Ldq1;->x()Lwlf;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->g0:Lgh1;
-
-    iget-object v0, v0, Lgh1;->a:Lbh1;
-
-    iget-object v0, v0, Lbh1;->c:Lmt9;
-
-    iget-boolean v0, v0, Lmt9;->e:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Ljy0;->b:Lfz0;
-
-    iget-object v0, v0, Lfz0;->k0:Ldq1;
-
-    invoke-virtual {v0}, Ldq1;->x()Lwlf;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,287 +1,214 @@
 .class public final Lin3;
-.super Ljava/lang/Object;
+.super Ljzg;
 .source "SourceFile"
+
+# interfaces
+.implements Lnn3;
+
+
+# static fields
+.field public static final synthetic v0:[Les7;
 
 
 # instance fields
-.field public final a:Lc11;
+.field public final X:Lru7;
 
-.field public final b:Lpmc;
+.field public final Y:La1f;
 
-.field public final c:Lhn3;
+.field public final Z:Lr13;
 
-.field public final d:Lhp0;
+.field public final b:Ljava/lang/String;
 
-.field public e:D
+.field public final c:Lru7;
 
-.field public final f:Lf78;
+.field public final d:Lru7;
 
-.field public g:D
+.field public final o:Lru7;
 
-.field public final h:Lzlh;
+.field public final s0:Lpqe;
 
-.field public volatile i:Z
+.field public final t0:Laf5;
 
-.field public volatile j:Z
+.field public final u0:Laf5;
 
 
 # direct methods
-.method public constructor <init>(Lc11;Lpmc;Lhn3;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La1a;
 
-    iput-object p1, p0, Lin3;->a:Lc11;
+    const-string v1, "codeInputJob"
 
-    iput-object p2, p0, Lin3;->b:Lpmc;
+    const-string v2, "getCodeInputJob()Lkotlinx/coroutines/Job;"
 
-    iput-object p3, p0, Lin3;->c:Lhn3;
+    const-class v3, Lin3;
 
-    new-instance p1, Lhp0;
+    invoke-direct {v0, v3, v1, v2}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    sget-object v1, Lv7d;->a:Lw7d;
 
-    invoke-direct {p1, v0}, Lhp0;-><init>(I)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lin3;->d:Lhp0;
+    const/4 v1, 0x1
 
-    new-instance p1, Lf78;
+    new-array v1, v1, [Les7;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lin3;->f:Lf78;
+    aput-object v0, v1, v2
 
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+    sput-object v1, Lin3;->v0:[Les7;
 
-    iput-wide v0, p0, Lin3;->g:D
+    return-void
+.end method
 
-    new-instance p1, Lzlh;
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 5
 
-    const/16 v0, 0x1c
+    sget-object v0, Lyee;->a:Lyee;
 
-    invoke-direct {p1, v0}, Lzlh;-><init>(I)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
-    iput-object p1, p0, Lin3;->h:Lzlh;
+    move-result-object v1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const-class v2, Ll83;
 
-    const-string v0, "Configuration: "
+    invoke-virtual {v1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
+
+    const-class v3, Lfeg;
+
+    invoke-virtual {v2, v3}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lyee;->a()Lru7;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v4, Lvf5;
+
+    invoke-virtual {v0, v4}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Ljzg;-><init>()V
+
+    iput-object p1, p0, Lin3;->b:Ljava/lang/String;
+
+    iput-object v1, p0, Lin3;->c:Lru7;
+
+    iput-object v2, p0, Lin3;->d:Lru7;
+
+    iput-object v3, p0, Lin3;->o:Lru7;
+
+    iput-object v0, p0, Lin3;->X:Lru7;
+
+    sget-object p1, Lfn3;->a:Lfn3;
+
+    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
 
     move-result-object p1
 
-    const-string p3, "CallAnalyticsLoggerConnectivityTracker"
+    iput-object p1, p0, Lin3;->Y:La1f;
 
-    invoke-interface {p2, p3, p1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Lr13;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v1}, Lr13;-><init>(Lez5;I)V
+
+    iput-object v0, p0, Lin3;->Z:Lr13;
+
+    invoke-static {}, Liwi;->f()Lpqe;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lin3;->s0:Lpqe;
+
+    new-instance p1, Laf5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Laf5;-><init>(I)V
+
+    iput-object p1, p0, Lin3;->t0:Laf5;
+
+    new-instance p1, Laf5;
+
+    invoke-direct {p1, v0}, Laf5;-><init>(I)V
+
+    iput-object p1, p0, Lin3;->u0:Laf5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final a(Ljava/lang/String;)V
+    .locals 3
 
-    iget-boolean v0, p0, Lin3;->i:Z
+    iget-object v0, p0, Lin3;->o:Lru7;
 
-    if-eqz v0, :cond_2
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lin3;->j:Z
+    move-result-object v0
 
-    if-eqz v0, :cond_2
+    check-cast v0, Ltlf;
 
-    iget-wide v0, p0, Lin3;->g:D
+    check-cast v0, Lsta;
 
-    iget-object v2, p0, Lin3;->c:Lhn3;
+    invoke-virtual {v0}, Lsta;->a()La54;
 
-    iget-wide v3, v2, Lhn3;->b:D
+    move-result-object v0
 
-    cmpg-double v0, v0, v3
+    iget-object v1, p0, Lin3;->X:Lru7;
 
-    if-gtz v0, :cond_2
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-wide v0, p0, Lin3;->e:D
+    move-result-object v1
 
-    iget-wide v2, v2, Lhn3;->c:D
+    check-cast v1, Lvf5;
 
-    cmpl-double v0, v0, v2
+    new-instance v2, Llk;
 
-    if-ltz v0, :cond_2
+    invoke-direct {v2, v1}, Llk;-><init>(Lvf5;)V
 
-    iget-object v0, p0, Lin3;->a:Lc11;
+    invoke-virtual {v0, v2}, Lp0;->plus(Ly44;)Ly44;
 
-    iget-boolean v0, v0, Lc11;->c:Z
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    new-instance v1, Lhn3;
 
-    const-string v0, "Enable upload analytics"
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v0}, Lin3;->b(Ljava/lang/String;)V
+    invoke-direct {v1, p1, p0, v2}, Lhn3;-><init>(Ljava/lang/String;Lin3;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_0
+    const/4 p1, 0x2
 
-    :cond_0
-    const-string v0, "Already enabled"
-
-    invoke-virtual {p0, v0}, Lin3;->b(Ljava/lang/String;)V
-
-    :goto_0
-    iget-object v0, p0, Lin3;->a:Lc11;
-
-    iget-boolean v1, v0, Lc11;->c:Z
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    iput-boolean v2, v0, Lc11;->c:Z
-
-    iget-object v0, v0, Lc11;->e:Ljava/lang/Object;
-
-    check-cast v0, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->setIdle(Z)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lin3;->a:Lc11;
-
-    iget-boolean v0, v0, Lc11;->c:Z
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "Disable upload analytics"
-
-    invoke-virtual {p0, v0}, Lin3;->b(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_3
-    const-string v0, "Already disabled"
-
-    invoke-virtual {p0, v0}, Lin3;->b(Ljava/lang/String;)V
-
-    :goto_1
-    iget-object v0, p0, Lin3;->a:Lc11;
-
-    iget-boolean v1, v0, Lc11;->c:Z
-
-    if-nez v1, :cond_4
-
-    :goto_2
-    return-void
-
-    :cond_4
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lc11;->c:Z
-
-    iget-object v1, v0, Lc11;->e:Ljava/lang/Object;
-
-    check-cast v1, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    iget-boolean v0, v0, Lc11;->b:Z
-
-    invoke-virtual {v1, v0}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->setIdle(Z)V
-
-    return-void
-.end method
-
-.method public final b(Ljava/lang/String;)V
-    .locals 8
-
-    iget-object v0, p0, Lin3;->b:Lpmc;
-
-    iget-boolean v1, p0, Lin3;->i:Z
-
-    iget-boolean v2, p0, Lin3;->j:Z
-
-    iget-wide v3, p0, Lin3;->e:D
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v5, "%.2f"
-
-    invoke-static {v5, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-wide v6, p0, Lin3;->g:D
-
-    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v6
-
-    filled-new-array {v6}, [Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-static {v6, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v5, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ": signaling_connected="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", pc_connected="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", bitrate="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", loss="
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0, v0, v1, p1}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
 
     move-result-object p1
 
-    const-string v1, "CallAnalyticsLoggerConnectivityTracker"
+    sget-object v0, Lin3;->v0:[Les7;
 
-    invoke-interface {v0, v1, p1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lin3;->s0:Lpqe;
+
+    invoke-virtual {v1, p0, v0, p1}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
 
     return-void
 .end method

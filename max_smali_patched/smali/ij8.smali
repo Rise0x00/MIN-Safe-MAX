@@ -1,129 +1,76 @@
 .class public final Lij8;
-.super Ljava/lang/Object;
+.super Landroidx/appcompat/widget/AppCompatTextView;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Z
-
-.field public final c:Z
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lij8;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lij8;->b:Z
-
-    iput-boolean p3, p0, Lij8;->c:Z
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final setTextAppearance(Landroid/content/Context;I)V
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    goto :goto_0
+    sget v0, Lgkc;->textAppearanceLineHeightEnabled:I
 
-    :cond_0
-    if-eqz p1, :cond_2
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p1, v1}, Lugi;->d(ILandroid/content/Context;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p1
+
+    sget-object v0, Ldvc;->MaterialTextAppearance:[I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v0, Ldvc;->MaterialTextAppearance_android_lineHeight:I
+
+    sget v1, Ldvc;->MaterialTextAppearance_lineHeight:I
+
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    const-class v1, Lij8;
+    const/4 v1, -0x1
 
-    if-eq v0, v1, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lij8;
-
-    iget-object v0, p0, Lij8;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lij8;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Lij8;->b:Z
-
-    iget-boolean v1, p1, Lij8;->b:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lij8;->c:Z
-
-    iget-boolean p1, p1, Lij8;->c:Z
-
-    if-ne v0, p1, :cond_2
+    move v3, v1
 
     :goto_0
-    const/4 p1, 0x1
+    const/4 v4, 0x2
 
-    return p1
+    if-ge v2, v4, :cond_0
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    if-gez v3, :cond_0
 
-    return p1
-.end method
+    aget v3, v0, v2
 
-.method public final hashCode()I
-    .locals 5
+    invoke-static {p2, p1, v3, v1}, Lzgi;->g(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
-    iget-object v0, p0, Lij8;->a:Ljava/lang/String;
+    move-result v3
 
-    const/16 v1, 0x1f
-
-    invoke-static {v1, v1, v0}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lij8;->b:Z
-
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    :goto_0
-    add-int/2addr v0, v2
+    if-ltz v3, :cond_1
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lij8;->c:Z
-
-    if-eqz v1, :cond_1
-
-    move v3, v4
+    invoke-virtual {p0, v3}, Landroidx/appcompat/widget/AppCompatTextView;->setLineHeight(I)V
 
     :cond_1
-    add-int/2addr v0, v3
-
-    return v0
+    return-void
 .end method

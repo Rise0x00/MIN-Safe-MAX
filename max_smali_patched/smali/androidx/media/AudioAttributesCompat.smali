@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls6g;
+.implements Lpkg;
 
 
 # static fields

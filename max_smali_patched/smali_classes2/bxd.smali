@@ -2,57 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhxd;
+
 
 # instance fields
-.field public final a:Labf;
+.field public final a:Lirf;
 
 
 # direct methods
-.method public constructor <init>(Lbbf;)V
+.method public constructor <init>(Lirf;)V
     .locals 1
+
+    sget v0, Lr4b;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v0, p1, Labf;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Labf;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    new-instance v0, Labf;
-
-    invoke-direct {v0, p1}, Labf;-><init>(Lbbf;)V
-
-    :cond_1
-    iput-object v0, p0, Lbxd;->a:Labf;
+    iput-object p1, p0, Lbxd;->a:Lirf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public final f()I
     .locals 1
 
-    iget-object v0, p0, Lbxd;->a:Labf;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Labf;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final getItemId()J
+    .locals 2
 
-    invoke-interface {p1, p2}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    const-wide v0, 0x7ffffffffffffffcL
 
-    move-result-object p1
+    return-wide v0
+.end method
 
-    return-object p1
+.method public final m()I
+    .locals 1
+
+    sget v0, Lr4b;->s:I
+
+    return v0
 .end method

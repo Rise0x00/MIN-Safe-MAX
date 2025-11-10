@@ -1,73 +1,109 @@
-.class public final synthetic Lcwa;
+.class public abstract Lcwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lfwa;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfwa;I)V
-    .locals 0
-
-    iput p2, p0, Lcwa;->a:I
-
-    iput-object p1, p0, Lcwa;->b:Lfwa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lcwa;->a:I
+    sget v0, Lrsc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lcwa;->a:I
 
-    iget-object v0, p0, Lcwa;->b:Lfwa;
+    sget v0, Lrsc;->oneme_folder_list_recommended_folders_section_title:I
 
-    iget-object v0, v0, Lfwa;->z0:Ldwa;
+    sput v0, Lcwa;->b:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lrsc;->oneme_folder_list_toolbar_title:I
 
-    check-cast v0, Lbb8;
+    sput v0, Lcwa;->c:I
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    sget v0, Lrsc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    check-cast v0, Llr6;
+    sput v0, Lcwa;->d:I
 
-    iget-object v0, v0, Llr6;->K0:Lz4d;
+    sget v0, Lrsc;->oneme_folders_delete_folder_bottom_sheet_description:I
 
-    invoke-virtual {v0}, Lz4d;->stop()V
+    sput v0, Lcwa;->e:I
 
-    :cond_0
-    sget-object v0, Loyf;->a:Loyf;
+    sget v0, Lrsc;->oneme_folders_edit_add_chats_button:I
 
-    return-object v0
+    sput v0, Lcwa;->f:I
 
-    :pswitch_0
-    iget-object v0, p0, Lcwa;->b:Lfwa;
+    sget v0, Lrsc;->oneme_folders_edit_create_button:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sput v0, Lcwa;->g:I
 
-    sget-object v0, Loyf;->a:Loyf;
+    sget v0, Lrsc;->oneme_folders_edit_delete_button:I
 
-    return-object v0
+    sput v0, Lcwa;->h:I
 
-    nop
+    sget v0, Lrsc;->oneme_folders_edit_name_hint:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sput v0, Lcwa;->i:I
+
+    sget v0, Lrsc;->oneme_folders_edit_toolbar_title_creation:I
+
+    sput v0, Lcwa;->j:I
+
+    sget v0, Lrsc;->oneme_folders_edit_toolbar_title_edit:I
+
+    sput v0, Lcwa;->k:I
+
+    sget v0, Lrsc;->oneme_folders_list_create_folder:I
+
+    sput v0, Lcwa;->l:I
+
+    sget v0, Lrsc;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Lcwa;->m:I
+
+    sget v0, Lrsc;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Lcwa;->n:I
+
+    sget v0, Lrsc;->oneme_folders_picker_empty_title:I
+
+    sput v0, Lcwa;->o:I
+
+    sget v0, Lrsc;->oneme_folders_picker_toolbar_title:I
+
+    sput v0, Lcwa;->p:I
+
+    return-void
 .end method

@@ -1,307 +1,213 @@
 .class public final Ll5b;
-.super Llo3;
+.super Lcom/google/android/material/tabs/TabLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Lqsf;
 
 
 # instance fields
-.field public final f:Ljava/util/ArrayList;
+.field public final i1:Lm5b;
 
-.field public final g:Ljava/util/ArrayList;
-
-.field public final h:Ljava/util/ArrayList;
-
-.field public final i:Ljava/util/HashMap;
-
-.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final j1:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyte;Lpmc;Ll7b;Lrxd;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 3
 
-    invoke-direct {p0, p1, p2, p3, p4}, Llo3;-><init>(Lyte;Lpmc;Ll7b;Lrxd;)V
+    const/4 p2, 0x0
 
-    new-instance p1, Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/tabs/TabLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    sget-object p1, Ln5b;->a:Ltif;
 
-    iput-object p1, p0, Ll5b;->f:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ltif;->getValue()Ljava/lang/Object;
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    check-cast p1, Lm5b;
 
-    iput-object p1, p0, Ll5b;->g:Ljava/util/ArrayList;
+    iput-object p1, p0, Ll5b;->i1:Lm5b;
 
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance p1, Ly4b;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Ll5b;->h:Ljava/util/ArrayList;
+    invoke-direct {p1, v0, p0}, Ly4b;-><init>(ILjava/lang/Object;)V
 
-    new-instance p1, Ljava/util/HashMap;
+    const/4 v0, 0x3
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    invoke-static {v0, p1}, Llci;->i(ILoi6;)Lru7;
 
-    iput-object p1, p0, Ll5b;->i:Ljava/util/HashMap;
+    move-result-object p1
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Ll5b;->j1:Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {p0}, Ll5b;->getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
 
-    iput-object p1, p0, Ll5b;->j:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object p1
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicator(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    sget-object p1, Ly53;->s0:Lvh4;
 
-    iput-object p1, p0, Ll5b;->k:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {p1, p0}, Lvh4;->i(Landroid/view/View;)Lw5b;
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-interface {p1}, Lw5b;->i()Libf;
 
-    iput-object p1, p0, Ll5b;->l:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object p1
+
+    iget p1, p1, Libf;->h:I
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setTabIndicatorFullWidth(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    invoke-virtual {p0, p2}, Lcom/google/android/material/tabs/TabLayout;->setTabRippleColor(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    const/4 p2, 0x4
+
+    int-to-float p2, p2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p2
+
+    invoke-static {v0}, Lkhi;->c(F)I
+
+    move-result v0
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lkhi;->c(F)I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, p2, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    const-class p2, Lcom/google/android/material/tabs/TabLayout;
+
+    invoke-static {p2}, Lv7d;->a(Ljava/lang/Class;)La73;
+
+    move-result-object p2
+
+    const-string v0, "requestedTabMinWidth"
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p2, p0, v0, p1}, Laxi;->e(La73;Lcom/google/android/material/tabs/TabLayout;Ljava/lang/String;Ljava/lang/Integer;)V
 
     return-void
+.end method
+
+.method private final getIndicatorDrawable()Landroid/graphics/drawable/GradientDrawable;
+    .locals 1
+
+    iget-object v0, p0, Ll5b;->j1:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lxg1;Lorg/webrtc/VideoFrame;)V
+.method public final onThemeChanged(Lw5b;)V
+    .locals 1
+
+    invoke-interface {p1}, Lw5b;->i()Libf;
+
+    move-result-object p1
+
+    iget p1, p1, Libf;->h:I
+
+    invoke-super {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->setSelectedTabIndicatorColor(I)V
+
+    sget-object p1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lvh4;->h(Landroid/content/Context;)Ly53;
+
+    move-result-object p1
+
+    invoke-static {p1, p0}, Ly53;->f(Ly53;Landroid/view/ViewGroup;)V
+
+    return-void
+.end method
+
+.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
     .locals 2
-
-    new-instance v0, Lfub;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lfub;-><init>(I)V
-
-    iput-object p1, v0, Lfub;->b:Ljava/lang/Object;
-
-    sget-object p1, Lejg;->b:Lejg;
-
-    iput-object p1, v0, Lfub;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lfub;->b()Lmr1;
-
-    move-result-object p1
-
-    iget-object v0, p0, Ll5b;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/16 v0, 0x28
 
-    move-result-object p1
+    int-to-float v0, v0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoSink;
-
-    invoke-interface {v0, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    invoke-static {}, Lim9;->f()V
-
-    iget-object v0, p0, Ll5b;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    iget-object v0, p0, Ll5b;->i:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    return-void
-.end method
-
-.method public final e(Lxg1;Ljava/lang/String;)V
-    .locals 3
-
-    invoke-static {}, Lim9;->f()V
-
-    iget-object p2, p0, Ll5b;->i:Ljava/util/HashMap;
-
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    check-cast v1, Lmr1;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v2, p0, Ll5b;->j:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object v1
 
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    goto :goto_0
+    mul-float/2addr v0, v1
 
-    :cond_1
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lkhi;->c(F)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public final f()V
-    .locals 3
-
-    iget-object v0, p0, Llo3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Llo3;->a:Ljava/lang/Object;
-
-    check-cast v0, Lyte;
-
-    new-instance v1, Lsga;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p0}, Lsga;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, v0, Lyte;->a:Ljava/lang/Object;
-
-    check-cast v0, Lv7b;
-
-    const-string v2, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
-
-    invoke-virtual {v0, v2, v1}, Lv7b;->i(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
-    .locals 3
-
-    iget-object v0, p0, Llo3;->a:Ljava/lang/Object;
-
-    check-cast v0, Lyte;
-
-    new-instance v1, Lpj4;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lpj4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
-
-    iget-object p1, v0, Lyte;->a:Ljava/lang/Object;
-
-    check-cast p1, Lv7b;
-
-    new-instance p2, Lseh;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p1, v1, v0}, Lseh;-><init>(Lv7b;Lxo3;I)V
-
-    const-string v0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
-
-    invoke-virtual {p1, v0, p2}, Lv7b;->i(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final p(Ljava/lang/String;Lmr1;Ljava/util/List;)V
-    .locals 1
-
-    invoke-static {}, Lim9;->f()V
-
-    iget-object p1, p0, Ll5b;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v0, p0, Ll5b;->i:Ljava/util/HashMap;
-
-    if-nez p3, :cond_1
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p2, Lmr1;->b:Lxg1;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     :cond_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p2, Lmr1;->b:Lxg1;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    if-nez p1, :cond_2
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iget-object p3, p2, Lmr1;->b:Lxg1;
-
-    invoke-virtual {v0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method

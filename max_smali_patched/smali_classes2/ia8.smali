@@ -1,113 +1,61 @@
-.class public final Lia8;
+.class public abstract synthetic Lia8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lm82;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public b:I
-
-.field public c:Lq49;
-
-.field public d:Lone/me/messages/list/loader/MessageModel;
-
-.field public e:Leob;
-
-.field public f:Ljava/util/List;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lb75;->a:Lb75;
-
-    iput-object v0, p0, Lia8;->f:Ljava/util/List;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lxe6;)Lja8;
+.method static constructor <clinit>()V
     .locals 3
 
-    invoke-interface {p1, p0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    iget-object p1, p0, Lia8;->a:Lm82;
+    invoke-static {v0}, Lnx1;->y(I)[I
 
-    const-string v0, "Required value was null."
+    move-result-object v1
 
-    if-eqz p1, :cond_3
+    array-length v1, v1
 
-    iget v1, p0, Lia8;->b:I
-
-    iget-object v2, p0, Lia8;->e:Leob;
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lja8;
-
-    invoke-direct {v0, p1, v2, v1}, Lja8;-><init>(Lm82;Leob;I)V
-
-    iget-object p1, p0, Lia8;->c:Lq49;
-
-    if-eqz p1, :cond_0
-
-    sget-object v1, Lja8;->h:[Ltm7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Lja8;->d:Lkbh;
-
-    iput-object p1, v1, Lkbh;->b:Ljava/lang/Object;
-
-    :cond_0
-    iget-object p1, p0, Lia8;->d:Lone/me/messages/list/loader/MessageModel;
-
-    if-eqz p1, :cond_1
-
-    sget-object v1, Lja8;->h:[Ltm7;
+    new-array v1, v1, [I
 
     const/4 v2, 0x1
 
-    aget-object v1, v1, v2
+    :try_start_0
+    aput v2, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v1, v0, Lja8;->e:Lkbh;
+    :catch_0
+    sput-object v1, Lia8;->$EnumSwitchMapping$0:[I
 
-    iput-object p1, v1, Lkbh;->b:Ljava/lang/Object;
+    invoke-static {}, Lze9;->values()[Lze9;
 
-    :cond_1
-    iget-object p1, p0, Lia8;->f:Ljava/util/List;
+    move-result-object v1
 
-    sget-object v1, Lja8;->h:[Ltm7;
+    array-length v1, v1
 
-    const/4 v2, 0x3
+    new-array v1, v1, [I
 
-    aget-object v1, v1, v2
+    :try_start_1
+    aput v2, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v1, v0, Lja8;->g:Lkbh;
+    :catch_1
+    :try_start_2
+    sget-object v2, Lze9;->a:Ljava/util/HashMap;
 
-    iput-object p1, v1, Lkbh;->b:Ljava/lang/Object;
+    aput v0, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    return-object v0
+    :catch_2
+    sput-object v1, Lia8;->$EnumSwitchMapping$1:[I
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

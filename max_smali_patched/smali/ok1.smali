@@ -1,61 +1,140 @@
 .class public final Lok1;
-.super Lgl1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lg24;
 
-# static fields
-.field public static final D:Lok1;
+
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    new-instance v0, Lok1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lgl1;-><init>()V
-
-    sput-object v0, Lok1;->D:Lok1;
+    iput-object p1, p0, Lok1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lc24;Lc24;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b(Lc24;Lc24;Z)V
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lok1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-    return v0
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-virtual {p1}, Lc24;->getParentController()Lc24;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p1}, Lc24;->getParentController()Lc24;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lok1;
+    instance-of p3, p1, Lejd;
 
-    if-nez p1, :cond_1
+    const/4 v0, 0x0
 
-    const/4 p1, 0x0
+    if-eqz p3, :cond_1
 
-    return p1
+    check-cast p1, Lejd;
+
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    move-object p1, v0
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    if-eqz p1, :cond_2
 
-    const v0, 0x619f7241
+    check-cast p1, Lone/me/android/root/RootController;
 
-    return v0
-.end method
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->D0()Lyid;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object p1
 
-    const-string v0, "ExitWithRecord"
+    goto :goto_2
 
-    return-object v0
+    :cond_2
+    move-object p1, v0
+
+    :goto_2
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Lyid;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    :cond_3
+    const/4 p1, 0x1
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    const/4 p3, 0x0
+
+    goto :goto_4
+
+    :cond_5
+    :goto_3
+    move p3, p1
+
+    :goto_4
+    xor-int/2addr p1, p3
+
+    iget-object p2, p2, Ltn1;->H0:La1f;
+
+    :cond_6
+    invoke-virtual {p2}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    move-object v0, p3
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {p2, p3, v0}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_6
+
+    return-void
 .end method

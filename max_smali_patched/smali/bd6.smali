@@ -1,33 +1,48 @@
 .class public final Lbd6;
-.super Ljava/lang/RuntimeException;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lh13;
 
-.field public final b:Ljava/lang/Throwable;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;I)V
+.method public constructor <init>(Lh13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iput-object p1, p0, Lbd6;->X:Lh13;
 
-    iput p2, p0, Lbd6;->a:I
-
-    iput-object p1, p0, Lbd6;->b:Ljava/lang/Throwable;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getCause()Ljava/lang/Throwable;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lbd6;->b:Ljava/lang/Throwable;
+    iput-object p1, p0, Lbd6;->d:Ljava/lang/Object;
 
-    return-object v0
+    iget p1, p0, Lbd6;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lbd6;->o:I
+
+    iget-object p1, p0, Lbd6;->X:Lh13;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lh13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,84 +1,70 @@
-.class public final synthetic Lmsc;
+.class public abstract Lmsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lmf6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static app_host:I = 0x7f130067
 
-.field public final synthetic b:Lnsc;
+.field public static app_host_1:I = 0x7f130068
 
-.field public final synthetic c:Ljava/util/ArrayList;
+.field public static app_host_2:I = 0x7f130069
 
+.field public static app_host_3:I = 0x7f13006a
 
-# direct methods
-.method public synthetic constructor <init>(Lnsc;Ljava/util/ArrayList;I)V
-    .locals 0
+.field public static app_host_prod:I = 0x7f13006b
 
-    iput p3, p0, Lmsc;->a:I
+.field public static app_host_prod_port:I = 0x7f13006c
 
-    iput-object p1, p0, Lmsc;->b:Lnsc;
+.field public static app_host_redirects:I = 0x7f13006d
 
-    iput-object p2, p0, Lmsc;->c:Ljava/util/ArrayList;
+.field public static app_scheme:I = 0x7f130071
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static folder_path:I = 0x7f130544
 
-    return-void
-.end method
+.field public static link_call_join_path:I = 0x7f1305bb
 
+.field public static link_chat_join_path:I = 0x7f1305bc
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.field public static link_chat_path:I = 0x7f1305bd
 
-    iget v0, p0, Lmsc;->a:I
+.field public static link_host_api:I = 0x7f1305c5
 
-    packed-switch v0, :pswitch_data_0
+.field public static link_private_channel_path:I = 0x7f1305cc
 
-    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+.field public static link_private_contact_path:I = 0x7f1305cd
 
-    new-instance v0, Lksc;
+.field public static link_startwebapp_path:I = 0x7f1305d0
 
-    const/4 v1, 0x1
+.field public static link_stickerset_path:I = 0x7f1305d1
 
-    iget-object v2, p0, Lmsc;->b:Lnsc;
+.field public static oneme_settings_app_version:I = 0x7f130975
 
-    iget-object v3, p0, Lmsc;->c:Ljava/util/ArrayList;
+.field public static oneme_settings_check_updates:I = 0x7f13097f
 
-    invoke-direct {v0, v2, p1, v3, v1}, Lksc;-><init>(Lnsc;Ljava/lang/Object;Ljava/util/List;I)V
+.field public static oneme_settings_dump_heap:I = 0x7f130981
 
-    new-instance p1, Loe3;
+.field public static oneme_settings_dump_threads:I = 0x7f130982
 
-    invoke-direct {p1, v1, v0}, Loe3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_settings_iar_market_build_condition:I = 0x7f130983
 
-    return-object p1
+.field public static oneme_settings_iar_time_condition:I = 0x7f130984
 
-    :pswitch_0
-    check-cast p1, Lzrc;
+.field public static oneme_settings_new_messages_screen:I = 0x7f1309a1
 
-    new-instance v0, Lksc;
+.field public static oneme_settings_old_dev_menu:I = 0x7f1309a2
 
-    const/4 v1, 0x2
+.field public static oneme_settings_old_logs_menu:I = 0x7f1309a3
 
-    iget-object v2, p0, Lmsc;->b:Lnsc;
+.field public static oneme_settings_send_logs:I = 0x7f1309f1
 
-    iget-object v3, p0, Lmsc;->c:Ljava/util/ArrayList;
+.field public static oneme_settings_thread_state_count:I = 0x7f130a0d
 
-    invoke-direct {v0, v2, p1, v3, v1}, Lksc;-><init>(Lnsc;Ljava/lang/Object;Ljava/util/List;I)V
+.field public static oneme_settings_thread_tracer:I = 0x7f130a0e
 
-    new-instance p1, Loe3;
+.field public static oneme_settings_thread_viewer_state:I = 0x7f130a0f
 
-    const/4 v1, 0x1
+.field public static oneme_settings_user_id:I = 0x7f130a43
 
-    invoke-direct {p1, v1, v0}, Loe3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_settings_web_app_ssl:I = 0x7f130a44
 
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static web_scheme:I = 0x7f130e8d

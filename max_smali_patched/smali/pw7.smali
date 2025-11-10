@@ -1,185 +1,130 @@
-.class public abstract Lpw7;
-.super Lpwc;
+.class public final enum Lpw7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final o:Lru;
+# static fields
+.field public static final synthetic X:[Lpw7;
+
+.field public static final enum a:Lpw7;
+
+.field public static final enum b:Lpw7;
+
+.field public static final enum c:Lpw7;
+
+.field public static final enum d:Lpw7;
+
+.field public static final enum o:Lpw7;
 
 
 # direct methods
-.method public constructor <init>(Llo4;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 7
 
-    .line 13
-    invoke-direct {p0}, Lpwc;-><init>()V
+    new-instance v0, Lpw7;
 
-    .line 14
-    new-instance v0, Low7;
+    const-string v1, "DESTROYED"
 
-    invoke-direct {v0, p0}, Low7;-><init>(Lpw7;)V
+    const/4 v2, 0x0
 
-    .line 15
-    new-instance v1, Lru;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v2, Lk12;
+    sput-object v0, Lpw7;->a:Lpw7;
 
-    const/4 v3, 0x2
+    new-instance v1, Lpw7;
 
-    invoke-direct {v2, v3, p0}, Lk12;-><init>(ILjava/lang/Object;)V
+    const-string v2, "INITIALIZED"
 
-    invoke-direct {v1, v2, p1}, Lru;-><init>(Lfx7;Llo4;)V
+    const/4 v3, 0x1
 
-    iput-object v1, p0, Lpw7;->o:Lru;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 16
-    iget-object p1, v1, Lru;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sput-object v1, Lpw7;->b:Lpw7;
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v2, Lpw7;
+
+    const-string v3, "CREATED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lpw7;->c:Lpw7;
+
+    new-instance v3, Lpw7;
+
+    const-string v4, "STARTED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lpw7;->d:Lpw7;
+
+    new-instance v4, Lpw7;
+
+    const-string v5, "RESUMED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lpw7;->o:Lpw7;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lpw7;
+
+    move-result-object v0
+
+    sput-object v0, Lpw7;->X:[Lpw7;
 
     return-void
 .end method
 
-.method public constructor <init>(Lsx9;)V
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Lpw7;
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Lpwc;-><init>()V
+    const-class v0, Lpw7;
 
-    .line 2
-    new-instance v0, Low7;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p0}, Low7;-><init>(Lpw7;)V
+    move-result-object p0
 
-    .line 3
-    new-instance v1, Lru;
+    check-cast p0, Lpw7;
 
-    new-instance v2, Lk12;
+    return-object p0
+.end method
 
-    const/4 v3, 0x2
+.method public static values()[Lpw7;
+    .locals 1
 
-    invoke-direct {v2, v3, p0}, Lk12;-><init>(ILjava/lang/Object;)V
+    sget-object v0, Lpw7;->X:[Lpw7;
 
-    .line 4
-    sget-object v3, Lhv0;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    monitor-enter v3
+    move-result-object v0
 
-    .line 5
-    :try_start_0
-    sget-object v4, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
+    check-cast v0, [Lpw7;
 
-    if-nez v4, :cond_0
-
-    const/4 v4, 0x2
-
-    .line 6
-    invoke-static {v4}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v4
-
-    sput-object v4, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    .line 7
-    :cond_0
-    :goto_0
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 8
-    sget-object v3, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
-
-    .line 9
-    new-instance v4, Llo4;
-
-    const/4 v5, 0x4
-
-    invoke-direct {v4, v3, v5, p1}, Llo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 10
-    invoke-direct {v1, v2, v4}, Lru;-><init>(Lfx7;Llo4;)V
-
-    iput-object v1, p0, Lpw7;->o:Lru;
-
-    .line 11
-    iget-object p1, v1, Lru;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    .line 12
-    :goto_1
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final C(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lpw7;->o:Lru;
-
-    iget-object v0, v0, Lru;->f:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public D(Ljava/util/List;Ljava/util/List;)V
+.method public final a(Lpw7;)Z
     .locals 0
 
-    return-void
-.end method
+    invoke-virtual {p0, p1}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-.method public final E(Ljava/util/List;)V
-    .locals 2
+    move-result p1
 
-    iget-object v0, p0, Lpw7;->o:Lru;
+    if-ltz p1, :cond_0
 
-    const/4 v1, 0x0
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lru;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    return p1
 
-    return-void
-.end method
+    :cond_0
+    const/4 p1, 0x0
 
-.method public F(Ljava/util/List;Ljava/lang/Runnable;)V
-    .locals 1
-
-    iget-object v0, p0, Lpw7;->o:Lru;
-
-    invoke-virtual {v0, p1, p2}, Lru;->b(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public j()I
-    .locals 1
-
-    iget-object v0, p0, Lpw7;->o:Lru;
-
-    iget-object v0, v0, Lru;->f:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
+    return p1
 .end method

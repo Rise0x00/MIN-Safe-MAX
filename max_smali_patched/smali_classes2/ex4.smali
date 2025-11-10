@@ -4,46 +4,30 @@
 
 
 # instance fields
-.field public final a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+.field public a:Ldx4;
 
-.field public final b:Lph;
+.field public final b:Landroid/view/GestureDetector;
 
-.field public final c:Lqh;
-
-.field public final d:Lqh;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lex4;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    new-instance v0, Landroid/view/GestureDetector;
 
-    new-instance v0, Lph;
+    new-instance v1, Lzw0;
 
-    const/4 v1, 0x7
+    const/4 v2, 0x7
 
-    invoke-direct {v0, p1, v1}, Lph;-><init>(Lx5d;I)V
+    invoke-direct {v1, v2, p0}, Lzw0;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lex4;->b:Lph;
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    new-instance v0, Lqh;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, p1, v1}, Lqh;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lex4;->c:Lqh;
-
-    new-instance v0, Lqh;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, p1, v1}, Lqh;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lex4;->d:Lqh;
+    iput-object v0, p0, Lex4;->b:Landroid/view/GestureDetector;
 
     return-void
 .end method

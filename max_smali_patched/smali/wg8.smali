@@ -1,46 +1,15 @@
 .class public final Lwg8;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lpb;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lwg8;->Y:Lpb;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Lb3g;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lwg8;->o:Ljava/lang/Object;
+    check-cast p1, Ljava/util/Map$Entry;
 
-    iget p1, p0, Lwg8;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwg8;->X:I
-
-    iget-object p1, p0, Lwg8;->Y:Lpb;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 

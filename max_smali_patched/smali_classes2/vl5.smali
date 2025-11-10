@@ -1,47 +1,46 @@
-.class public final Lvl5;
-.super Lnz3;
+.class public abstract Lvl5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lznf;
 
 
 # instance fields
-.field public final synthetic X:Lcm5;
+.field public a:Landroid/view/View;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public constructor <init>(Lcm5;Lnz3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lvl5;->X:Lcm5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lvl5;->b:Ljava/util/LinkedList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(I)Lu2c;
+    .locals 3
 
-    iput-object p1, p0, Lvl5;->o:Ljava/lang/Object;
+    new-instance v0, Lu2c;
 
-    iget p1, p0, Lvl5;->Y:I
+    new-instance v1, Ltl5;
 
-    const/high16 v0, -0x80000000
+    const/4 v2, 0x0
 
-    or-int/2addr p1, v0
+    invoke-direct {v1, p0, p1, v2}, Ltl5;-><init>(Ljava/lang/Object;II)V
 
-    iput p1, p0, Lvl5;->Y:I
+    invoke-direct {v0, p0, v1}, Lu2c;-><init>(Lvl5;Ltl5;)V
 
-    iget-object p1, p0, Lvl5;->X:Lcm5;
-
-    invoke-virtual {p1, p0}, Lcm5;->f1(Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,54 +1,57 @@
 .class public abstract Logf;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
+# interfaces
+.implements Lrj6;
 
-# static fields
-.field public static final a:Ljava/lang/ThreadLocal;
+
+# instance fields
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "ThreadLocalEventLoop"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lkotlinx/coroutines/internal/ThreadLocalKt;->commonThreadLocal(Lkotlinx/coroutines/internal/Symbol;)Ljava/lang/ThreadLocal;
-
-    move-result-object v0
-
-    sput-object v0, Logf;->a:Ljava/lang/ThreadLocal;
+    iput p1, p0, Logf;->d:I
 
     return-void
 .end method
 
-.method public static a()Lrb5;
-    .locals 3
 
-    sget-object v0, Logf;->a:Ljava/lang/ThreadLocal;
+# virtual methods
+.method public final getArity()I
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    iget v0, p0, Logf;->d:I
 
-    move-result-object v1
+    return v0
+.end method
 
-    check-cast v1, Lrb5;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lhj0;->a:Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lwp0;
+    if-nez v0, :cond_0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    sget-object v0, Lv7d;->a:Lw7d;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v1, v2}, Lwp0;-><init>(Ljava/lang/Thread;)V
+    invoke-static {p0}, Lw7d;->a(Lrj6;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    return-object v1
+    invoke-super {p0}, Lhj0;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

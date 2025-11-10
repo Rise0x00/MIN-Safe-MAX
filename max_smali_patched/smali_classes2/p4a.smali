@@ -1,27 +1,14 @@
-.class public final Lp4a;
+.class public interface abstract Lp4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# virtual methods
+.method public abstract i(Ljava/lang/String;)V
+.end method
 
-.field public final b:Lbp7;
+.method public abstract l(Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
 
-.field public final c:Lbp7;
-
-
-# direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp4a;->a:Lbp7;
-
-    iput-object p2, p0, Lp4a;->b:Lbp7;
-
-    iput-object p3, p0, Lp4a;->c:Lbp7;
-
-    return-void
+.method public abstract u(Ljava/lang/Throwable;)V
 .end method

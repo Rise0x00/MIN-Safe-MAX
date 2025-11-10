@@ -1,63 +1,132 @@
 .class public final Lpu2;
-.super Ldd0;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final b:Lpu2;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lr13;
+
+.field public final synthetic Z:Lvu2;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lr13;Lkotlin/coroutines/Continuation;Lvu2;)V
+    .locals 0
 
-    new-instance v0, Lpu2;
+    iput-object p1, p0, Lpu2;->Y:Lr13;
 
-    const/4 v1, 0x4
+    iput-object p3, p0, Lpu2;->Z:Lvu2;
 
-    invoke-direct {v0, v1}, Ldd0;-><init>(I)V
+    const/4 p1, 0x2
 
-    sput-object v0, Lpu2;->b:Lpu2;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lgz5;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lpu2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lpu2;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lpu2;
 
-    const/4 p1, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    return p1
+    invoke-virtual {p1, p2}, Lpu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const v0, 0x74a363af
+    new-instance v0, Lpu2;
 
-    return v0
-.end method
+    iget-object v1, p0, Lpu2;->Y:Lr13;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object v2, p0, Lpu2;->Z:Lvu2;
 
-    const-string v0, "RequestCameraPermission"
+    invoke-direct {v0, v1, p2, v2}, Lpu2;-><init>(Lr13;Lkotlin/coroutines/Continuation;Lvu2;)V
+
+    iput-object p1, v0, Lpu2;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lpu2;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpu2;->X:Ljava/lang/Object;
+
+    check-cast p1, Lgz5;
+
+    new-instance v0, Lnb2;
+
+    iget-object v2, p0, Lpu2;->Z:Lvu2;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v0, p1, v2, v3}, Lnb2;-><init>(Lgz5;Ljava/lang/Object;I)V
+
+    iput v1, p0, Lpu2;->o:I
+
+    iget-object p1, p0, Lpu2;->Y:Lr13;
+
+    invoke-virtual {p1, v0, p0}, Lr13;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

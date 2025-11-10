@@ -1,188 +1,100 @@
-.class public final Lr7;
+.class public abstract Lr7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
-
 
 # instance fields
-.field public X:Z
+.field public final a:Landroid/content/Context;
 
-.field public Y:Z
-
-.field public a:Ljava/lang/Object;
-
-.field public b:Landroid/app/Activity;
-
-.field public final c:I
-
-.field public o:Z
+.field public b:Lcye;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lr7;->o:Z
-
-    iput-boolean v0, p0, Lr7;->X:Z
-
-    iput-boolean v0, p0, Lr7;->Y:Z
-
-    iput-object p1, p0, Lr7;->b:Landroid/app/Activity;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    iput p1, p0, Lr7;->c:I
+    iput-object p1, p0, Lr7;->a:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
+.method public a()Z
     .locals 1
 
-    iget-object v0, p0, Lr7;->b:Landroid/app/Activity;
+    const/4 v0, 0x0
 
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lr7;->b:Landroid/app/Activity;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lr7;->X:Z
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 4
+.method public abstract b()Z
+.end method
 
-    iget-boolean v0, p0, Lr7;->X:Z
+.method public abstract c()Landroid/view/View;
+.end method
 
-    if-eqz v0, :cond_1
+.method public d(Lm89;)Landroid/view/View;
+    .locals 0
 
-    iget-boolean v0, p0, Lr7;->Y:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lr7;->o:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lr7;->a:Ljava/lang/Object;
-
-    :try_start_0
-    sget-object v1, Ls7;->c:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v0, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget v2, p0, Lr7;->c:I
-
-    if-eq v0, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    sget-object v0, Ls7;->b:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lr7;->c()Landroid/view/View;
 
     move-result-object p1
 
-    sget-object v0, Ls7;->g:Landroid/os/Handler;
-
-    new-instance v2, Lsg6;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p1, v3, v1}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lr7;->Y:Z
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lr7;->a:Ljava/lang/Object;
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    const-string v0, "ActivityRecreator"
-
-    const-string v1, "Exception while fetching field values"
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p1
 .end method
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
+.method public abstract e()Z
+.end method
+
+.method public f(Lsbf;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+.method public abstract g()Z
 .end method
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 1
+.method public h(Lcye;)V
+    .locals 2
 
-    iget-object v0, p0, Lr7;->b:Landroid/app/Activity;
+    iget-object v0, p0, Lr7;->b:Lcye;
 
-    if-ne v0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-boolean p1, p0, Lr7;->o:Z
+    const-string v1, "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " instance while it is still in use somewhere else?"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ActionProvider(support)"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    return-void
-.end method
-
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    iput-object p1, p0, Lr7;->b:Lcye;
 
     return-void
 .end method

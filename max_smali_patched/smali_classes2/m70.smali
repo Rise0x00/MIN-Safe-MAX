@@ -1,19 +1,31 @@
 .class public final Lm70;
-.super Ll9f;
+.super Lmmf;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:I
+
+
 # instance fields
-.field public final c:J
+.field public final c:Ljava/util/LinkedHashMap;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public final o:Ld5e;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ljava/util/LinkedHashMap;Ljava/util/ArrayList;Ld5e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lm70;->c:J
+    iput-object p1, p0, Lm70;->c:Ljava/util/LinkedHashMap;
+
+    iput-object p2, p0, Lm70;->d:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Lm70;->o:Ld5e;
 
     return-void
 .end method
@@ -21,62 +33,140 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lm70;
+    instance-of v0, p1, Lm70;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lm70;
 
-    iget-wide v3, p0, Lm70;->c:J
+    iget-object v0, p0, Lm70;->c:Ljava/util/LinkedHashMap;
 
-    iget-wide v5, p1, Lm70;->c:J
+    iget-object v1, p1, Lm70;->c:Ljava/util/LinkedHashMap;
 
-    cmp-long p1, v3, v5
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result v0
 
-    return v2
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    return v0
+    iget-object v0, p0, Lm70;->d:Ljava/util/ArrayList;
+
+    iget-object v1, p1, Lm70;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lm70;->o:Ld5e;
+
+    iget-object p1, p1, Lm70;->o:Ld5e;
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lm70;->c:J
+    iget-object v0, p0, Lm70;->c:Ljava/util/LinkedHashMap;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lm70;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lm70;->o:Ld5e;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "Response(timestampRemoveProfile="
+    iget-object v0, p0, Lm70;->c:Ljava/util/LinkedHashMap;
 
-    const-string v1, ")"
+    invoke-static {v0}, Lxvc;->h(Ljava/util/Map;)Ljava/lang/String;
 
-    iget-wide v2, p0, Lm70;->c:J
+    move-result-object v0
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{tokenTypes="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "passwordChallenge="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lm70;->o:Ld5e;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

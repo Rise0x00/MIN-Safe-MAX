@@ -1,112 +1,194 @@
 .class public final Lyr;
-.super Ljava/util/AbstractSet;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lyr;
+
+
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/Object;
 
 .field public final b:Ljava/lang/Object;
 
+.field public final c:Landroid/graphics/drawable/Drawable;
+
 
 # direct methods
-.method public constructor <init>(Lds;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lyr;
 
-    iput v0, p0, Lyr;->a:I
+    sget-object v1, Lna5;->a:Lna5;
 
-    .line 3
-    iput-object p1, p0, Lyr;->b:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    invoke-direct {v0, v1, v1, v2}, Lyr;-><init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
+
+    sput-object v0, Lyr;->d:Lyr;
 
     return-void
 .end method
 
-.method public constructor <init>([Lb5g;)V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lyr;->a:I
+    iput-object p1, p0, Lyr;->a:Ljava/lang/Object;
 
-    .line 1
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    iput-object p2, p0, Lyr;->b:Ljava/lang/Object;
 
-    .line 2
-    iput-object p1, p0, Lyr;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lyr;->c:Landroid/graphics/drawable/Drawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lyr;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    new-instance v0, Ll67;
+    :cond_0
+    instance-of v0, p1, Lyr;
 
-    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    check-cast v1, [Lb5g;
+    goto :goto_0
 
-    const/4 v2, 0x1
+    :cond_1
+    check-cast p1, Lyr;
 
-    invoke-direct {v0, v1, v2}, Ll67;-><init>([Lb5g;I)V
+    iget-object v0, p0, Lyr;->a:Ljava/lang/Object;
 
-    return-object v0
+    iget-object v1, p1, Lyr;->a:Ljava/lang/Object;
 
-    :pswitch_0
-    new-instance v0, Lbs;
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v1, Lds;
+    if-nez v0, :cond_2
 
-    invoke-direct {v0, v1}, Lbs;-><init>(Lds;)V
+    goto :goto_0
 
-    return-object v0
+    :cond_2
+    iget-object v0, p0, Lyr;->b:Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p1, Lyr;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lyr;->c:Landroid/graphics/drawable/Drawable;
+
+    iget-object p1, p1, Lyr;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lyr;->a:I
+    iget-object v0, p0, Lyr;->a:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v0, p0, Lyr;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, [Lb5g;
+    mul-int/lit8 v0, v0, 0x1f
 
-    array-length v0, v0
+    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
 
-    div-int/lit8 v0, v0, 0x2
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return v0
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Lyr;->b:Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    check-cast v0, Lds;
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v0, v0, Lade;->c:I
+    iget-object v0, p0, Lyr;->c:Landroid/graphics/drawable/Drawable;
 
-    return v0
+    if-nez v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "State(themes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyr;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", modes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", currentThemeDrawable="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyr;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

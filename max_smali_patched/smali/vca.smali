@@ -1,224 +1,470 @@
 .class public final Lvca;
-.super Ljava/util/concurrent/atomic/AtomicBoolean;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lxda;
-.implements Lss4;
 
 
 # instance fields
-.field public final a:Lxda;
+.field public A:I
 
-.field public final b:Lwca;
+.field public B:Ljava/lang/String;
 
-.field public final c:Luca;
+.field public C:I
 
-.field public o:Lss4;
+.field public D:I
+
+.field public final E:Z
+
+.field public final F:Landroid/app/Notification;
+
+.field public final G:Ljava/util/ArrayList;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public e:Ljava/lang/CharSequence;
+
+.field public f:Ljava/lang/CharSequence;
+
+.field public g:Landroid/app/PendingIntent;
+
+.field public h:Landroid/app/PendingIntent;
+
+.field public i:Landroidx/core/graphics/drawable/IconCompat;
+
+.field public j:I
+
+.field public k:I
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Ljda;
+
+.field public o:I
+
+.field public p:I
+
+.field public q:Z
+
+.field public r:Ljava/lang/String;
+
+.field public s:Z
+
+.field public t:Ljava/lang/String;
+
+.field public u:Z
+
+.field public v:Ljava/lang/String;
+
+.field public w:Landroid/os/Bundle;
+
+.field public x:I
+
+.field public y:I
+
+.field public z:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lxda;Lwca;Luca;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvca;->a:Lxda;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lvca;->b:Lwca;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p3, p0, Lvca;->c:Luca;
+    iput-object v0, p0, Lvca;->b:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lvca;->c:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lvca;->d:Ljava/util/ArrayList;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvca;->l:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lvca;->u:Z
+
+    iput v1, p0, Lvca;->x:I
+
+    iput v1, p0, Lvca;->y:I
+
+    iput v1, p0, Lvca;->A:I
+
+    iput v1, p0, Lvca;->C:I
+
+    iput v1, p0, Lvca;->D:I
+
+    new-instance v2, Landroid/app/Notification;
+
+    invoke-direct {v2}, Landroid/app/Notification;-><init>()V
+
+    iput-object v2, p0, Lvca;->F:Landroid/app/Notification;
+
+    iput-object p1, p0, Lvca;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lvca;->z:Ljava/lang/String;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p1
+
+    iput-wide p1, v2, Landroid/app/Notification;->when:J
+
+    const/4 p1, -0x1
+
+    iput p1, v2, Landroid/app/Notification;->audioStreamType:I
+
+    iput v1, p0, Lvca;->k:I
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lvca;->G:Ljava/util/ArrayList;
+
+    iput-boolean v0, p0, Lvca;->E:Z
 
     return-void
+.end method
+
+.method public static b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/16 v1, 0x1400
+
+    if-le v0, v1, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-interface {p0, v0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    :cond_1
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final a()Landroid/app/Notification;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ld5e;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, p0}, Ld5e;-><init>(Lvca;)V
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    iget-object v1, v0, Ld5e;->d:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v1, Lvca;
 
-    if-eqz v0, :cond_0
+    iget-object v2, v1, Lvca;->n:Ljda;
 
-    iget-object v0, p0, Lvca;->b:Lwca;
+    if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lvca;->c:Luca;
+    invoke-virtual {v2, v0}, Ljda;->b(Ld5e;)V
 
-    invoke-virtual {v0, v1}, Lwca;->w(Luca;)V
+    :cond_0
+    iget-object v0, v0, Ld5e;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lvca;->a:Lxda;
+    check-cast v0, Landroid/app/Notification$Builder;
 
-    invoke-interface {v0}, Lxda;->b()V
+    invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
+
+    move-result-object v0
+
+    if-eqz v2, :cond_1
+
+    iget-object v1, v1, Lvca;->n:Ljda;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    if-eqz v2, :cond_2
+
+    iget-object v1, v0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v2, v1}, Ljda;->a(Landroid/os/Bundle;)V
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public final c(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-static {p1}, Lvca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvca;->f:Ljava/lang/CharSequence;
+
+    return-void
+.end method
+
+.method public final d(I)V
+    .locals 1
+
+    iget-object v0, p0, Lvca;->F:Landroid/app/Notification;
+
+    iput p1, v0, Landroid/app/Notification;->defaults:I
+
+    and-int/lit8 p1, p1, 0x4
+
+    if-eqz p1, :cond_0
+
+    iget p1, v0, Landroid/app/Notification;->flags:I
+
+    or-int/lit8 p1, p1, 0x1
+
+    iput p1, v0, Landroid/app/Notification;->flags:I
 
     :cond_0
     return-void
 .end method
 
-.method public final c(Lss4;)V
+.method public final e(IZ)V
     .locals 1
 
-    iget-object v0, p0, Lvca;->o:Lss4;
+    iget-object v0, p0, Lvca;->F:Landroid/app/Notification;
 
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    if-eqz p2, :cond_0
 
-    move-result v0
+    iget p2, v0, Landroid/app/Notification;->flags:I
 
-    if-eqz v0, :cond_0
+    or-int/2addr p1, p2
 
-    iput-object p1, p0, Lvca;->o:Lss4;
+    iput p1, v0, Landroid/app/Notification;->flags:I
 
-    iget-object p1, p0, Lvca;->a:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+    return-void
 
     :cond_0
-    return-void
-.end method
+    iget p2, v0, Landroid/app/Notification;->flags:I
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+    not-int p1, p1
 
-    iget-object v0, p0, Lvca;->a:Lxda;
+    and-int/2addr p1, p2
 
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+    iput p1, v0, Landroid/app/Notification;->flags:I
 
     return-void
 .end method
 
-.method public final g()V
-    .locals 6
+.method public final f(Landroid/graphics/Bitmap;)V
+    .locals 9
 
-    iget-object v0, p0, Lvca;->o:Lss4;
+    if-nez p1, :cond_0
 
-    invoke-interface {v0}, Lss4;->g()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lvca;->b:Lwca;
-
-    iget-object v1, p0, Lvca;->c:Luca;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v2, v0, Lwca;->c:Luca;
-
-    if-eqz v2, :cond_3
-
-    if-eq v2, v1, :cond_0
+    const/4 p1, 0x0
 
     goto :goto_1
 
     :cond_0
-    iget-wide v2, v1, Luca;->b:J
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-wide/16 v4, 0x1
+    const/16 v1, 0x1b
 
-    sub-long/2addr v2, v4
-
-    iput-wide v2, v1, Luca;->b:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-boolean v2, v1, Luca;->c:Z
-
-    if-nez v2, :cond_1
+    if-lt v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0, v1}, Lwca;->x(Luca;)V
+    iget-object v0, p0, Lvca;->a:Landroid/content/Context;
 
-    monitor-exit v0
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    return-void
+    move-result-object v0
 
-    :catchall_0
-    move-exception v1
+    sget v1, Lclc;->compat_notification_large_icon_max_width:I
 
-    goto :goto_2
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    sget v2, Lclc;->compat_notification_large_icon_max_height:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    if-gt v2, v1, :cond_2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    if-gt v2, v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    monitor-exit v0
+    int-to-double v1, v1
 
-    return-void
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    :cond_3
-    :goto_1
-    monitor-exit v0
+    move-result v3
 
-    return-void
+    const/4 v4, 0x1
 
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v4, v3}, Ljava/lang/Math;->max(II)I
 
-    throw v1
+    move-result v3
 
-    :cond_4
-    return-void
-.end method
+    int-to-double v5, v3
 
-.method public final h()Z
-    .locals 1
+    div-double/2addr v1, v5
 
-    iget-object v0, p0, Lvca;->o:Lss4;
+    int-to-double v5, v0
 
-    invoke-interface {v0}, Lss4;->h()Z
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    return v0
+    invoke-static {v4, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    int-to-double v7, v0
+
+    div-double/2addr v5, v7
+
+    invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    int-to-double v2, v2
+
+    mul-double/2addr v2, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v2, v2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    int-to-double v5, v3
+
+    mul-double/2addr v5, v0
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int v0, v0
+
+    invoke-static {p1, v2, v0, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-static {p1}, Landroidx/core/graphics/drawable/IconCompat;->b(Landroid/graphics/Bitmap;)Landroidx/core/graphics/drawable/IconCompat;
+
+    move-result-object p1
+
+    :goto_1
+    iput-object p1, p0, Lvca;->i:Landroidx/core/graphics/drawable/IconCompat;
+
+    return-void
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public final g(Landroid/net/Uri;)V
     .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lvca;->F:Landroid/app/Notification;
 
-    const/4 v1, 0x1
+    iput-object p1, v0, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    const/4 p1, -0x1
 
-    move-result v0
+    iput p1, v0, Landroid/app/Notification;->audioStreamType:I
 
-    if-eqz v0, :cond_0
+    invoke-static {}, Luca;->b()Landroid/media/AudioAttributes$Builder;
 
-    iget-object v0, p0, Lvca;->b:Lwca;
+    move-result-object p1
 
-    iget-object v1, p0, Lvca;->c:Luca;
+    const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Lwca;->w(Luca;)V
+    invoke-static {p1, v1}, Luca;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
 
-    iget-object v0, p0, Lvca;->a:Lxda;
+    move-result-object p1
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+    const/4 v1, 0x5
+
+    invoke-static {p1, v1}, Luca;->e(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p1
+
+    invoke-static {p1}, Luca;->a(Landroid/media/AudioAttributes$Builder;)Landroid/media/AudioAttributes;
+
+    move-result-object p1
+
+    iput-object p1, v0, Landroid/app/Notification;->audioAttributes:Landroid/media/AudioAttributes;
 
     return-void
+.end method
+
+.method public final h(Ljda;)V
+    .locals 1
+
+    iget-object v0, p0, Lvca;->n:Ljda;
+
+    if-eq v0, p1, :cond_0
+
+    iput-object p1, p0, Lvca;->n:Ljda;
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p1, Ljda;->b:Ljava/lang/Object;
+
+    check-cast v0, Lvca;
+
+    if-eq v0, p0, :cond_0
+
+    iput-object p0, p1, Ljda;->b:Ljava/lang/Object;
+
+    invoke-virtual {p0, p1}, Lvca;->h(Ljda;)V
 
     :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
     return-void
 .end method

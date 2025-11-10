@@ -1,649 +1,623 @@
 .class public final Lvd7;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public X:I
+
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ljd7;
+
+.field public final synthetic s0:Lhe7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lvd7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lvd7;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
-    .locals 5
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    invoke-static {p1, v1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Landroid/content/pm/ResolveInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    const-string v4, "org.telegram.messenger"
-
-    invoke-static {v3, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "org.telegram.messenger.beta"
-
-    invoke-static {v3, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "org.telegram.messenger.web"
-
-    invoke-static {v3, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_2
-    move-object v1, v2
-
-    :cond_3
-    check-cast v1, Landroid/content/pm/ResolveInfo;
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {p1}, Landroid/content/Intent;->clone()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/Intent;
-
-    iget-object p1, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance p1, Landroid/content/ComponentName;
-
-    iget-object v2, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v3, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-direct {p1, v3, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    const/high16 p1, 0x10000000
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    new-instance p1, Landroid/content/pm/LabeledIntent;
-
-    iget-object v2, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget v3, v1, Landroid/content/pm/ResolveInfo;->labelRes:I
-
-    iget v1, v1, Landroid/content/pm/ResolveInfo;->icon:I
-
-    invoke-direct {p1, p0, v2, v3, v1}, Landroid/content/pm/LabeledIntent;-><init>(Landroid/content/Intent;Ljava/lang/String;II)V
-
-    filled-new-array {p1}, [Landroid/content/pm/LabeledIntent;
-
-    move-result-object p0
-
-    check-cast p0, [Landroid/os/Parcelable;
-
-    const-string p1, "android.intent.extra.INITIAL_INTENTS"
-
-    invoke-virtual {v0, p1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    :cond_4
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;)Landroid/content/Intent;
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.settings.APPLICATION_DETAILS_SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "package:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    return-object v0
-.end method
-
-.method public static c(Landroid/content/Context;Z)Landroid/content/Intent;
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Landroid/content/Intent;
-
-    const-string v0, "miui.intent.action.APP_PERM_EDITOR"
-
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "com.miui.securitycenter"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v0, "extra_package_uid"
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string v0, "extra_pkgname"
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, v0, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    return-object p1
-
-    :cond_0
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x22
-
-    if-lt p1, v0, :cond_1
-
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    const-string v1, "package"
-
-    invoke-static {v1, p0, v0}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    const-string v0, "android.settings.MANAGE_APP_USE_FULL_SCREEN_INTENT"
-
-    invoke-direct {p1, v0, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    return-object p1
-
-    :cond_1
-    invoke-static {p0}, Lvd7;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final d(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    .locals 5
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.RINGTONE_PICKER"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "openRingtoneSystemPickerIntent can\'t parse value defaultRingtone="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1, v1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_0
-
-    const-string v1, "android.intent.extra.ringtone.EXISTING_URI"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    :cond_0
-    const-string p1, "android.intent.extra.ringtone.TITLE"
-
-    invoke-virtual {v0, p1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p0, "android.intent.extra.ringtone.SHOW_SILENT"
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string p0, "android.intent.extra.ringtone.SHOW_DEFAULT"
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string p0, "android.intent.extra.ringtone.TYPE"
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    return-object v0
-.end method
-
-.method public static e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "-----\\w+ PRIVATE KEY-----"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p0
-
-    const-string v0, ""
-
-    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "\\s"
-
-    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-static {p0, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object p0
-
-    const-string v0, "RSA"
-
-    invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/security/spec/PKCS8EncodedKeySpec;
-
-    invoke-direct {v1, p0}, Ljava/security/spec/PKCS8EncodedKeySpec;-><init>([B)V
-
-    const-string p0, "SHA256withRSA"
-
-    invoke-static {p0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1}, Ljava/security/KeyFactory;->generatePrivate(Ljava/security/spec/KeySpec;)Ljava/security/PrivateKey;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
-
-    sget-object v0, Li82;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/security/Signature;->update([B)V
-
-    invoke-virtual {p0}, Ljava/security/Signature;->sign()[B
-
-    move-result-object p0
+    iput-object p1, p0, Lvd7;->s0:Lhe7;
 
     const/4 p1, 0x2
 
-    invoke-static {p0, p1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Lone/me/sdk/android/tools/SignatureGenerateException;
-
-    const-string v0, "Error calculating cipher data. SIC!"
-
-    invoke-direct {p1, v0, p0}, Lone/me/sdk/android/tools/SignatureGenerateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method public static f(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 2
-
-    :try_start_0
-    new-instance v0, Lr26;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, p0, v1}, Lr26;-><init>(Landroid/content/Context;I)V
-
-    iget-object p0, v0, Lr26;->c:Ljava/lang/Object;
-
-    check-cast p0, Landroid/content/Intent;
-
-    invoke-virtual {p0, p2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {v0, p1}, Lr26;->x(Landroid/net/Uri;)V
-
-    invoke-virtual {v0}, Lr26;->z()V
-
-    sget-object p0, Loyf;->a:Loyf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    new-instance p1, Lv3d;
-
-    invoke-direct {p1, p0}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p0, p1
-
-    :goto_0
-    invoke-static {p0}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p1, Lvd7;->a:Ljava/lang/String;
-
-    const-string p2, "shareMedia: failed"
-
-    invoke-static {p1, p2, p0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public static g(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
-    .locals 3
 
-    :try_start_0
-    new-instance v0, Lr26;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/16 v1, 0xb
+    check-cast p1, Lg54;
 
-    invoke-direct {v0, p0, v1}, Lr26;-><init>(Landroid/content/Context;I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz p2, :cond_1
+    invoke-virtual {p0, p1, p2}, Lvd7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    move-result-object p1
 
-    invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Lvd7;
 
-    move-result v1
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, p2}, Lvd7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lvd7;
+
+    iget-object v1, p0, Lvd7;->s0:Lhe7;
+
+    invoke-direct {v0, v1, p2}, Lvd7;-><init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 22
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lvd7;->s0:Lhe7;
+
+    iget-object v9, v4, Lhe7;->s0:La1f;
+
+    iget-object v10, v4, Lhe7;->Z:La1f;
+
+    iget-object v11, v4, Lhe7;->A0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v12, v4, Lhe7;->X:La1f;
+
+    iget-object v13, v4, Lhe7;->z0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v14, v4, Lhe7;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget v1, v0, Lvd7;->Y:I
+
+    const/4 v15, 0x3
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v16, Lybg;->a:Lybg;
+
+    const-string v5, "prefetch "
+
+    sget-object v6, Lh54;->a:Lh54;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    if-eq v1, v2, :cond_1
+
+    if-ne v1, v15, :cond_0
+
+    iget v1, v0, Lvd7;->X:I
+
+    iget-object v2, v0, Lvd7;->o:Ljd7;
+
+    iget-object v3, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    check-cast v3, Lg54;
+
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v18, v14
+
+    move-object v14, v5
+
+    move-object/from16 v5, p1
+
+    goto/16 :goto_3
 
     :cond_0
-    const-string v1, "image/*"
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    goto :goto_1
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 
     :cond_1
-    :goto_0
-    const-string v1, "text/plain"
+    iget-object v1, v0, Lvd7;->o:Ljd7;
 
-    :goto_1
-    iget-object v2, v0, Lr26;->c:Ljava/lang/Object;
+    iget-object v2, v0, Lvd7;->Z:Ljava/lang/Object;
 
-    check-cast v2, Landroid/content/Intent;
+    check-cast v2, Lg54;
 
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Lr26;->y(Ljava/lang/CharSequence;)V
+    move-object v3, v2
 
-    invoke-virtual {v0, p2}, Lr26;->x(Landroid/net/Uri;)V
+    move-object v2, v1
 
-    invoke-virtual {v0}, Lr26;->s()Landroid/content/Intent;
+    move-object v1, v3
 
-    move-result-object p1
+    move-object/from16 v3, p1
 
-    invoke-static {p0, p1}, Lvd7;->a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
+    move-object/from16 v20, v9
 
-    move-result-object p1
+    move-object/from16 v18, v14
 
-    if-eqz p1, :cond_2
+    move-object v14, v5
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    move-object v9, v6
 
-    sget-object p0, Loyf;->a:Loyf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
+    goto/16 :goto_1
 
     :cond_2
-    const/4 p0, 0x0
+    iget-object v1, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lg54;
+
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    move-object v2, v1
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v18, v14
+
+    move-object/from16 v1, p1
+
+    move-object v14, v5
+
+    move-object v9, v6
+
+    goto/16 :goto_0
+
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lg54;
+
+    sget-object v7, Lhe7;->D0:Ljava/lang/String;
+
+    invoke-virtual {v14}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v8
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ": start to load virtual albums"
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v14}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v2
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ": start fetch medias"
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Lcof;
+
+    iget-object v7, v4, Lhe7;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v7
+
+    const-string v8, " virtual albums recent items"
+
+    invoke-static {v7, v5, v8}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v2, v7}, Lcof;-><init>(Ljava/lang/String;)V
+
+    move-object v7, v2
+
+    sget-object v2, Lcl6;->a:Lcl6;
+
+    iput-object v1, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    iput v3, v0, Lvd7;->Y:I
+
+    iget-object v3, v4, Lhe7;->c:Ltlf;
+
+    check-cast v3, Lsta;
+
+    invoke-virtual {v3}, Lsta;->b()La54;
+
+    move-result-object v3
+
+    move-object v8, v1
+
+    new-instance v1, Lrd7;
+
+    move-object/from16 v17, v8
+
+    const/4 v8, 0x0
+
+    move-object/from16 v18, v5
+
+    const/16 v5, 0x28
+
+    move-object/from16 v19, v6
+
+    const/4 v6, 0x0
+
+    move-object/from16 v20, v3
+
+    move-object v3, v7
+
+    const/4 v7, 0x0
+
+    move-object/from16 v15, v18
+
+    move-object/from16 v18, v14
+
+    move-object v14, v15
+
+    move-object/from16 v15, v20
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v9, v19
+
+    invoke-direct/range {v1 .. v8}, Lrd7;-><init>(Lfl6;Lcof;Lhe7;IIZLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v15, v1, v0}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v9, :cond_4
 
     goto :goto_2
 
-    :catchall_0
-    move-exception p0
+    :cond_4
+    move-object/from16 v2, v17
 
-    new-instance p1, Lv3d;
+    :goto_0
+    check-cast v1, Ljd7;
 
-    invoke-direct {p1, p0}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {v2}, Ljwi;->e(Lg54;)Z
 
-    move-object p0, p1
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    sget-object v3, Lhe7;->D0:Ljava/lang/String;
+
+    invoke-virtual/range {v18 .. v18}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ": finish fetch medias"
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v3, Lbl6;->a:Lbl6;
+
+    iput-object v2, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    iput-object v1, v0, Lvd7;->o:Ljd7;
+
+    const/4 v5, 0x2
+
+    iput v5, v0, Lvd7;->Y:I
+
+    invoke-static {v4, v3, v0}, Lhe7;->a(Lhe7;Lfl6;Logf;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-ne v3, v9, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move-object/from16 v21, v2
+
+    move-object v2, v1
+
+    move-object/from16 v1, v21
+
+    :goto_1
+    check-cast v3, Ljava/lang/Number;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+
+    move-result v3
+
+    sget-object v5, Ldl6;->a:Ldl6;
+
+    iput-object v1, v0, Lvd7;->Z:Ljava/lang/Object;
+
+    iput-object v2, v0, Lvd7;->o:Ljd7;
+
+    iput v3, v0, Lvd7;->X:I
+
+    const/4 v6, 0x3
+
+    iput v6, v0, Lvd7;->Y:I
+
+    invoke-static {v4, v5, v0}, Lhe7;->a(Lhe7;Lfl6;Logf;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-ne v5, v9, :cond_7
 
     :goto_2
-    invoke-static {p0}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    return-object v9
 
-    move-result-object p0
+    :cond_7
+    move/from16 v21, v3
 
-    if-eqz p0, :cond_3
+    move-object v3, v1
 
-    sget-object p1, Lvd7;->a:Ljava/lang/String;
+    move/from16 v1, v21
 
-    const-string p2, "showInviteDialog error"
+    :goto_3
+    check-cast v5, Ljava/lang/Number;
 
-    invoke-static {p1, p2, p0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
 
-    :cond_3
-    return-void
-.end method
+    move-result v5
 
-.method public static h(Landroid/content/Context;Landroid/net/Uri;)V
-    .locals 2
+    invoke-static {v3}, Ljwi;->e(Lg54;)Z
 
-    :try_start_0
-    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    move-result v3
 
-    move-result-object p1
+    if-nez v3, :cond_8
 
-    const-string v0, "client"
+    :goto_4
+    return-object v16
 
-    const-string v1, "613"
+    :cond_8
+    iget-object v3, v4, Lhe7;->y0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {p1, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    add-int v6, v1, v5
 
-    move-result-object p1
+    invoke-virtual {v3, v6}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    const-string v0, "utm_source"
+    invoke-virtual {v13}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    const-string v1, "max"
+    invoke-virtual {v12}, La1f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    move-result-object v3
 
-    move-result-object p1
+    check-cast v3, Lgl6;
 
-    sget v0, Lvjc;->ya_key:I
+    iget-object v3, v3, Lgl6;->a:Lfl6;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    iget-object v7, v2, Ljd7;->a:Ljava/util/List;
 
-    move-result-object p0
+    iget-object v8, v2, Ljd7;->c:Ljava/util/List;
 
-    invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+    iget-object v9, v2, Ljd7;->b:Ljava/util/List;
 
-    move-result-object v0
+    invoke-virtual {v13, v3, v7}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    iget-object v2, v2, Ljd7;->a:Ljava/util/List;
 
-    move-result-object v0
+    invoke-static {v2}, Lab3;->C(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-static {p0, v0}, Lvd7;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object p0
+    check-cast v2, Lk68;
 
-    const-string v0, "signature"
+    if-eqz v2, :cond_9
 
-    invoke-virtual {p1, v0, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    invoke-virtual {v12}, La1f;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v3
 
-    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-    :try_end_0
-    .catch Lone/me/sdk/android/tools/SignatureGenerateException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v3, Lgl6;
 
-    return-void
+    iget-object v3, v3, Lgl6;->a:Lfl6;
 
-    :catch_0
-    move-exception p0
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object p1, Lvd7;->a:Ljava/lang/String;
+    :cond_9
+    invoke-virtual {v10}, La1f;->getValue()Ljava/lang/Object;
 
-    const-string v0, "fail to generate signature"
+    move-result-object v2
 
-    invoke-static {p1, v0, p0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v2, Lgl6;
 
-    return-void
+    iget-object v2, v2, Lgl6;->a:Lfl6;
+
+    invoke-virtual {v13, v2, v9}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v9}, Lab3;->C(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lk68;
+
+    if-eqz v2, :cond_a
+
+    invoke-virtual {v10}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lgl6;
+
+    iget-object v3, v3, Lgl6;->a:Lfl6;
+
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
+    invoke-virtual/range {v20 .. v20}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgl6;
+
+    iget-object v2, v2, Lgl6;->a:Lfl6;
+
+    invoke-virtual {v13, v2, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v8}, Lab3;->C(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lk68;
+
+    if-eqz v2, :cond_b
+
+    invoke-virtual/range {v20 .. v20}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lgl6;
+
+    iget-object v3, v3, Lgl6;->a:Lfl6;
+
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_b
+    invoke-virtual {v12}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgl6;
+
+    const/16 v3, 0x9
+
+    invoke-static {v2, v6, v3}, Lgl6;->a(Lgl6;II)Lgl6;
+
+    move-result-object v2
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v12, v6, v2}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual {v10}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgl6;
+
+    invoke-static {v2, v5, v3}, Lgl6;->a(Lgl6;II)Lgl6;
+
+    move-result-object v2
+
+    invoke-virtual {v10, v6, v2}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual/range {v20 .. v20}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgl6;
+
+    invoke-static {v2, v1, v3}, Lgl6;->a(Lgl6;II)Lgl6;
+
+    move-result-object v1
+
+    move-object/from16 v2, v20
+
+    invoke-virtual {v2, v6, v1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, v4, Lhe7;->u0:La1f;
+
+    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxe5;
+
+    if-eqz v2, :cond_c
+
+    iget-object v2, v2, Lxe5;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/List;
+
+    if-nez v2, :cond_d
+
+    :cond_c
+    sget-object v2, Lna5;->a:Lna5;
+
+    :cond_d
+    new-instance v3, Lxe5;
+
+    invoke-direct {v3, v2}, Lxe5;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v6, v3}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lhe7;->D0:Ljava/lang/String;
+
+    invoke-virtual/range {v18 .. v18}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ": finish load virtual albums"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v16
 .end method

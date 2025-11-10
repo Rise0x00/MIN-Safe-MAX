@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lql7;Ljava/lang/String;)V
+.method public constructor <init>(Lbr7;Ljava/lang/String;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -16,12 +16,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lql7;->m()Lml7;
+    invoke-virtual {p1}, Lbr7;->l()Lxq7;
 
     move-result-object p1
 
     :goto_0
-    invoke-direct {p0, p2, p1, v0}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lml7;Ljava/lang/NumberFormatException;)V
+    invoke-direct {p0, p2, p1, v0}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lxq7;Ljava/lang/NumberFormatException;)V
 
     return-void
 .end method

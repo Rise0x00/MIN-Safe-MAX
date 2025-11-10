@@ -1,166 +1,67 @@
-.class public final synthetic Lr22;
-.super Ljava/lang/Object;
+.class public final Lr22;
+.super Lue0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzo3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:Lkoh;
 
-.field public final synthetic b:Ld16;
+.field public final synthetic d:Ljava/util/UUID;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld16;I)V
+.method public constructor <init>(Lkoh;Ljava/util/UUID;)V
     .locals 0
 
-    iput p2, p0, Lr22;->a:I
+    iput-object p1, p0, Lr22;->c:Lkoh;
 
-    iput-object p1, p0, Lr22;->b:Ld16;
+    iput-object p2, p0, Lr22;->d:Ljava/util/UUID;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lue0;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final c()V
+    .locals 3
 
-    iget v0, p0, Lr22;->a:I
+    iget-object v0, p0, Lr22;->c:Lkoh;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lkoh;->c:Landroidx/work/impl/WorkDatabase;
 
-    check-cast p1, Lsb0;
+    invoke-virtual {v1}, Lpgd;->c()V
 
-    invoke-static {}, Lkjd;->e()V
+    :try_start_0
+    iget-object v2, p0, Lr22;->d:Ljava/util/UUID;
 
-    iget-object v0, p0, Lr22;->b:Ld16;
+    invoke-virtual {v2}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    iget-object v0, v0, Ld16;->b:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v0, Lgrb;
+    invoke-static {v0, v2}, Lue0;->b(Lkoh;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v1}, Lpgd;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v1, v0, Lgrb;->a:I
+    invoke-virtual {v1}, Lpgd;->k()V
 
-    iget v2, p1, Lsb0;->a:I
+    iget-object v1, v0, Lkoh;->b:Lul3;
 
-    if-ne v1, v2, :cond_3
+    iget-object v2, v0, Lkoh;->c:Landroidx/work/impl/WorkDatabase;
 
-    iget-object p1, p1, Lsb0;->b:Landroidx/camera/core/ImageCaptureException;
+    iget-object v0, v0, Lkoh;->e:Ljava/util/List;
 
-    iget-object v0, v0, Lgrb;->f:Lc2d;
-
-    iget-object v1, v0, Lc2d;->a:Ltb0;
-
-    invoke-static {}, Lkjd;->e()V
-
-    iget-boolean v2, v0, Lc2d;->g:Z
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Lkjd;->e()V
-
-    iget v2, v1, Ltb0;->a:I
-
-    if-lez v2, :cond_1
-
-    const/4 v3, 0x1
-
-    sub-int/2addr v2, v3
-
-    iput v2, v1, Ltb0;->a:I
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x0
-
-    :goto_0
-    if-nez v3, :cond_2
-
-    invoke-static {}, Lkjd;->e()V
-
-    iget-object v2, v1, Ltb0;->b:Ljava/util/concurrent/Executor;
-
-    new-instance v4, Lowd;
-
-    const/16 v5, 0xe
-
-    invoke-direct {v4, v1, v5, p1}, Lowd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v2, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_2
-    invoke-virtual {v0}, Lc2d;->a()V
-
-    iget-object v2, v0, Lc2d;->e:Lts1;
-
-    invoke-virtual {v2, p1}, Lts1;->d(Ljava/lang/Throwable;)Z
-
-    if-eqz v3, :cond_3
-
-    iget-object p1, v0, Lc2d;->b:Ld8f;
-
-    invoke-virtual {p1, v1}, Ld8f;->d(Ltb0;)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lgrb;
-
-    iget-object v0, p0, Lr22;->b:Ld16;
-
-    invoke-virtual {v0, p1}, Ld16;->n(Lgrb;)V
-
-    iget-object v0, v0, Ld16;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lr6d;
-
-    iget-object v1, v0, Lr6d;->b:Ljava/lang/Object;
-
-    check-cast v1, Lgrb;
-
-    if-nez v1, :cond_4
-
-    const/4 v1, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v1, 0x0
-
-    :goto_2
-    const-string v2, "Pending request should be null"
-
-    invoke-static {v2, v1}, Ll74;->m(Ljava/lang/String;Z)V
-
-    iput-object p1, v0, Lr6d;->b:Ljava/lang/Object;
+    invoke-static {v1, v2, v0}, Lupd;->a(Lul3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
 
     return-void
 
-    :pswitch_1
-    iget-object v0, p0, Lr22;->b:Ld16;
+    :catchall_0
+    move-exception v0
 
-    check-cast p1, Lgrb;
+    invoke-virtual {v1}, Lpgd;->k()V
 
-    invoke-virtual {v0, p1}, Ld16;->n(Lgrb;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

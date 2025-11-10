@@ -1,110 +1,162 @@
 .class public final Lup9;
-.super Ll9f;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public c:J
+.field public final synthetic X:Leq9;
 
-.field public o:Ljava/util/List;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public constructor <init>(Leq9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput-object p1, p0, Lup9;->X:Leq9;
 
-    iget-object p1, p0, Lup9;->o:Ljava/util/List;
+    const/4 p1, 0x2
 
-    if-nez p1, :cond_0
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lup9;->o:Ljava/util/List;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lg54;
 
-    const-string v0, "chatId"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "messages"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ls89;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lbz;->e(Ls89;)Lbz;
+    invoke-virtual {p0, p1, p2}, Lup9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lup9;->o:Ljava/util/List;
+    check-cast p1, Lup9;
 
-    return-void
+    sget-object p2, Lybg;->a:Lybg;
 
-    :cond_1
-    invoke-virtual {p1}, Ls89;->A0()J
+    invoke-virtual {p1, p2}, Lup9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide p1
+    move-result-object p1
 
-    iput-wide p1, p0, Lup9;->c:J
-
-    return-void
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-wide v0, p0, Lup9;->c:J
+    new-instance p1, Lup9;
 
-    iget-object v2, p0, Lup9;->o:Ljava/util/List;
+    iget-object v0, p0, Lup9;->X:Leq9;
 
-    invoke-static {v2}, Lkmc;->e(Ljava/util/Collection;)I
+    invoke-direct {p1, v0, p2}, Lup9;-><init>(Leq9;Lkotlin/coroutines/Continuation;)V
 
-    move-result v2
+    return-object p1
+.end method
 
-    new-instance v3, Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    const-string v4, "{chatId="
+    sget-object v0, Lybg;->a:Lybg;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v1, Lh54;->a:Lh54;
 
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget v2, p0, Lup9;->o:I
 
-    const-string v0, ", messages="
+    const/4 v3, 0x1
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-ne v2, v3, :cond_0
 
-    const-string v0, "}"
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lup9;->X:Leq9;
+
+    iget-object p1, p1, Leq9;->d:Lt0f;
+
+    invoke-interface {p1}, Lt0f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt92;
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p1, p1, Lt92;->d:Lr99;
+
+    iget-object p1, p1, Lr99;->a:Lgb9;
+
+    iget-wide v4, p1, Loj0;->a:J
+
+    iget-object p1, p0, Lup9;->X:Leq9;
+
+    iget-object p1, p1, Leq9;->i:Ljava/lang/String;
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    sget-object v6, La98;->d:La98;
+
+    invoke-virtual {v2, v6}, Lnxa;->b(La98;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    const-string v7, "Scrolling to last mention with id="
+
+    invoke-static {v4, v5, v7}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v2, v6, p1, v7, v8}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_0
+    iget-object p1, p0, Lup9;->X:Leq9;
+
+    iput v3, p0, Lup9;->o:I
+
+    invoke-static {p1, v4, v5, p0}, Leq9;->a(Leq9;JLp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_5
+
+    return-object v1
+
+    :cond_5
+    :goto_1
     return-object v0
 .end method

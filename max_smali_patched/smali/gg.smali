@@ -4,112 +4,156 @@
 
 
 # static fields
-.field public static final a:Landroid/view/animation/LinearInterpolator;
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static final b:Ltj5;
+.field public static final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static final c:Lsj5;
+.field public static final c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static final d:Lsj5;
+.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public static final e:Landroid/view/animation/DecelerateInterpolator;
+.field public static final e:Ltif;
+
+.field public static final f:Lqc;
+
+.field public static final g:Lqc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    sput-object v0, Lgg;->a:Landroid/view/animation/LinearInterpolator;
-
-    new-instance v0, Ltj5;
-
-    invoke-direct {v0}, Ltj5;-><init>()V
-
-    sput-object v0, Lgg;->b:Ltj5;
-
-    new-instance v0, Lsj5;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lsj5;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    sput-object v0, Lgg;->c:Lsj5;
+    sput-object v0, Lgg;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance v0, Lsj5;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lsj5;-><init>(I)V
+    sput-object v0, Lgg;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput-object v0, Lgg;->d:Lsj5;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+    sput-object v0, Lgg;->c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput-object v0, Lgg;->e:Landroid/view/animation/DecelerateInterpolator;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    sput-object v0, Lgg;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance v0, Lm;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lm;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lgg;->e:Ltif;
+
+    new-instance v0, Lqc;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lqc;-><init>(I)V
+
+    sput-object v0, Lgg;->f:Lqc;
+
+    new-instance v2, Lqc;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Lqc;-><init>(I)V
+
+    sput-object v2, Lgg;->g:Lqc;
+
+    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/os/Handler;
+
+    invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public static a(FFF)F
-    .locals 0
+.method public static a(Lmg6;I)V
+    .locals 4
 
-    invoke-static {p1, p0, p2, p0}, Lvpb;->f(FFFF)F
+    iget v0, p0, Lmg6;->a:I
 
-    move-result p0
+    iget-object p0, p0, Lmg6;->b:Lypf;
 
-    return p0
-.end method
+    int-to-float v1, v0
 
-.method public static b(FFFFF)F
-    .locals 1
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    cmpg-float v0, p4, p2
+    mul-float/2addr v1, v2
 
-    if-gtz v0, :cond_0
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    return p0
+    cmpg-float v3, v1, v2
+
+    if-gez v3, :cond_0
+
+    move v1, v2
 
     :cond_0
-    cmpl-float v0, p4, p3
+    float-to-int v1, v1
 
-    if-ltz v0, :cond_1
+    iget v2, p0, Lypf;->Y:I
 
-    return p1
+    add-int/2addr v2, p1
 
-    :cond_1
-    sub-float/2addr p4, p2
-
-    sub-float/2addr p3, p2
-
-    div-float/2addr p4, p3
-
-    invoke-static {p0, p1, p4}, Lgg;->a(FFF)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(IFI)I
-    .locals 0
-
-    sub-int/2addr p2, p0
-
-    int-to-float p2, p2
-
-    mul-float/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    invoke-static {v2, v1, v0}, Liwi;->c(III)I
 
     move-result p1
 
-    add-int/2addr p1, p0
+    iget v0, p0, Lypf;->Y:I
 
-    return p1
+    if-eq p1, v0, :cond_1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iget v1, p0, Lypf;->X:I
+
+    invoke-static {p1, v0, v1}, Liwi;->c(III)I
+
+    move-result p1
+
+    iput p1, p0, Lypf;->Y:I
+
+    invoke-virtual {p0}, Lypf;->q()Lnu0;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget p0, p0, Lypf;->Y:I
+
+    invoke-virtual {p1, p0}, Lnu0;->a(I)V
+
+    :cond_1
+    return-void
 .end method

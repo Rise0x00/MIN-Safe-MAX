@@ -1,61 +1,114 @@
 .class public final Ldsa;
-.super Lgsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgz6;
 
-# static fields
-.field public static final a:Ldsa;
+
+# instance fields
+.field public final b:J
+
+.field public final c:Lru7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru7;J)V
+    .locals 0
 
-    new-instance v0, Ldsa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Ldsa;->b:J
 
-    sput-object v0, Ldsa;->a:Ldsa;
+    iput-object p1, p0, Ldsa;->c:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final g()J
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lcsa;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {v0, p0, v1}, Lcsa;-><init>(Ldsa;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of p1, p1, Ldsa;
+    sget-object v1, Lha5;->a:Lha5;
 
-    if-nez p1, :cond_1
+    invoke-static {v1, v0}, Lkki;->f(Ly44;Lej6;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    check-cast v0, Lt92;
 
-    :cond_1
-    return v0
+    iget-object v0, v0, Lt92;->b:Lvd2;
+
+    iget-wide v0, v0, Lvd2;->x:J
+
+    return-wide v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final h()J
+    .locals 2
 
-    const v0, 0x715c406f
+    new-instance v0, Lcsa;
 
-    return v0
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcsa;-><init>(Ldsa;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lha5;->a:Lha5;
+
+    invoke-static {v1, v0}, Lkki;->f(Ly44;Lej6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt92;
+
+    iget-object v0, v0, Lt92;->b:Lvd2;
+
+    iget-wide v0, v0, Lvd2;->j:J
+
+    return-wide v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final i()J
+    .locals 2
 
-    const-string v0, "PrimaryStatic"
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final j()Ljava/util/List;
+    .locals 2
+
+    new-instance v0, Lcsa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcsa;-><init>(Ldsa;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Lha5;->a:Lha5;
+
+    invoke-static {v1, v0}, Lkki;->f(Ly44;Lej6;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt92;
+
+    iget-object v0, v0, Lt92;->b:Lvd2;
+
+    iget-object v0, v0, Lvd2;->n:Lpd2;
+
+    sget-object v1, Laq4;->o:Laq4;
+
+    invoke-virtual {v0, v1}, Lpd2;->d(Laq4;)Ljava/util/ArrayList;
+
+    move-result-object v0
 
     return-object v0
 .end method

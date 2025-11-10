@@ -1,63 +1,132 @@
-.class public abstract Lbvd;
-.super Ljava/lang/Object;
+.class public final Lbvd;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
+
+
+# instance fields
+.field public final synthetic X:Lcvd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a([B)Lcvd;
-    .locals 7
+.method public constructor <init>(Lcvd;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    iput-object p1, p0, Lbvd;->X:Lcvd;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    const/4 p1, 0x2
 
-    :try_start_0
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lcvd;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
+    check-cast p1, Luy6;
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
+    invoke-virtual {p0, p1, p2}, Lbvd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v6, Lhn4;->o:Lw88;
+    move-result-object p1
 
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+    check-cast p1, Lbvd;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object p0
+    invoke-virtual {p1, p2}, Lbvd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v6, p0}, Lw88;->n(Lw88;Ljava/lang/Integer;)Lhn4;
+    return-object p2
+.end method
 
-    move-result-object v6
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-direct/range {v0 .. v6}, Lcvd;-><init>(JJILhn4;)V
+    new-instance v0, Lbvd;
 
-    iget-object p0, v0, Lcvd;->Y:Ljava/lang/String;
+    iget-object v1, p0, Lbvd;->X:Lcvd;
 
-    const-string v1, "parseFrom"
+    invoke-direct {v0, v1, p2}, Lbvd;-><init>(Lcvd;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, v0, Lbvd;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :catch_0
-    move-exception v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    move-object p0, v0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    iget-object p1, p0, Lbvd;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    check-cast p1, Luy6;
 
-    throw v0
+    iget-wide v0, p1, Luy6;->b:J
+
+    iget-object p1, p0, Lbvd;->X:Lcvd;
+
+    iget-object v2, p1, Lcvd;->Z:Laf5;
+
+    sget-object v3, Lkvd;->c:Lkvd;
+
+    iget-wide v4, p1, Lcvd;->b:J
+
+    iget-object p1, p1, Lcvd;->c:Lyd2;
+
+    sget-object v6, Lyd2;->b:Lyd2;
+
+    if-ne p1, v6, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "local"
+
+    goto :goto_1
+
+    :cond_1
+    const-string p1, "server"
+
+    :goto_1
+    const-string v3, ":chats?id="
+
+    const-string v6, "&type="
+
+    invoke-static {v3, v4, v5, v6, p1}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string v3, "&message_id="
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Lcd0;->l(Ljava/lang/String;Laf5;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

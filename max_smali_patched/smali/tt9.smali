@@ -1,122 +1,234 @@
-.class public Ltt9;
-.super Lvt9;
+.class public final Ltt9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnm7;
+
+# static fields
+.field public static final b:Ljava/lang/Object;
+
+.field public static c:Ltt9;
+
+
+# instance fields
+.field public a:Lzh3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v5, 0x0
+    new-instance v0, Ljava/lang/Object;
 
-    sget-object v1, Lns1;->NO_RECEIVER:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "<v#0>"
-
-    move-object v0, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    invoke-direct/range {v0 .. v5}, Lu5c;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    sput-object v0, Ltt9;->b:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static c()Ltt9;
+    .locals 3
+
+    sget-object v0, Ltt9;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Ltt9;->c:Ltt9;
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    const-string v2, "MlKitContext has not been initialized"
+
+    invoke-static {v2, v1}, Lkui;->i(Ljava/lang/String;Z)V
+
+    sget-object v1, Ltt9;->c:Ltt9;
+
+    invoke-static {v1}, Lkui;->g(Ljava/lang/Object;)V
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public static d(Landroid/content/Context;Ljava/util/concurrent/Executor;)Ltt9;
+    .locals 9
+
+    sget-object v0, Ltt9;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Ltt9;->c:Ltt9;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v3
+
+    :goto_0
+    const-string v4, "MlKitContext is already initialized"
+
+    invoke-static {v4, v1}, Lkui;->i(Ljava/lang/String;Z)V
+
+    new-instance v1, Ltt9;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Ltt9;->c:Ltt9;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    move-object p0, v4
+
+    :cond_1
+    const-class v4, Lcom/google/mlkit/common/internal/MlKitComponentDiscoveryService;
+
+    new-instance v5, Lmxb;
+
+    new-instance v6, Lj1e;
+
+    const/16 v7, 0xa
+
+    invoke-direct {v6, v7, v4}, Lj1e;-><init>(ILjava/lang/Object;)V
+
+    const/16 v4, 0xa
+
+    invoke-direct {v5, p0, v4, v6}, Lmxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v5}, Lmxb;->h()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    sget-object v7, Lwh3;->n:Lbc2;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    const-class v4, Landroid/content/Context;
+
+    new-array v8, v3, [Ljava/lang/Class;
+
+    invoke-static {p0, v4, v8}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object p0
+
+    invoke-virtual {v6, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-class p0, Ltt9;
+
+    new-array v3, v3, [Ljava/lang/Class;
+
+    invoke-static {v1, p0, v3}, Lgh3;->c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+
+    move-result-object p0
+
+    invoke-virtual {v6, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance p0, Lzh3;
+
+    invoke-direct {p0, p1, v5, v6, v7}, Lzh3;-><init>(Ljava/util/concurrent/Executor;Ljava/util/ArrayList;Ljava/util/ArrayList;Lwh3;)V
+
+    iput-object p0, v1, Ltt9;->a:Lzh3;
+
+    invoke-virtual {p0, v2}, Lzh3;->l(Z)V
+
+    sget-object p0, Ltt9;->c:Ltt9;
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a(Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Lu5c;->getReflected()Ltm7;
+    sget-object v0, Ltt9;->c:Ltt9;
 
-    move-result-object v0
+    if-ne v0, p0, :cond_0
 
-    check-cast v0, Lnm7;
+    const/4 v0, 0x1
 
-    check-cast v0, Ltt9;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ltt9;->a()V
-
-    return-void
-.end method
-
-.method public final computeReflected()Lem7;
-    .locals 1
-
-    sget-object v0, Lxxc;->a:Lyxc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p0
-.end method
-
-.method public get()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Ltt9;->getGetter()Lqm7;
-
+    :cond_0
     const/4 v0, 0x0
 
-    throw v0
+    :goto_0
+    const-string v1, "MlKitContext has been deleted"
+
+    invoke-static {v1, v0}, Lkui;->i(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Ltt9;->a:Lzh3;
+
+    invoke-static {v0}, Lkui;->g(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Ltt9;->a:Lzh3;
+
+    invoke-interface {v0, p1}, Lsh3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final getDelegate()Ljava/lang/Object;
+.method public final b()Landroid/content/Context;
     .locals 1
 
-    invoke-virtual {p0}, Lu5c;->getReflected()Ltm7;
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {p0, v0}, Ltt9;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lnm7;
-
-    check-cast v0, Ltt9;
-
-    invoke-virtual {v0}, Ltt9;->getDelegate()Ljava/lang/Object;
-
-    move-result-object v0
+    check-cast v0, Landroid/content/Context;
 
     return-object v0
-.end method
-
-.method public final getGetter()Lqm7;
-    .locals 1
-
-    invoke-virtual {p0}, Lu5c;->getReflected()Ltm7;
-
-    move-result-object v0
-
-    check-cast v0, Lnm7;
-
-    check-cast v0, Ltt9;
-
-    invoke-virtual {v0}, Ltt9;->getGetter()Lqm7;
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
-
-    invoke-interface {p0}, Lrm7;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public set(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0}, Ltt9;->a()V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method

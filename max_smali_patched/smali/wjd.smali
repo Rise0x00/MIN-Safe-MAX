@@ -1,99 +1,128 @@
 .class public final Lwjd;
-.super Ljava/lang/Object;
+.super Llj0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Le8e;
+# static fields
+.field public static final synthetic Y:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+
+# instance fields
+.field public X:Landroid/net/Uri;
+
+.field public o:Lio/antmedia/rtmp_client/RtmpClient;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "media3.datasource.rtmp"
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lkt8;->a(Ljava/lang/String;)V
 
-    const/4 v1, 0x7
+    return-void
+.end method
 
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
+.method public constructor <init>()V
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lwjd;->a:Le8e;
-
-    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lr8f;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lwjd;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lov0;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Llj0;-><init>(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Laj0;)V
+.method public final H(Lec4;)J
     .locals 3
-    .annotation runtime Lxye;
-    .end annotation
 
-    .line 2
-    new-instance v0, Lvjd;
+    invoke-virtual {p0, p1}, Llj0;->c(Lec4;)V
+
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+
+    iput-object v0, p0, Lwjd;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    iget-object v1, p1, Lec4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Lec4;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Lwjd;->X:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Llj0;->d(Lec4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lwjd;->X:Landroid/net/Uri;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lvjd;-><init>(Lwjd;Laj0;Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x3
+    iput-object v1, p0, Lwjd;->X:Landroid/net/Uri;
 
-    iget-object v2, p0, Lwjd;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p0}, Llj0;->b()V
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    :cond_0
+    iget-object v0, p0, Lwjd;->o:Lio/antmedia/rtmp_client/RtmpClient;
 
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
+
+    iput-object v1, p0, Lwjd;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    :cond_1
     return-void
 .end method
 
-.method public final onEvent(Lbo2;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    .line 1
-    new-instance v0, Lujd;
+    iget-object v0, p0, Lwjd;->X:Landroid/net/Uri;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    invoke-direct {v0, p0, p1, v1}, Lujd;-><init>(Lwjd;Lbo2;Lkotlin/coroutines/Continuation;)V
+.method public final read([BII)I
+    .locals 2
 
-    const/4 p1, 0x3
+    iget-object v0, p0, Lwjd;->o:Lio/antmedia/rtmp_client/RtmpClient;
 
-    iget-object v2, p0, Lwjd;->b:Lkotlinx/coroutines/internal/ContextScope;
+    sget-object v1, Llig;->a:Ljava/lang/String;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
 
-    return-void
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    return p2
+
+    :cond_0
+    invoke-virtual {p0, p1}, Llj0;->a(I)V
+
+    return p1
 .end method

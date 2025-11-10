@@ -1,253 +1,78 @@
 .class public final Lob8;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ll28;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Lrb8;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:F
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:J
-
-.field public final k:Z
-
-.field public final l:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Lnb8;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v0, p1, Lnb8;->a:Ll28;
-
-    iput-object v0, p0, Lob8;->a:Ll28;
-
-    iget-wide v0, p1, Lnb8;->b:J
-
-    iput-wide v0, p0, Lob8;->b:J
-
-    iget-wide v0, p1, Lnb8;->c:J
-
-    iput-wide v0, p0, Lob8;->c:J
-
-    iget-object v0, p1, Lnb8;->d:Lrb8;
-
-    iput-object v0, p0, Lob8;->d:Lrb8;
-
-    iget-object v0, p1, Lnb8;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Lob8;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lnb8;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lob8;->f:Ljava/lang/String;
-
-    iget v0, p1, Lnb8;->g:F
-
-    iput v0, p0, Lob8;->g:F
-
-    iget-boolean v0, p1, Lnb8;->h:Z
-
-    iput-boolean v0, p0, Lob8;->h:Z
-
-    iget-boolean v0, p1, Lnb8;->i:Z
-
-    iput-boolean v0, p0, Lob8;->i:Z
-
-    iget-wide v0, p1, Lnb8;->j:J
-
-    iput-wide v0, p0, Lob8;->j:J
-
-    iget-boolean v0, p1, Lnb8;->k:Z
-
-    iput-boolean v0, p0, Lob8;->k:Z
-
-    iget-object p1, p1, Lnb8;->l:Ljava/lang/String;
-
-    iput-object p1, p0, Lob8;->l:Ljava/lang/String;
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final a()Lnb8;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lnb8;
+    check-cast p1, Ljava/io/File;
 
-    iget-object v1, p0, Lob8;->a:Ll28;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Lnb8;-><init>(Ll28;)V
+    invoke-virtual {p0, p1, p2}, Lob8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, p0, Lob8;->b:J
+    move-result-object p1
 
-    iput-wide v1, v0, Lnb8;->b:J
+    check-cast p1, Lob8;
 
-    iget-wide v1, p0, Lob8;->c:J
+    sget-object p2, Lybg;->a:Lybg;
 
-    iput-wide v1, v0, Lnb8;->c:J
+    invoke-virtual {p1, p2}, Lob8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lob8;->d:Lrb8;
+    move-result-object p1
 
-    iput-object v1, v0, Lnb8;->d:Lrb8;
+    return-object p1
+.end method
 
-    iget-object v1, p0, Lob8;->e:Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-object v1, v0, Lnb8;->e:Ljava/lang/String;
+    new-instance v0, Lob8;
 
-    iget-object v1, p0, Lob8;->f:Ljava/lang/String;
+    const/4 v1, 0x2
 
-    iput-object v1, v0, Lnb8;->f:Ljava/lang/String;
+    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget v1, p0, Lob8;->g:F
-
-    iput v1, v0, Lnb8;->g:F
-
-    iget-boolean v1, p0, Lob8;->h:Z
-
-    iput-boolean v1, v0, Lnb8;->h:Z
-
-    iget-boolean v1, p0, Lob8;->i:Z
-
-    iput-boolean v1, v0, Lnb8;->i:Z
-
-    iget-wide v1, p0, Lob8;->j:J
-
-    iput-wide v1, v0, Lnb8;->j:J
-
-    iget-boolean v1, p0, Lob8;->k:Z
-
-    iput-boolean v1, v0, Lnb8;->k:Z
-
-    iget-object v1, p0, Lob8;->l:Ljava/lang/String;
-
-    iput-object v1, v0, Lnb8;->l:Ljava/lang/String;
+    iput-object p1, v0, Lob8;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, "MarkerData{location="
+    iget-object p1, p0, Lob8;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ljava/io/File;
 
-    iget-object v1, p0, Lob8;->a:Ll28;
+    new-instance v0, Leld;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    const-string v1, ", contactId="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1}, Leld;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lob8;->b:J
+    new-instance p1, Lblf;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, ", messageId="
+    invoke-direct {p1, v0, v1}, Lblf;-><init>(Leld;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ljld;
 
-    iget-wide v1, p0, Lob8;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", markerWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lob8;->d:Lrb8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lob8;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', address=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lob8;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', distance="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lob8;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", live="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lob8;->h:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", decoding="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lob8;->i:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", date="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lob8;->j:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lob8;->k:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deviceId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lob8;->l:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p1}, Ljld;-><init>(Lej6;)V
 
     return-object v0
 .end method

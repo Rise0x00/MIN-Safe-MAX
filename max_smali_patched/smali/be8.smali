@@ -1,87 +1,100 @@
-.class public final Lbe8;
-.super Lo2;
+.class public abstract Lbe8;
+.super La54;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lrd8;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Lbe8;->b:I
-
-    invoke-direct {p0, p1}, Lo2;-><init>(Lrd8;)V
-
-    iput-object p2, p0, Lbe8;->c:Ljava/lang/Object;
-
-    return-void
+# virtual methods
+.method public abstract getImmediate()Lbe8;
 .end method
 
+.method public limitedParallelism(ILjava/lang/String;)La54;
+    .locals 0
 
-# virtual methods
-.method public final g(Lke8;)V
-    .locals 3
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-    iget v0, p0, Lbe8;->b:I
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(La54;Ljava/lang/String;)La54;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    new-instance v0, Lqs1;
+    return-object p1
+.end method
 
-    iget-object v1, p0, Lbe8;->c:Ljava/lang/Object;
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast v1, Lce8;
+    invoke-virtual {p0}, Lbe8;->toStringInternalImpl()Ljava/lang/String;
 
-    const/4 v2, 0x5
+    move-result-object v0
 
-    invoke-direct {v0, p1, v2, v1}, Lqs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-nez v0, :cond_0
 
-    iget-object p1, p0, Lo2;->a:Lrd8;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-void
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_0
-    new-instance v0, Lxe3;
+    move-result-object v1
 
-    iget-object v1, p0, Lbe8;->c:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    check-cast v1, Lmf6;
+    move-result-object v1
 
-    const/4 v2, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v2, v1}, Lxe3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/16 v1, 0x40
 
-    iget-object p1, p0, Lo2;->a:Lrd8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
+    invoke-static {p0}, Lle4;->b(Ljava/lang/Object;)Ljava/lang/String;
 
-    return-void
+    move-result-object v1
 
-    :pswitch_1
-    new-instance v0, Lsd8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lbe8;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v1, Lmf6;
+    move-result-object v0
 
-    invoke-direct {v0, p1, v1}, Lsd8;-><init>(Lke8;Lmf6;)V
+    :cond_0
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lo2;->a:Lrd8;
+.method public final toStringInternalImpl()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
+    sget-object v0, Lqv4;->a:Lpm4;
 
-    return-void
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lbe8;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-ne p0, v0, :cond_0
+
+    const-string v0, "Dispatchers.Main"
+
+    return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0}, Lbe8;->getImmediate()Lbe8;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-object v0, v1
+
+    :goto_0
+    if-ne p0, v0, :cond_1
+
+    const-string v0, "Dispatchers.Main.immediate"
+
+    return-object v0
+
+    :cond_1
+    return-object v1
 .end method

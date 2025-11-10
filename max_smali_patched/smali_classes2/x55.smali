@@ -1,77 +1,43 @@
-.class public final Lx55;
+.class public abstract synthetic Lx55;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Landroid/graphics/Rect;
-
-
-# instance fields
-.field public final a:Ls5f;
-
-.field public final b:Ls5f;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    new-instance v0, Landroid/graphics/Rect;
+    const/4 v0, 0x2
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    invoke-static {v0}, Lnx1;->y(I)[I
 
-    sput-object v0, Lx55;->c:Landroid/graphics/Rect;
+    move-result-object v1
 
-    return-void
-.end method
+    array-length v1, v1
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    new-array v1, v1, [I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x1
 
-    new-instance v0, Lio2;
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p0, p1}, Lio2;-><init>(Lx55;Landroid/content/Context;)V
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance p1, Ls5f;
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p1, p0, Lx55;->a:Ls5f;
-
-    new-instance p1, Ley3;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p1, v0, p0}, Ley3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Ls5f;
-
-    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object v0, p0, Lx55;->b:Ls5f;
+    :catch_1
+    sput-object v1, Lx55;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()F
-    .locals 1
-
-    iget-object v0, p0, Lx55;->a:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    return v0
 .end method

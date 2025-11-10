@@ -1,162 +1,97 @@
-.class public final synthetic Ld2b;
-.super Ljava/lang/Object;
+.class public final enum Ld2b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
 
+# static fields
+.field public static final enum a:Ld2b;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Ld2b;
 
-.field public final synthetic b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+.field public static final enum c:Ld2b;
+
+.field public static final enum d:Ld2b;
+
+.field public static final synthetic o:[Ld2b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Ld2b;->a:I
+    new-instance v0, Ld2b;
 
-    iput-object p1, p0, Ld2b;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+    const-string v1, "COLLAPSED"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ld2b;->a:Ld2b;
+
+    new-instance v1, Ld2b;
+
+    const-string v2, "ANIMATING_COLLAPSE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ld2b;->b:Ld2b;
+
+    new-instance v2, Ld2b;
+
+    const-string v3, "EXPANDED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ld2b;->c:Ld2b;
+
+    new-instance v3, Ld2b;
+
+    const-string v4, "ANIMATING_EXPAND"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ld2b;->d:Ld2b;
+
+    filled-new-array {v0, v1, v2, v3}, [Ld2b;
+
+    move-result-object v0
+
+    sput-object v0, Ld2b;->o:[Ld2b;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ld2b;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+    const-class v0, Ld2b;
 
-    iget v0, p0, Ld2b;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/16 v1, 0x14
+    move-result-object p0
 
-    const/4 v2, -0x1
+    check-cast p0, Ld2b;
 
-    const/4 v3, 0x6
+    return-object p0
+.end method
 
-    iget-object v4, p0, Ld2b;->b:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+.method public static values()[Ld2b;
+    .locals 1
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v0, Ld2b;->o:[Ld2b;
 
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Ltm7;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result-object v0
 
-    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-direct {v0, v5, v6, v3}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    sget v3, Lbra;->v:I
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v3, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v2, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOverScrollMode(I)V
-
-    iget-object v2, v4, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Ll1e;
-
-    invoke-virtual {v0, v2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lpwc;)V
-
-    new-instance v5, Lwu9;
-
-    invoke-direct {v5, v1}, Lwu9;-><init>(I)V
-
-    new-instance v3, Lzmd;
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v4
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x1c
-
-    invoke-direct/range {v3 .. v8}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
-
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
-
-    new-instance v1, Lhz0;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2}, Lhz0;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
+    check-cast v0, [Ld2b;
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Ltm7;
-
-    new-instance v0, Ltya;
-
-    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v0, v4, v3}, Ltya;-><init>(Landroid/content/Context;I)V
-
-    sget v3, Lbra;->x:I
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v4, -0x2
-
-    invoke-direct {v3, v2, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v2, Llya;->a:Llya;
-
-    invoke-virtual {v0, v2}, Ltya;->setForm(Llya;)V
-
-    sget v2, Ldra;->t:I
-
-    invoke-virtual {v0, v2}, Ltya;->setTitle(I)V
-
-    new-instance v2, Lbya;
-
-    new-instance v3, Ld1a;
-
-    invoke-direct {v3, v1}, Ld1a;-><init>(I)V
-
-    invoke-direct {v2, v3}, Lbya;-><init>(Lxe6;)V
-
-    invoke-virtual {v0, v2}, Ltya;->setLeftActions(Lhya;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

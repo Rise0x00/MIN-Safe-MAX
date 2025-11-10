@@ -1,243 +1,356 @@
 .class public final Lkb5;
-.super Ljava/lang/Object;
+.super Lyld;
 .source "SourceFile"
+
+# interfaces
+.implements Lxt6;
+
+
+# static fields
+.field public static final o:Ljava/nio/ByteBuffer;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final e:Lub6;
 
-.field public final b:Ljava/lang/reflect/Method;
+.field public final f:J
 
-.field public final c:I
+.field public final g:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public d:Z
+.field public final h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public final i:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public volatile j:Z
+
+.field public k:J
+
+.field public l:Z
+
+.field public m:J
+
+.field public n:Laf4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    const/4 v0, 0x1
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    iput-boolean v0, p0, Lkb5;->d:Z
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
-    if-eqz p2, :cond_0
+    move-result-object v1
 
-    iput-object p1, p0, Lkb5;->a:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    iput-object p2, p0, Lkb5;->b:Ljava/lang/reflect/Method;
+    move-result-object v0
 
-    invoke-virtual {p2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {p2}, Ljava/lang/reflect/Method;->hashCode()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, 0x1f
-
-    mul-int/lit8 p2, p2, 0x1f
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    add-int/2addr p1, p2
-
-    iput p1, p0, Lkb5;->c:I
+    sput-object v0, Lkb5;->o:Ljava/nio/ByteBuffer;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+.method public constructor <init>(Lub6;La3g;Lt1a;Lzp6;J)V
+    .locals 0
 
-    const-string p2, "EventHandler method cannot be null."
+    invoke-direct {p0, p1, p3}, Lyld;-><init>(Lub6;Lt1a;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lkb5;->e:Lub6;
 
-    throw p1
+    iput-wide p5, p0, Lkb5;->f:J
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
 
-    const-string p2, "EventHandler target cannot be null."
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lkb5;->g:Ljava/util/concurrent/atomic/AtomicLong;
 
-    throw p1
+    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object p1, p0, Lkb5;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object p1, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {p4, p2}, Lzp6;->h(La3g;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Lk65;JLub6;Z)V
+    .locals 0
 
-    iget-boolean v0, p0, Lkb5;->d:Z
+    iget-object p1, p0, Lkb5;->g:Ljava/util/concurrent/atomic/AtomicLong;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    :try_start_0
-    iget-object v0, p0, Lkb5;->b:Ljava/lang/reflect/Method;
+    move-result-wide p4
 
-    iget-object v1, p0, Lkb5;->a:Ljava/lang/Object;
+    iput-wide p4, p0, Lkb5;->k:J
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
 
     return-void
+.end method
 
-    :catch_0
-    move-exception p1
+.method public final e()Laf4;
+    .locals 5
+
+    iget-object v0, p0, Lkb5;->n:Laf4;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lkb5;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Laf4;
+
+    iput-object v0, p0, Lkb5;->n:Laf4;
+
+    iget-boolean v1, p0, Lkb5;->l:Z
+
+    if-nez v1, :cond_1
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Laf4;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Laf4;-><init>(I)V
+
+    iput-object v0, p0, Lkb5;->n:Laf4;
+
+    sget-object v1, Lkb5;->o:Ljava/nio/ByteBuffer;
+
+    iput-object v1, v0, Laf4;->o:Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
-    :catch_1
-    move-exception p1
+    :cond_0
+    iget-wide v1, p0, Lkb5;->m:J
+
+    iget-object v0, v0, Laf4;->o:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v0
+
+    int-to-long v3, v0
+
+    sub-long/2addr v1, v3
+
+    iput-wide v1, p0, Lkb5;->m:J
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lkb5;->n:Laf4;
+
+    return-object v0
+.end method
+
+.method public final g()Z
+    .locals 9
+
+    iget-object v0, p0, Lkb5;->n:Laf4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lkb5;->n:Laf4;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lqy;->j(I)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    iput-boolean v2, p0, Lkb5;->j:Z
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v3, v0, Laf4;->Y:J
+
+    iget-wide v5, p0, Lkb5;->k:J
+
+    iget-wide v7, p0, Lkb5;->f:J
+
+    add-long/2addr v5, v7
+
+    add-long/2addr v5, v3
+
+    iput-wide v5, v0, Laf4;->Y:J
+
+    iget-object v1, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    iget-boolean v1, p0, Lkb5;->l:Z
+
+    if-nez v1, :cond_3
+
+    iget-object v1, p0, Lkb5;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
+
+    move-result v1
+
+    iget-object v3, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    iget-wide v4, p0, Lkb5;->m:J
+
+    iget-object v0, v0, Laf4;->o:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    add-long/2addr v4, v0
+
+    iput-wide v4, p0, Lkb5;->m:J
+
+    const/16 v0, 0xa
+
+    if-lt v3, v0, :cond_2
+
+    const/16 v0, 0xc8
+
+    if-ge v3, v0, :cond_1
+
+    const-wide/32 v0, 0x200000
+
+    cmp-long v0, v4, v0
+
+    if-ltz v0, :cond_2
+
+    :cond_1
+    move v0, v2
 
     goto :goto_1
 
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    iput-boolean v0, p0, Lkb5;->l:Z
+
+    :cond_3
+    return v2
+.end method
+
+.method public final j(Lk65;Lub6;I)Lxt6;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final k()Laf4;
+    .locals 1
+
+    iget-object v0, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->peek()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Ljava/lang/Error;
+    check-cast v0, Laf4;
+
+    return-object v0
+.end method
+
+.method public final l()Lub6;
+    .locals 1
+
+    iget-object v0, p0, Lkb5;->e:Lub6;
+
+    return-object v0
+.end method
+
+.method public final m()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lkb5;->j:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+    iget-object v0, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
 
-    check-cast p1, Ljava/lang/Error;
+    move-result v0
 
-    throw p1
-
-    :cond_0
-    throw p1
-
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lkb5;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " has been invalidated and can no longer handle events."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
     return v0
 
     :cond_0
-    const/4 v1, 0x0
-
-    if-nez p1, :cond_1
-
-    return v1
-
-    :cond_1
-    const-class v2, Lkb5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_2
-
-    return v1
-
-    :cond_2
-    check-cast p1, Lkb5;
-
-    iget-object v2, p0, Lkb5;->b:Ljava/lang/reflect/Method;
-
-    iget-object v3, p1, Lkb5;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lkb5;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Lkb5;->a:Ljava/lang/Object;
-
-    if-ne v2, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lkb5;->c:I
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final o()V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "[EventHandler "
+.method public final p()V
+    .locals 3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lkb5;->i:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    iget-object v1, p0, Lkb5;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Laf4;
+
+    invoke-virtual {v0}, Laf4;->w()V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Laf4;->Y:J
+
+    iget-object v1, p0, Lkb5;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

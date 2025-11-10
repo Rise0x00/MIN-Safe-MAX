@@ -2,55 +2,270 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final d:Lewa;
+
+.field public static final e:Lewa;
+
+.field public static final f:Lewa;
+
+.field public static final g:Lewa;
+
+.field public static final h:Lewa;
+
+.field public static final i:Lewa;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lfwa;
+.field public final b:Lw5b;
+
+.field public final c:Lw5b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfwa;I)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->W0:Lx5b;
+
+    sget-object v2, Lx5b;->N0:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorSpace"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->d:Lewa;
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->U:Lx5b;
+
+    sget-object v2, Lx5b;->L:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorNature"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->e:Lewa;
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->m0:Lx5b;
+
+    sget-object v2, Lx5b;->d0:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorNeon"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->f:Lewa;
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->E0:Lx5b;
+
+    sget-object v2, Lx5b;->v0:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorSimple"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->g:Lewa;
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->C:Lx5b;
+
+    sget-object v2, Lx5b;->t:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorMoscow"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->h:Lewa;
+
+    new-instance v0, Lewa;
+
+    sget-object v1, Lx5b;->k:Lx5b;
+
+    sget-object v2, Lx5b;->b:Lx5b;
+
+    const-string v3, "OneMeGlobalThemeColorLebedev"
+
+    invoke-direct {v0, v3, v1, v2}, Lewa;-><init>(Ljava/lang/String;Lw5b;Lw5b;)V
+
+    sput-object v0, Lewa;->i:Lewa;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Lw5b;Lw5b;)V
     .locals 0
 
-    iput p2, p0, Lewa;->a:I
-
-    iput-object p1, p0, Lewa;->b:Lfwa;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lewa;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lewa;->b:Lw5b;
+
+    iput-object p3, p0, Lewa;->c:Lw5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final a(Z)Lw5b;
+    .locals 0
 
-    iget v0, p0, Lewa;->a:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lewa;->c:Lw5b;
 
-    iget-object v0, p0, Lewa;->b:Lfwa;
+    return-object p1
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    :cond_0
+    iget-object p1, p0, Lewa;->b:Lw5b;
 
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lewa;->b:Lfwa;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
 
-    nop
+    return v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    instance-of v1, p1, Lewa;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lewa;
+
+    iget-object v1, p0, Lewa;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lewa;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lewa;->b:Lw5b;
+
+    iget-object v3, p1, Lewa;->b:Lw5b;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lewa;->c:Lw5b;
+
+    iget-object p1, p1, Lewa;->c:Lw5b;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lewa;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lewa;->b:Lw5b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lewa;->c:Lw5b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OneMeGlobalTheme(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lewa;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lightMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lewa;->b:Lw5b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", darkMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lewa;->c:Lw5b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

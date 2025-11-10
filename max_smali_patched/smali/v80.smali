@@ -2,102 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzha;
 
-# instance fields
-.field public a:I
 
-.field public b:I
+# static fields
+.field public static final a:Lv80;
 
-.field public c:F
+.field public static final b:Lmr5;
 
-.field public d:F
+.field public static final c:Lmr5;
 
-.field public e:J
 
-.field public f:J
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public g:J
+    new-instance v0, Lv80;
 
-.field public h:F
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public i:I
+    sput-object v0, Lv80;->a:Lv80;
+
+    new-instance v0, Lny;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lny;-><init>(I)V
+
+    const-class v1, Ljec;
+
+    invoke-static {v1, v0}, Lnx1;->o(Ljava/lang/Class;Lny;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lmr5;
+
+    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSource"
+
+    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lv80;->b:Lmr5;
+
+    new-instance v0, Lny;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lny;-><init>(I)V
+
+    invoke-static {v1, v0}, Lnx1;->o(Ljava/lang/Class;Lny;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lmr5;
+
+    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "logEventDropped"
+
+    invoke-direct {v1, v2, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lv80;->c:Lmr5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(J)F
-    .locals 8
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    iget-wide v0, p0, Lv80;->e:J
+    check-cast p1, Ld98;
 
-    cmp-long v2, p1, v0
+    check-cast p2, Laia;
 
-    const/4 v3, 0x0
+    sget-object v0, Lv80;->b:Lmr5;
 
-    if-gez v2, :cond_0
+    iget-object v1, p1, Ld98;->a:Ljava/lang/String;
 
-    return v3
+    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
 
-    :cond_0
-    iget-wide v4, p0, Lv80;->g:J
+    sget-object v0, Lv80;->c:Lmr5;
 
-    const-wide/16 v6, 0x0
+    iget-object p1, p1, Ld98;->b:Ljava/util/List;
 
-    cmp-long v2, v4, v6
+    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
 
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    if-ltz v2, :cond_2
-
-    cmp-long v2, p1, v4
-
-    if-gez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sub-long/2addr p1, v4
-
-    iget v0, p0, Lv80;->h:F
-
-    sub-float v1, v6, v0
-
-    long-to-float p1, p1
-
-    iget p2, p0, Lv80;->i:I
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    invoke-static {p1, v3, v6}, Lgx7;->b(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v0
-
-    add-float/2addr p1, v1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    sub-long/2addr p1, v0
-
-    long-to-float p1, p1
-
-    iget p2, p0, Lv80;->a:I
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    invoke-static {p1, v3, v6}, Lgx7;->b(FFF)F
-
-    move-result p1
-
-    const/high16 p2, 0x3f000000    # 0.5f
-
-    mul-float/2addr p1, p2
-
-    return p1
+    return-void
 .end method

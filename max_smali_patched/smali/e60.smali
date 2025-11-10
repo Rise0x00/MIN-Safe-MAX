@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract read(Ljava/nio/ByteBuffer;)Ld90;
+.method public abstract read(Ljava/nio/ByteBuffer;)Ll90;
 .end method

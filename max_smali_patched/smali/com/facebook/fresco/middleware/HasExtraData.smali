@@ -15,7 +15,7 @@
         "",
         "key",
         "value",
-        "Loyf;",
+        "Lybg;",
         "putExtra",
         "(Ljava/lang/String;Ljava/lang/Object;)V",
         "getExtra",
@@ -30,7 +30,7 @@
         "putExtras",
         "(Ljava/util/Map;)V",
         "Companion",
-        "at6",
+        "yw6",
         "middleware_release"
     }
     k = 0x1
@@ -44,7 +44,7 @@
 
 
 # static fields
-.field public static final Companion:Lat6;
+.field public static final Companion:Lyw6;
 
 .field public static final KEY_BITMAP_CONFIG:Ljava/lang/String; = "bitmap_config"
 
@@ -89,9 +89,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lat6;->a:Lat6;
+    sget-object v0, Lyw6;->a:Lyw6;
 
-    sput-object v0, Lcom/facebook/fresco/middleware/HasExtraData;->Companion:Lat6;
+    sput-object v0, Lcom/facebook/fresco/middleware/HasExtraData;->Companion:Lyw6;
 
     return-void
 .end method

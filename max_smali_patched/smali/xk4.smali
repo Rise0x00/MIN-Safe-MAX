@@ -1,346 +1,185 @@
-.class public final synthetic Lxk4;
+.class public abstract Lxk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkob;
 
+# static fields
+.field public static final a:Lu97;
 
-# instance fields
-.field public final synthetic a:Ltl4;
+.field public static final b:Lu97;
 
-.field public final synthetic b:Lfl4;
+.field public static final c:Lu97;
+
+.field public static final d:Lu97;
+
+.field public static final e:Lu97;
+
+.field public static final f:Lu97;
+
+.field public static final g:Lu97;
+
+.field public static final h:Lu97;
+
+.field public static final i:Lu97;
+
+.field public static final j:Lu97;
+
+.field public static final k:Lu97;
+
+.field public static final l:Lu97;
+
+.field public static final m:Lu97;
+
+.field public static final n:Lu97;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltl4;Lfl4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lu97;
 
-    iput-object p1, p0, Lxk4;->a:Ltl4;
+    const-string v1, "JPEG"
 
-    iput-object p2, p0, Lxk4;->b:Lfl4;
+    const-string v2, "jpeg"
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    sput-object v0, Lxk4;->a:Lu97;
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 10
+    new-instance v1, Lu97;
 
-    check-cast p1, Lt76;
+    const-string v2, "PNG"
 
-    iget-object v0, p0, Lxk4;->a:Ltl4;
+    const-string v3, "png"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v2, v3}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lxk4;->b:Lfl4;
+    sput-object v1, Lxk4;->b:Lu97;
 
-    iget-boolean v1, v1, Lfl4;->s0:Z
+    new-instance v2, Lu97;
 
-    const/4 v2, 0x1
+    const-string v3, "GIF"
 
-    if-eqz v1, :cond_c
+    const-string v4, "gif"
 
-    iget v1, p1, Lt76;->D:I
+    invoke-direct {v2, v3, v4}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, p1, Lt76;->n:Ljava/lang/String;
+    sput-object v2, Lxk4;->c:Lu97;
 
-    const/4 v4, -0x1
+    new-instance v3, Lu97;
 
-    if-eq v1, v4, :cond_c
+    const-string v4, "BMP"
 
-    const/4 v5, 0x2
+    const-string v5, "bmp"
 
-    if-le v1, v5, :cond_c
+    invoke-direct {v3, v4, v5}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "audio/ac4"
+    sput-object v3, Lxk4;->d:Lu97;
 
-    const-string v6, "audio/eac3-joc"
+    new-instance v4, Lu97;
 
-    const/4 v7, 0x0
+    const-string v5, "ICO"
 
-    const/16 v8, 0x20
+    const-string v6, "ico"
 
-    if-nez v3, :cond_0
+    invoke-direct {v4, v5, v6}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_2
+    sput-object v4, Lxk4;->e:Lu97;
 
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    new-instance v5, Lu97;
 
-    move-result v9
+    const-string v6, "WEBP_SIMPLE"
 
-    sparse-switch v9, :sswitch_data_0
+    const-string v7, "webp"
 
-    :goto_0
-    move v9, v4
+    invoke-direct {v5, v6, v7}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    sput-object v5, Lxk4;->f:Lu97;
 
-    :sswitch_0
-    const-string v9, "audio/eac3"
+    new-instance v6, Lu97;
 
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v8, "WEBP_LOSSLESS"
 
-    move-result v9
+    invoke-direct {v6, v8, v7}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v9, :cond_1
+    sput-object v6, Lxk4;->g:Lu97;
 
-    goto :goto_0
+    move-object v8, v7
 
-    :cond_1
-    const/4 v9, 0x3
+    new-instance v7, Lu97;
 
-    goto :goto_1
+    const-string v9, "WEBP_EXTENDED"
 
-    :sswitch_1
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v7, v9, v8}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v9
+    sput-object v7, Lxk4;->h:Lu97;
 
-    if-nez v9, :cond_2
+    move-object v9, v8
 
-    goto :goto_0
+    new-instance v8, Lu97;
 
-    :cond_2
-    move v9, v5
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
 
-    goto :goto_1
+    invoke-direct {v8, v10, v9}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :sswitch_2
-    const-string v9, "audio/ac3"
+    sput-object v8, Lxk4;->i:Lu97;
 
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-object v10, v9
 
-    move-result v9
+    new-instance v9, Lu97;
 
-    if-nez v9, :cond_3
+    const-string v11, "WEBP_ANIMATED"
 
-    goto :goto_0
+    invoke-direct {v9, v11, v10}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_3
-    move v9, v2
+    sput-object v9, Lxk4;->j:Lu97;
 
-    goto :goto_1
+    new-instance v10, Lu97;
 
-    :sswitch_3
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v11, "HEIF"
 
-    move-result v9
+    const-string v12, "heif"
 
-    if-nez v9, :cond_4
+    invoke-direct {v10, v11, v12}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    sput-object v10, Lxk4;->k:Lu97;
 
-    :cond_4
-    move v9, v7
+    new-instance v11, Lu97;
 
-    :goto_1
-    packed-switch v9, :pswitch_data_0
+    const-string v12, "DNG"
 
-    goto :goto_2
+    const-string v13, "dng"
 
-    :pswitch_0
-    sget v9, Lt4g;->a:I
+    invoke-direct {v11, v12, v13}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-lt v9, v8, :cond_c
+    sput-object v11, Lxk4;->l:Lu97;
 
-    iget-object v9, v0, Ltl4;->g:Lmd6;
+    new-instance v11, Lu97;
 
-    if-eqz v9, :cond_c
+    const-string v12, "BINARY_XML"
 
-    iget-boolean v9, v9, Lmd6;->a:Z
+    const-string v13, "xml"
 
-    if-eqz v9, :cond_c
+    invoke-direct {v11, v12, v13}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_2
-    sget v9, Lt4g;->a:I
+    sput-object v11, Lxk4;->m:Lu97;
 
-    if-lt v9, v8, :cond_b
+    new-instance v12, Lu97;
 
-    iget-object v8, v0, Ltl4;->g:Lmd6;
+    const-string v13, "AVIF"
 
-    if-eqz v8, :cond_b
+    const-string v14, "avif"
 
-    iget-boolean v9, v8, Lmd6;->a:Z
+    invoke-direct {v12, v13, v14}, Lu97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v9, :cond_b
+    sput-object v12, Lxk4;->n:Lu97;
 
-    iget-object v8, v8, Lmd6;->b:Ljava/lang/Object;
-
-    check-cast v8, Landroid/media/Spatializer;
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v8}, Lh4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lh4;->h(Landroid/media/Spatializer;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_b
-
-    iget-object v8, v0, Ltl4;->g:Lmd6;
-
-    iget-object v8, v8, Lmd6;->b:Ljava/lang/Object;
-
-    check-cast v8, Landroid/media/Spatializer;
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v8}, Lh4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lh4;->k(Landroid/media/Spatializer;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_b
-
-    iget-object v8, v0, Ltl4;->g:Lmd6;
-
-    iget-object v0, v0, Ltl4;->h:Li20;
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v9, p1, Lt76;->D:I
-
-    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    const/16 v1, 0x10
-
-    if-ne v9, v1, :cond_8
-
-    const/16 v9, 0xc
-
-    goto :goto_3
-
-    :cond_5
-    const-string v6, "audio/iamf"
-
-    invoke-static {v3, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_6
-
-    if-ne v9, v4, :cond_8
-
-    const/4 v9, 0x6
-
-    goto :goto_3
-
-    :cond_6
-    invoke-static {v3, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    const/16 v1, 0x12
-
-    if-eq v9, v1, :cond_7
-
-    const/16 v1, 0x15
-
-    if-ne v9, v1, :cond_8
-
-    :cond_7
-    const/16 v9, 0x18
-
-    :cond_8
-    :goto_3
-    invoke-static {v9}, Lt4g;->t(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    move p1, v7
-
-    goto :goto_4
-
-    :cond_9
-    new-instance v3, Landroid/media/AudioFormat$Builder;
-
-    invoke-direct {v3}, Landroid/media/AudioFormat$Builder;-><init>()V
-
-    invoke-virtual {v3, v5}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v1
-
-    iget p1, p1, Lt76;->E:I
-
-    if-eq p1, v4, :cond_a
-
-    invoke-virtual {v1, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    :cond_a
-    iget-object p1, v8, Lmd6;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/media/Spatializer;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lh4;->c(Ljava/lang/Object;)Landroid/media/Spatializer;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Li20;->b()Lr4;
+    filled-new-array/range {v0 .. v12}, [Lu97;
 
     move-result-object v0
 
-    iget-object v0, v0, Lr4;->a:Ljava/lang/Object;
+    invoke-static {v0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
 
-    check-cast v0, Landroid/media/AudioAttributes;
-
-    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v1
-
-    invoke-static {p1, v0, v1}, Lh4;->i(Landroid/media/Spatializer;Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
-
-    move-result p1
-
-    :goto_4
-    if-eqz p1, :cond_b
-
-    goto :goto_5
-
-    :cond_b
-    return v7
-
-    :cond_c
-    :goto_5
-    return v2
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7e929daa -> :sswitch_3
-        0xb269698 -> :sswitch_2
-        0xb269699 -> :sswitch_1
-        0x59ae0c65 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

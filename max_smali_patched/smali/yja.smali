@@ -1,143 +1,84 @@
-.class public abstract Lyja;
-.super Ljava/lang/Object;
+.class public final Lyja;
+.super Leia;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final a:Lgpd;
 
-.field public static final b:J
+.field public final b:J
 
-.field public static final c:J
+.field public final c:J
 
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final synthetic q:I
+.field public final d:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lgpd;)V
+    .locals 0
 
-    sget v0, Lydc;->call_admin_settings_media_bottom_header:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
+    iput-wide p1, p0, Lyja;->b:J
 
-    sput-wide v0, Lyja;->a:J
+    iput-wide p3, p0, Lyja;->c:J
 
-    sget v0, Lydc;->call_admin_settings_media_header:I
+    iput-object p5, p0, Lyja;->d:Ljava/util/concurrent/TimeUnit;
 
-    int-to-long v0, v0
+    iput-object p6, p0, Lyja;->a:Lgpd;
 
-    sput-wide v0, Lyja;->b:J
+    return-void
+.end method
 
-    sget v0, Lydc;->call_context_action_chat:I
 
-    int-to-long v0, v0
+# virtual methods
+.method public final o(Lgla;)V
+    .locals 7
 
-    sput-wide v0, Lyja;->c:J
+    new-instance v1, Lxja;
 
-    sget v0, Lydc;->call_context_action_open_profile:I
+    invoke-direct {v1, p1}, Lxja;-><init>(Lgla;)V
 
-    int-to-long v0, v0
+    invoke-interface {p1, v1}, Lgla;->d(Lzv4;)V
 
-    sput-wide v0, Lyja;->d:J
+    iget-object v0, p0, Lyja;->a:Lgpd;
 
-    sget v0, Lydc;->call_context_action_record_screen:I
+    instance-of p1, v0, Lm2g;
 
-    int-to-long v0, v0
+    if-eqz p1, :cond_0
 
-    sput-wide v0, Lyja;->e:J
+    check-cast v0, Lm2g;
 
-    sget v0, Lydc;->call_context_action_record_screen_disable:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    int-to-long v0, v0
+    new-instance v0, Ll2g;
 
-    sput-wide v0, Lyja;->f:J
+    invoke-direct {v0}, Ll2g;-><init>()V
 
-    sget v0, Lydc;->call_context_action_record_screen_unavailable:I
+    invoke-static {v1, v0}, Ldw4;->g(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
-    int-to-long v0, v0
+    iget-wide v4, p0, Lyja;->c:J
 
-    sput-wide v0, Lyja;->g:J
+    iget-object v6, p0, Lyja;->d:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Lydc;->call_context_action_record_screenin_progress:I
+    iget-wide v2, p0, Lyja;->b:J
 
-    int-to-long v0, v0
+    invoke-virtual/range {v0 .. v6}, Lepd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lzv4;
 
-    sput-wide v0, Lyja;->h:J
+    return-void
 
-    sget v0, Lydc;->call_context_action_settings:I
+    :cond_0
+    iget-wide v4, p0, Lyja;->c:J
 
-    int-to-long v0, v0
+    iget-object v6, p0, Lyja;->d:Ljava/util/concurrent/TimeUnit;
 
-    sput-wide v0, Lyja;->i:J
+    iget-wide v2, p0, Lyja;->b:J
 
-    sget v0, Lydc;->call_context_action_share_screen:I
+    invoke-virtual/range {v0 .. v6}, Lgpd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lzv4;
 
-    int-to-long v0, v0
+    move-result-object p1
 
-    sput-wide v0, Lyja;->j:J
-
-    sget v0, Lydc;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->k:J
-
-    sget v0, Lydc;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->l:J
-
-    sget v0, Lydc;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->m:J
-
-    sget v0, Lydc;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->n:J
-
-    sget v0, Lydc;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->o:J
-
-    sget v0, Lydc;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lyja;->p:J
+    invoke-static {v1, p1}, Ldw4;->g(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
     return-void
 .end method

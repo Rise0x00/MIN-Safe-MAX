@@ -1,15 +1,11 @@
-.class public abstract Ln5a;
+.class public interface abstract Ln5a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo5a;
 
-# direct methods
-.method public static a(Landroid/app/Notification$Action;)Z
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->isAuthenticationRequired()Z
-
-    move-result p0
-
-    return p0
+# virtual methods
+.method public abstract a(I)V
 .end method

@@ -46,20 +46,20 @@
         "payload",
         "setPayload",
         "(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;",
-        "Lckf;",
+        "Lpxf;",
         "tokenProvider",
         "setTokenProvider",
-        "(Lckf;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;",
-        "Lam;",
+        "(Lpxf;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;",
+        "Lcn;",
         "tokenInfoProvider",
         "setTokenInfoProvider",
-        "(Lam;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;",
+        "(Lcn;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;",
         "isWatchTogetherEnabledForAll",
         "setWatchTogetherEnabledForAll",
         "build",
         "()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;",
-        "Lckf;",
-        "Lam;",
+        "Lpxf;",
+        "Lcn;",
         "Ljava/util/Collection;",
         "Ljava/lang/String;",
         "Z",
@@ -97,9 +97,9 @@
 
 .field private startConversationDelegate:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate;
 
-.field private tokenInfoProvider:Lam;
+.field private tokenInfoProvider:Lcn;
 
-.field private tokenProvider:Lckf;
+.field private tokenProvider:Lpxf;
 
 
 # direct methods
@@ -108,7 +108,7 @@
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;-><init>()V
 
-    sget-object v0, Lb75;->a:Lb75;
+    sget-object v0, Lna5;->a:Lna5;
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->initialIds:Ljava/util/Collection;
 
@@ -145,14 +145,14 @@
     if-eqz v9, :cond_2
 
     .line 3
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lxe6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lqi6;
 
     move-result-object v10
 
     if-eqz v10, :cond_1
 
     .line 4
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lxe6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lqi6;
 
     move-result-object v11
 
@@ -169,13 +169,13 @@
     move-result v8
 
     .line 7
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Lz22;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()La42;
 
     .line 8
-    iget-object v3, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenProvider:Lckf;
+    iget-object v3, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenProvider:Lpxf;
 
     .line 9
-    iget-object v4, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenInfoProvider:Lam;
+    iget-object v4, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenInfoProvider:Lcn;
 
     .line 10
     iget-boolean v6, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->isAnonForbidden:Z
@@ -190,7 +190,7 @@
     iget-boolean v7, v0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->isWatchTogetherEnabledForAll:Z
 
     .line 14
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lfaa;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lsha;
 
     move-result-object v14
 
@@ -206,7 +206,7 @@
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v1 .. v16}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams;-><init>(Ljava/util/Collection;Lckf;Lam;Ljava/lang/String;ZZZLru/ok/android/externcalls/sdk/id/ParticipantId;Lxe6;Lxe6;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lz22;Lfaa;Ljava/lang/String;Lof4;)V
+    invoke-direct/range {v1 .. v16}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams;-><init>(Ljava/util/Collection;Lpxf;Lcn;Ljava/lang/String;ZZZLru/ok/android/externcalls/sdk/id/ParticipantId;Lqi6;Lqi6;Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;La42;Lsha;Ljava/lang/String;Lfi4;)V
 
     return-object v1
 
@@ -274,18 +274,18 @@
     return-object p0
 .end method
 
-.method public final setTokenInfoProvider(Lam;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+.method public final setTokenInfoProvider(Lcn;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenInfoProvider:Lam;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenInfoProvider:Lcn;
 
     return-object p0
 .end method
 
-.method public final setTokenProvider(Lckf;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+.method public final setTokenProvider(Lpxf;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenProvider:Lckf;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->tokenProvider:Lpxf;
 
     return-object p0
 .end method

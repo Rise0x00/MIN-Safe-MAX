@@ -1,25 +1,50 @@
 .class public final Lpg0;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public X:Lgz5;
 
-.field public final b:Lie4;
+.field public final synthetic Y:Ls3;
 
-.field public c:Z
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Lie4;)V
+.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpg0;->Y:Ls3;
 
-    iput-object p1, p0, Lpg0;->a:Landroid/os/Handler;
-
-    iput-object p2, p0, Lpg0;->b:Lie4;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpg0;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lpg0;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpg0;->o:I
+
+    iget-object p1, p0, Lpg0;->Y:Ls3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

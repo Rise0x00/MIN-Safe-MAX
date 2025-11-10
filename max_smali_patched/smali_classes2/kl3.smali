@@ -1,62 +1,64 @@
-.class public final synthetic Lkl3;
+.class public final Lkl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/InputFilter;
+.implements Lml3;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lkl3;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lkl3;->a:I
+    new-instance v0, Lkl3;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkl3;->a:Lkl3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p2, p0, Lkl3;->a:I
+    const/4 v0, 0x1
 
-    const-string p3, ""
+    if-ne p0, p1, :cond_0
 
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p1, Lh69;->U0:[Ltm7;
-
-    return-object p3
-
-    :pswitch_0
-    sget-object p2, Lll3;->b:Layc;
-
-    invoke-virtual {p2, p1}, Layc;->a(Ljava/lang/CharSequence;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object p1, p3
+    instance-of p1, p1, Lkl3;
 
-    :goto_0
-    return-object p1
+    if-nez p1, :cond_1
 
-    nop
+    const/4 p1, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x385d4ca9
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "UserSettings"
+
+    return-object v0
 .end method

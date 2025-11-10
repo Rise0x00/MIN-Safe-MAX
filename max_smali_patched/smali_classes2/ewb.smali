@@ -1,87 +1,85 @@
-.class public final Lewb;
+.class public abstract Lewb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgwb;
 
+# virtual methods
+.method public abstract a()I
+.end method
 
-# instance fields
-.field public final a:J
+.method public b()I
+    .locals 1
 
+    const/4 v0, 0x1
 
-# direct methods
-.method public constructor <init>(J)V
+    return v0
+.end method
+
+.method public abstract c()I
+.end method
+
+.method public d()Landroid/view/View;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract e()I
+.end method
+
+.method public abstract f()Landroid/view/View;
+.end method
+
+.method public g(Liwb;Liwb;)Liwb;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-object p2
+.end method
 
-    iput-wide p1, p0, Lewb;->a:J
+.method public h()V
+    .locals 0
 
     return-void
 .end method
 
+.method public i()V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    return-void
+.end method
+
+.method public j()Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lewb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lewb;
-
-    iget-wide v3, p0, Lewb;->a:J
-
-    iget-wide v5, p1, Lewb;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public k()V
+    .locals 0
 
-    iget-wide v0, p0, Lewb;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public l(Liwb;)V
+    .locals 0
 
-    const-string v0, "ProfilePhotoUpdate(photoId="
+    return-void
+.end method
 
-    const-string v1, ")"
+.method public m(I)V
+    .locals 0
 
-    iget-wide v2, p0, Lewb;->a:J
+    return-void
+.end method
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public n(Liwb;FF)Z
+    .locals 0
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    return-object v0
+    return p1
 .end method

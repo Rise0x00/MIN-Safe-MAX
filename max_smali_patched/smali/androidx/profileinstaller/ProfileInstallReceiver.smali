@@ -15,11 +15,11 @@
 
 # virtual methods
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+    .locals 6
 
     if-nez p2, :cond_0
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -34,21 +34,21 @@
 
     if-eqz v1, :cond_1
 
-    new-instance p2, Lmr;
+    new-instance p2, Lls;
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, v0}, Lmr;-><init>(I)V
+    invoke-direct {p2, v0}, Lls;-><init>(I)V
 
-    new-instance v0, Lzde;
+    new-instance v0, Lj1e;
 
-    const/16 v1, 0x1b
+    const/16 v1, 0x1c
 
-    invoke-direct {v0, v1, p0}, Lzde;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lj1e;-><init>(ILjava/lang/Object;)V
 
     const/4 v1, 0x1
 
-    invoke-static {p1, p2, v0, v1}, Lva8;->C(Landroid/content/Context;Ljava/util/concurrent/Executor;Lsyb;Z)V
+    invoke-static {p1, p2, v0, v1}, Lr0i;->d(Landroid/content/Context;Ljava/util/concurrent/Executor;Lh7c;Z)V
 
     return-void
 
@@ -71,7 +71,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_9
 
     const-string v0, "EXTRA_SKIP_FILE_OPERATION"
 
@@ -87,11 +87,11 @@
 
     if-eqz v0, :cond_2
 
-    new-instance p2, Lzde;
+    new-instance p2, Lj1e;
 
-    const/16 v0, 0x1b
+    const/16 v0, 0x1c
 
-    invoke-direct {p2, v0, p0}, Lzde;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lj1e;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -118,20 +118,20 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lva8;->v(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
+    invoke-static {v0, p1}, Lr0i;->a(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
 
-    invoke-virtual {p2, v3, v4}, Lzde;->w(ILjava/lang/Object;)V
+    invoke-virtual {p2, v3, v4}, Lj1e;->f(ILjava/lang/Object;)V
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :catch_0
     move-exception p1
 
     const/4 v0, 0x7
 
-    invoke-virtual {p2, v0, p1}, Lzde;->w(ILjava/lang/Object;)V
+    invoke-virtual {p2, v0, p1}, Lj1e;->f(ILjava/lang/Object;)V
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :cond_2
     const-string v0, "DELETE_SKIP_FILE"
@@ -140,7 +140,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_9
 
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
@@ -171,6 +171,8 @@
 
     move-result v1
 
+    const/16 v5, 0xc
+
     if-eqz v1, :cond_4
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -183,9 +185,7 @@
 
     invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/16 p1, 0xc
-
-    invoke-virtual {p0, p1}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
+    invoke-virtual {p0, v5}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
 
     return-void
 
@@ -196,34 +196,51 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_9
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
 
-    if-eqz p2, :cond_7
+    if-eqz p2, :cond_9
 
     const-string v0, "EXTRA_BENCHMARK_OPERATION"
 
     invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    new-instance v0, Lzde;
+    new-instance v1, Lj1e;
 
-    const/16 v1, 0x1b
+    const/16 v2, 0x1c
 
-    invoke-direct {v0, v1, p0}, Lzde;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lj1e;-><init>(ILjava/lang/Object;)V
 
-    const-string v1, "DROP_SHADER_CACHE"
+    const-string v2, "DROP_SHADER_CACHE"
 
-    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result v2
 
-    if-eqz p2, :cond_6
+    if-eqz v2, :cond_7
 
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x22
+
+    if-lt p2, v0, :cond_5
+
+    invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_5
     invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
 
     move-result-object p1
@@ -232,31 +249,57 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lf09;->f(Ljava/io/File;)Z
+    :goto_0
+    invoke-static {p1}, Loji;->a(Ljava/io/File;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     const/16 p1, 0xe
 
-    invoke-virtual {v0, p1, v4}, Lzde;->w(ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_5
-    const/16 p1, 0xf
-
-    invoke-virtual {v0, p1, v4}, Lzde;->w(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v4}, Lj1e;->f(ILjava/lang/Object;)V
 
     return-void
 
     :cond_6
-    const/16 p1, 0x10
+    const/16 p1, 0xf
 
-    invoke-virtual {v0, p1, v4}, Lzde;->w(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v4}, Lj1e;->f(ILjava/lang/Object;)V
+
+    return-void
 
     :cond_7
-    :goto_0
+    const-string p1, "SAVE_PROFILE"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    const-string p1, "EXTRA_PID"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v0
+
+    invoke-virtual {p2, p1, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    invoke-static {p1, v3}, Landroid/os/Process;->sendSignal(II)V
+
+    invoke-virtual {v1, v5, v4}, Lj1e;->f(ILjava/lang/Object;)V
+
+    return-void
+
+    :cond_8
+    const/16 p1, 0x10
+
+    invoke-virtual {v1, p1, v4}, Lj1e;->f(ILjava/lang/Object;)V
+
+    :cond_9
+    :goto_1
     return-void
 .end method

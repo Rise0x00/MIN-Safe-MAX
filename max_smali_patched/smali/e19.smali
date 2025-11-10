@@ -1,14 +1,16 @@
-.class public interface abstract Le19;
+.class public final synthetic Le19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lho3;
+
 
 # virtual methods
-.method public abstract d(Ljava/lang/Object;)V
-.end method
+.method public final run()Lv28;
+    .locals 1
 
-.method public abstract e(Ljava/lang/Object;)V
-.end method
+    sget-object v0, Ljb7;->b:Ljb7;
 
-.method public abstract o(Lkx0;)V
+    return-object v0
 .end method

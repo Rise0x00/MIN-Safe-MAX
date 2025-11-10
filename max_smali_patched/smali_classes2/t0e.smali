@@ -1,26 +1,43 @@
 .class public final Lt0e;
-.super Ljava/lang/Object;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
-# interfaces
-.implements Lu0e;
 
+# virtual methods
+.method public final onMeasure(II)V
+    .locals 3
 
-# instance fields
-.field public final a:I
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-.field public final b:Loef;
+    move-result v0
 
+    const/16 v1, 0x96
 
-# direct methods
-.method public constructor <init>(ILoef;)V
-    .locals 0
+    int-to-float v1, v1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    iput p1, p0, Lt0e;->a:I
+    move-result-object v2
 
-    iput-object p2, p0, Lt0e;->b:Loef;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lm65;->o(FFI)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p2
+
+    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
 
     return-void
 .end method

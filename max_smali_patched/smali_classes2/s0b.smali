@@ -1,88 +1,100 @@
-.class public final Ls0b;
-.super Lhy9;
+.class public final synthetic Ls0b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt0b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(Lt0b;I)V
+    .locals 0
 
-    sget-object v0, Loyf;->a:Loyf;
+    iput p2, p0, Ls0b;->a:I
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Ls0b;->b:Lt0b;
 
-    iput-object p1, p0, Ls0b;->b:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Ls0b;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Ls0b;->b:Lt0b;
+
+    iget-object v1, v0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Ls0b;
+    iget-object v1, v0, Lt0b;->b:Ljava/util/concurrent/ExecutorService;
 
-    const/4 v2, 0x0
+    new-instance v2, Lzi;
 
-    if-nez v1, :cond_1
+    const/16 v3, 0xa
 
-    return v2
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v0, v4, v3}, Lzi;-><init>(Ljava/lang/Object;ZI)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ls0b;->b:Lt0b;
+
+    iget-object v1, v0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Ls0b;
+    iget-object v1, v0, Lt0b;->b:Ljava/util/concurrent/ExecutorService;
 
-    iget-object v1, p0, Ls0b;->b:Ljava/lang/String;
+    new-instance v2, Lzi;
 
-    iget-object p1, p1, Ls0b;->b:Ljava/lang/String;
+    const/16 v3, 0xa
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v4, 0x1
 
-    move-result p1
+    invoke-direct {v2, v0, v4, v3}, Lzi;-><init>(Ljava/lang/Object;ZI)V
 
-    if-nez p1, :cond_2
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return v2
+    :goto_1
+    return-void
 
-    :cond_2
-    return v0
-.end method
+    nop
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ls0b;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenExternalLink(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Ls0b;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

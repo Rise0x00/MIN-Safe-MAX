@@ -1,156 +1,232 @@
-.class public final synthetic Lgc7;
-.super Ljava/lang/Object;
+.class public final Lgc7;
+.super La2;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lac7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/login/inputphone/InputPhoneScreen;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/inputphone/InputPhoneScreen;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p2, p0, Lgc7;->a:I
-
-    iput-object p1, p0, Lgc7;->b:Lone/me/login/inputphone/InputPhoneScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lgc7;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final a()I
+    .locals 1
 
-    iget v0, p0, Lgc7;->a:I
+    const/4 v0, 0x3
 
-    iget-object v1, p0, Lgc7;->b:Lone/me/login/inputphone/InputPhoneScreen;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final b()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->I0:[Ltm7;
+    iget-wide v0, p0, Lgc7;->a:J
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    new-instance v3, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;
-
-    new-instance v0, Ln4b;
-
-    const-string v2, "add_country"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v2, v4}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0}, [Ln4b;
+    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final d()J
+    .locals 2
 
-    invoke-direct {v3, v0}, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;-><init>(Landroid/os/Bundle;)V
+    iget-wide v0, p0, Lgc7;->a:J
 
-    invoke-virtual {v3, v1}, Lb04;->setTargetController(Lb04;)V
+    return-wide v0
+.end method
 
-    invoke-virtual {v3, v1}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    move-object v0, v1
-
-    :goto_0
-    invoke-virtual {v0}, Lb04;->getParentController()Lb04;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Lb04;->getParentController()Lb04;
-
-    move-result-object v0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v2, v0, Lo8d;
+    instance-of v0, p1, Lwig;
 
-    if-eqz v2, :cond_1
+    const/4 v1, 0x0
 
-    check-cast v0, Lo8d;
+    if-nez v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move-object v0, v4
+    check-cast p1, Lwig;
 
-    :goto_1
-    if-eqz v0, :cond_2
+    check-cast p1, La2;
 
-    invoke-interface {v0}, Lo8d;->f0()Li8d;
+    invoke-interface {p1}, Lwig;->a()I
 
-    move-result-object v4
+    move-result v0
+
+    const/4 v2, 0x3
+
+    if-ne v0, v2, :cond_3
+
+    invoke-interface {p1}, Lwig;->g()Lac7;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lac7;->k()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    move-object v0, v4
+    iget-wide v2, p0, Lgc7;->a:J
 
-    invoke-virtual {v3, v1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+    invoke-interface {p1}, Lrha;->d()J
 
-    if-eqz v0, :cond_3
+    move-result-wide v4
 
-    new-instance v2, Ll8d;
+    cmp-long p1, v2, v4
 
-    const/4 v7, 0x0
+    if-nez p1, :cond_3
 
-    const/4 v8, -0x1
+    :goto_0
+    const/4 p1, 0x1
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v8}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x1
-
-    const-string v4, "BottomSheetWidget"
-
-    invoke-static {v1, v2, v3, v4}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Li8d;->H(Ll8d;)V
+    return p1
 
     :cond_3
-    sget-object v0, Loyf;->a:Loyf;
+    :goto_1
+    return v1
+.end method
 
-    return-object v0
+.method public final f()I
+    .locals 4
 
-    :pswitch_0
-    sget-object v0, Lone/me/login/inputphone/InputPhoneScreen;->I0:[Ltm7;
+    const-wide/32 v0, -0x80000000
 
-    new-instance v0, Lee7;
+    iget-wide v2, p0, Lgc7;->a:J
 
-    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, v2, v0
+
+    if-gtz v0, :cond_0
+
+    long-to-int v0, v2
+
+    return v0
+
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lee7;-><init>(Li8d;)V
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
+
+    throw v0
+.end method
+
+.method public final g()Lac7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const-wide/32 v0, -0x80000000
+
+    iget-wide v2, p0, Lgc7;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, v2, v0
+
+    if-gtz v0, :cond_0
+
+    long-to-int v0, v2
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x20
+
+    ushr-long v0, v2, v0
+
+    xor-long/2addr v0, v2
+
+    long-to-int v0, v0
+
+    return v0
+.end method
+
+.method public final i()Ljava/math/BigInteger;
+    .locals 2
+
+    iget-wide v0, p0, Lgc7;->a:J
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    nop
+.method public final j()J
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v0, p0, Lgc7;->a:J
+
+    return-wide v0
+.end method
+
+.method public final k()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final l()Lac7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-wide v0, p0, Lgc7;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

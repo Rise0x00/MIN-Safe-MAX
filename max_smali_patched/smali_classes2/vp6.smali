@@ -2,89 +2,93 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La88;
+
 
 # instance fields
-.field public final a:[I
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final synthetic b:Ly22;
 
 
 # direct methods
-.method public constructor <init>([I)V
-    .locals 0
+.method public constructor <init>(Ly22;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvp6;->a:[I
+    iput-object p1, p0, Lvp6;->b:Ly22;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lvp6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final F()V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lvp6;->b:Ly22;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ly22;->r()Z
 
-    return v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lvp6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ly22;->resumeWith(Ljava/lang/Object;)V
 
     :cond_0
-    instance-of v1, p1, Lvp6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvp6;
-
-    iget-object v1, p0, Lvp6;->a:[I
-
-    iget-object p1, p1, Lvp6;->a:[I
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final P(Lq78;)V
+    .locals 4
 
-    iget-object v0, p0, Lvp6;->a:[I
+    iget-object v0, p0, Lvp6;->b:Ly22;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-virtual {v0}, Ly22;->r()Z
 
-    move-result v0
+    move-result v1
 
-    return v0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lvp6;->a:[I
+    const/4 v2, 0x1
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    iget-object v3, p0, Lvp6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object v0
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    const-string v1, "GradientsLocalColors(promoTextGradient="
+    move-result v1
 
-    const-string v2, ")"
+    if-eqz v1, :cond_0
 
-    invoke-static {v1, v0, v2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ly22;->resumeWith(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

@@ -1,56 +1,183 @@
-.class public final synthetic Ldg;
+.class public final Ldg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcg;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:[I
 
-.field public final synthetic b:Lk98;
+.field public b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk98;I)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    iput p2, p0, Ldg;->a:I
-
-    iput-object p1, p0, Ldg;->b:Lk98;
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
+    const/4 v0, 0x2
 
-# virtual methods
-.method public final run()V
-    .locals 1
+    const/4 v1, 0x1
 
-    iget v0, p0, Ldg;->a:I
+    filled-new-array {v1, p1, v0}, [I
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Ldg;->b:Lk98;
-
-    invoke-virtual {v0}, Lk98;->y()V
+    iput-object p1, p0, Ldg;->a:[I
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ldg;->b:Lk98;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lk98;->z()V
+    const/16 p1, 0x8
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Ldg;->a:[I
 
     return-void
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
+.end method
+
+
+# virtual methods
+.method public a()I
+    .locals 3
+
+    iget-object v0, p0, Ldg;->a:[I
+
+    iget v1, p0, Ldg;->b:I
+
+    aget v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iput v1, p0, Ldg;->b:I
+
+    return v2
+.end method
+
+.method public b()I
+    .locals 2
+
+    iget v0, p0, Ldg;->b:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Ldg;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget v0, v1, v0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public c()I
+    .locals 2
+
+    iget v0, p0, Ldg;->b:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Ldg;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ldg;->b:I
+
+    aget v0, v1, v0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public d(I)V
+    .locals 2
+
+    iget v0, p0, Ldg;->b:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Ldg;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aput p1, v1, v0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p1}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p1
+.end method
+
+.method public e(I)V
+    .locals 4
+
+    iget-object v0, p0, Ldg;->a:[I
+
+    array-length v1, v0
+
+    iget v2, p0, Ldg;->b:I
+
+    if-ge v2, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v2, v1, 0x2
+
+    new-array v2, v2, [I
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v2, p0, Ldg;->a:[I
+
+    move-object v0, v2
+
+    :goto_0
+    iget v1, p0, Ldg;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ldg;->b:I
+
+    aput p1, v0, v1
+
+    return-void
 .end method

@@ -1,51 +1,23 @@
 .class public final Lu2a;
-.super Lnz3;
+.super Lzdi;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lv2a;
-
-.field public Z:I
-
-.field public o:Lv2a;
-
-
 # direct methods
-.method public constructor <init>(Lv2a;Lnz3;)V
+.method public constructor <init>(Lv2a;)V
     .locals 0
 
-    iput-object p1, p0, Lu2a;->Y:Lv2a;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final g()V
     .locals 1
-
-    iput-object p1, p0, Lu2a;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lu2a;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lu2a;->Z:I
-
-    iget-object p1, p0, Lu2a;->Y:Lv2a;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lv2a;->c(Lit9;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    throw v0
 .end method

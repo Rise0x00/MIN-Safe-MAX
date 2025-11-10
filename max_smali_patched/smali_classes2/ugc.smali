@@ -1,6 +1,77 @@
-.class public abstract Lugc;
-.super Ljava/lang/Object;
+.class public final Lugc;
+.super Ltre;
+.source "SourceFile"
 
 
 # static fields
-.field public static picker_min_distance:I = 0x7f0b005b
+.field public static final b:Lugc;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lugc;
+
+    invoke-direct {v0}, Ltre;-><init>()V
+
+    sput-object v0, Lugc;->b:Lugc;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Landroid/os/Bundle;)Lyf4;
+    .locals 3
+
+    const-string v0, "can_select_file"
+
+    invoke-static {v0, p1}, Lrxi;->b(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    const-string v1, "source_id"
+
+    invoke-static {v1, p1}, Lrxi;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object p1
+
+    new-instance v1, Lgv8;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Lgv8;-><init>(ZLjava/lang/Long;I)V
+
+    return-object v1
+.end method
+
+.method public final e(Lsre;)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xe
+
+    const-string v3, ":qr-scanner"
+
+    invoke-static {p1, v3, v0, v1, v2}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    return-void
+.end method

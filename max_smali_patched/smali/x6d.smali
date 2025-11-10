@@ -1,124 +1,145 @@
-.class public final synthetic Lx6d;
-.super Ljava/lang/Object;
+.class public Lx6d;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lm7d;
 
-.field public final synthetic b:Lone/me/android/root/RootController;
+.field public final b:Landroid/graphics/Rect;
+
+.field public c:Z
+
+.field public d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/android/root/RootController;I)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput p2, p0, Lx6d;->a:I
+    .line 5
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    iput-object p1, p0, Lx6d;->b:Lone/me/android/root/RootController;
+    .line 6
+    new-instance p1, Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p1, p0, Lx6d;->b:Landroid/graphics/Rect;
+
+    const/4 p1, 0x1
+
+    .line 7
+    iput-boolean p1, p0, Lx6d;->c:Z
+
+    const/4 p1, 0x0
+
+    .line 8
+    iput-boolean p1, p0, Lx6d;->d:Z
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+    .line 1
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iget v0, p0, Lx6d;->a:I
+    .line 2
+    new-instance p1, Landroid/graphics/Rect;
 
-    const/4 v1, -0x1
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object v2, p0, Lx6d;->b:Lone/me/android/root/RootController;
+    iput-object p1, p0, Lx6d;->b:Landroid/graphics/Rect;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    sget-object v0, Lone/me/android/root/RootController;->x0:[Ltm7;
+    .line 3
+    iput-boolean p1, p0, Lx6d;->c:Z
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    .line 4
+    iput-boolean p1, p0, Lx6d;->d:Z
 
-    invoke-static {v0}, Lk98;->a(Landroid/content/Context;)Lf52;
+    return-void
+.end method
 
-    move-result-object v0
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    sget v2, Lqdc;->root_top_indicator:I
+    .line 13
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    .line 14
+    new-instance p1, Landroid/graphics/Rect;
 
-    new-instance v2, Lc24;
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    const/4 v3, -0x2
+    iput-object p1, p0, Lx6d;->b:Landroid/graphics/Rect;
 
-    invoke-direct {v2, v1, v3}, Lc24;-><init>(II)V
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 15
+    iput-boolean p1, p0, Lx6d;->c:Z
 
-    const/16 v1, 0x64
+    const/4 p1, 0x0
 
-    int-to-float v1, v1
+    .line 16
+    iput-boolean p1, p0, Lx6d;->d:Z
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    return-void
+.end method
 
-    move-result-object v2
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 0
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    .line 9
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    move-result-object v2
+    .line 10
+    new-instance p1, Landroid/graphics/Rect;
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    mul-float/2addr v1, v2
+    iput-object p1, p0, Lx6d;->b:Landroid/graphics/Rect;
 
-    invoke-static {v1}, Lv63;->r0(F)I
+    const/4 p1, 0x1
 
-    move-result v1
+    .line 11
+    iput-boolean p1, p0, Lx6d;->c:Z
 
-    int-to-float v1, v1
+    const/4 p1, 0x0
 
-    neg-float v1, v1
+    .line 12
+    iput-boolean p1, p0, Lx6d;->d:Z
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+    return-void
+.end method
 
-    return-object v0
+.method public constructor <init>(Lx6d;)V
+    .locals 0
 
-    :pswitch_0
-    sget-object v0, Lone/me/android/root/RootController;->x0:[Ltm7;
+    .line 17
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    .line 18
+    new-instance p1, Landroid/graphics/Rect;
 
-    move-result-object v0
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-static {v0}, Lk98;->a(Landroid/content/Context;)Lf52;
+    iput-object p1, p0, Lx6d;->b:Landroid/graphics/Rect;
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    sget v2, Lqdc;->root_screen:I
+    .line 19
+    iput-boolean p1, p0, Lx6d;->c:Z
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    const/4 p1, 0x0
 
-    new-instance v2, Lc24;
+    .line 20
+    iput-boolean p1, p0, Lx6d;->d:Z
 
-    invoke-direct {v2, v1, v1}, Lc24;-><init>(II)V
-
-    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
-
-    invoke-direct {v1}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
-
-    invoke-virtual {v2, v1}, Lc24;->b(Lz14;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

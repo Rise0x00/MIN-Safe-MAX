@@ -1,238 +1,94 @@
-.class public final Ljo2;
-.super Ltxb;
+.class public final synthetic Ljo2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final J0:Lrxa;
+.field public final synthetic a:I
 
-.field public final K0:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 9
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
+    .locals 0
 
-    new-instance v0, Landroid/widget/LinearLayout;
+    iput p2, p0, Ljo2;->a:I
 
-    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Ljo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    invoke-direct {p0, v0}, Lnxc;-><init>(Landroid/view/View;)V
-
-    new-instance v1, Lrxa;
-
-    invoke-direct {v1, p1}, Lrxa;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x2
-
-    invoke-direct {v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v2, Lvsa;->O:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lrxa;->setBackgroundColorAttr(Ljava/lang/Integer;)V
-
-    sget v2, Lvsa;->Y:I
-
-    invoke-virtual {v1, v2}, Lrxa;->setHintColorAttr(I)V
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v5, Lt24;
-
-    const/16 v6, 0x10
-
-    int-to-float v7, v6
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v8
-
-    invoke-static {v7}, Lv63;->r0(F)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    invoke-direct {v5, v7}, Lt24;-><init>(F)V
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    iput-object v1, p0, Ljo2;->J0:Lrxa;
-
-    new-instance v5, Lio2;
-
-    const/4 v7, 0x0
-
-    invoke-direct {v5, p1, v7}, Lio2;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x3
-
-    invoke-static {p1, v5}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljo2;->K0:Ljava/lang/Object;
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {p1, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v1, Lgd0;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, p0, p1, v2}, Lgd0;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Lk74;->K(Lnf6;Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lha3;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Ljo2;->K0:Ljava/lang/Object;
+    iget v0, p0, Ljo2;->a:I
 
-    invoke-interface {v0}, Lbp7;->a()Z
+    sget-object v1, Lybg;->a:Lybg;
 
-    move-result v1
+    iget-object v2, p0, Ljo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    if-nez v1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez p1, :cond_0
+    check-cast p1, Landroid/view/View;
 
-    return-void
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
 
-    :cond_0
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v1, 0x8
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lha3;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->z0()Le69;
 
     move-result-object p1
 
-    goto :goto_1
+    iget-object p1, p1, Le69;->Y:La1f;
 
-    :cond_2
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    :goto_1
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    sget-object v2, Lxa5;->a:Lxa5;
 
-    iget-object p1, p0, Lnxc;->a:Landroid/view/View;
+    invoke-virtual {p1, v0, v2}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p1, Landroid/view/ViewGroup;
+    return-object v1
 
-    invoke-static {v0, p1}, Lbf0;->d(Landroid/view/View;Landroid/view/ViewGroup;)V
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final x(Lww7;)V
-    .locals 4
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
 
-    check-cast p1, Lho2;
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->y0()Lwo2;
 
-    iget-object v0, p1, Lho2;->b:Ljef;
+    move-result-object p1
 
-    invoke-virtual {v0, p0}, Loef;->a(Ltde;)Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lwo2;->v()Le28;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    return-object p1
 
-    const-string v0, ""
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
 
-    move-result-object v0
+    invoke-virtual {v2}, Lc24;->getRouter()Lyid;
 
-    iget-object v1, p0, Ljo2;->J0:Lrxa;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lrxa;->setHint(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lyid;->C()Z
 
-    new-instance v0, Landroid/text/InputFilter$LengthFilter;
+    return-object v1
 
-    iget v2, p1, Lho2;->o:I
-
-    invoke-direct {v0, v2}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Landroid/text/InputFilter;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    invoke-virtual {v1, v2}, Lrxa;->setFilters([Landroid/text/InputFilter;)V
-
-    iget-object v0, p1, Lho2;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1, v0}, Lrxa;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_1
-    iget-object p1, p1, Lho2;->c:Lha3;
-
-    invoke-virtual {p0, p1}, Ljo2;->F(Lha3;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

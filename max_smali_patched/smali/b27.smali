@@ -1,64 +1,58 @@
-.class public final Lb27;
+.class public final synthetic Lb27;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc27;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Landroid/os/IBinder;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lh27;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lh27;I)V
+    .locals 0
+
+    iput p2, p0, Lb27;->a:I
+
+    iput-object p1, p0, Lb27;->b:Lh27;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final J(Lu17;Landroid/os/Bundle;)V
-    .locals 3
+.method public final run()V
+    .locals 2
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    iget v0, p0, Lb27;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    const-string v1, "androidx.media3.session.IMediaSessionService"
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    iget-object v1, p0, Lb27;->b:Lh27;
 
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+    iput-boolean v0, v1, Lh27;->M0:Z
 
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
-
-    iget-object p2, p0, Lb27;->c:Landroid/os/IBinder;
-
-    const/16 v1, 0xbb9
-
-    const/4 v2, 0x0
-
-    invoke-interface {p2, v1, v0, v2, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v1}, Lh27;->E()V
 
     return-void
 
-    :catchall_0
-    move-exception p1
+    :pswitch_0
+    iget-object v0, p0, Lb27;->b:Lh27;
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v0}, Lh27;->E()V
 
-    throw p1
-.end method
+    return-void
 
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
-
-    iget-object v0, p0, Lb27;->c:Landroid/os/IBinder;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

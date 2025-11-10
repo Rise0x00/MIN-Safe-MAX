@@ -47,7 +47,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1, v1}, Lqxd;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

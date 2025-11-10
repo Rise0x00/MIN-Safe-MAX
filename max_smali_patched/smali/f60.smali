@@ -54,7 +54,7 @@
 
     if-ne v1, v3, :cond_0
 
-    invoke-static {v0}, Lwk;->c(Landroid/media/AudioRecordingConfiguration;)Z
+    invoke-static {v0}, Lpl;->c(Landroid/media/AudioRecordingConfiguration;)Z
 
     move-result p1
 

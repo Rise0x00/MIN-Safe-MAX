@@ -1,83 +1,61 @@
 .class public final Ld0b;
-.super Lrj4;
+.super Lf0b;
 .source "SourceFile"
 
 
-# instance fields
-.field public final e:Ljava/util/ArrayList;
+# static fields
+.field public static final a:Ld0b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lrj4;-><init>(Landroid/content/Context;)V
+    new-instance v0, Ld0b;
 
-    iput-object p2, p0, Ld0b;->e:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ld0b;->a:Ld0b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/content/Context;)Lue4;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Li40;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p1}, Li40;-><init>(Landroid/content/Context;)V
+    if-ne p0, p1, :cond_0
 
-    new-instance p1, Lalh;
+    return v0
 
-    const/4 v1, 0x0
+    :cond_0
+    instance-of p1, p1, Ld0b;
 
-    new-array v1, v1, [Lo50;
+    if-nez p1, :cond_1
 
-    iget-object v2, p0, Ld0b;->e:Ljava/util/ArrayList;
+    const/4 p1, 0x0
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    return p1
 
-    move-result-object v1
-
-    check-cast v1, [Lo50;
-
-    array-length v2, v1
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lo50;
-
-    invoke-direct {p1, v1}, Lalh;-><init>([Lo50;)V
-
-    iput-object p1, v0, Li40;->e:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Li40;->c()Lue4;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_1
+    return v0
 .end method
 
-.method public final d(Lcf5;Landroid/os/Looper;Ljava/util/ArrayList;)V
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lcef;
+    const v0, -0x18624f91
 
-    new-instance v1, Lf7d;
+    return v0
+.end method
 
-    const/16 v2, 0x18
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v1, v2}, Lf7d;-><init>(I)V
+    const-string v0, "Stub"
 
-    invoke-direct {v0, p1, p2, v1}, Lcef;-><init>(Lcf5;Landroid/os/Looper;Llze;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, v0, Lcef;->Z0:Z
-
-    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
+    return-object v0
 .end method

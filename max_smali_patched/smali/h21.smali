@@ -1,143 +1,75 @@
 .class public final Lh21;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lrf6;
 
 
 # instance fields
-.field public synthetic X:Z
-
-.field public synthetic Y:Z
-
-.field public synthetic Z:Z
-
-.field public synthetic w0:Z
-
-.field public final synthetic x0:Lbp7;
+.field public final a:Lod8;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lgy5;)V
+.method public constructor <init>(Lod8;)V
     .locals 0
 
-    iput-object p1, p0, Lh21;->x0:Lbp7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x5
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lh21;->a:Lod8;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lgy5;)Ljava/lang/Object;
+.method public static a(Landroid/view/Window;Lc24;Lc24;Z)V
     .locals 2
 
-    check-cast p1, Ljava/lang/Boolean;
+    instance-of v0, p2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const/4 v1, 0x0
 
-    move-result p1
+    if-nez v0, :cond_0
 
-    check-cast p2, Ljava/lang/Boolean;
+    instance-of v0, p2, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    if-nez v0, :cond_0
 
-    move-result p2
+    instance-of v0, p2, Lone/me/calls/ui/ui/call/CallScreen;
 
-    check-cast p3, Ljava/lang/Boolean;
-
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p3
-
-    check-cast p4, Ljava/lang/Boolean;
-
-    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p4
-
-    new-instance v0, Lh21;
-
-    iget-object v1, p0, Lh21;->x0:Lbp7;
-
-    invoke-direct {v0, v1, p5}, Lh21;-><init>(Lbp7;Lgy5;)V
-
-    iput-boolean p1, v0, Lh21;->X:Z
-
-    iput-boolean p2, v0, Lh21;->Y:Z
-
-    iput-boolean p3, v0, Lh21;->Z:Z
-
-    iput-boolean p4, v0, Lh21;->w0:Z
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lh21;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lh21;->X:Z
-
-    iget-boolean v0, p0, Lh21;->Y:Z
-
-    iget-boolean v1, p0, Lh21;->Z:Z
-
-    iget-boolean v2, p0, Lh21;->w0:Z
-
-    iget-object v3, p0, Lh21;->x0:Lbp7;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Llm5;
-
-    check-cast v3, Lnm5;
-
-    invoke-virtual {v3}, Lnm5;->q()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
+    if-eqz v0, :cond_2
 
     :cond_0
-    if-nez v2, :cond_1
+    instance-of v0, p2, Ljrd;
+
+    if-eqz v0, :cond_1
+
+    check-cast p2, Ljrd;
 
     goto :goto_0
 
     :cond_1
-    if-eqz v1, :cond_2
+    move-object p2, v1
 
-    goto :goto_0
+    :goto_0
+    if-eqz p2, :cond_2
+
+    invoke-interface {p2, p0}, Ljrd;->b(Landroid/view/Window;)V
 
     :cond_2
-    if-eqz v0, :cond_3
+    instance-of p2, p1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+    if-eqz p2, :cond_4
+
+    if-nez p3, :cond_4
 
     if-eqz p1, :cond_3
 
-    const/4 v4, 0x1
+    move-object v1, p1
+
+    check-cast v1, Ljrd;
 
     :cond_3
-    :goto_0
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v1, :cond_4
 
-    move-result-object p1
+    invoke-interface {v1, p0}, Ljrd;->j(Landroid/view/Window;)V
 
-    return-object p1
+    :cond_4
+    return-void
 .end method

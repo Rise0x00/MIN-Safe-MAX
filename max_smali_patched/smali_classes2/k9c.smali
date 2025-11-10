@@ -1,98 +1,96 @@
-.class public final synthetic Lk9c;
-.super Ljava/lang/Object;
+.class public final Lk9c;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lp9c;
+.field public final synthetic o:Lu9c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp9c;I)V
+.method public constructor <init>(Lu9c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lk9c;->a:I
+    iput-object p1, p0, Lk9c;->o:Lu9c;
 
-    iput-object p1, p0, Lk9c;->b:Lp9c;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lk9c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lk9c;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lk9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lk9c;
+
+    iget-object v0, p0, Lk9c;->o:Lu9c;
+
+    invoke-direct {p1, v0, p2}, Lk9c;-><init>(Lu9c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lk9c;->a:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lk9c;->o:Lu9c;
 
-    sget v0, Lq9d;->j0:I
+    iget-object p1, p1, Lu9c;->X:Lru7;
 
-    iget-object v1, p0, Lk9c;->b:Lp9c;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lc3b;
 
-    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    sget v0, Luza;->s1:I
 
-    move-result-object v0
+    new-instance v1, Lirf;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    invoke-direct {v1, v0}, Lirf;-><init>(I)V
 
-    move-result-object v0
+    invoke-virtual {p1, v1}, Lc3b;->g(Lnrf;)V
 
-    return-object v0
+    new-instance v0, Lq3b;
 
-    :pswitch_0
-    sget v0, Lq9d;->h0:I
+    sget v1, Lyjd;->J:I
 
-    iget-object v1, p0, Lk9c;->b:Lp9c;
+    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
 
-    move-result-object v1
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
 
-    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    sget-object p1, Lybg;->a:Lybg;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    sget v0, Lq9d;->i0:I
-
-    iget-object v1, p0, Lk9c;->b:Lp9c;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,55 +1,227 @@
-.class public final Lp2g;
-.super Lnz3;
+.class public final enum Lp2g;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Object;
+# static fields
+.field public static final enum X:Lp2g;
 
-.field public Y:Lgu9;
+.field public static final enum Y:Lp2g;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public static final enum Z:Lp2g;
 
-.field public o:Lr2g;
+.field public static final enum a:Lp2g;
 
-.field public final synthetic w0:Lr2g;
+.field public static final enum b:Lp2g;
 
-.field public x0:I
+.field public static final enum c:Lp2g;
+
+.field public static final enum d:Lp2g;
+
+.field public static final enum o:Lp2g;
+
+.field public static final enum s0:Lp2g;
+
+.field public static final enum t0:Lp2g;
+
+.field public static final synthetic u0:[Lp2g;
 
 
 # direct methods
-.method public constructor <init>(Lr2g;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 18
 
-    iput-object p1, p0, Lp2g;->w0:Lr2g;
+    new-instance v1, Lp2g;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v0, "client_hello"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lp2g;->a:Lp2g;
+
+    new-instance v2, Lp2g;
+
+    const-string v0, "server_hello"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lp2g;->b:Lp2g;
+
+    new-instance v3, Lp2g;
+
+    const-string v0, "new_session_ticket"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lp2g;
+
+    const-string v0, "end_of_early_data"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lp2g;
+
+    const-string v0, "encrypted_extensions"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lp2g;->c:Lp2g;
+
+    new-instance v6, Lp2g;
+
+    const-string v0, "certificate"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v7, Lp2g;
+
+    const-string v0, "certificate_request"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lp2g;->d:Lp2g;
+
+    new-instance v8, Lp2g;
+
+    const-string v0, "certificate_verify"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v9, Lp2g;
+
+    const-string v0, "finished"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v10, Lp2g;
+
+    const-string v0, "key_update"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v11, Lp2g;
+
+    const-string v0, "server_certificate"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Lp2g;->o:Lp2g;
+
+    new-instance v12, Lp2g;
+
+    const-string v0, "server_certificate_verify"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Lp2g;->X:Lp2g;
+
+    new-instance v13, Lp2g;
+
+    const-string v0, "server_finished"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v13, Lp2g;->Y:Lp2g;
+
+    new-instance v14, Lp2g;
+
+    const-string v0, "client_certificate"
+
+    const/16 v15, 0xd
+
+    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v14, Lp2g;->Z:Lp2g;
+
+    new-instance v15, Lp2g;
+
+    const-string v0, "client_certificate_verify"
+
+    move-object/from16 v16, v1
+
+    const/16 v1, 0xe
+
+    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v15, Lp2g;->s0:Lp2g;
+
+    new-instance v0, Lp2g;
+
+    const-string v1, "client_finished"
+
+    move-object/from16 v17, v2
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lp2g;->t0:Lp2g;
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v16, v0
+
+    filled-new-array/range {v1 .. v16}, [Lp2g;
+
+    move-result-object v0
+
+    sput-object v0, Lp2g;->u0:[Lp2g;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lp2g;
     .locals 1
 
-    iput-object p1, p0, Lp2g;->Z:Ljava/lang/Object;
+    const-class v0, Lp2g;
 
-    iget p1, p0, Lp2g;->x0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lp2g;
 
-    iput p1, p0, Lp2g;->x0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lp2g;->w0:Lr2g;
+.method public static values()[Lp2g;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lp2g;->u0:[Lp2g;
 
-    invoke-virtual {p1, v0, p0}, Lr2g;->g(Lg17;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v0}, [Lp2g;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lp2g;
+
+    return-object v0
 .end method

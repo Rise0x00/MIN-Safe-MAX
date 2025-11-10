@@ -1,72 +1,49 @@
 .class public final Lhz3;
-.super Landroid/widget/TextView;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Lrff;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Liz3;
 
 
 # direct methods
-.method public constructor <init>(Loef;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
+.method public constructor <init>(Liz3;Lp14;)V
     .locals 0
 
-    iput-object p2, p0, Lhz3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iput-object p1, p0, Lhz3;->o:Liz3;
 
-    invoke-direct {p0, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget-object p3, Lrxf;->n:Lpef;
-
-    invoke-static {p3, p0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object p3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-static {p2}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->B0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Luxa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhz3;->onThemeChanged(Luxa;)V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Luxa;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Lhz3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iput-object p1, p0, Lhz3;->d:Ljava/lang/Object;
 
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->B0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Luxa;
+    iget p1, p0, Lhz3;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lhz3;->X:I
+
+    iget-object p1, p0, Lhz3;->o:Liz3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Liz3;->e(Ljava/util/List;Lys3;Lp14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
-
-    move-result-object p1
-
-    iget p1, p1, Lbdf;->h:I
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
+    return-object p1
 .end method

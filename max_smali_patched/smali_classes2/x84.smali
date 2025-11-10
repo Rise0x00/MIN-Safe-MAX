@@ -1,631 +1,185 @@
 .class public final Lx84;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lr0a;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Lzy0;
 
-.field public Y:Lmj;
+.field public b:Ljava/lang/Boolean;
 
-.field public Z:I
+.field public c:Ljava/lang/Boolean;
 
-.field public final a:Lm3b;
+.field public d:Ljava/lang/Boolean;
 
-.field public final b:I
-
-.field public c:Lv84;
-
-.field public final o:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-.field public final w0:Ljava/util/concurrent/locks/ReentrantLock;
-
-.field public final x0:Ljava/util/concurrent/locks/Condition;
-
-.field public final y0:Ljava/util/concurrent/locks/ReentrantLock;
-
-.field public volatile z0:Z
+.field public e:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Lv84;Lm3b;)V
+.method public constructor <init>(Lzy0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lx84;->a:Lm3b;
-
-    const/16 p2, 0x1e
-
-    iput p2, p0, Lx84;->b:I
-
-    iput-object p1, p0, Lx84;->c:Lv84;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
-
-    iput-object p1, p0, Lx84;->o:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lx84;->X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object p1, p0, Lx84;->w0:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lx84;->x0:Ljava/util/concurrent/locks/Condition;
-
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object p1, p0, Lx84;->y0:Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object p1, p0, Lx84;->a:Lzy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 13
+.method public final g(Ls0a;)V
+    .locals 2
+
+    iget-object v0, p0, Lx84;->b:Ljava/lang/Boolean;
+
+    iget-boolean v1, p1, Ls0a;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lx84;->c:Ljava/lang/Boolean;
+
+    iget-boolean v1, p1, Ls0a;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lx84;->d:Ljava/lang/Boolean;
+
+    iget-boolean v1, p1, Ls0a;->g:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lx84;->e:Ljava/lang/Boolean;
+
+    iget-boolean v1, p1, Ls0a;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    :goto_0
-    iget-boolean v0, p0, Lx84;->z0:Z
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1b
-
-    iget-object v0, p0, Lx84;->y0:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_0
-    iget-object v2, p0, Lx84;->c:Lv84;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-nez v2, :cond_1
-
-    move v5, v4
+    const/4 v0, 0x0
 
     goto :goto_1
 
     :cond_1
-    move v5, v3
+    :goto_0
+    const/4 v0, 0x1
 
     :goto_1
-    const-wide/16 v6, 0x0
+    iget-boolean v1, p1, Ls0a;->e:Z
 
-    if-eqz v2, :cond_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v2, v2, Lv84;->a:Lorg/webrtc/DataChannel;
+    move-result-object v1
 
-    invoke-virtual {v2}, Lorg/webrtc/DataChannel;->bufferedAmount()J
+    iput-object v1, p0, Lx84;->b:Ljava/lang/Boolean;
 
-    move-result-wide v8
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+    iget-boolean v1, p1, Ls0a;->f:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lx84;->c:Ljava/lang/Boolean;
+
+    iget-boolean v1, p1, Ls0a;->g:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lx84;->d:Ljava/lang/Boolean;
+
+    iget-boolean p1, p1, Ls0a;->b:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx84;->e:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_3
+
+    iget-object p1, p0, Lx84;->a:Lzy0;
+
+    iget v0, p1, Lzy0;->a:I
+
+    iget-object p1, p1, Lzy0;->b:Lbi1;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p1, Lbi1;->a:Lwh1;
+
+    iget-object v1, v0, Lwh1;->a:Lsh1;
+
+    if-nez v1, :cond_2
 
     goto :goto_2
 
     :cond_2
-    move-wide v8, v6
+    invoke-virtual {p1, v1}, Lbi1;->c(Lsh1;)Lf8e;
 
-    :goto_2
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    move-result-object v1
 
-    if-nez v5, :cond_1b
-
-    :cond_3
-    iget-boolean v0, p0, Lx84;->z0:Z
-
-    if-nez v0, :cond_7
-
-    const-wide/32 v10, 0x7a1200
-
-    cmp-long v0, v8, v10
-
-    if-gez v0, :cond_4
-
-    iget-object v0, p0, Lx84;->Y:Lmj;
-
-    if-nez v0, :cond_7
-
-    iget-object v0, p0, Lx84;->o:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    :cond_4
-    :try_start_1
-    iget-object v0, p0, Lx84;->w0:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
-
-    :try_start_2
-    iget-object v2, p0, Lx84;->x0:Ljava/util/concurrent/locks/Condition;
-
-    sget-object v10, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v11, 0x32
-
-    invoke-interface {v2, v11, v12, v10}, Ljava/util/concurrent/locks/Condition;->await(JLjava/util/concurrent/TimeUnit;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :try_start_3
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    iget-object v0, p0, Lx84;->y0:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    :try_start_4
-    iget-object v2, p0, Lx84;->c:Lv84;
-
-    if-nez v2, :cond_5
-
-    move v5, v4
-
-    goto :goto_3
-
-    :cond_5
-    move v5, v3
-
-    :goto_3
-    if-eqz v2, :cond_6
-
-    iget-object v2, v2, Lv84;->a:Lorg/webrtc/DataChannel;
-
-    invoke-virtual {v2}, Lorg/webrtc/DataChannel;->bufferedAmount()J
-
-    move-result-wide v8
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    goto :goto_4
-
-    :cond_6
-    move-wide v8, v6
-
-    :goto_4
-    :try_start_5
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    goto :goto_5
-
-    :catchall_0
-    move-exception v2
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw v2
-
-    :catchall_1
-    move-exception v2
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw v2
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :catchall_2
-    :goto_5
-    if-eqz v5, :cond_3
-
-    goto/16 :goto_f
-
-    :cond_7
-    iget-boolean v0, p0, Lx84;->z0:Z
-
-    if-eqz v0, :cond_8
-
-    goto/16 :goto_f
-
-    :cond_8
-    iget-object v0, p0, Lx84;->Y:Lmj;
-
-    if-nez v0, :cond_a
-
-    iget-object v0, p0, Lx84;->o:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Lmj;
+    invoke-virtual {p1, v1, v0}, Lbi1;->e(Lf8e;Ljava/util/List;)V
 
-    iput-object v0, p0, Lx84;->Y:Lmj;
+    goto :goto_2
 
-    if-nez v0, :cond_9
+    :pswitch_0
+    iget-object v0, p1, Lbi1;->a:Lwh1;
 
-    goto/16 :goto_0
+    iget-object v1, v0, Lwh1;->a:Lsh1;
 
-    :cond_9
-    iget-object v0, p0, Lx84;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    if-nez v1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    :cond_a
-    iget-object v0, p0, Lx84;->Y:Lmj;
-
-    if-eqz v0, :cond_0
-
-    iget v2, p0, Lx84;->Z:I
-
-    add-int/lit8 v5, v2, 0x1
-
-    iput v5, p0, Lx84;->Z:I
-
-    iget v5, v0, Lmj;->b:I
-
-    iget-object v6, v0, Lmj;->c:Lwh;
-
-    iget v0, v0, Lmj;->a:I
-
-    const/4 v7, 0x2
-
-    if-ne v0, v4, :cond_f
-
-    instance-of v0, v6, Lyh;
-
-    instance-of v8, v6, Lvh;
-
-    if-eqz v8, :cond_b
-
-    check-cast v6, Lvh;
-
-    iget-object v6, v6, Lvh;->c:[F
-
-    goto :goto_6
-
-    :cond_b
-    if-eqz v0, :cond_d
-
-    new-array v6, v3, [F
-
-    :goto_6
-    array-length v8, v6
-
-    mul-int/lit8 v8, v8, 0x4
-
-    add-int/lit8 v8, v8, 0xa
-
-    new-array v8, v8, [B
-
-    invoke-static {v8}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v9
-
-    if-eqz v0, :cond_c
-
-    int-to-byte v0, v4
-
-    goto :goto_7
-
-    :cond_c
-    move v0, v3
-
-    :goto_7
-    invoke-virtual {v9, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    int-to-short v2, v2
-
-    invoke-virtual {v9, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v5}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {v9, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    array-length v0, v6
-
-    move v2, v3
-
-    :goto_8
-    if-ge v2, v0, :cond_16
-
-    aget v5, v6, v2
-
-    invoke-virtual {v9, v5}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_8
-
-    :cond_d
-    instance-of v0, v6, Lxh;
-
-    if-eqz v0, :cond_e
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Internal error AnimojiSendDataPackage"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_e
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_f
-    instance-of v0, v6, Lvh;
-
-    if-eqz v0, :cond_10
-
-    move-object v8, v6
-
-    check-cast v8, Lvh;
-
-    iget-object v8, v8, Lvh;->c:[F
-
-    array-length v8, v8
-
-    goto :goto_9
-
-    :cond_10
-    instance-of v8, v6, Lxh;
-
-    if-eqz v8, :cond_11
-
-    const/4 v8, 0x3
-
-    goto :goto_9
-
-    :cond_11
-    instance-of v8, v6, Lyh;
-
-    if-eqz v8, :cond_1a
-
-    move v8, v3
-
-    :goto_9
-    add-int/lit8 v8, v8, 0xc
-
-    new-array v8, v8, [B
-
-    invoke-static {v8}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v9
-
-    if-eqz v0, :cond_12
-
-    move v10, v3
-
-    goto :goto_a
-
-    :cond_12
-    instance-of v10, v6, Lxh;
-
-    if-eqz v10, :cond_13
-
-    move v10, v7
-
-    goto :goto_a
-
-    :cond_13
-    instance-of v10, v6, Lyh;
-
-    if-eqz v10, :cond_19
-
-    move v10, v4
-
-    :goto_a
-    int-to-byte v10, v10
-
-    invoke-virtual {v9, v7}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    int-to-short v2, v2
-
-    invoke-virtual {v9, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v5}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v10}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {v9, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_14
-
-    check-cast v6, Lvh;
-
-    iget-object v0, v6, Lvh;->c:[F
-
-    array-length v2, v0
-
-    move v5, v3
-
-    :goto_b
-    if-ge v5, v2, :cond_16
-
-    aget v6, v0, v5
-
-    const/high16 v10, 0x437f0000    # 255.0f
-
-    mul-float/2addr v6, v10
-
-    float-to-int v6, v6
-
-    int-to-byte v6, v6
-
-    invoke-virtual {v9, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_b
-
-    :cond_14
-    instance-of v0, v6, Lxh;
-
-    if-eqz v0, :cond_15
-
-    check-cast v6, Lxh;
-
-    iget v0, v6, Lxh;->c:I
-
-    invoke-static {v0}, Landroid/graphics/Color;->red(I)I
-
-    move-result v0
-
-    int-to-byte v0, v0
-
-    iget v2, v6, Lxh;->c:I
-
-    invoke-static {v2}, Landroid/graphics/Color;->green(I)I
-
-    move-result v2
-
-    int-to-byte v2, v2
-
-    iget v5, v6, Lxh;->c:I
-
-    invoke-static {v5}, Landroid/graphics/Color;->blue(I)I
-
-    move-result v5
-
-    int-to-byte v5, v5
-
-    invoke-virtual {v9, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v9, v5}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    goto :goto_c
-
-    :cond_15
-    sget-object v0, Lyh;->c:Lyh;
-
-    invoke-virtual {v6, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    :cond_16
-    :goto_c
-    iget-object v0, p0, Lx84;->y0:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_6
-    iget-object v2, p0, Lx84;->c:Lv84;
-
-    if-nez v2, :cond_17
-
-    move v3, v4
-
-    :cond_17
-    iget-object v2, p0, Lx84;->a:Lm3b;
-
-    array-length v4, v8
-
-    iget-object v2, v2, Lm3b;->a:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v2, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    iget-object v2, p0, Lx84;->c:Lv84;
-
-    if-eqz v2, :cond_18
-
-    invoke-virtual {v2, v7, v8}, Lv84;->e(I[B)Z
-
-    goto :goto_d
-
-    :catchall_3
-    move-exception v1
-
-    goto :goto_e
-
-    :cond_18
-    :goto_d
-    iget-object v2, p0, Lx84;->a:Lm3b;
-
-    iget-object v2, v2, Lm3b;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    iput-object v1, p0, Lx84;->Y:Lmj;
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    if-eqz v3, :cond_0
-
-    goto :goto_f
-
-    :goto_e
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw v1
-
-    :cond_19
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_1a
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :catchall_4
-    move-exception v1
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw v1
-
-    :cond_1b
-    :goto_f
-    iput-object v1, p0, Lx84;->Y:Lmj;
-
-    iget-object v0, p0, Lx84;->o:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
-
+    :cond_3
+    :goto_2
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;
-.super Lmo7;
+.super Lbu7;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Loi6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer;->init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lkea;Lve6;)V
+    value = Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer;->init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Ltla;Loi6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lmo7;",
-        "Lve6;"
+        "Lbu7;",
+        "Loi6;"
     }
 .end annotation
 
@@ -44,31 +44,31 @@
 
 
 # instance fields
-.field final synthetic $uploadConfig:Lve6;
+.field final synthetic $uploadConfig:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lve6;)V
+.method public constructor <init>(Loi6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Loi6;",
             ")V"
         }
     .end annotation
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;->$uploadConfig:Lve6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;->$uploadConfig:Loi6;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
 
     return-void
 .end method
@@ -79,9 +79,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;->$uploadConfig:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$2;->$uploadConfig:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

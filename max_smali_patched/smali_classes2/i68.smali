@@ -1,78 +1,41 @@
 .class public final Li68;
-.super Lm3f;
+.super Lrj0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Lrj0;-><init>()V
+
+    iput-object p1, p0, Li68;->b:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Ljava/io/File;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "LocalMediaEvent{albumId=\'"
 
-    invoke-virtual {p0, p1, p2}, Li68;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v1, p0, Li68;->b:Ljava/lang/String;
 
-    check-cast p1, Li68;
+    const-string v2, "\'}"
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Li68;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Li68;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Li68;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li68;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/io/File;
-
-    new-instance v0, Lbjb;
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lbjb;-><init>(Ljava/lang/String;)V
-
-    new-instance p1, Lz7f;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lz7f;-><init>(Lbjb;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Lrad;
-
-    invoke-direct {v0, p1}, Lrad;-><init>(Llf6;)V
+    move-result-object v0
 
     return-object v0
 .end method

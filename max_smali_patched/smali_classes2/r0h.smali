@@ -1,102 +1,157 @@
-.class public final Lr0h;
-.super Lm3f;
+.class public final enum Lr0h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final enum X:Lr0h;
+
+.field public static final synthetic Y:[Lr0h;
+
+.field public static final synthetic Z:Lce5;
+
+.field public static final enum b:Lr0h;
+
+.field public static final enum c:Lr0h;
+
+.field public static final enum d:Lr0h;
+
+.field public static final enum o:Lr0h;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p2, p0, Lr0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    new-instance v0, Lr0h;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    const-string v3, "None"
+
+    invoke-direct {v0, v3, v1, v2}, Lr0h;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+
+    sput-object v0, Lr0h;->b:Lr0h;
+
+    new-instance v1, Lr0h;
+
+    sget v2, Lyjd;->Z:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "Timer"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4, v2}, Lr0h;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+
+    sput-object v1, Lr0h;->c:Lr0h;
+
+    new-instance v2, Lr0h;
+
+    sget v3, Lyjd;->l:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const-string v4, "Send"
+
+    const/4 v5, 0x2
+
+    invoke-direct {v2, v4, v5, v3}, Lr0h;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+
+    sput-object v2, Lr0h;->d:Lr0h;
+
+    new-instance v3, Lr0h;
+
+    sget v4, Lyjd;->j:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const-string v5, "Seen"
+
+    const/4 v6, 0x3
+
+    invoke-direct {v3, v5, v6, v4}, Lr0h;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+
+    sput-object v3, Lr0h;->o:Lr0h;
+
+    new-instance v4, Lr0h;
+
+    sget v5, Lyjd;->I:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-string v6, "Error"
+
+    const/4 v7, 0x4
+
+    invoke-direct {v4, v6, v7, v5}, Lr0h;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+
+    sput-object v4, Lr0h;->X:Lr0h;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lr0h;
+
+    move-result-object v0
+
+    sput-object v0, Lr0h;->Y:[Lr0h;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lr0h;->Z:Lce5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lr0h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lr0h;->a:Ljava/lang/Integer;
 
-    move-result-object p1
-
-    check-cast p1, Lr0h;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lr0h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lr0h;
+    .locals 1
 
-    new-instance v0, Lr0h;
+    const-class v0, Lr0h;
 
-    iget-object v1, p0, Lr0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p2, v1}, Lr0h;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lr0h;->X:Ljava/lang/Object;
+    check-cast p0, Lr0h;
+
+    return-object p0
+.end method
+
+.method public static values()[Lr0h;
+    .locals 1
+
+    sget-object v0, Lr0h;->Y:[Lr0h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lr0h;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lr0h;->X:Ljava/lang/Object;
-
-    check-cast p1, Lv0h;
-
-    iget-object v0, p0, Lr0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppSettingsScreen;->Y:Lstg;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p1, Lv0h;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lv0h;->b:Lrtd;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, p1, v1, v2}, Lstg;->a(Lrtd;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :cond_1
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->w0:[Ltm7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

@@ -3,62 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls51;
+.implements Lyf4;
 
 
-# static fields
-.field public static final a:Lo51;
+# instance fields
+.field public final synthetic a:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lo51;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lo51;->a:Lo51;
+    iput-object p1, p0, Lo51;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    const-string v0, "call_id"
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lo51;->a:Landroid/os/Bundle;
 
-    return v0
+    invoke-static {v0, v1}, Lrxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "is_video"
+
+    invoke-static {v2, v1}, Lrxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result v2
+
+    const-string v3, "is_group"
+
+    invoke-static {v3, v1}, Lrxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    move-result v3
+
+    const-string v4, "sdk_reasons"
+
+    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-static {v4, v1}, Lrxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, ","
+
+    filled-new-array {v4}, [Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x4
+
+    invoke-static {v1, v4, v5}, Lxaf;->W(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object v1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lo51;
+    const/4 v1, 0x0
 
-    if-nez p1, :cond_1
+    :goto_0
+    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    const/4 p1, 0x0
+    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x7710d125
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Initialized"
-
-    return-object v0
+    return-object v4
 .end method

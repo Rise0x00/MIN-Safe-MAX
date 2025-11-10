@@ -1,58 +1,103 @@
 .class public final Li5b;
-.super Ljava/lang/Object;
+.super Ladi;
 .source "SourceFile"
-
-# interfaces
-.implements Lfh1;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic c:I
+
+.field public final synthetic d:Lk5b;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lgpa;Lk5b;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput v0, p0, Li5b;->c:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p2, p0, Li5b;->d:Lk5b;
 
-    iput-object v0, p0, Li5b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/16 p2, 0xc
+
+    .line 1
+    invoke-direct {p0, p2, p1}, Ladi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lk5b;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Li5b;->c:I
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iput-object p1, p0, Li5b;->d:Lk5b;
+
+    const/16 p1, 0xc
+
+    .line 2
+    invoke-direct {p0, p1, v0}, Ladi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onStateChanged(Lxg1;Lzg1;)V
-    .locals 2
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Li5b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Li5b;->c:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result v0
 
-    move-result v1
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_0
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast v1, Lfh1;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v1, p1, p2}, Lfh1;->onStateChanged(Lxg1;Lzg1;)V
+    iget-object p1, p0, Li5b;->d:Lk5b;
 
-    goto :goto_0
+    invoke-static {p1}, Lk5b;->a(Lk5b;)V
 
     :cond_0
     return-void
+
+    :pswitch_0
+    check-cast p2, Lgpa;
+
+    check-cast p1, Lgpa;
+
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Li5b;->d:Lk5b;
+
+    invoke-static {p1}, Lk5b;->a(Lk5b;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

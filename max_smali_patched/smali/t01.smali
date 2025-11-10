@@ -1,24 +1,24 @@
-.class public final Lt01;
+.class public final synthetic Lt01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lbq1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lbq1;I)V
     .locals 0
 
-    iput p1, p0, Lt01;->a:I
+    iput p2, p0, Lt01;->a:I
 
-    iput-object p2, p0, Lt01;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lt01;->b:Lbq1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,384 +27,123 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final onParticipantStateChanged(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V
+    .locals 4
 
-    iget v0, p0, Lt01;->a:I
+    iget p1, p0, Lt01;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lt01;->b:Lbq1;
+
+    check-cast p1, Loeb;
+
+    invoke-virtual {p1}, Loeb;->c()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lt01;->b:Lbq1;
+
+    check-cast p1, Lf11;
+
+    invoke-virtual {p1}, Lf11;->d()Lo34;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lo34;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x0
-
-    sget-object v4, Loyf;->a:Loyf;
-
-    iget-object v5, p0, Lt01;->b:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast v5, Lss4;
-
-    invoke-interface {v5}, Lss4;->g()V
-
-    return-object v4
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/profile/ProfileScreen;
-
-    sget-object p1, Lone/me/profile/ProfileScreen;->H0:[Ltm7;
-
-    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->G0()Lp4c;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lp4c;->V0:Lwrb;
-
-    invoke-virtual {v0}, Lwrb;->e()Ldd0;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lp4c;->H0:Ljb5;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    :cond_0
-    return-object v4
-
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    sget-object p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
-
-    invoke-virtual {v5}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lovb;->w()V
-
-    return-object v4
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast v5, Lz12;
-
-    invoke-virtual {v5, v4}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
-    return-object v4
-
-    :pswitch_3
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast v5, Lhfb;
-
-    sget-object p1, Lhfb;->J0:[Ltm7;
-
-    invoke-virtual {v5}, Lhfb;->r()Lf98;
-
-    move-result-object p1
-
-    iput-object v3, p1, Lf98;->i:Lv88;
-
-    return-object v4
-
-    :pswitch_4
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast v5, Ljava/lang/Process;
-
-    invoke-virtual {v5}, Ljava/lang/Process;->destroy()V
-
-    return-object v4
-
-    :pswitch_5
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast v5, Lr36;
-
-    invoke-virtual {v5}, Lpw7;->j()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    move-result-object v0
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v5, p1}, Lr36;->J(I)Lzz9;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-boolean p1, p1, Lzz9;->o:Z
-
-    if-ne p1, v2, :cond_2
-
-    move v1, v2
-
-    :cond_2
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
+    :cond_0
+    move-object v0, v1
 
     :goto_0
-    return-object p1
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;->getChanges()Ljava/util/Collection;
 
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
+    move-result-object p2
 
-    check-cast v5, Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
+    move-result-object p2
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Lma9;
+    :cond_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v2
 
-    iget-object v0, p1, Lma9;->R0:Lmoe;
+    if-eqz v2, :cond_2
 
-    invoke-virtual {v0, v3}, Lmoe;->setValue(Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lma9;->o:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr63;
-
-    check-cast p1, Lt63;
-
-    const-string v0, "app.onboarding.author_visibility"
-
-    invoke-virtual {p1, v0, v2}, Lh3;->g(Ljava/lang/String;Z)V
-
-    sget p1, Li9d;->m0:I
-
-    new-instance v0, Ljef;
-
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
-
-    invoke-virtual {v5, v0, v2}, Lone/me/sdk/messagewrite/MessageWriteWidget;->Q0(Ljef;Z)V
-
-    return-object v4
-
-    :pswitch_7
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    check-cast v5, Llra;
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, v5, Llra;->A0:Landroid/widget/EditText;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
-
-    new-instance v0, Lbt8;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v5, v1, p1}, Lbt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    invoke-virtual {v5, v3}, Llra;->setOnWindowFocusChanged(Lxe6;)V
-
-    :cond_3
-    return-object v4
-
-    :pswitch_8
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/folders/picker/FolderMemberPickerScreen;
-
-    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->D0:[Ltm7;
-
-    invoke-virtual {v5}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lveb;->c:Lugb;
-
-    check-cast p1, Lx26;
-
-    iget-object v0, v5, Lone/me/folders/picker/FolderMemberPickerScreen;->B0:Lpr;
-
-    sget-object v6, Lone/me/folders/picker/FolderMemberPickerScreen;->D0:[Ltm7;
-
-    aget-object v1, v6, v1
-
-    invoke-virtual {v0, v5}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-boolean v1, p1, Lx26;->i:Z
-
-    if-eqz v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iput-boolean v2, p1, Lx26;->i:Z
-
-    iget-object v1, p1, Lx26;->h:Le34;
-
-    if-eqz v1, :cond_5
-
-    sget-object v2, Lq2a;->a:Lq2a;
-
-    iget-object v5, p1, Lx26;->e:Lbp7;
-
-    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr8f;
-
-    check-cast v5, Lwla;
-
-    invoke-virtual {v5}, Lwla;->b()Ly24;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Le0;->plus(Lw24;)Lw24;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    new-instance v5, Lv26;
+    move-object v3, v2
 
-    invoke-direct {v5, p1, v0, v3}, Lv26;-><init>(Lx26;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    check-cast v3, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    sget-object p1, Lh34;->c:Lh34;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v2, p1, v5}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
+    move-result-object v3
 
-    :cond_5
-    :goto_1
-    return-object v4
+    invoke-static {v3, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_9
-    check-cast p1, Lus3;
+    move-result v3
 
-    check-cast v5, Lr03;
+    if-eqz v3, :cond_1
 
-    iget-object v0, v5, Lr03;->Y0:Lht9;
+    move-object v1, v2
 
-    iget-wide v1, p1, Lus3;->a:J
+    :cond_2
+    check-cast v1, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    iget-object p1, p1, Lus3;->A0:Labb;
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v1, v2, p1}, Lht9;->h(JLjava/lang/Object;)V
+    iget-object p2, p1, Lf11;->x0:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object v4
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
 
-    :pswitch_a
-    check-cast p1, Ljava/lang/Number;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    xor-int/lit8 v0, v0, 0x1
 
-    move-result p1
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
 
-    check-cast v5, Lone/me/chatscreen/ChatScreen;
+    move-result v1
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+    invoke-virtual {p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    invoke-virtual {v5}, Lone/me/chatscreen/ChatScreen;->X0()Lce9;
+    move-result p2
 
-    move-result-object v0
+    if-eqz p2, :cond_3
 
-    iget-object v0, v0, Lce9;->w0:Ljb5;
+    iget-object p1, p1, Lf11;->C0:Lake;
 
-    new-instance v1, Ltd9;
+    sget-object p2, Lza;->a:Lza;
 
-    invoke-direct {v1, p1}, Ltd9;-><init>(I)V
+    invoke-virtual {p1, p2}, Lake;->h(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    return-object v4
-
-    :pswitch_b
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
-
-    sget-object p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0:[Ltm7;
-
-    invoke-virtual {v5}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0()Lvm2;
-
-    move-result-object p1
-
-    sget v0, Lzdc;->oneme_chatmedia_viewer_toolbar_action_save_gallery:I
-
-    invoke-virtual {p1, v0}, Lvm2;->J(I)V
-
-    return-object v4
-
-    :pswitch_c
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
-
-    invoke-virtual {v5}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Li8d;->C()Z
-
-    return-object v4
-
-    :pswitch_d
-    check-cast p1, Landroid/view/View;
-
-    check-cast v5, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    invoke-virtual {v5}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Li8d;->C()Z
-
-    return-object v4
-
-    nop
+    :cond_3
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -2,167 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsz7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzy7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lzy7;
+
 
 # direct methods
-.method public static a(Lq9h;Z)V
-    .locals 15
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "start"
+    new-instance v0, Lzy7;
 
-    const-string v1, "LoadEmojiFontWorker"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    sput-object v0, Lzy7;->a:Lzy7;
 
-    new-instance v0, Lhza;
+    new-instance v0, Lmu7;
 
-    const-class v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v2}, Lhza;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, Lmu7;-><init>(I)V
 
-    const-wide/16 v2, 0x2710
+    sput-object v0, Lzy7;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    return-void
+.end method
 
-    sget-object v5, Luf0;->a:Luf0;
 
-    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Luf0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, Lhza;
+    return v0
+.end method
 
-    new-instance v2, Ljava/util/LinkedHashSet;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    const/4 v3, 0x2
-
-    :goto_0
-    move v5, v3
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    const/4 v3, 0x3
+    instance-of p1, p1, Lzy7;
 
-    goto :goto_0
+    if-nez p1, :cond_1
 
-    :goto_1
-    invoke-static {v2}, Le93;->M0(Ljava/lang/Iterable;)Ljava/util/Set;
+    const/4 p1, 0x0
 
-    move-result-object v14
+    return p1
 
-    new-instance v4, Lro3;
+    :cond_1
+    return v0
+.end method
 
-    const/4 v6, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    const/4 v7, 0x0
+    const v0, 0x608c29e1
 
-    const/4 v8, 0x0
+    return v0
+.end method
 
-    const/4 v9, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    const-wide/16 v10, -0x1
+    const-string v0, "ErrorPostNotFounded"
 
-    const-wide/16 v12, -0x1
+    return-object v0
+.end method
 
-    invoke-direct/range {v4 .. v14}, Lro3;-><init>(IZZZZJJLjava/util/Set;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {v0, v4}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lro3;)Landroidx/work/WorkRequest$Builder;
+    const/4 p2, 0x1
 
-    move-result-object v0
-
-    check-cast v0, Lhza;
-
-    sget-object v2, Lh2b;->a:Lh2b;
-
-    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setExpedited(Lh2b;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v0
-
-    check-cast v0, Lhza;
-
-    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v0
-
-    check-cast v0, Lhza;
-
-    invoke-static/range {p1 .. p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v3, Ln4b;
-
-    const-string v4, "waiting_for_wifi"
-
-    invoke-direct {v3, v4, v2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v3}, [Ln4b;
-
-    move-result-object v2
-
-    new-instance v3, Lrxd;
-
-    const/16 v4, 0xb
-
-    invoke-direct {v3, v4}, Lrxd;-><init>(I)V
-
-    const/4 v4, 0x0
-
-    aget-object v2, v2, v4
-
-    iget-object v5, v2, Ln4b;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/lang/String;
-
-    iget-object v2, v2, Ln4b;->b:Ljava/lang/Object;
-
-    invoke-virtual {v3, v2, v5}, Lrxd;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Lrxd;->f()Lu84;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lu84;)Landroidx/work/WorkRequest$Builder;
-
-    move-result-object v0
-
-    check-cast v0, Lhza;
-
-    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
-
-    move-result-object v0
-
-    check-cast v0, Liza;
-
-    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v5, "work "
-
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v2, Lzd5;->b:Lzd5;
-
-    invoke-virtual {p0, v1, v2, v0, v4}, Lq9h;->b(Ljava/lang/String;Lzd5;Liza;Z)Lks7;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lks7;->B()Lai3;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

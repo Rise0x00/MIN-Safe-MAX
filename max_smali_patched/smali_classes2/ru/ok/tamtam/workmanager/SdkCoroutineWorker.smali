@@ -1,5 +1,5 @@
 .class public abstract Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
-.super Lox7;
+.super La38;
 .source "SourceFile"
 
 
@@ -10,48 +10,48 @@
     }
     d2 = {
         "Lru/ok/tamtam/workmanager/SdkCoroutineWorker;",
-        "Lox7;",
+        "La38;",
         "Landroid/content/Context;",
         "appContext",
         "Landroidx/work/WorkerParameters;",
         "params",
         "<init>",
         "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V",
-        "Ljx7;",
-        "Lnx7;",
+        "Lv28;",
+        "Lz28;",
         "startWork",
-        "()Ljx7;",
-        "Loyf;",
+        "()Lv28;",
+        "Lybg;",
         "onStopWork",
         "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "Lu84;",
+        "Lfb4;",
         "data",
         "setProgress",
-        "(Lu84;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "Ld76;",
+        "(Lfb4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "Lcb6;",
         "foregroundInfo",
         "setForeground",
-        "(Ld76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "(Lcb6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
         "getForegroundInfoAsync",
         "onStopped",
         "()V",
-        "Lse3;",
+        "Lqg3;",
         "job",
-        "Lse3;",
-        "Ltxd;",
+        "Lqg3;",
+        "Lj9e;",
         "future",
-        "Ltxd;",
-        "Ll8f;",
+        "Lj9e;",
+        "Lnlf;",
         "tamComponent$delegate",
-        "Lbp7;",
+        "Lru7;",
         "getTamComponent",
-        "()Ll8f;",
+        "()Lnlf;",
         "tamComponent",
-        "Ly24;",
+        "La54;",
         "coroutineContext",
-        "Ly24;",
+        "La54;",
         "getCoroutineContext",
-        "()Ly24;",
+        "()La54;",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -65,86 +65,86 @@
 
 
 # instance fields
-.field private final coroutineContext:Ly24;
+.field private final coroutineContext:La54;
 
-.field private final future:Ltxd;
+.field private final future:Lj9e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ltxd;"
+            "Lj9e;"
         }
     .end annotation
 .end field
 
-.field private final job:Lse3;
+.field private final job:Lqg3;
 
-.field private final tamComponent$delegate:Lbp7;
+.field private final tamComponent$delegate:Lru7;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 2
 
-    invoke-direct {p0, p1, p2}, Lox7;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
+    invoke-direct {p0, p1, p2}, La38;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    invoke-static {}, Lhxf;->a()Lki7;
+    invoke-static {}, Lfbi;->a()Lxn7;
 
     move-result-object p2
 
-    iput-object p2, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lse3;
+    iput-object p2, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lqg3;
 
-    new-instance p2, Ltxd;
+    new-instance p2, Lj9e;
 
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Ltxd;
+    iput-object p2, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Lj9e;
 
-    new-instance v0, Lsga;
+    new-instance v0, Lfoa;
 
-    const/16 v1, 0x16
+    const/16 v1, 0x17
 
-    invoke-direct {v0, v1, p0}, Lsga;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lfoa;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Lox7;->getTaskExecutor()Lzbf;
+    invoke-virtual {p0}, La38;->getTaskExecutor()Lyof;
 
     move-result-object v1
 
-    check-cast v1, Lkw8;
+    check-cast v1, Lu2c;
 
-    iget-object v1, v1, Lkw8;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lu2c;->b:Ljava/lang/Object;
 
-    check-cast v1, Lgsd;
+    check-cast v1, Lr3e;
 
-    invoke-virtual {p2, v0, v1}, Ln1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p2, v0, v1}, Ly1;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    new-instance p2, Lvka;
+    new-instance p2, Ltra;
 
-    const/16 v0, 0x19
+    const/16 v0, 0x1c
 
-    invoke-direct {p2, p1, v0}, Lvka;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p2, p1, v0}, Ltra;-><init>(Landroid/content/Context;I)V
 
-    new-instance p1, Ls5f;
+    new-instance p1, Ltif;
 
-    invoke-direct {p1, p2}, Ls5f;-><init>(Lve6;)V
+    invoke-direct {p1, p2}, Ltif;-><init>(Loi6;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->tamComponent$delegate:Lbp7;
+    iput-object p1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->tamComponent$delegate:Lru7;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
-
-    move-result-object p1
-
-    check-cast p1, Lzid;
-
-    invoke-virtual {p1}, Lzid;->s()Lr8f;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
 
     move-result-object p1
 
-    check-cast p1, Lwla;
+    check-cast p1, Lbud;
 
-    invoke-virtual {p1}, Lwla;->a()Ly24;
+    invoke-virtual {p1}, Lbud;->k()Ltlf;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->coroutineContext:Ly24;
+    check-cast p1, Lsta;
+
+    invoke-virtual {p1}, Lsta;->a()La54;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->coroutineContext:La54;
 
     return-void
 .end method
@@ -152,30 +152,30 @@
 .method public static a(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Ltxd;
+    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Lj9e;
 
-    iget-object v0, v0, Ln1;->a:Ljava/lang/Object;
+    iget-object v0, v0, Ly1;->a:Ljava/lang/Object;
 
-    instance-of v0, v0, Lr0;
+    instance-of v0, v0, Lc1;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lse3;
+    iget-object p0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lqg3;
 
     const/4 v0, 0x0
 
-    check-cast p0, Llj7;
+    check-cast p0, Lyo7;
 
-    invoke-virtual {p0, v0}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-virtual {p0, v0}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Ltxd;
+.method public static final synthetic access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Lj9e;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Ltxd;
+    iget-object p0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Lj9e;
 
     return-object p0
 .end method
@@ -188,7 +188,7 @@
             "Lru/ok/tamtam/workmanager/SdkCoroutineWorker;",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Ld76;",
+            "Lcb6;",
             ">;)",
             "Ljava/lang/Object;"
         }
@@ -211,13 +211,13 @@
             "Lru/ok/tamtam/workmanager/SdkCoroutineWorker;",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Loyf;",
+            "Lybg;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    sget-object p0, Loyf;->a:Loyf;
+    sget-object p0, Lybg;->a:Lybg;
 
     return-object p0
 .end method
@@ -227,10 +227,10 @@
 .method public abstract doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 .end method
 
-.method public getCoroutineContext()Ly24;
+.method public getCoroutineContext()La54;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->coroutineContext:Ly24;
+    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->coroutineContext:La54;
 
     return-object v0
 .end method
@@ -245,58 +245,58 @@
     return-object p1
 .end method
 
-.method public final getForegroundInfoAsync()Ljx7;
+.method public final getForegroundInfoAsync()Lv28;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljx7;"
+            "Lv28;"
         }
     .end annotation
 
-    invoke-static {}, Lhxf;->a()Lki7;
+    invoke-static {}, Lfbi;->a()Lxn7;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()Ly24;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()La54;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Le0;->plus(Lw24;)Lw24;
+    invoke-virtual {v1, v0}, Lp0;->plus(Ly44;)Ly44;
 
     move-result-object v1
 
-    invoke-static {v1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {v1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
 
     move-result-object v1
 
-    new-instance v2, Lvi7;
+    new-instance v2, Lio7;
 
-    invoke-direct {v2, v0}, Lvi7;-><init>(Lki7;)V
+    invoke-direct {v2, v0}, Lio7;-><init>(Lxn7;)V
 
-    new-instance v0, Lajd;
+    new-instance v0, Lcud;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v2, p0, v3}, Lajd;-><init>(Lvi7;Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2, p0, v3}, Lcud;-><init>(Lio7;Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
     const/4 v4, 0x3
 
-    invoke-static {v1, v3, v3, v0, v4}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-static {v1, v3, v3, v0, v4}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
     return-object v2
 .end method
 
-.method public final getTamComponent()Ll8f;
+.method public final getTamComponent()Lnlf;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->tamComponent$delegate:Lbp7;
+    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->tamComponent$delegate:Lru7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll8f;
+    check-cast v0, Lnlf;
 
     return-object v0
 .end method
@@ -308,7 +308,7 @@
             "(",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Loyf;",
+            "Lybg;",
             ">;)",
             "Ljava/lang/Object;"
         }
@@ -324,54 +324,54 @@
 .method public final onStopped()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Ltxd;
+    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Lj9e;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ln1;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Ly1;->cancel(Z)Z
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()Ly24;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lse3;
-
-    invoke-virtual {v0, v1}, Le0;->plus(Lw24;)Lw24;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()La54;
 
     move-result-object v0
 
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lqg3;
+
+    invoke-virtual {v0, v1}, Lp0;->plus(Ly44;)Ly44;
 
     move-result-object v0
 
-    new-instance v1, Lbjd;
+    invoke-static {v0}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    new-instance v1, Ldud;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lbjd;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p0, v2}, Ldud;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
     const/4 v3, 0x3
 
-    invoke-static {v0, v2, v2, v1, v3}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-static {v0, v2, v2, v1, v3}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
     return-void
 .end method
 
-.method public final setForeground(Ld76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final setForeground(Lcb6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld76;",
+            "Lcb6;",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Loyf;",
+            "Lybg;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Lox7;->setForegroundAsync(Ld76;)Ljx7;
+    invoke-virtual {p0, p1}, La38;->setForegroundAsync(Lcb6;)Lv28;
 
     move-result-object p1
 
@@ -406,41 +406,41 @@
     throw p1
 
     :cond_1
-    new-instance v0, Lz12;
+    new-instance v0, Ly22;
 
-    invoke-static {p2}, La1b;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p2}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p2
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p2}, Lz12;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Ly22;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Lz12;->o()V
+    invoke-virtual {v0}, Ly22;->o()V
 
-    new-instance p2, Lsg6;
+    new-instance p2, Llk6;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x17
 
-    invoke-direct {p2, v0, v1, p1}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v0, v1, p1}, Llk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sget-object v1, Ldr4;->a:Ldr4;
+    sget-object v1, Lku4;->a:Lku4;
 
-    invoke-interface {p1, p2, v1}, Ljx7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-interface {p1, p2, v1}, Lv28;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    new-instance p2, Lcjd;
+    new-instance p2, Leud;
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, p1, v1}, Lcjd;-><init>(Ljx7;I)V
+    invoke-direct {p2, p1, v1}, Leud;-><init>(Lv28;I)V
 
-    invoke-virtual {v0, p2}, Lz12;->e(Lxe6;)V
+    invoke-virtual {v0, p2}, Ly22;->e(Lqi6;)V
 
-    invoke-virtual {v0}, Lz12;->n()Ljava/lang/Object;
+    invoke-virtual {v0}, Ly22;->n()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object p2, Lf34;->a:Lf34;
+    sget-object p2, Lh54;->a:Lh54;
 
     if-ne p1, p2, :cond_2
 
@@ -448,26 +448,26 @@
 
     :cond_2
     :goto_1
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method
 
-.method public final setProgress(Lu84;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final setProgress(Lfb4;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu84;",
+            "Lfb4;",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Loyf;",
+            "Lybg;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Lox7;->setProgressAsync(Lu84;)Ljx7;
+    invoke-virtual {p0, p1}, La38;->setProgressAsync(Lfb4;)Lv28;
 
     move-result-object p1
 
@@ -502,41 +502,41 @@
     throw p1
 
     :cond_1
-    new-instance v0, Lz12;
+    new-instance v0, Ly22;
 
-    invoke-static {p2}, La1b;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p2}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p2
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p2}, Lz12;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Ly22;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Lz12;->o()V
+    invoke-virtual {v0}, Ly22;->o()V
 
-    new-instance p2, Ltg6;
+    new-instance p2, Lkk6;
 
     const/16 v1, 0x18
 
-    invoke-direct {p2, v0, v1, p1}, Ltg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v0, v1, p1}, Lkk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sget-object v1, Ldr4;->a:Ldr4;
+    sget-object v1, Lku4;->a:Lku4;
 
-    invoke-interface {p1, p2, v1}, Ljx7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-interface {p1, p2, v1}, Lv28;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    new-instance p2, Lcjd;
+    new-instance p2, Leud;
 
     const/4 v1, 0x1
 
-    invoke-direct {p2, p1, v1}, Lcjd;-><init>(Ljx7;I)V
+    invoke-direct {p2, p1, v1}, Leud;-><init>(Lv28;I)V
 
-    invoke-virtual {v0, p2}, Lz12;->e(Lxe6;)V
+    invoke-virtual {v0, p2}, Ly22;->e(Lqi6;)V
 
-    invoke-virtual {v0}, Lz12;->n()Ljava/lang/Object;
+    invoke-virtual {v0}, Ly22;->n()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object p2, Lf34;->a:Lf34;
+    sget-object p2, Lh54;->a:Lh54;
 
     if-ne p1, p2, :cond_2
 
@@ -544,45 +544,45 @@
 
     :cond_2
     :goto_1
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method
 
-.method public final startWork()Ljx7;
+.method public final startWork()Lv28;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljx7;"
+            "Lv28;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()Ly24;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getCoroutineContext()La54;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lse3;
+    iget-object v1, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->job:Lqg3;
 
-    invoke-virtual {v0, v1}, Le0;->plus(Lw24;)Lw24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0, v1}, Lp0;->plus(Ly44;)Ly44;
 
     move-result-object v0
 
-    new-instance v1, Ldjd;
+    invoke-static {v0}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    new-instance v1, Lfud;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Ldjd;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p0, v2}, Lfud;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
     const/4 v3, 0x3
 
-    invoke-static {v0, v2, v2, v1, v3}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-static {v0, v2, v2, v1, v3}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
-    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Ltxd;
+    iget-object v0, p0, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->future:Lj9e;
 
     return-object v0
 .end method

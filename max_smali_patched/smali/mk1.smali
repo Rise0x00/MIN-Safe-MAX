@@ -1,81 +1,70 @@
-.class public final enum Lmk1;
-.super Ljava/lang/Enum;
+.class public final Lmk1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
-# static fields
-.field public static final enum a:Lmk1;
 
-.field public static final enum b:Lmk1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lmk1;
+.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
+    .locals 0
 
-    new-instance v0, Lmk1;
+    iput p2, p0, Lmk1;->a:I
 
-    const-string v1, "LOW"
+    iput-object p1, p0, Lmk1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lmk1;->a:Lmk1;
-
-    new-instance v1, Lmk1;
-
-    const-string v2, "MIDDLE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lmk1;->b:Lmk1;
-
-    new-instance v2, Lmk1;
-
-    const-string v3, "HIGH"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lmk1;
-
-    move-result-object v0
-
-    sput-object v0, Lmk1;->c:[Lmk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lmk1;
-    .locals 1
 
-    const-class v0, Lmk1;
+# virtual methods
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p2, p0, Lmk1;->a:I
 
-    move-result-object p0
+    iget-object p3, p0, Lmk1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    check-cast p0, Lmk1;
+    packed-switch p2, :pswitch_data_0
 
-    return-object p0
-.end method
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-.method public static values()[Lmk1;
-    .locals 1
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
 
-    sget-object v0, Lmk1;->c:[Lmk1;
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->F0()Lgrb;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Lgrb;->c()V
 
-    check-cast v0, [Lmk1;
+    return-void
 
-    return-object v0
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->F0()Lgrb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lgrb;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

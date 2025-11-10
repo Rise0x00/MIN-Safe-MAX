@@ -1,64 +1,35 @@
-.class public final Lt04;
+.class public abstract Lt04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv04;
-
-
-# static fields
-.field public static final a:Lt04;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/content/Context;)Landroid/content/Context;
+    .locals 0
 
-    new-instance v0, Lt04;
+    invoke-virtual {p0}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lt04;->a:Lt04;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/Context;)Ljava/io/File;
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {p0}, Landroid/content/Context;->getDataDir()Ljava/io/File;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lt04;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static c(Landroid/content/Context;)Z
+    .locals 0
 
-    const v0, 0xd8bf9f2
+    invoke-virtual {p0}, Landroid/content/Context;->isDeviceProtectedStorage()Z
 
-    return v0
-.end method
+    move-result p0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "StartSeekPlayerProgress"
-
-    return-object v0
+    return p0
 .end method

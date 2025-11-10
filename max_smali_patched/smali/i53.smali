@@ -1,11 +1,3 @@
-.class public final Li53;
-.super Lak0;
+.class public interface abstract Li53;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# instance fields
-.field public h:I
-
-.field public i:I
-
-.field public j:I

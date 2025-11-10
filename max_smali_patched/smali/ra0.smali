@@ -4,33 +4,29 @@
 
 
 # instance fields
-.field public final a:Landroid/opengl/EGLSurface;
+.field public final a:Ljava/lang/String;
 
-.field public final b:I
-
-.field public final c:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/opengl/EGLSurface;II)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lra0;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lra0;->a:Landroid/opengl/EGLSurface;
+    if-eqz p2, :cond_0
 
-    iput p2, p0, Lra0;->b:I
-
-    iput p3, p0, Lra0;->c:I
+    iput-object p2, p0, Lra0;->b:Ljava/lang/String;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null eglSurface"
+    const-string p2, "Null version"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -57,27 +53,25 @@
 
     check-cast p1, Lra0;
 
-    iget-object v1, p0, Lra0;->a:Landroid/opengl/EGLSurface;
+    iget-object v1, p0, Lra0;->a:Ljava/lang/String;
 
-    iget-object v3, p1, Lra0;->a:Landroid/opengl/EGLSurface;
+    iget-object v3, p1, Lra0;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Landroid/opengl/EGLSurface;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Lra0;->b:I
+    iget-object v1, p0, Lra0;->b:Ljava/lang/String;
 
-    iget v3, p1, Lra0;->b:I
+    iget-object p1, p1, Lra0;->b:Ljava/lang/String;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Lra0;->c:I
+    move-result p1
 
-    iget p1, p1, Lra0;->c:I
-
-    if-ne v1, p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -86,11 +80,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lra0;->a:Landroid/opengl/EGLSurface;
+    iget-object v0, p0, Lra0;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -100,13 +94,11 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lra0;->b:I
+    iget-object v1, p0, Lra0;->b:Ljava/lang/String;
 
-    xor-int/2addr v0, v2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lra0;->c:I
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -118,31 +110,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "OutputSurface{eglSurface="
+    const-string v1, "LibraryVersion{libraryName="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lra0;->a:Landroid/opengl/EGLSurface;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", width="
+    iget-object v1, p0, Lra0;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lra0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height="
+    const-string v1, ", version="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lra0;->c:I
+    iget-object v1, p0, Lra0;->b:Ljava/lang/String;
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

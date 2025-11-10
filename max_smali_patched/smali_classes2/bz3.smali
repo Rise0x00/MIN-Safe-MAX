@@ -1,217 +1,199 @@
 .class public final Lbz3;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lvy3;
+.implements Lgj6;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public synthetic X:Landroid/view/View;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lbz3;->o:I
 
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iput-object v0, p0, Lbz3;->a:Landroid/os/Bundle;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lvy3;
-    .locals 3
-
-    const-string v0, "highlight_padding"
-
-    sget-object v1, Lsu6;->b:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string v0, "highlight_radius"
-
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final b()Lvy3;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    const-string v0, "highlight_padding"
+    iget v0, p0, Lbz3;->o:I
 
-    iget-object v1, p0, Lbz3;->a:Landroid/os/Bundle;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    check-cast p2, Lw5b;
 
-    const-string v0, "highlight_radius"
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    new-instance p2, Lbz3;
 
-.method public final build()Lwy3;
-    .locals 3
+    const/4 v0, 0x3
 
-    new-instance v0, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;
+    const/4 v1, 0x2
 
-    new-instance v1, Landroid/os/Bundle;
+    invoke-direct {p2, v0, p3, v1}, Lbz3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object v2, p0, Lbz3;->a:Landroid/os/Bundle;
+    iput-object p1, p2, Lbz3;->X:Landroid/view/View;
 
-    invoke-direct {v1, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+    sget-object p1, Lybg;->a:Lybg;
 
-    invoke-direct {v0, v1}, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;-><init>(Landroid/os/Bundle;)V
+    invoke-virtual {p2, p1}, Lbz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    return-object p1
 
-.method public final c(Landroid/graphics/Rect;F)Lvy3;
-    .locals 2
+    :pswitch_0
+    new-instance p2, Lbz3;
 
-    const-string v0, "highlight_padding"
-
-    iget-object v1, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string p1, "highlight_radius"
-
-    invoke-virtual {v1, p1, p2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    return-object p0
-.end method
-
-.method public final e(Ljava/util/Collection;)Lvy3;
-    .locals 2
-
-    const-string v0, "actions"
-
-    invoke-static {p1}, Lva8;->e(Ljava/util/Collection;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object p0
-.end method
-
-.method public final g(F)Lvy3;
-    .locals 3
-
-    sget-object v0, Lsu6;->b:Landroid/graphics/Rect;
-
-    sget-object v0, Lsu6;->b:Landroid/graphics/Rect;
-
-    iget-object v1, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    const-string v2, "highlight_padding"
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string v0, "highlight_radius"
-
-    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
-
-    return-object p0
-.end method
-
-.method public final h(Landroid/os/Bundle;)Lvy3;
-    .locals 2
-
-    iget-object v0, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    const-string v1, "payload"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object p0
-.end method
-
-.method public final j(Landroid/view/View;)Lvy3;
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "anchor_id"
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    iget-object v2, p0, Lbz3;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v0, "anchor_class"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {v2, v0, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
-
-    return-object p0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Check failed."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final k()Lvy3;
-    .locals 3
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->Y:Li2a;
-
-    sget-object v0, Lone/me/sdk/contextmenu/bottomsheet/ContextMenuBottomSheet;->M0:[Ltm7;
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->Y:Li2a;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->w0:Ljava/lang/String;
+    const/4 v0, 0x3
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lbz3;->a:Landroid/os/Bundle;
+    invoke-direct {p2, v0, p3, v1}, Lbz3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v2, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    iput-object p1, p2, Lbz3;->X:Landroid/view/View;
 
-    return-object p0
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {p2, p1}, Lbz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lbz3;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lbz3;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lbz3;->X:Landroid/view/View;
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {p2, p1}, Lbz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final l(Loef;)Lvy3;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lbz3;->a:Landroid/os/Bundle;
+    iget v0, p0, Lbz3;->o:I
 
-    const-string v1, "header"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    return-object p0
+    iget-object p1, p0, Lbz3;->X:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lw5b;->getText()Laqf;
+
+    move-result-object p1
+
+    iget p1, p1, Laqf;->b:I
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    :cond_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbz3;->X:Landroid/view/View;
+
+    sget-object v0, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lw5b;->i()Libf;
+
+    move-result-object v0
+
+    iget-object v0, v0, Libf;->b:Lnbf;
+
+    iget v0, v0, Lnbf;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbz3;->X:Landroid/view/View;
+
+    sget-object v0, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lw5b;->b()Lcf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lcf0;->l:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

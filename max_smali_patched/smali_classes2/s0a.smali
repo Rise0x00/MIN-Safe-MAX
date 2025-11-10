@@ -1,31 +1,164 @@
 .class public final Ls0a;
-.super Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+.field public b:Z
 
-    move-result v0
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
+    .line 1
+    invoke-direct {p0, v0, v1, v1, v1}, Ls0a;-><init>(ZZZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZZ)V
+    .locals 1
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Ls0a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    .line 4
+    iput-boolean p1, p0, Ls0a;->e:Z
+
+    .line 5
+    iput-boolean p2, p0, Ls0a;->f:Z
+
+    .line 6
+    iput-boolean p3, p0, Ls0a;->b:Z
+
+    .line 7
+    iput-boolean p4, p0, Ls0a;->g:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget-object v0, p0, Ls0a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
     :goto_0
-    if-ge v1, v0, :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    move-result v1
 
-    move-result-object v2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v2, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v1
+
+    check-cast v1, Lr0a;
+
+    invoke-interface {v1, p0}, Lr0a;->g(Ls0a;)V
 
     goto :goto_0
 
     :cond_0
-    return-object p1
+    return-void
+.end method
+
+.method public final b(Lr0a;)V
+    .locals 1
+
+    iget-object v0, p0, Ls0a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ls0a;->f:Z
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MediaSettings{"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Ls0a;->e:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "|audio"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    iget-boolean v1, p0, Ls0a;->f:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "|video"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    iget-boolean v1, p0, Ls0a;->b:Z
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "|screen capture"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    iget-boolean v1, p0, Ls0a;->g:Z
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "|animoji"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

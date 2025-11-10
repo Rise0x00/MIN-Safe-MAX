@@ -1,52 +1,50 @@
-.class public final Ln4f;
-.super Lnz3;
+.class public final synthetic Ln4f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Lgv5;
-
-.field public final synthetic Z:Lk4f;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public w0:Ly0g;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lk4f;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Ln4f;->Z:Lk4f;
+    iput p1, p0, Ln4f;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final call()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Ln4f;->o:Ljava/lang/Object;
+    iget v0, p0, Ln4f;->a:I
 
-    iget p1, p0, Ln4f;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Ln4f;->X:I
+    return-object v0
 
-    iget-object p1, p0, Ln4f;->Z:Lk4f;
+    :pswitch_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 v0, 0x0
+    return-object v0
 
-    invoke-virtual {p1, v0, p0}, Lk4f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    nop
 
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

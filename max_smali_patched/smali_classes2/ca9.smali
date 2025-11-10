@@ -1,59 +1,85 @@
 .class public final Lca9;
-.super Lnz3;
+.super Ladi;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lq49;
+.field public final synthetic c:I
 
-.field public Y:Z
-
-.field public Z:I
-
-.field public o:Ljava/lang/Object;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Lma9;
-
-.field public y0:I
+.field public final synthetic d:Lda9;
 
 
 # direct methods
-.method public constructor <init>(Lma9;Lnz3;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lda9;I)V
     .locals 0
 
-    iput-object p1, p0, Lca9;->x0:Lma9;
+    iput p3, p0, Lca9;->c:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lca9;->d:Lda9;
+
+    const/16 p2, 0xc
+
+    invoke-direct {p0, p2, p1}, Ladi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    iput-object p1, p0, Lca9;->w0:Ljava/lang/Object;
+    iget v0, p0, Lca9;->c:I
 
-    iget p1, p0, Lca9;->y0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    or-int/2addr p1, v0
+    move-result v0
 
-    iput p1, p0, Lca9;->y0:I
+    if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    check-cast p2, [I
 
-    const/4 v0, 0x0
+    check-cast p1, [I
 
-    iget-object v1, p0, Lca9;->x0:Lma9;
+    iget-object p1, p0, Lca9;->d:Lda9;
 
-    invoke-virtual {v1, p1, v0, p0}, Lma9;->x(Ljava/lang/Long;ZLnz3;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    invoke-virtual {p1, p2, v0}, Lda9;->e([ILandroid/graphics/Rect;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, [I
+
+    check-cast p1, [I
+
+    iget-object p1, p0, Lca9;->d:Lda9;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {p1, p2, v0}, Lda9;->d([ILandroid/graphics/Rect;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

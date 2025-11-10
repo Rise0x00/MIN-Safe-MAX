@@ -1,115 +1,307 @@
-.class public final Lwu5;
+.class public final synthetic Lwu5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:Ltd4;
+.field public final synthetic a:I
 
-.field public final b:Lwr5;
-
-.field public final synthetic c:Lxu5;
+.field public final synthetic b:Lgv5;
 
 
 # direct methods
-.method public constructor <init>(Lxu5;)V
-    .locals 2
+.method public synthetic constructor <init>(Lgv5;I)V
+    .locals 0
+
+    iput p2, p0, Lwu5;->a:I
+
+    iput-object p1, p0, Lwu5;->b:Lgv5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwu5;->c:Lxu5;
-
-    new-instance v0, Ltd4;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1, p1}, Ltd4;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lwu5;->a:Ltd4;
-
-    new-instance v0, Lwr5;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1, p0}, Lwr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lwu5;->b:Lwr5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    iget-object p1, p0, Lwu5;->c:Lxu5;
+    iget v0, p0, Lwu5;->a:I
 
-    iget-object v0, p1, Lxu5;->x0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lwu5;->b:Lwr5;
+    iget-object v0, p0, Lwu5;->b:Lgv5;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Lgv5;->i:Ljava/io/File;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v3, v2, [Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+
+    move-result-object v1
+
+    sget-object v3, Ljava/nio/file/StandardOpenOption;->READ:Ljava/nio/file/StandardOpenOption;
+
+    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v3
+
+    iget-object v0, v0, Lgv5;->e:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    new-array v2, v2, [Ljava/nio/file/attribute/FileAttribute;
+
+    invoke-static {v1, v3, v0, v2}, Ljava/nio/channels/AsynchronousFileChannel;->open(Ljava/nio/file/Path;Ljava/util/Set;Ljava/util/concurrent/ExecutorService;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/AsynchronousFileChannel;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lwu5;->b:Lgv5;
+
+    iget-object v1, v0, Lgv5;->h:Ljava/net/URI;
+
+    iget v2, v0, Lgv5;->a:I
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    const-string v2, "application/octet-stream"
+
+    goto :goto_0
 
     :cond_0
-    iget-object p1, p1, Lxu5;->x0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const-string v2, "application/x-binary; charset=x-user-defined"
 
-    if-eqz p1, :cond_1
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    const-string v4, "POST "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/net/URI;->getRawPath()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v4, 0x3f
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/net/URI;->getRawQuery()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, " HTTP/1.1\nHost: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/net/URI;->getHost()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\nContent-Type: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lgv5;->i:Ljava/io/File;
+
+    iget-object v4, v0, Lgv5;->b:Ljava/lang/String;
+
+    iget v5, v0, Lgv5;->a:I
+
+    const/4 v6, 0x5
+
+    if-ne v5, v6, :cond_3
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    return-void
-.end method
+    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 3
+    move-result-object v2
 
-    iget-object p1, p0, Lwu5;->c:Lxu5;
+    goto :goto_3
 
-    iget-object p2, p1, Lxu5;->x0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    :cond_2
+    :goto_1
+    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    iget-object v0, p0, Lwu5;->b:Lwr5;
+    move-result-object v2
 
-    if-eqz p2, :cond_0
+    goto :goto_3
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    :cond_3
+    if-eqz v4, :cond_5
 
-    :cond_0
-    iget-object p1, p1, Lxu5;->x0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    if-eqz p1, :cond_1
+    move-result v5
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    if-nez v5, :cond_4
 
-    move-result-wide v1
+    goto :goto_2
 
-    sub-long/2addr p3, v1
+    :cond_4
+    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    move-result-object v2
 
-    :cond_1
-    return-void
-.end method
+    goto :goto_3
 
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
+    :cond_5
+    :goto_2
+    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    iget-object p1, p0, Lwu5;->c:Lxu5;
+    move-result-object v2
 
-    iget-object p1, p1, Lxu5;->x0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    if-eqz p1, :cond_0
+    move-result v2
 
-    iget-object p2, p0, Lwu5;->b:Lwr5;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    move-result-object v2
 
-    :cond_0
-    return-void
+    :goto_3
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Content-Disposition: attachment; filename="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\n"
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "X-Uploading-Mode: parallel\nConnection: keep-alive\nUser-Agent: "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lgv5;->c:Lr2g;
+
+    iget-object v2, v2, Lr2g;->e:Ltif;
+
+    invoke-virtual {v2}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-boolean v2, v0, Lgv5;->v:Z
+
+    if-eqz v2, :cond_7
+
+    iget-object v2, v0, Lgv5;->d:Ljava/lang/String;
+
+    sget-object v3, Lcuh;->b:Lnxa;
+
+    if-nez v3, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    sget-object v4, La98;->d:La98;
+
+    invoke-virtual {v3, v4}, Lnxa;->b(La98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    const-string v5, "Prepared sharedHeaders: "
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v3, v4, v2, v5, v6}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_4
+    sget-object v2, Lp92;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lgv5;->b()Liu0;
+
+    move-result-object v0
+
+    array-length v2, v1
+
+    invoke-interface {v0, v2}, Liu0;->a(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

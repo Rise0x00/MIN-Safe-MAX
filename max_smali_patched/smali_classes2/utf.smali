@@ -1,205 +1,331 @@
-.class public final synthetic Lutf;
-.super Ljava/lang/Object;
+.class public final Lutf;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+.field public final synthetic o:Lvtf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/creation/TwoFACreationScreen;I)V
+.method public constructor <init>(Lvtf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lutf;->a:I
+    iput-object p1, p0, Lutf;->o:Lvtf;
 
-    iput-object p1, p0, Lutf;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lutf;->a:I
+    check-cast p1, Lg54;
 
-    iget-object v1, p0, Lutf;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lutf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
+    move-result-object p1
 
-    new-instance v0, Lke7;
+    check-cast p1, Lutf;
 
-    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Lutf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lke7;-><init>(Li8d;)V
+    return-object p2
+.end method
 
-    return-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_0
-    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
+    new-instance p1, Lutf;
 
-    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lwtf;
+    iget-object v0, p0, Lutf;->o:Lvtf;
+
+    invoke-direct {p1, v0, p2}, Lutf;-><init>(Lvtf;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lutf;->o:Lvtf;
+
+    iget-object v0, p1, Lvtf;->d:Ljava/util/List;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lcb3;->k(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v2
 
-    const/4 v2, 0x3
+    if-eqz v2, :cond_a
 
-    const/4 v3, 0x2
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v4, 0x1
+    move-result-object v2
 
-    if-eqz v0, :cond_8
+    check-cast v2, Lvcb;
 
-    if-eq v0, v4, :cond_3
+    iget-object v3, v2, Lvcb;->a:Ljava/lang/Object;
 
-    if-ne v0, v3, :cond_2
+    move-object v10, v3
 
-    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lvtf;
+    check-cast v10, Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v2, v2, Lvcb;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    check-cast v2, Ljava/util/concurrent/ExecutorService;
 
-    move-result v0
+    instance-of v3, v2, Lug5;
 
-    if-eqz v0, :cond_1
+    const-wide/16 v4, -0x1
 
-    if-eq v0, v4, :cond_6
+    if-eqz v3, :cond_1
 
-    if-eq v0, v3, :cond_6
+    move-object v6, v2
 
-    if-ne v0, v2, :cond_0
+    check-cast v6, Lug5;
 
-    goto :goto_0
+    iget-object v6, v6, Lug5;->a:Ljava/util/concurrent/ExecutorService;
+
+    instance-of v7, v6, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v7, :cond_0
+
+    check-cast v6, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getCompletedTaskCount()J
+
+    move-result-wide v4
 
     :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    :goto_1
+    move-wide v8, v4
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
+    goto :goto_2
 
     :cond_1
-    sget-object v0, Lhfd;->W1:Lhfd;
+    instance-of v6, v2, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v6, :cond_0
+
+    move-object v4, v2
+
+    check-cast v4, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/ThreadPoolExecutor;->getCompletedTaskCount()J
+
+    move-result-wide v4
 
     goto :goto_1
+
+    :goto_2
+    const/4 v4, -0x1
+
+    if-eqz v3, :cond_3
+
+    move-object v5, v2
+
+    check-cast v5, Lug5;
+
+    iget-object v5, v5, Lug5;->a:Ljava/util/concurrent/ExecutorService;
+
+    instance-of v6, v5, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v6, :cond_2
+
+    check-cast v5, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
+
+    move-result v5
+
+    goto :goto_3
 
     :cond_2
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    move v5, v4
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :goto_3
+    move v6, v5
 
-    throw v0
+    goto :goto_4
 
     :cond_3
-    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lvtf;
+    instance-of v5, v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    move-result-object v0
+    if-eqz v5, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    move-object v5, v2
 
-    move-result v0
+    check-cast v5, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    if-eqz v0, :cond_7
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
 
-    if-eq v0, v4, :cond_6
+    move-result v5
 
-    if-eq v0, v3, :cond_5
-
-    if-ne v0, v2, :cond_4
-
-    sget-object v0, Lhfd;->V1:Lhfd;
-
-    goto :goto_1
+    goto :goto_3
 
     :cond_4
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    move v6, v4
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :goto_4
+    if-eqz v3, :cond_6
 
-    throw v0
+    move-object v5, v2
+
+    check-cast v5, Lug5;
+
+    iget-object v5, v5, Lug5;->a:Ljava/util/concurrent/ExecutorService;
+
+    instance-of v7, v5, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v7, :cond_5
+
+    check-cast v5, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getPoolSize()I
+
+    move-result v7
+
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
+
+    move-result v5
+
+    goto :goto_6
 
     :cond_5
-    sget-object v0, Lhfd;->U1:Lhfd;
+    move v7, v4
 
-    goto :goto_1
+    :goto_5
+    move v5, v7
+
+    goto :goto_7
 
     :cond_6
-    :goto_0
-    const/4 v0, 0x0
+    instance-of v5, v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    goto :goto_1
+    if-eqz v5, :cond_7
+
+    move-object v5, v2
+
+    check-cast v5, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getPoolSize()I
+
+    move-result v7
+
+    invoke-virtual {v5}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
+
+    move-result v5
+
+    :goto_6
+    sub-int/2addr v7, v5
+
+    goto :goto_5
 
     :cond_7
-    sget-object v0, Lhfd;->S1:Lhfd;
+    move v5, v4
 
-    goto :goto_1
+    :goto_7
+    if-eqz v3, :cond_9
+
+    move-object v3, v2
+
+    check-cast v3, Lug5;
+
+    iget-object v3, v3, Lug5;->a:Ljava/util/concurrent/ExecutorService;
+
+    instance-of v7, v3, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v7, :cond_8
+
+    check-cast v3, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Collection;->size()I
+
+    move-result v4
 
     :cond_8
-    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->C0()Lvtf;
+    :goto_8
+    move v7, v4
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    if-eq v0, v4, :cond_b
-
-    if-eq v0, v3, :cond_a
-
-    if-ne v0, v2, :cond_9
-
-    sget-object v0, Lhfd;->c2:Lhfd;
-
-    goto :goto_1
+    goto :goto_9
 
     :cond_9
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    instance-of v3, v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    if-eqz v3, :cond_8
 
-    throw v0
+    move-object v3, v2
+
+    check-cast v3, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Collection;->size()I
+
+    move-result v4
+
+    goto :goto_8
+
+    :goto_9
+    new-instance v4, Lvg5;
+
+    invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v11
+
+    invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v12
+
+    invoke-direct/range {v4 .. v12}, Lvg5;-><init>(IIIJLjava/lang/String;ZZ)V
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_0
 
     :cond_a
-    sget-object v0, Lhfd;->b2:Lhfd;
+    iget-object p1, p1, Lvtf;->b:La1f;
 
-    goto :goto_1
+    const/4 v0, 0x0
 
-    :cond_b
-    sget-object v0, Lhfd;->a2:Lhfd;
+    invoke-virtual {p1, v0, v1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-    :cond_c
-    sget-object v0, Lhfd;->Z1:Lhfd;
-
-    :goto_1
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

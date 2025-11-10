@@ -1,42 +1,20 @@
-.class public final Lh75;
+.class public interface abstract Lh75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lobd;
-
 
 # virtual methods
-.method public final b()V
-    .locals 0
-
-    return-void
+.method public abstract a()V
 .end method
 
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract f(Lbjg;)V
 .end method
 
-.method public final h(J)I
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract g(IJ)V
 .end method
 
-.method public final q(Lrob;Lkc4;I)I
-    .locals 0
+.method public abstract h()V
+.end method
 
-    const/4 p1, 0x4
-
-    iput p1, p2, Lsx;->b:I
-
-    const/4 p1, -0x4
-
-    return p1
+.method public abstract i(Lbm5;Lj5g;)V
 .end method

@@ -1,99 +1,109 @@
-.class public final Lawa;
-.super Lv2;
+.class public abstract Lawa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic o:Lbwa;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Lbwa;I)V
-    .locals 0
-
-    iput p2, p0, Lawa;->c:I
-
-    iput-object p1, p0, Lawa;->o:Lbwa;
-
-    const/16 p1, 0x9
-
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Lpva;->a:Lpva;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p2, Lwva;->a:Lwva;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lawa;->c:I
+    sget v0, Lunc;->oneme_folders_chats_picker_toolbar:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lawa;->a:I
 
-    check-cast p2, Lyva;
+    sget v0, Lunc;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
 
-    check-cast p1, Lyva;
+    sput v0, Lawa;->b:I
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Lunc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    move-result p1
+    sput v0, Lawa;->c:I
 
-    if-nez p1, :cond_0
+    sget v0, Lunc;->oneme_folders_edit_create_button:I
 
-    iget-object p1, p0, Lawa;->o:Lbwa;
+    sput v0, Lawa;->d:I
 
-    invoke-static {p1, p2}, Lbwa;->v(Lbwa;Lyva;)V
+    sget v0, Lunc;->oneme_folders_edit_members_list:I
 
-    invoke-virtual {p1}, Lbwa;->w()V
+    sput v0, Lawa;->e:I
 
-    :cond_0
+    sget v0, Lunc;->oneme_folders_edit_screen:I
+
+    sput v0, Lawa;->f:I
+
+    sget v0, Lunc;->oneme_folders_edit_toolbar:I
+
+    sput v0, Lawa;->g:I
+
+    sget v0, Lunc;->oneme_folders_list_all_folder_view_type:I
+
+    sput v0, Lawa;->h:I
+
+    sget v0, Lunc;->oneme_folders_list_create_folder_view_type:I
+
+    sput v0, Lawa;->i:I
+
+    sget v0, Lunc;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Lawa;->j:I
+
+    sget v0, Lunc;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Lawa;->k:I
+
+    sget v0, Lunc;->oneme_folders_list_recommended_folder_view_type:I
+
+    sput v0, Lawa;->l:I
+
+    sget v0, Lunc;->oneme_folders_list_recycler_view:I
+
+    sput v0, Lawa;->m:I
+
+    sget v0, Lunc;->oneme_folders_list_screen:I
+
+    sput v0, Lawa;->n:I
+
+    sget v0, Lunc;->oneme_folders_list_toolbar:I
+
+    sput v0, Lawa;->o:I
+
+    sget v0, Lunc;->oneme_folders_list_user_folder_view_type:I
+
+    sput v0, Lawa;->p:I
+
     return-void
-
-    :pswitch_0
-    check-cast p2, Ltva;
-
-    check-cast p1, Ltva;
-
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lawa;->o:Lbwa;
-
-    invoke-static {p1, p2}, Lbwa;->u(Lbwa;Ltva;)V
-
-    invoke-virtual {p1}, Lbwa;->w()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

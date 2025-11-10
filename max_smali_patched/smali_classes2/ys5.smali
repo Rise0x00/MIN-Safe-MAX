@@ -1,29 +1,23 @@
-.class public interface abstract Lys5;
-.super Ljava/lang/Object;
+.class public final Lys5;
+.super Ladi;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Z
-.end method
+# static fields
+.field public static final c:Lys5;
 
-.method public b()V
-    .locals 0
 
-    return-void
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.method public c()V
-    .locals 0
+    new-instance v0, Lys5;
 
-    return-void
-.end method
+    const/16 v1, 0xb
 
-.method public abstract d(Lope;)V
-.end method
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
 
-.method public e()V
-    .locals 0
+    sput-object v0, Lys5;->c:Lys5;
 
     return-void
 .end method

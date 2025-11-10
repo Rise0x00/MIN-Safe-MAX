@@ -1,139 +1,98 @@
 .class public final Lvme;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Laua;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/startconversation/StartConversationScreen;
+.field public final synthetic o:Lyme;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/startconversation/StartConversationScreen;)V
+.method public constructor <init>(Lyme;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvme;->o:Lyme;
 
-    iput-object p1, p0, Lvme;->a:Lone/me/startconversation/StartConversationScreen;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O(Ljava/lang/CharSequence;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->M0:[Ltm7;
+    check-cast p1, Lg54;
 
-    iget-object v0, p0, Lvme;->a:Lone/me/startconversation/StartConversationScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->c:Lpr;
-
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->M0:[Ltm7;
-
-    const/4 v3, 0x0
-
-    aget-object v3, v2, v3
-
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v0, v3}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->o:Lpr;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0, p1}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lfne;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lvme;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    goto :goto_0
+    check-cast p1, Lvme;
 
-    :cond_0
-    const/4 p1, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    :goto_0
-    if-nez p1, :cond_1
+    invoke-virtual {p1, p2}, Lvme;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, ""
+    move-result-object p1
 
-    :cond_1
-    iget-object v0, v0, Lfne;->A0:Lmx3;
+    return-object p1
+.end method
 
-    iget-object v0, v0, Lmx3;->g:Ls5f;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    new-instance p1, Lvme;
+
+    iget-object v0, p0, Lvme;->o:Lyme;
+
+    invoke-direct {p1, v0, p2}, Lvme;-><init>(Lyme;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvme;->o:Lyme;
+
+    iget-object p1, p1, Lyme;->d:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lzt9;
+    check-cast v0, Landroid/content/Context;
 
-    invoke-interface {v0, p1}, Lzt9;->setValue(Ljava/lang/Object;)V
+    sget v1, Lslc;->ic_geolocation_filled_28:I
 
-    return-void
-.end method
+    sget-object v2, Ly53;->s0:Lvh4;
 
-.method public final g0()V
-    .locals 4
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lvme;->a:Lone/me/startconversation/StartConversationScreen;
+    move-result-object p1
 
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->X:Lpr;
+    check-cast p1, Landroid/content/Context;
 
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->M0:[Ltm7;
+    invoke-static {v2, p1}, Lsfd;->f(Lvh4;Landroid/content/Context;)Le77;
 
-    const/4 v3, 0x2
+    move-result-object p1
 
-    aget-object v2, v2, v3
+    iget p1, p1, Le77;->k:I
 
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-static {v1, p1, v0}, Lm0i;->q(IILandroid/content/Context;)Landroid/graphics/Bitmap;
 
-    invoke-virtual {v1, v0, v2}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-object v0, v0, Lone/me/startconversation/StartConversationScreen;->L0:Lyz3;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lyea;->f(Z)V
-
-    return-void
-.end method
-
-.method public final n()V
-    .locals 4
-
-    iget-object v0, p0, Lvme;->a:Lone/me/startconversation/StartConversationScreen;
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->X:Lpr;
-
-    sget-object v2, Lone/me/startconversation/StartConversationScreen;->M0:[Ltm7;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v0, v2}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object v0, v0, Lone/me/startconversation/StartConversationScreen;->L0:Lyz3;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lyea;->f(Z)V
-
-    return-void
+    return-object p1
 .end method

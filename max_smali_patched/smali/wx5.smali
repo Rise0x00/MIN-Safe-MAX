@@ -1,86 +1,35 @@
 .class public final Lwx5;
-.super Lm3f;
+.super Lbl0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public synthetic X:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()I
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lwx5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwx5;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lwx5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final k()I
+    .locals 1
 
-    new-instance v0, Lwx5;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x2
+    return v0
+.end method
 
-    invoke-direct {v0, v1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public final m()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Lwx5;->X:I
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final t(JJJLjava/util/List;[Lio8;)V
     .locals 0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget p1, p0, Lwx5;->X:I
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

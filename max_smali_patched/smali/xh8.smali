@@ -1,120 +1,151 @@
 .class public final Lxh8;
-.super Ljava/lang/Object;
+.super Llvf;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxh8;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Lgl8;
+.field public final b:Los8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ltc8;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
-
-    sput-object v0, Lxh8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public constructor <init>(Los8;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lxh8;->a:I
-
-    sget-object v0, Lgl8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgl8;
-
-    iput-object p1, p0, Lxh8;->b:Lgl8;
+    iput-object p1, p0, Lxh8;->b:Los8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final b(Ljava/lang/Object;)I
     .locals 1
 
+    sget-object v0, Lvh8;->o:Ljava/lang/Object;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final f(ILgvf;Z)Lgvf;
+    .locals 11
+
+    const/4 p1, 0x0
+
+    if-eqz p3, :cond_0
+
     const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, p1
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget-object p1, Lvh8;->o:Ljava/lang/Object;
+
+    :cond_1
+    move-object v3, p1
+
+    sget-object v9, Ly8;->X:Ly8;
+
+    const/4 v10, 0x1
+
+    const/4 v4, 0x0
+
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v7, 0x0
+
+    move-object v1, p2
+
+    invoke-virtual/range {v1 .. v10}, Lgvf;->g(Ljava/lang/Object;Ljava/lang/Object;IJJLy8;Z)V
+
+    return-object v1
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object p1, Lvh8;->o:Ljava/lang/Object;
 
-    const-string v1, "MediaItem{mFlags="
+    return-object p1
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final m(ILjvf;J)Ljvf;
+    .locals 21
 
-    iget v1, p0, Lxh8;->a:I
+    sget-object v1, Ljvf;->B0:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/16 v18, 0x0
 
-    const-string v1, ", mDescription="
+    const-wide/16 v19, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    iget-object v1, p0, Lxh8;->b:Lgl8;
+    iget-object v2, v0, Lxh8;->b:Los8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    const/16 v1, 0x7d
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-object v0
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Ljvf;->b(Ljava/lang/Object;Los8;Ljava/lang/Object;JJJZZLes8;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Ljvf;->v0:Z
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final o()I
     .locals 1
 
-    iget v0, p0, Lxh8;->a:I
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lxh8;->b:Lgl8;
-
-    invoke-virtual {v0, p1, p2}, Lgl8;->writeToParcel(Landroid/os/Parcel;I)V
-
-    return-void
+    return v0
 .end method

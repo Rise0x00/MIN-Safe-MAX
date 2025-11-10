@@ -1,40 +1,60 @@
-.class public final Ll83;
+.class public interface abstract Ll83;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgf8;
-
-
-# instance fields
-.field public final a:[F
-
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Z
-
-
-# direct methods
-.method public constructor <init>([FLjava/util/ArrayList;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll83;->a:[F
-
-    iput-object p2, p0, Ll83;->b:Ljava/util/ArrayList;
-
-    iput-boolean p3, p0, Ll83;->c:Z
-
-    return-void
-.end method
+.implements Lbcd;
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public b()Z
+    .locals 4
 
-    iget-boolean v0, p0, Ll83;->c:Z
+    move-object v0, p0
+
+    check-cast v0, Le78;
+
+    invoke-virtual {v0}, Lztd;->s()J
+
+    move-result-wide v1
+
+    const-string v3, "app.pin_"
+
+    invoke-static {v1, v2, v3}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    iget-object v0, v0, Ly3;->h:Luu7;
+
+    invoke-virtual {v0, v1, v2}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v1
+
+    :goto_1
+    xor-int/2addr v0, v1
 
     return v0
 .end method

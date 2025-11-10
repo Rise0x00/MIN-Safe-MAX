@@ -1,85 +1,97 @@
-.class public final Ltre;
+.class public abstract Ltre;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvre;
+.implements Lof4;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Lsre;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Ltre;->a:Z
+    new-instance v0, Lsre;
+
+    invoke-direct {v0}, Lwf4;-><init>()V
+
+    invoke-virtual {p0, v0}, Ltre;->e(Lsre;)V
+
+    iput-object v0, p0, Ltre;->a:Lsre;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltre;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ltre;
-
-    iget-boolean v1, p0, Ltre;->a:Z
-
-    iget-boolean p1, p1, Ltre;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a()Lwf4;
     .locals 1
 
-    iget-boolean v0, p0, Ltre;->a:Z
+    iget-object v0, p0, Ltre;->a:Lsre;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;Lrf4;Landroid/os/Bundle;)Lzf4;
+    .locals 8
+
+    iget-object v0, p0, Ltre;->a:Lsre;
+
+    iget-object v0, v0, Lwf4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const/4 p1, 0x0
 
-    const-string v0, "SetSelection(selected="
+    return-object p1
 
-    const-string v1, ")"
+    :cond_0
+    new-instance v0, Lzf4;
 
-    iget-boolean v2, p0, Ltre;->a:Z
+    invoke-virtual {p0}, Ltre;->c()Lxf4;
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v0
+    invoke-virtual {p0, p3}, Ltre;->d(Landroid/os/Bundle;)Lyf4;
+
+    move-result-object v6
+
+    const/16 v7, 0x8
+
+    const/4 v4, 0x0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v7}, Lzf4;-><init>(Ljava/lang/String;Lrf4;Landroid/os/Bundle;ILxf4;Lyf4;I)V
 
     return-object v0
+.end method
+
+.method public c()Lxf4;
+    .locals 1
+
+    new-instance v0, Lxf4;
+
+    invoke-direct {v0}, Lxf4;-><init>()V
+
+    return-object v0
+.end method
+
+.method public abstract d(Landroid/os/Bundle;)Lyf4;
+.end method
+
+.method public abstract e(Lsre;)V
 .end method

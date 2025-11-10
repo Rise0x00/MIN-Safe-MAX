@@ -1,82 +1,61 @@
 .class public final Ljcb;
-.super Ljava/lang/Object;
+.super Lmcb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lncb;
-
-.field public final b:Lf35;
-
-.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-.field public final d:Lmmc;
-
-.field public e:Lmcb;
+# static fields
+.field public static final a:Ljcb;
 
 
 # direct methods
-.method public constructor <init>(Lncb;Lf35;Lru/ok/messages/photoeditor/ActPhotoEditor;Lmmc;Ld35;ZZZ)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljcb;
 
-    iput-object p1, p0, Ljcb;->a:Lncb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljcb;->b:Lf35;
+    sput-object v0, Ljcb;->a:Ljcb;
 
-    iput-object p0, p2, Lf35;->b:Ljcb;
+    return-void
+.end method
 
-    iput-object p3, p0, Ljcb;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
 
-    iget-object p3, p1, Lncb;->a:Ljava/util/HashSet;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    iput-object p4, p0, Ljcb;->d:Lmmc;
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lmcb;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v6, 0x0
-
-    move v4, p6
-
-    move v5, p7
-
-    move/from16 v7, p8
-
-    invoke-direct/range {v0 .. v7}, Lmcb;-><init>(ZZZZZZZ)V
-
-    iput-object v0, p0, Ljcb;->e:Lmcb;
-
-    invoke-virtual {p1, v0}, Lncb;->a(Lmcb;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p4, p2, p5, p1}, Lmmc;->b(Lf35;Ld35;Z)V
-
-    if-eqz p6, :cond_0
-
-    if-eqz p7, :cond_0
-
-    iget-object p3, p2, Lf35;->a:Lj35;
-
-    invoke-virtual {p3, p1}, Lj35;->setDrawStickerEnabled(Z)V
-
-    invoke-virtual {p2}, Lf35;->a()Ld35;
-
-    move-result-object p1
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p4, p2, p1, p3}, Lmmc;->b(Lf35;Ld35;Z)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Ljcb;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x401d641
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Loading"
+
+    return-object v0
 .end method

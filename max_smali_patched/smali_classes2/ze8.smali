@@ -1,165 +1,201 @@
-.class public final Lze8;
+.class public final synthetic Lze8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lir3;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
 
-    const/4 v0, 0x1
+# instance fields
+.field public final synthetic a:I
 
-    if-ne p0, p1, :cond_0
+.field public final synthetic b:Lff8;
 
-    return v0
+.field public final synthetic c:Ljava/lang/String;
 
-    :cond_0
-    instance-of v1, p1, Lze8;
 
-    if-nez v1, :cond_1
+# direct methods
+.method public synthetic constructor <init>(Lff8;Ljava/lang/String;I)V
+    .locals 0
 
-    goto :goto_0
+    iput p3, p0, Lze8;->a:I
 
-    :cond_1
-    check-cast p1, Lze8;
+    iput-object p1, p0, Lze8;->b:Lff8;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p2, p0, Lze8;->c:Ljava/lang/String;
 
-    const-wide/high16 v1, 0x405e000000000000L    # 120.0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-wide v1, 0x3fa47ae147ae147bL    # 0.04
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const-wide v1, 0x408f400000000000L    # 1000.0
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    const-wide v1, 0x4085e00000000000L    # 700.0
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
 
-    const-wide/high16 v0, 0x405e000000000000L    # 120.0
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 10
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+    iget v0, p0, Lze8;->a:I
 
-    move-result v0
+    const-string v1, "ff8"
 
-    const/16 v1, 0x1f
+    iget-object v2, p0, Lze8;->c:Ljava/lang/String;
 
-    mul-int/2addr v0, v1
+    iget-object v3, p0, Lze8;->b:Lff8;
 
-    const-wide v2, 0x3fa47ae147ae147bL    # 0.04
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result v0
+    const-string v0, "searchChats: exception"
 
-    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v0
+    iget-object v0, v3, Lff8;->g:Lvf5;
 
-    const-wide v2, 0x408f400000000000L    # 1000.0
+    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
 
-    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v0
+    invoke-interface {v0, v1}, Lvf5;->a(Ljava/lang/Throwable;)V
 
-    const-wide v2, 0x4085e00000000000L    # 700.0
+    return-void
 
-    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result v0
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v2, 0x1f4
+    const-string v0, "searchChatsAndMessages: exception"
 
-    invoke-static {v2, v0}, Lvhh;->a(II)I
+    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v0
+    iget-object v0, v3, Lff8;->g:Lvf5;
 
-    const/16 v2, 0x12c
+    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
 
-    invoke-static {v2, v0}, Lvhh;->a(II)I
+    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v0
+    invoke-interface {v0, v1}, Lvf5;->a(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x1
+    return-void
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    :pswitch_1
+    check-cast p1, Lwu2;
 
-    move-result v0
+    iget-object v0, v3, Lff8;->q:Ljava/util/ArrayList;
 
-    const/4 v3, 0x0
+    iget-object v1, p1, Lwu2;->c:Ljava/util/List;
 
-    invoke-static {v0, v1, v3}, Lvl3;->d(IIZ)I
+    new-instance v4, Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-interface {v1}, Ljava/util/Collection;->size()I
 
-    invoke-static {v0, v1, v3}, Lvl3;->d(IIZ)I
+    move-result v5
 
-    move-result v0
+    invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-static {v2}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    :try_start_0
+    check-cast v5, Lve9;
+
+    iget-object v6, v5, Lve9;->b:Ls99;
+
+    iget-wide v7, v5, Lve9;->a:J
+
+    iget-object v9, v5, Lve9;->c:Ljava/lang/String;
+
+    iget-object v5, v5, Lve9;->d:Ljava/util/List;
+
+    invoke-static {v6, v7, v8, v9, v5}, Luvd;->c(Ls99;JLjava/lang/String;Ljava/util/List;)Luvd;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v1, v3, Lff8;->n:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v1, p1, Lwu2;->o:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    const-string v4, "0"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_1
 
-    return v1
-.end method
+    const/4 p1, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput-object p1, v3, Lff8;->s:Ljava/lang/String;
 
-    const-string v0, "BadNetworkCondition(rttThreshold=120.0, lostPacketsLimitForRttBelowLowBound=0.04, lostPacketsLimitForRttAboveLowBound=0.04, rttEnterLevel2Mode=1000.0, rttLeaveLevel2Mode=700.0, videoBitrateLevel1K=500, videoBitrateLevel2K=300, preferHardwareVPXEncoder=true, limitFrameSize=false, limitBitrate=false, setTemporalLayers=true)"
+    goto :goto_1
 
-    return-object v0
+    :cond_1
+    iget-object p1, p1, Lwu2;->o:Ljava/lang/String;
+
+    iput-object p1, v3, Lff8;->s:Ljava/lang/String;
+
+    :goto_1
+    iget-object p1, v3, Lff8;->i:Lwe8;
+
+    if-eqz p1, :cond_2
+
+    iget-object v1, v3, Lff8;->n:Ljava/util/ArrayList;
+
+    const/4 v4, 0x0
+
+    invoke-interface {p1, v2, v1, v4}, Lwe8;->g(Ljava/lang/String;Ljava/util/List;Z)V
+
+    iget-object p1, v3, Lff8;->i:Lwe8;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

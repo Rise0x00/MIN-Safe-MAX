@@ -1,181 +1,119 @@
-.class public Lj2;
-.super Le2;
+.class public abstract Lj2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/SortedMap;
+.implements Ljava/util/ListIterator;
+.implements Ltr7;
 
 
 # instance fields
-.field public X:Ljava/util/SortedSet;
+.field public a:I
 
-.field public final synthetic Y:Lsr9;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lsr9;Ljava/util/SortedMap;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lj2;->Y:Lsr9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Le2;-><init>(Lz1;Ljava/util/Map;)V
+    iput p1, p0, Lj2;->a:I
+
+    iput p2, p0, Lj2;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Ljava/util/SortedSet;
-    .locals 3
-
-    new-instance v0, Lk2;
-
-    iget-object v1, p0, Lj2;->Y:Lsr9;
-
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Lk2;-><init>(Lsr9;Ljava/util/SortedMap;)V
-
-    return-object v0
-.end method
-
-.method public c()Ljava/util/SortedSet;
+.method public add(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lj2;->X:Ljava/util/SortedSet;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    if-nez v0, :cond_0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    invoke-virtual {p0}, Lj2;->b()Ljava/util/SortedSet;
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    throw p1
+.end method
 
-    iput-object v0, p0, Lj2;->X:Ljava/util/SortedSet;
+.method public final hasNext()Z
+    .locals 2
+
+    iget v0, p0, Lj2;->a:I
+
+    iget v1, p0, Lj2;->b:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    return-object v0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final comparator()Ljava/util/Comparator;
+.method public final hasPrevious()Z
     .locals 1
 
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
+    iget v0, p0, Lj2;->a:I
 
-    move-result-object v0
+    if-lez v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->comparator()Ljava/util/Comparator;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    return v0
 
-    return-object v0
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public d()Ljava/util/SortedMap;
+.method public final nextIndex()I
     .locals 1
 
-    iget-object v0, p0, Le2;->c:Ljava/util/Map;
+    iget v0, p0, Lj2;->a:I
 
-    check-cast v0, Ljava/util/SortedMap;
-
-    return-object v0
+    return v0
 .end method
 
-.method public final firstKey()Ljava/lang/Object;
+.method public final previousIndex()I
     .locals 1
 
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
+    iget v0, p0, Lj2;->a:I
 
-    move-result-object v0
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+.method public remove()V
     .locals 2
 
-    new-instance v0, Lj2;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
+    const-string v1, "Operation is not supported for read-only collection"
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lj2;->Y:Lsr9;
-
-    invoke-direct {v0, v1, p1}, Lj2;-><init>(Lsr9;Ljava/util/SortedMap;)V
-
-    return-object v0
+    throw v0
 .end method
 
-.method public bridge synthetic keySet()Ljava/util/Set;
+.method public set(Ljava/lang/Object;)V
     .locals 1
 
-    invoke-virtual {p0}, Lj2;->c()Ljava/util/SortedSet;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object v0
+    const-string v0, "Operation is not supported for read-only collection"
 
-    return-object v0
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-.method public final lastKey()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
-    .locals 2
-
-    new-instance v0, Lj2;
-
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1, p2}, Ljava/util/SortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lj2;->Y:Lsr9;
-
-    invoke-direct {v0, p2, p1}, Lj2;-><init>(Lsr9;Ljava/util/SortedMap;)V
-
-    return-object v0
-.end method
-
-.method public tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-    .locals 2
-
-    new-instance v0, Lj2;
-
-    invoke-virtual {p0}, Lj2;->d()Ljava/util/SortedMap;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1}, Ljava/util/SortedMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lj2;->Y:Lsr9;
-
-    invoke-direct {v0, v1, p1}, Lj2;-><init>(Lsr9;Ljava/util/SortedMap;)V
-
-    return-object v0
+    throw p1
 .end method

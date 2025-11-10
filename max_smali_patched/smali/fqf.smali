@@ -4,33 +4,11 @@
 
 
 # virtual methods
-.method public abstract a(Liqf;)V
+.method public abstract a()V
 .end method
 
-.method public abstract b()V
+.method public abstract getState()[I
 .end method
 
-.method public abstract c(Liqf;)V
-.end method
-
-.method public d(Liqf;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lfqf;->a(Liqf;)V
-
-    return-void
-.end method
-
-.method public e(Liqf;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lfqf;->c(Liqf;)V
-
-    return-void
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public abstract h(Liqf;)V
+.method public abstract onStateChange([I)Z
 .end method

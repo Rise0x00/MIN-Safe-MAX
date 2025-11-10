@@ -1,237 +1,128 @@
 .class public final Lo6c;
-.super Lg79;
+.super Logf;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile e:[Lo6c;
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic X:Lu6c;
 
-.field public b:I
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public c:I
+.field public final synthetic Z:Landroid/graphics/RectF;
 
-.field public d:Lu56;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lu6c;Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    iput-object p1, p0, Lo6c;->X:Lu6c;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lo6c;->Y:Ljava/lang/String;
 
-    iput v0, p0, Lo6c;->a:I
+    iput-object p3, p0, Lo6c;->Z:Landroid/graphics/RectF;
 
-    iput v0, p0, Lo6c;->b:I
+    const/4 p1, 0x2
 
-    iput v0, p0, Lo6c;->c:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lo6c;->d:Lu56;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lo6c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lo6c;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lo6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget v0, p0, Lo6c;->a:I
+    new-instance p1, Lo6c;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lo6c;->Y:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lo6c;->Z:Landroid/graphics/RectF;
 
-    invoke-static {v1, v0}, Le83;->f(II)I
+    iget-object v2, p0, Lo6c;->X:Lu6c;
 
-    move-result v0
+    invoke-direct {p1, v2, v0, v1, p2}, Lo6c;-><init>(Lu6c;Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, Lo6c;->b:I
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x2
-
-    invoke-static {v2, v1}, Le83;->f(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget v1, p0, Lo6c;->c:I
-
-    if-eqz v1, :cond_2
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v1}, Le83;->f(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_2
-    iget-object v1, p0, Lo6c;->d:Lu56;
-
-    if-eqz v1, :cond_3
-
-    const/4 v2, 0x4
-
-    invoke-static {v2, v1}, Le83;->i(ILg79;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final mergeFrom(Ld83;)Lg79;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lo6c;->d:Lu56;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lu56;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lu56;-><init>(I)V
-
-    iput-object v0, p0, Lo6c;->d:Lu56;
-
-    :cond_2
-    iget-object v0, p0, Lo6c;->d:Lu56;
-
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lo6c;->c:I
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lo6c;->b:I
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lo6c;->a:I
-
-    goto :goto_0
-
-    :cond_6
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Le83;)V
-    .locals 2
-
-    iget v0, p0, Lo6c;->a:I
-
-    if-eqz v0, :cond_0
+    iget v0, p0, Lo6c;->o:I
 
     const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
-
-    :cond_0
-    iget v0, p0, Lo6c;->b:I
 
     if-eqz v0, :cond_1
 
-    const/4 v1, 0x2
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    iget v0, p0, Lo6c;->c:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_2
+    iget-object p1, p0, Lo6c;->X:Lu6c;
 
-    const/4 v1, 0x3
+    iget-object p1, p1, Lu6c;->b:Lf65;
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    iput v1, p0, Lo6c;->o:I
+
+    iget-object v0, p0, Lo6c;->Y:Ljava/lang/String;
+
+    iget-object v1, p0, Lo6c;->Z:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0, v1, p0}, Lf65;->h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    iget-object v0, p0, Lo6c;->d:Lu56;
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

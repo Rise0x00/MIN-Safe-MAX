@@ -1,143 +1,148 @@
 .class public final Llqd;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ll97;
 
 
 # instance fields
-.field public X:I
+.field public a:F
 
-.field public final synthetic Y:Lu9h;
+.field public b:Landroid/animation/ValueAnimator;
 
-.field public final synthetic Z:Ljgb;
+.field public final synthetic c:Lmqd;
 
 
 # direct methods
-.method public constructor <init>(Lu9h;Ljgb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmqd;)V
     .locals 0
 
-    iput-object p1, p0, Llqd;->Y:Lu9h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Llqd;->Z:Ljgb;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llqd;->c:Lmqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JLky1;)V
+    .locals 3
 
-    check-cast p1, Le34;
+    const-string p1, "ScreenFlash#apply"
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string p2, "ScreenFlashView"
 
-    invoke-virtual {p0, p1, p2}, Llqd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p2, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object p1, p0, Llqd;->c:Lmqd;
 
-    check-cast p1, Llqd;
+    invoke-static {p1}, Lmqd;->a(Lmqd;)F
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result v0
 
-    invoke-virtual {p1, p2}, Llqd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput v0, p0, Llqd;->a:F
 
-    move-result-object p1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return-object p1
-.end method
+    invoke-static {p1, v0}, Lmqd;->b(Lmqd;F)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v0, p0, Llqd;->b:Landroid/animation/ValueAnimator;
 
-    new-instance p1, Llqd;
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Llqd;->Y:Lu9h;
-
-    iget-object v1, p0, Llqd;->Z:Ljgb;
-
-    invoke-direct {p1, v0, v1, p2}, Llqd;-><init>(Lu9h;Ljgb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Llqd;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v0, Lfoa;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/16 v1, 0x16
 
-    throw p1
+    invoke-direct {v0, v1, p3}, Lfoa;-><init>(ILjava/lang/Object;)V
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-string p3, "animateToFullOpacity"
 
-    iget-object p1, p0, Llqd;->Y:Lu9h;
+    invoke-static {p2, p3}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p1, Lu9h;->a:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    check-cast p1, Lbp7;
+    new-array p2, p2, [F
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    fill-array-data p2, :array_0
 
-    move-result-object p1
+    invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    check-cast p1, Lm13;
+    move-result-object p2
 
-    iget-object v0, p0, Llqd;->Z:Ljgb;
+    invoke-virtual {p1}, Lmqd;->getVisibilityRampUpAnimationDurationMillis()J
 
-    iget-wide v2, v0, Ljgb;->a:J
+    move-result-wide v1
 
-    iput v1, p0, Llqd;->X:I
+    invoke-virtual {p2, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    check-cast p1, Lm23;
+    new-instance p3, Lt00;
 
-    iget-object v0, p1, Lm23;->c:Lbp7;
+    const/16 v1, 0x14
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-direct {p3, v1, p1}, Lt00;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    check-cast v0, Lmid;
+    new-instance p1, Ltf;
 
-    invoke-virtual {v0}, Lmid;->a()J
+    const/16 p3, 0x8
 
-    move-result-wide v0
+    invoke-direct {p1, p3, v0}, Ltf;-><init>(ILjava/lang/Object;)V
 
-    xor-long/2addr v0, v2
+    invoke-virtual {p2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    invoke-virtual {p1, v0, v1, p0}, Lm23;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
 
-    move-result-object p1
+    iput-object p2, p0, Llqd;->b:Landroid/animation/ValueAnimator;
 
-    sget-object v0, Lf34;->a:Lf34;
+    return-void
 
-    if-ne p1, v0, :cond_2
+    nop
 
-    return-object v0
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
 
-    :cond_2
-    return-object p1
+.method public final clear()V
+    .locals 2
+
+    const-string v0, "ScreenFlashView"
+
+    const-string v1, "ScreenFlash#clearScreenFlashUi"
+
+    invoke-static {v0, v1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Llqd;->b:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Llqd;->b:Landroid/animation/ValueAnimator;
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Llqd;->c:Lmqd;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    iget v0, p0, Llqd;->a:F
+
+    invoke-static {v1, v0}, Lmqd;->b(Lmqd;F)V
+
+    return-void
 .end method

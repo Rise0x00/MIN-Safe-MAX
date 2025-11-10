@@ -1,55 +1,79 @@
 .class public final Lba9;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lo99;
+.field public a:I
 
-.field public Y:Lr99;
+.field public b:I
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public c:I
 
-.field public o:Lma9;
-
-.field public final synthetic w0:Lma9;
-
-.field public x0:I
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lma9;Lnz3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lba9;->w0:Lma9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    iput v0, p0, Lba9;->a:I
+
+    iput v0, p0, Lba9;->b:I
+
+    iput v0, p0, Lba9;->c:I
+
+    iput v0, p0, Lba9;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lba9;->Z:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lba9;->x0:I
+    const-string v1, "MeasureResult{layoutWidth="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget v1, p0, Lba9;->a:I
 
-    iput p1, p0, Lba9;->x0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lba9;->w0:Lma9;
+    const-string v1, ", layoutHeight="
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0, p0}, Lma9;->r(Lma9;Lo99;Lnz3;)Ljava/lang/Object;
+    iget v1, p0, Lba9;->b:I
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", imageWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lba9;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lba9;->d:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,155 +1,85 @@
-.class public final Lp10;
-.super Ljava/lang/Object;
+.class public final enum Lp10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/util/List;
+# static fields
+.field public static final enum a:Lp10;
 
-.field public b:Lfb7;
+.field public static final enum b:Lp10;
 
-.field public c:La1d;
+.field public static final enum c:Lp10;
+
+.field public static final synthetic d:[Lp10;
 
 
-# virtual methods
-.method public final a(Lo10;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+    new-instance v0, Lp10;
 
-    if-nez v0, :cond_0
+    const-string v1, "DEFAULT"
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 v2, 0x0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lp10;->a:Ljava/util/List;
+    sput-object v0, Lp10;->a:Lp10;
 
-    :cond_0
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+    new-instance v1, Lp10;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const-string v2, "PROCESSING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lp10;->b:Lp10;
+
+    new-instance v2, Lp10;
+
+    const-string v3, "PROCESSED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lp10;->c:Lp10;
+
+    filled-new-array {v0, v1, v2}, [Lp10;
+
+    move-result-object v0
+
+    sput-object v0, Lp10;->d:[Lp10;
 
     return-void
 .end method
 
-.method public final b()I
+.method public static valueOf(Ljava/lang/String;)Lp10;
     .locals 1
 
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+    const-class v0, Lp10;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Lp10;
 
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-object p0
 .end method
 
-.method public final c()Lfah;
-    .locals 2
+.method public static values()[Lp10;
+    .locals 1
 
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+    sget-object v0, Lp10;->d:[Lp10;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, [Lp10;->clone()Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lp10;->a:Ljava/util/List;
-
-    :cond_0
-    new-instance v0, Lfah;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lp10;->a:Ljava/util/List;
-
-    iput-object v1, v0, Lfah;->a:Ljava/lang/Object;
-
-    iget-object v1, p0, Lp10;->b:Lfb7;
-
-    iput-object v1, v0, Lfah;->b:Ljava/lang/Object;
-
-    iget-object v1, p0, Lp10;->c:La1d;
-
-    iput-object v1, v0, Lfah;->c:Ljava/lang/Object;
+    check-cast v0, [Lp10;
 
     return-object v0
-.end method
-
-.method public final d(I)Lo10;
-    .locals 1
-
-    if-ltz p1, :cond_0
-
-    invoke-virtual {p0}, Lp10;->b()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_0
-
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lo10;
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final e(ILo10;)V
-    .locals 1
-
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lp10;->a:Ljava/util/List;
-
-    :cond_0
-    if-ltz p1, :cond_1
-
-    invoke-virtual {p0}, Lp10;->b()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_1
-
-    iget-object v0, p0, Lp10;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "index < 0 or index >= attaches.size()"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

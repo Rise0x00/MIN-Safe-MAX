@@ -1,93 +1,189 @@
 .class public final Lseb;
-.super Ltde;
+.super Lqc5;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final F(Lreb;)V
-    .locals 5
+# instance fields
+.field public final e:I
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+.field public f:Landroid/widget/EditText;
 
-    check-cast v0, Lsp3;
+.field public final g:Lkb6;
 
-    iget-wide v1, p1, Lreb;->z0:J
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+# direct methods
+.method public constructor <init>(Lpc5;I)V
+    .locals 1
 
-    move-result v1
+    invoke-direct {p0, p1}, Lqc5;-><init>(Lpc5;)V
 
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    sget p1, Lomc;->design_password_eye:I
 
-    iget-boolean v1, p1, Lreb;->y0:Z
+    iput p1, p0, Lseb;->e:I
 
-    invoke-virtual {v0, v1}, Lsp3;->setActivated(Z)V
+    new-instance p1, Lkb6;
 
-    iget-object v1, p1, Lreb;->c:Ljava/lang/CharSequence;
+    const/16 v0, 0x1c
 
-    invoke-virtual {v0, v1}, Lsp3;->setName(Ljava/lang/CharSequence;)V
+    invoke-direct {p1, v0, p0}, Lkb6;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, p1, Lreb;->o:Loef;
+    iput-object p1, p0, Lseb;->g:Lkb6;
 
-    const/4 v2, 0x0
+    if-eqz p2, :cond_0
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    goto :goto_0
+    iput p2, p0, Lseb;->e:I
 
     :cond_0
-    move-object v1, v2
+    return-void
+.end method
 
-    :goto_0
-    invoke-virtual {v0, v1}, Lsp3;->setMessage(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v2}, Lsp3;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+# virtual methods
+.method public final b()V
+    .locals 0
 
-    iget-wide v1, p1, Lreb;->b:J
-
-    iget-object v3, p1, Lreb;->x0:Ljava/lang/CharSequence;
-
-    iget-object v4, p1, Lreb;->X:Landroid/net/Uri;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-nez v4, :cond_2
-
-    :cond_1
-    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_2
-    invoke-virtual {v0, v1, v2, v3, v4}, Lsp3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    iget-boolean p1, p1, Lreb;->Z:Z
-
-    invoke-virtual {v0, p1}, Lsp3;->setVerified(Z)V
+    invoke-virtual {p0}, Lqc5;->q()V
 
     return-void
 .end method
 
-.method public final bridge synthetic x(Lww7;)V
+.method public final c()I
+    .locals 1
+
+    sget v0, Lvrc;->password_toggle_content_description:I
+
+    return v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Lseb;->e:I
+
+    return v0
+.end method
+
+.method public final f()Landroid/view/View$OnClickListener;
+    .locals 1
+
+    iget-object v0, p0, Lseb;->g:Lkb6;
+
+    return-object v0
+.end method
+
+.method public final k()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final l()Z
+    .locals 2
+
+    iget-object v0, p0, Lseb;->f:Landroid/widget/EditText;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/text/method/PasswordTransformationMethod;
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final m(Landroid/widget/EditText;)V
     .locals 0
 
-    check-cast p1, Lreb;
+    iput-object p1, p0, Lseb;->f:Landroid/widget/EditText;
 
-    invoke-virtual {p0, p1}, Lseb;->F(Lreb;)V
+    invoke-virtual {p0}, Lqc5;->q()V
 
+    return-void
+.end method
+
+.method public final r()V
+    .locals 3
+
+    iget-object v0, p0, Lseb;->f:Landroid/widget/EditText;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getInputType()I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getInputType()I
+
+    move-result v1
+
+    const/16 v2, 0x80
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getInputType()I
+
+    move-result v1
+
+    const/16 v2, 0x90
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getInputType()I
+
+    move-result v0
+
+    const/16 v1, 0xe0
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lseb;->f:Landroid/widget/EditText;
+
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final s()V
+    .locals 2
+
+    iget-object v0, p0, Lseb;->f:Landroid/widget/EditText;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    :cond_0
     return-void
 .end method

@@ -4,5 +4,14 @@
 
 
 # virtual methods
-.method public abstract o(Lxe8;)V
+.method public d(Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public g(Ljava/lang/String;Ljava/util/List;Z)V
+    .locals 0
+
+    return-void
 .end method

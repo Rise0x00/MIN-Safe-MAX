@@ -1,41 +1,146 @@
 .class public final Lwse;
-.super Lgd4;
+.super Ladi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lwse;
+# instance fields
+.field public final synthetic c:I
 
-.field public static final c:Lbd4;
+.field public final synthetic d:Lxse;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lxse;I)V
+    .locals 0
 
-    new-instance v0, Lwse;
+    iput p2, p0, Lwse;->c:I
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    packed-switch p2, :pswitch_data_0
 
-    sput-object v0, Lwse;->b:Lwse;
+    const/4 p2, 0x0
 
-    const-string v1, "sticker_id"
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v1
+    iput-object p1, p0, Lwse;->d:Lxse;
 
-    const/4 v2, 0x0
+    const/16 p1, 0xc
 
-    const/16 v3, 0xe
-
-    const-string v4, ":stickers/preview"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v0
-
-    sput-object v0, Lwse;->c:Lbd4;
+    invoke-direct {p0, p1, p2}, Ladi;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lwse;->d:Lxse;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Ladi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    iput-object p1, p0, Lwse;->d:Lxse;
+
+    const/16 p1, 0xc
+
+    invoke-direct {p0, p1, p2}, Ladi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lwse;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lwse;->d:Lxse;
+
+    invoke-virtual {p1}, Lxse;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lxse;->e:I
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lwse;->d:Lxse;
+
+    iget p2, p1, Lxse;->d:F
+
+    invoke-virtual {p1, p2}, Lxse;->c(F)V
+
+    invoke-virtual {p1}, Lxse;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lxse;->e:I
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lwse;->d:Lxse;
+
+    iget p2, p1, Lxse;->d:F
+
+    invoke-virtual {p1, p2}, Lxse;->c(F)V
+
+    invoke-virtual {p1}, Lxse;->a()I
+
+    move-result p2
+
+    iput p2, p1, Lxse;->e:I
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

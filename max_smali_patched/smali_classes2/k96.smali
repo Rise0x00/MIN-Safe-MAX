@@ -1,145 +1,175 @@
 .class public final Lk96;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final synthetic X:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lk96;->X:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    const/4 p2, 0x2
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object v0, p0, Lk96;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lb0b;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lk96;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lk96;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lk96;
 
-    move-result v1
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, p2}, Lk96;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lk96;
-
-    invoke-virtual {v1, p1}, Lk96;->a(Lb0b;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p2
 .end method
 
-.method public final b(Lb0b;Lmza;Lwza;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lk96;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Lk96;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lk96;->X:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lk96;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iput-object p1, v0, Lk96;->o:Ljava/lang/Object;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lk96;
-
-    invoke-virtual {v1, p1, p2, p3}, Lk96;->b(Lb0b;Lmza;Lwza;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Lb0b;Lmza;Lwza;Ljava/io/IOException;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lk96;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Lk96;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljava/util/List;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lk96;->X:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    move-result v1
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_0
+    if-eqz p1, :cond_2
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Les7;
 
-    move-result-object v1
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    check-cast v1, Lk96;
+    move-result v2
 
-    invoke-virtual {v1, p1, p2, p3, p4}, Lk96;->c(Lb0b;Lmza;Lwza;Ljava/io/IOException;)V
+    const/4 v3, 0x1
 
-    goto :goto_0
+    if-ne v2, v3, :cond_2
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0}, Lc24;->getView()Landroid/view/View;
 
-.method public final d(Lb0b;Lmza;Lwza;)V
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Lk96;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    instance-of v2, p1, Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    if-eqz v2, :cond_0
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lk96;
-
-    invoke-virtual {v1, p1, p2, p3}, Lk96;->d(Lb0b;Lmza;Lwza;)V
+    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    iget-object v2, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lrn0;
+
+    invoke-virtual {v2}, Lrn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    new-instance v4, Lmq3;
+
+    const/4 v5, -0x2
+
+    invoke-direct {v4, v1, v5}, Lmq3;-><init>(II)V
+
+    iput v1, v4, Lmq3;->i:I
+
+    iput v1, v4, Lmq3;->e:I
+
+    iput v1, v4, Lmq3;->h:I
+
+    iput v1, v4, Lmq3;->l:I
+
+    invoke-static {p1, v2, v4}, Lwci;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_1
+    iget-object p1, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Ld0d;
+
+    sget-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Les7;
+
+    aget-object v2, v1, v3
+
+    invoke-interface {p1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Ld0d;
+
+    const/4 v3, 0x3
+
+    aget-object v1, v1, v3
+
+    invoke-interface {p1, v0, v1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v2, v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Ljjh;
+
+    new-instance v3, Lh96;
+
+    invoke-direct {v3, v1, v0}, Lh96;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, p1, v3}, Lb28;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

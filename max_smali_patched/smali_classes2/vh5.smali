@@ -1,51 +1,43 @@
-.class public abstract Lvh5;
+.class public final Lvh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ltif;
+
+.field public final b:Ltif;
+
+
 # direct methods
-.method public static a([B)Lwh5;
-    .locals 10
+.method public constructor <init>(Landroid/content/Context;Lru7;)V
+    .locals 2
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
+    new-instance v0, Lj42;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    const/16 v1, 0x8
 
-    move-result-object p0
+    invoke-direct {v0, p1, v1}, Lj42;-><init>(Landroid/content/Context;I)V
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance p1, Ltif;
 
-    new-instance v0, Lwh5;
+    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
+    iput-object p1, p0, Lvh5;->a:Ltif;
 
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
+    new-instance p1, Li33;
 
-    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
+    const/16 v0, 0x8
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
+    invoke-direct {p1, p2, v0, p0}, Li33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
+    new-instance p2, Ltif;
 
-    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
+    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
 
-    invoke-direct/range {v0 .. v9}, Lwh5;-><init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
+    iput-object p2, p0, Lvh5;->b:Ltif;
 
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method

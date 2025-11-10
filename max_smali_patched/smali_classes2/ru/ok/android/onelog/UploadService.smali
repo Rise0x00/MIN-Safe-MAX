@@ -1,5 +1,5 @@
 .class public Lru/ok/android/onelog/UploadService;
-.super Lxad;
+.super Lpld;
 .source "SourceFile"
 
 
@@ -13,30 +13,20 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lui7;-><init>()V
+    invoke-direct {p0}, Lho7;-><init>()V
 
     return-void
 .end method
 
 .method private onHandleUpload(Ljava/lang/String;)V
-    .locals 2
+    .locals 0
 
     :try_start_0
     invoke-static {p1}, Lru/ok/android/onelog/OneLogImpl;->upload(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-
     :catch_0
-    move-exception p1
-
-    const-string v0, "one-log"
-
-    const-string v1, "Cannot upload"
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-void
 .end method
 
@@ -45,7 +35,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxkg;->p()Landroid/app/Application;
+    invoke-static {}, Lkfi;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -85,7 +75,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2, p0}, Lui7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {v0, v1, v2, p0}, Lho7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
 
     return-void
 .end method

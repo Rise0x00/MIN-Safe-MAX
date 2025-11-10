@@ -1,150 +1,178 @@
-.class public final Lxwg;
-.super Lm3f;
+.class public abstract Lxwg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Landroid/net/Uri;
 
-.field public final synthetic Z:Lywg;
-
-.field public final synthetic w0:Lowg;
-
-.field public final synthetic x0:Luvg;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Luvg;Lowg;Lywg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILandroid/net/Uri;Z)V
     .locals 0
 
-    iput-object p3, p0, Lxwg;->Z:Lywg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxwg;->w0:Lowg;
+    iput p1, p0, Lxwg;->a:I
 
-    iput-object p1, p0, Lxwg;->x0:Luvg;
+    iput-object p2, p0, Lxwg;->b:Landroid/net/Uri;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lxwg;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ljava/lang/Throwable;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_2
 
-    invoke-virtual {p0, p1, p2}, Lxwg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lxwg;
+    if-eqz p1, :cond_1
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, Lxwg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lxwg;
-
-    iget-object v1, p0, Lxwg;->w0:Lowg;
-
-    iget-object v2, p0, Lxwg;->x0:Luvg;
-
-    iget-object v3, p0, Lxwg;->Z:Lywg;
-
-    invoke-direct {v0, v2, v1, v3, p2}, Lxwg;-><init>(Luvg;Lowg;Lywg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lxwg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lxwg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    iget-object p1, p0, Lxwg;->Y:Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-result v0
 
-    iget-object v0, p0, Lxwg;->Z:Lywg;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lywg;->e(Ljava/lang/Throwable;)Lsk7;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lywg;->f()Lec3;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lywg;->d:Llu0;
-
-    iget-object p1, p0, Lxwg;->x0:Luvg;
-
-    iget-object v6, p1, Luvg;->c:Ljava/lang/String;
-
-    iput v1, p0, Lxwg;->X:I
-
-    iget-object v5, p0, Lxwg;->w0:Lowg;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lec3;->a(Ln62;Lsk7;Lnxg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    check-cast p1, Lxwg;
 
-    return-object p1
+    iget-object v0, p0, Lxwg;->b:Landroid/net/Uri;
+
+    iget-object v1, p1, Lxwg;->b:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v0, p0, Lxwg;->a:I
+
+    iget v1, p1, Lxwg;->a:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget-boolean v0, p0, Lxwg;->c:Z
+
+    iget-boolean p1, p1, Lxwg;->c:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_2
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lxwg;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lxwg;->a:I
+
+    invoke-static {v2, v0, v1}, Lxjb;->k(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lxwg;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoSource(type: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lxwg;->a:I
+
+    invoke-static {v1}, Lijf;->C(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isLive: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxwg;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", uri: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxwg;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

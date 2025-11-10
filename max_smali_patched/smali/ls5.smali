@@ -3,127 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lye0;
+.implements Lub4;
 
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput p1, p0, Lls5;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    sput-object v0, Lls5;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 5
+.method public final a()Lxb4;
+    .locals 2
 
-    sget-object v0, Lns5;->j:Ljava/lang/Object;
+    iget v0, p0, Lls5;->a:I
 
-    monitor-enter v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v0, Lwjd;
 
-    sget-object v2, Lns5;->k:Lds;
+    invoke-direct {v0}, Lwjd;-><init>()V
 
-    invoke-virtual {v2}, Lds;->values()Ljava/util/Collection;
+    return-object v0
 
-    move-result-object v2
+    :pswitch_0
+    new-instance v0, Lns5;
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, v1}, Llj0;-><init>(Z)V
 
-    move-result-object v1
+    return-object v0
 
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lns5;
-
-    iget-object v3, v2, Lns5;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "FirebaseApp"
-
-    const-string v4, "Notifying background state change listeners."
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v2, v2, Lns5;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lks5;
-
-    iget-object v3, v3, Lks5;->a:Lns5;
-
-    if-nez p1, :cond_1
-
-    iget-object v3, v3, Lns5;->h:Lr6c;
-
-    invoke-interface {v3}, Lr6c;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lph4;
-
-    invoke-virtual {v3}, Lph4;->b()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

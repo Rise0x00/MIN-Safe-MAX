@@ -1,120 +1,79 @@
 .class public final Le7f;
-.super Lm3f;
+.super Lwf4;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final b:Le7f;
 
-# instance fields
-.field public X:I
+.field public static final c:Lrf4;
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public static final d:Lrf4;
 
-.field public final synthetic Z:Lg7f;
+.field public static final e:Lrf4;
+
+.field public static final f:Lrf4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lg7f;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Le7f;->Y:Ljava/lang/Object;
+    new-instance v0, Le7f;
 
-    iput-object p3, p0, Le7f;->Z:Lg7f;
+    invoke-direct {v0}, Lwf4;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Le7f;->b:Le7f;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v3, ":stickers/settings"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    invoke-static {v0, v3, v2, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v2
+
+    sput-object v2, Le7f;->c:Lrf4;
+
+    const-string v2, ":stickers/recent"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v2
+
+    sput-object v2, Le7f;->d:Lrf4;
+
+    const-string v2, ":stickers/favorite"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v1
+
+    sput-object v1, Le7f;->e:Lrf4;
+
+    const-string v1, "set_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":stickers/set"
+
+    invoke-static {v0, v2, v1, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v0
+
+    sput-object v0, Le7f;->f:Lrf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le7f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le7f;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Le7f;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Le7f;
-
-    iget-object v0, p0, Le7f;->Y:Ljava/lang/Object;
-
-    iget-object v1, p0, Le7f;->Z:Lg7f;
-
-    invoke-direct {p1, v0, p2, v1}, Le7f;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lg7f;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Le7f;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Le7f;->Y:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    iput v1, p0, Le7f;->X:I
-
-    iget-object p1, p0, Le7f;->Z:Lg7f;
-
-    invoke-virtual {p1, p0}, Lg7f;->p(Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

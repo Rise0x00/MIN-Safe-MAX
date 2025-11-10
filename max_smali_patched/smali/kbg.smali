@@ -1,213 +1,319 @@
 .class public final Lkbg;
-.super Lm3f;
+.super Lkj0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:Landroid/animation/AnimatorSet;
+.field public final X:[B
 
-.field public Y:I
+.field public final Y:Ljava/net/DatagramPacket;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public Z:Landroid/net/Uri;
 
-.field public final synthetic w0:Landroid/graphics/drawable/Drawable;
+.field public final o:I
+
+.field public s0:Ljava/net/DatagramSocket;
+
+.field public t0:Ljava/net/MulticastSocket;
+
+.field public u0:Ljava/net/InetAddress;
+
+.field public v0:Z
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput-object p1, p0, Lkbg;->w0:Landroid/graphics/drawable/Drawable;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lkj0;-><init>(Z)V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lkbg;->o:I
+
+    const/16 v0, 0x7d0
+
+    new-array v1, v0, [B
+
+    iput-object v1, p0, Lkbg;->X:[B
+
+    new-instance v2, Ljava/net/DatagramPacket;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, v3, v0}, Ljava/net/DatagramPacket;-><init>([BII)V
+
+    iput-object v2, p0, Lkbg;->Y:Ljava/net/DatagramPacket;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final R(Ldc4;)J
+    .locals 3
 
-    check-cast p1, Le34;
+    iget-object v0, p1, Ldc4;->a:Landroid/net/Uri;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object v0, p0, Lkbg;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p0, p1, p2}, Lkbg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lkbg;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v1, p0, Lkbg;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p1, p2}, Lkbg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
 
-    move-result-object p1
+    move-result v1
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lkbg;
-
-    iget-object v1, p0, Lkbg;->w0:Landroid/graphics/drawable/Drawable;
-
-    invoke-direct {v0, v1, p2}, Lkbg;-><init>(Landroid/graphics/drawable/Drawable;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lkbg;->Z:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget v0, p0, Lkbg;->Y:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x12c
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lkbg;->X:Landroid/animation/AnimatorSet;
-
-    iget-object v5, p0, Lkbg;->Z:Ljava/lang/Object;
-
-    check-cast v5, Le34;
+    invoke-virtual {p0}, Lkj0;->c()V
 
     :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    new-instance v0, Ljava/net/InetSocketAddress;
+
+    iget-object v2, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    invoke-direct {v0, v2, v1}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    iget-object v1, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    invoke-virtual {v1}, Ljava/net/InetAddress;->isMulticastAddress()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/net/MulticastSocket;
+
+    invoke-direct {v1, v0}, Ljava/net/MulticastSocket;-><init>(Ljava/net/SocketAddress;)V
+
+    iput-object v1, p0, Lkbg;->t0:Ljava/net/MulticastSocket;
+
+    iget-object v0, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    invoke-virtual {v1, v0}, Ljava/net/MulticastSocket;->joinGroup(Ljava/net/InetAddress;)V
+
+    iget-object v0, p0, Lkbg;->t0:Ljava/net/MulticastSocket;
+
+    iput-object v0, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
 
     goto :goto_0
 
-    :catchall_0
+    :catch_0
     move-exception p1
 
     goto :goto_1
 
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
+
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/net/DatagramSocket;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {v1, v0}, Ljava/net/DatagramSocket;-><init>(Ljava/net/SocketAddress;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object v1, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkbg;->Z:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    const/16 v0, 0xff
-
-    const/4 v5, 0x0
-
-    filled-new-array {v0, v5}, [I
-
-    move-result-object v6
-
-    iget-object v7, p0, Lkbg;->w0:Landroid/graphics/drawable/Drawable;
-
-    const-string v8, "alpha"
-
-    invoke-static {v7, v8, v6}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    filled-new-array {v5, v0}, [I
-
-    move-result-object v0
-
-    invoke-static {v7, v8, v0}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    new-instance v7, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v7}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-array v8, v1, [Landroid/animation/Animator;
-
-    aput-object v6, v8, v5
-
-    aput-object v0, v8, v2
-
-    invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
-
-    move-object v5, p1
-
-    move-object v0, v7
-
-    :cond_2
     :goto_0
-    :try_start_1
-    invoke-static {v5}, Lipe;->r(Le34;)Z
+    iget-object v0, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
 
-    move-result p1
+    iget v1, p0, Lkbg;->o:I
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+    iput-boolean v0, p0, Lkbg;->v0:Z
 
-    int-to-long v6, v1
+    invoke-virtual {p0, p1}, Lkj0;->d(Ldc4;)V
 
-    mul-long/2addr v6, v3
+    const-wide/16 v0, -0x1
 
-    const-wide/16 v8, 0x3e8
-
-    add-long/2addr v6, v8
-
-    iput-object v5, p0, Lkbg;->Z:Ljava/lang/Object;
-
-    iput-object v0, p0, Lkbg;->X:Landroid/animation/AnimatorSet;
-
-    iput v2, p0, Lkbg;->Y:I
-
-    invoke-static {v6, v7, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v6, Lf34;->a:Lf34;
-
-    if-ne p1, v6, :cond_2
-
-    return-object v6
-
-    :cond_3
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-wide v0
 
     :goto_1
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
 
-    throw p1
+    const/16 v1, 0x7d1
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
+
+    :goto_2
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 v1, 0x7d6
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
+.end method
+
+.method public final close()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lkbg;->Z:Landroid/net/Uri;
+
+    iget-object v1, p0, Lkbg;->t0:Ljava/net/MulticastSocket;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    iget-object v2, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, v2}, Ljava/net/MulticastSocket;->leaveGroup(Ljava/net/InetAddress;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    iput-object v0, p0, Lkbg;->t0:Ljava/net/MulticastSocket;
+
+    :cond_0
+    iget-object v1, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
+
+    iput-object v0, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
+
+    :cond_1
+    iput-object v0, p0, Lkbg;->u0:Ljava/net/InetAddress;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lkbg;->w0:I
+
+    iget-boolean v1, p0, Lkbg;->v0:Z
+
+    if-eqz v1, :cond_2
+
+    iput-boolean v0, p0, Lkbg;->v0:Z
+
+    invoke-virtual {p0}, Lkj0;->b()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lkbg;->Z:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    if-nez p3, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v0, p0, Lkbg;->w0:I
+
+    iget-object v1, p0, Lkbg;->Y:Ljava/net/DatagramPacket;
+
+    if-nez v0, :cond_1
+
+    :try_start_0
+    iget-object v0, p0, Lkbg;->s0:Ljava/net/DatagramSocket;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
+    :try_end_0
+    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+
+    move-result v0
+
+    iput v0, p0, Lkbg;->w0:I
+
+    invoke-virtual {p0, v0}, Lkj0;->a(I)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :goto_0
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d1
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :goto_1
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d2
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :cond_1
+    :goto_2
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+
+    move-result v0
+
+    iget v1, p0, Lkbg;->w0:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    iget-object v1, p0, Lkbg;->X:[B
+
+    invoke-static {v1, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lkbg;->w0:I
+
+    sub-int/2addr p1, p3
+
+    iput p1, p0, Lkbg;->w0:I
+
+    return p3
 .end method

@@ -29,11 +29,11 @@
         "isDestroyed",
         "Lru/ok/android/externcalls/sdk/audio/Logger;",
         "logger",
-        "Loyf;",
+        "Lybg;",
         "onFocusLost",
         "onFocusGained",
         "<init>",
-        "(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Lve6;Lru/ok/android/externcalls/sdk/audio/Logger;Lve6;Lve6;)V",
+        "(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Loi6;Lru/ok/android/externcalls/sdk/audio/Logger;Loi6;Loi6;)V",
         "T",
         "context",
         "",
@@ -53,7 +53,7 @@
         "Landroid/media/AudioManager;",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;",
         "Landroid/os/Handler;",
-        "Lve6;",
+        "Loi6;",
         "Lru/ok/android/externcalls/sdk/audio/Logger;",
         "Landroid/media/AudioFocusRequest;",
         "audioFocusRequest",
@@ -92,10 +92,10 @@
 
 .field private final audioManager:Landroid/media/AudioManager;
 
-.field private final isDestroyed:Lve6;
+.field private final isDestroyed:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
@@ -106,18 +106,18 @@
 
 .field private final mainThreadHandler:Landroid/os/Handler;
 
-.field private final onFocusGained:Lve6;
+.field private final onFocusGained:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
 
-.field private final onFocusLost:Lve6;
+.field private final onFocusLost:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
@@ -135,14 +135,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper$Companion;-><init>(Lfi4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Lve6;Lru/ok/android/externcalls/sdk/audio/Logger;Lve6;Lve6;)V
+.method public constructor <init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Loi6;Lru/ok/android/externcalls/sdk/audio/Logger;Loi6;Loi6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -151,10 +151,10 @@
             "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;",
             "Landroid/os/Handler;",
             "Landroid/os/Handler;",
-            "Lve6;",
+            "Loi6;",
             "Lru/ok/android/externcalls/sdk/audio/Logger;",
-            "Lve6;",
-            "Lve6;",
+            "Loi6;",
+            "Loi6;",
             ")V"
         }
     .end annotation
@@ -175,21 +175,21 @@
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->workerThreadHandler:Landroid/os/Handler;
 
     .line 6
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Lve6;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Loi6;
 
     .line 7
     iput-object p6, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->logger:Lru/ok/android/externcalls/sdk/audio/Logger;
 
     .line 8
-    iput-object p7, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusLost:Lve6;
+    iput-object p7, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusLost:Loi6;
 
     .line 9
-    iput-object p8, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusGained:Lve6;
+    iput-object p8, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusGained:Loi6;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Lve6;Lru/ok/android/externcalls/sdk/audio/Logger;Lve6;Lve6;ILof4;)V
+.method public synthetic constructor <init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Loi6;Lru/ok/android/externcalls/sdk/audio/Logger;Loi6;Loi6;ILfi4;)V
     .locals 11
 
     move/from16 v0, p9
@@ -242,7 +242,7 @@
 
     .line 12
     :goto_2
-    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;-><init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Lve6;Lru/ok/android/externcalls/sdk/audio/Logger;Lve6;Lve6;)V
+    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;-><init>(Landroid/media/AudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Landroid/os/Handler;Landroid/os/Handler;Loi6;Lru/ok/android/externcalls/sdk/audio/Logger;Loi6;Loi6;)V
 
     return-void
 .end method
@@ -374,18 +374,18 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusGained:Lve6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusGained:Loi6;
 
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
 
     invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->unmute()V
 
     return-void
 
     :cond_1
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusLost:Lve6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->onFocusLost:Loi6;
 
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
 
     if-eqz p2, :cond_2
 
@@ -417,9 +417,9 @@
 .method private final mute()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -436,11 +436,11 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lr30;
+    new-instance v1, Lw30;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lr30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
+    invoke-direct {v1, p0, v2}, Lw30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -481,9 +481,9 @@
 .method private final muteForever()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -500,11 +500,11 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lr30;
+    new-instance v1, Lw30;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lr30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
+    invoke-direct {v1, p0, v2}, Lw30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -641,9 +641,9 @@
 .method private final unmute()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->isDestroyed:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -660,11 +660,11 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->mainThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lr30;
+    new-instance v1, Lw30;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lr30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
+    invoke-direct {v1, p0, v2}, Lw30;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -772,11 +772,11 @@
 
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->releaseFocus()V
 
-    new-instance v0, Lh30;
+    new-instance v0, Lm30;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lh30;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lm30;-><init>(ILjava/lang/Object;)V
 
     new-instance v1, Landroid/media/AudioFocusRequest$Builder;
 

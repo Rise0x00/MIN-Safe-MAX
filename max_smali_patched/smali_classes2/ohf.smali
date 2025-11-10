@@ -1,79 +1,52 @@
 .class public final Lohf;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Lgz5;
 
-.field public final b:I
+.field public final synthetic Y:Lzv8;
 
-.field public final c:I
+.field public Z:Lkeg;
 
-.field public final d:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final e:I
-
-.field public f:F
-
-.field public g:Landroid/graphics/Paint;
-
-.field public final h:Ls5f;
-
-.field public final i:Landroid/graphics/Shader$TileMode;
-
-.field public j:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lzv8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lohf;->Y:Lzv8;
 
-    iput-object p1, p0, Lohf;->a:Ljava/lang/String;
-
-    iput p2, p0, Lohf;->b:I
-
-    iput p3, p0, Lohf;->c:I
-
-    iput p2, p0, Lohf;->d:I
-
-    iput p3, p0, Lohf;->e:I
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    iput p1, p0, Lohf;->f:F
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
-
-    iput-object p1, p0, Lohf;->g:Landroid/graphics/Paint;
-
-    new-instance p1, Lm6d;
-
-    const/16 p2, 0x16
-
-    invoke-direct {p1, p2, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lohf;->h:Ls5f;
-
-    sget-object p1, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
-
-    iput-object p1, p0, Lohf;->i:Landroid/graphics/Shader$TileMode;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lohf;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lohf;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lohf;->o:I
+
+    iget-object p1, p0, Lohf;->Y:Lzv8;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lzv8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

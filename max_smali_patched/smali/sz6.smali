@@ -1,113 +1,82 @@
 .class public final Lsz6;
-.super Lpbf;
+.super Lvz6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
-
-.field public final synthetic f:I
-
-.field public final synthetic g:I
-
-.field public final synthetic h:Ljava/lang/Object;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;III)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p5, p0, Lsz6;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lsz6;->h:Ljava/lang/Object;
-
-    iput p3, p0, Lsz6;->f:I
-
-    iput p4, p0, Lsz6;->g:I
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p2}, Lpbf;-><init>(Ljava/lang/String;Z)V
+    iput-boolean p1, p0, Lsz6;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lsz6;->e:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lsz6;->h:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lxz6;
+    :cond_0
+    instance-of v1, p1, Lsz6;
 
-    :try_start_0
-    iget v1, p0, Lsz6;->f:I
+    const/4 v2, 0x0
 
-    iget v2, p0, Lsz6;->g:I
+    if-nez v1, :cond_1
 
-    iget-object v3, v0, Lxz6;->L0:Lf07;
+    return v2
 
-    invoke-virtual {v3, v1, v2}, Lf07;->W(II)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_1
+    check-cast p1, Lsz6;
 
-    goto :goto_0
+    iget-boolean v1, p0, Lsz6;->a:Z
 
-    :catch_0
-    move-exception v1
+    iget-boolean p1, p1, Lsz6;->a:Z
 
-    const/4 v2, 0x2
+    if-eq v1, p1, :cond_2
 
-    invoke-virtual {v0, v2, v2, v1}, Lxz6;->c(IILjava/io/IOException;)V
+    return v2
 
-    :goto_0
-    const-wide/16 v0, -0x1
+    :cond_2
+    return v0
+.end method
 
-    return-wide v0
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lsz6;->h:Ljava/lang/Object;
+    iget-boolean v0, p0, Lsz6;->a:Z
 
-    check-cast v0, Lqc1;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget-object v0, v0, Lqc1;->c:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lxz6;
+    return v0
+.end method
 
-    iget v1, p0, Lsz6;->f:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v2, p0, Lsz6;->g:I
+    const-string v0, "Missing(isMissing="
 
-    :try_start_1
-    iget-object v3, v0, Lxz6;->L0:Lf07;
+    const-string v1, ")"
 
-    const/4 v4, 0x1
+    iget-boolean v2, p0, Lsz6;->a:Z
 
-    invoke-virtual {v3, v1, v2, v4}, Lf07;->o(IIZ)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v0
 
-    :catch_1
-    move-exception v1
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v2, v2, v1}, Lxz6;->c(IILjava/io/IOException;)V
-
-    :goto_1
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

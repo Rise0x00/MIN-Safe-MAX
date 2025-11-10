@@ -1,373 +1,472 @@
 .class public final Lzg3;
-.super Lked;
+.super Leia;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lxg3;
-
-.field public static final e:Lgad;
-
-.field public static final f:I
-
-.field public static final g:Lyg3;
-
-
 # instance fields
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    iput p1, p0, Lzg3;->a:I
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    const-string v1, "rx3.computation-threads"
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    if-le v1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :cond_1
-    :goto_0
-    sput v0, Lzg3;->f:I
-
-    new-instance v0, Lyg3;
-
-    new-instance v1, Lgad;
-
-    const-string v3, "RxComputationShutdown"
-
-    invoke-direct {v1, v3}, Lgad;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, v1}, Ls1a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    sput-object v0, Lzg3;->g:Lyg3;
-
-    invoke-virtual {v0}, Ls1a;->g()V
-
-    const-string v0, "rx3.computation-priority"
-
-    const/4 v1, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    new-instance v3, Lgad;
-
-    const-string v4, "RxComputationThreadPool"
-
-    invoke-direct {v3, v4, v0, v1}, Lgad;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v3, Lzg3;->e:Lgad;
-
-    new-instance v0, Lxg3;
-
-    invoke-direct {v0, v2, v3}, Lxg3;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sput-object v0, Lzg3;->d:Lxg3;
-
-    iget-object v0, v0, Lxg3;->b:[Lyg3;
-
-    array-length v1, v0
-
-    :goto_1
-    if-ge v2, v1, :cond_2
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ls1a;->g()V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 5
+    iput-object p2, p0, Lzg3;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Lzg3;->d:Lxg3;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lzg3;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v2, Lxg3;
-
-    sget v3, Lzg3;->f:I
-
-    sget-object v4, Lzg3;->e:Lgad;
-
-    invoke-direct {v2, v3, v4}, Lxg3;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    :cond_0
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_0
-
-    iget-object v0, v2, Lxg3;->b:[Lyg3;
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_2
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ls1a;->g()V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lied;
-    .locals 2
+.method public final o(Lgla;)V
+    .locals 5
 
-    new-instance v0, Lwg3;
+    iget v0, p0, Lzg3;->a:I
 
-    iget-object v1, p0, Lzg3;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxg3;
-
-    invoke-virtual {v1}, Lxg3;->a()Lyg3;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lwg3;-><init>(Lyg3;)V
-
-    return-object v0
-.end method
-
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 4
-
-    iget-object v0, p0, Lzg3;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxg3;
-
-    invoke-virtual {v0}, Lxg3;->a()Lyg3;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ls1a;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    new-instance v1, Ljdd;
-
-    const-string v2, "run is null"
-
-    invoke-static {p1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v2}, Lh0;-><init>(Ljava/lang/Runnable;Z)V
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v2, 0x0
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
 
-    cmp-long p1, p2, v2
+    check-cast v0, Landroid/view/View;
 
-    if-gtz p1, :cond_0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v0, Lsag;->b:Lt6;
+
+    new-instance v1, Le7;
+
+    invoke-direct {v1, v2, v0}, Le7;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p1, v1}, Lgla;->d(Lzv4;)V
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Expected to be called on the main thread but was "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    :catch_0
+    :cond_0
+    new-instance v1, Lbyg;
+
+    invoke-direct {v1, v0, p1}, Lbyg;-><init>(Landroid/view/View;Lgla;)V
+
+    invoke-interface {p1, v1}, Lgla;->d(Lzv4;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljqe;
+
+    new-instance v1, Lnk8;
+
+    invoke-direct {v1, p1, v2}, Lnk8;-><init>(Lgla;I)V
+
+    invoke-virtual {v0, v1}, Ljqe;->k(Lcre;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly26;
+
+    new-instance v1, Luja;
+
+    invoke-direct {v1, p1}, Luja;-><init>(Lgla;)V
+
+    invoke-virtual {v0, v1}, Lr26;->f(Lccf;)V
+
+    return-void
+
+    :pswitch_2
+    :try_start_0
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+
+    :try_start_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    if-nez v1, :cond_1
+
+    invoke-static {p1}, Lia5;->a(Lgla;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Ltja;
+
+    invoke-direct {v1, p1, v0}, Ltja;-><init>(Lgla;Ljava/util/Iterator;)V
+
+    invoke-interface {p1, v1}, Lgla;->d(Lzv4;)V
+
+    iget-boolean p1, v1, Ltja;->d:Z
+
+    if-nez p1, :cond_5
+
+    :cond_2
+    iget-boolean p1, v1, Ltja;->c:Z
+
+    if-eqz p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :try_start_2
+    iget-object p1, v1, Ltja;->b:Ljava/util/Iterator;
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The iterator returned a null value"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    iget-object v0, v1, Ltja;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, v1, Ltja;->c:Z
+
+    if-eqz p1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_3
+    iget-object p1, v1, Ltja;->b:Ljava/util/Iterator;
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-nez p1, :cond_2
+
+    iget-boolean p1, v1, Ltja;->c:Z
+
+    if-nez p1, :cond_5
+
+    iget-object p1, v1, Ltja;->a:Lgla;
+
+    invoke-interface {p1}, Lgla;->c()V
+
+    goto :goto_1
+
+    :catchall_0
     move-exception p1
 
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, v1, Ltja;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :catchall_1
+    move-exception p1
 
-    move-result-object p1
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
 
-    :goto_0
-    invoke-virtual {v1, p1}, Lh0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v1, Ltja;->a:Lgla;
 
-    return-object v1
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    :goto_1
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    goto :goto_1
 
-    sget-object p1, Lw65;->a:Lw65;
-
-    return-object p1
-.end method
-
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 8
-
-    iget-object v0, p0, Lzg3;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxg3;
-
-    invoke-virtual {v0}, Lxg3;->a()Lyg3;
-
-    move-result-object v0
-
-    iget-object v1, v0, Ls1a;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, p4, v2
-
-    if-gtz v0, :cond_1
-
-    new-instance p4, Ljd7;
-
-    invoke-direct {p4, p1, v1}, Ljd7;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    cmp-long p1, p2, v2
-
-    if-gtz p1, :cond_0
-
-    :try_start_0
-    invoke-virtual {v1, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :catch_0
+    :catchall_2
     move-exception v0
 
-    move-object p1, v0
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lia5;->c(Ljava/lang/Throwable;Lgla;)V
 
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {v1, p4, p2, p3, p6}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :catchall_3
+    move-exception v0
 
-    move-result-object p1
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
 
-    :goto_0
-    invoke-virtual {p4, p1}, Ljd7;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, p1}, Lia5;->c(Ljava/lang/Throwable;Lgla;)V
 
-    return-object p4
-
+    :cond_5
     :goto_1
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lqja;
+
+    iget-object v2, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v2, [Ljava/lang/Object;
+
+    invoke-direct {v0, p1, v2}, Lqja;-><init>(Lgla;[Ljava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lgla;->d(Lzv4;)V
+
+    iget-boolean p1, v0, Lqja;->d:Z
+
+    if-eqz p1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    array-length p1, v2
+
+    :goto_2
+    if-ge v1, p1, :cond_8
+
+    iget-boolean v3, v0, Lqja;->o:Z
+
+    if-nez v3, :cond_8
+
+    aget-object v3, v2, v1
+
+    if-nez v3, :cond_7
+
+    iget-object p1, v0, Lqja;->a:Lgla;
+
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v2, "The element at index "
+
+    const-string v3, " is null"
+
+    invoke-static {v1, v2, v3}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    :cond_7
+    iget-object v4, v0, Lqja;->a:Lgla;
+
+    invoke-interface {v4, v3}, Lgla;->b(Ljava/lang/Object;)V
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    :cond_1
-    new-instance v2, Lidd;
+    :cond_8
+    iget-boolean p1, v0, Lqja;->o:Z
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_9
 
-    invoke-direct {v2, p1, v0}, Lh0;-><init>(Ljava/lang/Runnable;Z)V
+    iget-object p1, v0, Lqja;->a:Lgla;
 
-    move-wide v3, p2
+    invoke-interface {p1}, Lgla;->c()V
 
-    move-wide v5, p4
+    :cond_9
+    :goto_3
+    return-void
 
-    move-object v7, p6
+    :pswitch_4
+    :try_start_4
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
 
-    :try_start_1
-    invoke-virtual/range {v1 .. v7}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    check-cast v0, Lwj6;
 
-    move-result-object p1
+    iget-object v0, v0, Lwj6;->a:Ljava/lang/Object;
 
-    invoke-virtual {v2, p1}, Lh0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v1, "Supplier returned a null Throwable."
 
-    return-object v2
+    if-eqz v0, :cond_a
 
-    :catch_1
+    sget-object v1, Lxf5;->a:Lwf5;
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    goto :goto_5
+
+    :catchall_4
     move-exception v0
 
-    move-object p1, v0
+    goto :goto_4
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    :cond_a
+    invoke-static {v1}, Lxf5;->a(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
-    :goto_2
-    sget-object p1, Lw65;->a:Lw65;
+    move-result-object v0
 
-    return-object p1
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+
+    :goto_4
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+
+    :goto_5
+    invoke-static {v0, p1}, Lia5;->c(Ljava/lang/Throwable;Lgla;)V
+
+    return-void
+
+    :pswitch_5
+    :try_start_5
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltef;
+
+    invoke-interface {v0}, Ltef;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The supplier returned a null ObservableSource"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Lwka;
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_5
+
+    invoke-interface {v0, p1}, Lwka;->a(Lgla;)V
+
+    goto :goto_6
+
+    :catchall_5
+    move-exception v0
+
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lia5;->c(Ljava/lang/Throwable;Lgla;)V
+
+    :goto_6
+    return-void
+
+    :pswitch_6
+    new-instance v0, Lria;
+
+    invoke-direct {v0, p1}, Lria;-><init>(Lgla;)V
+
+    invoke-interface {p1, v0}, Lgla;->d(Lzv4;)V
+
+    :try_start_6
+    iget-object p1, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ldka;
+
+    invoke-interface {p1, v0}, Ldka;->e(Lria;)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_6
+
+    goto :goto_7
+
+    :catchall_6
+    move-exception p1
+
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Lria;->onError(Ljava/lang/Throwable;)V
+
+    :goto_7
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ltj8;
+
+    new-instance v2, Lnk8;
+
+    invoke-direct {v2, p1, v1}, Lnk8;-><init>(Lgla;I)V
+
+    invoke-virtual {v0, v2}, Ltj8;->e(Lgk8;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lzg3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljg3;
+
+    new-instance v1, Lsja;
+
+    invoke-direct {v1, p1}, Lsja;-><init>(Lgla;)V
+
+    invoke-virtual {v0, v1}, Ljg3;->h(Ltg3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

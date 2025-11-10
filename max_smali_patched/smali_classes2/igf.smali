@@ -1,37 +1,19 @@
 .class public final Ligf;
-.super Landroid/text/style/CharacterStyle;
+.super Lrj0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Lrff;
 
 
 # instance fields
-.field public final a:Lxe6;
-
-.field public b:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Luxa;Lxe6;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    invoke-direct {p0}, Lrj0;-><init>()V
 
-    iput-object p2, p0, Ligf;->a:Lxe6;
-
-    invoke-interface {p2, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, p0, Ligf;->b:I
+    iput-wide p1, p0, Ligf;->b:J
 
     return-void
 .end method
@@ -39,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -57,13 +39,15 @@
     return v2
 
     :cond_1
-    iget v1, p0, Ligf;->b:I
-
     check-cast p1, Ligf;
 
-    iget p1, p1, Ligf;->b:I
+    iget-wide v3, p0, Ligf;->b:J
 
-    if-eq v1, p1, :cond_2
+    iget-wide v5, p1, Ligf;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -74,54 +58,27 @@
 .method public final hashCode()I
     .locals 2
 
-    const-class v0, Ligf;
+    iget-wide v0, p0, Ligf;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    iget v1, p0, Ligf;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final onThemeChanged(Luxa;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Ligf;->a:Lxe6;
+    const-string v0, "SuspendBotEvent(chatId="
 
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ")"
 
-    move-result-object p1
+    iget-wide v2, p0, Ligf;->b:J
 
-    check-cast p1, Ljava/lang/Number;
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    move-result-object v0
 
-    move-result p1
-
-    iput p1, p0, Ligf;->b:I
-
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    iget v0, p0, Ligf;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -1,152 +1,299 @@
-.class public interface abstract Lzj8;
-.super Ljava/lang/Object;
+.class public final Lzj8;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lgla;
+.implements Lgk8;
+.implements Lzv4;
+.implements Lcre;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Lgla;
+
+.field public final c:Lfj6;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lgla;Lfj6;I)V
+    .locals 0
+
+    iput p3, p0, Lzj8;->a:I
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lzj8;->b:Lgla;
+
+    iput-object p2, p0, Lzj8;->c:Lfj6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A()I
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    iget-object v0, p0, Lzj8;->c:Lfj6;
+
+    invoke-interface {v0, p1}, Lfj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null Publisher"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lwka;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Lzj8;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p1, p0}, Lwka;->a(Lgla;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Lzj8;->c:Lfj6;
+
+    invoke-interface {v0, p1}, Lfj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null Publisher"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lwka;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p0}, Lzj8;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1, p0}, Lwka;->a(Lgla;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract B()Lmif;
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract E(Lrm8;)V
+.method public final c()V
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0}, Lgla;->c()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzj8;->b:Lgla;
+
+    invoke-interface {v0}, Lgla;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract F()Z
+.method public final d(Lzv4;)V
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract H(IJLjava/util/List;)V
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract J(Ljava/util/List;)V
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Lzj8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzv4;
+
+    invoke-static {v0}, Ldw4;->c(Lzv4;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzv4;
+
+    invoke-static {v0}, Ldw4;->c(Lzv4;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract K()Lrkb;
-.end method
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-.method public abstract L()Llvd;
-.end method
+    iget v0, p0, Lzj8;->a:I
 
-.method public abstract M()Le77;
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract N(Lukb;)V
-.end method
+    iget-object v0, p0, Lzj8;->b:Lgla;
 
-.method public abstract O()I
-.end method
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-.method public abstract P(I)V
-.end method
+    return-void
 
-.method public abstract Q()Landroid/os/Bundle;
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lzj8;->b:Lgla;
 
-.method public abstract R()J
-.end method
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-.method public abstract S()I
-.end method
+    return-void
 
-.method public abstract T(Li20;Z)V
-.end method
+    nop
 
-.method public abstract U(Lukb;)V
-.end method
-
-.method public abstract V(Lrm8;)V
-.end method
-
-.method public abstract W(Lkvd;)Ljx7;
-.end method
-
-.method public abstract X()Leo8;
-.end method
-
-.method public abstract a()F
-.end method
-
-.method public abstract b()Z
-.end method
-
-.method public abstract c()J
-.end method
-
-.method public abstract connect()V
-.end method
-
-.method public abstract d(F)V
-.end method
-
-.method public abstract e()Lgkb;
-.end method
-
-.method public abstract getDuration()J
-.end method
-
-.method public abstract getPlaybackState()I
-.end method
-
-.method public abstract getRepeatMode()I
-.end method
-
-.method public abstract h()Z
-.end method
-
-.method public abstract isConnected()Z
-.end method
-
-.method public abstract j()J
-.end method
-
-.method public abstract k(Lrm8;J)V
-.end method
-
-.method public abstract l()Z
-.end method
-
-.method public abstract m()I
-.end method
-
-.method public abstract n()V
-.end method
-
-.method public abstract p()I
-.end method
-
-.method public abstract pause()V
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract prepare()V
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract seekTo(J)V
-.end method
-
-.method public abstract setPlaybackSpeed(F)V
-.end method
-
-.method public abstract stop()V
-.end method
-
-.method public abstract u()Landroidx/media3/common/PlaybackException;
-.end method
-
-.method public abstract v()J
-.end method
-
-.method public abstract x()Luof;
-.end method
-
-.method public abstract y()I
-.end method
-
-.method public abstract z()I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

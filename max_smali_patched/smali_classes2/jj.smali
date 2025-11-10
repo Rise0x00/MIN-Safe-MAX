@@ -4,169 +4,173 @@
 
 
 # instance fields
-.field public a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Lei;
 
-.field public b:Ljava/util/HashMap;
+.field public final b:Lgr4;
+
+.field public final c:Lqi;
+
+.field public final d:Ly53;
+
+.field public final e:Ljh9;
+
+.field public final f:Landroid/os/HandlerThread;
+
+.field public final g:Landroid/os/Handler;
+
+.field public final h:Landroid/os/HandlerThread;
+
+.field public final i:Ljava/util/HashMap;
+
+.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public final k:Ljava/util/HashMap;
+
+.field public final l:Ljava/util/LinkedHashSet;
+
+.field public final m:Landroid/graphics/Point;
+
+.field public final n:Lcwc;
+
+.field public final o:Lzf1;
+
+.field public volatile p:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lei;Lgr4;Lqi;Lorg/webrtc/EglBase;Ly53;Ljh9;)V
     .locals 1
 
-    const-class v0, Ljj;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lxxc;->a(Ljava/lang/Class;)Ll53;
+    iput-object p1, p0, Ljj;->a:Lei;
 
-    move-result-object v0
+    iput-object p2, p0, Ljj;->b:Lgr4;
 
-    invoke-virtual {v0}, Ll53;->b()Ljava/lang/String;
+    iput-object p3, p0, Ljj;->c:Lqi;
+
+    iput-object p5, p0, Ljj;->d:Ly53;
+
+    iput-object p6, p0, Ljj;->e:Ljh9;
+
+    new-instance p2, Landroid/os/HandlerThread;
+
+    const-string p3, "AniRDControl"
+
+    invoke-direct {p2, p3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object p2, p0, Ljj;->f:Landroid/os/HandlerThread;
+
+    new-instance p3, Landroid/os/HandlerThread;
+
+    const-string p5, "AniRDOutput"
+
+    invoke-direct {p3, p5}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object p3, p0, Ljj;->h:Landroid/os/HandlerThread;
+
+    new-instance p5, Ljava/util/HashMap;
+
+    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p5, p0, Ljj;->i:Ljava/util/HashMap;
+
+    new-instance p5, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p5}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p5, p0, Ljj;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p5, Ljava/util/HashMap;
+
+    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p5, p0, Ljj;->k:Ljava/util/HashMap;
+
+    new-instance p5, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p5}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object p5, p0, Ljj;->l:Ljava/util/LinkedHashSet;
+
+    new-instance p5, Landroid/graphics/Point;
+
+    invoke-direct {p5}, Landroid/graphics/Point;-><init>()V
+
+    iput-object p5, p0, Ljj;->m:Landroid/graphics/Point;
+
+    iget-object p1, p1, Lei;->b:Lcwc;
+
+    iput-object p1, p0, Ljj;->n:Lcwc;
+
+    new-instance p5, Lzf1;
+
+    invoke-interface {p4}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
+
+    move-result-object p4
+
+    sget-object p6, Lorg/webrtc/EglBase;->CONFIG_PLAIN:[I
+
+    const-string v0, "CallOpenGLAnimoji"
+
+    invoke-direct {p5, p1, p4, p6, v0}, Lzf1;-><init>(Lcwc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
+
+    iput-object p5, p0, Ljj;->o:Lzf1;
+
+    invoke-virtual {p2}, Ljava/lang/Thread;->start()V
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Ljj;->g:Landroid/os/Handler;
+
+    invoke-virtual {p3}, Ljava/lang/Thread;->start()V
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;)Ljava/util/List;
-    .locals 8
+.method public final a(Ljava/lang/Integer;Lsh1;[F)V
+    .locals 0
 
-    iget-object v0, p0, Ljj;->b:Ljava/util/HashMap;
+    if-eqz p2, :cond_0
 
-    instance-of v1, p1, Landroid/text/Spanned;
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_3
+    invoke-virtual {p0, p2}, Ljj;->b(Lsh1;)Lkj;
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+    return-void
+.end method
 
-    move-result v1
+.method public final b(Lsh1;)Lkj;
+    .locals 1
 
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Ljj;->i:Ljava/util/HashMap;
 
-    goto :goto_3
-
-    :cond_1
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    :try_start_0
-    instance-of v5, p1, Landroid/text/Spanned;
-
-    if-eqz v5, :cond_2
-
-    move-object v5, p1
-
-    check-cast v5, Landroid/text/Spanned;
-
-    goto :goto_0
-
-    :cond_2
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    const-class v6, Lnxf;
-
-    invoke-interface {v5, v3, v2, v6}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    :cond_3
-    check-cast v4, [Lnxf;
-
-    if-eqz v4, :cond_5
-
-    array-length v2, v4
-
-    :goto_1
-    if-ge v3, v2, :cond_5
-
-    aget-object v5, v4, v3
-
-    :try_start_1
-    move-object v6, p1
-
-    check-cast v6, Landroid/text/Spanned;
-
-    invoke-interface {v6, v5}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v6
-
-    move-object v7, p1
-
-    check-cast v7, Landroid/text/Spanned;
-
-    invoke-interface {v7, v5}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v5
-
-    invoke-interface {p1, v6, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-nez v5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v5, Ljava/lang/ClassCastException;
-
-    invoke-direct {v5}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v5
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    new-instance p1, Lmz4;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, v0}, Lmz4;-><init>(I)V
-
-    invoke-static {v1, p1}, Le93;->C0(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lkj;
 
-    :cond_6
-    :goto_3
-    sget-object p1, Lb75;->a:Lb75;
+    iget-object p1, p0, Ljj;->c:Lqi;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
 
     return-object p1
 .end method

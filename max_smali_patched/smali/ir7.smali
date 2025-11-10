@@ -1,147 +1,256 @@
-.class public final Lir7;
+.class public abstract Lir7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyr7;
-
 
 # instance fields
-.field public final a:Lbf4;
+.field public a:I
 
-.field public final b:Lcs7;
-
-
-# direct methods
-.method public constructor <init>(Lcs7;Lbf4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lir7;->b:Lcs7;
-
-    iput-object p2, p0, Lir7;->a:Lbf4;
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public onDestroy(Lcs7;)V
-    .locals 5
-    .annotation runtime Llfa;
-        value = .enum Ldr7;->ON_DESTROY:Ldr7;
-    .end annotation
+.method public abstract a()Ljava/lang/String;
+.end method
 
-    iget-object v0, p0, Lir7;->a:Lbf4;
+.method public final b()Z
+    .locals 2
 
-    iget-object v1, v0, Lbf4;->a:Ljava/lang/Object;
+    iget v0, p0, Lir7;->a:I
 
-    monitor-enter v1
+    const/4 v1, 0x1
 
-    :try_start_0
-    invoke-virtual {v0, p1}, Lbf4;->f(Lcs7;)Lir7;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v2
+    return v1
 
-    if-nez v2, :cond_0
+    :cond_0
+    const/4 v0, 0x0
 
-    monitor-exit v1
+    return v0
+.end method
 
-    return-void
+.method public final c()Z
+    .locals 2
 
-    :catchall_0
-    move-exception p1
+    iget v0, p0, Lir7;->a:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget v0, p0, Lir7;->a:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lir7;->a:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    const-string v0, "?"
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "Object"
+
+    return-object v0
+
+    :cond_1
+    const-string v0, "Array"
+
+    return-object v0
+
+    :cond_2
+    const-string v0, "root"
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 10
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iget v1, p0, Lir7;->a:I
+
+    if-eqz v1, :cond_7
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v1, v3, :cond_5
+
+    const/16 v1, 0x7b
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lir7;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    const/16 v3, 0x22
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    sget-object v4, Ll92;->h:[I
+
+    array-length v5, v4
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    :goto_0
+    if-ge v2, v6, :cond_3
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v7
+
+    if-ge v7, v5, :cond_2
+
+    aget v8, v4, v7
+
+    if-nez v8, :cond_0
 
     goto :goto_1
 
     :cond_0
-    invoke-virtual {v0, p1}, Lbf4;->m(Lcs7;)V
+    const/16 v8, 0x5c
 
-    iget-object p1, v0, Lbf4;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/util/HashMap;
+    aget v8, v4, v7
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-gez v8, :cond_1
 
-    move-result-object p1
+    const-string v8, "u00"
 
-    check-cast p1, Ljava/util/Set;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    sget-object v8, Ll92;->a:[C
 
-    move-result-object p1
+    shr-int/lit8 v9, v7, 0x4
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    aget-char v9, v8, v9
 
-    move-result v3
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_1
+    and-int/lit8 v7, v7, 0xf
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aget-char v7, v8, v7
 
-    move-result-object v3
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    check-cast v3, Lja0;
+    goto :goto_2
 
-    iget-object v4, v0, Lbf4;->b:Ljava/lang/Object;
+    :cond_1
+    int-to-char v7, v8
 
-    check-cast v4, Ljava/util/HashMap;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    iget-object p1, v0, Lbf4;->c:Ljava/lang/Object;
+    :cond_3
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/util/HashMap;
+    goto :goto_3
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_4
+    const/16 v1, 0x3f
 
-    iget-object p1, v2, Lir7;->b:Lcs7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lcs7;->L()Les7;
+    :goto_3
+    const/16 v1, 0x7d
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v2}, Les7;->f(Lyr7;)V
+    goto :goto_5
 
-    monitor-exit v1
+    :cond_5
+    const/16 v1, 0x5b
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v1, p0, Lir7;->b:I
 
-    throw p1
-.end method
+    if-gez v1, :cond_6
 
-.method public onStart(Lcs7;)V
-    .locals 1
-    .annotation runtime Llfa;
-        value = .enum Ldr7;->ON_START:Ldr7;
-    .end annotation
+    goto :goto_4
 
-    iget-object v0, p0, Lir7;->a:Lbf4;
+    :cond_6
+    move v2, v1
 
-    invoke-virtual {v0, p1}, Lbf4;->l(Lcs7;)V
+    :goto_4
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const/16 v1, 0x5d
 
-.method public onStop(Lcs7;)V
-    .locals 1
-    .annotation runtime Llfa;
-        value = .enum Ldr7;->ON_STOP:Ldr7;
-    .end annotation
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lir7;->a:Lbf4;
+    goto :goto_5
 
-    invoke-virtual {v0, p1}, Lbf4;->m(Lcs7;)V
+    :cond_7
+    const-string v1, "/"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

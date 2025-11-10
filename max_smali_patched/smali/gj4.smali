@@ -3,132 +3,189 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lend;
+.implements Lf0d;
 
 
 # instance fields
-.field public final synthetic a:Lhj4;
+.field public final synthetic a:I
+
+.field public b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhj4;)V
+.method public constructor <init>(I)V
     .locals 0
+
+    iput p1, p0, Lgj4;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgj4;->a:Lhj4;
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgj4;->b:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static a(Lkji;)Lej4;
+    .locals 3
+
+    new-instance v0, Lmxb;
+
+    const/16 v1, 0x14
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lmxb;-><init>(IB)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Ljava/util/HashMap;
+
+    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final b()Z
+.method public E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object p1, p0, Lgj4;->b:Ljava/lang/Object;
+
+    if-eqz p1, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Property "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p2}, Lpr7;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " should be initialized before get."
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+    .locals 0
+
+    iput-object p3, p0, Lgj4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public b(Los8;)Ln25;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p1, Los8;->b:Lis8;
 
-    return v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p1, Los8;->b:Lis8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Ln25;->a:Lk25;
+
+    return-object p1
 .end method
 
-.method public final e(J)Lcnd;
-    .locals 13
+.method public toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lgj4;->a:Lhj4;
+    iget v0, p0, Lgj4;->a:I
 
-    iget-object v1, v0, Lhj4;->B0:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Ldxe;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget v1, v1, Ldxe;->f:I
+    move-result-object v0
 
-    int-to-long v1, v1
+    return-object v0
 
-    mul-long/2addr v1, p1
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-wide/32 v3, 0xf4240
+    const-string v1, "NotNullProperty("
 
-    div-long/2addr v1, v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v3, v0, Lhj4;->b:J
+    iget-object v1, p0, Lgj4;->b:Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    if-eqz v1, :cond_0
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-wide v5, v0, Lhj4;->c:J
+    const-string v2, "value="
 
-    sub-long v7, v5, v3
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    iget-object v2, p0, Lgj4;->b:Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object v1
-
-    iget-wide v7, v0, Lhj4;->X:J
-
-    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+    goto :goto_0
 
-    move-result-wide v1
+    :cond_0
+    const-string v1, "value not initialized yet"
 
-    add-long/2addr v1, v3
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v3, 0x7530
+    const/16 v1, 0x29
 
-    sub-long v7, v1, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-wide v9, v0, Lhj4;->b:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-wide/16 v0, 0x1
+    move-result-object v0
 
-    sub-long v11, v5, v0
+    return-object v0
 
-    invoke-static/range {v7 .. v12}, Lt4g;->j(JJJ)J
+    nop
 
-    move-result-wide v0
-
-    new-instance v2, Lcnd;
-
-    new-instance v3, Lind;
-
-    invoke-direct {v3, p1, p2, v0, v1}, Lind;-><init>(JJ)V
-
-    invoke-direct {v2, v3, v3}, Lcnd;-><init>(Lind;Lind;)V
-
-    return-object v2
-.end method
-
-.method public final f()J
-    .locals 6
-
-    iget-object v0, p0, Lgj4;->a:Lhj4;
-
-    iget-object v1, v0, Lhj4;->B0:Ljava/lang/Object;
-
-    check-cast v1, Ldxe;
-
-    iget-wide v2, v0, Lhj4;->X:J
-
-    const-wide/32 v4, 0xf4240
-
-    mul-long/2addr v2, v4
-
-    iget v0, v1, Ldxe;->f:I
-
-    int-to-long v0, v0
-
-    div-long/2addr v2, v0
-
-    return-wide v2
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -6,29 +6,29 @@
 # static fields
 .field public static final j:J
 
-.field public static k:Lwwc;
+.field public static k:Luxe;
 
-.field public static l:Lr6c;
+.field public static l:Lzec;
 
 .field public static m:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
 
 # instance fields
-.field public final a:Lns5;
+.field public final a:Lsw5;
 
 .field public final b:Landroid/content/Context;
 
-.field public final c:Lo36;
+.field public final c:Lu30;
 
-.field public final d:Lw7b;
+.field public final d:Lgr4;
 
-.field public final e:Lmd6;
+.field public final e:Lph6;
 
 .field public final f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
 .field public final g:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public final h:Lpfg;
+.field public final h:Ljtg;
 
 .field public i:Z
 
@@ -47,65 +47,85 @@
 
     sput-wide v0, Lcom/google/firebase/messaging/FirebaseMessaging;->j:J
 
-    new-instance v0, Lyf3;
+    new-instance v0, Lxh3;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, v1}, Lyf3;-><init>(I)V
+    invoke-direct {v0, v1}, Lxh3;-><init>(I)V
 
-    sput-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lr6c;
+    sput-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lzec;
 
     return-void
 .end method
 
-.method public constructor <init>(Lns5;Lr6c;Lr6c;Lss5;Lr6c;Ldze;)V
+.method public constructor <init>(Lsw5;Lzec;Lzec;Lww5;Lzec;Ldcf;)V
     .locals 18
 
     move-object/from16 v0, p0
 
-    move-object/from16 v2, p1
+    move-object/from16 v1, p1
 
-    new-instance v3, Lpfg;
+    new-instance v2, Ljtg;
 
-    invoke-virtual {v2}, Lns5;->a()V
+    invoke-virtual {v1}, Lsw5;->a()V
 
-    iget-object v7, v2, Lns5;->a:Landroid/content/Context;
+    iget-object v3, v1, Lsw5;->a:Landroid/content/Context;
 
-    invoke-direct {v3, v7}, Lpfg;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Ljtg;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lo36;
+    new-instance v4, Lu30;
 
-    move-object/from16 v4, p2
+    new-instance v5, Lfjd;
+
+    invoke-virtual {v1}, Lsw5;->a()V
+
+    iget-object v6, v1, Lsw5;->a:Landroid/content/Context;
+
+    invoke-direct {v5, v6}, Lfjd;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v4, Lu30;->b:Ljava/lang/Object;
+
+    iput-object v2, v4, Lu30;->c:Ljava/lang/Object;
+
+    iput-object v5, v4, Lu30;->a:Ljava/lang/Object;
+
+    move-object/from16 v5, p2
+
+    iput-object v5, v4, Lu30;->d:Ljava/lang/Object;
 
     move-object/from16 v5, p3
 
-    move-object/from16 v6, p4
+    iput-object v5, v4, Lu30;->e:Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v6}, Lo36;-><init>(Lns5;Lpfg;Lr6c;Lr6c;Lss5;)V
+    move-object/from16 v5, p4
 
-    new-instance v4, Llx9;
+    iput-object v5, v4, Lu30;->f:Ljava/lang/Object;
 
-    const-string v5, "Firebase-Messaging-Task"
+    new-instance v5, Lw94;
 
-    const/4 v6, 0x0
+    const-string v6, "Firebase-Messaging-Task"
 
-    invoke-direct {v4, v5, v6}, Llx9;-><init>(Ljava/lang/String;I)V
+    const/4 v7, 0x2
 
-    invoke-static {v4}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+    invoke-direct {v5, v6, v7}, Lw94;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v4
+    invoke-static {v5}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
-    new-instance v5, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    move-result-object v5
 
-    new-instance v8, Llx9;
+    new-instance v6, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    new-instance v8, Lw94;
 
     const-string v9, "Firebase-Messaging-Init"
 
-    invoke-direct {v8, v9, v6}, Llx9;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v8, v9, v7}, Lw94;-><init>(Ljava/lang/String;I)V
 
     const/4 v9, 0x1
 
-    invoke-direct {v5, v9, v8}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+    invoke-direct {v6, v9, v8}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
 
     new-instance v10, Ljava/util/concurrent/ThreadPoolExecutor;
 
@@ -115,11 +135,11 @@
 
     invoke-direct/range {v16 .. v16}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    new-instance v8, Llx9;
+    new-instance v8, Lw94;
 
     const-string v11, "Firebase-Messaging-File-Io"
 
-    invoke-direct {v8, v11, v6}, Llx9;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v8, v11, v7}, Lw94;-><init>(Ljava/lang/String;I)V
 
     const/4 v11, 0x0
 
@@ -133,135 +153,135 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v6, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
+    const/4 v8, 0x0
 
-    sput-object p5, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lr6c;
+    iput-boolean v8, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
 
-    iput-object v2, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lns5;
+    sput-object p5, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lzec;
 
-    new-instance v8, Lmd6;
+    iput-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lsw5;
 
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+    new-instance v11, Lph6;
 
-    iput-object v0, v8, Lmd6;->o:Ljava/lang/Object;
+    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v11, p6
+    iput-object v0, v11, Lph6;->d:Ljava/lang/Object;
 
-    iput-object v11, v8, Lmd6;->b:Ljava/lang/Object;
+    move-object/from16 v12, p6
 
-    iput-object v8, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lmd6;
+    iput-object v12, v11, Lph6;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lns5;->a()V
+    iput-object v11, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lph6;
 
-    iget-object v8, v2, Lns5;->a:Landroid/content/Context;
+    invoke-virtual {v1}, Lsw5;->a()V
 
-    iput-object v8, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    iget-object v11, v1, Lsw5;->a:Landroid/content/Context;
 
-    new-instance v11, Ldm5;
+    iput-object v11, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
 
-    invoke-direct {v11}, Ldm5;-><init>()V
+    new-instance v12, Laq5;
 
-    iput-object v3, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->h:Lpfg;
+    invoke-direct {v12}, Laq5;-><init>()V
 
-    iput-object v1, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lo36;
+    iput-object v2, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->h:Ljtg;
 
-    new-instance v12, Lw7b;
+    iput-object v4, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lu30;
 
-    invoke-direct {v12, v4}, Lw7b;-><init>(Ljava/util/concurrent/ExecutorService;)V
+    new-instance v13, Lgr4;
 
-    iput-object v12, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->d:Lw7b;
+    invoke-direct {v13, v5}, Lgr4;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
-    iput-object v5, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    iput-object v13, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->d:Lgr4;
+
+    iput-object v6, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
     iput-object v10, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->g:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    invoke-virtual {v2}, Lns5;->a()V
+    invoke-virtual {v1}, Lsw5;->a()V
 
-    instance-of v2, v7, Landroid/app/Application;
+    instance-of v1, v3, Landroid/app/Application;
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    check-cast v7, Landroid/app/Application;
+    check-cast v3, Landroid/app/Application;
 
-    invoke-virtual {v7, v11}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+    invoke-virtual {v3, v12}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v4, "Context "
+    const-string v5, "Context "
 
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, " was not an application, can\'t register for lifecycle callbacks. Some notification events may be dropped as a result."
+    const-string v3, " was not an application, can\'t register for lifecycle callbacks. Some notification events may be dropped as a result."
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "FirebaseMessaging"
-
-    invoke-static {v4, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_0
-    new-instance v2, Lus5;
-
-    invoke-direct {v2, v0, v6}, Lus5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
-
-    invoke-virtual {v5, v2}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-
-    new-instance v2, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    new-instance v4, Llx9;
-
-    const-string v7, "Firebase-Messaging-Topics-Io"
-
-    invoke-direct {v4, v7, v6}, Llx9;-><init>(Ljava/lang/String;I)V
-
-    invoke-direct {v2, v9, v4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sget v4, Ltlf;->j:I
-
-    new-instance v4, Lslf;
-
-    move-object/from16 p4, v0
-
-    move-object/from16 p6, v1
-
-    move-object/from16 p3, v2
-
-    move-object/from16 p5, v3
-
-    move-object/from16 p1, v4
-
-    move-object/from16 p2, v8
-
-    invoke-direct/range {p1 .. p6}, Lslf;-><init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;Lcom/google/firebase/messaging/FirebaseMessaging;Lpfg;Lo36;)V
-
-    move-object/from16 v2, p1
-
-    move-object/from16 v1, p3
-
-    invoke-static {v2, v1}, Lud6;->g(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lvmh;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lvs5;
+    const-string v3, "FirebaseMessaging"
 
-    invoke-direct {v2, v0, v6}, Lvs5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v5, v2}, Lvmh;->d(Ljava/util/concurrent/Executor;Lsfa;)Lvmh;
+    :goto_0
+    new-instance v1, Lyw5;
 
-    new-instance v1, Lus5;
+    invoke-direct {v1, v0, v8}, Lyw5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
 
-    invoke-direct {v1, v0, v9}, Lus5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    invoke-virtual {v6, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v5, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    new-instance v1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    new-instance v3, Lw94;
+
+    const-string v5, "Firebase-Messaging-Topics-Io"
+
+    invoke-direct {v3, v5, v7}, Lw94;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v1, v9, v3}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    sget v3, Lgzf;->j:I
+
+    new-instance v3, Lfzf;
+
+    move-object/from16 p4, v0
+
+    move-object/from16 p3, v1
+
+    move-object/from16 p5, v2
+
+    move-object/from16 p1, v3
+
+    move-object/from16 p6, v4
+
+    move-object/from16 p2, v11
+
+    invoke-direct/range {p1 .. p6}, Lfzf;-><init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;Lcom/google/firebase/messaging/FirebaseMessaging;Ljtg;Lu30;)V
+
+    move-object/from16 v2, p1
+
+    invoke-static {v2, v1}, Lby9;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lj1j;
+
+    move-result-object v1
+
+    new-instance v2, Lzw5;
+
+    invoke-direct {v2, v0, v8}, Lzw5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+
+    invoke-virtual {v1, v6, v2}, Lj1j;->d(Ljava/util/concurrent/Executor;Lena;)Lj1j;
+
+    new-instance v1, Lyw5;
+
+    invoke-direct {v1, v0, v9}, Lyw5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+
+    invoke-virtual {v6, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -280,13 +300,13 @@
 
     new-instance v1, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    new-instance v2, Llx9;
+    new-instance v2, Lw94;
 
     const-string v3, "TAG"
 
-    const/4 v4, 0x0
+    const/4 v4, 0x2
 
-    invoke-direct {v2, v3, v4}, Llx9;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v2, v3, v4}, Lw94;-><init>(Ljava/lang/String;I)V
 
     const/4 v3, 0x1
 
@@ -321,7 +341,7 @@
     throw p0
 .end method
 
-.method public static declared-synchronized c(Landroid/content/Context;)Lwwc;
+.method public static declared-synchronized c(Landroid/content/Context;)Luxe;
     .locals 2
 
     const-class v0, Lcom/google/firebase/messaging/FirebaseMessaging;
@@ -329,15 +349,15 @@
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Lwwc;
+    sget-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Luxe;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lwwc;
+    new-instance v1, Luxe;
 
-    invoke-direct {v1, p0}, Lwwc;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Luxe;-><init>(Landroid/content/Context;)V
 
-    sput-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Lwwc;
+    sput-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Luxe;
 
     goto :goto_0
 
@@ -348,7 +368,7 @@
 
     :cond_0
     :goto_0
-    sget-object p0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Lwwc;
+    sget-object p0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Luxe;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -365,7 +385,7 @@
     throw p0
 .end method
 
-.method public static declared-synchronized getInstance(Lns5;)Lcom/google/firebase/messaging/FirebaseMessaging;
+.method public static declared-synchronized getInstance(Lsw5;)Lcom/google/firebase/messaging/FirebaseMessaging;
     .locals 2
     .annotation build Landroidx/annotation/Keep;
     .end annotation
@@ -377,11 +397,11 @@
     :try_start_0
     const-class v1, Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    invoke-virtual {p0}, Lns5;->a()V
+    invoke-virtual {p0}, Lsw5;->a()V
 
-    iget-object p0, p0, Lns5;->d:Lag3;
+    iget-object p0, p0, Lsw5;->d:Lzh3;
 
-    invoke-interface {p0, v1}, Luf3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p0, v1}, Lsh3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -389,7 +409,7 @@
 
     const-string v1, "Firebase Messaging component is not present"
 
-    invoke-static {p0, v1}, Lhv0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lkui;->h(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -413,28 +433,28 @@
 .method public final a()Ljava/lang/String;
     .locals 7
 
-    invoke-virtual {p0}, Lcom/google/firebase/messaging/FirebaseMessaging;->e()Lwwe;
+    invoke-virtual {p0}, Lcom/google/firebase/messaging/FirebaseMessaging;->e()Lh9f;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->i(Lwwe;)Z
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->i(Lh9f;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    iget-object v0, v0, Lwwe;->a:Ljava/lang/String;
+    iget-object v0, v0, Lh9f;->a:Ljava/lang/String;
 
     return-object v0
 
     :cond_0
-    iget-object v1, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lns5;
+    iget-object v1, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lsw5;
 
-    invoke-static {v1}, Lpfg;->h(Lns5;)Ljava/lang/String;
+    invoke-static {v1}, Ljtg;->b(Lsw5;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->d:Lw7b;
+    iget-object v2, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->d:Lgr4;
 
     const-string v3, "Making new request for: "
 
@@ -443,11 +463,11 @@
     monitor-enter v2
 
     :try_start_0
-    iget-object v5, v2, Lw7b;->c:Ljava/lang/Object;
+    iget-object v5, v2, Lgr4;->c:Ljava/lang/Object;
 
-    check-cast v5, Lds;
+    check-cast v5, Lbt;
 
-    invoke-virtual {v5, v1}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v1}, Llpe;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -519,13 +539,13 @@
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    iget-object v3, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lo36;
+    iget-object v3, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lu30;
 
-    iget-object v4, v3, Lo36;->a:Ljava/lang/Object;
+    iget-object v4, v3, Lu30;->b:Ljava/lang/Object;
 
-    check-cast v4, Lns5;
+    check-cast v4, Lsw5;
 
-    invoke-static {v4}, Lpfg;->h(Lns5;)Ljava/lang/String;
+    invoke-static {v4}, Ljtg;->b(Lsw5;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -535,45 +555,43 @@
 
     invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v3, v4, v5, v6}, Lo36;->k(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lvmh;
+    invoke-virtual {v3, v4, v5, v6}, Lu30;->m(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lj1j;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lo36;->c(Lvmh;)Lvmh;
+    invoke-virtual {v3, v4}, Lu30;->c(Lj1j;)Lj1j;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->g:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    new-instance v5, Lb00;
+    new-instance v5, Lul;
 
-    const/16 v6, 0x8
+    invoke-direct {v5, p0, v1, v0}, Lul;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Ljava/lang/String;Lh9f;)V
 
-    invoke-direct {v5, p0, v1, v0, v6}, Lb00;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v3, v4, v5}, Lvmh;->l(Ljava/util/concurrent/Executor;Lb0f;)Lvmh;
+    invoke-virtual {v3, v4, v5}, Lj1j;->m(Ljava/util/concurrent/Executor;Lbdf;)Lj1j;
 
     move-result-object v0
 
-    iget-object v3, v2, Lw7b;->b:Ljava/lang/Object;
+    iget-object v3, v2, Lgr4;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/concurrent/Executor;
 
-    new-instance v4, Lbv8;
+    new-instance v4, Lin9;
 
-    const/16 v5, 0x18
+    const/16 v5, 0x12
 
-    invoke-direct {v4, v2, v5, v1}, Lbv8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, v2, v5, v1}, Lin9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v3, v4}, Lvmh;->k(Ljava/util/concurrent/Executor;Llz3;)Lvmh;
+    invoke-virtual {v0, v3, v4}, Lj1j;->l(Ljava/util/concurrent/Executor;Ln14;)Lj1j;
 
     move-result-object v5
 
-    iget-object v0, v2, Lw7b;->c:Ljava/lang/Object;
+    iget-object v0, v2, Lgr4;->c:Ljava/lang/Object;
 
-    check-cast v0, Lds;
+    check-cast v0, Lbt;
 
-    invoke-virtual {v0, v1, v5}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v5}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -581,7 +599,7 @@
 
     :goto_1
     :try_start_2
-    invoke-static {v5}, Lud6;->e(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+    invoke-static {v5}, Lby9;->a(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -619,11 +637,11 @@
 .method public final d()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lns5;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lsw5;
 
-    invoke-virtual {v0}, Lns5;->a()V
+    invoke-virtual {v0}, Lsw5;->a()V
 
-    iget-object v1, v0, Lns5;->b:Ljava/lang/String;
+    iget-object v1, v0, Lsw5;->b:Ljava/lang/String;
 
     const-string v2, "[DEFAULT]"
 
@@ -638,19 +656,19 @@
     return-object v0
 
     :cond_0
-    invoke-virtual {v0}, Lns5;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lsw5;->c()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final e()Lwwe;
+.method public final e()Lh9f;
     .locals 4
 
     iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->c(Landroid/content/Context;)Lwwc;
+    invoke-static {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->c(Landroid/content/Context;)Luxe;
 
     move-result-object v0
 
@@ -658,20 +676,20 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lns5;
+    iget-object v2, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lsw5;
 
-    invoke-static {v2}, Lpfg;->h(Lns5;)Ljava/lang/String;
+    invoke-static {v2}, Ljtg;->b(Lsw5;)Ljava/lang/String;
 
     move-result-object v2
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v3, v0, Lwwc;->b:Ljava/lang/Object;
+    iget-object v3, v0, Luxe;->b:Ljava/lang/Object;
 
     check-cast v3, Landroid/content/SharedPreferences;
 
-    invoke-static {v1, v2}, Lwwc;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Luxe;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -681,7 +699,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lwwe;->b(Ljava/lang/String;)Lwwe;
+    invoke-static {v1}, Lh9f;->b(Ljava/lang/String;)Lh9f;
 
     move-result-object v1
     :try_end_0
@@ -705,15 +723,15 @@
 .method public final f()V
     .locals 6
 
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lo36;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->c:Lu30;
 
-    iget-object v0, v0, Lo36;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lu30;->a:Ljava/lang/Object;
 
-    check-cast v0, Lp8d;
+    check-cast v0, Lfjd;
 
-    iget-object v1, v0, Lp8d;->c:Lfea;
+    iget-object v1, v0, Lfjd;->c:Lola;
 
-    invoke-virtual {v1}, Lfea;->h()I
+    invoke-virtual {v1}, Lola;->h()I
 
     move-result v1
 
@@ -721,24 +739,24 @@
 
     if-lt v1, v2, :cond_0
 
-    iget-object v0, v0, Lp8d;->b:Landroid/content/Context;
+    iget-object v0, v0, Lfjd;->b:Landroid/content/Context;
 
-    invoke-static {v0}, Lomh;->c(Landroid/content/Context;)Lomh;
+    invoke-static {v0}, Lc0j;->d(Landroid/content/Context;)Lc0j;
 
     move-result-object v0
 
     sget-object v1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    new-instance v2, Lamh;
+    new-instance v2, Ltvi;
 
     monitor-enter v0
 
     :try_start_0
-    iget v3, v0, Lomh;->a:I
+    iget v3, v0, Lc0j;->b:I
 
     add-int/lit8 v4, v3, 0x1
 
-    iput v4, v0, Lomh;->a:I
+    iput v4, v0, Lc0j;->b:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -748,17 +766,17 @@
 
     const/4 v5, 0x5
 
-    invoke-direct {v2, v3, v5, v1, v4}, Lamh;-><init>(IILandroid/os/Bundle;I)V
+    invoke-direct {v2, v3, v5, v1, v4}, Ltvi;-><init>(IILandroid/os/Bundle;I)V
 
-    invoke-virtual {v0, v2}, Lomh;->d(Lamh;)Lvmh;
+    invoke-virtual {v0, v2}, Lc0j;->e(Ltvi;)Lj1j;
 
     move-result-object v0
 
-    sget-object v1, Lgr4;->o:Lgr4;
+    sget-object v1, Lnu4;->d:Lnu4;
 
-    sget-object v2, Lj2a;->y0:Lj2a;
+    sget-object v2, Lbp6;->X:Lbp6;
 
-    invoke-virtual {v0, v1, v2}, Lvmh;->j(Ljava/util/concurrent/Executor;Llz3;)Lvmh;
+    invoke-virtual {v0, v1, v2}, Lj1j;->k(Ljava/util/concurrent/Executor;Ln14;)Lj1j;
 
     move-result-object v0
 
@@ -781,20 +799,20 @@
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lud6;->o(Ljava/lang/Exception;)Lvmh;
+    invoke-static {v0}, Lby9;->d(Ljava/lang/Exception;)Lj1j;
 
     move-result-object v0
 
     :goto_0
     iget-object v1, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    new-instance v2, Lvs5;
+    new-instance v2, Lzw5;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p0, v3}, Lvs5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    invoke-direct {v2, p0, v3}, Lzw5;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
 
-    invoke-virtual {v0, v1, v2}, Lvmh;->d(Ljava/util/concurrent/Executor;Lsfa;)Lvmh;
+    invoke-virtual {v0, v1, v2}, Lj1j;->d(Ljava/util/concurrent/Executor;Lena;)Lj1j;
 
     return-void
 .end method
@@ -804,7 +822,7 @@
 
     iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
 
-    invoke-static {v0}, Lox9;->z(Landroid/content/Context;)V
+    invoke-static {v0}, Lnvi;->c(Landroid/content/Context;)V
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -838,7 +856,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    invoke-static {v0}, Lqx4;->k(Landroid/app/NotificationManager;)Ljava/lang/String;
+    invoke-static {v0}, Ld15;->k(Landroid/app/NotificationManager;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -861,15 +879,15 @@
     invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lns5;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->a:Lsw5;
 
-    invoke-virtual {v0}, Lns5;->a()V
+    invoke-virtual {v0}, Lsw5;->a()V
 
-    iget-object v0, v0, Lns5;->d:Lag3;
+    iget-object v0, v0, Lsw5;->d:Lzh3;
 
-    const-class v1, Lsc;
+    const-class v1, Ljd;
 
-    invoke-interface {v0, v1}, Luf3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lsh3;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -878,13 +896,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lhxf;->m()Z
+    invoke-static {}, Lgli;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lr6c;
+    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->l:Lzec;
 
     if-eqz v0, :cond_4
 
@@ -951,9 +969,9 @@
 
     move-result-wide v0
 
-    new-instance v2, Lo83;
+    new-instance v2, Lmif;
 
-    invoke-direct {v2, p0, v0, v1}, Lo83;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;J)V
+    invoke-direct {v2, p0, v0, v1}, Lmif;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;J)V
 
     invoke-static {v2, p1, p2}, Lcom/google/firebase/messaging/FirebaseMessaging;->b(Ljava/lang/Runnable;J)V
 
@@ -978,14 +996,14 @@
     throw p1
 .end method
 
-.method public final i(Lwwe;)Z
+.method public final i(Lh9f;)Z
     .locals 7
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->h:Lpfg;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->h:Ljtg;
 
-    invoke-virtual {v0}, Lpfg;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Ljtg;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -993,9 +1011,9 @@
 
     move-result-wide v1
 
-    iget-wide v3, p1, Lwwe;->c:J
+    iget-wide v3, p1, Lh9f;->c:J
 
-    sget-wide v5, Lwwe;->d:J
+    sget-wide v5, Lh9f;->d:J
 
     add-long/2addr v3, v5
 
@@ -1003,7 +1021,7 @@
 
     if-gtz v1, :cond_1
 
-    iget-object p1, p1, Lwwe;->b:Ljava/lang/String;
+    iget-object p1, p1, Lh9f;->b:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

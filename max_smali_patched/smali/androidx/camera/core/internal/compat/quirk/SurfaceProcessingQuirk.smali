@@ -3,16 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt9c;
+.implements Lgjc;
 
 
 # direct methods
-.method public static d(Lot6;)Z
+.method public static d(Lnx6;)Z
     .locals 1
 
     const-class v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
-    invoke-virtual {p0, v0}, Lot6;->f(Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {p0, v0}, Lnx6;->g(Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p0
 

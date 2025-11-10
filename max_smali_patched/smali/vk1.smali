@@ -1,94 +1,48 @@
 .class public final Lvk1;
-.super Lgl1;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public final D:Lch1;
+.field public final synthetic X:Lng0;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lch1;)V
+.method public constructor <init>(Lng0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Lgl1;-><init>()V
+    iput-object p1, p0, Lvk1;->X:Lng0;
 
-    iput-object p1, p0, Lvk1;->D:Lch1;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvk1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvk1;
-
-    iget-object v1, p0, Lvk1;->D:Lch1;
-
-    iget-object p1, p1, Lvk1;->D:Lch1;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lvk1;->D:Lch1;
+    iput-object p1, p0, Lvk1;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lch1;->hashCode()I
+    iget p1, p0, Lvk1;->o:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iput p1, p0, Lvk1;->o:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lvk1;->X:Lng0;
 
-    const-string v1, "RaiseHandDialog(participantId="
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p0}, Lng0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lvk1;->D:Lch1;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

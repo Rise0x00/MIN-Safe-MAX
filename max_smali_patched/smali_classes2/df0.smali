@@ -1,199 +1,95 @@
-.class public final Ldf0;
-.super Ljava/lang/Object;
+.class public final enum Ldf0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:[Ldf0;
+
+.field public static final synthetic d:Lce5;
+
+
 # instance fields
-.field public final a:Lcf0;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lef0;
-
-.field public final c:Lff0;
-
-.field public final d:Lgf0;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lcf0;Lef0;Lff0;Lgf0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldf0;
 
-    iput-object p1, p0, Ldf0;->a:Lcf0;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Ldf0;->b:Lef0;
+    const-string v2, "Light"
 
-    iput-object p3, p0, Ldf0;->c:Lff0;
+    const-string v3, "LIGHT"
 
-    iput-object p4, p0, Ldf0;->d:Lgf0;
+    invoke-direct {v0, v3, v1, v2, v1}, Ldf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    new-instance v1, Ldf0;
+
+    const/4 v2, 0x1
+
+    const-string v3, "Dark"
+
+    const-string v4, "DARK"
+
+    invoke-direct {v1, v4, v2, v3, v2}, Ldf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    filled-new-array {v0, v1}, [Ldf0;
+
+    move-result-object v0
+
+    sput-object v0, Ldf0;->c:[Ldf0;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ldf0;->d:Lce5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Ldf0;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    iput-boolean p4, p0, Ldf0;->b:Z
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldf0;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldf0;
-
-    iget-object v1, p0, Ldf0;->a:Lcf0;
-
-    iget-object v3, p1, Ldf0;->a:Lcf0;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ldf0;->b:Lef0;
-
-    iget-object v3, p1, Ldf0;->b:Lef0;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ldf0;->c:Lff0;
-
-    iget-object v3, p1, Ldf0;->c:Lff0;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ldf0;->d:Lgf0;
-
-    iget-object p1, p1, Ldf0;->d:Lgf0;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Ldf0;
+    .locals 1
 
-    iget-object v0, p0, Ldf0;->a:Lcf0;
+    const-class v0, Ldf0;
 
-    invoke-virtual {v0}, Lcf0;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    const/16 v1, 0x1f
+    check-cast p0, Ldf0;
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ldf0;->b:Lef0;
-
-    invoke-virtual {v2}, Lef0;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Ldf0;->c:Lff0;
-
-    iget v0, v0, Lff0;->a:I
-
-    invoke-static {v0, v2, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Ldf0;->d:Lgf0;
-
-    invoke-virtual {v1}, Lgf0;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static values()[Ldf0;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Ldf0;->c:[Ldf0;
 
-    const-string v1, "BackgroundLocalColors(chips="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldf0;->a:Lcf0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldf0;->b:Lef0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tabBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldf0;->c:Lff0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", topBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldf0;->d:Lgf0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Ldf0;
 
     return-object v0
 .end method

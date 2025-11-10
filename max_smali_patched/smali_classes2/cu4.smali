@@ -1,157 +1,163 @@
-.class public final Lcu4;
-.super Lm3f;
+.class public abstract Lcu4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public final synthetic Z:Lo10;
-
-.field public final synthetic w0:Lq49;
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p2, p0, Lcu4;->Z:Lo10;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p3, p0, Lcu4;->w0:Lq49;
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v1
+
+    const-string v2, "px"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "dip"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "sp"
+
+    const/4 v3, 0x2
+
+    const-string v4, "dp"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lmb3;->i(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "in"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-string v4, "pt"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lox1;->q(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const/4 v1, 0x5
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "mm"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sput-object v0, Lcu4;->a:Ljava/util/HashMap;
+
+    const-string v0, "^\\s*(\\d+(\\.\\d+)*)\\s*([a-zA-Z]+)\\s*$"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcu4;->b:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/String;)F
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    check-cast p1, Le34;
+    move-result-object p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p0, p1, p2}, Lcu4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    move-result-object p1
+    sget-object v0, Lcu4;->b:Ljava/util/regex/Pattern;
 
-    check-cast p1, Lcu4;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lcu4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move-result v0
 
-    new-instance p1, Lcu4;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcu4;->Z:Lo10;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lcu4;->w0:Lq49;
+    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    iget-object v2, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    move-result-object v0
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lcu4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    sget-object v0, Lf34;->a:Lf34;
+    move-result v0
 
-    iget v1, p0, Lcu4;->X:I
+    const/4 v1, 0x3
 
-    const/4 v2, 0x2
+    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    const/4 v3, 0x1
+    move-result-object p1
 
-    if-eqz v1, :cond_2
+    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    if-eq v1, v3, :cond_1
+    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    if-ne v1, v2, :cond_0
+    move-result-object p1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget-object v1, Lcu4;->a:Ljava/util/HashMap;
 
-    return-object p1
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    invoke-static {p1, v0, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/NumberFormatException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw p0
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    new-instance p0, Ljava/lang/NumberFormatException;
 
-    goto :goto_0
+    invoke-direct {p0}, Ljava/lang/NumberFormatException;-><init>()V
 
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->H0:I
-
-    iget-object v1, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    add-int/2addr p1, v3
-
-    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->H0:I
-
-    iget-object p1, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput v3, p0, Lcu4;->X:I
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    iget-object p1, p0, Lcu4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, p0, Lcu4;->Z:Lo10;
-
-    iget-object v3, p0, Lcu4;->w0:Lq49;
-
-    iput v2, p0, Lcu4;->X:I
-
-    invoke-static {p1, v1, v3, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->c(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_4
-
-    :goto_1
-    return-object v0
-
-    :cond_4
-    return-object p1
+    throw p0
 .end method

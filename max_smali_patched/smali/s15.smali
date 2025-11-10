@@ -1,404 +1,183 @@
-.class public abstract Ls15;
-.super Ljava/lang/Object;
+.class public final Ls15;
+.super Landroid/transition/Transition;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
+.field public static final synthetic c:I
 
-.field public static final b:Ljava/util/HashMap;
 
-.field public static final c:Ljava/util/HashMap;
+# instance fields
+.field public final a:Layi;
 
-.field public static final d:Ljava/util/HashMap;
-
-.field public static final e:Ljava/util/HashMap;
+.field public final b:Layi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(Layi;Layi;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p1, p0, Ls15;->a:Layi;
 
-    sput-object v0, Ls15;->a:Ljava/util/HashMap;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v1, Ls15;->b:Ljava/util/HashMap;
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v2, Ls15;->c:Ljava/util/HashMap;
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v3, Ls15;->d:Ljava/util/HashMap;
-
-    new-instance v4, Ljava/util/HashMap;
-
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v4, Ls15;->e:Ljava/util/HashMap;
-
-    const/16 v5, 0x8
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/util/HashSet;
-
-    invoke-static {v5}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v6, 0xa
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    new-instance v7, Ljava/util/HashSet;
-
-    invoke-static {v6}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v8
-
-    invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v7, 0x0
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    new-instance v8, Ljava/util/HashSet;
-
-    filled-new-array {v5, v6}, [Ljava/lang/Integer;
-
-    move-result-object v9
-
-    invoke-static {v9}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v9
-
-    invoke-direct {v8, v9}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const/4 v8, 0x1
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const/4 v9, 0x2
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const/4 v10, 0x3
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const/4 v11, 0x4
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    filled-new-array {v7, v8, v9, v10, v11}, [Ljava/lang/Integer;
-
-    move-result-object v12
-
-    invoke-static {v12}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v12
-
-    invoke-direct {v0, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v7}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v12
-
-    invoke-direct {v0, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v8, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    filled-new-array {v8, v9, v10, v11}, [Ljava/lang/Integer;
-
-    move-result-object v12
-
-    invoke-static {v12}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v12
-
-    invoke-direct {v0, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v9, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v12
-
-    invoke-direct {v0, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v10, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v9}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v12
-
-    invoke-direct {v0, v12}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v12, Ljava/util/HashSet;
-
-    invoke-static {v10}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v13
-
-    invoke-direct {v12, v13}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v0, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v12, 0x6
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    new-instance v13, Ljava/util/HashSet;
-
-    invoke-static {v11}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v14
-
-    invoke-direct {v13, v14}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v12, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2, v5, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2, v6, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v8, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v9, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v10, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sget-object v1, Lp15;->d:Lp15;
-
-    invoke-virtual {v0, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v2, Lp15;->e:Lp15;
-
-    invoke-virtual {v0, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v3, 0x1000
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v5, Lp15;->f:Lp15;
-
-    invoke-virtual {v0, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v6, 0x2000
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget-object v7, Lp15;->g:Lp15;
-
-    invoke-virtual {v0, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v10, Ljava/util/HashMap;
-
-    invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {v10, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v10, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v10, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v10, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v6, Ljava/util/HashMap;
-
-    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {v6, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v6, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v6, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v1, 0x4000
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v7, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    const/16 v2, 0x100
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget-object v3, Lp15;->h:Lp15;
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v2, 0x200
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget-object v3, Lp15;->i:Lp15;
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "video/hevc"
-
-    invoke-virtual {v4, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "video/av01"
-
-    invoke-virtual {v4, v0, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "video/x-vnd.on2.vp9"
-
-    invoke-virtual {v4, v0, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "video/dolby-vision"
-
-    invoke-virtual {v4, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p2, p0, Ls15;->b:Layi;
 
     return-void
 .end method
 
-.method public static a(Lu90;Lp15;)Z
-    .locals 3
+.method public static a(Landroid/transition/TransitionValues;)V
+    .locals 4
 
-    iget v0, p0, Lu90;->h:I
+    iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
-    iget v1, p1, Lp15;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    sget-object v2, Ls15;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Set;
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    instance-of v0, v0, Ltn6;
 
     if-eqz v0, :cond_0
 
-    iget p0, p0, Lu90;->j:I
+    iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
-    iget p1, p1, Lp15;->a:I
+    new-instance v1, Landroid/graphics/Rect;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
-    move-result-object p1
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
-    sget-object v0, Ls15;->b:Ljava/util/HashMap;
+    move-result v2
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    const/4 v3, 0x0
 
-    const/4 p0, 0x1
+    invoke-direct {v1, v3, v3, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    return p0
+    const-string p0, "draweeTransition:bounds"
+
+    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    return p0
+
+# virtual methods
+.method public final captureEndValues(Landroid/transition/TransitionValues;)V
+    .locals 0
+
+    invoke-static {p1}, Ls15;->a(Landroid/transition/TransitionValues;)V
+
+    return-void
+.end method
+
+.method public final captureStartValues(Landroid/transition/TransitionValues;)V
+    .locals 0
+
+    invoke-static {p1}, Ls15;->a(Landroid/transition/TransitionValues;)V
+
+    return-void
+.end method
+
+.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 3
+
+    const/4 p1, 0x0
+
+    if-eqz p2, :cond_3
+
+    if-nez p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    const-string v1, "draweeTransition:bounds"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    iget-object p3, p3, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_3
+
+    if-nez p3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Ls15;->a:Layi;
+
+    iget-object v2, p0, Ls15;->b:Layi;
+
+    if-ne v1, v2, :cond_2
+
+    return-object p1
+
+    :cond_2
+    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    check-cast p1, Ltn6;
+
+    new-instance p2, Lond;
+
+    invoke-direct {p2, v1, v2, v0, p3}, Lond;-><init>(Layi;Layi;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    invoke-virtual {p1}, Lt15;->getHierarchy()Lq15;
+
+    move-result-object p3
+
+    check-cast p3, Lrn6;
+
+    invoke-virtual {p3, p2}, Lrn6;->h(Lpnd;)V
+
+    const/4 p3, 0x2
+
+    new-array v0, p3, [F
+
+    fill-array-data v0, :array_0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    new-instance v1, Lvk0;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p2}, Lvk0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance p2, Lph;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, p0, p1, v1, p3}, Lph;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v0, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object v0
+
+    :cond_3
+    :goto_0
+    return-object p1
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

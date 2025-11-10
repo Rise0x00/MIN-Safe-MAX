@@ -1,91 +1,97 @@
-.class public abstract Llqa;
-.super Ljava/lang/Object;
+.class public final enum Llqa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Llqa;
 
-.field public static final b:I
+.field public static final enum b:Llqa;
 
-.field public static final c:I
+.field public static final enum c:Llqa;
 
-.field public static final d:I
+.field public static final enum d:Llqa;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public static final synthetic o:[Llqa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    sget v0, Lmcc;->contact_icon_corner:I
+    new-instance v0, Llqa;
 
-    sput v0, Llqa;->a:I
+    const-string v1, "PRIMARY"
 
-    sget v0, Lmcc;->geo_icon_corner:I
+    const/4 v2, 0x0
 
-    sput v0, Llqa;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lmcc;->ic_call_incoming_audio_24:I
+    sput-object v0, Llqa;->a:Llqa;
 
-    sput v0, Llqa;->c:I
+    new-instance v1, Llqa;
 
-    sget v0, Lmcc;->ic_call_incoming_audio_missed_24:I
+    const-string v2, "SECONDARY"
 
-    sput v0, Llqa;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lmcc;->ic_call_incoming_video_missed_24:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Llqa;->e:I
+    sput-object v1, Llqa;->b:Llqa;
 
-    sget v0, Lmcc;->ic_call_incomnig_video_24:I
+    new-instance v2, Llqa;
 
-    sput v0, Llqa;->f:I
+    const-string v3, "TERTIARY"
 
-    sget v0, Lmcc;->ic_call_outgoing_audio_24:I
+    const/4 v4, 0x2
 
-    sput v0, Llqa;->g:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lmcc;->ic_call_outgoing_video_24:I
+    sput-object v2, Llqa;->c:Llqa;
 
-    sput v0, Llqa;->h:I
+    new-instance v3, Llqa;
 
-    sget v0, Lmcc;->ic_chat_16:I
+    const-string v4, "LINK"
 
-    sput v0, Llqa;->i:I
+    const/4 v5, 0x3
 
-    sget v0, Lmcc;->ic_contact_16:I
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Llqa;->j:I
+    sput-object v3, Llqa;->d:Llqa;
 
-    sget v0, Lmcc;->ic_geolocation_filled_28:I
+    filled-new-array {v0, v1, v2, v3}, [Llqa;
 
-    sput v0, Llqa;->k:I
+    move-result-object v0
 
-    sget v0, Lmcc;->link_icon_corner:I
-
-    sput v0, Llqa;->l:I
-
-    sget v0, Lmcc;->miniapp_icon_corner:I
-
-    sput v0, Llqa;->m:I
+    sput-object v0, Llqa;->o:[Llqa;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Llqa;
+    .locals 1
+
+    const-class v0, Llqa;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Llqa;
+
+    return-object p0
+.end method
+
+.method public static values()[Llqa;
+    .locals 1
+
+    sget-object v0, Llqa;->o:[Llqa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Llqa;
+
+    return-object v0
 .end method

@@ -1,242 +1,682 @@
-.class public abstract Lnu0;
+.class public final Lnu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lo72;
+# instance fields
+.field public final a:Lpsb;
 
-.field public static final b:I
+.field public final b:Lye;
 
-.field public static final c:I
+.field public final c:Lvx5;
 
-.field public static final d:Lkotlinx/coroutines/internal/Symbol;
+.field public final d:Ls9d;
 
-.field public static final e:Lkotlinx/coroutines/internal/Symbol;
+.field public final e:I
 
-.field public static final f:Lkotlinx/coroutines/internal/Symbol;
+.field public final f:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public static final g:Lkotlinx/coroutines/internal/Symbol;
+.field public volatile g:I
 
-.field public static final h:Lkotlinx/coroutines/internal/Symbol;
+.field public volatile h:Z
 
-.field public static final i:Lkotlinx/coroutines/internal/Symbol;
+.field public final i:Lvx5;
 
-.field public static final j:Lkotlinx/coroutines/internal/Symbol;
+.field public j:I
 
-.field public static final k:Lkotlinx/coroutines/internal/Symbol;
+.field public k:Ljava/lang/Object;
 
-.field public static final l:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final m:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final n:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final o:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final p:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final q:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final r:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final s:Lkotlinx/coroutines/internal/Symbol;
+.field public l:Ljava/util/Set;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lpsb;Lye;Lvx5;Ls9d;I)V
+    .locals 0
 
-    new-instance v0, Lo72;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v4, 0x0
+    iput-object p1, p0, Lnu0;->a:Lpsb;
 
-    const/4 v5, 0x0
+    iput-object p2, p0, Lnu0;->b:Lye;
 
-    const-wide/16 v1, -0x1
+    iput-object p3, p0, Lnu0;->c:Lvx5;
 
-    const/4 v3, 0x0
+    iput-object p4, p0, Lnu0;->d:Ls9d;
 
-    invoke-direct/range {v0 .. v5}, Lo72;-><init>(JLo72;Llu0;I)V
+    invoke-static {p4}, Lnu0;->d(Ls9d;)I
 
-    sput-object v0, Lnu0;->a:Lo72;
+    move-result p1
 
-    const/16 v5, 0xc
+    mul-int/2addr p1, p5
 
-    const/4 v6, 0x0
+    div-int/lit16 p1, p1, 0x3e8
 
-    const-string v1, "kotlinx.coroutines.bufferedChannel.segmentSize"
+    const/4 p2, 0x1
 
-    const/16 v2, 0x20
+    if-ge p1, p2, :cond_0
 
-    const/4 v3, 0x0
+    move p1, p2
 
-    const/4 v4, 0x0
+    :cond_0
+    iput p1, p0, Lnu0;->e:I
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
+    new-instance p2, Ljava/util/concurrent/ConcurrentHashMap;
 
-    move-result v0
+    invoke-direct {p2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput v0, Lnu0;->b:I
+    iput-object p2, p0, Lnu0;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const-string v1, "kotlinx.coroutines.bufferedChannel.expandBufferCompletionWaitIterations"
+    new-instance p2, Lvx5;
 
-    const/16 v2, 0x2710
+    invoke-virtual {p4}, Ls9d;->l()I
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
+    move-result p3
 
-    move-result v0
+    const/4 p5, 0x6
 
-    sput v0, Lnu0;->c:I
+    invoke-direct {p2, p3, p5}, Lvx5;-><init>(II)V
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    iput-object p2, p0, Lnu0;->i:Lvx5;
 
-    const-string v1, "BUFFERED"
+    const/4 p2, -0x1
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput p2, p0, Lnu0;->j:I
 
-    sput-object v0, Lnu0;->d:Lkotlinx/coroutines/internal/Symbol;
+    sget-object p2, Loa5;->a:Loa5;
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    iput-object p2, p0, Lnu0;->k:Ljava/lang/Object;
 
-    const-string v1, "SHOULD_BUFFER"
+    sget-object p2, Lxa5;->a:Lxa5;
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iput-object p2, p0, Lnu0;->l:Ljava/util/Set;
 
-    sput-object v0, Lnu0;->e:Lkotlinx/coroutines/internal/Symbol;
+    invoke-static {p4}, Lnu0;->d(Ls9d;)I
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    move-result p2
 
-    const-string v1, "S_RESUMING_BY_RCV"
+    invoke-virtual {p0, p2}, Lnu0;->a(I)V
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    int-to-float p1, p1
 
-    sput-object v0, Lnu0;->f:Lkotlinx/coroutines/internal/Symbol;
+    const/high16 p2, 0x3f000000    # 0.5f
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    mul-float/2addr p1, p2
 
-    const-string v1, "RESUMING_BY_EB"
+    float-to-int p1, p1
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->g:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "POISONED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->h:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "DONE_RCV"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->i:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "INTERRUPTED_SEND"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->j:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "INTERRUPTED_RCV"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->k:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CHANNEL_CLOSED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->l:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SUSPEND"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->m:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SUSPEND_NO_WAITER"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->n:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "FAILED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->o:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "NO_RECEIVE_RESULT"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->p:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSE_HANDLER_CLOSED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->q:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "CLOSE_HANDLER_INVOKED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->r:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "NO_CLOSE_CAUSE"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lnu0;->s:Lkotlinx/coroutines/internal/Symbol;
+    iput p1, p0, Lnu0;->g:I
 
     return-void
 .end method
 
-.method public static final a(Ly12;Ljava/lang/Object;Lnf6;)Z
-    .locals 0
+.method public static d(Ls9d;)I
+    .locals 7
 
-    invoke-interface {p0, p1, p2}, Ly12;->j(Ljava/lang/Object;Lnf6;)Lkotlinx/coroutines/internal/Symbol;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v3
+
+    iget-object v0, p0, Ls9d;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhp3;
+
+    iget v0, v0, Lhp3;->a:I
+
+    invoke-virtual {p0}, Ls9d;->l()I
+
+    move-result p0
+
+    div-int/2addr v0, p0
+
+    int-to-long v5, v0
+
+    div-long/2addr v3, v5
+
+    cmp-long p0, v3, v1
+
+    if-gez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v1, v3
+
+    :goto_0
+    long-to-int p0, v1
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final a(I)V
+    .locals 6
+
+    iget-object v0, p0, Lnu0;->d:Ls9d;
+
+    iget-object v1, v0, Ls9d;->b:Ljava/lang/Object;
+
+    check-cast v1, Lhp3;
+
+    iget v1, v1, Lhp3;->a:I
+
+    invoke-virtual {v0}, Ls9d;->m()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ge v2, v3, :cond_0
+
+    move v2, v3
+
+    :cond_0
+    mul-int/2addr v1, v2
+
+    invoke-virtual {v0}, Ls9d;->l()I
+
+    move-result v2
+
+    invoke-static {v0}, Lnu0;->d(Ls9d;)I
+
+    move-result v0
+
+    if-le p1, v0, :cond_1
+
+    move p1, v0
+
+    :cond_1
+    if-ge p1, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, p1
+
+    :goto_0
+    iget-object p1, p0, Lnu0;->c:Lvx5;
+
+    iget p1, p1, Lvx5;->b:I
+
+    if-le v3, p1, :cond_3
+
+    move v3, p1
+
+    :cond_3
+    int-to-float p1, v3
+
+    int-to-float v0, v1
+
+    const/high16 v1, 0x447a0000    # 1000.0f
+
+    div-float/2addr v0, v1
+
+    mul-float/2addr v0, p1
+
+    const/4 p1, 0x0
+
+    cmpg-float v1, v0, p1
+
+    if-gez v1, :cond_4
+
+    move v0, p1
+
+    :cond_4
+    int-to-float p1, v2
+
+    cmpl-float v1, v0, p1
+
+    if-lez v1, :cond_5
+
+    move v0, p1
+
+    :cond_5
+    div-float/2addr p1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v2}, Liwi;->h(II)Laj7;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/LinkedHashMap;
+
+    const/16 v3, 0xa
+
+    invoke-static {v1, v3}, Lcb3;->k(Ljava/lang/Iterable;I)I
+
+    move-result v3
+
+    invoke-static {v3}, Lyg8;->g(I)I
+
+    move-result v3
+
+    const/16 v4, 0x10
+
+    if-ge v3, v4, :cond_6
+
+    move v3, v4
+
+    :cond_6
+    invoke-direct {v2, v3}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-virtual {v1}, Lyi7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    move-object v3, v1
+
+    check-cast v3, Lzi7;
+
+    iget-boolean v4, v3, Lzi7;->c:Z
+
+    if-eqz v4, :cond_8
+
+    invoke-virtual {v3}, Lzi7;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v4, v3
+
+    check-cast v4, Ljava/lang/Number;
+
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+
+    move-result v4
+
+    int-to-float v5, v4
+
+    rem-float/2addr v5, p1
+
+    float-to-int v5, v5
+
+    if-nez v5, :cond_7
+
+    move v0, v4
+
+    :cond_7
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_8
+    iput-object v2, p0, Lnu0;->k:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lab3;->b0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu0;->l:Ljava/util/Set;
+
+    return-void
+.end method
+
+.method public final b(I)Lfg;
+    .locals 6
+
+    new-instance v0, Laj7;
+
+    iget-object v1, p0, Lnu0;->i:Lvx5;
+
+    iget v2, v1, Lvx5;->b:I
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v4, v2, v3}, Lyi7;-><init>(III)V
+
+    invoke-virtual {v0}, Lyi7;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    move-object v2, v0
+
+    check-cast v2, Lzi7;
+
+    iget-boolean v2, v2, Lzi7;->c:Z
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_3
+
+    move-object v2, v0
+
+    check-cast v2, Lzi7;
+
+    invoke-virtual {v2}, Lzi7;->nextInt()I
+
+    move-result v2
+
+    sub-int v2, p1, v2
+
+    invoke-virtual {v1, v2}, Lvx5;->i(I)I
+
+    move-result v2
+
+    iget-object v4, p0, Lnu0;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lmu0;
+
+    if-eqz v4, :cond_2
+
+    iget-boolean v5, v4, Lmu0;->b:Z
+
+    if-nez v5, :cond_1
+
+    iget-object v5, v4, Lmu0;->a:Lci4;
+
+    invoke-virtual {v5}, Lq93;->h0()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v4, v3
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    new-instance v3, Lfg;
+
+    iget-object v4, v4, Lmu0;->a:Lci4;
+
+    invoke-direct {v3, v2, v4}, Lfg;-><init>(ILci4;)V
+
+    :cond_2
+    if-eqz v3, :cond_0
+
+    :cond_3
+    return-object v3
+.end method
+
+.method public final c(I)Lpg6;
+    .locals 2
+
+    invoke-virtual {p0, p1}, Lnu0;->b(I)Lfg;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p0, p1}, Ly12;->l(Ljava/lang/Object;)V
+    iget-object v0, p1, Lfg;->b:Lci4;
 
-    const/4 p0, 0x1
+    invoke-virtual {v0}, Lci4;->l()Lq93;
 
-    return p0
+    move-result-object v0
+
+    iget p1, p1, Lfg;->a:I
+
+    iput p1, p0, Lnu0;->j:I
+
+    new-instance p1, Lpg6;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v1, v0}, Lpg6;-><init>(ILq93;)V
+
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance p1, Lpg6;
 
-    return p0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v1, v0}, Lpg6;-><init>(ILq93;)V
+
+    return-object p1
+.end method
+
+.method public final e(II)V
+    .locals 2
+
+    iget-boolean v0, p0, Lnu0;->h:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lnu0;->h:Z
+
+    new-instance v0, Llu0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, p2, v1}, Llu0;-><init>(Ljava/lang/Object;III)V
+
+    sget-object p1, Lrg;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final f(ILq93;)V
+    .locals 8
+
+    invoke-virtual {p0, p1}, Lnu0;->b(I)Lfg;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnu0;->b:Lye;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_3
+
+    iget-object v4, v0, Lfg;->b:Lci4;
+
+    invoke-virtual {v4}, Lq93;->w()Lq93;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    :try_start_0
+    iget v0, v0, Lfg;->a:I
+
+    if-ge v0, p1, :cond_2
+
+    invoke-virtual {v4}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p2}, Lq93;->h0()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    new-instance v6, Landroid/graphics/Canvas;
+
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/graphics/Bitmap;
+
+    invoke-direct {v6, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    sget-object v7, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v6, v3, v7}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
+
+    const/4 v3, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v5, v7, v7, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    :cond_0
+    new-instance v3, Laj7;
+
+    add-int/2addr v0, v2
+
+    invoke-direct {v3, v0, p1, v2}, Lyi7;-><init>(III)V
+
+    invoke-virtual {v3}, Lyi7;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    move-object v0, p1
+
+    check-cast v0, Lzi7;
+
+    iget-boolean v0, v0, Lzi7;->c:Z
+
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Lzi7;
+
+    invoke-virtual {v0}, Lzi7;->nextInt()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1, v2, v0}, Lye;->j(Landroid/graphics/Bitmap;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {v4}, Ljava/io/Closeable;->close()V
+
+    return-void
+
+    :cond_2
+    invoke-interface {v4}, Ljava/io/Closeable;->close()V
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p2
+
+    invoke-static {v4, p1}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :cond_3
+    :goto_2
+    invoke-virtual {p2}, Lq93;->h0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    new-instance v0, Landroid/graphics/Canvas;
+
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/graphics/Bitmap;
+
+    invoke-direct {v0, v4}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v0, v3, v4}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
+
+    :cond_4
+    new-instance v0, Laj7;
+
+    invoke-direct {v0, v3, p1, v2}, Lyi7;-><init>(III)V
+
+    invoke-virtual {v0}, Lyi7;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_3
+    move-object v0, p1
+
+    check-cast v0, Lzi7;
+
+    iget-boolean v0, v0, Lzi7;->c:Z
+
+    if-eqz v0, :cond_5
+
+    move-object v0, p1
+
+    check-cast v0, Lzi7;
+
+    invoke-virtual {v0}, Lzi7;->nextInt()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1, v2, v0}, Lye;->j(Landroid/graphics/Bitmap;I)Z
+
+    goto :goto_3
+
+    :cond_5
+    return-void
 .end method

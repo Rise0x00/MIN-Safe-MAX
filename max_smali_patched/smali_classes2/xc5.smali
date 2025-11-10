@@ -2,24 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
+
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ldd5;
-
-.field public final synthetic c:J
+.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldd5;JI)V
+.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
     .locals 0
 
-    iput p4, p0, Lxc5;->a:I
+    iput p2, p0, Lxc5;->a:I
 
-    iput-object p1, p0, Lxc5;->b:Ldd5;
-
-    iput-wide p2, p0, Lxc5;->c:J
+    iput-object p1, p0, Lxc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,29 +27,73 @@
 
 
 # virtual methods
-.method public final a()J
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
     iget v0, p0, Lxc5;->a:I
 
+    iget-object v1, p0, Lxc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lxc5;->b:Ldd5;
+    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->y0:[Les7;
 
-    iget-wide v1, p0, Lxc5;->c:J
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v1, v2}, Ldd5;->f(J)V
+    move-result-object v0
 
-    return-wide v1
+    invoke-static {v0}, Lbp6;->f(Landroid/content/Context;)Le1f;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lxc5;->b:Ldd5;
+    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->h2:I
 
-    iget-wide v1, p0, Lxc5;->c:J
+    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-virtual {v0, v1, v2}, Ldd5;->f(J)V
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    return-wide v1
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "-"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "."
+
+    const-string v2, "_"
+
+    invoke-static {v0, v1, v2}, Lfbf;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 

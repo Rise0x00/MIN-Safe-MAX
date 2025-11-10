@@ -1,44 +1,45 @@
-.class public abstract Lpbf;
-.super Ljava/lang/Object;
+.class public final Lpbf;
+.super Lqbf;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lgcf;
+# static fields
+.field public static final b:Lpbf;
 
-.field public b:J
+.field public static final c:Lpbf;
 
-.field public final c:Ljava/lang/String;
+.field public static final d:Lpbf;
 
-.field public final d:Z
+.field public static final e:Lpbf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpbf;->c:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lpbf;->d:Z
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lpbf;->b:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()J
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Lpbf;->c:Ljava/lang/String;
+    new-instance v0, Lpbf;
 
-    return-object v0
+    invoke-direct {v0}, Lsyi;-><init>()V
+
+    sput-object v0, Lpbf;->b:Lpbf;
+
+    new-instance v0, Lpbf;
+
+    invoke-direct {v0}, Lsyi;-><init>()V
+
+    sput-object v0, Lpbf;->c:Lpbf;
+
+    new-instance v0, Lpbf;
+
+    invoke-direct {v0}, Lsyi;-><init>()V
+
+    sput-object v0, Lpbf;->d:Lpbf;
+
+    new-instance v0, Lpbf;
+
+    invoke-direct {v0}, Lsyi;-><init>()V
+
+    sput-object v0, Lpbf;->e:Lpbf;
+
+    return-void
 .end method

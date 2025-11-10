@@ -4,17 +4,15 @@
 
 # interfaces
 .implements Landroid/graphics/drawable/Animatable;
-.implements Lrff;
+.implements Lqsf;
 
 
 # instance fields
-.field public final A0:Landroid/animation/ValueAnimator;
+.field public final X:Landroid/graphics/PathMeasure;
 
-.field public final X:Landroid/graphics/Path;
+.field public final Y:Landroid/graphics/Path;
 
-.field public final Y:Landroid/graphics/PathMeasure;
-
-.field public final Z:Landroid/graphics/Path;
+.field public final Z:Landroid/graphics/PathMeasure;
 
 .field public final a:Landroid/graphics/Paint;
 
@@ -22,15 +20,17 @@
 
 .field public final c:Landroid/graphics/Path;
 
-.field public final o:Landroid/graphics/PathMeasure;
+.field public final d:Landroid/graphics/PathMeasure;
 
-.field public final w0:Landroid/graphics/PathMeasure;
+.field public final o:Landroid/graphics/Path;
 
-.field public final x0:Landroid/graphics/Path;
+.field public final s0:Landroid/graphics/Path;
 
-.field public final y0:Lzm7;
+.field public final t0:Lks7;
 
-.field public z0:F
+.field public u0:F
+
+.field public final v0:Landroid/animation/ValueAnimator;
 
 
 # direct methods
@@ -69,45 +69,45 @@
 
     invoke-direct {v0}, Landroid/graphics/PathMeasure;-><init>()V
 
-    iput-object v0, p0, Lo60;->o:Landroid/graphics/PathMeasure;
+    iput-object v0, p0, Lo60;->d:Landroid/graphics/PathMeasure;
 
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lo60;->X:Landroid/graphics/Path;
+    iput-object v0, p0, Lo60;->o:Landroid/graphics/Path;
 
     new-instance v0, Landroid/graphics/PathMeasure;
 
     invoke-direct {v0}, Landroid/graphics/PathMeasure;-><init>()V
 
-    iput-object v0, p0, Lo60;->Y:Landroid/graphics/PathMeasure;
+    iput-object v0, p0, Lo60;->X:Landroid/graphics/PathMeasure;
 
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lo60;->Z:Landroid/graphics/Path;
+    iput-object v0, p0, Lo60;->Y:Landroid/graphics/Path;
 
     new-instance v0, Landroid/graphics/PathMeasure;
 
     invoke-direct {v0}, Landroid/graphics/PathMeasure;-><init>()V
 
-    iput-object v0, p0, Lo60;->w0:Landroid/graphics/PathMeasure;
+    iput-object v0, p0, Lo60;->Z:Landroid/graphics/PathMeasure;
 
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lo60;->x0:Landroid/graphics/Path;
+    iput-object v0, p0, Lo60;->s0:Landroid/graphics/Path;
 
-    new-instance v0, Lzm7;
+    new-instance v0, Lks7;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v2, v2, v2}, Lzm7;-><init>(FFFF)V
+    invoke-direct {v0, v2, v2, v2, v2}, Lks7;-><init>(FFFF)V
 
-    iput-object v0, p0, Lo60;->y0:Lzm7;
+    iput-object v0, p0, Lo60;->t0:Lks7;
 
     const-wide/16 v3, 0x7d0
 
@@ -139,13 +139,13 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    new-instance v1, Lg00;
+    new-instance v1, Lt00;
 
-    invoke-direct {v1, v5, p0}, Lg00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v5, p0}, Lt00;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iput-object v0, p0, Lo60;->A0:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lo60;->v0:Landroid/animation/ValueAnimator;
 
     return-void
 .end method
@@ -155,7 +155,7 @@
 .method public final a(Landroid/graphics/Canvas;Ljava/util/List;Landroid/graphics/PathMeasure;)V
     .locals 9
 
-    iget v0, p0, Lo60;->z0:F
+    iget v0, p0, Lo60;->u0:F
 
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -174,7 +174,7 @@
 
     move-result-object v4
 
-    check-cast v4, Lzm7;
+    check-cast v4, Lks7;
 
     add-int/lit8 v3, v3, 0x1
 
@@ -182,11 +182,11 @@
 
     move-result-object v5
 
-    check-cast v5, Lzm7;
+    check-cast v5, Lks7;
 
-    iget v6, v4, Lzm7;->a:F
+    iget v6, v4, Lks7;->a:F
 
-    iget v7, v5, Lzm7;->a:F
+    iget v7, v5, Lks7;->a:F
 
     cmpg-float v8, v0, v7
 
@@ -202,53 +202,53 @@
 
     div-float/2addr p2, v7
 
-    iget-object v1, p0, Lo60;->y0:Lzm7;
+    iget-object v1, p0, Lo60;->t0:Lks7;
 
-    iput v0, v1, Lzm7;->a:F
+    iput v0, v1, Lks7;->a:F
 
-    iget v0, v4, Lzm7;->b:F
+    iget v0, v4, Lks7;->b:F
 
-    iget v3, v5, Lzm7;->b:F
+    iget v3, v5, Lks7;->b:F
 
-    invoke-static {v3, v0, p2, v0}, Lvpb;->f(FFFF)F
-
-    move-result v0
-
-    iput v0, v1, Lzm7;->b:F
-
-    iget v0, v4, Lzm7;->c:F
-
-    iget v3, v5, Lzm7;->c:F
-
-    invoke-static {v3, v0, p2, v0}, Lvpb;->f(FFFF)F
+    invoke-static {v3, v0, p2, v0}, Lxjb;->i(FFFF)F
 
     move-result v0
 
-    iput v0, v1, Lzm7;->c:F
+    iput v0, v1, Lks7;->b:F
 
-    iget v0, v4, Lzm7;->d:F
+    iget v0, v4, Lks7;->c:F
 
-    iget v3, v5, Lzm7;->d:F
+    iget v3, v5, Lks7;->c:F
 
-    invoke-static {v3, v0, p2, v0}, Lvpb;->f(FFFF)F
+    invoke-static {v3, v0, p2, v0}, Lxjb;->i(FFFF)F
+
+    move-result v0
+
+    iput v0, v1, Lks7;->c:F
+
+    iget v0, v4, Lks7;->d:F
+
+    iget v3, v5, Lks7;->d:F
+
+    invoke-static {v3, v0, p2, v0}, Lxjb;->i(FFFF)F
 
     move-result p2
 
-    iput p2, v1, Lzm7;->d:F
+    iput p2, v1, Lks7;->d:F
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p2}, Le93;->u0(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {p2}, Lab3;->J(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object p2
 
     move-object v1, p2
 
-    check-cast v1, Lzm7;
+    check-cast v1, Lks7;
 
     :goto_0
-    iget p2, v1, Lzm7;->b:F
+    iget p2, v1, Lks7;->b:F
 
     iget v0, p0, Lo60;->b:F
 
@@ -271,7 +271,7 @@
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    iget-object p2, p0, Lo60;->x0:Landroid/graphics/Path;
+    iget-object p2, p0, Lo60;->s0:Landroid/graphics/Path;
 
     invoke-virtual {p2}, Landroid/graphics/Path;->reset()V
 
@@ -279,7 +279,7 @@
 
     move-result v3
 
-    iget v4, v1, Lzm7;->c:F
+    iget v4, v1, Lks7;->c:F
 
     mul-float/2addr v3, v4
 
@@ -287,7 +287,7 @@
 
     move-result v4
 
-    iget v1, v1, Lzm7;->d:F
+    iget v1, v1, Lks7;->d:F
 
     mul-float/2addr v4, v1
 
@@ -303,19 +303,19 @@
 
     sget-object v0, Lp60;->a:Ljava/util/List;
 
-    iget-object v1, p0, Lo60;->o:Landroid/graphics/PathMeasure;
+    iget-object v1, p0, Lo60;->d:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p0, p1, v0, v1}, Lo60;->a(Landroid/graphics/Canvas;Ljava/util/List;Landroid/graphics/PathMeasure;)V
 
     sget-object v0, Lp60;->b:Ljava/util/List;
 
-    iget-object v1, p0, Lo60;->Y:Landroid/graphics/PathMeasure;
+    iget-object v1, p0, Lo60;->X:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p0, p1, v0, v1}, Lo60;->a(Landroid/graphics/Canvas;Ljava/util/List;Landroid/graphics/PathMeasure;)V
 
     sget-object v0, Lp60;->c:Ljava/util/List;
 
-    iget-object v1, p0, Lo60;->w0:Landroid/graphics/PathMeasure;
+    iget-object v1, p0, Lo60;->Z:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p0, p1, v0, v1}, Lo60;->a(Landroid/graphics/Canvas;Ljava/util/List;Landroid/graphics/PathMeasure;)V
 
@@ -333,7 +333,7 @@
 .method public final isRunning()Z
     .locals 1
 
-    iget-object v0, p0, Lo60;->A0:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lo60;->v0:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -421,13 +421,13 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object v4, p0, Lo60;->o:Landroid/graphics/PathMeasure;
+    iget-object v4, p0, Lo60;->d:Landroid/graphics/PathMeasure;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v2, v5}, Landroid/graphics/PathMeasure;->setPath(Landroid/graphics/Path;Z)V
 
-    iget-object v2, p0, Lo60;->X:Landroid/graphics/Path;
+    iget-object v2, p0, Lo60;->o:Landroid/graphics/Path;
 
     invoke-virtual {v2}, Landroid/graphics/Path;->reset()V
 
@@ -435,11 +435,11 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object p1, p0, Lo60;->Y:Landroid/graphics/PathMeasure;
+    iget-object p1, p0, Lo60;->X:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p1, v2, v5}, Landroid/graphics/PathMeasure;->setPath(Landroid/graphics/Path;Z)V
 
-    iget-object p1, p0, Lo60;->Z:Landroid/graphics/Path;
+    iget-object p1, p0, Lo60;->Y:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
@@ -447,21 +447,21 @@
 
     invoke-virtual {p1, v0, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object v0, p0, Lo60;->w0:Landroid/graphics/PathMeasure;
+    iget-object v0, p0, Lo60;->Z:Landroid/graphics/PathMeasure;
 
     invoke-virtual {v0, p1, v5}, Landroid/graphics/PathMeasure;->setPath(Landroid/graphics/Path;Z)V
 
     return-void
 .end method
 
-.method public final onThemeChanged(Luxa;)V
+.method public final onThemeChanged(Lw5b;)V
     .locals 1
 
-    invoke-interface {p1}, Luxa;->getIcon()Lk27;
+    invoke-interface {p1}, Lw5b;->getIcon()Le77;
 
     move-result-object p1
 
-    iget p1, p1, Lk27;->j:I
+    iget p1, p1, Le77;->j:I
 
     iget-object v0, p0, Lo60;->a:Landroid/graphics/Paint;
 
@@ -499,7 +499,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -516,7 +516,7 @@
 .method public final start()V
     .locals 2
 
-    iget-object v0, p0, Lo60;->A0:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lo60;->v0:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -533,7 +533,7 @@
 .method public final stop()V
     .locals 1
 
-    iget-object v0, p0, Lo60;->A0:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lo60;->v0:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 

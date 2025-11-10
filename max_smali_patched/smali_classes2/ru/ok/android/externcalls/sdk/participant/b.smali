@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcce;
+.implements Lyne;
 
 
 # instance fields
@@ -40,33 +40,33 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lxo3;
+    check-cast v0, Ljr3;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->c(Lxo3;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;->c(Ljr3;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
 
     return-void
 
     :pswitch_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lxe6;
+    check-cast v0, Lqi6;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantsExtIds$1;->a(Lxe6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantsExtIds$1;->a(Lqi6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
 
     return-void
 
     :pswitch_1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lxe6;
+    check-cast v0, Lqi6;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/participant/b;->c:Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;->a(Lxe6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;->a(Lqi6;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lorg/json/JSONObject;)V
 
     return-void
 

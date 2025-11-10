@@ -1,1093 +1,550 @@
-.class public abstract Laka;
-.super Ljava/lang/Object;
+.class public final Laka;
+.super Lwl0;
 .source "SourceFile"
 
+# interfaces
+.implements Lgla;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public X:Ljava/lang/Throwable;
 
-.field public static final A1:I
+.field public volatile Y:Z
 
-.field public static final B:I
+.field public volatile Z:Z
 
-.field public static final B0:I
+.field public final a:Lgla;
 
-.field public static final B1:I
+.field public final b:Lepd;
 
-.field public static final C:I
+.field public final c:I
 
-.field public static final C0:I
+.field public d:Lbqe;
 
-.field public static final C1:I
+.field public o:Lzv4;
 
-.field public static final D:I
+.field public s0:I
 
-.field public static final D0:I
-
-.field public static final D1:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final E1:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final O1:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final P1:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final Q1:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final R1:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final S1:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final T1:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final U1:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final V1:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final W1:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final X1:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Y1:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final Z1:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final a2:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final b2:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final c2:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final d2:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final e2:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final f2:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final g2:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final h2:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final i2:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final j2:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final k2:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final l2:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final m2:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final n2:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final o2:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final p2:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final q2:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final r2:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final s2:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final t2:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final u2:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final v2:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final w2:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final x2:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public t0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgla;Lepd;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Laka;->a:Lgla;
+
+    iput-object p2, p0, Laka;->b:Lepd;
+
+    iput p3, p0, Laka;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-boolean v0, p0, Laka;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Laka;->s0:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Laka;->d:Lbqe;
+
+    invoke-interface {v0, p1}, Lbqe;->offer(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Laka;->b:Lepd;
+
+    invoke-virtual {p1, p0}, Lepd;->b(Ljava/lang/Runnable;)Lzv4;
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final c()V
     .locals 1
 
-    sget v0, Luic;->call_admin_settings_disable_all_cameras_once:I
+    iget-boolean v0, p0, Laka;->Y:Z
 
-    sput v0, Laka;->a:I
+    if-eqz v0, :cond_0
 
-    sget v0, Luic;->call_admin_settings_disable_all_hands_once:I
+    goto :goto_0
 
-    sput v0, Laka;->b:I
+    :cond_0
+    const/4 v0, 0x1
 
-    sget v0, Luic;->call_admin_settings_disable_all_mic_once:I
+    iput-boolean v0, p0, Laka;->Y:Z
 
-    sput v0, Laka;->c:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Luic;->call_admins_settings_camera_disabled_in_call:I
+    move-result v0
 
-    sput v0, Laka;->d:I
+    if-nez v0, :cond_1
 
-    sget v0, Luic;->call_admins_settings_camera_failed_in_call:I
+    iget-object v0, p0, Laka;->b:Lepd;
 
-    sput v0, Laka;->e:I
+    invoke-virtual {v0, p0}, Lepd;->b(Ljava/lang/Runnable;)Lzv4;
 
-    sget v0, Luic;->call_admins_settings_camera_in_call:I
+    :cond_1
+    :goto_0
+    return-void
+.end method
 
-    sput v0, Laka;->f:I
+.method public final clear()V
+    .locals 1
 
-    sget v0, Luic;->call_admins_settings_mic_failed_in_call:I
+    iget-object v0, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->g:I
+    invoke-interface {v0}, Lbqe;->clear()V
 
-    sget v0, Luic;->call_admins_settings_mic_in_call:I
+    return-void
+.end method
 
-    sput v0, Laka;->h:I
+.method public final d(Lzv4;)V
+    .locals 2
 
-    sget v0, Luic;->call_admins_settings_min_disabled_in_call:I
+    iget-object v0, p0, Laka;->o:Lzv4;
 
-    sput v0, Laka;->i:I
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
 
-    sget v0, Luic;->call_admins_settings_screen_connection_header:I
+    move-result v0
 
-    sput v0, Laka;->j:I
+    if-eqz v0, :cond_2
 
-    sget v0, Luic;->call_admins_settings_screen_disable_camera_for_user:I
+    iput-object p1, p0, Laka;->o:Lzv4;
 
-    sput v0, Laka;->k:I
+    instance-of v0, p1, Lshc;
 
-    sget v0, Luic;->call_admins_settings_screen_disable_camera_once:I
+    if-eqz v0, :cond_1
 
-    sput v0, Laka;->l:I
+    check-cast p1, Lshc;
 
-    sget v0, Luic;->call_admins_settings_screen_disable_mic_for_user:I
+    const/4 v0, 0x7
 
-    sput v0, Laka;->m:I
+    invoke-interface {p1, v0}, Lthc;->q(I)I
 
-    sget v0, Luic;->call_admins_settings_screen_disable_mic_once:I
+    move-result v0
 
-    sput v0, Laka;->n:I
+    const/4 v1, 0x1
 
-    sget v0, Luic;->call_admins_settings_screen_disable_race_for_user:I
+    if-ne v0, v1, :cond_0
 
-    sput v0, Laka;->o:I
+    iput v0, p0, Laka;->s0:I
 
-    sget v0, Luic;->call_admins_settings_screen_disable_race_once:I
+    iput-object p1, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->p:I
+    iput-boolean v1, p0, Laka;->Y:Z
 
-    sget v0, Luic;->call_admins_settings_screen_disable_record:I
+    iget-object p1, p0, Laka;->a:Lgla;
 
-    sput v0, Laka;->q:I
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
 
-    sget v0, Luic;->call_admins_settings_screen_disable_sharing_for_user:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sput v0, Laka;->r:I
+    move-result p1
 
-    sget v0, Luic;->call_admins_settings_screen_failed_enabled_in_call:I
+    if-nez p1, :cond_2
 
-    sput v0, Laka;->s:I
+    iget-object p1, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_admins_settings_screen_media_header:I
+    invoke-virtual {p1, p0}, Lepd;->b(Ljava/lang/Runnable;)Lzv4;
 
-    sput v0, Laka;->t:I
+    return-void
 
-    sget v0, Luic;->call_admins_settings_screen_media_header_bottom:I
+    :cond_0
+    const/4 v1, 0x2
 
-    sput v0, Laka;->u:I
+    if-ne v0, v1, :cond_1
 
-    sget v0, Luic;->call_admins_settings_screen_record_disabled_in_call:I
+    iput v0, p0, Laka;->s0:I
 
-    sput v0, Laka;->v:I
+    iput-object p1, p0, Laka;->d:Lbqe;
 
-    sget v0, Luic;->call_admins_settings_screen_record_in_call:I
+    iget-object p1, p0, Laka;->a:Lgla;
 
-    sput v0, Laka;->w:I
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
 
-    sget v0, Luic;->call_admins_settings_screen_sharing_disabled_in_call:I
+    return-void
 
-    sput v0, Laka;->x:I
+    :cond_1
+    new-instance p1, Lywe;
 
-    sget v0, Luic;->call_admins_settings_screen_sharing_in_call:I
+    iget v0, p0, Laka;->c:I
 
-    sput v0, Laka;->y:I
+    invoke-direct {p1, v0}, Lywe;-><init>(I)V
 
-    sget v0, Luic;->call_admins_settings_title:I
+    iput-object p1, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->z:I
+    iget-object p1, p0, Laka;->a:Lgla;
 
-    sget v0, Luic;->call_admins_settings_waiting_room:I
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
 
-    sput v0, Laka;->A:I
+    :cond_2
+    return-void
+.end method
 
-    sget v0, Luic;->call_admins_settings_waiting_room_desc:I
+.method public final dispose()V
+    .locals 1
 
-    sput v0, Laka;->B:I
+    iget-boolean v0, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_ask_permission_audio_video_denied_description:I
+    if-nez v0, :cond_0
 
-    sput v0, Laka;->C:I
+    const/4 v0, 0x1
 
-    sget v0, Luic;->call_ask_permission_audio_video_denied_title:I
+    iput-boolean v0, p0, Laka;->Z:Z
 
-    sput v0, Laka;->D:I
+    iget-object v0, p0, Laka;->o:Lzv4;
 
-    sget v0, Luic;->call_ask_permission_denied_description:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sput v0, Laka;->E:I
+    iget-object v0, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_ask_permission_denied_title:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sput v0, Laka;->F:I
+    iget-boolean v0, p0, Laka;->t0:Z
 
-    sget v0, Luic;->call_ask_permission_description:I
+    if-nez v0, :cond_0
 
-    sput v0, Laka;->G:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Luic;->call_close_dialog_accessibility:I
+    move-result v0
 
-    sput v0, Laka;->H:I
+    if-nez v0, :cond_0
 
-    sget v0, Luic;->call_context_action_chat:I
+    iget-object v0, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->I:I
+    invoke-interface {v0}, Lbqe;->clear()V
 
-    sget v0, Luic;->call_context_dialog_invite_user_to_p2p:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Laka;->J:I
+.method public final e(ZZLgla;)Z
+    .locals 2
 
-    sget v0, Luic;->call_context_dialog_open_chat:I
+    iget-boolean v0, p0, Laka;->Z:Z
 
-    sput v0, Laka;->K:I
+    const/4 v1, 0x1
 
-    sget v0, Luic;->call_context_dialog_open_profile:I
+    if-eqz v0, :cond_0
 
-    sput v0, Laka;->L:I
+    iget-object p1, p0, Laka;->d:Lbqe;
 
-    sget v0, Luic;->call_context_dialog_record_screen:I
+    invoke-interface {p1}, Lbqe;->clear()V
 
-    sput v0, Laka;->M:I
+    return v1
 
-    sget v0, Luic;->call_context_dialog_record_screen_in_progress:I
+    :cond_0
+    if-eqz p1, :cond_2
 
-    sput v0, Laka;->N:I
+    iget-object p1, p0, Laka;->X:Ljava/lang/Throwable;
 
-    sget v0, Luic;->call_context_dialog_record_screen_unavailable_desc:I
+    if-eqz p1, :cond_1
 
-    sput v0, Laka;->O:I
+    iput-boolean v1, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_context_dialog_settings:I
+    iget-object p2, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->P:I
+    invoke-interface {p2}, Lbqe;->clear()V
 
-    sget v0, Luic;->call_context_dialog_share_screen:I
+    invoke-interface {p3, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Laka;->Q:I
+    iget-object p1, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_context_dialog_share_screen_unavailable_desc:I
+    invoke-interface {p1}, Lzv4;->dispose()V
 
-    sput v0, Laka;->R:I
+    return v1
 
-    sget v0, Luic;->call_context_dialog_share_sound:I
+    :cond_1
+    if-eqz p2, :cond_2
 
-    sput v0, Laka;->S:I
+    iput-boolean v1, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_context_dialog_stop_record_screen:I
+    invoke-interface {p3}, Lgla;->c()V
 
-    sput v0, Laka;->T:I
+    iget-object p1, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_context_dialog_stop_share_screen:I
+    invoke-interface {p1}, Lzv4;->dispose()V
 
-    sput v0, Laka;->U:I
+    return v1
 
-    sget v0, Luic;->call_incoming_accept_with_audio_accessibility:I
+    :cond_2
+    const/4 p1, 0x0
 
-    sput v0, Laka;->V:I
+    return p1
+.end method
 
-    sget v0, Luic;->call_incoming_accept_with_video_accessibility:I
+.method public final f()Z
+    .locals 1
 
-    sput v0, Laka;->W:I
+    iget-boolean v0, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_incoming_apply_audio_call_description:I
+    return v0
+.end method
 
-    sput v0, Laka;->X:I
+.method public final isEmpty()Z
+    .locals 1
 
-    sget v0, Luic;->call_incoming_apply_video_call_description:I
+    iget-object v0, p0, Laka;->d:Lbqe;
 
-    sput v0, Laka;->Y:I
+    invoke-interface {v0}, Lbqe;->isEmpty()Z
 
-    sget v0, Luic;->call_incoming_call_video_disable:I
+    move-result v0
 
-    sput v0, Laka;->Z:I
+    return v0
+.end method
 
-    sget v0, Luic;->call_incoming_call_video_enable:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sput v0, Laka;->a0:I
+    iget-boolean v0, p0, Laka;->Y:Z
 
-    sget v0, Luic;->call_incoming_cancel_call_description:I
+    if-eqz v0, :cond_0
 
-    sput v0, Laka;->b0:I
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
 
-    sget v0, Luic;->call_incoming_decline_accessibility:I
+    return-void
 
-    sput v0, Laka;->c0:I
+    :cond_0
+    iput-object p1, p0, Laka;->X:Ljava/lang/Throwable;
 
-    sget v0, Luic;->call_item_join_by_link_preview_copy:I
+    const/4 p1, 0x1
 
-    sput v0, Laka;->d0:I
+    iput-boolean p1, p0, Laka;->Y:Z
 
-    sget v0, Luic;->call_item_join_by_link_preview_send:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sput v0, Laka;->e0:I
+    move-result p1
 
-    sget v0, Luic;->call_item_join_by_link_preview_share:I
+    if-nez p1, :cond_1
 
-    sput v0, Laka;->f0:I
+    iget-object p1, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_item_join_waiting_room_title:I
+    invoke-virtual {p1, p0}, Lepd;->b(Ljava/lang/Runnable;)Lzv4;
 
-    sput v0, Laka;->g0:I
+    :cond_1
+    return-void
+.end method
 
-    sget v0, Luic;->call_item_share_screen_mode_button_share_stop:I
+.method public final poll()Ljava/lang/Object;
+    .locals 1
 
-    sput v0, Laka;->h0:I
+    iget-object v0, p0, Laka;->d:Lbqe;
 
-    sget v0, Luic;->call_item_share_screen_mode_description:I
+    invoke-interface {v0}, Lbqe;->poll()Ljava/lang/Object;
 
-    sput v0, Laka;->i0:I
+    move-result-object v0
 
-    sget v0, Luic;->call_item_share_screen_mode_title:I
+    return-object v0
+.end method
 
-    sput v0, Laka;->j0:I
+.method public final q(I)I
+    .locals 0
 
-    sget v0, Luic;->call_join_by_link_ask_microphone:I
+    const/4 p1, 0x1
 
-    sput v0, Laka;->k0:I
+    iput-boolean p1, p0, Laka;->t0:Z
 
-    sget v0, Luic;->call_join_by_link_ask_start_call:I
+    const/4 p1, 0x2
 
-    sput v0, Laka;->l0:I
+    return p1
+.end method
 
-    sget v0, Luic;->call_join_by_link_ask_start_title:I
+.method public final run()V
+    .locals 7
 
-    sput v0, Laka;->m0:I
+    iget-boolean v0, p0, Laka;->t0:Z
 
-    sget v0, Luic;->call_join_by_link_ask_video:I
+    const/4 v1, 0x1
 
-    sput v0, Laka;->n0:I
+    if-eqz v0, :cond_5
 
-    sget v0, Luic;->call_main_speaker_share_screen:I
+    move v0, v1
 
-    sput v0, Laka;->o0:I
+    :cond_0
+    iget-boolean v2, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_me_in_waiting_room:I
+    if-eqz v2, :cond_1
 
-    sput v0, Laka;->p0:I
+    goto/16 :goto_3
 
-    sget v0, Luic;->call_me_member:I
+    :cond_1
+    iget-boolean v2, p0, Laka;->Y:Z
 
-    sput v0, Laka;->q0:I
+    iget-object v3, p0, Laka;->X:Ljava/lang/Throwable;
 
-    sget v0, Luic;->call_microphone_disabled_accessibility:I
+    if-eqz v2, :cond_2
 
-    sput v0, Laka;->r0:I
+    if-eqz v3, :cond_2
 
-    sget v0, Luic;->call_microphone_enabled_accessibility:I
+    iput-boolean v1, p0, Laka;->Z:Z
 
-    sput v0, Laka;->s0:I
+    iget-object v0, p0, Laka;->a:Lgla;
 
-    sget v0, Luic;->call_more_accessibility:I
+    iget-object v1, p0, Laka;->X:Ljava/lang/Throwable;
 
-    sput v0, Laka;->t0:I
+    invoke-interface {v0, v1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sget v0, Luic;->call_opponents_scroll_to_start:I
+    iget-object v0, p0, Laka;->b:Lepd;
 
-    sput v0, Laka;->u0:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sget v0, Luic;->call_rate_initial_title_text:I
+    return-void
 
-    sput v0, Laka;->v0:I
+    :cond_2
+    iget-object v3, p0, Laka;->a:Lgla;
 
-    sget v0, Luic;->call_rate_negative_title_text:I
+    const/4 v4, 0x0
 
-    sput v0, Laka;->w0:I
+    invoke-interface {v3, v4}, Lgla;->b(Ljava/lang/Object;)V
 
-    sget v0, Luic;->call_rate_reason_audio_call_interuption_title:I
+    if-eqz v2, :cond_4
 
-    sput v0, Laka;->x0:I
+    iput-boolean v1, p0, Laka;->Z:Z
 
-    sget v0, Luic;->call_rate_reason_audio_echo_title:I
+    iget-object v0, p0, Laka;->X:Ljava/lang/Throwable;
 
-    sput v0, Laka;->y0:I
+    if-eqz v0, :cond_3
 
-    sget v0, Luic;->call_rate_reason_audio_freezes_title:I
+    iget-object v1, p0, Laka;->a:Lgla;
 
-    sput v0, Laka;->z0:I
+    invoke-interface {v1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sget v0, Luic;->call_rate_reason_audio_quality_title:I
+    goto :goto_0
 
-    sput v0, Laka;->A0:I
+    :cond_3
+    iget-object v0, p0, Laka;->a:Lgla;
 
-    sget v0, Luic;->call_rate_reason_users_freezes_title:I
+    invoke-interface {v0}, Lgla;->c()V
 
-    sput v0, Laka;->B0:I
+    :goto_0
+    iget-object v0, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_rate_reason_video_call_interuption_title:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sput v0, Laka;->C0:I
+    return-void
 
-    sget v0, Luic;->call_rate_reason_video_freezes_title:I
+    :cond_4
+    neg-int v0, v0
 
-    sput v0, Laka;->D0:I
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    sget v0, Luic;->call_rate_reason_video_quality_title:I
+    move-result v0
 
-    sput v0, Laka;->E0:I
+    if-nez v0, :cond_0
 
-    sget v0, Luic;->call_rate_reason_video_sync_title:I
+    goto :goto_3
 
-    sput v0, Laka;->F0:I
+    :cond_5
+    iget-object v0, p0, Laka;->d:Lbqe;
 
-    sget v0, Luic;->call_rate_reason_voice_communication_problem_title:I
+    iget-object v2, p0, Laka;->a:Lgla;
 
-    sput v0, Laka;->G0:I
+    move v3, v1
 
-    sget v0, Luic;->call_rate_send_button_text:I
+    :cond_6
+    iget-boolean v4, p0, Laka;->Y:Z
 
-    sput v0, Laka;->H0:I
+    invoke-interface {v0}, Lbqe;->isEmpty()Z
 
-    sget v0, Luic;->call_rate_success_snackbar_subtitle:I
+    move-result v5
 
-    sput v0, Laka;->I0:I
+    invoke-virtual {p0, v4, v5, v2}, Laka;->e(ZZLgla;)Z
 
-    sget v0, Luic;->call_rate_success_snackbar_title:I
+    move-result v4
 
-    sput v0, Laka;->J0:I
+    if-eqz v4, :cond_7
 
-    sget v0, Luic;->call_record_me_stop_record:I
+    goto :goto_3
 
-    sput v0, Laka;->K0:I
+    :cond_7
+    :goto_1
+    iget-boolean v4, p0, Laka;->Y:Z
 
-    sget v0, Luic;->call_record_me_stop_record_and_remove:I
+    :try_start_0
+    invoke-interface {v0}, Lbqe;->poll()Ljava/lang/Object;
 
-    sput v0, Laka;->L0:I
+    move-result-object v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget v0, Luic;->call_record_review_name:I
+    if-nez v5, :cond_8
 
-    sput v0, Laka;->M0:I
+    move v6, v1
 
-    sget v0, Luic;->call_screen_admin_confirm_add_users_check:I
+    goto :goto_2
 
-    sput v0, Laka;->N0:I
+    :cond_8
+    const/4 v6, 0x0
 
-    sget v0, Luic;->call_screen_admin_confirm_add_users_neutral:I
+    :goto_2
+    invoke-virtual {p0, v4, v6, v2}, Laka;->e(ZZLgla;)Z
 
-    sput v0, Laka;->O0:I
+    move-result v4
 
-    sget v0, Luic;->call_screen_admin_confirm_add_users_positive:I
+    if-eqz v4, :cond_9
 
-    sput v0, Laka;->P0:I
+    goto :goto_3
 
-    sget v0, Luic;->call_screen_admin_confirm_add_users_subtitle:I
+    :cond_9
+    if-eqz v6, :cond_a
 
-    sput v0, Laka;->Q0:I
+    neg-int v3, v3
 
-    sget v0, Luic;->call_screen_admin_confirm_add_users_title:I
+    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    sput v0, Laka;->R0:I
+    move-result v3
 
-    sget v0, Luic;->call_screen_admin_confirm_remove_user_neutral:I
+    if-nez v3, :cond_6
 
-    sput v0, Laka;->S0:I
+    :goto_3
+    return-void
 
-    sget v0, Luic;->call_screen_admin_confirm_remove_user_positive:I
+    :cond_a
+    invoke-interface {v2, v5}, Lgla;->b(Ljava/lang/Object;)V
 
-    sput v0, Laka;->T0:I
+    goto :goto_1
 
-    sget v0, Luic;->call_screen_admin_confirm_remove_user_subtitle:I
+    :catchall_0
+    move-exception v3
 
-    sput v0, Laka;->U0:I
+    invoke-static {v3}, Lose;->c(Ljava/lang/Throwable;)V
 
-    sget v0, Luic;->call_screen_admin_confirm_remove_user_title:I
+    iput-boolean v1, p0, Laka;->Z:Z
 
-    sput v0, Laka;->V0:I
+    iget-object v1, p0, Laka;->o:Lzv4;
 
-    sget v0, Luic;->call_screen_admin_remove_user_title:I
+    invoke-interface {v1}, Lzv4;->dispose()V
 
-    sput v0, Laka;->W0:I
+    invoke-interface {v0}, Lbqe;->clear()V
 
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_apply_all:I
+    invoke-interface {v2, v3}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Laka;->X0:I
+    iget-object v0, p0, Laka;->b:Lepd;
 
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_empty_button:I
-
-    sput v0, Laka;->Y0:I
-
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_empty_subtitle:I
-
-    sput v0, Laka;->Z0:I
-
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_empty_title:I
-
-    sput v0, Laka;->a1:I
-
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_reject_all:I
-
-    sput v0, Laka;->b1:I
-
-    sget v0, Luic;->call_screen_admin_user_in_wait_room_title:I
-
-    sput v0, Laka;->c1:I
-
-    sget v0, Luic;->call_screen_camera_admin_low_hand:I
-
-    sput v0, Laka;->d1:I
-
-    sget v0, Luic;->call_screen_camera_admin_remove_user:I
-
-    sput v0, Laka;->e1:I
-
-    sget v0, Luic;->call_screen_camera_admin_stop_camera_user:I
-
-    sput v0, Laka;->f1:I
-
-    sget v0, Luic;->call_screen_camera_admin_stop_mic_user:I
-
-    sput v0, Laka;->g1:I
-
-    sget v0, Luic;->call_screen_camera_admin_stop_sharing_user:I
-
-    sput v0, Laka;->h1:I
-
-    sget v0, Luic;->call_screen_camera_and_mic_unavailable_in_call:I
-
-    sput v0, Laka;->i1:I
-
-    sget v0, Luic;->call_screen_camera_disabled_by_admin:I
-
-    sput v0, Laka;->j1:I
-
-    sget v0, Luic;->call_screen_camera_unavailable_in_call:I
-
-    sput v0, Laka;->k1:I
-
-    sget v0, Luic;->call_screen_invite_to_p2p_title:I
-
-    sput v0, Laka;->l1:I
-
-    sget v0, Luic;->call_screen_menu_grid_mode_title:I
-
-    sput v0, Laka;->m1:I
-
-    sget v0, Luic;->call_screen_menu_speaker_mode_subtitle:I
-
-    sput v0, Laka;->n1:I
-
-    sget v0, Luic;->call_screen_menu_speaker_mode_title:I
-
-    sput v0, Laka;->o1:I
-
-    sget v0, Luic;->call_screen_mic_disabled_by_admin:I
-
-    sput v0, Laka;->p1:I
-
-    sget v0, Luic;->call_screen_mic_unavailable_in_call:I
-
-    sput v0, Laka;->q1:I
-
-    sget v0, Luic;->call_screen_opponents_list_add_users:I
-
-    sput v0, Laka;->r1:I
-
-    sget v0, Luic;->call_screen_opponents_list_empty_subtitle:I
-
-    sput v0, Laka;->s1:I
-
-    sget v0, Luic;->call_screen_opponents_list_empty_title:I
-
-    sput v0, Laka;->t1:I
-
-    sget v0, Luic;->call_screen_opponents_list_link:I
-
-    sput v0, Laka;->u1:I
-
-    sget v0, Luic;->call_screen_opponents_list_users_title:I
-
-    sput v0, Laka;->v1:I
-
-    sget v0, Luic;->call_screen_raise_hand_disabled_by_admin:I
-
-    sput v0, Laka;->w1:I
-
-    sget v0, Luic;->call_screen_raisehand_manage_negative_btn:I
-
-    sput v0, Laka;->x1:I
-
-    sget v0, Luic;->call_screen_raisehand_manage_positive_btn:I
-
-    sput v0, Laka;->y1:I
-
-    sget v0, Luic;->call_screen_raisehand_manage_subtitle_admin:I
-
-    sput v0, Laka;->z1:I
-
-    sget v0, Luic;->call_screen_raisehand_manage_title_admin:I
-
-    sput v0, Laka;->A1:I
-
-    sget v0, Luic;->call_screen_raisehand_manage_title_me:I
-
-    sput v0, Laka;->B1:I
-
-    sget v0, Luic;->call_screen_record_admin_exit_need_remove:I
-
-    sput v0, Laka;->C1:I
-
-    sget v0, Luic;->call_screen_record_admin_exit_negative_btn:I
-
-    sput v0, Laka;->D1:I
-
-    sget v0, Luic;->call_screen_record_admin_exit_positive_btn:I
-
-    sput v0, Laka;->E1:I
-
-    sget v0, Luic;->call_screen_record_admin_exit_title:I
-
-    sput v0, Laka;->F1:I
-
-    sget v0, Luic;->call_screen_record_me_owner_exit_negative_btn:I
-
-    sput v0, Laka;->G1:I
-
-    sget v0, Luic;->call_screen_record_me_owner_exit_positive_btn:I
-
-    sput v0, Laka;->H1:I
-
-    sget v0, Luic;->call_screen_record_me_owner_exit_subtitle:I
-
-    sput v0, Laka;->I1:I
-
-    sget v0, Luic;->call_screen_record_me_owner_exit_title:I
-
-    sput v0, Laka;->J1:I
-
-    sget v0, Luic;->call_screen_record_start_chat_subtitle:I
-
-    sput v0, Laka;->K1:I
-
-    sget v0, Luic;->call_screen_record_start_chat_title:I
-
-    sput v0, Laka;->L1:I
-
-    sget v0, Luic;->call_screen_record_start_failed:I
-
-    sput v0, Laka;->M1:I
-
-    sget v0, Luic;->call_screen_record_start_name_error:I
-
-    sput v0, Laka;->N1:I
-
-    sget v0, Luic;->call_screen_record_start_start_btn:I
-
-    sput v0, Laka;->O1:I
-
-    sget v0, Luic;->call_screen_record_start_title:I
-
-    sput v0, Laka;->P1:I
-
-    sget v0, Luic;->call_screen_record_start_tooltip_admin:I
-
-    sput v0, Laka;->Q1:I
-
-    sget v0, Luic;->call_screen_record_start_tooltip_user:I
-
-    sput v0, Laka;->R1:I
-
-    sget v0, Luic;->call_screen_record_user_description:I
-
-    sput v0, Laka;->S1:I
-
-    sget v0, Luic;->call_screen_record_user_description_with_duration:I
-
-    sput v0, Laka;->T1:I
-
-    sget v0, Luic;->call_screen_share_link_title:I
-
-    sput v0, Laka;->U1:I
-
-    sget v0, Luic;->call_screen_sharing_unavailable_in_call:I
-
-    sput v0, Laka;->V1:I
-
-    sget v0, Luic;->call_screen_waiting_room_more_users_waitting_title:I
-
-    sput v0, Laka;->W1:I
-
-    sget v0, Luic;->call_screen_waiting_room_two_users_waitting_title:I
-
-    sput v0, Laka;->X1:I
-
-    sget v0, Luic;->call_screen_waiting_room_user_waitting_approuve:I
-
-    sput v0, Laka;->Y1:I
-
-    sget v0, Luic;->call_screen_waiting_room_users_waitting_approuve:I
-
-    sput v0, Laka;->Z1:I
-
-    sget v0, Luic;->call_settings_accessibility:I
-
-    sput v0, Laka;->a2:I
-
-    sget v0, Luic;->call_start_screen_sharing_error:I
-
-    sput v0, Laka;->b2:I
-
-    sget v0, Luic;->call_tooltip_mic_disabled:I
-
-    sput v0, Laka;->c2:I
-
-    sget v0, Luic;->call_tooltip_raise_hand:I
-
-    sput v0, Laka;->d2:I
-
-    sget v0, Luic;->call_user_connection_accessibility:I
-
-    sput v0, Laka;->e2:I
-
-    sget v0, Luic;->call_user_info_open_chat:I
-
-    sput v0, Laka;->f2:I
-
-    sget v0, Luic;->call_user_info_pin:I
-
-    sput v0, Laka;->g2:I
-
-    sget v0, Luic;->call_user_info_unpin:I
-
-    sput v0, Laka;->h2:I
-
-    sget v0, Luic;->call_user_item_rotate:I
-
-    sput v0, Laka;->i2:I
-
-    sget v0, Luic;->call_user_microphone_disabled_accessibility:I
-
-    sput v0, Laka;->j2:I
-
-    sget v0, Luic;->call_user_talking_accessibility:I
-
-    sput v0, Laka;->k2:I
-
-    sget v0, Luic;->call_users_in_call_search:I
-
-    sput v0, Laka;->l2:I
-
-    sget v0, Luic;->call_users_in_wait_room_count_no_users:I
-
-    sput v0, Laka;->m2:I
-
-    sget v0, Luic;->call_users_in_wait_room_count_show_all:I
-
-    sput v0, Laka;->n2:I
-
-    sget v0, Luic;->call_users_info_admin:I
-
-    sput v0, Laka;->o2:I
-
-    sget v0, Luic;->call_users_info_count_no_users:I
-
-    sput v0, Laka;->p2:I
-
-    sget v0, Luic;->call_users_info_me:I
-
-    sput v0, Laka;->q2:I
-
-    sget v0, Luic;->call_users_info_me_admin:I
-
-    sput v0, Laka;->r2:I
-
-    sget v0, Luic;->call_users_info_participant:I
-
-    sput v0, Laka;->s2:I
-
-    sget v0, Luic;->call_volume_bluetooth:I
-
-    sput v0, Laka;->t2:I
-
-    sget v0, Luic;->call_volume_default:I
-
-    sput v0, Laka;->u2:I
-
-    sget v0, Luic;->call_volume_speakerphone:I
-
-    sput v0, Laka;->v2:I
-
-    sget v0, Luic;->call_volume_wired_unknown:I
-
-    sput v0, Laka;->w2:I
-
-    sget v0, Luic;->call_volume_wired_wired_headset:I
-
-    sput v0, Laka;->x2:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
     return-void
 .end method

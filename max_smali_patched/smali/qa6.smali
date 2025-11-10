@@ -1,132 +1,95 @@
 .class public final Lqa6;
-.super Lvb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrlg;
-.implements Lcs7;
-.implements Lqcd;
-.implements Lhb6;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final X:Landroidx/fragment/app/b;
+.field public final synthetic a:I
 
-.field public final Y:Landroid/os/Handler;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final Z:Lfb6;
+.field public final synthetic c:Landroid/content/Context;
 
-.field public final o:Landroidx/fragment/app/b;
+.field public final synthetic d:Lx3;
 
-.field public final synthetic w0:Landroidx/fragment/app/b;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/b;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;Landroid/content/Context;Lx3;II)V
+    .locals 0
+
+    iput p5, p0, Lqa6;->a:I
+
+    iput-object p1, p0, Lqa6;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lqa6;->c:Landroid/content/Context;
+
+    iput-object p3, p0, Lqa6;->d:Lx3;
+
+    iput p4, p0, Lqa6;->o:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqa6;->w0:Landroidx/fragment/app/b;
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object p1, p0, Lqa6;->o:Landroidx/fragment/app/b;
-
-    iput-object p1, p0, Lqa6;->X:Landroidx/fragment/app/b;
-
-    iput-object v0, p0, Lqa6;->Y:Landroid/os/Handler;
-
-    new-instance p1, Lfb6;
-
-    invoke-direct {p1}, Landroidx/fragment/app/c;-><init>()V
-
-    iput-object p1, p0, Lqa6;->Z:Lfb6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(I)Landroid/view/View;
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lqa6;->w0:Landroidx/fragment/app/b;
+    iget v0, p0, Lqa6;->a:I
 
-    invoke-virtual {v0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    :try_start_0
+    iget-object v0, p0, Lqa6;->b:Ljava/lang/String;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lqa6;->c:Landroid/content/Context;
 
-.method public final G()Z
-    .locals 1
+    iget-object v2, p0, Lqa6;->d:Lx3;
 
-    iget-object v0, p0, Lqa6;->w0:Landroidx/fragment/app/b;
+    iget v3, p0, Lqa6;->o:I
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+    invoke-static {v0, v1, v2, v3}, Lsa6;->a(Ljava/lang/String;Landroid/content/Context;Lx3;I)Lra6;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
-    const/4 v0, 0x1
+    :catchall_0
+    new-instance v0, Lra6;
 
-    return v0
+    const/4 v1, -0x3
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lra6;-><init>(I)V
 
-    return v0
-.end method
-
-.method public final L()Les7;
-    .locals 1
-
-    iget-object v0, p0, Lqa6;->w0:Landroidx/fragment/app/b;
-
-    iget-object v0, v0, Landroidx/fragment/app/b;->J0:Les7;
-
+    :goto_0
     return-object v0
-.end method
 
-.method public final a(Landroidx/fragment/app/a;)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lqa6;->d:Lx3;
 
-    return-void
-.end method
+    iget v1, p0, Lqa6;->o:I
 
-.method public final u()Lqlg;
-    .locals 1
+    iget-object v2, p0, Lqa6;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lqa6;->w0:Landroidx/fragment/app/b;
+    iget-object v3, p0, Lqa6;->c:Landroid/content/Context;
 
-    invoke-virtual {v0}, Ltf3;->u()Lqlg;
+    invoke-static {v2, v3, v0, v1}, Lsa6;->a(Ljava/lang/String;Landroid/content/Context;Lx3;I)Lra6;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final x()Lum;
-    .locals 1
-
-    iget-object v0, p0, Lqa6;->w0:Landroidx/fragment/app/b;
-
-    iget-object v0, v0, Ltf3;->o:Ljd;
-
-    iget-object v0, v0, Ljd;->o:Ljava/lang/Object;
-
-    check-cast v0, Lum;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

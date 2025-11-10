@@ -1,79 +1,109 @@
-.class public abstract Lnhf;
-.super Ljava/lang/Object;
+.class public final Lnhf;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final a:Ls5f;
 
-.field public static final b:Ls5f;
+# instance fields
+.field public final synthetic X:Lphf;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lphf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Luse;
+    iput-object p1, p0, Lnhf;->X:Lphf;
 
-    const/16 v1, 0x11
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Luse;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lnhf;->a:Ls5f;
-
-    new-instance v0, Luse;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Luse;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lnhf;->b:Ls5f;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
-    .locals 3
 
-    const/16 v0, 0x100
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    check-cast p1, Llf9;
 
-    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnhf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lnhf;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lnhf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lnhf;
+
+    iget-object v1, p0, Lnhf;->X:Lphf;
+
+    invoke-direct {v0, v1, p2}, Lnhf;-><init>(Lphf;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lnhf;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnhf;->o:Ljava/lang/Object;
+
+    check-cast p1, Llf9;
+
+    iget v0, p1, Llf9;->d:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lnhf;->X:Lphf;
+
+    iget-object v0, v0, Lphf;->e:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Landroid/graphics/Canvas;
+    check-cast v0, Lx34;
 
-    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p1}, Lx34;->a(Llf9;)Leia;
 
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    move-result-object p1
 
-    move-result p0
+    invoke-static {p1}, Lqxi;->a(Lwka;)Lpt1;
 
-    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
+    move-result-object p1
 
-    new-instance p0, Ljava/io/ByteArrayOutputStream;
+    return-object p1
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    :cond_0
+    new-instance v0, Lw01;
 
-    move-result v1
+    const/16 v1, 0xd
 
-    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+    invoke-direct {v0, v1, p1}, Lw01;-><init>(ILjava/lang/Object;)V
 
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v2, 0x64
-
-    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    return-object p0
+    return-object v0
 .end method

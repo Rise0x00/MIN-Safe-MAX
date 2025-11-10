@@ -1,42 +1,87 @@
-.class public final Lxy5;
-.super Loy5;
+.class public abstract Lxy5;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lucd;
 
 
 # static fields
-.field public static final b:Lxy5;
+.field public static final a:[F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 11
 
-    new-instance v0, Lxy5;
+    sget-object v0, Lcod;->a:[J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lxy5;->b:Lxy5;
+    invoke-static {v1}, Lcod;->f(I)I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    invoke-static {v2}, Lcod;->e(I)I
+
+    move-result v2
+
+    const/4 v3, 0x7
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v0, v2, 0xf
+
+    and-int/lit8 v0, v0, -0x8
+
+    shr-int/lit8 v0, v0, 0x3
+
+    new-array v3, v0, [J
+
+    const-wide v4, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    invoke-static {v3, v1, v0, v4, v5}, Ljava/util/Arrays;->fill([JIIJ)V
+
+    move-object v0, v3
+
+    :goto_1
+    shr-int/lit8 v3, v2, 0x3
+
+    and-int/lit8 v4, v2, 0x7
+
+    shl-int/lit8 v4, v4, 0x3
+
+    aget-wide v5, v0, v3
+
+    const-wide/16 v7, 0xff
+
+    shl-long/2addr v7, v4
+
+    not-long v9, v7
+
+    and-long v4, v5, v9
+
+    or-long/2addr v4, v7
+
+    aput-wide v4, v0, v3
+
+    new-array v0, v2, [F
+
+    new-array v0, v1, [F
+
+    sput-object v0, Lxy5;->a:[F
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final g(Lyz5;)V
-    .locals 0
-
-    invoke-static {p1}, Lr75;->a(Lcze;)V
-
-    return-void
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
 .end method

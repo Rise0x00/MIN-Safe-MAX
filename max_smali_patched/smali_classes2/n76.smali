@@ -2,561 +2,352 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Collection;
-.implements Lim7;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/Long;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lo76;)V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Ln76;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iget-object p1, p1, Lo76;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+    iput-wide p1, p0, Ln76;->a:J
 
-    .line 3
-    iput-object p1, p0, Ln76;->b:Ljava/lang/Object;
+    iput-object p3, p0, Ln76;->b:Ljava/lang/String;
 
-    return-void
-.end method
+    iput-object p4, p0, Ln76;->c:Ljava/lang/String;
 
-.method public constructor <init>(Lwt9;)V
-    .locals 1
+    iput-object p5, p0, Ln76;->d:Ljava/lang/String;
 
-    const/4 v0, 0x1
+    iput-object p6, p0, Ln76;->e:Ljava/lang/Long;
 
-    iput v0, p0, Ln76;->a:I
+    iput-object p7, p0, Ln76;->f:Ljava/lang/String;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p8, p0, Ln76;->g:Ljava/lang/String;
 
-    .line 5
-    iput-object p1, p0, Ln76;->b:Ljava/lang/Object;
+    iput-object p9, p0, Ln76;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget p1, p0, Ln76;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    iget p1, p0, Ln76;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final clear()V
-    .locals 2
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwt9;
-
-    invoke-virtual {v0, p1}, Lwt9;->c(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    instance-of v0, p1, Lue8;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    check-cast p1, Lue8;
+    instance-of v1, p1, Ln76;
 
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentSkipListSet;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    :goto_0
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwt9;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lwt9;->c(Ljava/lang/Object;)Z
-
-    move-result v1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    const/4 v2, 0x0
-
-    :cond_2
-    :goto_0
     return v2
 
-    :pswitch_0
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ln76;
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    iget-wide v3, p0, Ln76;->a:J
 
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+    iget-wide v5, p1, Ln76;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ln76;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Ln76;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ln76;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Ln76;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ln76;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Ln76;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ln76;->e:Ljava/lang/Long;
+
+    iget-object v3, p1, Ln76;->e:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Ln76;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Ln76;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Ln76;->g:Ljava/lang/String;
+
+    iget-object v3, p1, Ln76;->g:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-object v1, p0, Ln76;->h:Ljava/lang/String;
+
+    iget-object p1, p1, Ln76;->h:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_9
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_9
+    return v0
 .end method
 
-.method public final isEmpty()Z
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    iget v0, p0, Ln76;->a:I
+    iget-wide v0, p0, Ln76;->a:J
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwt9;
-
-    invoke-virtual {v0}, Lwt9;->h()Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    return v0
+    const/16 v1, 0x1f
 
-    :pswitch_0
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    iget-object v2, p0, Ln76;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->isEmpty()Z
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
 
     move-result v0
 
-    return v0
+    iget-object v2, p0, Ln76;->c:Ljava/lang/String;
 
-    nop
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lddd;
-
-    iget-object v1, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v1, Lwt9;
+    move-result v0
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lddd;-><init>(Lwt9;Lkotlin/coroutines/Continuation;)V
+    iget-object v3, p0, Ln76;->d:Ljava/lang/String;
 
-    invoke-static {v0}, Lv4b;->u(Llf6;)Lrrd;
+    if-nez v3, :cond_0
 
-    move-result-object v0
+    move v3, v2
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_0
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    move-result v3
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->iterator()Ljava/util/Iterator;
+    :goto_0
+    add-int/2addr v0, v3
 
-    move-result-object v0
+    mul-int/2addr v0, v1
 
-    return-object v0
+    iget-object v3, p0, Ln76;->e:Ljava/lang/Long;
 
-    nop
+    if-nez v3, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move v3, v2
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
+    goto :goto_1
 
-    iget p1, p0, Ln76;->a:I
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    packed-switch p1, :pswitch_data_0
+    move-result v3
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    :goto_1
+    add-int/2addr v0, v3
 
-    const-string v0, "Operation is not supported for read-only collection"
+    mul-int/2addr v0, v1
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object v3, p0, Ln76;->f:Ljava/lang/String;
 
-    throw p1
+    if-nez v3, :cond_2
 
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    move v3, v2
 
-    const-string v0, "Operation is not supported for read-only collection"
+    goto :goto_2
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    throw p1
+    move-result v3
 
-    nop
+    :goto_2
+    add-int/2addr v0, v3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    mul-int/2addr v0, v1
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
+    iget-object v3, p0, Ln76;->g:Ljava/lang/String;
 
-    iget p1, p0, Ln76;->a:I
+    if-nez v3, :cond_3
 
-    packed-switch p1, :pswitch_data_0
+    move v3, v2
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    goto :goto_3
 
-    const-string v0, "Operation is not supported for read-only collection"
+    :cond_3
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    throw p1
+    :goto_3
+    add-int/2addr v0, v3
 
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    mul-int/2addr v0, v1
 
-    const-string v0, "Operation is not supported for read-only collection"
+    iget-object v1, p0, Ln76;->h:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_4
 
-    throw p1
+    goto :goto_4
 
-    nop
+    :cond_4
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v2
 
-.method public final removeIf(Ljava/util/function/Predicate;)Z
-    .locals 1
-
-    iget p1, p0, Ln76;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    iget p1, p0, Ln76;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwt9;
-
-    iget v0, v0, Lwt9;->e:I
+    :goto_4
+    add-int/2addr v0, v2
 
     return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;->size()I
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget v0, p0, Ln76;->a:I
+    const-string v0, "FolderWidget(id="
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, ", name="
 
-    .line 1
-    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
+    iget-wide v2, p0, Ln76;->a:J
+
+    iget-object v4, p0, Ln76;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", background="
+
+    const-string v2, ", description="
+
+    iget-object v3, p0, Ln76;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Ln76;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", appId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ln76;->e:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startParam="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ln76;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    const-string v2, ", iconUrl="
+
+    iget-object v3, p0, Ln76;->g:Ljava/lang/String;
+
+    iget-object v4, p0, Ln76;->h:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    .line 2
-    :pswitch_0
-    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ln76;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 4
-    :pswitch_0
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

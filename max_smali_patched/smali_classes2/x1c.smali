@@ -1,125 +1,65 @@
 .class public final Lx1c;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
-
-.field public final c:Llub;
+.field public final synthetic a:Lt5;
 
 
 # direct methods
-.method public constructor <init>(JLlub;)V
-    .locals 1
+.method public constructor <init>(Lt5;)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
-
-    iput-wide p1, p0, Lx1c;->b:J
-
-    iput-object p3, p0, Lx1c;->c:Llub;
+    iput-object p1, p0, Lx1c;->a:Lt5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(J)Lrt4;
+    .locals 6
 
-    const/4 v0, 0x1
+    new-instance v0, Lrt4;
 
-    if-ne p0, p1, :cond_0
+    const-class v1, Liw0;
 
-    return v0
+    iget-object v2, p0, Lx1c;->a:Lt5;
 
-    :cond_0
-    instance-of v1, p1, Lx1c;
+    invoke-virtual {v2, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    if-nez v1, :cond_1
+    move-object v3, v1
 
-    return v2
+    check-cast v3, Liw0;
 
-    :cond_1
-    check-cast p1, Lx1c;
+    const-class v1, Ltlf;
 
-    iget-wide v3, p0, Lx1c;->b:J
+    invoke-virtual {v2, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget-wide v5, p1, Lx1c;->b:J
+    move-result-object v1
 
-    cmp-long v1, v3, v5
+    move-object v4, v1
 
-    if-eqz v1, :cond_2
+    check-cast v4, Ltlf;
 
-    return v2
+    const-class v1, Lu23;
 
-    :cond_2
-    iget-object v1, p0, Lx1c;->c:Llub;
+    invoke-virtual {v2, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lx1c;->c:Llub;
+    move-result-object v1
 
-    if-eq v1, p1, :cond_3
+    move-object v5, v1
 
-    return v2
+    check-cast v5, Lu23;
 
-    :cond_3
-    return v0
-.end method
+    move-wide v1, p1
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lx1c;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lx1c;->c:Llub;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenChat(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lx1c;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx1c;->c:Llub;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v5}, Lrt4;-><init>(JLiw0;Ltlf;Lu23;)V
 
     return-object v0
 .end method

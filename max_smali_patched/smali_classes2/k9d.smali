@@ -1,25 +1,79 @@
-.class public abstract Lk9d;
-.super Ljava/lang/Object;
+.class public final Lk9d;
+.super Lxi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
+# instance fields
+.field public final synthetic a:Lwj8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lwj8;)V
+    .locals 0
 
-    sget v0, Ligc;->one_chat_reactions_expand_view_type:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lk9d;->a:I
+    iput-object p1, p0, Lk9d;->a:Lwj8;
 
-    sget v0, Ligc;->one_chat_reactions_selection_animoji_view_type:I
+    return-void
+.end method
 
-    sput v0, Lk9d;->b:I
+
+# virtual methods
+.method public final e(Lr0;)V
+    .locals 2
+
+    iget-object v0, p0, Lk9d;->a:Lwj8;
+
+    invoke-virtual {v0}, Lwj8;->f()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Lr0;->c()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lwj8;->b(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 2
+
+    iget-object v0, p0, Lk9d;->a:Lwj8;
+
+    invoke-virtual {v0}, Lwj8;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0}, Lwj8;->c()V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0, p1}, Lwj8;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

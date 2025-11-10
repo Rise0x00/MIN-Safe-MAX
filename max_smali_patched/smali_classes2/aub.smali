@@ -1,15 +1,20 @@
-.class public abstract Laub;
-.super Lhy9;
+.class public interface abstract Laub;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+# virtual methods
+.method public abstract a()V
+.end method
 
-    sget-object v0, Loyf;->a:Loyf;
+.method public abstract b()V
+.end method
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+.method public abstract c()Lpf4;
+.end method
 
-    return-void
+.method public abstract d(Latb;)V
+.end method
+
+.method public abstract pause()V
 .end method

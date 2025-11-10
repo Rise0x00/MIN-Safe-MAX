@@ -1,60 +1,158 @@
-.class public abstract Lxfc;
+.class public final Lxfc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_twofa_action:I = 0x7f0a0855
+# instance fields
+.field public volatile a:Z
 
-.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a0856
+.field public final b:Ljava/lang/Object;
 
-.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a0857
 
-.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a0858
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a0859
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a085a
+    const/4 v0, 0x0
 
-.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a085b
+    iput-boolean v0, p0, Lxfc;->a:Z
 
-.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a085c
+    new-instance v0, Ljava/lang/Object;
 
-.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a085d
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a085e
+    iput-object v0, p0, Lxfc;->b:Ljava/lang/Object;
 
-.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a085f
+    return-void
+.end method
 
-.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a0860
 
-.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a0861
+# virtual methods
+.method public final a()V
+    .locals 2
 
-.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a0862
+    iget-object v0, p0, Lxfc;->b:Ljava/lang/Object;
 
-.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a0863
+    monitor-enter v0
 
-.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a0864
+    const/4 v1, 0x1
 
-.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a0865
+    :try_start_0
+    iput-boolean v1, p0, Lxfc;->a:Z
 
-.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a0866
+    iget-object v1, p0, Lxfc;->b:Ljava/lang/Object;
 
-.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a0867
+    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a0868
+    monitor-exit v0
 
-.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a0869
+    return-void
 
-.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a086a
+    :catchall_0
+    move-exception v1
 
-.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a086b
+    monitor-exit v0
 
-.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a086c
+    throw v1
+.end method
 
-.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a086d
+.method public final b(J)V
+    .locals 5
 
-.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a086e
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a086f
+    move-result-wide v0
 
-.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a0870
+    add-long/2addr p1, v0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_1
+
+    iget-object p1, p0, Lxfc;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :goto_0
+    :try_start_0
+    iget-boolean p2, p0, Lxfc;->a:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lxfc;->b:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :cond_0
+    iput-boolean v3, p0, Lxfc;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+
+    throw p2
+
+    :cond_1
+    iget-object v2, p0, Lxfc;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_2
+    :try_start_1
+    iget-boolean v4, p0, Lxfc;->a:Z
+
+    if-nez v4, :cond_2
+
+    cmp-long v4, v0, p1
+
+    if-gez v4, :cond_2
+
+    iget-object v4, p0, Lxfc;->b:Ljava/lang/Object;
+
+    sub-long v0, p1, v0
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_2
+    iput-boolean v3, p0, Lxfc;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v2
+
+    return-void
+
+    :goto_3
+    monitor-exit v2
+
+    throw p1
+.end method

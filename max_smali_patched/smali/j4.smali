@@ -1,289 +1,249 @@
-.class public abstract synthetic Lj4;
+.class public abstract Lj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static bridge synthetic A(Landroid/media/MediaRoute2Info;)Z
-    .locals 0
+# instance fields
+.field public a:[Lk4;
 
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->isSystemRoute()Z
+.field public b:I
 
-    move-result p0
+.field public c:I
 
-    return p0
-.end method
+.field public d:Lgcf;
 
-.method public static bridge synthetic B()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
 
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_IME_ENTER:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+# virtual methods
+.method public final f()Lk4;
+    .locals 4
 
-    return-object v0
-.end method
+    monitor-enter p0
 
-.method public static bridge synthetic C(Landroid/app/ApplicationExitInfo;)V
-    .locals 0
+    :try_start_0
+    iget-object v0, p0, Lj4;->a:[Lk4;
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lj4;->k()[Lk4;
 
-.method public static bridge synthetic D(Landroid/app/ApplicationExitInfo;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getDescription()Ljava/lang/String;
+    iput-object v0, p0, Lj4;->a:[Lk4;
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public static bridge synthetic a()I
-    .locals 1
+    :catchall_0
+    move-exception v0
 
-    invoke-static {}, Landroid/os/IBinder;->getSuggestedMaxIpcSizeBytes()I
+    goto :goto_1
 
-    move-result v0
+    :cond_0
+    iget v1, p0, Lj4;->b:I
 
-    return v0
-.end method
+    array-length v2, v0
 
-.method public static bridge synthetic b(Landroid/app/ApplicationExitInfo;)I
-    .locals 0
+    if-lt v1, v2, :cond_1
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getReason()I
+    array-length v1, v0
 
-    move-result p0
+    mul-int/lit8 v1, v1, 0x2
 
-    return p0
-.end method
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-.method public static bridge synthetic c(Landroid/app/ApplicationExitInfo;)J
-    .locals 2
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTimestamp()J
+    move-object v1, v0
 
-    move-result-wide v0
+    check-cast v1, [Lk4;
 
-    return-wide v0
-.end method
+    iput-object v1, p0, Lj4;->a:[Lk4;
 
-.method public static bridge synthetic d(Ljava/lang/Object;)Landroid/app/ApplicationExitInfo;
-    .locals 0
+    check-cast v0, [Lk4;
 
-    check-cast p0, Landroid/app/ApplicationExitInfo;
+    :cond_1
+    :goto_0
+    iget v1, p0, Lj4;->c:I
 
-    return-object p0
-.end method
+    :cond_2
+    aget-object v2, v0, v1
 
-.method public static bridge synthetic e(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 1
+    if-nez v2, :cond_3
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lj4;->j()Lk4;
 
-    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+    move-result-object v2
 
-    move-result-object p0
+    aput-object v2, v0, v1
 
-    return-object p0
-.end method
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
 
-.method public static bridge synthetic f()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
+    array-length v3, v0
 
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_ZOOM_RATIO_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic g()Landroid/hardware/camera2/CaptureRequest$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic h(Ljava/lang/Object;)Landroid/media/MediaRoute2Info;
-    .locals 0
-
-    check-cast p0, Landroid/media/MediaRoute2Info;
-
-    return-object p0
-.end method
-
-.method public static synthetic i(Lxyc;)Landroid/media/RouteDiscoveryPreference$Builder;
-    .locals 2
-
-    new-instance v0, Landroid/media/RouteDiscoveryPreference$Builder;
+    if-lt v1, v3, :cond_4
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroid/media/RouteDiscoveryPreference$Builder;-><init>(Ljava/util/List;Z)V
+    :cond_4
+    invoke-virtual {v2, p0}, Lk4;->a(Lj4;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iput v1, p0, Lj4;->c:I
+
+    iget v0, p0, Lj4;->b:I
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lj4;->b:I
+
+    iget-object v0, p0, Lj4;->d:Lgcf;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0, v1}, Lgcf;->z(I)V
+
+    :cond_5
+    return-object v2
+
+    :goto_1
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final i()Lt0f;
+    .locals 5
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lj4;->d:Lgcf;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lgcf;
+
+    iget v1, p0, Lj4;->b:I
+
+    const v2, 0x7fffffff
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v4, v2, v3}, Lake;-><init>(III)V
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
+
+    iput-object v0, p0, Lj4;->d:Lgcf;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
 
     return-object v0
+
+    :goto_1
+    monitor-exit p0
+
+    throw v0
 .end method
 
-.method public static bridge synthetic j(Landroid/media/RouteDiscoveryPreference$Builder;)Landroid/media/RouteDiscoveryPreference;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/RouteDiscoveryPreference$Builder;->build()Landroid/media/RouteDiscoveryPreference;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract j()Lk4;
 .end method
 
-.method public static bridge synthetic k(Landroid/media/MediaRoute2Info;)Landroid/os/Bundle;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract k()[Lk4;
 .end method
 
-.method public static bridge synthetic l(Landroid/media/MediaRouter2$RoutingController;)Landroid/os/Bundle;
-    .locals 0
+.method public final l(Lk4;)V
+    .locals 6
 
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getControlHints()Landroid/os/Bundle;
+    monitor-enter p0
 
-    move-result-object p0
+    :try_start_0
+    iget v0, p0, Lj4;->b:I
 
-    return-object p0
-.end method
+    const/4 v1, -0x1
 
-.method public static bridge synthetic m(Landroid/content/Context;)Landroid/view/Display;
-    .locals 0
+    add-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+    iput v0, p0, Lj4;->b:I
 
-    move-result-object p0
+    iget-object v2, p0, Lj4;->d:Lgcf;
 
-    return-object p0
-.end method
+    const/4 v3, 0x0
 
-.method public static bridge synthetic n()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
+    if-nez v0, :cond_0
 
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_PRESS_AND_HOLD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    iput v3, p0, Lj4;->c:I
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public static bridge synthetic o(Landroid/app/ApplicationExitInfo;)Ljava/io/InputStream;
-    .locals 0
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getTraceInputStream()Ljava/io/InputStream;
+    goto :goto_2
 
-    move-result-object p0
+    :cond_0
+    :goto_0
+    invoke-virtual {p1, p0}, Lk4;->b(Lj4;)[Lkotlin/coroutines/Continuation;
 
-    return-object p0
-.end method
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public static bridge synthetic p(Landroid/app/ApplicationExitInfo;)Ljava/lang/String;
-    .locals 0
+    monitor-exit p0
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getProcessName()Ljava/lang/String;
+    array-length v0, p1
 
-    move-result-object p0
+    :goto_1
+    if-ge v3, v0, :cond_2
 
-    return-object p0
-.end method
+    aget-object v4, p1, v3
 
-.method public static bridge synthetic q(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
-    .locals 0
+    if-eqz v4, :cond_1
 
-    invoke-virtual {p0}, Landroid/bluetooth/BluetoothDevice;->getAlias()Ljava/lang/String;
+    sget-object v5, Lybg;->a:Lybg;
 
-    move-result-object p0
+    invoke-interface {v4, v5}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
-    return-object p0
-.end method
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
 
-.method public static bridge synthetic r(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
+    goto :goto_1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
+    :cond_2
+    if-eqz v2, :cond_3
 
-    move-result-object p0
+    invoke-virtual {v2, v1}, Lgcf;->z(I)V
 
-    return-object p0
-.end method
-
-.method public static bridge synthetic s(Landroid/media/MediaRoute2Info;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRoute2Info;->getId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic t(Landroid/media/session/MediaController$PlaybackInfo;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/session/MediaController$PlaybackInfo;->getVolumeControlId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic u(Landroid/app/ActivityManager;)Ljava/util/List;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1, v1}, Landroid/app/ActivityManager;->getHistoricalProcessExitReasons(Ljava/lang/String;II)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic v(Landroid/media/MediaRouter2$RoutingController;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaRouter2$RoutingController;->getSelectedRoutes()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic w()V
-    .locals 1
-
-    new-instance v0, Landroid/media/RouteDiscoveryPreference$Builder;
-
+    :cond_3
     return-void
-.end method
 
-.method public static bridge synthetic x(Landroid/app/ApplicationExitInfo;)V
-    .locals 0
+    :goto_2
+    monitor-exit p0
 
-    invoke-virtual {p0}, Landroid/app/ApplicationExitInfo;->getProcessName()Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static bridge synthetic y(Landroid/graphics/Outline;Landroid/graphics/Path;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Outline;->setPath(Landroid/graphics/Path;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic z(Landroid/media/MediaRouter2;Landroid/media/MediaRoute2Info;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaRouter2;->transferTo(Landroid/media/MediaRoute2Info;)V
-
-    return-void
+    throw p1
 .end method

@@ -1,17 +1,15 @@
-.class public interface abstract Lgn6;
+.class public final Lgn6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public c()V
-    .locals 0
+# instance fields
+.field public a:Z
 
-    return-void
-.end method
+.field public b:I
 
-.method public h(Lin6;J)V
-    .locals 0
+.field public c:I
 
-    return-void
-.end method
+.field public d:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public e:I

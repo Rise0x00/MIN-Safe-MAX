@@ -1,99 +1,158 @@
-.class public final enum Li91;
-.super Ljava/lang/Enum;
+.class public final Li91;
+.super Li94;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:Lla5;
-
-.field public static final enum b:Li91;
-
-.field public static final enum c:Li91;
-
-.field public static final synthetic o:[Li91;
-
-
 # instance fields
-.field public final a:I
+.field public final v0:Ljava/lang/String;
+
+.field public w0:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Li91;
-
-    const/4 v1, 0x0
-
-    sget v2, Lpic;->call_history_call_tab_all:I
-
-    const-string v3, "ALL"
-
-    invoke-direct {v0, v3, v1, v2}, Li91;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Li91;->b:Li91;
-
-    new-instance v1, Li91;
-
-    const/4 v2, 0x1
-
-    sget v3, Lpic;->call_history_call_tab_missing:I
-
-    const-string v4, "MISSING"
-
-    invoke-direct {v1, v4, v2, v3}, Li91;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Li91;->c:Li91;
-
-    filled-new-array {v0, v1}, [Li91;
-
-    move-result-object v0
-
-    sput-object v0, Li91;->o:[Li91;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Li91;->X:Lla5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, p1}, Li94;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput p3, p0, Li91;->a:I
+    const-class p1, Li91;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Li91;->v0:Ljava/lang/String;
+
+    sget-object p1, Lna5;->a:Lna5;
+
+    iput-object p1, p0, Li91;->w0:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Li91;
-    .locals 1
 
-    const-class v0, Li91;
+# virtual methods
+.method public final E(Lyid;I)V
+    .locals 8
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p1}, Lyid;->n()Z
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Li91;
+    if-eqz v0, :cond_0
 
-    return-object p0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Li91;->w0:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lba1;
+
+    iget-object p2, p2, Lba1;->c:Laa1;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_1
+
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
+
+    sget-object v0, Laa1;->c:Laa1;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Laa1;)V
+
+    :goto_0
+    move-object v2, p2
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
+
+    sget-object v0, Laa1;->b:Laa1;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Laa1;)V
+
+    goto :goto_0
+
+    :goto_1
+    sget-object p2, Lb24;->b:Lb24;
+
+    invoke-virtual {v2, p2}, Lc24;->setRetainViewMode(Lb24;)V
+
+    new-instance v1, Lbjd;
+
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Lbjd;-><init>(Lc24;Ljava/lang/String;Lh24;Lh24;ZI)V
+
+    invoke-virtual {p1, v1}, Lyid;->S(Lbjd;)V
+
+    return-void
 .end method
 
-.method public static values()[Li91;
+.method public final J(Ldjd;)V
     .locals 1
 
-    sget-object v0, Li91;->o:[Li91;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iput-object v0, p1, Ldjd;->F0:Lyid;
 
-    move-result-object v0
+    invoke-super {p0, p1}, Li94;->J(Ldjd;)V
 
-    check-cast v0, [Li91;
+    return-void
+.end method
 
-    return-object v0
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Li91;->w0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final bridge synthetic y(Lm7d;)V
+    .locals 0
+
+    check-cast p1, Ldjd;
+
+    invoke-virtual {p0, p1}, Li91;->J(Ldjd;)V
+
+    return-void
 .end method

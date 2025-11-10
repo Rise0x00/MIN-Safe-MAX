@@ -1,38 +1,26 @@
 .class public final Li4c;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-.field public final synthetic Y:Lwxc;
-
-.field public final synthetic Z:Lvxc;
-
-.field public final synthetic w0:Lp4c;
-
-.field public final synthetic x0:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwxc;Lvxc;Lp4c;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
     .locals 0
 
-    iput-object p1, p0, Li4c;->Y:Lwxc;
+    iput-object p2, p0, Li4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    iput-object p2, p0, Li4c;->Z:Lvxc;
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Li4c;->w0:Lp4c;
-
-    iput-boolean p4, p0, Li4c;->x0:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -42,167 +30,84 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Li4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Li4c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Li4c;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Li4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Li4c;
 
-    iget-object v3, p0, Li4c;->w0:Lp4c;
+    iget-object v1, p0, Li4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    iget-boolean v4, p0, Li4c;->x0:Z
+    invoke-direct {v0, p2, v1}, Li4c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    iget-object v1, p0, Li4c;->Y:Lwxc;
-
-    iget-object v2, p0, Li4c;->Z:Lvxc;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Li4c;-><init>(Lwxc;Lvxc;Lp4c;ZLkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Li4c;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+    .locals 3
 
-    iget-object v0, p0, Li4c;->w0:Lp4c;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lp4c;->V0:Lwrb;
+    iget-object p1, p0, Li4c;->o:Ljava/lang/Object;
 
-    iget v2, p0, Li4c;->X:I
+    check-cast p1, Lw3c;
 
-    const/4 v3, 0x0
+    iget-object v0, p0, Li4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    sget-object v4, Loyf;->a:Loyf;
+    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:Ltcd;
 
-    iget-object v5, p0, Li4c;->Z:Lvxc;
+    invoke-virtual {v1}, Ltcd;->e()Z
 
-    const/4 v6, 0x1
-
-    iget-object v7, p0, Li4c;->Y:Lwxc;
+    move-result v2
 
     if-eqz v2, :cond_1
 
-    if-ne v2, v6, :cond_0
+    invoke-virtual {v1}, Ltcd;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v1
 
-    goto :goto_1
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-boolean v2, p1, Lw3c;->b:Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v2, :cond_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, v7, Lwxc;->a:Ljava/lang/Object;
-
-    sget-object v2, Llub;->b:Llub;
-
-    sget-object v8, Llub;->c:Llub;
-
-    if-ne p1, v2, :cond_3
-
-    invoke-virtual {v1}, Lwrb;->j()Ljava/lang/Long;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v9
-
-    iput-wide v9, v5, Lvxc;->a:J
-
-    iput-object v8, v7, Lwxc;->a:Ljava/lang/Object;
+    const/4 v2, 0x0
 
     goto :goto_0
 
-    :cond_2
-    return-object v4
+    :cond_0
+    const/16 v2, 0x8
 
-    :cond_3
     :goto_0
-    iget-object p1, v7, Lwxc;->a:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    if-ne p1, v8, :cond_5
+    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()V
 
-    iput v6, p0, Li4c;->X:I
+    :cond_1
+    iget-object v0, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Ljjh;
 
-    invoke-virtual {v1, p0}, Lwrb;->n(Lm3f;)Ljava/lang/Object;
+    iget-object p1, p1, Lw3c;->a:Ljava/util/List;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
 
-    sget-object v1, Lf34;->a:Lf34;
+    sget-object p1, Lybg;->a:Lybg;
 
-    if-ne p1, v1, :cond_4
-
-    return-object v1
-
-    :cond_4
-    :goto_1
-    check-cast p1, Lm82;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Lm82;->r()Lq00;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p1, Lq00;->c:Ljava/io/Serializable;
-
-    move-object v3, p1
-
-    check-cast v3, Ljava/lang/String;
-
-    :cond_5
-    move-object v13, v3
-
-    iget-object p1, v0, Lp4c;->H0:Ljb5;
-
-    new-instance v8, Lw1c;
-
-    iget-wide v9, v5, Lvxc;->a:J
-
-    iget-object v0, v7, Lwxc;->a:Ljava/lang/Object;
-
-    move-object v11, v0
-
-    check-cast v11, Llub;
-
-    iget-boolean v12, p0, Li4c;->x0:Z
-
-    invoke-direct/range {v8 .. v13}, Lw1c;-><init>(JLlub;ZLjava/lang/String;)V
-
-    invoke-static {p1, v8}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    return-object v4
+    return-object p1
 .end method

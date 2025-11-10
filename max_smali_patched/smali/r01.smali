@@ -3,86 +3,111 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Z
 
-.field public final synthetic b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final synthetic b:Lf11;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
+.method public synthetic constructor <init>(ZLf11;)V
     .locals 0
 
-    iput p2, p0, Lr01;->a:I
-
-    iput-object p1, p0, Lr01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lr01;->a:Z
+
+    iput-object p2, p0, Lr01;->b:Lf11;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p0, Lr01;->a:I
+    check-cast p1, Let;
 
-    iget-object v1, p0, Lr01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Lxs;
 
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
+    invoke-direct {v0, p1}, Lxs;-><init>(Let;)V
 
-    new-instance v0, Ls01;
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Lxs;->hasNext()Z
 
-    invoke-direct {v0, v1}, Ls01;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    move-result v1
 
-    return-object v0
+    iget-boolean v2, p0, Lr01;->a:Z
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
+    if-eqz v1, :cond_2
 
-    new-instance v4, Lh8d;
+    invoke-virtual {v0}, Lxs;->next()Ljava/lang/Object;
 
-    const/16 v0, 0xc
+    move-result-object v1
 
-    invoke-direct {v4, v0, v1}, Lh8d;-><init>(ILjava/lang/Object;)V
+    check-cast v1, Ljava/lang/Number;
 
-    new-instance v2, Lzmd;
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    move-result-wide v3
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {v3, v4}, Lwdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Lsed;->m(Landroid/content/Context;)Lloa;
+    iget-object v3, p0, Lr01;->b:Lf11;
 
-    move-result-object v0
+    if-eqz v2, :cond_1
 
-    iget-object v3, v0, Lloa;->c:Luxa;
+    invoke-virtual {v3}, Lf11;->d()Lo34;
 
-    new-instance v5, Lk;
+    move-result-object v2
 
-    const/16 v0, 0x10
+    invoke-virtual {v2}, Lo34;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-direct {v5, v0, v1}, Lk;-><init>(ILjava/lang/Object;)V
+    move-result-object v2
 
-    const/4 v6, 0x0
+    if-eqz v2, :cond_0
 
-    const/16 v7, 0x14
+    const/4 v3, 0x1
 
-    invoke-direct/range {v2 .. v7}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
+    invoke-interface {v2, v1, v3}, Lru/ok/android/externcalls/sdk/Conversation;->promoteParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
 
-    return-object v2
+    goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    invoke-virtual {v3}, Lf11;->d()Lo34;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lo34;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/Conversation;->removeParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    return-object p1
+
+    :cond_3
+    new-instance p1, Let;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Let;-><init>(I)V
+
+    return-object p1
 .end method

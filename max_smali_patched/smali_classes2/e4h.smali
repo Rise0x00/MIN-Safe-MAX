@@ -1,113 +1,309 @@
-.class public abstract synthetic Le4h;
+.class public final Le4h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzv4;
+.implements Law4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final a:Lai3;
+
+.field public final b:Ljava/util/HashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-static {}, Lv77;->values()[Lv77;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    new-instance v0, Lai3;
 
-    array-length v0, v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object v0, p0, Le4h;->a:Lai3;
 
-    const/4 v1, 0x0
+    new-instance v0, Ljava/util/HashSet;
 
-    const/4 v2, 0x1
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    :try_start_0
-    sget-object v3, Lv77;->Companion:Lu77;
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    sget-object v4, Lv77;->Companion:Lu77;
-
-    aput v3, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v4, 0x3
-
-    :try_start_2
-    sget-object v5, Lv77;->Companion:Lu77;
-
-    aput v4, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v5, 0x4
-
-    :try_start_3
-    sget-object v6, Lv77;->Companion:Lu77;
-
-    aput v5, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v6, Lv77;->Companion:Lu77;
-
-    const/4 v6, 0x5
-
-    aput v6, v0, v5
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Le4h;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lx7a;->values()[Lx7a;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_5
-    sget-object v5, Lx7a;->Companion:Lw7a;
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Lx7a;->Companion:Lw7a;
-
-    aput v3, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v1, Lx7a;->Companion:Lw7a;
-
-    aput v4, v0, v3
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    sput-object v0, Le4h;->$EnumSwitchMapping$1:[I
+    iput-object v0, p0, Le4h;->b:Ljava/util/HashSet;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized a(Lzv4;)Z
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    new-instance v0, Lf4h;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Le4h;->a:Lai3;
+
+    invoke-virtual {p1, v0}, Lai3;->a(Lzv4;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v1, p0, Le4h;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return p1
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized b(Lzv4;)Z
+    .locals 5
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Le4h;->a:Lai3;
+
+    iget-object v2, p0, Le4h;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lf4h;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lzv4;
+
+    if-ne v4, p1, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {v1, v3}, Lai3;->b(Lzv4;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    const-string v1, "e4h"
+
+    const-string v2, "delete: failed"
+
+    invoke-static {v1, v2, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+.end method
+
+.method public final declared-synchronized c(Lzv4;)Z
+    .locals 5
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Le4h;->a:Lai3;
+
+    iget-object v2, p0, Le4h;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lf4h;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lzv4;
+
+    if-ne v4, p1, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {v1, v3}, Lai3;->c(Lzv4;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    const-string v1, "e4h"
+
+    const-string v2, "delete: failed"
+
+    invoke-static {v1, v2, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+.end method
+
+.method public final declared-synchronized d()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Le4h;->a:Lai3;
+
+    invoke-virtual {v0}, Lai3;->d()V
+
+    iget-object v0, p0, Le4h;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized dispose()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Le4h;->a:Lai3;
+
+    invoke-virtual {v0}, Lai3;->dispose()V
+
+    iget-object v0, p0, Le4h;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Le4h;->a:Lai3;
+
+    iget-boolean v0, v0, Lai3;->b:Z
+
+    return v0
 .end method

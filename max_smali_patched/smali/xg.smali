@@ -1,444 +1,114 @@
-.class public abstract Lxg;
-.super Lg04;
+.class public final synthetic Lxg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic a:I
 
-.field public Y:Z
+.field public final synthetic b:Landroid/view/View;
 
-.field public Z:Z
-
-.field public o:J
-
-.field public w0:Landroid/animation/Animator;
-
-.field public x0:Lvg;
-
-.field public y0:Z
+.field public final synthetic c:Lpg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    const-wide/16 v0, 0x0
-
-    const/4 v2, 0x3
-
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Lxg;-><init>(JI)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    const/4 p1, 0x1
-
-    const-wide/16 v0, -0x1
-
-    .line 6
-    invoke-direct {p0, v0, v1, p1}, Lxg;-><init>(JZ)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(JI)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    and-int/2addr p3, v0
-
-    if-eqz p3, :cond_0
-
-    const-wide/16 p1, -0x1
-
-    .line 2
-    :cond_0
-    invoke-direct {p0, p1, p2, v0}, Lxg;-><init>(JZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Landroid/view/View;Lpg;I)V
     .locals 0
 
-    .line 3
-    invoke-direct {p0}, Lg04;-><init>()V
+    iput p3, p0, Lxg;->a:I
 
-    .line 4
-    iput-wide p1, p0, Lxg;->o:J
+    iput-object p1, p0, Lxg;->b:Landroid/view/View;
 
-    .line 5
-    iput-boolean p3, p0, Lxg;->y0:Z
+    iput-object p2, p0, Lxg;->c:Lpg;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget p1, p0, Lxg;->a:I
 
-    iput-boolean v0, p0, Lxg;->Y:Z
+    iget-object v0, p0, Lxg;->c:Lpg;
 
-    iget-object v0, p0, Lxg;->w0:Landroid/animation/Animator;
+    iget-object v1, p0, Lxg;->b:Landroid/view/View;
 
-    if-eqz v0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
+    sget p1, Lgp1;->w0:I
 
-    return-void
+    new-instance p1, Landroid/graphics/Rect;
 
-    :cond_0
-    iget-object v0, p0, Lxg;->x0:Lvg;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    if-eqz v0, :cond_1
+    move-result-object v2
 
-    invoke-virtual {v0}, Lvg;->a()V
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    return-void
-.end method
+    move-result-object v2
 
-.method public d()Z
-    .locals 1
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    iget-boolean v0, p0, Lxg;->y0:Z
+    const/high16 v3, 0x41800000    # 16.0f
 
-    return v0
-.end method
+    mul-float/2addr v2, v3
 
-.method public final f(Lg04;Lb04;)V
-    .locals 0
+    float-to-int v2, v2
 
-    const/4 p1, 0x1
+    neg-int v2, v2
 
-    iput-boolean p1, p0, Lxg;->X:Z
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
-    iget-object p1, p0, Lxg;->w0:Landroid/animation/Animator;
+    move-result v4
 
-    if-eqz p1, :cond_0
+    iget v0, v0, Lpg;->a:I
 
-    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
+    const/4 v5, 0x0
 
-    return-void
+    invoke-direct {p1, v5, v2, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    :cond_0
-    iget-object p1, p0, Lxg;->x0:Lvg;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lvg;->a()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLe04;)V
-    .locals 7
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    move v5, v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    if-eqz v5, :cond_4
-
-    if-nez p4, :cond_2
-
-    if-nez p2, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual/range {p1 .. p2}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+    mul-float/2addr v0, v3
 
-    move-result v0
-
-    invoke-virtual {p1, p3, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    goto :goto_3
-
-    :cond_2
-    :goto_2
-    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    :cond_3
-    :goto_3
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    if-gtz v0, :cond_4
-
-    invoke-virtual {p3}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    if-gtz v0, :cond_4
-
-    new-instance v0, Lvg;
-
-    move-object v1, p0
-
-    move-object v5, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move v6, p4
-
-    move-object v2, p5
-
-    invoke-direct/range {v0 .. v6}, Lvg;-><init>(Lxg;Le04;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
-
-    move-object v1, v0
-
-    iput-object v1, p0, Lxg;->x0:Lvg;
-
-    invoke-virtual {p3}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lxg;->x0:Lvg;
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    invoke-static {v1, p1, v0}, Lyyg;->d(Landroid/view/View;Landroid/graphics/Rect;F)V
 
     return-void
 
-    :cond_4
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move v4, p4
-
-    move-object v6, p5
-
-    invoke-virtual/range {v0 .. v6}, Lxg;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLe04;)V
-
-    return-void
-.end method
-
-.method public final h(Landroid/os/Bundle;)V
-    .locals 2
-
-    const-string v0, "AnimatorChangeHandler.duration"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lxg;->o:J
-
-    const-string v0, "AnimatorChangeHandler.removesFromViewOnPush"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lxg;->y0:Z
-
-    return-void
-.end method
-
-.method public final i(Landroid/os/Bundle;)V
-    .locals 3
-
-    const-string v0, "AnimatorChangeHandler.duration"
-
-    iget-wide v1, p0, Lxg;->o:J
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
-
-    const-string v0, "AnimatorChangeHandler.removesFromViewOnPush"
-
-    invoke-virtual {p0}, Lxg;->d()Z
-
-    move-result v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final k(Le04;Lwg;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lxg;->Z:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lxg;->Z:Z
-
-    invoke-virtual {p1}, Le04;->n()V
-
-    :cond_0
-    iget-object p1, p0, Lxg;->w0:Landroid/animation/Animator;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    :cond_1
-    iget-object p1, p0, Lxg;->w0:Landroid/animation/Animator;
-
-    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
-
-    iput-object v0, p0, Lxg;->w0:Landroid/animation/Animator;
-
-    :cond_2
-    iput-object v0, p0, Lxg;->x0:Lvg;
-
-    return-void
-.end method
-
-.method public abstract l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-.end method
-
-.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLe04;)V
-    .locals 9
-
-    iget-boolean v0, p0, Lxg;->X:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p6, v1}, Lxg;->k(Le04;Lwg;)V
-
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lxg;->Y:Z
-
-    if-eqz v0, :cond_4
-
-    if-eqz p2, :cond_2
-
-    if-eqz p4, :cond_1
-
-    invoke-virtual {p0}, Lxg;->d()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_2
-
-    :cond_1
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_2
-    invoke-virtual {p0, p6, v1}, Lxg;->k(Le04;Lwg;)V
-
-    if-eqz p4, :cond_3
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p0, p2}, Lxg;->n(Landroid/view/View;)V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move v6, p4
-
-    move v7, p5
-
-    invoke-virtual/range {v2 .. v7}, Lxg;->l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+    :pswitch_0
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    iput-object p1, v2, Lxg;->w0:Landroid/animation/Animator;
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget-wide p2, v2, Lxg;->o:J
+    iget v0, v0, Lpg;->a:I
 
-    const-wide/16 p4, 0x0
+    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    cmp-long p4, p2, p4
-
-    if-lez p4, :cond_5
-
-    invoke-virtual {p1, p2, p3}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
-
-    :cond_5
-    iget-object p1, v2, Lxg;->w0:Landroid/animation/Animator;
-
-    new-instance v2, Lwg;
-
-    move-object v7, v3
-
-    move v8, v6
-
-    move-object v3, p0
-
-    move-object v6, v5
-
-    move-object v5, v4
-
-    move-object v4, p6
-
-    invoke-direct/range {v2 .. v8}, Lwg;-><init>(Lxg;Le04;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
-
-    move-object p2, v2
-
-    move-object v2, v3
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, v2, Lxg;->w0:Landroid/animation/Animator;
-
-    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
-.end method
 
-.method public abstract n(Landroid/view/View;)V
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

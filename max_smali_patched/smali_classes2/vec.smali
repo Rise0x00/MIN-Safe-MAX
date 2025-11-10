@@ -1,110 +1,875 @@
-.class public abstract Lvec;
-.super Ljava/lang/Object;
+.class public final Lvec;
+.super Lud9;
+.source "SourceFile"
 
 
 # static fields
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a0289
+.field public static volatile o:[Lvec;
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a028a
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a028b
+# instance fields
+.field public a:J
 
-.field public static messages_contact_attach_chat_action:I = 0x7f0a0564
+.field public b:Ljava/lang/String;
 
-.field public static messages_contact_attach_profile_action:I = 0x7f0a0565
+.field public c:Ljava/lang/String;
 
-.field public static messages_list_chat_description_view_id:I = 0x7f0a0566
+.field public d:I
 
-.field public static messages_list_chat_description_view_type:I = 0x7f0a0567
+.field public e:J
 
-.field public static messages_list_confirm_cancel:I = 0x7f0a0568
+.field public f:Ljava/lang/String;
 
-.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a0569
+.field public g:J
 
-.field public static messages_list_confirm_complaint_fake:I = 0x7f0a056a
+.field public h:Ljava/lang/String;
 
-.field public static messages_list_confirm_complaint_other:I = 0x7f0a056b
+.field public i:I
 
-.field public static messages_list_confirm_complaint_porno:I = 0x7f0a056c
+.field public j:[I
 
-.field public static messages_list_confirm_complaint_spam:I = 0x7f0a056d
+.field public k:Ljava/lang/String;
 
-.field public static messages_list_confirm_complaint_threat:I = 0x7f0a056e
+.field public l:Luec;
 
-.field public static messages_list_confirm_delete:I = 0x7f0a056f
+.field public m:Lsec;
 
-.field public static messages_list_confirm_delete_for_all:I = 0x7f0a0570
+.field public n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
-.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a0571
 
-.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a0572
+# direct methods
+.method public constructor <init>()V
+    .locals 4
 
-.field public static messages_list_context_action_copy:I = 0x7f0a0573
+    invoke-direct {p0}, Lud9;-><init>()V
 
-.field public static messages_list_context_action_copy_photo:I = 0x7f0a0574
+    const-wide/16 v0, 0x0
 
-.field public static messages_list_context_action_delete:I = 0x7f0a0575
+    iput-wide v0, p0, Lvec;->a:J
 
-.field public static messages_list_context_action_delete_for_all:I = 0x7f0a0576
+    const-string v2, ""
 
-.field public static messages_list_context_action_edit:I = 0x7f0a0577
+    iput-object v2, p0, Lvec;->b:Ljava/lang/String;
 
-.field public static messages_list_context_action_forward:I = 0x7f0a0578
+    iput-object v2, p0, Lvec;->c:Ljava/lang/String;
 
-.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a0579
+    const/4 v3, 0x0
 
-.field public static messages_list_context_action_pin:I = 0x7f0a057a
+    iput v3, p0, Lvec;->d:I
 
-.field public static messages_list_context_action_reply:I = 0x7f0a057b
+    iput-wide v0, p0, Lvec;->e:J
 
-.field public static messages_list_context_action_report:I = 0x7f0a057c
+    iput-object v2, p0, Lvec;->f:Ljava/lang/String;
 
-.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a057d
+    iput-wide v0, p0, Lvec;->g:J
 
-.field public static messages_list_context_action_select:I = 0x7f0a057e
+    iput-object v2, p0, Lvec;->h:Ljava/lang/String;
 
-.field public static messages_list_context_action_share_externally:I = 0x7f0a057f
+    iput v3, p0, Lvec;->i:I
 
-.field public static messages_list_context_action_share_post:I = 0x7f0a0580
+    sget-object v0, Lqbi;->a:[I
 
-.field public static messages_list_context_action_unpin:I = 0x7f0a0581
+    iput-object v0, p0, Lvec;->j:[I
 
-.field public static messages_list_context_actions_view_type:I = 0x7f0a0582
+    iput-object v2, p0, Lvec;->k:Ljava/lang/String;
 
-.field public static messages_list_context_content_container:I = 0x7f0a0583
+    const/4 v0, 0x0
 
-.field public static messages_list_context_member_view_type:I = 0x7f0a0584
+    iput-object v0, p0, Lvec;->l:Luec;
 
-.field public static messages_list_context_members_member_cell:I = 0x7f0a0585
+    iput-object v0, p0, Lvec;->m:Lsec;
 
-.field public static messages_list_context_members_member_reaction:I = 0x7f0a0586
+    iput-object v0, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
-.field public static messages_list_context_reactions_container:I = 0x7f0a0587
+    const/4 v0, -0x1
 
-.field public static messages_list_item_alias:I = 0x7f0a0588
+    iput v0, p0, Lud9;->cachedSize:I
 
-.field public static messages_list_item_date:I = 0x7f0a0589
+    return-void
+.end method
 
-.field public static messages_list_item_keyboard_buttons:I = 0x7f0a058a
 
-.field public static messages_list_item_single_image:I = 0x7f0a058b
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 8
 
-.field public static messages_list_item_text:I = 0x7f0a058c
+    iget-wide v0, p0, Lvec;->a:J
 
-.field public static messages_list_item_title:I = 0x7f0a058d
+    const-wide/16 v2, 0x0
 
-.field public static messages_list_item_video_duration:I = 0x7f0a058e
+    cmp-long v4, v0, v2
 
-.field public static messages_list_reactions_badge:I = 0x7f0a058f
+    const/4 v5, 0x0
 
-.field public static messages_list_recycler_view:I = 0x7f0a0590
+    if-eqz v4, :cond_0
 
-.field public static messages_list_scroll_btn:I = 0x7f0a0591
+    const/4 v4, 0x1
 
-.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a0592
+    invoke-static {v4, v0, v1}, Lca3;->h(IJ)I
 
-.field public static messages_list_vh_message_subtitle:I = 0x7f0a0593
+    move-result v0
 
-.field public static messages_list_vh_message_title:I = 0x7f0a0594
+    goto :goto_0
 
-.field public static messages_share_attach_open_url_action:I = 0x7f0a0595
+    :cond_0
+    move v0, v5
+
+    :goto_0
+    iget-object v1, p0, Lvec;->b:Ljava/lang/String;
+
+    const-string v4, ""
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x2
+
+    iget-object v6, p0, Lvec;->b:Ljava/lang/String;
+
+    invoke-static {v1, v6}, Lca3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget-object v1, p0, Lvec;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x3
+
+    iget-object v6, p0, Lvec;->c:Ljava/lang/String;
+
+    invoke-static {v1, v6}, Lca3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget v1, p0, Lvec;->d:I
+
+    if-eqz v1, :cond_3
+
+    const/4 v6, 0x4
+
+    invoke-static {v6, v1}, Lca3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_3
+    iget-wide v6, p0, Lvec;->e:J
+
+    cmp-long v1, v6, v2
+
+    if-eqz v1, :cond_4
+
+    const/4 v1, 0x5
+
+    invoke-static {v1, v6, v7}, Lca3;->h(IJ)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_4
+    iget-object v1, p0, Lvec;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    const/4 v1, 0x6
+
+    iget-object v6, p0, Lvec;->f:Ljava/lang/String;
+
+    invoke-static {v1, v6}, Lca3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_5
+    iget-wide v6, p0, Lvec;->g:J
+
+    cmp-long v1, v6, v2
+
+    if-eqz v1, :cond_6
+
+    const/4 v1, 0x7
+
+    invoke-static {v1, v6, v7}, Lca3;->h(IJ)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_6
+    iget-object v1, p0, Lvec;->h:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    const/16 v1, 0x8
+
+    iget-object v2, p0, Lvec;->h:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lca3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_7
+    iget v1, p0, Lvec;->i:I
+
+    if-eqz v1, :cond_8
+
+    const/16 v2, 0x9
+
+    invoke-static {v2, v1}, Lca3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_8
+    iget-object v1, p0, Lvec;->j:[I
+
+    array-length v1, v1
+
+    if-lez v1, :cond_a
+
+    move v1, v5
+
+    :goto_1
+    iget-object v2, p0, Lvec;->j:[I
+
+    array-length v3, v2
+
+    if-ge v5, v3, :cond_9
+
+    aget v2, v2, v5
+
+    invoke-static {v2}, Lca3;->g(I)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    add-int/2addr v0, v1
+
+    array-length v1, v2
+
+    add-int/2addr v0, v1
+
+    :cond_a
+    iget-object v1, p0, Lvec;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_b
+
+    const/16 v1, 0xc
+
+    iget-object v2, p0, Lvec;->k:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lca3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_b
+    iget-object v1, p0, Lvec;->l:Luec;
+
+    if-eqz v1, :cond_c
+
+    const/16 v2, 0xd
+
+    invoke-static {v2, v1}, Lca3;->i(ILud9;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_c
+    iget-object v1, p0, Lvec;->m:Lsec;
+
+    if-eqz v1, :cond_d
+
+    const/16 v2, 0xe
+
+    invoke-static {v2, v1}, Lca3;->i(ILud9;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_d
+    iget-object v1, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    if-eqz v1, :cond_e
+
+    const/16 v2, 0xf
+
+    invoke-static {v2, v1}, Lca3;->i(ILud9;)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_e
+    return v0
+.end method
+
+.method public final mergeFrom(Lba3;)Lud9;
+    .locals 6
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lba3;->s()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    sparse-switch v0, :sswitch_data_0
+
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_4
+
+    :sswitch_0
+    iget-object v0, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach;-><init>()V
+
+    iput-object v0, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    :cond_1
+    iget-object v0, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
+
+    goto :goto_0
+
+    :sswitch_1
+    iget-object v0, p0, Lvec;->m:Lsec;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lsec;
+
+    invoke-direct {v0}, Lud9;-><init>()V
+
+    const-string v1, ""
+
+    iput-object v1, v0, Lsec;->a:Ljava/lang/String;
+
+    iput-object v1, v0, Lsec;->b:Ljava/lang/String;
+
+    iput-object v1, v0, Lsec;->c:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lsec;->d:Loec;
+
+    iput-object v1, v0, Lsec;->e:Ljava/lang/String;
+
+    iput-object v2, v0, Lsec;->f:Lqec;
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Lud9;->cachedSize:I
+
+    iput-object v0, p0, Lvec;->m:Lsec;
+
+    :cond_2
+    iget-object v0, p0, Lvec;->m:Lsec;
+
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
+
+    goto :goto_0
+
+    :sswitch_2
+    iget-object v0, p0, Lvec;->l:Luec;
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Luec;
+
+    invoke-direct {v0}, Lud9;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Luec;->a:F
+
+    iput v1, v0, Luec;->b:F
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Luec;->c:I
+
+    iput-boolean v1, v0, Luec;->d:Z
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Lud9;->cachedSize:I
+
+    iput-object v0, p0, Lvec;->l:Luec;
+
+    :cond_3
+    iget-object v0, p0, Lvec;->l:Luec;
+
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
+
+    goto :goto_0
+
+    :sswitch_3
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvec;->k:Ljava/lang/String;
+
+    goto :goto_0
+
+    :sswitch_4
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lba3;->e(I)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Lba3;->c()I
+
+    move-result v2
+
+    move v3, v1
+
+    :goto_1
+    invoke-virtual {p1}, Lba3;->b()I
+
+    move-result v4
+
+    if-lez v4, :cond_4
+
+    invoke-virtual {p1}, Lba3;->p()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p1, v2}, Lba3;->t(I)V
+
+    iget-object v2, p0, Lvec;->j:[I
+
+    array-length v4, v2
+
+    add-int/2addr v3, v4
+
+    new-array v5, v3, [I
+
+    if-eqz v4, :cond_5
+
+    invoke-static {v2, v1, v5, v1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_5
+    :goto_2
+    if-ge v4, v3, :cond_6
+
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v1
+
+    aput v1, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    iput-object v5, p0, Lvec;->j:[I
+
+    invoke-virtual {p1, v0}, Lba3;->d(I)V
+
+    goto/16 :goto_0
+
+    :sswitch_5
+    const/16 v0, 0x58
+
+    invoke-static {p1, v0}, Lqbi;->b(Lba3;I)I
+
+    move-result v0
+
+    iget-object v2, p0, Lvec;->j:[I
+
+    array-length v3, v2
+
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [I
+
+    if-eqz v3, :cond_7
+
+    invoke-static {v2, v1, v4, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_7
+    :goto_3
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_8
+
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v1
+
+    aput v1, v4, v3
+
+    invoke-virtual {p1}, Lba3;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_3
+
+    :cond_8
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    aput v0, v4, v3
+
+    iput-object v4, p0, Lvec;->j:[I
+
+    goto/16 :goto_0
+
+    :sswitch_6
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lvec;->i:I
+
+    goto/16 :goto_0
+
+    :sswitch_7
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvec;->h:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :sswitch_8
+    invoke-virtual {p1}, Lba3;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lvec;->g:J
+
+    goto/16 :goto_0
+
+    :sswitch_9
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvec;->f:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :sswitch_a
+    invoke-virtual {p1}, Lba3;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lvec;->e:J
+
+    goto/16 :goto_0
+
+    :sswitch_b
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lvec;->d:I
+
+    goto/16 :goto_0
+
+    :sswitch_c
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvec;->c:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :sswitch_d
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvec;->b:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :sswitch_e
+    invoke-virtual {p1}, Lba3;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lvec;->a:J
+
+    goto/16 :goto_0
+
+    :goto_4
+    :sswitch_f
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_f
+        0x8 -> :sswitch_e
+        0x12 -> :sswitch_d
+        0x1a -> :sswitch_c
+        0x20 -> :sswitch_b
+        0x28 -> :sswitch_a
+        0x32 -> :sswitch_9
+        0x38 -> :sswitch_8
+        0x42 -> :sswitch_7
+        0x48 -> :sswitch_6
+        0x58 -> :sswitch_5
+        0x5a -> :sswitch_4
+        0x62 -> :sswitch_3
+        0x6a -> :sswitch_2
+        0x72 -> :sswitch_1
+        0x7a -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public final writeTo(Lca3;)V
+    .locals 6
+
+    iget-wide v0, p0, Lvec;->a:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {p1, v4, v0, v1}, Lca3;->x(IJ)V
+
+    :cond_0
+    iget-object v0, p0, Lvec;->b:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x2
+
+    iget-object v4, p0, Lvec;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v4}, Lca3;->E(ILjava/lang/String;)V
+
+    :cond_1
+    iget-object v0, p0, Lvec;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x3
+
+    iget-object v4, p0, Lvec;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v4}, Lca3;->E(ILjava/lang/String;)V
+
+    :cond_2
+    iget v0, p0, Lvec;->d:I
+
+    if-eqz v0, :cond_3
+
+    const/4 v4, 0x4
+
+    invoke-virtual {p1, v4, v0}, Lca3;->w(II)V
+
+    :cond_3
+    iget-wide v4, p0, Lvec;->e:J
+
+    cmp-long v0, v4, v2
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p1, v0, v4, v5}, Lca3;->x(IJ)V
+
+    :cond_4
+    iget-object v0, p0, Lvec;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    const/4 v0, 0x6
+
+    iget-object v4, p0, Lvec;->f:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v4}, Lca3;->E(ILjava/lang/String;)V
+
+    :cond_5
+    iget-wide v4, p0, Lvec;->g:J
+
+    cmp-long v0, v4, v2
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x7
+
+    invoke-virtual {p1, v0, v4, v5}, Lca3;->x(IJ)V
+
+    :cond_6
+    iget-object v0, p0, Lvec;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const/16 v0, 0x8
+
+    iget-object v2, p0, Lvec;->h:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lca3;->E(ILjava/lang/String;)V
+
+    :cond_7
+    iget v0, p0, Lvec;->i:I
+
+    if-eqz v0, :cond_8
+
+    const/16 v2, 0x9
+
+    invoke-virtual {p1, v2, v0}, Lca3;->w(II)V
+
+    :cond_8
+    iget-object v0, p0, Lvec;->j:[I
+
+    array-length v0, v0
+
+    if-lez v0, :cond_9
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lvec;->j:[I
+
+    array-length v3, v2
+
+    if-ge v0, v3, :cond_9
+
+    const/16 v3, 0xb
+
+    aget v2, v2, v0
+
+    invoke-virtual {p1, v3, v2}, Lca3;->w(II)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_9
+    iget-object v0, p0, Lvec;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    const/16 v0, 0xc
+
+    iget-object v1, p0, Lvec;->k:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lca3;->E(ILjava/lang/String;)V
+
+    :cond_a
+    iget-object v0, p0, Lvec;->l:Luec;
+
+    if-eqz v0, :cond_b
+
+    const/16 v1, 0xd
+
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
+
+    :cond_b
+    iget-object v0, p0, Lvec;->m:Lsec;
+
+    if-eqz v0, :cond_c
+
+    const/16 v1, 0xe
+
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
+
+    :cond_c
+    iget-object v0, p0, Lvec;->n:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
+
+    if-eqz v0, :cond_d
+
+    const/16 v1, 0xf
+
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
+
+    :cond_d
+    return-void
+.end method

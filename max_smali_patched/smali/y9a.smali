@@ -1,6 +1,9 @@
 .class public final Ly9a;
-.super Ljava/net/ProxySelector;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgz5;
 
 
 # static fields
@@ -13,7 +16,7 @@
 
     new-instance v0, Ly9a;
 
-    invoke-direct {v0}, Ljava/net/ProxySelector;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Ly9a;->a:Ly9a;
 
@@ -22,31 +25,10 @@
 
 
 # virtual methods
-.method public final connectFailed(Ljava/net/URI;Ljava/net/SocketAddress;Ljava/io/IOException;)V
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
-
-.method public final select(Ljava/net/URI;)Ljava/util/List;
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "uri must not be null"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

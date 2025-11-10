@@ -1,85 +1,116 @@
-.class public final Lzo7;
+.class public abstract Lzo7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-.field public b:I
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
-.field public c:I
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
 
-.field public d:I
+.field public static final d:Lkotlinx/coroutines/internal/Symbol;
 
-.field public e:I
+.field public static final e:Lkotlinx/coroutines/internal/Symbol;
 
-.field public f:I
+.field public static final f:Lea5;
 
-.field public g:I
-
-.field public h:Z
-
-.field public i:Z
+.field public static final g:Lea5;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v1, "LayoutState{mAvailable="
+    const-string v1, "COMPLETING_ALREADY"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lzo7;->b:I
+    sput-object v0, Lzo7;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v1, ", mCurrentPosition="
+    const-string v1, "COMPLETING_WAITING_CHILDREN"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lzo7;->c:I
+    sput-object v0, Lzo7;->b:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v1, ", mItemDirection="
+    const-string v1, "COMPLETING_RETRY"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lzo7;->d:I
+    sput-object v0, Lzo7;->c:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v1, ", mLayoutDirection="
+    const-string v1, "TOO_LATE_TO_CANCEL"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lzo7;->e:I
+    sput-object v0, Lzo7;->d:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const-string v1, ", mStartLine="
+    const-string v1, "SEALED"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lzo7;->f:I
+    sput-object v0, Lzo7;->e:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lea5;
 
-    const-string v1, ", mEndLine="
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lea5;-><init>(Z)V
 
-    iget v1, p0, Lzo7;->g:I
+    sput-object v0, Lzo7;->f:Lea5;
 
-    const/16 v2, 0x7d
+    new-instance v0, Lea5;
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lea5;-><init>(Z)V
 
+    sput-object v0, Lzo7;->g:Lea5;
+
+    return-void
+.end method
+
+.method public static final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p0, Lqe7;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lqe7;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Lqe7;->a:Lpe7;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     return-object v0
+
+    :cond_2
+    :goto_1
+    return-object p0
 .end method

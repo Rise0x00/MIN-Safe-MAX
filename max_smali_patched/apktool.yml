@@ -9,8 +9,8 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6420
-  versionName: 25.12.1
+  versionCode: 6442
+  versionName: 25.14.2
 doNotCompress:
 - arsc
 - mp3
@@ -28,6 +28,7 @@ doNotCompress:
 - META-INF/androidx.camera_camera-camera2.version
 - META-INF/androidx.camera_camera-core.version
 - META-INF/androidx.camera_camera-lifecycle.version
+- META-INF/androidx.camera_camera-mlkit-vision.version
 - META-INF/androidx.camera_camera-video.version
 - META-INF/androidx.camera_camera-view.version
 - META-INF/androidx.cardview_cardview.version
@@ -104,9 +105,14 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/dnf
-- META-INF/services/gl7
+- META-INF/services/p0g
+- META-INF/services/rq7
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
+- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
+- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
+- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
+- tech/kwik/agent15/version.properties
+- tech/kwik/core/version.properties

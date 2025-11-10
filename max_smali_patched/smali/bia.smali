@@ -1,118 +1,137 @@
-.class public final Lbia;
+.class public abstract Lbia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx58;
 
+# static fields
+.field public static final a:[Ljava/lang/Object;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:La5;
+.field public static final b:Lx0a;
 
 
 # direct methods
-.method public synthetic constructor <init>(La5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lbia;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lbia;->b:La5;
+    new-array v1, v0, [Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v1, Lbia;->a:[Ljava/lang/Object;
+
+    new-instance v1, Lx0a;
+
+    invoke-direct {v1, v0}, Lx0a;-><init>(I)V
+
+    sput-object v1, Lbia;->b:Lx0a;
 
     return-void
 .end method
 
+.method public static final a(ILjava/util/List;)V
+    .locals 4
 
-# virtual methods
-.method public final f()V
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-ltz p0, :cond_0
+
+    if-ge p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, " is out of bounds. The list has "
+
+    const-string v2, " elements."
+
+    const-string v3, "Index "
+
+    invoke-static {v3, p0, v1, p1, v2}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final b(Ljava/util/List;II)V
     .locals 3
 
-    iget v0, p0, Lbia;->a:I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result p0
 
-    iget-object v0, p0, Lbia;->b:La5;
+    if-gt p1, p2, :cond_2
 
-    const-class v1, Ll63;
+    if-ltz p1, :cond_1
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll63;
-
-    invoke-interface {v0}, Ll63;->a()V
+    if-gt p2, p0, :cond_0
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lbia;->b:La5;
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-class v1, Landroid/content/Context;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v1, "toIndex ("
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Landroid/content/Context;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    const-string p2, ") is more than than the list size ("
 
-    invoke-virtual {v1, v0}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lbx4;->Y:Ljava/lang/Object;
+    const/16 p0, 0x29
 
-    check-cast v0, Lzb4;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lzb4;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v1, Ls5f;
+    move-result-object p0
 
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-direct {p1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw p1
 
-    check-cast v1, Landroid/content/SharedPreferences;
+    :cond_1
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    const-string p2, "fromIndex ("
 
-    move-result-object v1
+    const-string v0, ") is less than 0."
 
-    sget-object v2, Lz1a;->a:Lh2a;
+    invoke-static {p1, p2, v0}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    sget-object v2, Ly1a;->b:Ly1a;
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    iput-object v2, v0, Lzb4;->c:Ljava/lang/Object;
+    throw p0
 
-    const-string v0, "nightmode"
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-static {v2}, Lh2a;->E(Lz1a;)Ljava/lang/String;
+    const-string v0, ") is greater than toIndex ("
 
-    move-result-object v2
+    const-string v1, ")."
 
-    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v2, "Indices are out of order. fromIndex ("
 
-    sget-object v0, Lloa;->d:Lloa;
+    invoke-static {v2, p1, v0, p2, v1}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, v0, Lloa;->a:Ljava/lang/String;
+    move-result-object p1
 
-    const-string v2, "themename"
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method

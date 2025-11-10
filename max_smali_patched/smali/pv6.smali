@@ -1,209 +1,302 @@
 .class public final Lpv6;
-.super Lvv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:[B
+
+.field public static final g:[B
+
+
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public b:Z
 
-.field public final c:Ljava/lang/String;
+.field public c:I
 
-.field public final d:Z
+.field public d:I
+
+.field public e:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/CharSequence;Ljava/lang/String;Z)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [B
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lpv6;->f:[B
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lpv6;->g:[B
+
+    return-void
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Lpv6;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpv6;->a:J
+    return-void
+.end method
 
-    iput-object p3, p0, Lpv6;->b:Ljava/lang/CharSequence;
+.method public constructor <init>(Lz02;Landroid/util/Rational;)V
+    .locals 1
 
-    iput-object p4, p0, Lpv6;->c:Ljava/lang/String;
+    const/4 v0, 0x2
 
-    iput-boolean p5, p0, Lpv6;->d:Z
+    iput v0, p0, Lpv6;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    invoke-interface {p1}, Lz02;->b()I
+
+    move-result v0
+
+    iput v0, p0, Lpv6;->c:I
+
+    .line 4
+    invoke-interface {p1}, Lz02;->h()I
+
+    move-result p1
+
+    iput p1, p0, Lpv6;->d:I
+
+    .line 5
+    iput-object p2, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    const/4 p1, 0x1
+
+    if-eqz p2, :cond_1
+
+    .line 6
+    invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
+
+    move-result v0
+
+    .line 7
+    invoke-virtual {p2}, Landroid/util/Rational;->getDenominator()I
+
+    move-result p2
+
+    if-lt v0, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :cond_1
+    :goto_0
+    iput-boolean p1, p0, Lpv6;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public a(Lja7;)Landroid/util/Size;
+    .locals 5
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {p1, v0}, Lja7;->I(I)I
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpv6;
+    move-result v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    sget-object v3, Lja7;->D:Lv90;
 
-    return v2
+    invoke-interface {p1, v3, v2}, Lg0d;->e(Lv90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lpv6;
+    move-result-object p1
 
-    iget-wide v3, p0, Lpv6;->a:J
+    check-cast p1, Landroid/util/Size;
 
-    iget-wide v5, p1, Lpv6;->a:J
+    iget v2, p0, Lpv6;->d:I
 
-    cmp-long v1, v3, v5
+    iget v3, p0, Lpv6;->c:I
 
-    if-eqz v1, :cond_2
+    if-eqz p1, :cond_2
 
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lpv6;->b:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lpv6;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1}, Lmmi;->c(I)I
 
     move-result v1
 
-    if-nez v1, :cond_3
+    const/4 v4, 0x1
 
-    return v2
+    if-ne v4, v2, :cond_0
 
-    :cond_3
-    iget-object v1, p0, Lpv6;->c:Ljava/lang/String;
+    move v0, v4
 
-    iget-object v3, p1, Lpv6;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lpv6;->d:Z
-
-    iget-boolean p1, p1, Lpv6;->d:Z
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lpv6;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :cond_0
+    invoke-static {v1, v3, v0}, Lmmi;->a(IIZ)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x5a
 
-    const/4 v1, 0x0
+    if-eq v0, v1, :cond_1
 
-    iget-object v2, p0, Lpv6;->b:Ljava/lang/CharSequence;
+    const/16 v1, 0x10e
 
-    if-nez v2, :cond_0
+    if-ne v0, v1, :cond_2
 
-    move v2, v1
+    :cond_1
+    new-instance v0, Landroid/util/Size;
+
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+
+    move-result p1
+
+    invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
+
+    return-object v0
+
+    :cond_2
+    return-object p1
+.end method
+
+.method public b(I[BI)V
+    .locals 3
+
+    iget v0, p0, Lpv6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lpv6;->b:Z
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    sub-int/2addr p3, p1
 
-    move-result v2
+    iget-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
 
-    :goto_0
-    add-int/2addr v0, v2
+    check-cast v0, [B
 
-    mul-int/lit8 v0, v0, 0x1f
+    array-length v1, v0
 
-    iget-object v2, p0, Lpv6;->c:Ljava/lang/String;
+    iget v2, p0, Lpv6;->c:I
 
-    if-nez v2, :cond_1
+    add-int/2addr v2, p3
 
-    goto :goto_1
+    if-ge v1, v2, :cond_1
 
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    mul-int/lit8 v2, v2, 0x2
 
-    move-result v1
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lpv6;->d:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Avatar(avatarColorId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lpv6;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpv6;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpv6;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isCallLink="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lpv6;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    :cond_1
+    iget-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    iget v1, p0, Lpv6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lpv6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lpv6;->c:I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lpv6;->b:Z
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    array-length v1, v0
+
+    iget v2, p0, Lpv6;->c:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    :cond_3
+    iget-object v0, p0, Lpv6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    iget v1, p0, Lpv6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lpv6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lpv6;->c:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,8 +1,3 @@
-.class public interface abstract Lu18;
-.super Ljava/lang/Object;
+.class public final Lu18;
+.super Lx18;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a(II)V
-.end method

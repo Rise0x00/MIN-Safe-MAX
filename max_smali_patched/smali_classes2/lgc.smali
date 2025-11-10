@@ -1,62 +1,122 @@
 .class public abstract Llgc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static back:I = 0x7f0a00fd
+# instance fields
+.field public final a:J
 
-.field public static copy:I = 0x7f0a02ec
+.field public final b:Ljava/lang/String;
 
-.field public static cut:I = 0x7f0a02f6
 
-.field public static edit_menu_item:I = 0x7f0a0333
+# direct methods
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-.field public static extendedMenu:I = 0x7f0a037a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static markdown_badge_count_view:I = 0x7f0a0487
+    iput-wide p1, p0, Llgc;->a:J
 
-.field public static markdown_bold:I = 0x7f0a0488
+    iput-object p3, p0, Llgc;->b:Ljava/lang/String;
 
-.field public static markdown_code:I = 0x7f0a0489
+    return-void
+.end method
 
-.field public static markdown_group:I = 0x7f0a048a
 
-.field public static markdown_heading:I = 0x7f0a048b
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static markdown_italic:I = 0x7f0a048c
+    const/4 v0, 0x1
 
-.field public static markdown_link:I = 0x7f0a048d
+    if-ne p0, p1, :cond_0
 
-.field public static markdown_menu_container:I = 0x7f0a048e
+    return v0
 
-.field public static markdown_message_bubble_view:I = 0x7f0a048f
+    :cond_0
+    instance-of v1, p1, Llgc;
 
-.field public static markdown_mono:I = 0x7f0a0490
+    const/4 v2, 0x0
 
-.field public static markdown_original:I = 0x7f0a0491
+    if-nez v1, :cond_1
 
-.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0492
+    return v2
 
-.field public static markdown_preview_send_button:I = 0x7f0a0493
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static markdown_preview_send_button_guideline:I = 0x7f0a0494
+    move-result-object v1
 
-.field public static markdown_quote:I = 0x7f0a0495
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static markdown_regular:I = 0x7f0a0496
+    move-result-object v3
 
-.field public static markdown_strikethrough:I = 0x7f0a0497
+    if-eq v1, v3, :cond_2
 
-.field public static markdown_underline:I = 0x7f0a0498
+    return v2
 
-.field public static menu:I = 0x7f0a04f3
+    :cond_2
+    check-cast p1, Llgc;
 
-.field public static menu_list:I = 0x7f0a0521
+    iget-wide v3, p1, Llgc;->a:J
 
-.field public static paste:I = 0x7f0a08f8
+    iget-wide v5, p0, Llgc;->a:J
 
-.field public static rect:I = 0x7f0a0a0a
+    cmp-long v1, v5, v3
 
-.field public static root:I = 0x7f0a0a1d
+    if-eqz v1, :cond_3
 
-.field public static select_all:I = 0x7f0a0b49
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Llgc;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Llgc;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lv7d;->a(Ljava/lang/Class;)La73;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, La73;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Llgc;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Llgc;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method

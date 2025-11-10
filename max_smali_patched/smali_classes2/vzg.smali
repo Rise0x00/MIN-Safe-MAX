@@ -1,148 +1,209 @@
 .class public final Lvzg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Li0h;
+.field public final a:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Li0h;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
-    iput-object p1, p0, Lvzg;->Y:Li0h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
+    iput-object v0, p0, Lvzg;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lvzg;->a(Landroid/widget/TextView;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static a(Landroid/widget/TextView;)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/text/Spanned;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spanned;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Luzg;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
+
+    :cond_1
+    if-nez v2, :cond_2
+
+    new-array v2, v1, [Luzg;
+
+    :cond_2
+    array-length v0, v2
+
+    :goto_1
+    if-ge v1, v0, :cond_3
+
+    aget-object v3, v2, v1
+
+    check-cast v3, Luzg;
+
+    invoke-interface {v3, p0}, Luzg;->attach(Landroid/widget/TextView;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 0
 
-    check-cast p1, Le34;
+    iget-object p1, p0, Lvzg;->a:Ljava/lang/ref/WeakReference;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvzg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lvzg;
+    check-cast p1, Landroid/widget/TextView;
 
-    sget-object p2, Loyf;->a:Loyf;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p2}, Lvzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lvzg;->a(Landroid/widget/TextView;)V
 
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    new-instance p1, Lvzg;
-
-    iget-object v0, p0, Lvzg;->Y:Li0h;
-
-    invoke-direct {p1, v0, p2}, Lvzg;-><init>(Li0h;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
+
+    check-cast p1, Landroid/widget/TextView;
+
+    invoke-static {p1}, Lvzg;->a(Landroid/widget/TextView;)V
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 4
 
-    iget-object v0, p0, Lvzg;->Y:Li0h;
+    check-cast p1, Landroid/widget/TextView;
 
-    iget-object v1, v0, Li0h;->c1:Ljb5;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    iget v2, p0, Lvzg;->X:I
+    move-result-object v0
 
-    const/4 v3, 0x1
+    instance-of v1, v0, Landroid/text/Spanned;
 
-    if-eqz v2, :cond_1
+    const/4 v2, 0x0
 
-    if-ne v2, v3, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast v0, Landroid/text/Spanned;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v0, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    const/4 v1, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    throw p1
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Luzg;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-nez v2, :cond_2
 
-    iget-object p1, v0, Li0h;->P0:Lmoe;
-
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, v0, Li0h;->S0:Lmoe;
-
-    iput v3, p0, Lvzg;->X:I
-
-    invoke-static {p1, p0}, Ltp;->B(Lev5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    new-array v2, v1, [Luzg;
 
     :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/String;
+    array-length v0, v2
 
-    new-instance v0, Ldzg;
+    :goto_1
+    if-ge v1, v0, :cond_3
 
-    invoke-direct {v0, p1}, Ldzg;-><init>(Ljava/lang/String;)V
+    aget-object v3, v2, v1
 
-    invoke-static {v1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    check-cast v3, Luzg;
+
+    invoke-interface {v3, p1}, Luzg;->detach(Landroid/widget/TextView;)V
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_3
-    new-instance p1, Lvyg;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lvyg;-><init>(Z)V
-
-    invoke-static {v1, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

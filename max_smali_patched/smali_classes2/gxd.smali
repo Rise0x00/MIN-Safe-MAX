@@ -1,25 +1,64 @@
-.class public abstract Lgxd;
+.class public final Lgxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhxd;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final a:Lode;
+
+.field public final b:Lpf4;
+
+.field public final c:I
+
+.field public final d:J
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lode;Lpf4;IJI)V
+    .locals 0
 
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lgxd;->a:Lode;
 
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    iput-object p2, p0, Lgxd;->b:Lpf4;
 
-    move-result-object v0
+    iput p3, p0, Lgxd;->c:I
 
-    sput-object v0, Lgxd;->a:Ljava/lang/String;
+    iput-wide p4, p0, Lgxd;->d:J
+
+    iput p6, p0, Lgxd;->o:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lgxd;->o:I
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lgxd;->d:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lgxd;->c:I
+
+    return v0
 .end method

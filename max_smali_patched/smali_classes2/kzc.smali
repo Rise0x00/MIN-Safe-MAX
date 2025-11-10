@@ -3,262 +3,168 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgc6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Lo57;
+.field public final synthetic a:Lbzc;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Landroid/view/ViewGroup;
 
-.field public c:Ldc6;
+.field public final synthetic c:Lqi6;
 
-.field public d:Lg0;
-
-.field public e:Lg0;
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Lo57;)V
+.method public constructor <init>(Lbzc;Landroid/view/ViewGroup;Lqi6;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkzc;->a:Lo57;
+    iput-object p1, p0, Lkzc;->a:Lbzc;
 
-    const-class p1, Lkzc;
+    iput-object p2, p0, Lkzc;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p3, p0, Lkzc;->c:Lqi6;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lkzc;->b:Ljava/lang/String;
-
-    sget-object p1, Ldc6;->d:Ldc6;
-
-    iput-object p1, p0, Lkzc;->c:Ldc6;
+    iput p4, p0, Lkzc;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-object v0, p0, Lkzc;->c:Ldc6;
-
-    iget-object v0, v0, Ldc6;->a:Lq8g;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lq8g;->c()Lvx;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Ldc6;
-    .locals 1
-
-    iget-object v0, p0, Lkzc;->c:Ldc6;
-
-    return-object v0
-.end method
-
-.method public final c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lkzc;->e:Lg0;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lg0;->a()Z
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lkzc;->e:Lg0;
-
-    iget-object v1, p0, Lkzc;->c:Ldc6;
-
-    iget-object v1, v1, Ldc6;->a:Lq8g;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lq8g;->c()Lvx;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, v0
-
-    :goto_0
-    if-eqz v1, :cond_3
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v3, Lz12;
-
-    invoke-static {p3}, La1b;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p3
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v4, p3}, Lz12;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v3}, Lz12;->o()V
-
-    iget-object p3, v2, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast p3, Ljava/lang/String;
-
-    invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p3
-
-    invoke-static {p3}, Lc67;->d(Landroid/net/Uri;)Lc67;
-
-    move-result-object p3
-
-    sget-object v2, Lmw4;->c:Lmw4;
-
-    iput-object v2, p3, Lc67;->n:Lmw4;
-
-    new-instance v2, Loc6;
-
-    invoke-direct {v2, v1, p1, p2}, Loc6;-><init>(Lq8g;J)V
-
-    iput-object v2, p3, Lc67;->k:Lznb;
-
-    iget-object p1, p0, Lkzc;->a:Lo57;
-
-    invoke-virtual {p3}, Lc67;->a()Lb67;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2, v0}, Lo57;->a(Lb67;Ljava/lang/Object;)Lg0;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkzc;->e:Lg0;
-
-    new-instance p2, Lh57;
-
-    invoke-direct {p2, v3, p1, p0}, Lh57;-><init>(Lz12;Lg0;Lkzc;)V
-
-    sget-object p3, Lys1;->a:Lys1;
-
-    invoke-virtual {p1, p2, p3}, Lg0;->m(Ls94;Ljava/util/concurrent/Executor;)V
-
-    invoke-virtual {v3}, Lz12;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_3
-    :goto_1
-    iget-object p1, p0, Lkzc;->b:Ljava/lang/String;
-
-    const-string p2, "Video collage is null"
-
-    invoke-static {p1, p2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v0
-.end method
-
-.method public final prepare()V
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 3
 
-    iget-object v0, p0, Lkzc;->c:Ldc6;
+    iget-object p1, p0, Lkzc;->a:Lbzc;
 
-    iget-object v0, v0, Ldc6;->a:Lq8g;
+    iget-object p1, p1, Lbzc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lkzc;->b:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "You should call init before prepare!"
-
-    invoke-static {v1, v0, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lq8g;->c()Lvx;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
 
-    const-string v0, "Video collage is null"
+    if-eqz v0, :cond_2
 
-    invoke-static {v1, v0, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v2, p0, Lkzc;->d:I
 
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lkzc;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lkzc;->c:Lqi6;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
     return-void
 
     :cond_1
-    iget-object v0, v0, Lvx;->Y:Ljava/lang/Object;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    check-cast v0, Ljava/lang/String;
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lc67;->d(Landroid/net/Uri;)Lc67;
-
-    move-result-object v0
-
-    sget-object v1, Lmw4;->c:Lmw4;
-
-    iput-object v1, v0, Lc67;->n:Lmw4;
-
-    iget-object v1, p0, Lkzc;->d:Lg0;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lg0;->a()Z
+    throw p1
 
     :cond_2
-    iput-object v2, p0, Lkzc;->d:Lg0;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    iget-object v1, p0, Lkzc;->a:Lo57;
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lc67;->a()Lb67;
+    throw p1
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget-object p1, p0, Lkzc;->a:Lbzc;
+
+    iget-object p1, p1, Lbzc;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0, v2}, Lo57;->e(Lb67;Lol9;)Lg0;
+    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v0, :cond_2
+
+    iget v2, p0, Lkzc;->d:I
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lkzc;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkzc;->d:Lg0;
+    if-eqz v0, :cond_1
+
+    iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lkzc;->c:Lqi6;
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

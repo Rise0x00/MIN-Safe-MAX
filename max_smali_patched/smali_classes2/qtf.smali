@@ -1,19 +1,25 @@
-.class public final Lqtf;
-.super Lrtf;
+.class public abstract synthetic Lqtf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final synthetic a:Lce5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Lrtf;-><init>()V
+    invoke-static {}, Ljava/lang/Thread$State;->values()[Ljava/lang/Thread$State;
 
-    iput-object p1, p0, Lqtf;->b:Ljava/lang/String;
+    move-result-object v0
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lqtf;->a:Lce5;
 
     return-void
 .end method

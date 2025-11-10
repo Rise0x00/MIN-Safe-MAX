@@ -1,26 +1,28 @@
 .class public final Luj9;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Ltif;
 
-.field public final synthetic Y:Lone/me/messages/settings/MessagesSettingsScreen;
+.field public final synthetic o:Lqu7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/settings/MessagesSettingsScreen;)V
+.method public constructor <init>(Lqu7;Ltif;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Luj9;->Y:Lone/me/messages/settings/MessagesSettingsScreen;
+    iput-object p1, p0, Luj9;->o:Lqu7;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Luj9;->X:Ltif;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,56 +32,57 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lg54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Luj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Luj9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Luj9;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Luj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Luj9;
+    new-instance p1, Luj9;
 
-    iget-object v1, p0, Luj9;->Y:Lone/me/messages/settings/MessagesSettingsScreen;
+    iget-object v0, p0, Luj9;->o:Lqu7;
 
-    invoke-direct {v0, p2, v1}, Luj9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/settings/MessagesSettingsScreen;)V
+    iget-object v1, p0, Luj9;->X:Ltif;
 
-    iput-object p1, v0, Luj9;->X:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Luj9;-><init>(Lqu7;Ltif;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Luj9;->X:Ljava/lang/Object;
+    iget-object p1, p0, Luj9;->o:Lqu7;
 
-    check-cast p1, Lhy9;
+    iget-object p1, p1, Lqu7;->b:Lff9;
 
-    instance-of v0, p1, Lzc4;
+    iget-object v0, p0, Luj9;->X:Ltif;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
 
-    sget-object v0, Ltj9;->c:Ltj9;
+    move-result-object v0
 
-    check-cast p1, Lzc4;
+    check-cast v0, Landroid/text/Layout;
 
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
+    invoke-virtual {p1, v0}, Lff9;->b(Landroid/text/Layout;)V
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

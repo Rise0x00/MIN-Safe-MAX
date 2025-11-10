@@ -1,94 +1,112 @@
 .class public final Lsc7;
-.super Lm3f;
+.super Lz1;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public final synthetic X:Lbp7;
-
-.field public final synthetic Y:Lema;
-
-
-# direct methods
-.method public constructor <init>(Lbp7;Lema;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lsc7;->X:Lbp7;
-
-    iput-object p2, p0, Lsc7;->Y:Lema;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lrc7;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    check-cast p1, Le34;
+    const/4 v0, 0x5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return v0
+.end method
 
-    invoke-virtual {p0, p1, p2}, Lsc7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lwig;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    check-cast p1, Lwig;
+
+    check-cast p1, La2;
+
+    invoke-interface {p1}, Lwig;->a()I
+
+    move-result v0
+
+    const/4 v2, 0x5
+
+    if-ne v0, v2, :cond_3
+
+    instance-of v0, p1, Lsc7;
+
+    iget-object v1, p0, Lz1;->a:[B
+
+    if-eqz v0, :cond_2
 
     check-cast p1, Lsc7;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object p1, p1, Lz1;->a:[B
 
-    invoke-virtual {p1, p2}, Lsc7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lsc7;
-
-    iget-object v0, p0, Lsc7;->X:Lbp7;
-
-    iget-object v1, p0, Lsc7;->Y:Lema;
-
-    invoke-direct {p1, v0, v1, p2}, Lsc7;-><init>(Lbp7;Lema;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsc7;->X:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkbb;
-
-    iget-object v0, p0, Lsc7;->Y:Lema;
-
-    iget-object v0, v0, Lema;->a:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Ltp;->S(Lkbb;Ljava/lang/String;)I
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result p1
 
-    new-instance v0, Ljava/lang/Integer;
+    return p1
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    :cond_2
+    invoke-interface {p1}, Lwig;->n()Lrc7;
 
-    return-object v0
+    move-result-object p1
+
+    check-cast p1, Lz1;
+
+    iget-object p1, p1, Lz1;->a:[B
+
+    array-length v0, p1
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lz1;->a:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n()Lrc7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final q()Lrc7;
+    .locals 0
+
+    return-object p0
 .end method

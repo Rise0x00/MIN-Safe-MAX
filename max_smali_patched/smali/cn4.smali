@@ -1,14 +1,39 @@
-.class public interface abstract Lcn4;
+.class public final Lcn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lcn4;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcn4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcn4;->a:Lcn4;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final a(Landroid/animation/AnimatorSet;)V
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->reverse()V
+
+    return-void
 .end method
 
-.method public abstract invokeOnTimeout(JLjava/lang/Runnable;Lw24;)Lvs4;
-.end method
+.method public final b(Landroid/animation/AnimatorSet;J)V
+    .locals 0
 
-.method public abstract scheduleResumeAfterDelay(JLy12;)V
+    invoke-virtual {p1, p2, p3}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+
+    return-void
 .end method

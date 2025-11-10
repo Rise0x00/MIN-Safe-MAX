@@ -1,64 +1,147 @@
-.class public final Lkf8;
+.class public abstract Lkf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsf8;
-
 
 # static fields
-.field public static final a:Lkf8;
+.field public static volatile a:Lfw6;
+
+.field public static final b:[I
+
+.field public static final c:[I
+
+.field public static final d:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lkf8;
+    const/16 v0, 0x10
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v1, v0, [I
 
-    sput-object v0, Lkf8;->a:Lkf8;
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lkf8;->b:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lkf8;->c:[I
+
+    const/16 v0, 0x1d
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_2
+
+    sput-object v0, Lkf8;->d:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x1
+        0x2
+        0x2
+        0x2
+        0x2
+        0x3
+        0x3
+        0x4
+        0x4
+        0x5
+        0x6
+        0x6
+        0x6
+        0x7
+        0x8
+        0x8
+    .end array-data
+
+    :array_1
+    .array-data 4
+        -0x1
+        0x1f40
+        0x3e80
+        0x7d00
+        -0x1
+        -0x1
+        0x2b11
+        0x5622
+        0xac44
+        -0x1
+        -0x1
+        0x2ee0
+        0x5dc0
+        0xbb80
+        -0x1
+        -0x1
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x40
+        0x70
+        0x80
+        0xc0
+        0xe0
+        0x100
+        0x180
+        0x1c0
+        0x200
+        0x280
+        0x300
+        0x380
+        0x400
+        0x480
+        0x500
+        0x600
+        0x780
+        0x800
+        0x900
+        0xa00
+        0xa80
+        0xb00
+        0xb07
+        0xb80
+        0xc00
+        0xf00
+        0x1000
+        0x1800
+        0x1e00
+    .end array-data
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static synthetic a(Lbk6;Ly44;III)Lez5;
     .locals 1
 
-    const/4 v0, 0x1
+    and-int/lit8 v0, p4, 0x1
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    sget-object p1, Lha5;->a:Lha5;
 
     :cond_0
-    instance-of p1, p1, Lkf8;
+    and-int/lit8 v0, p4, 0x2
 
-    if-nez p1, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 p1, 0x0
-
-    return p1
+    const/4 p2, -0x3
 
     :cond_1
-    return v0
-.end method
+    and-int/lit8 p4, p4, 0x4
 
-.method public final hashCode()I
-    .locals 1
+    if-eqz p4, :cond_2
 
-    const v0, -0x7501247
+    const/4 p3, 0x1
 
-    return v0
-.end method
+    :cond_2
+    invoke-interface {p0, p1, p2, p3}, Lbk6;->e(Ly44;II)Lez5;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object p0
 
-    const-string v0, "CloseKeyboard"
-
-    return-object v0
+    return-object p0
 .end method

@@ -1,59 +1,104 @@
 .class public final Lx31;
-.super Lbp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lx31;
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    new-instance v0, Lx31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    iput-object p1, p0, Lx31;->a:Landroid/content/Context;
 
-    sput-object v0, Lx31;->a:Lx31;
+    new-instance p1, Ln6;
+
+    const/16 v0, 0x15
+
+    invoke-direct {p1, v0, p0}, Ln6;-><init>(ILjava/lang/Object;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Llci;->i(ILoi6;)Lru7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx31;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lav1;
-    .locals 2
+.method public final a(Lw31;)Lm41;
+    .locals 6
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v1, p1, Lw31;->a:Ljava/lang/Long;
 
-    move-result-object v0
+    iget-object v0, p1, Lw31;->e:Ljava/lang/Long;
 
-    const-class v1, Lav1;
+    iget-object v2, p1, Lw31;->f:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lav1;
+    if-eqz v2, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-.method public final c()Lst1;
-    .locals 2
+    move-result-wide v4
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    const-class v1, Lst1;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lqii;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lqc0;
 
     move-result-object v0
 
-    check-cast v0, Lst1;
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v3
+
+    :goto_0
+    iget-object v2, p1, Lw31;->d:Ljava/lang/String;
+
+    move-object v4, v3
+
+    new-instance v3, Lzd0;
+
+    invoke-direct {v3, v0, v2}, Lzd0;-><init>(Lqc0;Ljava/lang/String;)V
+
+    iget-object v2, p1, Lw31;->c:Ljava/lang/CharSequence;
+
+    iget-boolean v0, p1, Lw31;->g:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lx31;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbe0;
+
+    move-object v4, v0
+
+    :cond_1
+    iget-boolean v5, p1, Lw31;->g:Z
+
+    new-instance v0, Lm41;
+
+    invoke-direct/range {v0 .. v5}, Lm41;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lzd0;Lbe0;Z)V
 
     return-object v0
 .end method

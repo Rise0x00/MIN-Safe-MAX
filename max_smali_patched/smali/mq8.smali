@@ -1,136 +1,256 @@
-.class public final Lmq8;
-.super Landroid/os/AsyncTask;
+.class public final synthetic Lmq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld38;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Landroid/content/Context;
-
-.field public final synthetic c:Lnq8;
+.field public final synthetic b:Lnub;
 
 
 # direct methods
-.method public constructor <init>(Lnq8;ILandroid/content/Context;)V
+.method public synthetic constructor <init>(Lnub;I)V
     .locals 0
-
-    iput-object p1, p0, Lmq8;->c:Lnq8;
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     iput p2, p0, Lmq8;->a:I
 
-    iput-object p3, p0, Lmq8;->b:Landroid/content/Context;
+    iput-object p1, p0, Lmq8;->b:Lnub;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    sget-object p1, Lnq8;->J0:Landroid/util/SparseArray;
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Lmq8;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    check-cast p1, Lotb;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/graphics/drawable/Drawable$ConstantState;
+    iget-object v0, p0, Lmq8;->b:Lnub;
 
-    if-nez p1, :cond_0
+    iget v0, v0, Lnub;->y:I
 
-    iget-object p1, p0, Lmq8;->b:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lqxd;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final onCancelled(Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p1, Landroid/graphics/drawable/Drawable;
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lnq8;->J0:Landroid/util/SparseArray;
-
-    iget v1, p0, Lmq8;->a:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    :cond_0
-    iget-object p1, p0, Lmq8;->c:Lnq8;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lnq8;->y0:Lmq8;
+    invoke-interface {p1, v0}, Lotb;->k(I)V
 
     return-void
-.end method
 
-.method public final onPostExecute(Ljava/lang/Object;)V
-    .locals 5
+    :pswitch_0
+    iget-object v0, p0, Lmq8;->b:Lnub;
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    iget-boolean v0, v0, Lnub;->w:Z
 
-    const/4 v0, 0x0
-
-    iget v1, p0, Lmq8;->a:I
-
-    iget-object v2, p0, Lmq8;->c:Lnq8;
-
-    if-eqz p1, :cond_0
-
-    sget-object v3, Lnq8;->J0:Landroid/util/SparseArray;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v1, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    iput-object v0, v2, Lnq8;->y0:Lmq8;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Lnq8;->J0:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/Drawable$ConstantState;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    :cond_1
-    iput-object v0, v2, Lnq8;->y0:Lmq8;
-
-    :goto_0
-    invoke-virtual {v2, p1}, Lnq8;->setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lotb;->h(Z)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->z:Ldu8;
+
+    invoke-interface {p1, v0}, Lotb;->j0(Ldu8;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->D:Lf2g;
+
+    invoke-interface {p1, v0}, Lotb;->f0(Lf2g;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->E:Lz1g;
+
+    invoke-interface {p1, v0}, Lotb;->A(Lz1g;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-wide v0, v0, Lnub;->C:J
+
+    invoke-interface {p1, v0, v1}, Lotb;->F0(J)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-wide v0, v0, Lnub;->B:J
+
+    invoke-interface {p1, v0, v1}, Lotb;->l0(J)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-wide v0, v0, Lnub;->A:J
+
+    invoke-interface {p1, v0, v1}, Lotb;->i0(J)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->l:Lvwg;
+
+    invoke-interface {p1, v0}, Lotb;->g(Lvwg;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget v1, v0, Lnub;->r:I
+
+    iget-boolean v0, v0, Lnub;->s:Z
+
+    invoke-interface {p1, v1, v0}, Lotb;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->q:Lws4;
+
+    invoke-interface {p1, v0}, Lotb;->E0(Lws4;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->p:Ls84;
+
+    invoke-interface {p1, v0}, Lotb;->X(Ls84;)V
+
+    return-void
+
+    :pswitch_b
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->p:Ls84;
+
+    iget-object v0, v0, Ls84;->a:Lz8d;
+
+    invoke-interface {p1, v0}, Lotb;->n(Ljava/util/List;)V
+
+    return-void
+
+    :pswitch_c
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->o:Ln20;
+
+    invoke-interface {p1, v0}, Lotb;->y(Ln20;)V
+
+    return-void
+
+    :pswitch_d
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget v0, v0, Lnub;->n:F
+
+    invoke-interface {p1, v0}, Lotb;->j(F)V
+
+    return-void
+
+    :pswitch_e
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->m:Ldu8;
+
+    invoke-interface {p1, v0}, Lotb;->k0(Ldu8;)V
+
+    return-void
+
+    :pswitch_f
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-boolean v0, v0, Lnub;->i:Z
+
+    invoke-interface {p1, v0}, Lotb;->U(Z)V
+
+    return-void
+
+    :pswitch_10
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget v0, v0, Lnub;->h:I
+
+    invoke-interface {p1, v0}, Lotb;->onRepeatModeChanged(I)V
+
+    return-void
+
+    :pswitch_11
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-object v0, v0, Lnub;->g:Lzsb;
+
+    invoke-interface {p1, v0}, Lotb;->A0(Lzsb;)V
+
+    return-void
+
+    :pswitch_12
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget-boolean v0, v0, Lnub;->v:Z
+
+    invoke-interface {p1, v0}, Lotb;->q(Z)V
+
+    return-void
+
+    :pswitch_13
+    iget-object v0, p0, Lmq8;->b:Lnub;
+
+    iget v0, v0, Lnub;->x:I
+
+    invoke-interface {p1, v0}, Lotb;->f(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

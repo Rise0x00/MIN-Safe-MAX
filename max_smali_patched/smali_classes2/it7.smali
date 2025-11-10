@@ -4,84 +4,78 @@
 
 
 # instance fields
-.field public final a:Le8e;
+.field public final synthetic a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method public constructor <init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Landroid/os/Bundle;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lit7;->a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lit7;->a:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput-object p2, p0, Lit7;->b:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Laj0;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final a(Ll3f;)V
+    .locals 6
 
-    .line 2
-    new-instance v0, Lht7;
+    iget-object v0, p0, Lit7;->a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+
+    iget-object v0, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzs8;
+
+    iget-object v0, v0, Lzs8;->o:Laf5;
+
+    sget-object v1, Lvs8;->a:Lvs8;
+
+    invoke-static {v0, v1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    sget-object v0, Lzs7;->c:Lzs7;
+
+    iget-wide v1, p1, Ll3f;->a:J
+
+    iget-object p1, p0, Lit7;->b:Landroid/os/Bundle;
+
+    const-string v3, "arg_key_chat_id"
+
+    invoke-virtual {p1, v3}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    invoke-virtual {v0}, Ladi;->p0()Ltf4;
+
+    move-result-object p1
+
+    const-string v0, ":stickers/preview?sticker_id="
+
+    const-string v5, "&chat_id="
+
+    invoke-static {v1, v2, v0, v5}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lht7;-><init>(Lit7;Laj0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
-.end method
-
-.method public final onEvent(Lft7;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lgt7;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lgt7;-><init>(Lit7;Lft7;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {p1, v0, v1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 .end method

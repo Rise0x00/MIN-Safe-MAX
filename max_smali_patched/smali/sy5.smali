@@ -1,86 +1,93 @@
 .class public final Lsy5;
-.super Lude;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lhg6;
 
 
 # instance fields
-.field public final a:Loy5;
+.field public a:I
 
-.field public final b:Leg6;
+.field public b:Z
 
-.field public final c:Lyl0;
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method public constructor <init>(Loy5;Leg6;Lyl0;)V
-    .locals 0
+.field public e:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public f:I
 
-    iput-object p1, p0, Lsy5;->a:Loy5;
+.field public g:I
 
-    iput-object p2, p0, Lsy5;->b:Leg6;
+.field public h:I
 
-    iput-object p3, p0, Lsy5;->c:Lyl0;
-
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final b()Loy5;
-    .locals 5
-
-    new-instance v0, Lqy5;
-
-    iget-object v1, p0, Lsy5;->c:Lyl0;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lsy5;->a:Loy5;
-
-    iget-object v4, p0, Lsy5;->b:Leg6;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lqy5;-><init>(Loy5;Leg6;Ljava/lang/Object;I)V
-
-    return-object v0
-.end method
-
-.method public final l(Lnee;)V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    :try_start_0
-    iget-object v0, p0, Lsy5;->b:Leg6;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Leg6;->a:Ljava/lang/Object;
+    const-string v1, "LayoutState{mAvailable="
 
-    const-string v1, "The initialSupplier returned a null value"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v1, p0, Lsy5;->a:I
 
-    new-instance v1, Lry5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lsy5;->c:Lyl0;
+    const-string v1, ", mFlexLinePosition="
 
-    invoke-direct {v1, p1, v0, v2}, Lry5;-><init>(Lnee;Ljava/lang/Object;Lyl0;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lsy5;->a:Loy5;
+    iget v1, p0, Lsy5;->c:I
 
-    invoke-virtual {p1, v1}, Loy5;->c(Lyz5;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", mPosition="
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+    iget v1, p0, Lsy5;->d:I
 
-    invoke-static {v0, p1}, Lw65;->c(Ljava/lang/Throwable;Lnee;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", mOffset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lsy5;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mScrollingOffset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lsy5;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mLastScrollDelta="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lsy5;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mItemDirection=1, mLayoutDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lsy5;->h:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

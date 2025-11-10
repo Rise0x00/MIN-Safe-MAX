@@ -1,103 +1,206 @@
 .class public final Lp4h;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lqi7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/webapp/settings/WebAppsSettingScreen;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p2, p0, Lp4h;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iput p1, p0, Lp4h;->a:I
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lt5;)Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lp4h;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lp4h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
-
-    check-cast p1, Lp4h;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lp4h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lp4h;
-
-    iget-object v1, p0, Lp4h;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-    invoke-direct {v0, p2, v1}, Lp4h;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppsSettingScreen;)V
-
-    iput-object p1, v0, Lp4h;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp4h;->X:Ljava/lang/Object;
-
-    check-cast p1, Lhy9;
-
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Ltm7;
-
-    instance-of v0, p1, Lj73;
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lp4h;->Y:Lone/me/webapp/settings/WebAppsSettingScreen;
-
-    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Li8d;->C()Z
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lzc4;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Loxg;->c:Loxg;
-
-    check-cast p1, Lzc4;
-
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Ldkh;->a:Ldkh;
 
     return-object p1
+
+    :pswitch_0
+    const-class v0, Liq7;
+
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liq7;
+
+    sget-object v1, Lu8;->Y:Lu8;
+
+    invoke-static {v0, v1}, Lnbi;->a(Liq7;Lqi6;)Lvq7;
+
+    move-result-object v0
+
+    new-instance v1, Lyih;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object p1
+
+    invoke-direct {v1, v0, p1}, Lyih;-><init>(Lvq7;Lru7;)V
+
+    return-object v1
+
+    :pswitch_1
+    new-instance v0, Ln7h;
+
+    const-class v1, Liq7;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liq7;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v2
+
+    const-class v3, Lbe3;
+
+    invoke-virtual {p1, v3}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v3
+
+    const-class v4, Lvs4;
+
+    invoke-virtual {p1, v4}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v4
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ln7h;-><init>(Liq7;Lru7;Lru7;Lru7;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lh8h;
+
+    const-class v1, Liq7;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liq7;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lh8h;-><init>(Liq7;Lru7;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Ls9h;
+
+    const-class v1, Liq7;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liq7;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v2
+
+    const-class v3, Lbe3;
+
+    invoke-virtual {p1, v3}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Ls9h;-><init>(Liq7;Lru7;Lru7;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Ljih;
+
+    const-class v1, Liq7;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liq7;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v2
+
+    const-class v3, Lbe3;
+
+    invoke-virtual {p1, v3}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, p1}, Ljih;-><init>(Liq7;Lru7;Lru7;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ltbh;
+
+    const-class v1, Liq7;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liq7;
+
+    const-class v2, La8h;
+
+    invoke-virtual {p1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Ltbh;-><init>(Liq7;Lru7;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

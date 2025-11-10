@@ -1,53 +1,114 @@
 .class public final Ltzf;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public X:Lup9;
+.field public final synthetic a:Landroid/view/View;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Landroid/graphics/Rect;
 
-.field public final synthetic Z:Luzf;
+.field public final synthetic c:I
 
-.field public o:Luzf;
-
-.field public w0:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Luzf;Lnz3;)V
+.method public constructor <init>(Landroid/view/View;Landroid/graphics/Rect;II)V
     .locals 0
 
-    iput-object p1, p0, Ltzf;->Z:Luzf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltzf;->a:Landroid/view/View;
+
+    iput-object p2, p0, Ltzf;->b:Landroid/graphics/Rect;
+
+    iput p3, p0, Ltzf;->c:I
+
+    iput p4, p0, Ltzf;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    iput-object p1, p0, Ltzf;->Y:Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    iget p1, p0, Ltzf;->w0:I
+    iget-object p1, p0, Ltzf;->a:Landroid/view/View;
 
-    const/high16 v0, -0x80000000
+    iget-object p2, p0, Ltzf;->b:Landroid/graphics/Rect;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, p2}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    iput p1, p0, Ltzf;->w0:I
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    iget-object p1, p0, Ltzf;->Z:Luzf;
+    move-result p3
 
-    const/4 v0, 0x0
+    iget p4, p0, Ltzf;->c:I
 
-    invoke-virtual {p1, v0, p0}, Luzf;->f(Lup9;Lnz3;)Ljava/lang/Object;
+    if-ge p3, p4, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    return-object p1
+    move-result p3
+
+    sub-int/2addr p4, p3
+
+    iget p3, p2, Landroid/graphics/Rect;->left:I
+
+    div-int/lit8 p4, p4, 0x2
+
+    sub-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->left:I
+
+    iget p3, p2, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->right:I
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    iget p4, p0, Ltzf;->d:I
+
+    if-ge p3, p4, :cond_1
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    sub-int/2addr p4, p3
+
+    iget p3, p2, Landroid/graphics/Rect;->top:I
+
+    div-int/lit8 p4, p4, 0x2
+
+    sub-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->top:I
+
+    iget p3, p2, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->bottom:I
+
+    :cond_1
+    new-instance p3, Lzj5;
+
+    invoke-direct {p3, p2, p1}, Lzj5;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    invoke-virtual {p1, p3}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
+
+    return-void
 .end method

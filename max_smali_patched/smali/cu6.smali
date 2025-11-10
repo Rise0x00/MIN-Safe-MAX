@@ -1,176 +1,121 @@
 .class public final Lcu6;
-.super Ltnc;
+.super Lqle;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
-
-
 # instance fields
-.field public final b:Z
+.field public final synthetic e:Lqle;
 
-.field public final c:Z
+.field public final synthetic f:Lqle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lqle;Lqle;)V
+    .locals 0
 
-    sget v0, Lt4g;->a:I
+    invoke-direct {p0}, Lqle;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lcu6;->e:Lqle;
 
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcu6;->d:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcu6;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-boolean v0, p0, Lcu6;->b:Z
-
-    .line 3
-    iput-boolean v0, p0, Lcu6;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    .line 5
-    iput-boolean v0, p0, Lcu6;->b:Z
-
-    .line 6
-    iput-boolean p1, p0, Lcu6;->c:Z
+    iput-object p2, p0, Lcu6;->f:Lqle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcu6;->b:Z
-
-    return v0
-.end method
-
-.method public final c()Landroid/os/Bundle;
-    .locals 3
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Ltnc;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lcu6;->d:Ljava/lang/String;
-
-    iget-boolean v2, p0, Lcu6;->b:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    sget-object v1, Lcu6;->e:Ljava/lang/String;
-
-    iget-boolean v2, p0, Lcu6;->c:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b(Landroid/view/View;II)I
     .locals 2
 
-    instance-of v0, p1, Lcu6;
+    sget-object v0, Ltyg;->a:Ljava/util/WeakHashMap;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcu6;->f:Lqle;
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Lcu6;
+    iget-object v0, p0, Lcu6;->e:Lqle;
 
-    iget-boolean v0, p0, Lcu6;->c:Z
-
-    iget-boolean v1, p1, Lcu6;->c:Z
-
-    if-ne v0, v1, :cond_1
-
-    iget-boolean v0, p0, Lcu6;->b:Z
-
-    iget-boolean p1, p1, Lcu6;->b:Z
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
     :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v0, p1, p2, p3}, Lqle;->b(Landroid/view/View;II)I
+
+    move-result p1
 
     return p1
 .end method
 
-.method public final hashCode()I
+.method public final d()Ljava/lang/String;
     .locals 2
 
-    iget-boolean v0, p0, Lcu6;->b:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v1, "SWITCHING[L:"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v1, p0, Lcu6;->c:Z
+    iget-object v1, p0, Lcu6;->e:Lqle;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v1}, Lqle;->d()Ljava/lang/String;
 
     move-result-object v1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", R:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcu6;->f:Lqle;
+
+    invoke-virtual {v1}, Lqle;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    return-object v0
+.end method
+
+.method public final e(Landroid/view/View;I)I
+    .locals 2
+
+    sget-object v0, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
 
     move-result v0
 
-    return v0
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcu6;->f:Lqle;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcu6;->e:Lqle;
+
+    :goto_0
+    invoke-virtual {v0, p1, p2}, Lqle;->e(Landroid/view/View;I)I
+
+    move-result p1
+
+    return p1
 .end method

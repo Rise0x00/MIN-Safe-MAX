@@ -1,393 +1,293 @@
 .class public final Lf8d;
-.super Ljava/lang/Object;
+.super Lly8;
 .source "SourceFile"
+
+# interfaces
+.implements Lc8d;
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:Z
+.field public final b:Ljava/lang/String;
 
-.field public c:[F
+.field public c:Z
 
 .field public d:I
 
-.field public e:F
+.field public e:I
 
-.field public f:I
+.field public f:Lb8d;
 
-.field public g:F
+.field public g:I
 
-.field public h:Z
+.field public final synthetic h:Lg8d;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lg8d;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lf8d;->h:Lg8d;
 
-    iput v0, p0, Lf8d;->a:I
+    const/4 p1, -0x1
 
-    const/4 v0, 0x0
+    iput p1, p0, Lf8d;->d:I
 
-    iput-boolean v0, p0, Lf8d;->b:Z
+    iput-object p2, p0, Lf8d;->a:Ljava/lang/String;
 
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lf8d;->c:[F
-
-    iput v0, p0, Lf8d;->d:I
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lf8d;->e:F
-
-    iput v0, p0, Lf8d;->f:I
-
-    iput v1, p0, Lf8d;->g:F
-
-    iput-boolean v0, p0, Lf8d;->h:Z
+    iput-object p3, p0, Lf8d;->b:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static a()Lf8d;
-    .locals 2
-
-    new-instance v0, Lf8d;
-
-    invoke-direct {v0}, Lf8d;-><init>()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lf8d;->b:Z
-
-    return-object v0
-.end method
-
-.method public static b(FFFF)Lf8d;
-    .locals 1
-
-    new-instance v0, Lf8d;
-
-    invoke-direct {v0}, Lf8d;-><init>()V
-
-    invoke-virtual {v0, p0, p1, p2, p3}, Lf8d;->d(FFFF)V
-
-    return-object v0
-.end method
-
-.method public static c([F)Lf8d;
-    .locals 5
-
-    new-instance v0, Lf8d;
-
-    invoke-direct {v0}, Lf8d;-><init>()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x8
-
-    if-ne v1, v3, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    const-string v4, "radii should have exactly 8 values"
-
-    invoke-static {v4, v1}, Lbv0;->n(Ljava/lang/String;Z)V
-
-    iget-object v1, v0, Lf8d;->c:[F
-
-    if-nez v1, :cond_1
-
-    new-array v1, v3, [F
-
-    iput-object v1, v0, Lf8d;->c:[F
-
-    :cond_1
-    iget-object v1, v0, Lf8d;->c:[F
-
-    invoke-static {p0, v2, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final d(FFFF)V
-    .locals 2
+.method public final a()I
+    .locals 1
 
-    iget-object v0, p0, Lf8d;->c:[F
+    iget v0, p0, Lf8d;->g:I
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    const/16 v0, 0x8
+.method public final b(Lb8d;)V
+    .locals 6
 
-    new-array v0, v0, [F
+    iput-object p1, p0, Lf8d;->f:Lb8d;
 
-    iput-object v0, p0, Lf8d;->c:[F
+    iget v3, p1, Lb8d;->e:I
+
+    add-int/lit8 v0, v3, 0x1
+
+    iput v0, p1, Lb8d;->e:I
+
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    const-string v0, "routeId"
+
+    iget-object v1, p0, Lf8d;->a:Ljava/lang/String;
+
+    invoke-virtual {v5, v0, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "routeGroupId"
+
+    iget-object v1, p0, Lf8d;->b:Ljava/lang/String;
+
+    invoke-virtual {v5, v0, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v2, p1, Lb8d;->d:I
+
+    add-int/lit8 v0, v2, 0x1
+
+    iput v0, p1, Lb8d;->d:I
+
+    const/4 v4, 0x0
+
+    const/4 v1, 0x3
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Lb8d;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+
+    iput v3, p0, Lf8d;->g:I
+
+    iget-boolean p1, p0, Lf8d;->c:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0, v3}, Lb8d;->a(I)V
+
+    iget p1, p0, Lf8d;->d:I
+
+    if-ltz p1, :cond_0
+
+    iget v1, p0, Lf8d;->g:I
+
+    invoke-virtual {v0, v1, p1}, Lb8d;->c(II)V
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lf8d;->d:I
 
     :cond_0
-    iget-object v0, p0, Lf8d;->c:[F
+    iget p1, p0, Lf8d;->e:I
 
-    const/4 v1, 0x1
+    if-eqz p1, :cond_1
 
-    aput p1, v0, v1
+    iget v1, p0, Lf8d;->g:I
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1, p1}, Lb8d;->d(II)V
 
-    aput p1, v0, v1
+    const/4 p1, 0x0
 
-    const/4 p1, 0x3
+    iput p1, p0, Lf8d;->e:I
 
-    aput p2, v0, p1
+    :cond_1
+    return-void
+.end method
 
-    const/4 p1, 0x2
+.method public final c()V
+    .locals 6
 
-    aput p2, v0, p1
+    iget-object v0, p0, Lf8d;->f:Lb8d;
 
-    const/4 p1, 0x5
+    if-eqz v0, :cond_0
 
-    aput p3, v0, p1
+    iget v3, p0, Lf8d;->g:I
 
-    const/4 p1, 0x4
+    iget v2, v0, Lb8d;->d:I
 
-    aput p3, v0, p1
+    add-int/lit8 v1, v2, 0x1
 
-    const/4 p1, 0x7
+    iput v1, v0, Lb8d;->d:I
 
-    aput p4, v0, p1
+    const/4 v4, 0x0
 
-    const/4 p1, 0x6
+    const/4 v5, 0x0
 
-    aput p4, v0, p1
+    const/4 v1, 0x4
+
+    invoke-virtual/range {v0 .. v5}, Lb8d;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lf8d;->f:Lb8d;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lf8d;->g:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d()V
+    .locals 2
+
+    iget-object v0, p0, Lf8d;->h:Lg8d;
+
+    iget-object v1, v0, Lg8d;->u0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {p0}, Lf8d;->c()V
+
+    invoke-virtual {v0}, Lg8d;->o()V
 
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public final e()V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x1
 
-    const/4 p1, 0x1
+    iput-boolean v0, p0, Lf8d;->c:Z
 
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_9
-
-    const-class v0, Lf8d;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lf8d;
-
-    iget-boolean v0, p0, Lf8d;->b:Z
-
-    iget-boolean v1, p1, Lf8d;->b:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lf8d;->d:I
-
-    iget v1, p1, Lf8d;->d:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p1, Lf8d;->e:F
-
-    iget v1, p0, Lf8d;->e:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lf8d;->f:I
-
-    iget v1, p1, Lf8d;->f:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p1, Lf8d;->g:F
-
-    iget v1, p0, Lf8d;->g:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lf8d;->a:I
-
-    iget v1, p1, Lf8d;->a:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-boolean v0, p0, Lf8d;->h:Z
-
-    iget-boolean v1, p1, Lf8d;->h:Z
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lf8d;->c:[F
-
-    iget-object p1, p1, Lf8d;->c:[F
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_9
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget v0, p0, Lf8d;->a:I
-
-    const/4 v1, 0x0
+    iget-object v0, p0, Lf8d;->f:Lb8d;
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lqw1;->u(I)I
+    iget v1, p0, Lf8d;->g:I
 
-    move-result v0
-
-    goto :goto_0
+    invoke-virtual {v0, v1}, Lb8d;->a(I)V
 
     :cond_0
-    move v0, v1
+    return-void
+.end method
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+.method public final f(I)V
+    .locals 2
 
-    iget-boolean v2, p0, Lf8d;->b:Z
+    iget-object v0, p0, Lf8d;->f:Lb8d;
 
-    add-int/2addr v0, v2
+    if-eqz v0, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v1, p0, Lf8d;->g:I
 
-    iget-object v2, p0, Lf8d;->c:[F
+    invoke-virtual {v0, v1, p1}, Lb8d;->c(II)V
 
-    if-eqz v2, :cond_1
+    return-void
 
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([F)I
+    :cond_0
+    iput p1, p0, Lf8d;->d:I
 
-    move-result v2
+    const/4 p1, 0x0
 
-    goto :goto_1
+    iput p1, p0, Lf8d;->e:I
 
-    :cond_1
-    move v2, v1
+    return-void
+.end method
 
-    :goto_1
-    add-int/2addr v0, v2
+.method public final g()V
+    .locals 1
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v0, 0x0
 
-    iget v2, p0, Lf8d;->d:I
+    invoke-virtual {p0, v0}, Lf8d;->h(I)V
 
-    add-int/2addr v0, v2
+    return-void
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public final h(I)V
+    .locals 7
 
-    iget v2, p0, Lf8d;->e:F
+    const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    iput-boolean v0, p0, Lf8d;->c:Z
 
-    cmpl-float v4, v2, v3
+    iget-object v1, p0, Lf8d;->f:Lb8d;
 
-    if-eqz v4, :cond_2
+    if-eqz v1, :cond_0
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget v4, p0, Lf8d;->g:I
 
-    move-result v2
+    const-string v0, "unselectReason"
 
-    goto :goto_2
+    invoke-static {p1, v0}, Lok7;->e(ILjava/lang/String;)Landroid/os/Bundle;
 
-    :cond_2
-    move v2, v1
+    move-result-object v6
 
-    :goto_2
-    add-int/2addr v0, v2
+    iget v3, v1, Lb8d;->d:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    add-int/lit8 p1, v3, 0x1
 
-    iget v2, p0, Lf8d;->f:I
+    iput p1, v1, Lb8d;->d:I
 
-    add-int/2addr v0, v2
+    const/4 v5, 0x0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v2, 0x6
 
-    iget v2, p0, Lf8d;->g:F
+    invoke-virtual/range {v1 .. v6}, Lb8d;->b(IIILandroid/os/Bundle;Landroid/os/Bundle;)Z
 
-    cmpl-float v3, v2, v3
+    :cond_0
+    return-void
+.end method
 
-    if-eqz v3, :cond_3
+.method public final i(I)V
+    .locals 2
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object v0, p0, Lf8d;->f:Lb8d;
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    :cond_3
-    add-int/2addr v0, v1
+    iget v1, p0, Lf8d;->g:I
 
-    mul-int/lit16 v0, v0, 0x3c1
+    invoke-virtual {v0, v1, p1}, Lb8d;->d(II)V
 
-    iget-boolean v1, p0, Lf8d;->h:Z
+    return-void
 
-    add-int/2addr v0, v1
+    :cond_0
+    iget v0, p0, Lf8d;->e:I
 
-    return v0
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lf8d;->e:I
+
+    return-void
 .end method

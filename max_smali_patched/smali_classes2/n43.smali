@@ -1,40 +1,44 @@
-.class public interface abstract Ln43;
+.class public final Ln43;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()J
-.end method
+# instance fields
+.field public final a:Z
 
-.method public b(J)Z
+.field public final b:Z
+
+.field public final c:Lt92;
+
+
+# direct methods
+.method public synthetic constructor <init>(Z)V
     .locals 2
 
-    invoke-interface {p0}, Ln43;->a()J
+    const/4 v0, 0x0
 
-    move-result-wide v0
+    const/4 v1, 0x1
 
-    cmp-long v0, v0, p1
+    .line 1
+    invoke-direct {p0, v1, p1, v0}, Ln43;-><init>(ZZLt92;)V
 
-    if-gtz v0, :cond_0
-
-    invoke-interface {p0}, Ln43;->c()J
-
-    move-result-wide v0
-
-    cmp-long p1, p1, v0
-
-    if-gtz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public abstract c()J
+.method public constructor <init>(ZZLt92;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-boolean p1, p0, Ln43;->a:Z
+
+    .line 4
+    iput-boolean p2, p0, Ln43;->b:Z
+
+    .line 5
+    iput-object p3, p0, Ln43;->c:Lt92;
+
+    return-void
 .end method

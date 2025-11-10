@@ -1,49 +1,48 @@
-.class public final Lcea;
-.super Li25;
+.class public abstract Lcea;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final C0:Lpb8;
-
-.field public final D0:F
-
-
 # direct methods
-.method public constructor <init>(Lpb8;F)V
-    .locals 1
+.method public static a(Landroid/app/NotificationManager;)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/NotificationManager;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/service/notification/StatusBarNotification;",
+            ">;"
+        }
+    .end annotation
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->getActiveNotifications()[Landroid/service/notification/StatusBarNotification;
 
-    invoke-direct {p0, v0}, Li25;-><init>(I)V
+    move-result-object p0
 
-    iput-object p1, p0, Lcea;->C0:Lpb8;
+    if-nez p0, :cond_0
 
-    iput p2, p0, Lcea;->D0:F
+    new-instance p0, Ljava/util/ArrayList;
 
-    return-void
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/NotificationManager;)I
+    .locals 0
 
-# virtual methods
-.method public final A()Z
-    .locals 1
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->getCurrentInterruptionFilter()I
 
-    const/4 v0, 0x1
+    move-result p0
 
-    return v0
-.end method
-
-.method public final C(FFFLd6e;)V
-    .locals 1
-
-    iget v0, p0, Lcea;->D0:F
-
-    sub-float/2addr p2, v0
-
-    iget-object v0, p0, Lcea;->C0:Lpb8;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lpb8;->C(FFFLd6e;)V
-
-    return-void
+    return p0
 .end method

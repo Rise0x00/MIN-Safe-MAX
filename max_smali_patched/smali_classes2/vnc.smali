@@ -1,29 +1,26 @@
-.class public final Lvnc;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "SourceFile"
+.class public abstract Lvnc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public K0:I
+# static fields
+.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a036b
 
-.field public L0:Lunc;
+.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a036c
 
+.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a036d
 
-# virtual methods
-.method public final getSelected()I
-    .locals 1
+.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a036e
 
-    iget v0, p0, Lvnc;->K0:I
+.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a036f
 
-    add-int/lit8 v0, v0, 0x1
+.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0370
 
-    return v0
-.end method
+.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0371
 
-.method public final setOnSelectListener(Lunc;)V
-    .locals 0
+.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0372
 
-    iput-object p1, p0, Lvnc;->L0:Lunc;
+.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0373
 
-    return-void
-.end method
+.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a0374
+
+.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a0375

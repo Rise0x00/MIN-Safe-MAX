@@ -1,173 +1,64 @@
 .class public final Lwoa;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lapa;
 
-.field public final synthetic Z:Lxoa;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lxoa;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lapa;Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    iput-object p1, p0, Lwoa;->Z:Lxoa;
+    iput p3, p0, Lwoa;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lwoa;->b:Lapa;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lwoa;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwoa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwoa;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lwoa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Lwoa;
+    iget v0, p0, Lwoa;->a:I
 
-    iget-object v1, p0, Lwoa;->Z:Lxoa;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Lwoa;-><init>(Lxoa;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lwoa;->b:Lapa;
 
-    iput-object p1, v0, Lwoa;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lwoa;->c:Landroid/graphics/drawable/Drawable;
 
-    return-object v0
-.end method
+    invoke-static {v0, v1}, Lapa;->d(Lapa;Landroid/graphics/drawable/Drawable;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    return-void
 
-    iget-object v0, p0, Lwoa;->Z:Lxoa;
+    :pswitch_0
+    iget-object v0, p0, Lwoa;->b:Lapa;
 
-    iget-object v1, v0, Lxoa;->a:Lbp7;
+    iget-object v1, p0, Lwoa;->c:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Lwoa;->X:I
+    invoke-static {v0, v1}, Lapa;->b(Lapa;Landroid/graphics/drawable/Drawable;)V
 
-    const/4 v3, 0x1
+    return-void
 
-    if-eqz v2, :cond_1
+    nop
 
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwoa;->Y:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr8f;
-
-    check-cast v2, Lwla;
-
-    invoke-virtual {v2}, Lwla;->a()Ly24;
-
-    move-result-object v2
-
-    new-instance v4, Luoa;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v0, v5}, Luoa;-><init>(Lxoa;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v6, 0x2
-
-    invoke-static {p1, v2, v4, v6}, Lq9e;->b(Le34;Ly24;Llf6;I)Ltm4;
-
-    move-result-object v2
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr8f;
-
-    check-cast v1, Lwla;
-
-    invoke-virtual {v1}, Lwla;->a()Ly24;
-
-    move-result-object v1
-
-    new-instance v4, Lvoa;
-
-    invoke-direct {v4, v0, v5}, Lvoa;-><init>(Lxoa;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v1, v4, v6}, Lq9e;->b(Le34;Ly24;Llf6;I)Ltm4;
-
-    move-result-object p1
-
-    new-array v0, v6, [Lsm4;
-
-    const/4 v1, 0x0
-
-    aput-object v2, v0, v1
-
-    aput-object p1, v0, v3
-
-    iput v3, p0, Lwoa;->X:I
-
-    new-instance p1, Lhe0;
-
-    invoke-direct {p1, v0}, Lhe0;-><init>([Lsm4;)V
-
-    invoke-virtual {p1, p0}, Lhe0;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

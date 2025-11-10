@@ -1,23 +1,26 @@
-.class public final Lznc;
+.class public abstract Lznc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final synthetic b:I
+.field public static oneme_location_map_bottom_gradient_view:I = 0x7f0a06b9
 
+.field public static oneme_location_map_bottom_insets_guideline:I = 0x7f0a06ba
 
-# instance fields
-.field public final a:Lrea;
+.field public static oneme_location_map_button_current_location:I = 0x7f0a06bb
 
+.field public static oneme_location_map_button_geo_layers:I = 0x7f0a06bc
 
-# direct methods
-.method public constructor <init>(Lrea;)V
-    .locals 0
+.field public static oneme_location_map_button_send:I = 0x7f0a06bd
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_location_map_center_marker:I = 0x7f0a06be
 
-    iput-object p1, p0, Lznc;->a:Lrea;
+.field public static oneme_location_map_location_info:I = 0x7f0a06bf
 
-    return-void
-.end method
+.field public static oneme_location_map_logo_view:I = 0x7f0a06c0
+
+.field public static oneme_location_map_toolbar:I = 0x7f0a06c1
+
+.field public static oneme_location_map_toolbar_close:I = 0x7f0a06c2
+
+.field public static oneme_location_map_view:I = 0x7f0a06c3

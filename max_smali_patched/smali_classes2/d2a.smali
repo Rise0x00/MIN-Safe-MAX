@@ -1,72 +1,156 @@
-.class public final Ld2a;
+.class public final synthetic Ld2a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La5g;
+.implements Lir3;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lh2a;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lh2a;I)V
+    .locals 0
+
+    iput p2, p0, Ld2a;->a:I
+
+    iput-object p1, p0, Ld2a;->b:Lh2a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Ljef;
+.method public final accept(Ljava/lang/Object;)V
     .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    iget v0, p0, Ld2a;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-lez v0, :cond_2
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Ld2a;->b:Lh2a;
 
-    :goto_0
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    iget-object v0, p1, Lh2a;->w0:Ldl8;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    iget-object v1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
+
+    invoke-virtual {v1}, Landroid/view/View;->isFocused()Z
 
     move-result v1
 
-    if-ge v0, v1, :cond_1
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Lqt7;
 
-    move-result v1
+    iget-object v0, v0, Lqt7;->b:Lpt7;
 
-    const/16 v2, 0x2d
+    iget-boolean v0, v0, Lpt7;->o:Z
 
-    if-eq v1, v2, :cond_0
-
-    const/16 v2, 0x20
-
-    if-ne v1, v2, :cond_2
+    if-nez v0, :cond_2
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    new-instance v0, Ldk0;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lh2a;->V0(Llr3;)V
+
+    iget-object p1, p1, Lh2a;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-class p2, Ld2a;
+    const/4 v0, 0x0
 
-    invoke-static {p2}, Lxxc;->a(Ljava/lang/Class;)Ll53;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lipe;->n(ILl53;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    new-instance p2, Ljef;
-
-    invoke-direct {p2, p1}, Ljef;-><init>(I)V
-
-    return-object p2
+    invoke-virtual {p1, v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Z)V
 
     :cond_2
-    const/4 p1, 0x0
+    :goto_0
+    return-void
 
-    return-object p1
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object v0, p0, Ld2a;->b:Lh2a;
+
+    iget-object v0, v0, Lh2a;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->I0(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lhmg;
+
+    iget-object v0, p0, Ld2a;->b:Lh2a;
+
+    iget-object v1, v0, Lh2a;->c:Lm68;
+
+    invoke-virtual {v1, p1, v0}, Lm68;->k(Lhmg;Lbw8;)V
+
+    new-instance v1, Lf22;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, p1}, Lf22;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lh2a;->V0(Llr3;)V
+
+    iget-object p1, v0, Ladi;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln2a;
+
+    check-cast p1, Lx2a;
+
+    iget-object p1, p1, Lx2a;->X:Lru/ok/messages/video/widgets/VideoView;
+
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoView;->a(Ljxg;)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p1, Ljava/lang/Long;
+
+    new-instance p1, Lf2a;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Ld2a;->b:Lh2a;
+
+    invoke-direct {p1, v1, v0}, Lf2a;-><init>(Lh2a;I)V
+
+    invoke-virtual {v1, p1}, Lh2a;->V0(Llr3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

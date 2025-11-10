@@ -1,24 +1,23 @@
 .class public final Lx8c;
-.super Ljava/lang/Object;
+.super Ly8c;
 .source "SourceFile"
 
-# interfaces
-.implements Ly8c;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lx8c;
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lx8c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lx8c;->a:I
 
-    sput-object v0, Lx8c;->a:Lx8c;
+    iput p1, p0, Lx8c;->b:I
 
     return-void
 .end method
@@ -26,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -35,30 +34,75 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lx8c;
+    instance-of v1, p1, Lx8c;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lx8c;
+
+    iget v1, p0, Lx8c;->a:I
+
+    iget p1, p1, Lx8c;->a:I
+
+    if-ne v1, p1, :cond_2
+
     return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/high16 v0, 0x20000
+
+    int-to-long v0, v0
+
+    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x47cfa8d4
+    iget v0, p0, Lx8c;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lx8c;->b:I
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "TakePhoto"
+    iget v0, p0, Lx8c;->a:I
+
+    invoke-static {v0}, Livi;->c(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RknLabel(itemViewType="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

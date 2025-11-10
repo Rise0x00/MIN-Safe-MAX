@@ -1,637 +1,744 @@
-.class public final Lxz4;
-.super Lb95;
+.class public abstract Lxz4;
+.super Landroid/app/Service;
 .source "SourceFile"
 
 
+# static fields
+.field public static final X:Ljava/util/HashMap;
+
+
 # instance fields
-.field public final e:I
+.field public a:Lwz4;
 
-.field public final f:I
+.field public b:I
 
-.field public final g:Landroid/animation/TimeInterpolator;
+.field public c:Z
 
-.field public h:Landroid/widget/AutoCompleteTextView;
+.field public d:Z
 
-.field public final i:Lh5;
-
-.field public final j:Lf63;
-
-.field public final k:Lrz3;
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:Z
-
-.field public o:J
-
-.field public p:Landroid/view/accessibility/AccessibilityManager;
-
-.field public q:Landroid/animation/ValueAnimator;
-
-.field public r:Landroid/animation/ValueAnimator;
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(La95;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lb95;-><init>(La95;)V
+    new-instance v0, Ljava/util/HashMap;
 
-    new-instance v0, Lh5;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/16 v1, 0x1b
+    sput-object v0, Lxz4;->X:Ljava/util/HashMap;
 
-    invoke-direct {v0, v1, p0}, Lh5;-><init>(ILjava/lang/Object;)V
+    return-void
+.end method
 
-    iput-object v0, p0, Lxz4;->i:Lh5;
+.method public static a(Lxz4;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lf63;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lf63;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lxz4;->j:Lf63;
-
-    new-instance v0, Lrz3;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1, p0}, Lrz3;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lxz4;->k:Lrz3;
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    iput-wide v0, p0, Lxz4;->o:J
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lvac;->motionDurationShort3:I
-
-    const/16 v2, 0x43
-
-    invoke-static {v1, v2, v0}, Lpih;->U(IILandroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Lxz4;->f:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lvac;->motionDurationShort3:I
-
-    const/16 v2, 0x32
-
-    invoke-static {v1, v2, v0}, Lpih;->U(IILandroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Lxz4;->e:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget v0, Lvac;->motionEasingLinearInterpolator:I
-
-    sget-object v1, Lgg;->a:Landroid/view/animation/LinearInterpolator;
-
-    invoke-static {p1, v0, v1}, Lpih;->V(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxz4;->g:Landroid/animation/TimeInterpolator;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final b()V
+    .locals 2
 
-    iget-object v0, p0, Lxz4;->p:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v0, p0, Lxz4;->a:Lwz4;
 
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    iget-object v0, v0, Lwz4;->b:Loz4;
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-static {v0}, Lps;->x(Landroid/widget/EditText;)Z
-
-    move-result v0
+    iget-boolean v0, v0, Loz4;->k:Z
 
     if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lb95;->d:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {v0}, Landroid/view/View;->hasFocus()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
-
-    :cond_0
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    new-instance v1, Ltd4;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2, p0}, Ltd4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
-.end method
-
-.method public final c()I
-    .locals 1
-
-    sget v0, Ljic;->exposed_dropdown_menu_content_description:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    sget v0, Lfdc;->mtrl_dropdown_arrow:I
-
-    return v0
-.end method
-
-.method public final e()Landroid/view/View$OnFocusChangeListener;
-    .locals 1
-
-    iget-object v0, p0, Lxz4;->j:Lf63;
-
-    return-object v0
-.end method
-
-.method public final f()Landroid/view/View$OnClickListener;
-    .locals 1
-
-    iget-object v0, p0, Lxz4;->i:Lh5;
-
-    return-object v0
-.end method
-
-.method public final h()Lrz3;
-    .locals 1
-
-    iget-object v0, p0, Lxz4;->k:Lrz3;
-
-    return-object v0
-.end method
-
-.method public final i(I)Z
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
 
     :cond_0
-    const/4 p1, 0x0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return p1
-.end method
+    const/16 v1, 0x1c
 
-.method public final j()Z
-    .locals 1
+    if-ge v0, v1, :cond_1
 
-    iget-boolean v0, p0, Lxz4;->l:Z
-
-    return v0
-.end method
-
-.method public final l()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lxz4;->n:Z
-
-    return v0
-.end method
-
-.method public final m(Landroid/widget/EditText;)V
-    .locals 3
-
-    instance-of v0, p1, Landroid/widget/AutoCompleteTextView;
+    iget-boolean v0, p0, Lxz4;->d:Z
 
     if-eqz v0, :cond_1
 
-    move-object v0, p1
+    invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
-    check-cast v0, Landroid/widget/AutoCompleteTextView;
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    new-instance v1, Loj1;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p0}, Loj1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    new-instance v1, Lwz4;
-
-    invoke-direct {v1, p0}, Lwz4;-><init>(Lxz4;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setThreshold(I)V
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lb95;->a:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v1, v0}, Lcom/google/android/material/textfield/TextInputLayout;->setErrorIconDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-static {p1}, Lps;->x(Landroid/widget/EditText;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lxz4;->p:Landroid/view/accessibility/AccessibilityManager;
-
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lskg;->a:Ljava/util/WeakHashMap;
-
-    iget-object p1, p0, Lb95;->d:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setImportantForAccessibility(I)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconVisible(Z)V
+    iput-boolean v0, p0, Lxz4;->o:Z
 
     return-void
 
     :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    iget-boolean v0, p0, Lxz4;->o:Z
 
-    const-string v0, "EditText needs to be an AutoCompleteTextView if an Exposed Dropdown Menu is being used."
+    iget v1, p0, Lxz4;->b:I
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Landroid/app/Service;->stopSelfResult(I)Z
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    iput-boolean v0, p0, Lxz4;->o:Z
+
+    return-void
+.end method
+
+.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
 .end method
 
-.method public final n(Lp4;)V
-    .locals 2
-
-    iget-object v0, p1, Lp4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    iget-object v1, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-static {v1}, Lps;->x(Landroid/widget/EditText;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-class v1, Landroid/widget/Spinner;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lp4;->h(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isShowingHintText()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHintText(Ljava/lang/CharSequence;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final o(Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 3
-
-    iget-object v0, p0, Lxz4;->p:Landroid/view/accessibility/AccessibilityManager;
-
-    invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-static {v0}, Lps;->x(Landroid/widget/EditText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
-
-    move-result v0
-
-    const v1, 0x8000
-
-    const/4 v2, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
-
-    move-result v0
-
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_2
-
-    :cond_1
-    iget-boolean v0, p0, Lxz4;->n:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
-
-    move-result p1
-
-    if-eq p1, v2, :cond_3
-
-    if-eqz v0, :cond_4
-
-    :cond_3
-    invoke-virtual {p0}, Lxz4;->u()V
-
-    iput-boolean v2, p0, Lxz4;->m:Z
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lxz4;->o:J
-
-    :cond_4
-    :goto_1
-    return-void
-.end method
-
-.method public final r()V
-    .locals 5
-
-    const/4 v0, 0x2
-
-    new-array v1, v0, [F
-
-    fill-array-data v1, :array_0
-
-    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lxz4;->g:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget v3, p0, Lxz4;->f:I
-
-    int-to-long v3, v3
-
-    invoke-virtual {v1, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v3, Lg00;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v3, v4, p0}, Lg00;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iput-object v1, p0, Lxz4;->r:Landroid/animation/ValueAnimator;
-
-    new-array v0, v0, [F
-
-    fill-array-data v0, :array_1
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget v1, p0, Lxz4;->e:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lg00;
-
-    invoke-direct {v1, v4, p0}, Lg00;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iput-object v0, p0, Lxz4;->q:Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lh6;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p0}, Lh6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object v0, p0, Lb95;->c:Landroid/content/Context;
-
-    const-string v1, "accessibility"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/accessibility/AccessibilityManager;
-
-    iput-object v0, p0, Lxz4;->p:Landroid/view/accessibility/AccessibilityManager;
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
-.end method
-
-.method public final s()V
-    .locals 2
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final t(Z)V
-    .locals 1
-
-    iget-boolean v0, p0, Lxz4;->n:Z
-
-    if-eq v0, p1, :cond_0
-
-    iput-boolean p1, p0, Lxz4;->n:Z
-
-    iget-object p1, p0, Lxz4;->r:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
-
-    iget-object p1, p0, Lxz4;->q:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final u()V
+.method public final onCreate()V
     .locals 6
 
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    return-void
+    sget-object v1, Lxz4;->X:Ljava/util/HashMap;
 
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v0
+    move-result-object v2
 
-    iget-wide v2, p0, Lxz4;->o:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
+    check-cast v2, Lwz4;
 
     const/4 v3, 0x0
 
-    if-ltz v2, :cond_1
+    if-nez v2, :cond_0
 
-    const-wide/16 v4, 0x12c
+    sget-object v2, Lsp8;->a:Lsp8;
 
-    cmp-long v0, v0, v4
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
 
-    if-lez v0, :cond_2
+    move-result-object v2
+
+    const-class v4, Loz4;
+
+    invoke-virtual {v2, v4}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loz4;
+
+    invoke-virtual {v2, v3}, Loz4;->c(Z)V
+
+    new-instance v4, Lwz4;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5, v2, v3, v0}, Lwz4;-><init>(Landroid/content/Context;Loz4;ZLjava/lang/Class;)V
+
+    invoke-virtual {v1, v0, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object v2, v4
+
+    :cond_0
+    iput-object v2, p0, Lxz4;->a:Lwz4;
+
+    iget-object v0, v2, Lwz4;->e:Lxz4;
+
+    if-nez v0, :cond_1
+
+    const/4 v3, 0x1
 
     :cond_1
-    iput-boolean v3, p0, Lxz4;->m:Z
+    invoke-static {v3}, Ligi;->h(Z)V
+
+    iput-object p0, v2, Lwz4;->e:Lxz4;
+
+    iget-object v0, v2, Lwz4;->b:Loz4;
+
+    iget-boolean v0, v0, Loz4;->h:Z
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Llig;->o(Lej3;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lhn4;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v1, v2, v3, p0}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
     :cond_2
-    iget-boolean v0, p0, Lxz4;->m:Z
+    return-void
+.end method
 
-    if-nez v0, :cond_4
+.method public final onDestroy()V
+    .locals 2
 
-    iget-boolean v0, p0, Lxz4;->n:Z
+    iget-object v0, p0, Lxz4;->a:Lwz4;
 
-    xor-int/lit8 v0, v0, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Lxz4;->t(Z)V
+    iget-object v1, v0, Lwz4;->e:Lxz4;
 
-    iget-boolean v0, p0, Lxz4;->n:Z
+    if-ne v1, p0, :cond_0
 
-    if-eqz v0, :cond_3
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
+    goto :goto_0
 
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
+    :goto_0
+    invoke-static {v1}, Ligi;->h(Z)V
 
-    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lwz4;->e:Lxz4;
 
     return-void
+.end method
+
+.method public final onStartCommand(Landroid/content/Intent;II)I
+    .locals 12
+
+    iput p3, p0, Lxz4;->b:I
+
+    const/4 p2, 0x0
+
+    iput-boolean p2, p0, Lxz4;->d:Z
+
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.RESTART"
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "content_id"
+
+    invoke-virtual {p1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-boolean v4, p0, Lxz4;->c:Z
+
+    const-string v5, "foreground"
+
+    invoke-virtual {p1, v5, p2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v5, p2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v5, v0
+
+    :goto_1
+    or-int/2addr v4, v5
+
+    iput-boolean v4, p0, Lxz4;->c:Z
+
+    goto :goto_2
+
+    :cond_2
+    move-object v2, v1
+
+    move-object v3, v2
+
+    :goto_2
+    const-string v4, "androidx.media3.exoplayer.downloadService.action.INIT"
+
+    if-nez v2, :cond_3
+
+    move-object v2, v4
 
     :cond_3
-    iget-object v0, p0, Lxz4;->h:Landroid/widget/AutoCompleteTextView;
+    iget-object v5, p0, Lxz4;->a:Lwz4;
 
-    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    iget-object v5, v5, Lwz4;->b:Loz4;
+
+    iget-object v6, v5, Loz4;->c:Llz4;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v7
+
+    const/16 v8, 0x8
+
+    const/4 v9, 0x7
+
+    const/4 v10, 0x4
+
+    const/4 v11, -0x1
+
+    sparse-switch v7, :sswitch_data_0
+
+    goto/16 :goto_3
+
+    :sswitch_0
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.PAUSE_DOWNLOADS"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_4
+
+    goto/16 :goto_3
 
     :cond_4
-    iput-boolean v3, p0, Lxz4;->m:Z
+    move v11, v8
+
+    goto/16 :goto_3
+
+    :sswitch_1
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.SET_REQUIREMENTS"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v11, v9
+
+    goto :goto_3
+
+    :sswitch_2
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.ADD_DOWNLOAD"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    const/4 v11, 0x6
+
+    goto :goto_3
+
+    :sswitch_3
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.REMOVE_ALL_DOWNLOADS"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    const/4 v11, 0x5
+
+    goto :goto_3
+
+    :sswitch_4
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.RESUME_DOWNLOADS"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    move v11, v10
+
+    goto :goto_3
+
+    :sswitch_5
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_9
+
+    goto :goto_3
+
+    :cond_9
+    const/4 v11, 0x3
+
+    goto :goto_3
+
+    :sswitch_6
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_a
+
+    goto :goto_3
+
+    :cond_a
+    const/4 v11, 0x2
+
+    goto :goto_3
+
+    :sswitch_7
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.REMOVE_DOWNLOAD"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_b
+
+    goto :goto_3
+
+    :cond_b
+    move v11, v0
+
+    goto :goto_3
+
+    :sswitch_8
+    const-string p3, "androidx.media3.exoplayer.downloadService.action.SET_STOP_REASON"
+
+    invoke-virtual {v2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_c
+
+    goto :goto_3
+
+    :cond_c
+    move v11, p2
+
+    :goto_3
+    const-string p3, "stop_reason"
+
+    const-string v4, "DownloadService"
+
+    packed-switch v11, :pswitch_data_0
+
+    const-string p1, "Ignored unrecognized action: "
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v4, p1}, Lpyh;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_4
+
+    :pswitch_0
+    invoke-virtual {v5, v0}, Loz4;->c(Z)V
+
+    goto/16 :goto_4
+
+    :pswitch_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p3, "requirements"
+
+    invoke-virtual {p1, p3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Llcd;
+
+    if-nez p1, :cond_d
+
+    const-string p1, "Ignored SET_REQUIREMENTS: Missing requirements extra"
+
+    invoke-static {v4, p1}, Lpyh;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_4
+
+    :cond_d
+    iget-object p3, v5, Loz4;->m:Ldb0;
+
+    iget-object p3, p3, Ldb0;->d:Ljava/lang/Object;
+
+    check-cast p3, Llcd;
+
+    invoke-virtual {p1, p3}, Llcd;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_e
+
+    goto/16 :goto_4
+
+    :cond_e
+    iget-object p3, v5, Loz4;->m:Ldb0;
+
+    iget-object v2, p3, Ldb0;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/content/Context;
+
+    iget-object v3, p3, Ldb0;->f:Ljava/lang/Object;
+
+    check-cast v3, Llo;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    iput-object v1, p3, Ldb0;->f:Ljava/lang/Object;
+
+    iget-object v3, p3, Ldb0;->g:Ljava/lang/Object;
+
+    check-cast v3, Lncd;
+
+    if-eqz v3, :cond_f
+
+    const-string v3, "connectivity"
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v3, p3, Ldb0;->g:Ljava/lang/Object;
+
+    check-cast v3, Lncd;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2, v3}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    iput-object v1, p3, Ldb0;->g:Ljava/lang/Object;
+
+    :cond_f
+    new-instance p3, Ldb0;
+
+    iget-object v1, v5, Loz4;->a:Landroid/content/Context;
+
+    iget-object v2, v5, Loz4;->d:Lhg4;
+
+    invoke-direct {p3, v1, v2, p1}, Ldb0;-><init>(Landroid/content/Context;Lhg4;Llcd;)V
+
+    iput-object p3, v5, Loz4;->m:Ldb0;
+
+    invoke-virtual {p3}, Ldb0;->c()I
+
+    move-result p1
+
+    iget-object p3, v5, Loz4;->m:Ldb0;
+
+    invoke-virtual {v5, p3, p1}, Loz4;->b(Ldb0;I)V
+
+    goto :goto_4
+
+    :pswitch_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "download_request"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    check-cast v1, Lvz4;
+
+    if-nez v1, :cond_10
+
+    const-string p1, "Ignored ADD_DOWNLOAD: Missing download_request extra"
+
+    invoke-static {v4, p1}, Lpyh;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_10
+    invoke-virtual {p1, p3, p2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    iget p3, v5, Loz4;->f:I
+
+    add-int/2addr p3, v0
+
+    iput p3, v5, Loz4;->f:I
+
+    invoke-virtual {v6, v9, p1, p2, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    goto :goto_4
+
+    :pswitch_3
+    iget p1, v5, Loz4;->f:I
+
+    add-int/2addr p1, v0
+
+    iput p1, v5, Loz4;->f:I
+
+    const/16 p1, 0x9
+
+    invoke-virtual {v6, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    goto :goto_4
+
+    :pswitch_4
+    invoke-virtual {v5, p2}, Loz4;->c(Z)V
+
+    goto :goto_4
+
+    :pswitch_5
+    if-nez v3, :cond_11
+
+    const-string p1, "Ignored REMOVE_DOWNLOAD: Missing content_id extra"
+
+    invoke-static {v4, p1}, Lpyh;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_11
+    iget p1, v5, Loz4;->f:I
+
+    add-int/2addr p1, v0
+
+    iput p1, v5, Loz4;->f:I
+
+    invoke-virtual {v6, v8, v3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    goto :goto_4
+
+    :pswitch_6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1, p3}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_12
+
+    const-string p1, "Ignored SET_STOP_REASON: Missing stop_reason extra"
+
+    invoke-static {v4, p1}, Lpyh;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_12
+    invoke-virtual {p1, p3, p2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    iget p3, v5, Loz4;->f:I
+
+    add-int/2addr p3, v0
+
+    iput p3, v5, Loz4;->f:I
+
+    invoke-virtual {v6, v10, p1, p2, v3}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    :goto_4
+    :pswitch_7
+    iput-boolean p2, p0, Lxz4;->o:Z
+
+    iget p1, v5, Loz4;->g:I
+
+    if-nez p1, :cond_13
+
+    iget p1, v5, Loz4;->f:I
+
+    if-nez p1, :cond_13
+
+    invoke-virtual {p0}, Lxz4;->b()V
+
+    :cond_13
+    return v0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7b47cdc8 -> :sswitch_8
+        -0x47112489 -> :sswitch_7
+        -0x274df87d -> :sswitch_6
+        -0xe367804 -> :sswitch_5
+        0x1f2a425 -> :sswitch_4
+        0x1bab7dfe -> :sswitch_3
+        0x3175ed72 -> :sswitch_2
+        0x3267e259 -> :sswitch_1
+        0x6815b736 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_7
+        :pswitch_7
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onTaskRemoved(Landroid/content/Intent;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lxz4;->d:Z
 
     return-void
 .end method

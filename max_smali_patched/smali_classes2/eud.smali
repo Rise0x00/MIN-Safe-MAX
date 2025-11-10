@@ -1,41 +1,70 @@
 .class public final Leud;
-.super Lrud;
+.super Lbu7;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final g:J
+.field public final synthetic a:I
 
-.field public final h:J
-
-.field public final i:J
+.field public final synthetic b:Lv28;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
-    .locals 2
+.method public synthetic constructor <init>(Lv28;I)V
+    .locals 0
 
-    const-wide/16 v0, 0x0
+    iput p2, p0, Leud;->a:I
 
-    invoke-direct {p0, v0, v1}, Lrud;-><init>(J)V
+    iput-object p1, p0, Leud;->b:Lv28;
 
-    iput-wide p1, p0, Leud;->g:J
+    const/4 p1, 0x1
 
-    iput-wide p3, p0, Leud;->h:J
-
-    iput-wide p5, p0, Leud;->i:J
+    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsud;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lfud;
+    iget v0, p0, Leud;->a:I
 
-    invoke-direct {v0, p0}, Lfud;-><init>(Leud;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Leud;->b:Lv28;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Leud;->b:Lv28;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

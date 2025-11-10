@@ -1,197 +1,133 @@
-.class public final Leia;
+.class public abstract Leia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljp4;
-
-
-# instance fields
-.field public final a:Lbp7;
-
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lbp7;
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
-
-.field public final h:J
-
-.field public final i:Lmoe;
+.implements Lwka;
 
 
 # direct methods
-.method public constructor <init>(La5;)V
+.method public static f(Ljava/lang/Throwable;)Lzg3;
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "throwable is null"
 
-    const-class v0, Landroid/content/Context;
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    new-instance v0, Lwj6;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lwj6;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Leia;->a:Lbp7;
+    new-instance p0, Lzg3;
 
-    const-class v0, Lg7f;
+    const/4 v1, 0x4
 
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-direct {p0, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Leia;->b:Lbp7;
-
-    const-class v0, Lr63;
-
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Leia;->c:Lbp7;
-
-    const-class v0, Lxwe;
-
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Leia;->d:Lbp7;
-
-    sget-object p1, Lap4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Leia;->e:J
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Leia;->f:J
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Leia;->g:J
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Leia;->h:J
-
-    invoke-virtual {p0}, Leia;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Leia;->i:Lmoe;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static i(Ljava/lang/Iterable;)Lzg3;
+    .locals 2
 
-# virtual methods
-.method public final c()Lfoe;
-    .locals 1
+    const-string v0, "source is null"
 
-    iget-object v0, p0, Leia;->i:Lmoe;
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lzg3;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p0}, Lzg3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final d(Lub4;)V
-    .locals 6
+.method public static j(JJLjava/util/concurrent/TimeUnit;Lgpd;)Lyja;
+    .locals 8
 
-    iget-wide v0, p1, Lub4;->a:J
+    const-string v0, "unit is null"
 
-    iget-wide v2, p0, Leia;->e:J
+    invoke-static {p4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2, v3}, Lap4;->a(JJ)Z
+    const-string v0, "scheduler is null"
 
-    move-result p1
+    invoke-static {p5, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const-string v2, "PushToken"
+    new-instance v1, Lyja;
 
-    if-eqz p1, :cond_0
+    const-wide/16 v2, 0x0
 
-    iget-object p1, p0, Leia;->b:Lbp7;
+    invoke-static {v2, v3, p0, p1}, Ljava/lang/Math;->max(JJ)J
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result-wide p0
 
-    move-result-object p1
+    invoke-static {v2, v3, p2, p3}, Ljava/lang/Math;->max(JJ)J
 
-    check-cast p1, Lg7f;
+    move-result-wide v4
 
-    invoke-virtual {p1}, Lg7f;->H()Ljava/lang/String;
+    move-wide v2, p0
 
-    move-result-object p1
+    move-object v6, p4
 
-    iget-object v0, p0, Leia;->a:Lbp7;
+    move-object v7, p5
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-direct/range {v1 .. v7}, Lyja;-><init>(JJLjava/util/concurrent/TimeUnit;Lgpd;)V
 
-    move-result-object v0
+    return-object v1
+.end method
 
-    check-cast v0, Landroid/content/Context;
+.method public static k(Ljava/lang/Object;)Lzja;
+    .locals 1
 
-    invoke-static {v0, p1}, Lx63;->a(Landroid/content/Context;Ljava/lang/String;)V
+    const-string v0, "item is null"
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const-string v1, "Current pushToken: \""
+    new-instance v0, Lzja;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lzja;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    const-string p1, "\""
+.method public static r(JLjava/util/concurrent/TimeUnit;Lgpd;)Lela;
+    .locals 3
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "unit is null"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p1
+    const-string v0, "scheduler is null"
 
-    invoke-static {v2, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-void
+    new-instance v0, Lela;
 
-    :cond_0
-    iget-wide v3, p0, Leia;->f:J
+    const-wide/16 v1, 0x0
 
-    invoke-static {v0, v1, v3, v4}, Lap4;->a(JJ)Z
+    invoke-static {p0, p1, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
-    move-result p1
+    move-result-wide p0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, p0, p1, p2, p3}, Lela;-><init>(JLjava/util/concurrent/TimeUnit;Lgpd;)V
 
-    if-eqz p1, :cond_1
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Lgla;)V
+    .locals 2
+
+    const-string v0, "observer is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     :try_start_0
-    sget-object p1, Lbo6;->a:Lbo6;
-
-    new-instance v0, Ldia;
-
-    invoke-direct {v0, p0, v3}, Ldia;-><init>(Leia;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v3, v3, v0, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {p0, p1}, Leia;->o(Lgla;)V
     :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
@@ -199,288 +135,273 @@
     :catchall_0
     move-exception p1
 
-    const-string v0, "Refresh current token failed"
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
 
-    invoke-static {v2, v0, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
 
-    return-void
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    :cond_1
-    iget-wide v4, p0, Leia;->g:J
+    const-string v1, "Actually not, but can\'t throw other exceptions due to RS"
 
-    invoke-static {v0, v1, v4, v5}, Lap4;->a(JJ)Z
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    move-result p1
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    const/4 v2, 0x1
+    throw v0
 
-    if-eqz p1, :cond_2
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {p0}, Leia;->f()Lr63;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Leia;->f()Lr63;
-
-    move-result-object v0
-
-    check-cast v0, Lt63;
-
-    invoke-virtual {v0}, Lt63;->B()Z
-
-    move-result v0
-
-    xor-int/2addr v0, v2
-
-    check-cast p1, Lt63;
-
-    const-string v1, "ok_push_disabled"
-
-    invoke-virtual {p1, v1, v0}, Lh3;->g(Ljava/lang/String;Z)V
-
-    iput-object v3, p1, Lt63;->l:Ljava/lang/Boolean;
-
-    iget-object p1, p0, Leia;->i:Lmoe;
-
-    invoke-virtual {p0}, Leia;->e()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v3, v0}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_2
-    iget-wide v4, p0, Leia;->h:J
-
-    invoke-static {v0, v1, v4, v5}, Lap4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0}, Leia;->f()Lr63;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Leia;->f()Lr63;
-
-    move-result-object v0
-
-    check-cast v0, Lt63;
-
-    iget-object v0, v0, Lh3;->g:Lep7;
-
-    const-string v1, "server.useTls"
-
-    invoke-virtual {v0, v1, v2}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    xor-int/2addr v0, v2
-
-    check-cast p1, Lxid;
-
-    invoke-virtual {p1, v1, v0}, Lh3;->g(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, Leia;->i:Lmoe;
-
-    invoke-virtual {p0}, Leia;->e()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v3, v0}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_3
-    return-void
+    throw p1
 .end method
 
-.method public final e()Ljava/util/List;
-    .locals 20
+.method public final e(Lfj6;)Leia;
+    .locals 7
 
-    move-object/from16 v0, p0
+    const-string v0, "bufferSize"
 
-    new-instance v4, Lnef;
+    const/4 v4, 0x2
 
-    const-string v1, "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c Push token"
+    invoke-static {v4, v0}, Lh0i;->c(ILjava/lang/String;)V
 
-    invoke-direct {v4, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
+    instance-of v0, p0, Llnd;
 
-    iget-object v1, v0, Leia;->b:Lbp7;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    move-object v0, p0
 
-    move-result-object v1
+    check-cast v0, Llnd;
 
-    check-cast v1, Lg7f;
+    invoke-interface {v0}, Ltef;->get()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lg7f;->H()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_0
+    sget-object p1, Lhja;->a:Lhja;
 
-    const/16 v2, 0xa
-
-    invoke-static {v2, v1}, Lyxe;->K0(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "..."
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
+    return-object p1
 
     :cond_0
-    const-string v1, "null"
+    new-instance v1, Lak8;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, p1, v2}, Lak8;-><init>(Ljava/lang/Object;Lfj6;I)V
+
+    return-object v1
 
     :cond_1
-    new-instance v6, Lnef;
+    new-instance v1, Lpia;
 
-    invoke-direct {v6, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lub4;
-
-    iget-wide v2, v0, Leia;->e:J
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x14
-
-    invoke-direct/range {v1 .. v8}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
-
-    new-instance v2, Lub4;
-
-    new-instance v5, Lnef;
-
-    const-string v3, "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c Push token"
-
-    invoke-direct {v5, v3}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    iget-object v3, v0, Leia;->d:Lbp7;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lxwe;
-
-    check-cast v3, Lfp6;
-
-    iget-object v3, v3, Lfp6;->f:Ljava/lang/String;
-
-    new-instance v7, Lnef;
-
-    invoke-direct {v7, v3}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x14
-
-    iget-wide v3, v0, Leia;->f:J
+    const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    invoke-direct/range {v2 .. v9}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
+    move-object v2, p0
 
-    new-instance v3, Lub4;
+    move-object v3, p1
 
-    new-instance v6, Lnef;
-
-    const-string v4, "\u041f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u043f\u0443\u0448\u0438 \u0438\u0437 \u0441\u043e\u043a\u0435\u0442\u0430"
-
-    invoke-direct {v6, v4}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v9, Ltb4;
-
-    invoke-virtual {v0}, Leia;->f()Lr63;
-
-    move-result-object v4
-
-    check-cast v4, Lt63;
-
-    invoke-virtual {v4}, Lt63;->B()Z
-
-    move-result v4
-
-    const/4 v11, 0x1
-
-    xor-int/2addr v4, v11
-
-    invoke-direct {v9, v4}, Ltb4;-><init>(Z)V
-
-    const/16 v10, 0xc
-
-    iget-wide v4, v0, Leia;->g:J
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v3 .. v10}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
-
-    new-instance v12, Lub4;
-
-    new-instance v15, Lnef;
-
-    const-string v4, "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c ssl"
-
-    invoke-direct {v15, v4}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v4, Ltb4;
-
-    invoke-virtual {v0}, Leia;->f()Lr63;
-
-    move-result-object v5
-
-    check-cast v5, Lt63;
-
-    const-string v6, "server.useTls"
-
-    iget-object v5, v5, Lh3;->g:Lep7;
-
-    invoke-virtual {v5, v6, v11}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Ltb4;-><init>(Z)V
-
-    const/16 v19, 0xc
-
-    iget-wide v13, v0, Leia;->h:J
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    move-object/from16 v18, v4
-
-    invoke-direct/range {v12 .. v19}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
-
-    filled-new-array {v1, v2, v3, v12}, [Lub4;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
+    invoke-direct/range {v1 .. v6}, Lpia;-><init>(Leia;Lfj6;III)V
 
     return-object v1
 .end method
 
-.method public final f()Lr63;
+.method public final g(Lgxb;)Lhia;
+    .locals 2
+
+    const-string v0, "predicate is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lhia;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lhia;-><init>(Leia;Lgxb;I)V
+
+    return-object v0
+.end method
+
+.method public final h(Lfj6;I)Leia;
+    .locals 6
+
+    sget v4, Lr26;->a:I
+
+    const-string v0, "maxConcurrency"
+
+    invoke-static {p2, v0}, Lh0i;->c(ILjava/lang/String;)V
+
+    const-string v0, "bufferSize"
+
+    invoke-static {v4, v0}, Lh0i;->c(ILjava/lang/String;)V
+
+    instance-of v0, p0, Llnd;
+
+    if-eqz v0, :cond_1
+
+    move-object p2, p0
+
+    check-cast p2, Llnd;
+
+    invoke-interface {p2}, Ltef;->get()Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    sget-object p1, Lhja;->a:Lhja;
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lak8;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p2, p1, v1}, Lak8;-><init>(Ljava/lang/Object;Lfj6;I)V
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lpia;
+
+    const/4 v5, 0x1
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    invoke-direct/range {v0 .. v5}, Lpia;-><init>(Leia;Lfj6;III)V
+
+    return-object v0
+.end method
+
+.method public final l(Lgpd;)Lbka;
+    .locals 2
+
+    sget v0, Lr26;->a:I
+
+    const-string v1, "scheduler is null"
+
+    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v1, "bufferSize"
+
+    invoke-static {v0, v1}, Lh0i;->c(ILjava/lang/String;)V
+
+    new-instance v1, Lbka;
+
+    invoke-direct {v1, p0, p1, v0}, Lbka;-><init>(Leia;Lgpd;I)V
+
+    return-object v1
+.end method
+
+.method public final m(JLgxb;)Lzka;
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    new-instance v0, Lzka;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lzka;-><init>(Leia;JLgxb;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p3, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "times >= 0 required but it was "
+
+    invoke-static {p1, p2, v0}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p3, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p3
+.end method
+
+.method public final n(Lir3;)Lcu7;
+    .locals 3
+
+    new-instance v0, Lcu7;
+
+    sget-object v1, Lsag;->e:Lh9a;
+
+    sget-object v2, Lsag;->c:Lvj6;
+
+    invoke-direct {v0, p1, v1, v2}, Lcu7;-><init>(Lir3;Lir3;Lu6;)V
+
+    invoke-virtual {p0, v0}, Leia;->a(Lgla;)V
+
+    return-object v0
+.end method
+
+.method public abstract o(Lgla;)V
+.end method
+
+.method public final p(Lgpd;)Luia;
     .locals 1
 
-    iget-object v0, p0, Leia;->c:Lbp7;
+    const-string v0, "scheduler is null"
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    new-instance v0, Luia;
 
-    check-cast v0, Lr63;
+    invoke-direct {v0, p0, p1}, Luia;-><init>(Leia;Lgpd;)V
+
+    return-object v0
+.end method
+
+.method public final q(J)Lxka;
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    new-instance v0, Lxka;
+
+    invoke-direct {v0, p0, p1, p2}, Lxka;-><init>(Leia;J)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "count >= 0 required but it was "
+
+    invoke-static {p1, p2, v1}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final s()Liia;
+    .locals 2
+
+    const/16 v0, 0x10
+
+    const-string v1, "capacityHint"
+
+    invoke-static {v0, v1}, Lh0i;->c(ILjava/lang/String;)V
+
+    new-instance v0, Liia;
+
+    invoke-direct {v0, p0}, Liia;-><init>(Leia;)V
 
     return-object v0
 .end method

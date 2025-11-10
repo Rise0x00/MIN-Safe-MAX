@@ -1,177 +1,96 @@
-.class public final Leoe;
+.class public abstract Leoe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final direct:Z
 
-.field public b:J
-
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
+.field public final message:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Lapf;J)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Leoe;->a:I
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-object p1, p0, Leoe;->c:Ljava/lang/Object;
+    iput-object p1, p0, Leoe;->message:Ljava/lang/String;
 
-    .line 6
-    iput-object p2, p0, Leoe;->o:Ljava/lang/Object;
-
-    .line 7
-    iput-wide p3, p0, Leoe;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lsv8;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Leoe;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Leoe;->o:Ljava/lang/Object;
-
-    .line 3
-    new-instance v0, Ldoe;
-
-    invoke-direct {v0, p1, p0}, Ldoe;-><init>(Lsv8;Leoe;)V
-
-    iput-object v0, p0, Leoe;->c:Ljava/lang/Object;
+    iput-boolean p2, p0, Leoe;->direct:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Leoe;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Leoe;->o:Ljava/lang/Object;
+    return p1
 
-    check-cast v0, Lapf;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v0, v0, Lapf;->o:Z
+    if-eqz p1, :cond_3
 
-    if-nez v0, :cond_1
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {v0}, Lied;->a(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Leoe;->b:J
-
-    cmp-long v4, v2, v0
-
-    if-lez v4, :cond_0
-
-    sub-long/2addr v2, v0
-
-    :try_start_0
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
+    move-result-object v2
 
-    goto :goto_1
+    if-eq v1, v2, :cond_1
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Leoe;->o:Ljava/lang/Object;
-
-    check-cast v0, Lapf;
-
-    iget-boolean v0, v0, Lapf;->o:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Leoe;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    goto :goto_0
 
     :cond_1
-    :goto_1
-    return-void
+    check-cast p1, Leoe;
 
-    :pswitch_0
-    iget-object v0, p0, Leoe;->o:Ljava/lang/Object;
+    iget-boolean v1, p0, Leoe;->direct:Z
 
-    check-cast v0, Lsv8;
+    iget-boolean v2, p1, Leoe;->direct:Z
 
-    iget-object v1, v0, Lsv8;->c:Ljava/lang/Object;
+    if-eq v1, v2, :cond_2
 
-    check-cast v1, Lxy0;
+    return v0
 
-    iget-object v2, p0, Leoe;->c:Ljava/lang/Object;
+    :cond_2
+    iget-object v0, p0, Leoe;->message:Ljava/lang/String;
 
-    check-cast v2, Ldoe;
+    iget-object p1, p1, Leoe;->message:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lxy0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lsv8;->k:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, Landroid/os/Handler;
+    return p1
 
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    :cond_3
+    :goto_0
+    return v0
+.end method
 
-    const-wide/16 v1, 0x3e8
+.method public hashCode()I
+    .locals 2
 
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    iget-object v0, p0, Leoe;->message:Ljava/lang/String;
 
-    iget-wide v0, p0, Leoe;->b:J
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const-wide/16 v2, 0x1
+    move-result v0
 
-    add-long/2addr v0, v2
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput-wide v0, p0, Leoe;->b:J
+    iget-boolean v1, p0, Leoe;->direct:Z
 
-    return-void
+    add-int/2addr v0, v1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

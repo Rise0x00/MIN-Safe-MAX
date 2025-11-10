@@ -2,288 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkj8;
-.implements Llj8;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:I
 
-.field public final b:I
+.field public B:I
 
-.field public c:[Landroid/media/MediaCodecInfo;
+.field public C:I
 
+.field public D:I
 
-# direct methods
-.method public constructor <init>(ZZ)V
-    .locals 1
+.field public E:I
 
-    const/4 v0, 0x0
+.field public F:F
 
-    iput v0, p0, Lmj8;->a:I
+.field public G:F
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public H:F
 
-    if-nez p1, :cond_1
+.field public I:F
 
-    if-eqz p2, :cond_0
+.field public J:F
 
-    goto :goto_0
+.field public K:F
 
-    :cond_0
-    const/4 p1, 0x0
+.field public L:F
 
-    goto :goto_1
+.field public M:F
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+.field public N:F
 
-    .line 4
-    :goto_1
-    iput p1, p0, Lmj8;->b:I
+.field public O:F
 
-    return-void
-.end method
+.field public P:[B
 
-.method public constructor <init>(ZZZ)V
-    .locals 1
+.field public Q:I
 
-    const/4 v0, 0x1
+.field public R:I
 
-    iput v0, p0, Lmj8;->a:I
+.field public S:I
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public T:J
 
-    if-nez p1, :cond_1
+.field public U:J
 
-    if-nez p2, :cond_1
+.field public V:La5g;
 
-    if-eqz p3, :cond_0
+.field public W:Z
 
-    goto :goto_0
+.field public X:Z
 
-    :cond_0
-    const/4 p1, 0x0
+.field public Y:Ljava/lang/String;
 
-    goto :goto_1
+.field public Z:Ln1g;
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+.field public a:Z
 
-    .line 2
-    :goto_1
-    iput p1, p0, Lmj8;->b:I
+.field public a0:I
 
-    return-void
-.end method
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Z
+
+.field public j:[B
+
+.field public k:Ll1g;
+
+.field public l:[B
+
+.field public m:Lc25;
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:F
+
+.field public v:F
+
+.field public w:F
+
+.field public x:[B
+
+.field public y:I
+
+.field public z:Z
 
 
 # virtual methods
-.method public final a(I)Landroid/media/MediaCodecInfo;
+.method public final a(Ljava/lang/String;)[B
     .locals 2
 
-    iget v0, p0, Lmj8;->a:I
+    iget-object v0, p0, Lmj8;->l:[B
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lmj8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
+    return-object v0
 
     :cond_0
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    aget-object p1, v0, p1
+    const-string v1, "Missing CodecPrivate for codec "
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    move-result-object p1
 
-    iget v1, p0, Lmj8;->b:I
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    move-result-object p1
 
-    move-result-object v0
-
-    iput-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    :cond_1
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    aget-object p1, v0, p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 0
-
-    iget p2, p0, Lmj8;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 1
-
-    iget v0, p0, Lmj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d()I
-    .locals 2
-
-    iget v0, p0, Lmj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lmj8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    :cond_0
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    array-length v0, v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lmj8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    :cond_1
-    iget-object v0, p0, Lmj8;->c:[Landroid/media/MediaCodecInfo;
-
-    array-length v0, v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget v0, p0, Lmj8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

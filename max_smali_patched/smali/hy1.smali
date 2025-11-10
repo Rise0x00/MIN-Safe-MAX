@@ -4,8 +4,11 @@
 
 
 # virtual methods
-.method public abstract a()Ljx7;
+.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)Lv28;
 .end method
 
-.method public abstract b()Ljx7;
+.method public abstract b()Z
+.end method
+
+.method public abstract c()V
 .end method

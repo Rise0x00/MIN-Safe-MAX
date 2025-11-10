@@ -1,66 +1,67 @@
-.class public final synthetic Ldq7;
-.super Ljava/lang/Object;
+.class public final Ldq7;
+.super Leq7;
 .source "SourceFile"
 
-# interfaces
-.implements Lid4;
 
-
-# instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic Y:Z
-
-.field public final synthetic a:Lw29;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Z
+# static fields
+.field public static final d:Ldq7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw29;Ljava/lang/String;ZZZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldq7;
 
-    iput-object p1, p0, Ldq7;->a:Lw29;
+    const/4 v1, 0x6
 
-    iput-object p2, p0, Ldq7;->b:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-boolean p3, p0, Ldq7;->c:Z
+    const-string v3, "unknown"
 
-    iput-boolean p4, p0, Ldq7;->o:Z
+    invoke-direct {v0, v3, v1, v2}, Leq7;-><init>(Ljava/lang/String;ILfq7;)V
 
-    iput-boolean p5, p0, Ldq7;->X:Z
-
-    iput-boolean p6, p0, Ldq7;->Y:Z
+    sput-object v0, Ldq7;->d:Ldq7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lfq7;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ldq7;->a:Lw29;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Ldq7;->b:Ljava/lang/String;
+    return v0
 
-    iget-boolean v3, p0, Ldq7;->c:Z
+    :cond_0
+    instance-of p1, p1, Ldq7;
 
-    iget-boolean v4, p0, Ldq7;->o:Z
+    if-nez p1, :cond_1
 
-    iget-boolean v5, p0, Ldq7;->X:Z
+    const/4 p1, 0x0
 
-    iget-boolean v6, p0, Ldq7;->Y:Z
+    return p1
 
-    invoke-direct/range {v0 .. v6}, Lfq7;-><init>(Lw29;Ljava/lang/String;ZZZZ)V
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2c724b44
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "UnknownError"
 
     return-object v0
 .end method

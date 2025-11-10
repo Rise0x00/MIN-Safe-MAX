@@ -1,66 +1,177 @@
 .class public final Lku0;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfb5;
 
 
 # instance fields
-.field public final synthetic X:Llu0;
+.field public final a:Ljava/nio/ByteBuffer;
 
-.field public Y:I
+.field public final b:Landroid/media/MediaCodec$BufferInfo;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lqt1;
 
 
 # direct methods
-.method public constructor <init>(Llu0;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Lfb5;)V
+    .locals 7
 
-    iput-object p1, p0, Lku0;->X:Llu0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p1}, Lfb5;->z()Landroid/media/MediaCodec$BufferInfo;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/media/MediaCodec$BufferInfo;
+
+    invoke-direct {v1}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
+
+    iget v3, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    iget-wide v4, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    iget v6, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
+
+    iput-object v1, p0, Lku0;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    invoke-interface {p1}, Lfb5;->o()Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Lfb5;->z()Landroid/media/MediaCodec$BufferInfo;
+
+    move-result-object p1
+
+    iget v1, p1, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget v1, p1, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    iget v2, p1, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    iget p1, p1, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    iput-object p1, p0, Lku0;->a:Ljava/nio/ByteBuffer;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance v0, Lju0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lju0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    invoke-static {v0}, Lcmi;->a(Lrt1;)Ltt1;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqt1;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lku0;->c:Lqt1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final C()Z
+    .locals 2
 
-    iput-object p1, p0, Lku0;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lku0;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    iget p1, p0, Lku0;->Y:I
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    const/high16 v0, -0x80000000
+    const/4 v1, 0x1
 
-    or-int/2addr p1, v0
+    and-int/2addr v0, v1
 
-    iput p1, p0, Lku0;->Y:I
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    return v1
 
-    const-wide/16 v3, 0x0
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lku0;->X:Llu0;
+    return v0
+.end method
+
+.method public final U()J
+    .locals 2
+
+    iget-object v0, p0, Lku0;->b:Landroid/media/MediaCodec$BufferInfo;
+
+    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lku0;->c:Lqt1;
 
     const/4 v1, 0x0
 
-    move-object v5, p0
+    invoke-virtual {v0, v1}, Lqt1;->b(Ljava/lang/Object;)Z
 
-    invoke-virtual/range {v0 .. v5}, Llu0;->C(Lo72;IJLnz3;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final o()Ljava/nio/ByteBuffer;
+    .locals 1
 
-    sget-object v0, Lf34;->a:Lf34;
+    iget-object v0, p0, Lku0;->a:Ljava/nio/ByteBuffer;
 
-    if-ne p1, v0, :cond_0
+    return-object v0
+.end method
 
-    return-object p1
+.method public final size()J
+    .locals 2
 
-    :cond_0
-    new-instance v0, Ln72;
+    iget-object v0, p0, Lku0;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    invoke-direct {v0, p1}, Ln72;-><init>(Ljava/lang/Object;)V
+    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final z()Landroid/media/MediaCodec$BufferInfo;
+    .locals 1
+
+    iget-object v0, p0, Lku0;->b:Landroid/media/MediaCodec$BufferInfo;
 
     return-object v0
 .end method

@@ -1,65 +1,137 @@
-.class public final La18;
-.super Ljava/lang/Object;
+.class public final enum La18;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final enum X:La18;
 
-.field public final b:Lbp7;
+.field public static final synthetic Y:[La18;
+
+.field public static final synthetic Z:Lce5;
+
+.field public static final enum a:La18;
+
+.field public static final enum b:La18;
+
+.field public static final enum c:La18;
+
+.field public static final enum d:La18;
+
+.field public static final enum o:La18;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La18;
 
-    iput-object p1, p0, La18;->a:Lbp7;
+    const-string v1, "URL"
 
-    iput-object p2, p0, La18;->b:Lbp7;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, La18;->a:La18;
+
+    new-instance v1, La18;
+
+    const-string v2, "HASH_TAG"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, La18;->b:La18;
+
+    new-instance v2, La18;
+
+    const-string v3, "BOT_COMMAND"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, La18;->c:La18;
+
+    new-instance v3, La18;
+
+    const-string v4, "PROFILE_TAG"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, La18;->d:La18;
+
+    new-instance v4, La18;
+
+    const-string v5, "MENTION"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, La18;->o:La18;
+
+    new-instance v5, La18;
+
+    const-string v6, "ML_ENTRY"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v6, La18;
+
+    const-string v7, "MARKDOWN_LINK"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, La18;->X:La18;
+
+    filled-new-array/range {v0 .. v6}, [La18;
+
+    move-result-object v0
+
+    sput-object v0, La18;->Y:[La18;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, La18;->Z:Lce5;
 
     return-void
 .end method
 
-.method public static a(La18;J)Lmda;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)La18;
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v0, La18;
 
-    const/16 v0, 0x1a
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, p1, p2, v1, v0}, La18;->b(La18;JZI)Lmda;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
+
+    check-cast p0, La18;
 
     return-object p0
 .end method
 
-.method public static b(La18;JZI)Lmda;
-    .locals 9
+.method public static values()[La18;
+    .locals 1
 
-    new-instance v0, Lz08;
+    sget-object v0, La18;->Y:[La18;
 
-    const-wide/16 v5, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const-wide/16 v7, 0x0
+    move-result-object v0
 
-    move-object v1, p0
+    check-cast v0, [La18;
 
-    move-wide v2, p1
-
-    move v4, p3
-
-    invoke-direct/range {v0 .. v8}, Lz08;-><init>(La18;JZJJ)V
-
-    new-instance p0, Lmda;
-
-    const/4 p1, 0x4
-
-    invoke-direct {p0, p1, v0}, Lmda;-><init>(ILjava/lang/Object;)V
-
-    return-object p0
+    return-object v0
 .end method

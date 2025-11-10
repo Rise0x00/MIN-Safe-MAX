@@ -1,73 +1,48 @@
 .class public final Le58;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li28;
 
-# instance fields
-.field public A0:Lwxc;
 
-.field public B0:Lwxc;
+# static fields
+.field public static final a:Le58;
 
-.field public C0:I
-
-.field public D0:I
-
-.field public synthetic E0:Ljava/lang/Object;
-
-.field public final synthetic F0:Lg58;
-
-.field public G0:I
-
-.field public X:Ljava/util/Iterator;
-
-.field public Y:Lm82;
-
-.field public Z:Llc2;
-
-.field public o:Lg58;
-
-.field public w0:Lw29;
-
-.field public x0:Lw29;
-
-.field public y0:Ljava/util/Iterator;
-
-.field public z0:Lx29;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lg58;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Le58;->F0:Lg58;
+    new-instance v0, Le58;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Le58;->a:Le58;
+
+    sget v0, Llsa;->q:I
+
+    sput v0, Le58;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iput-object p1, p0, Le58;->E0:Ljava/lang/Object;
+    sget v0, Le58;->b:I
 
-    iget p1, p0, Le58;->G0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Le58;->G0:I
-
-    iget-object p1, p0, Le58;->F0:Lg58;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg58;->g(Ljava/util/Map;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

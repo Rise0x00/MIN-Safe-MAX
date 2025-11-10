@@ -22,7 +22,7 @@
         "()V",
         "Lone/me/rlottie/RLottie$Config;",
         "config",
-        "Loyf;",
+        "Lybg;",
         "init",
         "(Lone/me/rlottie/RLottie$Config;)V",
         "checkNativeLibraryLoad$rlottie_release",
@@ -32,9 +32,9 @@
         "()Lone/me/rlottie/RLottie$Config;",
         "setConfig",
         "getConfig$annotations",
-        "Lwx9;",
+        "Lp4a;",
         "getLogger",
-        "()Lwx9;",
+        "()Lp4a;",
         "getLogger$annotations",
         "logger",
         "WorkQueue",
@@ -99,14 +99,14 @@
     return-void
 .end method
 
-.method public static final getLogger()Lwx9;
+.method public static final getLogger()Lp4a;
     .locals 1
 
     invoke-static {}, Lone/me/rlottie/RLottie;->getConfig()Lone/me/rlottie/RLottie$Config;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/rlottie/RLottie$Config;->getLogger()Lwx9;
+    invoke-virtual {v0}, Lone/me/rlottie/RLottie$Config;->getLogger()Lp4a;
 
     move-result-object v0
 

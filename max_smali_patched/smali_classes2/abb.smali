@@ -2,353 +2,378 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+
 
 # instance fields
-.field public final a:I
+.field public a:Landroid/graphics/SurfaceTexture;
 
-.field public final b:Ljava/lang/String;
+.field public b:Landroid/view/Surface;
 
-.field public final c:Ljava/lang/String;
+.field public final c:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/String;
+.field public d:Z
 
-.field public final e:Ljava/util/List;
-
-.field public final f:Ljava/util/List;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
-
-.field public i:Ljava/lang/String;
+.field public o:Llsf;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Labb;->a:I
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Labb;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Labb;->c:Ljava/lang/String;
+    iput-object v0, p0, Labb;->c:Ljava/lang/Object;
 
-    iput-object p4, p0, Labb;->d:Ljava/lang/String;
+    new-instance v0, Llsf;
 
-    iput-object p5, p0, Labb;->e:Ljava/util/List;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iput-object p6, p0, Labb;->f:Ljava/util/List;
+    const/4 v2, 0x1
 
-    iput-object p7, p0, Labb;->g:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Llsf;-><init>(FZ)V
 
-    iput-object p8, p0, Labb;->h:Ljava/lang/String;
+    iput-object v0, p0, Labb;->o:Llsf;
 
-    invoke-static {p3, p4}, Lyoa;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    const v1, 0x8b31
 
-    move-result-object p1
+    const-string v3, "uniform mat4 uMVPMatrix;\nuniform mat4 uSTMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n  gl_Position = uMVPMatrix * aPosition;\n  vTextureCoord = (uSTMatrix * aTextureCoord).xy;\n}\n"
 
-    iput-object p1, p0, Labb;->i:Ljava/lang/String;
+    invoke-static {v1, v3}, Llsf;->b(ILjava/lang/String;)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    move v5, v3
+
+    goto :goto_1
+
+    :cond_0
+    const v4, 0x8b30
+
+    const-string v5, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n  gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
+
+    invoke-static {v4, v5}, Llsf;->b(ILjava/lang/String;)I
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+
+    move-result v5
+
+    const-string v6, "glCreateProgram"
+
+    invoke-static {v6}, Llsf;->a(Ljava/lang/String;)V
+
+    const-string v6, "TextureRender"
+
+    if-nez v5, :cond_2
+
+    const-string v7, "Could not create program"
+
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    const-string v1, "glAttachShader"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    invoke-static {v5, v4}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    invoke-static {v5}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+
+    new-array v1, v2, [I
+
+    const v4, 0x8b82
+
+    invoke-static {v5, v4, v1, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+
+    aget v1, v1, v3
+
+    if-eq v1, v2, :cond_3
+
+    const-string v1, "Could not link program: "
+
+    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v5}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v5}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    iput v5, v0, Llsf;->d:I
+
+    if-eqz v5, :cond_8
+
+    const-string v1, "aPosition"
+
+    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v0, Llsf;->h:I
+
+    const-string v1, "glGetAttribLocation aPosition"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    iget v1, v0, Llsf;->h:I
+
+    const/4 v4, -0x1
+
+    if-eq v1, v4, :cond_7
+
+    iget v1, v0, Llsf;->d:I
+
+    const-string v5, "aTextureCoord"
+
+    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v0, Llsf;->i:I
+
+    const-string v1, "glGetAttribLocation aTextureCoord"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    iget v1, v0, Llsf;->i:I
+
+    if-eq v1, v4, :cond_6
+
+    iget v1, v0, Llsf;->d:I
+
+    const-string v5, "uMVPMatrix"
+
+    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v0, Llsf;->f:I
+
+    const-string v1, "glGetUniformLocation uMVPMatrix"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    iget v1, v0, Llsf;->f:I
+
+    if-eq v1, v4, :cond_5
+
+    iget v1, v0, Llsf;->d:I
+
+    const-string v5, "uSTMatrix"
+
+    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+
+    move-result v1
+
+    iput v1, v0, Llsf;->g:I
+
+    const-string v1, "glGetUniformLocation uSTMatrix"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    iget v1, v0, Llsf;->g:I
+
+    if-eq v1, v4, :cond_4
+
+    new-array v1, v2, [I
+
+    invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+
+    aget v1, v1, v3
+
+    iput v1, v0, Llsf;->e:I
+
+    const v0, 0x8d65
+
+    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    const-string v1, "glBindTexture mTextureID"
+
+    invoke-static {v1}, Llsf;->a(Ljava/lang/String;)V
+
+    const/16 v1, 0x2801
+
+    const/high16 v2, 0x46180000    # 9728.0f
+
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v1, 0x2800
+
+    const v2, 0x46180400    # 9729.0f
+
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v1, 0x2802
+
+    const v2, 0x812f
+
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v1, 0x2803
+
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const-string v0, "glTexParameter"
+
+    invoke-static {v0}, Llsf;->a(Ljava/lang/String;)V
+
+    new-instance v0, Landroid/graphics/SurfaceTexture;
+
+    iget-object v1, p0, Labb;->o:Llsf;
+
+    iget v1, v1, Llsf;->e:I
+
+    invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
+
+    iput-object v0, p0, Labb;->a:Landroid/graphics/SurfaceTexture;
+
+    invoke-virtual {v0, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+
+    new-instance v0, Landroid/view/Surface;
+
+    iget-object v1, p0, Labb;->a:Landroid/graphics/SurfaceTexture;
+
+    invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+
+    iput-object v0, p0, Labb;->b:Landroid/view/Surface;
 
     return-void
+
+    :cond_4
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Could not get attrib location for uSTMatrix"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Could not get attrib location for uMVPMatrix"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_6
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Could not get attrib location for aTextureCoord"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Could not get attrib location for aPosition"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_8
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "failed creating program"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 8
+.method public final a()V
+    .locals 1
+
+    iget-object v0, p0, Labb;->b:Landroid/view/Surface;
+
+    invoke-virtual {v0}, Landroid/view/Surface;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Labb;->o:Llsf;
+
+    iput-object v0, p0, Labb;->b:Landroid/view/Surface;
+
+    iput-object v0, p0, Labb;->a:Landroid/graphics/SurfaceTexture;
+
+    return-void
+.end method
+
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+    .locals 2
+
+    iget-object p1, p0, Labb;->c:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-boolean v0, p0, Labb;->d:Z
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v0, p0, Labb;->d:Z
 
-    return v0
+    iget-object v0, p0, Labb;->c:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    if-eqz p1, :cond_c
+    monitor-exit p1
 
-    const-class v2, Labb;
+    return-void
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    check-cast p1, Labb;
-
-    iget-object v2, p1, Labb;->h:Ljava/lang/String;
-
-    iget-object v3, p1, Labb;->g:Ljava/lang/String;
-
-    iget-object v4, p1, Labb;->f:Ljava/util/List;
-
-    iget-object v5, p1, Labb;->e:Ljava/util/List;
-
-    iget-object v6, p1, Labb;->b:Ljava/lang/String;
-
-    iget v7, p0, Labb;->a:I
-
-    iget p1, p1, Labb;->a:I
-
-    if-eq v7, p1, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object p1, p0, Labb;->b:Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz v6, :cond_4
-
-    :goto_0
-    return v1
-
-    :cond_4
-    iget-object p1, p0, Labb;->e:Ljava/util/List;
-
-    if-eqz p1, :cond_5
-
-    invoke-interface {p1, v5}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    goto :goto_1
-
-    :cond_5
-    if-eqz v5, :cond_6
-
-    :goto_1
-    return v1
-
-    :cond_6
-    iget-object p1, p0, Labb;->f:Ljava/util/List;
-
-    if-eqz p1, :cond_7
-
-    invoke-interface {p1, v4}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    goto :goto_2
-
-    :cond_7
-    if-eqz v4, :cond_8
-
-    :goto_2
-    return v1
-
-    :cond_8
-    iget-object p1, p0, Labb;->g:Ljava/lang/String;
-
-    if-eqz p1, :cond_9
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_a
-
-    goto :goto_3
-
-    :cond_9
-    if-eqz v3, :cond_a
-
-    :goto_3
-    return v1
-
-    :cond_a
-    iget-object p1, p0, Labb;->h:Ljava/lang/String;
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_b
-    if-nez v2, :cond_c
-
-    return v0
-
-    :cond_c
-    :goto_4
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Labb;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Labb;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    :catchall_0
+    move-exception v0
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "mFrameAvailable already set, frame could be dropped"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :goto_0
-    add-int/2addr v0, v2
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Labb;->e:Ljava/util/List;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v2
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v1
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Labb;->f:Ljava/util/List;
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v2
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v1
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Labb;->g:Ljava/lang/String;
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    goto :goto_3
-
-    :cond_3
-    move v2, v1
-
-    :goto_3
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Labb;->h:Ljava/lang/String;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :cond_4
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Phone{contactId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Labb;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Labb;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', phones="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Labb;->e:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverPhones="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Labb;->f:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatarPath=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Labb;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', email=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Labb;->h:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

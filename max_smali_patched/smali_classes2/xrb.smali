@@ -1,105 +1,89 @@
-.class public abstract Lxrb;
-.super Ljava/lang/Object;
+.class public final enum Lxrb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic b:[Lxrb;
+
+.field public static final synthetic c:Lce5;
+
+
+# instance fields
+.field public final a:I
+
+
 # direct methods
-.method public static a([B)Lyrb;
-    .locals 14
+.method static constructor <clinit>()V
+    .locals 5
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
+    new-instance v0, Lxrb;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
+    const-string v1, "CALL"
 
-    :try_start_0
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lxrb;-><init>(Ljava/lang/String;II)V
+
+    new-instance v1, Lxrb;
+
+    const-string v2, "VIDEO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lxrb;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1}, [Lxrb;
+
+    move-result-object v0
+
+    sput-object v0, Lxrb;->b:[Lxrb;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lxrb;->c:Lce5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lxrb;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lxrb;
+    .locals 1
+
+    const-class v0, Lxrb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p0, Lxrb;
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_0
+.method public static values()[Lxrb;
+    .locals 1
 
-    new-instance v1, Lf10;
+    sget-object v0, Lxrb;->b:[Lxrb;
 
-    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+    move-result-object v0
 
-    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+    check-cast v0, [Lxrb;
 
-    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
-
-    const/4 v6, 0x2
-
-    invoke-direct/range {v1 .. v6}, Lf10;-><init>(FFFFI)V
-
-    :goto_0
-    move-object v10, v1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    new-instance v2, Lyrb;
-
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
-
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
-
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
-
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
-
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
-
-    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
-
-    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
-
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
-
-    const-string v0, "PRESET_AVATAR"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    :goto_2
-    move v13, p0
-
-    goto :goto_3
-
-    :cond_1
-    const/4 p0, 0x2
-
-    goto :goto_2
-
-    :goto_3
-    invoke-direct/range {v2 .. v13}, Lyrb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLf10;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

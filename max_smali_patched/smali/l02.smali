@@ -1,191 +1,86 @@
-.class public Ll02;
-.super Llo4;
+.class public final synthetic Ll02;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkx1;
+
+.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
-.method public static D(Ljava/lang/RuntimeException;)Z
-    .locals 3
+.method public synthetic constructor <init>(Lkx1;Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput p3, p0, Ll02;->a:I
 
-    const/16 v1, 0x1c
+    iput-object p1, p0, Ll02;->b:Lkx1;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Ll02;->c:Landroid/hardware/camera2/CameraDevice;
 
-    if-ne v0, v1, :cond_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Ljava/lang/RuntimeException;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    array-length v0, p0
-
-    if-gez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    aget-object p0, p0, v2
-
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "_enableShutterSound"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move p0, v2
-
-    :goto_1
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
 
 # virtual methods
-.method public final C(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Llo4;->b:Ljava/lang/Object;
+    iget v0, p0, Ll02;->a:I
 
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+    iget-object v0, p0, Ll02;->b:Lkx1;
 
-    return-void
-.end method
+    iget-object v0, v0, Lkx1;->b:Ljava/lang/Object;
 
-.method public p(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-    .locals 1
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    :try_start_0
-    invoke-super {p0, p1}, Llo4;->p(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+    iget-object v1, p0, Ll02;->c:Landroid/hardware/camera2/CameraDevice;
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    invoke-static {p1}, Ll02;->D(Ljava/lang/RuntimeException;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/RuntimeException;)V
-
-    throw v0
-
-    :cond_0
-    throw p1
-.end method
-
-.method public w(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Llo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    :catch_0
-    move-exception p1
+    :pswitch_0
+    iget-object v0, p0, Ll02;->b:Lkx1;
 
-    goto :goto_0
+    iget-object v0, v0, Lkx1;->b:Ljava/lang/Object;
 
-    :catch_1
-    move-exception p1
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    goto :goto_1
+    iget-object v1, p0, Ll02;->c:Landroid/hardware/camera2/CameraDevice;
 
-    :catch_2
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_3
-    move-exception p1
-
-    goto :goto_2
-
-    :goto_0
-    invoke-static {p1}, Ll02;->D(Ljava/lang/RuntimeException;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/RuntimeException;)V
-
-    throw p2
-
-    :cond_0
-    throw p1
-
-    :goto_1
-    throw p1
-
-    :goto_2
-    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
-
-    throw p2
-.end method
-
-.method public final x(Lcsd;Low1;)V
-    .locals 1
-
-    iget-object v0, p0, Llo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
-
-    invoke-virtual {v0, p1, p2}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ll02;->b:Lkx1;
+
+    iget-object v0, v0, Lkx1;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    iget-object v1, p0, Ll02;->c:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

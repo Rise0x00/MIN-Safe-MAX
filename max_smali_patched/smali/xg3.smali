@@ -1,80 +1,64 @@
 .class public final Lxg3;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lzv4;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:[Lyg3;
-
-.field public c:J
+.field public final a:Ltg3;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
-    .locals 3
+.method public constructor <init>(Ltg3;Lyg3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput p1, p0, Lxg3;->a:I
+    iput-object p1, p0, Lxg3;->a:Ltg3;
 
-    new-array v0, p1, [Lyg3;
+    invoke-virtual {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lxg3;->b:[Lyg3;
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p1, :cond_0
-
-    iget-object v1, p0, Lxg3;->b:[Lyg3;
-
-    new-instance v2, Lyg3;
-
-    invoke-direct {v2, p2}, Ls1a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    aput-object v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lyg3;
-    .locals 5
+.method public final dispose()V
+    .locals 1
 
-    iget v0, p0, Lxg3;->a:I
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyg3;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p0}, Lyg3;->l(Lxg3;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lzg3;->g:Lyg3;
+    const/4 v0, 0x1
 
-    return-object v0
+    return v0
 
     :cond_0
-    iget-wide v1, p0, Lxg3;->c:J
+    const/4 v0, 0x0
 
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v3, v1
-
-    iput-wide v3, p0, Lxg3;->c:J
-
-    int-to-long v3, v0
-
-    rem-long/2addr v1, v3
-
-    long-to-int v0, v1
-
-    iget-object v1, p0, Lxg3;->b:[Lyg3;
-
-    aget-object v0, v1, v0
-
-    return-object v0
+    return v0
 .end method

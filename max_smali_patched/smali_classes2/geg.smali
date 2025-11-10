@@ -1,382 +1,193 @@
-.class public final synthetic Lgeg;
+.class public final Lgeg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Lye9;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lye9;)V
     .locals 0
 
-    iput p1, p0, Lgeg;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lgeg;->a:J
+
+    iput-object p3, p0, Lgeg;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lgeg;->c:Ljava/util/List;
+
+    iput-object p5, p0, Lgeg;->d:Lye9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lgeg;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgeg;
 
     const/4 v2, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v1, :cond_1
 
-    new-instance v0, Lbeh;
+    return v2
 
-    invoke-direct {v0}, Lbeh;-><init>()V
+    :cond_1
+    check-cast p1, Lgeg;
 
-    return-object v0
+    iget-wide v3, p0, Lgeg;->a:J
 
-    :pswitch_0
-    sget-object v0, Lone/me/login/welcome/WelcomeScreen;->w0:[Ltm7;
+    iget-wide v5, p1, Lgeg;->a:J
 
-    sget-object v0, Li6g;->a:Li6g;
+    cmp-long v1, v3, v5
 
-    invoke-virtual {v0}, Li6g;->b()Lsia;
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    return v2
 
-    return-object v0
+    :cond_2
+    iget-object v1, p0, Lgeg;->b:Ljava/lang/String;
 
-    :pswitch_1
-    sget-object v0, Lone/me/login/welcome/WelcomeScreen;->w0:[Ltm7;
+    iget-object v3, p1, Lgeg;->b:Ljava/lang/String;
 
-    sget-object v0, Lhfd;->c:Lhfd;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v1
 
-    :pswitch_2
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Ltm7;
+    if-nez v1, :cond_3
 
-    new-instance v0, Lt4h;
+    return v2
 
-    sget-object v1, Lkug;->a:Lkug;
+    :cond_3
+    iget-object v1, p0, Lgeg;->c:Ljava/util/List;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+    iget-object v3, p1, Lgeg;->c:Ljava/util/List;
 
-    move-result-object v1
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-class v2, Lr63;
+    move-result v1
 
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-nez v1, :cond_4
 
-    move-result-object v1
+    return v2
 
-    check-cast v1, Lr63;
+    :cond_4
+    iget-object v1, p0, Lgeg;->d:Lye9;
 
-    check-cast v1, Lxid;
+    iget-object p1, p1, Lgeg;->d:Lye9;
 
-    invoke-virtual {v1}, Lxid;->p()J
+    if-eq v1, p1, :cond_5
 
-    move-result-wide v1
+    return v2
 
-    invoke-direct {v0, v1, v2}, Lt4h;-><init>(J)V
+    :cond_5
+    return v0
+.end method
 
-    return-object v0
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_3
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Ltm7;
+    iget-wide v0, p0, Lgeg;->a:J
 
-    sget-object v0, Lhfd;->J1:Lhfd;
-
-    return-object v0
-
-    :pswitch_4
-    invoke-static {}, Ln2h;->values()[Ln2h;
-
-    move-result-object v0
-
-    const-string v1, "shared"
-
-    const-string v3, "cancelled"
-
-    filled-new-array {v1, v3}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    filled-new-array {v2, v2}, [[Ljava/lang/annotation/Annotation;
-
-    move-result-object v2
-
-    const-string v3, "one.me.webapp.domain.jsbridge.delegates.share.WebAppShareStatus"
-
-    invoke-static {v3, v0, v1, v2}, Lz84;->c(Ljava/lang/String;[Ljava/lang/Enum;[Ljava/lang/String;[[Ljava/lang/annotation/Annotation;)Lma5;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->w0:[Ltm7;
-
-    sget-object v0, Lhfd;->K1:Lhfd;
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lmxg;
-
-    invoke-direct {v0}, Lmxg;-><init>()V
-
-    return-object v0
-
-    :pswitch_7
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
-
-    sget-object v0, Lhfd;->M1:Lhfd;
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v1, Lyy3;
-
-    sget v2, Lbza;->b:I
-
-    sget v0, Lt9d;->e:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v0}, Ljef;-><init>(I)V
-
-    sget v0, Lg9d;->O:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget v0, Lvsa;->L:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const/4 v6, 0x4
-
-    invoke-direct/range {v1 .. v6}, Lyy3;-><init>(ILoef;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v1
-
-    :pswitch_9
-    new-instance v2, Lyy3;
-
-    sget v3, Lbza;->c:I
-
-    sget v0, Ldza;->i:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, v0}, Ljef;-><init>(I)V
-
-    sget v0, Lq9d;->s0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget v0, Lvsa;->L:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const/4 v7, 0x4
-
-    invoke-direct/range {v2 .. v7}, Lyy3;-><init>(ILoef;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v2
-
-    :pswitch_a
-    new-instance v3, Lyy3;
-
-    sget v4, Lbza;->a:I
-
-    sget v0, Lt9d;->A0:I
-
-    new-instance v5, Ljef;
-
-    invoke-direct {v5, v0}, Ljef;-><init>(I)V
-
-    sget v0, Lq9d;->D:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget v0, Lvsa;->L:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const/4 v8, 0x4
-
-    invoke-direct/range {v3 .. v8}, Lyy3;-><init>(ILoef;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v3
-
-    :pswitch_b
-    invoke-static {}, Lnwg;->values()[Lnwg;
-
-    move-result-object v0
-
-    const-string v1, "notificationOccured"
-
-    const-string v3, "selectionChanged"
-
-    const-string v4, "impactOccured"
-
-    filled-new-array {v4, v1, v3}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    filled-new-array {v2, v2, v2}, [[Ljava/lang/annotation/Annotation;
-
-    move-result-object v2
-
-    const-string v3, "one.me.webapp.domain.jsbridge.delegates.haptic.WebAppHapticFeedbackStatus"
-
-    invoke-static {v3, v0, v1, v2}, Lz84;->c(Ljava/lang/String;[Ljava/lang/Enum;[Ljava/lang/String;[[Ljava/lang/annotation/Annotation;)Lma5;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "AES/CBC/PKCS7Padding"
-
-    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "AndroidKeyStore"
-
-    invoke-static {v0}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
-
-    return-object v0
-
-    :pswitch_e
-    new-instance v0, Lsde;
-
-    invoke-direct {v0, v1}, Lsde;-><init>(Z)V
-
-    return-object v0
-
-    :pswitch_f
-    new-instance v0, Lsde;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lsde;-><init>(Z)V
-
-    return-object v0
-
-    :pswitch_10
-    sget v0, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->c:I
-
-    new-instance v0, Lvog;
-
-    sget-object v1, Lik1;->a:Lik1;
-
-    invoke-virtual {v1}, Lik1;->b()Lpt1;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lvog;-><init>(Lpt1;)V
-
-    return-object v0
-
-    :pswitch_11
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->M0:[Ltm7;
-
-    const/16 v0, 0x8
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lv63;->r0(F)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
+    const/16 v1, 0x1f
 
-    invoke-direct {v2}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v2, v1}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
+    iget-object v2, p0, Lgeg;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v0, v0}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
+    if-nez v2, :cond_0
 
-    new-instance v1, Landroid/graphics/drawable/InsetDrawable;
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    goto :goto_0
 
-    return-object v1
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_12
-    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->M0:[Ltm7;
+    move-result v2
 
-    new-instance v0, Lhgg;
+    :goto_0
+    add-int/2addr v0, v2
 
-    invoke-direct {v0}, Lhgg;-><init>()V
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgeg;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lijf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lgeg;->d:Lye9;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "UpdateTextEntity(id="
+
+    const-string v1, ", text="
+
+    iget-wide v2, p0, Lgeg;->a:J
+
+    iget-object v4, p0, Lgeg;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", elements="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgeg;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", status="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgeg;->d:Lye9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_13
-    const-string v0, "setStencil"
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

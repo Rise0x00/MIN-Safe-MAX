@@ -1,88 +1,117 @@
 .class public final Lrj2;
-.super Lm3f;
+.super Lyj2;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:J
 
-.field public final synthetic Y:Lok2;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lok2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lrj2;->Y:Lok2;
+    invoke-direct {p0}, Lyj2;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lrj2;->b:J
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lrj2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lxn8;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lrj2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lrj2;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lrj2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-wide v3, p0, Lrj2;->b:J
 
-    invoke-virtual {p1, p2}, Lrj2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lrj2;->b:J
 
-    return-object p2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lrj2;->c:J
+
+    iget-wide v5, p1, Lrj2;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lrj2;
-
-    iget-object v1, p0, Lrj2;->Y:Lok2;
-
-    invoke-direct {v0, v1, p2}, Lrj2;-><init>(Lok2;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lrj2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lrj2;->b:J
 
-    iget-object p1, p0, Lrj2;->X:Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    check-cast p1, Lxn8;
+    move-result v0
 
-    iget-object v0, p0, Lrj2;->Y:Lok2;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, v0, Lok2;->F0:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-wide v1, p0, Lrj2;->c:J
 
-    new-instance v1, Lyz0;
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    const/4 v2, 0x5
+    move-result v1
 
-    invoke-direct {v1, v2, p1}, Lyz0;-><init>(ILjava/lang/Object;)V
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    return v1
+.end method
 
-    sget-object p1, Loyf;->a:Loyf;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-object p1
+    const-string v0, "OpenMessage(chatId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lrj2;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lrj2;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

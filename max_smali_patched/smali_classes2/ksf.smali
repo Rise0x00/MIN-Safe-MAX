@@ -1,135 +1,138 @@
-.class public final enum Lksf;
-.super Ljava/lang/Enum;
+.class public final Lksf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lksf;
-
-.field public static final enum Y:Lksf;
-
-.field public static final enum Z:Lksf;
-
-.field public static final enum b:Lksf;
-
-.field public static final enum c:Lksf;
-
-.field public static final enum o:Lksf;
-
-.field public static final synthetic w0:[Lksf;
-
-
 # instance fields
-.field public final a:B
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(III)V
+    .locals 0
 
-    new-instance v0, Lksf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SET_PASSWORD"
+    iput p1, p0, Lksf;->a:I
+
+    iput p2, p0, Lksf;->b:I
+
+    iput p3, p0, Lksf;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lksf;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Lksf;-><init>(Ljava/lang/String;IB)V
+    if-nez v1, :cond_1
 
-    sput-object v0, Lksf;->b:Lksf;
+    return v2
 
-    new-instance v1, Lksf;
+    :cond_1
+    check-cast p1, Lksf;
 
-    const-string v2, "UPDATE_PASSWORD"
+    iget v1, p0, Lksf;->a:I
 
-    const/4 v3, 0x1
+    iget v3, p1, Lksf;->a:I
 
-    invoke-direct {v1, v2, v3, v3}, Lksf;-><init>(Ljava/lang/String;IB)V
+    if-eq v1, v3, :cond_2
 
-    sput-object v1, Lksf;->c:Lksf;
+    return v2
 
-    new-instance v2, Lksf;
+    :cond_2
+    iget v1, p0, Lksf;->b:I
 
-    const-string v3, "RESTORE_PASSWORD"
+    iget v3, p1, Lksf;->b:I
 
-    const/4 v4, 0x2
+    if-eq v1, v3, :cond_3
 
-    invoke-direct {v2, v3, v4, v4}, Lksf;-><init>(Ljava/lang/String;IB)V
+    return v2
 
-    sput-object v2, Lksf;->o:Lksf;
+    :cond_3
+    iget v1, p0, Lksf;->c:I
 
-    new-instance v3, Lksf;
+    iget p1, p1, Lksf;->c:I
 
-    const-string v4, "HINT"
+    if-eq v1, p1, :cond_4
 
-    const/4 v5, 0x3
+    return v2
 
-    invoke-direct {v3, v4, v5, v5}, Lksf;-><init>(Ljava/lang/String;IB)V
+    :cond_4
+    return v0
+.end method
 
-    sput-object v3, Lksf;->X:Lksf;
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v4, Lksf;
+    iget v0, p0, Lksf;->a:I
 
-    const-string v5, "EMAIL"
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const/4 v6, 0x4
+    move-result v0
 
-    invoke-direct {v4, v5, v6, v6}, Lksf;-><init>(Ljava/lang/String;IB)V
+    const/16 v1, 0x1f
 
-    sput-object v4, Lksf;->Y:Lksf;
+    mul-int/2addr v0, v1
 
-    new-instance v5, Lksf;
+    iget v2, p0, Lksf;->b:I
 
-    const-string v6, "REMOVE_2FA"
+    invoke-static {v2, v0, v1}, Lijf;->m(III)I
 
-    const/4 v7, 0x5
+    move-result v0
 
-    invoke-direct {v5, v6, v7, v7}, Lksf;-><init>(Ljava/lang/String;IB)V
+    iget v1, p0, Lksf;->c:I
 
-    sput-object v5, Lksf;->Z:Lksf;
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    filled-new-array/range {v0 .. v5}, [Lksf;
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", descriptionRes="
+
+    const-string v1, ", buttonRes="
+
+    const-string v2, "TextsUiModel(titleRes="
+
+    iget v3, p0, Lksf;->a:I
+
+    iget v4, p0, Lksf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sput-object v0, Lksf;->w0:[Lksf;
+    const-string v1, ")"
 
-    return-void
-.end method
+    iget v2, p0, Lksf;->c:I
 
-.method public constructor <init>(Ljava/lang/String;IB)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-byte p3, p0, Lksf;->a:B
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lksf;
-    .locals 1
-
-    const-class v0, Lksf;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lksf;
-
-    return-object p0
-.end method
-
-.method public static values()[Lksf;
-    .locals 1
-
-    sget-object v0, Lksf;->w0:[Lksf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lksf;
 
     return-object v0
 .end method

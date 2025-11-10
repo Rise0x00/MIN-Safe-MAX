@@ -1,44 +1,64 @@
-.class public abstract Lil8;
+.class public final Lil8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lol8;
+
 
 # static fields
-.field public static final a:Lcfd;
+.field public static final a:Lil8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Ljzf;
+    new-instance v0, Lil8;
 
-    const-string v1, "media-gallery-scope"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljzf;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lihf;->f:Lcfd;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, v0, Ljzf;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ljzf;->a()Lcfd;
-
-    move-result-object v0
-
-    sput-object v0, Lil8;->a:Lcfd;
+    sput-object v0, Lil8;->a:Lil8;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    instance-of p1, p1, Lil8;
 
-    const-string v1, "Trying to access DI graph before initialization!"
+    if-nez p1, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw v0
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x8c5b203
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Show"
+
+    return-object v0
 .end method

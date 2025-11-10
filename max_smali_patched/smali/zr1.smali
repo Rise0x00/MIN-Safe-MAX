@@ -1,95 +1,80 @@
-.class public final Lzr1;
+.class public final synthetic Lzr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbs1;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lfs1;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lfs1;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lzr1;->a:I
 
-    iput-wide p1, p0, Lzr1;->a:J
+    iput-object p1, p0, Lzr1;->b:Lfs1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lzr1;->a:J
+    iget v0, p0, Lzr1;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iget-object v0, p0, Lzr1;->b:Lfs1;
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzr1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzr1;
-
-    iget-wide v3, p0, Lzr1;->a:J
-
-    iget-wide v5, p1, Lzr1;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lzr1;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "None(lastUpdate="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lzr1;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lfs1;->B(Lfs1;)Landroid/graphics/drawable/ShapeDrawable;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lzr1;->b:Lfs1;
+
+    iget-object v0, v0, Lfs1;->P0:Loi6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lapg;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lzr1;->b:Lfs1;
+
+    invoke-static {v0}, Lfs1;->w(Lfs1;)Landroid/graphics/drawable/ShapeDrawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

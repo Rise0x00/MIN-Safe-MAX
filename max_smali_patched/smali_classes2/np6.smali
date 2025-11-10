@@ -1,304 +1,258 @@
 .class public final Lnp6;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lop6;
+.field public final synthetic c:I
 
-.field public final b:Lpp6;
-
-.field public final c:Lqp6;
-
-.field public final d:Lrp6;
-
-.field public final e:Lsp6;
-
-.field public final f:Ltp6;
-
-.field public final g:Lup6;
+.field public d:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lop6;Lpp6;Lqp6;Lrp6;Lsp6;Ltp6;Lup6;)V
+.method public constructor <init>(Ljf9;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lnp6;->c:I
 
-    iput-object p1, p0, Lnp6;->a:Lop6;
+    packed-switch p2, :pswitch_data_0
 
-    iput-object p2, p0, Lnp6;->b:Lpp6;
-
-    iput-object p3, p0, Lnp6;->c:Lqp6;
-
-    iput-object p4, p0, Lnp6;->d:Lrp6;
-
-    iput-object p5, p0, Lnp6;->e:Lsp6;
-
-    iput-object p6, p0, Lnp6;->f:Ltp6;
-
-    iput-object p7, p0, Lnp6;->g:Lup6;
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+
+    iget-object p1, p0, Lnp6;->d:Ljava/util/ArrayList;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lnp6;->d:Ljava/util/ArrayList;
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d(Ljf9;Ljava/lang/String;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lnp6;->c:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "members"
+
+    invoke-static {p2, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    invoke-static {p1}, Le0i;->j(Ljf9;)I
+
+    move-result p2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lnp6;->d:Ljava/util/ArrayList;
+
+    invoke-static {v1, p2}, Liwi;->h(II)Laj7;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {p2, v1}, Lcb3;->k(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {p2}, Lyi7;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :goto_0
+    move-object v1, p2
+
+    check-cast v1, Lzi7;
+
+    iget-boolean v1, v1, Lzi7;->c:Z
+
+    if-eqz v1, :cond_0
+
+    move-object v1, p2
+
+    check-cast v1, Lzi7;
+
+    invoke-virtual {v1}, Lzi7;->nextInt()I
+
+    invoke-static {p1}, Lbo2;->a(Ljf9;)Lbo2;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lnp6;
+    iget-object p1, p0, Lnp6;->d:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    const/4 p1, 0x0
 
     :cond_1
-    check-cast p1, Lnp6;
+    invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    iget-object v1, p0, Lnp6;->a:Lop6;
-
-    iget-object v3, p1, Lnp6;->a:Lop6;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Lnp6;->b:Lpp6;
+    invoke-virtual {p1}, Ljf9;->v()V
 
-    iget-object v3, p1, Lnp6;->b:Lpp6;
+    :goto_1
+    return-void
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v1
+    const-string v0, "calls"
 
-    if-nez v1, :cond_3
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return v2
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    invoke-virtual {p1}, Ljf9;->v()V
+
+    goto :goto_3
 
     :cond_3
-    iget-object v1, p0, Lnp6;->c:Lqp6;
+    new-instance p2, Ljava/util/ArrayList;
 
-    iget-object v3, p1, Lnp6;->c:Lqp6;
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p2, p0, Lnp6;->d:Ljava/util/ArrayList;
 
-    move-result v1
+    invoke-static {p1}, Le0i;->j(Ljf9;)I
 
-    if-nez v1, :cond_4
+    move-result p2
 
-    return v2
+    :goto_2
+    if-ge v1, p2, :cond_4
+
+    iget-object v0, p0, Lnp6;->d:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Lllg;->a(Ljf9;)Lllg;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
 
     :cond_4
-    iget-object v1, p0, Lnp6;->d:Lrp6;
+    :goto_3
+    return-void
 
-    iget-object v3, p1, Lnp6;->d:Lrp6;
+    nop
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lnp6;->e:Lsp6;
-
-    iget-object v3, p1, Lnp6;->e:Lsp6;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lnp6;->f:Ltp6;
-
-    iget-object v3, p1, Lnp6;->f:Ltp6;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lnp6;->g:Lup6;
-
-    iget-object p1, p1, Lnp6;->g:Lup6;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lnp6;->a:Lop6;
-
-    invoke-virtual {v0}, Lop6;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lnp6;->b:Lpp6;
-
-    invoke-virtual {v1}, Lpp6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lnp6;->c:Lqp6;
-
-    invoke-virtual {v0}, Lqp6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lnp6;->d:Lrp6;
-
-    invoke-virtual {v1}, Lrp6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lnp6;->e:Lsp6;
-
-    invoke-virtual {v0}, Lsp6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lnp6;->f:Ltp6;
-
-    invoke-virtual {v1}, Ltp6;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lnp6;->g:Lup6;
-
-    invoke-virtual {v0}, Lup6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lnp6;->c:I
 
-    const-string v1, "GradientsLoadingIconColors(contrast="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lnp6;->d:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lnp6;->a:Lop6;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, ", contrastStatic="
+    :cond_0
+    move-object v1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v5, Lzpf;
 
-    iget-object v1, p0, Lnp6;->b:Lpp6;
+    const/4 v0, 0x6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v5, v0}, Lzpf;-><init>(I)V
 
-    const-string v1, ", negative="
+    const/16 v6, 0x1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lnp6;->c:Lqp6;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    const-string v1, ", neutralThemed="
+    invoke-static/range {v1 .. v6}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v1, p0, Lnp6;->d:Lrp6;
+    const-string v1, "{members : ["
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "]}"
 
-    const-string v1, ", primary="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnp6;->e:Lsp6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", primaryStatic="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnp6;->f:Ltp6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", themed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnp6;->g:Lup6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lnp6;->d:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Response{calls="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

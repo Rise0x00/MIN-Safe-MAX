@@ -4,17 +4,5 @@
 
 
 # virtual methods
-.method public abstract onAttendee(Ltr1;)V
-.end method
-
-.method public abstract onFeedback(Lur1;)V
-.end method
-
-.method public abstract onHandUp(Lvr1;)V
-.end method
-
-.method public abstract onMeInWaitingRoomChanged(Z)V
-.end method
-
-.method public abstract onPromotionUpdated(Lwr1;)V
+.method public abstract m(Lcua;)V
 .end method

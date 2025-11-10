@@ -1,158 +1,129 @@
 .class public final Ll7c;
-.super Ljava/lang/Object;
+.super Lm7c;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:Z
+.field public final a:Lirf;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILirf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Ll7c;->a:Lirf;
 
-    iput-boolean v0, p0, Ll7c;->a:Z
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Ll7c;->b:Ljava/lang/Object;
+    iput p1, p0, Ll7c;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Ll7c;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Ll7c;->a:Z
-
-    iget-object v1, p0, Ll7c;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public final b(J)V
-    .locals 5
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr p1, v0
-
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_1
-
-    iget-object p1, p0, Ll7c;->b:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :goto_0
-    :try_start_0
-    iget-boolean p2, p0, Ll7c;->a:Z
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Ll7c;->b:Ljava/lang/Object;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iput-boolean v3, p0, Ll7c;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    instance-of v0, p1, Ll7c;
 
-    monitor-exit p1
+    if-nez v0, :cond_1
 
-    return-void
-
-    :goto_1
-    monitor-exit p1
-
-    throw p2
+    goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Ll7c;->b:Ljava/lang/Object;
+    check-cast p1, Ll7c;
 
-    monitor-enter v2
+    iget-object v0, p0, Ll7c;->a:Lirf;
 
-    :goto_2
-    :try_start_1
-    iget-boolean v4, p0, Ll7c;->a:Z
+    iget-object v1, p1, Ll7c;->a:Lirf;
 
-    if-nez v4, :cond_2
+    invoke-virtual {v0, v1}, Lirf;->equals(Ljava/lang/Object;)Z
 
-    cmp-long v4, v0, p1
+    move-result v0
 
-    if-gez v4, :cond_2
+    if-nez v0, :cond_2
 
-    iget-object v4, p0, Ll7c;->b:Ljava/lang/Object;
-
-    sub-long v0, p1, v0
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_2
-    iput-boolean v3, p0, Ll7c;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    iget v0, p0, Ll7c;->b:I
 
-    monitor-exit v2
+    iget p1, p1, Ll7c;->b:I
 
-    return-void
+    if-eq v0, p1, :cond_3
 
-    :goto_3
-    monitor-exit v2
+    :goto_0
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ll7c;->a:Lirf;
+
+    iget v0, v0, Lirf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ll7c;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSuccessSnackbar(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ll7c;->a:Lirf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ll7c;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

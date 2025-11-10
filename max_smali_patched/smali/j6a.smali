@@ -1,342 +1,125 @@
-.class public abstract Lj6a;
-.super Ljava/lang/Object;
+.class public final Lj6a;
+.super Landroid/telephony/PhoneStateListener;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Lk6a;
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+.method public constructor <init>(Lk6a;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+    iput-object p1, p0, Lj6a;->a:Lk6a;
 
-    move-result-object p0
+    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/Notification$Action$Builder;Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/app/Notification$Action$Builder;)Landroid/app/Notification$Action;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
+# virtual methods
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
     .locals 1
 
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    invoke-static {p1}, Lwy8;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    move-result p1
 
-    return-object v0
-.end method
+    const/4 v0, 0x3
 
-.method public static e(Ljava/util/ArrayList;I)Lg5a;
-    .locals 19
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Landroid/os/Parcelable;",
-            ">;I)",
-            "Lg5a;"
-        }
-    .end annotation
+    if-eq p1, v0, :cond_1
 
-    invoke-virtual/range {p0 .. p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/4 v0, 0x4
 
-    move-result-object v0
+    if-ne p1, v0, :cond_0
 
-    check-cast v0, Landroid/app/Notification$Action;
-
-    invoke-static {v0}, Lh5a;->g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
-
-    move-result-object v1
-
-    const/16 v2, 0x1d
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    if-nez v1, :cond_0
-
-    move-object v12, v3
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    array-length v5, v1
-
-    new-array v5, v5, [Lnzc;
-
-    move v6, v4
-
-    :goto_0
-    array-length v7, v1
-
-    if-ge v6, v7, :cond_2
-
-    aget-object v7, v1, v6
-
-    new-instance v8, Lnzc;
-
-    invoke-static {v7}, Lh5a;->h(Landroid/app/RemoteInput;)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v7}, Lh5a;->f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
-
-    move-result-object v10
-
-    invoke-static {v7}, Lh5a;->b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
-
-    move-result-object v11
-
-    invoke-static {v7}, Lh5a;->a(Landroid/app/RemoteInput;)Z
-
-    move-result v12
-
-    sget v13, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v13, v2, :cond_1
-
-    invoke-static {v7}, Lm5a;->c(Landroid/app/RemoteInput;)I
-
-    move-result v13
+    const/4 p1, 0x0
 
     goto :goto_1
 
     :cond_1
-    move v13, v4
+    :goto_0
+    const/4 p1, 0x1
 
     :goto_1
-    invoke-static {v7}, Lh5a;->d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
+    if-eqz p1, :cond_2
 
-    move-result-object v14
+    const/16 p1, 0xa
 
-    const/4 v15, 0x0
+    goto :goto_2
 
-    invoke-direct/range {v8 .. v15}, Lnzc;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
+    :cond_2
+    const/4 p1, 0x5
 
-    aput-object v8, v5, v6
+    :goto_2
+    iget-object v0, p0, Lj6a;->a:Lk6a;
 
-    add-int/lit8 v6, v6, 0x1
+    invoke-static {v0, p1}, Lk6a;->a(Lk6a;I)V
+
+    return-void
+.end method
+
+.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {p1}, Landroid/telephony/ServiceState;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_0
+    const-string v0, "nrState=CONNECTED"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "nrState=NOT_RESTRICTED"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_2
+
     :cond_2
-    move-object v12, v5
+    :goto_1
+    const/4 p1, 0x1
 
     :goto_2
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-eqz p1, :cond_3
 
-    invoke-static {v0}, Lh5a;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-
-    move-result-object v5
-
-    const-string v6, "android.support.allowGeneratedReplies"
-
-    invoke-virtual {v5, v6}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-nez v5, :cond_4
-
-    invoke-static {v0}, Lk5a;->a(Landroid/app/Notification$Action;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
+    const/16 p1, 0xa
 
     goto :goto_3
 
     :cond_3
-    move v14, v4
+    const/4 p1, 0x5
 
-    goto :goto_4
-
-    :cond_4
     :goto_3
-    move v14, v6
+    iget-object v0, p0, Lj6a;->a:Lk6a;
 
-    :goto_4
-    invoke-static {v0}, Lh5a;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    invoke-static {v0, p1}, Lk6a;->a(Lk6a;I)V
 
-    move-result-object v5
-
-    const-string v7, "android.support.action.showsUserInterface"
-
-    invoke-virtual {v5, v7, v6}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v16
-
-    const/16 v5, 0x1c
-
-    if-lt v1, v5, :cond_5
-
-    invoke-static {v0}, Ll5a;->a(Landroid/app/Notification$Action;)I
-
-    move-result v5
-
-    :goto_5
-    move v15, v5
-
-    goto :goto_6
-
-    :cond_5
-    invoke-static {v0}, Lh5a;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-
-    move-result-object v5
-
-    const-string v6, "android.support.action.semanticAction"
-
-    invoke-virtual {v5, v6, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    goto :goto_5
-
-    :goto_6
-    if-lt v1, v2, :cond_6
-
-    invoke-static {v0}, Lm5a;->e(Landroid/app/Notification$Action;)Z
-
-    move-result v2
-
-    move/from16 v17, v2
-
-    goto :goto_7
-
-    :cond_6
-    move/from16 v17, v4
-
-    :goto_7
-    const/16 v2, 0x1f
-
-    if-lt v1, v2, :cond_7
-
-    invoke-static {v0}, Ln5a;->a(Landroid/app/Notification$Action;)Z
-
-    move-result v4
-
-    :cond_7
-    move/from16 v18, v4
-
-    invoke-static {v0}, Lj5a;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
-
-    move-result-object v1
-
-    if-nez v1, :cond_9
-
-    iget v1, v0, Landroid/app/Notification$Action;->icon:I
-
-    if-eqz v1, :cond_9
-
-    new-instance v7, Lg5a;
-
-    iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
-
-    iget-object v10, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
-
-    invoke-static {v0}, Lh5a;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-
-    move-result-object v11
-
-    if-nez v1, :cond_8
-
-    :goto_8
-    move-object v8, v3
-
-    goto :goto_9
-
-    :cond_8
-    const-string v0, ""
-
-    invoke-static {v3, v0, v1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
-
-    move-result-object v3
-
-    goto :goto_8
-
-    :goto_9
-    const/4 v13, 0x0
-
-    invoke-direct/range {v7 .. v18}, Lg5a;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lnzc;[Lnzc;ZIZZZ)V
-
-    return-object v7
-
-    :cond_9
-    invoke-static {v0}, Lj5a;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
-
-    move-result-object v1
-
-    if-nez v1, :cond_a
-
-    :goto_a
-    move-object v8, v3
-
-    goto :goto_b
-
-    :cond_a
-    invoke-static {v0}, Lj5a;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v1}, Ll27;->d(Ljava/lang/Object;)I
-
-    move-result v2
-
-    const/4 v4, 0x2
-
-    if-ne v2, v4, :cond_b
-
-    invoke-static {v1}, Ll27;->b(Ljava/lang/Object;)I
-
-    move-result v2
-
-    if-nez v2, :cond_b
-
-    goto :goto_a
-
-    :cond_b
-    invoke-static {v1}, Ll27;->a(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
-
-    move-result-object v3
-
-    goto :goto_a
-
-    :goto_b
-    new-instance v7, Lg5a;
-
-    iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
-
-    iget-object v10, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
-
-    invoke-static {v0}, Lh5a;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-
-    move-result-object v11
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v7 .. v18}, Lg5a;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lnzc;[Lnzc;ZIZZZ)V
-
-    return-object v7
+    return-void
 .end method

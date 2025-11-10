@@ -1,21 +1,14 @@
-.class public final Lsse;
-.super Lbp;
+.class public interface abstract Lsse;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lsse;
+# virtual methods
+.method public abstract a()Z
+.end method
 
+.method public abstract m(I)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lsse;
-
-    invoke-direct {v0}, Lbp;-><init>()V
-
-    sput-object v0, Lsse;->a:Lsse;
-
-    return-void
+.method public abstract o()V
 .end method

@@ -1,105 +1,94 @@
 .class public final Ltz6;
-.super Lpbf;
+.super Lvz6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:Lxz6;
-
-.field public final synthetic f:I
-
-.field public final synthetic g:Lnt0;
-
-.field public final synthetic h:I
+.field public final a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lxz6;ILnt0;IZ)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Ltz6;->e:Lxz6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ltz6;->f:I
-
-    iput-object p4, p0, Ltz6;->g:Lnt0;
-
-    iput p5, p0, Ltz6;->h:I
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p1, p2}, Lpbf;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Ltz6;->a:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    :try_start_0
-    iget-object v0, p0, Ltz6;->e:Lxz6;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lxz6;->z0:Lpid;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Ltz6;->g:Lnt0;
+    return v0
 
-    iget v2, p0, Ltz6;->h:I
+    :cond_0
+    instance-of v1, p1, Ltz6;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    int-to-long v2, v2
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1, v2, v3}, Lnt0;->skip(J)V
+    return v2
 
-    iget-object v0, p0, Ltz6;->e:Lxz6;
+    :cond_1
+    check-cast p1, Ltz6;
 
-    iget-object v0, v0, Lxz6;->L0:Lf07;
+    iget-object v1, p0, Ltz6;->a:Ljava/lang/CharSequence;
 
-    iget v1, p0, Ltz6;->f:I
+    iget-object p1, p1, Ltz6;->a:Ljava/lang/CharSequence;
 
-    const/16 v2, 0x9
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v2}, Lf07;->W(II)V
+    move-result p1
 
-    iget-object v0, p0, Ltz6;->e:Lxz6;
+    if-nez p1, :cond_2
 
-    monitor-enter v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    return v2
 
-    :try_start_1
-    iget-object v1, p0, Ltz6;->e:Lxz6;
+    :cond_2
+    return v0
+.end method
 
-    iget-object v1, v1, Lxz6;->N0:Ljava/util/LinkedHashSet;
+.method public final hashCode()I
+    .locals 1
 
-    iget v2, p0, Ltz6;->f:I
+    iget-object v0, p0, Ltz6;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return v0
+.end method
 
-    :try_start_2
-    monitor-exit v0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception v1
+    const-string v1, "Name(name="
 
-    monitor-exit v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw v1
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    iget-object v1, p0, Ltz6;->a:Ljava/lang/CharSequence;
 
-    :catch_0
-    :goto_0
-    const-wide/16 v0, -0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-wide v0
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

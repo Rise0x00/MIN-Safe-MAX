@@ -4,109 +4,44 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/Object;
 
-.field public b:I
+.field public final b:Lfy;
 
-.field public c:F
+.field public final c:Ljava/util/ArrayDeque;
 
-.field public d:F
+.field public d:Ly6e;
+
+.field public e:Lltb;
+
+.field public f:Z
+
+.field public g:Lltb;
 
 
-# virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 3
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Lfy;Ly6e;Lltb;)V
+    .locals 0
 
-    sget-object v0, Lzlc;->PropertySet:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    iput-object p1, p0, Lio3;->a:Ljava/lang/Object;
 
-    move-result-object p1
+    iput-object p2, p0, Lio3;->b:Lfy;
 
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+    iput-object p3, p0, Lio3;->d:Ly6e;
 
-    move-result p2
+    iput-object p4, p0, Lio3;->e:Lltb;
 
-    const/4 v0, 0x0
+    new-instance p1, Ljava/util/ArrayDeque;
 
-    :goto_0
-    if-ge v0, p2, :cond_4
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
+    iput-object p1, p0, Lio3;->c:Ljava/util/ArrayDeque;
 
-    move-result v1
+    sget-object p1, Lltb;->b:Lltb;
 
-    sget v2, Lzlc;->PropertySet_android_alpha:I
-
-    if-ne v1, v2, :cond_0
-
-    iget v2, p0, Lio3;->c:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lio3;->c:F
-
-    goto :goto_1
-
-    :cond_0
-    sget v2, Lzlc;->PropertySet_android_visibility:I
-
-    if-ne v1, v2, :cond_1
-
-    iget v2, p0, Lio3;->a:I
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v1
-
-    iput v1, p0, Lio3;->a:I
-
-    sget-object v2, Lko3;->d:[I
-
-    aget v1, v2, v1
-
-    iput v1, p0, Lio3;->a:I
-
-    goto :goto_1
-
-    :cond_1
-    sget v2, Lzlc;->PropertySet_visibilityMode:I
-
-    if-ne v1, v2, :cond_2
-
-    iget v2, p0, Lio3;->b:I
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v1
-
-    iput v1, p0, Lio3;->b:I
-
-    goto :goto_1
-
-    :cond_2
-    sget v2, Lzlc;->PropertySet_motionProgress:I
-
-    if-ne v1, v2, :cond_3
-
-    iget v2, p0, Lio3;->d:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lio3;->d:F
-
-    :cond_3
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    iput-object p1, p0, Lio3;->g:Lltb;
 
     return-void
 .end method

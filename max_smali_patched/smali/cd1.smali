@@ -3,89 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfd1;
+.implements Loi6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:[Lez5;
+
+
+# direct methods
+.method public synthetic constructor <init>([Lez5;I)V
+    .locals 0
+
+    iput p2, p0, Lcd1;->a:I
+
+    iput-object p1, p0, Lcd1;->b:[Lez5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lcd1;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lcd1;
+    iget-object v0, p0, Lcd1;->b:[Lez5;
 
-    if-nez v0, :cond_1
+    array-length v0, v0
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lcd1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Loef;->a:Lnef;
-
-    invoke-virtual {p1, p1}, Lnef;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getText()Loef;
-    .locals 1
-
-    sget-object v0, Loef;->a:Lnef;
+    new-array v0, v0, [Ljava/lang/Object;
 
     return-object v0
-.end method
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lcd1;->b:[Lez5;
 
-    sget-object v0, Loef;->a:Lnef;
+    array-length v0, v0
 
-    invoke-virtual {v0}, Lnef;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Error(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Loef;->a:Lnef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    new-array v0, v0, [Lpob;
 
     return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lwva;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lmr3;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Ljava/util/List;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lo46;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lcd1;->b:[Lez5;
+
+    array-length v0, v0
+
+    new-array v0, v0, [Lmr3;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

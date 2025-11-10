@@ -1,284 +1,164 @@
 .class public final Ljlf;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IIIIIIIII)V
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljlf;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iput p1, p0, Ljlf;->a:I
+    const/4 p1, 0x2
 
-    iput p2, p0, Ljlf;->b:I
-
-    iput p3, p0, Ljlf;->c:I
-
-    iput p4, p0, Ljlf;->d:I
-
-    iput p5, p0, Ljlf;->e:I
-
-    iput p6, p0, Ljlf;->f:I
-
-    iput p7, p0, Ljlf;->g:I
-
-    iput p8, p0, Ljlf;->h:I
-
-    iput p9, p0, Ljlf;->i:I
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lvnf;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ljlf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ljlf;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ljlf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljlf;
+
+    iget-object v1, p0, Ljlf;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-direct {v0, v1, p2}, Ljlf;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ljlf;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljlf;->o:Ljava/lang/Object;
+
+    check-cast p1, Lvnf;
+
+    iget-object v0, p0, Ljlf;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    iget-object v1, v0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    const/high16 v2, -0x80000000
+
+    invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
+
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getSystemUiVisibility()I
+
+    move-result v2
+
+    iget-boolean v3, p1, Lvnf;->c:Z
+
+    if-eqz v3, :cond_0
+
+    and-int/lit8 v2, v2, -0x11
+
+    goto :goto_0
+
+    :cond_0
+    or-int/lit8 v2, v2, 0x10
+
+    :goto_0
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    iget v2, p1, Lvnf;->H:I
+
+    invoke-virtual {v1, v2}, Landroid/view/Window;->setNavigationBarColor(I)V
+
+    :cond_1
+    iget-object v1, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Ljlf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ljlf;
-
-    iget v0, p0, Ljlf;->a:I
-
-    iget v1, p1, Ljlf;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
     :cond_2
-    iget v0, p0, Ljlf;->b:I
+    move-object v1, v2
 
-    iget v1, p1, Ljlf;->b:I
+    :goto_1
+    instance-of v3, v1, Landroid/view/ViewGroup;
 
-    if-eq v0, v1, :cond_3
+    if-eqz v3, :cond_3
 
-    goto :goto_0
+    move-object v2, v1
+
+    check-cast v2, Landroid/view/ViewGroup;
 
     :cond_3
-    iget v0, p0, Ljlf;->c:I
+    if-nez v2, :cond_4
 
-    iget v1, p1, Ljlf;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_4
-    iget v0, p0, Ljlf;->d:I
+    iget v1, p1, Lvnf;->m:I
 
-    iget v1, p1, Ljlf;->d:I
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    if-eq v0, v1, :cond_5
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
-    :cond_5
-    iget v0, p0, Ljlf;->e:I
+    :goto_2
+    invoke-virtual {v0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->k(Lvnf;)V
 
-    iget v1, p1, Ljlf;->e:I
+    sget-object p1, Lybg;->a:Lybg;
 
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Ljlf;->f:I
-
-    iget v1, p1, Ljlf;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Ljlf;->g:I
-
-    iget v1, p1, Ljlf;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Ljlf;->h:I
-
-    iget v1, p1, Ljlf;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget v0, p0, Ljlf;->i:I
-
-    iget p1, p1, Ljlf;->i:I
-
-    if-eq v0, p1, :cond_a
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_a
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ljlf;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ljlf;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->d:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->e:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->f:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->g:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljlf;->h:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Ljlf;->i:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", contrastStatic="
-
-    const-string v1, ", negative="
-
-    const-string v2, "TopbarIconDisabledColors(contrast="
-
-    iget v3, p0, Ljlf;->a:I
-
-    iget v4, p0, Ljlf;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", neutralFade="
-
-    const-string v2, ", primary="
-
-    iget v3, p0, Ljlf;->c:I
-
-    iget v4, p0, Ljlf;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", quaternary="
-
-    const-string v2, ", secondary="
-
-    iget v3, p0, Ljlf;->e:I
-
-    iget v4, p0, Ljlf;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", tertiary="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Ljlf;->g:I
-
-    iget v4, p0, Ljlf;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget v2, p0, Ljlf;->i:I
-
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,34 +1,129 @@
-.class public abstract Legc;
+.class public final Legc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d6a
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d6b
+.field public final b:Landroid/graphics/Bitmap;
 
-.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d6c
 
-.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d6d
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
+    .locals 0
 
-.field public static webapp_root_content_container:I = 0x7f0a0d6e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static webapp_root_error_container:I = 0x7f0a0d6f
+    iput-object p1, p0, Legc;->a:Landroid/net/Uri;
 
-.field public static webapp_root_frame:I = 0x7f0a0d70
+    iput-object p2, p0, Legc;->b:Landroid/graphics/Bitmap;
 
-.field public static webapp_root_progressbar:I = 0x7f0a0d71
+    return-void
+.end method
 
-.field public static webapp_root_settings_header:I = 0x7f0a0d72
 
-.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d73
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static webapp_root_settings_switcher:I = 0x7f0a0d74
+    const/4 v0, 0x1
 
-.field public static webapp_root_settings_toolbar:I = 0x7f0a0d75
+    if-ne p0, p1, :cond_0
 
-.field public static webapp_root_settings_transition:I = 0x7f0a0d76
+    return v0
 
-.field public static webapp_root_toolbar:I = 0x7f0a0d77
+    :cond_0
+    instance-of v1, p1, Legc;
 
-.field public static webapp_root_webview:I = 0x7f0a0d78
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Legc;
+
+    iget-object v1, p0, Legc;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Legc;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Legc;->b:Landroid/graphics/Bitmap;
+
+    iget-object p1, p1, Legc;->b:Landroid/graphics/Bitmap;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Legc;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Legc;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QrCode(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Legc;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitmap="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Legc;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,6 +1,7 @@
-.class public abstract Luhc;
+.class public interface abstract Luhc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# static fields
-.field public static forward_snackbar_messages_sent:I = 0x7f110017
+# interfaces
+.implements Lthc;
+.implements Lecf;

@@ -1,85 +1,73 @@
-.class public final enum Loxa;
-.super Ljava/lang/Enum;
+.class public abstract Loxa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Loxa;
+.field public static final a:I
 
-.field public static final enum b:Loxa;
+.field public static final b:I
 
-.field public static final enum c:Loxa;
+.field public static final c:I
 
-.field public static final synthetic o:[Loxa;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Loxa;
+    sget v0, Lboc;->oneme_main_bottom_bar:I
 
-    const-string v1, "ERROR"
+    sput v0, Loxa;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lboc;->oneme_main_calls_bottom_item:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Loxa;->b:I
 
-    sput-object v0, Loxa;->a:Loxa;
+    sget v0, Lboc;->oneme_main_calls_container:I
 
-    new-instance v1, Loxa;
+    sput v0, Loxa;->c:I
 
-    const-string v2, "HINT"
+    sget v0, Lboc;->oneme_main_chats_bottom_item:I
 
-    const/4 v3, 0x1
+    sput v0, Loxa;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lboc;->oneme_main_chats_container:I
 
-    sput-object v1, Loxa;->b:Loxa;
+    sput v0, Loxa;->e:I
 
-    new-instance v2, Loxa;
+    sget v0, Lboc;->oneme_main_contacts_bottom_item:I
 
-    const-string v3, "DESCRIPTION"
+    sput v0, Loxa;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Lboc;->oneme_main_contacts_container:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Loxa;->g:I
 
-    sput-object v2, Loxa;->c:Loxa;
+    sget v0, Lboc;->oneme_main_root:I
 
-    filled-new-array {v0, v1, v2}, [Loxa;
+    sput v0, Loxa;->h:I
 
-    move-result-object v0
+    sget v0, Lboc;->oneme_main_settings_bottom_item:I
 
-    sput-object v0, Loxa;->o:[Loxa;
+    sput v0, Loxa;->i:I
+
+    sget v0, Lboc;->oneme_main_settings_container:I
+
+    sput v0, Loxa;->j:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Loxa;
-    .locals 1
-
-    const-class v0, Loxa;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Loxa;
-
-    return-object p0
-.end method
-
-.method public static values()[Loxa;
-    .locals 1
-
-    sget-object v0, Loxa;->o:[Loxa;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Loxa;
-
-    return-object v0
 .end method

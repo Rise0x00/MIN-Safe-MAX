@@ -1,43 +1,27 @@
-.class public abstract synthetic Lblb;
+.class public abstract Lblb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    const/4 v0, 0x2
+    sget v0, Lw35;->d:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const v0, 0xea60
 
-    move-result-object v1
+    sget-object v1, Lb45;->c:Lb45;
 
-    array-length v1, v1
+    invoke-static {v0, v1}, Lzyi;->d(ILb45;)J
 
-    new-array v1, v1, [I
+    move-result-wide v0
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Lblb;->$EnumSwitchMapping$0:[I
+    sput-wide v0, Lblb;->a:J
 
     return-void
 .end method

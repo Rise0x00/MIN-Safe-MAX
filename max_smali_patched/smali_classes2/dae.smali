@@ -1,101 +1,134 @@
 .class public final Ldae;
-.super Lss3;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic X:Lgae;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Lgae;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldae;->X:Lgae;
 
-    iput-object p1, p0, Ldae;->a:Landroid/net/Uri;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lg54;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ldae;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ldae;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ldae;
 
-    iget-object v1, p0, Ldae;->a:Landroid/net/Uri;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-object p1, p1, Ldae;->a:Landroid/net/Uri;
+    invoke-virtual {p1, p2}, Ldae;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Ldae;->a:Landroid/net/Uri;
+    new-instance p1, Ldae;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Ldae;->X:Lgae;
 
-    const/4 v0, 0x0
+    invoke-direct {p1, v0, p2}, Ldae;-><init>(Lgae;Lkotlin/coroutines/Continuation;)V
 
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Ldae;->o:I
 
-    const-string v1, "ShowInviteDialog(qrCodeUri="
+    iget-object v1, p0, Ldae;->X:Lgae;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Ldae;->a:Landroid/net/Uri;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-ne v0, v2, :cond_0
 
-    const-string v1, ")"
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lgae;->u0:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lu23;
+
+    iput v2, p0, Ldae;->o:I
+
+    check-cast p1, Lw33;
+
+    invoke-virtual {p1, p0}, Lw33;->J(Lp14;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    iget-object p1, v1, Lgae;->A0:Laf5;
+
+    sget-object v0, Lxde;->c:Lxde;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lpf4;
+
+    const-string v1, ":saved-messages"
+
+    invoke-direct {v0, v1}, Lpf4;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, v0}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

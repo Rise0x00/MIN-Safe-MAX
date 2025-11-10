@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Lfi4;)V
     .locals 0
 
     .line 1
@@ -73,7 +73,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;-><init>(ILof4;)V
+    invoke-direct {v0, v1, v2}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;-><init>(ILfi4;)V
 
     return-object v0
 .end method

@@ -1,69 +1,635 @@
-.class public final enum Lo63;
-.super Ljava/lang/Enum;
+.class public final Lo63;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lo63;
+.field public static final b:Lw25;
 
-.field public static final synthetic b:[Lo63;
+.field public static final c:Ljava/util/LinkedHashMap;
+
+.field public static final d:Lo63;
+
+.field public static final e:Lo63;
+
+.field public static final f:Lo63;
+
+.field public static final g:Lo63;
+
+.field public static final h:Lo63;
+
+.field public static final i:Lo63;
+
+.field public static final j:Lo63;
+
+.field public static final k:Lo63;
+
+.field public static final l:Lo63;
+
+.field public static final m:Lo63;
+
+.field public static final n:Lo63;
+
+.field public static final o:Lo63;
+
+.field public static final p:Lo63;
+
+.field public static final q:Lo63;
+
+.field public static final r:Lo63;
+
+.field public static final s:Lo63;
+
+.field public static final t:Lu55;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    new-instance v0, Lo63;
+    new-instance v0, Lu55;
 
-    const-string v1, "UNKNOWN"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lo63;->t:Lu55;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v1, Lw25;
 
-    new-instance v1, Lo63;
+    const/16 v2, 0x12
 
-    const-string v2, "ANDROID_FIREBASE"
+    invoke-direct {v1, v2}, Lw25;-><init>(I)V
 
-    const/4 v3, 0x1
+    sput-object v1, Lo63;->b:Lw25;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    sput-object v1, Lo63;->a:Lo63;
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    filled-new-array {v0, v1}, [Lo63;
+    sput-object v1, Lo63;->c:Ljava/util/LinkedHashMap;
 
-    move-result-object v0
+    const-string v1, "SSL_RSA_WITH_NULL_MD5"
 
-    sput-object v0, Lo63;->b:[Lo63;
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_EXPORT_WITH_RC4_40_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_WITH_RC4_128_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_EXPORT_WITH_DES40_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_WITH_DES_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->d:Lo63;
+
+    const-string v1, "SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DHE_DSS_WITH_DES_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DHE_RSA_WITH_DES_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DH_anon_EXPORT_WITH_RC4_40_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DH_anon_WITH_RC4_128_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DH_anon_WITH_DES_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "SSL_DH_anon_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_DES_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_DES_CBC_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_3DES_EDE_CBC_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_WITH_RC4_128_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_EXPORT_WITH_RC4_40_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_KRB5_EXPORT_WITH_RC4_40_MD5"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->e:Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->f:Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_NULL_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_256_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_PSK_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_PSK_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_PSK_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_PSK_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_SEED_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->g:Lo63;
+
+    const-string v1, "TLS_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->h:Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DHE_DSS_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_DH_anon_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_EMPTY_RENEGOTIATION_INFO_SCSV"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_FALLBACK_SCSV"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->i:Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->j:Lo63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_NULL_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_RC4_128_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_anon_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->k:Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->l:Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->m:Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->n:Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->o:Lo63;
+
+    const-string v1, "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->p:Lo63;
+
+    const-string v1, "TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_AES_128_GCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->q:Lo63;
+
+    const-string v1, "TLS_AES_256_GCM_SHA384"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->r:Lo63;
+
+    const-string v1, "TLS_CHACHA20_POLY1305_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    move-result-object v1
+
+    sput-object v1, Lo63;->s:Lo63;
+
+    const-string v1, "TLS_AES_128_CCM_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
+
+    const-string v1, "TLS_AES_128_CCM_8_SHA256"
+
+    invoke-static {v0, v1}, Lu55;->b(Lu55;Ljava/lang/String;)Lo63;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lo63;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    const-class v0, Lo63;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lo63;->a:Ljava/lang/String;
 
-    move-result-object p0
-
-    check-cast p0, Lo63;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lo63;
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lo63;->b:[Lo63;
-
-    invoke-virtual {v0}, [Lo63;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lo63;
+    iget-object v0, p0, Lo63;->a:Ljava/lang/String;
 
     return-object v0
 .end method

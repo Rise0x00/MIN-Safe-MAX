@@ -1,94 +1,41 @@
 .class public final Ldl1;
-.super Lgl1;
+.super Leq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final D:Le41;
+# static fields
+.field public static final a:Ldl1;
 
 
 # direct methods
-.method public constructor <init>(Le41;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Lgl1;-><init>()V
+    new-instance v0, Ldl1;
 
-    iput-object p1, p0, Ldl1;->D:Le41;
+    invoke-direct {v0}, Leq;-><init>()V
+
+    sput-object v0, Ldl1;->a:Ldl1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldl1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldl1;
-
-    iget-object v1, p0, Ldl1;->D:Le41;
-
-    iget-object p1, p1, Ldl1;->D:Le41;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ldl1;->D:Le41;
-
-    invoke-virtual {v0}, Le41;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a()Lmu1;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowOpponentInfo(contextInfo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldl1;->D:Le41;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
+
+    const-class v1, Lmu1;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmu1;
 
     return-object v0
 .end method

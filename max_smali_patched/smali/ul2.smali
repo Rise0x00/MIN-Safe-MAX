@@ -1,48 +1,68 @@
 .class public final Lul2;
-.super Lnz3;
+.super Ladi;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lum1;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lul2;
 
 
 # direct methods
-.method public constructor <init>(Lum1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lul2;->Y:Lum1;
+    new-instance v0, Lul2;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
+
+    sput-object v0, Lul2;->c:Lul2;
 
     return-void
 .end method
 
+.method public static R0(JLjava/lang/Long;)Lpf4;
+    .locals 2
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const-string v0, ":chats/forward?messages_ids="
 
-    iput-object p1, p0, Lul2;->o:Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    iget p1, p0, Lul2;->X:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lul2;->X:I
+    const-string p0, "&attach_id="
 
-    iget-object p1, p0, Lul2;->Y:Lum1;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lum1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string p0, "&is_forward_attach=true"
 
-    move-result-object p1
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lpf4;
+
+    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_0
+    invoke-static {p0, p1, v0}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lpf4;
+
+    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
 
     return-object p1
 .end method

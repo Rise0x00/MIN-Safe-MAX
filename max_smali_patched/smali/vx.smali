@@ -1,714 +1,158 @@
 .class public final Lvx;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
-
-# interfaces
-.implements Lux;
-.implements Las0;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Ljava/lang/Object;
-
 .field public final synthetic a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public o:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lvx;->a:I
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-ltz p1, :cond_0
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    if-gt p1, v2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    .line 9
-    :goto_0
-    invoke-static {v2}, Lpih;->i(Z)V
-
-    if-nez p1, :cond_1
-
-    move p1, v1
-
-    .line 10
-    :cond_1
-    invoke-static {p1}, Ljava/lang/Integer;->bitCount(I)I
-
-    move-result v2
-
-    if-eq v2, v1, :cond_2
-
-    add-int/lit8 p1, p1, -0x1
-
-    .line 11
-    invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result p1
-
-    shl-int/2addr p1, v1
-
-    .line 12
-    :cond_2
-    iput v0, p0, Lvx;->b:I
-
-    const/4 v2, -0x1
-
-    .line 13
-    iput v2, p0, Lvx;->c:I
-
-    .line 14
-    iput v0, p0, Lvx;->o:I
-
-    .line 15
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lvx;->Y:Ljava/lang/Object;
-
-    sub-int/2addr p1, v1
-
-    .line 16
-    iput p1, p0, Lvx;->X:I
-
-    return-void
-.end method
-
-.method public constructor <init>(IB)V
-    .locals 0
-
-    iput p1, p0, Lvx;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 2
-    iput p1, p0, Lvx;->b:I
-
-    const/4 p2, -0x1
-
-    .line 3
-    iput p2, p0, Lvx;->c:I
-
-    .line 4
-    iput p1, p0, Lvx;->o:I
-
-    const/16 p1, 0x10
-
-    .line 5
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    .line 6
-    array-length p1, p1
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lvx;->X:I
-
-    return-void
-
-    :pswitch_0
-    const/16 p1, 0x10
-
-    .line 7
-    invoke-direct {p0, p1}, Lvx;-><init>(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(IIIILjava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const/4 v0, 0x1
 
     iput v0, p0, Lvx;->a:I
 
-    .line 17
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 18
-    iput-object p5, p0, Lvx;->Y:Ljava/lang/Object;
-
-    .line 19
-    iput p1, p0, Lvx;->b:I
-
-    .line 20
-    iput p2, p0, Lvx;->c:I
-
-    .line 21
-    iput p3, p0, Lvx;->o:I
-
-    .line 22
-    iput p4, p0, Lvx;->X:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lrx;)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lvx;->a:I
 
-    .line 23
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 24
-    iget-object p1, p1, Lrx;->c:Lg5g;
-
-    iput-object p1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    const/16 v0, 0xc
-
-    .line 25
-    invoke-virtual {p1, v0}, Lg5g;->E(I)V
-
-    .line 26
-    invoke-virtual {p1}, Lg5g;->v()I
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    iput v0, p0, Lvx;->c:I
-
-    .line 27
-    invoke-virtual {p1}, Lg5g;->v()I
-
-    move-result p1
-
-    iput p1, p0, Lvx;->b:I
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lso9;)V
+.method public synthetic constructor <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
     .locals 1
 
+    .line 3
     const/4 v0, 0x2
 
     iput v0, p0, Lvx;->a:I
 
-    .line 28
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 29
-    iget-object p1, p1, Lso9;->c:Ly4b;
-
-    iput-object p1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    const/16 v0, 0xc
-
-    .line 30
-    invoke-virtual {p1, v0}, Ly4b;->G(I)V
-
-    .line 31
-    invoke-virtual {p1}, Ly4b;->y()I
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    iput v0, p0, Lvx;->c:I
-
-    .line 32
-    invoke-virtual {p1}, Ly4b;->y()I
-
-    move-result p1
-
-    iput p1, p0, Lvx;->b:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 1
-
-    iget v0, p0, Lvx;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, -0x1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget v0, p0, Lvx;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lvx;->b:I
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Lvx;->b:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c()I
+.method public run()V
     .locals 3
 
     iget v0, p0, Lvx;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvx;->Y:Ljava/lang/Object;
+    :pswitch_0
+    invoke-super {p0}, Ljava/lang/Thread;->run()V
 
-    check-cast v0, Ly4b;
+    return-void
 
-    iget v1, p0, Lvx;->c:I
+    :pswitch_1
+    const/16 v0, 0x13
 
-    const/16 v2, 0x8
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    if-ne v1, v2, :cond_0
+    monitor-enter p0
 
-    invoke-virtual {v0}, Ly4b;->u()I
-
-    move-result v0
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_0
+    :try_start_1
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catch_1
     :cond_0
-    const/16 v2, 0x10
+    :goto_2
+    :pswitch_2
+    :try_start_2
+    const-class v0, Lyx;
+
+    monitor-enter v0
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
+
+    :try_start_3
+    sget-object v1, Lyx;->j:Lyx;
+
+    invoke-static {}, Lkgi;->a()Lyx;
+
+    move-result-object v1
+
+    sget-object v2, Lyx;->j:Lyx;
 
     if-ne v1, v2, :cond_1
 
-    invoke-virtual {v0}, Ly4b;->A()I
+    const/4 v1, 0x0
 
-    move-result v0
+    sput-object v1, Lyx;->j:Lyx;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    goto :goto_0
+    :try_start_4
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
 
     :cond_1
-    iget v1, p0, Lvx;->o:I
+    monitor-exit v0
 
-    add-int/lit8 v2, v1, 0x1
+    if-eqz v1, :cond_0
 
-    iput v2, p0, Lvx;->o:I
+    invoke-virtual {v1}, Lyx;->k()V
 
-    rem-int/lit8 v1, v1, 0x2
+    goto :goto_2
 
-    if-nez v1, :cond_2
+    :goto_3
+    monitor-exit v0
 
-    invoke-virtual {v0}, Ly4b;->u()I
-
-    move-result v0
-
-    iput v0, p0, Lvx;->X:I
-
-    and-int/lit16 v0, v0, 0xf0
-
-    shr-int/lit8 v0, v0, 0x4
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lvx;->X:I
-
-    and-int/lit8 v0, v0, 0xf
-
-    :goto_0
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lg5g;
-
-    iget v1, p0, Lvx;->c:I
-
-    const/16 v2, 0x8
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {v0}, Lg5g;->s()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_3
-    const/16 v2, 0x10
-
-    if-ne v1, v2, :cond_4
-
-    invoke-virtual {v0}, Lg5g;->x()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_4
-    iget v1, p0, Lvx;->o:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lvx;->o:I
-
-    rem-int/lit8 v1, v1, 0x2
-
-    if-nez v1, :cond_5
-
-    invoke-virtual {v0}, Lg5g;->s()I
-
-    move-result v0
-
-    iput v0, p0, Lvx;->X:I
-
-    and-int/lit16 v0, v0, 0xf0
-
-    shr-int/lit8 v0, v0, 0x4
-
-    goto :goto_1
-
-    :cond_5
-    iget v0, p0, Lvx;->X:I
-
-    and-int/lit8 v0, v0, 0xf
-
-    :goto_1
-    return v0
-
-    nop
+    throw v1
+    :try_end_4
+    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_0
+        :pswitch_1
     .end packed-switch
-.end method
-
-.method public d(I)V
-    .locals 6
-
-    iget v0, p0, Lvx;->o:I
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [I
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_1
-
-    array-length v0, v1
-
-    shl-int/lit8 v0, v0, 0x1
-
-    if-ltz v0, :cond_0
-
-    new-array v2, v0, [I
-
-    array-length v3, v1
-
-    iget v4, p0, Lvx;->b:I
-
-    sub-int/2addr v3, v4
-
-    const/4 v5, 0x0
-
-    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [I
-
-    invoke-static {v1, v5, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iput v5, p0, Lvx;->b:I
-
-    iget v1, p0, Lvx;->o:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lvx;->c:I
-
-    iput-object v2, p0, Lvx;->Y:Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvx;->X:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget v0, p0, Lvx;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iget v1, p0, Lvx;->X:I
-
-    and-int/2addr v0, v1
-
-    iput v0, p0, Lvx;->c:I
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [I
-
-    aput p1, v1, v0
-
-    iget p1, p0, Lvx;->o:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lvx;->o:I
-
-    return-void
-.end method
-
-.method public e(J)V
-    .locals 6
-
-    iget v0, p0, Lvx;->o:I
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_1
-
-    array-length v0, v1
-
-    shl-int/lit8 v0, v0, 0x1
-
-    if-ltz v0, :cond_0
-
-    new-array v2, v0, [J
-
-    array-length v3, v1
-
-    iget v4, p0, Lvx;->b:I
-
-    sub-int/2addr v3, v4
-
-    const/4 v5, 0x0
-
-    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    invoke-static {v1, v5, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iput v5, p0, Lvx;->b:I
-
-    iget v1, p0, Lvx;->o:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lvx;->c:I
-
-    iput-object v2, p0, Lvx;->Y:Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvx;->X:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget v0, p0, Lvx;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iget v1, p0, Lvx;->X:I
-
-    and-int/2addr v0, v1
-
-    iput v0, p0, Lvx;->c:I
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    aput-wide p1, v1, v0
-
-    iget p1, p0, Lvx;->o:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lvx;->o:I
-
-    return-void
-.end method
-
-.method public f()J
-    .locals 3
-
-    iget v0, p0, Lvx;->o:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v0, [J
-
-    iget v1, p0, Lvx;->b:I
-
-    aget-wide v1, v0, v1
-
-    return-wide v1
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public g()I
-    .locals 4
-
-    iget v0, p0, Lvx;->o:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [I
-
-    iget v2, p0, Lvx;->b:I
-
-    aget v1, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    iget v3, p0, Lvx;->X:I
-
-    and-int/2addr v2, v3
-
-    iput v2, p0, Lvx;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvx;->o:I
-
-    return v1
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public h()J
-    .locals 5
-
-    iget v0, p0, Lvx;->o:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lvx;->Y:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    iget v2, p0, Lvx;->b:I
-
-    aget-wide v3, v1, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    iget v1, p0, Lvx;->X:I
-
-    and-int/2addr v1, v2
-
-    iput v1, p0, Lvx;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lvx;->o:I
-
-    return-wide v3
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
 .end method

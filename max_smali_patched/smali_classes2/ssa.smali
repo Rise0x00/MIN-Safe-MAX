@@ -1,355 +1,77 @@
-.class public final Lssa;
-.super Ljava/lang/Object;
+.class public final enum Lssa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
 
+# static fields
+.field public static final enum a:Lssa;
 
-# instance fields
-.field public final X:Ljava/util/concurrent/CountDownLatch;
-
-.field public volatile Y:Ljava/lang/Object;
-
-.field public final Z:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final a:Ljava/util/concurrent/Callable;
-
-.field public final b:Ljava/util/concurrent/ExecutorService;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public w0:Ljava/util/concurrent/ScheduledFuture;
+.field public static final synthetic b:[Lssa;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lssa;
 
-    iput-object p1, p0, Lssa;->a:Ljava/util/concurrent/Callable;
+    const-string v1, "TITLE"
 
-    iput-object p2, p0, Lssa;->b:Ljava/util/concurrent/ExecutorService;
+    const/4 v2, 0x0
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p2, 0x0
+    new-instance v1, Lssa;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    const-string v2, "SUBTITLE"
 
-    iput-object p1, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v3, 0x1
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    new-instance v2, Lssa;
 
-    iput-object p1, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v3, "NONE"
 
-    new-instance p1, Ljava/util/concurrent/CountDownLatch;
+    const/4 v4, 0x2
 
-    const/4 p2, 0x1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    sput-object v2, Lssa;->a:Lssa;
 
-    iput-object p1, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
+    filled-new-array {v0, v1, v2}, [Lssa;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v0
 
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+    sput-object v0, Lssa;->b:[Lssa;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 3
-
-    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_1
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iget-object p1, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return v2
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
+.method public static valueOf(Ljava/lang/String;)Lssa;
     .locals 1
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    const-class v0, Lssa;
 
-    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    const/4 v0, 0x0
+    check-cast p0, Lssa;
 
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public static values()[Lssa;
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lssa;->b:[Lssa;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Exception;
-
-    if-eqz v0, :cond_3
-
-    instance-of v1, v0, Ljava/util/concurrent/ExecutionException;
-
-    if-eqz v1, :cond_1
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/util/concurrent/ExecutionException;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v1, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_1
-    throw v1
-
-    .line 4
-    :cond_3
-    iget-object v0, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    .line 5
-    iget-object v0, p0, Lssa;->Y:Ljava/lang/Object;
+    check-cast v0, [Lssa;
 
     return-object v0
-
-    .line 6
-    :cond_4
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v1, "Future is cancelled"
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 3
-
-    .line 7
-    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 8
-    iget-object v0, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "No result for "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, " "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 9
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Exception;
-
-    if-eqz p1, :cond_4
-
-    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
-
-    if-eqz p2, :cond_2
-
-    move-object p2, p1
-
-    check-cast p2, Ljava/util/concurrent/ExecutionException;
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p2, 0x0
-
-    :goto_1
-    if-eqz p2, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    new-instance p2, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_2
-    throw p2
-
-    .line 10
-    :cond_4
-    iget-object p1, p0, Lssa;->Y:Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
-
-    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
 .end method

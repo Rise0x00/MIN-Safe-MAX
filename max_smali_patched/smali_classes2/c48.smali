@@ -1,89 +1,168 @@
-.class public abstract synthetic Lc48;
+.class public final Lc48;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public static a(Looh;Z)V
+    .locals 15
 
-    const/4 v0, 0x3
+    const-string v0, "start"
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const-string v1, "LoadEmojiFontWorker"
 
-    move-result-object v1
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    array-length v1, v1
+    new-instance v0, Lj7b;
 
-    new-array v1, v1, [I
+    const-class v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v2}, Lj7b;-><init>(Ljava/lang/Class;)V
 
-    const/4 v3, 0x0
+    const-wide/16 v2, 0x2710
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    :catch_0
-    const/4 v4, 0x2
+    sget-object v5, Ldg0;->a:Ldg0;
 
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Ldg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v0
 
-    :catch_2
-    sput-object v1, Lc48;->$EnumSwitchMapping$0:[I
+    check-cast v0, Lj7b;
 
-    const/4 v1, 0x4
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    invoke-static {v1}, Lqw1;->y(I)[I
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    move-result-object v5
+    if-eqz p1, :cond_0
 
-    array-length v5, v5
+    const/4 v3, 0x2
 
-    new-array v5, v5, [I
+    :goto_0
+    move v5, v3
 
-    :try_start_3
-    aput v2, v5, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    goto :goto_1
 
-    :catch_3
-    :try_start_4
-    aput v4, v5, v4
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    :cond_0
+    const/4 v3, 0x3
 
-    :catch_4
-    :try_start_5
-    aput v0, v5, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    goto :goto_0
 
-    :catch_5
-    :try_start_6
-    aput v1, v5, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    :goto_1
+    invoke-static {v2}, Lab3;->b0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    :catch_6
-    sput-object v5, Lc48;->$EnumSwitchMapping$1:[I
+    move-result-object v14
+
+    new-instance v4, Ldr3;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/16 v10, -0x1
+
+    const-wide/16 v12, -0x1
+
+    invoke-direct/range {v4 .. v14}, Ldr3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    invoke-virtual {v0, v4}, Landroidx/work/WorkRequest$Builder;->setConstraints(Ldr3;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lj7b;
+
+    sget-object v2, Ljab;->a:Ljab;
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setExpedited(Ljab;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lj7b;
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lj7b;
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v3, Lvcb;
+
+    const-string v4, "waiting_for_wifi"
+
+    invoke-direct {v3, v4, v2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v3}, [Lvcb;
+
+    move-result-object v2
+
+    new-instance v3, Lhf;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v4}, Lhf;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    aget-object v2, v2, v4
+
+    iget-object v4, v2, Lvcb;->a:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v2, v2, Lvcb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2, v4}, Lhf;->R(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Lhf;->M()Lfb4;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lfb4;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lj7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Lk7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Lph5;->b:Lph5;
+
+    invoke-virtual {p0, v1, v2, v0}, Looh;->b(Ljava/lang/String;Lph5;Lk7b;)Lux7;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lux7;->d()Lzj3;
 
     return-void
 .end method

@@ -1,152 +1,318 @@
 .class public final Lftg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lid;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lru7;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lru7;
 
-.field public final synthetic Z:Lmtg;
-
-.field public final synthetic w0:Lvsg;
-
-.field public final synthetic x0:Lptg;
+.field public final c:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lvsg;Lmtg;Lptg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru7;Lru7;Lru7;)V
     .locals 0
 
-    iput-object p2, p0, Lftg;->Z:Lmtg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lftg;->w0:Lvsg;
+    iput-object p1, p0, Lftg;->a:Lru7;
 
-    iput-object p3, p0, Lftg;->x0:Lptg;
+    iput-object p2, p0, Lftg;->b:Lru7;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lftg;->c:Lru7;
 
     return-void
 .end method
 
+.method public static a(Lftg;ILjava/lang/Long;Lnve;Ljava/lang/Long;Letg;II)V
+    .locals 18
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-object/from16 v0, p0
 
-    check-cast p1, Ljava/lang/Throwable;
+    move/from16 v1, p1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-object/from16 v2, p3
 
-    invoke-virtual {p0, p1, p2}, Lftg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    and-int/lit8 v3, p7, 0x8
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    check-cast p1, Lftg;
+    if-eqz v3, :cond_0
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lftg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lftg;
-
-    iget-object v1, p0, Lftg;->w0:Lvsg;
-
-    iget-object v2, p0, Lftg;->x0:Lptg;
-
-    iget-object v3, p0, Lftg;->Z:Lmtg;
-
-    invoke-direct {v0, v1, v3, v2, p2}, Lftg;-><init>(Lvsg;Lmtg;Lptg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lftg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lftg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-object v3, v4
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object/from16 v3, p4
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    and-int/lit8 v5, p7, 0x10
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v5, :cond_1
 
-    throw p1
+    move-object v5, v4
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-object/from16 v5, p5
 
-    iget-object p1, p0, Lftg;->Y:Ljava/lang/Object;
+    :goto_1
+    and-int/lit8 v6, p7, 0x20
 
-    check-cast p1, Ljava/lang/Throwable;
+    if-eqz v6, :cond_2
 
-    sget-object v0, Lmtg;->i:Ljava/util/List;
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Lftg;->Z:Lmtg;
+    goto :goto_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_2
+    move/from16 v6, p6
 
-    invoke-static {p1}, Lmtg;->f(Ljava/lang/Throwable;)Lsk7;
+    :goto_2
+    iget-object v7, v0, Lftg;->a:Lru7;
 
-    move-result-object v4
+    iget-object v0, v0, Lftg;->b:Lru7;
 
-    invoke-virtual {v0}, Lmtg;->g()Lec3;
+    invoke-interface {v7}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lhd;
+
+    new-instance v8, Lsf8;
+
+    invoke-direct {v8}, Lsf8;-><init>()V
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual/range {p2 .. p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v9
+
+    const-string v11, "local_message_id"
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v11, v9}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v9
+
+    const-string v3, "message_id"
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v3, v9}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    iget v3, v2, Lnve;->b:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const-string v9, "source_type"
+
+    invoke-virtual {v8, v9, v3}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide v2, v2, Lnve;->a:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    iget-object v3, v0, Lmtg;->g:Llu0;
+    const-string v3, "source_id"
 
-    iget-object p1, p0, Lftg;->x0:Lptg;
+    invoke-virtual {v8, v3, v2}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, p1, Lptg;->b:Ljava/lang/String;
+    if-eqz v5, :cond_5
 
-    iput v1, p0, Lftg;->X:I
+    const-string v2, "reason"
 
-    iget-object v5, p0, Lftg;->w0:Lvsg;
+    invoke-interface {v5}, Letg;->getTitle()Ljava/lang/String;
 
-    move-object v7, p0
+    move-result-object v3
 
-    invoke-virtual/range {v2 .. v7}, Lec3;->a(Ln62;Lsk7;Lnxg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v8, v2, v3}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    :cond_5
+    if-eqz v6, :cond_8
 
-    sget-object v0, Lf34;->a:Lf34;
+    const/4 v2, 0x1
 
-    if-ne p1, v0, :cond_2
+    if-eq v6, v2, :cond_7
 
-    return-object v0
+    const/4 v2, 0x2
 
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    if-ne v6, v2, :cond_6
 
-    return-object p1
+    goto :goto_3
+
+    :cond_6
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_7
+    :goto_3
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "startType"
+
+    invoke-virtual {v8, v3, v2}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_8
+    invoke-virtual {v8}, Lsf8;->b()Lsf8;
+
+    move-result-object v2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    const/4 v3, 0x1
+
+    if-eq v1, v3, :cond_c
+
+    const/4 v3, 0x2
+
+    if-eq v1, v3, :cond_b
+
+    const/4 v3, 0x3
+
+    if-eq v1, v3, :cond_a
+
+    const/4 v3, 0x4
+
+    if-ne v1, v3, :cond_9
+
+    const-string v1, "video_message_error"
+
+    :goto_4
+    move-object/from16 v16, v1
+
+    goto :goto_5
+
+    :cond_9
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_a
+    const-string v1, "video_message_hands_free_mode_on"
+
+    goto :goto_4
+
+    :cond_b
+    const-string v1, "video_message_delete"
+
+    goto :goto_4
+
+    :cond_c
+    const-string v1, "video_message_start_recording"
+
+    goto :goto_4
+
+    :goto_5
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ll83;
+
+    check-cast v1, Lztd;
+
+    invoke-virtual {v1}, Lztd;->s()J
+
+    move-result-wide v11
+
+    if-eqz v2, :cond_e
+
+    invoke-virtual {v2}, Lsf8;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    new-instance v4, Lbt;
+
+    iget v1, v2, Lsf8;->s0:I
+
+    invoke-direct {v4, v1}, Llpe;-><init>(I)V
+
+    invoke-virtual {v4, v2}, Lbt;->putAll(Ljava/util/Map;)V
+
+    :cond_e
+    :goto_6
+    move-object/from16 v17, v4
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll83;
+
+    check-cast v0, Le78;
+
+    invoke-virtual {v0}, Le78;->K()J
+
+    move-result-wide v13
+
+    invoke-virtual/range {v16 .. v16}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, v5, v0
+
+    if-nez v0, :cond_f
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    :cond_f
+    move-wide v9, v5
+
+    new-instance v8, Lv88;
+
+    const-string v15, "VIDEO_MESSAGE"
+
+    invoke-direct/range {v8 .. v17}, Lv88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v7, v8}, Lhd;->i(Lv88;)Z
+
+    return-void
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type or event can\'t be empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

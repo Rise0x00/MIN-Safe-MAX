@@ -1,265 +1,178 @@
 .class public final Lheg;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lieg;
 
-.field public final synthetic b:Lleg;
+.field public final synthetic Y:Z
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lleg;Z)V
+.method public constructor <init>(Lieg;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lheg;->X:Lieg;
 
-    iput-object p1, p0, Lheg;->b:Lleg;
+    iput-boolean p2, p0, Lheg;->Y:Z
 
-    iput-boolean p2, p0, Lheg;->a:Z
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lg54;
 
-    if-nez p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lheg;->b:Lleg;
-
-    iget-object p1, p1, Lleg;->a:Ljava/lang/String;
-
-    const-string v1, "onFrameAvailable, surface texture is null!"
-
-    invoke-static {p1, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Lheg;->b:Lleg;
-
-    iget-boolean v2, v1, Lleg;->z0:Z
-
-    if-nez v2, :cond_9
-
-    iget-object v1, v1, Lleg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    iget-object v1, p0, Lheg;->b:Lleg;
-
-    iget-object v2, v1, Lleg;->y0:Lcfg;
-
-    if-eqz v2, :cond_8
-
-    iget-object v3, v1, Lleg;->Z:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    const/4 v7, 0x1
-
-    if-eqz v6, :cond_4
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/Map$Entry;
-
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lt2f;
-
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/view/Surface;
-
-    iget v9, v8, Lt2f;->c:I
-
-    const/16 v10, 0x22
-
-    if-ne v9, v10, :cond_3
-
-    if-nez v5, :cond_2
-
-    invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-
-    iget-object v5, v1, Lleg;->w0:[F
-
-    invoke-virtual {p1, v5}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
-
-    move v5, v7
-
-    :cond_2
-    iget-object v9, v1, Lleg;->x0:[F
-
-    iget-object v10, v1, Lleg;->w0:[F
-
-    invoke-virtual {v8, v9, v10}, Lt2f;->n([F[F)V
-
-    :try_start_0
-    iget-object v8, v1, Lleg;->x0:[F
-
-    iget-boolean v9, p0, Lheg;->a:Z
-
-    invoke-virtual {v2, p1, v6, v8, v9}, Lcfg;->w(Landroid/graphics/SurfaceTexture;Landroid/view/Surface;[FZ)V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move v4, v7
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v6
-
-    iget-object v7, v1, Lleg;->a:Ljava/lang/String;
-
-    const-string v8, "failed to render with GL renderer"
-
-    invoke-static {v7, v8, v6}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v6, v1, Lleg;->a:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v10, "onFrameAvailable, unsupported format="
-
-    invoke-direct {v7, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v9, " for surfaceOutput="
-
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_4
-    if-eqz v4, :cond_7
-
-    iget-object p1, p0, Lheg;->b:Lleg;
-
-    iget-boolean v1, p1, Lleg;->B0:Z
-
-    if-nez v1, :cond_7
-
-    iput-boolean v7, p1, Lleg;->B0:Z
-
-    iget-object v1, p1, Lleg;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    iget-object v4, p1, Lleg;->c:Lieg;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v5
-
-    iget-wide v7, v4, Lieg;->c:J
-
-    sub-long/2addr v5, v7
-
-    const-string v4, "notifyFirstFrameRendered, in "
-
-    const-string v7, " ms after video message processor started"
-
-    invoke-static {v5, v6, v4, v7}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v1, v4, v0}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_6
-    :goto_1
-    iget-object p1, p1, Lleg;->Y:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lheg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lheg;
 
-    move-result v0
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz v0, :cond_7
+    invoke-virtual {p1, p2}, Lheg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lheg;
+
+    iget-object v0, p0, Lheg;->X:Lieg;
+
+    iget-boolean v1, p0, Lheg;->Y:Z
+
+    invoke-direct {p1, v0, v1, p2}, Lheg;-><init>(Lieg;ZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lheg;->o:I
+
+    iget-object v1, p0, Lheg;->X:Lieg;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lieg;->a:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lml;
+
+    new-instance v3, Lbe2;
+
+    new-instance v7, Ltl3;
+
+    new-instance v0, Laig;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-boolean v4, p0, Lheg;->Y:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    iput-object v4, v0, Laig;->x:Ljava/lang/Boolean;
+
+    new-instance v4, Lcig;
+
+    invoke-direct {v4, v0}, Lcig;-><init>(Laig;)V
+
+    invoke-direct {v7, v4}, Ltl3;-><init>(Lcig;)V
+
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v3 .. v8}, Lbe2;-><init>(Ljava/lang/String;JLtl3;Z)V
+
+    iput v2, p0, Lheg;->o:I
+
+    check-cast p1, Lona;
+
+    invoke-virtual {p1, v3, p0}, Lona;->I(Lkh;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lhl3;
+
+    iget-object p1, p1, Lhl3;->d:Lcig;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v1, Lieg;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmeg;
+    check-cast v0, Ltq;
 
-    invoke-virtual {v0}, Lmeg;->c()V
+    check-cast v0, Leig;
 
-    goto :goto_2
+    invoke-virtual {v0, p1}, Leig;->s(Lcig;)V
 
-    :cond_7
-    return-void
+    sget-object p1, Lybg;->a:Lybg;
 
-    :cond_8
+    return-object p1
+
+    :cond_3
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Required value was null."
@@ -267,16 +180,4 @@
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-
-    :cond_9
-    :goto_3
-    iget-object p1, p0, Lheg;->b:Lleg;
-
-    iget-object p1, p1, Lleg;->a:Ljava/lang/String;
-
-    const-string v1, "onFrameAvailable, called in released state"
-
-    invoke-static {p1, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
 .end method

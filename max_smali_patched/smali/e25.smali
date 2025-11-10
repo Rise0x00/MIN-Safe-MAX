@@ -1,81 +1,86 @@
-.class public Le25;
+.class public final synthetic Le25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# virtual methods
-.method public a(Landroid/view/Window;)V
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lh25;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lh25;Lj25;I)V
     .locals 0
+
+    iput p3, p0, Le25;->a:I
+
+    iput-object p1, p0, Le25;->b:Lh25;
+
+    iput-object p2, p0, Le25;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public b(Lx5f;Lx5f;Landroid/view/Window;Landroid/view/View;ZZ)V
-    .locals 1
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    invoke-static {p3, v0}, Lsx9;->B(Landroid/view/Window;Z)V
+    iget v0, p0, Le25;->a:I
 
-    if-eqz p5, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p1, Lx5f;->b:I
+    iget-object v0, p0, Le25;->b:Lh25;
 
-    goto :goto_0
+    iget v1, v0, Lh25;->a:I
 
-    :cond_0
-    iget p1, p1, Lx5f;->a:I
+    iget-object v0, v0, Lh25;->b:Lo19;
 
-    :goto_0
-    invoke-virtual {p3, p1}, Landroid/view/Window;->setStatusBarColor(I)V
+    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
 
-    if-eqz p6, :cond_1
-
-    iget p1, p2, Lx5f;->b:I
-
-    goto :goto_1
-
-    :cond_1
-    iget p1, p2, Lx5f;->a:I
-
-    :goto_1
-    invoke-virtual {p3, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
-
-    new-instance p1, Leqd;
-
-    invoke-direct {p1, p4}, Leqd;-><init>(Landroid/view/View;)V
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 p4, 0x1e
-
-    if-lt p2, p4, :cond_2
-
-    new-instance p2, Ls8h;
-
-    invoke-static {p3}, Lm8h;->e(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-
-    move-result-object p4
-
-    invoke-direct {p2, p4, p1}, Ls8h;-><init>(Landroid/view/WindowInsetsController;Leqd;)V
-
-    iput-object p3, p2, Ls8h;->g:Landroid/view/Window;
-
-    goto :goto_2
-
-    :cond_2
-    new-instance p2, Lr8h;
-
-    invoke-direct {p2, p3, p1}, Lr8h;-><init>(Landroid/view/Window;Leqd;)V
-
-    :goto_2
-    xor-int/lit8 p1, p5, 0x1
-
-    invoke-virtual {p2, p1}, Lv4b;->F(Z)V
-
-    xor-int/lit8 p1, p6, 0x1
-
-    invoke-virtual {p2, p1}, Lv4b;->E(Z)V
+    invoke-interface {v2, v1, v0}, Lj25;->z(ILo19;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Le25;->b:Lh25;
+
+    iget v1, v0, Lh25;->a:I
+
+    iget-object v0, v0, Lh25;->b:Lo19;
+
+    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
+
+    invoke-interface {v2, v1, v0}, Lj25;->w(ILo19;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Le25;->b:Lh25;
+
+    iget v1, v0, Lh25;->a:I
+
+    iget-object v0, v0, Lh25;->b:Lo19;
+
+    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
+
+    invoke-interface {v2, v1, v0}, Lj25;->B(ILo19;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

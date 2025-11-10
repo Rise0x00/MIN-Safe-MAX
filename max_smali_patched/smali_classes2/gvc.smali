@@ -1,35 +1,28 @@
-.class public interface abstract Lgvc;
+.class public abstract Lgvc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# static fields
+.field public static MarkdownItemView:[I = null
 
-.method public abstract b()Z
-.end method
+.field public static MarkdownItemView_miv_highlight_title:I = 0x0
 
-.method public abstract d()V
-.end method
+.field public static MarkdownItemView_miv_title:I = 0x1
 
-.method public abstract e()V
-.end method
 
-.method public abstract f(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
 
-.method public abstract g(Lfvc;)Ljava/lang/Object;
-.end method
+    const v0, 0x7f04066e
 
-.method public abstract h()V
-.end method
+    const v1, 0x7f04066f
 
-.method public abstract i()Z
-.end method
+    filled-new-array {v0, v1}, [I
 
-.method public abstract j()Ljava/lang/String;
-.end method
+    move-result-object v0
 
-.method public abstract k(Lkuc;)V
+    sput-object v0, Lgvc;->MarkdownItemView:[I
+
+    return-void
 .end method

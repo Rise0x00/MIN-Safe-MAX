@@ -1,135 +1,96 @@
 .class public final Lq62;
-.super Ljava/lang/Object;
+.super Lu62;
 .source "SourceFile"
 
-# interfaces
-.implements Lmd9;
+
+# instance fields
+.field public final a:Lmrf;
 
 
 # direct methods
-.method public static b(Loef;Ljef;Lm82;)Ljava/util/List;
-    .locals 7
+.method public constructor <init>(Lmrf;)V
+    .locals 0
 
-    new-instance v0, Lad2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lqk0;->b:Lqk0;
+    iput-object p1, p0, Lq62;->a:Lmrf;
 
-    sget-object v2, Lpk0;->a:Lpk0;
-
-    invoke-virtual {p2, v1, v2}, Lm82;->g(Lqk0;Lpk0;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p2}, Lm82;->l0()V
-
-    iget-object v4, p2, Lm82;->B0:Ljava/lang/CharSequence;
-
-    invoke-virtual {p2}, Lm82;->f()J
-
-    move-result-wide v5
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    invoke-direct/range {v0 .. v6}, Lad2;-><init>(Loef;Ljef;Ljava/lang/String;Ljava/lang/CharSequence;J)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm82;)Ljava/util/List;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-eqz p1, :cond_2
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Lm82;->H()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p1}, Lm82;->b0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget v0, Loqa;->L0:I
-
-    new-instance v1, Ljef;
-
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
-
-    sget v0, Loqa;->K0:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v0}, Ljef;-><init>(I)V
-
-    invoke-static {v1, v2, p1}, Lq62;->b(Loef;Ljef;Lm82;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {p1}, Lm82;->Z()Z
+    instance-of v0, p1, Lq62;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lq62;
+
+    iget-object v0, p0, Lq62;->a:Lmrf;
+
+    iget-object p1, p1, Lq62;->a:Lmrf;
+
+    invoke-virtual {v0, p1}, Lmrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lq62;->a:Lmrf;
+
+    invoke-virtual {v0}, Lmrf;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lm82;->q()Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lnef;
+    const-string v1, "ErrorWithLocalizedMessage(text="
 
-    invoke-direct {v1, v0}, Lnef;-><init>(Ljava/lang/CharSequence;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v0, Loqa;->M0:I
+    iget-object v1, p0, Lq62;->a:Lmrf;
 
-    new-instance v2, Ljef;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v0}, Ljef;-><init>(I)V
+    const-string v1, ")"
 
-    invoke-static {v1, v2, p1}, Lq62;->b(Loef;Ljef;Lm82;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    invoke-virtual {p1}, Lm82;->q()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lnef;
-
-    invoke-direct {v1, v0}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    sget v0, Loqa;->N0:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v0}, Ljef;-><init>(I)V
-
-    invoke-static {v1, v2, p1}, Lq62;->b(Loef;Ljef;Lm82;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    sget-object p1, Lb75;->a:Lb75;
-
-    return-object p1
+    return-object v0
 .end method

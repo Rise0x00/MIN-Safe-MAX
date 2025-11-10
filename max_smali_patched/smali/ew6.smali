@@ -1,117 +1,211 @@
 .class public final Lew6;
-.super Lo43;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/RunnableScheduledFuture;
 
 
 # instance fields
-.field public A0:[B
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public y0:[B
+.field public final b:J
 
-.field public volatile z0:Z
+.field public final c:Ljava/util/concurrent/Callable;
+
+.field public final d:Ltt1;
 
 
-# virtual methods
-.method public final e()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lew6;->z0:Z
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lew6;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-wide p2, p0, Lew6;->b:J
+
+    iput-object p4, p0, Lew6;->c:Ljava/util/concurrent/Callable;
+
+    new-instance p2, Li78;
+
+    const/16 p3, 0x9
+
+    invoke-direct {p2, p0, p1, p4, p3}, Li78;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {p2}, Lcmi;->a(Lrt1;)Ltt1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lew6;->d:Ltt1;
 
     return-void
 .end method
 
-.method public final load()V
-    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Lo43;->x0:Lspe;
+# virtual methods
+.method public final cancel(Z)Z
+    .locals 1
 
-    iget-object v1, p0, Lo43;->b:Lr94;
+    iget-object v0, p0, Lew6;->d:Ltt1;
 
-    invoke-virtual {v0, v1}, Lspe;->G(Lr94;)J
+    invoke-virtual {v0, p1}, Ltt1;->cancel(Z)Z
 
-    const/4 v0, 0x0
+    move-result p1
 
-    move v1, v0
+    return p1
+.end method
 
-    :cond_0
-    :goto_0
-    const/4 v2, -0x1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 5
 
-    if-eq v0, v2, :cond_2
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    iget-boolean v0, p0, Lew6;->z0:Z
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    if-nez v0, :cond_2
+    invoke-virtual {p0, v0}, Lew6;->getDelay(Ljava/util/concurrent/TimeUnit;)J
 
-    iget-object v0, p0, Lew6;->y0:[B
+    move-result-wide v1
 
-    array-length v3, v0
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
 
-    add-int/lit16 v4, v1, 0x4000
+    move-result-wide v3
 
-    const/16 v5, 0x4000
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Long;->compare(JJ)I
 
-    if-ge v3, v4, :cond_1
+    move-result p1
 
-    array-length v3, v0
+    return p1
+.end method
 
-    add-int/2addr v3, v5
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+    .line 1
+    iget-object v0, p0, Lew6;->d:Ltt1;
+
+    .line 2
+    iget-object v0, v0, Ltt1;->b:Lst1;
+
+    .line 3
+    invoke-virtual {v0}, Lg4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lew6;->y0:[B
+    return-object v0
+.end method
 
-    :cond_1
-    iget-object v0, p0, Lo43;->x0:Lspe;
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v3, p0, Lew6;->y0:[B
+    .line 4
+    iget-object v0, p0, Lew6;->d:Ltt1;
 
-    invoke-virtual {v0, v3, v1, v5}, Lspe;->read([BII)I
+    .line 5
+    iget-object v0, v0, Ltt1;->b:Lst1;
+
+    .line 6
+    invoke-virtual {v0, p1, p2, p3}, Lg4;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 4
+
+    iget-wide v0, p0, Lew6;->b:J
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lew6;->d:Ltt1;
+
+    invoke-virtual {v0}, Ltt1;->isCancelled()Z
 
     move-result v0
 
-    if-eq v0, v2, :cond_0
+    return v0
+.end method
 
-    add-int/2addr v1, v0
+.method public final isDone()Z
+    .locals 1
 
-    goto :goto_0
+    iget-object v0, p0, Lew6;->d:Ltt1;
 
-    :catchall_0
-    move-exception v0
+    iget-object v0, v0, Ltt1;->b:Lst1;
 
-    goto :goto_1
+    invoke-virtual {v0}, Lg4;->isDone()Z
 
-    :cond_2
-    iget-boolean v0, p0, Lew6;->z0:Z
+    move-result v0
 
-    if-nez v0, :cond_3
+    return v0
+.end method
 
-    iget-object v0, p0, Lew6;->y0:[B
+.method public final isPeriodic()Z
+    .locals 1
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    iget-object v0, p0, Lew6;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lew6;->A0:[B
+    check-cast v0, Lqt1;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v1, p0, Lew6;->c:Ljava/util/concurrent/Callable;
+
+    invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lqt1;->b(Ljava/lang/Object;)Z
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    iget-object v0, p0, Lo43;->x0:Lspe;
-
-    invoke-static {v0}, Lj40;->f(Lk94;)V
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :goto_1
-    iget-object v1, p0, Lo43;->x0:Lspe;
+    :catch_0
+    move-exception v1
 
-    invoke-static {v1}, Lj40;->f(Lk94;)V
+    invoke-virtual {v0, v1}, Lqt1;->d(Ljava/lang/Throwable;)Z
 
-    throw v0
+    :cond_0
+    return-void
 .end method

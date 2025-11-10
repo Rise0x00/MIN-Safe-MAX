@@ -1,121 +1,47 @@
-.class public abstract enum Lu4g;
-.super Ljava/lang/Enum;
+.class public final Lu4g;
+.super Ls4g;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/ByteOrder;
-
-.field public static final b:Z
-
-.field public static final synthetic c:[Lu4g;
+# instance fields
+.field public final d:Ldjb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ldjb;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ls4g;-><init>()V
 
-    new-array v1, v0, [Lu4g;
-
-    sput-object v1, Lu4g;->c:[Lu4g;
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    sput-object v1, Lu4g;->a:Ljava/nio/ByteOrder;
-
-    const-string v1, "os.arch"
-
-    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "i386"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "x86"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "amd64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "x86_64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "aarch64"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "ppc64le"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    sput-boolean v0, Lu4g;->b:Z
+    iput-object p1, p0, Lu4g;->d:Ldjb;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lu4g;
-    .locals 1
 
-    const-class v0, Lu4g;
+# virtual methods
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Ls4g;->c:I
 
-    move-result-object p0
+    add-int/lit8 v1, v0, 0x2
 
-    invoke-static {p0}, Lnd5;->n(Ljava/lang/Object;)V
+    iput v1, p0, Ls4g;->c:I
 
-    const/4 p0, 0x0
+    new-instance v1, Lp0a;
 
-    throw p0
-.end method
+    iget-object v2, p0, Ls4g;->a:[Ljava/lang/Object;
 
-.method public static values()[Lu4g;
-    .locals 1
+    aget-object v3, v2, v0
 
-    sget-object v0, Lu4g;->c:[Lu4g;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v0}, [Lu4g;->clone()Ljava/lang/Object;
+    aget-object v0, v2, v0
 
-    move-result-object v0
+    iget-object v2, p0, Lu4g;->d:Ldjb;
 
-    check-cast v0, [Lu4g;
+    invoke-direct {v1, v2, v3, v0}, Lp0a;-><init>(Ldjb;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-object v0
+    return-object v1
 .end method

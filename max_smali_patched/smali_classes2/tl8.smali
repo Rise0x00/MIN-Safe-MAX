@@ -1,255 +1,136 @@
 .class public final Ltl8;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Landroid/widget/FrameLayout;
+
+.field public synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method public constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Ltl8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ltl8;->Y:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    iput-object p1, p0, Ltl8;->a:Landroid/content/Context;
-
-    const-class p1, Ltl8;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltl8;->b:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltl8;->a:Landroid/content/Context;
-
-    const-string p1, "ActivityThemer"
-
-    iput-object p1, p0, Ltl8;->b:Ljava/lang/String;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Landroid/net/Uri;)Lrl8;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lql8;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v1, p0, Ltl8;->a:Landroid/content/Context;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v0, v1, p1}, Lql8;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance p1, Ljh4;
-
-    invoke-direct {p1}, Ljh4;-><init>()V
-
-    monitor-enter p1
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput v1, p1, Ljh4;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    monitor-exit p1
-
-    monitor-enter p1
-
-    const/4 v2, 0x6
-
-    :try_start_1
-    iput v2, p1, Ljh4;->c:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit p1
-
-    iget-object v2, v0, Lql8;->a:Lyf4;
-
-    invoke-virtual {v2}, Lyf4;->getUri()Landroid/net/Uri;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_9
-
-    sget-object v3, Lc75;->a:Lc75;
-
-    invoke-virtual {p1, v2, v3}, Ljh4;->g(Landroid/net/Uri;Ljava/util/Map;)[Lfi5;
+    invoke-virtual {p0, p1, p2}, Ltl8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    array-length v2, p1
+    check-cast p1, Ltl8;
 
-    const/4 v3, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-ne v2, v1, :cond_0
+    invoke-virtual {p1, p2}, Ltl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lrl8;
+    return-object p2
+.end method
 
-    aget-object p1, p1, v3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-direct {v1, p1, v0}, Lrl8;-><init>(Lfi5;Lql8;)V
+    new-instance v0, Ltl8;
 
-    return-object v1
+    iget-object v1, p0, Ltl8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    :cond_0
-    array-length v1, p1
+    iget-object v2, p0, Ltl8;->Y:Landroid/widget/FrameLayout;
 
-    move v2, v3
+    invoke-direct {v0, v1, v2, p2}, Ltl8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
 
-    :goto_0
-    const/4 v4, 0x0
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-ge v2, v1, :cond_5
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    aget-object v5, p1, v2
+    move-result p1
 
-    :try_start_2
-    iget-object v6, v0, Lql8;->b:Lhh4;
+    iput-boolean p1, v0, Ltl8;->o:Z
 
-    if-eqz v6, :cond_1
+    return-object v0
+.end method
 
-    invoke-interface {v5, v6}, Lfi5;->i(Lhi5;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object v7, v0, Lql8;->b:Lhh4;
+    iget-boolean p1, p0, Ltl8;->o:Z
 
-    if-eqz v7, :cond_3
+    iget-object v0, p0, Ltl8;->X:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    iput v3, v7, Lhh4;->Y:I
+    if-eqz p1, :cond_0
 
-    goto :goto_1
+    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->d:Lrn0;
 
-    :cond_1
-    :try_start_3
-    const-string v6, "Required value was null."
+    invoke-virtual {p1}, Lrn0;->getValue()Ljava/lang/Object;
 
-    new-instance v7, Ljava/lang/IllegalArgumentException;
+    move-result-object p1
 
-    invoke-direct {v7, v6}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lxy1;
 
-    throw v7
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-interface {p1}, Lxy1;->getRootView()Landroid/view/View;
 
-    :catchall_0
-    iget-object v6, v0, Lql8;->b:Lhh4;
+    move-result-object p1
 
-    if-eqz v6, :cond_2
+    new-instance v1, Lsl8;
 
-    iput v3, v6, Lhh4;->Y:I
+    const/4 v2, 0x2
 
-    :cond_2
-    move v6, v3
+    invoke-direct {v1, v0, v2}, Lsl8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    :cond_3
-    :goto_1
-    if-eqz v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {p1, v1}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     goto :goto_0
 
-    :cond_5
-    move-object v5, v4
+    :cond_0
+    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Lrn0;
 
-    :goto_2
-    array-length v1, p1
+    sget-object v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Les7;
 
-    :goto_3
-    if-ge v3, v1, :cond_7
+    const/4 v1, 0x0
 
-    aget-object v2, p1, v3
+    aget-object v0, v0, v1
 
-    invoke-static {v2, v5}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Lrn0;->getValue()Ljava/lang/Object;
 
-    move-result v6
+    move-result-object p1
 
-    if-nez v6, :cond_6
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    invoke-interface {v2}, Lfi5;->release()V
+    :goto_0
+    iget-object v0, p0, Ltl8;->Y:Landroid/widget/FrameLayout;
 
-    :cond_6
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    goto :goto_3
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    :cond_7
-    if-eqz v5, :cond_8
+    sget-object p1, Lybg;->a:Lybg;
 
-    new-instance v4, Lrl8;
-
-    invoke-direct {v4, v5, v0}, Lrl8;-><init>(Lfi5;Lql8;)V
-
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {v0}, Lql8;->close()V
-
-    :goto_4
-    return-object v4
-
-    :cond_9
-    const-string p1, "Required value was null."
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_4
-    monitor-exit p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v0
-
-    :try_start_5
-    monitor-exit p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    throw v0
+    return-object p1
 .end method

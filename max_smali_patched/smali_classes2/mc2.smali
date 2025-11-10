@@ -1,63 +1,62 @@
-.class public final Lmc2;
+.class public final synthetic Lmc2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkr3;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:J
-
-.field public final e:Z
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(Li7;)V
-    .locals 2
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
+
+    iput p2, p0, Lmc2;->a:I
+
+    iput-boolean p1, p0, Lmc2;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Li7;->c:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Ljava/lang/String;
 
-    iput-object v0, p0, Lmc2;->a:Ljava/lang/String;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p1, Li7;->o:Ljava/lang/Object;
+    iget v0, p0, Lmc2;->a:I
 
-    check-cast v0, Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object v0, p0, Lmc2;->b:Ljava/lang/String;
+    check-cast p1, Lt92;
 
-    iget-object v0, p1, Li7;->X:Ljava/lang/Object;
+    iget-object p1, p1, Lt92;->b:Lvd2;
 
-    check-cast v0, Ljava/util/ArrayList;
+    iget-boolean v0, p0, Lmc2;->b:Z
 
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lmc2;->c:Ljava/util/List;
-
-    iget-wide v0, p1, Li7;->a:J
-
-    iput-wide v0, p0, Lmc2;->d:J
-
-    iget-boolean p1, p1, Li7;->b:Z
-
-    iput-boolean p1, p0, Lmc2;->e:Z
+    iput-boolean v0, p1, Lvd2;->f0:Z
 
     return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lmc2;->b:Z
+
+    check-cast p1, Lfd2;
+
+    iput-boolean v0, p1, Lfd2;->i0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

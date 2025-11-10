@@ -1,173 +1,55 @@
 .class public final Lji2;
-.super Lti2;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Ly10;
 
-.field public final c:J
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/String;
+.field public final synthetic Z:Lni2;
 
-.field public final e:Z
+.field public d:Lni2;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Z)V
+.method public constructor <init>(Lni2;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Lti2;-><init>()V
+    iput-object p1, p0, Lji2;->Z:Lni2;
 
-    iput-wide p1, p0, Lji2;->b:J
-
-    iput-wide p3, p0, Lji2;->c:J
-
-    iput-object p5, p0, Lji2;->d:Ljava/lang/String;
-
-    iput-boolean p6, p0, Lji2;->e:Z
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lji2;->Y:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lji2;->s0:I
 
-    :cond_0
-    instance-of v0, p1, Lji2;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lji2;->s0:I
 
-    :cond_1
-    check-cast p1, Lji2;
+    iget-object p1, p0, Lji2;->Z:Lni2;
 
-    iget-wide v0, p0, Lji2;->b:J
+    const/4 v0, 0x0
 
-    iget-wide v2, p1, Lji2;->b:J
+    invoke-static {p1, v0, v0, v0, p0}, Lni2;->u(Lni2;Ljava/lang/String;Ly10;Lgb9;Lp14;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    move-result-object p1
 
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lji2;->c:J
-
-    iget-wide v2, p1, Lji2;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lji2;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lji2;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lji2;->e:Z
-
-    iget-boolean p1, p1, Lji2;->e:Z
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lji2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lji2;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lji2;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lji2;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "OpenImage(chatId="
-
-    const-string v1, ", messageId="
-
-    iget-wide v2, p0, Lji2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lji2;->c:J
-
-    iget-object v4, p0, Lji2;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3, v1, v4, v0}, Lvl3;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ", isSingleAttach="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lji2;->e:Z
-
-    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

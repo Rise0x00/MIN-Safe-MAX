@@ -1,48 +1,43 @@
-.class public final Lak1;
-.super Lnz3;
+.class public final synthetic Lak1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Z
 
-.field public final synthetic Y:Leg0;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lbk1;
 
 
 # direct methods
-.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ZLbk1;)V
     .locals 0
 
-    iput-object p1, p0, Lak1;->Y:Leg0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lak1;->a:Z
+
+    iput-object p2, p0, Lak1;->b:Lbk1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 0
 
-    iput-object p1, p0, Lak1;->o:Ljava/lang/Object;
+    iget-boolean p1, p0, Lak1;->a:Z
 
-    iget p1, p0, Lak1;->X:I
+    if-nez p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lak1;->b:Lbk1;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1}, Lbk1;->e()V
 
-    iput p1, p0, Lak1;->X:I
-
-    iget-object p1, p0, Lak1;->Y:Leg0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

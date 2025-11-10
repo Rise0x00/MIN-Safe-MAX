@@ -1,165 +1,133 @@
-.class public final enum Lt28;
-.super Ljava/lang/Enum;
+.class public final Lt28;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lt28;
-
-.field public static final enum Y:Lt28;
-
-.field public static final enum Z:Lt28;
-
-.field public static final enum c:Lt28;
-
-.field public static final enum o:Lt28;
-
-.field public static final synthetic w0:[Lt28;
-
-
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/Float;
 
-.field public final b:J
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 17
-
-    new-instance v0, Lt28;
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v2, 0x14
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v4
-
-    const/4 v1, 0x0
-
-    const-string v6, "MIN_20"
-
-    invoke-direct/range {v0 .. v6}, Lt28;-><init>(IJJLjava/lang/String;)V
-
-    sput-object v0, Lt28;->c:Lt28;
-
-    new-instance v1, Lt28;
-
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v2, 0x1
-
-    invoke-virtual {v8, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v5
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x1
-
-    const-string v7, "HOUR_1"
-
-    invoke-direct/range {v1 .. v7}, Lt28;-><init>(IJJLjava/lang/String;)V
-
-    sput-object v1, Lt28;->o:Lt28;
-
-    new-instance v9, Lt28;
-
-    const-wide/16 v2, 0x3
-
-    invoke-virtual {v8, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v13
-
-    const/4 v10, 0x2
-
-    const-wide/16 v11, 0x3
-
-    const-string v15, "HOUR_3"
-
-    invoke-direct/range {v9 .. v15}, Lt28;-><init>(IJJLjava/lang/String;)V
-
-    sput-object v9, Lt28;->X:Lt28;
-
-    new-instance v10, Lt28;
-
-    const-wide/16 v2, 0x18
-
-    invoke-virtual {v8, v2, v3}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v14
-
-    const/4 v11, 0x3
-
-    const-wide/16 v12, 0x18
-
-    const-string v16, "HOUR_24"
-
-    invoke-direct/range {v10 .. v16}, Lt28;-><init>(IJJLjava/lang/String;)V
-
-    sput-object v10, Lt28;->Y:Lt28;
-
-    new-instance v2, Lt28;
-
-    const-wide v4, 0x7fffffffffffffffL
-
-    const-wide v6, 0x7fffffffffffffffL
-
-    const/4 v3, 0x4
-
-    const-string v8, "NO_LIMIT"
-
-    invoke-direct/range {v2 .. v8}, Lt28;-><init>(IJJLjava/lang/String;)V
-
-    sput-object v2, Lt28;->Z:Lt28;
-
-    filled-new-array {v0, v1, v9, v10, v2}, [Lt28;
-
-    move-result-object v0
-
-    sput-object v0, Lt28;->w0:[Lt28;
-
-    return-void
-.end method
-
-.method public constructor <init>(IJJLjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Float;Z)V
     .locals 0
 
-    invoke-direct {p0, p6, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lt28;->a:J
+    iput-object p1, p0, Lt28;->a:Ljava/lang/Float;
 
-    iput-wide p4, p0, Lt28;->b:J
+    iput-boolean p2, p0, Lt28;->b:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lt28;
-    .locals 1
 
-    const-class v0, Lt28;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lt28;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lt28;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lt28;
+
+    iget-object v1, p0, Lt28;->a:Ljava/lang/Float;
+
+    iget-object v3, p1, Lt28;->a:Ljava/lang/Float;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lt28;->b:Z
+
+    iget-boolean p1, p1, Lt28;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public static values()[Lt28;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Lt28;->w0:[Lt28;
+    iget-object v0, p0, Lt28;->a:Ljava/lang/Float;
 
-    invoke-virtual {v0}, [Lt28;->clone()Ljava/lang/Object;
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lt28;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ListeningState(progress="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lt28;->a:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPlaying="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lt28;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lt28;
 
     return-object v0
 .end method

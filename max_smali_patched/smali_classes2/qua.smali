@@ -1,223 +1,423 @@
-.class public abstract Lqua;
+.class public final Lqua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:J
 
-.field public static final B:I
+.field public final b:Lfu7;
 
-.field public static final C:I
+.field public final c:Ljava/lang/Long;
 
-.field public static final D:I
+.field public final d:Ljava/lang/Long;
 
-.field public static final E:I
+.field public final e:Ljava/lang/Long;
 
-.field public static final F:I
+.field public final f:Z
 
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final g:Ld39;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(JLfu7;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ZI)V
+    .locals 9
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_all_cancel:I
+    and-int/lit8 v0, p8, 0x1
 
-    sput v0, Lqua;->a:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_all_clear:I
+    const-wide/16 p1, 0x0
 
-    sput v0, Lqua;->b:I
+    :cond_0
+    move-wide v1, p1
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_audio_cancel:I
+    and-int/lit8 p1, p8, 0x2
 
-    sput v0, Lqua;->c:I
+    const/4 p2, 0x0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_audio_clear:I
+    if-eqz p1, :cond_1
 
-    sput v0, Lqua;->d:I
+    move-object v3, p2
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_files_cancel:I
+    goto :goto_0
 
-    sput v0, Lqua;->e:I
+    :cond_1
+    move-object v3, p3
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_files_clear:I
+    :goto_0
+    and-int/lit8 p1, p8, 0x4
 
-    sput v0, Lqua;->f:I
+    if-eqz p1, :cond_2
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_gif_cancel:I
+    move-object v4, p2
 
-    sput v0, Lqua;->g:I
+    goto :goto_1
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_gif_clear:I
+    :cond_2
+    move-object v4, p4
 
-    sput v0, Lqua;->h:I
+    :goto_1
+    and-int/lit8 p1, p8, 0x8
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_images_cancel:I
+    if-eqz p1, :cond_3
 
-    sput v0, Lqua;->i:I
+    move-object v5, p2
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_images_clear:I
+    goto :goto_2
 
-    sput v0, Lqua;->j:I
+    :cond_3
+    move-object v5, p5
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_music_cancel:I
+    :goto_2
+    and-int/lit8 p1, p8, 0x10
 
-    sput v0, Lqua;->k:I
+    if-eqz p1, :cond_4
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_music_clear:I
+    move-object v6, p2
 
-    sput v0, Lqua;->l:I
+    goto :goto_3
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_stickers_cancel:I
+    :cond_4
+    move-object v6, p6
 
-    sput v0, Lqua;->m:I
+    :goto_3
+    and-int/lit8 p1, p8, 0x20
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_stickers_clear:I
+    if-eqz p1, :cond_5
 
-    sput v0, Lqua;->n:I
+    const/4 p1, 0x0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_video_cancel:I
+    move v7, p1
 
-    sput v0, Lqua;->o:I
+    goto :goto_4
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_video_clear:I
+    :cond_5
+    move/from16 v7, p7
 
-    sput v0, Lqua;->p:I
+    :goto_4
+    const/4 v8, 0x0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_audio_messages:I
+    move-object v0, p0
 
-    sput v0, Lqua;->q:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_clear_cache:I
-
-    sput v0, Lqua;->r:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_files:I
-
-    sput v0, Lqua;->s:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_gif:I
-
-    sput v0, Lqua;->t:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_images:I
-
-    sput v0, Lqua;->u:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_music:I
-
-    sput v0, Lqua;->v:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_one_month:I
-
-    sput v0, Lqua;->w:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_one_week:I
-
-    sput v0, Lqua;->x:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_six_month:I
-
-    sput v0, Lqua;->y:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_stickers:I
-
-    sput v0, Lqua;->z:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_unlimited:I
-
-    sput v0, Lqua;->A:I
-
-    sget v0, Lvfc;->oneme_settings_storage_item_video:I
-
-    sput v0, Lqua;->B:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_data_section_header:I
-
-    sput v0, Lqua;->C:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_list:I
-
-    sput v0, Lqua;->D:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_preserve_media_section:I
-
-    sput v0, Lqua;->E:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_button_vh:I
-
-    sput v0, Lqua;->F:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_header_vh:I
-
-    sput v0, Lqua;->G:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_item_vh:I
-
-    sput v0, Lqua;->H:I
-
-    sget v0, Lvfc;->oneme_settings_storage_screen_toolbar:I
-
-    sput v0, Lqua;->I:I
+    .line 1
+    invoke-direct/range {v0 .. v8}, Lqua;-><init>(JLfu7;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ZLd39;)V
 
     return-void
+.end method
+
+.method public constructor <init>(JLfu7;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ZLd39;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-wide p1, p0, Lqua;->a:J
+
+    .line 4
+    iput-object p3, p0, Lqua;->b:Lfu7;
+
+    .line 5
+    iput-object p4, p0, Lqua;->c:Ljava/lang/Long;
+
+    .line 6
+    iput-object p5, p0, Lqua;->d:Ljava/lang/Long;
+
+    .line 7
+    iput-object p6, p0, Lqua;->e:Ljava/lang/Long;
+
+    .line 8
+    iput-boolean p7, p0, Lqua;->f:Z
+
+    .line 9
+    iput-object p8, p0, Lqua;->g:Ld39;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ld39;
+    .locals 1
+
+    iget-object v0, p0, Lqua;->g:Ld39;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/Long;
+    .locals 1
+
+    iget-object v0, p0, Lqua;->e:Ljava/lang/Long;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lqua;->b:Lfu7;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lfu7;->a:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget-object v0, p0, Lqua;->b:Lfu7;
+
+    invoke-static {v0}, Lhoi;->b(Lfu7;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqua;->d:Ljava/lang/Long;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lqua;->c:Ljava/lang/Long;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqua;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqua;
+
+    iget-wide v3, p1, Lqua;->a:J
+
+    iget-wide v5, p0, Lqua;->a:J
+
+    cmp-long v1, v5, v3
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqua;->b:Lfu7;
+
+    invoke-static {v1}, Lhoi;->b(Lfu7;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p1, Lqua;->b:Lfu7;
+
+    invoke-static {v3}, Lhoi;->b(Lfu7;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    :cond_3
+    iget-object v3, p1, Lqua;->b:Lfu7;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lqua;->c:Ljava/lang/Long;
+
+    iget-object v3, p1, Lqua;->c:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lqua;->d:Ljava/lang/Long;
+
+    iget-object p1, p1, Lqua;->d:Ljava/lang/Long;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lqua;->b:Lfu7;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lfu7;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-wide v3, p0, Lqua;->a:J
+
+    invoke-static {v1, v2, v3, v4}, Lo3h;->c(IIJ)I
+
+    move-result v1
+
+    iget-object v3, p0, Lqua;->c:Ljava/lang/Long;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v0
+
+    :goto_1
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v2
+
+    iget-object v2, p0, Lqua;->d:Ljava/lang/Long;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OneMeDraft(cid="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lqua;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastInputText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->b:Lfu7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", replyMessageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->c:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", editMessageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->d:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->e:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromServer="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqua;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attaches="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->g:Ld39;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

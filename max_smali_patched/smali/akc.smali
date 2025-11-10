@@ -3,52 +3,26 @@
 
 
 # static fields
-.field public static mr_button_content_description:I = 0x7f1306e5
+.field public static cardBackgroundColor:I = 0x7f0400bc
 
-.field public static mr_cast_button_connected:I = 0x7f1306e6
+.field public static cardCornerRadius:I = 0x7f0400bd
 
-.field public static mr_cast_button_connecting:I = 0x7f1306e7
+.field public static cardElevation:I = 0x7f0400be
 
-.field public static mr_cast_button_disconnected:I = 0x7f1306e8
+.field public static cardMaxElevation:I = 0x7f0400c0
 
-.field public static mr_cast_dialog_title_view_placeholder:I = 0x7f1306e9
+.field public static cardPreventCornerOverlap:I = 0x7f0400c1
 
-.field public static mr_chooser_searching:I = 0x7f1306ea
+.field public static cardUseCompatPadding:I = 0x7f0400c2
 
-.field public static mr_chooser_title:I = 0x7f1306eb
+.field public static cardViewStyle:I = 0x7f0400c3
 
-.field public static mr_controller_album_art:I = 0x7f1306ec
+.field public static contentPadding:I = 0x7f040302
 
-.field public static mr_controller_casting_screen:I = 0x7f1306ed
+.field public static contentPaddingBottom:I = 0x7f040303
 
-.field public static mr_controller_close_description:I = 0x7f1306ee
+.field public static contentPaddingLeft:I = 0x7f040305
 
-.field public static mr_controller_collapse_group:I = 0x7f1306ef
+.field public static contentPaddingRight:I = 0x7f040306
 
-.field public static mr_controller_disconnect:I = 0x7f1306f0
-
-.field public static mr_controller_expand_group:I = 0x7f1306f1
-
-.field public static mr_controller_no_info_available:I = 0x7f1306f2
-
-.field public static mr_controller_no_media_selected:I = 0x7f1306f3
-
-.field public static mr_controller_pause:I = 0x7f1306f4
-
-.field public static mr_controller_play:I = 0x7f1306f5
-
-.field public static mr_controller_stop:I = 0x7f1306f6
-
-.field public static mr_controller_stop_casting:I = 0x7f1306f7
-
-.field public static mr_controller_volume_slider:I = 0x7f1306f8
-
-.field public static mr_dialog_default_group_name:I = 0x7f1306f9
-
-.field public static mr_dialog_groupable_header:I = 0x7f1306fa
-
-.field public static mr_dialog_transferable_header:I = 0x7f1306fb
-
-.field public static mr_system_route_name:I = 0x7f1306fc
-
-.field public static mr_user_route_category_name:I = 0x7f1306fd
+.field public static contentPaddingTop:I = 0x7f040308

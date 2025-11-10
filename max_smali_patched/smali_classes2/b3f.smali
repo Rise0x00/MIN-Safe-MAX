@@ -1,72 +1,64 @@
-.class public final synthetic Lb3f;
-.super Ljava/lang/Object;
+.class public final Lb3f;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
+.field public c:Lq2f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+.method public constructor <init>(Ljf9;)V
     .locals 0
 
-    iput p2, p0, Lb3f;->a:I
-
-    iput-object p1, p0, Lb3f;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final d(Ljf9;Ljava/lang/String;)V
     .locals 1
 
-    iget v0, p0, Lb3f;->a:I
+    const-string v0, "sticker"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lb3f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    move-result p2
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    if-eqz p2, :cond_0
 
-    return-void
+    invoke-static {p1}, Lq2f;->a(Ljf9;)Lq2f;
 
-    :pswitch_0
-    iget-object v0, p0, Lb3f;->b:Lorg/webrtc/SurfaceTextureHelper;
+    move-result-object p1
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lb3f;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
+    iput-object p1, p0, Lb3f;->c:Lq2f;
 
     return-void
 
-    :pswitch_2
-    iget-object v0, p0, Lb3f;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
+    :cond_0
+    invoke-virtual {p1}, Ljf9;->v()V
 
     return-void
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lb3f;->c:Lq2f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "{sticker = "
+
+    const-string v2, "}"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

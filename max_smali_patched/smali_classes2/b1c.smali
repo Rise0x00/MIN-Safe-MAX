@@ -1,118 +1,102 @@
 .class public final Lb1c;
-.super Lm3f;
+.super Li94;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Li1c;
+.field public v0:Ljava/util/List;
 
 
-# direct methods
-.method public constructor <init>(Li1c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+# virtual methods
+.method public final E(Lyid;I)V
+    .locals 7
 
-    iput-object p1, p0, Lb1c;->Y:Li1c;
+    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
 
-    const/4 p1, 0x2
+    invoke-static {p2, v0}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p2
+
+    check-cast p2, Lp0c;
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
+
+    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Lp0c;)V
+
+    new-instance v0, Lbjd;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lbjd;-><init>(Lc24;Ljava/lang/String;Lh24;Lh24;ZI)V
+
+    invoke-virtual {p1, v0}, Lyid;->S(Lbjd;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lb1c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lb1c;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lb1c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final j()I
     .locals 1
 
-    new-instance p1, Lb1c;
+    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
 
-    iget-object v0, p0, Lb1c;->Y:Li1c;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-direct {p1, v0, p2}, Lb1c;-><init>(Li1c;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final k(I)J
     .locals 2
 
-    iget v0, p0, Lb1c;->X:I
+    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
 
-    const/4 v1, 0x1
+    invoke-static {p1, v0}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    if-ne v0, v1, :cond_0
+    check-cast p1, Lp0c;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
+
+    iget-wide v0, p1, Lp0c;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    throw p1
+    move-result p1
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lb1c;->Y:Li1c;
+    :goto_1
+    int-to-long v0, p1
 
-    iget-object v0, p1, Li1c;->D0:Lmoe;
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lv0c;
-
-    iput v1, p0, Lb1c;->X:I
-
-    invoke-static {p1, v0, p0}, Li1c;->q(Li1c;Lv0c;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-wide v0
 .end method

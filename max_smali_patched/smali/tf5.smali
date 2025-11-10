@@ -1,27 +1,81 @@
 .class public final Ltf5;
-.super Ljava/lang/Object;
+.super Lp0;
 .source "SourceFile"
 
+# interfaces
+.implements Lb54;
 
-# instance fields
-.field public final a:Lmif;
 
-.field public final b:I
+# static fields
+.field public static final a:Ltf5;
 
-.field public final c:J
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lmif;IJ)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ltf5;
+
+    sget-object v1, Luea;->c:Luea;
+
+    invoke-direct {v0, v1}, Lp0;-><init>(Lx44;)V
+
+    sput-object v0, Ltf5;->a:Ltf5;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ltf5;->b:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Ltf5;
+
+    if-nez v0, :cond_1
+
+    instance-of p1, p1, Luf5;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final i(Ly44;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object p1, Ltf5;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Ltf5;->a:Lmif;
+    monitor-enter p1
 
-    iput p2, p0, Ltf5;->b:I
-
-    iput-wide p3, p0, Ltf5;->c:J
+    monitor-exit p1
 
     return-void
 .end method

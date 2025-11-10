@@ -1,153 +1,126 @@
 .class public final Ljs;
-.super Ljava/lang/Object;
+.super Lpue;
 .source "SourceFile"
 
 # interfaces
-.implements Lord;
+.implements Lf6d;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final b:Ljava/lang/Object;
+.field public b:Lru4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Ljs;->a:I
-
-    iput-object p2, p0, Ljs;->b:Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput p2, p0, Ljs;->a:I
 
-.method public constructor <init>(Llf6;)V
-    .locals 1
+    new-instance v0, Lru4;
 
-    const/4 v0, 0x5
+    new-instance v1, Ljava/io/File;
 
-    iput v0, p0, Ljs;->a:I
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    .line 3
-    check-cast p1, Lq3d;
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    iput-object p1, p0, Ljs;->b:Ljava/lang/Object;
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1, p2}, Lru4;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Ljs;->b:Lru4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final a(Landroid/content/Context;)Lpue;
+    .locals 2
 
-    iget v0, p0, Ljs;->a:I
+    new-instance v0, Lru4;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Ljava/io/File;
 
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    check-cast v0, Landroid/view/ViewGroup;
+    move-result-object p1
 
-    new-instance v1, Lu1;
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    const/4 v2, 0x5
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
+    iget p1, p0, Ljs;->a:I
 
-    return-object v1
+    or-int/lit8 p1, p1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, p1}, Lru4;-><init>(Ljava/io/File;I)V
 
-    check-cast v0, Ljava/util/Iterator;
+    iput-object v0, p0, Ljs;->b:Lru4;
 
-    return-object v0
+    return-object p0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
+    .locals 0
 
-    check-cast v0, Lq3d;
+    const/4 p0, 0x0
 
-    invoke-static {v0}, Lv4b;->u(Llf6;)Lrrd;
+    throw p0
+.end method
+
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+    .locals 1
+
+    iget-object v0, p0, Ljs;->b:Lru4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lru4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(I)V
+    .locals 0
+
+    iget-object p1, p0, Ljs;->b:Lru4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ApplicationSoSource["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljs;->b:Lru4;
+
+    invoke-virtual {v1}, Lru4;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/Menu;
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_3
-    new-instance v0, Lys7;
-
-    invoke-direct {v0, p0}, Lys7;-><init>(Ljs;)V
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, [F
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_6
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

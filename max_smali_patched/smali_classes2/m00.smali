@@ -1,65 +1,43 @@
-.class public final Lm00;
+.class public abstract synthetic Lm00;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public e:I
-
-.field public f:J
-
-.field public g:Ljava/lang/Object;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lm00;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ln00;->values()[Ln00;
 
-    iget-wide v0, p1, Lm00;->a:J
+    move-result-object v0
 
-    iput-wide v0, p0, Lm00;->a:J
+    array-length v0, v0
 
-    iget-object v0, p1, Lm00;->b:Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    check-cast v0, Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lm00;->b:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    iget-object v0, p1, Lm00;->c:Ljava/lang/Object;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v0, Ljava/lang/String;
+    :catch_0
+    const/4 v2, 0x2
 
-    iput-object v0, p0, Lm00;->c:Ljava/lang/Object;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p1, Lm00;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lm00;->d:Ljava/lang/Object;
-
-    iget v0, p1, Lm00;->e:I
-
-    iput v0, p0, Lm00;->e:I
-
-    iget-wide v0, p1, Lm00;->f:J
-
-    iput-wide v0, p0, Lm00;->f:J
-
-    iget-object p1, p1, Lm00;->g:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iput-object p1, p0, Lm00;->g:Ljava/lang/Object;
+    :catch_1
+    sput-object v0, Lm00;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

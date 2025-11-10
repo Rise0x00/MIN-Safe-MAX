@@ -1,117 +1,208 @@
-.class public final Lay;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public final synthetic Lay;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpp8;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lqo8;Lpp8;I)V
+    .locals 0
+
+    iput p3, p0, Lay;->a:I
+
+    iput-object p2, p0, Lay;->b:Lpp8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)Z
-    .locals 1
-
-    invoke-static {p0, p1}, Lgc5;->a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Throwable;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final b()V
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
     .locals 2
 
-    invoke-static {p0}, Lgc5;->d(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
+    iget p1, p0, Lay;->a:I
 
-    move-result-object v0
+    packed-switch p1, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lay;->b:Lpp8;
 
-    sget-object v1, Lgc5;->a:Lfc5;
+    iget-object p4, p1, Lpp8;->b:Landroid/os/Handler;
 
-    if-eq v0, v1, :cond_0
+    sget p5, Ljig;->a:I
 
-    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
+    const/16 v0, 0x1e
+
+    if-ge p5, v0, :cond_0
+
+    const/16 p1, 0x20
+
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    iget-object p4, p1, Lpp8;->c:Ljava/lang/Object;
 
-.method public final c(Lve3;)V
-    .locals 2
+    check-cast p4, Lqp8;
 
-    invoke-static {p0}, Lgc5;->d(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
+    iget-object p5, p4, Lqp8;->v2:Lpp8;
 
-    move-result-object v0
+    if-eq p1, p5, :cond_1
 
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lve3;->b()V
-
-    return-void
-
-    :cond_0
-    sget-object v1, Lgc5;->a:Lfc5;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Lve3;->onError(Ljava/lang/Throwable;)V
+    goto :goto_0
 
     :cond_1
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p2, v0
+
+    const/4 p5, 0x1
+
+    if-nez p1, :cond_2
+
+    iput-boolean p5, p4, Lzo8;->H1:Z
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Lzo8;->n0(J)V
+
+    invoke-virtual {p4}, Lqp8;->v0()V
+
+    iget-object p1, p4, Lzo8;->J1:Lye4;
+
+    iget v0, p1, Lye4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lye4;->f:I
+
+    invoke-virtual {p4}, Lqp8;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lqp8;->X(J)V
+    :try_end_0
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    iput-object p1, p4, Lzo8;->I1:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    :goto_0
     return-void
-.end method
 
-.method public final d(Lxda;)V
-    .locals 2
+    :pswitch_0
+    iget-object p1, p0, Lay;->b:Lpp8;
 
-    invoke-static {p0}, Lgc5;->d(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
+    iget-object p4, p1, Lpp8;->b:Landroid/os/Handler;
 
-    move-result-object v0
+    sget p5, Ljig;->a:I
 
-    if-nez v0, :cond_0
+    const/16 v0, 0x1e
 
-    invoke-interface {p1}, Lxda;->b()V
+    if-ge p5, v0, :cond_3
 
+    const/16 p1, 0x20
+
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_1
+
+    :cond_3
+    iget-object p4, p1, Lpp8;->c:Ljava/lang/Object;
+
+    check-cast p4, Lqp8;
+
+    iget-object p5, p4, Lqp8;->v2:Lpp8;
+
+    if-eq p1, p5, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p2, v0
+
+    const/4 p5, 0x1
+
+    if-nez p1, :cond_5
+
+    iput-boolean p5, p4, Lzo8;->H1:Z
+
+    goto :goto_1
+
+    :cond_5
+    :try_start_1
+    invoke-virtual {p4, p2, p3}, Lzo8;->n0(J)V
+
+    invoke-virtual {p4}, Lqp8;->v0()V
+
+    iget-object p1, p4, Lzo8;->J1:Lye4;
+
+    iget v0, p1, Lye4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lye4;->f:I
+
+    invoke-virtual {p4}, Lqp8;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lqp8;->X(J)V
+    :try_end_1
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    iput-object p1, p4, Lzo8;->I1:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    :goto_1
     return-void
 
-    :cond_0
-    sget-object v1, Lgc5;->a:Lfc5;
+    nop
 
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final e(Lcze;)V
-    .locals 2
-
-    invoke-static {p0}, Lgc5;->d(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lcze;->b()V
-
-    return-void
-
-    :cond_0
-    sget-object v1, Lgc5;->a:Lfc5;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-interface {p1, v0}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

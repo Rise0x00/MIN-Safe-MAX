@@ -14,6 +14,12 @@
 
 
 # static fields
+.field public static Capability:[I = null
+
+.field public static Capability_queryPatterns:I = 0x0
+
+.field public static Capability_shortcutMatchRequired:I = 0x1
+
 .field public static ColorStateListItem:[I = null
 
 .field public static ColorStateListItem_alpha:I = 0x3
@@ -101,9 +107,19 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    const v0, 0x7f040709
+
+    const v1, 0x7f04075b
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lru/ok/android/onelog/impl/R$styleable;->Capability:[I
+
     const v0, 0x7f04003c
 
-    const v1, 0x7f040589
+    const v1, 0x7f040588
 
     const v2, 0x10101a5
 
@@ -175,7 +191,7 @@
         0x7f0403e9
         0x7f0403ea
         0x7f0403eb
-        0x7f0408c0
+        0x7f0408bf
     .end array-data
 
     :array_2

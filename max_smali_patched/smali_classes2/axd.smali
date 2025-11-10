@@ -2,209 +2,252 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld5c;
+
 
 # instance fields
-.field public volatile a:Landroid/os/ConditionVariable;
+.field public final a:Lirf;
+
+.field public final b:Lxyc;
+
+.field public final c:Lorf;
+
+.field public final d:I
+
+.field public final o:I
 
 
-# virtual methods
-.method public final a(Lh7f;Ljava/util/List;Lzwd;)V
-    .locals 9
+# direct methods
+.method public constructor <init>(Lirf;Lorf;I)V
+    .locals 2
 
-    sget-object v0, Lomf;->a:Lomf;
+    new-instance v0, Lxyc;
 
-    invoke-static {}, Lomf;->a()Ljava/lang/String;
+    const/16 v1, 0x9
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lxyc;-><init>(I)V
 
-    if-nez v0, :cond_0
+    and-int/lit8 v1, p3, 0x4
 
-    return-void
+    if-eqz v1, :cond_0
+
+    sget-object p2, Lcbg;->w:Lorf;
 
     :cond_0
-    invoke-static {}, Lomf;->b()Lqz4;
+    and-int/lit8 p3, p3, 0x8
 
-    move-result-object v1
+    if-eqz p3, :cond_1
 
-    invoke-virtual {v1}, Lqz4;->d()Ljava/util/List;
-
-    move-result-object v5
-
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v2, "buildUuid"
-
-    iget-object v3, p1, Lh7f;->e:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v2, "deviceId"
-
-    iget-object p1, p1, Lh7f;->h:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p1, "sessions"
-
-    invoke-static {p2}, Lkjd;->J(Ljava/util/List;)Lorg/json/JSONArray;
-
-    move-result-object p2
-
-    invoke-virtual {v1, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    new-instance p1, Lorg/json/JSONArray;
-
-    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
-
-    invoke-interface {v5}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lsz4;
-
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v4, "event"
-
-    iget-object v6, v2, Lsz4;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v4, "reason"
-
-    iget-object v6, v2, Lsz4;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v4, "count"
-
-    iget v2, v2, Lsz4;->c:I
-
-    invoke-virtual {v3, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    invoke-virtual {p1, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    const/16 p3, 0x800
 
     goto :goto_0
 
     :cond_1
-    const-string p2, "drops"
+    const/16 p3, 0x1000
 
-    invoke-virtual {v1, p2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Laxd;->a:Lirf;
+
+    iput-object v0, p0, Laxd;->b:Lxyc;
+
+    iput-object p2, p0, Laxd;->c:Lorf;
+
+    iput p3, p0, Laxd;->d:I
+
+    iput p3, p0, Laxd;->o:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Laxd;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Laxd;
+
+    iget-object v0, p0, Laxd;->a:Lirf;
+
+    iget-object v1, p1, Laxd;->a:Lirf;
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    sget-object p1, Lomf;->a:Lomf;
+    iget-object v0, p0, Laxd;->b:Lxyc;
 
-    invoke-static {}, Lomf;->c()Ljava/util/Map;
+    iget-object v1, p1, Laxd;->b:Lxyc;
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object p2, Lkmc;->a:Lzzc;
+    move-result v0
 
-    invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of p2, p1, Lr24;
-
-    if-eqz p2, :cond_3
-
-    check-cast p1, Lr24;
+    if-nez v0, :cond_3
 
     goto :goto_1
 
     :cond_3
-    const/4 p1, 0x0
+    iget-object v0, p0, Laxd;->c:Lorf;
 
-    :goto_1
-    if-nez p1, :cond_4
+    iget-object v1, p1, Laxd;->c:Lorf;
 
-    new-instance p1, Lr6d;
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/16 p2, 0xd
+    move-result v0
 
-    invoke-direct {p1, p2}, Lr6d;-><init>(I)V
+    if-nez v0, :cond_4
 
-    invoke-virtual {p1}, Lr6d;->r()Lr24;
+    goto :goto_1
 
     :cond_4
-    const-string p1, "http://127.0.0.1"
+    iget v0, p0, Laxd;->d:I
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget p1, p1, Laxd;->d:I
 
-    move-result-object p1
+    if-ne v0, p1, :cond_5
 
-    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    :goto_0
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
 
-    const-string p2, "api/crash/trackSession"
+    :cond_5
+    :goto_1
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+    return p1
+.end method
 
-    move-result-object p1
+.method public final getItemId()J
+    .locals 2
 
-    const-string p2, "crashToken"
+    iget v0, p0, Laxd;->d:I
 
-    invoke-virtual {p1, p2, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    int-to-long v0, v0
 
-    move-result-object p1
+    return-wide v0
+.end method
 
-    invoke-virtual {p1}, Landroid/net/Uri$Builder;->toString()Ljava/lang/String;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Laxd;->a:Lirf;
 
-    new-instance v3, Lkw8;
+    iget v0, v0, Lirf;->c:I
 
-    const-string p2, "application/json; charset=utf-8"
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Laxd;->b:Lxyc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Laxd;->c:Lorf;
+
+    invoke-virtual {v0}, Lorf;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Laxd;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Laxd;->o:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Laxd;->d:I
+
+    invoke-static {v0}, Lgvi;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Loid;->f(Ljava/lang/String;Ljava/lang/String;)Ldp5;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string v2, "Section(title="
 
-    invoke-direct {v3, p1, p2}, Lkw8;-><init>(Ljava/lang/String;Lb17;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v6, Landroid/os/ConditionVariable;
+    iget-object v2, p0, Laxd;->a:Lirf;
 
-    invoke-direct {v6}, Landroid/os/ConditionVariable;-><init>()V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput-object v6, p0, Laxd;->a:Landroid/os/ConditionVariable;
+    const-string v2, ", textColor="
 
-    new-instance v2, Lly1;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v8, 0xf
+    iget-object v2, p0, Laxd;->b:Lxyc;
 
-    move-object v4, p0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object v7, p3
+    const-string v2, ", typography="
 
-    invoke-direct/range {v2 .. v8}, Lly1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Llnf;->b(Ljava/lang/Runnable;)V
+    iget-object v2, p0, Laxd;->c:Lorf;
 
-    return-void
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", itemViewType="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

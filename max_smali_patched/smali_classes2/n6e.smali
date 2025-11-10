@@ -1,227 +1,63 @@
-.class public final Ln6e;
+.class public abstract Ln6e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Loef;
-
-.field public final b:Loef;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/Integer;
-
-
 # direct methods
-.method public constructor <init>(Loef;Loef;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+.method public static a([B)Lo6e;
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
 
-    iput-object p1, p0, Ln6e;->a:Loef;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
 
-    iput-object p2, p0, Ln6e;->b:Loef;
+    :try_start_0
+    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
 
-    iput-object p3, p0, Ln6e;->c:Ljava/lang/String;
+    move-result-object p0
 
-    iput-object p4, p0, Ln6e;->d:Ljava/lang/Integer;
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    new-instance v0, Lo6e;
 
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
 
-    if-ne p0, p1, :cond_0
+    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
 
-    goto :goto_1
+    sget-object v6, Laq4;->d:Lcy9;
 
-    :cond_0
-    instance-of v0, p1, Ln6e;
+    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
 
-    if-nez v0, :cond_1
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_1
-    check-cast p1, Ln6e;
+    invoke-static {v6, p0}, Lcy9;->d(Lcy9;Ljava/lang/Integer;)Laq4;
 
-    iget-object v0, p0, Ln6e;->a:Loef;
+    move-result-object v6
 
-    iget-object v1, p1, Ln6e;->a:Loef;
+    invoke-direct/range {v0 .. v6}, Lo6e;-><init>(JJILaq4;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p0, v0, Lo6e;->X:Ljava/lang/String;
 
-    move-result v0
+    const-string v1, "parseFrom"
 
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ln6e;->b:Loef;
-
-    iget-object v1, p1, Ln6e;->b:Loef;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ln6e;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Ln6e;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Ln6e;->d:Ljava/lang/Integer;
-
-    iget-object p1, p1, Ln6e;->d:Ljava/lang/Integer;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Ln6e;->a:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Ln6e;->b:Loef;
-
-    if-nez v2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Ln6e;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Ln6e;->d:Ljava/lang/Integer;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_2
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "QuoteData(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ln6e;->a:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", body="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln6e;->b:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", image="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln6e;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", count="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln6e;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", placeholder=null)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {p0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

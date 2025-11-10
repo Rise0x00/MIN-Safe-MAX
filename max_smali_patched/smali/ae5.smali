@@ -1,217 +1,221 @@
 .class public final Lae5;
-.super Lbe5;
+.super Lfvb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final S0:Lfah;
+.field public final l:Lt3e;
 
-.field public T0:Z
+.field public final m:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Lfah;Lm33;Lgt;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p2, p3}, Lbe5;-><init>(ILm33;Lgt;)V
+    invoke-direct {p0, p1, v0, p2}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
 
-    iput-object p1, p0, Lae5;->S0:Lfah;
+    sget-object v0, Lt3e;->c:Lt3e;
+
+    iput-object v0, p0, Lae5;->l:Lt3e;
+
+    new-instance v0, Lzd5;
+
+    invoke-direct {v0, p2, p1, p0}, Lzd5;-><init>(ILjava/lang/String;Lae5;)V
+
+    new-instance p1, Ltif;
+
+    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
+
+    iput-object p1, p0, Lae5;->m:Ltif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()Z
-    .locals 6
+.method public final e()Lsyi;
+    .locals 1
 
-    iget-object v0, p0, Lbe5;->H0:Lebd;
+    iget-object v0, p0, Lae5;->l:Lt3e;
 
-    invoke-interface {v0}, Lebd;->e()Lkc4;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-boolean v2, p0, Lae5;->T0:Z
+    if-nez p1, :cond_1
 
-    const/4 v3, 0x1
-
-    if-nez v2, :cond_4
-
-    iget-object v2, p0, Lbe5;->I0:Lnf4;
-
-    invoke-virtual {v2}, Lnf4;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lkc4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v2}, Lsx;->a(I)V
-
-    iget-object v0, p0, Lbe5;->H0:Lebd;
-
-    invoke-interface {v0}, Lebd;->g()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lbe5;->J0:Z
-
-    return v1
+    goto :goto_0
 
     :cond_1
-    iget-object v2, p0, Lbe5;->I0:Lnf4;
+    instance-of v0, p1, Lo3e;
 
-    invoke-virtual {v2}, Lnf4;->d()Ljava/nio/ByteBuffer;
+    if-nez v0, :cond_2
 
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    invoke-virtual {v2}, Ljava/nio/Buffer;->limit()I
+    check-cast p1, Lo3e;
 
-    move-result v4
+    invoke-interface {p1}, Lo3e;->e()Lsyi;
 
-    invoke-virtual {v0, v4}, Lkc4;->w(I)V
+    move-result-object v0
 
-    iget-object v4, v0, Lkc4;->X:Ljava/nio/ByteBuffer;
+    sget-object v1, Lt3e;->c:Lt3e;
 
-    invoke-virtual {v4, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    iget-object v2, p0, Lbe5;->I0:Lnf4;
-
-    invoke-virtual {v2, v1}, Lnf4;->g(Z)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    iget-object v2, v2, Lnf4;->a:Landroid/media/MediaCodec$BufferInfo;
+    if-eq v0, v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    const/4 v2, 0x0
+    iget-object v0, p0, Lfvb;->a:Ljava/lang/String;
 
-    :goto_0
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p1}, Lo3e;->a()Ljava/lang/String;
 
-    iget-wide v4, v2, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+    move-result-object v1
 
-    iput-wide v4, v0, Lkc4;->Z:J
-
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    iput v2, v0, Lsx;->b:I
-
-    iget-object v0, p0, Lbe5;->I0:Lnf4;
-
-    invoke-virtual {v0}, Lnf4;->j()V
-
-    iput-boolean v3, p0, Lae5;->T0:Z
-
-    :cond_4
-    iget-object v0, p0, Lbe5;->H0:Lebd;
-
-    invoke-interface {v0}, Lebd;->g()Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    :goto_1
-    return v1
+    goto :goto_0
 
-    :cond_5
-    iput-boolean v1, p0, Lae5;->T0:Z
+    :cond_4
+    invoke-static {p0}, Ln0i;->a(Lo3e;)Ljava/util/Set;
 
-    return v3
-.end method
+    move-result-object v0
 
-.method public final C(Lt76;)V
-    .locals 1
-
-    iget-object v0, p0, Lae5;->S0:Lfah;
-
-    invoke-virtual {v0, p1}, Lfah;->c(Lt76;)Lnf4;
+    invoke-static {p1}, Ln0i;->a(Lo3e;)Ljava/util/Set;
 
     move-result-object p1
 
-    iput-object p1, p0, Lbe5;->I0:Lnf4;
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public final L(Lkc4;)Z
-    .locals 6
+    if-nez p1, :cond_5
 
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Lsx;->g(I)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    iget-wide v2, p1, Lkc4;->Z:J
-
-    iget-wide v4, p0, Lbe5;->G0:J
-
-    sub-long/2addr v2, v4
-
-    iput-wide v2, p1, Lkc4;->Z:J
-
-    iget-object v0, p0, Lbe5;->I0:Lnf4;
-
-    if-eqz v0, :cond_1
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, v2, v4
-
-    if-gez v0, :cond_1
-
-    invoke-virtual {p1}, Lkc4;->u()V
-
-    const/4 p1, 0x1
+    :goto_0
+    const/4 p1, 0x0
 
     return p1
 
-    :cond_1
-    return v1
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final g()Ljava/lang/String;
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lfvb;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    new-instance v1, Lf2;
+
+    invoke-direct {v1, p0}, Lf2;-><init>(Lae5;)V
+
+    const/4 v2, 0x1
+
+    :goto_0
+    invoke-virtual {v1}, Lf2;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    check-cast v3, Ljava/lang/String;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v3, 0x0
+
+    :goto_1
+    add-int/2addr v2, v3
+
+    goto :goto_0
+
+    :cond_1
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final i(I)Lo3e;
     .locals 1
 
-    const-string v0, "ExoAssetLoaderAudioRenderer"
+    iget-object v0, p0, Lae5;->m:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lo3e;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    new-instance v0, Lgt;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, p0}, Lgt;-><init>(ILjava/lang/Object;)V
+
+    iget-object v1, p0, Lfvb;->a:Ljava/lang/String;
+
+    const-string v2, "("
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x38
+
+    const-string v1, ", "
+
+    const-string v3, ")"
+
+    invoke-static/range {v0 .. v5}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

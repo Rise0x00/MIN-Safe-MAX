@@ -1,58 +1,102 @@
-.class public abstract Lfh4;
+.class public final Lfh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lcn4;
+# instance fields
+.field public final a:Lub6;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Lj50;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lub6;IIIIIIILj50;ZZZ)V
+    .locals 0
 
-    const-string v0, "kotlinx.coroutines.main.delay"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lfh4;->a:Lub6;
 
-    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Z)Z
+    iput p2, p0, Lfh4;->b:I
 
-    move-result v0
+    iput p3, p0, Lfh4;->c:I
 
-    if-nez v0, :cond_0
+    iput p4, p0, Lfh4;->d:I
 
-    sget-object v0, Leh4;->w0:Leh4;
+    iput p5, p0, Lfh4;->e:I
+
+    iput p6, p0, Lfh4;->f:I
+
+    iput p7, p0, Lfh4;->g:I
+
+    iput p8, p0, Lfh4;->h:I
+
+    iput-object p9, p0, Lfh4;->i:Lj50;
+
+    iput-boolean p10, p0, Lfh4;->j:Z
+
+    iput-boolean p11, p0, Lfh4;->k:Z
+
+    iput-boolean p12, p0, Lfh4;->l:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()La60;
+    .locals 7
+
+    new-instance v0, La60;
+
+    iget v1, p0, Lfh4;->c:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    :goto_0
+    move v5, v2
 
     goto :goto_1
 
     :cond_0
-    sget-object v0, Ljs4;->a:Luj4;
-
-    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Le88;
-
-    invoke-static {v0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->isMissing(Le88;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    instance-of v1, v0, Lcn4;
-
-    if-nez v1, :cond_1
+    const/4 v2, 0x0
 
     goto :goto_0
 
-    :cond_1
-    check-cast v0, Lcn4;
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    sget-object v0, Leh4;->w0:Leh4;
-
     :goto_1
-    sput-object v0, Lfh4;->a:Lcn4;
+    iget v6, p0, Lfh4;->h:I
 
-    return-void
+    iget v1, p0, Lfh4;->g:I
+
+    iget v2, p0, Lfh4;->e:I
+
+    iget v3, p0, Lfh4;->f:I
+
+    iget-boolean v4, p0, Lfh4;->l:Z
+
+    invoke-direct/range {v0 .. v6}, La60;-><init>(IIIZZI)V
+
+    return-object v0
 .end method

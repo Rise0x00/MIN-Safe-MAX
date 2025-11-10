@@ -1,181 +1,78 @@
-.class public final synthetic Lshb;
+.class public final Lshb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Luhb;
+.field public final b:J
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luhb;I)V
+.method public constructor <init>(Ljava/lang/String;JLjava/util/ArrayList;Ljava/util/List;)V
     .locals 0
 
-    iput p2, p0, Lshb;->a:I
-
-    iput-object p1, p0, Lshb;->b:Luhb;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lshb;->a:Ljava/lang/String;
+
+    iput-wide p2, p0, Lshb;->b:J
+
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lshb;->c:Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lshb;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 3
+.method public final a(I)I
+    .locals 4
 
-    iget v0, p0, Lshb;->a:I
+    iget-object v0, p0, Lshb;->c:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    check-cast p1, Ljava/lang/Float;
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v3
 
-    iget-object v0, p0, Lshb;->b:Luhb;
+    check-cast v3, Lb9;
 
-    iput p1, v0, Luhb;->G0:F
+    iget v3, v3, Lb9;->b:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    if-ne v3, p1, :cond_0
 
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lshb;->b:Luhb;
-
-    iput p1, v0, Luhb;->F0:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lshb;->b:Luhb;
-
-    iput p1, v0, Luhb;->C0:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lshb;->b:Luhb;
-
-    iput p1, v0, Luhb;->B0:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_3
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lshb;->b:Luhb;
-
-    iput p1, v0, Luhb;->o:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_4
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, p0, Lshb;->b:Luhb;
-
-    iget-object v1, v0, Luhb;->z0:Landroid/graphics/Paint;
-
-    const/16 v2, 0xff
-
-    int-to-float v2, v2
-
-    mul-float/2addr v2, p1
-
-    float-to-int v2, v2
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    const/4 v1, 0x0
-
-    cmpg-float p1, p1, v1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, v0, Luhb;->y0:Z
+    return v2
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    add-int/lit8 v2, v2, 0x1
 
-    return-void
+    goto :goto_0
 
-    nop
+    :cond_1
+    const/4 p1, -0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

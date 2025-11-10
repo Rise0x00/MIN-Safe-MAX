@@ -1,27 +1,98 @@
 .class public final Ltf0;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lmg5;
+.field public final synthetic X:Ljava/util/List;
 
-.field public final b:J
-
-.field public c:I
-
-.field public d:J
+.field public final synthetic o:Lu7d;
 
 
 # direct methods
-.method public constructor <init>(Lmg5;J)V
+.method public constructor <init>(Lu7d;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltf0;->o:Lu7d;
 
-    iput-object p1, p0, Ltf0;->a:Lmg5;
+    iput-object p2, p0, Ltf0;->X:Ljava/util/List;
 
-    iput-wide p2, p0, Ltf0;->b:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ltf0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ltf0;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ltf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ltf0;
+
+    iget-object v0, p0, Ltf0;->o:Lu7d;
+
+    iget-object v1, p0, Ltf0;->X:Ljava/util/List;
+
+    invoke-direct {p1, v0, v1, p2}, Ltf0;-><init>(Lu7d;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltf0;->o:Lu7d;
+
+    iget-object p1, p1, Lu7d;->a:Ljava/lang/Object;
+
+    check-cast p1, Lru/ok/tamtam/workmanager/BacklogWorker;
+
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Looh;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Looh;->g()Landroidx/work/impl/model/WorkersQueueDao;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ltf0;->X:Ljava/util/List;
+
+    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->contains(Ljava/util/List;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

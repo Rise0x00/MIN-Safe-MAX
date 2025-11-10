@@ -1,64 +1,35 @@
-.class public final Lr04;
+.class public abstract Lr04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv04;
-
-
-# static fields
-.field public static final a:Lr04;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/content/Context;)Ljava/io/File;
+    .locals 0
 
-    new-instance v0, Lr04;
+    invoke-virtual {p0}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lr04;->a:Lr04;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lr04;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static c(Landroid/content/Context;)Ljava/io/File;
+    .locals 0
 
-    const v0, -0x4c87b195
+    invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
 
-    return v0
-.end method
+    move-result-object p0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ClickMute"
-
-    return-object v0
+    return-object p0
 .end method

@@ -1,64 +1,147 @@
 .class public final Lyn1;
-.super Ljava/lang/Object;
+.super Landroid/media/VolumeProvider;
 .source "SourceFile"
 
-# interfaces
-.implements Lao1;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:Lyn1;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lg09;III)V
     .locals 1
 
-    new-instance v0, Lyn1;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lyn1;->a:I
 
-    sput-object v0, Lyn1;->a:Lyn1;
+    .line 1
+    iput-object p1, p0, Lyn1;->b:Ljava/lang/Object;
+
+    invoke-direct {p0, p2, p3, p4}, Landroid/media/VolumeProvider;-><init>(III)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/calls/impl/service/CallServiceImpl;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lyn1;->a:I
+
+    iput-object p1, p0, Lyn1;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    .line 2
+    invoke-direct {p0, p1, v0, v0}, Landroid/media/VolumeProvider;-><init>(III)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onAdjustVolume(I)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyn1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lyn1;->b:Ljava/lang/Object;
 
-    :cond_0
-    instance-of p1, p1, Lyn1;
+    check-cast v0, Lg09;
 
-    if-nez p1, :cond_1
+    iget-object v1, v0, Lg09;->f:Landroid/os/Handler;
 
-    const/4 p1, 0x0
+    iget-object v0, v0, Lg09;->g:Lxub;
 
-    return p1
+    new-instance v2, Lf09;
 
-    :cond_1
-    return v0
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, p1, v3}, Lf09;-><init>(Lxub;II)V
+
+    invoke-static {v1, v2}, Llig;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "on adjust volume changed: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "CallServiceTag"
+
+    invoke-static {v0, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lyn1;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/calls/impl/service/CallServiceImpl;
+
+    iget-object p1, p1, Lone/me/calls/impl/service/CallServiceImpl;->X:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt81;
+
+    invoke-virtual {p1}, Lt81;->a()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public onSetVolumeTo(I)V
+    .locals 4
 
-    const v0, 0x7d43b3c9
+    iget v0, p0, Lyn1;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-super {p0, p1}, Landroid/media/VolumeProvider;->onSetVolumeTo(I)V
 
-    const-string v0, "Loading"
+    return-void
 
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Lyn1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lg09;
+
+    iget-object v1, v0, Lg09;->f:Landroid/os/Handler;
+
+    iget-object v0, v0, Lg09;->g:Lxub;
+
+    new-instance v2, Lf09;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lf09;-><init>(Lxub;II)V
+
+    invoke-static {v1, v2}, Llig;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

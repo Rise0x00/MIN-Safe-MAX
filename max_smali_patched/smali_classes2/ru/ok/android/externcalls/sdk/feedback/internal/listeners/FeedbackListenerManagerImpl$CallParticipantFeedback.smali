@@ -20,16 +20,16 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;",
         "",
-        "Lxg1;",
+        "Lsh1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "participantId",
         "",
         "feedbackId",
         "<init>",
-        "(Lxg1;Ljava/lang/String;)V",
-        "Lxg1;",
+        "(Lsh1;Ljava/lang/String;)V",
+        "Lsh1;",
         "getParticipantId",
-        "()Lxg1;",
+        "()Lsh1;",
         "Ljava/lang/String;",
         "getFeedbackId",
         "()Ljava/lang/String;",
@@ -48,16 +48,16 @@
 # instance fields
 .field private final feedbackId:Ljava/lang/String;
 
-.field private final participantId:Lxg1;
+.field private final participantId:Lsh1;
 
 
 # direct methods
-.method public constructor <init>(Lxg1;Ljava/lang/String;)V
+.method public constructor <init>(Lsh1;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;->participantId:Lxg1;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;->participantId:Lsh1;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;->feedbackId:Ljava/lang/String;
 
@@ -74,10 +74,10 @@
     return-object v0
 .end method
 
-.method public final getParticipantId()Lxg1;
+.method public final getParticipantId()Lsh1;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;->participantId:Lxg1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl$CallParticipantFeedback;->participantId:Lsh1;
 
     return-object v0
 .end method

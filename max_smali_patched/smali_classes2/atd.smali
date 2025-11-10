@@ -1,80 +1,213 @@
-.class public final Latd;
-.super Lm3f;
+.class public abstract Latd;
+.super Ly3;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ltq;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final i:Lmm0;
 
-.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+.field public final j:Lmm0;
+
+.field public final k:Lmm0;
+
+.field public final l:Lmm0;
+
+.field public final m:La1f;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lrt5;)V
+    .locals 1
 
-    iput-object p2, p0, Latd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    const-string v0, "app.prefs"
 
-    const/4 p2, 0x2
+    invoke-direct {p0, p1, v0, p2}, Ly3;-><init>(Landroid/content/Context;Ljava/lang/String;Lrt5;)V
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x0
+
+    iget-object p2, p0, Ly3;->h:Luu7;
+
+    const-string v0, "app.extra.text.size.sp"
+
+    invoke-virtual {p2, v0, p1}, Luu7;->getFloat(Ljava/lang/String;F)F
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmm0;->t(Ljava/lang/Object;)Lmm0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latd;->i:Lmm0;
+
+    iget-object p1, p0, Ly3;->h:Luu7;
+
+    const-string p2, "app.extra.text.size.mode"
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, p2, v0}, Luu7;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmm0;->t(Ljava/lang/Object;)Lmm0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latd;->j:Lmm0;
+
+    invoke-virtual {p0}, Latd;->k()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmm0;->t(Ljava/lang/Object;)Lmm0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latd;->k:Lmm0;
+
+    invoke-virtual {p0}, Latd;->j()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmm0;->t(Ljava/lang/Object;)Lmm0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latd;->l:Lmm0;
+
+    const-string p1, "app.pinLock.screenshotEnabled"
+
+    iget-object p2, p0, Ly3;->h:Luu7;
+
+    invoke-virtual {p2, p1, v0}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Latd;->m:La1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final j()I
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Latd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Ly3;->h:Luu7;
+
+    const-string v2, "app.notification.chats.show"
+
+    invoke-virtual {v1, v2, v0}, Luu7;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Ly3;->h:Luu7;
+
+    const-string v2, "app.notification.dialogs.show"
+
+    invoke-virtual {v1, v2, v0}, Luu7;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final l()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Ly3;->h:Luu7;
+
+    const-string v2, "app.privacy.safe_mode"
+
+    invoke-virtual {v1, v2, v0}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m(I)V
+    .locals 1
+
+    const-string v0, "app.notification.chats.show"
+
+    invoke-virtual {p0, p1, v0}, Ly3;->g(ILjava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
+    const-string v0, "app.notification.chats.show.last"
+
+    invoke-virtual {p0, p1, v0}, Ly3;->g(ILjava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Latd;->l:Lmm0;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    check-cast p1, Latd;
+    invoke-virtual {v0, p1}, Lmm0;->b(Ljava/lang/Object;)V
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Latd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final n(Z)V
     .locals 2
 
-    new-instance v0, Latd;
+    const-string v0, "app.pinLock.screenshotEnabled"
 
-    iget-object v1, p0, Latd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    invoke-virtual {p0, v0, p1}, Ly3;->f(Ljava/lang/String;Z)V
 
-    invoke-direct {v0, p2, v1}, Latd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iput-object p1, v0, Latd;->X:Ljava/lang/Object;
+    move-result-object p1
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v1, p0, Latd;->m:La1f;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0, p1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Latd;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Latd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
-
-    iget-object v0, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->G0:Lr36;
-
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

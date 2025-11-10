@@ -1,92 +1,99 @@
 .class public final Lzud;
-.super Lstd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final a:Lake;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Lru7;Lru7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lzud;->b:J
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lbke;->b(III)Lake;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lzud;->a:Lake;
+
+    invoke-interface {p2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ltlf;
+
+    check-cast p2, Lsta;
+
+    invoke-virtual {p2}, Lsta;->c()Lbe8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lzud;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Liw0;
+
+    invoke-virtual {p1, p0}, Liw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w()V
-    .locals 5
+.method public final onEvent(Lep2;)V
+    .locals 3
+    .annotation runtime Lxbf;
+    .end annotation
 
-    invoke-virtual {p0}, Lstd;->b()Lub2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "storeChatFromCache chatId = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Lzud;->b:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, "ub2"
-
-    invoke-static {v4, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2, v3}, Lub2;->A(J)Lqc2;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "storeChatFromCache, chatId = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 1
+    new-instance v0, Lxud;
 
     const/4 v1, 0x0
 
-    invoke-static {v4, v0, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, p0, p1, v1}, Lxud;-><init>(Lzud;Lep2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lzud;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
     return-void
+.end method
 
-    :cond_0
-    iget-object v1, v1, Lqc2;->b:Lpc2;
+.method public final onEvent(Lqj0;)V
+    .locals 3
+    .annotation runtime Lxbf;
+    .end annotation
 
-    iget-object v0, v0, Lub2;->l:Ljt4;
+    .line 2
+    new-instance v0, Lyud;
 
-    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, p0, p1, v1}, Lyud;-><init>(Lzud;Lqj0;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Lu94;
+    const/4 p1, 0x3
 
-    check-cast v0, Lb94;
+    iget-object v2, p0, Lzud;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v0, v0, Lb94;->b:Lu5d;
-
-    invoke-virtual {v0, v2, v3, v1}, Lu5d;->h(JLpc2;)V
+    invoke-static {v2, v1, v1, v0, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
     return-void
 .end method

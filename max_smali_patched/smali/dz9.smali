@@ -1,65 +1,88 @@
-.class public final Ldz9;
-.super Lxn3;
+.class public final synthetic Ldz9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Lgog;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lgog;JZI)V
+    .locals 0
 
-    const-string v0, "NetworkMeteredCtrlr"
+    iput p5, p0, Ldz9;->a:I
 
-    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Ldz9;->d:Lgog;
+
+    iput-wide p2, p0, Ldz9;->b:J
+
+    iput-boolean p4, p0, Ldz9;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbah;)Z
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iget-object p1, p1, Lbah;->j:Lro3;
+    iget v0, p0, Ldz9;->a:I
 
-    iget p1, p1, Lro3;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x5
+    iget-object v0, p0, Ldz9;->d:Lgog;
 
-    if-ne p1, v0, :cond_0
+    check-cast v0, Li22;
 
-    const/4 p1, 0x1
+    iget-object v0, v0, Li22;->c:Ljava/lang/Object;
 
-    return p1
+    check-cast v0, Lzqe;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v0, v0, Lzqe;->d:Lvog;
 
-    return p1
-.end method
+    iget-wide v1, p0, Ldz9;->b:J
 
-.method public final b(Ljava/lang/Object;)Z
-    .locals 1
+    iget-boolean v3, p0, Ldz9;->c:Z
 
-    check-cast p1, Lfz9;
+    invoke-interface {v0, v1, v2, v3}, Lvog;->p(JZ)V
 
-    iget-boolean v0, p1, Lfz9;->a:Z
+    return-void
 
-    if-eqz v0, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Ldz9;->d:Lgog;
 
-    iget-boolean p1, p1, Lfz9;->c:Z
+    check-cast v0, Lwui;
 
-    if-nez p1, :cond_0
+    iget-object v0, v0, Lwui;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lgz9;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v0, v0, Lgz9;->e:Lvog;
 
-    return p1
+    iget-wide v1, p0, Ldz9;->b:J
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    iget-boolean v3, p0, Ldz9;->c:Z
 
-    return p1
+    invoke-interface {v0, v1, v2, v3}, Lvog;->p(JZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

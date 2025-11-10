@@ -1,32 +1,19 @@
-.class public interface abstract Lms3;
+.class public final synthetic Lms3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract C(J)V
-.end method
+# instance fields
+.field public final synthetic a:Lqs3;
 
-.method public X()V
+
+# direct methods
+.method public synthetic constructor <init>(Lqs3;)V
     .locals 0
 
-    return-void
-.end method
+    iput-object p1, p0, Lms3;->a:Lqs3;
 
-.method public e(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f(JZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(JLandroid/view/View;)V
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

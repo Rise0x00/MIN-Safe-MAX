@@ -1,233 +1,712 @@
-.class public final enum Ly29;
-.super Ljava/lang/Enum;
+.class public final Ly29;
+.super Lz29;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum A0:Ly29;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 21
 
-.field public static final enum B0:Ly29;
+    move-object/from16 v0, p0
 
-.field public static final enum C0:Ly29;
+    iget-wide v1, v0, Lz29;->a:J
 
-.field public static final enum D0:Ly29;
+    iget-wide v3, v0, Lz29;->b:J
 
-.field public static final synthetic E0:[Ly29;
+    sub-long v5, v3, v1
 
-.field public static final enum X:Ly29;
+    long-to-float v5, v5
 
-.field public static final enum Y:Ly29;
+    const/high16 v6, 0x447a0000    # 1000.0f
 
-.field public static final enum Z:Ly29;
+    div-float/2addr v5, v6
 
-.field public static final enum a:Ly29;
+    invoke-static {v1, v2, v3, v4}, Lal5;->a(JJ)Ljava/lang/String;
 
-.field public static final enum b:Ly29;
+    move-result-object v1
 
-.field public static final enum c:Ly29;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-.field public static final enum o:Ly29;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-.field public static final enum w0:Ly29;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static final enum x0:Ly29;
+    const-string v1, ", "
 
-.field public static final enum y0:Ly29;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static final enum z0:Ly29;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    const-string v1, " s"
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 17
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ly29;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "FORWARD"
+    move-result-object v1
 
-    const/4 v2, 0x0
+    iget-object v2, v0, Lz29;->d:La39;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v3, v2, La39;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput-object v0, Ly29;->a:Ly29;
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    new-instance v1, Ly29;
+    move-result-object v3
 
-    const-string v2, "COPY"
+    check-cast v3, Lgk5;
 
-    const/4 v3, 0x1
+    iget-object v4, v2, La39;->c:Ljava/util/ArrayList;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
-    sput-object v1, Ly29;->b:Ly29;
+    move-result v7
 
-    new-instance v2, Ly29;
+    const-wide/16 v8, 0x0
 
-    const-string v3, "REPORT"
+    const/4 v10, 0x0
 
-    const/4 v4, 0x2
+    :goto_0
+    const-wide v11, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-ge v10, v7, :cond_1
 
-    sput-object v2, Ly29;->c:Ly29;
+    invoke-virtual {v4, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    new-instance v3, Ly29;
+    move-result-object v13
 
-    const-string v4, "MARK_AS_UNREAD"
+    check-cast v13, Lnr8;
 
-    const/4 v5, 0x3
+    iget-wide v13, v13, Lnr8;->b:J
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    cmp-long v15, v13, v11
 
-    sput-object v3, Ly29;->o:Ly29;
+    if-nez v15, :cond_0
 
-    new-instance v4, Ly29;
+    move-wide v8, v11
 
-    const-string v5, "REPLY"
+    goto :goto_1
 
-    const/4 v6, 0x4
+    :cond_0
+    add-long/2addr v8, v13
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    add-int/lit8 v10, v10, 0x1
 
-    sput-object v4, Ly29;->X:Ly29;
+    goto :goto_0
 
-    new-instance v5, Ly29;
+    :cond_1
+    :goto_1
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v6, "DELETE"
+    move-result-object v4
 
-    const/4 v7, 0x5
+    cmp-long v7, v8, v11
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-eqz v7, :cond_2
 
-    sput-object v5, Ly29;->Y:Ly29;
+    goto :goto_2
 
-    new-instance v6, Ly29;
+    :cond_2
+    const/4 v4, 0x0
 
-    const-string v7, "DELETE_FOR_ALL"
+    :goto_2
+    const v7, 0x49742400    # 1000000.0f
 
-    const/4 v8, 0x6
+    if-eqz v4, :cond_3
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
 
-    sput-object v6, Ly29;->Z:Ly29;
+    move-result-wide v9
 
-    new-instance v7, Ly29;
+    long-to-float v4, v9
 
-    const-string v8, "PIN"
+    div-float/2addr v4, v7
 
-    const/4 v9, 0x7
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v4
 
-    sput-object v7, Ly29;->w0:Ly29;
+    goto :goto_3
 
-    new-instance v8, Ly29;
+    :cond_3
+    const/4 v4, 0x0
 
-    const-string v9, "UNPIN"
+    :goto_3
+    const/4 v9, 0x0
 
-    const/16 v10, 0x8
+    cmpg-float v10, v5, v9
 
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-nez v10, :cond_4
 
-    sput-object v8, Ly29;->x0:Ly29;
+    goto :goto_4
 
-    new-instance v9, Ly29;
+    :cond_4
+    iget-wide v11, v3, Lgk5;->b:J
 
-    const-string v10, "SELECT"
+    long-to-float v3, v11
 
-    const/16 v11, 0x9
+    const/high16 v9, 0x44800000    # 1024.0f
 
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    mul-float/2addr v9, v5
 
-    sput-object v9, Ly29;->y0:Ly29;
+    div-float v9, v3, v9
 
-    new-instance v10, Ly29;
+    :goto_4
+    if-eqz v4, :cond_6
 
-    const-string v11, "EDIT"
+    if-nez v10, :cond_5
 
-    const/16 v12, 0xa
+    const/4 v4, 0x0
 
-    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :cond_5
+    if-eqz v4, :cond_6
 
-    sput-object v10, Ly29;->z0:Ly29;
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
-    new-instance v11, Ly29;
+    move-result v3
 
-    const-string v12, "SAVE_TO_GALLERY"
+    div-float/2addr v3, v5
 
-    const/16 v13, 0xb
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v3
 
-    sput-object v11, Ly29;->A0:Ly29;
+    goto :goto_5
 
-    new-instance v12, Ly29;
+    :cond_6
+    const/4 v3, 0x0
 
-    const-string v13, "COPY_PHOTO"
+    :goto_5
+    iget-object v4, v2, La39;->a:Ls29;
 
-    const/16 v14, 0xc
+    iget-object v4, v4, Ls29;->b:Ljava/util/ArrayList;
 
-    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v4}, Lal5;->f(Ljava/util/ArrayList;)Ljava/lang/String;
 
-    sput-object v12, Ly29;->B0:Ly29;
+    move-result-object v4
 
-    new-instance v13, Ly29;
+    iget-object v5, v2, La39;->c:Ljava/util/ArrayList;
 
-    const-string v14, "SHARE_EXTERNAL"
+    invoke-static {v5}, Lal5;->c(Ljava/util/List;)Ljava/lang/String;
 
-    const/16 v15, 0xd
+    move-result-object v5
 
-    invoke-direct {v13, v14, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v10, v0, Lz29;->c:Ls29;
 
-    sput-object v13, Ly29;->C0:Ly29;
+    iget-object v11, v10, Ls29;->c:Ljava/lang/String;
 
-    new-instance v14, Ly29;
+    invoke-static {v10}, Lal5;->d(Ls29;)Ljava/lang/String;
 
-    const-string v15, "SHARE_POST"
+    move-result-object v10
 
-    move-object/from16 v16, v0
+    iget-object v12, v0, Lz29;->c:Ls29;
 
-    const/16 v0, 0xe
+    const-string v13, "                  "
 
-    invoke-direct {v14, v15, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v12, v13}, Lal5;->e(Ls29;Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v14, Ly29;->D0:Ly29;
+    move-result-object v12
 
-    move-object/from16 v0, v16
+    iget-object v13, v2, La39;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    filled-new-array/range {v0 .. v14}, [Ly29;
+    invoke-virtual {v13}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Lgk5;
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
+
+    if-eqz v13, :cond_7
+
+    const-string v15, "\n                  duration="
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move v15, v6
+
+    move/from16 v16, v7
+
+    iget-wide v6, v13, Lgk5;->a:J
+
+    long-to-float v6, v6
+
+    div-float/2addr v6, v15
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v6, " s\n                  file_size="
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v6, v13, Lgk5;->b:J
+
+    invoke-virtual {v14, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v6, " bytes\n                  optimization="
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v6, v13, Lgk5;->o:I
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    goto :goto_6
+
+    :cond_7
+    move v15, v6
+
+    move/from16 v16, v7
+
+    const-string v6, "\n                  duration=?\n                  file_size=?\n                  optimization=?"
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_6
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    iget-object v7, v2, La39;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lgk5;
+
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    const-string v14, "\n                      encoder="
+
+    invoke-direct {v13, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v8, "?"
+
+    move/from16 v18, v15
+
+    if-eqz v7, :cond_8
+
+    iget-object v15, v7, Lgk5;->f:Ljava/lang/String;
+
+    if-nez v15, :cond_9
+
+    :cond_8
+    move-object v15, v8
+
+    :cond_9
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v15, "\n                      channels="
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v7, :cond_a
+
+    iget v15, v7, Lgk5;->d:I
+
+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v15
+
+    goto :goto_7
+
+    :cond_a
+    move-object v15, v8
+
+    :goto_7
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v15, "\n                      sample_rate="
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v7, :cond_b
+
+    iget v15, v7, Lgk5;->e:I
+
+    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v15
+
+    goto :goto_8
+
+    :cond_b
+    move-object v15, v8
+
+    :goto_8
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v15, "\n                      bitrate="
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v7, :cond_c
+
+    iget v7, v7, Lgk5;->c:I
+
+    if-lez v7, :cond_c
+
+    int-to-float v7, v7
+
+    div-float v7, v7, v18
+
+    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v7, " Kbps"
+
+    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_9
+
+    :cond_c
+    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_9
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    iget-object v13, v2, La39;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v13}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Lgk5;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-eqz v13, :cond_d
+
+    iget-object v14, v13, Lgk5;->m:Ljava/lang/String;
+
+    if-nez v14, :cond_e
+
+    :cond_d
+    move-object v14, v8
+
+    :cond_e
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v14, "\n                      frames="
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v13, :cond_f
+
+    iget v14, v13, Lgk5;->l:I
+
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v14
+
+    goto :goto_a
+
+    :cond_f
+    move-object v14, v8
+
+    :goto_a
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v14, "\n                      size="
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v13, :cond_10
+
+    iget v14, v13, Lgk5;->k:I
+
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v14
+
+    goto :goto_b
+
+    :cond_10
+    move-object v14, v8
+
+    :goto_b
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v14, 0x78
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    if-eqz v13, :cond_11
+
+    iget v14, v13, Lgk5;->j:I
+
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v14
+
+    goto :goto_c
+
+    :cond_11
+    move-object v14, v8
+
+    :goto_c
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v14, "\n                      bitrate_mode="
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v14, v2, La39;->d:I
+
+    move-object/from16 v18, v3
+
+    const-string v3, "?("
+
+    move/from16 v19, v9
+
+    const-string v9, ")"
+
+    if-eqz v14, :cond_15
+
+    move-object/from16 v20, v6
+
+    const/4 v6, 0x1
+
+    if-eq v14, v6, :cond_14
+
+    const/4 v6, 0x2
+
+    if-eq v14, v6, :cond_13
+
+    const/4 v6, 0x3
+
+    if-eq v14, v6, :cond_12
+
+    invoke-static {v14, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_d
+
+    :cond_12
+    const-string v6, "CBR-FD("
+
+    invoke-static {v14, v6, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_d
+
+    :cond_13
+    const-string v6, "CBR("
+
+    invoke-static {v14, v6, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_d
+
+    :cond_14
+    const-string v6, "VBR("
+
+    invoke-static {v14, v6, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_d
+
+    :cond_15
+    move-object/from16 v20, v6
+
+    const-string v6, "CQ("
+
+    invoke-static {v14, v6, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    :goto_d
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v13, :cond_16
+
+    iget v6, v13, Lgk5;->h:I
+
+    if-lez v6, :cond_16
+
+    int-to-float v6, v6
+
+    div-float v6, v6, v16
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v6, " Mbps"
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_e
+
+    :cond_16
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_e
+    const-string v6, "\n                      hdr_mode="
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, v2, La39;->e:I
+
+    if-eqz v2, :cond_1a
+
+    const/4 v6, 0x1
+
+    if-eq v2, v6, :cond_19
+
+    const/4 v6, 0x2
+
+    if-eq v2, v6, :cond_18
+
+    const/4 v6, 0x3
+
+    if-eq v2, v6, :cond_17
+
+    invoke-static {v2, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_f
+
+    :cond_17
+    const-string v3, "exp_HDR-as-SDR("
+
+    invoke-static {v2, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_f
+
+    :cond_18
+    const-string v3, "HDR-to-SDR_gl("
+
+    invoke-static {v2, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_f
+
+    :cond_19
+    const-string v3, "HDR-to-SDR_mc("
+
+    invoke-static {v2, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_f
+
+    :cond_1a
+    const-string v3, "Keep-HDR("
+
+    invoke-static {v2, v3, v9}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_f
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\n                      hdr="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v13, :cond_1b
+
+    iget-object v2, v13, Lgk5;->i:Llb3;
+
+    move-object/from16 v17, v2
+
+    goto :goto_10
+
+    :cond_1b
+    const/16 v17, 0x0
+
+    :goto_10
+    invoke-static/range {v17 .. v17}, Llb3;->g(Llb3;)Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ly29;->E0:[Ly29;
+    if-nez v18, :cond_1c
 
-    return-void
-.end method
+    move-object v3, v8
 
-.method public static valueOf(Ljava/lang/String;)Ly29;
-    .locals 1
+    goto :goto_11
 
-    const-class v0, Ly29;
+    :cond_1c
+    move-object/from16 v3, v18
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :goto_11
+    const-string v2, "\n              }\n              inputMedias={"
 
-    move-result-object p0
+    const-string v6, "\n              }\n              out="
 
-    check-cast p0, Ly29;
+    const-string v8, "\n            MediaTransformResult.Success(\n              in={"
 
-    return-object p0
-.end method
+    invoke-static {v8, v4, v2, v5, v6}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public static values()[Ly29;
-    .locals 1
+    move-result-object v2
 
-    sget-object v0, Ly29;->E0:[Ly29;
+    const-string v4, "\n              request={"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v5, "\n                  settings={"
+
+    invoke-static {v2, v11, v4, v10, v5}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "\n                  }\n              }\n              took="
+
+    const-string v5, "\n              out={"
+
+    invoke-static {v2, v12, v4, v1, v5}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "\n                  audio={"
+
+    const-string v4, "\n                  }\n                  video={"
+
+    move-object/from16 v5, v20
+
+    invoke-static {v2, v5, v1, v7, v4}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n                  }\n              }\n              transform_speed="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move/from16 v9, v19
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, " Mbytes/s\n              transform_speed="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " s/s\n            )\n        "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Ly29;
+    invoke-static {v0}, Lyaf;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

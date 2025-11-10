@@ -1,210 +1,85 @@
-.class public final Lml;
+.class public interface abstract Lml;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static synthetic b(Lml;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lq10;Ljava/lang/String;Ljava/lang/String;)J
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v9, 0x2
 
-    new-instance v0, Ljava/util/ArrayList;
+    move-object v0, p0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    check-cast v0, Lona;
 
-    iput-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    const-wide/16 v7, 0x0
 
-    const/4 v0, 0x1
+    move-object v1, p1
 
-    iput-boolean v0, p0, Lml;->b:Z
+    move-object v2, p2
 
-    return-void
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object/from16 v6, p6
+
+    invoke-virtual/range {v0 .. v9}, Lona;->G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lq10;Ljava/lang/String;Ljava/lang/String;JI)J
+
+    move-result-wide p0
+
+    return-wide p0
 .end method
 
 
 # virtual methods
-.method public final a(Lll;)V
+.method public a(Lcig;)J
     .locals 2
 
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object v1, p0
 
-    iget-boolean v0, p0, Lml;->b:Z
+    check-cast v1, Lona;
 
-    invoke-virtual {p1}, Lll;->a()Z
+    invoke-virtual {v1, p1, v0}, Lona;->s(Lcig;Z)J
 
-    move-result v1
+    move-result-wide v0
 
-    and-int/2addr v0, v1
-
-    iput-boolean v0, p0, Lml;->b:Z
-
-    iget-boolean v0, p0, Lml;->c:Z
-
-    invoke-virtual {p1}, Lll;->c()Z
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    iput-boolean v0, p0, Lml;->c:Z
-
-    iget-boolean v0, p0, Lml;->d:Z
-
-    invoke-virtual {p1}, Lll;->b()Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    or-int/2addr v0, v1
-
-    iput-boolean v0, p0, Lml;->d:Z
-
-    iget-boolean v0, p0, Lml;->e:Z
-
-    invoke-virtual {p1}, Lll;->b()Z
-
-    move-result p1
-
-    or-int/2addr p1, v0
-
-    iput-boolean p1, p0, Lml;->e:Z
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public c(ILjava/util/List;)V
+    .locals 4
 
-    new-instance v0, Lqxe;
+    invoke-static {p2}, Lab3;->Y(Ljava/util/Collection;)[J
 
-    invoke-direct {v0, p1, p2}, Lwxe;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p2
 
-    invoke-virtual {p0, v0}, Lml;->a(Lll;)V
+    move-object v0, p0
 
-    return-void
-.end method
+    check-cast v0, Lona;
 
-.method public final c(Lcm7;)V
-    .locals 3
+    new-instance v1, Lku;
 
-    iget-boolean v0, p0, Lml;->d:Z
+    invoke-virtual {v0}, Lona;->x()Lqxb;
 
-    if-nez v0, :cond_0
+    move-result-object v2
 
-    goto :goto_1
+    check-cast v2, Lsxb;
 
-    :cond_0
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    iget-object v2, v2, Lsxb;->a:Le78;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2}, Lztd;->k()J
 
-    move-result v1
+    move-result-wide v2
 
-    const/4 v2, 0x1
+    invoke-direct {v1, p1, v2, v3, p2}, Lku;-><init>(IJ[J)V
 
-    if-le v1, v2, :cond_1
+    invoke-static {v0, v1}, Lona;->u(Lona;Lzm;)J
 
-    new-instance v1, Lmz4;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2}, Lmz4;-><init>(I)V
-
-    invoke-static {v0, v1}, Lj93;->X(Ljava/util/List;Ljava/util/Comparator;)V
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_2
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lll;
-
-    invoke-virtual {v1}, Lll;->b()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {v1, p1}, Lll;->d(Lcm7;)V
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-void
-.end method
-
-.method public final d(Lcm7;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lml;->e:Z
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lll;
-
-    invoke-virtual {v1}, Lll;->b()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, p1}, Lll;->d(Lcm7;)V
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
     return-void
 .end method

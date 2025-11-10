@@ -1,236 +1,196 @@
 .class public final Lixe;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lbf5;
+.field public final synthetic Y:J
 
-.field public final c:Landroid/media/AudioManager;
-
-.field public d:I
-
-.field public e:I
-
-.field public f:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lbf5;)V
-    .locals 2
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lixe;->Y:J
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    iput-object p2, p0, Lixe;->a:Landroid/os/Handler;
-
-    iput-object p3, p0, Lixe;->b:Lbf5;
-
-    const-string p2, "audio"
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/media/AudioManager;
-
-    invoke-static {p2}, Lyhh;->h(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lixe;->c:Landroid/media/AudioManager;
-
-    const/4 p3, 0x3
-
-    iput p3, p0, Lixe;->d:I
-
-    invoke-static {p2, p3}, Lixe;->a(Landroid/media/AudioManager;I)I
-
-    move-result p3
-
-    iput p3, p0, Lixe;->e:I
-
-    iget p3, p0, Lixe;->d:I
-
-    sget v0, Lr4g;->a:I
-
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    invoke-virtual {p2, p3}, Landroid/media/AudioManager;->isStreamMute(I)Z
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p2, p3}, Lixe;->a(Landroid/media/AudioManager;I)I
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    const/4 p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
-
-    :goto_0
-    iput-boolean p2, p0, Lixe;->f:Z
-
-    new-instance p2, Lhn;
-
-    const/16 p3, 0xc
-
-    invoke-direct {p2, p3, p0}, Lhn;-><init>(ILjava/lang/Object;)V
-
-    new-instance p3, Landroid/content/IntentFilter;
-
-    const-string v0, "android.media.VOLUME_CHANGED_ACTION"
-
-    invoke-direct {p3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :catch_0
-    move-exception p1
-
-    const-string p2, "StreamVolumeManager"
-
-    const-string p3, "Error registering stream volume receiver"
-
-    invoke-static {p2, p3, p1}, Lf09;->P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/media/AudioManager;I)I
-    .locals 3
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x3c
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Could not retrieve stream volume for stream type "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "StreamVolumeManager"
-
-    invoke-static {v2, v1, v0}, Lf09;->P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
-
-    move-result p0
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lixe;->d:I
+    check-cast p1, Lg54;
 
-    iget-object v1, p0, Lixe;->c:Landroid/media/AudioManager;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v1, v0}, Lixe;->a(Landroid/media/AudioManager;I)I
+    invoke-virtual {p0, p1, p2}, Lixe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    move-result-object p1
 
-    iget v2, p0, Lixe;->d:I
+    check-cast p1, Lixe;
 
-    sget v3, Lr4g;->a:I
+    sget-object p2, Lybg;->a:Lybg;
 
-    const/16 v4, 0x17
+    invoke-virtual {p1, p2}, Lixe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-lt v3, v4, :cond_0
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Landroid/media/AudioManager;->isStreamMute(I)Z
+    return-object p1
+.end method
 
-    move-result v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    goto :goto_0
+    new-instance v0, Lixe;
 
-    :cond_0
-    invoke-static {v1, v2}, Lixe;->a(Landroid/media/AudioManager;I)I
+    iget-wide v1, p0, Lixe;->Y:J
 
-    move-result v1
+    invoke-direct {v0, v1, v2, p2}, Lixe;-><init>(JLkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_1
+    iput-object p1, v0, Lixe;->X:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    :cond_1
-    const/4 v1, 0x0
+    sget-object v0, Lh54;->a:Lh54;
 
-    :goto_0
-    iget v2, p0, Lixe;->e:I
+    iget v1, p0, Lixe;->o:I
 
-    if-ne v2, v0, :cond_3
+    const/4 v2, 0x1
 
-    iget-boolean v2, p0, Lixe;->f:Z
+    if-eqz v1, :cond_1
 
-    if-eq v2, v1, :cond_2
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lixe;->X:Ljava/lang/Object;
+
+    check-cast v1, Lg54;
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lixe;->X:Ljava/lang/Object;
+
+    check-cast p1, Lg54;
+
+    move-object v1, p1
+
     :cond_2
-    return-void
+    :goto_0
+    invoke-static {v1}, Ljwi;->e(Lg54;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-wide v3, p0, Lixe;->Y:J
+
+    iput-object v1, p0, Lixe;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lixe;->o:I
+
+    invoke-static {v3, v4, p0}, Lxxi;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
 
     :cond_3
     :goto_1
-    iput v0, p0, Lixe;->e:I
+    :try_start_0
+    sget-object p1, Lusa;->a:Lusa;
 
-    iput-boolean v1, p0, Lixe;->f:Z
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
 
-    iget-object v2, p0, Lixe;->b:Lbf5;
+    move-result-object p1
 
-    iget-object v2, v2, Lbf5;->a:Lhf5;
+    const-class v3, Ljxe;
 
-    iget-object v2, v2, Lhf5;->B0:La63;
+    invoke-virtual {p1, v3}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v3, Laf5;
+    move-result-object p1
 
-    invoke-direct {v3, v0, v1}, Laf5;-><init>(IZ)V
+    check-cast p1, Ljxe;
 
-    const/16 v0, 0x1e
+    check-cast p1, Lkxe;
 
-    invoke-virtual {v2, v0, v3}, La63;->l(ILrx7;)V
+    iget-object p1, p1, Lkxe;->a:Ljava/lang/String;
 
-    return-void
+    sget-object v3, Lcuh;->b:Lnxa;
+
+    if-nez v3, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    sget-object v4, La98;->d:La98;
+
+    invoke-virtual {v3, v4}, Lnxa;->b(La98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const-string v5, "verifyIntegrity"
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v3, v4, p1, v5, v6}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_0
+    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "ssl integrity verification failed"
+
+    invoke-static {v3, v4, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_5
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

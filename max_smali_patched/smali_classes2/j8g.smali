@@ -1,59 +1,53 @@
 .class public final Lj8g;
-.super Ll8g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll8g;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lj8g;",
-            ">;"
-        }
-    .end annotation
-.end field
 
-.field public static final a:Lj8g;
+# instance fields
+.field public final a:Lnrf;
+
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(IILnrf;)V
+    .locals 0
 
-    new-instance v0, Lj8g;
+    and-int/lit8 p2, p2, 0x2
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-eqz p2, :cond_0
 
-    sput-object v0, Lj8g;->a:Lj8g;
+    .line 5
+    sget p1, Likd;->X0:I
 
-    new-instance v0, Lk3g;
+    :cond_0
+    const/4 p2, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lk3g;-><init>(I)V
-
-    sput-object v0, Lj8g;->CREATOR:Landroid/os/Parcelable$Creator;
+    .line 6
+    invoke-direct {p0, p1, p3, p2}, Lj8g;-><init>(ILnrf;Z)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public constructor <init>(ILnrf;Z)V
     .locals 0
 
-    const/4 p2, 0x1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    .line 2
+    iput-object p2, p0, Lj8g;->a:Lnrf;
+
+    .line 3
+    iput p1, p0, Lj8g;->b:I
+
+    .line 4
+    iput-boolean p3, p0, Lj8g;->c:Z
 
     return-void
 .end method

@@ -1,26 +1,26 @@
 .class public final Lwq1;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-.field public final synthetic Y:Lzq1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lzq1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
     .locals 0
 
-    iput-object p1, p0, Lwq1;->Y:Lzq1;
+    iput-object p2, p0, Lwq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,114 +30,85 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lwq1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lwq1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lwq1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lwq1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance p1, Lwq1;
+    new-instance v0, Lwq1;
 
-    iget-object v0, p0, Lwq1;->Y:Lzq1;
+    iget-object v1, p0, Lwq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    invoke-direct {p1, v0, p2}, Lwq1;-><init>(Lzq1;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lwq1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
 
-    return-object p1
+    iput-object p1, v0, Lwq1;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 10
 
-    iget v0, p0, Lwq1;->X:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lwq1;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lpyf;
 
-    if-ne v0, v1, :cond_0
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Les7;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Lwq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Lwq1;->X:I
-
-    iget-object p1, p0, Lwq1;->Y:Lzq1;
-
-    invoke-static {p1, p0}, Lzq1;->a(Lzq1;Lnz3;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lap3;
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v1
-
-    invoke-virtual {p1}, Lap3;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->x0()Lrq1;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
+    iget-boolean v1, p1, Lpyf;->c:Z
 
-    const-string v0, ""
+    iget-object v2, p1, Lpyf;->f:Lgyf;
 
-    :cond_3
-    move-object v3, v0
+    invoke-virtual {v0, v1, v2}, Lrq1;->x(ZLgyf;)V
 
-    invoke-virtual {p1}, Lap3;->m()Ljava/lang/CharSequence;
+    new-instance v1, Lpq1;
 
-    move-result-object v4
+    iget-boolean v2, p1, Lpyf;->d:Z
 
-    sget-object v0, Lqk0;->o:Lqk0;
+    iget-boolean v3, p1, Lpyf;->e:Z
 
-    invoke-virtual {p1, v0}, Lap3;->p(Lqk0;)Ljava/lang/String;
+    invoke-direct {v1, v2, v3}, Lpq1;-><init>(ZZ)V
 
-    move-result-object v6
+    invoke-virtual {v0, v1}, Lrq1;->setButtonsVisibility(Lpq1;)V
 
-    invoke-virtual {p1}, Lap3;->x()Z
+    iget-boolean v5, p1, Lpyf;->b:Z
 
-    move-result v5
+    iget-object v4, v0, Lrq1;->K0:Landroid/widget/TextView;
 
-    new-instance v0, Lh4g;
+    const/4 v8, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lh4g;-><init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
+    const/4 v9, 0x6
 
-    return-object v0
+    const-wide/16 v6, 0x0
+
+    invoke-static/range {v4 .. v9}, Lbei;->e(Landroid/view/View;ZJLqi6;I)V
+
+    iget-object v4, v0, Lrq1;->L0:Landroid/widget/TextView;
+
+    invoke-static/range {v4 .. v9}, Lbei;->e(Landroid/view/View;ZJLqi6;I)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

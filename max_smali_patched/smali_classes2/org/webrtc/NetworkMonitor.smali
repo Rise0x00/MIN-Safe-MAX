@@ -597,46 +597,38 @@
     .line 9
     const-string v0, "NetworkMonitor"
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Start monitoring with native observer "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v1, "Start monitoring with native observer "
 
     const-string v2, " fieldTrialsString: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 10
+    invoke-static {v1, p2, p3, v2, p4}, Lo3h;->g(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 11
     invoke-static {v0, v1}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
-    .line 10
+    .line 12
     :cond_0
     invoke-static {}, Lorg/webrtc/ContextUtils;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 11
+    .line 13
     :goto_0
     invoke-virtual {p0, p1, p4}, Lorg/webrtc/NetworkMonitor;->startMonitoring(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 12
+    .line 14
     iget-object p1, p0, Lorg/webrtc/NetworkMonitor;->nativeNetworkObservers:Ljava/util/ArrayList;
 
     monitor-enter p1
 
-    .line 13
+    .line 15
     :try_start_0
     iget-object p4, p0, Lorg/webrtc/NetworkMonitor;->nativeNetworkObservers:Ljava/util/ArrayList;
 
@@ -646,15 +638,15 @@
 
     invoke-virtual {p4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 14
+    .line 16
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
+    .line 17
     invoke-direct {p0, p2, p3}, Lorg/webrtc/NetworkMonitor;->updateObserverActiveNetworkList(J)V
 
-    .line 16
+    .line 18
     iget-object p1, p0, Lorg/webrtc/NetworkMonitor;->currentConnectionType:Lorg/webrtc/NetworkChangeDetector$ConnectionType;
 
     invoke-direct {p0, p1}, Lorg/webrtc/NetworkMonitor;->notifyObserversOfConnectionTypeChange(Lorg/webrtc/NetworkChangeDetector$ConnectionType;)V
@@ -664,7 +656,7 @@
     :catchall_0
     move-exception p2
 
-    .line 17
+    .line 19
     :try_start_1
     monitor-exit p1
     :try_end_1

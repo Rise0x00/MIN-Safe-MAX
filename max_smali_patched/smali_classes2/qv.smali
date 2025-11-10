@@ -1,9 +1,6 @@
-.class public final synthetic Lqv;
-.super Lag6;
+.class public final Lqv;
+.super Luv;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # static fields
@@ -12,21 +9,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
     new-instance v0, Lqv;
 
-    const-string v4, "getTime()J"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Liv6;
-
-    const-string v3, "getTime"
-
-    invoke-direct/range {v0 .. v5}, Lag6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lqv;->a:Lqv;
 
@@ -35,18 +22,40 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Liv6;
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Liv6;->l()J
+    if-ne p0, p1, :cond_0
 
-    move-result-wide v0
+    return v0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_0
+    instance-of p1, p1, Lqv;
 
-    move-result-object p1
+    if-nez p1, :cond_1
 
-    return-object p1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x2c75b5e3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Idle"
+
+    return-object v0
 .end method

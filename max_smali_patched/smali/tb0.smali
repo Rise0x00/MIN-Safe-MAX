@@ -4,109 +4,36 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public final b:I
 
-.field public final c:Lk12;
+.field public final c:Z
 
-.field public final d:Landroid/graphics/Rect;
-
-.field public final e:Landroid/graphics/Matrix;
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:Ljava/util/List;
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lk12;Landroid/graphics/Rect;Landroid/graphics/Matrix;IIILjava/util/List;)V
-    .locals 2
+.method public constructor <init>(IIZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v0, Landroidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk;
+    iput p1, p0, Ltb0;->a:I
 
-    sget-object v1, Lrp4;->a:Lot6;
+    iput p2, p0, Ltb0;->b:I
 
-    invoke-virtual {v1, v0}, Lot6;->e(Ljava/lang/Class;)Lt9c;
+    iput-boolean p3, p0, Ltb0;->c:Z
 
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/core/internal/compat/quirk/CaptureFailedRetryQuirk;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    iput v0, p0, Ltb0;->a:I
-
-    if-eqz p1, :cond_3
-
-    iput-object p1, p0, Ltb0;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Ltb0;->c:Lk12;
-
-    iput-object p3, p0, Ltb0;->d:Landroid/graphics/Rect;
-
-    if-eqz p4, :cond_2
-
-    iput-object p4, p0, Ltb0;->e:Landroid/graphics/Matrix;
-
-    iput p5, p0, Ltb0;->f:I
-
-    iput p6, p0, Ltb0;->g:I
-
-    iput p7, p0, Ltb0;->h:I
-
-    if-eqz p8, :cond_1
-
-    iput-object p8, p0, Ltb0;->i:Ljava/util/List;
+    iput-boolean p4, p0, Ltb0;->d:Z
 
     return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null sessionConfigCameraCaptureCallbacks"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null sensorToBufferTransform"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null appExecutor"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -119,100 +46,44 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     check-cast p1, Ltb0;
 
-    iget-object v1, p1, Ltb0;->b:Ljava/util/concurrent/Executor;
+    iget v1, p0, Ltb0;->a:I
 
-    iget-object v3, p1, Ltb0;->c:Lk12;
+    iget v3, p1, Ltb0;->a:I
 
-    iget-object v4, p0, Ltb0;->b:Ljava/util/concurrent/Executor;
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v4, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Ltb0;->b:I
 
-    move-result v1
+    iget v3, p1, Ltb0;->b:I
 
-    if-eqz v1, :cond_2
+    if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Ltb0;->c:Lk12;
+    iget-boolean v1, p0, Ltb0;->c:Z
 
-    if-nez v1, :cond_1
+    iget-boolean v3, p1, Ltb0;->c:Z
 
-    if-nez v3, :cond_2
+    if-ne v1, v3, :cond_1
 
-    goto :goto_0
+    iget-boolean v1, p0, Ltb0;->d:Z
 
-    :cond_1
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-boolean p1, p1, Ltb0;->d:Z
 
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    :goto_0
-    iget-object v1, p0, Ltb0;->d:Landroid/graphics/Rect;
-
-    iget-object v3, p1, Ltb0;->d:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v3}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Ltb0;->e:Landroid/graphics/Matrix;
-
-    iget-object v3, p1, Ltb0;->e:Landroid/graphics/Matrix;
-
-    invoke-virtual {v1, v3}, Landroid/graphics/Matrix;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Ltb0;->f:I
-
-    iget v3, p1, Ltb0;->f:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Ltb0;->g:I
-
-    iget v3, p1, Ltb0;->g:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Ltb0;->h:I
-
-    iget v3, p1, Ltb0;->h:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Ltb0;->i:Ljava/util/List;
-
-    iget-object p1, p1, Ltb0;->i:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
+    if-ne v1, p1, :cond_1
 
     return v0
 
-    :cond_2
+    :cond_1
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 5
 
-    iget-object v0, p0, Ltb0;->b:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Ltb0;->a:I
 
     const v1, 0xf4243
 
@@ -220,71 +91,40 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ltb0;->c:Lk12;
+    iget v2, p0, Ltb0;->b:I
 
-    if-nez v2, :cond_0
+    xor-int/2addr v0, v2
 
-    const/4 v2, 0x0
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ltb0;->c:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
+    move v2, v3
 
     :goto_0
     xor-int/2addr v0, v2
 
-    const v2, 0x22cd8cdb
-
-    mul-int/2addr v0, v2
-
-    iget-object v2, p0, Ltb0;->d:Landroid/graphics/Rect;
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ltb0;->e:Landroid/graphics/Matrix;
+    iget-boolean v1, p0, Ltb0;->d:Z
 
-    invoke-virtual {v2}, Landroid/graphics/Matrix;->hashCode()I
+    if-eqz v1, :cond_1
 
-    move-result v2
+    move v3, v4
 
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltb0;->f:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltb0;->g:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltb0;->h:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Ltb0;->i:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
+    :cond_1
+    xor-int/2addr v0, v3
 
     return v0
 .end method
@@ -294,71 +134,39 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "TakePictureRequest{appExecutor="
+    const-string v1, "FeatureSettings{cameraMode="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltb0;->b:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inMemoryCallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltb0;->c:Lk12;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", onDiskCallback=null, outputFileOptions=null, cropRect="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltb0;->d:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sensorToBufferTransform="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltb0;->e:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rotationDegrees="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltb0;->f:I
+    iget v1, p0, Ltb0;->a:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", jpegQuality="
+    const-string v1, ", requiredMaxBitDepth="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Ltb0;->g:I
+    iget v1, p0, Ltb0;->b:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", captureMode="
+    const-string v1, ", previewStabilizationOn="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Ltb0;->h:I
+    iget-boolean v1, p0, Ltb0;->c:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", sessionConfigCameraCaptureCallbacks="
+    const-string v1, ", ultraHdrOn="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltb0;->i:Ljava/util/List;
+    iget-boolean v1, p0, Ltb0;->d:Z
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lqw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

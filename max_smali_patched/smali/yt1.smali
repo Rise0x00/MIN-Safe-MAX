@@ -1,48 +1,49 @@
 .class public final Lyt1;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lru7;
 
-.field public final synthetic Y:Lum1;
+.field public final b:Lru7;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lefc;
+
+.field public final d:Lru7;
+
+.field public final e:Lru7;
+
+.field public final f:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Lum1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru7;Lru7;Lefc;Lru7;Lru7;)V
     .locals 0
 
-    iput-object p1, p0, Lyt1;->Y:Lum1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lyt1;->a:Lru7;
+
+    iput-object p2, p0, Lyt1;->b:Lru7;
+
+    iput-object p3, p0, Lyt1;->c:Lefc;
+
+    iput-object p4, p0, Lyt1;->d:Lru7;
+
+    iput-object p5, p0, Lyt1;->e:Lru7;
+
+    new-instance p1, Lgk1;
+
+    const/16 p2, 0xf
+
+    invoke-direct {p1, p2}, Lgk1;-><init>(I)V
+
+    new-instance p2, Ltif;
+
+    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
+
+    iput-object p2, p0, Lyt1;->f:Ltif;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lyt1;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lyt1;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lyt1;->X:I
-
-    iget-object p1, p0, Lyt1;->Y:Lum1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lum1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

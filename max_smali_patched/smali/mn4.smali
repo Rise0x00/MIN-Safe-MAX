@@ -1,51 +1,37 @@
 .class public abstract Lmn4;
-.super Lqi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lqi0;
-
-
 # direct methods
-.method public constructor <init>(Lqi0;)V
+.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 0
 
-    invoke-direct {p0}, Lqi0;-><init>()V
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-    iput-object p1, p0, Lmn4;->b:Lqi0;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
-# virtual methods
-.method public d()V
-    .locals 1
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-    iget-object v0, p0, Lmn4;->b:Lqi0;
+    move-result-object p0
 
-    invoke-virtual {v0}, Lqi0;->c()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public f(Ljava/lang/Throwable;)V
+.method public static c(Landroid/os/Handler;Lc22;J)Z
     .locals 1
 
-    iget-object v0, p0, Lmn4;->b:Lqi0;
+    const-string v0, "retry_token"
 
-    invoke-virtual {v0, p1}, Lqi0;->e(Ljava/lang/Throwable;)V
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
-    return-void
-.end method
+    move-result p0
 
-.method public j(F)V
-    .locals 1
-
-    iget-object v0, p0, Lmn4;->b:Lqi0;
-
-    invoke-virtual {v0, p1}, Lqi0;->i(F)V
-
-    return-void
+    return p0
 .end method

@@ -26,7 +26,7 @@
         "(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V",
         "Landroid/graphics/Matrix;",
         "matrix",
-        "Loyf;",
+        "Lybg;",
         "transform",
         "(Landroid/graphics/Matrix;)V",
         "Ljava/lang/String;",
@@ -34,7 +34,7 @@
         "()Ljava/lang/String;",
         "Landroid/graphics/Path;",
         "path$delegate",
-        "Lbp7;",
+        "Lru7;",
         "getPath",
         "()Landroid/graphics/Path;",
         "path",
@@ -62,7 +62,7 @@
 
 .field private final originalPath:Landroid/graphics/Path;
 
-.field private final path$delegate:Lbp7;
+.field private final path$delegate:Lru7;
 
 
 # direct methods
@@ -76,24 +76,24 @@
     iput-object p1, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->name:Ljava/lang/String;
 
     .line 3
-    new-instance p1, Lzh1;
+    new-instance p1, Lhi1;
 
-    const/16 v0, 0x11
+    const/16 v0, 0x12
 
-    invoke-direct {p1, v0, p0}, Lzh1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lhi1;-><init>(ILjava/lang/Object;)V
 
     .line 4
-    new-instance v0, Ls5f;
+    new-instance v0, Ltif;
 
-    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
+    invoke-direct {v0, p1}, Ltif;-><init>(Loi6;)V
 
     .line 5
-    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lbp7;
+    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lru7;
 
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-static {p2}, Lxkg;->l(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p2}, Luti;->d(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p1
 
@@ -205,9 +205,9 @@
 .method public final getPath()Landroid/graphics/Path;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lbp7;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lru7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

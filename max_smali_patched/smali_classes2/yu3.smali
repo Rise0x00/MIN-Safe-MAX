@@ -1,130 +1,52 @@
 .class public final Lyu3;
-.super Lbj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lav3;
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/io/Serializable;
+.field public final b:La1f;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/io/Serializable;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    .line 1
-    iput p4, p0, Lyu3;->b:I
-
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
-
-    iput-object p3, p0, Lyu3;->c:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lyu3;->b:I
+    const/4 v1, 0x7
 
-    .line 2
-    invoke-direct {p0}, Lbj0;-><init>()V
+    sget-object v2, Lnu3;->d:Lnu3;
 
-    .line 3
-    new-instance v0, Ljava/util/LinkedHashSet;
+    invoke-static {v2, v0, v1}, Lnu3;->a(Lnu3;Ljava/util/ArrayList;I)Lnu3;
 
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lyu3;->c:Ljava/io/Serializable;
+    invoke-static {v0}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lyu3;->b:La1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a()Lt0f;
+    .locals 1
 
-    iget v0, p0, Lyu3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SharePreviewEvent{attaches="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyu3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Lbz;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lyu3;->b:La1f;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final b()V
+    .locals 0
 
-    const-string v1, "ProfileEvent{contactInfo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyu3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Lds3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactNotFoundEvent{contactServerIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lyu3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

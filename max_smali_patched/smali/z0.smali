@@ -1,67 +1,51 @@
 .class public final Lz0;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lsxd;
+.field public final synthetic X:Ljld;
 
-.field public final b:Ljx7;
+.field public Y:I
+
+.field public d:Lfld;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsxd;Ljx7;)V
+.method public constructor <init>(Ljld;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz0;->X:Ljld;
 
-    iput-object p1, p0, Lz0;->a:Lsxd;
-
-    iput-object p2, p0, Lz0;->b:Ljx7;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lz0;->a:Lsxd;
+    iput-object p1, p0, Lz0;->o:Ljava/lang/Object;
 
-    iget-object v0, v0, Lm1;->a:Ljava/lang/Object;
+    iget p1, p0, Lz0;->Y:I
 
-    if-eq v0, p0, :cond_0
+    const/high16 v0, -0x80000000
 
-    goto :goto_0
+    or-int/2addr p1, v0
 
-    :cond_0
-    iget-object v0, p0, Lz0;->b:Ljx7;
+    iput p1, p0, Lz0;->Y:I
 
-    invoke-static {v0}, Lm1;->h(Ljx7;)Ljava/lang/Object;
+    iget-object p1, p0, Lz0;->X:Ljld;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    sget-object v1, Lm1;->Y:Lhv0;
+    invoke-virtual {p1, v0, p0}, Ljld;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lz0;->a:Lsxd;
+    move-result-object p1
 
-    invoke-virtual {v1, v2, p0, v0}, Lhv0;->e(Lm1;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lz0;->a:Lsxd;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lm1;->e(Lm1;Z)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p1
 .end method

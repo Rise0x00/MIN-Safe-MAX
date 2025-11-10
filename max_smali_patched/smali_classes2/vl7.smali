@@ -1,50 +1,114 @@
-.class public interface abstract Lvl7;
-.super Ljava/lang/Object;
+.class public final Lvl7;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
+.implements Lej6;
+
+
+# instance fields
+.field public final synthetic X:Lam7;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lam7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lvl7;->X:Lam7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract B()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvl7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvl7;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lvl7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract E()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lvl7;
+
+    iget-object v0, p0, Lvl7;->X:Lam7;
+
+    invoke-direct {p1, v0, p2}, Lvl7;-><init>(Lam7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public abstract H()Ljava/lang/String;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.method public abstract Y()Ljava/lang/String;
-.end method
+    iget v0, p0, Lvl7;->o:I
 
-.method public abstract e0()Z
-.end method
+    const/4 v1, 0x1
 
-.method public abstract hasNext()Z
-.end method
+    if-eqz v0, :cond_1
 
-.method public abstract j0()Ljava/lang/String;
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public abstract name()Ljava/lang/String;
-.end method
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-.method public abstract peek()I
-.end method
+    goto :goto_0
 
-.method public abstract q()V
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public abstract s()V
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public abstract t()V
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public abstract u()V
-.end method
+    throw p1
 
-.method public abstract y()J
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvl7;->X:Lam7;
+
+    iget-object p1, p1, Lam7;->x0:Lake;
+
+    iput v1, p0, Lvl7;->o:I
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

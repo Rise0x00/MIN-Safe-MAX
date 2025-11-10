@@ -145,275 +145,275 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ltgc;->abc_config_activityDefaultDur:I
+    sget v0, Ldqc;->abc_config_activityDefaultDur:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->abc_config_activityDefaultDur:I
 
-    sget v0, Ltgc;->abc_config_activityShortDur:I
+    sget v0, Ldqc;->abc_config_activityShortDur:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->abc_config_activityShortDur:I
 
-    sget v0, Ltgc;->app_bar_elevation_anim_duration:I
+    sget v0, Ldqc;->app_bar_elevation_anim_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->app_bar_elevation_anim_duration:I
 
-    sget v0, Ltgc;->bottom_sheet_slide_duration:I
+    sget v0, Ldqc;->bottom_sheet_slide_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->bottom_sheet_slide_duration:I
 
-    sget v0, Ltgc;->cancel_button_image_alpha:I
+    sget v0, Ldqc;->cancel_button_image_alpha:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->cancel_button_image_alpha:I
 
-    sget v0, Ltgc;->config_tooltipAnimTime:I
+    sget v0, Ldqc;->config_tooltipAnimTime:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->config_tooltipAnimTime:I
 
-    sget v0, Ltgc;->design_snackbar_text_max_lines:I
+    sget v0, Ldqc;->design_snackbar_text_max_lines:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->design_snackbar_text_max_lines:I
 
-    sget v0, Ltgc;->design_tab_indicator_anim_duration_ms:I
+    sget v0, Ldqc;->design_tab_indicator_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->design_tab_indicator_anim_duration_ms:I
 
-    sget v0, Ltgc;->hide_password_duration:I
+    sget v0, Ldqc;->hide_password_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->hide_password_duration:I
 
-    sget v0, Ltgc;->m3_badge_max_number:I
+    sget v0, Ldqc;->m3_badge_max_number:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_badge_max_number:I
 
-    sget v0, Ltgc;->m3_btn_anim_delay_ms:I
+    sget v0, Ldqc;->m3_btn_anim_delay_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_btn_anim_delay_ms:I
 
-    sget v0, Ltgc;->m3_btn_anim_duration_ms:I
+    sget v0, Ldqc;->m3_btn_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_btn_anim_duration_ms:I
 
-    sget v0, Ltgc;->m3_card_anim_delay_ms:I
+    sget v0, Ldqc;->m3_card_anim_delay_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_card_anim_delay_ms:I
 
-    sget v0, Ltgc;->m3_card_anim_duration_ms:I
+    sget v0, Ldqc;->m3_card_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_card_anim_duration_ms:I
 
-    sget v0, Ltgc;->m3_chip_anim_duration:I
+    sget v0, Ldqc;->m3_chip_anim_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_chip_anim_duration:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_extra_long1:I
+    sget v0, Ldqc;->m3_sys_motion_duration_extra_long1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_extra_long1:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_extra_long2:I
+    sget v0, Ldqc;->m3_sys_motion_duration_extra_long2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_extra_long2:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_extra_long3:I
+    sget v0, Ldqc;->m3_sys_motion_duration_extra_long3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_extra_long3:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_extra_long4:I
+    sget v0, Ldqc;->m3_sys_motion_duration_extra_long4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_extra_long4:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_long1:I
+    sget v0, Ldqc;->m3_sys_motion_duration_long1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_long1:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_long2:I
+    sget v0, Ldqc;->m3_sys_motion_duration_long2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_long2:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_long3:I
+    sget v0, Ldqc;->m3_sys_motion_duration_long3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_long3:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_long4:I
+    sget v0, Ldqc;->m3_sys_motion_duration_long4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_long4:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_medium1:I
+    sget v0, Ldqc;->m3_sys_motion_duration_medium1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_medium1:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_medium2:I
+    sget v0, Ldqc;->m3_sys_motion_duration_medium2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_medium2:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_medium3:I
+    sget v0, Ldqc;->m3_sys_motion_duration_medium3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_medium3:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_medium4:I
+    sget v0, Ldqc;->m3_sys_motion_duration_medium4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_medium4:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_short1:I
+    sget v0, Ldqc;->m3_sys_motion_duration_short1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_short1:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_short2:I
+    sget v0, Ldqc;->m3_sys_motion_duration_short2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_short2:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_short3:I
+    sget v0, Ldqc;->m3_sys_motion_duration_short3:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_short3:I
 
-    sget v0, Ltgc;->m3_sys_motion_duration_short4:I
+    sget v0, Ldqc;->m3_sys_motion_duration_short4:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_duration_short4:I
 
-    sget v0, Ltgc;->m3_sys_motion_path:I
+    sget v0, Ldqc;->m3_sys_motion_path:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_motion_path:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_extra_large_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_extra_large_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_extra_large_corner_family:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_extra_small_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_extra_small_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_extra_small_corner_family:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_full_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_full_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_full_corner_family:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_large_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_large_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_large_corner_family:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_medium_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_medium_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_medium_corner_family:I
 
-    sget v0, Ltgc;->m3_sys_shape_corner_small_corner_family:I
+    sget v0, Ldqc;->m3_sys_shape_corner_small_corner_family:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->m3_sys_shape_corner_small_corner_family:I
 
-    sget v0, Ltgc;->material_motion_duration_long_1:I
+    sget v0, Ldqc;->material_motion_duration_long_1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_long_1:I
 
-    sget v0, Ltgc;->material_motion_duration_long_2:I
+    sget v0, Ldqc;->material_motion_duration_long_2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_long_2:I
 
-    sget v0, Ltgc;->material_motion_duration_medium_1:I
+    sget v0, Ldqc;->material_motion_duration_medium_1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_medium_1:I
 
-    sget v0, Ltgc;->material_motion_duration_medium_2:I
+    sget v0, Ldqc;->material_motion_duration_medium_2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_medium_2:I
 
-    sget v0, Ltgc;->material_motion_duration_short_1:I
+    sget v0, Ldqc;->material_motion_duration_short_1:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_short_1:I
 
-    sget v0, Ltgc;->material_motion_duration_short_2:I
+    sget v0, Ldqc;->material_motion_duration_short_2:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_duration_short_2:I
 
-    sget v0, Ltgc;->material_motion_path:I
+    sget v0, Ldqc;->material_motion_path:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->material_motion_path:I
 
-    sget v0, Ltgc;->mtrl_badge_max_character_count:I
+    sget v0, Ldqc;->mtrl_badge_max_character_count:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_badge_max_character_count:I
 
-    sget v0, Ltgc;->mtrl_btn_anim_delay_ms:I
+    sget v0, Ldqc;->mtrl_btn_anim_delay_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_btn_anim_delay_ms:I
 
-    sget v0, Ltgc;->mtrl_btn_anim_duration_ms:I
+    sget v0, Ldqc;->mtrl_btn_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_btn_anim_duration_ms:I
 
-    sget v0, Ltgc;->mtrl_calendar_header_orientation:I
+    sget v0, Ldqc;->mtrl_calendar_header_orientation:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_calendar_header_orientation:I
 
-    sget v0, Ltgc;->mtrl_calendar_selection_text_lines:I
+    sget v0, Ldqc;->mtrl_calendar_selection_text_lines:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_calendar_selection_text_lines:I
 
-    sget v0, Ltgc;->mtrl_calendar_year_selector_span:I
+    sget v0, Ldqc;->mtrl_calendar_year_selector_span:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_calendar_year_selector_span:I
 
-    sget v0, Ltgc;->mtrl_card_anim_delay_ms:I
+    sget v0, Ldqc;->mtrl_card_anim_delay_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_card_anim_delay_ms:I
 
-    sget v0, Ltgc;->mtrl_card_anim_duration_ms:I
+    sget v0, Ldqc;->mtrl_card_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_card_anim_duration_ms:I
 
-    sget v0, Ltgc;->mtrl_chip_anim_duration:I
+    sget v0, Ldqc;->mtrl_chip_anim_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_chip_anim_duration:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_motion_duration:I
+    sget v0, Ldqc;->mtrl_switch_thumb_motion_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_motion_duration:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_post_morphing_duration:I
+    sget v0, Ldqc;->mtrl_switch_thumb_post_morphing_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_post_morphing_duration:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_pre_morphing_duration:I
+    sget v0, Ldqc;->mtrl_switch_thumb_pre_morphing_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_pre_morphing_duration:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_pressed_duration:I
+    sget v0, Ldqc;->mtrl_switch_thumb_pressed_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_pressed_duration:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_viewport_center_coordinate:I
+    sget v0, Ldqc;->mtrl_switch_thumb_viewport_center_coordinate:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_viewport_center_coordinate:I
 
-    sget v0, Ltgc;->mtrl_switch_thumb_viewport_size:I
+    sget v0, Ldqc;->mtrl_switch_thumb_viewport_size:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_thumb_viewport_size:I
 
-    sget v0, Ltgc;->mtrl_switch_track_viewport_height:I
+    sget v0, Ldqc;->mtrl_switch_track_viewport_height:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_track_viewport_height:I
 
-    sget v0, Ltgc;->mtrl_switch_track_viewport_width:I
+    sget v0, Ldqc;->mtrl_switch_track_viewport_width:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_switch_track_viewport_width:I
 
-    sget v0, Ltgc;->mtrl_tab_indicator_anim_duration_ms:I
+    sget v0, Ldqc;->mtrl_tab_indicator_anim_duration_ms:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_tab_indicator_anim_duration_ms:I
 
-    sget v0, Ltgc;->mtrl_view_gone:I
+    sget v0, Ldqc;->mtrl_view_gone:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_view_gone:I
 
-    sget v0, Ltgc;->mtrl_view_invisible:I
+    sget v0, Ldqc;->mtrl_view_invisible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_view_invisible:I
 
-    sget v0, Ltgc;->mtrl_view_visible:I
+    sget v0, Ldqc;->mtrl_view_visible:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->mtrl_view_visible:I
 
-    sget v0, Ltgc;->show_password_duration:I
+    sget v0, Ldqc;->show_password_duration:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->show_password_duration:I
 
-    sget v0, Ltgc;->status_bar_notification_info_maxnum:I
+    sget v0, Ldqc;->status_bar_notification_info_maxnum:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$integer;->status_bar_notification_info_maxnum:I
 

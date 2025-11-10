@@ -3,75 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lmeh;
 
 
-# instance fields
-.field public final synthetic X:Lr3b;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Runnable;
-
-.field public volatile c:Z
-
-.field public o:I
+# static fields
+.field public static final a:Lxdh;
 
 
 # direct methods
-.method public constructor <init>(Lr3b;Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxdh;
 
-    iput-object p1, p0, Lxdh;->X:Lr3b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lxdh;->c:Z
-
-    iput p1, p0, Lxdh;->o:I
-
-    iput-object p2, p0, Lxdh;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lxdh;->b:Ljava/lang/Runnable;
+    sput-object v0, Lxdh;->a:Lxdh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
-
-    iget-object v0, p0, Lxdh;->X:Lr3b;
-
-    iget-object v0, v0, Lr3b;->b:Landroid/os/Handler;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput-object p0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v1, p0, Lxdh;->X:Lr3b;
-
-    iget-object v1, v1, Lr3b;->b:Landroid/os/Handler;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    :cond_0
-    iget-object v0, p0, Lxdh;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lxdh;->c:Z
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lxdh;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x78e79e0e
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Reload"
+
+    return-object v0
 .end method

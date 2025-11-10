@@ -1,804 +1,2821 @@
-.class public abstract Lodc;
+.class public final Lodc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lxu8;
+.implements Lcm5;
+.implements Lq48;
+.implements Lv48;
+.implements Lcmd;
 
 
 # static fields
-.field public static BOTTOM_END:I = 0x7f0a0004
+.field public static final a1:Ljava/util/Map;
 
-.field public static BOTTOM_START:I = 0x7f0a0005
+.field public static final b1:Lub6;
 
-.field public static NO_DEBUG:I = 0x7f0a002b
 
-.field public static SHOW_ALL:I = 0x7f0a0036
+# instance fields
+.field public final A0:Lfdc;
 
-.field public static SHOW_PATH:I = 0x7f0a0037
+.field public final B0:Landroid/os/Handler;
 
-.field public static SHOW_PROGRESS:I = 0x7f0a0038
+.field public C0:Lvu8;
 
-.field public static TOP_END:I = 0x7f0a0046
+.field public D0:Lv77;
 
-.field public static TOP_START:I = 0x7f0a0047
+.field public E0:[Lemd;
 
-.field public static accelerate:I = 0x7f0a0053
+.field public F0:[Lmdc;
 
-.field public static accessibility_action_clickable_span:I = 0x7f0a0054
+.field public G0:Z
 
-.field public static accessibility_custom_action_0:I = 0x7f0a0055
+.field public H0:Z
 
-.field public static accessibility_custom_action_1:I = 0x7f0a0056
+.field public I0:Z
 
-.field public static accessibility_custom_action_10:I = 0x7f0a0057
+.field public J0:Z
 
-.field public static accessibility_custom_action_11:I = 0x7f0a0058
+.field public K0:Lp66;
 
-.field public static accessibility_custom_action_12:I = 0x7f0a0059
+.field public L0:Liyd;
 
-.field public static accessibility_custom_action_13:I = 0x7f0a005a
+.field public M0:J
 
-.field public static accessibility_custom_action_14:I = 0x7f0a005b
+.field public N0:Z
 
-.field public static accessibility_custom_action_15:I = 0x7f0a005c
+.field public O0:I
 
-.field public static accessibility_custom_action_16:I = 0x7f0a005d
+.field public P0:Z
 
-.field public static accessibility_custom_action_17:I = 0x7f0a005e
+.field public Q0:Z
 
-.field public static accessibility_custom_action_18:I = 0x7f0a005f
+.field public R0:Z
 
-.field public static accessibility_custom_action_19:I = 0x7f0a0060
+.field public S0:I
 
-.field public static accessibility_custom_action_2:I = 0x7f0a0061
+.field public T0:Z
 
-.field public static accessibility_custom_action_20:I = 0x7f0a0062
+.field public U0:J
 
-.field public static accessibility_custom_action_21:I = 0x7f0a0063
+.field public V0:J
 
-.field public static accessibility_custom_action_22:I = 0x7f0a0064
+.field public W0:Z
 
-.field public static accessibility_custom_action_23:I = 0x7f0a0065
+.field public final X:Lh25;
 
-.field public static accessibility_custom_action_24:I = 0x7f0a0066
+.field public X0:I
 
-.field public static accessibility_custom_action_25:I = 0x7f0a0067
+.field public final Y:Ltdc;
 
-.field public static accessibility_custom_action_26:I = 0x7f0a0068
+.field public Y0:Z
 
-.field public static accessibility_custom_action_27:I = 0x7f0a0069
+.field public final Z:Lcg4;
 
-.field public static accessibility_custom_action_28:I = 0x7f0a006a
+.field public Z0:Z
 
-.field public static accessibility_custom_action_29:I = 0x7f0a006b
+.field public final a:Landroid/net/Uri;
 
-.field public static accessibility_custom_action_3:I = 0x7f0a006c
+.field public final b:Lxb4;
 
-.field public static accessibility_custom_action_30:I = 0x7f0a006d
+.field public final c:Lo25;
 
-.field public static accessibility_custom_action_31:I = 0x7f0a006e
+.field public final d:Lbp6;
 
-.field public static accessibility_custom_action_4:I = 0x7f0a006f
+.field public final o:Lxg6;
 
-.field public static accessibility_custom_action_5:I = 0x7f0a0070
+.field public final s0:Ljava/lang/String;
 
-.field public static accessibility_custom_action_6:I = 0x7f0a0071
+.field public final t0:J
 
-.field public static accessibility_custom_action_7:I = 0x7f0a0072
+.field public final u0:Lub6;
 
-.field public static accessibility_custom_action_8:I = 0x7f0a0073
+.field public final v0:J
 
-.field public static accessibility_custom_action_9:I = 0x7f0a0074
+.field public final w0:Li78;
 
-.field public static action_bar:I = 0x7f0a00a7
+.field public final x0:Lngd;
 
-.field public static action_bar_activity_content:I = 0x7f0a00a8
+.field public final y0:Lak3;
 
-.field public static action_bar_container:I = 0x7f0a00a9
+.field public final z0:Lfdc;
 
-.field public static action_bar_root:I = 0x7f0a00aa
 
-.field public static action_bar_spinner:I = 0x7f0a00ab
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public static action_bar_subtitle:I = 0x7f0a00ac
+    new-instance v0, Ljava/util/HashMap;
 
-.field public static action_bar_title:I = 0x7f0a00ad
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-.field public static action_container:I = 0x7f0a00ae
+    const-string v1, "Icy-MetaData"
 
-.field public static action_context_bar:I = 0x7f0a00af
+    const-string v2, "1"
 
-.field public static action_divider:I = 0x7f0a00b0
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static action_image:I = 0x7f0a00b1
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-.field public static action_menu_divider:I = 0x7f0a00b2
+    move-result-object v0
 
-.field public static action_menu_presenter:I = 0x7f0a00b3
+    sput-object v0, Lodc;->a1:Ljava/util/Map;
 
-.field public static action_mode_bar:I = 0x7f0a00b4
+    new-instance v0, Lrb6;
 
-.field public static action_mode_bar_stub:I = 0x7f0a00b5
+    invoke-direct {v0}, Lrb6;-><init>()V
 
-.field public static action_mode_close_button:I = 0x7f0a00b6
+    const-string v1, "icy"
 
-.field public static action_text:I = 0x7f0a00b7
+    iput-object v1, v0, Lrb6;->a:Ljava/lang/String;
 
-.field public static actions:I = 0x7f0a00b8
+    const-string v1, "application/x-icy"
 
-.field public static activity_chooser_view_content:I = 0x7f0a00b9
+    invoke-static {v1}, Lcs9;->n(Ljava/lang/String;)Ljava/lang/String;
 
-.field public static add:I = 0x7f0a00ba
+    move-result-object v1
 
-.field public static alertTitle:I = 0x7f0a00c1
+    iput-object v1, v0, Lrb6;->m:Ljava/lang/String;
 
-.field public static aligned:I = 0x7f0a00c4
+    new-instance v1, Lub6;
 
-.field public static animateToEnd:I = 0x7f0a00ca
+    invoke-direct {v1, v0}, Lub6;-><init>(Lrb6;)V
 
-.field public static animateToStart:I = 0x7f0a00cb
+    sput-object v1, Lodc;->b1:Lub6;
 
-.field public static arc:I = 0x7f0a00e0
+    return-void
+.end method
 
-.field public static asConfigured:I = 0x7f0a00e3
+.method public constructor <init>(Landroid/net/Uri;Lxb4;Lngd;Lo25;Lh25;Lbp6;Lxg6;Ltdc;Lcg4;Ljava/lang/String;ILub6;JLh9d;)V
+    .locals 1
 
-.field public static async:I = 0x7f0a00e4
+    move-object/from16 v0, p15
 
-.field public static auto:I = 0x7f0a00f9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static autoComplete:I = 0x7f0a00fa
+    iput-object p1, p0, Lodc;->a:Landroid/net/Uri;
 
-.field public static autoCompleteToEnd:I = 0x7f0a00fb
+    iput-object p2, p0, Lodc;->b:Lxb4;
 
-.field public static autoCompleteToStart:I = 0x7f0a00fc
+    iput-object p4, p0, Lodc;->c:Lo25;
 
-.field public static baseline:I = 0x7f0a0100
+    iput-object p5, p0, Lodc;->X:Lh25;
 
-.field public static blocking:I = 0x7f0a0106
+    iput-object p6, p0, Lodc;->d:Lbp6;
 
-.field public static bottom:I = 0x7f0a0108
+    iput-object p7, p0, Lodc;->o:Lxg6;
 
-.field public static bounce:I = 0x7f0a010c
+    iput-object p8, p0, Lodc;->Y:Ltdc;
 
-.field public static buttonPanel:I = 0x7f0a0115
+    iput-object p9, p0, Lodc;->Z:Lcg4;
 
-.field public static cancel_button:I = 0x7f0a0238
+    iput-object p10, p0, Lodc;->s0:Ljava/lang/String;
 
-.field public static center:I = 0x7f0a023b
+    int-to-long p1, p11
 
-.field public static centerCrop:I = 0x7f0a023c
+    iput-wide p1, p0, Lodc;->t0:J
 
-.field public static centerInside:I = 0x7f0a023d
+    iput-object p12, p0, Lodc;->u0:Lub6;
 
-.field public static chain:I = 0x7f0a0241
+    if-eqz v0, :cond_0
 
-.field public static checkbox:I = 0x7f0a02ae
+    new-instance p1, Li78;
 
-.field public static checked:I = 0x7f0a02af
+    invoke-direct {p1, v0}, Li78;-><init>(Lh9d;)V
 
-.field public static chronometer:I = 0x7f0a02b0
+    goto :goto_0
 
-.field public static circle_center:I = 0x7f0a02b1
+    :cond_0
+    new-instance p1, Li78;
 
-.field public static clear_text:I = 0x7f0a02bf
+    const-string p2, "ProgressiveMediaPeriod"
 
-.field public static clockwise:I = 0x7f0a02c3
+    invoke-direct {p1, p2}, Li78;-><init>(Ljava/lang/String;)V
 
-.field public static compress:I = 0x7f0a02cc
+    :goto_0
+    iput-object p1, p0, Lodc;->w0:Li78;
 
-.field public static confirm_button:I = 0x7f0a02cd
+    iput-object p3, p0, Lodc;->x0:Lngd;
 
-.field public static container:I = 0x7f0a02e1
+    iput-wide p13, p0, Lodc;->v0:J
 
-.field public static content:I = 0x7f0a02e2
+    new-instance p1, Lak3;
 
-.field public static contentPanel:I = 0x7f0a02e3
+    invoke-direct {p1}, Lak3;-><init>()V
 
-.field public static contiguous:I = 0x7f0a02e9
+    iput-object p1, p0, Lodc;->y0:Lak3;
 
-.field public static coordinator:I = 0x7f0a02eb
+    new-instance p1, Lfdc;
 
-.field public static cos:I = 0x7f0a02ed
+    const/4 p2, 0x1
 
-.field public static counterclockwise:I = 0x7f0a02ee
+    invoke-direct {p1, p0, p2}, Lfdc;-><init>(Lodc;I)V
 
-.field public static cradle:I = 0x7f0a02f0
+    iput-object p1, p0, Lodc;->z0:Lfdc;
 
-.field public static custom:I = 0x7f0a02f4
+    new-instance p1, Lfdc;
 
-.field public static customPanel:I = 0x7f0a02f5
+    const/4 p2, 0x2
 
-.field public static cut:I = 0x7f0a02f6
+    invoke-direct {p1, p0, p2}, Lfdc;-><init>(Lodc;I)V
 
-.field public static date_picker_actions:I = 0x7f0a02f8
+    iput-object p1, p0, Lodc;->A0:Lfdc;
 
-.field public static decelerate:I = 0x7f0a02fc
+    const/4 p1, 0x0
 
-.field public static decelerateAndComplete:I = 0x7f0a02fd
+    invoke-static {p1}, Llig;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
-.field public static decor_content_parent:I = 0x7f0a0300
+    move-result-object p1
 
-.field public static default_activity_button:I = 0x7f0a0302
+    iput-object p1, p0, Lodc;->B0:Landroid/os/Handler;
 
-.field public static deltaRelative:I = 0x7f0a0306
+    const/4 p1, 0x0
 
-.field public static design_bottom_sheet:I = 0x7f0a0308
+    new-array p2, p1, [Lmdc;
 
-.field public static design_menu_item_action_area:I = 0x7f0a0309
+    iput-object p2, p0, Lodc;->F0:[Lmdc;
 
-.field public static design_menu_item_action_area_stub:I = 0x7f0a030a
+    new-array p1, p1, [Lemd;
 
-.field public static design_menu_item_text:I = 0x7f0a030b
+    iput-object p1, p0, Lodc;->E0:[Lemd;
 
-.field public static design_navigation_view:I = 0x7f0a030c
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-.field public static dialog_button:I = 0x7f0a030e
+    iput-wide p1, p0, Lodc;->V0:J
 
-.field public static disjoint:I = 0x7f0a031e
+    const/4 p1, 0x1
 
-.field public static dragDown:I = 0x7f0a0325
+    iput p1, p0, Lodc;->O0:I
 
-.field public static dragEnd:I = 0x7f0a0326
+    return-void
+.end method
 
-.field public static dragLeft:I = 0x7f0a0327
 
-.field public static dragRight:I = 0x7f0a0328
+# virtual methods
+.method public final A(I)V
+    .locals 4
 
-.field public static dragStart:I = 0x7f0a0329
+    invoke-virtual {p0}, Lodc;->d()V
 
-.field public static dragUp:I = 0x7f0a032a
+    iget-boolean v0, p0, Lodc;->W0:Z
 
-.field public static dropdown_menu:I = 0x7f0a032b
+    if-eqz v0, :cond_3
 
-.field public static easeIn:I = 0x7f0a032d
+    iget-boolean v0, p0, Lodc;->I0:Z
 
-.field public static easeInOut:I = 0x7f0a032e
+    if-eqz v0, :cond_0
 
-.field public static easeOut:I = 0x7f0a032f
+    iget-object v0, p0, Lodc;->K0:Lp66;
 
-.field public static edge:I = 0x7f0a0331
+    iget-object v0, v0, Lp66;->c:Ljava/lang/Object;
 
-.field public static edit_query:I = 0x7f0a0334
+    check-cast v0, [Z
 
-.field public static edit_text_id:I = 0x7f0a0335
+    aget-boolean v0, v0, p1
 
-.field public static elastic:I = 0x7f0a0336
+    if-eqz v0, :cond_3
 
-.field public static embed:I = 0x7f0a0337
+    :cond_0
+    iget-object v0, p0, Lodc;->E0:[Lemd;
 
-.field public static end:I = 0x7f0a0340
+    aget-object p1, v0, p1
 
-.field public static endToStart:I = 0x7f0a0341
+    const/4 v0, 0x0
 
-.field public static escape:I = 0x7f0a0345
+    invoke-virtual {p1, v0}, Lemd;->u(Z)Z
 
-.field public static expand_activities_button:I = 0x7f0a0378
+    move-result p1
 
-.field public static expanded_menu:I = 0x7f0a0379
+    if-eqz p1, :cond_1
 
-.field public static fade:I = 0x7f0a037e
+    goto :goto_1
 
-.field public static fill:I = 0x7f0a038e
+    :cond_1
+    const-wide/16 v1, 0x0
 
-.field public static filled:I = 0x7f0a0394
+    iput-wide v1, p0, Lodc;->V0:J
 
-.field public static fitCenter:I = 0x7f0a039c
+    iput-boolean v0, p0, Lodc;->W0:Z
 
-.field public static fitEnd:I = 0x7f0a039d
+    const/4 p1, 0x1
 
-.field public static fitStart:I = 0x7f0a039e
+    iput-boolean p1, p0, Lodc;->Q0:Z
 
-.field public static fitXY:I = 0x7f0a03a0
+    iput-wide v1, p0, Lodc;->U0:J
 
-.field public static fixed:I = 0x7f0a03a1
+    iput v0, p0, Lodc;->X0:I
 
-.field public static flip:I = 0x7f0a03a9
+    iget-object p1, p0, Lodc;->E0:[Lemd;
 
-.field public static floating:I = 0x7f0a03ab
+    array-length v1, p1
 
-.field public static forever:I = 0x7f0a03ae
+    move v2, v0
 
-.field public static fragment_container_view_tag:I = 0x7f0a03af
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-.field public static fullscreen_header:I = 0x7f0a03f9
+    aget-object v3, p1, v2
 
-.field public static ghost_view:I = 0x7f0a03fa
+    invoke-virtual {v3, v0}, Lemd;->A(Z)V
 
-.field public static ghost_view_holder:I = 0x7f0a03fb
+    add-int/lit8 v2, v2, 0x1
 
-.field public static gone:I = 0x7f0a03fe
+    goto :goto_0
 
-.field public static group_divider:I = 0x7f0a0402
+    :cond_2
+    iget-object p1, p0, Lodc;->C0:Lvu8;
 
-.field public static header_title:I = 0x7f0a0407
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static hide_ime_id:I = 0x7f0a0409
+    invoke-interface {p1, p0}, Le3e;->n(Lg3e;)V
 
-.field public static home:I = 0x7f0a040c
+    :cond_3
+    :goto_1
+    return-void
+.end method
 
-.field public static honorRequest:I = 0x7f0a040e
+.method public final B(II)Ln1g;
+    .locals 1
 
-.field public static icon:I = 0x7f0a0413
+    new-instance p2, Lmdc;
 
-.field public static icon_group:I = 0x7f0a0415
+    const/4 v0, 0x0
 
-.field public static ignore:I = 0x7f0a0418
+    invoke-direct {p2, p1, v0}, Lmdc;-><init>(IZ)V
 
-.field public static ignoreRequest:I = 0x7f0a0419
+    invoke-virtual {p0, p2}, Lodc;->C(Lmdc;)Ln1g;
 
-.field public static image:I = 0x7f0a041a
+    move-result-object p1
 
-.field public static indeterminate:I = 0x7f0a0421
+    return-object p1
+.end method
 
-.field public static info:I = 0x7f0a0422
+.method public final C(Lmdc;)Ln1g;
+    .locals 5
 
-.field public static invisible:I = 0x7f0a0425
+    iget-object v0, p0, Lodc;->E0:[Lemd;
 
-.field public static inward:I = 0x7f0a0427
+    array-length v0, v0
 
-.field public static italic:I = 0x7f0a0429
+    const/4 v1, 0x0
 
-.field public static item_touch_helper_previous_elevation:I = 0x7f0a042d
+    :goto_0
+    if-ge v1, v0, :cond_1
 
-.field public static jumpToEnd:I = 0x7f0a0430
+    iget-object v2, p0, Lodc;->F0:[Lmdc;
 
-.field public static jumpToStart:I = 0x7f0a0431
+    aget-object v2, v2, v1
 
-.field public static labeled:I = 0x7f0a0439
+    invoke-virtual {p1, v2}, Lmdc;->equals(Ljava/lang/Object;)Z
 
-.field public static layout:I = 0x7f0a043a
+    move-result v2
 
-.field public static left:I = 0x7f0a0453
+    if-eqz v2, :cond_0
 
-.field public static leftToRight:I = 0x7f0a0454
+    iget-object p1, p0, Lodc;->E0:[Lemd;
 
-.field public static legacy:I = 0x7f0a0455
+    aget-object p1, p1, v1
 
-.field public static line1:I = 0x7f0a0457
+    return-object p1
 
-.field public static line3:I = 0x7f0a0458
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-.field public static linear:I = 0x7f0a0459
+    goto :goto_0
 
-.field public static listMode:I = 0x7f0a0465
+    :cond_1
+    iget-boolean v1, p0, Lodc;->G0:Z
 
-.field public static list_item:I = 0x7f0a0466
+    if-eqz v1, :cond_2
 
-.field public static m3_side_sheet:I = 0x7f0a0486
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static marquee:I = 0x7f0a0499
+    const-string v1, "Extractor added new track (id="
 
-.field public static masked:I = 0x7f0a049a
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static match_parent:I = 0x7f0a049c
+    iget p1, p1, Lmdc;->a:I
 
-.field public static material_clock_display:I = 0x7f0a049d
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.field public static material_clock_display_and_toggle:I = 0x7f0a049e
+    const-string p1, ") after finishing tracks."
 
-.field public static material_clock_face:I = 0x7f0a049f
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static material_clock_hand:I = 0x7f0a04a0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static material_clock_level:I = 0x7f0a04a1
+    move-result-object p1
 
-.field public static material_clock_period_am_button:I = 0x7f0a04a2
+    const-string v0, "ProgressiveMediaPeriod"
 
-.field public static material_clock_period_pm_button:I = 0x7f0a04a3
+    invoke-static {v0, p1}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-.field public static material_clock_period_toggle:I = 0x7f0a04a4
+    new-instance p1, Ltu4;
 
-.field public static material_hour_text_input:I = 0x7f0a04a5
+    invoke-direct {p1}, Ltu4;-><init>()V
 
-.field public static material_hour_tv:I = 0x7f0a04a6
+    return-object p1
 
-.field public static material_label:I = 0x7f0a04a7
+    :cond_2
+    new-instance v1, Lemd;
 
-.field public static material_minute_text_input:I = 0x7f0a04a8
+    iget-object v2, p0, Lodc;->c:Lo25;
 
-.field public static material_minute_tv:I = 0x7f0a04a9
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static material_textinput_timepicker:I = 0x7f0a04aa
+    iget-object v3, p0, Lodc;->Z:Lcg4;
 
-.field public static material_timepicker_cancel_button:I = 0x7f0a04ab
+    iget-object v4, p0, Lodc;->X:Lh25;
 
-.field public static material_timepicker_container:I = 0x7f0a04ac
+    invoke-direct {v1, v3, v2, v4}, Lemd;-><init>(Lcg4;Lo25;Lh25;)V
 
-.field public static material_timepicker_mode_button:I = 0x7f0a04ad
+    iput-object p0, v1, Lemd;->f:Ljava/lang/Object;
 
-.field public static material_timepicker_ok_button:I = 0x7f0a04ae
+    iget-object v2, p0, Lodc;->F0:[Lmdc;
 
-.field public static material_timepicker_view:I = 0x7f0a04af
+    add-int/lit8 v3, v0, 0x1
 
-.field public static material_value_index:I = 0x7f0a04b0
+    invoke-static {v2, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-.field public static matrix:I = 0x7f0a04b1
+    move-result-object v2
 
-.field public static message:I = 0x7f0a053b
+    check-cast v2, [Lmdc;
 
-.field public static middle:I = 0x7f0a0597
+    aput-object p1, v2, v0
 
-.field public static mini:I = 0x7f0a0599
+    sget-object p1, Llig;->a:Ljava/lang/String;
 
-.field public static month_grid:I = 0x7f0a059b
+    iput-object v2, p0, Lodc;->F0:[Lmdc;
 
-.field public static month_navigation_bar:I = 0x7f0a059c
+    iget-object p1, p0, Lodc;->E0:[Lemd;
 
-.field public static month_navigation_fragment_toggle:I = 0x7f0a059d
+    invoke-static {p1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-.field public static month_navigation_next:I = 0x7f0a059e
+    move-result-object p1
 
-.field public static month_navigation_previous:I = 0x7f0a059f
+    check-cast p1, [Lemd;
 
-.field public static month_title:I = 0x7f0a05a0
+    aput-object v1, p1, v0
 
-.field public static motion_base:I = 0x7f0a05a3
+    iput-object p1, p0, Lodc;->E0:[Lemd;
 
-.field public static mtrl_anchor_parent:I = 0x7f0a05d9
+    return-object v1
+.end method
 
-.field public static mtrl_calendar_day_selector_frame:I = 0x7f0a05da
+.method public final D(Liyd;)V
+    .locals 6
 
-.field public static mtrl_calendar_days_of_week:I = 0x7f0a05db
+    iget-object v0, p0, Lodc;->D0:Lv77;
 
-.field public static mtrl_calendar_frame:I = 0x7f0a05dc
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-.field public static mtrl_calendar_main_pane:I = 0x7f0a05dd
+    if-nez v0, :cond_0
 
-.field public static mtrl_calendar_months:I = 0x7f0a05de
+    move-object v0, p1
 
-.field public static mtrl_calendar_selection_frame:I = 0x7f0a05df
+    goto :goto_0
 
-.field public static mtrl_calendar_text_input_frame:I = 0x7f0a05e0
+    :cond_0
+    new-instance v0, Lje0;
 
-.field public static mtrl_calendar_year_selector_frame:I = 0x7f0a05e1
+    invoke-direct {v0, v1, v2}, Lje0;-><init>(J)V
 
-.field public static mtrl_card_checked_layer_id:I = 0x7f0a05e2
+    :goto_0
+    iput-object v0, p0, Lodc;->L0:Liyd;
 
-.field public static mtrl_child_content_container:I = 0x7f0a05e3
+    invoke-interface {p1}, Liyd;->f()J
 
-.field public static mtrl_internal_children_alpha_tag:I = 0x7f0a05e4
+    move-result-wide v3
 
-.field public static mtrl_motion_snapshot_view:I = 0x7f0a05e5
+    iput-wide v3, p0, Lodc;->M0:J
 
-.field public static mtrl_picker_fullscreen:I = 0x7f0a05e6
+    iget-boolean v0, p0, Lodc;->T0:Z
 
-.field public static mtrl_picker_header:I = 0x7f0a05e7
+    const/4 v3, 0x1
 
-.field public static mtrl_picker_header_selection_text:I = 0x7f0a05e8
+    if-nez v0, :cond_1
 
-.field public static mtrl_picker_header_title_and_selection:I = 0x7f0a05e9
+    invoke-interface {p1}, Liyd;->f()J
 
-.field public static mtrl_picker_header_toggle:I = 0x7f0a05ea
+    move-result-wide v4
 
-.field public static mtrl_picker_text_input_date:I = 0x7f0a05eb
+    cmp-long v0, v4, v1
 
-.field public static mtrl_picker_text_input_range_end:I = 0x7f0a05ec
+    if-nez v0, :cond_1
 
-.field public static mtrl_picker_text_input_range_start:I = 0x7f0a05ed
+    move v0, v3
 
-.field public static mtrl_picker_title_text:I = 0x7f0a05ee
+    goto :goto_1
 
-.field public static mtrl_view_tag_bottom_padding:I = 0x7f0a05ef
+    :cond_1
+    const/4 v0, 0x0
 
-.field public static multiply:I = 0x7f0a05f0
+    :goto_1
+    iput-boolean v0, p0, Lodc;->N0:Z
 
-.field public static navigation_bar_item_active_indicator_view:I = 0x7f0a05f5
+    if-eqz v0, :cond_2
 
-.field public static navigation_bar_item_icon_container:I = 0x7f0a05f6
+    const/4 v3, 0x7
 
-.field public static navigation_bar_item_icon_view:I = 0x7f0a05f7
+    :cond_2
+    iput v3, p0, Lodc;->O0:I
 
-.field public static navigation_bar_item_labels_group:I = 0x7f0a05f8
+    iget-boolean v1, p0, Lodc;->H0:Z
 
-.field public static navigation_bar_item_large_label_view:I = 0x7f0a05f9
+    if-eqz v1, :cond_3
 
-.field public static navigation_bar_item_small_label_view:I = 0x7f0a05fa
+    iget-object v1, p0, Lodc;->Y:Ltdc;
 
-.field public static navigation_header_container:I = 0x7f0a05fb
+    iget-wide v2, p0, Lodc;->M0:J
 
-.field public static none:I = 0x7f0a0602
+    invoke-virtual {v1, v2, v3, p1, v0}, Ltdc;->v(JLiyd;Z)V
 
-.field public static normal:I = 0x7f0a0603
+    return-void
 
-.field public static notification_background:I = 0x7f0a0605
+    :cond_3
+    invoke-virtual {p0}, Lodc;->y()V
 
-.field public static notification_main_column:I = 0x7f0a0608
+    return-void
+.end method
 
-.field public static notification_main_column_container:I = 0x7f0a0609
+.method public final E()V
+    .locals 10
 
-.field public static off:I = 0x7f0a060b
+    new-instance v0, Lidc;
 
-.field public static on:I = 0x7f0a060d
+    iget-object v4, p0, Lodc;->x0:Lngd;
 
-.field public static open_search_bar_text_view:I = 0x7f0a08df
+    iget-object v6, p0, Lodc;->y0:Lak3;
 
-.field public static open_search_view_background:I = 0x7f0a08e0
+    iget-object v2, p0, Lodc;->a:Landroid/net/Uri;
 
-.field public static open_search_view_clear_button:I = 0x7f0a08e1
+    iget-object v3, p0, Lodc;->b:Lxb4;
 
-.field public static open_search_view_content_container:I = 0x7f0a08e2
+    move-object v5, p0
 
-.field public static open_search_view_divider:I = 0x7f0a08e3
+    move-object v1, p0
 
-.field public static open_search_view_dummy_toolbar:I = 0x7f0a08e4
+    invoke-direct/range {v0 .. v6}, Lidc;-><init>(Lodc;Landroid/net/Uri;Lxb4;Lngd;Lodc;Lak3;)V
 
-.field public static open_search_view_edit_text:I = 0x7f0a08e5
+    iget-boolean v2, v1, Lodc;->H0:Z
 
-.field public static open_search_view_header_container:I = 0x7f0a08e6
+    if-eqz v2, :cond_2
 
-.field public static open_search_view_root:I = 0x7f0a08e7
+    invoke-virtual {p0}, Lodc;->x()Z
 
-.field public static open_search_view_scrim:I = 0x7f0a08e8
+    move-result v2
 
-.field public static open_search_view_search_prefix:I = 0x7f0a08e9
+    invoke-static {v2}, Ligi;->h(Z)V
 
-.field public static open_search_view_status_bar_spacer:I = 0x7f0a08ea
+    iget-wide v2, v1, Lodc;->M0:J
 
-.field public static open_search_view_toolbar:I = 0x7f0a08eb
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
 
-.field public static open_search_view_toolbar_container:I = 0x7f0a08ec
+    cmp-long v6, v2, v4
 
-.field public static outline:I = 0x7f0a08ed
+    const/4 v7, 0x1
 
-.field public static outward:I = 0x7f0a08ee
+    if-eqz v6, :cond_0
 
-.field public static packed:I = 0x7f0a08f0
+    iget-wide v8, v1, Lodc;->V0:J
 
-.field public static parallax:I = 0x7f0a08f2
+    cmp-long v2, v8, v2
 
-.field public static parent:I = 0x7f0a08f3
+    if-lez v2, :cond_0
 
-.field public static parentPanel:I = 0x7f0a08f4
+    iput-boolean v7, v1, Lodc;->Y0:Z
 
-.field public static parentRelative:I = 0x7f0a08f5
+    iput-wide v4, v1, Lodc;->V0:J
 
-.field public static parent_matrix:I = 0x7f0a08f6
+    return-void
 
-.field public static password_toggle:I = 0x7f0a08f7
+    :cond_0
+    iget-object v2, v1, Lodc;->L0:Liyd;
 
-.field public static path:I = 0x7f0a08f9
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static pathRelative:I = 0x7f0a08fa
+    iget-wide v8, v1, Lodc;->V0:J
 
-.field public static percent:I = 0x7f0a08fc
+    invoke-interface {v2, v8, v9}, Liyd;->e(J)Lgyd;
 
-.field public static pin:I = 0x7f0a08ff
+    move-result-object v2
 
-.field public static position:I = 0x7f0a0911
+    iget-object v2, v2, Lgyd;->a:Lmyd;
 
-.field public static postLayout:I = 0x7f0a0912
+    iget-wide v2, v2, Lmyd;->b:J
 
-.field public static pressed:I = 0x7f0a0919
+    iget-wide v8, v1, Lodc;->V0:J
 
-.field public static progress_circular:I = 0x7f0a09fd
+    iget-object v6, v0, Lidc;->X:Ls7;
 
-.field public static progress_horizontal:I = 0x7f0a09fe
+    iput-wide v2, v6, Ls7;->a:J
 
-.field public static radio:I = 0x7f0a0a01
+    iput-wide v8, v0, Lidc;->s0:J
 
-.field public static rectangles:I = 0x7f0a0a0b
+    iput-boolean v7, v0, Lidc;->Z:Z
 
-.field public static report_drawn:I = 0x7f0a0a0e
+    const/4 v2, 0x0
 
-.field public static reverseSawtooth:I = 0x7f0a0a12
+    iput-boolean v2, v0, Lidc;->v0:Z
 
-.field public static right:I = 0x7f0a0a13
+    iget-object v3, v1, Lodc;->E0:[Lemd;
 
-.field public static rightToLeft:I = 0x7f0a0a14
+    array-length v6, v3
 
-.field public static right_icon:I = 0x7f0a0a15
+    :goto_0
+    if-ge v2, v6, :cond_1
 
-.field public static right_side:I = 0x7f0a0a16
+    aget-object v7, v3, v2
 
-.field public static rounded:I = 0x7f0a0a23
+    iget-wide v8, v1, Lodc;->V0:J
 
-.field public static row_index_key:I = 0x7f0a0a96
+    iput-wide v8, v7, Lemd;->t:J
 
-.field public static save_non_transition_alpha:I = 0x7f0a0b28
+    add-int/lit8 v2, v2, 0x1
 
-.field public static save_overlay_view:I = 0x7f0a0b29
+    goto :goto_0
 
-.field public static sawtooth:I = 0x7f0a0b2a
+    :cond_1
+    iput-wide v4, v1, Lodc;->V0:J
 
-.field public static scale:I = 0x7f0a0b2b
+    :cond_2
+    invoke-virtual {p0}, Lodc;->h()I
 
-.field public static screen:I = 0x7f0a0b2e
+    move-result v2
 
-.field public static scrollIndicatorDown:I = 0x7f0a0b30
+    iput v2, v1, Lodc;->X0:I
 
-.field public static scrollIndicatorUp:I = 0x7f0a0b31
+    iget-object v2, v1, Lodc;->d:Lbp6;
 
-.field public static scrollView:I = 0x7f0a0b32
+    iget v3, v1, Lodc;->O0:I
 
-.field public static scrollable:I = 0x7f0a0b33
+    invoke-virtual {v2, v3}, Lbp6;->i(I)I
 
-.field public static search_badge:I = 0x7f0a0b34
+    move-result v2
 
-.field public static search_bar:I = 0x7f0a0b35
+    iget-object v3, v1, Lodc;->w0:Li78;
 
-.field public static search_button:I = 0x7f0a0b36
+    invoke-virtual {v3, v0, p0, v2}, Li78;->t(Lt48;Lq48;I)V
 
-.field public static search_close_btn:I = 0x7f0a0b39
+    return-void
+.end method
 
-.field public static search_edit_frame:I = 0x7f0a0b3b
+.method public final F()Z
+    .locals 1
 
-.field public static search_go_btn:I = 0x7f0a0b3c
+    iget-boolean v0, p0, Lodc;->Q0:Z
 
-.field public static search_mag_icon:I = 0x7f0a0b3d
+    if-nez v0, :cond_1
 
-.field public static search_plate:I = 0x7f0a0b3f
+    invoke-virtual {p0}, Lodc;->x()Z
 
-.field public static search_src_text:I = 0x7f0a0b40
+    move-result v0
 
-.field public static search_voice_btn:I = 0x7f0a0b41
+    if-eqz v0, :cond_0
 
-.field public static select_dialog_listview:I = 0x7f0a0b4a
+    goto :goto_0
 
-.field public static selected:I = 0x7f0a0b4b
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static selection_type:I = 0x7f0a0b4d
+    return v0
 
-.field public static shortcut:I = 0x7f0a0bc3
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-.field public static sin:I = 0x7f0a0bc9
+    return v0
+.end method
 
-.field public static slide:I = 0x7f0a0bcc
+.method public final Q(Liyd;)V
+    .locals 2
 
-.field public static snackbar_action:I = 0x7f0a0bd2
+    new-instance v0, Lpkb;
 
-.field public static snackbar_text:I = 0x7f0a0bd3
+    const/16 v1, 0xd
 
-.field public static spacer:I = 0x7f0a0bda
+    invoke-direct {v0, p0, v1, p1}, Lpkb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static special_effects_controller_view_tag:I = 0x7f0a0bdb
+    iget-object p1, p0, Lodc;->B0:Landroid/os/Handler;
 
-.field public static spline:I = 0x7f0a0bdf
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-.field public static split_action_bar:I = 0x7f0a0be0
+    return-void
+.end method
 
-.field public static spread:I = 0x7f0a0be1
+.method public final a()V
+    .locals 7
 
-.field public static spread_inside:I = 0x7f0a0be2
+    iget-object v0, p0, Lodc;->E0:[Lemd;
 
-.field public static square:I = 0x7f0a0be4
+    array-length v1, v0
 
-.field public static src_atop:I = 0x7f0a0be5
+    const/4 v2, 0x0
 
-.field public static src_in:I = 0x7f0a0be6
+    :goto_0
+    const/4 v3, 0x0
 
-.field public static src_over:I = 0x7f0a0be7
+    if-ge v2, v1, :cond_1
 
-.field public static standard:I = 0x7f0a0be8
+    aget-object v4, v0, v2
 
-.field public static start:I = 0x7f0a0be9
+    const/4 v5, 0x1
 
-.field public static startHorizontal:I = 0x7f0a0bea
+    invoke-virtual {v4, v5}, Lemd;->A(Z)V
 
-.field public static startToEnd:I = 0x7f0a0beb
+    iget-object v5, v4, Lemd;->h:Ld25;
 
-.field public static startVertical:I = 0x7f0a0bec
+    if-eqz v5, :cond_0
 
-.field public static staticLayout:I = 0x7f0a0bee
+    iget-object v6, v4, Lemd;->e:Lh25;
 
-.field public static staticPostLayout:I = 0x7f0a0bef
+    invoke-interface {v5, v6}, Ld25;->c(Lh25;)V
 
-.field public static stop:I = 0x7f0a0bf1
+    iput-object v3, v4, Lemd;->h:Ld25;
 
-.field public static stretch:I = 0x7f0a0bf2
+    iput-object v3, v4, Lemd;->g:Lub6;
 
-.field public static submenuarrow:I = 0x7f0a0bf3
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-.field public static submit_area:I = 0x7f0a0bf4
+    goto :goto_0
 
-.field public static tabMode:I = 0x7f0a0bff
+    :cond_1
+    iget-object v0, p0, Lodc;->x0:Lngd;
 
-.field public static tag_accessibility_actions:I = 0x7f0a0c00
+    iget-object v1, v0, Lngd;->c:Ljava/lang/Object;
 
-.field public static tag_accessibility_clickable_spans:I = 0x7f0a0c01
+    check-cast v1, Lyl5;
 
-.field public static tag_accessibility_heading:I = 0x7f0a0c02
+    if-eqz v1, :cond_2
 
-.field public static tag_accessibility_pane_title:I = 0x7f0a0c03
+    invoke-interface {v1}, Lyl5;->release()V
 
-.field public static tag_on_apply_window_listener:I = 0x7f0a0c04
+    iput-object v3, v0, Lngd;->c:Ljava/lang/Object;
 
-.field public static tag_on_receive_content_listener:I = 0x7f0a0c05
+    :cond_2
+    iput-object v3, v0, Lngd;->d:Ljava/lang/Object;
 
-.field public static tag_on_receive_content_mime_types:I = 0x7f0a0c06
+    return-void
+.end method
 
-.field public static tag_screen_reader_focusable:I = 0x7f0a0c08
+.method public final b()V
+    .locals 2
 
-.field public static tag_state_description:I = 0x7f0a0c09
+    iget-object v0, p0, Lodc;->B0:Landroid/os/Handler;
 
-.field public static tag_transition_group:I = 0x7f0a0c0b
+    iget-object v1, p0, Lodc;->z0:Lfdc;
 
-.field public static tag_unhandled_key_event_manager:I = 0x7f0a0c0c
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-.field public static tag_unhandled_key_listeners:I = 0x7f0a0c0d
+    return-void
+.end method
 
-.field public static tag_window_insets_animation_callback:I = 0x7f0a0c0e
+.method public final c(JLkyd;)J
+    .locals 9
 
-.field public static text:I = 0x7f0a0c10
+    invoke-virtual {p0}, Lodc;->d()V
 
-.field public static text2:I = 0x7f0a0c11
+    iget-object v0, p0, Lodc;->L0:Liyd;
 
-.field public static textSpacerNoButtons:I = 0x7f0a0c13
+    invoke-interface {v0}, Liyd;->c()Z
 
-.field public static textSpacerNoTitle:I = 0x7f0a0c14
+    move-result v0
 
-.field public static text_input_end_icon:I = 0x7f0a0c1d
+    if-nez v0, :cond_0
 
-.field public static text_input_error_icon:I = 0x7f0a0c1e
+    const-wide/16 p1, 0x0
 
-.field public static text_input_start_icon:I = 0x7f0a0c1f
+    return-wide p1
 
-.field public static textinput_counter:I = 0x7f0a0c23
+    :cond_0
+    iget-object v0, p0, Lodc;->L0:Liyd;
 
-.field public static textinput_error:I = 0x7f0a0c24
+    invoke-interface {v0, p1, p2}, Liyd;->e(J)Lgyd;
 
-.field public static textinput_helper_text:I = 0x7f0a0c25
+    move-result-object v0
 
-.field public static textinput_placeholder:I = 0x7f0a0c26
+    iget-object v1, v0, Lgyd;->a:Lmyd;
 
-.field public static textinput_prefix_text:I = 0x7f0a0c27
+    iget-wide v5, v1, Lmyd;->a:J
 
-.field public static textinput_suffix_text:I = 0x7f0a0c28
+    iget-object v0, v0, Lgyd;->b:Lmyd;
 
-.field public static time:I = 0x7f0a0c2f
+    iget-wide v7, v0, Lmyd;->a:J
 
-.field public static title:I = 0x7f0a0c31
+    move-wide v3, p1
 
-.field public static titleDividerNoCustom:I = 0x7f0a0c32
+    move-object v2, p3
 
-.field public static title_template:I = 0x7f0a0c33
+    invoke-virtual/range {v2 .. v8}, Lkyd;->a(JJJ)J
 
-.field public static top:I = 0x7f0a0c46
+    move-result-wide p1
 
-.field public static topPanel:I = 0x7f0a0c47
+    return-wide p1
+.end method
 
-.field public static touch_outside:I = 0x7f0a0c4a
+.method public final d()V
+    .locals 1
 
-.field public static transition_clip:I = 0x7f0a0c4d
+    iget-boolean v0, p0, Lodc;->H0:Z
 
-.field public static transition_current_scene:I = 0x7f0a0c4e
+    invoke-static {v0}, Ligi;->h(Z)V
 
-.field public static transition_image_transform:I = 0x7f0a0c4f
+    iget-object v0, p0, Lodc;->K0:Lp66;
 
-.field public static transition_layout_save:I = 0x7f0a0c50
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static transition_pause_alpha:I = 0x7f0a0c51
+    iget-object v0, p0, Lodc;->L0:Liyd;
 
-.field public static transition_position:I = 0x7f0a0c52
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static transition_scene_layoutid_cache:I = 0x7f0a0c53
+    return-void
+.end method
 
-.field public static transition_transform:I = 0x7f0a0c54
+.method public final e()J
+    .locals 2
 
-.field public static triangle:I = 0x7f0a0c55
+    invoke-virtual {p0}, Lodc;->l()J
 
-.field public static unchecked:I = 0x7f0a0c63
+    move-result-wide v0
 
-.field public static uniform:I = 0x7f0a0c64
+    return-wide v0
+.end method
 
-.field public static unlabeled:I = 0x7f0a0c66
+.method public final f()V
+    .locals 3
 
-.field public static up:I = 0x7f0a0c67
+    iget-object v0, p0, Lodc;->d:Lbp6;
 
-.field public static view_offset_helper:I = 0x7f0a0d04
+    iget v1, p0, Lodc;->O0:I
 
-.field public static view_tree_lifecycle_owner:I = 0x7f0a0d42
+    invoke-virtual {v0, v1}, Lbp6;->i(I)I
 
-.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0d43
+    move-result v0
 
-.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d44
+    iget-object v1, p0, Lodc;->w0:Li78;
 
-.field public static view_tree_view_model_store_owner:I = 0x7f0a0d45
+    iget-object v2, v1, Li78;->d:Ljava/lang/Object;
 
-.field public static visible:I = 0x7f0a0d67
+    check-cast v2, Ljava/io/IOException;
 
-.field public static visible_removing_fragment_view_tag:I = 0x7f0a0d68
+    if-nez v2, :cond_5
 
-.field public static with_icon:I = 0x7f0a0d7e
+    iget-object v1, v1, Li78;->c:Ljava/lang/Object;
 
-.field public static withinBounds:I = 0x7f0a0d7f
+    check-cast v1, Lr48;
 
-.field public static wrap:I = 0x7f0a0d80
+    if-eqz v1, :cond_2
 
-.field public static wrap_content:I = 0x7f0a0d81
+    const/high16 v2, -0x80000000
+
+    if-ne v0, v2, :cond_0
+
+    iget v0, v1, Lr48;->b:I
+
+    :cond_0
+    iget-object v2, v1, Lr48;->d:Ljava/io/IOException;
+
+    if-eqz v2, :cond_2
+
+    iget v1, v1, Lr48;->o:I
+
+    if-gt v1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    throw v2
+
+    :cond_2
+    :goto_0
+    iget-boolean v0, p0, Lodc;->Y0:Z
+
+    if-eqz v0, :cond_4
+
+    iget-boolean v0, p0, Lodc;->H0:Z
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const-string v0, "Loading finished before preparation is complete."
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :cond_5
+    throw v2
+.end method
+
+.method public final g(J)J
+    .locals 9
+
+    invoke-virtual {p0}, Lodc;->d()V
+
+    iget-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-object v0, v0, Lp66;->c:Ljava/lang/Object;
+
+    check-cast v0, [Z
+
+    iget-object v1, p0, Lodc;->L0:Liyd;
+
+    invoke-interface {v1}, Liyd;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 p1, 0x0
+
+    :goto_0
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lodc;->Q0:Z
+
+    iget-wide v2, p0, Lodc;->U0:J
+
+    cmp-long v2, v2, p1
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_1
+
+    move v2, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    iput-wide p1, p0, Lodc;->U0:J
+
+    invoke-virtual {p0}, Lodc;->x()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    iput-wide p1, p0, Lodc;->V0:J
+
+    return-wide p1
+
+    :cond_2
+    iget v4, p0, Lodc;->O0:I
+
+    const/4 v5, 0x7
+
+    iget-object v6, p0, Lodc;->w0:Li78;
+
+    if-eq v4, v5, :cond_9
+
+    iget-boolean v4, p0, Lodc;->Y0:Z
+
+    if-nez v4, :cond_3
+
+    invoke-virtual {v6}, Li78;->r()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    :cond_3
+    iget-object v4, p0, Lodc;->E0:[Lemd;
+
+    array-length v4, v4
+
+    move v5, v1
+
+    :goto_2
+    if-ge v5, v4, :cond_8
+
+    iget-object v7, p0, Lodc;->E0:[Lemd;
+
+    aget-object v7, v7, v5
+
+    invoke-virtual {v7}, Lemd;->q()I
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    if-eqz v2, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    iget-boolean v8, p0, Lodc;->J0:Z
+
+    if-eqz v8, :cond_5
+
+    iget v8, v7, Lemd;->q:I
+
+    invoke-virtual {v7, v8}, Lemd;->B(I)Z
+
+    move-result v7
+
+    goto :goto_3
+
+    :cond_5
+    iget-boolean v8, p0, Lodc;->Y0:Z
+
+    invoke-virtual {v7, p1, p2, v8}, Lemd;->C(JZ)Z
+
+    move-result v7
+
+    :goto_3
+    if-nez v7, :cond_7
+
+    aget-boolean v7, v0, v5
+
+    if-nez v7, :cond_6
+
+    iget-boolean v7, p0, Lodc;->I0:Z
+
+    if-nez v7, :cond_7
+
+    :cond_6
+    move v3, v1
+
+    goto :goto_5
+
+    :cond_7
+    :goto_4
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
+    :cond_8
+    :goto_5
+    if-eqz v3, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    iput-boolean v1, p0, Lodc;->W0:Z
+
+    iput-wide p1, p0, Lodc;->V0:J
+
+    iput-boolean v1, p0, Lodc;->Y0:Z
+
+    iput-boolean v1, p0, Lodc;->R0:Z
+
+    invoke-virtual {v6}, Li78;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v2, v0
+
+    :goto_6
+    if-ge v1, v2, :cond_a
+
+    aget-object v3, v0, v1
+
+    invoke-virtual {v3}, Lemd;->h()V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_6
+
+    :cond_a
+    invoke-virtual {v6}, Li78;->h()V
+
+    return-wide p1
+
+    :cond_b
+    const/4 v0, 0x0
+
+    iput-object v0, v6, Li78;->d:Ljava/lang/Object;
+
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v2, v0
+
+    move v3, v1
+
+    :goto_7
+    if-ge v3, v2, :cond_c
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4, v1}, Lemd;->A(Z)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_7
+
+    :cond_c
+    :goto_8
+    return-wide p1
+.end method
+
+.method public final h()I
+    .locals 6
+
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v4, v0, v2
+
+    iget v5, v4, Lemd;->q:I
+
+    iget v4, v4, Lemd;->p:I
+
+    add-int/2addr v5, v4
+
+    add-int/2addr v3, v5
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v3
+.end method
+
+.method public final i()Z
+    .locals 1
+
+    iget-object v0, p0, Lodc;->w0:Li78;
+
+    invoke-virtual {v0}, Li78;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lodc;->y0:Lak3;
+
+    invoke-virtual {v0}, Lak3;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j()J
+    .locals 3
+
+    iget-boolean v0, p0, Lodc;->R0:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-boolean v1, p0, Lodc;->R0:Z
+
+    iget-wide v0, p0, Lodc;->U0:J
+
+    return-wide v0
+
+    :cond_0
+    iget-boolean v0, p0, Lodc;->Q0:Z
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lodc;->Y0:Z
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lodc;->h()I
+
+    move-result v0
+
+    iget v2, p0, Lodc;->X0:I
+
+    if-le v0, v2, :cond_2
+
+    :cond_1
+    iput-boolean v1, p0, Lodc;->Q0:Z
+
+    iget-wide v0, p0, Lodc;->U0:J
+
+    return-wide v0
+
+    :cond_2
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide v0
+.end method
+
+.method public final k()Li1g;
+    .locals 1
+
+    invoke-virtual {p0}, Lodc;->d()V
+
+    iget-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-object v0, v0, Lp66;->b:Ljava/lang/Object;
+
+    check-cast v0, Li1g;
+
+    return-object v0
+.end method
+
+.method public final l()J
+    .locals 11
+
+    invoke-virtual {p0}, Lodc;->d()V
+
+    iget-boolean v0, p0, Lodc;->Y0:Z
+
+    const-wide/high16 v1, -0x8000000000000000L
+
+    if-nez v0, :cond_7
+
+    iget v0, p0, Lodc;->S0:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {p0}, Lodc;->x()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lodc;->V0:J
+
+    return-wide v0
+
+    :cond_1
+    iget-boolean v0, p0, Lodc;->I0:Z
+
+    const/4 v3, 0x0
+
+    const-wide v4, 0x7fffffffffffffffL
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v0, v0
+
+    move v6, v3
+
+    move-wide v7, v4
+
+    :goto_0
+    if-ge v6, v0, :cond_4
+
+    iget-object v9, p0, Lodc;->K0:Lp66;
+
+    iget-object v10, v9, Lp66;->c:Ljava/lang/Object;
+
+    check-cast v10, [Z
+
+    aget-boolean v10, v10, v6
+
+    if-eqz v10, :cond_2
+
+    iget-object v9, v9, Lp66;->d:Ljava/lang/Object;
+
+    check-cast v9, [Z
+
+    aget-boolean v9, v9, v6
+
+    if-eqz v9, :cond_2
+
+    iget-object v9, p0, Lodc;->E0:[Lemd;
+
+    aget-object v9, v9, v6
+
+    monitor-enter v9
+
+    :try_start_0
+    iget-boolean v10, v9, Lemd;->w:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v9
+
+    if-nez v10, :cond_2
+
+    iget-object v9, p0, Lodc;->E0:[Lemd;
+
+    aget-object v9, v9, v6
+
+    invoke-virtual {v9}, Lemd;->n()J
+
+    move-result-wide v9
+
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v7
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v9
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    move-wide v7, v4
+
+    :cond_4
+    cmp-long v0, v7, v4
+
+    if-nez v0, :cond_5
+
+    invoke-virtual {p0, v3}, Lodc;->q(Z)J
+
+    move-result-wide v7
+
+    :cond_5
+    cmp-long v0, v7, v1
+
+    if-nez v0, :cond_6
+
+    iget-wide v0, p0, Lodc;->U0:J
+
+    return-wide v0
+
+    :cond_6
+    return-wide v7
+
+    :cond_7
+    :goto_2
+    return-wide v1
+.end method
+
+.method public final m(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final n(Lt48;JJZ)V
+    .locals 12
+
+    check-cast p1, Lidc;
+
+    iget-object v0, p1, Lidc;->b:Lf2f;
+
+    new-instance v1, Lk48;
+
+    iget-object v2, p1, Lidc;->t0:Lec4;
+
+    iget-object v3, v0, Lf2f;->c:Landroid/net/Uri;
+
+    iget-wide v5, v0, Lf2f;->b:J
+
+    move-wide/from16 v3, p4
+
+    invoke-direct/range {v1 .. v6}, Lk48;-><init>(Lec4;JJ)V
+
+    iget-object v0, p0, Lodc;->d:Lbp6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v8, p1, Lidc;->s0:J
+
+    iget-wide v10, p0, Lodc;->M0:J
+
+    move-object v2, v1
+
+    iget-object v1, p0, Lodc;->o:Lxg6;
+
+    const/4 v3, 0x1
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v1 .. v11}, Lxg6;->M(Lk48;IILub6;ILjava/lang/Object;JJ)V
+
+    if-nez p6, :cond_1
+
+    iget-object p1, p0, Lodc;->E0:[Lemd;
+
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    aget-object v3, p1, v2
+
+    invoke-virtual {v3, v1}, Lemd;->A(Z)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget p1, p0, Lodc;->S0:I
+
+    if-lez p1, :cond_1
+
+    iget-object p1, p0, Lodc;->C0:Lvu8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1, p0}, Le3e;->n(Lg3e;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final o([Lwj5;[Z[Lgmd;[ZJ)J
+    .locals 8
+
+    invoke-virtual {p0}, Lodc;->d()V
+
+    iget-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-object v1, v0, Lp66;->b:Ljava/lang/Object;
+
+    check-cast v1, Li1g;
+
+    iget-object v0, v0, Lp66;->d:Ljava/lang/Object;
+
+    check-cast v0, [Z
+
+    iget v2, p0, Lodc;->S0:I
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    array-length v5, p1
+
+    const/4 v6, 0x1
+
+    if-ge v4, v5, :cond_2
+
+    aget-object v5, p3, v4
+
+    if-eqz v5, :cond_1
+
+    aget-object v7, p1, v4
+
+    if-eqz v7, :cond_0
+
+    aget-boolean v7, p2, v4
+
+    if-nez v7, :cond_1
+
+    :cond_0
+    check-cast v5, Lkdc;
+
+    iget v5, v5, Lkdc;->a:I
+
+    aget-boolean v7, v0, v5
+
+    invoke-static {v7}, Ligi;->h(Z)V
+
+    iget v7, p0, Lodc;->S0:I
+
+    sub-int/2addr v7, v6
+
+    iput v7, p0, Lodc;->S0:I
+
+    aput-boolean v3, v0, v5
+
+    const/4 v5, 0x0
+
+    aput-object v5, p3, v4
+
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean p2, p0, Lodc;->P0:Z
+
+    if-eqz p2, :cond_4
+
+    if-nez v2, :cond_3
+
+    :goto_1
+    move p2, v6
+
+    goto :goto_2
+
+    :cond_3
+    move p2, v3
+
+    goto :goto_2
+
+    :cond_4
+    const-wide/16 v4, 0x0
+
+    cmp-long p2, p5, v4
+
+    if-eqz p2, :cond_3
+
+    iget-boolean p2, p0, Lodc;->J0:Z
+
+    if-nez p2, :cond_3
+
+    goto :goto_1
+
+    :goto_2
+    move v2, v3
+
+    :goto_3
+    array-length v4, p1
+
+    if-ge v2, v4, :cond_9
+
+    aget-object v4, p3, v2
+
+    if-nez v4, :cond_8
+
+    aget-object v4, p1, v2
+
+    if-eqz v4, :cond_8
+
+    invoke-interface {v4}, Lwj5;->length()I
+
+    move-result v5
+
+    if-ne v5, v6, :cond_5
+
+    move v5, v6
+
+    goto :goto_4
+
+    :cond_5
+    move v5, v3
+
+    :goto_4
+    invoke-static {v5}, Ligi;->h(Z)V
+
+    invoke-interface {v4, v3}, Lwj5;->f(I)I
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    move v5, v6
+
+    goto :goto_5
+
+    :cond_6
+    move v5, v3
+
+    :goto_5
+    invoke-static {v5}, Ligi;->h(Z)V
+
+    invoke-interface {v4}, Lwj5;->a()Lg1g;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Li1g;->b(Lg1g;)I
+
+    move-result v5
+
+    aget-boolean v7, v0, v5
+
+    xor-int/2addr v7, v6
+
+    invoke-static {v7}, Ligi;->h(Z)V
+
+    iget v7, p0, Lodc;->S0:I
+
+    add-int/2addr v7, v6
+
+    iput v7, p0, Lodc;->S0:I
+
+    aput-boolean v6, v0, v5
+
+    iget-boolean v7, p0, Lodc;->R0:Z
+
+    invoke-interface {v4}, Lwj5;->j()Lub6;
+
+    move-result-object v4
+
+    iget-boolean v4, v4, Lub6;->t:Z
+
+    or-int/2addr v4, v7
+
+    iput-boolean v4, p0, Lodc;->R0:Z
+
+    new-instance v4, Lkdc;
+
+    invoke-direct {v4, p0, v5}, Lkdc;-><init>(Lodc;I)V
+
+    aput-object v4, p3, v2
+
+    aput-boolean v6, p4, v2
+
+    if-nez p2, :cond_8
+
+    iget-object p2, p0, Lodc;->E0:[Lemd;
+
+    aget-object p2, p2, v5
+
+    invoke-virtual {p2}, Lemd;->q()I
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    invoke-virtual {p2, p5, p6, v6}, Lemd;->C(JZ)Z
+
+    move-result p2
+
+    if-nez p2, :cond_7
+
+    move p2, v6
+
+    goto :goto_6
+
+    :cond_7
+    move p2, v3
+
+    :cond_8
+    :goto_6
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3
+
+    :cond_9
+    iget p1, p0, Lodc;->S0:I
+
+    if-nez p1, :cond_c
+
+    iput-boolean v3, p0, Lodc;->W0:Z
+
+    iput-boolean v3, p0, Lodc;->Q0:Z
+
+    iput-boolean v3, p0, Lodc;->R0:Z
+
+    iget-object p1, p0, Lodc;->w0:Li78;
+
+    invoke-virtual {p1}, Li78;->r()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_b
+
+    iget-object p2, p0, Lodc;->E0:[Lemd;
+
+    array-length p3, p2
+
+    :goto_7
+    if-ge v3, p3, :cond_a
+
+    aget-object p4, p2, v3
+
+    invoke-virtual {p4}, Lemd;->h()V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_7
+
+    :cond_a
+    invoke-virtual {p1}, Li78;->h()V
+
+    goto :goto_a
+
+    :cond_b
+    iput-boolean v3, p0, Lodc;->Y0:Z
+
+    iget-object p1, p0, Lodc;->E0:[Lemd;
+
+    array-length p2, p1
+
+    move p3, v3
+
+    :goto_8
+    if-ge p3, p2, :cond_e
+
+    aget-object p4, p1, p3
+
+    invoke-virtual {p4, v3}, Lemd;->A(Z)V
+
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_8
+
+    :cond_c
+    if-eqz p2, :cond_e
+
+    invoke-virtual {p0, p5, p6}, Lodc;->g(J)J
+
+    move-result-wide p5
+
+    :goto_9
+    array-length p1, p3
+
+    if-ge v3, p1, :cond_e
+
+    aget-object p1, p3, v3
+
+    if-eqz p1, :cond_d
+
+    aput-boolean v6, p4, v3
+
+    :cond_d
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_9
+
+    :cond_e
+    :goto_a
+    iput-boolean v6, p0, Lodc;->P0:Z
+
+    return-wide p5
+.end method
+
+.method public final p(Lt48;JJ)V
+    .locals 13
+
+    check-cast p1, Lidc;
+
+    iget-wide v0, p0, Lodc;->M0:J
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, v0, v2
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lodc;->L0:Liyd;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0, v1}, Lodc;->q(Z)J
+
+    move-result-wide v2
+
+    const-wide/high16 v4, -0x8000000000000000L
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_0
+
+    const-wide/16 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v4, 0x2710
+
+    add-long/2addr v2, v4
+
+    :goto_0
+    iput-wide v2, p0, Lodc;->M0:J
+
+    iget-object v0, p0, Lodc;->L0:Liyd;
+
+    iget-boolean v4, p0, Lodc;->N0:Z
+
+    iget-object v5, p0, Lodc;->Y:Ltdc;
+
+    invoke-virtual {v5, v2, v3, v0, v4}, Ltdc;->v(JLiyd;Z)V
+
+    :cond_1
+    iget-object v0, p1, Lidc;->b:Lf2f;
+
+    new-instance v2, Lk48;
+
+    iget-object v3, p1, Lidc;->t0:Lec4;
+
+    iget-object v4, v0, Lf2f;->c:Landroid/net/Uri;
+
+    iget-wide v6, v0, Lf2f;->b:J
+
+    move-wide/from16 v4, p4
+
+    invoke-direct/range {v2 .. v7}, Lk48;-><init>(Lec4;JJ)V
+
+    iget-object v0, p0, Lodc;->d:Lbp6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v9, p1, Lidc;->s0:J
+
+    iget-wide v11, p0, Lodc;->M0:J
+
+    move-object v3, v2
+
+    iget-object v2, p0, Lodc;->o:Lxg6;
+
+    const/4 v4, 0x1
+
+    const/4 v5, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v2 .. v12}, Lxg6;->N(Lk48;IILub6;ILjava/lang/Object;JJ)V
+
+    iput-boolean v1, p0, Lodc;->Y0:Z
+
+    iget-object p1, p0, Lodc;->C0:Lvu8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1, p0}, Le3e;->n(Lg3e;)V
+
+    return-void
+.end method
+
+.method public final q(Z)J
+    .locals 5
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-object v3, p0, Lodc;->E0:[Lemd;
+
+    array-length v3, v3
+
+    if-ge v2, v3, :cond_2
+
+    if-nez p1, :cond_0
+
+    iget-object v3, p0, Lodc;->K0:Lp66;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v3, v3, Lp66;->d:Ljava/lang/Object;
+
+    check-cast v3, [Z
+
+    aget-boolean v3, v3, v2
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    iget-object v3, p0, Lodc;->E0:[Lemd;
+
+    aget-object v3, v3, v2
+
+    invoke-virtual {v3}, Lemd;->n()J
+
+    move-result-wide v3
+
+    invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-wide v0
+.end method
+
+.method public final r(Lvu8;J)V
+    .locals 5
+
+    iput-object p1, p0, Lodc;->C0:Lvu8;
+
+    iget-object p1, p0, Lodc;->u0:Lub6;
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0}, Lodc;->B(II)Ln1g;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ln1g;->d(Lub6;)V
+
+    new-instance p1, Lxe7;
+
+    const/4 v0, 0x1
+
+    new-array v2, v0, [J
+
+    const-wide/16 v3, 0x0
+
+    aput-wide v3, v2, v1
+
+    new-array v0, v0, [J
+
+    aput-wide v3, v0, v1
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {p1, v3, v4, v2, v0}, Lxe7;-><init>(J[J[J)V
+
+    invoke-virtual {p0, p1}, Lodc;->D(Liyd;)V
+
+    invoke-virtual {p0}, Lodc;->w()V
+
+    iput-wide p2, p0, Lodc;->V0:J
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Lodc;->y0:Lak3;
+
+    invoke-virtual {p1}, Lak3;->f()Z
+
+    invoke-virtual {p0}, Lodc;->E()V
+
+    return-void
+.end method
+
+.method public final s(Ld58;)Z
+    .locals 1
+
+    iget-boolean p1, p0, Lodc;->Y0:Z
+
+    if-nez p1, :cond_3
+
+    iget-object p1, p0, Lodc;->w0:Li78;
+
+    invoke-virtual {p1}, Li78;->p()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lodc;->W0:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lodc;->H0:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lodc;->u0:Lub6;
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    iget v0, p0, Lodc;->S0:I
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lodc;->y0:Lak3;
+
+    invoke-virtual {v0}, Lak3;->f()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Li78;->r()Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p0}, Lodc;->E()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    return v0
+
+    :cond_3
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final t(Lt48;JJI)V
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    check-cast v1, Lidc;
+
+    iget-object v2, v1, Lidc;->b:Lf2f;
+
+    if-nez p6, :cond_0
+
+    new-instance v2, Lk48;
+
+    iget-object v3, v1, Lidc;->t0:Lec4;
+
+    invoke-direct {v2, v3}, Lk48;-><init>(Lec4;)V
+
+    move-object v6, v2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v4, Lk48;
+
+    iget-object v5, v1, Lidc;->t0:Lec4;
+
+    iget-object v3, v2, Lf2f;->c:Landroid/net/Uri;
+
+    iget-wide v8, v2, Lf2f;->b:J
+
+    move-wide/from16 v6, p4
+
+    invoke-direct/range {v4 .. v9}, Lk48;-><init>(Lec4;JJ)V
+
+    move-object v6, v4
+
+    :goto_0
+    iget-wide v12, v1, Lidc;->s0:J
+
+    iget-wide v14, v0, Lodc;->M0:J
+
+    iget-object v5, v0, Lodc;->o:Lxg6;
+
+    const/4 v7, 0x1
+
+    const/4 v8, -0x1
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    move/from16 v16, p6
+
+    invoke-virtual/range {v5 .. v16}, Lxg6;->R(Lk48;IILub6;ILjava/lang/Object;JJI)V
+
+    return-void
+.end method
+
+.method public final u(JZ)V
+    .locals 5
+
+    iget-boolean v0, p0, Lodc;->J0:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Lodc;->d()V
+
+    invoke-virtual {p0}, Lodc;->x()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-object v0, v0, Lp66;->d:Ljava/lang/Object;
+
+    check-cast v0, [Z
+
+    iget-object v1, p0, Lodc;->E0:[Lemd;
+
+    array-length v1, v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    iget-object v3, p0, Lodc;->E0:[Lemd;
+
+    aget-object v3, v3, v2
+
+    aget-boolean v4, v0, v2
+
+    invoke-virtual {v3, p1, p2, p3, v4}, Lemd;->g(JZZ)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public final v(Lt48;JJLjava/io/IOException;I)Li21;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v12, p6
+
+    move-object/from16 v1, p1
+
+    check-cast v1, Lidc;
+
+    iget-object v2, v1, Lidc;->b:Lf2f;
+
+    new-instance v3, Lk48;
+
+    iget-object v4, v1, Lidc;->t0:Lec4;
+
+    iget-object v5, v2, Lf2f;->c:Landroid/net/Uri;
+
+    iget-wide v7, v2, Lf2f;->b:J
+
+    move-wide/from16 v5, p4
+
+    invoke-direct/range {v3 .. v8}, Lk48;-><init>(Lec4;JJ)V
+
+    move-object v2, v3
+
+    sget-object v3, Llig;->a:Ljava/lang/String;
+
+    iget-object v3, v0, Lodc;->d:Lbp6;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    instance-of v3, v12, Landroidx/media3/common/ParserException;
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v6, 0x1
+
+    if-nez v3, :cond_2
+
+    instance-of v3, v12, Ljava/io/FileNotFoundException;
+
+    if-nez v3, :cond_2
+
+    instance-of v3, v12, Landroidx/media3/datasource/HttpDataSource$CleartextNotPermittedException;
+
+    if-nez v3, :cond_2
+
+    instance-of v3, v12, Landroidx/media3/exoplayer/upstream/Loader$UnexpectedLoaderException;
+
+    if-nez v3, :cond_2
+
+    sget v3, Landroidx/media3/datasource/DataSourceException;->b:I
+
+    move-object v3, v12
+
+    :goto_0
+    if-eqz v3, :cond_1
+
+    instance-of v7, v3, Landroidx/media3/datasource/DataSourceException;
+
+    if-eqz v7, :cond_0
+
+    move-object v7, v3
+
+    check-cast v7, Landroidx/media3/datasource/DataSourceException;
+
+    iget v7, v7, Landroidx/media3/datasource/DataSourceException;->a:I
+
+    const/16 v8, 0x7d8
+
+    if-ne v7, v8, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v3, p7, -0x1
+
+    mul-int/lit16 v3, v3, 0x3e8
+
+    const/16 v7, 0x1388
+
+    invoke-static {v3, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    int-to-long v7, v3
+
+    move-wide v14, v7
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    move-wide v14, v4
+
+    :goto_2
+    cmp-long v3, v14, v4
+
+    if-nez v3, :cond_3
+
+    sget-object v3, Li78;->Y:Li21;
+
+    :goto_3
+    move-object v14, v3
+
+    goto :goto_8
+
+    :cond_3
+    invoke-virtual {v0}, Lodc;->h()I
+
+    move-result v3
+
+    iget v7, v0, Lodc;->X0:I
+
+    const/4 v8, 0x0
+
+    if-le v3, v7, :cond_4
+
+    move/from16 v16, v6
+
+    goto :goto_4
+
+    :cond_4
+    move/from16 v16, v8
+
+    :goto_4
+    iget-boolean v7, v0, Lodc;->T0:Z
+
+    if-nez v7, :cond_8
+
+    iget-object v7, v0, Lodc;->L0:Liyd;
+
+    if-eqz v7, :cond_5
+
+    invoke-interface {v7}, Liyd;->f()J
+
+    move-result-wide v9
+
+    cmp-long v4, v9, v4
+
+    if-eqz v4, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    iget-boolean v3, v0, Lodc;->H0:Z
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v0}, Lodc;->F()Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    iput-boolean v6, v0, Lodc;->W0:Z
+
+    sget-object v3, Li78;->X:Li21;
+
+    goto :goto_3
+
+    :cond_6
+    iget-boolean v3, v0, Lodc;->H0:Z
+
+    iput-boolean v3, v0, Lodc;->Q0:Z
+
+    const-wide/16 v3, 0x0
+
+    iput-wide v3, v0, Lodc;->U0:J
+
+    iput v8, v0, Lodc;->X0:I
+
+    iget-object v5, v0, Lodc;->E0:[Lemd;
+
+    array-length v7, v5
+
+    move v9, v8
+
+    :goto_5
+    if-ge v9, v7, :cond_7
+
+    aget-object v10, v5, v9
+
+    invoke-virtual {v10, v8}, Lemd;->A(Z)V
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    iget-object v5, v1, Lidc;->X:Ls7;
+
+    iput-wide v3, v5, Ls7;->a:J
+
+    iput-wide v3, v1, Lidc;->s0:J
+
+    iput-boolean v6, v1, Lidc;->Z:Z
+
+    iput-boolean v8, v1, Lidc;->v0:Z
+
+    goto :goto_7
+
+    :cond_8
+    :goto_6
+    iput v3, v0, Lodc;->X0:I
+
+    :goto_7
+    new-instance v13, Li21;
+
+    const/16 v17, 0x5
+
+    const/16 v18, 0x0
+
+    invoke-direct/range {v13 .. v18}, Li21;-><init>(JIIZ)V
+
+    move-object v3, v13
+
+    goto :goto_3
+
+    :goto_8
+    invoke-virtual {v14}, Li21;->a()Z
+
+    move-result v3
+
+    xor-int/lit8 v13, v3, 0x1
+
+    iget-wide v8, v1, Lidc;->s0:J
+
+    iget-wide v10, v0, Lodc;->M0:J
+
+    iget-object v1, v0, Lodc;->o:Lxg6;
+
+    const/4 v3, 0x1
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v1 .. v13}, Lxg6;->O(Lk48;IILub6;ILjava/lang/Object;JJLjava/io/IOException;Z)V
+
+    return-object v14
+.end method
+
+.method public final w()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lodc;->G0:Z
+
+    iget-object v0, p0, Lodc;->B0:Landroid/os/Handler;
+
+    iget-object v1, p0, Lodc;->z0:Lfdc;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final x()Z
+    .locals 4
+
+    iget-wide v0, p0, Lodc;->V0:J
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final y()V
+    .locals 15
+
+    iget-boolean v0, p0, Lodc;->Z0:Z
+
+    if-nez v0, :cond_c
+
+    iget-boolean v0, p0, Lodc;->H0:Z
+
+    if-nez v0, :cond_c
+
+    iget-boolean v0, p0, Lodc;->G0:Z
+
+    if-eqz v0, :cond_c
+
+    iget-object v0, p0, Lodc;->L0:Liyd;
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_2
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Lemd;->t()Lub6;
+
+    move-result-object v4
+
+    if-nez v4, :cond_1
+
+    goto/16 :goto_6
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lodc;->y0:Lak3;
+
+    invoke-virtual {v0}, Lak3;->d()V
+
+    iget-object v0, p0, Lodc;->E0:[Lemd;
+
+    array-length v0, v0
+
+    new-array v1, v0, [Lg1g;
+
+    new-array v3, v0, [Z
+
+    move v4, v2
+
+    :goto_1
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    iget-wide v7, p0, Lodc;->v0:J
+
+    const/4 v9, 0x1
+
+    if-ge v4, v0, :cond_a
+
+    iget-object v10, p0, Lodc;->E0:[Lemd;
+
+    aget-object v10, v10, v4
+
+    invoke-virtual {v10}, Lemd;->t()Lub6;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v11, v10, Lub6;->n:Ljava/lang/String;
+
+    invoke-static {v11}, Lcs9;->i(Ljava/lang/String;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_4
+
+    invoke-static {v11}, Lcs9;->m(Ljava/lang/String;)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v13, v2
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    move v13, v9
+
+    :goto_3
+    aput-boolean v13, v3, v4
+
+    iget-boolean v14, p0, Lodc;->I0:Z
+
+    or-int/2addr v13, v14
+
+    iput-boolean v13, p0, Lodc;->I0:Z
+
+    invoke-static {v11}, Lcs9;->k(Ljava/lang/String;)Z
+
+    move-result v11
+
+    cmp-long v5, v7, v5
+
+    if-eqz v5, :cond_5
+
+    if-ne v0, v9, :cond_5
+
+    if-eqz v11, :cond_5
+
+    move v5, v9
+
+    goto :goto_4
+
+    :cond_5
+    move v5, v2
+
+    :goto_4
+    iput-boolean v5, p0, Lodc;->J0:Z
+
+    iget-object v5, p0, Lodc;->D0:Lv77;
+
+    if-eqz v5, :cond_9
+
+    iget v6, v5, Lv77;->a:I
+
+    if-nez v12, :cond_6
+
+    iget-object v7, p0, Lodc;->F0:[Lmdc;
+
+    aget-object v7, v7, v4
+
+    iget-boolean v7, v7, Lmdc;->b:Z
+
+    if-eqz v7, :cond_8
+
+    :cond_6
+    iget-object v7, v10, Lub6;->l:Lyq9;
+
+    if-nez v7, :cond_7
+
+    new-instance v7, Lyq9;
+
+    new-array v8, v9, [Lwq9;
+
+    aput-object v5, v8, v2
+
+    invoke-direct {v7, v8}, Lyq9;-><init>([Lwq9;)V
+
+    goto :goto_5
+
+    :cond_7
+    new-array v8, v9, [Lwq9;
+
+    aput-object v5, v8, v2
+
+    invoke-virtual {v7, v8}, Lyq9;->a([Lwq9;)Lyq9;
+
+    move-result-object v7
+
+    :goto_5
+    invoke-virtual {v10}, Lub6;->a()Lrb6;
+
+    move-result-object v5
+
+    iput-object v7, v5, Lrb6;->k:Lyq9;
+
+    new-instance v10, Lub6;
+
+    invoke-direct {v10, v5}, Lub6;-><init>(Lrb6;)V
+
+    :cond_8
+    if-eqz v12, :cond_9
+
+    iget v5, v10, Lub6;->h:I
+
+    const/4 v7, -0x1
+
+    if-ne v5, v7, :cond_9
+
+    iget v5, v10, Lub6;->i:I
+
+    if-ne v5, v7, :cond_9
+
+    if-eq v6, v7, :cond_9
+
+    invoke-virtual {v10}, Lub6;->a()Lrb6;
+
+    move-result-object v5
+
+    iput v6, v5, Lrb6;->h:I
+
+    new-instance v10, Lub6;
+
+    invoke-direct {v10, v5}, Lub6;-><init>(Lrb6;)V
+
+    :cond_9
+    iget-object v5, p0, Lodc;->c:Lo25;
+
+    invoke-interface {v5, v10}, Lo25;->d(Lub6;)I
+
+    move-result v5
+
+    invoke-virtual {v10}, Lub6;->a()Lrb6;
+
+    move-result-object v6
+
+    iput v5, v6, Lrb6;->N:I
+
+    new-instance v5, Lub6;
+
+    invoke-direct {v5, v6}, Lub6;-><init>(Lrb6;)V
+
+    new-instance v6, Lg1g;
+
+    invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    filled-new-array {v5}, [Lub6;
+
+    move-result-object v8
+
+    invoke-direct {v6, v7, v8}, Lg1g;-><init>(Ljava/lang/String;[Lub6;)V
+
+    aput-object v6, v1, v4
+
+    iget-boolean v6, p0, Lodc;->R0:Z
+
+    iget-boolean v5, v5, Lub6;->t:Z
+
+    or-int/2addr v5, v6
+
+    iput-boolean v5, p0, Lodc;->R0:Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto/16 :goto_1
+
+    :cond_a
+    new-instance v0, Lp66;
+
+    new-instance v2, Li1g;
+
+    invoke-direct {v2, v1}, Li1g;-><init>([Lg1g;)V
+
+    invoke-direct {v0, v2, v3}, Lp66;-><init>(Li1g;[Z)V
+
+    iput-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-boolean v0, p0, Lodc;->J0:Z
+
+    if-eqz v0, :cond_b
+
+    iget-wide v0, p0, Lodc;->M0:J
+
+    cmp-long v0, v0, v5
+
+    if-nez v0, :cond_b
+
+    iput-wide v7, p0, Lodc;->M0:J
+
+    new-instance v0, Lgdc;
+
+    iget-object v1, p0, Lodc;->L0:Liyd;
+
+    invoke-direct {v0, p0, v1}, Lgdc;-><init>(Lodc;Liyd;)V
+
+    iput-object v0, p0, Lodc;->L0:Liyd;
+
+    :cond_b
+    iget-wide v0, p0, Lodc;->M0:J
+
+    iget-object v2, p0, Lodc;->L0:Liyd;
+
+    iget-boolean v3, p0, Lodc;->N0:Z
+
+    iget-object v4, p0, Lodc;->Y:Ltdc;
+
+    invoke-virtual {v4, v0, v1, v2, v3}, Ltdc;->v(JLiyd;Z)V
+
+    iput-boolean v9, p0, Lodc;->H0:Z
+
+    iget-object v0, p0, Lodc;->C0:Lvu8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v0, p0}, Lvu8;->d(Lxu8;)V
+
+    :cond_c
+    :goto_6
+    return-void
+.end method
+
+.method public final z(I)V
+    .locals 10
+
+    invoke-virtual {p0}, Lodc;->d()V
+
+    iget-object v0, p0, Lodc;->K0:Lp66;
+
+    iget-object v1, v0, Lp66;->o:Ljava/lang/Object;
+
+    check-cast v1, [Z
+
+    aget-boolean v2, v1, p1
+
+    if-nez v2, :cond_0
+
+    iget-object v0, v0, Lp66;->b:Ljava/lang/Object;
+
+    check-cast v0, Li1g;
+
+    invoke-virtual {v0, p1}, Li1g;->a(I)Lg1g;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    iget-object v0, v0, Lg1g;->d:[Lub6;
+
+    aget-object v5, v0, v2
+
+    iget-object v0, v5, Lub6;->n:Ljava/lang/String;
+
+    invoke-static {v0}, Lcs9;->h(Ljava/lang/String;)I
+
+    move-result v4
+
+    const/4 v7, 0x0
+
+    iget-wide v8, p0, Lodc;->U0:J
+
+    iget-object v3, p0, Lodc;->o:Lxg6;
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v3 .. v9}, Lxg6;->F(ILub6;ILjava/lang/Object;J)V
+
+    const/4 v0, 0x1
+
+    aput-boolean v0, v1, p1
+
+    :cond_0
+    return-void
+.end method

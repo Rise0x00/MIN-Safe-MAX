@@ -1,77 +1,86 @@
 .class public final Lg6e;
-.super Lcy;
+.super Ld6e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final synthetic g:I
 
-.field public final Y:Ljava/lang/String;
+.field public final h:Ljava/lang/String;
 
-.field public final Z:Ljava/lang/String;
+.field public i:Z
 
-.field public final o:J
-
-.field public final w0:Ljava/lang/String;
-
-.field public final x0:Lecb;
-
-.field public final y0:Lcy;
-
-.field public final z0:Z
+.field public final j:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lecb;Lcy;ZZZ)V
+.method public constructor <init>(JLjava/lang/String;Lz10;)V
     .locals 1
 
-    sget-object v0, Li00;->w0:Li00;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p9, p10}, Lcy;-><init>(Li00;ZZ)V
+    iput v0, p0, Lg6e;->g:I
 
-    iput-wide p1, p0, Lg6e;->o:J
+    .line 5
+    invoke-direct {p0, p1, p2}, Ld6e;-><init>(J)V
 
-    iput-object p3, p0, Lg6e;->X:Ljava/lang/String;
+    .line 6
+    iput-object p3, p0, Lg6e;->h:Ljava/lang/String;
 
-    iput-object p4, p0, Lg6e;->Y:Ljava/lang/String;
+    .line 7
+    iput-object p4, p0, Lg6e;->j:Ljava/lang/Object;
 
-    iput-object p5, p0, Lg6e;->Z:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p6, p0, Lg6e;->w0:Ljava/lang/String;
+.method public constructor <init>(JLjava/lang/String;ZLjava/util/List;)V
+    .locals 1
 
-    iput-object p7, p0, Lg6e;->x0:Lecb;
+    const/4 v0, 0x1
 
-    iput-object p8, p0, Lg6e;->y0:Lcy;
+    iput v0, p0, Lg6e;->g:I
 
-    iput-boolean p11, p0, Lg6e;->z0:Z
+    .line 1
+    invoke-direct {p0, p1, p2}, Ld6e;-><init>(J)V
+
+    .line 2
+    iput-object p3, p0, Lg6e;->h:Ljava/lang/String;
+
+    .line 3
+    iput-boolean p4, p0, Lg6e;->i:Z
+
+    .line 4
+    iput-object p5, p0, Lg6e;->j:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final a()Le6e;
+    .locals 1
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    iget v0, p0, Lg6e;->g:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lg6e;->o:J
+    new-instance v0, Li6e;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "shareId"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "url"
-
-    iget-object v2, p0, Lg6e;->X:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p0}, Li6e;-><init>(Lg6e;)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lh6e;
+
+    invoke-direct {v0, p0}, Lh6e;-><init>(Lg6e;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

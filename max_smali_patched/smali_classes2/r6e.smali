@@ -1,64 +1,186 @@
 .class public final Lr6e;
-.super Ljava/lang/Object;
+.super Le5e;
 .source "SourceFile"
 
-# interfaces
-.implements Lv6e;
 
+# instance fields
+.field public final b:J
 
-# static fields
-.field public static final a:Lr6e;
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJZJ)V
+    .locals 0
 
-    new-instance v0, Lr6e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lr6e;->b:J
 
-    sput-object v0, Lr6e;->a:Lr6e;
+    iput-wide p3, p0, Lr6e;->c:J
+
+    iput-wide p6, p0, Lr6e;->d:J
+
+    iput-boolean p5, p0, Lr6e;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final w()V
+    .locals 13
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Le5e;->m()Leb9;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v1, p0, Lr6e;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    iget-boolean v4, p0, Lr6e;->o:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    filled-new-array {v3, v5}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v5, "eb9"
+
+    const-string v6, "updateDelayedAttrs %d, %b"
+
+    invoke-static {v5, v6, v3}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v3, v0, Leb9;->a:Lhc4;
+
+    check-cast v3, Lob4;
+
+    iget-object v3, v3, Lob4;->c:Ldhd;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    iget-wide v4, p0, Lr6e;->c:J
+
+    invoke-virtual {v3, v4, v5, v1, v2}, Ldhd;->s(JLjava/lang/Long;Ljava/lang/Boolean;)V
+
+    iget-object v0, v0, Leb9;->e:Lxwb;
+
+    iget-object v0, v0, Lxwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Le5e;->m()Leb9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4, v5}, Leb9;->m(J)Lgb9;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Le5e;->m()Leb9;
+
+    move-result-object v1
+
+    sget-object v2, Llb9;->d:Llb9;
+
+    invoke-virtual {v1, v0, v2}, Leb9;->t(Lgb9;Llb9;)V
+
+    new-instance v3, Ludg;
+
+    invoke-virtual {p0}, Le5e;->i()Ll83;
+
+    move-result-object v0
+
+    check-cast v0, Lztd;
+
+    invoke-virtual {v0}, Lztd;->k()J
+
+    move-result-wide v4
+
+    iget-wide v10, p0, Lr6e;->d:J
+
+    iget-boolean v12, p0, Lr6e;->o:Z
+
+    iget-wide v6, p0, Lr6e;->b:J
+
+    iget-wide v8, p0, Lr6e;->c:J
+
+    invoke-direct/range {v3 .. v12}, Ludg;-><init>(JJJJZ)V
+
+    iget-object v0, p0, Le5e;->a:Lf5e;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lr6e;
+    move-object v0, v1
 
-    if-nez p1, :cond_1
+    :goto_0
+    iget-object v0, v0, Lf5e;->h:Lru7;
 
-    const/4 p1, 0x0
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    return p1
+    move-result-object v0
+
+    check-cast v0, Lrnf;
+
+    const/4 v2, 0x1
+
+    const/4 v4, 0x4
+
+    invoke-static {v0, v3, v2, v4}, Lrnf;->d(Lrnf;Lzm;ZI)J
+
+    iget-object v0, p0, Le5e;->a:Lf5e;
+
+    if-eqz v0, :cond_1
+
+    move-object v1, v0
 
     :cond_1
-    return v0
-.end method
+    iget-object v0, v1, Lf5e;->c:Lru7;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    const v0, 0x50cc4ef4
+    move-result-object v0
 
-    return v0
-.end method
+    check-cast v0, Liw0;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    new-instance v1, Lzdg;
 
-    const-string v0, "CancelShare"
+    iget-wide v4, p0, Lr6e;->c:J
 
-    return-object v0
+    const/4 v6, 0x0
+
+    iget-wide v2, p0, Lr6e;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lzdg;-><init>(JJZ)V
+
+    invoke-virtual {v0, v1}, Liw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

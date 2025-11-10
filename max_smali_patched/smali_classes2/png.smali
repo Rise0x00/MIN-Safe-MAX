@@ -1,77 +1,27 @@
 .class public final Lpng;
-.super Lzz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lhx;
-
-.field public final synthetic b:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic c:Lqng;
-
-.field public final synthetic d:Landroid/view/View;
+# static fields
+.field public static final a:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lhx;Landroid/view/ViewTreeObserver;Lqng;Landroid/view/View;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpj8;
 
-    iput-object p1, p0, Lpng;->a:Lhx;
+    const/16 v1, 0x3e8
 
-    iput-object p2, p0, Lpng;->b:Landroid/view/ViewTreeObserver;
+    invoke-direct {v0, v1}, Lpj8;-><init>(I)V
 
-    iput-object p3, p0, Lpng;->c:Lqng;
-
-    iput-object p4, p0, Lpng;->d:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final s(Lb04;Landroid/view/View;)V
-    .locals 1
-
-    iget-object p2, p0, Lpng;->a:Lhx;
-
-    iget-object p2, p2, Lhx;->Y:Ljava/lang/Object;
-
-    check-cast p2, Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    check-cast v0, Lnng;
-
-    invoke-interface {v0}, Lnng;->b()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, p0}, Lb04;->removeLifecycleListener(Lzz3;)V
-
-    iget-object p1, p0, Lpng;->c:Lqng;
-
-    iget-object p2, p0, Lpng;->d:Landroid/view/View;
-
-    iget-object v0, p0, Lpng;->b:Landroid/view/ViewTreeObserver;
-
-    invoke-static {p1, p2, v0}, Lhx;->b(Lqng;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    sput-object v0, Lpng;->a:Ljava/util/Map;
 
     return-void
 .end method

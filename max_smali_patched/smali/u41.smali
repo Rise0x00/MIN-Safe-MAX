@@ -3,22 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Lqi6;
 
 
 # instance fields
+.field public final synthetic X:Lyw0;
+
+.field public final synthetic Y:Ljava/lang/Object;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic b:J
+
+.field public final synthetic c:Lwye;
+
+.field public final synthetic d:Ly41;
+
+.field public final synthetic o:Lqu1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JLwye;Ly41;Lqu1;Lyw0;I)V
     .locals 0
 
-    iput p2, p0, Lu41;->a:I
+    iput p8, p0, Lu41;->a:I
 
-    iput-object p1, p0, Lu41;->b:Ljava/lang/String;
+    iput-object p1, p0, Lu41;->Y:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lu41;->b:J
+
+    iput-object p4, p0, Lu41;->c:Lwye;
+
+    iput-object p5, p0, Lu41;->d:Ly41;
+
+    iput-object p6, p0, Lu41;->o:Lqu1;
+
+    iput-object p7, p0, Lu41;->X:Lyw0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,72 +47,162 @@
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lu41;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    iget-object v0, p0, Lu41;->Y:Ljava/lang/Object;
 
-    new-instance v2, Lne7;
+    check-cast v0, Ljava/lang/String;
 
-    const/4 v7, 0x0
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
 
-    const/16 v8, 0x1d
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->setLink(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    iget-object v4, p0, Lu41;->b:Ljava/lang/String;
+    iget-wide v0, p0, Lu41;->b:J
 
-    const/4 v5, 0x0
+    invoke-static {v0, v1}, Lwdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    const/4 v6, 0x0
+    move-result-object v0
 
-    invoke-direct/range {v2 .. v8}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;I)V
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    const/4 v5, 0x2
+    move-result-object p1
 
-    move-object v4, v2
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
 
-    const-string v2, "SETTINGS"
+    iget-object v0, p0, Lu41;->c:Lwye;
 
-    invoke-direct/range {v1 .. v6}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lne7;ILof4;)V
+    iget-boolean v0, v0, Lwye;->b:Z
 
-    return-object v1
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+
+    iget-object v0, p0, Lu41;->d:Ly41;
+
+    iget-object v0, v0, Ly41;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwv1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+
+    iget-object v0, p0, Lu41;->o:Lqu1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+
+    iget-object v0, p0, Lu41;->X:Lyw0;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
+
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_0
-    new-instance v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
+    iget-object v0, p0, Lu41;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Lu41;->b:Ljava/lang/String;
+    check-cast v0, Lorg/json/JSONObject;
 
-    invoke-direct {v0, v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
 
-    return-object v0
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
-    :pswitch_1
-    new-instance v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    move-result-object v0
 
-    iget-object v1, p0, Lu41;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
 
-    invoke-direct {v0, v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    return-object v0
+    iget-wide v0, p0, Lu41;->b:J
 
-    :pswitch_2
-    new-instance v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-static {v0, v1}, Lwdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object v1, p0, Lu41;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    return-object v0
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+
+    iget-object v0, p0, Lu41;->c:Lwye;
+
+    iget-boolean v0, v0, Lwye;->b:Z
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+
+    iget-object v0, p0, Lu41;->d:Ly41;
+
+    iget-object v0, v0, Ly41;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwv1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+
+    iget-object v0, p0, Lu41;->o:Lqu1;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+
+    iget-object v0, p0, Lu41;->X:Lyw0;
+
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,136 +1,59 @@
-.class public final Lcyd;
-.super Lm3f;
+.class public abstract synthetic Lcyd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
-
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lbp7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lcyd;->Z:Lbp7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lgv5;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcyd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcyd;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lcyd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lcyd;
-
-    iget-object v1, p0, Lcyd;->Z:Lbp7;
-
-    invoke-direct {v0, v1, p2}, Lcyd;-><init>(Lbp7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lcyd;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 4
 
-    iget v0, p0, Lcyd;->X:I
+    const/4 v0, 0x4
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lnx1;->y(I)[I
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    array-length v1, v1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    new-array v1, v1, [I
 
-    goto :goto_0
+    const/4 v2, 0x1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v3, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :catch_0
+    const/4 v3, 0x2
 
-    throw p1
+    :try_start_1
+    aput v3, v1, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :catch_1
+    const/4 v3, 0x3
 
-    iget-object p1, p0, Lcyd;->Y:Ljava/lang/Object;
+    :try_start_2
+    aput v3, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast p1, Lgv5;
+    :catch_2
+    :try_start_3
+    aput v0, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object v0, p0, Lcyd;->Z:Lbp7;
+    :catch_3
+    sput-object v1, Lcyd;->$EnumSwitchMapping$0:[I
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxob;
-
-    check-cast v0, Lzob;
-
-    iget-object v0, v0, Lzob;->a:Lt63;
-
-    invoke-virtual {v0}, Lxid;->p()J
-
-    move-result-wide v2
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
-
-    iput v1, p0, Lcyd;->X:I
-
-    invoke-interface {p1, v0, p0}, Lgv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

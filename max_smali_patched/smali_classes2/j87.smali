@@ -1,100 +1,245 @@
-.class public final synthetic Lj87;
+.class public final Lj87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxe6;
+
+# static fields
+.field public static final d:Lj87;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final a:Ljava/util/List;
 
-.field public final synthetic b:I
+.field public final b:Ljava/util/List;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj87;
+
+    sget-object v1, Lna5;->a:Lna5;
+
+    invoke-direct {v0, v1, v1, v1}, Lj87;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+
+    sput-object v0, Lj87;->d:Lj87;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lj87;->a:J
+    iput-object p1, p0, Lj87;->a:Ljava/util/List;
 
-    iput p3, p0, Lj87;->b:I
+    iput-object p2, p0, Lj87;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lj87;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ljava/lang/Throwable;
+    const/4 v0, 0x1
 
-    sget-object v0, Lk97;->I0:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    iget-wide v3, p0, Lj87;->a:J
-
-    sub-long/2addr v1, v3
-
-    iget v3, p0, Lj87;->b:I
-
-    const-string v4, "ms"
-
-    const-string v5, "prefetch "
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, " completed, all time = "
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance v6, Ljava/lang/StringBuilder;
+    instance-of v1, p1, Lj87;
 
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_1
 
-    const-string v3, " completion error, all time = "
+    return v2
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    check-cast p1, Lj87;
 
-    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lj87;->a:Ljava/util/List;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p1, Lj87;->a:Ljava/util/List;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lj87;->b:Ljava/util/List;
+
+    iget-object v3, p1, Lj87;->b:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lj87;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lj87;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lj87;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lj87;->b:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lijf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lj87;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 8
+
+    sget-object v0, Lj87;->d:Lj87;
+
+    if-ne p0, v0, :cond_0
+
+    const-class v0, Lj87;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ".INITIAL"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "IdleSearchData(recentContacts="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    new-instance v6, Ld23;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v6, v1}, Ld23;-><init>(I)V
+
+    const/16 v7, 0x18
+
+    iget-object v2, p0, Lj87;->a:Ljava/util/List;
+
+    const-string v3, ","
+
+    const-string v4, "["
+
+    const-string v5, "]"
+
+    invoke-static/range {v2 .. v7}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    const-string v1, ", recentSearch="
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v6, Ld23;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v6, v1}, Ld23;-><init>(I)V
+
+    iget-object v2, p0, Lj87;->b:Ljava/util/List;
+
+    const-string v3, ","
+
+    const-string v4, "["
+
+    const-string v5, "]"
+
+    invoke-static/range {v2 .. v7}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", allContacts="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v6, Ld23;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v6, v1}, Ld23;-><init>(I)V
+
+    iget-object v2, p0, Lj87;->c:Ljava/util/List;
+
+    const-string v3, ","
+
+    const-string v4, "["
+
+    const-string v5, "]"
+
+    invoke-static/range {v2 .. v7}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

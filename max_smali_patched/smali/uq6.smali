@@ -1,581 +1,153 @@
 .class public final Luq6;
-.super Lfmg;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chatmedia/viewer/photo/GifViewerWidget;
 
-.field public final b:Ljava/lang/ref/WeakReference;
-
-.field public c:I
-
-.field public d:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/GifViewerWidget;)V
     .locals 0
 
-    iput p2, p0, Luq6;->a:I
+    iput-object p2, p0, Luq6;->X:Lone/me/chatmedia/viewer/photo/GifViewerWidget;
 
-    packed-switch p2, :pswitch_data_0
+    const/4 p2, 0x2
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    const/4 p1, 0x0
-
-    .line 7
-    iput p1, p0, Luq6;->d:I
-
-    .line 8
-    iput p1, p0, Luq6;->c:I
-
-    return-void
-
-    .line 9
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 10
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    const/4 p1, 0x0
-
-    .line 11
-    iput p1, p0, Luq6;->d:I
-
-    iput p1, p0, Luq6;->c:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lzq6;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Luq6;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput p1, p0, Luq6;->c:I
-
-    .line 4
-    iput p1, p0, Luq6;->d:I
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Luq6;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Luq6;->d:I
-
-    iput v0, p0, Luq6;->c:I
-
-    iput p1, p0, Luq6;->d:I
-
-    iget-object p1, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Luq6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/material/tabs/TabLayout;
+    check-cast p1, Luq6;
 
-    if-eqz p1, :cond_0
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget v0, p0, Luq6;->d:I
+    invoke-virtual {p1, p2}, Luq6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput v0, p1, Lcom/google/android/material/tabs/TabLayout;->l1:I
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Luq6;->d:I
-
-    iput v0, p0, Luq6;->c:I
-
-    iput p1, p0, Luq6;->d:I
-
-    iget-object p1, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/material/tabs/TabLayout;
-
-    if-eqz p1, :cond_1
-
-    iget v0, p0, Luq6;->d:I
-
-    iput v0, p1, Lcom/google/android/material/tabs/TabLayout;->l1:I
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Luq6;->d:I
-
-    iput v0, p0, Luq6;->c:I
-
-    iput p1, p0, Luq6;->d:I
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public final b(IFI)V
-    .locals 12
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget p3, p0, Luq6;->a:I
+    new-instance v0, Luq6;
 
-    packed-switch p3, :pswitch_data_0
+    iget-object v1, p0, Luq6;->X:Lone/me/chatmedia/viewer/photo/GifViewerWidget;
 
-    iget-object p3, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
+    invoke-direct {v0, p2, v1}, Luq6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/GifViewerWidget;)V
 
-    invoke-virtual {p3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iput-object p1, v0, Luq6;->o:Ljava/lang/Object;
 
-    move-result-object p3
-
-    move-object v0, p3
-
-    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
-
-    if-eqz v0, :cond_4
-
-    iget p3, p0, Luq6;->d:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-ne p3, v2, :cond_1
-
-    iget v4, p0, Luq6;->c:I
-
-    if-ne v4, v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v4, v3
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v4, v3
-
-    :goto_1
-    if-ne p3, v2, :cond_3
-
-    iget p3, p0, Luq6;->c:I
-
-    if-eqz p3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v4, v1
-
-    :cond_3
-    :goto_2
-    const/4 v5, 0x0
-
-    move v1, p1
-
-    move v2, p2
-
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/tabs/TabLayout;->q(IFZZZ)V
-
-    :cond_4
-    return-void
-
-    :pswitch_0
-    move v1, p1
-
-    move v2, p2
-
-    iget-object p1, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v6, p1
-
-    check-cast v6, Lcom/google/android/material/tabs/TabLayout;
-
-    if-nez v6, :cond_5
-
-    goto :goto_7
-
-    :cond_5
-    iget p1, p0, Luq6;->d:I
-
-    const/4 p2, 0x0
-
-    const/4 p3, 0x2
-
-    const/4 v0, 0x1
-
-    if-ne p1, p3, :cond_7
-
-    iget v3, p0, Luq6;->c:I
-
-    if-ne v3, v0, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    move v9, p2
-
-    goto :goto_4
-
-    :cond_7
-    :goto_3
-    move v9, v0
-
-    :goto_4
-    if-ne p1, p3, :cond_9
-
-    iget p1, p0, Luq6;->c:I
-
-    if-eqz p1, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    move v10, p2
-
-    goto :goto_6
-
-    :cond_9
-    :goto_5
-    move v10, v0
-
-    :goto_6
-    const/4 v11, 0x0
-
-    move v7, v1
-
-    move v8, v2
-
-    invoke-virtual/range {v6 .. v11}, Lcom/google/android/material/tabs/TabLayout;->q(IFZZZ)V
-
-    :goto_7
-    return-void
-
-    :pswitch_1
-    move v1, p1
-
-    move v2, p2
-
-    iget-object p1, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzq6;
-
-    if-eqz p1, :cond_a
-
-    :try_start_0
-    iget-object p2, p1, Lzq6;->c:Lyq6;
-
-    iget p2, p2, Lyq6;->a:I
-
-    invoke-static {p2, v1}, Lzq6;->a(II)V
-
-    invoke-virtual {p1, v1, v2}, Lzq6;->c(IF)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_8
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    const-class p2, Luq6;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "updatePagesNumber error: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p2, p3, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_a
-    :goto_8
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final c(I)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p0, Luq6;->a:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Luq6;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
+    check-cast p1, Lsm2;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    sget-object v0, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->u0:[Les7;
 
-    move-result-object v0
+    iget v0, p1, Lsm2;->a:I
 
-    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
+    iget p1, p1, Lsm2;->b:F
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
+    iget-object v0, p0, Luq6;->X:Lone/me/chatmedia/viewer/photo/GifViewerWidget;
 
-    move-result v1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->B0()Lrxg;
 
-    if-eq v1, p1, :cond_2
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabCount()I
+    invoke-virtual {v1, p1}, Landroid/view/View;->setRotation(F)V
 
-    move-result v1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->B0()Lrxg;
 
-    if-ge p1, v1, :cond_2
+    move-result-object v1
 
-    iget v1, p0, Luq6;->d:I
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->C0()Lao2;
 
-    const/4 v2, 0x2
+    move-result-object v1
 
-    if-ne v1, v2, :cond_0
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->y0()J
 
-    iget v1, p0, Luq6;->c:I
+    move-result-wide v2
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->x0()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v2, v3, v4}, Lao2;->G(JLjava/lang/String;)Lps8;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lhs8;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Lhs8;
 
     goto :goto_0
 
     :cond_0
     const/4 v1, 0x0
 
+    :goto_0
+    if-nez v1, :cond_1
+
     goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->z0()Lmlb;
 
-    :goto_1
-    invoke-virtual {v0, p1}, Lcom/google/android/material/tabs/TabLayout;->h(I)Ln7f;
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Lmlb;->setImageRotation(F)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->z0()Lmlb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/tabs/TabLayout;->o(Ln7f;Z)V
+    iget-object v1, v1, Lhs8;->d:Le97;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v1, v2}, Lmlb;->k(Le97;Z)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/GifViewerWidget;->z0()Lmlb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
     :cond_2
-    return-void
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-    :pswitch_0
-    iget-object v0, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
-
-    if-nez v0, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
-
-    move-result v1
-
-    if-eq v1, p1, :cond_6
-
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabCount()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_6
-
-    iget v1, p0, Luq6;->d:I
-
-    if-eqz v1, :cond_5
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_4
-
-    iget v1, p0, Luq6;->c:I
-
-    if-nez v1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v1, 0x0
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    const/4 v1, 0x1
-
-    :goto_3
-    invoke-virtual {v0, p1}, Lcom/google/android/material/tabs/TabLayout;->h(I)Ln7f;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/tabs/TabLayout;->o(Ln7f;Z)V
-
-    :cond_6
-    :goto_4
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Luq6;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzq6;
-
-    :try_start_0
-    iget v1, p0, Luq6;->d:I
-
-    if-eqz v1, :cond_7
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_8
-
-    iget v1, p0, Luq6;->c:I
-
-    if-nez v1, :cond_8
-
-    goto :goto_5
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_6
-
-    :cond_7
-    :goto_5
-    if-eqz v0, :cond_8
-
-    invoke-virtual {v0, p1}, Lzq6;->setSelectedPageIndex(I)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_7
-
-    :goto_6
-    const-class v0, Luq6;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "updatePagesNumber error: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_8
-    :goto_7
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

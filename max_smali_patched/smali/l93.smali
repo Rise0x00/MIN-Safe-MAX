@@ -1,54 +1,249 @@
 .class public final Ll93;
-.super Lmo7;
+.super Lbi4;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public d:Lsoh;
 
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Ll93;->a:I
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
-
-    return-void
-.end method
+.field public o:Z
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final close()V
     .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    monitor-enter p0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    :try_start_0
+    iget-object v0, p0, Ll93;->d:Lsoh;
 
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    if-nez v0, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    monitor-exit p0
 
-    const-string v1, "Collection doesn\'t contain element at index "
+    return-void
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :catchall_0
+    move-exception v0
 
-    iget v1, p0, Ll93;->a:I
+    goto :goto_0
 
-    const/16 v2, 0x2e
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    iput-object v1, p0, Ll93;->d:Lsoh;
 
-    move-result-object v0
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    monitor-enter v0
 
-    throw p1
+    :try_start_1
+    iget-object v2, v0, Lsoh;->c:Ljava/lang/Object;
+
+    check-cast v2, Lq93;
+
+    invoke-static {v2}, Lq93;->P(Lq93;)V
+
+    iput-object v1, v0, Lsoh;->c:Ljava/lang/Object;
+
+    iget-object v2, v0, Lsoh;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    invoke-static {v2}, Lq93;->Q(Ljava/util/ArrayList;)V
+
+    iput-object v1, v0, Lsoh;->d:Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v1
+
+    :goto_0
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized getHeight()I
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll93;->d:Lsoh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v0, Lsoh;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcom/facebook/animated/gif/GifImage;
+
+    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->h()I
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized getSizeInBytes()I
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll93;->d:Lsoh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v0, Lsoh;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcom/facebook/animated/gif/GifImage;
+
+    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->j()I
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized getWidth()I
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll93;->d:Lsoh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v0, Lsoh;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcom/facebook/animated/gif/GifImage;
+
+    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->k()I
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized isClosed()Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ll93;->d:Lsoh;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final isStateful()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ll93;->o:Z
+
+    return v0
 .end method

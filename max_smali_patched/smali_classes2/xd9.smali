@@ -3,62 +3,45 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbe9;
+.implements Ljava/lang/Cloneable;
 
 
-# static fields
-.field public static final a:Lxd9;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final clone()Ljava/lang/Object;
     .locals 1
 
     new-instance v0, Lxd9;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lxd9;->a:Lxd9;
-
-    return-void
+    return-object v0
 .end method
 
-
-# virtual methods
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lxd9;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lxd9;
-
-    if-nez p1, :cond_1
+    if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     return p1
 
-    :cond_1
-    return v0
+    :cond_0
+    check-cast p1, Lxd9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x2b56aa18
+    const v0, 0x164be01
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "HideSearch"
-
-    return-object v0
 .end method

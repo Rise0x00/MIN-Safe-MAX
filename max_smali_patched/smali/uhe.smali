@@ -1,59 +1,87 @@
-.class public abstract synthetic Luhe;
-.super Ljava/lang/Object;
+.class public final Luhe;
+.super Lwhe;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final h:Landroid/graphics/RectF;
+
+
+# instance fields
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:F
+
+.field public final e:F
+
+.field public f:F
+
+.field public g:F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Lcva;->values()[Lcva;
+    new-instance v0, Landroid/graphics/RectF;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    array-length v0, v0
+    sput-object v0, Luhe;->h:Landroid/graphics/RectF;
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public constructor <init>(FFFF)V
+    .locals 0
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Lwhe;-><init>()V
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput p1, p0, Luhe;->b:F
 
-    :catch_0
-    const/4 v2, 0x2
+    iput p2, p0, Luhe;->c:F
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput p3, p0, Luhe;->d:F
 
-    :catch_1
-    const/4 v1, 0x3
+    iput p4, p0, Luhe;->e:F
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    return-void
+.end method
 
-    :catch_2
-    const/4 v2, 0x4
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+# virtual methods
+.method public final a(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
+    .locals 5
 
-    :catch_3
-    sput-object v0, Luhe;->$EnumSwitchMapping$0:[I
+    iget-object v0, p0, Lwhe;->a:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+
+    iget v0, p0, Luhe;->d:F
+
+    iget v1, p0, Luhe;->e:F
+
+    sget-object v2, Luhe;->h:Landroid/graphics/RectF;
+
+    iget v3, p0, Luhe;->b:F
+
+    iget v4, p0, Luhe;->c:F
+
+    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
+
+    iget v0, p0, Luhe;->f:F
+
+    iget v1, p0, Luhe;->g:F
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p2, v2, v0, v1, v3}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FFZ)V
+
+    invoke-virtual {p2, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
     return-void
 .end method

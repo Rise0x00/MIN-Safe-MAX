@@ -1,103 +1,278 @@
 .class public final Lt12;
-.super Lb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lt12;
+
+.field public static final c:Lt12;
+
+
 # instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic c:Lm9h;
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final a:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(Lm9h;Ljava/lang/String;Z)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v1, Lcw7;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lcw7;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lt12;
+
+    invoke-direct {v1, v0}, Lt12;-><init>(Ljava/util/LinkedHashSet;)V
+
+    sput-object v1, Lt12;->b:Lt12;
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v1, Lcw7;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lcw7;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lt12;
+
+    invoke-direct {v1, v0}, Lt12;-><init>(Ljava/util/LinkedHashSet;)V
+
+    sput-object v1, Lt12;->c:Lt12;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/LinkedHashSet;)V
     .locals 0
 
-    iput-object p1, p0, Lt12;->c:Lm9h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lt12;->o:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lt12;->X:Z
-
-    invoke-direct {p0}, Lb;-><init>()V
+    iput-object p1, p0, Lt12;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public final a(Ljava/util/ArrayList;)Ljava/util/List;
+    .locals 3
 
-    iget-object v0, p0, Lt12;->c:Lm9h;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, v0, Lm9h;->c:Landroidx/work/impl/WorkDatabase;
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    iget-object v1, p0, Lt12;->a:Ljava/util/LinkedHashSet;
 
-    :try_start_0
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Ldah;
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
-
-    iget-object v3, p0, Lt12;->o:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ldah;->o(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
+    move-result-object v1
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Ljava/lang/String;
+    check-cast v2, Lt02;
 
-    invoke-static {v0, v3}, Lb;->b(Lm9h;Ljava/lang/String;)V
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Lt02;->a(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/List;->retainAll(Ljava/util/Collection;)Z
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/Integer;
+    .locals 4
+
+    iget-object v0, p0, Lt12;->a:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lt02;
+
+    instance-of v3, v2, Lcw7;
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Lcw7;
+
+    iget v2, v2, Lcw7;->b:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    if-nez v1, :cond_1
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1, v2}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Multiple conflicting lens facing requirements exist."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    return-object v1
+.end method
+
+.method public final c(Ljava/util/LinkedHashSet;)Lb12;
+    .locals 4
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lb12;
+
+    invoke-interface {v2}, Lb12;->n()Lz02;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v0}, Lt12;->a(Ljava/util/ArrayList;)Ljava/util/List;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lb12;
+
+    invoke-interface {v2}, Lb12;->n()Lz02;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v1, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_2
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    move-result-object p1
 
-    iget-boolean v1, p0, Lt12;->X:Z
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    iget-object v1, v0, Lm9h;->b:Luj3;
+    if-eqz v0, :cond_3
 
-    iget-object v2, v0, Lm9h;->c:Landroidx/work/impl/WorkDatabase;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, v0, Lm9h;->e:Ljava/util/List;
+    move-result-object p1
 
-    invoke-static {v1, v2, v0}, Lyed;->a(Luj3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
+    check-cast p1, Lb12;
 
-    :cond_1
-    return-void
+    return-object p1
 
-    :goto_1
-    invoke-virtual {v1}, Lx5d;->k()V
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    throw v0
+    const-string v0, "No available camera can be found"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

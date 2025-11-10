@@ -1,144 +1,103 @@
 .class public final Lf8g;
-.super Li9f;
+.super Lwf4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic o:I
+# static fields
+.field public static final b:Lf8g;
+
+.field public static final c:Lrf4;
+
+.field public static final d:Lrf4;
+
+.field public static final e:Lrf4;
+
+.field public static final f:Lrf4;
+
+.field public static final g:Lrf4;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    const/4 v0, 0x2
+    new-instance v0, Lf8g;
 
-    iput v0, p0, Lf8g;->o:I
+    invoke-direct {v0}, Lwf4;-><init>()V
 
-    const/4 v0, 0x0
+    sput-object v0, Lf8g;->b:Lf8g;
 
-    .line 2
-    invoke-direct {p0, v0}, Li9f;-><init>(Ln0b;)V
+    const-string v1, "state"
 
-    .line 3
-    const-string v0, "type"
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    .line 4
-    invoke-static {p1}, Lqw1;->u(I)I
+    move-result-object v1
 
-    move-result p1
+    const-string v2, ":settings/privacy/onboarding-twofa"
 
-    .line 5
-    invoke-virtual {p0, p1, v0}, Li9f;->f(ILjava/lang/String;)V
+    const/4 v3, 0x0
 
-    .line 6
-    const-string p1, "count"
+    const/16 v4, 0xe
 
-    const/4 v0, 0x1
+    invoke-static {v0, v2, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
 
-    invoke-virtual {p0, v0, p1}, Li9f;->f(ILjava/lang/String;)V
+    move-result-object v1
 
-    return-void
-.end method
+    sput-object v1, Lf8g;->c:Lrf4;
 
-.method public constructor <init>(Ljava/lang/String;JJJ)V
-    .locals 1
+    const-string v1, "src"
 
-    const/4 v0, 0x1
+    const-string v2, "track_id"
 
-    iput v0, p0, Lf8g;->o:I
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    .line 7
-    invoke-direct {p0, v0}, Li9f;-><init>(Ln0b;)V
+    const-string v5, ":settings/privacy/creation-twofa"
 
-    .line 8
-    const-string v0, "videoId"
+    invoke-static {v0, v5, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
 
-    invoke-virtual {p0, p2, p3, v0}, Li9f;->j(JLjava/lang/String;)V
+    move-result-object v1
 
-    const-wide/16 p2, 0x0
+    sput-object v1, Lf8g;->d:Lrf4;
 
-    cmp-long v0, p4, p2
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    new-array v5, v1, [Ljava/lang/String;
 
-    .line 9
-    const-string v0, "chatId"
+    const-string v6, ":settings/privacy/profile-deletion"
 
-    invoke-virtual {p0, p4, p5, v0}, Li9f;->j(JLjava/lang/String;)V
+    invoke-static {v0, v6, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
 
-    :cond_0
-    cmp-long p2, p6, p2
+    move-result-object v5
 
-    if-lez p2, :cond_1
+    sput-object v5, Lf8g;->e:Lrf4;
 
-    .line 10
-    const-string p2, "messageId"
+    const-string v5, ":twofa/password/check"
 
-    invoke-virtual {p0, p6, p7, p2}, Li9f;->j(JLjava/lang/String;)V
+    new-array v1, v1, [Ljava/lang/String;
 
-    .line 11
-    :cond_1
-    invoke-static {p1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    invoke-static {v0, v5, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
 
-    move-result p2
+    move-result-object v1
 
-    if-nez p2, :cond_2
+    sput-object v1, Lf8g;->f:Lrf4;
 
-    .line 12
-    const-string p2, "token"
+    const-string v1, "phone"
 
-    invoke-virtual {p0, p2, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    :cond_2
-    return-void
-.end method
+    move-result-object v1
 
-.method public synthetic constructor <init>(Ln0b;I)V
-    .locals 0
+    const/4 v2, 0x2
 
-    .line 1
-    iput p2, p0, Lf8g;->o:I
+    const-string v4, ":twofa/auth/password/check"
 
-    invoke-direct {p0, p1}, Li9f;-><init>(Ln0b;)V
+    invoke-static {v0, v4, v1, v3, v2}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v0
+
+    sput-object v0, Lf8g;->g:Lrf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public K()S
-    .locals 1
-
-    iget v0, p0, Lf8g;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Li9f;->K()S
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    sget-object v0, Ln0b;->c:Lt7a;
-
-    const/16 v0, 0x52
-
-    return v0
-
-    :pswitch_1
-    sget-object v0, Ln0b;->c:Lt7a;
-
-    const/16 v0, 0x53
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

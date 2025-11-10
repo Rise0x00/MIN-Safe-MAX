@@ -19,19 +19,19 @@
         "",
         "Ljava/util/UUID;",
         "id",
-        "Lbah;",
+        "Lzoh;",
         "workSpec",
         "",
         "",
         "tags",
         "<init>",
-        "(Ljava/util/UUID;Lbah;Ljava/util/Set;)V",
+        "(Ljava/util/UUID;Lzoh;Ljava/util/Set;)V",
         "Ljava/util/UUID;",
         "getId",
         "()Ljava/util/UUID;",
-        "Lbah;",
+        "Lzoh;",
         "getWorkSpec",
-        "()Lbah;",
+        "()Lzoh;",
         "Ljava/util/Set;",
         "getTags",
         "()Ljava/util/Set;",
@@ -40,7 +40,7 @@
         "stringId",
         "Companion",
         "Builder",
-        "x9h",
+        "voh",
         "work-runtime_release"
     }
     k = 0x1
@@ -54,7 +54,7 @@
 
 
 # static fields
-.field public static final Companion:Lx9h;
+.field public static final Companion:Lvoh;
 
 .field public static final DEFAULT_BACKOFF_DELAY_MILLIS:J = 0x7530L
 
@@ -88,29 +88,29 @@
     .end annotation
 .end field
 
-.field private final workSpec:Lbah;
+.field private final workSpec:Lzoh;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lx9h;
+    new-instance v0, Lvoh;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroidx/work/WorkRequest;->Companion:Lx9h;
+    sput-object v0, Landroidx/work/WorkRequest;->Companion:Lvoh;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/UUID;Lbah;Ljava/util/Set;)V
+.method public constructor <init>(Ljava/util/UUID;Lzoh;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/UUID;",
-            "Lbah;",
+            "Lzoh;",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;)V"
@@ -121,7 +121,7 @@
 
     iput-object p1, p0, Landroidx/work/WorkRequest;->id:Ljava/util/UUID;
 
-    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lbah;
+    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lzoh;
 
     iput-object p3, p0, Landroidx/work/WorkRequest;->tags:Ljava/util/Set;
 
@@ -168,10 +168,10 @@
     return-object v0
 .end method
 
-.method public final getWorkSpec()Lbah;
+.method public final getWorkSpec()Lzoh;
     .locals 1
 
-    iget-object v0, p0, Landroidx/work/WorkRequest;->workSpec:Lbah;
+    iget-object v0, p0, Landroidx/work/WorkRequest;->workSpec:Lzoh;
 
     return-object v0
 .end method

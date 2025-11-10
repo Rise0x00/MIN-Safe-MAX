@@ -1,138 +1,98 @@
-.class public final synthetic Low9;
+.class public abstract Low9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpw9;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lpw9;I)V
-    .locals 0
+.method public static a([B)Lpw9;
+    .locals 14
 
-    iput p2, p0, Low9;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
 
-    iput-object p1, p0, Low9;->b:Lpw9;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDelete;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
 
-    return-void
-.end method
+    move-result-object p0
 
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
 
-    iget v0, p0, Low9;->a:I
+    invoke-static {v0}, Lxvc;->d(Ljava/lang/CharSequence;)Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    new-instance v0, Lmj0;
+    if-nez v0, :cond_0
 
-    const/16 v1, 0x11
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->complaint:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
+    invoke-static {v0}, Ltf3;->a(Ljava/lang/String;)Ltf3;
 
-    iget-object v1, p0, Low9;->b:Lpw9;
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    :goto_0
+    move-object v10, v0
 
-    return-void
+    goto :goto_1
 
-    :pswitch_0
-    new-instance v0, Lfw9;
+    :cond_0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x4
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
+    :goto_1
+    new-instance v1, Lpw9;
 
-    iget-object v1, p0, Low9;->b:Lpw9;
+    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->requestId:J
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatId:J
 
-    return-void
+    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->chatServerId:J
 
-    :pswitch_1
-    new-instance v0, Lfw9;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesId:[J
 
-    const/4 v1, 0x5
+    invoke-static {v0}, Lft;->A([J)Ljava/util/List;
 
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
+    move-result-object v8
 
-    iget-object v1, p0, Low9;->b:Lpw9;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->messagesServerId:[J
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    invoke-static {v0}, Lft;->A([J)Ljava/util/List;
 
-    return-void
+    move-result-object v9
 
-    :pswitch_2
-    new-instance v0, Lfw9;
+    iget-boolean v11, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->forMe:Z
 
-    const/4 v1, 0x6
+    sget-object v0, Laq4;->d:Lcy9;
 
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
+    iget v12, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->itemTypeId:I
 
-    iget-object v1, p0, Low9;->b:Lpw9;
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    move-result-object v12
 
-    return-void
+    invoke-static {v0, v12}, Lcy9;->d(Lcy9;Ljava/lang/Integer;)Laq4;
 
-    :pswitch_3
-    new-instance v0, Lmj0;
+    move-result-object v12
 
-    const/16 v1, 0x18
+    iget-boolean v13, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
 
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
+    invoke-direct/range {v1 .. v13}, Lpw9;-><init>(JJJLjava/util/List;Ljava/util/List;Ltf3;ZLaq4;Z)V
 
-    iget-object v1, p0, Low9;->b:Lpw9;
+    return-object v1
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    :catch_0
+    move-exception v0
 
-    return-void
+    move-object p0, v0
 
-    :pswitch_4
-    new-instance v0, Lmj0;
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    const/16 v1, 0x1a
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
-
-    iget-object v1, p0, Low9;->b:Lpw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_5
-    new-instance v0, Lmj0;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
-
-    iget-object v1, p0, Low9;->b:Lpw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

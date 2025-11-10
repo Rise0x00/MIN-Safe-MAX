@@ -1,324 +1,140 @@
 .class public final Lr8d;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-.field public final b:Lq8d;
-
-.field public c:Lv8d;
-
-.field public d:Llq4;
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:F
-
-.field public final h:F
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lq8d;)V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    iput v0, p0, Lr8d;->a:I
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Lr8d;->c:Lv8d;
-
-    .line 3
-    iput-object v0, p0, Lr8d;->d:Llq4;
-
-    .line 4
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0xc8
-
-    .line 5
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lr8d;->e:J
-
-    .line 6
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x4
-
-    .line 7
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lr8d;->f:J
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    .line 8
-    iput v0, p0, Lr8d;->g:F
-
-    const v0, 0x3dcccccd    # 0.1f
-
-    .line 9
-    iput v0, p0, Lr8d;->h:F
-
-    .line 10
-    iput-object p1, p0, Lr8d;->b:Lq8d;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Lr8d;)V
-    .locals 10
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lr8d;->a:I
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 12
-    iget-object v0, p1, Lr8d;->b:Lq8d;
-
-    iget v1, p1, Lr8d;->h:F
-
-    iget v2, p1, Lr8d;->g:F
-
-    iget-wide v3, p1, Lr8d;->f:J
-
-    iget-wide v5, p1, Lr8d;->e:J
-
-    if-eqz v0, :cond_4
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v9, v5, v7
-
-    if-ltz v9, :cond_3
-
-    cmp-long v7, v3, v7
-
-    if-ltz v7, :cond_2
-
-    const/4 v7, 0x0
-
-    cmpg-float v8, v2, v7
-
-    if-ltz v8, :cond_1
-
-    cmpg-float v7, v1, v7
-
-    if-ltz v7, :cond_0
-
-    .line 13
-    iput-object v0, p0, Lr8d;->b:Lq8d;
-
-    .line 14
-    iget-object v0, p1, Lr8d;->c:Lv8d;
-
-    iput-object v0, p0, Lr8d;->c:Lv8d;
-
-    .line 15
-    iget-object p1, p1, Lr8d;->d:Llq4;
-
-    iput-object p1, p0, Lr8d;->d:Llq4;
-
-    .line 16
-    iput-wide v5, p0, Lr8d;->e:J
-
-    .line 17
-    iput-wide v3, p0, Lr8d;->f:J
-
-    .line 18
-    iput v2, p0, Lr8d;->g:F
-
-    .line 19
-    iput v1, p0, Lr8d;->h:F
-
-    return-void
-
-    .line 20
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Illegal \'retryBackoffJitter\' value: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 21
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Illegal \'retryBackoffFactor\' value: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 22
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Illegal \'maxRetryTimeoutMs\' value: "
-
-    .line 23
-    invoke-static {v3, v4, v0}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 24
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 25
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Illegal \'minRetryTimeoutMs\' value: "
-
-    .line 26
-    invoke-static {v5, v6, v0}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 27
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 28
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Illegal \'command\' value: null"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lr8d;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lr8d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lr8d;
 
-    return-object v0
+    sget-object p2, Lybg;->a:Lybg;
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lr8d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "RtcCommandConfig{command="
+    return-object p2
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v1, p0, Lr8d;->b:Lq8d;
+    new-instance v0, Lr8d;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    const-string v1, ", sentListener=null, successListener="
+    invoke-direct {v0, p2, v1}, Lr8d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8d;->c:Lv8d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorListener="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8d;->d:Llq4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxRetryCount=0, minRetryTimeoutMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lr8d;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxRetryTimeoutMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lr8d;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retryBackoffFactor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr8d;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retryBackoffJitter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr8d;->h:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lr8d;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lr8d;->o:Ljava/lang/Object;
+
+    check-cast p1, Lx0e;
+
+    iget-object p1, p1, Lx0e;->a:Lw0e;
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    instance-of p1, p1, Lu0e;
+
+    iget-object v2, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    iget-object v3, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Ld0d;
+
+    sget-object v4, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Les7;
+
+    const/4 v5, 0x6
+
+    aget-object v5, v4, v5
+
+    invoke-interface {v3, v2, v5}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    if-eqz v1, :cond_2
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget p1, Lwsc;->oneme_registration_neuro_avatars_change_photo:I
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    sget p1, Lwsc;->oneme_registration_neuro_avatars_choose_photo:I
+
+    :goto_2
+    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object p1, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->s0:Ld0d;
+
+    const/4 v3, 0x3
+
+    aget-object v3, v4, v3
+
+    invoke-interface {p1, v2, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luf;
+
+    iput-boolean v0, p1, Luf;->c:Z
+
+    invoke-virtual {p1, v1}, Luf;->setEnabled(Z)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

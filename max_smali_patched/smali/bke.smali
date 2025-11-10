@@ -1,218 +1,205 @@
-.class public final Lbke;
+.class public abstract Lbke;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lsg0;
-
-.field public final b:I
-
-.field public final c:J
-
-.field public final d:Lz5f;
-
-.field public final e:Lkbh;
-
-.field public f:I
-
-.field public g:J
-
-.field public h:J
-
-.field public i:J
-
-.field public j:J
-
-.field public k:I
-
-.field public l:J
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public constructor <init>(Lim4;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    iget-object v0, p1, Lim4;->c:Ljava/lang/Object;
+    const-string v1, "NO_VALUE"
 
-    check-cast v0, Lsg0;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lbke;->a:Lsg0;
-
-    iget v0, p1, Lim4;->a:I
-
-    iput v0, p0, Lbke;->b:I
-
-    iget-wide v0, p1, Lim4;->b:J
-
-    iput-wide v0, p0, Lbke;->c:J
-
-    iget-object p1, p1, Lim4;->d:Ljava/lang/Object;
-
-    check-cast p1, Lz5f;
-
-    iput-object p1, p0, Lbke;->d:Lz5f;
-
-    new-instance p1, Lkbh;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Lkbh;-><init>(I)V
-
-    iput-object p1, p0, Lbke;->e:Lkbh;
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    iput-wide v0, p0, Lbke;->i:J
-
-    iput-wide v0, p0, Lbke;->j:J
+    sput-object v0, Lbke;->a:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method
 
+.method public static final a(III)Lake;
+    .locals 1
 
-# virtual methods
-.method public final a(IJJ)V
-    .locals 7
+    if-ltz p0, :cond_4
 
-    const-wide/high16 v0, -0x8000000000000000L
+    if-ltz p1, :cond_3
 
-    cmp-long v0, p4, v0
+    if-gtz p0, :cond_1
+
+    if-gtz p1, :cond_1
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p2}, Lcd0;->p(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "replay or extraBufferCapacity must be positive with non-default onBufferOverflow strategy "
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    add-int/2addr p1, p0
+
+    if-gez p1, :cond_2
+
+    const p1, 0x7fffffff
+
+    :cond_2
+    new-instance v0, Lake;
+
+    invoke-direct {v0, p0, p1, p2}, Lake;-><init>(III)V
+
+    return-object v0
+
+    :cond_3
+    const-string p0, "extraBufferCapacity cannot be negative, but was "
+
+    invoke-static {p1, p0}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    const-string p1, "replay cannot be negative, but was "
+
+    invoke-static {p0, p1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static synthetic b(III)Lake;
+    .locals 2
+
+    and-int/lit8 v0, p2, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move p0, v1
+
+    :cond_0
+    and-int/lit8 v0, p2, 0x2
 
     if-eqz v0, :cond_1
 
-    if-nez p1, :cond_0
+    move p1, v1
 
-    const-wide/16 v0, 0x0
+    :cond_1
+    and-int/lit8 p2, p2, 0x4
 
-    cmp-long v0, p2, v0
+    if-eqz p2, :cond_2
 
-    if-nez v0, :cond_0
-
-    iget-wide v0, p0, Lbke;->j:J
-
-    cmp-long v0, p4, v0
-
-    if-nez v0, :cond_0
+    const/4 p2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    iput-wide p4, p0, Lbke;->j:J
+    :cond_2
+    const/4 p2, 0x2
 
-    iget-object v1, p0, Lbke;->e:Lkbh;
-
-    move v2, p1
-
-    move-wide v3, p2
-
-    move-wide v5, p4
-
-    invoke-virtual/range {v1 .. v6}, Lkbh;->p(IJJ)V
-
-    :cond_1
     :goto_0
+    invoke-static {p0, p1, p2}, Lbke;->a(III)Lake;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c([Ljava/lang/Object;J)Ljava/lang/Object;
+    .locals 0
+
+    long-to-int p1, p1
+
+    array-length p2, p0
+
+    add-int/lit8 p2, p2, -0x1
+
+    and-int/2addr p1, p2
+
+    aget-object p0, p0, p1
+
+    return-object p0
+.end method
+
+.method public static final d([Ljava/lang/Object;JLjava/lang/Object;)V
+    .locals 0
+
+    long-to-int p1, p1
+
+    array-length p2, p0
+
+    add-int/lit8 p2, p2, -0x1
+
+    and-int/2addr p1, p2
+
+    aput-object p3, p0, p1
+
     return-void
 .end method
 
-.method public final b()V
-    .locals 13
+.method public static final e(Lwje;Ly44;II)Lez5;
+    .locals 1
 
-    iget v1, p0, Lbke;->f:I
+    if-eqz p2, :cond_0
 
-    const/4 v6, 0x1
+    const/4 v0, -0x3
 
-    if-lez v1, :cond_0
-
-    move v1, v6
-
-    goto :goto_0
+    if-ne p2, v0, :cond_1
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    :goto_0
-    invoke-static {v1}, Lpih;->o(Z)V
+    if-ne p3, v0, :cond_1
 
-    iget-object v1, p0, Lbke;->d:Lz5f;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    iget-wide v1, p0, Lbke;->g:J
-
-    sub-long v1, v7, v1
-
-    long-to-int v1, v1
-
-    int-to-long v1, v1
-
-    const-wide/16 v9, 0x0
-
-    cmp-long v3, v1, v9
-
-    if-lez v3, :cond_2
-
-    iget-wide v3, p0, Lbke;->h:J
-
-    const-wide/16 v11, 0x3e8
-
-    mul-long/2addr v11, v1
-
-    iget-object v5, p0, Lbke;->a:Lsg0;
-
-    invoke-interface {v5, v3, v4, v11, v12}, Lsg0;->a(JJ)V
-
-    iget v3, p0, Lbke;->k:I
-
-    add-int/2addr v3, v6
-
-    iput v3, p0, Lbke;->k:I
-
-    iget v4, p0, Lbke;->b:I
-
-    if-le v3, v4, :cond_1
-
-    iget-wide v3, p0, Lbke;->l:J
-
-    iget-wide v11, p0, Lbke;->c:J
-
-    cmp-long v3, v3, v11
-
-    if-lez v3, :cond_1
-
-    invoke-interface {v5}, Lsg0;->b()J
-
-    move-result-wide v3
-
-    iput-wide v3, p0, Lbke;->i:J
+    return-object p0
 
     :cond_1
-    long-to-int v1, v1
+    new-instance v0, Li82;
 
-    iget-wide v2, p0, Lbke;->h:J
+    invoke-direct {v0, p2, p3, p1, p0}, Lh82;-><init>(IILy44;Lez5;)V
 
-    iget-wide v4, p0, Lbke;->i:J
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v5}, Lbke;->a(IJJ)V
-
-    iput-wide v7, p0, Lbke;->g:J
-
-    iput-wide v9, p0, Lbke;->h:J
-
-    :cond_2
-    iget v1, p0, Lbke;->f:I
-
-    sub-int/2addr v1, v6
-
-    iput v1, p0, Lbke;->f:I
-
-    return-void
+    return-object v0
 .end method

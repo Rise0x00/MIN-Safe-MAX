@@ -3,468 +3,497 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lks8;
+.implements Landroid/os/Handler$Callback;
 
 
 # instance fields
-.field public final a:Lu17;
+.field public final X:Landroid/content/Intent;
 
-.field public final b:I
+.field public final Y:Ljava/util/HashMap;
+
+.field public final Z:Lju8;
+
+.field public final a:Lone/me/android/media/service/OneMeMediaSessionService;
+
+.field public final b:Lgj;
+
+.field public final c:Ljea;
+
+.field public final d:Landroid/os/Handler;
+
+.field public final o:Lbu1;
+
+.field public s0:I
+
+.field public t0:Lvhd;
+
+.field public u0:Z
+
+.field public v0:Z
+
+.field public w0:Z
+
+.field public final x0:J
+
+.field public final y0:I
 
 
 # direct methods
-.method public constructor <init>(Lu17;I)V
-    .locals 0
+.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lju8;Lgj;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnu8;->a:Lu17;
+    iput-object p1, p0, Lnu8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    iput p2, p0, Lnu8;->b:I
+    iput-object p2, p0, Lnu8;->Z:Lju8;
+
+    iput-object p3, p0, Lnu8;->b:Lgj;
+
+    new-instance p2, Ljea;
+
+    invoke-direct {p2, p1}, Ljea;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lnu8;->c:Ljea;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p2
+
+    sget-object p3, Llig;->a:Ljava/lang/String;
+
+    new-instance p3, Landroid/os/Handler;
+
+    invoke-direct {p3, p2, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object p3, p0, Lnu8;->d:Landroid/os/Handler;
+
+    new-instance p2, Lbu1;
+
+    const/4 p3, 0x3
+
+    invoke-direct {p2, p3, p0}, Lbu1;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lnu8;->o:Lbu1;
+
+    new-instance p2, Landroid/content/Intent;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-direct {p2, p1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iput-object p2, p0, Lnu8;->X:Landroid/content/Intent;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lnu8;->Y:Ljava/util/HashMap;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lnu8;->u0:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lnu8;->w0:Z
+
+    const-wide/32 p1, 0x927c0
+
+    iput-wide p1, p0, Lnu8;->x0:J
+
+    iput p3, p0, Lnu8;->y0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I)V
+.method public final a(Liz8;)Lxp8;
     .locals 1
 
-    iget-object v0, p0, Lnu8;->a:Lu17;
+    iget-object v0, p0, Lnu8;->Y:Ljava/util/HashMap;
 
-    invoke-interface {v0, p1}, Lu17;->b(I)V
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final c(ILandroid/app/PendingIntent;)V
-    .locals 1
+    check-cast p1, Llu8;
 
-    iget-object v0, p0, Lnu8;->a:Lu17;
+    if-eqz p1, :cond_1
 
-    invoke-interface {v0, p1, p2}, Lu17;->c(ILandroid/app/PendingIntent;)V
+    iget-object p1, p1, Llu8;->a:Lgq8;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Lx1;->isDone()Z
 
-.method public final e(ILuq7;)V
-    .locals 9
+    move-result v0
 
-    sget-object v0, Luq7;->j:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iget-object v1, p2, Luq7;->c:Ljava/lang/Object;
-
-    iget v2, p2, Luq7;->d:I
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v4, Luq7;->g:Ljava/lang/String;
-
-    iget v5, p2, Luq7;->a:I
-
-    invoke-virtual {v3, v4, v5}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v4, Luq7;->h:Ljava/lang/String;
-
-    iget-wide v5, p2, Luq7;->b:J
-
-    invoke-virtual {v3, v4, v5, v6}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
-
-    iget-object v4, p2, Luq7;->e:Lmn8;
-
-    if-eqz v4, :cond_0
-
-    sget-object v5, Luq7;->i:Ljava/lang/String;
-
-    new-instance v6, Landroid/os/Bundle;
-
-    invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v7, Lmn8;->e:Ljava/lang/String;
-
-    iget-object v8, v4, Lmn8;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v6, v7, v8}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    sget-object v7, Lmn8;->f:Ljava/lang/String;
-
-    iget-boolean v8, v4, Lmn8;->b:Z
-
-    invoke-virtual {v6, v7, v8}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    sget-object v7, Lmn8;->g:Ljava/lang/String;
-
-    iget-boolean v8, v4, Lmn8;->c:Z
-
-    invoke-virtual {v6, v7, v8}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    sget-object v7, Lmn8;->h:Ljava/lang/String;
-
-    iget-boolean v4, v4, Lmn8;->d:Z
-
-    invoke-virtual {v6, v7, v4}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-virtual {v3, v5, v6}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    goto :goto_0
 
     :cond_0
-    iget-object p2, p2, Luq7;->f:Lwvd;
+    :try_start_0
+    invoke-static {p1}, Lxg8;->c(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
-    if-eqz p2, :cond_1
+    move-result-object p1
 
-    sget-object v4, Luq7;->l:Ljava/lang/String;
+    check-cast p1, Lxp8;
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p2}, Lwvd;->b()Landroid/os/Bundle;
+    return-object p1
 
-    move-result-object p2
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v3, v4, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 
     :cond_1
-    sget-object p2, Luq7;->k:Ljava/lang/String;
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v3, p2, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    return-object p1
+.end method
 
-    if-nez v1, :cond_2
+.method public final b(Z)Z
+    .locals 7
+
+    iget-object v0, p0, Lnu8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    invoke-virtual {v0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-ge v2, v3, :cond_3
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Liz8;
+
+    invoke-virtual {p0, v3}, Lnu8;->a(Liz8;)Lxp8;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Lxp8;->i()Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    if-eqz p1, :cond_2
+
+    :cond_0
+    invoke-virtual {v3}, Lxp8;->getPlaybackState()I
+
+    move-result v5
+
+    const/4 v6, 0x3
+
+    if-eq v5, v6, :cond_1
+
+    invoke-virtual {v3}, Lxp8;->getPlaybackState()I
+
+    move-result v3
+
+    const/4 v5, 0x2
+
+    if-ne v3, v5, :cond_2
+
+    :cond_1
+    move p1, v4
 
     goto :goto_1
 
     :cond_2
-    const/4 p2, 0x1
-
-    if-eq v2, p2, :cond_6
-
-    const/4 p2, 0x2
-
-    const/4 v4, 0x0
-
-    if-eq v2, p2, :cond_5
-
-    const/4 p2, 0x3
-
-    if-eq v2, p2, :cond_3
-
-    const/4 p2, 0x4
-
-    if-eq v2, p2, :cond_6
-
-    goto :goto_1
-
-    :cond_3
-    new-instance p2, Ldv0;
-
-    check-cast v1, Le77;
-
-    invoke-static {}, Le77;->i()Lb77;
-
-    move-result-object v2
-
-    move v5, v4
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_4
-
-    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lrm8;
-
-    invoke-virtual {v6, v4}, Lrm8;->d(Z)Landroid/os/Bundle;
-
-    move-result-object v6
-
-    invoke-virtual {v2, v6}, Lu67;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {v2}, Lb77;->h()Lxyc;
-
-    move-result-object v1
-
-    invoke-direct {p2, v1}, Ldv0;-><init>(Ljava/util/List;)V
-
-    invoke-virtual {v3, v0, p2}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    goto :goto_1
-
-    :cond_5
-    check-cast v1, Lrm8;
-
-    invoke-virtual {v1, v4}, Lrm8;->d(Z)Landroid/os/Bundle;
-
-    move-result-object p2
-
-    invoke-virtual {v3, v0, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    :cond_3
+    move p1, v1
 
     :goto_1
-    iget-object p2, p0, Lnu8;->a:Lu17;
+    iget-boolean v0, p0, Lnu8;->w0:Z
 
-    invoke-interface {p2, p1, v3}, Lu17;->z(ILandroid/os/Bundle;)V
+    iget-wide v2, p0, Lnu8;->x0:J
 
-    return-void
+    if-eqz v0, :cond_4
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v0, v2, v5
+
+    if-lez v0, :cond_4
+
+    move v0, v4
+
+    goto :goto_2
+
+    :cond_4
+    move v0, v1
+
+    :goto_2
+    iget-boolean v5, p0, Lnu8;->v0:Z
+
+    iget-object v6, p0, Lnu8;->d:Landroid/os/Handler;
+
+    if-eqz v5, :cond_5
+
+    if-nez p1, :cond_5
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v6, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    goto :goto_3
+
+    :cond_5
+    if-eqz p1, :cond_6
+
+    invoke-virtual {v6, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     :cond_6
+    :goto_3
+    iput-boolean p1, p0, Lnu8;->v0:Z
+
+    invoke-virtual {v6, v4}, Landroid/os/Handler;->hasMessages(I)Z
+
+    move-result v0
+
+    if-nez p1, :cond_8
+
+    if-eqz v0, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    return v1
+
+    :cond_8
+    :goto_4
+    return v4
+.end method
+
+.method public final c(Liz8;)Z
+    .locals 4
+
+    invoke-virtual {p0, p1}, Lnu8;->a(Liz8;)Lxp8;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Lxp8;->u()Lmvf;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lmvf;->p()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, p0, Lnu8;->Y:Ljava/util/HashMap;
+
+    invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llu8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lxp8;->getPlaybackState()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_1
+
+    iput-boolean v1, p1, Llu8;->b:Z
+
+    iput-boolean v2, p1, Llu8;->c:Z
+
+    return v2
+
+    :cond_1
+    iget v0, p0, Lnu8;->y0:I
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_4
+
+    const/4 v3, 0x3
+
+    if-ne v0, v3, :cond_2
+
+    iget-boolean v0, p1, Llu8;->b:Z
+
+    if-nez v0, :cond_4
+
+    iget-boolean p1, p1, Llu8;->c:Z
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw p1
+
+    :cond_3
+    iget-boolean p1, p1, Llu8;->b:Z
+
+    xor-int/2addr p1, v2
+
+    return p1
+
+    :cond_4
+    :goto_0
+    return v1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final d(Liz8;Lvhd;Z)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p1, Liz8;->a:Lzz8;
+
+    iget-object p1, p1, Lzz8;->h:Lk09;
+
+    iget-object p1, p1, Lk09;->k:Ltz8;
+
+    iget-object p1, p1, Ltz8;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnz8;
+
+    iget-object p1, p1, Lnz8;->c:Lsz8;
+
+    iget-object p1, p1, Lsz8;->b:Landroid/media/session/MediaSession$Token;
+
+    iget-object v0, p2, Lvhd;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/app/Notification;
+
+    iget-object v1, v0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+
+    const-string v2, "android.mediaSession"
+
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    iput-object p2, p0, Lnu8;->t0:Lvhd;
+
+    const/4 p1, 0x2
+
+    iget-object p2, p0, Lnu8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+
+    const/16 v1, 0x3e9
+
+    if-eqz p3, :cond_0
+
+    iget-object p3, p0, Lnu8;->X:Landroid/content/Intent;
+
+    invoke-static {p2, p3}, Lu04;->b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    const-string p3, "mediaPlayback"
+
+    invoke-static {p2, v1, v0, p1, p3}, Llig;->g0(Landroid/app/Service;ILandroid/app/Notification;ILjava/lang/String;)V
 
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Lnu8;->u0:Z
+
+    return-void
 
     :cond_0
-    if-eqz p1, :cond_2
+    iget-object p3, p0, Lnu8;->c:Ljea;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    invoke-virtual {p3, v2, v1, v0}, Ljea;->a(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    const-class v1, Lnu8;
+    invoke-virtual {p2, p1}, Landroid/app/Service;->stopForeground(I)V
 
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lnu8;
-
-    iget-object v0, p0, Lnu8;->a:Lu17;
-
-    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lnu8;->a:Lu17;
-
-    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
-.end method
-
-.method public final g(ILrkb;)V
-    .locals 1
-
-    iget-object v0, p0, Lnu8;->a:Lu17;
-
-    invoke-virtual {p2}, Lrkb;->c()Landroid/os/Bundle;
-
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Lu17;->u(ILandroid/os/Bundle;)V
+    iput-boolean p1, p0, Lnu8;->u0:Z
 
     return-void
 .end method
 
-.method public final h(ILgwd;)V
-    .locals 1
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 5
 
-    iget-object v0, p0, Lnu8;->a:Lu17;
-
-    invoke-virtual {p2}, Lgwd;->b()Landroid/os/Bundle;
-
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Lu17;->X(ILandroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lnu8;->a:Lu17;
-
-    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final i(ILvlb;Lrkb;ZZ)V
-    .locals 6
+    iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    iget v2, p0, Lnu8;->b:I
+    if-ne p1, v1, :cond_1
 
-    if-eqz v2, :cond_0
+    iget-object p1, p0, Lnu8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    move v3, v1
+    invoke-virtual {p1}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    move v3, v0
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_0
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Liz8;
+
+    invoke-virtual {p1, v4, v0}, Lone/me/android/media/service/OneMeMediaSessionService;->k(Liz8;Z)Z
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v3, v0
-
-    :goto_0
-    invoke-static {v3}, Lpih;->o(Z)V
-
-    if-nez p4, :cond_2
-
-    const/16 v3, 0x11
-
-    invoke-virtual {p3, v3}, Lrkb;->a(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
+    return v1
 
     :cond_1
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    move v3, v1
-
-    :goto_2
-    if-nez p5, :cond_3
-
-    const/16 v4, 0x1e
-
-    invoke-virtual {p3, v4}, Lrkb;->a(I)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    :cond_3
-    move v0, v1
-
-    :cond_4
-    const/4 v4, 0x2
-
-    iget-object v5, p0, Lnu8;->a:Lu17;
-
-    if-lt v2, v4, :cond_6
-
-    invoke-virtual {p2, p3, p4, p5}, Lvlb;->l(Lrkb;ZZ)Lvlb;
-
-    move-result-object p2
-
-    instance-of p3, v5, Lfl8;
-
-    if-eqz p3, :cond_5
-
-    new-instance p3, Landroid/os/Bundle;
-
-    invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
-
-    sget-object p4, Lvlb;->l0:Ljava/lang/String;
-
-    new-instance p5, Lulb;
-
-    invoke-direct {p5, p2}, Lulb;-><init>(Lvlb;)V
-
-    invoke-virtual {p3, p4, p5}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {p2, v2}, Lvlb;->o(I)Landroid/os/Bundle;
-
-    move-result-object p3
-
-    :goto_3
-    new-instance p2, Ltlb;
-
-    new-instance p2, Landroid/os/Bundle;
-
-    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
-
-    sget-object p4, Ltlb;->d:Ljava/lang/String;
-
-    invoke-virtual {p2, p4, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    sget-object p4, Ltlb;->e:Ljava/lang/String;
-
-    invoke-virtual {p2, p4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-interface {v5, p1, p3, p2}, Lu17;->w(ILandroid/os/Bundle;Landroid/os/Bundle;)V
-
-    return-void
-
-    :cond_6
-    invoke-virtual {p2, p3, p4, v1}, Lvlb;->l(Lrkb;ZZ)Lvlb;
-
-    move-result-object p2
-
-    invoke-virtual {p2, v2}, Lvlb;->o(I)Landroid/os/Bundle;
-
-    move-result-object p2
-
-    invoke-interface {v5, p1, p2, v3}, Lu17;->S(ILandroid/os/Bundle;Z)V
-
-    return-void
-.end method
-
-.method public final j(ILewd;ZZI)V
-    .locals 0
-
-    invoke-virtual {p2, p3, p4}, Lewd;->a(ZZ)Lewd;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p5}, Lewd;->c(I)Landroid/os/Bundle;
-
-    move-result-object p2
-
-    iget-object p3, p0, Lnu8;->a:Lu17;
-
-    invoke-interface {p3, p1, p2}, Lu17;->v(ILandroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public final onDisconnected()V
-    .locals 1
-
-    iget-object v0, p0, Lnu8;->a:Lu17;
-
-    invoke-interface {v0}, Lu17;->onDisconnected()V
-
-    return-void
+    return v0
 .end method

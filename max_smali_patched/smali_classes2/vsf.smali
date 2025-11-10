@@ -1,105 +1,296 @@
 .class public final Lvsf;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:F
 
-.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final b:F
+
+.field public final c:[I
+
+.field public final d:[F
+
+.field public final e:F
+
+.field public final f:F
+
+.field public final g:F
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+.method public constructor <init>(FFFFF[F[I)V
     .locals 0
 
-    iput-object p2, p0, Lvsf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p1, p0, Lvsf;->a:F
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lvsf;->b:F
+
+    iput-object p7, p0, Lvsf;->c:[I
+
+    iput-object p6, p0, Lvsf;->d:[F
+
+    iput p3, p0, Lvsf;->e:F
+
+    iput p4, p0, Lvsf;->f:F
+
+    iput p5, p0, Lvsf;->g:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lvsf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lvsf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lvsf;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget v1, p0, Lvsf;->a:F
 
-    invoke-virtual {p1, p2}, Lvsf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v3, p1, Lvsf;->a:F
 
-    return-object p2
-.end method
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result v1
 
-    new-instance v0, Lvsf;
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lvsf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    return v2
 
-    invoke-direct {v0, p2, v1}, Lvsf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    :cond_2
+    iget v1, p0, Lvsf;->b:F
 
-    iput-object p1, v0, Lvsf;->X:Ljava/lang/Object;
+    iget v3, p1, Lvsf;->b:F
 
-    return-object v0
-.end method
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result v1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-eqz v1, :cond_3
 
-    iget-object p1, p0, Lvsf;->X:Ljava/lang/Object;
+    return v2
 
-    check-cast p1, Ljava/lang/Boolean;
+    :cond_3
+    iget-object v1, p0, Lvsf;->c:[I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v3, p1, Lvsf;->c:[I
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lvsf;->d:[F
+
+    iget-object v3, p1, Lvsf;->d:[F
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lvsf;->e:F
+
+    iget v3, p1, Lvsf;->e:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lvsf;->f:F
+
+    iget v3, p1, Lvsf;->f:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget v1, p0, Lvsf;->g:F
+
+    iget p1, p1, Lvsf;->g:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_8
 
-    iget-object p1, p0, Lvsf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    return v2
 
-    iget-object v0, p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lmqc;
+    :cond_8
+    return v0
+.end method
 
-    sget-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
+.method public final hashCode()I
+    .locals 3
 
-    const/4 v2, 0x1
+    iget v0, p0, Lvsf;->a:F
 
-    aget-object v1, v1, v2
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
-    invoke-interface {v0, p1, v1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lvsf;->b:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v2, p0, Lvsf;->c:[I
+
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lvsf;->d:[F
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lvsf;->e:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lvsf;->f:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lvsf;->g:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lvsf;->c:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ScrollView;
+    iget-object v1, p0, Lvsf;->d:[F
 
-    new-instance v1, Lace;
+    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
-    const/16 v2, 0x14
+    move-result-object v1
 
-    invoke-direct {v1, v2, p1}, Lace;-><init>(ILjava/lang/Object;)V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    const-string v3, "GradientEllipse(x="
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    iget v3, p0, Lvsf;->a:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", y="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lvsf;->b:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", color="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", stops="
+
+    const-string v4, ", radiusX="
+
+    invoke-static {v2, v0, v3, v1, v4}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lvsf;->e:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", radiusY="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lvsf;->f:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lvsf;->g:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

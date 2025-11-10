@@ -1,114 +1,220 @@
-.class public Lhk8;
-.super Lvb4;
+.class public final Lhk8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgk8;
+.implements Lcre;
+.implements Lzv4;
+.implements Lgla;
 
 
 # instance fields
-.field public final o:Landroid/media/session/MediaController$TransportControls;
+.field public final synthetic a:I
+
+.field public b:Lzv4;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/session/MediaController$TransportControls;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lhk8;->a:I
 
-    iput-object p1, p0, Lhk8;->o:Landroid/media/session/MediaController$TransportControls;
+    iput-object p2, p0, Lhk8;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p0(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method public a(Ljava/lang/Object;)V
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lhk8;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lgk8;
 
-    :cond_0
-    const-string v0, "android.support.v4.media.session.action.FOLLOW"
+    invoke-interface {v0, p1}, Lgk8;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return-void
+.end method
 
-    move-result v0
+.method public b(Ljava/lang/Object;)V
+    .locals 0
 
-    if-nez v0, :cond_1
+    return-void
+.end method
 
-    const-string v0, "android.support.v4.media.session.action.UNFOLLOW"
+.method public final c()V
+    .locals 1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v0, p0, Lhk8;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Lhk8;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Ltg3;
 
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const-string v0, "android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE"
-
-    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :goto_0
-    iget-object v0, p0, Lhk8;->o:Landroid/media/session/MediaController$TransportControls;
-
-    invoke-virtual {v0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0}, Ltg3;->c()V
 
     return-void
 
-    :cond_2
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    :pswitch_0
+    iget-object v0, p0, Lhk8;->c:Ljava/lang/Object;
 
-    const-string v0, "An extra field android.support.v4.media.session.ARGUMENT_MEDIA_ATTRIBUTE is required for this action "
+    check-cast v0, Lgk8;
 
-    const-string v1, "."
+    invoke-interface {v0}, Lgk8;->c()V
 
-    invoke-static {v0, p1, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object p1
+    nop
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public q0(F)V
-    .locals 2
+.method public final d(Lzv4;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lhk8;->a:I
 
-    cmpl-float v0, p1, v0
+    packed-switch v0, :pswitch_data_0
+
+    iput-object p1, p0, Lhk8;->b:Lzv4;
+
+    iget-object p1, p0, Lhk8;->c:Ljava/lang/Object;
+
+    check-cast p1, Ltg3;
+
+    invoke-interface {p1, p0}, Ltg3;->d(Lzv4;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhk8;->b:Lzv4;
+
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Landroid/os/Bundle;
+    iput-object p1, p0, Lhk8;->b:Lzv4;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    iget-object p1, p0, Lhk8;->c:Ljava/lang/Object;
 
-    const-string v1, "android.support.v4.media.session.action.ARGUMENT_PLAYBACK_SPEED"
+    check-cast p1, Lgk8;
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
+    invoke-interface {p1, p0}, Lgk8;->d(Lzv4;)V
 
-    const-string p1, "android.support.v4.media.session.action.SET_PLAYBACK_SPEED"
+    :cond_0
+    return-void
 
-    invoke-virtual {p0, p1, v0}, Lhk8;->p0(Ljava/lang/String;Landroid/os/Bundle;)V
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lhk8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhk8;->b:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->dispose()V
 
     return-void
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :pswitch_0
+    iget-object v0, p0, Lhk8;->b:Lzv4;
 
-    const-string v0, "speed must not be zero"
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    throw p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Lhk8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhk8;->b:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lhk8;->b:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->f()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lhk8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhk8;->c:Ljava/lang/Object;
+
+    check-cast v0, Ltg3;
+
+    invoke-interface {v0, p1}, Ltg3;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lhk8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lgk8;
+
+    invoke-interface {p1}, Lgk8;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

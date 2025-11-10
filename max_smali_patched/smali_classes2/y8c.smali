@@ -1,3 +1,3 @@
-.class public interface abstract Ly8c;
-.super Ljava/lang/Object;
+.class public abstract Ly8c;
+.super Lz8c;
 .source "SourceFile"

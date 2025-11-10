@@ -1,255 +1,103 @@
-.class public final synthetic Lf7b;
+.class public abstract Lf7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lv7b;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv7b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    iput p2, p0, Lf7b;->a:I
+    sget v0, Lduc;->web_app_root_biometry_open_settings_dialog_accept:I
 
-    iput-object p1, p0, Lf7b;->b:Lv7b;
+    sput v0, Lf7b;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lduc;->web_app_root_biometry_open_settings_dialog_title:I
 
-    return-void
-.end method
+    sput v0, Lf7b;->b:I
 
-.method public synthetic constructor <init>(Lv7b;Ljava/lang/String;I)V
-    .locals 0
+    sget v0, Lduc;->web_app_root_biometry_request_dialog_accept:I
 
-    .line 2
-    iput p3, p0, Lf7b;->a:I
+    sput v0, Lf7b;->c:I
 
-    iput-object p1, p0, Lf7b;->b:Lv7b;
+    sget v0, Lduc;->web_app_root_biometry_request_dialog_decline:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lf7b;->d:I
 
-    return-void
-.end method
+    sget v0, Lduc;->web_app_root_biometry_request_dialog_default_reason:I
 
+    sput v0, Lf7b;->e:I
 
-# virtual methods
-.method public final run()V
-    .locals 4
+    sget v0, Lduc;->web_app_root_biometry_request_dialog_title:I
 
-    iget v0, p0, Lf7b;->a:I
+    sput v0, Lf7b;->f:I
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Lduc;->web_app_root_biometry_setting:I
 
-    iget-object v0, p0, Lf7b;->b:Lv7b;
+    sput v0, Lf7b;->g:I
 
-    invoke-virtual {v0}, Lv7b;->q()V
+    sget v0, Lduc;->web_app_root_biometry_setting_description:I
 
-    iget-object v1, v0, Lv7b;->i:Loj;
+    sput v0, Lf7b;->h:I
 
-    if-eqz v1, :cond_1
+    sget v0, Lduc;->web_app_root_choose_media_bottomsheet_gallery:I
 
-    invoke-virtual {v1}, Loj;->d()V
+    sput v0, Lf7b;->i:I
 
-    iget-object v2, v1, Loj;->a:Loh;
+    sget v0, Lduc;->web_app_root_choose_media_bottomsheet_title:I
 
-    iget-boolean v3, v2, Loh;->i:Z
+    sput v0, Lf7b;->j:I
 
-    if-nez v3, :cond_0
+    sget v0, Lduc;->web_app_root_max_share_quote_title:I
 
-    goto :goto_0
+    sput v0, Lf7b;->k:I
 
-    :cond_0
-    iget-object v2, v2, Loh;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sget v0, Lduc;->web_app_root_setting_open_webapp:I
 
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    sput v0, Lf7b;->l:I
 
-    :cond_1
-    :goto_0
-    iget-object v1, v0, Lv7b;->k:Loi;
+    sget v0, Lduc;->web_app_root_settings_header_subtitle:I
 
-    if-eqz v1, :cond_3
+    sput v0, Lf7b;->m:I
 
-    iget-object v2, v1, Loi;->c:Lv84;
+    sget v0, Lduc;->web_app_root_settings_header_title:I
 
-    if-eqz v2, :cond_2
+    sput v0, Lf7b;->n:I
 
-    invoke-virtual {v2, v1}, Lv84;->c(Ld9d;)V
+    sget v0, Lduc;->web_app_root_settings_webapps:I
 
-    :cond_2
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Loi;->c:Lv84;
-
-    :cond_3
-    iget-object v1, v0, Lv7b;->y:Lpmc;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ": "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Lim9;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " was released"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "PCRTCClient"
-
-    invoke-interface {v1, v2, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, Lf7b;->o:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lv7b;->K:Z
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v1, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v0}, Lu7b;->q(Lv7b;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v1, v0, Lv7b;->y:Lpmc;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "createPeerConnectionFactoryInternal, "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PCRTCClient"
-
-    invoke-interface {v1, v3, v2}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lv7b;->K:Z
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v1, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v1, v0}, Lu7b;->b(Lv7b;)V
-
-    :cond_5
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v0, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v0}, Lu7b;->f()V
-
-    :cond_6
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v0, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {v0}, Lu7b;->d()V
-
-    :cond_7
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lv7b;->X:Z
-
-    iget-object v1, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v1, :cond_8
-
-    invoke-interface {v1, v0}, Lu7b;->c(Lv7b;)V
-
-    :cond_8
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    invoke-virtual {v0}, Lv7b;->q()V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Lf7b;->b:Lv7b;
-
-    iget-object v0, v0, Lv7b;->N:Lu7b;
-
-    if-eqz v0, :cond_9
-
-    invoke-interface {v0}, Lu7b;->onIceRestart()V
-
-    :cond_9
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

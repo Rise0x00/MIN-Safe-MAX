@@ -1,175 +1,53 @@
-.class public final Lucf;
-.super Le88;
+.class public interface abstract Lucf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcn4;
-
-
-# instance fields
-.field public a:Ltcf;
 
 
 # virtual methods
-.method public final delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public abstract A([BIILtcf;Lhr3;)V
+.end method
+
+.method public abstract B()I
+.end method
+
+.method public reset()V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lud6;->n(Lcn4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public u(I[BI)Ljcf;
+    .locals 6
+
+    invoke-static {}, Lec7;->j()Lbc7;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    new-instance v5, Lc2d;
 
-.method public final dispatch(Lw24;Ljava/lang/Runnable;)V
-    .locals 1
+    const/16 v0, 0x1c
 
-    iget-object v0, p0, Lucf;->a:Ltcf;
+    invoke-direct {v5, v0, p1}, Lc2d;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    sget-object v4, Ltcf;->c:Ltcf;
 
-    check-cast v0, Ly24;
+    move-object v0, p0
 
-    invoke-virtual {v0, p1, p2}, Ly24;->dispatch(Lw24;Ljava/lang/Runnable;)V
+    move-object v1, p2
 
-    return-void
-.end method
+    move v3, p3
 
-.method public final dispatchYield(Lw24;Ljava/lang/Runnable;)V
-    .locals 1
+    invoke-interface/range {v0 .. v5}, Lucf;->A([BIILtcf;Lhr3;)V
 
-    iget-object v0, p0, Lucf;->a:Ltcf;
+    new-instance p2, Lv84;
 
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ly24;
-
-    invoke-virtual {v0, p1, p2}, Ly24;->dispatchYield(Lw24;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final getImmediate()Le88;
-    .locals 2
-
-    iget-object v0, p0, Lucf;->a:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Le88;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Le88;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Le88;->getImmediate()Le88;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final invokeOnTimeout(JLjava/lang/Runnable;Lw24;)Lvs4;
-    .locals 2
-
-    iget-object v0, p0, Lucf;->a:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lcn4;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lcn4;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    sget-object v0, Lfh4;->a:Lcn4;
-
-    :cond_1
-    invoke-interface {v0, p1, p2, p3, p4}, Lcn4;->invokeOnTimeout(JLjava/lang/Runnable;Lw24;)Lvs4;
+    invoke-virtual {p1}, Lbc7;->i()Lz8d;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-direct {p2, p1}, Lv84;-><init>(Lz8d;)V
 
-.method public final isDispatchNeeded(Lw24;)Z
-    .locals 1
-
-    iget-object v0, p0, Lucf;->a:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ly24;
-
-    invoke-virtual {v0, p1}, Ly24;->isDispatchNeeded(Lw24;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final scheduleResumeAfterDelay(JLy12;)V
-    .locals 2
-
-    iget-object v0, p0, Lucf;->a:Ltcf;
-
-    invoke-virtual {v0}, Ltcf;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lcn4;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lcn4;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    sget-object v0, Lfh4;->a:Lcn4;
-
-    :cond_1
-    invoke-interface {v0, p1, p2, p3}, Lcn4;->scheduleResumeAfterDelay(JLy12;)V
-
-    return-void
+    return-object p2
 .end method

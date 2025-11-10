@@ -1,205 +1,137 @@
 .class public final Lj15;
-.super Lyhh;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lk15;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lk15;I)V
     .locals 0
 
-    iput p1, p0, Lj15;->e:I
+    iput p2, p0, Lj15;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj15;->b:Lk15;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final K(Ljava/lang/Object;F)V
-    .locals 1
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget v0, p0, Lj15;->e:I
+    iget v0, p0, Lj15;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
     return-void
 
     :pswitch_0
-    check-cast p1, Landroid/view/View;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
+    iget-object p1, p0, Lj15;->b:Lk15;
+
+    invoke-static {p1}, Lk15;->a(Lk15;)V
+
+    iget-object v0, p1, Lk15;->X:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p1, Lk15;->Y:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lre;
+
+    invoke-virtual {v1, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget v0, p0, Lj15;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
     return-void
 
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
+    iget-object p1, p0, Lj15;->b:Lk15;
 
-    return-void
+    iget-object v0, p1, Lk15;->X:Ljava/util/ArrayList;
 
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+    iget-boolean v1, p1, Lk15;->Y:Z
 
-    return-void
+    if-nez v1, :cond_0
 
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+    move-result-object v0
 
-    return-void
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
+    move-result v1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+    if-eqz v1, :cond_0
 
-    return-void
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
+    check-cast v1, Lre;
 
-    return-void
+    invoke-virtual {v1, p1}, Lre;->b(Landroid/graphics/drawable/Drawable;)V
 
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
+    goto :goto_0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
-
+    :cond_0
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final t(Ljava/lang/Object;)F
-    .locals 1
-
-    iget v0, p0, Lj15;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

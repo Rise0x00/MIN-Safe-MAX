@@ -1,89 +1,77 @@
-.class public final synthetic Lwta;
+.class public abstract synthetic Lwta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ldua;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldua;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lwta;->a:I
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Lwta;->b:Ldua;
+    invoke-static {v0}, Lnx1;->y(I)[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v1, Lwta;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v0}, Lnx1;->y(I)[I
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v4, 0x0
+
+    :try_start_1
+    aput v2, v1, v4
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    aput v3, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v3, 0x3
+
+    :try_start_3
+    aput v3, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    aput v0, v1, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v1, Lwta;->$EnumSwitchMapping$1:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget p1, p0, Lwta;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lwta;->b:Ldua;
-
-    iget-object p1, p1, Ldua;->G0:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatEditText;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lwta;->b:Ldua;
-
-    invoke-virtual {p1}, Ldua;->d()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lwta;->b:Ldua;
-
-    invoke-virtual {p1}, Ldua;->b()V
-
-    iget-object p1, p1, Ldua;->y0:Laua;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Laua;->p()V
-
-    :cond_0
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lwta;->b:Ldua;
-
-    invoke-virtual {p1}, Ldua;->d()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

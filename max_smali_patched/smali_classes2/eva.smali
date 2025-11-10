@@ -1,64 +1,105 @@
-.class public final synthetic Leva;
+.class public final Leva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Handler$Callback;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final synthetic d:Lfva;
+
+
+# direct methods
+.method public constructor <init>(Lfva;I)V
+    .locals 2
+
+    iput p2, p0, Leva;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leva;->d:Lfva;
+
+    iget-object p1, p1, Lfva;->a:Lyy8;
+
+    iget-wide v0, p1, Lyy8;->d:J
+
+    iput-wide v0, p0, Leva;->b:J
+
+    iget-wide p1, p1, Lyy8;->c:J
+
+    iput-wide p1, p0, Leva;->c:J
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leva;->d:Lfva;
+
+    iget-object p1, p1, Lfva;->a:Lyy8;
+
+    iget-wide v0, p1, Lyy8;->d:J
+
+    iput-wide v0, p0, Leva;->b:J
+
+    iget-wide p1, p1, Lyy8;->c:J
+
+    iput-wide p1, p0, Leva;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 4
+.method public final a(Ljava/util/ArrayList;)V
+    .locals 1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget v0, p0, Leva;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_3
+    iget-object v0, p0, Leva;->d:Lfva;
 
-    sget-object v0, Lgva;->a:Landroid/os/Handler;
+    iget-object v0, v0, Lfva;->a:Lyy8;
 
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget-object v0, v0, Lyy8;->o:Ljava/lang/Object;
 
-    check-cast p1, Lfva;
+    check-cast v0, Lqi6;
 
-    sget-object v0, Lgva;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    :pswitch_0
+    iget-object v0, p0, Leva;->d:Lfva;
 
-    move-result v3
+    iget-object v0, v0, Lfva;->a:Lyy8;
 
-    if-eqz v3, :cond_2
+    iget-object v0, v0, Lyy8;->o:Ljava/lang/Object;
 
-    sget-object v3, Lgva;->b:Lfva;
+    check-cast v0, Lqi6;
 
-    invoke-static {v3, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v3
+    return-void
 
-    if-nez v3, :cond_0
+    nop
 
-    sget-object v3, Lgva;->c:Lfva;
-
-    invoke-static {v3, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_0
-    sget-object v3, Lcva;->a:Lcva;
-
-    invoke-static {p1, v3}, Lgva;->a(Lfva;Lcva;)V
-
-    :cond_1
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_2
-    return v2
-
-    :cond_3
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

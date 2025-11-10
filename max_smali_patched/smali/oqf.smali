@@ -1,245 +1,106 @@
-.class public abstract Loqf;
+.class public final Loqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/TextWatcher;
 
-# static fields
-.field public static final a:Lw80;
 
-.field public static final b:Ljava/lang/ThreadLocal;
+# instance fields
+.field public a:I
 
-.field public static final c:Ljava/util/ArrayList;
+.field public final synthetic b:Landroid/widget/EditText;
+
+.field public final synthetic c:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;)V
+    .locals 0
 
-    new-instance v0, Lw80;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lw80;-><init>()V
+    iput-object p1, p0, Loqf;->c:Lcom/google/android/material/textfield/TextInputLayout;
 
-    sput-object v0, Loqf;->a:Lw80;
+    iput-object p2, p0, Loqf;->b:Landroid/widget/EditText;
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-virtual {p2}, Landroid/widget/TextView;->getLineCount()I
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    move-result p1
 
-    sput-object v0, Loqf;->b:Ljava/lang/ThreadLocal;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sput-object v0, Loqf;->c:Ljava/util/ArrayList;
+    iput p1, p0, Loqf;->a:I
 
     return-void
 .end method
 
-.method public static a(Landroid/view/ViewGroup;Liqf;)V
-    .locals 2
 
-    sget-object v0, Loqf;->c:Ljava/util/ArrayList;
+# virtual methods
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 3
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    iget-object v0, p0, Loqf;->c:Lcom/google/android/material/textfield/TextInputLayout;
 
-    move-result v1
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->K1:Z
 
-    if-nez v1, :cond_3
+    xor-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+    const/4 v2, 0x0
 
-    move-result v1
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/textfield/TextInputLayout;->u(ZZ)V
 
-    if-eqz v1, :cond_3
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->x0:Z
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_0
 
-    if-nez p1, :cond_0
-
-    sget-object p1, Loqf;->a:Lw80;
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->n(Landroid/text/Editable;)V
 
     :cond_0
-    invoke-virtual {p1}, Liqf;->k()Liqf;
-
-    move-result-object p1
-
-    invoke-static {}, Loqf;->c()Lds;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->F0:Z
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liqf;
-
-    invoke-virtual {v1, p0}, Liqf;->B(Landroid/view/View;)V
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->v(Landroid/text/Editable;)V
 
     :cond_1
-    const/4 v0, 0x1
+    iget-object p1, p0, Loqf;->b:Landroid/widget/EditText;
 
-    invoke-virtual {p1, p0, v0}, Liqf;->i(Landroid/view/ViewGroup;Z)V
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLineCount()I
 
-    sget v0, Lmdc;->transition_current_scene:I
+    move-result v1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    iget v2, p0, Loqf;->a:I
 
-    move-result-object v0
+    if-eq v1, v2, :cond_3
 
-    if-nez v0, :cond_2
+    if-ge v1, v2, :cond_2
 
-    const/4 v0, 0x0
+    sget-object v2, Ltyg;->a:Ljava/util/WeakHashMap;
 
-    sget v1, Lmdc;->transition_current_scene:I
+    invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
 
-    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    move-result v2
 
-    new-instance v0, Lnqf;
+    iget v0, v0, Lcom/google/android/material/textfield/TextInputLayout;->D1:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-eq v2, v0, :cond_2
 
-    iput-object p1, v0, Lnqf;->a:Liqf;
-
-    iput-object p0, v0, Lnqf;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    return-void
+    invoke-virtual {p1, v0}, Landroid/view/View;->setMinimumHeight(I)V
 
     :cond_2
-    new-instance p0, Ljava/lang/ClassCastException;
-
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p0
+    iput v1, p0, Loqf;->a:I
 
     :cond_3
     return-void
 .end method
 
-.method public static b(Landroid/view/ViewGroup;)V
-    .locals 3
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    sget-object v0, Loqf;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-static {}, Loqf;->c()Lds;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Liqf;
-
-    invoke-virtual {v2, p0}, Liqf;->q(Landroid/view/ViewGroup;)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public static c()Lds;
-    .locals 3
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    sget-object v0, Loqf;->b:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/ref/WeakReference;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lds;
-
-    if-eqz v1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    new-instance v1, Lds;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lade;-><init>(I)V
-
-    new-instance v2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    return-object v1
+    return-void
 .end method

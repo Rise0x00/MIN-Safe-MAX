@@ -1,675 +1,440 @@
 .class public final Lxxf;
-.super Ljava/io/Reader;
+.super Lzci;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final b:Lcyf;
 
-.field public final Y:Z
+.field public final c:Landroid/view/Window$Callback;
 
-.field public Z:C
+.field public final d:Llde;
 
-.field public final a:Lg27;
+.field public e:Z
 
-.field public b:Ljava/io/BufferedInputStream;
+.field public f:Z
 
-.field public c:[B
+.field public g:Z
 
-.field public o:I
+.field public final h:Ljava/util/ArrayList;
 
-.field public w0:I
-
-.field public x0:I
-
-.field public final y0:Z
-
-.field public z0:[C
+.field public final i:Lsxf;
 
 
 # direct methods
-.method public constructor <init>(Lg27;Ljava/io/BufferedInputStream;[BIIZ)V
-    .locals 1
+.method public constructor <init>(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Ljo;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/io/Reader;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-char v0, p0, Lxxf;->Z:C
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lxxf;->a:Lg27;
+    iput-object v0, p0, Lxxf;->h:Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lxxf;->b:Ljava/io/BufferedInputStream;
+    new-instance v0, Lsxf;
 
-    iput-object p3, p0, Lxxf;->c:[B
+    const/4 v1, 0x1
 
-    iput p4, p0, Lxxf;->o:I
+    invoke-direct {v0, v1, p0}, Lsxf;-><init>(ILjava/lang/Object;)V
 
-    iput p5, p0, Lxxf;->X:I
+    iput-object v0, p0, Lxxf;->i:Lsxf;
 
-    iput-boolean p6, p0, Lxxf;->Y:Z
+    new-instance v0, Lv5d;
 
-    const/4 p1, 0x1
+    invoke-direct {v0, p0}, Lv5d;-><init>(Ljava/lang/Object;)V
 
-    iput-boolean p1, p0, Lxxf;->y0:Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lcyf;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lcyf;-><init>(Landroidx/appcompat/widget/Toolbar;Z)V
+
+    iput-object v1, p0, Lxxf;->b:Lcyf;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lxxf;->c:Landroid/view/Window$Callback;
+
+    iput-object p3, v1, Lcyf;->k:Landroid/view/Window$Callback;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Lwxf;)V
+
+    iget-boolean p1, v1, Lcyf;->g:Z
+
+    if-nez p1, :cond_0
+
+    iput-object p2, v1, Lcyf;->h:Ljava/lang/CharSequence;
+
+    iget p1, v1, Lcyf;->b:I
+
+    and-int/lit8 p1, p1, 0x8
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, v1, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean p3, v1, Lcyf;->g:Z
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Ltyg;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    new-instance p1, Llde;
+
+    const/4 p2, 0x5
+
+    invoke-direct {p1, p2, p0}, Llde;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lxxf;->d:Llde;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)V
-    .locals 6
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Lxxf;->x0:I
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    add-int/2addr v0, p1
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    iget v1, p0, Lxxf;->w0:I
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
 
-    new-instance v2, Ljava/io/CharConversionException;
+    if-eqz v0, :cond_0
 
-    const-string v3, ", needed 4, at char #"
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->o:Lm7;
 
-    const-string v4, ", byte #"
+    if-eqz v0, :cond_0
 
-    const-string v5, "Unexpected EOF in the middle of a 4-byte UTF-32 char: got "
+    invoke-virtual {v0}, Lm7;->g()Z
 
-    invoke-static {v5, p1, v3, v1, v4}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    const-string v1, ")"
+    const/4 v0, 0x1
 
-    invoke-static {p1, v0, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {v2, p1}, Ljava/io/CharConversionException;-><init>(Ljava/lang/String;)V
-
-    throw v2
+    return v0
 .end method
 
-.method public final close()V
-    .locals 3
+.method public final b()Z
+    .locals 2
 
-    iget-object v0, p0, Lxxf;->b:Ljava/io/BufferedInputStream;
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->Z0:Luxf;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, v0, Luxf;->b:Lm89;
+
+    if-eqz v1, :cond_2
+
+    if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lxxf;->b:Ljava/io/BufferedInputStream;
-
-    iget-object v2, p0, Lxxf;->c:[B
-
-    if-eqz v2, :cond_0
-
-    iput-object v1, p0, Lxxf;->c:[B
-
-    iget-object v1, p0, Lxxf;->a:Lg27;
-
-    invoke-virtual {v1, v2}, Lg27;->a([B)V
-
     :cond_0
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lm89;->collapseActionView()Z
 
     :cond_1
-    return-void
-.end method
-
-.method public final read()I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lxxf;->z0:[C
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-array v0, v1, [C
-
-    iput-object v0, p0, Lxxf;->z0:[C
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lxxf;->z0:[C
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v0, v2, v1}, Lxxf;->read([CII)I
-
-    move-result v0
-
-    if-ge v0, v1, :cond_1
-
-    const/4 v0, -0x1
+    const/4 v0, 0x1
 
     return v0
 
-    .line 4
-    :cond_1
-    iget-object v0, p0, Lxxf;->z0:[C
-
-    aget-char v0, v0, v2
-
-    return v0
-.end method
-
-.method public final read([CII)I
-    .locals 12
-
-    .line 5
-    iget-object v0, p0, Lxxf;->c:[B
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v2, 0x1
-
-    if-ge p3, v2, :cond_1
-
-    return p3
-
-    :cond_1
-    if-ltz p2, :cond_15
-
-    add-int v3, p2, p3
-
-    .line 6
-    array-length v4, p1
-
-    if-gt v3, v4, :cond_15
-
-    .line 7
-    iget-char p3, p0, Lxxf;->Z:C
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x4
-
-    if-eqz p3, :cond_2
-
-    add-int/lit8 v0, p2, 0x1
-
-    .line 8
-    aput-char p3, p1, p2
-
-    .line 9
-    iput-char v4, p0, Lxxf;->Z:C
-
-    goto/16 :goto_4
-
-    .line 10
     :cond_2
-    iget p3, p0, Lxxf;->X:I
+    const/4 v0, 0x0
 
-    iget v6, p0, Lxxf;->o:I
+    return v0
+.end method
 
-    sub-int v7, p3, v6
+.method public final c(Z)V
+    .locals 1
 
-    if-ge v7, v5, :cond_e
+    iget-boolean v0, p0, Lxxf;->g:Z
 
-    .line 11
-    iget v8, p0, Lxxf;->x0:I
-
-    sub-int/2addr p3, v7
-
-    add-int/2addr p3, v8
-
-    iput p3, p0, Lxxf;->x0:I
-
-    .line 12
-    const-string p3, "Strange I/O stream, returned 0 bytes on read"
-
-    iget-object v8, p0, Lxxf;->a:Lg27;
-
-    const/4 v9, 0x0
-
-    iget-boolean v10, p0, Lxxf;->y0:Z
-
-    if-lez v7, :cond_4
-
-    if-lez v6, :cond_3
-
-    .line 13
-    invoke-static {v0, v6, v0, v4, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 14
-    iput v4, p0, Lxxf;->o:I
-
-    .line 15
-    :cond_3
-    iput v7, p0, Lxxf;->X:I
-
-    goto :goto_2
-
-    .line 16
-    :cond_4
-    iput v4, p0, Lxxf;->o:I
-
-    .line 17
-    iget-object v6, p0, Lxxf;->b:Ljava/io/BufferedInputStream;
-
-    if-nez v6, :cond_5
-
-    move v0, v1
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
-    :cond_5
-    invoke-virtual {v6, v0}, Ljava/io/InputStream;->read([B)I
+    :cond_0
+    iput-boolean p1, p0, Lxxf;->g:Z
+
+    iget-object p1, p0, Lxxf;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
+
+    if-gtz v0, :cond_1
 
     :goto_0
-    if-ge v0, v2, :cond_9
+    return-void
 
-    .line 18
-    iput v4, p0, Lxxf;->X:I
+    :cond_1
+    const/4 v0, 0x0
 
-    if-gez v0, :cond_8
+    invoke-static {p1, v0}, Lijf;->o(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
 
-    if-eqz v10, :cond_6
-
-    .line 19
-    iget-object p1, p0, Lxxf;->c:[B
-
-    if-eqz p1, :cond_6
-
-    .line 20
-    iput-object v9, p0, Lxxf;->c:[B
-
-    .line 21
-    invoke-virtual {v8, p1}, Lg27;->a([B)V
-
-    :cond_6
-    if-nez v7, :cond_7
-
-    :goto_1
-    return v1
-
-    .line 22
-    :cond_7
-    iget p1, p0, Lxxf;->X:I
-
-    iget p2, p0, Lxxf;->o:I
-
-    sub-int/2addr p1, p2
-
-    invoke-virtual {p0, p1}, Lxxf;->c(I)V
-
-    throw v9
-
-    .line 23
-    :cond_8
-    new-instance p1, Ljava/io/IOException;
-
-    invoke-direct {p1, p3}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
     throw p1
+.end method
 
-    .line 24
-    :cond_9
-    iput v0, p0, Lxxf;->X:I
+.method public final d()I
+    .locals 1
 
-    .line 25
-    :goto_2
-    iget v0, p0, Lxxf;->X:I
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    if-ge v0, v5, :cond_e
+    iget v0, v0, Lcyf;->b:I
 
-    .line 26
-    iget-object v4, p0, Lxxf;->b:Ljava/io/BufferedInputStream;
+    return v0
+.end method
 
-    if-nez v4, :cond_a
+.method public final e()Landroid/content/Context;
+    .locals 1
 
-    move v0, v1
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    goto :goto_3
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    :cond_a
-    iget-object v6, p0, Lxxf;->c:[B
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    array-length v7, v6
+    move-result-object v0
 
-    sub-int/2addr v7, v0
+    return-object v0
+.end method
 
-    invoke-virtual {v4, v6, v0, v7}, Ljava/io/InputStream;->read([BII)I
+.method public final f()Z
+    .locals 3
 
-    move-result v0
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    :goto_3
-    if-ge v0, v2, :cond_d
+    iget-object v1, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    if-gez v0, :cond_c
+    iget-object v2, p0, Lxxf;->i:Lsxf;
 
-    if-eqz v10, :cond_b
+    invoke-virtual {v1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 27
-    iget-object p1, p0, Lxxf;->c:[B
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz p1, :cond_b
+    sget-object v1, Ltyg;->a:Ljava/util/WeakHashMap;
 
-    .line 28
-    iput-object v9, p0, Lxxf;->c:[B
+    invoke-virtual {v0, v2}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
-    .line 29
-    invoke-virtual {v8, p1}, Lg27;->a([B)V
+    const/4 v0, 0x1
 
-    .line 30
-    :cond_b
-    iget p1, p0, Lxxf;->X:I
+    return v0
+.end method
 
-    invoke-virtual {p0, p1}, Lxxf;->c(I)V
+.method public final h()V
+    .locals 0
 
-    throw v9
+    return-void
+.end method
 
-    .line 31
-    :cond_c
-    new-instance p1, Ljava/io/IOException;
+.method public final i()V
+    .locals 2
 
-    invoke-direct {p1, p3}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    throw p1
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    .line 32
-    :cond_d
-    iget v4, p0, Lxxf;->X:I
+    iget-object v1, p0, Lxxf;->i:Lsxf;
 
-    add-int/2addr v4, v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    iput v4, p0, Lxxf;->X:I
+    return-void
+.end method
 
-    goto :goto_2
+.method public final j(ILandroid/view/KeyEvent;)Z
+    .locals 4
 
-    :cond_e
-    move v0, p2
+    invoke-virtual {p0}, Lxxf;->r()Landroid/view/Menu;
 
-    .line 33
-    :goto_4
-    iget p3, p0, Lxxf;->X:I
+    move-result-object v0
 
-    sub-int/2addr p3, v5
+    const/4 v1, 0x0
 
-    :goto_5
-    if-ge v0, v3, :cond_14
+    if-eqz v0, :cond_1
 
-    .line 34
-    iget v1, p0, Lxxf;->o:I
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getDeviceId()I
 
-    .line 35
-    iget-boolean v4, p0, Lxxf;->Y:Z
+    move-result v2
 
-    if-eqz v4, :cond_f
-
-    .line 36
-    iget-object v4, p0, Lxxf;->c:[B
-
-    aget-byte v5, v4, v1
-
-    shl-int/lit8 v5, v5, 0x8
-
-    add-int/lit8 v6, v1, 0x1
-
-    aget-byte v6, v4, v6
-
-    and-int/lit16 v6, v6, 0xff
-
-    or-int/2addr v5, v6
-
-    add-int/lit8 v6, v1, 0x2
-
-    .line 37
-    aget-byte v6, v4, v6
-
-    and-int/lit16 v6, v6, 0xff
-
-    shl-int/lit8 v6, v6, 0x8
-
-    add-int/lit8 v7, v1, 0x3
-
-    aget-byte v4, v4, v7
-
-    and-int/lit16 v4, v4, 0xff
-
-    or-int/2addr v4, v6
-
-    goto :goto_6
-
-    .line 38
-    :cond_f
-    iget-object v4, p0, Lxxf;->c:[B
-
-    aget-byte v5, v4, v1
-
-    and-int/lit16 v5, v5, 0xff
-
-    add-int/lit8 v6, v1, 0x1
-
-    aget-byte v6, v4, v6
-
-    and-int/lit16 v6, v6, 0xff
-
-    shl-int/lit8 v6, v6, 0x8
-
-    or-int/2addr v5, v6
-
-    add-int/lit8 v6, v1, 0x2
-
-    .line 39
-    aget-byte v6, v4, v6
-
-    and-int/lit16 v6, v6, 0xff
-
-    add-int/lit8 v7, v1, 0x3
-
-    aget-byte v4, v4, v7
-
-    shl-int/lit8 v4, v4, 0x8
-
-    or-int/2addr v4, v6
-
-    move v11, v5
-
-    move v5, v4
-
-    move v4, v11
-
-    :goto_6
-    add-int/lit8 v1, v1, 0x4
-
-    .line 40
-    iput v1, p0, Lxxf;->o:I
-
-    if-eqz v5, :cond_12
-
-    const v6, 0xffff
-
-    and-int/2addr v5, v6
-
-    add-int/lit8 v6, v5, -0x1
-
-    const/16 v7, 0x10
-
-    shl-int/2addr v6, v7
-
-    or-int/2addr v4, v6
-
-    if-gt v5, v7, :cond_11
-
-    add-int/lit8 v5, v0, 0x1
-
-    shr-int/lit8 v6, v4, 0xa
-
-    const v7, 0xd800
-
-    add-int/2addr v6, v7
-
-    int-to-char v6, v6
-
-    .line 41
-    aput-char v6, p1, v0
-
-    and-int/lit16 v0, v4, 0x3ff
-
-    const v6, 0xdc00
-
-    or-int/2addr v0, v6
-
-    if-lt v5, v3, :cond_10
-
-    int-to-char p1, v4
-
-    .line 42
-    iput-char p1, p0, Lxxf;->Z:C
-
-    :goto_7
-    move v0, v5
-
-    goto :goto_9
-
-    :cond_10
-    move v4, v0
-
-    move v0, v5
-
-    goto :goto_8
-
-    :cond_11
-    sub-int/2addr v0, p2
-
-    const p1, 0x10ffff
-
-    .line 43
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string p2, " (above 0x%08x)"
-
-    invoke-static {p2, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 44
-    iget p2, p0, Lxxf;->x0:I
-
-    iget p3, p0, Lxxf;->o:I
-
-    add-int/2addr p2, p3
-
-    sub-int/2addr p2, v2
-
-    iget p3, p0, Lxxf;->w0:I
-
-    add-int/2addr p3, v0
-
-    .line 45
-    new-instance v0, Ljava/io/CharConversionException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Invalid UTF-32 character 0x"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v2}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    const-string p1, " at char #"
+    const/4 v3, 0x1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v2, v3, :cond_0
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string p1, ", byte #"
+    :cond_0
+    move v3, v1
 
-    const-string p3, ")"
+    :goto_0
+    invoke-interface {v0, v3}, Landroid/view/Menu;->setQwertyMode(Z)V
 
-    .line 46
-    invoke-static {v1, p1, p2, p3}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, p1, p2, v1}, Landroid/view/Menu;->performShortcut(ILandroid/view/KeyEvent;I)Z
 
-    move-result-object p1
+    move-result p1
 
-    .line 47
-    invoke-direct {v0, p1}, Ljava/io/CharConversionException;-><init>(Ljava/lang/String;)V
+    return p1
 
-    throw v0
+    :cond_1
+    return v1
+.end method
 
-    :cond_12
-    :goto_8
-    add-int/lit8 v5, v0, 0x1
+.method public final k(Landroid/view/KeyEvent;)Z
+    .locals 1
 
-    int-to-char v4, v4
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
-    .line 48
-    aput-char v4, p1, v0
+    move-result p1
 
-    if-le v1, p3, :cond_13
+    const/4 v0, 0x1
 
-    goto :goto_7
+    if-ne p1, v0, :cond_0
 
-    :cond_13
-    move v0, v5
+    invoke-virtual {p0}, Lxxf;->l()Z
 
-    goto/16 :goto_5
+    :cond_0
+    return v0
+.end method
 
-    :cond_14
-    :goto_9
-    sub-int/2addr v0, p2
+.method public final l()Z
+    .locals 1
 
-    .line 49
-    iget p1, p0, Lxxf;->w0:I
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    add-int/2addr p1, v0
+    iget-object v0, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    iput p1, p0, Lxxf;->w0:I
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->w()Z
+
+    move-result v0
 
     return v0
+.end method
 
-    .line 50
-    :cond_15
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+.method public final m(Z)V
+    .locals 0
 
-    const-string v1, ","
+    return-void
+.end method
 
-    const-string v2, "), cbuf["
+.method public final n(Z)V
+    .locals 0
 
-    .line 51
-    const-string v3, "read(buf,"
+    return-void
+.end method
 
-    invoke-static {v3, p2, v1, p3, v2}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+.method public final o(Ljava/lang/CharSequence;)V
+    .locals 3
 
-    move-result-object p2
+    iget-object v0, p0, Lxxf;->b:Lcyf;
 
-    .line 52
-    array-length p1, p1
+    iget-boolean v1, v0, Lcyf;->g:Z
 
-    const-string p3, "]"
+    if-nez v1, :cond_0
 
-    .line 53
-    invoke-static {p2, p1, p3}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    iget-object v1, v0, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
 
-    move-result-object p1
+    iput-object p1, v0, Lcyf;->h:Ljava/lang/CharSequence;
 
-    .line 54
-    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    iget v2, v0, Lcyf;->b:I
 
-    throw v0
+    and-int/lit8 v2, v2, 0x8
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v0, v0, Lcyf;->g:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ltyg;->o(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final r()Landroid/view/Menu;
+    .locals 4
+
+    iget-boolean v0, p0, Lxxf;->f:Z
+
+    iget-object v1, p0, Lxxf;->b:Lcyf;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lfs0;
+
+    invoke-direct {v0, p0}, Lfs0;-><init>(Ljava/lang/Object;)V
+
+    new-instance v2, Lv1f;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3, p0}, Lv1f;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v1, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iput-object v0, v3, Landroidx/appcompat/widget/Toolbar;->a1:Lfs0;
+
+    iput-object v2, v3, Landroidx/appcompat/widget/Toolbar;->b1:Lv1f;
+
+    iget-object v3, v3, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
+
+    if-eqz v3, :cond_0
+
+    iput-object v0, v3, Landroidx/appcompat/widget/ActionMenuView;->s0:Lfs0;
+
+    iput-object v2, v3, Landroidx/appcompat/widget/ActionMenuView;->t0:Lg89;
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lxxf;->f:Z
+
+    :cond_1
+    iget-object v0, v1, Lcyf;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
+
+    move-result-object v0
+
+    return-object v0
 .end method

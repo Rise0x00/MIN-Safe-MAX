@@ -1,85 +1,61 @@
-.class public final Lnod;
+.class public final synthetic Lnod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqod;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lnod;->a:I
+    iput-object p1, p0, Lnod;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x4
 
-    if-ne p0, p1, :cond_0
+    if-ne p2, p1, :cond_0
 
-    return v0
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_0
+
+    new-instance p1, Lpod;
+
+    iget-object p2, p0, Lnod;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    iget-object p3, p2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
+
+    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/os/Parcelable;
+
+    invoke-direct {p1, p3}, Lpod;-><init>(Landroid/os/Parcelable;)V
+
+    invoke-virtual {p2, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->B0(Lrod;)V
 
     :cond_0
-    instance-of v1, p1, Lnod;
+    const/4 p1, 0x0
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnod;
-
-    iget v1, p0, Lnod;->a:I
-
-    iget p1, p1, Lnod;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lnod;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "AlbumHeightChanged(height="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lnod;->a:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

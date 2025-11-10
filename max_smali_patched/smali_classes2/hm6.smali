@@ -1,59 +1,129 @@
-.class public final Lhm6;
-.super Lnz3;
+.class public final synthetic Lhm6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La1e;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lim6;
-
-.field public Z:I
-
-.field public o:Lim6;
+.field public final synthetic a:Len6;
 
 
 # direct methods
-.method public constructor <init>(Lim6;Lnz3;)V
+.method public synthetic constructor <init>(Len6;)V
     .locals 0
 
-    iput-object p1, p0, Lhm6;->Y:Lim6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lhm6;->a:Len6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final X(Ljava/util/Set;)V
+    .locals 6
 
-    iput-object p1, p0, Lhm6;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lhm6;->a:Len6;
 
-    iget p1, p0, Lhm6;->Z:I
+    iget-object v1, v0, Len6;->u0:La1f;
 
-    const/high16 v0, -0x80000000
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    or-int/2addr p1, v0
+    move-result v2
 
-    iput p1, p0, Lhm6;->Z:I
+    const/16 v3, 0x64
 
-    const-wide/16 v4, 0x0
+    const/4 v4, 0x1
 
-    const/4 v6, 0x0
+    if-lt v2, v3, :cond_0
 
-    iget-object v0, p0, Lhm6;->Y:Lim6;
+    move v2, v4
 
-    const-wide/16 v1, 0x0
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
 
     const/4 v3, 0x0
 
-    move-object v7, p0
+    invoke-virtual {v1, v3, v2}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual/range {v0 .. v7}, Lim6;->a(JLxm2;JLjava/lang/String;Lnz3;)Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v5, "onSelectedMediasChangeListener(), selectedCount "
+
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "en6"
+
+    invoke-static {v2, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Len6;->K0:Lgye;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, v3}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_1
+    iget-object v1, v0, Len6;->d:Llk;
+
+    new-instance v2, Lym6;
+
+    invoke-direct {v2, v0, p1, v3}, Lym6;-><init>(Len6;Ljava/util/Set;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v2, p1}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
 
     move-result-object p1
 
-    return-object p1
+    iput-object p1, v0, Len6;->K0:Lgye;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v0, v4}, Len6;->v(Len6;I)V
+
+    :goto_1
+    iget-object p1, v0, Len6;->X:Lxl6;
+
+    iget-object v0, v0, Len6;->E0:Lc1e;
+
+    invoke-static {v0}, Lfei;->b(Lc1e;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iget-object p1, p1, Lxl6;->c:Laf5;
+
+    new-instance v1, Lrl6;
+
+    invoke-direct {v1, v0}, Lrl6;-><init>(Ljava/util/List;)V
+
+    invoke-static {p1, v1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    return-void
 .end method

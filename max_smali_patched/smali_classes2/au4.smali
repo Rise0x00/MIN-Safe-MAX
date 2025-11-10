@@ -1,650 +1,865 @@
 .class public final Lau4;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static volatile y:Lau4;
 
 
 # instance fields
-.field public X:Lq49;
+.field public a:I
 
-.field public Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public b:I
 
-.field public Z:I
+.field public c:I
 
-.field public synthetic w0:Ljava/lang/Object;
+.field public d:I
 
-.field public final synthetic x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+.field public l:I
+
+.field public m:I
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:I
+
+.field public v:F
+
+.field public w:F
+
+.field public x:F
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a()Lau4;
+    .locals 2
 
-    iput-object p1, p0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    sget-object v0, Lau4;->y:Lau4;
 
-    const/4 p1, 0x2
+    if-nez v0, :cond_1
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-class v1, Lau4;
 
-    return-void
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lau4;->y:Lau4;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lau4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0}, Lau4;->b()V
+
+    sput-object v0, Lau4;->y:Lau4;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    return-object v0
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_1
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lau4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lau4;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lau4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lau4;
-
-    iget-object v1, p0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-direct {v0, v1, p2}, Lau4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lau4;->w0:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+.method public final b()V
+    .locals 22
 
     move-object/from16 v0, p0
 
-    sget-object v1, Lh34;->b:Lh34;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    sget-object v2, Lf34;->a:Lf34;
+    float-to-int v2, v1
 
-    iget v3, v0, Lau4;->Z:I
-
-    const/4 v4, 0x5
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x4
-
-    const/4 v9, 0x0
-
-    if-eqz v3, :cond_5
-
-    if-eq v3, v7, :cond_4
-
-    if-eq v3, v6, :cond_3
-
-    if-eq v3, v5, :cond_2
-
-    if-eq v3, v8, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object/from16 v1, p1
-
-    goto/16 :goto_9
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_7
-
-    :cond_2
-    iget-object v3, v0, Lau4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v5, v0, Lau4;->X:Lq49;
-
-    iget-object v6, v0, Lau4;->w0:Ljava/lang/Object;
-
-    check-cast v6, Le34;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object v7, v6
-
-    move-object v6, v5
-
-    move-object/from16 v5, p1
-
-    goto/16 :goto_2
-
-    :cond_3
-    iget-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    check-cast v3, Le34;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object/from16 v6, p1
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    check-cast v3, Le34;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    check-cast v3, Le34;
-
-    iget-object v10, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    iput v7, v0, Lau4;->Z:I
-
-    invoke-virtual {v10, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    if-ne v7, v2, :cond_6
-
-    goto/16 :goto_8
-
-    :cond_6
-    :goto_0
-    iget-object v7, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-wide v10, v7, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->a:J
-
-    const-wide/16 v12, -0x1
-
-    cmp-long v10, v10, v12
-
-    if-eqz v10, :cond_1d
-
-    iget-wide v10, v7, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b:J
-
-    cmp-long v10, v10, v12
-
-    if-nez v10, :cond_7
-
-    goto/16 :goto_b
-
-    :cond_7
-    iget-object v7, v7, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->C0:Ls5f;
-
-    invoke-virtual {v7}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lr8f;
-
-    check-cast v7, Lwla;
-
-    invoke-virtual {v7}, Lwla;->b()Ly24;
-
-    move-result-object v7
-
-    new-instance v10, Lzt4;
-
-    iget-object v11, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    invoke-direct {v10, v11, v9}, Lzt4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lkotlin/coroutines/Continuation;)V
-
-    iput-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    iput v6, v0, Lau4;->Z:I
-
-    invoke-static {v7, v10, v0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-ne v6, v2, :cond_8
-
-    goto/16 :goto_8
-
-    :cond_8
-    :goto_1
-    check-cast v6, Lq49;
-
-    if-nez v6, :cond_9
-
-    invoke-static {}, Lnx7;->a()Lkx7;
-
-    move-result-object v1
-
-    return-object v1
-
-    :cond_9
-    iget-object v7, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v10, v7, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->o:Ls5f;
-
-    invoke-virtual {v10}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lm13;
-
-    iget-object v11, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-wide v11, v11, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->a:J
-
-    iput-object v3, v0, Lau4;->w0:Ljava/lang/Object;
-
-    iput-object v6, v0, Lau4;->X:Lq49;
-
-    iput-object v7, v0, Lau4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput v5, v0, Lau4;->Z:I
-
-    check-cast v10, Lm23;
-
-    invoke-virtual {v10, v11, v12, v0}, Lm23;->K(JLnz3;)Ljava/lang/Comparable;
-
-    move-result-object v5
-
-    if-ne v5, v2, :cond_a
-
-    goto/16 :goto_8
-
-    :cond_a
-    move-object/from16 v16, v7
-
-    move-object v7, v3
-
-    move-object/from16 v3, v16
-
-    :goto_2
-    check-cast v5, Lm82;
-
-    if-eqz v5, :cond_b
-
-    invoke-virtual {v5}, Lm82;->k0()V
-
-    iget-object v5, v5, Lm82;->y0:Ljava/lang/CharSequence;
-
-    if-nez v5, :cond_c
-
-    :cond_b
-    const-string v5, ""
-
-    :cond_c
-    iput-object v5, v3, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->J0:Ljava/lang/CharSequence;
-
-    iget-object v3, v6, Lq49;->C0:Lfah;
-
-    if-eqz v3, :cond_1c
-
-    invoke-virtual {v3}, Lfah;->g()I
-
-    move-result v5
-
-    if-nez v5, :cond_d
-
-    goto/16 :goto_a
-
-    :cond_d
-    iget-object v5, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v10, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->c:Ljava/lang/String;
-
-    if-nez v10, :cond_14
-
-    iget-object v10, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->C0:Ls5f;
-
-    iget-object v11, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->G0:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v3}, Lfah;->g()I
-
-    move-result v12
-
-    const/4 v13, 0x0
-
-    move v14, v13
-
-    move v15, v14
-
-    :goto_3
-    if-ge v13, v12, :cond_11
-
-    invoke-virtual {v3, v13}, Lfah;->e(I)Lo10;
-
-    move-result-object v4
-
-    if-nez v4, :cond_e
-
-    move-object/from16 p1, v10
-
-    goto :goto_4
-
-    :cond_e
-    iget-object v8, v4, Lo10;->b:Lc10;
-
-    if-eqz v8, :cond_f
-
-    add-int/lit8 v15, v15, 0x1
-
-    invoke-virtual {v10}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lr8f;
-
-    check-cast v8, Lwla;
-
-    invoke-virtual {v8}, Lwla;->d()Ly24;
-
-    move-result-object v8
-
-    move-object/from16 p1, v10
-
-    new-instance v10, Ldu4;
-
-    invoke-direct {v10, v5, v4, v9}, Ldu4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v7, v8, v1, v10}, Lq9e;->a(Le34;Lw24;Lh34;Llf6;)Ltm4;
-
-    move-result-object v4
-
-    invoke-virtual {v11, v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
-
-    :cond_f
-    move-object/from16 p1, v10
-
-    iget-object v8, v4, Lo10;->d:Ln10;
-
-    if-eqz v8, :cond_10
-
-    add-int/lit8 v14, v14, 0x1
-
-    invoke-virtual/range {p1 .. p1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lr8f;
-
-    check-cast v8, Lwla;
-
-    invoke-virtual {v8}, Lwla;->d()Ly24;
-
-    move-result-object v8
-
-    new-instance v10, Leu4;
-
-    invoke-direct {v10, v5, v4, v6, v9}, Leu4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v7, v8, v1, v10}, Lq9e;->a(Le34;Lw24;Lh34;Llf6;)Ltm4;
-
-    move-result-object v4
-
-    invoke-virtual {v11, v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_10
-    :goto_4
-    add-int/lit8 v13, v13, 0x1
-
-    move-object/from16 v10, p1
-
-    const/4 v4, 0x5
-
-    const/4 v8, 0x4
-
-    goto :goto_3
-
-    :cond_11
-    if-ne v12, v14, :cond_12
-
-    sget v1, Ln9d;->j:I
-
-    goto :goto_5
-
-    :cond_12
-    if-ne v12, v15, :cond_13
-
-    sget v1, Ln9d;->g:I
-
-    goto :goto_5
-
-    :cond_13
-    sget v1, Ln9d;->f:I
-
-    :goto_5
-    iput v1, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->K0:I
-
-    goto :goto_6
-
-    :cond_14
-    iget-object v4, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->C0:Ls5f;
-
-    iget-object v8, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->G0:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v3, v10}, Lfah;->h(Ljava/lang/String;)Lo10;
-
-    move-result-object v3
-
-    if-nez v3, :cond_15
-
-    goto :goto_6
-
-    :cond_15
-    iget-object v10, v3, Lo10;->b:Lc10;
-
-    if-eqz v10, :cond_16
-
-    sget v6, Ln9d;->h:I
-
-    iput v6, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->K0:I
-
-    invoke-virtual {v4}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lr8f;
-
-    check-cast v4, Lwla;
-
-    invoke-virtual {v4}, Lwla;->d()Ly24;
-
-    move-result-object v4
-
-    new-instance v6, Lbu4;
-
-    invoke-direct {v6, v5, v3, v9}, Lbu4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v7, v4, v1, v6}, Lq9e;->a(Le34;Lw24;Lh34;Llf6;)Ltm4;
-
-    move-result-object v1
-
-    invoke-virtual {v8, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_6
-
-    :cond_16
-    iget-object v10, v3, Lo10;->d:Ln10;
-
-    if-eqz v10, :cond_17
-
-    sget v10, Ln9d;->i:I
-
-    iput v10, v5, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->K0:I
-
-    invoke-virtual {v4}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lr8f;
-
-    check-cast v4, Lwla;
-
-    invoke-virtual {v4}, Lwla;->d()Ly24;
-
-    move-result-object v4
-
-    new-instance v10, Lcu4;
-
-    invoke-direct {v10, v5, v3, v6, v9}, Lcu4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v7, v4, v1, v10}, Lq9e;->a(Le34;Lw24;Lh34;Llf6;)Ltm4;
-
-    move-result-object v1
-
-    invoke-virtual {v8, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_17
-    :goto_6
-    iget-object v1, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput-object v9, v0, Lau4;->w0:Ljava/lang/Object;
-
-    iput-object v9, v0, Lau4;->X:Lq49;
-
-    iput-object v9, v0, Lau4;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    const/4 v3, 0x4
-
-    iput v3, v0, Lau4;->Z:I
-
-    invoke-virtual {v1, v0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v2, :cond_18
-
-    goto :goto_8
-
-    :cond_18
-    :goto_7
-    iget-object v1, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->G0:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    const/4 v3, 0x5
-
-    iput v3, v0, Lau4;->Z:I
-
-    invoke-static {v1, v0}, Lhd6;->d(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v2, :cond_19
-
-    :goto_8
-    return-object v2
-
-    :cond_19
-    :goto_9
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1a
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v2}, Leu4;->b(I)I
 
     move-result v2
 
-    if-eqz v2, :cond_1b
+    iput v2, v0, Lau4;->a:I
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/high16 v2, 0x40000000    # 2.0f
 
-    move-result-object v2
+    float-to-int v3, v2
 
-    check-cast v2, Lnx7;
+    invoke-static {v3}, Leu4;->b(I)I
 
-    instance-of v3, v2, Lmx7;
+    move-result v3
 
-    if-nez v3, :cond_1a
+    iput v3, v0, Lau4;->b:I
 
-    iget-object v1, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    const/high16 v3, 0x40400000    # 3.0f
 
-    iget-object v1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->L0:Ljava/lang/String;
+    float-to-int v4, v3
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {v4}, Leu4;->b(I)I
 
-    const-string v4, "finish with error: "
+    move-result v4
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput v4, v0, Lau4;->c:I
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/high16 v4, 0x40800000    # 4.0f
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    float-to-int v5, v4
 
-    move-result-object v2
+    invoke-static {v5}, Leu4;->b(I)I
 
-    invoke-static {v1, v2, v9}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v5
 
-    invoke-static {}, Lnx7;->a()Lkx7;
+    iput v5, v0, Lau4;->d:I
 
-    move-result-object v1
+    const/high16 v5, 0x40a00000    # 5.0f
 
-    return-object v1
+    float-to-int v6, v5
 
-    :cond_1b
-    iget-object v1, v0, Lau4;->x0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-static {v6}, Leu4;->b(I)I
 
-    iget-object v1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->L0:Ljava/lang/String;
+    move-result v6
 
-    const-string v2, "finish"
+    iput v6, v0, Lau4;->e:I
 
-    invoke-static {v1, v2}, Lox9;->L(Ljava/lang/String;Ljava/lang/String;)V
+    const/high16 v6, 0x40c00000    # 6.0f
 
-    invoke-static {}, Lnx7;->b()Lmx7;
+    float-to-int v7, v6
 
-    move-result-object v1
+    invoke-static {v7}, Leu4;->b(I)I
 
-    return-object v1
+    move-result v7
 
-    :cond_1c
-    :goto_a
-    invoke-static {}, Lnx7;->a()Lkx7;
+    iput v7, v0, Lau4;->f:I
 
-    move-result-object v1
+    const/high16 v7, 0x40e00000    # 7.0f
 
-    return-object v1
+    float-to-int v8, v7
 
-    :cond_1d
-    :goto_b
-    invoke-static {}, Lnx7;->a()Lkx7;
+    invoke-static {v8}, Leu4;->b(I)I
 
-    move-result-object v1
+    move-result v8
 
-    return-object v1
+    iput v8, v0, Lau4;->g:I
+
+    const/high16 v8, 0x41000000    # 8.0f
+
+    float-to-int v9, v8
+
+    invoke-static {v9}, Leu4;->b(I)I
+
+    move-result v9
+
+    iput v9, v0, Lau4;->h:I
+
+    const/high16 v9, 0x41100000    # 9.0f
+
+    float-to-int v10, v9
+
+    invoke-static {v10}, Leu4;->b(I)I
+
+    const/high16 v10, 0x41200000    # 10.0f
+
+    float-to-int v11, v10
+
+    invoke-static {v11}, Leu4;->b(I)I
+
+    move-result v11
+
+    iput v11, v0, Lau4;->i:I
+
+    const/high16 v11, 0x41300000    # 11.0f
+
+    float-to-int v12, v11
+
+    invoke-static {v12}, Leu4;->b(I)I
+
+    const/high16 v12, 0x41400000    # 12.0f
+
+    float-to-int v13, v12
+
+    invoke-static {v13}, Leu4;->b(I)I
+
+    move-result v13
+
+    iput v13, v0, Lau4;->j:I
+
+    const/high16 v13, 0x41500000    # 13.0f
+
+    float-to-int v14, v13
+
+    invoke-static {v14}, Leu4;->b(I)I
+
+    const/high16 v14, 0x41600000    # 14.0f
+
+    float-to-int v15, v14
+
+    invoke-static {v15}, Leu4;->b(I)I
+
+    const/high16 v15, 0x41700000    # 15.0f
+
+    move/from16 v16, v1
+
+    float-to-int v1, v15
+
+    invoke-static {v1}, Leu4;->b(I)I
+
+    move-result v1
+
+    iput v1, v0, Lau4;->k:I
+
+    const/high16 v1, 0x41800000    # 16.0f
+
+    move/from16 v17, v2
+
+    float-to-int v2, v1
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41880000    # 17.0f
+
+    move/from16 v18, v1
+
+    float-to-int v1, v2
+
+    invoke-static {v1}, Leu4;->b(I)I
+
+    const/high16 v1, 0x41900000    # 18.0f
+
+    move/from16 v19, v2
+
+    float-to-int v2, v1
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41980000    # 19.0f
+
+    move/from16 v20, v1
+
+    float-to-int v1, v2
+
+    invoke-static {v1}, Leu4;->b(I)I
+
+    const/high16 v1, 0x41a00000    # 20.0f
+
+    move/from16 v21, v2
+
+    float-to-int v2, v1
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->l:I
+
+    const/high16 v2, 0x41a80000    # 21.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41b00000    # 22.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41b80000    # 23.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41c00000    # 24.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41c80000    # 25.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->m:I
+
+    const/high16 v2, 0x41d00000    # 26.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->n:I
+
+    const/high16 v2, 0x41d80000    # 27.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41e00000    # 28.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41e80000    # 29.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41f00000    # 30.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x41f80000    # 31.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42000000    # 32.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->o:I
+
+    const/high16 v2, 0x42040000    # 33.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42080000    # 34.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x420c0000    # 35.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42100000    # 36.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->p:I
+
+    const/high16 v2, 0x42140000    # 37.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42180000    # 38.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x421c0000    # 39.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42200000    # 40.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->q:I
+
+    const/high16 v2, 0x42240000    # 41.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42280000    # 42.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x422c0000    # 43.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42300000    # 44.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42340000    # 45.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42380000    # 46.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x423c0000    # 47.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42400000    # 48.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42440000    # 49.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42480000    # 50.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x424c0000    # 51.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42500000    # 52.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42540000    # 53.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42580000    # 54.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x425c0000    # 55.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42600000    # 56.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->r:I
+
+    const/high16 v2, 0x42640000    # 57.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42680000    # 58.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x426c0000    # 59.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42700000    # 60.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->s:I
+
+    const/high16 v2, 0x42740000    # 61.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42780000    # 62.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x427c0000    # 63.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42800000    # 64.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42820000    # 65.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42840000    # 66.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42860000    # 67.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42880000    # 68.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x428a0000    # 69.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x428c0000    # 70.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x428e0000    # 71.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42900000    # 72.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42920000    # 73.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42940000    # 74.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42960000    # 75.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42980000    # 76.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x429a0000    # 77.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x429c0000    # 78.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x429e0000    # 79.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42a00000    # 80.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->t:I
+
+    const/high16 v2, 0x42a20000    # 81.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42a40000    # 82.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42a60000    # 83.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42a80000    # 84.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42aa0000    # 85.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42ac0000    # 86.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42ae0000    # 87.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42b00000    # 88.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42b20000    # 89.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42b40000    # 90.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42b60000    # 91.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42b80000    # 92.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42ba0000    # 93.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42bc0000    # 94.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42be0000    # 95.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42c00000    # 96.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42c20000    # 97.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42c40000    # 98.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42c60000    # 99.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    float-to-int v2, v2
+
+    invoke-static {v2}, Leu4;->b(I)I
+
+    move-result v2
+
+    iput v2, v0, Lau4;->u:I
+
+    invoke-static/range {v16 .. v16}, Leu4;->e(F)F
+
+    invoke-static/range {v17 .. v17}, Leu4;->e(F)F
+
+    invoke-static {v3}, Leu4;->e(F)F
+
+    invoke-static {v4}, Leu4;->e(F)F
+
+    move-result v2
+
+    iput v2, v0, Lau4;->v:F
+
+    invoke-static {v5}, Leu4;->e(F)F
+
+    invoke-static {v6}, Leu4;->e(F)F
+
+    invoke-static {v7}, Leu4;->e(F)F
+
+    invoke-static {v8}, Leu4;->e(F)F
+
+    invoke-static {v9}, Leu4;->e(F)F
+
+    invoke-static {v10}, Leu4;->e(F)F
+
+    move-result v2
+
+    iput v2, v0, Lau4;->w:F
+
+    invoke-static {v11}, Leu4;->e(F)F
+
+    invoke-static {v12}, Leu4;->e(F)F
+
+    invoke-static {v13}, Leu4;->e(F)F
+
+    invoke-static {v14}, Leu4;->e(F)F
+
+    invoke-static {v15}, Leu4;->e(F)F
+
+    invoke-static/range {v18 .. v18}, Leu4;->e(F)F
+
+    move-result v2
+
+    iput v2, v0, Lau4;->x:F
+
+    invoke-static/range {v19 .. v19}, Leu4;->e(F)F
+
+    invoke-static/range {v20 .. v20}, Leu4;->e(F)F
+
+    invoke-static/range {v21 .. v21}, Leu4;->e(F)F
+
+    invoke-static {v1}, Leu4;->e(F)F
+
+    return-void
 .end method

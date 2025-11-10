@@ -1,328 +1,324 @@
 .class public final Lbi8;
-.super Landroid/service/media/MediaBrowserService;
+.super Li2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lum4;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lci8;
-
-.field public final synthetic c:Lci8;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lci8;Landroid/content/Context;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lbi8;->c:Lci8;
+    iput p1, p0, Lbi8;->a:I
 
-    iput-object p1, p0, Lbi8;->b:Lci8;
+    iput-object p2, p0, Lbi8;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lbi8;->a:Lum4;
-
-    invoke-direct {p0}, Landroid/service/media/MediaBrowserService;-><init>()V
-
-    invoke-virtual {p0, p2}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/service/media/MediaBrowserService$BrowserRoot;
-    .locals 9
+.method public bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-static {p3}, Lys8;->g(Landroid/os/Bundle;)V
+    iget v0, p0, Lbi8;->a:I
 
-    iget-object v0, p0, Lbi8;->a:Lum4;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v0, Lum4;->d:Ljava/lang/Object;
+    invoke-super {p0, p1}, Lk0;->contains(Ljava/lang/Object;)Z
 
-    move-object v3, v1
+    move-result p1
 
-    check-cast v3, Lau8;
+    return p1
 
-    const/4 v1, 0x0
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
 
-    if-nez p3, :cond_0
+    if-nez v0, :cond_0
 
-    move-object p3, v1
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Landroid/os/Bundle;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-direct {v2, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lk0;->contains(Ljava/lang/Object;)Z
 
-    move-object p3, v2
+    move-result p1
 
     :goto_0
-    const/4 v2, -0x1
+    return p1
 
-    if-eqz p3, :cond_3
+    nop
 
-    const/4 v4, 0x0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v5, "extra_client_version"
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p3, v5, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    iget v0, p0, Lbi8;->a:I
 
-    move-result v4
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v4, :cond_3
+    iget-object v0, p0, Lbi8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p3, v5}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    check-cast v0, Ljava/util/List;
 
-    new-instance v4, Landroid/os/Messenger;
+    invoke-static {p1, p0}, Lab3;->s(ILjava/util/List;)I
 
-    iget-object v5, v3, Lau8;->Z:Lix;
+    move-result p1
 
-    invoke-direct {v4, v5}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
-
-    iput-object v4, v0, Lum4;->c:Ljava/lang/Object;
-
-    const-string v4, "extra_service_version"
-
-    const/4 v5, 0x2
-
-    invoke-static {v5, v4}, Lfl7;->d(ILjava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lum4;->c:Ljava/lang/Object;
-
-    check-cast v5, Landroid/os/Messenger;
-
-    invoke-virtual {v5}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
-
-    move-result-object v5
-
-    const-string v6, "extra_messenger"
-
-    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    iget-object v5, v3, Lau8;->w0:Lxs8;
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v5}, Lxs8;->a()Lz17;
-
-    move-result-object v5
-
-    if-nez v5, :cond_1
-
-    move-object v5, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v5}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v5
-
-    :goto_1
-    const-string v6, "extra_session_binder"
-
-    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v5, v0, Lum4;->a:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_2
-    const-string v5, "extra_calling_pid"
-
-    invoke-virtual {p3, v5, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    invoke-virtual {p3, v5}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
-
-    move-object v8, v4
-
-    :goto_3
-    move v5, v2
-
-    goto :goto_4
-
-    :cond_3
-    move-object v8, v1
-
-    goto :goto_3
-
-    :goto_4
-    new-instance v2, Lai8;
-
-    const/4 v7, 0x0
-
-    move-object v4, p1
-
-    move v6, p2
-
-    invoke-direct/range {v2 .. v7}, Lai8;-><init>(Lau8;Ljava/lang/String;IILii8;)V
-
-    iput-object v2, v3, Lau8;->Y:Lai8;
-
-    invoke-virtual {v3, p3}, Lau8;->b(Landroid/os/Bundle;)Lgz3;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object v1, v3, Lau8;->Y:Lai8;
+    return-object p1
 
-    if-nez p1, :cond_4
+    :pswitch_0
+    iget-object v0, p0, Lbi8;->b:Ljava/lang/Object;
 
-    move-object p1, v1
+    check-cast v0, Lqoh;
 
-    goto :goto_6
+    iget-object v0, v0, Lqoh;->b:Ljava/lang/Object;
 
-    :cond_4
-    iget-object p2, v0, Lum4;->c:Ljava/lang/Object;
+    check-cast v0, Ljava/util/regex/Matcher;
 
-    check-cast p2, Landroid/os/Messenger;
+    invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    if-eqz p2, :cond_5
+    move-result-object p1
 
-    iget-object p2, v3, Lau8;->o:Ljava/util/ArrayList;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string p1, ""
 
-    :cond_5
-    iget-object p1, p1, Lgz3;->a:Landroid/os/Bundle;
+    :cond_0
+    return-object p1
 
-    if-nez v8, :cond_6
+    nop
 
-    move-object v8, p1
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz p1, :cond_7
-
-    invoke-virtual {v8, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_7
-    :goto_5
-    new-instance p1, Lgz3;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, v8, p2}, Lgz3;-><init>(Landroid/os/Bundle;I)V
-
-    :goto_6
-    if-nez p1, :cond_8
-
-    return-object v1
-
-    :cond_8
-    new-instance p2, Landroid/service/media/MediaBrowserService$BrowserRoot;
-
-    const-string p3, "androidx.media3.session.MediaLibraryService"
-
-    iget-object p1, p1, Lgz3;->a:Landroid/os/Bundle;
-
-    invoke-direct {p2, p3, p1}, Landroid/service/media/MediaBrowserService$BrowserRoot;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
+.method public final getSize()I
     .locals 1
 
-    .line 1
-    new-instance p1, Lf7d;
+    iget v0, p0, Lbi8;->a:I
 
-    const/16 v0, 0x14
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lf7d;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lbi8;->b:Ljava/lang/Object;
 
-    .line 2
-    iget-object p2, p0, Lbi8;->a:Lum4;
+    check-cast v0, Ljava/util/List;
 
-    iget-object p2, p2, Lum4;->d:Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    check-cast p2, Lau8;
+    move-result v0
 
-    iget-object v0, p2, Lau8;->c:Lai8;
+    return v0
 
-    iput-object v0, p2, Lau8;->Y:Lai8;
+    :pswitch_0
+    iget-object v0, p0, Lbi8;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Lqoh;
 
-    .line 3
-    invoke-virtual {p1, v0}, Lf7d;->w(Ljava/lang/Object;)V
+    iget-object v0, v0, Lqoh;->b:Ljava/lang/Object;
 
-    .line 4
-    iput-object v0, p2, Lau8;->Y:Lai8;
+    check-cast v0, Ljava/util/regex/Matcher;
 
-    return-void
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;Landroid/os/Bundle;)V
+.method public bridge indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lbi8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Li2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Li2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public iterator()Ljava/util/Iterator;
     .locals 2
 
-    .line 5
-    invoke-static {p3}, Lys8;->g(Landroid/os/Bundle;)V
+    iget v0, p0, Lbi8;->a:I
 
-    .line 6
-    iget-object p1, p0, Lbi8;->c:Lci8;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lci8;->f:Lau8;
+    invoke-super {p0}, Li2;->iterator()Ljava/util/Iterator;
 
-    iget-object p3, p1, Lau8;->c:Lai8;
+    move-result-object v0
 
-    .line 7
-    new-instance v0, Lf7d;
+    return-object v0
 
-    const/16 v1, 0x14
+    :pswitch_0
+    new-instance v0, Lcfd;
 
-    invoke-direct {v0, v1, p2}, Lf7d;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x0
 
-    .line 8
-    iput-object p3, p1, Lau8;->Y:Lai8;
+    invoke-direct {v0, p0, v1}, Lcfd;-><init>(Lbi8;I)V
 
-    const/4 p2, 0x0
+    return-object v0
 
-    .line 9
-    invoke-virtual {v0, p2}, Lf7d;->w(Ljava/lang/Object;)V
+    nop
 
-    .line 10
-    iput-object p2, p1, Lau8;->Y:Lai8;
-
-    .line 11
-    iput-object p2, p1, Lau8;->Y:Lai8;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onLoadItem(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
+.method public bridge lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    new-instance p1, Lf7d;
+    iget v0, p0, Lbi8;->a:I
 
-    const/16 v0, 0x14
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lf7d;-><init>(ILjava/lang/Object;)V
+    invoke-super {p0, p1}, Li2;->lastIndexOf(Ljava/lang/Object;)I
 
-    iget-object p2, p0, Lbi8;->b:Lci8;
+    move-result p1
 
-    iget-object p2, p2, Lci8;->e:Lau8;
+    return p1
 
-    iget-object v0, p2, Lau8;->c:Lai8;
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
 
-    iput-object v0, p2, Lau8;->Y:Lai8;
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p1, -0x1
 
-    invoke-virtual {p1, v0}, Lf7d;->w(Ljava/lang/Object;)V
+    goto :goto_0
 
-    iput-object v0, p2, Lau8;->Y:Lai8;
+    :cond_0
+    check-cast p1, Ljava/lang/String;
 
-    return-void
+    invoke-super {p0, p1}, Li2;->lastIndexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public listIterator()Ljava/util/ListIterator;
+    .locals 2
+
+    iget v0, p0, Lbi8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Li2;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 1
+    :pswitch_0
+    new-instance v0, Lcfd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcfd;-><init>(Lbi8;I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public listIterator(I)Ljava/util/ListIterator;
+    .locals 1
+
+    iget v0, p0, Lbi8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Li2;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 2
+    :pswitch_0
+    new-instance v0, Lcfd;
+
+    invoke-direct {v0, p0, p1}, Lcfd;-><init>(Lbi8;I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

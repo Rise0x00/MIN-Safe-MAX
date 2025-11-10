@@ -15,7 +15,7 @@
 # instance fields
 .field public a:Landroid/media/AudioRecord;
 
-.field public final b:La90;
+.field public final b:Li90;
 
 .field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -27,9 +27,9 @@
 
 .field public final g:I
 
-.field public h:Lgma;
+.field public h:Lpqe;
 
-.field public i:Lcsd;
+.field public i:Ln3e;
 
 .field public j:J
 
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(La90;Landroid/content/Context;)V
+.method public constructor <init>(Li90;Landroid/content/Context;)V
     .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -84,11 +84,11 @@
 
     iput-boolean v1, p0, Lg60;->l:Z
 
-    iget v0, p1, La90;->b:I
+    iget v0, p1, Li90;->b:I
 
-    iget v3, p1, La90;->c:I
+    iget v3, p1, Li90;->c:I
 
-    iget v4, p1, La90;->d:I
+    iget v4, p1, Li90;->d:I
 
     if-lez v0, :cond_4
 
@@ -116,9 +116,9 @@
 
     if-lez v8, :cond_4
 
-    iput-object p1, p0, Lg60;->b:La90;
+    iput-object p1, p0, Lg60;->b:Li90;
 
-    invoke-virtual {p1}, La90;->a()I
+    invoke-virtual {p1}, Li90;->a()I
 
     move-result v8
 
@@ -138,13 +138,13 @@
     move v1, v7
 
     :cond_2
-    invoke-static {v2, v1}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {v2, v1}, Loui;->f(Ljava/lang/String;Z)V
 
     mul-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lg60;->f:I
 
-    invoke-static {v0, p1, p2}, Lg60;->b(ILa90;Landroid/content/Context;)Landroid/media/AudioRecord;
+    invoke-static {v0, p1, p2}, Lg60;->b(ILi90;Landroid/content/Context;)Landroid/media/AudioRecord;
 
     move-result-object p1
 
@@ -199,7 +199,7 @@
     throw p1
 .end method
 
-.method public static b(ILa90;Landroid/content/Context;)Landroid/media/AudioRecord;
+.method public static b(ILi90;Landroid/content/Context;)Landroid/media/AudioRecord;
     .locals 4
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -208,13 +208,13 @@
 
     invoke-direct {v1}, Landroid/media/AudioFormat$Builder;-><init>()V
 
-    iget v2, p1, La90;->b:I
+    iget v2, p1, Li90;->b:I
 
     invoke-virtual {v1, v2}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
 
     move-result-object v1
 
-    iget v2, p1, La90;->c:I
+    iget v2, p1, Li90;->c:I
 
     const/4 v3, 0x1
 
@@ -232,7 +232,7 @@
 
     move-result-object v1
 
-    iget v2, p1, La90;->d:I
+    iget v2, p1, Li90;->d:I
 
     invoke-virtual {v1, v2}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
 
@@ -252,10 +252,10 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {v2, p2}, Lxk;->c(Landroid/media/AudioRecord$Builder;Landroid/content/Context;)V
+    invoke-static {v2, p2}, Lql;->c(Landroid/media/AudioRecord$Builder;Landroid/content/Context;)V
 
     :cond_1
-    iget p1, p1, La90;->a:I
+    iget p1, p1, Li90;->a:I
 
     invoke-virtual {v2, p1}, Landroid/media/AudioRecord$Builder;->setAudioSource(I)Landroid/media/AudioRecord$Builder;
 
@@ -285,7 +285,7 @@
 
     const-string v1, "AudioStream has been released."
 
-    invoke-static {v1, v0}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Loui;->f(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -293,9 +293,9 @@
 .method public final c(Z)V
     .locals 4
 
-    iget-object v0, p0, Lg60;->i:Lcsd;
+    iget-object v0, p0, Lg60;->i:Ln3e;
 
-    iget-object v1, p0, Lg60;->h:Lgma;
+    iget-object v1, p0, Lg60;->h:Lpqe;
 
     if-eqz v0, :cond_0
 
@@ -321,13 +321,13 @@
 
     if-nez v2, :cond_0
 
-    new-instance v2, Lji;
+    new-instance v2, Lzi;
 
     const/4 v3, 0x4
 
-    invoke-direct {v2, v1, p1, v3}, Lji;-><init>(Ljava/lang/Object;ZI)V
+    invoke-direct {v2, v1, p1, v3}, Lzi;-><init>(Ljava/lang/Object;ZI)V
 
-    invoke-virtual {v0, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -353,9 +353,9 @@
     :cond_0
     const-class v2, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;
 
-    sget-object v3, Lsp4;->a:Lot6;
+    sget-object v3, Lzs4;->a:Lnx6;
 
-    invoke-virtual {v3, v2}, Lot6;->e(Ljava/lang/Class;)Lt9c;
+    invoke-virtual {v3, v2}, Lnx6;->f(Ljava/lang/Class;)Lgjc;
 
     move-result-object v2
 
@@ -420,13 +420,13 @@
 
     iget-object v0, p0, Lg60;->a:Landroid/media/AudioRecord;
 
-    invoke-static {v0}, Lwk;->b(Landroid/media/AudioRecord;)Landroid/media/AudioRecordingConfiguration;
+    invoke-static {v0}, Lpl;->b(Landroid/media/AudioRecord;)Landroid/media/AudioRecordingConfiguration;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-static {v0}, Lwk;->c(Landroid/media/AudioRecordingConfiguration;)Z
+    invoke-static {v0}, Lpl;->c(Landroid/media/AudioRecordingConfiguration;)Z
 
     move-result v0
 
@@ -473,7 +473,7 @@
     throw v0
 .end method
 
-.method public final read(Ljava/nio/ByteBuffer;)Ld90;
+.method public final read(Ljava/nio/ByteBuffer;)Ll90;
     .locals 13
 
     invoke-virtual {p0}, Lg60;->a()V
@@ -486,7 +486,7 @@
 
     const-string v1, "AudioStream has not been started."
 
-    invoke-static {v1, v0}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Loui;->f(Ljava/lang/String;Z)V
 
     iget-object v0, p0, Lg60;->a:Landroid/media/AudioRecord;
 
@@ -522,9 +522,9 @@
 
     if-nez v5, :cond_3
 
-    iget-object v5, p0, Lg60;->b:La90;
+    iget-object v5, p0, Lg60;->b:Li90;
 
-    iget v5, v5, La90;->b:I
+    iget v5, v5, Li90;->b:I
 
     iget-wide v7, p0, Lg60;->j:J
 
@@ -546,7 +546,7 @@
     :goto_0
     const-string v11, "sampleRate must be greater than 0."
 
-    invoke-static {v11, v9}, Ll74;->h(Ljava/lang/String;Z)V
+    invoke-static {v11, v9}, Loui;->a(Ljava/lang/String;Z)V
 
     cmp-long v9, v7, v1
 
@@ -557,13 +557,13 @@
     :cond_1
     const-string v9, "framePosition must be no less than 0."
 
-    invoke-static {v9, v6}, Ll74;->h(Ljava/lang/String;Z)V
+    invoke-static {v9, v6}, Loui;->a(Ljava/lang/String;Z)V
 
     iget-wide v11, p1, Landroid/media/AudioTimestamp;->framePosition:J
 
     sub-long/2addr v7, v11
 
-    invoke-static {v5, v7, v8}, Lhv0;->w(IJ)J
+    invoke-static {v5, v7, v8}, Lbhi;->c(IJ)J
 
     move-result-wide v5
 
@@ -606,7 +606,7 @@
 
     const-string v1, "Unable to get audio timestamp"
 
-    invoke-static {p1, v1}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lafi;->g(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     :goto_2
@@ -628,7 +628,7 @@
 
     iget p1, p0, Lg60;->g:I
 
-    invoke-static {p1, v5, v6}, Lhv0;->Q(IJ)J
+    invoke-static {p1, v5, v6}, Lbhi;->e(IJ)J
 
     move-result-wide v5
 
@@ -637,9 +637,9 @@
     iput-wide v5, p0, Lg60;->j:J
 
     :cond_7
-    new-instance p1, Ld90;
+    new-instance p1, Ll90;
 
-    invoke-direct {p1, v0, v1, v2}, Ld90;-><init>(IJ)V
+    invoke-direct {p1, v0, v1, v2}, Ll90;-><init>(IJ)V
 
     return-object p1
 .end method

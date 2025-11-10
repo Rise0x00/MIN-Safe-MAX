@@ -1,67 +1,92 @@
-.class public interface abstract Lvmd;
+.class public final Lvmd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj1e;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lru7;
+
+.field public final c:Lru7;
+
+.field public final d:Lru7;
+
+
+# direct methods
+.method public constructor <init>(Lru7;Lru7;Lru7;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-class v0, Lvmd;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvmd;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lvmd;->b:Lru7;
+
+    iput-object p2, p0, Lvmd;->c:Lru7;
+
+    iput-object p3, p0, Lvmd;->d:Lru7;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Loef;
-    .locals 1
+.method public final a(JLjava/lang/String;JJZLogf;)Ljava/lang/Object;
+    .locals 12
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lvmd;->d:Lru7;
 
-    return-object v0
-.end method
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-.method public b()Lz0e;
-    .locals 1
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Ltlf;
 
-    return-object v0
-.end method
+    check-cast v0, Lsta;
 
-.method public c()Loef;
-    .locals 1
+    invoke-virtual {v0}, Lsta;->b()La54;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    return-object v0
-.end method
+    new-instance v1, Lumd;
 
-.method public d()Lg1e;
-    .locals 1
+    const/4 v11, 0x0
 
-    const/4 v0, 0x0
+    move-object v2, p0
 
-    return-object v0
-.end method
+    move-wide v8, p1
 
-.method public e()Llp7;
-    .locals 1
+    move-object v7, p3
 
-    const/4 v0, 0x0
+    move-wide/from16 v5, p4
 
-    return-object v0
-.end method
+    move-wide/from16 v3, p6
 
-.method public abstract f()I
-.end method
+    move/from16 v10, p8
 
-.method public g()Z
-    .locals 1
+    invoke-direct/range {v1 .. v11}, Lumd;-><init>(Lvmd;JJLjava/lang/String;JZLkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x1
+    move-object/from16 p1, p9
 
-    return v0
-.end method
+    invoke-static {v0, v1, p1}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public getType()Li1e;
-    .locals 1
+    move-result-object p1
 
-    sget-object v0, Li1e;->b:Li1e;
+    sget-object p2, Lh54;->a:Lh54;
 
-    return-object v0
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

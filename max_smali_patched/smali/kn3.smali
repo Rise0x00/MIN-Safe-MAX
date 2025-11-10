@@ -1,24 +1,27 @@
 .class public final Lkn3;
-.super Ljava/lang/Object;
+.super Ljzg;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/conscrypt/ConscryptHostnameVerifier;
 
+# instance fields
+.field public final b:Lxh1;
 
-# static fields
-.field public static final a:Lkn3;
+.field public final c:Lmu1;
+
+.field public final d:Lhr1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lxh1;Lmu1;Lhr1;)V
+    .locals 0
 
-    new-instance v0, Lkn3;
+    invoke-direct {p0}, Ljzg;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkn3;->b:Lxh1;
 
-    sput-object v0, Lkn3;->a:Lkn3;
+    iput-object p2, p0, Lkn3;->c:Lmu1;
+
+    iput-object p3, p0, Lkn3;->d:Lhr1;
 
     return-void
 .end method

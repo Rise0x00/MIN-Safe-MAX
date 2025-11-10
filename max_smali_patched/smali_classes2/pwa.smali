@@ -1,157 +1,173 @@
-.class public abstract Lpwa;
-.super Ljava/lang/Object;
+.class public final Lpwa;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic Y:Lqwa;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqwa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_cancel:I
+    iput-object p1, p0, Lpwa;->Y:Lqwa;
 
-    sput v0, Lpwa;->a:I
+    const/4 p1, 0x2
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_delete_set_action:I
-
-    sput v0, Lpwa;->b:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_delete_stickers_action:I
-
-    sput v0, Lpwa;->c:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_favorite_clear_action:I
-
-    sput v0, Lpwa;->d:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_recent_clear_action:I
-
-    sput v0, Lpwa;->e:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_content_recycler:I
-
-    sput v0, Lpwa;->f:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_emoji_suggest_view_type:I
-
-    sput v0, Lpwa;->g:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_favorite_view_type:I
-
-    sput v0, Lpwa;->h:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_copy_link:I
-
-    sput v0, Lpwa;->i:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_delete_set:I
-
-    sput v0, Lpwa;->j:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_forward:I
-
-    sput v0, Lpwa;->k:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_share:I
-
-    sput v0, Lpwa;->l:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_recent_view_type:I
-
-    sput v0, Lpwa;->m:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_drag:I
-
-    sput v0, Lpwa;->n:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_icon:I
-
-    sput v0, Lpwa;->o:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_subtitle:I
-
-    sput v0, Lpwa;->p:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_title:I
-
-    sput v0, Lpwa;->q:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_view_type:I
-
-    sput v0, Lpwa;->r:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_sets_title_view_type:I
-
-    sput v0, Lpwa;->s:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_favorite_menu_clear:I
-
-    sput v0, Lpwa;->t:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_menu_change:I
-
-    sput v0, Lpwa;->u:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_multiselect_delete:I
-
-    sput v0, Lpwa;->v:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_recent_menu_clear:I
-
-    sput v0, Lpwa;->w:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_toolbar:I
-
-    sput v0, Lpwa;->x:I
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpwa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpwa;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lpwa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lpwa;
+
+    iget-object v1, p0, Lpwa;->Y:Lqwa;
+
+    invoke-direct {v0, v1, p2}, Lpwa;-><init>(Lqwa;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lpwa;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lpwa;->Y:Lqwa;
+
+    iget-object v1, v0, Lqwa;->a:Lru7;
+
+    iget v2, p0, Lpwa;->o:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpwa;->X:Ljava/lang/Object;
+
+    check-cast p1, Lg54;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltlf;
+
+    check-cast v2, Lsta;
+
+    invoke-virtual {v2}, Lsta;->a()La54;
+
+    move-result-object v2
+
+    new-instance v4, Lnwa;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, v5}, Lnwa;-><init>(Lqwa;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v6, 0x2
+
+    invoke-static {p1, v2, v4, v6}, Lkki;->b(Lg54;La54;Lej6;I)Lmp4;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltlf;
+
+    check-cast v1, Lsta;
+
+    invoke-virtual {v1}, Lsta;->a()La54;
+
+    move-result-object v1
+
+    new-instance v4, Lowa;
+
+    invoke-direct {v4, v0, v5}, Lowa;-><init>(Lqwa;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v1, v4, v6}, Lkki;->b(Lg54;La54;Lej6;I)Lmp4;
+
+    move-result-object p1
+
+    new-array v0, v6, [Llp4;
+
+    const/4 v1, 0x0
+
+    aput-object v2, v0, v1
+
+    aput-object p1, v0, v3
+
+    iput v3, p0, Lpwa;->o:I
+
+    new-instance p1, Lqe0;
+
+    invoke-direct {p1, v0}, Lqe0;-><init>([Llp4;)V
+
+    invoke-virtual {p1, p0}, Lqe0;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

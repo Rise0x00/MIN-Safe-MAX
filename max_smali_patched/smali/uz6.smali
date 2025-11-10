@@ -1,244 +1,86 @@
 .class public final Luz6;
-.super Lpbf;
+.super Lvz6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
-
-.field public final synthetic f:Lxz6;
-
-.field public final synthetic g:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lxz6;II)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    const/4 p4, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p4, p0, Luz6;->e:I
-
-    iput-object p2, p0, Luz6;->f:Lxz6;
-
-    iput p3, p0, Luz6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lpbf;-><init>(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lxz6;ILjava/util/List;)V
-    .locals 0
-
-    const/4 p4, 0x1
-
-    iput p4, p0, Luz6;->e:I
-
-    iput-object p2, p0, Luz6;->f:Lxz6;
-
-    iput p3, p0, Luz6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 2
-    invoke-direct {p0, p1, p2}, Lpbf;-><init>(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lxz6;ILjava/util/List;Z)V
-    .locals 0
-
-    const/4 p4, 0x0
-
-    iput p4, p0, Luz6;->e:I
-
-    iput-object p2, p0, Luz6;->f:Lxz6;
-
-    iput p3, p0, Luz6;->g:I
-
-    const/4 p2, 0x1
-
-    .line 3
-    invoke-direct {p0, p1, p2}, Lpbf;-><init>(Ljava/lang/String;Z)V
+    iput-object p1, p0, Luz6;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Luz6;->e:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Luz6;->f:Lxz6;
+    return v0
 
-    iget-object v0, v0, Lxz6;->z0:Lpid;
+    :cond_0
+    instance-of v1, p1, Luz6;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Luz6;->f:Lxz6;
+    if-nez v1, :cond_1
 
-    monitor-enter v0
+    return v2
 
-    :try_start_0
-    iget-object v1, p0, Luz6;->f:Lxz6;
+    :cond_1
+    check-cast p1, Luz6;
 
-    iget-object v1, v1, Lxz6;->N0:Ljava/util/LinkedHashSet;
+    iget-object v1, p0, Luz6;->a:Ljava/lang/String;
 
-    iget v2, p0, Luz6;->g:I
+    iget-object p1, p1, Luz6;->a:Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result p1
 
-    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez p1, :cond_2
 
-    monitor-exit v0
+    return v2
 
-    const-wide/16 v0, -0x1
+    :cond_2
+    return v0
+.end method
 
-    return-wide v0
+.method public final hashCode()I
+    .locals 1
 
-    :catchall_0
-    move-exception v1
+    iget-object v0, p0, Luz6;->a:Ljava/lang/String;
 
-    monitor-exit v0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    throw v1
+    move-result v0
 
-    :pswitch_0
-    iget-object v0, p0, Luz6;->f:Lxz6;
+    return v0
+.end method
 
-    iget-object v0, v0, Lxz6;->z0:Lpid;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "Time(time="
 
-    :try_start_1
-    iget-object v0, p0, Luz6;->f:Lxz6;
+    const-string v1, ")"
 
-    iget-object v0, v0, Lxz6;->L0:Lf07;
+    iget-object v2, p0, Luz6;->a:Ljava/lang/String;
 
-    iget v1, p0, Luz6;->g:I
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v2, 0x9
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lf07;->W(II)V
-
-    iget-object v0, p0, Luz6;->f:Lxz6;
-
-    monitor-enter v0
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :try_start_2
-    iget-object v1, p0, Luz6;->f:Lxz6;
-
-    iget-object v1, v1, Lxz6;->N0:Ljava/util/LinkedHashSet;
-
-    iget v2, p0, Luz6;->g:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :try_start_3
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :catch_0
-    :goto_0
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :pswitch_1
-    iget-object v0, p0, Luz6;->f:Lxz6;
-
-    iget-object v0, v0, Lxz6;->z0:Lpid;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_4
-    iget-object v0, p0, Luz6;->f:Lxz6;
-
-    iget-object v0, v0, Lxz6;->L0:Lf07;
-
-    iget v1, p0, Luz6;->g:I
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Lf07;->W(II)V
-
-    iget-object v0, p0, Luz6;->f:Lxz6;
-
-    monitor-enter v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-
-    :try_start_5
-    iget-object v1, p0, Luz6;->f:Lxz6;
-
-    iget-object v1, v1, Lxz6;->N0:Ljava/util/LinkedHashSet;
-
-    iget v2, p0, Luz6;->g:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :try_start_6
-    monitor-exit v0
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
-
-    :catch_1
-    :goto_1
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

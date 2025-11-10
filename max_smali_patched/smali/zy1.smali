@@ -1,229 +1,174 @@
 .class public final Lzy1;
-.super Ljava/lang/Object;
+.super Lyy1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public final b:Lzlh;
-
-.field public final c:Ljava/lang/String;
-
-.field public d:Lof;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lzy1;->a:Ljava/util/HashMap;
+    iput-object v0, p0, Lzy1;->a:Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iput-object v0, p0, Lzy1;->d:Lof;
+    move-result-object p1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    const/16 v1, 0x1c
+    move-result v0
 
-    if-lt v0, v1, :cond_0
+    if-eqz v0, :cond_1
 
-    new-instance v0, Lyy1;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v1, 0x6
+    move-result-object v0
 
-    invoke-direct {v0, v1, p1}, Lzlh;-><init>(ILjava/lang/Object;)V
+    check-cast v0, Lyy1;
 
-    iput-object v0, p0, Lzy1;->b:Lzlh;
+    instance-of v1, v0, Laz1;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lzy1;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lzlh;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lzlh;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lzy1;->b:Lzlh;
-
-    :goto_0
-    iput-object p2, p0, Lzy1;->c:Ljava/lang/String;
-
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+.method public final a(I)V
     .locals 2
 
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_ORIENTATION:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    iget-object v0, p0, Lzy1;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CameraCharacteristics$Key;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lzy1;->b:Lzlh;
-
-    iget-object v0, v0, Lzlh;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraCharacteristics;
-
-    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lzy1;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    monitor-exit p0
+    move-result v1
 
-    return-object v0
+    if-eqz v1, :cond_0
 
-    :catchall_0
-    move-exception p1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyy1;
+
+    invoke-virtual {v1, p1}, Lyy1;->a(I)V
 
     goto :goto_0
 
-    :cond_1
-    iget-object v0, p0, Lzy1;->b:Lzlh;
-
-    iget-object v0, v0, Lzlh;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraCharacteristics;
-
-    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lzy1;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_0
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    :cond_0
+    return-void
 .end method
 
-.method public final b()Lof;
-    .locals 4
+.method public final b(ILfz1;)V
+    .locals 2
 
-    iget-object v0, p0, Lzy1;->d:Lof;
+    iget-object v0, p0, Lzy1;->a:Ljava/util/ArrayList;
 
-    if-nez v0, :cond_1
-
-    :try_start_0
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {p0, v0}, Lzy1;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Landroid/hardware/camera2/params/StreamConfigurationMap;
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    new-instance v1, Llo4;
+    if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lzy1;->c:Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Llo4;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    new-instance v2, Lof;
+    check-cast v1, Lyy1;
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v3, v2, Lof;->c:Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    new-instance v3, Lhpe;
-
-    invoke-direct {v3, v0}, Lhpe;-><init>(Ljava/lang/Object;)V
-
-    iput-object v3, v2, Lof;->a:Ljava/lang/Object;
-
-    iput-object v1, v2, Lof;->b:Ljava/lang/Object;
-
-    iput-object v2, p0, Lzy1;->d:Lof;
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "StreamConfigurationMap is null!"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_0
-    move-exception v0
+    invoke-virtual {v1, p1, p2}, Lyy1;->b(ILfz1;)V
 
     goto :goto_0
 
-    :catch_1
-    move-exception v0
+    :cond_0
+    return-void
+.end method
 
-    :goto_0
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+.method public final c(ILrtd;)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    iget-object v0, p0, Lzy1;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw v1
+    move-result v1
 
-    :cond_1
-    :goto_1
-    iget-object v0, p0, Lzy1;->d:Lof;
+    if-eqz v1, :cond_0
 
-    return-object v0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyy1;
+
+    invoke-virtual {v1, p1, p2}, Lyy1;->c(ILrtd;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(I)V
+    .locals 2
+
+    iget-object v0, p0, Lzy1;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyy1;
+
+    invoke-virtual {v1, p1}, Lyy1;->d(I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

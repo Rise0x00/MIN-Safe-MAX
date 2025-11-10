@@ -10,7 +10,7 @@
 
 .field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "ru.ok.android.externcalls.common"
 
-.field public static final SDK_VERSION:Ljava/lang/String; = "125.1.0.67"
+.field public static final SDK_VERSION:Ljava/lang/String; = "125.1.0.71.1"
 
 
 # direct methods

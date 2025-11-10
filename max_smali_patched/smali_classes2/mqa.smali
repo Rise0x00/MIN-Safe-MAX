@@ -1,283 +1,85 @@
-.class public abstract Lmqa;
-.super Ljava/lang/Object;
+.class public final enum Lmqa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final A:I
+.field public static final enum a:Lmqa;
 
-.field public static final B:I
+.field public static final enum b:Lmqa;
 
-.field public static final C:I
+.field public static final enum c:Lmqa;
 
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public static final synthetic d:[Lmqa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    sget v0, Lvec;->chat_screen_message_send_error_delete_action:I
+    new-instance v0, Lmqa;
 
-    sput v0, Lmqa;->a:I
+    const-string v1, "SMALL"
 
-    sget v0, Lvec;->chat_screen_message_send_error_resend_action_multi:I
+    const/4 v2, 0x0
 
-    sput v0, Lmqa;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lvec;->chat_screen_message_send_error_resend_action_solo:I
+    sput-object v0, Lmqa;->a:Lmqa;
 
-    sput v0, Lmqa;->c:I
+    new-instance v1, Lmqa;
 
-    sget v0, Lvec;->messages_list_chat_description_view_id:I
+    const-string v2, "MEDIUM"
 
-    sput v0, Lmqa;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lvec;->messages_list_chat_description_view_type:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lmqa;->e:I
+    sput-object v1, Lmqa;->b:Lmqa;
 
-    sget v0, Lvec;->messages_list_confirm_cancel:I
+    new-instance v2, Lmqa;
 
-    sput v0, Lmqa;->f:I
+    const-string v3, "LARGE"
 
-    sget v0, Lvec;->messages_list_confirm_complaint_extremism:I
+    const/4 v4, 0x2
 
-    sput v0, Lmqa;->g:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lvec;->messages_list_confirm_complaint_fake:I
+    sput-object v2, Lmqa;->c:Lmqa;
 
-    sput v0, Lmqa;->h:I
+    filled-new-array {v0, v1, v2}, [Lmqa;
 
-    sget v0, Lvec;->messages_list_confirm_complaint_other:I
+    move-result-object v0
 
-    sput v0, Lmqa;->i:I
-
-    sget v0, Lvec;->messages_list_confirm_complaint_porno:I
-
-    sput v0, Lmqa;->j:I
-
-    sget v0, Lvec;->messages_list_confirm_complaint_spam:I
-
-    sput v0, Lmqa;->k:I
-
-    sget v0, Lvec;->messages_list_confirm_complaint_threat:I
-
-    sput v0, Lmqa;->l:I
-
-    sget v0, Lvec;->messages_list_confirm_delete:I
-
-    sput v0, Lmqa;->m:I
-
-    sget v0, Lvec;->messages_list_confirm_delete_for_all:I
-
-    sput v0, Lmqa;->n:I
-
-    sget v0, Lvec;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Lmqa;->o:I
-
-    sget v0, Lvec;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Lmqa;->p:I
-
-    sget v0, Lvec;->messages_list_context_action_copy:I
-
-    sput v0, Lmqa;->q:I
-
-    sget v0, Lvec;->messages_list_context_action_copy_photo:I
-
-    sput v0, Lmqa;->r:I
-
-    sget v0, Lvec;->messages_list_context_action_delete:I
-
-    sput v0, Lmqa;->s:I
-
-    sget v0, Lvec;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Lmqa;->t:I
-
-    sget v0, Lvec;->messages_list_context_action_edit:I
-
-    sput v0, Lmqa;->u:I
-
-    sget v0, Lvec;->messages_list_context_action_forward:I
-
-    sput v0, Lmqa;->v:I
-
-    sget v0, Lvec;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Lmqa;->w:I
-
-    sget v0, Lvec;->messages_list_context_action_pin:I
-
-    sput v0, Lmqa;->x:I
-
-    sget v0, Lvec;->messages_list_context_action_reply:I
-
-    sput v0, Lmqa;->y:I
-
-    sget v0, Lvec;->messages_list_context_action_report:I
-
-    sput v0, Lmqa;->z:I
-
-    sget v0, Lvec;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Lmqa;->A:I
-
-    sget v0, Lvec;->messages_list_context_action_select:I
-
-    sput v0, Lmqa;->B:I
-
-    sget v0, Lvec;->messages_list_context_action_unpin:I
-
-    sput v0, Lmqa;->C:I
-
-    sget v0, Lvec;->messages_list_context_actions_view_type:I
-
-    sput v0, Lmqa;->D:I
-
-    sget v0, Lvec;->messages_list_context_content_container:I
-
-    sput v0, Lmqa;->E:I
-
-    sget v0, Lvec;->messages_list_context_member_view_type:I
-
-    sput v0, Lmqa;->F:I
-
-    sget v0, Lvec;->messages_list_context_members_member_cell:I
-
-    sput v0, Lmqa;->G:I
-
-    sget v0, Lvec;->messages_list_context_members_member_reaction:I
-
-    sput v0, Lmqa;->H:I
-
-    sget v0, Lvec;->messages_list_context_reactions_container:I
-
-    sput v0, Lmqa;->I:I
-
-    sget v0, Lvec;->messages_list_item_alias:I
-
-    sput v0, Lmqa;->J:I
-
-    sget v0, Lvec;->messages_list_item_date:I
-
-    sput v0, Lmqa;->K:I
-
-    sget v0, Lvec;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Lmqa;->L:I
-
-    sget v0, Lvec;->messages_list_item_single_image:I
-
-    sput v0, Lmqa;->M:I
-
-    sget v0, Lvec;->messages_list_item_text:I
-
-    sput v0, Lmqa;->N:I
-
-    sget v0, Lvec;->messages_list_item_title:I
-
-    sput v0, Lmqa;->O:I
-
-    sget v0, Lvec;->messages_list_item_video_duration:I
-
-    sput v0, Lmqa;->P:I
-
-    sget v0, Lvec;->messages_list_recycler_view:I
-
-    sput v0, Lmqa;->Q:I
-
-    sget v0, Lvec;->messages_list_scroll_btn:I
-
-    sput v0, Lmqa;->R:I
-
-    sget v0, Lvec;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Lmqa;->S:I
+    sput-object v0, Lmqa;->d:[Lmqa;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lmqa;
+    .locals 1
+
+    const-class v0, Lmqa;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lmqa;
+
+    return-object p0
+.end method
+
+.method public static values()[Lmqa;
+    .locals 1
+
+    sget-object v0, Lmqa;->d:[Lmqa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmqa;
+
+    return-object v0
 .end method

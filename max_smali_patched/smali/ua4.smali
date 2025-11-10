@@ -1,223 +1,494 @@
 .class public final Lua4;
-.super Landroid/widget/BaseAdapter;
+.super Lmvf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/Calendar;
+.field public final e:J
 
-.field public final b:I
+.field public final f:J
 
-.field public final c:I
+.field public final g:J
+
+.field public final h:I
+
+.field public final i:J
+
+.field public final j:J
+
+.field public final k:J
+
+.field public final l:Lha4;
+
+.field public final m:Lqs8;
+
+.field public final n:Lfs8;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(JJJIJJJLha4;Lqs8;Lfs8;)V
+    .locals 6
 
-    .line 1
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    move-object/from16 v0, p14
 
-    const/4 v0, 0x0
+    move-object/from16 v1, p16
 
-    .line 2
-    invoke-static {v0}, Lp4g;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iget-boolean v2, v0, Lha4;->d:Z
 
-    .line 3
-    iput-object v0, p0, Lua4;->a:Ljava/util/Calendar;
+    const/4 v3, 0x0
 
-    const/4 v1, 0x7
+    const/4 v4, 0x1
 
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->getMaximum(I)I
+    if-eqz v1, :cond_0
 
-    move-result v1
+    move v5, v4
 
-    iput v1, p0, Lua4;->b:I
+    goto :goto_0
 
-    .line 5
-    invoke-virtual {v0}, Ljava/util/Calendar;->getFirstDayOfWeek()I
+    :cond_0
+    move v5, v3
 
-    move-result v0
+    :goto_0
+    if-ne v2, v5, :cond_1
 
-    iput v0, p0, Lua4;->c:I
+    move v3, v4
 
-    return-void
-.end method
+    :cond_1
+    invoke-static {v3}, Ligi;->h(Z)V
 
-.method public constructor <init>(I)V
-    .locals 2
+    iput-wide p1, p0, Lua4;->e:J
 
-    .line 6
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    iput-wide p3, p0, Lua4;->f:J
 
-    const/4 v0, 0x0
+    iput-wide p5, p0, Lua4;->g:J
 
-    .line 7
-    invoke-static {v0}, Lp4g;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    iput p7, p0, Lua4;->h:I
 
-    move-result-object v0
+    iput-wide p8, p0, Lua4;->i:J
 
-    .line 8
-    iput-object v0, p0, Lua4;->a:Ljava/util/Calendar;
+    move-wide/from16 p1, p10
 
-    const/4 v1, 0x7
+    iput-wide p1, p0, Lua4;->j:J
 
-    .line 9
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->getMaximum(I)I
+    move-wide/from16 p1, p12
 
-    move-result v0
+    iput-wide p1, p0, Lua4;->k:J
 
-    iput v0, p0, Lua4;->b:I
+    iput-object v0, p0, Lua4;->l:Lha4;
 
-    .line 10
-    iput p1, p0, Lua4;->c:I
+    move-object/from16 p1, p15
+
+    iput-object p1, p0, Lua4;->m:Lqs8;
+
+    iput-object v1, p0, Lua4;->n:Lfs8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getCount()I
+.method public final b(Ljava/lang/Object;)I
+    .locals 2
+
+    instance-of v0, p1, Ljava/lang/Integer;
+
+    const/4 v1, -0x1
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget v0, p0, Lua4;->h:I
+
+    sub-int/2addr p1, v0
+
+    if-ltz p1, :cond_2
+
+    invoke-virtual {p0}, Lua4;->h()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    return p1
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final f(ILhvf;Z)Lhvf;
+    .locals 13
+
+    invoke-virtual {p0}, Lua4;->h()I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Ligi;->d(II)V
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lua4;->l:Lha4;
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lshb;->a:Ljava/lang/String;
+
+    move-object v4, v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v4, v0
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    iget v0, p0, Lua4;->h:I
+
+    add-int/2addr v0, p1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    :cond_1
+    move-object v5, v0
+
+    invoke-virtual {v1, p1}, Lha4;->d(I)J
+
+    move-result-wide v7
+
+    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
+
+    move-result-object p1
+
+    iget-wide v2, p1, Lshb;->b:J
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
+
+    move-result-object p1
+
+    iget-wide v0, p1, Lshb;->b:J
+
+    sub-long/2addr v2, v0
+
+    invoke-static {v2, v3}, Llig;->U(J)J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lua4;->i:J
+
+    sub-long v9, v0, v2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v11, Lz8;->f:Lz8;
+
+    const/4 v12, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v3, p2
+
+    invoke-virtual/range {v3 .. v12}, Lhvf;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLz8;Z)V
+
+    return-object p2
+.end method
+
+.method public final h()I
     .locals 1
 
-    iget v0, p0, Lua4;->b:I
+    iget-object v0, p0, Lua4;->l:Lha4;
+
+    iget-object v0, v0, Lha4;->m:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
 
     return v0
 .end method
 
-.method public final getItem(I)Ljava/lang/Object;
-    .locals 2
+.method public final l(I)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lua4;->b:I
+    invoke-virtual {p0}, Lua4;->h()I
 
-    if-lt p1, v0, :cond_0
+    move-result v0
 
-    const/4 p1, 0x0
+    invoke-static {p1, v0}, Ligi;->d(II)V
 
-    return-object p1
+    iget v0, p0, Lua4;->h:I
 
-    :cond_0
-    iget v1, p0, Lua4;->c:I
+    add-int/2addr v0, p1
 
-    add-int/2addr p1, v1
-
-    if-le p1, v0, :cond_1
-
-    sub-int/2addr p1, v0
-
-    :cond_1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final getItemId(I)J
-    .locals 2
+.method public final m(ILkvf;J)Lkvf;
+    .locals 23
 
-    const-wide/16 v0, 0x0
+    move-object/from16 v0, p0
 
-    return-wide v0
-.end method
+    const/4 v1, 0x1
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+    move/from16 v2, p1
 
-    move-object v0, p2
+    invoke-static {v2, v1}, Ligi;->d(II)V
 
-    check-cast v0, Landroid/widget/TextView;
+    iget-object v5, v0, Lua4;->l:Lha4;
 
-    if-nez p2, :cond_0
+    iget-boolean v2, v5, Lha4;->d:Z
 
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v3, 0x0
 
-    move-result-object p2
+    iget-wide v6, v0, Lua4;->k:J
 
-    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-object p2
+    if-eqz v2, :cond_5
 
-    sget v0, Ldhc;->mtrl_calendar_day_of_week:I
+    iget-wide v10, v5, Lha4;->e:J
 
-    const/4 v1, 0x0
+    cmp-long v2, v10, v8
 
-    invoke-virtual {p2, v0, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    if-eqz v2, :cond_5
 
-    move-result-object p2
+    iget-wide v10, v5, Lha4;->b:J
 
-    move-object v0, p2
+    cmp-long v2, v10, v8
 
-    check-cast v0, Landroid/widget/TextView;
+    if-nez v2, :cond_5
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v2, p3, v10
+
+    if-lez v2, :cond_0
+
+    add-long v6, v6, p3
+
+    iget-wide v12, v0, Lua4;->j:J
+
+    cmp-long v2, v6, v12
+
+    if-lez v2, :cond_0
+
+    move/from16 v16, v1
+
+    move v1, v3
+
+    move-wide v6, v8
+
+    goto :goto_2
 
     :cond_0
-    iget p2, p0, Lua4;->c:I
+    iget-wide v12, v0, Lua4;->i:J
 
-    add-int/2addr p1, p2
+    add-long/2addr v12, v6
 
-    iget p2, p0, Lua4;->b:I
+    invoke-virtual {v5, v3}, Lha4;->d(I)J
 
-    if-le p1, p2, :cond_1
+    move-result-wide v14
 
-    sub-int/2addr p1, p2
+    move v2, v3
+
+    :goto_0
+    iget-object v4, v5, Lha4;->m:Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    sub-int/2addr v4, v1
+
+    if-ge v2, v4, :cond_1
+
+    cmp-long v4, v12, v14
+
+    if-ltz v4, :cond_1
+
+    sub-long/2addr v12, v14
+
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-virtual {v5, v2}, Lha4;->d(I)J
+
+    move-result-wide v14
+
+    goto :goto_0
 
     :cond_1
-    iget-object p2, p0, Lua4;->a:Ljava/util/Calendar;
-
-    const/4 v1, 0x7
-
-    invoke-virtual {p2, v1, p1}, Ljava/util/Calendar;->set(II)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {p2, v1, v2, p1}, Ljava/util/Calendar;->getDisplayName(IILjava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget p3, Ljic;->mtrl_picker_day_of_week_column_header:I
-
-    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p3, 0x2
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    invoke-virtual {v5, v2}, Lha4;->b(I)Lshb;
 
     move-result-object v2
 
-    invoke-virtual {p2, v1, p3, v2}, Ljava/util/Calendar;->getDisplayName(IILjava/util/Locale;)Ljava/lang/String;
+    const/4 v4, 0x2
 
-    move-result-object p2
+    invoke-virtual {v2, v4}, Lshb;->a(I)I
 
-    filled-new-array {p2}, [Ljava/lang/Object;
+    move-result v4
 
-    move-result-object p2
+    move/from16 v16, v1
 
-    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const/4 v1, -0x1
 
-    move-result-object p1
+    if-ne v4, v1, :cond_2
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    goto :goto_1
 
-    return-object v0
+    :cond_2
+    iget-object v1, v2, Lshb;->c:Ljava/util/List;
+
+    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lb9;
+
+    iget-object v1, v1, Lb9;->c:Ljava/util/List;
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwbd;
+
+    invoke-virtual {v1}, Lwbd;->c()Lbb4;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v14, v15}, Lbb4;->D(J)J
+
+    move-result-wide v17
+
+    cmp-long v2, v17, v10
+
+    if-nez v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {v1, v12, v13, v14, v15}, Lbb4;->u(JJ)J
+
+    move-result-wide v10
+
+    invoke-interface {v1, v10, v11}, Lbb4;->b(J)J
+
+    move-result-wide v1
+
+    add-long/2addr v1, v6
+
+    sub-long v6, v1, v12
+
+    :cond_4
+    :goto_1
+    move v1, v3
+
+    goto :goto_2
+
+    :cond_5
+    move/from16 v16, v1
+
+    goto :goto_1
+
+    :goto_2
+    sget-object v3, Lkvf;->q:Ljava/lang/Object;
+
+    iget-boolean v2, v5, Lha4;->d:Z
+
+    if-eqz v2, :cond_6
+
+    iget-wide v10, v5, Lha4;->e:J
+
+    cmp-long v2, v10, v8
+
+    if-eqz v2, :cond_6
+
+    iget-wide v10, v5, Lha4;->b:J
+
+    cmp-long v2, v10, v8
+
+    if-nez v2, :cond_6
+
+    move/from16 v13, v16
+
+    goto :goto_3
+
+    :cond_6
+    move v13, v1
+
+    :goto_3
+    invoke-virtual {v0}, Lua4;->h()I
+
+    move-result v1
+
+    add-int/lit8 v20, v1, -0x1
+
+    iget-wide v1, v0, Lua4;->i:J
+
+    iget-object v4, v0, Lua4;->m:Lqs8;
+
+    move-wide v15, v6
+
+    iget-wide v6, v0, Lua4;->e:J
+
+    iget-wide v8, v0, Lua4;->f:J
+
+    iget-wide v10, v0, Lua4;->g:J
+
+    iget-object v14, v0, Lua4;->n:Lfs8;
+
+    move/from16 p1, v13
+
+    iget-wide v12, v0, Lua4;->j:J
+
+    const/16 v19, 0x0
+
+    move-wide/from16 v21, v1
+
+    move-wide/from16 v17, v12
+
+    const/4 v12, 0x1
+
+    move/from16 v13, p1
+
+    move-object/from16 v2, p2
+
+    invoke-virtual/range {v2 .. v22}, Lkvf;->b(Ljava/lang/Object;Lqs8;Ljava/lang/Object;JJJZZLfs8;JJIIJ)V
+
+    return-object p2
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

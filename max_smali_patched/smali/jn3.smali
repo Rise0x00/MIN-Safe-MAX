@@ -1,61 +1,74 @@
-.class public abstract Ljn3;
+.class public final synthetic Ljn3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+
 
 # direct methods
-.method public static a()Z
-    .locals 4
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;I)V
+    .locals 0
 
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
+    iput p2, p0, Ljn3;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Ljn3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    return-void
+.end method
 
-    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    if-eq v1, v2, :cond_0
+    iget p1, p0, Ljn3;->a:I
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    const/4 v0, 0x1
 
-    move-result v0
+    iget-object v1, p0, Ljn3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
 
-    if-le v0, v2, :cond_2
+    packed-switch p1, :pswitch_data_0
 
-    goto :goto_0
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:I
 
-    :cond_0
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
 
-    move-result v1
+    return-void
 
-    if-eq v1, v3, :cond_1
+    :pswitch_0
+    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->C0:I
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
+    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->B0:Lru7;
 
-    move-result v0
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    if-le v0, v3, :cond_2
+    move-result-object p1
 
-    goto :goto_0
+    check-cast p1, Lkn3;
 
-    :cond_1
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->patch()I
+    iget-object v2, p1, Lkn3;->d:Lhr1;
 
-    move-result v0
+    iget-object p1, p1, Lkn3;->b:Lxh1;
 
-    if-ltz v0, :cond_2
+    invoke-virtual {v2, p1}, Lhr1;->g(Lxh1;)V
 
-    :goto_0
-    return v3
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
 
-    :cond_2
-    const/4 v0, 0x0
+    return-void
 
-    return v0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

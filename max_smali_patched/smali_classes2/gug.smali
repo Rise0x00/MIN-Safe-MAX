@@ -3,384 +3,257 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luk7;
+.implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
 
 # instance fields
-.field public final a:Lwk7;
-
-.field public final b:Lbp7;
-
-.field public final c:Ljava/util/Set;
-
-.field public final d:Llu0;
-
-.field public e:Lpqg;
+.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method public constructor <init>(Lwk7;Lbp7;)V
-    .locals 2
+.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgug;->a:Lwk7;
-
-    iput-object p2, p0, Lgug;->b:Lbp7;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/16 p2, 0xa
-
-    sget-object v0, Lcug;->b:Lla5;
-
-    invoke-static {v0, p2}, Lg93;->V(Ljava/lang/Iterable;I)I
-
-    move-result p2
-
-    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance p2, Lu1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v1, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {p2}, Lu1;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p2}, Lu1;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcug;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "WebAppChangeScreenBrightness"
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Le93;->M0(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgug;->c:Ljava/util/Set;
-
-    const/4 p1, 0x7
-
-    const/4 p2, 0x0
-
-    invoke-static {p2, p2, p1}, Lf09;->a(III)Llu0;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgug;->d:Llu0;
+    iput-object p1, p0, Lgug;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 4
 
-    sget-object v0, Lcug;->b:Lla5;
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Les7;
 
-    invoke-virtual {v0}, Lx1;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lgug;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->F0()Lbug;
 
     move-result-object v0
 
-    :cond_0
-    move-object v1, v0
+    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
-    check-cast v1, Lu1;
+    move-result p1
 
-    invoke-virtual {v1}, Lu1;->hasNext()Z
+    iget-object v0, v0, Lbug;->b:Llpg;
 
-    move-result v2
+    check-cast v0, Lvsg;
 
-    const/4 v3, 0x0
+    iget-object v1, v0, Lvsg;->G:Landroid/animation/ValueAnimator;
 
-    if-eqz v2, :cond_1
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Lu1;->next()Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lcug;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v2, "WebAppChangeScreenBrightness"
-
-    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    move-object v1, v3
-
-    :goto_0
-    check-cast v1, Lcug;
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    if-nez v1, :cond_2
-
-    const-class p2, Lgug;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unknown method with name = "
-
-    invoke-direct {p3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " in JsDelegate: "
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1, v3}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v0
-
-    :cond_2
-    sget-object p1, Ldug;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v1
 
-    aget p1, p1, v1
+    if-ne v1, v2, :cond_0
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Lvsg;->G:Landroid/animation/ValueAnimator;
 
-    if-ne p1, v1, :cond_4
+    if-eqz v1, :cond_0
 
-    check-cast p3, Lnz3;
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    invoke-virtual {p0, p2, p3}, Lgug;->e(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+    :cond_0
+    int-to-float v1, v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    invoke-static {p1, v1, v3, v1}, Lxjb;->i(FFFF)F
+
+    move-result p1
+
+    iget v1, v0, Lvsg;->F:F
+
+    mul-float/2addr v1, p1
+
+    iput v1, v0, Lvsg;->F:F
+
+    invoke-virtual {v0}, Lvsg;->p()Lz02;
 
     move-result-object p1
 
-    sget-object p2, Lf34;->a:Lf34;
+    if-eqz p1, :cond_1
 
-    if-ne p1, p2, :cond_3
+    check-cast p1, Lvdd;
 
-    return-object p1
+    iget-object p1, p1, Lvdd;->b:Lz02;
 
-    :cond_3
-    return-object v0
+    invoke-interface {p1}, Lz02;->q()Lq38;
 
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    move-result-object p1
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    if-eqz p1, :cond_1
 
-    throw p1
-.end method
+    invoke-virtual {p1}, Lq38;->d()Ljava/lang/Object;
 
-.method public final b()Llu0;
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lgug;->d:Llu0;
+    check-cast p1, Ldrh;
 
-    return-object v0
-.end method
+    if-eqz p1, :cond_1
 
-.method public final c()Ljava/util/Set;
-    .locals 1
+    invoke-interface {p1}, Ldrh;->b()F
 
-    iget-object v0, p0, Lgug;->c:Ljava/util/Set;
-
-    return-object v0
-.end method
-
-.method public final d(Lpqg;)V
-    .locals 0
-
-    iput-object p1, p0, Lgug;->e:Lpqg;
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
-    .locals 6
-
-    instance-of v0, p2, Leug;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p2
-
-    check-cast v0, Leug;
-
-    iget v1, v0, Leug;->x0:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Leug;->x0:I
+    move-result p1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Leug;
-
-    invoke-direct {v0, p0, p2}, Leug;-><init>(Lgug;Lnz3;)V
+    :cond_1
+    const/high16 p1, 0x3f800000    # 1.0f
 
     :goto_0
-    iget-object p2, v0, Leug;->Z:Ljava/lang/Object;
+    invoke-virtual {v0}, Lvsg;->p()Lz02;
 
-    iget v1, v0, Leug;->x0:I
+    move-result-object v3
 
-    const/4 v2, 0x2
+    if-eqz v3, :cond_2
 
-    const/4 v3, 0x1
+    check-cast v3, Lvdd;
 
-    sget-object v4, Lf34;->a:Lf34;
+    iget-object v3, v3, Lvdd;->b:Lz02;
 
-    if-eqz v1, :cond_3
+    invoke-interface {v3}, Lz02;->q()Lq38;
 
-    if-eq v1, v3, :cond_2
+    move-result-object v3
 
-    if-ne v1, v2, :cond_1
+    if-eqz v3, :cond_2
 
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v3}, Lq38;->d()Ljava/lang/Object;
 
-    goto :goto_4
+    move-result-object v3
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast v3, Ldrh;
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v3, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v3}, Ldrh;->a()F
 
-    throw p1
+    move-result v3
+
+    goto :goto_1
 
     :cond_2
-    iget-object p1, v0, Leug;->Y:Lik7;
+    const/high16 v3, 0x41200000    # 10.0f
 
-    iget-object v1, v0, Leug;->X:Ljug;
+    :goto_1
+    invoke-static {v1, p1, v3}, Liwi;->b(FFF)F
 
-    iget-object v3, v0, Leug;->o:Lgug;
+    move-result p1
 
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, v0, Lvsg;->p:Lrw7;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v0, Lrw7;->c:La22;
+
+    iget-object v0, v0, La22;->A0:Ludd;
 
     goto :goto_2
 
     :cond_3
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p2, p0, Lgug;->a:Lwk7;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Ljug;->Companion:Liug;
-
-    invoke-virtual {v1}, Liug;->serializer()Lum7;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v1, p1}, Lwk7;->a(Lum7;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v1, p1
-
-    check-cast v1, Ljug;
-
-    iget-boolean p1, v1, Ljug;->b:Z
-
-    if-eqz p1, :cond_4
-
-    sget-object p1, Laug;->c:Laug;
-
-    goto :goto_1
-
-    :cond_4
-    sget-object p1, Lbug;->c:Lbug;
-
-    :goto_1
-    iput-object p0, v0, Leug;->o:Lgug;
-
-    iput-object v1, v0, Leug;->X:Ljug;
-
-    iput-object p1, v0, Leug;->Y:Lik7;
-
-    iput v3, v0, Leug;->x0:I
-
-    iget-object p2, p0, Lgug;->d:Llu0;
-
-    invoke-interface {p2, p1, v0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-ne p2, v4, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move-object v3, p0
+    const/4 v0, 0x0
 
     :goto_2
-    new-instance p2, Lfug;
+    if-eqz v0, :cond_4
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, p1}, Ludd;->d(F)Lv28;
 
-    invoke-direct {p2, v1, v3, v5}, Lfug;-><init>(Ljug;Lgug;Lkotlin/coroutines/Continuation;)V
+    :cond_4
+    return v2
+.end method
 
-    iput-object v5, v0, Leug;->o:Lgug;
+.method public final onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
+    .locals 0
 
-    iput-object v5, v0, Leug;->X:Ljug;
+    const/4 p1, 0x1
 
-    iput-object v5, v0, Leug;->Y:Lik7;
+    return p1
+.end method
 
-    iput v2, v0, Leug;->x0:I
+.method public final onScaleEnd(Landroid/view/ScaleGestureDetector;)V
+    .locals 4
 
-    invoke-virtual {p1, p2, v0}, Lik7;->c(Llf6;Lnz3;)Ljava/lang/Object;
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Les7;
+
+    iget-object p1, p0, Lgug;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->F0()Lbug;
 
     move-result-object p1
 
-    if-ne p1, v4, :cond_6
+    iget-object p1, p1, Lbug;->b:Llpg;
 
-    :goto_3
-    return-object v4
+    check-cast p1, Lvsg;
 
-    :cond_6
-    :goto_4
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v0, p1, Lvsg;->G:Landroid/animation/ValueAnimator;
 
-    return-object p1
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget v0, p1, Lvsg;->F:F
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    aput v0, v2, v3
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    aput v0, v2, v1
+
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x96
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v1, Lt00;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v2, p1}, Lt00;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v1, Ltf;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2, p1}, Ltf;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iput-object v0, p1, Lvsg;->G:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
 .end method

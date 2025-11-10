@@ -4,18 +4,18 @@
 
 
 # instance fields
-.field public final a:Lv8f;
+.field public final a:Lxlf;
 
 
 # direct methods
-.method public constructor <init>(Lv8f;)V
+.method public constructor <init>(Lxlf;)V
     .locals 1
 
-    iget-object v0, p1, Lv8f;->X:Lf8f;
+    iget-object v0, p1, Lxlf;->o:Lhlf;
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lv8f;
+    iput-object p1, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lxlf;
 
     return-void
 .end method

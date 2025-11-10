@@ -1,60 +1,108 @@
 .class public final Lar0;
-.super Ljava/lang/Object;
+.super Landroid/text/style/StyleSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Ljh8;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lar0;->a:I
 
-    iput-boolean p1, p0, Lar0;->a:Z
+    packed-switch p1, :pswitch_data_0
 
-    iput-boolean p2, p0, Lar0;->b:Z
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
+
+    const/4 p1, 0x2
+
+    iput p1, p0, Lar0;->b:I
 
     return-void
+
+    :pswitch_0
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Lar0;->b:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final copy()Lh44;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lar0;->a:I
 
-    const-string v1, "{hasBots="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lar0;
 
-    iget-boolean v1, p0, Lar0;->a:Z
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", suspendedBot="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lar0;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Lar0;-><init>(I)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lar0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lar0;-><init>(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lar0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lar0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lar0;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

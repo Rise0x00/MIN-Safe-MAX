@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;
-.super Lmo7;
+.super Lbu7;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Loi6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lmo7;",
-        "Lve6;"
+        "Lbu7;",
+        "Loi6;"
     }
 .end annotation
 
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
 # virtual methods
 .method public final invoke()Ljava/io/File;
-    .locals 7
+    .locals 8
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;->this$0:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;
@@ -150,10 +150,45 @@
 
     move-result-object v3
 
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/utils/Files;->length(Ljava/util/Collection;)J
+    sget-object v4, Ltv5;->a:[B
 
-    move-result-wide v4
+    const-wide/16 v4, 0x0
 
+    if-nez v2, :cond_3
+
+    goto :goto_2
+
+    .line 12
+    :cond_3
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/io/File;
+
+    .line 13
+    invoke-static {v6}, Ltv5;->d(Ljava/io/File;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    goto :goto_1
+
+    .line 14
+    :cond_4
+    :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v6, "Propose new file for upload cache: "
@@ -176,7 +211,7 @@
 
     invoke-interface {v3, v4, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
+    .line 15
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V

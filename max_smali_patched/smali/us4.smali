@@ -3,58 +3,99 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvs4;
+.implements Law0;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ScheduledFuture;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ScheduledFuture;)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lus4;->a:Ljava/util/concurrent/ScheduledFuture;
+    iput p1, p0, Lus4;->a:I
+
+    iput p2, p0, Lus4;->b:I
+
+    iput p3, p0, Lus4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lus4;->a:Ljava/util/concurrent/ScheduledFuture;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    return v0
 
-    return-void
+    :cond_0
+    instance-of v1, p1, Lus4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lus4;
+
+    iget v1, p0, Lus4;->a:I
+
+    iget v3, p1, Lus4;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lus4;->b:I
+
+    iget v3, p1, Lus4;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lus4;->c:I
+
+    iget p1, p1, Lus4;->c:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 v0, 0x20f
 
-    const-string v1, "DisposableFutureHandle["
+    iget v1, p0, Lus4;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    add-int/2addr v0, v1
 
-    iget-object v1, p0, Lus4;->a:Ljava/util/concurrent/ScheduledFuture;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lus4;->b:I
 
-    const/16 v1, 0x5d
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lus4;->c:I
 
-    move-result-object v0
+    add-int/2addr v0, v1
 
-    return-object v0
+    return v0
 .end method

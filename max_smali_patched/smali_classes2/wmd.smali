@@ -4,160 +4,190 @@
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Lpgd;
 
-.field public final b:Lbp7;
+.field public final b:Lhgd;
 
-.field public final c:Lbp7;
+.field public final c:Lhgd;
 
-.field public final d:Lbp7;
-
-.field public final e:Lbp7;
-
-.field public final f:Ljava/lang/Object;
+.field public final d:Lhgd;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwmd;->a:Lbp7;
+    iput-object p1, p0, Lwmd;->a:Lpgd;
 
-    iput-object p2, p0, Lwmd;->b:Lbp7;
+    new-instance v0, Lhgd;
 
-    iput-object p3, p0, Lwmd;->c:Lbp7;
+    const/4 v1, 0x2
 
-    iput-object p4, p0, Lwmd;->d:Lbp7;
+    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
 
-    iput-object p5, p0, Lwmd;->e:Lbp7;
+    iput-object v0, p0, Lwmd;->b:Lhgd;
 
-    new-instance p1, Lm2c;
+    new-instance v0, Lhgd;
 
-    const/16 p2, 0x19
+    const/4 v1, 0x3
 
-    invoke-direct {p1, p2}, Lm2c;-><init>(I)V
+    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
 
-    const/4 p2, 0x3
+    iput-object v0, p0, Lwmd;->c:Lhgd;
 
-    invoke-static {p2, p1}, Lvr0;->r(ILve6;)Lbp7;
+    new-instance v0, Lhgd;
 
-    move-result-object p1
+    const/4 v1, 0x4
 
-    iput-object p1, p0, Lwmd;->f:Ljava/lang/Object;
+    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
+
+    iput-object v0, p0, Lwmd;->d:Lhgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Liqa;
-    .locals 1
+.method public final a(J)Lxmd;
+    .locals 6
 
-    iget-object v0, p0, Lwmd;->a:Lbp7;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const-string v1, "SELECT * FROM saved_msg_chat WHERE user_id = ?"
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lfhd;->c(ILjava/lang/String;)Lfhd;
 
-    check-cast v0, Liqa;
+    move-result-object v1
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v0, p1, p2}, Lfhd;->k(IJ)V
 
-.method public final b(Lsw7;Lap3;Lm82;)V
-    .locals 3
+    iget-object p1, p0, Lwmd;->a:Lpgd;
 
-    iget-object v0, p0, Lwmd;->d:Lbp7;
+    invoke-virtual {p1}, Lpgd;->b()V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Lpgd;->n(Lhff;)Landroid/database/Cursor;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lktd;
+    :try_start_0
+    const-string p2, "user_id"
 
-    check-cast v0, Lgjd;
+    invoke-static {p1, p2}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p2
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->debug-profile-info:Lru/ok/tamtam/android/prefs/PmsKey;
+    const-string v0, "chat_id"
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lgjd;->k(Ljava/lang/Enum;Z)Z
+    invoke-static {p1, v0}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    iget-object v0, p0, Lwmd;->c:Lbp7;
+    move-result v2
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
-    move-result-object v0
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
 
-    check-cast v0, Lr63;
+    move-result-wide v2
 
-    check-cast v0, Lt63;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    const-string v1, "app.debug.profile.info.enabled"
+    move-result-wide v4
 
-    iget-object v0, v0, Lh3;->g:Lep7;
+    new-instance p2, Lxmd;
 
-    invoke-virtual {v0, v1, v2}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    if-nez p2, :cond_2
-
-    if-eqz p3, :cond_1
-
-    invoke-virtual {p3}, Lm82;->l()Lap3;
-
-    move-result-object p2
+    invoke-direct {p2, v2, v3, v4, v5}, Lxmd;-><init>(JJ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 p2, 0x0
-
-    :cond_2
-    :goto_0
-    if-eqz p2, :cond_3
-
-    new-instance p3, Lf0c;
-
-    invoke-virtual {p2}, Lap3;->n()J
-
-    move-result-wide v0
-
-    invoke-direct {p3, v0, v1}, Lf0c;-><init>(J)V
+    :catchall_0
+    move-exception p2
 
     goto :goto_1
 
-    :cond_3
-    if-eqz p3, :cond_4
+    :cond_0
+    const/4 p2, 0x0
 
-    new-instance p2, Lf0c;
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    iget-object p3, p3, Lm82;->b:Lpc2;
+    invoke-virtual {v1}, Lfhd;->l()V
 
-    iget-wide v0, p3, Lpc2;->a:J
-
-    invoke-direct {p2, v0, v1}, Lf0c;-><init>(J)V
-
-    move-object p3, p2
+    return-object p2
 
     :goto_1
-    invoke-virtual {p1, p3}, Lsw7;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    :cond_4
-    :goto_2
+    invoke-virtual {v1}, Lfhd;->l()V
+
+    throw p2
+.end method
+
+.method public final b(JJ)V
+    .locals 4
+
+    iget-object v0, p0, Lwmd;->a:Lpgd;
+
+    invoke-virtual {v0}, Lpgd;->b()V
+
+    iget-object v1, p0, Lwmd;->b:Lhgd;
+
+    invoke-virtual {v1}, Lf3;->a()Lhh6;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-interface {v2, v3, p1, p2}, Lgff;->k(IJ)V
+
+    const/4 p1, 0x2
+
+    invoke-interface {v2, p1, p3, p4}, Lgff;->k(IJ)V
+
+    :try_start_0
+    invoke-virtual {v0}, Lpgd;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v2}, Lhh6;->l()J
+
+    invoke-virtual {v0}, Lpgd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v0}, Lpgd;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
+
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    invoke-virtual {v0}, Lpgd;->k()V
+
+    throw p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
+
+    throw p1
 .end method

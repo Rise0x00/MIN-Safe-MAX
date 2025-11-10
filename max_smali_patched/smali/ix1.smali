@@ -1,21 +1,24 @@
-.class public final Lix1;
-.super Lay1;
+.class public final synthetic Lix1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lrt1;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lts1;
+.field public final synthetic b:Lsx1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lts1;I)V
+.method public synthetic constructor <init>(Lsx1;I)V
     .locals 0
 
     iput p2, p0, Lix1;->a:I
 
-    iput-object p1, p0, Lix1;->b:Lts1;
+    iput-object p1, p0, Lix1;->b:Lsx1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,122 +27,132 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
+.method public B(Lqt1;)Ljava/lang/String;
+    .locals 5
 
-    iget p1, p0, Lix1;->a:I
+    iget v0, p0, Lix1;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lix1;->b:Lts1;
+    iget-object v0, p0, Lix1;->b:Lsx1;
 
-    if-eqz p1, :cond_0
+    :try_start_0
+    iget-object v1, v0, Lsx1;->c:Ln3e;
 
-    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+    new-instance v2, Lax1;
 
-    const-string v1, "Camera is closed"
+    const/4 v3, 0x5
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, p1}, Lax1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Lts1;->d(Ljava/lang/Throwable;)Z
+    invoke-virtual {v1, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    return-void
+    goto :goto_0
 
-    :pswitch_0
-    new-instance p1, Landroidx/camera/core/ImageCaptureException;
+    :catch_0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const/4 v0, 0x0
+    const-string v1, "Unable to check if MeteringRepeating is attached. Camera executor shut down."
 
-    const-string v1, "Capture request is cancelled because camera is closed"
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lqt1;->d(Ljava/lang/Throwable;)Z
 
-    iget-object v0, p0, Lix1;->b:Lts1;
+    :goto_0
+    const-string p1, "isMeteringRepeatingAttached"
 
-    invoke-virtual {v0, p1}, Lts1;->d(Ljava/lang/Throwable;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(ILiy1;)V
-    .locals 0
-
-    iget p1, p0, Lix1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    const-string p1, "FocusMeteringControl"
-
-    const-string p2, "triggerAePrecapture: triggering capture request completed"
-
-    invoke-static {p1, p2}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iget-object p2, p0, Lix1;->b:Lts1;
-
-    invoke-virtual {p2, p1}, Lts1;->b(Ljava/lang/Object;)Z
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object p1, p0, Lix1;->b:Lts1;
+    iget-object v0, p0, Lix1;->b:Lsx1;
 
-    const/4 p2, 0x0
+    :try_start_1
+    iget-object v1, v0, Lsx1;->a:Ljfc;
 
-    invoke-virtual {p1, p2}, Lts1;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljfc;->F()Ld7e;
 
-    return-void
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {v1}, Ld7e;->b()Le7e;
 
-.method public final c(ILh2a;)V
-    .locals 1
+    move-result-object v1
 
-    iget p1, p0, Lix1;->a:I
+    new-instance v2, Ljava/util/ArrayList;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, v1, Le7e;->c:Ljava/util/List;
 
-    new-instance p1, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
+    iget-object v1, v0, Lsx1;->H0:Lzq5;
 
-    iget-object p2, p0, Lix1;->b:Lts1;
+    iget-object v1, v1, Lzq5;->f:Ljava/lang/Object;
 
-    invoke-virtual {p2, p1}, Lts1;->d(Ljava/lang/Throwable;)Z
+    check-cast v1, Lp02;
 
-    return-void
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :pswitch_0
-    const-string p1, "ERROR"
+    new-instance v1, Lkx1;
 
-    const-string p2, "Capture request failed with reason "
+    invoke-direct {v1, v0, p1}, Lkx1;-><init>(Lsx1;Lqt1;)V
 
-    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    iget-object v1, v0, Lsx1;->b:Lh12;
 
-    new-instance p2, Landroidx/camera/core/ImageCaptureException;
+    iget-object v3, v0, Lsx1;->s0:Lvx1;
 
-    const/4 v0, 0x0
+    iget-object v3, v3, Lvx1;->a:Ljava/lang/String;
 
-    invoke-direct {p2, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v4, v0, Lsx1;->c:Ln3e;
 
-    iget-object p1, p0, Lix1;->b:Lts1;
+    invoke-static {v2}, Limi;->a(Ljava/util/ArrayList;)Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    invoke-virtual {p1, p2}, Lts1;->d(Ljava/lang/Throwable;)Z
+    move-result-object v2
 
-    return-void
+    iget-object v1, v1, Lh12;->a:Lihd;
+
+    invoke-virtual {v1, v3, v4, v2}, Lihd;->w(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    :try_end_1
+    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v1
+
+    :goto_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unable to open camera for configAndClose: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2, v1}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p1, v1}, Lqt1;->d(Ljava/lang/Throwable;)Z
+
+    :goto_2
+    const-string p1, "configAndCloseTask"
+
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0

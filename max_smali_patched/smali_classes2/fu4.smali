@@ -1,53 +1,51 @@
 .class public final Lfu4;
-.super Lnz3;
+.super Lt5;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lo10;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-.field public w0:I
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lnz3;)V
+.method public synthetic constructor <init>(Lypd;I)V
     .locals 0
 
-    iput-object p1, p0, Lfu4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iput p2, p0, Lfu4;->b:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lt5;-><init>(Lypd;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a(Ljava/lang/Class;)Ljava/util/ArrayList;
     .locals 1
 
-    iput-object p1, p0, Lfu4;->Y:Ljava/lang/Object;
+    iget v0, p0, Lfu4;->b:I
 
-    iget p1, p0, Lfu4;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfu4;->w0:I
-
-    iget-object p1, p0, Lfu4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lnz3;)Ljava/lang/Object;
+    invoke-super {p0, p1}, Lt5;->a(Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lt5;->a:Lypd;
+
+    invoke-virtual {v0, p1}, Lypd;->b(Ljava/lang/Class;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

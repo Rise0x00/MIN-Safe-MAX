@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxo3;
+.implements Ljr3;
 
 
 # instance fields
@@ -13,13 +13,13 @@
 
 .field public final synthetic c:Z
 
-.field public final synthetic d:Lxe6;
+.field public final synthetic d:Lqi6;
 
-.field public final synthetic e:Lxe6;
+.field public final synthetic e:Lqi6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLxe6;Lxe6;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqi6;Lqi6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,9 +30,9 @@
 
     iput-boolean p3, p0, Lru/ok/android/externcalls/sdk/r;->c:Z
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/r;->d:Lxe6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/r;->d:Lqi6;
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/r;->e:Lxe6;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/r;->e:Lqi6;
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 6
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/r;->e:Lxe6;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/r;->e:Lqi6;
 
     move-object v5, p1
 
@@ -54,9 +54,9 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/r;->c:Z
 
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/r;->d:Lxe6;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/r;->d:Lqi6;
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->A(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLxe6;Lxe6;Ljava/util/Collection;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->F(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Boolean;ZLqi6;Lqi6;Ljava/util/Collection;)V
 
     return-void
 .end method

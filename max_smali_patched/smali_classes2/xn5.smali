@@ -3,32 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Lu6;
 
 
 # instance fields
-.field public final synthetic a:Lyn5;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lo10;
+.field public final synthetic b:Lgp5;
 
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lw29;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyn5;Lo10;ZLw29;)V
+.method public synthetic constructor <init>(Lgp5;Ljava/util/List;I)V
     .locals 0
 
+    iput p3, p0, Lxn5;->a:I
+
+    iput-object p1, p0, Lxn5;->b:Lgp5;
+
+    iput-object p2, p0, Lxn5;->c:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxn5;->a:Lyn5;
-
-    iput-object p2, p0, Lxn5;->b:Lo10;
-
-    iput-boolean p3, p0, Lxn5;->c:Z
-
-    iput-object p4, p0, Lxn5;->d:Lw29;
 
     return-void
 .end method
@@ -36,77 +32,109 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 6
 
-    iget-object v0, p0, Lxn5;->a:Lyn5;
+    iget v0, p0, Lxn5;->a:I
 
-    iget-object v1, v0, Lyn5;->c:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Lyn5;->a()Z
+    iget-object v0, p0, Lxn5;->c:Ljava/util/List;
 
-    move-result v2
+    iget-object v1, p0, Lxn5;->b:Lgp5;
 
-    if-nez v2, :cond_0
+    iget-object v2, v1, Lgp5;->a:Lpgd;
+
+    invoke-virtual {v2}, Lpgd;->c()V
+
+    :try_start_0
+    const-string v3, "SELECT MAX(`index`) FROM favorite_stickers"
+
+    const/4 v4, 0x0
+
+    invoke-static {v4, v3}, Lfhd;->c(ILjava/lang/String;)Lfhd;
+
+    move-result-object v3
+
+    iget-object v1, v1, Lgp5;->a:Lpgd;
+
+    invoke-virtual {v1}, Lpgd;->b()V
+
+    invoke-virtual {v1, v3}, Lpgd;->n(Lhff;)Landroid/database/Cursor;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
     :cond_0
-    iget-object v2, v0, Lyn5;->g:Lpr5;
-
-    iget-object v3, p0, Lxn5;->b:Lo10;
-
-    invoke-virtual {v2, v3}, Lpr5;->h(Lo10;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    iget-boolean v2, p0, Lxn5;->c:Z
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v3}, Lv63;->Z(Lo10;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {v3}, Lv63;->b0(Lo10;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_1
     :goto_0
-    return-void
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    :cond_2
-    iget-object v2, v0, Lyn5;->a:Landroid/content/Context;
+    invoke-virtual {v3}, Lfhd;->l()V
 
-    iget-object v0, v0, Lyn5;->b:Ll8f;
+    add-int/lit8 v4, v4, 0x1
 
-    check-cast v0, Lzid;
+    invoke-static {v4, v0}, Lgp5;->b(ILjava/util/List;)Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lzid;->n()Lo49;
+    invoke-virtual {v2}, Lpgd;->q()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move-result-object v0
-
-    iget-object v1, v1, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
-
-    iget-object v1, v1, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast v1, Lsg3;
-
-    check-cast v1, Lyka;
-
-    invoke-virtual {v1}, Lyka;->h()Lpr5;
-
-    move-result-object v1
-
-    iget-object v4, p0, Lxn5;->d:Lw29;
-
-    invoke-static {v2, v4, v3, v0, v1}, Lbf0;->z(Landroid/content/Context;Lw29;Lo10;Lo49;Lpr5;)V
+    invoke-virtual {v2}, Lpgd;->k()V
 
     return-void
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v3}, Lfhd;->l()V
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :goto_2
+    invoke-virtual {v2}, Lpgd;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lxn5;->b:Lgp5;
+
+    iget-object v1, p0, Lxn5;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lgp5;->a(Ljava/util/List;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

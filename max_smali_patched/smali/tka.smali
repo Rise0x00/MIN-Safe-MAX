@@ -1,283 +1,154 @@
 .class public abstract Ltka;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Lgla;
+.implements Lzv4;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public X:Lzv4;
 
-.field public static final C:I
+.field public final a:Lv3e;
 
-.field public static final D:I
+.field public final b:J
 
-.field public static final E:I
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
-.field public static final F:I
+.field public final d:Lgpd;
 
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lv3e;JLjava/util/concurrent/TimeUnit;Lgpd;)V
     .locals 1
 
-    sget v0, Lyic;->chat_screen__leave_chat_action:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Ltka;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lyic;->chat_screen__leave_chat_title:I
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Ltka;->b:I
+    iput-object v0, p0, Ltka;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lyic;->chat_screen__remove_chat_action:I
+    iput-object p1, p0, Ltka;->a:Lv3e;
 
-    sput v0, Ltka;->c:I
+    iput-wide p2, p0, Ltka;->b:J
 
-    sget v0, Lyic;->chat_screen__remove_chat_title:I
+    iput-object p4, p0, Ltka;->c:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Ltka;->d:I
+    iput-object p5, p0, Ltka;->d:Lgpd;
 
-    sget v0, Lyic;->chat_screen__search_result_down_button_accessibility:I
+    return-void
+.end method
 
-    sput v0, Ltka;->e:I
 
-    sget v0, Lyic;->chat_screen__search_result_not_found:I
+# virtual methods
+.method public abstract a()V
+.end method
 
-    sput v0, Ltka;->f:I
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lyic;->chat_screen__search_result_success:I
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Ltka;->g:I
+    return-void
+.end method
 
-    sget v0, Lyic;->chat_screen__search_result_up_button_accessibility:I
+.method public final c()V
+    .locals 1
 
-    sput v0, Ltka;->h:I
+    iget-object v0, p0, Ltka;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lyic;->chat_screen__start_chat_with_bot:I
+    invoke-static {v0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    sput v0, Ltka;->i:I
+    invoke-virtual {p0}, Ltka;->a()V
 
-    sget v0, Lyic;->chat_screen_channel_search_hint:I
+    return-void
+.end method
 
-    sput v0, Ltka;->j:I
+.method public final d(Lzv4;)V
+    .locals 7
 
-    sget v0, Lyic;->chat_screen_file_too_big_caption:I
+    iget-object v0, p0, Ltka;->X:Lzv4;
 
-    sput v0, Ltka;->k:I
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
 
-    sget v0, Lyic;->chat_screen_file_too_big_title:I
+    move-result v0
 
-    sput v0, Ltka;->l:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lyic;->chat_screen_join_channel:I
+    iput-object p1, p0, Ltka;->X:Lzv4;
 
-    sput v0, Ltka;->m:I
+    iget-object p1, p0, Ltka;->a:Lv3e;
 
-    sget v0, Lyic;->chat_screen_join_chat:I
+    invoke-virtual {p1, p0}, Lv3e;->d(Lzv4;)V
 
-    sput v0, Ltka;->n:I
+    iget-wide v2, p0, Ltka;->b:J
 
-    sget v0, Lyic;->chat_screen_leave_chat:I
+    iget-object v6, p0, Ltka;->c:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Ltka;->o:I
+    iget-object v0, p0, Ltka;->d:Lgpd;
 
-    sget v0, Lyic;->chat_screen_remove_chat:I
+    move-wide v4, v2
 
-    sput v0, Ltka;->p:I
+    move-object v1, p0
 
-    sget v0, Lyic;->chat_screen_search_hint:I
+    invoke-virtual/range {v0 .. v6}, Lgpd;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lzv4;
 
-    sput v0, Ltka;->q:I
+    move-result-object p1
 
-    sget v0, Lyic;->chat_screen_status_mute_chat:I
+    iget-object v0, v1, Ltka;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Ltka;->r:I
+    invoke-static {v0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
-    sget v0, Lyic;->chat_screen_status_subscribe_chat:I
+    return-void
 
-    sput v0, Ltka;->s:I
+    :cond_0
+    move-object v1, p0
 
-    sget v0, Lyic;->chat_screen_status_unmute_chat:I
+    return-void
+.end method
 
-    sput v0, Ltka;->t:I
+.method public final dispose()V
+    .locals 1
 
-    sget v0, Lyic;->chat_screen_unblock_contact:I
+    iget-object v0, p0, Ltka;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput v0, Ltka;->u:I
+    invoke-static {v0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    sget v0, Lyic;->media_bar_restricted_media_action:I
+    iget-object v0, p0, Ltka;->X:Lzv4;
 
-    sput v0, Ltka;->v:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sget v0, Lyic;->media_bar_restricted_media_subtitle:I
+    return-void
+.end method
 
-    sput v0, Ltka;->w:I
+.method public final f()Z
+    .locals 1
 
-    sget v0, Lyic;->media_bar_restricted_media_title:I
+    iget-object v0, p0, Ltka;->X:Lzv4;
 
-    sput v0, Ltka;->x:I
+    invoke-interface {v0}, Lzv4;->f()Z
 
-    sget v0, Lyic;->media_type_picker__close_dialog__accept:I
+    move-result v0
 
-    sput v0, Ltka;->y:I
+    return v0
+.end method
 
-    sget v0, Lyic;->media_type_picker__close_dialog__title:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sput v0, Ltka;->z:I
+    iget-object v0, p0, Ltka;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lyic;->media_type_picker__contact:I
+    invoke-static {v0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    sput v0, Ltka;->A:I
+    iget-object v0, p0, Ltka;->a:Lv3e;
 
-    sget v0, Lyic;->media_type_picker__file:I
-
-    sput v0, Ltka;->B:I
-
-    sget v0, Lyic;->media_type_picker__file_dialog__from_file_manager:I
-
-    sput v0, Ltka;->C:I
-
-    sget v0, Lyic;->media_type_picker__file_dialog__from_gallery:I
-
-    sput v0, Ltka;->D:I
-
-    sget v0, Lyic;->media_type_picker__file_dialog__title:I
-
-    sput v0, Ltka;->E:I
-
-    sget v0, Lyic;->media_type_picker__gallery:I
-
-    sput v0, Ltka;->F:I
-
-    sget v0, Lyic;->media_type_picker__input_hint:I
-
-    sput v0, Ltka;->G:I
-
-    sget v0, Lyic;->media_type_picker__money:I
-
-    sput v0, Ltka;->H:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Ltka;->I:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__camera_permission:I
-
-    sput v0, Ltka;->J:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Ltka;->K:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Ltka;->L:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Ltka;->M:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Ltka;->N:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Ltka;->O:I
-
-    sget v0, Lyic;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Ltka;->P:I
-
-    sget v0, Lyic;->media_type_picker__place:I
-
-    sput v0, Ltka;->Q:I
-
-    sget v0, Lyic;->media_type_picker__snack_file:I
-
-    sput v0, Ltka;->R:I
-
-    sget v0, Lyic;->media_type_picker__snack_media:I
-
-    sput v0, Ltka;->S:I
+    invoke-virtual {v0, p1}, Lv3e;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

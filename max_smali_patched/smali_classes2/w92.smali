@@ -1,49 +1,894 @@
-.class public final Lw92;
-.super Lnz3;
+.class public abstract Lw92;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Lun3;
 
-.field public final synthetic Y:Lma2;
-
-.field public Z:I
-
-.field public o:Lma2;
+.field public static final b:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Lma2;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lw92;->Y:Lma2;
+    new-instance v0, Lun3;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget v1, Llsa;->R:I
+
+    sget v2, Lnsa;->a:I
+
+    new-instance v3, Lirf;
+
+    invoke-direct {v3, v2}, Lirf;-><init>(I)V
+
+    const/4 v2, 0x2
+
+    const/16 v4, 0x38
+
+    invoke-direct {v0, v1, v3, v2, v4}, Lun3;-><init>(ILnrf;II)V
+
+    sput-object v0, Lw92;->a:Lun3;
+
+    new-instance v0, Lgk1;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lgk1;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lw92;->b:Ltif;
 
     return-void
 .end method
 
+.method public static a(Lt92;)Lbme;
+    .locals 9
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    new-instance v0, Lbme;
 
-    iput-object p1, p0, Lw92;->X:Ljava/lang/Object;
+    iget-wide v1, p0, Lt92;->a:J
 
-    iget p1, p0, Lw92;->Z:I
+    sget v3, Lnsa;->B:I
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0}, Lt92;->n()Lmr3;
 
-    or-int/2addr p1, v0
+    move-result-object p0
 
-    iput p1, p0, Lw92;->Z:I
+    if-eqz p0, :cond_0
 
-    iget-object p1, p0, Lw92;->Y:Lma2;
+    invoke-virtual {p0}, Lmr3;->e()Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Lma2;->n(Lnz3;)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    if-eqz p0, :cond_1
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    sget p0, Lmkd;->O:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, p0}, Lirf;-><init>(I)V
+
+    new-instance p0, Lun3;
+
+    sget v5, Llsa;->Q:I
+
+    sget v6, Lnsa;->x:I
+
+    new-instance v7, Lirf;
+
+    invoke-direct {v7, v6}, Lirf;-><init>(I)V
+
+    const/4 v6, 0x1
+
+    const/16 v8, 0x38
+
+    invoke-direct {p0, v5, v7, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v5, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v5}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static b(J)Lbme;
+    .locals 7
+
+    new-instance v0, Lbme;
+
+    sget v1, Lnsa;->b:I
+
+    new-instance v3, Lirf;
+
+    invoke-direct {v3, v1}, Lirf;-><init>(I)V
+
+    new-instance v1, Lun3;
+
+    sget v2, Llsa;->T:I
+
+    sget v4, Lnsa;->y:I
+
+    new-instance v5, Lirf;
+
+    invoke-direct {v5, v4}, Lirf;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    const/16 v6, 0x38
+
+    invoke-direct {v1, v2, v5, v4, v6}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v2, Lw92;->a:Lun3;
+
+    filled-new-array {v1, v2}, [Lun3;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    move-wide v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static c(J)Lbme;
+    .locals 7
+
+    new-instance v0, Lbme;
+
+    sget v1, Lnsa;->j:I
+
+    new-instance v3, Lirf;
+
+    invoke-direct {v3, v1}, Lirf;-><init>(I)V
+
+    new-instance v1, Lun3;
+
+    sget v2, Llsa;->T:I
+
+    sget v4, Lnsa;->i:I
+
+    new-instance v5, Lirf;
+
+    invoke-direct {v5, v4}, Lirf;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    const/16 v6, 0x38
+
+    invoke-direct {v1, v2, v5, v4, v6}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v2, Lw92;->a:Lun3;
+
+    filled-new-array {v1, v2}, [Lun3;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    move-wide v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static d(Lt92;)Lbme;
+    .locals 11
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->d:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    sget p0, Lmkd;->v:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, p0}, Lirf;-><init>(I)V
+
+    new-instance p0, Lun3;
+
+    sget v5, Llsa;->I:I
+
+    sget v6, Lnsa;->f:I
+
+    new-instance v7, Lirf;
+
+    invoke-direct {v7, v6}, Lirf;-><init>(I)V
+
+    const/4 v6, 0x1
+
+    const/16 v8, 0x38
+
+    invoke-direct {p0, v5, v7, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v5, Lun3;
+
+    sget v7, Llsa;->B:I
+
+    sget v9, Lnsa;->c:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v9}, Lirf;-><init>(I)V
+
+    invoke-direct {v5, v7, v10, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v6, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v5, v6}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static e(Lt92;)Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->m:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->S:I
+
+    sget v5, Lnsa;->h:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x1
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v4, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v4}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static f(Lt92;)Lbme;
+    .locals 11
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->m:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    sget p0, Lmkd;->C:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, p0}, Lirf;-><init>(I)V
+
+    new-instance p0, Lun3;
+
+    sget v5, Llsa;->I:I
+
+    sget v6, Lnsa;->r:I
+
+    new-instance v7, Lirf;
+
+    invoke-direct {v7, v6}, Lirf;-><init>(I)V
+
+    const/4 v6, 0x1
+
+    const/16 v8, 0x38
+
+    invoke-direct {p0, v5, v7, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v5, Lun3;
+
+    sget v7, Llsa;->C:I
+
+    sget v9, Lnsa;->k:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v9}, Lirf;-><init>(I)V
+
+    invoke-direct {v5, v7, v10, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v6, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v5, v6}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static g(Lt92;)Lbme;
+    .locals 11
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->H:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    sget p0, Lmkd;->x:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, p0}, Lirf;-><init>(I)V
+
+    new-instance p0, Lun3;
+
+    sget v5, Llsa;->S:I
+
+    sget v6, Lnsa;->l:I
+
+    new-instance v7, Lirf;
+
+    invoke-direct {v7, v6}, Lirf;-><init>(I)V
+
+    const/4 v6, 0x1
+
+    const/16 v8, 0x38
+
+    invoke-direct {p0, v5, v7, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v5, Lun3;
+
+    sget v7, Llsa;->T:I
+
+    sget v9, Lnsa;->k:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v9}, Lirf;-><init>(I)V
+
+    invoke-direct {v5, v7, v10, v6, v8}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v6, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v5, v6}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static h(Lt92;)Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->e:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->U:I
+
+    sget v5, Lnsa;->z:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x1
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v4, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v4}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static i(Lt92;)Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->e:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->I:I
+
+    sget v5, Lnsa;->f:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x1
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v4, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v4}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static j(Lt92;)Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->o:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->U:I
+
+    sget v5, Lnsa;->A:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x1
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v4, Lw92;->b:Ltif;
+
+    invoke-virtual {v4}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lun3;
+
+    filled-new-array {p0, v4}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static k(Lt92;)Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget v3, Lnsa;->o:I
+
+    invoke-virtual {p0}, Lt92;->n0()V
+
+    iget-object p0, p0, Lt92;->t0:Ljava/lang/CharSequence;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    move v4, v3
+
+    new-instance v3, Lkrf;
+
+    invoke-static {p0}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v3, v4, p0}, Lkrf;-><init>(ILjava/util/List;)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->I:I
+
+    sget v5, Lnsa;->r:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x1
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v4, Lw92;->b:Ltif;
+
+    invoke-virtual {v4}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lun3;
+
+    filled-new-array {p0, v4}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static l(Lt92;)Lbme;
+    .locals 11
+
+    new-instance v0, Lbme;
+
+    iget-wide v1, p0, Lt92;->a:J
+
+    sget p0, Lnsa;->L:I
+
+    new-instance v3, Lirf;
+
+    invoke-direct {v3, p0}, Lirf;-><init>(I)V
+
+    new-instance p0, Lun3;
+
+    sget v4, Llsa;->W:I
+
+    sget v5, Lnsa;->J:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v5}, Lirf;-><init>(I)V
+
+    const/4 v5, 0x3
+
+    const/16 v7, 0x38
+
+    invoke-direct {p0, v4, v6, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v4, Lun3;
+
+    sget v6, Llsa;->X:I
+
+    sget v8, Lnsa;->K:I
+
+    new-instance v9, Lirf;
+
+    invoke-direct {v9, v8}, Lirf;-><init>(I)V
+
+    invoke-direct {v4, v6, v9, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v6, Lun3;
+
+    sget v8, Llsa;->V:I
+
+    sget v9, Lnsa;->I:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v9}, Lirf;-><init>(I)V
+
+    invoke-direct {v6, v8, v10, v5, v7}, Lun3;-><init>(ILnrf;II)V
+
+    new-instance v5, Lun3;
+
+    sget v8, Llsa;->Y:I
+
+    sget v9, Lnsa;->M:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v9}, Lirf;-><init>(I)V
+
+    const/4 v9, 0x1
+
+    invoke-direct {v5, v8, v10, v9, v7}, Lun3;-><init>(ILnrf;II)V
+
+    sget-object v7, Lw92;->a:Lun3;
+
+    filled-new-array {p0, v4, v6, v5, v7}, [Lun3;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public static m()Lbme;
+    .locals 8
+
+    new-instance v0, Lbme;
+
+    new-instance v3, Lmrf;
+
+    const-string v1, "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435!"
+
+    invoke-direct {v3, v1}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v4, Lmrf;
+
+    const-string v1, "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435\u0441\u044c \u043f\u043e\u0437\u0436\u0435 :)"
+
+    invoke-direct {v4, v1}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v1, Lun3;
+
+    new-instance v2, Lmrf;
+
+    const-string v5, "\u0412\u0435\u0440\u043d\u0443\u0441\u044c \u043f\u043e\u0437\u0436\u0435"
+
+    invoke-direct {v2, v5}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
+
+    const/4 v5, 0x3
+
+    const/16 v6, 0x38
+
+    const/high16 v7, -0x80000000
+
+    invoke-direct {v1, v7, v2, v5, v6}, Lun3;-><init>(ILnrf;II)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v5
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    invoke-direct/range {v0 .. v5}, Lbme;-><init>(JLnrf;Lnrf;Ljava/util/List;)V
+
+    return-object v0
 .end method

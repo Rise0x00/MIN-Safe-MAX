@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public A:J
+.field public A:Z
 
 .field public B:J
 
@@ -14,15 +14,9 @@
 
 .field public E:J
 
-.field public F:J
+.field public F:Lzif;
 
-.field public G:Z
-
-.field public H:J
-
-.field public I:Lz5f;
-
-.field public final a:Lzde;
+.field public final a:Ls95;
 
 .field public final b:[J
 
@@ -34,23 +28,23 @@
 
 .field public f:I
 
-.field public g:Z
+.field public g:J
 
-.field public h:J
+.field public h:F
 
-.field public i:F
+.field public i:Z
 
-.field public j:Z
+.field public j:J
 
-.field public k:J
+.field public k:I
 
 .field public l:J
 
-.field public m:Ljava/lang/reflect/Method;
+.field public m:J
 
-.field public n:J
+.field public n:Ljava/lang/reflect/Method;
 
-.field public o:Z
+.field public o:J
 
 .field public p:Z
 
@@ -62,11 +56,11 @@
 
 .field public t:J
 
-.field public u:J
+.field public u:I
 
 .field public v:I
 
-.field public w:I
+.field public w:J
 
 .field public x:J
 
@@ -76,12 +70,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lzde;)V
+.method public constructor <init>(Ls95;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln60;->a:Lzde;
+    iput-object p1, p0, Ln60;->a:Ls95;
 
     :try_start_0
     const-class p1, Landroid/media/AudioTrack;
@@ -94,7 +88,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Ln60;->m:Ljava/lang/reflect/Method;
+    iput-object p1, p0, Ln60;->n:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -105,9 +99,15 @@
 
     iput-object p1, p0, Ln60;->b:[J
 
-    sget-object p1, Lz5f;->a:Lz5f;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput-object p1, p0, Ln60;->I:Lz5f;
+    iput-wide v0, p0, Ln60;->C:J
+
+    iput-wide v0, p0, Ln60;->B:J
+
+    sget-object p1, Lzif;->a:Lzif;
+
+    iput-object p1, p0, Ln60;->F:Lzif;
 
     return-void
 .end method
@@ -115,917 +115,993 @@
 
 # virtual methods
 .method public final a()J
-    .locals 28
+    .locals 31
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Ln60;->a:Lzde;
+    iget-object v1, v0, Ln60;->c:Landroid/media/AudioTrack;
 
-    iget-object v1, v1, Lzde;->b:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lue4;
+    invoke-virtual {v1}, Landroid/media/AudioTrack;->getPlayState()I
 
-    iget-object v2, v0, Ln60;->c:Landroid/media/AudioTrack;
+    move-result v2
+
+    const-wide/16 v4, 0x3e8
+
+    const-wide/16 v6, 0x0
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x3
+
+    if-ne v2, v10, :cond_19
+
+    iget-object v2, v0, Ln60;->F:Lzif;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2}, Landroid/media/AudioTrack;->getPlayState()I
-
-    move-result v3
-
-    const-wide/16 v9, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x1
-
-    const-wide/16 v13, 0x3e8
-
-    const/4 v15, 0x3
-
-    if-ne v3, v15, :cond_1a
-
-    iget-object v3, v0, Ln60;->I:Lz5f;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-wide v16
+    move-result-wide v11
 
-    div-long v4, v16, v13
+    div-long/2addr v11, v4
 
-    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+    iget-wide v13, v0, Ln60;->m:J
 
-    iget-wide v6, v0, Ln60;->l:J
+    sub-long v13, v11, v13
 
-    sub-long v6, v4, v6
+    const-wide/16 v15, 0x7530
 
-    const-wide/16 v18, 0x7530
+    cmp-long v2, v13, v15
 
-    cmp-long v3, v6, v18
-
-    if-ltz v3, :cond_2
+    if-ltz v2, :cond_2
 
     invoke-virtual {v0}, Ln60;->b()J
 
-    move-result-wide v6
+    move-result-wide v13
 
-    iget v3, v0, Ln60;->f:I
+    iget v2, v0, Ln60;->f:I
 
-    invoke-static {v3, v6, v7}, Lt4g;->a0(IJ)J
+    invoke-static {v2, v13, v14}, Llig;->c0(IJ)J
 
-    move-result-wide v6
+    move-result-wide v13
 
-    cmp-long v3, v6, v9
+    cmp-long v2, v13, v6
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    move-wide/from16 v18, v13
-
-    goto/16 :goto_9
+    goto/16 :goto_8
 
     :cond_0
-    iget v3, v0, Ln60;->v:I
+    iget v2, v0, Ln60;->u:I
 
-    move-wide/from16 v18, v13
+    iget v15, v0, Ln60;->h:F
 
-    iget v13, v0, Ln60;->i:F
+    invoke-static {v15, v13, v14}, Llig;->G(FJ)J
 
-    invoke-static {v13, v6, v7}, Lt4g;->G(FJ)J
+    move-result-wide v13
 
-    move-result-wide v6
+    sub-long/2addr v13, v11
 
-    sub-long/2addr v6, v4
+    iget-object v15, v0, Ln60;->b:[J
 
-    iget-object v13, v0, Ln60;->b:[J
+    aput-wide v13, v15, v2
 
-    aput-wide v6, v13, v3
+    iget v2, v0, Ln60;->u:I
 
-    iget v3, v0, Ln60;->v:I
+    add-int/2addr v2, v9
 
-    add-int/2addr v3, v12
+    const/16 v13, 0xa
 
-    const/16 v6, 0xa
+    rem-int/2addr v2, v13
 
-    rem-int/2addr v3, v6
+    iput v2, v0, Ln60;->u:I
 
-    iput v3, v0, Ln60;->v:I
+    iget v2, v0, Ln60;->v:I
 
-    iget v3, v0, Ln60;->w:I
+    if-ge v2, v13, :cond_1
 
-    if-ge v3, v6, :cond_1
+    add-int/2addr v2, v9
 
-    add-int/2addr v3, v12
-
-    iput v3, v0, Ln60;->w:I
+    iput v2, v0, Ln60;->v:I
 
     :cond_1
-    iput-wide v4, v0, Ln60;->l:J
+    iput-wide v11, v0, Ln60;->m:J
 
-    iput-wide v9, v0, Ln60;->k:J
+    iput-wide v6, v0, Ln60;->l:J
 
-    move v3, v11
+    const/4 v2, 0x0
 
     :goto_0
-    iget v6, v0, Ln60;->w:I
+    iget v13, v0, Ln60;->v:I
 
-    if-ge v3, v6, :cond_3
+    if-ge v2, v13, :cond_2
 
-    iget-wide v9, v0, Ln60;->k:J
+    move-wide/from16 v16, v4
 
-    aget-wide v20, v13, v3
+    iget-wide v4, v0, Ln60;->l:J
 
-    int-to-long v6, v6
+    aget-wide v18, v15, v2
 
-    div-long v20, v20, v6
+    int-to-long v13, v13
 
-    add-long v6, v20, v9
+    div-long v18, v18, v13
 
-    iput-wide v6, v0, Ln60;->k:J
+    add-long v4, v18, v4
 
-    add-int/lit8 v3, v3, 0x1
+    iput-wide v4, v0, Ln60;->l:J
 
-    const-wide/16 v9, 0x0
+    add-int/lit8 v2, v2, 0x1
+
+    move-wide/from16 v4, v16
 
     goto :goto_0
 
     :cond_2
-    move-wide/from16 v18, v13
+    move-wide/from16 v16, v4
+
+    iget-boolean v2, v0, Ln60;->p:Z
+
+    const-string v4, "DefaultAudioSink"
+
+    const-wide/32 v18, 0x7a120
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, v0, Ln60;->n:Ljava/lang/reflect/Method;
+
+    if-eqz v2, :cond_4
+
+    const-wide/32 v20, 0x4c4b40
+
+    iget-wide v13, v0, Ln60;->q:J
+
+    sub-long v13, v11, v13
+
+    cmp-long v5, v13, v18
+
+    if-ltz v5, :cond_5
+
+    const/4 v5, 0x0
+
+    :try_start_0
+    iget-object v13, v0, Ln60;->c:Landroid/media/AudioTrack;
+
+    invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2, v13, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    sget-object v13, Llig;->a:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    int-to-long v13, v2
+
+    mul-long v13, v13, v16
+
+    iget-wide v9, v0, Ln60;->g:J
+
+    sub-long/2addr v13, v9
+
+    iput-wide v13, v0, Ln60;->o:J
+
+    invoke-static {v13, v14, v6, v7}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v9
+
+    iput-wide v9, v0, Ln60;->o:J
+
+    cmp-long v13, v9, v20
+
+    if-lez v13, :cond_3
+
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    const-string v14, "Ignoring impossibly large audio latency: "
+
+    invoke-direct {v13, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v13, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v4, v9}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-wide v6, v0, Ln60;->o:J
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    iput-object v5, v0, Ln60;->n:Ljava/lang/reflect/Method;
 
     :cond_3
-    iget-boolean v3, v0, Ln60;->g:Z
-
-    if-eqz v3, :cond_4
-
-    goto/16 :goto_9
-
-    :cond_4
-    iget-object v3, v0, Ln60;->e:Lk60;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v6, v3, Lk60;->g:Ljava/lang/Object;
-
-    check-cast v6, Lj60;
-
-    if-eqz v6, :cond_11
-
-    iget-object v13, v6, Lj60;->b:Landroid/media/AudioTimestamp;
-
-    const-wide/32 v20, 0x7a120
-
-    iget-wide v9, v3, Lk60;->e:J
-
-    sub-long v9, v4, v9
-
-    iget-wide v7, v3, Lk60;->d:J
-
-    cmp-long v7, v9, v7
-
-    if-gez v7, :cond_5
-
-    goto/16 :goto_3
-
-    :cond_5
-    iput-wide v4, v3, Lk60;->e:J
-
-    iget-object v7, v6, Lj60;->a:Landroid/media/AudioTrack;
-
-    invoke-virtual {v7, v13}, Landroid/media/AudioTrack;->getTimestamp(Landroid/media/AudioTimestamp;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_8
-
-    iget-wide v8, v13, Landroid/media/AudioTimestamp;->framePosition:J
-
-    iget-wide v14, v6, Lj60;->d:J
-
-    cmp-long v23, v14, v8
-
-    if-lez v23, :cond_7
-
-    iget-boolean v10, v6, Lj60;->f:Z
-
-    if-eqz v10, :cond_6
-
-    move-object/from16 v24, v13
-
-    iget-wide v12, v6, Lj60;->g:J
-
-    add-long/2addr v12, v14
-
-    iput-wide v12, v6, Lj60;->g:J
-
-    iput-boolean v11, v6, Lj60;->f:Z
-
-    goto :goto_1
-
-    :cond_6
-    move-object/from16 v24, v13
-
-    iget-wide v12, v6, Lj60;->c:J
-
-    const-wide/16 v14, 0x1
-
-    add-long/2addr v12, v14
-
-    iput-wide v12, v6, Lj60;->c:J
-
-    goto :goto_1
-
-    :cond_7
-    move-object/from16 v24, v13
-
     :goto_1
-    iput-wide v8, v6, Lj60;->d:J
-
-    iget-wide v12, v6, Lj60;->g:J
-
-    add-long/2addr v8, v12
-
-    iget-wide v12, v6, Lj60;->c:J
-
-    const/16 v10, 0x20
-
-    shl-long/2addr v12, v10
-
-    add-long/2addr v8, v12
-
-    iput-wide v8, v6, Lj60;->e:J
+    iput-wide v11, v0, Ln60;->q:J
 
     goto :goto_2
 
-    :cond_8
-    move-object/from16 v24, v13
+    :cond_4
+    const-wide/32 v20, 0x4c4b40
 
+    :cond_5
     :goto_2
-    iget v8, v3, Lk60;->b:I
+    iget-object v5, v0, Ln60;->e:Lk60;
 
-    if-eqz v8, :cond_e
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v9, 0x1
+    iget v9, v5, Lk60;->b:I
 
-    if-eq v8, v9, :cond_c
+    iget-object v10, v5, Lk60;->a:Lj60;
 
-    const/4 v14, 0x2
+    iget v13, v0, Ln60;->h:F
 
-    if-eq v8, v14, :cond_b
+    move-wide/from16 v22, v6
 
-    const/4 v10, 0x3
+    invoke-virtual {v0, v11, v12}, Ln60;->c(J)J
 
-    if-eq v8, v10, :cond_a
+    move-result-wide v6
 
-    const/4 v9, 0x4
+    iget-wide v2, v5, Lk60;->g:J
 
-    if-ne v8, v9, :cond_9
+    sub-long v2, v11, v2
+
+    iget-wide v14, v5, Lk60;->f:J
+
+    cmp-long v2, v2, v14
+
+    if-gez v2, :cond_6
+
+    move-object/from16 v26, v1
+
+    goto/16 :goto_7
+
+    :cond_6
+    iput-wide v11, v5, Lk60;->g:J
+
+    iget-object v2, v10, Lj60;->a:Landroid/media/AudioTrack;
+
+    iget-object v3, v10, Lj60;->b:Landroid/media/AudioTimestamp;
+
+    invoke-virtual {v2, v3}, Landroid/media/AudioTrack;->getTimestamp(Landroid/media/AudioTimestamp;)Z
+
+    move-result v24
+
+    if-eqz v24, :cond_9
+
+    iget-wide v14, v3, Landroid/media/AudioTimestamp;->framePosition:J
+
+    move/from16 v25, v9
+
+    iget-wide v8, v10, Lj60;->d:J
+
+    cmp-long v2, v8, v14
+
+    if-lez v2, :cond_8
+
+    iget-boolean v2, v10, Lj60;->f:Z
+
+    if-eqz v2, :cond_7
+
+    move-object/from16 v26, v1
+
+    iget-wide v1, v10, Lj60;->g:J
+
+    add-long/2addr v1, v8
+
+    iput-wide v1, v10, Lj60;->g:J
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v10, Lj60;->f:Z
+
+    goto :goto_3
+
+    :cond_7
+    move-object/from16 v26, v1
+
+    iget-wide v1, v10, Lj60;->c:J
+
+    const-wide/16 v8, 0x1
+
+    add-long/2addr v1, v8
+
+    iput-wide v1, v10, Lj60;->c:J
+
+    goto :goto_3
+
+    :cond_8
+    move-object/from16 v26, v1
+
+    :goto_3
+    iput-wide v14, v10, Lj60;->d:J
+
+    iget-wide v1, v10, Lj60;->g:J
+
+    add-long/2addr v14, v1
+
+    iget-wide v1, v10, Lj60;->c:J
+
+    const/16 v8, 0x20
+
+    shl-long/2addr v1, v8
+
+    add-long/2addr v14, v1
+
+    iput-wide v14, v10, Lj60;->e:J
 
     goto :goto_4
 
     :cond_9
-    new-instance v1, Ljava/lang/IllegalStateException;
+    move-object/from16 v26, v1
 
-    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
+    move/from16 v25, v9
 
-    throw v1
-
-    :cond_a
-    if-eqz v7, :cond_12
-
-    invoke-virtual {v3}, Lk60;->a()V
-
-    goto :goto_4
-
-    :cond_b
-    if-nez v7, :cond_12
-
-    invoke-virtual {v3}, Lk60;->a()V
-
-    goto :goto_4
-
-    :cond_c
-    if-eqz v7, :cond_d
-
-    iget-wide v8, v6, Lj60;->e:J
-
-    iget-wide v12, v3, Lk60;->f:J
-
-    cmp-long v8, v8, v12
-
-    if-lez v8, :cond_12
-
-    const/4 v14, 0x2
-
-    invoke-virtual {v3, v14}, Lk60;->b(I)V
-
-    goto :goto_4
-
-    :cond_d
-    invoke-virtual {v3}, Lk60;->a()V
-
-    goto :goto_4
-
-    :cond_e
-    if-eqz v7, :cond_10
-
-    move-object/from16 v8, v24
-
-    iget-wide v8, v8, Landroid/media/AudioTimestamp;->nanoTime:J
-
-    div-long v8, v8, v18
-
-    iget-wide v12, v3, Lk60;->c:J
-
-    cmp-long v8, v8, v12
-
-    if-ltz v8, :cond_f
-
-    iget-wide v8, v6, Lj60;->e:J
-
-    iput-wide v8, v3, Lk60;->f:J
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v3, v9}, Lk60;->b(I)V
-
-    goto :goto_4
-
-    :cond_f
-    :goto_3
-    move v7, v11
-
-    goto :goto_4
-
-    :cond_10
-    iget-wide v8, v3, Lk60;->c:J
-
-    sub-long v8, v4, v8
-
-    cmp-long v8, v8, v20
-
-    if-lez v8, :cond_12
-
-    const/4 v10, 0x3
-
-    invoke-virtual {v3, v10}, Lk60;->b(I)V
-
-    goto :goto_4
-
-    :cond_11
-    const-wide/32 v20, 0x7a120
-
-    goto :goto_3
-
-    :cond_12
     :goto_4
-    const-string v12, "DefaultAudioSink"
+    if-eqz v24, :cond_c
 
-    if-nez v7, :cond_13
+    iget-object v2, v5, Lk60;->c:Ls95;
 
-    const-wide/32 v22, 0x4c4b40
+    iget-wide v8, v3, Landroid/media/AudioTimestamp;->nanoTime:J
 
-    goto/16 :goto_7
+    div-long v8, v8, v16
 
-    :cond_13
-    if-eqz v6, :cond_14
+    iget-wide v14, v10, Lj60;->e:J
 
-    iget-object v7, v6, Lj60;->b:Landroid/media/AudioTimestamp;
+    iget-object v1, v10, Lj60;->b:Landroid/media/AudioTimestamp;
 
-    const-wide/32 v22, 0x4c4b40
+    iget-wide v0, v1, Landroid/media/AudioTimestamp;->nanoTime:J
 
-    iget-wide v8, v7, Landroid/media/AudioTimestamp;->nanoTime:J
+    div-long v0, v0, v16
 
-    div-long v8, v8, v18
+    move-wide/from16 v27, v0
 
-    goto :goto_5
+    move/from16 v0, v25
 
-    :cond_14
-    const-wide/32 v22, 0x4c4b40
+    invoke-static {v0, v14, v15}, Llig;->c0(IJ)J
 
-    move-wide/from16 v8, v16
+    move-result-wide v14
 
-    :goto_5
-    if-eqz v6, :cond_15
+    move-wide/from16 v29, v14
 
-    iget-wide v6, v6, Lj60;->e:J
+    sub-long v14, v11, v27
 
-    goto :goto_6
+    invoke-static {v13, v14, v15}, Llig;->D(FJ)J
 
-    :cond_15
-    const-wide/16 v6, -0x1
+    move-result-wide v14
 
-    :goto_6
-    invoke-virtual {v0}, Ln60;->b()J
+    add-long v14, v14, v29
 
-    move-result-wide v10
+    sub-long v27, v8, v11
 
-    iget v13, v0, Ln60;->f:I
+    invoke-static/range {v27 .. v28}, Ljava/lang/Math;->abs(J)J
 
-    invoke-static {v13, v10, v11}, Lt4g;->a0(IJ)J
+    move-result-wide v27
 
-    move-result-wide v10
+    cmp-long v1, v27, v20
 
-    sub-long v25, v8, v4
+    move/from16 v25, v1
 
-    invoke-static/range {v25 .. v26}, Ljava/lang/Math;->abs(J)J
+    const-string v1, ", "
 
-    move-result-wide v25
+    if-lez v25, :cond_a
 
-    cmp-long v13, v25, v22
+    iget-wide v14, v10, Lj60;->e:J
 
-    const-string v14, ", "
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-lez v13, :cond_16
+    move-object/from16 v25, v3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    move/from16 v27, v13
 
     const-string v13, "Spurious audio timestamp (system clock mismatch): "
 
-    invoke-static {v6, v7, v13, v14}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v6
+    invoke-virtual {v3, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v5, v14, v14, v6}, Lqw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v11, v12, v1, v1, v3}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lue4;->j()J
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-wide v7
+    iget-object v2, v2, Ls95;->a:Ljava/lang/Object;
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    check-cast v2, Llh4;
 
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Llh4;->j()J
 
-    invoke-virtual {v1}, Lue4;->k()J
+    move-result-wide v6
 
-    move-result-wide v7
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Llh4;->k()J
 
-    move-result-object v6
+    move-result-wide v1
 
-    invoke-static {v12, v6}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v9, 0x4
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3, v9}, Lk60;->b(I)V
+    move-result-object v1
+
+    invoke-static {v4, v1}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v5, v1}, Lk60;->a(I)V
+
+    goto :goto_5
+
+    :cond_a
+    move-object/from16 v25, v3
+
+    move/from16 v27, v13
+
+    sub-long/2addr v14, v6
+
+    invoke-static {v14, v15}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v13
+
+    cmp-long v3, v13, v20
+
+    if-lez v3, :cond_b
+
+    iget-wide v13, v10, Lj60;->e:J
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v15, "Spurious audio timestamp (frame position mismatch): "
+
+    invoke-direct {v3, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-static {v11, v12, v1, v1, v3}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v2, Ls95;->a:Ljava/lang/Object;
+
+    check-cast v2, Llh4;
+
+    invoke-virtual {v2}, Llh4;->j()J
+
+    move-result-wide v6
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Llh4;->k()J
+
+    move-result-wide v1
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v4, v1}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v5, v1}, Lk60;->a(I)V
+
+    goto :goto_5
+
+    :cond_b
+    const/4 v1, 0x4
+
+    iget v2, v5, Lk60;->d:I
+
+    if-ne v2, v1, :cond_d
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v5, v2}, Lk60;->a(I)V
+
+    goto :goto_5
+
+    :cond_c
+    move/from16 v27, v13
+
+    move/from16 v0, v25
+
+    const/4 v1, 0x4
+
+    move-object/from16 v25, v3
+
+    :cond_d
+    :goto_5
+    iget v3, v5, Lk60;->d:I
+
+    if-eqz v3, :cond_16
+
+    const/4 v2, 0x1
+
+    if-eq v3, v2, :cond_11
+
+    const/4 v14, 0x2
+
+    if-eq v3, v14, :cond_10
+
+    const/4 v15, 0x3
+
+    if-eq v3, v15, :cond_f
+
+    if-ne v3, v1, :cond_e
+
+    goto/16 :goto_7
+
+    :cond_e
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :cond_f
+    if-eqz v24, :cond_18
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v5, v1}, Lk60;->a(I)V
+
+    goto/16 :goto_7
+
+    :cond_10
+    const/4 v1, 0x0
+
+    if-nez v24, :cond_18
+
+    invoke-virtual {v5, v1}, Lk60;->a(I)V
+
+    goto/16 :goto_7
+
+    :cond_11
+    if-eqz v24, :cond_15
+
+    iget-wide v3, v10, Lj60;->e:J
+
+    iget-wide v6, v5, Lk60;->h:J
+
+    cmp-long v1, v3, v6
+
+    if-gtz v1, :cond_12
+
+    goto :goto_6
+
+    :cond_12
+    iget-wide v3, v5, Lk60;->i:J
+
+    invoke-static {v0, v6, v7}, Llig;->c0(IJ)J
+
+    move-result-wide v6
+
+    sub-long v3, v11, v3
+
+    move/from16 v1, v27
+
+    invoke-static {v1, v3, v4}, Llig;->D(FJ)J
+
+    move-result-wide v3
+
+    add-long/2addr v3, v6
+
+    iget-wide v6, v10, Lj60;->e:J
+
+    iget-object v8, v10, Lj60;->b:Landroid/media/AudioTimestamp;
+
+    iget-wide v8, v8, Landroid/media/AudioTimestamp;->nanoTime:J
+
+    div-long v8, v8, v16
+
+    invoke-static {v0, v6, v7}, Llig;->c0(IJ)J
+
+    move-result-wide v6
+
+    sub-long v8, v11, v8
+
+    invoke-static {v1, v8, v9}, Llig;->D(FJ)J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v6
+
+    sub-long/2addr v0, v3
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, v16
+
+    if-gez v0, :cond_13
+
+    const/4 v14, 0x2
+
+    invoke-virtual {v5, v14}, Lk60;->a(I)V
+
+    goto :goto_7
+
+    :cond_13
+    :goto_6
+    iget-wide v0, v5, Lk60;->e:J
+
+    sub-long/2addr v11, v0
+
+    const-wide/32 v0, 0x1e8480
+
+    cmp-long v0, v11, v0
+
+    if-lez v0, :cond_14
+
+    const/4 v15, 0x3
+
+    invoke-virtual {v5, v15}, Lk60;->a(I)V
+
+    goto :goto_7
+
+    :cond_14
+    iget-wide v0, v10, Lj60;->e:J
+
+    iput-wide v0, v5, Lk60;->h:J
+
+    move-object/from16 v0, v25
+
+    iget-wide v0, v0, Landroid/media/AudioTimestamp;->nanoTime:J
+
+    div-long v0, v0, v16
+
+    iput-wide v0, v5, Lk60;->i:J
+
+    goto :goto_7
+
+    :cond_15
+    const/4 v1, 0x0
+
+    invoke-virtual {v5, v1}, Lk60;->a(I)V
 
     goto :goto_7
 
     :cond_16
-    iget v13, v0, Ln60;->f:I
+    move-object/from16 v0, v25
 
-    invoke-static {v13, v6, v7}, Lt4g;->a0(IJ)J
+    if-eqz v24, :cond_17
 
-    move-result-wide v26
+    iget-wide v0, v0, Landroid/media/AudioTimestamp;->nanoTime:J
 
-    sub-long v26, v26, v10
+    div-long v3, v0, v16
 
-    invoke-static/range {v26 .. v27}, Ljava/lang/Math;->abs(J)J
+    iget-wide v6, v5, Lk60;->e:J
 
-    move-result-wide v26
+    cmp-long v3, v3, v6
 
-    cmp-long v13, v26, v22
+    if-ltz v3, :cond_18
 
-    if-lez v13, :cond_17
+    iget-wide v3, v10, Lj60;->e:J
 
-    const-string v13, "Spurious audio timestamp (frame position mismatch): "
+    iput-wide v3, v5, Lk60;->h:J
 
-    invoke-static {v6, v7, v13, v14}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    div-long v0, v0, v16
 
-    move-result-object v6
+    iput-wide v0, v5, Lk60;->i:J
 
-    invoke-virtual {v6, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    invoke-static {v4, v5, v14, v14, v6}, Lqw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v6, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Lue4;->j()J
-
-    move-result-wide v7
-
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Lue4;->k()J
-
-    move-result-wide v7
-
-    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v12, v6}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v9, 0x4
-
-    invoke-virtual {v3, v9}, Lk60;->b(I)V
+    invoke-virtual {v5, v2}, Lk60;->a(I)V
 
     goto :goto_7
 
     :cond_17
-    const/4 v9, 0x4
+    iget-wide v0, v5, Lk60;->e:J
 
-    iget v6, v3, Lk60;->b:I
+    sub-long/2addr v11, v0
 
-    if-ne v6, v9, :cond_18
+    cmp-long v0, v11, v18
 
-    invoke-virtual {v3}, Lk60;->a()V
+    if-lez v0, :cond_18
+
+    const/4 v15, 0x3
+
+    invoke-virtual {v5, v15}, Lk60;->a(I)V
 
     :cond_18
     :goto_7
-    iget-boolean v3, v0, Ln60;->p:Z
-
-    if-eqz v3, :cond_1b
-
-    iget-object v3, v0, Ln60;->m:Ljava/lang/reflect/Method;
-
-    if-eqz v3, :cond_1b
-
-    iget-wide v6, v0, Ln60;->q:J
-
-    sub-long v6, v4, v6
-
-    cmp-long v6, v6, v20
-
-    if-ltz v6, :cond_1b
-
-    const/4 v6, 0x0
-
-    :try_start_0
-    iget-object v7, v0, Ln60;->c:Landroid/media/AudioTrack;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v3, v7, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Integer;
-
-    sget v7, Lt4g;->a:I
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    int-to-long v7, v3
-
-    mul-long v7, v7, v18
-
-    iget-wide v9, v0, Ln60;->h:J
-
-    sub-long/2addr v7, v9
-
-    iput-wide v7, v0, Ln60;->n:J
-
-    const-wide/16 v9, 0x0
-
-    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v7
-
-    iput-wide v7, v0, Ln60;->n:J
-
-    cmp-long v3, v7, v22
-
-    if-lez v3, :cond_19
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v9, "Ignoring impossibly large audio latency: "
-
-    invoke-direct {v3, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v12, v3}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-wide/16 v9, 0x0
-
-    iput-wide v9, v0, Ln60;->n:J
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_8
-
-    :catch_0
-    iput-object v6, v0, Ln60;->m:Ljava/lang/reflect/Method;
-
-    :cond_19
-    :goto_8
-    iput-wide v4, v0, Ln60;->q:J
+    move-object/from16 v0, p0
 
     goto :goto_9
 
-    :cond_1a
-    move-wide/from16 v18, v13
+    :cond_19
+    :goto_8
+    move-object/from16 v26, v1
 
-    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+    move-wide/from16 v16, v4
 
-    :cond_1b
+    move-wide/from16 v22, v6
+
+    goto :goto_7
+
     :goto_9
-    iget-object v3, v0, Ln60;->I:Lz5f;
+    iget-object v1, v0, Ln60;->F:Lzif;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v3
 
-    div-long v3, v3, v18
+    div-long v3, v3, v16
 
-    iget-object v5, v0, Ln60;->e:Lk60;
+    iget-object v1, v0, Ln60;->e:Lk60;
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v6, v5, Lk60;->g:Ljava/lang/Object;
-
-    check-cast v6, Lj60;
-
-    iget v5, v5, Lk60;->b:I
+    iget v5, v1, Lk60;->d:I
 
     const/4 v14, 0x2
 
-    if-ne v5, v14, :cond_1c
+    if-ne v5, v14, :cond_1a
 
-    const/4 v11, 0x1
+    const/4 v5, 0x1
 
     goto :goto_a
 
-    :cond_1c
-    const/4 v11, 0x0
+    :cond_1a
+    const/4 v5, 0x0
 
     :goto_a
-    if-eqz v11, :cond_1f
+    if-eqz v5, :cond_1b
 
-    if-eqz v6, :cond_1d
+    iget v6, v0, Ln60;->h:F
 
-    iget-wide v7, v6, Lj60;->e:J
+    iget-object v7, v1, Lk60;->a:Lj60;
 
-    goto :goto_b
+    iget-wide v8, v7, Lj60;->e:J
 
-    :cond_1d
-    const-wide/16 v7, -0x1
+    iget-object v7, v7, Lj60;->b:Landroid/media/AudioTimestamp;
 
-    :goto_b
-    iget v5, v0, Ln60;->f:I
+    iget-wide v10, v7, Landroid/media/AudioTimestamp;->nanoTime:J
 
-    invoke-static {v5, v7, v8}, Lt4g;->a0(IJ)J
+    div-long v10, v10, v16
 
-    move-result-wide v7
+    iget v7, v1, Lk60;->b:I
 
-    if-eqz v6, :cond_1e
-
-    iget-object v5, v6, Lj60;->b:Landroid/media/AudioTimestamp;
-
-    iget-wide v5, v5, Landroid/media/AudioTimestamp;->nanoTime:J
-
-    div-long v5, v5, v18
-
-    move-wide/from16 v16, v5
-
-    :cond_1e
-    sub-long v5, v3, v16
-
-    iget v9, v0, Ln60;->i:F
-
-    invoke-static {v9, v5, v6}, Lt4g;->D(FJ)J
-
-    move-result-wide v5
-
-    add-long/2addr v5, v7
-
-    goto :goto_d
-
-    :cond_1f
-    iget v5, v0, Ln60;->w:I
-
-    if-nez v5, :cond_21
-
-    iget-wide v5, v0, Ln60;->x:J
-
-    cmp-long v5, v5, v16
-
-    if-eqz v5, :cond_20
-
-    invoke-virtual {v0}, Ln60;->c()J
-
-    move-result-wide v5
-
-    iget v7, v0, Ln60;->f:I
-
-    invoke-static {v7, v5, v6}, Lt4g;->a0(IJ)J
-
-    move-result-wide v5
-
-    goto :goto_c
-
-    :cond_20
-    invoke-virtual {v0}, Ln60;->b()J
-
-    move-result-wide v5
-
-    iget v7, v0, Ln60;->f:I
-
-    invoke-static {v7, v5, v6}, Lt4g;->a0(IJ)J
-
-    move-result-wide v5
-
-    goto :goto_c
-
-    :cond_21
-    iget-wide v5, v0, Ln60;->k:J
-
-    add-long/2addr v5, v3
-
-    iget v7, v0, Ln60;->i:F
-
-    invoke-static {v7, v5, v6}, Lt4g;->D(FJ)J
-
-    move-result-wide v5
-
-    :goto_c
-    iget-wide v7, v0, Ln60;->n:J
-
-    sub-long/2addr v5, v7
-
-    const-wide/16 v9, 0x0
-
-    invoke-static {v9, v10, v5, v6}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v5
-
-    iget-wide v7, v0, Ln60;->x:J
-
-    cmp-long v7, v7, v16
-
-    if-eqz v7, :cond_22
-
-    iget-wide v7, v0, Ln60;->A:J
-
-    iget v9, v0, Ln60;->f:I
-
-    invoke-static {v9, v7, v8}, Lt4g;->a0(IJ)J
+    invoke-static {v7, v8, v9}, Llig;->c0(IJ)J
 
     move-result-wide v7
 
-    invoke-static {v7, v8, v5, v6}, Ljava/lang/Math;->min(JJ)J
+    sub-long v9, v3, v10
 
-    move-result-wide v5
-
-    :cond_22
-    :goto_d
-    iget-boolean v7, v0, Ln60;->D:Z
-
-    if-eq v7, v11, :cond_23
-
-    iget-wide v7, v0, Ln60;->C:J
-
-    iput-wide v7, v0, Ln60;->F:J
-
-    iget-wide v7, v0, Ln60;->B:J
-
-    iput-wide v7, v0, Ln60;->E:J
-
-    :cond_23
-    iget-wide v7, v0, Ln60;->F:J
-
-    sub-long v7, v3, v7
-
-    const-wide/32 v9, 0xf4240
-
-    cmp-long v12, v7, v9
-
-    if-gez v12, :cond_24
-
-    iget-wide v12, v0, Ln60;->E:J
-
-    iget v14, v0, Ln60;->i:F
-
-    invoke-static {v14, v7, v8}, Lt4g;->D(FJ)J
-
-    move-result-wide v16
-
-    add-long v16, v16, v12
-
-    mul-long v7, v7, v18
-
-    div-long/2addr v7, v9
-
-    mul-long/2addr v5, v7
-
-    sub-long v13, v18, v7
-
-    mul-long v13, v13, v16
-
-    add-long/2addr v13, v5
-
-    div-long v5, v13, v18
-
-    :cond_24
-    iget-boolean v7, v0, Ln60;->j:Z
-
-    if-nez v7, :cond_25
-
-    iget-wide v7, v0, Ln60;->B:J
-
-    cmp-long v7, v5, v7
-
-    if-lez v7, :cond_25
-
-    invoke-virtual {v2}, Landroid/media/AudioTrack;->getPlayState()I
-
-    move-result v2
-
-    const/4 v10, 0x3
-
-    if-ne v2, v10, :cond_25
-
-    const/4 v9, 0x1
-
-    iput-boolean v9, v0, Ln60;->j:Z
-
-    iget-wide v7, v0, Ln60;->B:J
-
-    sub-long v7, v5, v7
-
-    invoke-static {v7, v8}, Lt4g;->j0(J)J
-
-    move-result-wide v7
-
-    iget v2, v0, Ln60;->i:F
-
-    invoke-static {v2, v7, v8}, Lt4g;->G(FJ)J
-
-    move-result-wide v7
-
-    iget-object v2, v0, Ln60;->I:Lz5f;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-static {v6, v9, v10}, Llig;->D(FJ)J
 
     move-result-wide v9
 
-    invoke-static {v7, v8}, Lt4g;->j0(J)J
+    add-long/2addr v9, v7
 
-    move-result-wide v7
+    goto :goto_b
 
-    sub-long/2addr v9, v7
+    :cond_1b
+    invoke-virtual {v0, v3, v4}, Ln60;->c(J)J
 
-    iget-object v1, v1, Lue4;->r:Lyn6;
+    move-result-wide v9
 
-    if-eqz v1, :cond_25
+    :goto_b
+    invoke-virtual/range {v26 .. v26}, Landroid/media/AudioTrack;->getPlayState()I
 
-    iget-object v1, v1, Lyn6;->b:Ljava/lang/Object;
+    move-result v6
 
-    check-cast v1, Lyi8;
+    const/4 v15, 0x3
 
-    iget-object v1, v1, Lyi8;->T1:Llo4;
+    if-ne v6, v15, :cond_20
 
-    iget-object v2, v1, Llo4;->b:Ljava/lang/Object;
+    if-nez v5, :cond_1c
+
+    iget v1, v1, Lk60;->d:I
+
+    if-eqz v1, :cond_1d
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1c
+
+    goto :goto_c
+
+    :cond_1c
+    invoke-virtual {v0, v9, v10}, Ln60;->e(J)V
+
+    :cond_1d
+    :goto_c
+    iget-wide v5, v0, Ln60;->C:J
+
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v1, v5, v7
+
+    if-eqz v1, :cond_1e
+
+    sub-long v5, v3, v5
+
+    iget-wide v11, v0, Ln60;->B:J
+
+    sub-long v11, v9, v11
+
+    iget v1, v0, Ln60;->h:F
+
+    invoke-static {v1, v5, v6}, Llig;->D(FJ)J
+
+    move-result-wide v5
+
+    iget-wide v13, v0, Ln60;->B:J
+
+    add-long/2addr v13, v5
+
+    sub-long v15, v13, v9
+
+    invoke-static/range {v15 .. v16}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v15
+
+    cmp-long v1, v11, v22
+
+    if-eqz v1, :cond_1e
+
+    const-wide/32 v11, 0xf4240
+
+    cmp-long v1, v15, v11
+
+    if-gez v1, :cond_1e
+
+    const-wide/16 v11, 0xa
+
+    mul-long/2addr v5, v11
+
+    const-wide/16 v11, 0x64
+
+    div-long/2addr v5, v11
+
+    sub-long v18, v13, v5
+
+    add-long v20, v13, v5
+
+    move-wide/from16 v16, v9
+
+    invoke-static/range {v16 .. v21}, Llig;->j(JJJ)J
+
+    move-result-wide v9
+
+    :cond_1e
+    iget-boolean v1, v0, Ln60;->A:Z
+
+    if-nez v1, :cond_1f
+
+    iget-boolean v1, v0, Ln60;->i:Z
+
+    if-nez v1, :cond_1f
+
+    iget-wide v5, v0, Ln60;->B:J
+
+    cmp-long v1, v5, v7
+
+    if-eqz v1, :cond_1f
+
+    cmp-long v1, v9, v5
+
+    if-lez v1, :cond_1f
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Ln60;->i:Z
+
+    sub-long v1, v9, v5
+
+    invoke-static {v1, v2}, Llig;->l0(J)J
+
+    move-result-wide v1
+
+    iget v5, v0, Ln60;->h:F
+
+    invoke-static {v5, v1, v2}, Llig;->G(FJ)J
+
+    move-result-wide v1
+
+    iget-object v5, v0, Ln60;->F:Lzif;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    invoke-static {v1, v2}, Llig;->l0(J)J
+
+    move-result-wide v1
+
+    sub-long/2addr v5, v1
+
+    iget-object v1, v0, Ln60;->a:Ls95;
+
+    iget-object v1, v1, Ls95;->a:Ljava/lang/Object;
+
+    check-cast v1, Llh4;
+
+    iget-object v1, v1, Llh4;->s:Lpqe;
+
+    if-eqz v1, :cond_1f
+
+    iget-object v1, v1, Lpqe;->b:Ljava/lang/Object;
+
+    check-cast v1, Lto8;
+
+    iget-object v1, v1, Lto8;->P1:Ltz8;
+
+    iget-object v2, v1, Ltz8;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Handler;
 
-    if-eqz v2, :cond_25
+    if-eqz v2, :cond_1f
 
-    new-instance v7, Lu50;
+    new-instance v7, Lx50;
 
-    invoke-direct {v7, v1, v9, v10}, Lu50;-><init>(Llo4;J)V
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v1, v5, v6, v8}, Lx50;-><init>(Ljava/lang/Object;JI)V
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_25
+    :cond_1f
     iput-wide v3, v0, Ln60;->C:J
 
-    iput-wide v5, v0, Ln60;->B:J
+    iput-wide v9, v0, Ln60;->B:J
 
-    iput-boolean v11, v0, Ln60;->D:Z
+    goto :goto_d
 
-    return-wide v5
+    :cond_20
+    const/4 v2, 0x1
+
+    if-ne v6, v2, :cond_21
+
+    invoke-virtual {v0, v9, v10}, Ln60;->e(J)V
+
+    :cond_21
+    :goto_d
+    return-wide v9
 .end method
 
 .method public final b()J
     .locals 12
 
-    iget-wide v0, p0, Ln60;->x:J
+    iget-wide v0, p0, Ln60;->w:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -1033,11 +1109,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ln60;->c()J
+    invoke-virtual {p0}, Ln60;->d()J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Ln60;->A:J
+    iget-wide v2, p0, Ln60;->z:J
 
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
@@ -1046,7 +1122,7 @@
     return-wide v0
 
     :cond_0
-    iget-object v0, p0, Ln60;->I:Lz5f;
+    iget-object v0, p0, Ln60;->F:Lzif;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1062,7 +1138,7 @@
 
     cmp-long v4, v4, v6
 
-    if-ltz v4, :cond_9
+    if-ltz v4, :cond_7
 
     iget-object v4, p0, Ln60;->c:Landroid/media/AudioTrack;
 
@@ -1089,15 +1165,13 @@
 
     and-long/2addr v6, v8
 
-    iget-boolean v4, p0, Ln60;->g:Z
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v8, 0x1d
+
+    if-gt v4, v8, :cond_3
 
     const-wide/16 v8, 0x0
-
-    if-eqz v4, :cond_3
-
-    const/4 v4, 0x2
-
-    if-ne v5, v4, :cond_2
 
     cmp-long v4, v6, v8
 
@@ -1105,71 +1179,51 @@
 
     iget-wide v10, p0, Ln60;->s:J
 
-    iput-wide v10, p0, Ln60;->u:J
-
-    :cond_2
-    iget-wide v10, p0, Ln60;->u:J
-
-    add-long/2addr v6, v10
-
-    :cond_3
-    sget v4, Lt4g;->a:I
-
-    const/16 v10, 0x1d
-
-    if-gt v4, v10, :cond_5
-
-    cmp-long v4, v6, v8
-
-    if-nez v4, :cond_4
-
-    iget-wide v10, p0, Ln60;->s:J
-
     cmp-long v4, v10, v8
 
-    if-lez v4, :cond_4
+    if-lez v4, :cond_2
 
     const/4 v4, 0x3
 
-    if-ne v5, v4, :cond_4
+    if-ne v5, v4, :cond_2
 
-    iget-wide v4, p0, Ln60;->y:J
+    iget-wide v4, p0, Ln60;->x:J
 
     cmp-long v2, v4, v2
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_6
 
-    iput-wide v0, p0, Ln60;->y:J
+    iput-wide v0, p0, Ln60;->x:J
 
     goto :goto_1
 
-    :cond_4
-    iput-wide v2, p0, Ln60;->y:J
+    :cond_2
+    iput-wide v2, p0, Ln60;->x:J
 
-    :cond_5
+    :cond_3
     iget-wide v2, p0, Ln60;->s:J
 
     cmp-long v4, v2, v6
 
-    if-lez v4, :cond_7
+    if-lez v4, :cond_5
 
-    iget-boolean v4, p0, Ln60;->G:Z
+    iget-boolean v4, p0, Ln60;->D:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_4
 
-    iget-wide v4, p0, Ln60;->H:J
+    iget-wide v4, p0, Ln60;->E:J
 
     add-long/2addr v4, v2
 
-    iput-wide v4, p0, Ln60;->H:J
+    iput-wide v4, p0, Ln60;->E:J
 
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Ln60;->G:Z
+    iput-boolean v2, p0, Ln60;->D:Z
 
     goto :goto_0
 
-    :cond_6
+    :cond_4
     iget-wide v2, p0, Ln60;->t:J
 
     const-wide/16 v4, 0x1
@@ -1178,18 +1232,18 @@
 
     iput-wide v2, p0, Ln60;->t:J
 
-    :cond_7
+    :cond_5
     :goto_0
     iput-wide v6, p0, Ln60;->s:J
 
-    :cond_8
+    :cond_6
     :goto_1
     iput-wide v0, p0, Ln60;->r:J
 
-    :cond_9
+    :cond_7
     iget-wide v0, p0, Ln60;->s:J
 
-    iget-wide v2, p0, Ln60;->H:J
+    iget-wide v2, p0, Ln60;->E:J
 
     add-long/2addr v0, v2
 
@@ -1204,7 +1258,91 @@
     return-wide v0
 .end method
 
-.method public final c()J
+.method public final c(J)J
+    .locals 5
+
+    iget v0, p0, Ln60;->v:I
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-nez v0, :cond_1
+
+    iget-wide p1, p0, Ln60;->w:J
+
+    cmp-long p1, p1, v1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Ln60;->d()J
+
+    move-result-wide p1
+
+    iget v0, p0, Ln60;->f:I
+
+    invoke-static {v0, p1, p2}, Llig;->c0(IJ)J
+
+    move-result-wide p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Ln60;->b()J
+
+    move-result-wide p1
+
+    iget v0, p0, Ln60;->f:I
+
+    invoke-static {v0, p1, p2}, Llig;->c0(IJ)J
+
+    move-result-wide p1
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v3, p0, Ln60;->l:J
+
+    add-long/2addr p1, v3
+
+    iget v0, p0, Ln60;->h:F
+
+    invoke-static {v0, p1, p2}, Llig;->D(FJ)J
+
+    move-result-wide p1
+
+    :goto_0
+    iget-wide v3, p0, Ln60;->o:J
+
+    sub-long/2addr p1, v3
+
+    const-wide/16 v3, 0x0
+
+    invoke-static {v3, v4, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    iget-wide v3, p0, Ln60;->w:J
+
+    cmp-long v0, v3, v1
+
+    if-eqz v0, :cond_2
+
+    iget-wide v0, p0, Ln60;->z:J
+
+    iget v2, p0, Ln60;->f:I
+
+    invoke-static {v2, v0, v1}, Llig;->c0(IJ)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    :cond_2
+    return-wide p1
+.end method
+
+.method public final d()J
     .locals 4
 
     iget-object v0, p0, Ln60;->c:Landroid/media/AudioTrack;
@@ -1219,12 +1357,12 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-wide v0, p0, Ln60;->z:J
+    iget-wide v0, p0, Ln60;->y:J
 
     return-wide v0
 
     :cond_0
-    iget-object v0, p0, Ln60;->I:Lz5f;
+    iget-object v0, p0, Ln60;->F:Lzif;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1232,110 +1370,136 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lt4g;->U(J)J
+    invoke-static {v0, v1}, Llig;->U(J)J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Ln60;->x:J
+    iget-wide v2, p0, Ln60;->w:J
 
     sub-long/2addr v0, v2
 
-    iget v2, p0, Ln60;->i:F
+    iget v2, p0, Ln60;->h:F
 
-    invoke-static {v2, v0, v1}, Lt4g;->D(FJ)J
+    invoke-static {v2, v0, v1}, Llig;->D(FJ)J
 
     move-result-wide v0
 
     iget v2, p0, Ln60;->f:I
 
-    invoke-static {v2, v0, v1}, Lt4g;->p(IJ)J
+    invoke-static {v2, v0, v1}, Llig;->p(IJ)J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Ln60;->z:J
+    iget-wide v2, p0, Ln60;->y:J
 
     add-long/2addr v2, v0
 
     return-wide v2
 .end method
 
-.method public final d(J)Z
-    .locals 3
+.method public final e(J)V
+    .locals 5
 
-    invoke-virtual {p0}, Ln60;->a()J
+    iget-boolean v0, p0, Ln60;->A:Z
 
-    move-result-wide v0
+    if-eqz v0, :cond_1
 
-    iget v2, p0, Ln60;->f:I
+    iget-wide v0, p0, Ln60;->j:J
 
-    invoke-static {v2, v0, v1}, Lt4g;->p(IJ)J
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-wide v0
+    cmp-long v4, v0, v2
 
-    cmp-long p1, p1, v0
+    if-eqz v4, :cond_1
 
-    if-gtz p1, :cond_1
+    cmp-long v4, p1, v0
 
-    iget-boolean p1, p0, Ln60;->g:Z
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ln60;->c:Landroid/media/AudioTrack;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/media/AudioTrack;->getPlayState()I
-
-    move-result p1
-
-    const/4 p2, 0x2
-
-    if-ne p1, p2, :cond_0
-
-    invoke-virtual {p0}, Ln60;->b()J
-
-    move-result-wide p1
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p1, p1, v0
-
-    if-nez p1, :cond_0
+    if-gez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    sub-long/2addr p1, v0
 
-    return p1
+    iget v0, p0, Ln60;->h:F
+
+    invoke-static {v0, p1, p2}, Llig;->G(FJ)J
+
+    move-result-wide p1
+
+    iget-object v0, p0, Ln60;->F:Lzif;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {p1, p2}, Llig;->l0(J)J
+
+    move-result-wide p1
+
+    sub-long/2addr v0, p1
+
+    iput-wide v2, p0, Ln60;->j:J
+
+    iget-object p1, p0, Ln60;->a:Ls95;
+
+    iget-object p1, p1, Ls95;->a:Ljava/lang/Object;
+
+    check-cast p1, Llh4;
+
+    iget-object p1, p1, Llh4;->s:Lpqe;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Lpqe;->b:Ljava/lang/Object;
+
+    check-cast p1, Lto8;
+
+    iget-object p1, p1, Lto8;->P1:Ltz8;
+
+    iget-object p2, p1, Ltz8;->b:Ljava/lang/Object;
+
+    check-cast p2, Landroid/os/Handler;
+
+    if-eqz p2, :cond_1
+
+    new-instance v2, Lx50;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v0, v1, v3}, Lx50;-><init>(Ljava/lang/Object;JI)V
+
+    invoke-virtual {p2, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
     :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final e()V
+.method public final f()V
     .locals 3
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Ln60;->k:J
+    iput-wide v0, p0, Ln60;->l:J
 
     const/4 v2, 0x0
 
-    iput v2, p0, Ln60;->w:I
-
     iput v2, p0, Ln60;->v:I
 
-    iput-wide v0, p0, Ln60;->l:J
+    iput v2, p0, Ln60;->u:I
+
+    iput-wide v0, p0, Ln60;->m:J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Ln60;->B:J
 
     iput-wide v0, p0, Ln60;->C:J
 
-    iput-wide v0, p0, Ln60;->F:J
-
-    iput-boolean v2, p0, Ln60;->j:Z
+    iput-boolean v2, p0, Ln60;->i:Z
 
     return-void
 .end method

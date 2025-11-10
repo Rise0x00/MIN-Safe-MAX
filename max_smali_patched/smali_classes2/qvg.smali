@@ -1,120 +1,54 @@
-.class public final Lqvg;
-.super Lm3f;
+.class public final synthetic Lqvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
 
-.field public final synthetic Y:Lrvg;
-
-.field public final synthetic Z:Lpvg;
+.field public final synthetic b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lrvg;Lpvg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p1, p0, Lqvg;->Y:Lrvg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqvg;->Z:Lpvg;
+    iput-object p1, p0, Lqvg;->a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lqvg;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    check-cast p1, Le34;
+    new-instance p1, Ltvg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lqvg;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p1, p2}, Lqvg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p2
 
-    check-cast p1, Lqvg;
+    check-cast p2, Lphc;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object p2, p2, Lphc;->a:Lmhc;
 
-    invoke-virtual {p1, p2}, Lqvg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p2, p2, Lmhc;->a:Lkhc;
 
-    move-result-object p1
+    invoke-direct {p1, p2}, Ltvg;-><init>(Lkhc;)V
 
-    return-object p1
-.end method
+    iget-object p2, p0, Lqvg;->a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p2, p1}, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;->y0(Luvg;)V
 
-    new-instance p1, Lqvg;
-
-    iget-object v0, p0, Lqvg;->Y:Lrvg;
-
-    iget-object v1, p0, Lqvg;->Z:Lpvg;
-
-    invoke-direct {p1, v0, v1, p2}, Lqvg;-><init>(Lrvg;Lpvg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lqvg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqvg;->Y:Lrvg;
-
-    iget-object p1, p1, Lrvg;->b:Le8e;
-
-    iput v1, p0, Lqvg;->X:I
-
-    iget-object v0, p0, Lqvg;->Z:Lpvg;
-
-    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

@@ -1,265 +1,213 @@
 .class public final Lvyc;
-.super Ljava/lang/Object;
+.super Landroid/transition/Visibility;
 .source "SourceFile"
-
-# interfaces
-.implements Liqd;
-.implements Lmm3;
 
 
 # static fields
-.field public static final synthetic D0:[Ltm7;
+.field public static final b:Landroid/view/animation/PathInterpolator;
 
 
 # instance fields
-.field public final A0:Le8e;
-
-.field public final B0:Lrqc;
-
-.field public final C0:Lsqc;
-
-.field public final X:Lbp7;
-
-.field public final Y:Ls5f;
-
-.field public final Z:Lbp7;
-
-.field public final synthetic a:Lllg;
-
-.field public b:Lkyc;
-
-.field public final c:Le34;
-
-.field public final o:Lf1a;
-
-.field public final w0:Lbp7;
-
-.field public final x0:Lbp7;
-
-.field public final y0:Lbp7;
-
-.field public final z0:Lg65;
+.field public final a:Lfyc;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
-    new-instance v0, Lut9;
+    new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    const-string v1, "registerJob"
+    const v1, 0x3f28f5c3    # 0.66f
 
-    const-string v2, "getRegisterJob()Lkotlinx/coroutines/Job;"
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    const-class v3, Lvyc;
+    const v3, 0x3f666666    # 0.9f
 
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    sget-object v1, Lxxc;->a:Lyxc;
+    invoke-direct {v0, v3, v4, v1, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltm7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lvyc;->D0:[Ltm7;
+    sput-object v0, Lvyc;->b:Landroid/view/animation/PathInterpolator;
 
     return-void
 .end method
 
-.method public constructor <init>(Lkyc;Lkotlinx/coroutines/internal/ContextScope;Lf1a;Lbp7;Lbp7;Ls5f;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 3
+.method public constructor <init>(Lfyc;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/transition/Visibility;-><init>()V
 
-    new-instance v0, Lllg;
-
-    new-instance v1, Lo2c;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v1, v2}, Lo2c;-><init>(I)V
-
-    invoke-direct {v0, p5, v1}, Lllg;-><init>(Lbp7;Lxe6;)V
-
-    iput-object v0, p0, Lvyc;->a:Lllg;
-
-    iput-object p1, p0, Lvyc;->b:Lkyc;
-
-    iput-object p2, p0, Lvyc;->c:Le34;
-
-    iput-object p3, p0, Lvyc;->o:Lf1a;
-
-    iput-object p7, p0, Lvyc;->X:Lbp7;
-
-    iput-object p6, p0, Lvyc;->Y:Ls5f;
-
-    iput-object p4, p0, Lvyc;->Z:Lbp7;
-
-    iput-object p8, p0, Lvyc;->w0:Lbp7;
-
-    iput-object p9, p0, Lvyc;->x0:Lbp7;
-
-    iput-object p10, p0, Lvyc;->y0:Lbp7;
-
-    invoke-static {}, Lqxd;->w()Lg65;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvyc;->z0:Lg65;
-
-    const/4 p1, 0x1
-
-    const/4 p2, 0x2
-
-    invoke-static {p1, p1, p2}, Lf8e;->a(III)Le8e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvyc;->A0:Le8e;
-
-    new-instance p2, Lrqc;
-
-    invoke-direct {p2, p1}, Lrqc;-><init>(Lyt9;)V
-
-    iput-object p2, p0, Lvyc;->B0:Lrqc;
-
-    sget-object p1, Lkjb;->a:Lkjb;
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    new-instance p2, Lsqc;
-
-    invoke-direct {p2, p1}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object p2, p0, Lvyc;->C0:Lsqc;
+    iput-object p1, p0, Lvyc;->a:Lfyc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lopd;)V
-    .locals 1
+.method public final a(Landroid/view/View;Z)Landroid/animation/AnimatorSet;
+    .locals 11
 
-    iget-object v0, p0, Lvyc;->A0:Le8e;
+    new-instance v0, Landroid/animation/AnimatorSet;
 
-    invoke-virtual {v0, p1}, Le8e;->h(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    return-void
-.end method
-
-.method public final b(Lqpd;)V
-    .locals 4
-
-    iget-object v0, p0, Lvyc;->X:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr8f;
-
-    check-cast v0, Lwla;
-
-    invoke-virtual {v0}, Lwla;->b()Ly24;
-
-    move-result-object v0
-
-    new-instance v1, Luyc;
+    const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, p0, v2}, Luyc;-><init>(Lqpd;Lvyc;Lkotlin/coroutines/Continuation;)V
+    if-eqz p2, :cond_0
 
-    iget-object p1, p0, Lvyc;->a:Lllg;
+    move v3, v2
 
-    iget-object v2, p0, Lvyc;->c:Le34;
+    goto :goto_0
 
-    sget-object v3, Lh34;->b:Lh34;
+    :cond_0
+    move v3, v1
 
-    invoke-virtual {p1, v2, v0, v3, v1}, Lllg;->a(Le34;Lw24;Lh34;Llf6;)Lji7;
+    :goto_0
+    if-eqz p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    const/4 v2, 0x2
+
+    new-array v4, v2, [F
+
+    fill-array-data v4, :array_0
+
+    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v4
+
+    const-wide/16 v5, 0x64
+
+    invoke-virtual {v4, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    move-result-object v4
+
+    new-instance v7, Lsyc;
+
+    sget-object v8, Ltwe;->r:Ls45;
+
+    invoke-direct {v7, p1, v8, v1}, Lsyc;-><init>(Landroid/view/View;Ls45;F)V
+
+    invoke-virtual {p0, v7}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+
+    new-array v7, v2, [F
+
+    fill-array-data v7, :array_1
+
+    invoke-static {v7}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    move-result-object v7
+
+    new-instance v8, Lsyc;
+
+    sget-object v9, Ltwe;->s:Ls45;
+
+    invoke-direct {v8, p1, v9, v1}, Lsyc;-><init>(Landroid/view/View;Ls45;F)V
+
+    invoke-virtual {p0, v8}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+
+    new-array v8, v2, [F
+
+    const/4 v9, 0x0
+
+    aput v3, v8, v9
+
+    const/4 v10, 0x1
+
+    aput v1, v8, v10
+
+    invoke-static {v8}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    sget-object v5, Lvyc;->b:Landroid/view/animation/PathInterpolator;
+
+    invoke-virtual {v1, v5}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v5, Luyc;
+
+    invoke-direct {v5, p1, v3}, Luyc;-><init>(Landroid/view/View;F)V
+
+    invoke-virtual {p0, v5}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    new-instance v3, Lhg;
+
+    const/4 v5, 0x5
+
+    invoke-direct {v3, p1, v5}, Lhg;-><init>(Landroid/view/View;I)V
+
+    invoke-virtual {v1, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Landroid/animation/Animator;
+
+    aput-object v4, v3, v9
+
+    aput-object v7, v3, v10
+
+    aput-object v1, v3, v2
+
+    invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    new-instance v1, Ltyc;
+
+    invoke-direct {v1, p2, p0, p1}, Ltyc;-><init>(ZLvyc;Landroid/view/View;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object v0
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public final onAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p2, p1}, Lvyc;->a(Landroid/view/View;Z)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
-    sget-object v0, Lvyc;->D0:[Ltm7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lvyc;->z0:Lg65;
-
-    invoke-virtual {v1, p0, v0, p1}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final c()Lsqc;
-    .locals 1
+.method public final onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 0
 
-    iget-object v0, p0, Lvyc;->C0:Lsqc;
+    const/4 p1, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {p0, p2, p1}, Lvyc;->a(Landroid/view/View;Z)Landroid/animation/AnimatorSet;
 
-.method public final d(Lzz9;)V
-    .locals 4
+    move-result-object p1
 
-    new-instance v0, Lopd;
-
-    iget-object v1, p1, Lzz9;->b:Ljava/lang/String;
-
-    iget-wide v2, p1, Lzz9;->a:J
-
-    iget p1, p1, Lzz9;->c:I
-
-    invoke-direct {v0, v2, v3, v1, p1}, Lopd;-><init>(JLjava/lang/String;I)V
-
-    iget-object p1, p0, Lvyc;->A0:Le8e;
-
-    invoke-virtual {p1, v0}, Le8e;->h(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final e()Lrqc;
-    .locals 1
-
-    iget-object v0, p0, Lvyc;->B0:Lrqc;
-
-    return-object v0
-.end method
-
-.method public final f()Lrqc;
-    .locals 1
-
-    iget-object v0, p0, Lvyc;->a:Lllg;
-
-    iget-object v0, v0, Lllg;->o:Lrqc;
-
-    return-object v0
-.end method
-
-.method public final g()Llff;
-    .locals 4
-
-    new-instance v0, Llff;
-
-    sget v1, Lkjc;->oneme_login_neuro_avatars_title:I
-
-    sget v2, Lkjc;->oneme_login_neuro_avatars_description:I
-
-    sget v3, Lkjc;->oneme_login_neuro_avatars_continue_button:I
-
-    invoke-direct {v0, v1, v2, v3}, Llff;-><init>(III)V
-
-    return-object v0
+    return-object p1
 .end method

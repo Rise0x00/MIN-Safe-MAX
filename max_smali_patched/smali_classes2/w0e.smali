@@ -1,29 +1,29 @@
-.class public final Lw0e;
+.class public abstract Lw0e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lw0e;
-
-.field public static final b:Lv0e;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lw0e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lw0e;->a:Lw0e;
-
-    new-instance v0, Lv0e;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lw0e;->b:Lv0e;
+    iput-object p1, p0, Lw0e;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lw0e;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

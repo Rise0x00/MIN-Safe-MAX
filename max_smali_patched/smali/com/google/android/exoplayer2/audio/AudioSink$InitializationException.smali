@@ -6,11 +6,11 @@
 # instance fields
 .field public final a:Z
 
-.field public final b:Lr76;
+.field public final b:Lsb6;
 
 
 # direct methods
-.method public constructor <init>(IIIILr76;ZLjava/lang/RuntimeException;)V
+.method public constructor <init>(IIIILsb6;ZLjava/lang/RuntimeException;)V
     .locals 3
 
     if-eqz p6, :cond_0
@@ -57,7 +57,7 @@
 
     const-string p1, ")"
 
-    invoke-static {v2, p1, v0}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
 
     iput-boolean p6, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->a:Z
 
-    iput-object p5, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->b:Lr76;
+    iput-object p5, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->b:Lsb6;
 
     return-void
 .end method

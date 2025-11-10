@@ -1,61 +1,71 @@
 .class public final Lyl6;
-.super Lnz3;
+.super Lam6;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:J
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public final synthetic w0:Lzl6;
-
-.field public x0:I
+# static fields
+.field public static final b:Lyl6;
 
 
 # direct methods
-.method public constructor <init>(Lzl6;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lyl6;->w0:Lzl6;
+    new-instance v0, Lyl6;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lam6;-><init>(I)V
+
+    sput-object v0, Lyl6;->b:Lyl6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a()Ljava/lang/Long;
+    .locals 1
 
-    iput-object p1, p0, Lyl6;->Z:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iget p1, p0, Lyl6;->x0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lyl6;->x0:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v3, 0x0
+    return v0
 
-    const/4 v4, 0x0
+    :cond_0
+    instance-of p1, p1, Lyl6;
 
-    iget-object v0, p0, Lyl6;->w0:Lzl6;
+    if-nez p1, :cond_1
 
-    const-wide/16 v1, 0x0
+    const/4 p1, 0x0
 
-    move-object v5, p0
+    return p1
 
-    invoke-virtual/range {v0 .. v5}, Lzl6;->a(JLjava/lang/Long;Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, -0x41cf7668
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Camera"
+
+    return-object v0
 .end method

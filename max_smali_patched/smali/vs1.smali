@@ -1,62 +1,72 @@
 .class public final Lvs1;
-.super Lp3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzs1;
 
-# instance fields
-.field public final synthetic w0:Lws1;
+
+# static fields
+.field public static final a:Lvs1;
 
 
 # direct methods
-.method public constructor <init>(Lws1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvs1;
 
-    iput-object p1, p0, Lvs1;->w0:Lws1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lvs1;->a:Lvs1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h()Ljava/lang/String;
-    .locals 3
+.method public final a()J
+    .locals 2
 
-    iget-object v0, p0, Lvs1;->w0:Lws1;
+    const-wide/16 v0, 0x0
 
-    iget-object v0, v0, Lws1;->a:Ljava/lang/ref/WeakReference;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    check-cast v0, Lts1;
+    if-ne p0, p1, :cond_0
 
-    if-nez v0, :cond_0
-
-    const-string v0, "Completer object has been garbage collected, future will fail soon"
-
-    return-object v0
+    return v0
 
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    instance-of p1, p1, Lvs1;
 
-    const-string v2, "tag=["
+    if-nez p1, :cond_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    iget-object v0, v0, Lts1;->a:Ljava/lang/Object;
+    return p1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_1
+    return v0
+.end method
 
-    const-string v0, "]"
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const v0, -0x53d7451
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Init"
 
     return-object v0
 .end method

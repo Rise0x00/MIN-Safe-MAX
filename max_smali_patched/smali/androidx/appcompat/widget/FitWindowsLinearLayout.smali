@@ -24,7 +24,7 @@
     return p1
 .end method
 
-.method public setOnFitSystemWindowsListener(Lnt5;)V
+.method public setOnFitSystemWindowsListener(Lqx5;)V
     .locals 0
 
     return-void

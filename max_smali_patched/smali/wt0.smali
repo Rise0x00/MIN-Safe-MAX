@@ -1,176 +1,35 @@
 .class public final Lwt0;
-.super Ly1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public a:Lwt0;
 
-.field public final o:Ljava/lang/Object;
+.field public b:I
 
+.field public c:Ljava/util/LinkedList;
 
-# direct methods
-.method public constructor <init>(II[Ljava/lang/Object;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lwt0;->c:I
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Ly1;-><init>(II)V
-
-    .line 2
-    iput-object p3, p0, Lwt0;->o:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/lang/Object;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lwt0;->c:I
-
-    .line 3
-    invoke-direct {p0, p1, v0}, Ly1;-><init>(II)V
-
-    iput-object p2, p0, Lwt0;->o:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public d:Lwt0;
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Lwt0;->c:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "LinkedEntry(key: "
 
-    invoke-virtual {p0}, Ly1;->hasNext()Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    iget v1, p0, Lwt0;->b:I
 
-    if-eqz v0, :cond_0
+    const-string v2, ")"
 
-    iget v0, p0, Ly1;->a:I
+    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly1;->a:I
-
-    iget-object v0, p0, Lwt0;->o:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ly1;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lwt0;->o:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    iget v1, p0, Ly1;->a:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ly1;->a:I
-
-    aget-object v0, v0, v1
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lwt0;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ly1;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ly1;->a:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Ly1;->a:I
-
-    iget-object v0, p0, Lwt0;->o:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ly1;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lwt0;->o:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    iget v1, p0, Ly1;->a:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Ly1;->a:I
-
-    aget-object v0, v0, v1
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

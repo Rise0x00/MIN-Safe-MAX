@@ -1,16 +1,15 @@
-.class public abstract Laec;
-.super Ljava/lang/Object;
+.class public Laec;
+.super Lzdc;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_picker_input_view:I = 0x7f0a078a
+# virtual methods
+.method public get()Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_picker_media_keyboard_container:I = 0x7f0a078c
+    invoke-virtual {p0}, Lzdc;->getGetter()Lbs7;
 
-.field public static oneme_picker_quote_view:I = 0x7f0a078e
+    const/4 v0, 0x0
 
-.field public static oneme_picker_toolbar:I = 0x7f0a078f
-
-.field public static oneme_picker_toolbar_action_cancel_selection:I = 0x7f0a0790
-
-.field public static oneme_picker_toolbar_action_select:I = 0x7f0a0791
+    throw v0
+.end method

@@ -1,119 +1,163 @@
-.class public final Lc1b;
-.super Lhy9;
+.class public abstract Lc1b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final a:I
 
-.field public final c:Z
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Loyf;->a:Loyf;
+    sget v0, Lylc;->emoji_sprite_0:I
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    sput v0, Lc1b;->a:I
 
-    iput-wide p1, p0, Lc1b;->b:J
+    sget v0, Lylc;->emoji_sprite_1:I
 
-    iput-boolean p3, p0, Lc1b;->c:Z
+    sput v0, Lc1b;->b:I
+
+    sget v0, Lylc;->emoji_sprite_10:I
+
+    sput v0, Lc1b;->c:I
+
+    sget v0, Lylc;->emoji_sprite_11:I
+
+    sput v0, Lc1b;->d:I
+
+    sget v0, Lylc;->emoji_sprite_12:I
+
+    sput v0, Lc1b;->e:I
+
+    sget v0, Lylc;->emoji_sprite_13:I
+
+    sput v0, Lc1b;->f:I
+
+    sget v0, Lylc;->emoji_sprite_14:I
+
+    sput v0, Lc1b;->g:I
+
+    sget v0, Lylc;->emoji_sprite_15:I
+
+    sput v0, Lc1b;->h:I
+
+    sget v0, Lylc;->emoji_sprite_16:I
+
+    sput v0, Lc1b;->i:I
+
+    sget v0, Lylc;->emoji_sprite_17:I
+
+    sput v0, Lc1b;->j:I
+
+    sget v0, Lylc;->emoji_sprite_18:I
+
+    sput v0, Lc1b;->k:I
+
+    sget v0, Lylc;->emoji_sprite_19:I
+
+    sput v0, Lc1b;->l:I
+
+    sget v0, Lylc;->emoji_sprite_2:I
+
+    sput v0, Lc1b;->m:I
+
+    sget v0, Lylc;->emoji_sprite_20:I
+
+    sput v0, Lc1b;->n:I
+
+    sget v0, Lylc;->emoji_sprite_21:I
+
+    sput v0, Lc1b;->o:I
+
+    sget v0, Lylc;->emoji_sprite_22:I
+
+    sput v0, Lc1b;->p:I
+
+    sget v0, Lylc;->emoji_sprite_23:I
+
+    sput v0, Lc1b;->q:I
+
+    sget v0, Lylc;->emoji_sprite_24:I
+
+    sput v0, Lc1b;->r:I
+
+    sget v0, Lylc;->emoji_sprite_3:I
+
+    sput v0, Lc1b;->s:I
+
+    sget v0, Lylc;->emoji_sprite_4:I
+
+    sput v0, Lc1b;->t:I
+
+    sget v0, Lylc;->emoji_sprite_5:I
+
+    sput v0, Lc1b;->u:I
+
+    sget v0, Lylc;->emoji_sprite_6:I
+
+    sput v0, Lc1b;->v:I
+
+    sget v0, Lylc;->emoji_sprite_7:I
+
+    sput v0, Lc1b;->w:I
+
+    sget v0, Lylc;->emoji_sprite_8:I
+
+    sput v0, Lc1b;->x:I
+
+    sget v0, Lylc;->emoji_sprite_9:I
+
+    sput v0, Lc1b;->y:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lc1b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lc1b;
-
-    iget-wide v3, p0, Lc1b;->b:J
-
-    iget-wide v5, p1, Lc1b;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lc1b;->c:Z
-
-    iget-boolean p1, p1, Lc1b;->c:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lc1b;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lc1b;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "OpenOneToOneCall(opponentId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lc1b;->b:J
-
-    iget-boolean v4, p0, Lc1b;->c:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

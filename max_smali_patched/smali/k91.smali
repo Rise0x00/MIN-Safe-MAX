@@ -1,210 +1,181 @@
-.class public final synthetic Lk91;
-.super Ljava/lang/Object;
+.class public final Lk91;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-.field public final synthetic b:Lm3b;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm3b;I)V
+.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lk91;->a:I
+    iput-object p1, p0, Lk91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    iput-object p1, p0, Lk91;->b:Lm3b;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lpcb;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lk91;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lk91;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lk91;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lk91;
+
+    iget-object v1, p0, Lk91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {v0, v1, p2}, Lk91;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lk91;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lk91;->a:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lk91;->b:Lm3b;
+    iget-object p1, p0, Lk91;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lpcb;
 
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
+    sget-object v0, Locb;->a:Locb;
 
-    check-cast v0, Landroid/content/Context;
+    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v1, Lbcc;->ic_link_16:I
+    move-result v0
 
-    sget v2, Lvsa;->a:I
+    if-nez v0, :cond_2
 
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    instance-of v0, p1, Lncb;
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    check-cast p1, Lncb;
 
-    move-result-object v1
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
 
-    new-instance v2, Lsff;
+    iget-object v0, p0, Lk91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    iget-object v1, v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Y:Ltif;
 
-    return-object v2
-
-    :pswitch_0
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    sget v1, Lq9d;->n0:I
-
-    sget v2, Lvsa;->a:I
-
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    check-cast v1, Lh91;
+
+    iget-object p1, p1, Lncb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lab3;->X(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lb28;->E(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lp91;
 
     move-result-object v1
 
-    new-instance v2, Lsff;
+    invoke-virtual {v1}, Lp91;->v()Z
 
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    move-result v1
 
-    return-object v2
+    invoke-virtual {p1, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
 
-    :pswitch_1
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    check-cast v0, Landroid/content/Context;
+    move-result-object p1
 
-    sget v1, Lq9d;->o0:I
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lp91;
 
-    sget v2, Lvsa;->a:I
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    sget-object v1, Laa1;->b:Laa1;
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lp91;->b:Laa1;
 
-    move-result-object v1
+    sget-object v2, Laa1;->b:Laa1;
 
-    new-instance v2, Lsff;
+    if-ne v1, v2, :cond_0
 
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    iget-object v0, v0, Lp91;->d:Lqv5;
 
-    return-object v2
+    iget-object v0, v0, Lqv5;->d:Ljava/lang/Object;
 
-    :pswitch_2
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
+    check-cast v0, Ljava/util/ArrayList;
 
-    check-cast v0, Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    sget v1, Lq9d;->e0:I
+    move-result v0
 
-    sget v2, Lvsa;->a:I
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object v1
+    :goto_0
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
 
-    new-instance v2, Lsff;
+    goto :goto_1
 
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    return-object v2
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :pswitch_3
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
+    throw p1
 
-    check-cast v0, Landroid/content/Context;
+    :cond_2
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-    sget v1, Lq9d;->f0:I
-
-    sget v2, Lvsa;->a:I
-
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    new-instance v2, Lsff;
-
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v2
-
-    :pswitch_4
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    sget v1, Lq9d;->l0:I
-
-    sget v2, Lvsa;->a:I
-
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    new-instance v2, Lsff;
-
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v2
-
-    :pswitch_5
-    iget-object v0, v1, Lm3b;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    sget v1, Lq9d;->m0:I
-
-    sget v2, Lvsa;->a:I
-
-    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    new-instance v2, Lsff;
-
-    invoke-direct {v2, v1, v0}, Lsff;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

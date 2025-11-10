@@ -1,42 +1,53 @@
-.class public abstract Lbdc;
-.super Ljava/lang/Object;
+.class public final Lbdc;
+.super Lskd;
+.source "SourceFile"
 
 
-# static fields
-.field public static ic_call_answer:I = 0x7f080554
+# instance fields
+.field public final synthetic Z:Lcdc;
 
-.field public static ic_call_answer_low:I = 0x7f080555
 
-.field public static ic_call_answer_video:I = 0x7f080556
+# direct methods
+.method public constructor <init>(Lcdc;)V
+    .locals 0
 
-.field public static ic_call_answer_video_low:I = 0x7f080557
+    iput-object p1, p0, Lbdc;->Z:Lcdc;
 
-.field public static ic_call_decline:I = 0x7f080559
+    invoke-direct {p0}, Lskd;-><init>()V
 
-.field public static ic_call_decline_low:I = 0x7f08055a
+    return-void
+.end method
 
-.field public static notification_action_background:I = 0x7f0808f4
 
-.field public static notification_bg:I = 0x7f0808f5
+# virtual methods
+.method public final b()V
+    .locals 2
 
-.field public static notification_bg_low:I = 0x7f0808f6
+    iget-object v0, p0, Lbdc;->Z:Lcdc;
 
-.field public static notification_bg_low_normal:I = 0x7f0808f7
+    iget-object v0, v0, Lcdc;->f:Ljava/lang/Object;
 
-.field public static notification_bg_low_pressed:I = 0x7f0808f8
+    check-cast v0, Lny0;
 
-.field public static notification_bg_normal:I = 0x7f0808f9
+    const/4 v1, 0x1
 
-.field public static notification_bg_normal_pressed:I = 0x7f0808fa
+    iput-boolean v1, v0, Lny0;->j:Z
 
-.field public static notification_icon_background:I = 0x7f0808fb
+    return-void
+.end method
 
-.field public static notification_oversize_large_icon_bg:I = 0x7f0808fe
+.method public final c()Ljava/lang/Object;
+    .locals 1
 
-.field public static notification_template_icon_bg:I = 0x7f0808ff
+    iget-object v0, p0, Lbdc;->Z:Lcdc;
 
-.field public static notification_template_icon_low_bg:I = 0x7f080900
+    iget-object v0, v0, Lcdc;->f:Ljava/lang/Object;
 
-.field public static notification_tile_bg:I = 0x7f080901
+    check-cast v0, Lny0;
 
-.field public static notify_panel_notification_icon_bg:I = 0x7f080902
+    invoke-virtual {v0}, Lny0;->a()V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method

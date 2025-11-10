@@ -1,485 +1,234 @@
 .class public final Lb11;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljo1;
+.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
 
 
 # instance fields
-.field public final X:Lbp7;
-
-.field public final Y:Lbp7;
-
-.field public final Z:Lmoe;
-
-.field public final b:Lpt1;
-
-.field public final c:Lbp7;
-
-.field public final o:Lbp7;
-
-.field public final w0:Lsqc;
-
-.field public final x0:Ljb5;
+.field public final synthetic a:Lf11;
 
 
 # direct methods
-.method public constructor <init>(Lpt1;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 2
+.method public constructor <init>(Lf11;)V
+    .locals 0
 
-    invoke-direct {p0}, Lilg;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb11;->b:Lpt1;
-
-    iput-object p3, p0, Lb11;->c:Lbp7;
-
-    iput-object p4, p0, Lb11;->o:Lbp7;
-
-    iput-object p2, p0, Lb11;->X:Lbp7;
-
-    iput-object p5, p0, Lb11;->Y:Lbp7;
-
-    sget-object p1, Lb75;->a:Lb75;
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb11;->Z:Lmoe;
-
-    new-instance p4, Lsqc;
-
-    invoke-direct {p4, p1}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object p4, p0, Lb11;->w0:Lsqc;
-
-    new-instance p1, Ljb5;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p1, p4}, Ljb5;-><init>(I)V
-
-    iput-object p1, p0, Lb11;->x0:Ljb5;
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Luz0;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Lp01;
-
-    iget-object p1, p1, Lp01;->K0:Lmoe;
-
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr9;
-
-    invoke-virtual {p0, p1}, Lb11;->r(Lr9;)V
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Luz0;
-
-    check-cast p1, Lp01;
-
-    iget-object p1, p1, Lp01;->I0:Le8e;
-
-    new-instance p4, Lz01;
-
-    const/4 p5, 0x0
-
-    invoke-direct {p4, p0, p5}, Lz01;-><init>(Lb11;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Ljx5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, p4, v1}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v0, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Luz0;
-
-    check-cast p1, Lp01;
-
-    iget-object p1, p1, Lp01;->K0:Lmoe;
-
-    new-instance p3, La11;
-
-    invoke-direct {p3, p0, p5}, La11;-><init>(Lb11;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p4, Ljx5;
-
-    const/4 p5, 0x1
-
-    invoke-direct {p4, p1, p3, p5}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p4, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lst1;
-
-    check-cast p1, Lhu1;
-
-    invoke-virtual {p1, p0}, Lhu1;->f(Ljo1;)V
+    iput-object p1, p0, Lb11;->a:Lf11;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()V
-    .locals 2
+.method public final onFeatureEnabledChanged(Lw71;Z)V
+    .locals 9
 
-    iget-object v0, p0, Lb11;->x0:Ljb5;
+    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lw71;Z)V
 
-    sget-object v1, Ljk1;->D:Ljk1;
+    sget-object v0, Lw71;->b:Lw71;
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    if-eq p1, v0, :cond_0
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final q()Luz0;
-    .locals 1
+    :cond_0
+    sget-object p1, Lcuh;->b:Lnxa;
 
-    iget-object v0, p0, Lb11;->c:Lbp7;
+    if-nez p1, :cond_1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, La98;->d:La98;
+
+    invoke-virtual {p1, v0}, Lnxa;->b(La98;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "Record in call was changed for me to "
+
+    invoke-static {v1, p2}, Lpa9;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "CallAdminSettingsController"
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lb11;->a:Lf11;
+
+    iget-object p1, p1, Lf11;->E0:La1f;
+
+    :goto_1
+    invoke-virtual {p1}, La1f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Luz0;
+    move-object v1, v0
 
-    return-object v0
+    check-cast v1, Lga;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x6f
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move v6, p2
+
+    invoke-static/range {v1 .. v8}, Lga;->a(Lga;ZZZZZZI)Lga;
+
+    move-result-object p2
+
+    invoke-virtual {p1, v0, p2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    :goto_2
+    return-void
+
+    :cond_3
+    move p2, v6
+
+    goto :goto_1
 .end method
 
-.method public final r(Lr9;)V
-    .locals 28
+.method public final onFeatureRolesChanged(Lw71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+    .locals 12
 
-    move-object/from16 v0, p0
+    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lw71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
 
-    move-object/from16 v1, p1
+    sget-object v0, Lw71;->b:Lw71;
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_2
 
     :cond_0
-    iget-object v2, v0, Lb11;->Z:Lmoe;
+    sget-object p1, Lcuh;->b:Lnxa;
 
-    invoke-virtual {v2}, Lmoe;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    move-result-object v3
+    goto :goto_0
 
-    move-object v4, v3
+    :cond_1
+    sget-object v0, La98;->d:La98;
 
-    check-cast v4, Ljava/util/List;
+    invoke-virtual {p1, v0}, Lnxa;->b(La98;)Z
 
-    invoke-static {}, Lvhh;->p()Lsw7;
+    move-result v1
 
-    move-result-object v4
+    if-eqz v1, :cond_2
 
-    new-instance v5, Lw01;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget v6, Laka;->t:I
+    const-string v2, "Record in call was changed for role="
 
-    new-instance v7, Ljef;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v7, v6}, Ljef;-><init>(I)V
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget v6, Lyja;->q:I
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v6, 0x0
+    move-result-object v1
 
-    invoke-direct {v5, v6, v7}, Lw01;-><init>(ILjef;)V
+    const/4 v2, 0x0
 
-    invoke-virtual {v4, v5}, Lsw7;->add(Ljava/lang/Object;)Z
+    const-string v3, "CallAdminSettingsController"
 
-    sget v5, Lxja;->a:I
+    invoke-virtual {p1, v0, v3, v1, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    int-to-long v11, v5
+    :cond_2
+    :goto_0
+    instance-of v9, p2, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForAll;
 
-    sget v5, Lwja;->i:I
+    iget-object p1, p0, Lb11;->a:Lf11;
 
-    sget v7, Laka;->f:I
+    iget-object p1, p1, Lf11;->E0:La1f;
 
-    new-instance v9, Ljef;
+    :cond_3
+    invoke-virtual {p1}, La1f;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v9, v7}, Ljef;-><init>(I)V
+    move-result-object p2
 
-    new-instance v14, Le1e;
+    move-object v4, p2
 
-    iget-boolean v7, v1, Lr9;->b:Z
-
-    const/4 v8, 0x1
-
-    invoke-direct {v14, v7, v8}, Le1e;-><init>(ZZ)V
-
-    new-instance v7, Lv01;
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v15
-
-    const/16 v16, 0x130
-
-    move v5, v8
+    check-cast v4, Lga;
 
     const/4 v10, 0x0
 
-    const/4 v13, 0x0
+    const/16 v11, 0x6f
 
-    invoke-direct/range {v7 .. v16}, Lv01;-><init>(ILjef;IJLjef;Le1e;Ljava/lang/Integer;I)V
+    const/4 v5, 0x0
 
-    invoke-virtual {v4, v7}, Lsw7;->add(Ljava/lang/Object;)Z
+    const/4 v6, 0x0
 
-    sget v7, Lxja;->h:I
+    const/4 v7, 0x0
 
-    int-to-long v12, v7
+    const/4 v8, 0x0
 
-    sget v7, Lwja;->l:I
+    invoke-static/range {v4 .. v11}, Lga;->a(Lga;ZZZZZZI)Lga;
 
-    sget v8, Laka;->h:I
+    move-result-object v0
 
-    new-instance v10, Ljef;
+    invoke-virtual {p1, p2, v0}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v10, v8}, Ljef;-><init>(I)V
+    move-result p2
 
-    new-instance v15, Le1e;
+    if-eqz p2, :cond_3
 
-    iget-boolean v8, v1, Lr9;->c:Z
+    iget-object p1, p0, Lb11;->a:Lf11;
 
-    invoke-direct {v15, v8, v5}, Le1e;-><init>(ZZ)V
+    invoke-virtual {p1}, Lf11;->d()Lo34;
 
-    new-instance v8, Lv01;
+    move-result-object p1
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1}, Lo34;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    move-result-object v16
+    move-result-object p1
 
-    const/16 v17, 0x130
+    if-eqz p1, :cond_4
 
-    const/16 v19, 0x2
+    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->isMeCreatorOrAdmin()Z
 
-    const/4 v11, 0x0
+    move-result p1
 
-    const/4 v14, 0x0
+    goto :goto_1
 
-    move/from16 v9, v19
+    :cond_4
+    const/4 p1, 0x0
 
-    invoke-direct/range {v8 .. v17}, Lv01;-><init>(ILjef;IJLjef;Le1e;Ljava/lang/Integer;I)V
+    :goto_1
+    if-eqz p1, :cond_5
 
-    invoke-virtual {v4, v8}, Lsw7;->add(Ljava/lang/Object;)Z
+    iget-object p1, p0, Lb11;->a:Lf11;
 
-    sget v7, Lxja;->j:I
+    iget-object p1, p1, Lf11;->C0:Lake;
 
-    int-to-long v7, v7
+    new-instance p2, Lib;
 
-    sget v9, Lwja;->v:I
+    invoke-direct {p2, v9}, Lib;-><init>(Z)V
 
-    sget v10, Laka;->y:I
+    invoke-virtual {p1, p2}, Lake;->h(Ljava/lang/Object;)Z
 
-    new-instance v11, Ljef;
-
-    invoke-direct {v11, v10}, Ljef;-><init>(I)V
-
-    new-instance v10, Le1e;
-
-    iget-boolean v12, v1, Lr9;->d:Z
-
-    invoke-direct {v10, v12, v5}, Le1e;-><init>(ZZ)V
-
-    new-instance v18, Lv01;
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v26
-
-    const/16 v27, 0x130
-
-    const/16 v21, 0x0
-
-    const/16 v24, 0x0
-
-    move-wide/from16 v22, v7
-
-    move-object/from16 v25, v10
-
-    move-object/from16 v20, v11
-
-    invoke-direct/range {v18 .. v27}, Lv01;-><init>(ILjef;IJLjef;Le1e;Ljava/lang/Integer;I)V
-
-    move-object/from16 v7, v18
-
-    invoke-virtual {v4, v7}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    iget-object v7, v0, Lb11;->o:Lbp7;
-
-    invoke-interface {v7}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Llm5;
-
-    check-cast v8, Lnm5;
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v9, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v8, v9, v6}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_1
-
-    sget v8, Lxja;->i:I
-
-    int-to-long v13, v8
-
-    sget v8, Lwja;->m:I
-
-    sget v9, Laka;->w:I
-
-    new-instance v11, Ljef;
-
-    invoke-direct {v11, v9}, Ljef;-><init>(I)V
-
-    new-instance v9, Le1e;
-
-    iget-boolean v10, v1, Lr9;->e:Z
-
-    invoke-direct {v9, v10, v5}, Le1e;-><init>(ZZ)V
-
-    move-object/from16 v16, v9
-
-    new-instance v9, Lv01;
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v17
-
-    const/16 v18, 0x130
-
-    const/4 v10, 0x3
-
-    const/4 v12, 0x0
-
-    const/4 v15, 0x0
-
-    invoke-direct/range {v9 .. v18}, Lv01;-><init>(ILjef;IJLjef;Le1e;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v4, v9}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    new-instance v8, Lx01;
-
-    sget v9, Laka;->u:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    invoke-direct {v8, v10}, Lx01;-><init>(Ljef;)V
-
-    invoke-virtual {v4, v8}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {v7}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Llm5;
-
-    check-cast v7, Lnm5;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->gcwre:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v7, v8, v6}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    new-instance v6, Lw01;
-
-    sget v7, Laka;->j:I
-
-    new-instance v8, Ljef;
-
-    invoke-direct {v8, v7}, Ljef;-><init>(I)V
-
-    invoke-direct {v6, v5, v8}, Lw01;-><init>(ILjef;)V
-
-    invoke-virtual {v4, v6}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    sget v6, Lxja;->k:I
-
-    int-to-long v11, v6
-
-    sget v6, Lwja;->z0:I
-
-    sget v7, Laka;->A:I
-
-    new-instance v9, Ljef;
-
-    invoke-direct {v9, v7}, Ljef;-><init>(I)V
-
-    sget v7, Laka;->B:I
-
-    new-instance v13, Ljef;
-
-    invoke-direct {v13, v7}, Ljef;-><init>(I)V
-
-    new-instance v14, Le1e;
-
-    iget-boolean v7, v1, Lr9;->g:Z
-
-    invoke-direct {v14, v7, v5}, Le1e;-><init>(ZZ)V
-
-    new-instance v7, Lv01;
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v15
-
-    const/16 v16, 0x110
-
-    const/4 v8, 0x4
-
-    const/4 v10, 0x1
-
-    invoke-direct/range {v7 .. v16}, Lv01;-><init>(ILjef;IJLjef;Le1e;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v4, v7}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    invoke-static {v4}, Lvhh;->e(Ljava/util/List;)Lsw7;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v4}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
+    :cond_5
+    :goto_2
     return-void
 .end method

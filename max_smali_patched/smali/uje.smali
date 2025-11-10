@@ -4,24 +4,20 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/view/View;
 
-.field public final b:J
-
-.field public final c:J
+.field public final b:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
+.method public constructor <init>(Landroid/view/View;Landroid/view/ViewGroup;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Luje;->a:I
+    iput-object p1, p0, Luje;->a:Landroid/view/View;
 
-    iput-wide p2, p0, Luje;->b:J
-
-    iput-wide p4, p0, Luje;->c:J
+    iput-object p2, p0, Luje;->b:Landroid/view/ViewGroup;
 
     return-void
 .end method

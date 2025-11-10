@@ -1,53 +1,84 @@
 .class public final Laad;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lal;
-
-.field public final b:Lked;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lal;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laad;->a:Lal;
-
-    invoke-static {}, Lxed;->b()Lked;
-
-    move-result-object p1
-
-    iput-object p1, p0, Laad;->b:Lked;
+    iput-wide p1, p0, Laad;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfl;)Lmee;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Laad;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Laad;
+
+    iget-wide v3, p0, Laad;->c:J
+
+    iget-wide v5, p1, Laad;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lu14;
+    iget-wide v0, p0, Laad;->c:J
 
-    const/16 v1, 0x8
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {v0, p0, v1, p1}, Lu14;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result v0
 
-    new-instance p1, Lmda;
+    return v0
+.end method
 
-    const/4 v1, 0x4
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-direct {p1, v1, v0}, Lmda;-><init>(ILjava/lang/Object;)V
+    const-string v0, "Response(timestampRemoveProfile="
 
-    iget-object v0, p0, Laad;->b:Lked;
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0}, Lude;->m(Lked;)Lmee;
+    iget-wide v2, p0, Laad;->c:J
 
-    move-result-object p1
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

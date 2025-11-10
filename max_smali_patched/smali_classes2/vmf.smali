@@ -1,64 +1,62 @@
-.class public final synthetic Lvmf;
+.class public final Lvmf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements Lonf;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic a:Lnqe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
+.method public constructor <init>(Lnqe;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvmf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-object p2, p0, Lvmf;->b:Ljava/lang/String;
+    iput-object p1, p0, Lvmf;->a:Lnqe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+.method public final e(Lmmf;)V
+    .locals 2
 
-    iget-object v0, p0, Lvmf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, Lvmf;->a:Lnqe;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-virtual {v0}, Lnqe;->f()Z
 
-    move-result v0
+    move-result v1
 
-    new-instance v1, Ljava/lang/Thread;
+    if-nez v1, :cond_0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lnqe;->a(Ljava/lang/Object;)V
 
-    const-string v3, "tracer-io-"
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final j(Lxlf;)V
+    .locals 2
 
-    iget-object v3, p0, Lvmf;->b:Ljava/lang/String;
+    iget-object v0, p0, Lvmf;->a:Lnqe;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lnqe;->f()Z
 
-    const/16 v3, 0x2d
+    move-result v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lxlf;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lnqe;->onError(Ljava/lang/Throwable;)V
 
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
+    :cond_0
+    return-void
 .end method

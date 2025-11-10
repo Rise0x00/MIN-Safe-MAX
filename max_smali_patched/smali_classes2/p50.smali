@@ -1,5 +1,5 @@
 .class public final Lp50;
-.super Llo3;
+.super Lxq3;
 .source "SourceFile"
 
 
@@ -8,10 +8,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Lpmc;)V
+.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Lcwc;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p4}, Llo3;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lpmc;)V
+    invoke-direct {p0, p2, p3, p4}, Lxq3;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lcwc;)V
 
     iput-object p1, p0, Lp50;->f:Lorg/webrtc/PeerConnectionFactory;
 

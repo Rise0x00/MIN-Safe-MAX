@@ -1,64 +1,43 @@
-.class public abstract Lm43;
-.super Ljava/lang/Object;
+.class public final Lm43;
+.super Landroidx/appcompat/widget/AppCompatCheckBox;
 .source "SourceFile"
-
-# interfaces
-.implements Lpz7;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:Ljava/lang/Object;
-
-.field public final Z:J
-
-.field public final a:J
-
-.field public final b:Lq94;
-
-.field public final c:I
-
-.field public final o:Lr76;
-
-.field public final w0:J
-
-.field public final x0:Lrpe;
+.field public o:I
 
 
-# direct methods
-.method public constructor <init>(Li94;Lq94;ILr76;ILjava/lang/Object;JJ)V
+# virtual methods
+.method public getCompoundPaddingLeft()I
+    .locals 2
+
+    invoke-super {p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
+
+    move-result v0
+
+    iget v1, p0, Lm43;->o:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final getPaddingBetweenCheckbox()I
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Lm43;->o:I
 
-    new-instance v0, Lrpe;
+    return v0
+.end method
 
-    invoke-direct {v0, p1}, Lrpe;-><init>(Li94;)V
+.method public final setPaddingBetweenCheckbox(I)V
+    .locals 0
 
-    iput-object v0, p0, Lm43;->x0:Lrpe;
+    iput p1, p0, Lm43;->o:I
 
-    iput-object p2, p0, Lm43;->b:Lq94;
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    iput p3, p0, Lm43;->c:I
-
-    iput-object p4, p0, Lm43;->o:Lr76;
-
-    iput p5, p0, Lm43;->X:I
-
-    iput-object p6, p0, Lm43;->Y:Ljava/lang/Object;
-
-    iput-wide p7, p0, Lm43;->Z:J
-
-    iput-wide p9, p0, Lm43;->w0:J
-
-    sget-object p1, Lgz7;->h:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lm43;->a:J
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     return-void
 .end method

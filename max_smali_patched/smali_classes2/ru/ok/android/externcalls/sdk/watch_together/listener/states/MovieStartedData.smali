@@ -14,20 +14,20 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participant",
-        "Lnwd;",
+        "Lf8e;",
         "roomId",
-        "Lyn9;",
+        "Lav9;",
         "movie",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)V",
         "component1",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "component2",
-        "()Lnwd;",
+        "()Lf8e;",
         "component3",
-        "()Lyn9;",
+        "()Lav9;",
         "copy",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;",
         "",
         "toString",
         "()Ljava/lang/String;",
@@ -40,9 +40,9 @@
         "(Ljava/lang/Object;)Z",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getParticipant",
-        "Lnwd;",
+        "Lf8e;",
         "getRoomId",
-        "Lyn9;",
+        "Lav9;",
         "getMovie",
         "calls-sdk_release"
     }
@@ -57,29 +57,29 @@
 
 
 # instance fields
-.field private final movie:Lyn9;
+.field private final movie:Lav9;
 
 .field private final participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private final roomId:Lnwd;
+.field private final roomId:Lf8e;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
+.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -93,17 +93,17 @@
 
     if-eqz p5, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
     :cond_1
     and-int/lit8 p4, p4, 0x4
 
     if-eqz p4, :cond_2
 
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
     :cond_2
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
 
     move-result-object p0
 
@@ -120,28 +120,28 @@
     return-object v0
 .end method
 
-.method public final component2()Lnwd;
+.method public final component2()Lf8e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
     return-object v0
 .end method
 
-.method public final component3()Lyn9;
+.method public final component3()Lav9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
     return-object v0
 .end method
 
-.method public final copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
+.method public final copy(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
     .locals 1
 
     new-instance v0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;
 
-    invoke-direct {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lyn9;)V
+    invoke-direct {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lf8e;Lav9;)V
 
     return-object v0
 .end method
@@ -171,7 +171,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -180,11 +180,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
-    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v3, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -193,11 +193,11 @@
     return v2
 
     :cond_3
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
-    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object p1, p1, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -209,10 +209,10 @@
     return v0
 .end method
 
-.method public final getMovie()Lyn9;
+.method public final getMovie()Lav9;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
     return-object v0
 .end method
@@ -225,10 +225,10 @@
     return-object v0
 .end method
 
-.method public final getRoomId()Lnwd;
+.method public final getRoomId()Lf8e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
     return-object v0
 .end method
@@ -244,7 +244,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -254,9 +254,9 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
-    invoke-virtual {v0}, Lyn9;->hashCode()I
+    invoke-virtual {v0}, Lav9;->hashCode()I
 
     move-result v0
 
@@ -270,9 +270,9 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->participant:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lnwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->roomId:Lf8e;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lyn9;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/watch_together/listener/states/MovieStartedData;->movie:Lav9;
 
     new-instance v3, Ljava/lang/StringBuilder;
 

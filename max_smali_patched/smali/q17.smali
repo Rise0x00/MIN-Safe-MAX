@@ -1,117 +1,34 @@
-.class public final Lq17;
+.class public abstract Lq17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls17;
-.implements Landroid/os/IInterface;
+.implements Lxv5;
 
 
 # instance fields
-.field public final c:Landroid/os/IBinder;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq17;->c:Landroid/os/IBinder;
+    iput-object p1, p0, Lq17;->a:Ljava/lang/String;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
-
-    iget-object v0, p0, Lq17;->c:Landroid/os/IBinder;
-
-    return-object v0
-.end method
-
-.method public final k(Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 4
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const-string v1, "com.google.android.finsky.externalreferrer.IGetInstallReferrerService"
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    sget v1, Lhdh;->a:I
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    :try_start_0
-    iget-object v3, p0, Lq17;->c:Landroid/os/IBinder;
+    iput-object p1, p0, Lq17;->b:Ljava/util/List;
 
-    invoke-interface {v3, v1, v0, p1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    iput-boolean p3, p0, Lq17;->c:Z
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    :goto_0
-    check-cast v0, Landroid/os/Bundle;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    :try_start_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p1
+    return-void
 .end method

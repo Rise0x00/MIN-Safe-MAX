@@ -1,214 +1,405 @@
 .class public final Lbtg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lkxg;
 
 
 # instance fields
-.field public X:I
+.field public X:F
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:J
 
-.field public final synthetic Z:Lrsg;
+.field public final Z:Lfvg;
 
-.field public final synthetic w0:Lmtg;
+.field public final a:J
 
-.field public final synthetic x0:Lvsg;
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Limg;
+
+.field public o:Latg;
+
+.field public final s0:Lhub;
 
 
 # direct methods
-.method public constructor <init>(Lrsg;Lvsg;Lmtg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJLjava/lang/String;Limg;JLfvg;Lhre;)V
     .locals 0
 
-    iput-object p1, p0, Lbtg;->Z:Lrsg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lbtg;->w0:Lmtg;
+    iput-wide p1, p0, Lbtg;->a:J
 
-    iput-object p2, p0, Lbtg;->x0:Lvsg;
+    iput-wide p3, p0, Lbtg;->b:J
 
-    const/4 p1, 0x2
+    iput-object p5, p0, Lbtg;->c:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p6, p0, Lbtg;->d:Limg;
+
+    sget-object p1, Latg;->a:Latg;
+
+    iput-object p1, p0, Lbtg;->o:Latg;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lbtg;->X:F
+
+    iput-wide p7, p0, Lbtg;->Y:J
+
+    iput-object p9, p0, Lbtg;->Z:Lfvg;
+
+    iput-object p10, p0, Lbtg;->s0:Lhub;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final B()I
+    .locals 1
 
-    check-cast p1, Lyn0;
+    iget-object v0, p0, Lbtg;->d:Limg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Limg;->getHeight()I
 
-    invoke-virtual {p0, p1, p2}, Lbtg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
-
-    check-cast p1, Lbtg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lbtg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public final b()I
+    .locals 1
 
-    new-instance v0, Lbtg;
+    iget-object v0, p0, Lbtg;->d:Limg;
 
-    iget-object v1, p0, Lbtg;->w0:Lmtg;
+    invoke-interface {v0}, Limg;->getWidth()I
 
-    iget-object v2, p0, Lbtg;->x0:Lvsg;
+    move-result v0
 
-    iget-object v3, p0, Lbtg;->Z:Lrsg;
-
-    invoke-direct {v0, v3, v2, v1, p2}, Lbtg;-><init>(Lrsg;Lvsg;Lmtg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lbtg;->Y:Ljava/lang/Object;
-
-    return-object v0
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lbtg;->X:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lbtg;->x0:Lvsg;
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lbtg;->w0:Lmtg;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lbtg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lbtg;
 
-    iget-object p1, p0, Lbtg;->Y:Ljava/lang/Object;
+    iget-wide v3, p0, Lbtg;->a:J
 
-    check-cast p1, Lyn0;
+    iget-wide v5, p1, Lbtg;->a:J
 
-    iget-boolean v0, p1, Lyn0;->a:Z
+    cmp-long v1, v3, v5
 
-    iget-object v4, p0, Lbtg;->Z:Lrsg;
+    if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_2
-
-    new-instance v5, Lusg;
-
-    iget-object v6, v4, Lrsg;->b:Ljava/lang/String;
-
-    sget-object v7, Lmtg;->i:Ljava/util/List;
-
-    iget-boolean v8, p1, Lyn0;->b:Z
-
-    iget-boolean v9, p1, Lyn0;->c:Z
-
-    iget-boolean v10, p1, Lyn0;->d:Z
-
-    iget-object p1, v3, Lmtg;->d:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lop4;
-
-    invoke-virtual {p1}, Llp4;->a()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct/range {v5 .. v11}, Lusg;-><init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
-
-    iget-object p1, v3, Lmtg;->a:Lwk7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lusg;->Companion:Ltsg;
-
-    invoke-virtual {v0}, Ltsg;->serializer()Lum7;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v5}, Lwk7;->b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    new-instance p1, Lvtg;
+    iget-wide v3, p0, Lbtg;->b:J
 
-    iget-object v0, v4, Lrsg;->b:Ljava/lang/String;
+    iget-wide v5, p1, Lbtg;->b:J
 
-    invoke-direct {p1, v0}, Lvtg;-><init>(Ljava/lang/String;)V
+    cmp-long v1, v3, v5
 
-    iget-object v0, v3, Lmtg;->a:Lwk7;
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v2
 
-    sget-object v4, Lvtg;->Companion:Lutg;
+    :cond_3
+    iget-object v1, p0, Lbtg;->c:Ljava/lang/String;
 
-    invoke-virtual {v4}, Lutg;->serializer()Lum7;
+    iget-object v3, p1, Lbtg;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lbtg;->d:Limg;
+
+    iget-object v3, p1, Lbtg;->d:Limg;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lbtg;->o:Latg;
+
+    iget-object v3, p1, Lbtg;->o:Latg;
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lbtg;->X:F
+
+    iget v3, p1, Lbtg;->X:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-wide v3, p0, Lbtg;->Y:J
+
+    iget-wide v5, p1, Lbtg;->Y:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-object v1, p0, Lbtg;->Z:Lfvg;
+
+    iget-object v3, p1, Lbtg;->Z:Lfvg;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-object v1, p0, Lbtg;->s0:Lhub;
+
+    iget-object p1, p1, Lbtg;->s0:Lhub;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_a
+
+    return v2
+
+    :cond_a
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lbtg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lbtg;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lbtg;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lbtg;->d:Limg;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lbtg;->o:Latg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lbtg;->X:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lbtg;->Y:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lbtg;->Z:Lfvg;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lbtg;->s0:Lhub;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final i(Landroid/view/Surface;Lcng;)V
+    .locals 1
+
+    iget-object v0, p0, Lbtg;->Z:Lfvg;
+
+    invoke-interface {v0, p1}, Lfvg;->b0(Landroid/view/Surface;)V
+
+    invoke-interface {v0, p2}, Lfvg;->O(Lcng;)V
+
+    return-void
+.end method
+
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
+    .locals 1
+
+    iget-object p1, p0, Lbtg;->Z:Lfvg;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lfvg;->b0(Landroid/view/Surface;)V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 9
+
+    iget-object v0, p0, Lbtg;->o:Latg;
+
+    iget v1, p0, Lbtg;->X:F
+
+    iget-wide v2, p0, Lbtg;->Y:J
+
+    const-string v4, "VideoMessageState(localChatId="
+
+    const-string v5, ", messageId="
+
+    iget-wide v6, p0, Lbtg;->a:J
+
+    invoke-static {v6, v7, v4, v5}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {v0, v4, p1}, Lwk7;->b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
+    const-string v5, ", attachId="
 
-    move-result-object p1
+    iget-wide v6, p0, Lbtg;->b:J
 
-    :goto_0
-    iget-object v0, v3, Lmtg;->g:Llu0;
+    iget-object v8, p0, Lbtg;->c:Ljava/lang/String;
 
-    new-instance v4, Ljk7;
+    invoke-static {v6, v7, v5, v8, v4}, Lmb3;->f(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    iget-object v5, v1, Lvsg;->a:Ljava/lang/String;
+    const-string v5, ", videoContent="
 
-    invoke-direct {v4, v5, p1}, Ljk7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v2, p0, Lbtg;->X:I
+    iget-object v5, p0, Lbtg;->d:Limg;
 
-    invoke-interface {v0, v4, p0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v5, ", state="
 
-    sget-object v0, Lf34;->a:Lf34;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne p1, v0, :cond_3
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", progress="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", durationProgress="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", player="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lbtg;->Z:Lfvg;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", playerHolder="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lbtg;->s0:Lhub;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :cond_3
-    :goto_1
-    iget-object p1, v1, Lvsg;->a:Ljava/lang/String;
+.method public final z()I
+    .locals 1
 
-    invoke-static {v3, p1}, Lmtg;->e(Lmtg;Ljava/lang/String;)V
+    const/4 v0, 0x3
 
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return v0
 .end method

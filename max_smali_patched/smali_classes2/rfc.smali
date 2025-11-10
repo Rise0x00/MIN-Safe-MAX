@@ -1,40 +1,339 @@
-.class public abstract Lrfc;
-.super Ljava/lang/Object;
+.class public final Lrfc;
+.super Lmmf;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_avatar_select_screen:I = 0x7f0a07a4
+# instance fields
+.field public c:Ljava/util/List;
 
-.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a07a5
+.field public d:I
 
-.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a07a6
+.field public o:Ljava/lang/Long;
 
-.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a07a7
 
-.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a07a8
+# direct methods
+.method public constructor <init>(Ljf9;)V
+    .locals 0
 
-.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a07a9
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
-.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a07aa
+    iget-object p1, p0, Lrfc;->c:Ljava/util/List;
 
-.field public static oneme_settings_container:I = 0x7f0a07ab
+    if-nez p1, :cond_0
 
-.field public static oneme_settings_list_screen_appbar:I = 0x7f0a07b3
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a07b4
+    iput-object p1, p0, Lrfc;->c:Ljava/util/List;
 
-.field public static oneme_settings_toolbar:I = 0x7f0a084d
+    :cond_0
+    return-void
+.end method
 
-.field public static oneme_settings_topbar:I = 0x7f0a084e
 
-.field public static oneme_settings_topbar_avatar:I = 0x7f0a084f
+# virtual methods
+.method public final d(Ljf9;Ljava/lang/String;)V
+    .locals 13
 
-.field public static oneme_settings_topbar_container:I = 0x7f0a0850
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a0851
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-.field public static oneme_settings_topbar_name:I = 0x7f0a0852
+    move-result v0
 
-.field public static oneme_settings_topbar_nick:I = 0x7f0a0853
+    const/4 v1, 0x2
 
-.field public static oneme_settings_topbar_phone:I = 0x7f0a0854
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    :goto_0
+    move p2, v4
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v0, "total"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move p2, v1
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "result"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move p2, v2
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "marker"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move p2, v3
+
+    :goto_1
+    packed-switch p2, :pswitch_data_0
+
+    invoke-virtual {p1}, Ljf9;->v()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Ljf9;->q0()I
+
+    move-result p1
+
+    iput p1, p0, Lrfc;->d:I
+
+    return-void
+
+    :pswitch_1
+    invoke-static {p1}, Le0i;->j(Ljf9;)I
+
+    move-result p2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lrfc;->c:Ljava/util/List;
+
+    move v0, v3
+
+    :goto_2
+    if-ge v0, p2, :cond_7
+
+    iget-object v5, p0, Lrfc;->c:Ljava/util/List;
+
+    invoke-static {p1}, Le0i;->r(Ljf9;)I
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    move v10, v3
+
+    move-object v8, v7
+
+    move-object v9, v8
+
+    :goto_3
+    if-ge v10, v6, :cond_6
+
+    invoke-virtual {p1}, Ljf9;->u0()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v11}, Ljava/lang/String;->hashCode()I
+
+    move-result v12
+
+    sparse-switch v12, :sswitch_data_1
+
+    :goto_4
+    move v11, v4
+
+    goto :goto_5
+
+    :sswitch_3
+    const-string v12, "contact"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    move v11, v1
+
+    goto :goto_5
+
+    :sswitch_4
+    const-string v12, "highlights"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    move v11, v2
+
+    goto :goto_5
+
+    :sswitch_5
+    const-string v12, "chat"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    move v11, v3
+
+    :goto_5
+    packed-switch v11, :pswitch_data_1
+
+    invoke-virtual {p1}, Ljf9;->v()V
+
+    goto :goto_6
+
+    :pswitch_2
+    invoke-static {p1}, Lqx3;->a(Ljf9;)Lqx3;
+
+    move-result-object v9
+
+    goto :goto_6
+
+    :pswitch_3
+    invoke-static {p1}, Luz;->h(Ljf9;)Luz;
+
+    move-result-object v8
+
+    goto :goto_6
+
+    :pswitch_4
+    invoke-static {p1}, Lu92;->a(Ljf9;)Lu92;
+
+    move-result-object v7
+
+    :goto_6
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    new-instance v6, Lsfc;
+
+    invoke-direct {v6, v7, v8, v9}, Lsfc;-><init>(Lu92;Luz;Lqx3;)V
+
+    invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    return-void
+
+    :pswitch_5
+    invoke-virtual {p1}, Ljf9;->r0()J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrfc;->o:Ljava/lang/Long;
+
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x40736bc6 -> :sswitch_2
+        -0x37b237e3 -> :sswitch_1
+        0x696db44 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :sswitch_data_1
+    .sparse-switch
+        0x2e9358 -> :sswitch_5
+        0x154c0a3f -> :sswitch_4
+        0x38b72420 -> :sswitch_3
+    .end sparse-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lrfc;->c:Ljava/util/List;
+
+    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
+
+    move-result v0
+
+    iget v1, p0, Lrfc;->d:I
+
+    iget-object v2, p0, Lrfc;->o:Ljava/lang/Long;
+
+    const-string v3, ", total="
+
+    const-string v4, ", marker="
+
+    const-string v5, "{result="
+
+    invoke-static {v5, v0, v3, v1, v4}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

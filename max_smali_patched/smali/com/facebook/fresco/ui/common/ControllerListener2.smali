@@ -32,7 +32,7 @@
         "callerContext",
         "Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;",
         "extraData",
-        "Loyf;",
+        "Lybg;",
         "onSubmit",
         "(Ljava/lang/String;Ljava/lang/Object;Lcom/facebook/fresco/ui/common/ControllerListener2$Extras;)V",
         "imageInfo",

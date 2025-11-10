@@ -1,204 +1,201 @@
-.class public final synthetic Lzj5;
-.super Ljava/lang/Object;
+.class public final Lzj5;
+.super Landroid/view/TouchDelegate;
 .source "SourceFile"
-
-# interfaces
-.implements Le6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Z
 
-.field public final synthetic b:J
+.field public final b:Landroid/graphics/Rect;
 
-.field public final synthetic c:Z
+.field public final c:I
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public final d:Landroid/graphics/Rect;
+
+.field public final e:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ZIJ)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    .locals 1
 
-    iput p3, p0, Lzj5;->a:I
+    invoke-direct {p0, p1, p2}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    iput-object p1, p0, Lzj5;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lzj5;->b:Landroid/graphics/Rect;
 
-    iput-wide p4, p0, Lzj5;->b:J
+    iput-object p2, p0, Lzj5;->e:Landroid/view/View;
 
-    iput-boolean p2, p0, Lzj5;->c:Z
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p2
+
+    iput p2, p0, Lzj5;->c:I
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    iput-object v0, p0, Lzj5;->d:Landroid/graphics/Rect;
+
+    neg-int p1, p2
+
+    invoke-virtual {v0, p1, p1}, Landroid/graphics/Rect;->inset(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
-    iget v0, p0, Lzj5;->a:I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lzj5;->d:Ljava/lang/Object;
+    float-to-int v0, v0
 
-    check-cast v0, Lbl5;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    iget-object v1, v0, Lbl5;->a:Lx5d;
+    move-result v1
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    float-to-int v1, v1
 
-    :try_start_0
-    invoke-virtual {v0}, Lbl5;->c()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v2
 
-    iget-wide v3, p0, Lzj5;->b:J
+    const/4 v3, 0x2
 
-    iget-boolean v5, p0, Lzj5;->c:Z
+    const/4 v4, 0x0
 
-    if-nez v5, :cond_0
+    const/4 v5, 0x1
 
-    :try_start_1
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eqz v2, :cond_3
 
-    move-result-object v3
+    if-eq v2, v5, :cond_1
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    if-eq v2, v3, :cond_1
 
-    move-result v3
+    const/4 v6, 0x3
 
-    if-eqz v3, :cond_1
+    if-eq v2, v6, :cond_0
 
-    invoke-virtual {v0, v2}, Lbl5;->a(Ljava/util/List;)V
+    const/4 v6, 0x5
+
+    if-eq v2, v6, :cond_1
+
+    const/4 v6, 0x6
+
+    if-eq v2, v6, :cond_1
+
+    move v0, v4
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-boolean v0, p0, Lzj5;->a:Z
 
-    move-result-object v5
+    iput-boolean v4, p0, Lzj5;->a:Z
 
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-ne v5, v6, :cond_1
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lbl5;->a(Ljava/util/List;)V
+    goto :goto_0
 
     :cond_1
+    iget-boolean v2, p0, Lzj5;->a:Z
+
+    if-eqz v2, :cond_2
+
+    iget-object v6, p0, Lzj5;->d:Landroid/graphics/Rect;
+
+    invoke-virtual {v6, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    move v0, v2
+
+    move v5, v4
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v2, p0, Lzj5;->b:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lzj5;->a:Z
+
     :goto_0
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v0, :cond_5
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    iget-object v0, p0, Lzj5;->e:Landroid/view/View;
 
-    return-void
+    if-eqz v5, :cond_4
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    move-result v1
 
-    throw v0
+    div-int/2addr v1, v3
 
-    :pswitch_0
-    iget-object v0, p0, Lzj5;->d:Ljava/lang/Object;
+    int-to-float v1, v1
 
-    check-cast v0, Ljl5;
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    iget-object v1, v0, Ljl5;->a:Lx5d;
+    move-result v2
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    div-int/2addr v2, v3
 
-    :try_start_2
-    invoke-virtual {v0}, Ljl5;->c()Ljava/util/ArrayList;
+    int-to-float v2, v2
 
-    move-result-object v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    iget-wide v3, p0, Lzj5;->b:J
-
-    iget-boolean v5, p0, Lzj5;->c:Z
-
-    if-nez v5, :cond_2
-
-    :try_start_3
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0, v2}, Ljl5;->a(Ljava/util/List;)V
+    invoke-virtual {p1, v1, v2}, Landroid/view/MotionEvent;->setLocation(FF)V
 
     goto :goto_1
 
-    :cond_2
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_4
+    iget v1, p0, Lzj5;->c:I
 
-    move-result-object v5
+    mul-int/2addr v1, v3
 
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    int-to-float v1, v1
 
-    move-result v5
+    neg-float v1, v1
 
-    const/4 v6, -0x1
+    invoke-virtual {p1, v1, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    if-ne v5, v6, :cond_3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Ljl5;->a(Ljava/util/List;)V
-
-    :cond_3
     :goto_1
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    move-result-object v1
 
-    return-void
+    const/4 v2, 0x0
 
-    :catchall_1
-    move-exception v0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    invoke-virtual {v0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    throw v0
+    move-result p1
 
-    nop
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
+
+    :cond_5
+    return v4
 .end method

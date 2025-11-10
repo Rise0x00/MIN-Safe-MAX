@@ -1,188 +1,57 @@
-.class public final Lgo7;
-.super Ljava/util/Random;
+.class public abstract Lgo7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lanc;
+.field public a:Z
 
-.field public b:Z
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    sget-object v0, Lbnc;->a:Lanc;
-
-    invoke-direct {p0}, Ljava/util/Random;-><init>()V
-
-    iput-object v0, p0, Lgo7;->a:Lanc;
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final next(I)I
-    .locals 1
+.method public final a(I)V
+    .locals 3
 
-    iget-object v0, p0, Lgo7;->a:Lanc;
+    iget-boolean v0, p0, Lgo7;->a:Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_0
 
-    sget-object v0, Lbnc;->b:Lg3;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Lg3;->a(I)I
+    iput-boolean v0, p0, Lgo7;->a:Z
 
-    move-result p1
-
-    return p1
-.end method
-
-.method public final nextBoolean()Z
-    .locals 1
-
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lbnc;->b:Lg3;
-
-    invoke-virtual {v0}, Lg3;->h()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextBytes([B)V
-    .locals 1
-
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lbnc;->b:Lg3;
-
-    invoke-virtual {v0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/Random;->nextBytes([B)V
-
-    return-void
-.end method
-
-.method public final nextDouble()D
-    .locals 2
-
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lbnc;->b:Lg3;
-
-    invoke-virtual {v0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextDouble()D
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final nextFloat()F
-    .locals 1
-
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lbnc;->b:Lg3;
-
-    invoke-virtual {v0}, Lg3;->i()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextInt()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 2
-    sget-object v0, Lbnc;->b:Lg3;
-
-    .line 3
-    invoke-virtual {v0}, Lg3;->b()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextInt(I)I
-    .locals 1
-
-    .line 4
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 5
-    sget-object v0, Lbnc;->b:Lg3;
-
-    .line 6
-    invoke-virtual {v0, p1}, Lg3;->c(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final nextLong()J
-    .locals 2
-
-    iget-object v0, p0, Lgo7;->a:Lanc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lbnc;->b:Lg3;
-
-    invoke-virtual {v0}, Lg3;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final setSeed(J)V
-    .locals 0
-
-    iget-boolean p1, p0, Lgo7;->b:Z
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lgo7;->b:Z
+    iput p1, p0, Lgo7;->b:I
 
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lgo7;->b:I
 
-    const-string p2, "Setting seed is not supported."
+    if-ne v0, p1, :cond_1
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    return-void
 
-    throw p1
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Given job ID "
+
+    const-string v2, " is different than previous "
+
+    invoke-static {p1, v1, v2}, Lok7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget v1, p0, Lgo7;->b:I
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

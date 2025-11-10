@@ -1,175 +1,150 @@
 .class public final Lncd;
-.super Ljava/lang/Object;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lpcd;
 
 
 # instance fields
-.field public final a:Lum;
+.field public a:Z
 
 .field public b:Z
 
-.field public c:Landroid/os/Bundle;
-
-.field public final d:Ls5f;
+.field public final synthetic c:Ldb0;
 
 
 # direct methods
-.method public constructor <init>(Lum;Lrlg;)V
-    .locals 1
+.method public constructor <init>(Ldb0;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lncd;->c:Ldb0;
 
-    iput-object p1, p0, Lncd;->a:Lum;
-
-    new-instance p1, Lxd;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, v0, p2}, Lxd;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lncd;->d:Ls5f;
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/Bundle;
-    .locals 5
+.method public final onAvailable(Landroid/net/Network;)V
+    .locals 2
 
-    new-instance v0, Landroid/os/Bundle;
+    iget-object p1, p0, Lncd;->c:Ldb0;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    iget-object p1, p1, Ldb0;->e:Ljava/lang/Object;
 
-    iget-object v1, p0, Lncd;->c:Landroid/os/Bundle;
+    check-cast p1, Landroid/os/Handler;
 
-    if-eqz v1, :cond_0
+    new-instance v0, Lmcd;
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_0
-    iget-object v1, p0, Lncd;->d:Ls5f;
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/lifecycle/SavedStateHandlesVM;
-
-    iget-object v1, v1, Landroidx/lifecycle/SavedStateHandlesVM;->b:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lkcd;
-
-    iget-object v2, v2, Lkcd;->e:Lpcd;
-
-    invoke-interface {v2}, Lpcd;->a()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    invoke-static {v2, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    goto :goto_0
-
-    :cond_2
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lncd;->b:Z
+    invoke-direct {v0, p0, v1}, Lmcd;-><init>(Lncd;I)V
 
-    return-object v0
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method
 
-.method public final b()V
-    .locals 3
+.method public final onBlockedStatusChanged(Landroid/net/Network;Z)V
+    .locals 1
 
-    iget-boolean v0, p0, Lncd;->b:Z
+    if-nez p2, :cond_0
 
-    if-nez v0, :cond_2
+    iget-object p1, p0, Lncd;->c:Ldb0;
 
-    iget-object v0, p0, Lncd;->a:Lum;
+    iget-object p1, p1, Ldb0;->e:Ljava/lang/Object;
 
-    const-string v1, "androidx.lifecycle.internal.SavedStateHandlesProvider"
+    check-cast p1, Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Lum;->c(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    iget-object v2, p0, Lncd;->c:Landroid/os/Bundle;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_1
-    iput-object v1, p0, Lncd;->c:Landroid/os/Bundle;
+    new-instance p2, Lmcd;
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lncd;->b:Z
+    invoke-direct {p2, p0, v0}, Lmcd;-><init>(Lncd;I)V
 
-    iget-object v0, p0, Lncd;->d:Ls5f;
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    :cond_0
+    return-void
+.end method
 
-    move-result-object v0
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 1
 
-    check-cast v0, Landroidx/lifecycle/SavedStateHandlesVM;
+    const/16 p1, 0x10
+
+    invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result p1
+
+    iget-boolean p2, p0, Lncd;->a:Z
+
+    iget-object v0, p0, Lncd;->c:Ldb0;
+
+    if-eqz p2, :cond_2
+
+    iget-boolean p2, p0, Lncd;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object p1, v0, Ldb0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lmcd;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p0, v0}, Lmcd;-><init>(Lncd;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
 
     :cond_2
+    :goto_0
+    const/4 p2, 0x1
+
+    iput-boolean p2, p0, Lncd;->a:Z
+
+    iput-boolean p1, p0, Lncd;->b:Z
+
+    iget-object p1, v0, Ldb0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lmcd;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lmcd;-><init>(Lncd;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onLost(Landroid/net/Network;)V
+    .locals 2
+
+    iget-object p1, p0, Lncd;->c:Ldb0;
+
+    iget-object p1, p1, Ldb0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance v0, Lmcd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lmcd;-><init>(Lncd;I)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method

@@ -229,7 +229,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxkg;->p()Landroid/app/Application;
+    invoke-static {}, Lkfi;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -474,18 +474,6 @@
     return-void
 .end method
 
-.method public registerAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 1
-
-    invoke-direct {p0}, Lru/ok/android/onelog/Collector;->getWorker()Lru/ok/android/onelog/Worker;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lru/ok/android/onelog/Worker;->registerAgent(Lru/ok/android/onelog/OneLogAgent;)V
-
-    return-void
-.end method
-
 .method public setMaxMillisToUpload(Ljava/lang/String;J)V
     .locals 1
 
@@ -506,18 +494,6 @@
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Lru/ok/android/onelog/Worker;->setMaxMillisToUploadAny(J)V
-
-    return-void
-.end method
-
-.method public unregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 1
-
-    invoke-direct {p0}, Lru/ok/android/onelog/Collector;->getWorker()Lru/ok/android/onelog/Worker;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lru/ok/android/onelog/Worker;->unregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
 
     return-void
 .end method

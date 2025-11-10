@@ -1,14 +1,71 @@
-.class public interface abstract Lve3;
-.super Ljava/lang/Object;
+.class public final Lve3;
+.super Lxe3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic Y:Lze3;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lze3;I)V
+    .locals 0
+
+    iput p2, p0, Lve3;->X:I
+
+    iput-object p1, p0, Lve3;->Y:Lze3;
+
+    invoke-direct {p0, p1}, Lxe3;-><init>(Lze3;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract b()V
-.end method
+.method public final a(I)Ljava/lang/Object;
+    .locals 2
 
-.method public abstract c(Lss4;)V
-.end method
+    iget v0, p0, Lve3;->X:I
 
-.method public abstract onError(Ljava/lang/Throwable;)V
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lve3;->Y:Lze3;
+
+    invoke-virtual {v0}, Lze3;->j()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lye3;
+
+    iget-object v1, p0, Lve3;->Y:Lze3;
+
+    invoke-direct {v0, v1, p1}, Lye3;-><init>(Lze3;I)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lve3;->Y:Lze3;
+
+    invoke-virtual {v0}, Lze3;->i()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

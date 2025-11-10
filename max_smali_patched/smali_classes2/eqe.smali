@@ -1,113 +1,335 @@
 .class public final Leqe;
-.super Lcy;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lt30;
 
 
 # instance fields
-.field public final A0:Ljava/lang/String;
+.field public X:Ljava/lang/Thread;
 
-.field public final B0:I
+.field public final a:Landroid/content/Context;
 
-.field public final C0:J
+.field public final b:Landroid/media/AudioManager;
 
-.field public final D0:Ljava/lang/String;
+.field public final c:I
 
-.field public final E0:Z
+.field public d:Landroid/media/MediaPlayer;
 
-.field public final F0:I
-
-.field public final G0:Ljava/lang/String;
-
-.field public final X:I
-
-.field public final Y:I
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
-
-.field public final w0:J
-
-.field public final x0:Ljava/lang/String;
-
-.field public final y0:Ljava/lang/String;
-
-.field public final z0:Ljava/util/List;
+.field public final o:Lu30;
 
 
 # direct methods
-.method public constructor <init>(JIILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;IJLjava/lang/String;ZIZZLjava/lang/String;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    sget-object v0, Li00;->Z:Li00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move/from16 v1, p18
+    iput-object p1, p0, Leqe;->a:Landroid/content/Context;
 
-    move/from16 v2, p19
+    const-string v0, "audio"
 
-    invoke-direct {p0, v0, v1, v2}, Lcy;-><init>(Li00;ZZ)V
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-wide p1, p0, Leqe;->o:J
+    move-result-object v0
 
-    iput p3, p0, Leqe;->X:I
+    check-cast v0, Landroid/media/AudioManager;
 
-    iput p4, p0, Leqe;->Y:I
+    iput-object v0, p0, Leqe;->b:Landroid/media/AudioManager;
 
-    iput-object p5, p0, Leqe;->Z:Ljava/lang/String;
+    const/4 v1, 0x3
 
-    iput-wide p6, p0, Leqe;->w0:J
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
-    iput-object p8, p0, Leqe;->x0:Ljava/lang/String;
+    move-result v0
 
-    iput-object p9, p0, Leqe;->y0:Ljava/lang/String;
+    iput v0, p0, Leqe;->c:I
 
-    iput-object p10, p0, Leqe;->z0:Ljava/util/List;
+    new-instance v0, Lu30;
 
-    iput-object p11, p0, Leqe;->A0:Ljava/lang/String;
+    invoke-direct {v0, p1, p0}, Lu30;-><init>(Landroid/content/Context;Lt30;)V
 
-    iput p12, p0, Leqe;->B0:I
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Leqe;->C0:J
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Leqe;->D0:Ljava/lang/String;
-
-    move/from16 p1, p16
-
-    iput-boolean p1, p0, Leqe;->E0:Z
-
-    move/from16 p1, p17
-
-    iput p1, p0, Leqe;->F0:I
-
-    move-object/from16 p1, p20
-
-    iput-object p1, p0, Leqe;->G0:Ljava/lang/String;
+    iput-object v0, p0, Leqe;->o:Lu30;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
+.method public final a()F
+    .locals 2
+
+    iget-object v0, p0, Leqe;->b:Landroid/media/AudioManager;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    iget v1, p0, Leqe;->c:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final b(F)V
+    .locals 1
+
+    iget-object v0, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Landroid/media/MediaPlayer;IZ)V
+    .locals 0
+
+    invoke-virtual {p1, p3}, Landroid/media/MediaPlayer;->setLooping(Z)V
+
+    new-instance p3, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {p3}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    invoke-virtual {p3, p2}, Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Landroid/media/MediaPlayer;->setAudioAttributes(Landroid/media/AudioAttributes;)V
+
+    new-instance p3, Lcqe;
+
+    invoke-direct {p3, p0, p2}, Lcqe;-><init>(Leqe;I)V
+
+    invoke-virtual {p1, p3}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
+
+    new-instance p2, Ldqe;
+
+    invoke-direct {p2, p0}, Ldqe;-><init>(Leqe;)V
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->prepareAsync()V
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leqe;->X:Ljava/lang/Thread;
+
+    return-void
+.end method
+
+.method public final d()Z
     .locals 3
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    iget-object v0, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    return v2
+
+    :cond_0
+    return v1
+.end method
+
+.method public final e(Lr19;IZ)V
+    .locals 2
+
+    :try_start_0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    iget-wide v1, p0, Leqe;->o:J
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Leqe;->f()V
 
-    move-result-object v1
+    new-instance v0, Landroid/media/MediaPlayer;
 
-    const-string v2, "stickerId"
+    invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Leqe;->a:Landroid/content/Context;
 
-    return-object v0
+    invoke-interface {p1, v0, v1}, Lr19;->a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
+
+    invoke-virtual {p0, v0, p2, p3}, Leqe;->c(Landroid/media/MediaPlayer;IZ)V
+
+    iput-object v0, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "Wrong thread, looper expected"
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    const-class p2, Leqe;
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string p3, "Got error during init player"
+
+    invoke-static {p2, p3, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Leqe;->f()V
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 4
+
+    const-string v0, "Wrong thread, expected="
+
+    iget-object v1, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    if-eqz v1, :cond_2
+
+    :try_start_0
+    iget-object v2, p0, Leqe;->X:Ljava/lang/Thread;
+
+    if-eqz v2, :cond_1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v3
+
+    invoke-static {v3, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Leqe;->o:Lu30;
+
+    invoke-virtual {v0}, Lu30;->i()V
+
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->stop()V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "player stop failed"
+
+    invoke-static {v2, v3, v0}, Lcuh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
+
+    :cond_2
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    iput-object v0, p0, Leqe;->X:Ljava/lang/Thread;
+
+    return-void
+.end method
+
+.method public final onAudioFocusChange(I)V
+    .locals 1
+
+    iget-object v0, p0, Leqe;->o:Lu30;
+
+    invoke-virtual {v0, p1}, Lu30;->h(I)V
+
+    return-void
+.end method
+
+.method public final pause()V
+    .locals 1
+
+    iget-object v0, p0, Leqe;->d:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final play()V
+    .locals 0
+
+    return-void
 .end method

@@ -1,184 +1,108 @@
-.class public final synthetic Lksc;
+.class public abstract Lksc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Le6;
 
+# static fields
+.field public static audio_record_click_to_cancel:I = 0x7f13008a
 
-# instance fields
-.field public final synthetic a:I
+.field public static audio_record_swipe_to_cancel:I = 0x7f13009b
 
-.field public final synthetic b:Lnsc;
+.field public static chat_screen__leave_chat_action:I = 0x7f13035e
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static chat_screen__leave_chat_title:I = 0x7f13035f
 
-.field public final synthetic d:Ljava/util/List;
+.field public static chat_screen__remove_chat_action:I = 0x7f130360
 
+.field public static chat_screen__remove_chat_title:I = 0x7f130361
 
-# direct methods
-.method public synthetic constructor <init>(Lnsc;Ljava/lang/Object;Ljava/util/List;I)V
-    .locals 0
+.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130362
 
-    iput p4, p0, Lksc;->a:I
+.field public static chat_screen__search_result_not_found:I = 0x7f130363
 
-    iput-object p1, p0, Lksc;->b:Lnsc;
+.field public static chat_screen__search_result_success:I = 0x7f130364
 
-    iput-object p2, p0, Lksc;->c:Ljava/lang/Object;
+.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f130365
 
-    iput-object p3, p0, Lksc;->d:Ljava/util/List;
+.field public static chat_screen__start_chat_with_bot:I = 0x7f130366
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static chat_screen_channel_search_hint:I = 0x7f13037e
 
-    return-void
-.end method
+.field public static chat_screen_error_restricted_send_message_action:I = 0x7f13038b
 
+.field public static chat_screen_error_restricted_send_message_cancel:I = 0x7f13038c
 
-# virtual methods
-.method public final run()V
-    .locals 10
+.field public static chat_screen_error_restricted_send_message_desc:I = 0x7f13038d
 
-    iget v0, p0, Lksc;->a:I
+.field public static chat_screen_error_restricted_send_message_title:I = 0x7f13038e
 
-    iget-object v1, p0, Lksc;->d:Ljava/util/List;
+.field public static chat_screen_file_too_big_caption:I = 0x7f13038f
 
-    iget-object v2, p0, Lksc;->c:Ljava/lang/Object;
+.field public static chat_screen_file_too_big_title:I = 0x7f130390
 
-    iget-object v3, p0, Lksc;->b:Lnsc;
+.field public static chat_screen_join_channel:I = 0x7f130397
 
-    packed-switch v0, :pswitch_data_0
+.field public static chat_screen_join_chat:I = 0x7f130398
 
-    check-cast v2, Lzrc;
+.field public static chat_screen_leave_chat:I = 0x7f130399
 
-    check-cast v1, Ljava/util/ArrayList;
+.field public static chat_screen_remove_chat:I = 0x7f1303b3
 
-    iget-object v0, v3, Lnsc;->b:Lr63;
+.field public static chat_screen_search_hint:I = 0x7f1303ba
 
-    check-cast v0, Lxid;
+.field public static chat_screen_status_mute_chat:I = 0x7f1303bd
 
-    invoke-virtual {v0}, Lxid;->k()J
+.field public static chat_screen_status_subscribe_chat:I = 0x7f1303be
 
-    move-result-wide v3
+.field public static chat_screen_status_unmute_chat:I = 0x7f1303bf
 
-    new-instance v0, Ljava/util/ArrayList;
+.field public static chat_screen_unblock_contact:I = 0x7f1303c1
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+.field public static media_bar_recent:I = 0x7f13062f
 
-    move-result v5
+.field public static media_bar_restricted_media_action:I = 0x7f130630
 
-    invoke-direct {v0, v5}, Ljava/util/ArrayList;-><init>(I)V
+.field public static media_bar_restricted_media_subtitle:I = 0x7f130631
 
-    const/4 v5, 0x0
+.field public static media_bar_restricted_media_title:I = 0x7f130632
 
-    move v6, v5
+.field public static media_type_picker__close_dialog__accept:I = 0x7f130676
 
-    :goto_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+.field public static media_type_picker__close_dialog__title:I = 0x7f130677
 
-    move-result v7
+.field public static media_type_picker__contact:I = 0x7f130678
 
-    if-ge v6, v7, :cond_0
+.field public static media_type_picker__file:I = 0x7f130679
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f13067a
 
-    move-result-object v7
+.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f13067b
 
-    check-cast v7, Ldsc;
+.field public static media_type_picker__file_dialog__title:I = 0x7f13067c
 
-    int-to-long v8, v6
+.field public static media_type_picker__gallery:I = 0x7f13067d
 
-    sub-long v8, v3, v8
+.field public static media_type_picker__input_hint:I = 0x7f13067e
 
-    invoke-static {v7, v8, v9}, Lisc;->a(Ldsc;J)Lasc;
+.field public static media_type_picker__money:I = 0x7f13067f
 
-    move-result-object v7
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f130680
 
-    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f130681
 
-    add-int/lit8 v6, v6, 0x1
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f130682
 
-    goto :goto_0
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f130683
 
-    :cond_0
-    iget-object v1, v2, Lzrc;->a:Lx5d;
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f130684
 
-    invoke-virtual {v1}, Lx5d;->c()V
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130685
 
-    :try_start_0
-    new-instance v3, Lwg4;
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130686
 
-    const/16 v4, 0xc
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f130687
 
-    invoke-direct {v3, v4, v2}, Lwg4;-><init>(ILjava/lang/Object;)V
+.field public static media_type_picker__place:I = 0x7f130688
 
-    new-instance v4, Loe3;
+.field public static media_type_picker__snack_file:I = 0x7f130689
 
-    const/4 v6, 0x2
-
-    invoke-direct {v4, v6, v3}, Loe3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v3, Lrh;
-
-    const/16 v7, 0x1c
-
-    invoke-direct {v3, v2, v7, v0}, Lrh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v0, Loe3;
-
-    invoke-direct {v0, v6, v3}, Loe3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lme3;
-
-    invoke-direct {v2, v4, v5, v0}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v2}, Lle3;->a()V
-
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    throw v0
-
-    :pswitch_0
-    check-cast v2, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    new-instance v0, Lwpb;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v0, v3, v4, v1}, Lwpb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v0}, Lx5d;->p(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v2, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v0, Lq7b;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v0, v3, v2, v1, v4}, Lq7b;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v2, v0}, Lx5d;->p(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static media_type_picker__snack_media:I = 0x7f13068a

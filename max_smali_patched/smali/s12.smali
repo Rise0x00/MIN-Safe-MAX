@@ -1,67 +1,169 @@
 .class public final Ls12;
-.super Lb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lued;
 
 
 # instance fields
-.field public final synthetic c:Lm9h;
+.field public final synthetic b:I
 
-.field public final synthetic o:Ljava/util/UUID;
+.field public final c:Lued;
 
 
 # direct methods
-.method public constructor <init>(Lm9h;Ljava/util/UUID;)V
-    .locals 0
+.method public constructor <init>(JI)V
+    .locals 1
 
-    iput-object p1, p0, Ls12;->c:Lm9h;
+    iput p3, p0, Ls12;->b:I
 
-    iput-object p2, p0, Ls12;->o:Ljava/util/UUID;
+    packed-switch p3, :pswitch_data_0
 
-    invoke-direct {p0}, Lb;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p3, Ls12;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p3, p1, p2, v0}, Ls12;-><init>(JI)V
+
+    iput-object p3, p0, Ls12;->c:Lued;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p3, Lrvf;
+
+    new-instance v0, Lr12;
+
+    invoke-direct {v0, p1, p2}, Lr12;-><init>(J)V
+
+    invoke-direct {p3, p1, p2, v0}, Lrvf;-><init>(JLued;)V
+
+    iput-object p3, p0, Ls12;->c:Lued;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final a()J
+    .locals 2
 
-    iget-object v0, p0, Ls12;->c:Lm9h;
+    iget v0, p0, Ls12;->b:I
 
-    iget-object v1, v0, Lm9h;->c:Landroidx/work/impl/WorkDatabase;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    iget-object v0, p0, Ls12;->c:Lued;
 
-    :try_start_0
-    iget-object v2, p0, Ls12;->o:Ljava/util/UUID;
+    check-cast v0, Lrvf;
 
-    invoke-virtual {v2}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    iget-wide v0, v0, Lrvf;->b:J
 
-    move-result-object v2
+    return-wide v0
 
-    invoke-static {v0, v2}, Lb;->b(Lm9h;Ljava/lang/String;)V
+    :pswitch_0
+    iget-object v0, p0, Ls12;->c:Lued;
 
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v0, Ls12;
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    iget-object v0, v0, Ls12;->c:Lued;
 
-    iget-object v1, v0, Lm9h;->b:Luj3;
+    check-cast v0, Lrvf;
 
-    iget-object v2, v0, Lm9h;->c:Landroidx/work/impl/WorkDatabase;
+    iget-wide v0, v0, Lrvf;->b:J
 
-    iget-object v0, v0, Lm9h;->e:Ljava/util/List;
+    return-wide v0
 
-    invoke-static {v1, v2, v0}, Lyed;->a(Luj3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
+    nop
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final b(Lq12;)Lted;
+    .locals 2
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    iget v0, p0, Ls12;->b:I
 
-    throw v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ls12;->c:Lued;
+
+    check-cast v0, Lrvf;
+
+    invoke-virtual {v0, p1}, Lrvf;->b(Lq12;)Lted;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Ls12;->c:Lued;
+
+    check-cast v0, Ls12;
+
+    iget-object v0, v0, Ls12;->c:Lued;
+
+    check-cast v0, Lrvf;
+
+    invoke-virtual {v0, p1}, Lrvf;->b(Lq12;)Lted;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lted;->b:Z
+
+    if-nez v0, :cond_1
+
+    iget-object p1, p1, Lq12;->d:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    instance-of v0, p1, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "CameraX"
+
+    const-string v1, "The device might underreport the amount of the cameras. Finish the initialize task since we are already reaching the maximum number of retries."
+
+    invoke-static {v0, v1}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    check-cast p1, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+
+    iget p1, p1, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;->a:I
+
+    if-lez p1, :cond_0
+
+    sget-object p1, Lted;->f:Lted;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lted;->d:Lted;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Lted;->e:Lted;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

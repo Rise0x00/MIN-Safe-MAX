@@ -1,688 +1,484 @@
 .class public final Lonb;
-.super Lps;
+.super Ljzg;
 .source "SourceFile"
 
 
 # instance fields
-.field public i:I
+.field public final X:La1f;
 
-.field public final synthetic j:Lpnb;
+.field public final Y:Lj0d;
+
+.field public final Z:Laf5;
+
+.field public final b:Lqob;
+
+.field public final c:Lnpb;
+
+.field public final d:La1f;
+
+.field public final o:Lj0d;
+
+.field public final s0:La1f;
+
+.field public final t0:Lj0d;
 
 
 # direct methods
-.method public constructor <init>(Lpnb;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/Set;Lqob;Lnpb;Ltlf;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljzg;-><init>()V
 
-    iput-object p1, p0, Lonb;->j:Lpnb;
+    iput-object p2, p0, Lonb;->b:Lqob;
+
+    iput-object p3, p0, Lonb;->c:Lnpb;
+
+    sget-object p2, Loa5;->a:Loa5;
+
+    invoke-static {p2}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lonb;->d:La1f;
+
+    new-instance v0, Lj0d;
+
+    invoke-direct {v0, p2}, Lj0d;-><init>(Lf1a;)V
+
+    iput-object v0, p0, Lonb;->o:Lj0d;
+
+    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lonb;->X:La1f;
+
+    new-instance p2, Lj0d;
+
+    invoke-direct {p2, p1}, Lj0d;-><init>(Lf1a;)V
+
+    iput-object p2, p0, Lonb;->Y:Lj0d;
+
+    new-instance p2, Laf5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Laf5;-><init>(I)V
+
+    iput-object p2, p0, Lonb;->Z:Laf5;
+
+    const-string p2, ""
+
+    invoke-static {p2}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lonb;->s0:La1f;
+
+    const-wide/16 v0, 0xc8
+
+    invoke-static {p2, v0, v1}, Lqs0;->j(Lez5;J)Lez5;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lqs0;->l(Lez5;)Lez5;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v1, Lqke;->a:Lipd;
+
+    iget-object v2, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v0, v2, v1, p2}, Lqs0;->D(Lez5;Lg54;Lrke;Ljava/lang/Object;)Lj0d;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lonb;->t0:Lj0d;
+
+    new-instance p2, Lnnb;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lnnb;-><init>(Lonb;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, p2}, Lqs0;->x(Lez5;Lej6;)Lm82;
+
+    move-result-object p1
+
+    check-cast p4, Lsta;
+
+    invoke-virtual {p4}, Lsta;->b()La54;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lqs0;->t(Lez5;Ly44;)Lez5;
+
+    move-result-object p1
+
+    iget-object p2, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    iget-object p1, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p3, p1}, Lnpb;->e(Lkotlinx/coroutines/internal/ContextScope;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C(Landroid/view/View;II)V
-    .locals 3
+.method public final t()V
+    .locals 1
 
-    iget-object p1, p0, Lonb;->j:Lpnb;
+    iget-object v0, p0, Lonb;->c:Lnpb;
 
-    invoke-static {p1}, Lpnb;->e(Lpnb;)Lgnb;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p3}, Lgnb;->a(I)V
-
-    invoke-virtual {p1}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object p2
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p1, Lpnb;->x0:Lwkg;
-
-    iget v0, v0, Lwkg;->a:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_3
-
-    invoke-virtual {p1}, Lpnb;->getScrollState()Lnnb;
-
-    move-result-object v0
-
-    sget-object v1, Lnnb;->a:Lnnb;
-
-    if-ne v0, v1, :cond_3
-
-    invoke-virtual {p2}, Ljnb;->e()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Lpnb;->getStackFromBottom()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lonb;->i:I
-
-    sub-int v2, p3, v1
-
-    int-to-float v2, v2
-
-    sub-int v1, v0, v1
-
-    :goto_0
-    int-to-float v1, v1
-
-    div-float/2addr v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    iget v1, p0, Lonb;->i:I
-
-    sub-int v2, v1, p3
-
-    int-to-float v2, v2
-
-    sub-int/2addr v1, v0
-
-    goto :goto_0
-
-    :goto_1
-    const/4 v1, 0x1
-
-    int-to-float v1, v1
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    sub-float/2addr v1, v2
-
-    invoke-static {p1, v1}, Lpnb;->g(Lpnb;F)V
-
-    invoke-virtual {p1}, Lpnb;->getStackFromBottom()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    if-lt p3, v0, :cond_2
-
-    invoke-virtual {p2}, Ljnb;->h()V
-
-    :cond_2
-    invoke-virtual {p1}, Lpnb;->getStackFromBottom()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    if-gt p3, v0, :cond_3
-
-    invoke-virtual {p2}, Ljnb;->h()V
-
-    :cond_3
-    invoke-virtual {p2, p3}, Ljnb;->m(I)V
+    invoke-interface {v0}, Lnpb;->a()V
 
     return-void
 .end method
 
-.method public final D(Landroid/view/View;FF)V
-    .locals 11
+.method public final u(Ldpb;ZLdf2;Z)V
+    .locals 4
 
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+    const/4 v0, 0x0
 
-    move-result p2
+    if-eqz p2, :cond_1
 
-    iput p2, p0, Lonb;->i:I
+    iget-object p2, p0, Lonb;->X:La1f;
 
-    iget-object p2, p0, Lonb;->j:Lpnb;
+    invoke-virtual {p2}, La1f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Lpnb;->getCallback()Ljnb;
+    move-result-object p3
 
-    move-result-object v0
+    check-cast p3, Ljava/lang/Iterable;
 
-    if-nez v0, :cond_0
+    invoke-static {p3}, Lab3;->a0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object p3
+
+    iget-wide v1, p1, Ldpb;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p4
+
+    invoke-interface {p3, p4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    iget-object v3, p0, Lonb;->c:Lnpb;
+
+    if-nez p4, :cond_0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p4
+
+    invoke-interface {p3, p4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v3, p1}, Lnpb;->b(Ldpb;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v3, v1, v2}, Lnpb;->d(J)V
+
+    :goto_0
+    invoke-virtual {p2, v0, p3}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
 
-    :cond_0
-    float-to-double v1, p3
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v3
-
-    const-wide/high16 v5, 0x4069000000000000L    # 200.0
-
-    cmpl-double v3, v3, v5
-
-    const/4 v4, 0x2
-
-    sget-object v5, Lnnb;->c:Lnnb;
-
-    sget-object v6, Lnnb;->b:Lnnb;
-
-    sget-object v7, Lnnb;->a:Lnnb;
-
-    const/4 v8, 0x0
-
-    if-lez v3, :cond_a
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
-
-    move-result-wide v1
-
-    const-wide v9, 0x40bf400000000000L    # 8000.0
-
-    cmpg-double v1, v1, v9
-
-    if-gez v1, :cond_8
-
-    invoke-virtual {v0}, Ljnb;->b()I
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    sget-object v2, Lknb;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v1}, Lqw1;->u(I)I
-
-    move-result v1
-
-    aget v1, v2, v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_2
-
-    if-ne v1, v4, :cond_1
-
-    invoke-virtual {p2}, Lpnb;->getScrollState()Lnnb;
-
-    move-result-object v5
-
-    goto/16 :goto_2
-
     :cond_1
+    iget p1, p1, Ldpb;->c:I
+
+    invoke-static {p1}, Lnx1;->v(I)I
+
+    move-result p1
+
+    const/4 p2, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x3
+
+    if-eqz p1, :cond_13
+
+    if-eq p1, v2, :cond_d
+
+    const/4 v3, 0x4
+
+    if-eq p1, v3, :cond_7
+
+    invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_19
+
+    if-eq p1, v1, :cond_6
+
+    if-eq p1, p2, :cond_4
+
+    if-ne p1, v2, :cond_3
+
+    if-eqz p4, :cond_2
+
+    sget p1, Lnsa;->Z:I
+
+    goto :goto_1
+
+    :cond_2
+    sget p1, Lnsa;->Y:I
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto/16 :goto_9
+
+    :cond_3
     new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
     invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
-    :cond_2
-    invoke-virtual {p2}, Lpnb;->getStackFromBottom()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    iget v1, p0, Lonb;->i:I
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_4
-
-    cmpl-float p3, p3, v8
-
-    if-lez p3, :cond_e
-
-    :cond_3
-    :goto_0
-    move-object v5, v6
-
-    goto/16 :goto_2
-
     :cond_4
-    cmpl-float p3, p3, v8
+    if-eqz p4, :cond_5
 
-    if-lez p3, :cond_3
+    sget p1, Lnsa;->Q:I
 
-    :goto_1
-    move-object v5, v7
-
-    goto/16 :goto_2
+    goto :goto_2
 
     :cond_5
-    iget v1, p0, Lonb;->i:I
+    sget p1, Lnsa;->T:I
 
-    invoke-virtual {v0}, Ljnb;->c()I
+    :goto_2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v2
+    move-result-object v0
 
-    if-le v1, v2, :cond_6
-
-    cmpg-float p3, p3, v8
-
-    if-gez p3, :cond_e
-
-    goto :goto_0
+    goto/16 :goto_9
 
     :cond_6
-    cmpg-float p3, p3, v8
+    sget p1, Lnsa;->d0:I
 
-    if-gez p3, :cond_3
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_1
+    move-result-object v0
+
+    goto/16 :goto_9
 
     :cond_7
-    const/4 p1, 0x0
+    invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_19
+
+    if-eq p1, v1, :cond_c
+
+    if-eq p1, p2, :cond_a
+
+    if-ne p1, v2, :cond_9
+
+    if-eqz p4, :cond_8
+
+    sget p1, Lnsa;->V:I
+
+    goto :goto_3
+
+    :cond_8
+    sget p1, Lnsa;->X:I
+
+    :goto_3
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto/16 :goto_9
+
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
-    :cond_8
-    invoke-virtual {p2}, Lpnb;->getStackFromBottom()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    cmpl-float p3, p3, v8
-
-    if-lez p3, :cond_e
-
-    goto :goto_1
-
-    :cond_9
-    cmpg-float p3, p3, v8
-
-    if-gez p3, :cond_e
-
-    goto :goto_1
-
     :cond_a
-    invoke-virtual {p2}, Lpnb;->getStackFromBottom()Z
+    if-eqz p4, :cond_b
 
-    move-result p3
-
-    if-eqz p3, :cond_c
-
-    iget p3, p0, Lonb;->i:I
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v1
-
-    div-int/2addr v1, v4
-
-    if-ge p3, v1, :cond_b
-
-    goto :goto_2
-
-    :cond_b
-    iget p3, p0, Lonb;->i:I
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljnb;->e()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    div-int/2addr v2, v4
-
-    add-int/2addr v2, v1
-
-    if-le p3, v2, :cond_3
-
-    goto :goto_1
-
-    :cond_c
-    iget p3, p0, Lonb;->i:I
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v1
-
-    div-int/2addr v1, v4
-
-    if-le p3, v1, :cond_d
-
-    goto :goto_2
-
-    :cond_d
-    iget p3, p0, Lonb;->i:I
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljnb;->e()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Ljnb;->c()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    div-int/2addr v2, v4
-
-    add-int/2addr v2, v1
-
-    if-ge p3, v2, :cond_3
-
-    goto :goto_1
-
-    :cond_e
-    :goto_2
-    invoke-virtual {p2}, Lpnb;->getScrollState()Lnnb;
-
-    move-result-object p3
-
-    invoke-virtual {v0, p3, v5}, Ljnb;->g(Lnnb;Lnnb;)Lnnb;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Lpnb;->setScrollState(Lnnb;)V
-
-    iget p3, p0, Lonb;->i:I
-
-    invoke-static {p2}, Lpnb;->f(Lpnb;)I
-
-    move-result v1
-
-    if-ne p3, v1, :cond_f
-
-    invoke-virtual {p2}, Lpnb;->getScrollState()Lnnb;
-
-    move-result-object p3
-
-    if-ne p3, v7, :cond_f
-
-    invoke-virtual {v0}, Ljnb;->h()V
-
-    invoke-static {p2, v8}, Lpnb;->g(Lpnb;F)V
-
-    return-void
-
-    :cond_f
-    iget-object p3, p2, Lpnb;->x0:Lwkg;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    invoke-static {p2}, Lpnb;->f(Lpnb;)I
-
-    move-result v1
-
-    invoke-virtual {p3, p1, v1}, Lwkg;->o(II)Z
-
-    invoke-virtual {p2}, Lpnb;->getScrollState()Lnnb;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljnb;->l(Lnnb;)V
-
-    invoke-virtual {p2}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final O(Landroid/view/View;I)Z
-    .locals 1
-
-    iget-object p2, p0, Lonb;->j:Lpnb;
-
-    invoke-virtual {p2}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljnb;->f()Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ne p1, v0, :cond_1
-
-    iget-boolean p1, p2, Lpnb;->o:Z
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final c(Landroid/view/View;I)I
-    .locals 4
-
-    iget-object p1, p0, Lonb;->j:Lpnb;
-
-    invoke-virtual {p1}, Lpnb;->getStackFromBottom()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljnb;->a()I
-
-    move-result v0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljnb;->e()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :goto_1
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v2
-
-    :goto_2
-    invoke-virtual {p1}, Lpnb;->getStackFromBottom()Z
-
-    move-result v3
-
-    invoke-virtual {p1}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object p1
-
-    if-eqz v3, :cond_3
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Ljnb;->e()I
-
-    move-result p1
-
-    :goto_3
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
+    sget p1, Lnsa;->P:I
 
     goto :goto_4
 
-    :cond_3
-    if-eqz p1, :cond_4
+    :cond_b
+    sget p1, Lnsa;->S:I
 
-    invoke-virtual {p1}, Ljnb;->a()I
-
-    move-result p1
-
-    goto :goto_3
-
-    :cond_4
     :goto_4
-    if-eqz v1, :cond_5
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result v2
+    goto/16 :goto_9
 
-    :cond_5
-    invoke-static {p2, v0, v2}, Lkjd;->h(III)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final q(I)I
-    .locals 4
-
-    iget-object p1, p0, Lonb;->j:Lpnb;
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-virtual {p1}, Lpnb;->getCallback()Ljnb;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljnb;->f()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
-
-    move-result p1
+    :cond_c
+    sget p1, Lnsa;->b0:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    goto :goto_1
+    goto/16 :goto_9
 
-    :catchall_0
-    move-exception p1
+    :cond_d
+    invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
-    goto :goto_0
+    move-result p1
 
-    :cond_0
-    move-object p1, v0
+    if-eqz p1, :cond_19
 
-    goto :goto_1
+    if-eq p1, v1, :cond_12
 
-    :goto_0
-    new-instance v1, Lv3d;
+    if-eq p1, p2, :cond_10
 
-    invoke-direct {v1, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    if-ne p1, v2, :cond_f
 
-    move-object p1, v1
+    if-eqz p4, :cond_e
 
-    :goto_1
-    invoke-static {p1}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    sget p1, Lnsa;->U:I
 
-    move-result-object v1
+    goto :goto_5
 
-    if-eqz v1, :cond_1
+    :cond_e
+    sget p1, Lnsa;->W:I
 
-    const-string v2, "PopupLayout"
+    :goto_5
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v3, "getOrderedChildIndex fail, issue ONEME-9645"
+    move-result-object v0
 
-    invoke-static {v2, v3, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_9
 
-    :cond_1
-    instance-of v1, p1, Lv3d;
+    :cond_f
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    if-eqz v1, :cond_2
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    goto :goto_2
+    throw p1
 
-    :cond_2
-    move-object v0, p1
+    :cond_10
+    if-eqz p4, :cond_11
 
-    :goto_2
-    check-cast v0, Ljava/lang/Integer;
+    sget p1, Lnsa;->O:I
 
-    if-eqz v0, :cond_3
+    goto :goto_6
+
+    :cond_11
+    sget p1, Lnsa;->R:I
+
+    :goto_6
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    :cond_12
+    sget p1, Lnsa;->a0:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    :cond_13
+    invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_19
+
+    if-eq p1, v1, :cond_18
+
+    if-eq p1, p2, :cond_16
+
+    if-ne p1, v2, :cond_15
+
+    if-eqz p4, :cond_14
+
+    sget p1, Lnsa;->U:I
+
+    goto :goto_7
+
+    :cond_14
+    sget p1, Lnsa;->W:I
+
+    :goto_7
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    :cond_15
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_16
+    if-eqz p4, :cond_17
+
+    sget p1, Lnsa;->O:I
+
+    goto :goto_8
+
+    :cond_17
+    sget p1, Lnsa;->R:I
+
+    :goto_8
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    :cond_18
+    sget p1, Lnsa;->c0:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    :cond_19
+    :goto_9
+    if-eqz v0, :cond_1a
+
+    new-instance p1, Lqnb;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result p1
+    move-result p2
 
-    goto :goto_3
+    new-instance p3, Lirf;
 
-    :cond_3
-    const/4 p1, -0x1
+    invoke-direct {p3, p2}, Lirf;-><init>(I)V
 
-    :goto_3
-    return p1
-.end method
+    invoke-direct {p1, p3}, Lqnb;-><init>(Lirf;)V
 
-.method public final s(Landroid/view/View;)I
-    .locals 0
+    iget-object p2, p0, Lonb;->Z:Laf5;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-static {p2, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
 
-    move-result p1
-
-    return p1
+    :cond_1a
+    return-void
 .end method

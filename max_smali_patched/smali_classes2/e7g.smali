@@ -1,456 +1,205 @@
-.class public final Le7g;
+.class public final synthetic Le7g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lg83;
-
-
-# static fields
-.field public static final k:Le7g;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Landroid/net/Uri;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:J
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Landroid/net/Uri;
-
-.field public final i:Lo2d;
-
-.field public final j:Lh10;
+.field public final synthetic b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
-
-    new-instance v0, Le7g;
-
-    sget-object v3, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    sget v1, Ln05;->o:I
-
-    const-wide/16 v7, 0x0
-
-    sget-object v12, Lh10;->a:Lh10;
-
-    const-wide/16 v1, 0x0
-
-    const/4 v4, -0x1
-
-    const/4 v5, -0x1
-
-    const/4 v6, -0x1
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v0 .. v12}, Le7g;-><init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lo2d;Lh10;)V
-
-    sput-object v0, Le7g;->k:Le7g;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lo2d;Lh10;)V
+.method public synthetic constructor <init>(Lone/me/settings/twofa/creation/TwoFACreationScreen;I)V
     .locals 0
 
+    iput p2, p0, Le7g;->a:I
+
+    iput-object p1, p0, Le7g;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Le7g;->a:J
-
-    iput-object p3, p0, Le7g;->b:Landroid/net/Uri;
-
-    iput p4, p0, Le7g;->c:I
-
-    iput p5, p0, Le7g;->d:I
-
-    iput p6, p0, Le7g;->e:I
-
-    iput-wide p7, p0, Le7g;->f:J
-
-    iput-object p9, p0, Le7g;->g:Ljava/lang/String;
-
-    iput-object p10, p0, Le7g;->h:Landroid/net/Uri;
-
-    iput-object p11, p0, Le7g;->i:Lo2d;
-
-    iput-object p12, p0, Le7g;->j:Lh10;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Le7g;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Le7g;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Le7g;
+    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Les7;
 
-    const/4 v2, 0x0
+    new-instance v0, Lvj7;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1}, Lc24;->getRouter()Lyid;
 
-    return v2
+    move-result-object v1
 
-    :cond_1
-    check-cast p1, Le7g;
+    invoke-direct {v0, v1}, Lvj7;-><init>(Lyid;)V
 
-    iget-wide v3, p0, Le7g;->a:J
+    return-object v0
 
-    iget-wide v5, p1, Le7g;->a:J
+    :pswitch_0
+    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Les7;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->A0()Lg7g;
 
-    if-eqz v1, :cond_2
+    move-result-object v0
 
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Le7g;->b:Landroid/net/Uri;
-
-    iget-object v3, p1, Le7g;->b:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Le7g;->c:I
-
-    iget v3, p1, Le7g;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Le7g;->d:I
-
-    iget v3, p1, Le7g;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Le7g;->e:I
-
-    iget v3, p1, Le7g;->e:I
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Le7g;->f:J
-
-    iget-wide v5, p1, Le7g;->f:J
-
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Le7g;->g:Ljava/lang/String;
-
-    iget-object v3, p1, Le7g;->g:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Le7g;->h:Landroid/net/Uri;
-
-    iget-object v3, p1, Le7g;->h:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-object v1, p0, Le7g;->i:Lo2d;
-
-    iget-object v3, p1, Le7g;->i:Lo2d;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-object v1, p0, Le7g;->j:Lh10;
-
-    iget-object p1, p1, Le7g;->j:Lh10;
-
-    if-eq v1, p1, :cond_b
-
-    return v2
-
-    :cond_b
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Le7g;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    const/16 v1, 0x1f
+    const/4 v2, 0x3
 
-    mul-int/2addr v0, v1
+    const/4 v3, 0x2
 
-    iget-object v2, p0, Le7g;->b:Landroid/net/Uri;
+    const/4 v4, 0x1
 
-    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+    if-eqz v0, :cond_8
 
-    move-result v2
+    if-eq v0, v4, :cond_3
 
-    add-int/2addr v2, v0
+    if-ne v0, v3, :cond_2
 
-    mul-int/2addr v2, v1
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->y0()Lf7g;
 
-    iget v0, p0, Le7g;->c:I
+    move-result-object v0
 
-    invoke-static {v0, v2, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Le7g;->d:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    iget v2, p0, Le7g;->e:I
+    if-eqz v0, :cond_1
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    if-eq v0, v4, :cond_6
 
-    move-result v0
+    if-eq v0, v3, :cond_6
 
-    sget v2, Ln05;->o:I
-
-    iget-wide v2, p0, Le7g;->f:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Le7g;->g:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result v3
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :goto_0
-    add-int/2addr v0, v3
+    throw v0
 
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Le7g;->h:Landroid/net/Uri;
-
-    if-nez v3, :cond_1
-
-    move v3, v2
+    :cond_1
+    sget-object v0, Ldqd;->U1:Ldqd;
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
+    :cond_2
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result v3
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_3
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->y0()Lf7g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    if-eq v0, v4, :cond_6
+
+    if-eq v0, v3, :cond_5
+
+    if-ne v0, v2, :cond_4
+
+    sget-object v0, Ldqd;->T1:Ldqd;
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_5
+    sget-object v0, Ldqd;->S1:Ldqd;
+
+    goto :goto_1
+
+    :cond_6
+    :goto_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_7
+    sget-object v0, Ldqd;->Q1:Ldqd;
+
+    goto :goto_1
+
+    :cond_8
+    invoke-virtual {v1}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->y0()Lf7g;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    if-eq v0, v4, :cond_b
+
+    if-eq v0, v3, :cond_a
+
+    if-ne v0, v2, :cond_9
+
+    sget-object v0, Ldqd;->a2:Ldqd;
+
+    goto :goto_1
+
+    :cond_9
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_a
+    sget-object v0, Ldqd;->Z1:Ldqd;
+
+    goto :goto_1
+
+    :cond_b
+    sget-object v0, Ldqd;->Y1:Ldqd;
+
+    goto :goto_1
+
+    :cond_c
+    sget-object v0, Ldqd;->X1:Ldqd;
 
     :goto_1
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Le7g;->i:Lo2d;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Lo2d;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Le7g;->j:Lh10;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final i()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Le7g;->g:Ljava/lang/String;
-
     return-object v0
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    nop
 
-    iget-wide v0, p0, Le7g;->f:J
-
-    invoke-static {v0, v1}, Ln05;->j(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "VideoAttachConfig(videoId="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Le7g;->a:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ", previewUri="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Le7g;->b:Landroid/net/Uri;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", width="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Le7g;->c:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", height="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Le7g;->d:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", maxImageViewHeight="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Le7g;->e:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", duration="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", attachId="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Le7g;->g:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", lowResUri="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Le7g;->h:Landroid/net/Uri;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", previewResizeOptions="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Le7g;->i:Lo2d;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", status="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Le7g;->j:Lh10;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

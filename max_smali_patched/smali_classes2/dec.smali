@@ -1,48 +1,156 @@
-.class public abstract Ldec;
+.class public final Ldec;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/TypeEvaluator;
 
 
-# static fields
-.field public static oneme_contactlist_action_audio_call:I = 0x7f0a0684
+# instance fields
+.field public a:[Lifb;
 
-.field public static oneme_contactlist_action_block:I = 0x7f0a0685
 
-.field public static oneme_contactlist_action_delete:I = 0x7f0a0686
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_contactlist_action_open_profile:I = 0x7f0a0687
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_contactlist_action_select:I = 0x7f0a0688
+    const/4 v0, 0x0
 
-.field public static oneme_contactlist_action_share_contact:I = 0x7f0a0689
+    iput-object v0, p0, Ldec;->a:[Lifb;
 
-.field public static oneme_contactlist_action_suspend_bot:I = 0x7f0a068a
+    return-void
+.end method
 
-.field public static oneme_contactlist_action_video_call:I = 0x7f0a068b
 
-.field public static oneme_contactlist_action_write:I = 0x7f0a068c
+# virtual methods
+.method public final evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-.field public static oneme_contactlist_confirm_block:I = 0x7f0a068d
+    check-cast p2, [Lifb;
 
-.field public static oneme_contactlist_confirm_cancel:I = 0x7f0a068e
+    check-cast p3, [Lifb;
 
-.field public static oneme_contactlist_confirm_delete:I = 0x7f0a068f
+    invoke-static {p2, p3}, Luti;->a([Lifb;[Lifb;)Z
 
-.field public static oneme_contactlist_contact_view_type:I = 0x7f0a0690
+    move-result v0
 
-.field public static oneme_contactlist_container:I = 0x7f0a0691
+    if-eqz v0, :cond_6
 
-.field public static oneme_contactlist_empty_search_result_view_type:I = 0x7f0a0692
+    iget-object v0, p0, Ldec;->a:[Lifb;
 
-.field public static oneme_contactlist_global_contact_view_type:I = 0x7f0a0693
+    invoke-static {v0, p2}, Luti;->a([Lifb;[Lifb;)Z
 
-.field public static oneme_contactlist_menu_item_add_contact:I = 0x7f0a0694
+    move-result v0
 
-.field public static oneme_contactlist_menu_item_create_chat:I = 0x7f0a0695
+    if-nez v0, :cond_1
 
-.field public static oneme_contactlist_menu_item_invite:I = 0x7f0a0696
+    if-eqz p2, :cond_0
 
-.field public static oneme_contactlist_phonebook_contact_view_type:I = 0x7f0a0697
+    invoke-static {p2}, Luti;->e([Lifb;)[Lifb;
 
-.field public static oneme_contactlist_rv:I = 0x7f0a0698
+    move-result-object v0
 
-.field public static oneme_contactlist_toolbar:I = 0x7f0a0699
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-object v0, p0, Ldec;->a:[Lifb;
+
+    :cond_1
+    iget-object v0, p0, Ldec;->a:[Lifb;
+
+    const-string v1, "Required value was null."
+
+    if-eqz v0, :cond_5
+
+    if-eqz p2, :cond_4
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    :goto_1
+    if-ge v2, v1, :cond_3
+
+    if-eqz p3, :cond_2
+
+    aget-object v3, v0, v2
+
+    aget-object v4, p2, v2
+
+    aget-object v5, p3, v2
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-char v6, v4, Lifb;->a:C
+
+    iput-char v6, v3, Lifb;->a:C
+
+    const/4 v6, 0x0
+
+    :goto_2
+    iget-object v7, v4, Lifb;->b:[F
+
+    array-length v8, v7
+
+    if-ge v6, v8, :cond_2
+
+    iget-object v8, v3, Lifb;->b:[F
+
+    aget v7, v7, v6
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    sub-float/2addr v9, p1
+
+    mul-float/2addr v9, v7
+
+    iget-object v7, v5, Lifb;->b:[F
+
+    aget v7, v7, v6
+
+    mul-float/2addr v7, p1
+
+    add-float/2addr v7, v9
+
+    aput v7, v8, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-object v0
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Can\'t interpolate between two incompatible pathData"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

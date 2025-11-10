@@ -1,356 +1,620 @@
 .class public final Lgke;
-.super Landroid/graphics/drawable/Drawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Landroid/graphics/Paint;
+# interfaces
+.implements Ly68;
+.implements Lr0a;
 
 
 # instance fields
-.field public final a:Lhke;
+.field public final a:Lorg/webrtc/EglBase$Context;
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:Lw68;
 
-.field public final c:Landroid/graphics/Paint;
+.field public final c:Ljke;
+
+.field public final d:Ll40;
+
+.field public final e:Ls0a;
+
+.field public final f:Landroid/content/Context;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:Ljava/lang/String;
+
+.field public final j:Ljava/lang/Integer;
+
+.field public final k:Lcwc;
+
+.field public final l:Z
+
+.field public final m:Lrh1;
+
+.field public final n:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public volatile o:Lx68;
+
+.field public volatile p:Lorg/webrtc/VideoSink;
+
+.field public final q:Ll68;
+
+.field public final r:Lcid;
+
+.field public final s:Ltuf;
+
+.field public final t:Lfke;
+
+.field public final u:Lxsd;
+
+.field public v:Lp12;
+
+.field public w:Lv68;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Leke;)V
+    .locals 3
 
-    new-instance v0, Landroid/graphics/Paint;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    sput-object v0, Lgke;->d:Landroid/graphics/Paint;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lh65;ILc45;)V
-    .locals 4
-
-    .line 8
-    new-instance v0, Lhke;
-
-    .line 9
-    new-instance v1, Le55;
-
-    .line 10
-    iget v2, p1, Lh65;->b:I
-
-    .line 11
-    iget v3, p1, Lh65;->c:I
-
-    .line 12
-    iget p1, p1, Lh65;->d:I
-
-    .line 13
-    invoke-direct {v1, v2, v3, p1}, Le55;-><init>(III)V
-
-    .line 14
-    invoke-direct {v0, v1, p2, p3}, Lhke;-><init>(Le55;ILc45;)V
-
-    .line 15
-    invoke-direct {p0, v0}, Lgke;-><init>(Lhke;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhke;)V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lgke;->a:Lhke;
-
-    .line 3
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Lgke;->b:Landroid/graphics/Rect;
-
-    .line 4
-    new-instance v0, Landroid/graphics/Paint;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
-
-    iput-object v0, p0, Lgke;->c:Landroid/graphics/Paint;
+    iput-object v0, p0, Lgke;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     const/4 v0, 0x0
 
-    .line 5
-    iget p1, p1, Lhke;->b:I
+    iput-object v0, p0, Lgke;->v:Lp12;
 
-    .line 6
-    invoke-virtual {p0, v0, v0, p1, p1}, Lgke;->setBounds(IIII)V
+    iget-object v0, p1, Leke;->e:Lcwc;
 
-    .line 7
-    invoke-virtual {p0}, Lgke;->a()V
+    iput-object v0, p0, Lgke;->k:Lcwc;
+
+    iget-object v1, p1, Leke;->a:Ljke;
+
+    iput-object v1, p0, Lgke;->c:Ljke;
+
+    iget-object v1, p1, Leke;->b:Ll40;
+
+    iput-object v1, p0, Lgke;->d:Ll40;
+
+    iget-object v1, p1, Leke;->i:Ljava/lang/Integer;
+
+    iput-object v1, p0, Lgke;->j:Ljava/lang/Integer;
+
+    iget-object v1, p1, Leke;->d:Landroid/content/Context;
+
+    iput-object v1, p0, Lgke;->f:Landroid/content/Context;
+
+    iget-object v1, p1, Leke;->c:Ls0a;
+
+    iput-object v1, p0, Lgke;->e:Ls0a;
+
+    iget-object v1, p1, Leke;->k:Lorg/webrtc/EglBase$Context;
+
+    iput-object v1, p0, Lgke;->a:Lorg/webrtc/EglBase$Context;
+
+    iget-boolean v1, p1, Leke;->j:Z
+
+    iput-boolean v1, p0, Lgke;->l:Z
+
+    iget-object v1, p1, Leke;->f:Lrh1;
+
+    iput-object v1, p0, Lgke;->m:Lrh1;
+
+    iget-object v1, p1, Leke;->g:Lw68;
+
+    iput-object v1, p0, Lgke;->b:Lw68;
+
+    iget-object v1, p1, Leke;->l:Ll68;
+
+    iput-object v1, p0, Lgke;->q:Ll68;
+
+    iget-object v1, p1, Leke;->n:Lcid;
+
+    iput-object v1, p0, Lgke;->r:Lcid;
+
+    const-string v1, "ARDAMSv0"
+
+    iput-object v1, p0, Lgke;->h:Ljava/lang/String;
+
+    const-string v1, "ARDAMSa0"
+
+    iput-object v1, p0, Lgke;->i:Ljava/lang/String;
+
+    const-string v1, "ARDAMS"
+
+    iput-object v1, p0, Lgke;->g:Ljava/lang/String;
+
+    const-string v1, "SlmsSource"
+
+    const-string v2, "local media stream id = ARDAMS local video track id = ARDAMSv0 local audio track id = ARDAMSa0"
+
+    invoke-interface {v0, v1, v2}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Leke;->m:Ltuf;
+
+    iput-object v0, p0, Lgke;->s:Ltuf;
+
+    iget-object v0, p1, Leke;->o:Lfke;
+
+    iput-object v0, p0, Lgke;->t:Lfke;
+
+    iget-object p1, p1, Leke;->h:Lxsd;
+
+    iput-object p1, p0, Lgke;->u:Lxsd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a()Lfs0;
     .locals 5
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v0, p0, Lgke;->o:Lx68;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v1
-
-    iget-object v2, p0, Lgke;->a:Lhke;
-
-    iget v2, v2, Lhke;->b:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    sub-int v3, v0, v2
-
-    sub-int v4, v1, v2
-
-    add-int/2addr v0, v2
-
-    add-int/2addr v1, v2
-
-    iget-object v2, p0, Lgke;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
-
-    return-void
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    iget-object v0, p0, Lgke;->a:Lhke;
-
-    iget-object v1, v0, Lhke;->c:Lc45;
-
-    iget-object v0, v0, Lhke;->a:Le55;
-
-    invoke-virtual {v1, v0}, Lc45;->t(Le55;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lgke;->b:Landroid/graphics/Rect;
+    const/4 v2, 0x1
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lgke;->d:Landroid/graphics/Paint;
+    move v0, v2
 
-    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    sget-object v2, Lx55;->c:Landroid/graphics/Rect;
+    move v0, v1
 
-    sget-object v2, Lx55;->c:Landroid/graphics/Rect;
+    :goto_0
+    if-eqz v0, :cond_4
 
-    iget-object v3, p0, Lgke;->c:Landroid/graphics/Paint;
+    new-instance v3, Lu68;
 
-    invoke-virtual {p1, v0, v2, v1, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
+    iput-boolean v1, v3, Lu68;->o:Z
+
+    const/4 v4, 0x0
+
+    iput-object v4, v3, Lu68;->s:Ljava/lang/Integer;
+
+    iput-boolean v1, v3, Lu68;->t:Z
+
+    iget-object v1, p0, Lgke;->c:Ljke;
+
+    iget-object v1, v1, Ljke;->d:Lorg/webrtc/PeerConnectionFactory;
+
+    iput-object v1, v3, Lu68;->a:Lorg/webrtc/PeerConnectionFactory;
+
+    iget-object v1, p0, Lgke;->c:Ljke;
+
+    iget-object v1, v1, Ljke;->a:Ljava/util/concurrent/ExecutorService;
+
+    iput-object v1, v3, Lu68;->c:Ljava/util/concurrent/Executor;
+
+    iget-object v1, p0, Lgke;->d:Ll40;
+
+    iput-object v1, v3, Lu68;->b:Ll40;
+
+    iget-object v1, p0, Lgke;->g:Ljava/lang/String;
+
+    iput-object v1, v3, Lu68;->e:Ljava/lang/String;
+
+    iget-object v1, p0, Lgke;->h:Ljava/lang/String;
+
+    iput-object v1, v3, Lu68;->f:Ljava/lang/String;
+
+    iget-object v1, p0, Lgke;->i:Ljava/lang/String;
+
+    iput-object v1, v3, Lu68;->g:Ljava/lang/String;
+
+    iget-object v1, p0, Lgke;->f:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iput-object v1, v3, Lu68;->d:Landroid/content/Context;
+
+    iget-object v1, p0, Lgke;->k:Lcwc;
+
+    iput-object v1, v3, Lu68;->h:Lcwc;
+
+    iget-object v1, p0, Lgke;->a:Lorg/webrtc/EglBase$Context;
+
+    iput-object v1, v3, Lu68;->i:Lorg/webrtc/EglBase$Context;
+
+    iput-boolean v2, v3, Lu68;->k:Z
+
+    iget-object v1, p0, Lgke;->b:Lw68;
+
+    iput-object v1, v3, Lu68;->j:Lw68;
+
+    iget-boolean v1, p0, Lgke;->l:Z
+
+    iput-boolean v1, v3, Lu68;->p:Z
+
+    iget-object v1, p0, Lgke;->m:Lrh1;
+
+    iget-boolean v2, v1, Lrh1;->q:Z
+
+    iput-boolean v2, v3, Lu68;->l:Z
+
+    iget-object v2, p0, Lgke;->q:Ll68;
+
+    iput-object v2, v3, Lu68;->q:Ll68;
+
+    iget-object v4, p0, Lgke;->r:Lcid;
+
+    iput-object v4, v3, Lu68;->m:Lcid;
+
+    iget-object v4, p0, Lgke;->j:Ljava/lang/Integer;
+
+    iput-object v4, v3, Lu68;->s:Ljava/lang/Integer;
+
+    iget-object v1, v1, Lrh1;->z:Lph1;
+
+    iget-boolean v4, v1, Lph1;->a:Z
+
+    iput-boolean v4, v3, Lu68;->t:Z
+
+    iget-boolean v1, v1, Lph1;->l:Z
+
+    iput-boolean v1, v3, Lu68;->o:Z
+
+    iget-object v1, p0, Lgke;->s:Ltuf;
+
+    iput-object v1, v3, Lu68;->n:Ltuf;
+
+    iget-object v1, p0, Lgke;->u:Lxsd;
+
+    iput-object v1, v3, Lu68;->r:Lxsd;
+
+    iget-object v1, v3, Lu68;->a:Lorg/webrtc/PeerConnectionFactory;
+
+    if-eqz v1, :cond_3
+
+    if-eqz v2, :cond_3
+
+    iget-object v1, v3, Lu68;->b:Ll40;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->e:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget-object v1, v3, Lu68;->f:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget-object v1, v3, Lu68;->g:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget-object v1, v3, Lu68;->h:Lcwc;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->j:Lw68;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->i:Lorg/webrtc/EglBase$Context;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->m:Lcid;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->n:Ltuf;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v3, Lu68;->r:Lxsd;
+
+    if-eqz v1, :cond_3
+
+    new-instance v1, Lx68;
+
+    invoke-direct {v1, v3}, Lx68;-><init>(Lu68;)V
+
+    iput-object v1, p0, Lgke;->o:Lx68;
+
+    iget-object v1, p0, Lgke;->o:Lx68;
+
+    iget-object v2, p0, Lgke;->w:Lv68;
+
+    iput-object v2, v1, Lx68;->x:Lv68;
+
+    iget-object v1, p0, Lgke;->o:Lx68;
+
+    iget-object v1, v1, Lx68;->c:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lgke;->v:Lp12;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lgke;->o:Lx68;
+
+    iget-object v2, p0, Lgke;->v:Lp12;
+
+    invoke-virtual {v1, v2}, Lx68;->k(Lp12;)V
+
+    :cond_1
+    iget-object v1, p0, Lgke;->p:Lorg/webrtc/VideoSink;
+
+    if-eqz v1, :cond_2
+
+    iget-object v2, p0, Lgke;->o:Lx68;
+
+    invoke-virtual {v2, v1}, Lx68;->j(Lorg/webrtc/VideoSink;)V
+
+    :cond_2
+    iget-object v1, p0, Lgke;->o:Lx68;
+
+    iget-object v2, p0, Lgke;->e:Ls0a;
+
+    invoke-virtual {v1, v2}, Lx68;->d(Ls0a;)V
+
+    iget-object v1, p0, Lgke;->t:Lfke;
+
+    if-eqz v1, :cond_4
+
+    iget-object v2, p0, Lgke;->o:Lx68;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lt68;
+
+    invoke-direct {v3, v2}, Lt68;-><init>(Lx68;)V
+
+    invoke-interface {v1, v3}, Lfke;->b(Lt68;)V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    :cond_4
+    :goto_1
+    new-instance v1, Lfs0;
+
+    iget-object v2, p0, Lgke;->o:Lx68;
+
+    invoke-direct {v1, v2, v0}, Lfs0;-><init>(Ljava/lang/Object;Z)V
+
+    return-object v1
+.end method
+
+.method public final b(Lx68;)V
+    .locals 3
+
+    const-string v0, "SlmsSource"
+
+    const-string v1, "onLocalMediaStreamChanged"
+
+    iget-object v2, p0, Lgke;->k:Lcwc;
+
+    invoke-interface {v2, v0, v1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lgke;->n:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly68;
+
+    invoke-interface {v1, p1}, Ly68;->b(Lx68;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final c()I
+    .locals 4
+
+    iget-object v0, p0, Lgke;->o:Lx68;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    iget-object v2, v0, Lx68;->r:Lrz1;
+
+    if-eqz v2, :cond_2
+
+    iget-boolean v3, v2, Lrz1;->k:Z
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, v0, Lx68;->y:Lxvg;
+
+    iget-object v3, v3, Lxq3;->e:Ljava/lang/Object;
+
+    check-cast v3, Lorg/webrtc/MediaStreamTrack;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
+
+    move-result v3
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v1
+
+    :goto_0
+    if-eqz v3, :cond_2
+
+    iget-boolean v0, v2, Lrz1;->i:Z
+
+    if-eqz v0, :cond_1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
     return v0
-
-    :cond_0
-    instance-of v1, p1, Lgke;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
 
     :cond_1
-    check-cast p1, Lgke;
+    const/4 v0, 0x2
 
-    iget-object v1, p0, Lgke;->a:Lhke;
-
-    iget-object p1, p1, Lgke;->a:Lhke;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
+    return v0
 
     :cond_2
-    return v0
-.end method
+    iget-object v2, v0, Lx68;->t:Lgqd;
 
-.method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-    .locals 1
+    if-eqz v2, :cond_4
 
-    iget-object v0, p0, Lgke;->a:Lhke;
+    iget-boolean v2, v2, Lgqd;->d:Z
 
-    return-object v0
-.end method
+    if-eqz v2, :cond_4
 
-.method public final getIntrinsicHeight()I
-    .locals 1
+    iget-object v0, v0, Lx68;->z:Lgrd;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v0, v0, Lxq3;->e:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lorg/webrtc/MediaStreamTrack;
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
 
     move-result v0
 
-    return v0
-.end method
+    goto :goto_1
 
-.method public final getIntrinsicWidth()I
-    .locals 1
+    :cond_3
+    move v0, v1
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    :goto_1
+    if-eqz v0, :cond_4
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v0
+    const/4 v0, 0x3
 
     return v0
+
+    :cond_4
+    return v1
 .end method
 
-.method public final getMinimumHeight()I
-    .locals 1
+.method public final d(Z)V
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v0, p0, Lgke;->o:Lx68;
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    iget-object v1, v0, Lx68;->j:Lp50;
 
-    move-result v0
+    iget-object v2, v1, Lxq3;->e:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast v2, Lorg/webrtc/MediaStreamTrack;
 
-.method public final getMinimumWidth()I
-    .locals 1
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Lorg/webrtc/MediaStreamTrack;->enabled()Z
 
-    move-result-object v0
+    move-result v2
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+    goto :goto_0
 
-    move-result v0
+    :cond_0
+    const/4 v2, 0x0
 
-    return v0
-.end method
+    :goto_0
+    if-eq v2, p1, :cond_1
 
-.method public final getOpacity()I
-    .locals 1
+    const-string v2, "setAudioShareTrackEnabled, enabled="
 
-    const/4 v0, -0x2
+    invoke-static {v2, p1}, Lpa9;->f(Ljava/lang/String;Z)Ljava/lang/String;
 
-    return v0
-.end method
+    move-result-object v2
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v0, v0, Lx68;->n:Lcwc;
 
-    iget-object v0, p0, Lgke;->a:Lhke;
+    const-string v3, "OKRTCLmsAdapter"
 
-    invoke-virtual {v0}, Lhke;->hashCode()I
+    invoke-interface {v0, v3, v2}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {v1, p1}, Lxq3;->o(Z)V
 
-    return v0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 0
-
+    :cond_1
     return-void
 .end method
 
-.method public final setBounds(IIII)V
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object p1, p0, Lgke;->a:Lhke;
-
-    iput p4, p1, Lhke;->b:I
-
-    invoke-virtual {p0}, Lgke;->a()V
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
-
-    iget-object v0, p0, Lgke;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final g(Ls0a;)V
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SpriteEmojiDrawable(state="
+    const-string v1, "onMediaSettingsChanged, "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lgke;->a:Lhke;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "SlmsSource"
+
+    iget-object v2, p0, Lgke;->k:Lcwc;
+
+    invoke-interface {v2, v1, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lgke;->c:Ljke;
+
+    iget-object v0, v0, Ljke;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lpjd;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, p0, v2, p1}, Lpjd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

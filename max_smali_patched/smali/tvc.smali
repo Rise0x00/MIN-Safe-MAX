@@ -1,56 +1,158 @@
-.class public final synthetic Ltvc;
+.class public final Ltvc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Luvc;
+.field public final b:Luk8;
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Luvc;I)V
+.method public constructor <init>(ILuk8;Z)V
     .locals 0
 
-    iput p2, p0, Ltvc;->a:I
-
-    iput-object p1, p0, Ltvc;->b:Luvc;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ltvc;->a:I
+
+    iput-object p2, p0, Ltvc;->b:Luk8;
+
+    iput-boolean p3, p0, Ltvc;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget p1, p0, Ltvc;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
+    goto :goto_1
 
-    iget-object p1, p0, Ltvc;->b:Luvc;
+    :cond_0
+    instance-of v0, p1, Ltvc;
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    if-nez v0, :cond_1
 
-    return-void
+    goto :goto_0
 
-    :pswitch_0
-    iget-object p1, p0, Ltvc;->b:Luvc;
+    :cond_1
+    check-cast p1, Ltvc;
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    iget v0, p0, Ltvc;->a:I
 
-    return-void
+    iget v1, p1, Ltvc;->a:I
 
-    nop
+    if-eq v0, v1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Ltvc;->b:Luk8;
+
+    iget-object v1, p1, Ltvc;->b:Luk8;
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Ltvc;->c:Z
+
+    iget-boolean p1, p1, Ltvc;->c:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Ltvc;->a:I
+
+    invoke-static {v0}, Lnx1;->v(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ltvc;->b:Luk8;
+
+    invoke-virtual {v1}, Luk8;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Ltvc;->c:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NetworkParameters(condition="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ltvc;->a:I
+
+    invoke-static {v1}, Lok7;->t(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", state="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltvc;->b:Luk8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", preferHardwareVPX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Ltvc;->c:Z
+
+    invoke-static {v0, v2, v1}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

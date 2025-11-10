@@ -1,92 +1,85 @@
-.class public final Lli1;
-.super Lm3f;
+.class public final enum Lli1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lli1;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum b:Lli1;
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public static final enum c:Lli1;
+
+.field public static final synthetic d:[Lli1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p2, p0, Lli1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    new-instance v0, Lli1;
 
-    const/4 p2, 0x2
+    const-string v1, "NONE"
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lli1;->a:Lli1;
+
+    new-instance v1, Lli1;
+
+    const-string v2, "LOCAL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lli1;->b:Lli1;
+
+    new-instance v2, Lli1;
+
+    const-string v3, "APPLICATION"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lli1;->c:Lli1;
+
+    filled-new-array {v0, v1, v2}, [Lli1;
+
+    move-result-object v0
+
+    sput-object v0, Lli1;->d:[Lli1;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lli1;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lli1;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p0, p1, p2}, Lli1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    move-result-object p1
+    check-cast p0, Lli1;
 
-    check-cast p1, Lli1;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lli1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lli1;
+    .locals 1
 
-    new-instance v0, Lli1;
+    sget-object v0, Lli1;->d:[Lli1;
 
-    iget-object v1, p0, Lli1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lli1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-
-    iput-object p1, v0, Lli1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lli1;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lli1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->L0:Lmqc;
-
-    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->O0:[Ltm7;
-
-    const/4 v3, 0x5
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljnc;
+    check-cast v0, [Lli1;
 
-    invoke-virtual {v0, p1}, Ljnc;->setButtonToolDataList(Ljava/util/List;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

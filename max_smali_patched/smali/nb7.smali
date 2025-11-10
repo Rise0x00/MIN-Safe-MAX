@@ -1,72 +1,56 @@
-.class public Lnb7;
-.super Ljava/lang/Object;
+.class public final Lnb7;
+.super Lxg6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/hardware/camera2/params/InputConfiguration;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Landroid/hardware/camera2/params/InputConfiguration;
-
-    iput-object p1, p0, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final bridge synthetic C()Lic7;
     .locals 1
 
-    instance-of v0, p1, Lnb7;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    check-cast p1, Lnb7;
-
-    iget-object p1, p1, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    iget-object v0, p0, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lnb7;->c0()Ly8d;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
+
+    return-object p0
+.end method
+
+.method public final c0()Ly8d;
+    .locals 3
+
+    iget v0, p0, Lxg6;->b:I
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ly8d;->s0:Ly8d;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ly8d;
+
+    iget-object v1, p0, Lxg6;->c:Ljava/lang/Object;
+
+    check-cast v1, [Ljava/lang/Object;
+
+    iget v2, p0, Lxg6;->b:I
+
+    invoke-direct {v0, v2, v1}, Ly8d;-><init>(I[Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
+
+    return-void
 .end method

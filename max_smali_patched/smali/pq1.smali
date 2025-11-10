@@ -1,162 +1,109 @@
-.class public final synthetic Lpq1;
+.class public final Lpq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Luq1;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Luq1;I)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput p2, p0, Lpq1;->a:I
-
-    iput-object p1, p0, Lpq1;->b:Luq1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lpq1;->a:Z
+
+    iput-boolean p2, p0, Lpq1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lpq1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+    return v0
 
-    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    :cond_0
+    instance-of v1, p1, Lpq1;
 
-    sget-object v2, Lbx4;->y0:Lsed;
+    const/4 v2, 0x0
 
-    iget-object v3, p0, Lpq1;->b:Luq1;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v2, v3}, Lsed;->o(Landroid/view/View;)Lloa;
+    return v2
 
-    move-result-object v2
+    :cond_1
+    check-cast p1, Lpq1;
 
-    iget-object v2, v2, Lloa;->c:Luxa;
+    iget-boolean v1, p0, Lpq1;->a:Z
 
-    invoke-interface {v2}, Luxa;->b()Lue0;
+    iget-boolean v3, p1, Lpq1;->a:Z
 
-    move-result-object v2
+    if-eq v1, v3, :cond_2
 
-    iget v2, v2, Lue0;->f:I
+    return v2
 
-    const/4 v3, 0x0
+    :cond_2
+    iget-boolean v1, p0, Lpq1;->b:Z
 
-    filled-new-array {v2, v3, v3}, [I
+    iget-boolean p1, p1, Lpq1;->b:Z
 
-    move-result-object v2
+    if-eq v1, p1, :cond_3
 
-    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+    return v2
 
-    return-object v0
+    :cond_3
+    return v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+.method public final hashCode()I
+    .locals 2
 
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+    iget-boolean v0, p0, Lpq1;->a:Z
 
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v1
+    iget-boolean v1, p0, Lpq1;->b:Z
 
-    sget-object v2, Lbx4;->y0:Lsed;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget-object v3, p0, Lpq1;->b:Luq1;
+    move-result v1
 
-    invoke-virtual {v2, v3}, Lsed;->o(Landroid/view/View;)Lloa;
+    add-int/2addr v1, v0
 
-    move-result-object v2
+    return v1
+.end method
 
-    iget-object v2, v2, Lloa;->c:Luxa;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-interface {v2}, Luxa;->b()Lue0;
+    const-string v0, ", settingsButtonVisibility="
 
-    move-result-object v2
+    const-string v1, ")"
 
-    iget v2, v2, Lue0;->f:I
+    const-string v2, "ButtonsVisibility(moreButtonVisibility="
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+    iget-boolean v3, p0, Lpq1;->a:Z
 
-    return-object v0
+    iget-boolean v4, p0, Lpq1;->b:Z
 
-    :pswitch_1
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v1
-
-    sget-object v2, Lbx4;->y0:Lsed;
-
-    iget-object v3, p0, Lpq1;->b:Luq1;
-
-    invoke-virtual {v2, v3}, Lsed;->o(Landroid/view/View;)Lloa;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lloa;->c:Luxa;
-
-    invoke-interface {v2}, Luxa;->b()Lue0;
-
-    move-result-object v2
-
-    iget v2, v2, Lue0;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lpq1;->b:Luq1;
-
-    iget-object v0, v0, Luq1;->m1:Lve6;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v4, v1}, Lcd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lhbg;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,15 +1,19 @@
-.class public abstract Lxy9;
+.class public final Lxy9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Z
+
+
 # direct methods
-.method public static final a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-boolean p1, p0, Lxy9;->a:Z
 
-    return-object p0
+    return-void
 .end method

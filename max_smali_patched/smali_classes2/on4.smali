@@ -1,269 +1,195 @@
 .class public final Lon4;
-.super Ljava/lang/Object;
+.super Lvnf;
 .source "SourceFile"
 
-# interfaces
-.implements Ltg5;
 
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public volatile c:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
+# static fields
+.field public static final e0:Lon4;
 
 
 # direct methods
-.method public constructor <init>(Lpmc;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 41
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lon4;
 
-    .line 2
-    iput-object p1, p0, Lon4;->a:Ljava/lang/Object;
+    new-instance v1, Lxb3;
 
-    .line 3
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    const-wide v2, 0xff697cffL
 
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    long-to-int v2, v2
 
-    iput-object p1, p0, Lon4;->b:Ljava/lang/Object;
+    const-wide v3, 0xffffffffL
 
-    .line 4
-    new-instance p1, Lxe8;
+    long-to-int v3, v3
 
-    .line 5
-    new-instance v0, Lye8;
+    const-wide v4, 0xff000000L
 
-    const-wide/16 v1, 0x0
+    long-to-int v5, v4
 
-    invoke-direct {v0, v1, v2, v1, v2}, Lye8;-><init>(DD)V
+    const-wide v6, 0xff6988e0L
 
-    const/4 v1, 0x0
+    long-to-int v6, v6
 
-    const/4 v2, 0x1
+    const-wide v7, 0xff333344L
 
-    .line 6
-    invoke-direct {p1, v2, v0, v1, v2}, Lxe8;-><init>(ILye8;Ly7b;Z)V
+    long-to-int v8, v7
 
-    .line 7
-    iput-object p1, p0, Lon4;->d:Ljava/lang/Object;
+    const-wide v9, 0xff5b5b69L
 
-    .line 8
-    new-instance p1, Lnn4;
+    long-to-int v13, v9
 
-    invoke-direct {p1, p0}, Lnn4;-><init>(Lon4;)V
+    const-wide v9, 0xfff5f5f5L
 
-    iput-object p1, p0, Lon4;->e:Ljava/lang/Object;
+    long-to-int v15, v9
 
-    return-void
-.end method
+    const-wide v9, 0xffff3f3fL
 
-.method public constructor <init>(Lwl;Lzk;)V
-    .locals 0
+    long-to-int v4, v9
 
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide v9, 0xfffbc03dL
 
-    .line 10
-    iput-object p1, p0, Lon4;->a:Ljava/lang/Object;
+    long-to-int v7, v9
 
-    .line 11
-    iput-object p2, p0, Lon4;->b:Ljava/lang/Object;
+    const-wide v9, 0xffecececL
 
-    .line 12
-    new-instance p1, Lbg3;
+    long-to-int v9, v9
 
-    .line 13
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    const-wide v10, 0xfff2f2f2L
 
-    .line 14
-    iput-object p1, p0, Lon4;->d:Ljava/lang/Object;
+    long-to-int v10, v10
 
-    .line 15
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+    const-wide v11, 0xffd7f5bcL
 
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    long-to-int v11, v11
 
-    iput-object p1, p0, Lon4;->e:Ljava/lang/Object;
+    move-object/from16 v40, v0
 
-    return-void
-.end method
+    move-object v12, v1
 
+    const-wide v0, 0xffbceb91L
 
-# virtual methods
-.method public a()Lyhd;
-    .locals 4
+    long-to-int v0, v0
 
-    iget-object v0, p0, Lon4;->c:Ljava/lang/Object;
+    move/from16 v22, v0
 
-    check-cast v0, Lyhd;
+    const-wide v0, 0xff222222L
 
-    if-nez v0, :cond_4
+    long-to-int v0, v0
 
-    iget-object v0, p0, Lon4;->a:Ljava/lang/Object;
+    move/from16 v23, v0
 
-    check-cast v0, Lwl;
+    const-wide v0, 0xffe8e8e8L
 
-    invoke-interface {v0}, Lwl;->getSessionInfo()Lvl;
+    long-to-int v0, v0
 
-    move-result-object v0
+    move/from16 v28, v0
 
-    sget-object v1, Lyhd;->c:Lyhd;
+    const-wide v0, 0xffbdbfcdL
 
-    iget-object v2, p0, Lon4;->b:Ljava/lang/Object;
+    long-to-int v0, v0
 
-    check-cast v2, Lzk;
+    move/from16 v29, v0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide v0, 0xff999999L
 
-    const-string v2, "CGPGAGLGDIHBABABA"
+    long-to-int v0, v0
 
-    invoke-virtual {v1, v2}, Lyhd;->b(Ljava/lang/String;)Lyhd;
+    move/from16 v30, v0
 
-    move-result-object v1
+    const-wide v0, 0xff10bc07L
 
-    const/4 v2, 0x0
+    long-to-int v0, v0
 
-    if-eqz v0, :cond_0
+    move/from16 v32, v0
 
-    iget-object v3, v0, Lvl;->c:Ljava/lang/String;
+    const-wide v0, 0xff9da4afL
 
-    goto :goto_0
+    long-to-int v0, v0
 
-    :cond_0
-    move-object v3, v2
+    move/from16 v33, v0
 
-    :goto_0
-    if-eqz v3, :cond_1
+    const-wide v0, 0xff5b5b68L
 
-    iget-object v3, v0, Lvl;->c:Ljava/lang/String;
+    long-to-int v0, v0
 
-    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    move/from16 v37, v0
 
-    move-result-object v3
+    const-wide v0, 0xff474757L
 
-    invoke-virtual {v1, v3}, Lyhd;->d(Landroid/net/Uri;)Lyhd;
+    long-to-int v0, v0
 
-    move-result-object v1
+    const/16 v39, 0x3e0
 
-    :cond_1
-    if-eqz v0, :cond_2
+    move/from16 v16, v4
 
-    iget-object v2, v0, Lvl;->a:Ljava/lang/String;
+    move v4, v3
 
-    :cond_2
-    if-eqz v2, :cond_3
+    move/from16 v17, v7
 
-    iget-object v2, v0, Lvl;->b:Ljava/lang/String;
+    move v7, v3
 
-    if-eqz v2, :cond_3
+    move/from16 v18, v9
 
-    iget-object v0, v0, Lvl;->a:Ljava/lang/String;
+    move v9, v3
 
-    invoke-virtual {v1, v0, v2}, Lyhd;->c(Ljava/lang/String;Ljava/lang/String;)Lyhd;
+    move/from16 v20, v10
 
-    move-result-object v0
+    move v10, v8
 
-    goto :goto_1
+    move/from16 v21, v11
 
-    :cond_3
-    move-object v0, v1
+    move v11, v3
 
-    :cond_4
-    :goto_1
-    iput-object v0, p0, Lon4;->c:Ljava/lang/Object;
+    move-object v1, v12
 
-    return-object v0
-.end method
+    move v12, v5
 
-.method public b(Lwe8;)V
-    .locals 2
+    move v14, v13
 
-    iget-object v0, p0, Lon4;->b:Ljava/lang/Object;
+    move/from16 v19, v3
 
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    move/from16 v24, v2
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
+    move/from16 v25, v15
 
-    move-result v1
+    move/from16 v26, v18
 
-    if-eqz v1, :cond_0
+    move/from16 v27, v13
 
-    return-void
+    move/from16 v31, v3
 
-    :cond_0
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    move/from16 v34, v3
 
-    iget-object v0, p0, Lon4;->d:Ljava/lang/Object;
+    move/from16 v35, v3
 
-    check-cast v0, Lxe8;
+    move/from16 v36, v8
 
-    invoke-interface {p1, v0}, Lwe8;->o(Lxe8;)V
+    move/from16 v38, v0
 
-    return-void
-.end method
+    invoke-direct/range {v1 .. v39}, Lxb3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
 
-.method public c(Lwe8;)V
-    .locals 1
+    sget-object v7, Lvh4;->o:Lot0;
 
-    iget-object v0, p0, Lon4;->b:Ljava/lang/Object;
+    sget-object v8, Lvh4;->d:Lot0;
 
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    const/4 v4, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    const-string v5, "DEFAULT"
 
-    return-void
-.end method
+    move-object v6, v1
 
-.method public d(Lyhd;)V
-    .locals 2
+    const-string v1, "TamTam Default"
 
-    iput-object p1, p0, Lon4;->c:Ljava/lang/Object;
+    const-string v2, "TamTam Team"
 
-    new-instance v0, Lug5;
+    const/4 v3, 0x0
 
-    const/4 v1, 0x0
+    move-object/from16 v0, v40
 
-    invoke-direct {v0, p0, v1, p1}, Lug5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct/range {v0 .. v8}, Lvnf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lxb3;Lot0;Lot0;)V
 
-    new-instance p1, Lu14;
-
-    invoke-direct {p1, p0, v0}, Lu14;-><init>(Lon4;Lve6;)V
-
-    new-instance v0, Loe3;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p1}, Loe3;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lxed;->b()Lked;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lle3;->j(Lked;)Lue3;
-
-    move-result-object p1
-
-    new-instance v0, Lb22;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lb22;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lle3;->h(Lve3;)V
-
-    iget-object p1, p0, Lon4;->d:Ljava/lang/Object;
-
-    check-cast p1, Lbg3;
-
-    invoke-virtual {p1, v0}, Lbg3;->a(Lss4;)Z
+    sput-object v0, Lon4;->e0:Lon4;
 
     return-void
 .end method

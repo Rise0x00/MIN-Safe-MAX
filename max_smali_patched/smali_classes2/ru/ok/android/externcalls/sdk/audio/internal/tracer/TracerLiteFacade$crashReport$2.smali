@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;
-.super Lmo7;
+.super Lbu7;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Loi6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lmo7;",
-        "Lve6;"
+        "Lbu7;",
+        "Loi6;"
     }
 .end annotation
 
@@ -28,9 +28,9 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lumf;",
+        "Lg0g;",
         "invoke",
-        "()Lumf;",
+        "()Lg0g;",
         "<anonymous>"
     }
     k = 0x3
@@ -54,37 +54,37 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Lg0g;
+    .locals 2
 
-    .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;->invoke()Lumf;
+    .line 2
+    new-instance v0, Lg0g;
 
-    move-result-object v0
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;
+
+    invoke-static {v1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->access$getTracerLite(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;)Lm0g;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lg0g;-><init>(Lm0g;)V
 
     return-object v0
 .end method
 
-.method public final invoke()Lumf;
-    .locals 2
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    new-instance v0, Lumf;
+    .line 1
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;->invoke()Lg0g;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;->this$0:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;
-
-    invoke-static {v1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->access$getTracerLite(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;)Lanf;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lumf;-><init>(Lanf;)V
+    move-result-object v0
 
     return-object v0
 .end method

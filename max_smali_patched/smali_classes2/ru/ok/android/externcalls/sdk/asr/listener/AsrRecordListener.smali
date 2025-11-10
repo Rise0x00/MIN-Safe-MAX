@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/asr/AsrInfo;",
         "callAsrInfo",
-        "Loyf;",
+        "Lybg;",
         "onAsrRecordStarted",
         "(Lru/ok/android/externcalls/sdk/asr/AsrInfo;)V",
         "onAsrRecordStopped",

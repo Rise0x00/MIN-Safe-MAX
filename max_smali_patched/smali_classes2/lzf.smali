@@ -1,61 +1,63 @@
 .class public final Llzf;
-.super Lnz3;
+.super Lmzf;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lgu9;
+.field public final synthetic b:I
 
-.field public Y:J
-
-.field public Z:J
-
-.field public o:Luzf;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Luzf;
-
-.field public y0:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Luzf;Lnz3;)V
+.method public constructor <init>(JI)V
     .locals 0
 
-    iput-object p1, p0, Llzf;->x0:Luzf;
+    iput p3, p0, Llzf;->b:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    packed-switch p3, :pswitch_data_0
+
+    sget-object p3, Lkzf;->b:Lkzf;
+
+    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
+
+    iput-wide p1, p0, Llzf;->c:J
 
     return-void
-.end method
 
+    :pswitch_0
+    sget-object p3, Lkzf;->o:Lkzf;
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
 
-    iput-object p1, p0, Llzf;->w0:Ljava/lang/Object;
+    iput-wide p1, p0, Llzf;->c:J
 
-    iget p1, p0, Llzf;->y0:I
+    return-void
 
-    const/high16 v0, -0x80000000
+    :pswitch_1
+    sget-object p3, Lkzf;->d:Lkzf;
 
-    or-int/2addr p1, v0
+    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
 
-    iput p1, p0, Llzf;->y0:I
+    iput-wide p1, p0, Llzf;->c:J
 
-    const-wide/16 v1, 0x0
+    return-void
 
-    const-wide/16 v3, 0x0
+    :pswitch_2
+    sget-object p3, Lkzf;->c:Lkzf;
 
-    iget-object v0, p0, Llzf;->x0:Luzf;
+    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
 
-    move-object v5, p0
+    iput-wide p1, p0, Llzf;->c:J
 
-    invoke-virtual/range {v0 .. v5}, Luzf;->b(JJLnz3;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,106 +1,131 @@
 .class public final Lfwf;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ltwf;
 
-.field public final synthetic b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+.field public final synthetic Y:Ljava/nio/ByteBuffer;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;I)V
+.method public constructor <init>(Ltwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lfwf;->a:I
+    iput-object p1, p0, Lfwf;->X:Ltwf;
 
-    iput-object p1, p0, Lfwf;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    iput-object p2, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lfwf;->a:I
+    check-cast p1, Lg54;
 
-    iget-object v0, p0, Lfwf;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->x0:[Ltm7;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->B0()Lqwf;
+    invoke-virtual {p0, p1, p2}, Lfwf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object v0, p1, Lqwf;->w0:Lbp7;
+    check-cast p1, Lfwf;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object v0
-
-    check-cast v0, Lr8f;
-
-    check-cast v0, Lwla;
-
-    invoke-virtual {v0}, Lwla;->b()Ly24;
-
-    move-result-object v0
-
-    new-instance v1, Lnwf;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lnwf;-><init>(Lqwf;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v2, p1, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v3, Lh34;->b:Lh34;
-
-    invoke-static {v2, v0, v3, v1}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lqwf;->F0:Lg65;
-
-    sget-object v2, Lqwf;->I0:[Ltm7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p1, v2, v0}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->x0:[Ltm7;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->B0()Lqwf;
+    invoke-virtual {p1, p2}, Lfwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqwf;->C0:Ljb5;
+    return-object p1
+.end method
 
-    invoke-static {}, Lz84;->q()Lxuf;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance p1, Lfwf;
 
-    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    iget-object v0, p0, Lfwf;->X:Ltwf;
 
-    return-void
+    iget-object v1, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p1, v0, v1, p2}, Lfwf;-><init>(Ltwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lfwf;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfwf;->X:Ltwf;
+
+    iget-object p1, p1, Ltwf;->b:Ljava/nio/channels/AsynchronousByteChannel;
+
+    iput v1, p0, Lfwf;->o:I
+
+    new-instance v0, Ly22;
+
+    invoke-static {p0}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Ly22;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {v0}, Ly22;->o()V
+
+    sget-object v1, Lkv;->b:Lkv;
+
+    iget-object v2, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
+
+    invoke-interface {p1, v2, v0, v1}, Ljava/nio/channels/AsynchronousByteChannel;->write(Ljava/nio/ByteBuffer;Ljava/lang/Object;Ljava/nio/channels/CompletionHandler;)V
+
+    invoke-virtual {v0}, Ly22;->n()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

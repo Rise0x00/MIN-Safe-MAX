@@ -2,90 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu3b;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lq3b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lh1d;
-
-.field public final b:Lp3b;
-
-.field public final c:Lpmc;
-
-.field public final d:Lan2;
-
-.field public final e:Lx9;
-
-.field public final f:Lq34;
-
-.field public volatile g:Lno7;
-
-.field public volatile h:Lked;
-
-.field public i:D
-
-.field public j:J
-
-.field public final k:Lzlh;
-
-.field public l:D
-
-.field public m:D
-
-.field public final n:Lf78;
-
-.field public final o:Lhp0;
-
-.field public final p:Lhp0;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lh1d;Lp3b;Lpmc;Lan2;Lx9;Lq34;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lui8;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Lui8;-><init>(I)V
+
+    sput-object v0, Lq3b;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq3b;->a:Lh1d;
+    iput p1, p0, Lq3b;->a:I
 
-    iput-object p2, p0, Lq3b;->b:Lp3b;
+    return-void
+.end method
 
-    iput-object p3, p0, Lq3b;->c:Lpmc;
 
-    iput-object p4, p0, Lq3b;->d:Lan2;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    iput-object p5, p0, Lq3b;->e:Lx9;
+    const/4 v0, 0x0
 
-    iput-object p6, p0, Lq3b;->f:Lq34;
+    return v0
+.end method
 
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-wide p1, p0, Lq3b;->i:D
+    const/4 v0, 0x1
 
-    new-instance p1, Lzlh;
+    if-ne p0, p1, :cond_0
 
-    const/16 p2, 0x1c
+    return v0
 
-    invoke-direct {p1, p2}, Lzlh;-><init>(I)V
+    :cond_0
+    instance-of v1, p1, Lq3b;
 
-    iput-object p1, p0, Lq3b;->k:Lzlh;
+    const/4 v2, 0x0
 
-    new-instance p1, Lf78;
+    if-nez v1, :cond_1
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    return v2
 
-    iput-object p1, p0, Lq3b;->n:Lf78;
+    :cond_1
+    check-cast p1, Lq3b;
 
-    new-instance p1, Lhp0;
+    iget v1, p0, Lq3b;->a:I
 
-    const/4 p2, 0x0
+    iget p1, p1, Lq3b;->a:I
 
-    invoke-direct {p1, p2}, Lhp0;-><init>(I)V
+    if-eq v1, p1, :cond_2
 
-    iput-object p1, p0, Lq3b;->o:Lhp0;
+    return v2
 
-    new-instance p1, Lhp0;
+    :cond_2
+    return v0
+.end method
 
-    invoke-direct {p1, p2}, Lhp0;-><init>(I)V
+.method public final hashCode()I
+    .locals 1
 
-    iput-object p1, p0, Lq3b;->p:Lhp0;
+    iget v0, p0, Lq3b;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ContrastIcon(iconRes="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lq3b;->a:I
+
+    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lq3b;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

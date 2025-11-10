@@ -1,138 +1,94 @@
-.class public final Lf1e;
-.super Lg1e;
+.class public final synthetic Lf1e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lf1e;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Loef;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lg1e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ltdd;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Ltdd;-><init>(I)V
-
-    sput-object v0, Lf1e;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Loef;)V
+.method public synthetic constructor <init>(Lg1e;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lf1e;->a:I
 
-    iput-object p1, p0, Lf1e;->a:Loef;
+    iput-object p1, p0, Lf1e;->b:Lg1e;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    const/4 v0, 0x1
+    iget p1, p0, Lf1e;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p1, p0, Lf1e;->b:Lg1e;
+
+    iget-object v0, p1, Lg1e;->H0:Ld1e;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lg1e;->E0:Lsm8;
+
+    iget-object p1, p1, Lsm8;->u0:Lfv0;
+
+    new-instance v1, Lhl8;
+
+    invoke-direct {v1, v0}, Lhl8;-><init>(Ld1e;)V
+
+    invoke-interface {p1, v1}, Lb2e;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    instance-of v1, p1, Lf1e;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget-object p1, p0, Lf1e;->b:Lg1e;
 
-    if-nez v1, :cond_1
+    iget-object v0, p1, Lg1e;->H0:Ld1e;
 
-    return v2
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lg1e;->E0:Lsm8;
+
+    iget-object v1, p1, Lsm8;->y0:La1f;
+
+    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    iget-object p1, p1, Lsm8;->u0:Lfv0;
+
+    new-instance v2, Lll8;
+
+    invoke-direct {v2, v0, v1}, Lll8;-><init>(Ld1e;I)V
+
+    invoke-interface {p1, v2}, Lb2e;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    check-cast p1, Lf1e;
-
-    iget-object v1, p0, Lf1e;->a:Loef;
-
-    iget-object p1, p1, Lf1e;->a:Loef;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lf1e;->a:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Text(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lf1e;->a:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lf1e;->a:Loef;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,119 +1,35 @@
 .class public final Lssf;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lru7;
 
-.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final b:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-    .locals 0
+.method public constructor <init>(Lt5;)V
+    .locals 1
 
-    iput-object p2, p0, Lssf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const-class v0, Lm48;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lssf;->a:Lru7;
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {p1, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lssf;->b:Lru7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lssf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lssf;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lssf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lssf;
-
-    iget-object v1, p0, Lssf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    invoke-direct {v0, p2, v1}, Lssf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-
-    iput-object p1, v0, Lssf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lssf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxwf;
-
-    iget-object v0, p0, Lssf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    iget-object v1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Lmqc;
-
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
-
-    const/4 v3, 0x0
-
-    aget-object v3, v2, v3
-
-    invoke-interface {v1, v0, v3}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbxf;
-
-    invoke-virtual {v1, p1}, Lbxf;->f(Lxwf;)V
-
-    invoke-interface {p1}, Lxwf;->b()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lmqc;
-
-    const/4 v1, 0x1
-
-    aget-object v1, v2, v1
-
-    invoke-interface {p1, v0, v1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ScrollView;
-
-    new-instance v1, Lace;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v1, v2, v0}, Lace;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

@@ -1,27 +1,19 @@
 .class public final Lh1d;
-.super Ljava/lang/Object;
+.super Lswi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:D
-
-.field public final b:I
-
-.field public final c:I
+.field public final a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(IID)V
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lh1d;->a:D
-
-    iput p1, p0, Lh1d;->b:I
-
-    iput p2, p0, Lh1d;->c:I
+    iput-object p1, p0, Lh1d;->a:Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -29,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -49,96 +41,52 @@
     :cond_1
     check-cast p1, Lh1d;
 
-    iget-wide v3, p0, Lh1d;->a:D
+    iget-object v1, p0, Lh1d;->a:Ljava/lang/CharSequence;
 
-    iget-wide v5, p1, Lh1d;->a:D
+    iget-object p1, p1, Lh1d;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Lh1d;->b:I
-
-    iget v3, p1, Lh1d;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lh1d;->c:I
-
-    iget p1, p1, Lh1d;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Lh1d;->a:D
+    iget-object v0, p0, Lh1d;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lh1d;->b:I
-
-    invoke-static {v1, v0}, Lvhh;->a(II)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget v1, p0, Lh1d;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ReportNetworkStatusConfig(networkStatusReportThreshold="
+    const-string v1, "Name(name="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lh1d;->a:D
+    iget-object v1, p0, Lh1d;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", networkStatusReportIntervalMs="
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lh1d;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", networkStatusReportForceIntervalMs="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lh1d;->c:I
-
-    invoke-static {v0, v1, v3, v2}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

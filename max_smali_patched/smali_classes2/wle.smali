@@ -1,85 +1,93 @@
-.class public abstract synthetic Lwle;
+.class public final Lwle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final a:Ltif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    new-instance v0, Lmbe;
 
-    move-result-object v1
+    const/16 v1, 0x14
 
-    array-length v1, v1
+    invoke-direct {v0, v1}, Lmbe;-><init>(I)V
 
-    new-array v1, v1, [I
+    new-instance v1, Ltif;
 
-    const/4 v2, 0x1
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
 
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Lwle;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lk10;->values()[Lk10;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    :try_start_2
-    aput v2, v1, v0
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x3
-
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v0, 0x4
-
-    :try_start_4
-    aput v2, v1, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    const/16 v2, 0x9
-
-    :try_start_5
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v1, Lwle;->$EnumSwitchMapping$1:[I
+    iput-object v1, p0, Lwle;->a:Ltif;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+
+    if-eqz p1, :cond_2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p2}, Lxaf;->g0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lwle;->a:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ly7d;
+
+    iget-object v0, v0, Ly7d;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p2
+
+    const-string v0, ""
+
+    invoke-virtual {p2, v0}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

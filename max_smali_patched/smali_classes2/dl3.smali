@@ -1,26 +1,36 @@
 .class public final Ldl3;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+.field public final synthetic Y:Lfl3;
+
+.field public final synthetic Z:Ljava/lang/String;
+
+.field public o:Lfl3;
+
+.field public final synthetic s0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
+.method public constructor <init>(Lfl3;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Ldl3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iput-object p1, p0, Ldl3;->Y:Lfl3;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Ldl3;->Z:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ldl3;->s0:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,59 +40,160 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lg54;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Ldl3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Ldl3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Ldl3;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Ldl3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    new-instance v0, Ldl3;
+    new-instance p1, Ldl3;
 
-    iget-object v1, p0, Ldl3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iget-object v0, p0, Ldl3;->Z:Ljava/lang/String;
 
-    invoke-direct {v0, p2, v1}, Ldl3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
+    iget-object v1, p0, Ldl3;->s0:Ljava/lang/String;
 
-    iput-object p1, v0, Ldl3;->X:Ljava/lang/Object;
+    iget-object v2, p0, Ldl3;->Y:Lfl3;
 
-    return-object v0
+    invoke-direct {p1, v2, v0, v1, p2}, Ldl3;-><init>(Lfl3;Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 10
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Ldl3;->X:I
 
-    iget-object p1, p0, Ldl3;->X:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljava/lang/String;
+    iget-object v2, p0, Ldl3;->Y:Lfl3;
 
-    new-instance v0, Lava;
+    const/4 v3, 0x3
 
-    iget-object v1, p0, Ldl3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    const/4 v4, 0x2
 
-    invoke-direct {v0, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
+    const/4 v5, 0x1
 
-    invoke-static {p1}, Lgye;->T(Ljava/lang/String;)Ljava/lang/String;
+    sget-object v6, Lh54;->a:Lh54;
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v5, :cond_2
+
+    if-eq v0, v4, :cond_1
+
+    if-ne v0, v3, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v2, p0, Ldl3;->o:Lfl3;
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lfl3;->K0:Ljava/lang/String;
+
+    invoke-virtual {v2}, Lfl3;->w()Ligd;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lava;->h(Ljava/lang/CharSequence;)V
+    iput v5, p0, Ldl3;->X:I
 
-    invoke-virtual {v0}, Lava;->i()Lzua;
+    iget-object v0, p1, Ligd;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
 
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance v7, Lfgd;
+
+    iget-object v8, p0, Ldl3;->s0:Ljava/lang/String;
+
+    iget-object v9, p0, Ldl3;->Z:Ljava/lang/String;
+
+    invoke-direct {v7, p1, v8, v1, v9}, Lfgd;-><init>(Ligd;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v0, v7, p0}, Lkwi;->c(Lpgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :goto_0
+    sget-object p1, Lfl3;->K0:Ljava/lang/String;
+
+    invoke-virtual {v2}, Lfl3;->w()Ligd;
+
+    move-result-object p1
+
+    iput-object v2, p0, Ldl3;->o:Lfl3;
+
+    iput v4, p0, Ldl3;->X:I
+
+    invoke-virtual {p1, p0}, Ligd;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    check-cast p1, Ljava/util/List;
+
+    iput-object v1, p0, Ldl3;->o:Lfl3;
+
+    iput v3, p0, Ldl3;->X:I
+
+    invoke-static {v2, p1, v5, p0}, Lfl3;->H(Lfl3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_6
+
+    :goto_2
+    return-object v6
+
+    :cond_6
+    :goto_3
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

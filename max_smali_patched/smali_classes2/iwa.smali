@@ -26,102 +26,54 @@
 
 .field public static final k:I
 
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view:I
 
     sput v0, Liwa;->a:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
     sput v0, Liwa;->b:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
 
     sput v0, Liwa;->c:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_constraint_layout:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
 
     sput v0, Liwa;->d:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_create_button_view:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
 
     sput v0, Liwa;->e:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
 
     sput v0, Liwa;->f:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_description_view:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_rate_view_title:I
 
     sput v0, Liwa;->g:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_icon_view:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_thank_view:I
 
     sput v0, Liwa;->h:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_title_view:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
 
     sput v0, Liwa;->i:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_toolbar:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_thank_view_icon:I
 
     sput v0, Liwa;->j:I
 
-    sget v0, Lzfc;->oneme_startconversation_chat_toolbar:I
+    sget v0, Lvnc;->fake_in_app_review_bottom_sheet_thank_view_title:I
 
     sput v0, Liwa;->k:I
-
-    sget v0, Lzfc;->oneme_startconversation_confirm_add_subscribers_button:I
-
-    sput v0, Liwa;->l:I
-
-    sget v0, Lzfc;->oneme_startconversation_container:I
-
-    sput v0, Liwa;->m:I
-
-    sget v0, Lzfc;->oneme_startconversation_create_button_view_type:I
-
-    sput v0, Liwa;->n:I
-
-    sget v0, Lzfc;->oneme_startconversation_recyclerview:I
-
-    sput v0, Liwa;->o:I
-
-    sget v0, Lzfc;->oneme_startconversation_select_channel_subscribers_toolbar:I
-
-    sput v0, Liwa;->p:I
-
-    sget v0, Lzfc;->oneme_startconversation_toolbar:I
-
-    sput v0, Liwa;->q:I
-
-    sget v0, Lzfc;->oneme_startconversations_create_channel:I
-
-    sput v0, Liwa;->r:I
-
-    sget v0, Lzfc;->oneme_startconversations_create_chat:I
-
-    sput v0, Liwa;->s:I
 
     return-void
 .end method

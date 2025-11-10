@@ -1,60 +1,61 @@
-.class public final synthetic Lxcg;
-.super Ljava/lang/Object;
+.class public final Lxcg;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public final synthetic b:Ledg;
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lgdg;
+
+.field public o:Lm1a;
+
+.field public final synthetic s0:Lgdg;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ledg;I)V
+.method public constructor <init>(Lgdg;Lp14;)V
     .locals 0
 
-    iput p2, p0, Lxcg;->a:I
+    iput-object p1, p0, Lxcg;->s0:Lgdg;
 
-    iput-object p1, p0, Lxcg;->b:Ledg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lxcg;->a:I
+    iput-object p1, p0, Lxcg;->Z:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lxcg;->t0:I
 
-    iget-object v0, p0, Lxcg;->b:Ledg;
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0}, Ledg;->a(Ledg;)Lycg;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lxcg;->t0:I
 
-    return-object v0
+    const-wide/16 v1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lxcg;->b:Ledg;
+    const-wide/16 v3, 0x0
 
-    invoke-static {v0}, Ledg;->e(Ledg;)Lycg;
+    iget-object v0, p0, Lxcg;->s0:Lgdg;
 
-    move-result-object v0
+    move-object v5, p0
 
-    return-object v0
+    invoke-virtual/range {v0 .. v5}, Lgdg;->b(JJLp14;)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,110 +1,67 @@
-.class public final Lp1b;
+.class public abstract Lp1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lp1b;
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lp1b;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lp1b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-
-    sput-object v0, Lp1b;->b:Lp1b;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp1b;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lp1b;
+    sget v0, Lntc;->permissions_allow_access:I
 
-    if-eqz v0, :cond_1
+    sput v0, Lp1b;->a:I
 
-    check-cast p1, Lp1b;
+    sget v0, Lntc;->permissions_audio_denied_title:I
 
-    if-eq p1, p0, :cond_0
+    sput v0, Lp1b;->b:I
 
-    if-eqz p1, :cond_1
+    sget v0, Lntc;->permissions_audio_request_denied:I
 
-    iget-object v0, p0, Lp1b;->a:Ljava/lang/Object;
+    sput v0, Lp1b;->c:I
 
-    iget-object p1, p1, Lp1b;->a:Ljava/lang/Object;
+    sget v0, Lntc;->permissions_audio_title:I
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Lp1b;->d:I
 
-    move-result p1
+    sget v0, Lntc;->permissions_dialog_open_setting:I
 
-    if-eqz p1, :cond_1
+    sput v0, Lp1b;->e:I
 
-    :cond_0
-    const/4 p1, 0x1
+    sget v0, Lntc;->permissions_dialog_yes:I
 
-    return p1
+    sput v0, Lp1b;->f:I
 
-    :cond_1
-    const/4 p1, 0x0
+    sget v0, Lntc;->permissions_video_message_request:I
 
-    return p1
-.end method
+    sput v0, Lp1b;->g:I
 
-.method public final hashCode()I
-    .locals 1
+    sget v0, Lntc;->permissions_video_message_request_only_camera_title:I
 
-    iget-object v0, p0, Lp1b;->a:Ljava/lang/Object;
+    sput v0, Lp1b;->h:I
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    sget v0, Lntc;->permissions_video_message_request_title:I
 
-    move-result v0
+    sput v0, Lp1b;->i:I
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lp1b;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "Optional[%s]"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Optional.empty"
-
-    return-object v0
+    return-void
 .end method

@@ -1,74 +1,192 @@
-.class public final synthetic Lnk8;
-.super Ljava/lang/Object;
+.class public final Lnk8;
+.super Lqp4;
 .source "SourceFile"
 
 # interfaces
-.implements Ltk8;
+.implements Lgk8;
+.implements Lcre;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lvk8;
-
-.field public final synthetic c:Lrm8;
+.field public d:Lzv4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvk8;Lrm8;I)V
+.method public synthetic constructor <init>(Lgla;I)V
     .locals 0
 
-    iput p3, p0, Lnk8;->a:I
+    iput p2, p0, Lnk8;->c:I
 
-    iput-object p1, p0, Lnk8;->b:Lvk8;
-
-    iput-object p2, p0, Lnk8;->c:Lrm8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lqp4;-><init>(Lgla;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(La27;I)V
-    .locals 3
+.method public c()V
+    .locals 1
 
-    iget v0, p0, Lnk8;->a:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lqp4;->a:Lgla;
+
+    invoke-interface {v0}, Lgla;->c()V
+
+    return-void
+.end method
+
+.method public final d(Lzv4;)V
+    .locals 1
+
+    iget v0, p0, Lnk8;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lnk8;->b:Lvk8;
+    iget-object v0, p0, Lnk8;->d:Lzv4;
 
-    iget-object v0, v0, Lvk8;->c:Lfl8;
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
 
-    iget-object v1, p0, Lnk8;->c:Lrm8;
+    move-result v0
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Lrm8;->d(Z)Landroid/os/Bundle;
+    iput-object p1, p0, Lnk8;->d:Lzv4;
 
-    move-result-object v1
+    iget-object p1, p0, Lqp4;->a:Lgla;
 
-    invoke-interface {p1, v0, p2, v1, v2}, La27;->O(Lu17;ILandroid/os/Bundle;Z)V
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lnk8;->d:Lzv4;
+
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lnk8;->d:Lzv4;
+
+    iget-object p1, p0, Lqp4;->a:Lgla;
+
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lnk8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lqp4;->dispose()V
+
+    iget-object v0, p0, Lnk8;->d:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->dispose()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lnk8;->b:Lvk8;
+    invoke-super {p0}, Lqp4;->dispose()V
 
-    iget-object v0, v0, Lvk8;->c:Lfl8;
+    iget-object v0, p0, Lnk8;->d:Lzv4;
 
-    const/4 v1, 0x1
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    iget-object v2, p0, Lnk8;->c:Lrm8;
+    return-void
 
-    invoke-virtual {v2, v1}, Lrm8;->d(Z)Landroid/os/Bundle;
+    nop
 
-    move-result-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-interface {p1, v0, p2, v1}, La27;->H(Lu17;ILandroid/os/Bundle;)V
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
+    iget v0, p0, Lnk8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lqp4;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lqp4;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
     return-void
 
     nop

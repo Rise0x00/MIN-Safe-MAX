@@ -3,139 +3,146 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:J
-
-.field public Y:J
-
-.field public final synthetic Z:Lied;
-
 .field public final a:Ljava/lang/Object;
-
-.field public final b:Lb22;
-
-.field public final c:J
-
-.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lied;JLjava/lang/Runnable;JLb22;J)V
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhed;->Z:Lied;
-
-    iput-object p4, p0, Lhed;->a:Ljava/lang/Object;
-
-    iput-object p7, p0, Lhed;->b:Lb22;
-
-    iput-wide p8, p0, Lhed;->c:J
-
-    iput-wide p5, p0, Lhed;->X:J
-
-    iput-wide p2, p0, Lhed;->Y:J
+    iput-object p1, p0, Lhed;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    .locals 1
+
+    instance-of v0, p0, Lfed;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lfed;
+
+    iget-object p0, p0, Lfed;->a:Ljava/lang/Throwable;
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static final b(Ljava/io/Serializable;)Z
+    .locals 0
+
+    instance-of p0, p0, Lfed;
+
+    return p0
+.end method
+
+.method public static final c(Ljava/io/Serializable;)Z
+    .locals 0
+
+    instance-of p0, p0, Lfed;
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lhed;->a:Ljava/lang/Object;
+    instance-of v0, p1, Lhed;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    iget-object v0, p0, Lhed;->b:Lb22;
-
-    invoke-virtual {v0}, Lb22;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v2, p0, Lhed;->Z:Lied;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lied;->a(Ljava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v3
-
-    sget-wide v5, Lked;->b:J
-
-    add-long v7, v3, v5
-
-    iget-wide v9, p0, Lhed;->X:J
-
-    cmp-long v7, v7, v9
-
-    const-wide/16 v11, 0x1
-
-    iget-wide v13, p0, Lhed;->c:J
-
-    if-ltz v7, :cond_1
-
-    add-long/2addr v9, v13
-
-    add-long/2addr v9, v5
-
-    cmp-long v5, v3, v9
-
-    if-ltz v5, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-wide v5, p0, Lhed;->Y:J
+    check-cast p1, Lhed;
 
-    iget-wide v7, p0, Lhed;->o:J
+    iget-object p1, p1, Lhed;->a:Ljava/lang/Object;
 
-    add-long/2addr v7, v11
+    iget-object v0, p0, Lhed;->a:Ljava/lang/Object;
 
-    iput-wide v7, p0, Lhed;->o:J
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    mul-long/2addr v7, v13
+    move-result p1
 
-    add-long/2addr v7, v5
+    if-nez p1, :cond_1
 
-    goto :goto_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    :goto_0
-    add-long v7, v3, v13
+    const/4 p1, 0x1
 
-    iget-wide v5, p0, Lhed;->o:J
+    return p1
+.end method
 
-    add-long/2addr v5, v11
+.method public final hashCode()I
+    .locals 1
 
-    iput-wide v5, p0, Lhed;->o:J
+    iget-object v0, p0, Lhed;->a:Ljava/lang/Object;
 
-    mul-long/2addr v13, v5
+    if-nez v0, :cond_0
 
-    sub-long v5, v7, v13
+    const/4 v0, 0x0
 
-    iput-wide v5, p0, Lhed;->Y:J
+    return v0
 
-    :goto_1
-    iput-wide v3, p0, Lhed;->X:J
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    sub-long/2addr v7, v3
+    move-result v0
 
-    invoke-virtual {v2, p0, v7, v8, v1}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {v0, v1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    iget-object v0, p0, Lhed;->a:Ljava/lang/Object;
 
-    :cond_2
-    return-void
+    instance-of v1, v0, Lfed;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Success("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x29
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

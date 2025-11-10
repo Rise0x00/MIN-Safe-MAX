@@ -1,155 +1,33 @@
-.class public final Ls5a;
-.super Li6a;
+.class public abstract Ls5a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic e:I
-
-.field public f:Ljava/lang/Object;
-
-
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public static final a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
     .locals 0
 
-    iput p1, p0, Ls5a;->e:I
+    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0}, Li6a;-><init>()V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static final b(Landroid/net/NetworkCapabilities;I)Z
+    .locals 0
 
-# virtual methods
-.method public final b(Lyqd;)V
-    .locals 2
+    invoke-virtual {p0, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
-    iget v0, p0, Ls5a;->e:I
+    move-result p0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p1, Lyqd;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/app/Notification$Builder;
-
-    new-instance v0, Landroid/app/Notification$InboxStyle;
-
-    invoke-direct {v0, p1}, Landroid/app/Notification$InboxStyle;-><init>(Landroid/app/Notification$Builder;)V
-
-    iget-object p1, p0, Li6a;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p1}, Landroid/app/Notification$InboxStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
-
-    move-result-object p1
-
-    iget-boolean v0, p0, Li6a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Li6a;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v0}, Landroid/app/Notification$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
-
-    :cond_0
-    iget-object v0, p0, Ls5a;->f:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v1}, Landroid/app/Notification$InboxStyle;->addLine(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object p1, p1, Lyqd;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/app/Notification$Builder;
-
-    new-instance v0, Landroid/app/Notification$BigTextStyle;
-
-    invoke-direct {v0, p1}, Landroid/app/Notification$BigTextStyle;-><init>(Landroid/app/Notification$Builder;)V
-
-    iget-object p1, p0, Li6a;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p1}, Landroid/app/Notification$BigTextStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
-
-    move-result-object p1
-
-    iget-object v0, p0, Ls5a;->f:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
-
-    move-result-object p1
-
-    iget-boolean v0, p0, Li6a;->a:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Li6a;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public static final c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    .locals 0
 
-    iget v0, p0, Ls5a;->e:I
+    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
 
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "androidx.core.app.NotificationCompat$InboxStyle"
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "androidx.core.app.NotificationCompat$BigTextStyle"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

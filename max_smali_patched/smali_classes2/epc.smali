@@ -1,64 +1,20 @@
-.class public final Lepc;
+.class public abstract Lepc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
-# instance fields
-.field public final synthetic a:Landroid/view/View;
+# static fields
+.field public static oneme_settings_ringtone_section_bottom_vh:I = 0x7f0a07f4
 
-.field public final synthetic b:F
+.field public static oneme_settings_ringtone_section_custom_add:I = 0x7f0a07f5
 
+.field public static oneme_settings_ringtone_section_default:I = 0x7f0a07f6
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;F)V
-    .locals 0
+.field public static oneme_settings_ringtone_section_header_vh:I = 0x7f0a07f7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_ringtone_section_item_vh:I = 0x7f0a07f8
 
-    iput-object p1, p0, Lepc;->a:Landroid/view/View;
+.field public static oneme_settings_ringtone_section_system:I = 0x7f0a07f9
 
-    iput p2, p0, Lepc;->b:F
+.field public static oneme_settings_ringtone_settings_list:I = 0x7f0a07fa
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 1
-
-    iget-object p1, p0, Lepc;->a:Landroid/view/View;
-
-    iget v0, p0, Lepc;->b:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-.end method
+.field public static oneme_settings_ringtone_title:I = 0x7f0a07fb

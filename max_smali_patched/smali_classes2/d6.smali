@@ -1,98 +1,238 @@
-.class public final Ld6;
+.class public final synthetic Ld6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyo3;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/messages/views/ActAvatarCrop;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+.method public synthetic constructor <init>(Lru/ok/messages/views/ActAvatarCrop;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ld6;->a:I
 
-    iput-object p1, p0, Ld6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iput-object p1, p0, Ld6;->b:Lru/ok/messages/views/ActAvatarCrop;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
-    check-cast p1, Ld8c;
+    iget p1, p0, Ld6;->a:I
 
-    iget-object v0, p0, Ld6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    const/high16 v0, 0x40000000    # 2.0f
 
-    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v3, p0, Ld6;->b:Lru/ok/messages/views/ActAvatarCrop;
 
-    move-result-object v1
+    packed-switch p1, :pswitch_data_0
 
-    filled-new-array {v1}, [Ljava/lang/Object;
+    sget p1, Lru/ok/messages/views/ActAvatarCrop;->d1:I
 
-    move-result-object v1
+    iget-object p1, v3, Lj6;->J0:Lch8;
 
-    const-string v2, "dv9"
+    iget-object p1, p1, Lch8;->b:Ljava/lang/Object;
 
-    const-string v3, "onQualitySelected: %s"
+    check-cast p1, Lri3;
 
-    invoke-static {v2, v3, v1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    check-cast p1, Lusa;
 
-    iget-object v1, v0, Ldv9;->x0:Lb9g;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Lb9g;->a()Lm10;
+    sget-object p1, Lbud;->a:Lbud;
 
-    move-result-object v1
+    new-instance v0, Le6;
 
-    iput-object p1, v1, Lm10;->c:Ld8c;
+    invoke-direct {v0, v2, v3}, Le6;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Lb9g;
+    new-instance v4, Lah3;
 
-    invoke-direct {v2, v1}, Lb9g;-><init>(Lm10;)V
+    const/4 v5, 0x5
 
-    iput-object v2, v0, Ldv9;->x0:Lb9g;
+    invoke-direct {v4, v5, v0}, Lah3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Ldv9;->f1()V
-
-    new-instance v1, Lkz1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, p1}, Lkz1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ldv9;->g1(Lwf6;)V
-
-    new-instance p1, Lyu9;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p1, v0, v1}, Lyu9;-><init>(Ldv9;I)V
-
-    invoke-virtual {v0, p1}, Ldv9;->g1(Lwf6;)V
-
-    iget-object p1, v0, Ldv9;->z0:Lqc;
-
-    iget-object v0, v0, Ldv9;->x0:Lb9g;
-
-    iget-object v0, v0, Lb9g;->a:Ld8c;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    const-string v1, "VIDEO_UPLOAD_QUALITY_SELECTED"
+    const-class v5, Lnmf;
 
-    invoke-virtual {p1, v1, v0}, Lqc;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnmf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v0, Lomf;
+
+    invoke-virtual {v0}, Lomf;->a()Lgpd;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljqe;->m(Lgpd;)Lbre;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v5}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnmf;
+
+    check-cast p1, Lomf;
+
+    invoke-virtual {p1}, Lomf;->b()Lgpd;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljqe;->i(Lgpd;)Lbre;
+
+    move-result-object p1
+
+    new-instance v0, Lf6;
+
+    invoke-direct {v0, v3, v2}, Lf6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
+
+    new-instance v2, Lf6;
+
+    invoke-direct {v2, v3, v1}, Lf6;-><init>(Lru/ok/messages/views/ActAvatarCrop;I)V
+
+    new-instance v1, Lnt1;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v0, v3, v2}, Lnt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Ljqe;->k(Lcre;)V
 
     return-void
+
+    :pswitch_0
+    iput-boolean v2, v3, Lru/ok/messages/views/ActAvatarCrop;->c1:Z
+
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+
+    invoke-virtual {p1}, Lru/ok/messages/views/widgets/AvatarCropView;->m()V
+
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->b1:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->Y0:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_1
+    sget p1, Lru/ok/messages/views/ActAvatarCrop;->d1:I
+
+    invoke-virtual {v3}, Lj6;->finish()V
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+
+    invoke-virtual {p1}, Lru/ok/messages/views/widgets/AvatarCropView;->k()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->b1:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Point;
+
+    iget v2, v1, Landroid/graphics/Point;->x:I
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v0
+
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v0
+
+    const/high16 v0, -0x40800000    # -1.0f
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+
+    :cond_0
+    return-void
+
+    :pswitch_3
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->T0:Lru/ok/messages/views/widgets/AvatarCropView;
+
+    invoke-virtual {p1}, Lru/ok/messages/views/widgets/AvatarCropView;->n()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p1, v3, Lru/ok/messages/views/ActAvatarCrop;->c1:Z
+
+    xor-int/2addr p1, v1
+
+    iput-boolean p1, v3, Lru/ok/messages/views/ActAvatarCrop;->c1:Z
+
+    iget-object p1, v3, Lru/ok/messages/views/ActAvatarCrop;->b1:Landroid/graphics/Matrix;
+
+    iget-object v1, v3, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Point;
+
+    iget v2, v1, Landroid/graphics/Point;->x:I
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v0
+
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v0
+
+    const/high16 v0, 0x42b40000    # 90.0f
+
+    invoke-virtual {p1, v0, v2, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

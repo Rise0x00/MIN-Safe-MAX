@@ -42,7 +42,7 @@
 
     iget v1, v0, Ld60;->g:I
 
-    invoke-static {v1}, Lqw1;->u(I)I
+    invoke-static {v1}, Lnx1;->v(I)I
 
     move-result v1
 
@@ -94,7 +94,7 @@
 
     iget v1, v0, Ld60;->g:I
 
-    invoke-static {v1}, Lqw1;->u(I)I
+    invoke-static {v1}, Lnx1;->v(I)I
 
     move-result v1
 
@@ -130,7 +130,7 @@
 
     invoke-virtual {v0, v2}, Ld60;->d(I)V
 
-    iget-object v1, v0, Ld60;->a:Lcsd;
+    iget-object v1, v0, Ld60;->a:Ln3e;
 
     new-instance v2, Lb60;
 
@@ -140,7 +140,7 @@
 
     invoke-direct {v2, v0, v4, v3}, Lb60;-><init>(Ld60;ZI)V
 
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
 
     invoke-virtual {v0}, Ld60;->f()V
 

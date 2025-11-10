@@ -1,23 +1,17 @@
-.class public final Lzx0;
+.class public interface abstract Lzx0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# virtual methods
+.method public abstract a(Lnpe;Lqpe;)V
+.end method
 
-.field public final b:J
+.method public abstract b(Lqx0;Ljava/lang/String;JJ)V
+.end method
 
+.method public abstract c(Lnpe;Lqpe;Lqpe;)V
+.end method
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lzx0;->a:J
-
-    iput-wide p3, p0, Lzx0;->b:J
-
-    return-void
+.method public abstract d(Lnpe;Liy0;)V
 .end method

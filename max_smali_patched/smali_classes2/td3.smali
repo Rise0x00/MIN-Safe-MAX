@@ -1,61 +1,38 @@
 .class public final Ltd3;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwd3;
 
-# instance fields
-.field public final c:J
 
-.field public final o:Ljava/util/List;
+# static fields
+.field public static final a:Ltd3;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltd3;
 
-    iput-wide p1, p0, Ltd3;->c:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ltd3;->o:Ljava/util/List;
+    sput-object v0, Ltd3;->a:Ltd3;
+
+    const-class v0, Ltd3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final getId()J
+    .locals 2
 
-    iget-object v0, p0, Ltd3;->o:Ljava/util/List;
+    const-wide/16 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Response(complainSync="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Ltd3;->c:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ",complainsSize:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

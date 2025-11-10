@@ -3,214 +3,342 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lln6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lt6h;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field private static final descriptor:Lo3e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lt6h;->a:I
+    new-instance v0, Lt6h;
 
-    iput-object p1, p0, Lt6h;->b:Lone/me/sdk/arch/Widget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lt6h;->a:Lt6h;
+
+    new-instance v1, Lfvb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryInfoResponse"
+
+    const/4 v3, 0x7
+
+    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "available"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "type"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "accessRequested"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "accessGranted"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "tokenSaved"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "deviceId"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lt6h;->descriptor:Lo3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final a(Le9;)Ljava/lang/Object;
+    .locals 16
 
-    iget v0, p0, Lt6h;->a:I
+    sget-object v0, Lt6h;->descriptor:Lo3e;
 
-    iget-object v1, p0, Lt6h;->b:Lone/me/sdk/arch/Widget;
+    move-object/from16 v1, p1
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1, v0}, Le9;->k(Lo3e;)Le9;
 
-    check-cast p1, Lq8h;
+    move-result-object v1
 
-    sget v0, Lon7;->a:I
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Lon7;->e:Lmoe;
-
-    iget-object p1, p1, Lq8h;->a:Lo8h;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {p1, v2}, Lo8h;->f(I)Lcd7;
-
-    move-result-object v2
-
-    iget v2, v2, Lcd7;->d:I
-
-    const/4 v3, 0x7
-
-    invoke-virtual {p1, v3}, Lo8h;->f(I)Lcd7;
-
-    move-result-object p1
-
-    iget p1, p1, Lcd7;->d:I
-
-    sub-int/2addr v2, p1
-
-    sget p1, Lon7;->c:I
-
-    if-ne p1, v2, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const-class p1, Lon7;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "insets changed keyboard height="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {p1, v3}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v2}, Lon7;->b(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
+    sget-object v2, Lv6h;->h:[Lfs7;
 
     const/4 v3, 0x1
 
-    if-ne v3, p1, :cond_1
+    const/4 v4, 0x0
 
-    const-string p1, "pref_keyboard_height_portrait"
+    const/4 v5, 0x0
+
+    move v7, v4
+
+    move v9, v7
+
+    move v11, v9
+
+    move v12, v11
+
+    move v13, v12
+
+    move-object v8, v5
+
+    move-object v10, v8
+
+    move-object v14, v10
+
+    move v5, v3
+
+    :goto_0
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v1, v0}, Le9;->q(Lo3e;)I
+
+    move-result v6
+
+    packed-switch v6, :pswitch_data_0
+
+    new-instance v0, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {v0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw v0
+
+    :pswitch_0
+    const/4 v6, 0x6
+
+    invoke-virtual {v1, v0, v6}, Le9;->w(Lo3e;I)Ljava/lang/String;
+
+    move-result-object v14
+
+    or-int/lit8 v7, v7, 0x40
 
     goto :goto_0
 
-    :cond_1
-    const-string p1, "pref_keyboard_height_landscape"
+    :pswitch_1
+    const/4 v6, 0x5
 
-    :goto_0
-    sget-object v3, Lon7;->b:Lnt9;
+    invoke-virtual {v1, v0, v6}, Le9;->p(Lo3e;I)Z
 
-    invoke-virtual {v3, v2, p1}, Lnt9;->d(ILjava/lang/Object;)V
+    move-result v13
 
-    sget-object v3, Lon7;->d:Landroid/content/SharedPreferences;
+    or-int/lit8 v7, v7, 0x20
 
-    if-nez v3, :cond_2
+    goto :goto_0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    :pswitch_2
+    const/4 v6, 0x4
 
-    move-result-object v0
+    invoke-virtual {v1, v0, v6}, Le9;->p(Lo3e;I)Z
 
-    const-string v3, "keyboard_prefs"
+    move-result v12
 
-    const/4 v4, 0x0
+    or-int/lit8 v7, v7, 0x10
 
-    invoke-virtual {v0, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    goto :goto_0
 
-    move-result-object v3
+    :pswitch_3
+    const/4 v6, 0x3
 
-    :cond_2
-    sget-object v0, Lon7;->d:Landroid/content/SharedPreferences;
+    invoke-virtual {v1, v0, v6}, Le9;->p(Lo3e;I)Z
 
-    if-nez v0, :cond_3
+    move-result v11
 
-    sput-object v3, Lon7;->d:Landroid/content/SharedPreferences;
+    or-int/lit8 v7, v7, 0x8
 
-    :cond_3
-    invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_4
+    const/4 v6, 0x2
 
-    invoke-interface {v0, p1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    aget-object v15, v2, v6
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-virtual {v1, v0, v6, v15, v10}, Le9;->t(Lo3e;ILfs7;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_4
-    invoke-static {v2}, Lon7;->b(I)Z
+    move-result-object v6
 
-    move-result p1
+    move-object v10, v6
 
-    const/4 v0, 0x0
+    check-cast v10, Ljava/util/List;
 
-    if-eqz p1, :cond_5
+    or-int/lit8 v7, v7, 0x4
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    goto :goto_0
 
-    invoke-virtual {v1, v0, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_5
+    invoke-virtual {v1, v0, v3}, Le9;->p(Lo3e;I)Z
 
-    goto :goto_1
+    move-result v9
 
-    :cond_5
-    sget p1, Lon7;->c:I
+    or-int/lit8 v7, v7, 0x2
 
-    invoke-static {p1}, Lon7;->b(I)Z
+    goto :goto_0
 
-    move-result p1
+    :pswitch_6
+    invoke-virtual {v1, v0, v4}, Le9;->w(Lo3e;I)Ljava/lang/String;
 
-    if-eqz p1, :cond_6
+    move-result-object v8
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    or-int/lit8 v7, v7, 0x1
 
-    invoke-virtual {v1, v0, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    goto :goto_0
 
-    :cond_6
-    :goto_1
-    sput v2, Lon7;->c:I
+    :pswitch_7
+    move v5, v4
 
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
+    goto :goto_0
 
-    return-object p1
+    :cond_0
+    invoke-virtual {v1, v0}, Le9;->z(Lo3e;)V
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    new-instance v6, Lv6h;
 
-    invoke-static {v1, p1}, Lone/me/sdk/arch/Widget;->z0(Lone/me/sdk/arch/Widget;Landroid/view/View;)Z
+    invoke-direct/range {v6 .. v14}, Lv6h;-><init>(ILjava/lang/String;ZLjava/util/List;ZZZLjava/lang/String;)V
 
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v6
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch -0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final b(Lf24;Ljava/lang/Object;)V
+    .locals 4
+
+    check-cast p2, Lv6h;
+
+    sget-object v0, Lt6h;->descriptor:Lo3e;
+
+    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
+
+    move-result-object p1
+
+    sget-object v1, Lv6h;->h:[Lfs7;
+
+    iget-object v2, p2, Lv6h;->a:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
+
+    const/4 v2, 0x1
+
+    iget-boolean v3, p2, Lv6h;->b:Z
+
+    invoke-virtual {p1, v0, v2, v3}, Lf24;->e(Lo3e;IZ)V
+
+    const/4 v2, 0x2
+
+    aget-object v1, v1, v2
+
+    iget-object v3, p2, Lv6h;->c:Ljava/util/List;
+
+    invoke-virtual {p1, v0, v2, v1, v3}, Lf24;->i(Lo3e;ILfs7;Ljava/lang/Object;)V
+
+    const/4 v1, 0x3
+
+    iget-boolean v2, p2, Lv6h;->d:Z
+
+    invoke-virtual {p1, v0, v1, v2}, Lf24;->e(Lo3e;IZ)V
+
+    const/4 v1, 0x4
+
+    iget-boolean v2, p2, Lv6h;->e:Z
+
+    invoke-virtual {p1, v0, v1, v2}, Lf24;->e(Lo3e;IZ)V
+
+    const/4 v1, 0x5
+
+    iget-boolean v2, p2, Lv6h;->f:Z
+
+    invoke-virtual {p1, v0, v1, v2}, Lf24;->e(Lo3e;IZ)V
+
+    const/4 v1, 0x6
+
+    iget-object p2, p2, Lv6h;->g:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1, p2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lf24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lfs7;
+    .locals 6
+
+    sget-object v0, Lv6h;->h:[Lfs7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    const/4 v2, 0x7
+
+    new-array v2, v2, [Lfs7;
+
+    sget-object v3, Ltaf;->a:Ltaf;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    sget-object v4, Ldr0;->a:Ldr0;
+
+    const/4 v5, 0x1
+
+    aput-object v4, v2, v5
+
+    aput-object v0, v2, v1
+
+    const/4 v0, 0x3
+
+    aput-object v4, v2, v0
+
+    const/4 v0, 0x4
+
+    aput-object v4, v2, v0
+
+    const/4 v0, 0x5
+
+    aput-object v4, v2, v0
+
+    const/4 v0, 0x6
+
+    aput-object v3, v2, v0
+
+    return-object v2
+.end method
+
+.method public final d()Lo3e;
+    .locals 1
+
+    sget-object v0, Lt6h;->descriptor:Lo3e;
+
+    return-object v0
 .end method

@@ -1,184 +1,77 @@
-.class public final Laa7;
+.class public abstract synthetic Laa7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldnd;
 
-
-# instance fields
-.field public final a:[J
-
-.field public final b:[J
-
-.field public final c:J
-
-.field public final d:Z
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(J[J[J)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lba7;->values()[Lba7;
 
-    array-length v0, p3
+    move-result-object v0
 
-    array-length v1, p4
+    array-length v0, v0
 
-    const/4 v2, 0x0
+    new-array v0, v0, [I
 
-    const/4 v3, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    invoke-static {v0}, Lyhh;->e(Z)V
-
-    array-length v0, p4
-
-    if-lez v0, :cond_1
-
-    move v1, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v2
-
-    :goto_1
-    iput-boolean v1, p0, Laa7;->d:Z
-
-    if-eqz v1, :cond_2
-
-    aget-wide v4, p4, v2
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v1, v4, v6
-
-    if-lez v1, :cond_2
-
-    add-int/lit8 v1, v0, 0x1
-
-    new-array v4, v1, [J
-
-    iput-object v4, p0, Laa7;->a:[J
-
-    new-array v1, v1, [J
-
-    iput-object v1, p0, Laa7;->b:[J
-
-    invoke-static {p3, v2, v4, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {p4, v2, v1, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_2
-
-    :cond_2
-    iput-object p3, p0, Laa7;->a:[J
-
-    iput-object p4, p0, Laa7;->b:[J
-
-    :goto_2
-    iput-wide p1, p0, Laa7;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Laa7;->d:Z
-
-    return v0
-.end method
-
-.method public final e(J)Lbnd;
-    .locals 9
-
-    iget-boolean v0, p0, Laa7;->d:Z
-
-    if-nez v0, :cond_0
-
-    new-instance p1, Lbnd;
-
-    sget-object p2, Lhnd;->c:Lhnd;
-
-    invoke-direct {p1, p2, p2}, Lbnd;-><init>(Lhnd;Lhnd;)V
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, p0, Laa7;->b:[J
+    :try_start_0
+    sget-object v1, Lba7;->a:[Lba7;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, p2, v1}, Lr4g;->e([JJZ)I
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v2
+    :catch_0
+    const/4 v1, 0x2
 
-    new-instance v3, Lhnd;
+    const/4 v2, 0x3
 
-    aget-wide v4, v0, v2
+    :try_start_1
+    sget-object v3, Lba7;->a:[Lba7;
 
-    iget-object v6, p0, Laa7;->a:[J
+    aput v1, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    aget-wide v7, v6, v2
+    :catch_1
+    :try_start_2
+    sget-object v3, Lba7;->a:[Lba7;
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lhnd;-><init>(JJ)V
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    cmp-long p1, v4, p1
+    :catch_2
+    :try_start_3
+    sget-object v1, Lba7;->a:[Lba7;
 
-    if-eqz p1, :cond_2
+    const/4 v1, 0x4
 
-    array-length p1, v0
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    sub-int/2addr p1, v1
+    :catch_3
+    :try_start_4
+    sget-object v1, Lba7;->a:[Lba7;
 
-    if-ne v2, p1, :cond_1
+    const/4 v1, 0x6
 
-    goto :goto_0
+    const/4 v2, 0x5
 
-    :cond_1
-    new-instance p1, Lhnd;
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    add-int/2addr v2, v1
+    :catch_4
+    sput-object v0, Laa7;->$EnumSwitchMapping$0:[I
 
-    aget-wide v4, v0, v2
-
-    aget-wide v0, v6, v2
-
-    invoke-direct {p1, v4, v5, v0, v1}, Lhnd;-><init>(JJ)V
-
-    new-instance p2, Lbnd;
-
-    invoke-direct {p2, v3, p1}, Lbnd;-><init>(Lhnd;Lhnd;)V
-
-    return-object p2
-
-    :cond_2
-    :goto_0
-    new-instance p1, Lbnd;
-
-    invoke-direct {p1, v3, v3}, Lbnd;-><init>(Lhnd;Lhnd;)V
-
-    return-object p1
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Laa7;->c:J
-
-    return-wide v0
+    return-void
 .end method

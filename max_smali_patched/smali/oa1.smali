@@ -1,322 +1,249 @@
 .class public final Loa1;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lll1;
+.implements Lg24;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.field public final synthetic a:Lta1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Lta1;)V
+    .locals 0
 
-    iput-object p1, p0, Loa1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    sget p2, Lxja;->N:I
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->setId(I)V
-
-    new-instance p2, Landroid/graphics/drawable/ColorDrawable;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p2, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Z:[Ltm7;
-
-    iget-object p2, p1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->o:Lan0;
-
-    sget-object v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->Z:[Ltm7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p2}, Lan0;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput-object p1, p0, Loa1;->a:Lta1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 5
+.method public final a(Lc24;Lc24;Z)V
+    .locals 11
 
-    iget-object p1, p0, Loa1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    iget-object v0, p0, Loa1;->a:Lta1;
 
-    const/4 v0, 0x1
+    iget-object v1, v0, Lta1;->s0:Lru7;
 
-    invoke-static {p1, v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->C0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
-
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    const/16 v2, 0x64
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    if-eq v1, v3, :cond_1
-
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    iput v2, v3, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Lfa1;->a(Z)V
-
-    return-void
-.end method
-
-.method public final b(Z)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Loa1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-static {v1, v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->C0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
-
-    invoke-static {v1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lfa1;->b(Z)V
-
-    return-void
-.end method
-
-.method public final g(Lsw7;ZJ)V
-    .locals 6
-
-    iget-object v0, p0, Loa1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2, p3, p4}, Lfa1;->g(Lsw7;ZJ)V
-
-    iget-object v1, v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->b:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsa1;
-
-    check-cast v1, Lta1;
-
-    iget-object v1, v1, Lta1;->c:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lufd;
-
-    iget v1, v1, Lufd;->a:I
-
-    const/16 v2, 0x64
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v3, v1}, Lnd5;->q(FFI)I
-
-    move-result v1
-
-    if-eqz p2, :cond_0
-
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v1
-
-    :cond_1
-    invoke-static {v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->B0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lfa1;
-
-    move-result-object v2
-
-    new-instance v4, Lag;
-
-    const-string v5, "height"
-
-    invoke-direct {v4, v5, v3}, Lag;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v3, v1}, [I
-
-    move-result-object v1
+    iget-object v2, v0, Lta1;->a:Lpu1;
 
     const/4 v3, 0x0
 
-    invoke-static {v3, v4, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+    if-eqz p1, :cond_0
 
-    move-result-object v1
+    invoke-virtual {v0}, Lta1;->a()Lcm1;
 
-    invoke-virtual {v1, p3, p4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    move-result-object v4
 
-    new-instance p3, Lig;
+    instance-of v5, p1, Lb9a;
 
-    const/4 p4, 0x0
+    invoke-virtual {v4, v5, v3}, Lcm1;->c(ZZ)V
 
-    invoke-direct {p3, v2, v4, p4}, Lig;-><init>(Landroid/view/View;Lag;I)V
+    :cond_0
+    const/4 v4, 0x1
 
-    invoke-virtual {v1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    if-nez p3, :cond_1
 
-    invoke-virtual {p1, v1}, Lsw7;->add(Ljava/lang/Object;)Z
+    instance-of p3, p2, Lb9a;
 
-    new-instance p3, Lag;
+    if-eqz p3, :cond_1
 
-    const-string p4, "backgroundChange"
+    instance-of p3, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    const/4 v1, 0x0
+    if-nez p3, :cond_1
 
-    invoke-direct {p3, p4, v1}, Lag;-><init>(Ljava/lang/String;I)V
+    if-nez p1, :cond_1
 
-    filled-new-array {v1}, [I
-
-    move-result-object p4
-
-    invoke-static {v3, p3, p4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0}, Lta1;->a()Lcm1;
 
     move-result-object p3
 
-    new-instance p4, Lna1;
+    instance-of v5, p1, Lb9a;
 
-    invoke-direct {p4, v0, p2}, Lna1;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+    invoke-virtual {p3, v5, v4}, Lcm1;->c(ZZ)V
 
-    invoke-virtual {p3, p4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    :cond_1
+    instance-of p3, p1, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    invoke-virtual {p1, p3}, Lsw7;->add(Ljava/lang/Object;)Z
+    const/4 v5, 0x0
 
+    sget-object v6, Lh2f;->b:Lh2f;
+
+    if-eqz p3, :cond_3
+
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
+
+    if-nez v7, :cond_3
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lki1;
+
+    move-object v8, v2
+
+    check-cast v8, Lev1;
+
+    invoke-virtual {v8}, Lev1;->l()Lw84;
+
+    move-result-object v8
+
+    iget-object v8, v8, Lw84;->c:Ljava/lang/String;
+
+    check-cast v7, Li2f;
+
+    iget-object v9, v7, Li2f;->a:La1f;
+
+    invoke-virtual {v9}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    if-eq v10, v6, :cond_2
+
+    invoke-virtual {v7, v8, v4}, Li2f;->a(Ljava/lang/String;Z)V
+
+    :cond_2
+    invoke-virtual {v9, v5, v6}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_3
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
+
+    if-eqz v7, :cond_5
+
+    if-nez p3, :cond_5
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lki1;
+
+    move-object v1, v2
+
+    check-cast v1, Lev1;
+
+    invoke-virtual {v1}, Lev1;->l()Lw84;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lw84;->c:Ljava/lang/String;
+
+    check-cast p3, Li2f;
+
+    iget-object v8, p3, Li2f;->a:La1f;
+
+    invoke-virtual {v8}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v9
+
+    if-ne v9, v6, :cond_4
+
+    invoke-virtual {p3, v1, v3}, Li2f;->a(Ljava/lang/String;Z)V
+
+    :cond_4
+    sget-object p3, Lh2f;->a:Lh2f;
+
+    invoke-virtual {v8, v5, p3}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_5
+    if-eqz v7, :cond_6
+
+    if-nez p1, :cond_6
+
+    const-string p1, "PipAppController"
+
+    const-string p2, "pip screen was hidden quietly, skip hide fake pip."
+
+    invoke-static {p1, p2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_6
+    instance-of p1, p2, Lb9a;
+
+    if-nez p1, :cond_8
+
+    if-nez p2, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    return-void
+
+    :cond_8
+    :goto_0
+    check-cast v2, Lev1;
+
+    invoke-virtual {v2}, Lev1;->t()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    invoke-virtual {v0}, Lta1;->a()Lcm1;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcm1;->a()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    move v3, v4
+
+    :cond_9
+    iput-boolean v3, v0, Lta1;->v0:Z
+
+    return-void
+.end method
+
+.method public final b(Lc24;Lc24;Z)V
+    .locals 4
+
+    iget-object v0, p0, Loa1;->a:Lta1;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lta1;->a()Lcm1;
+
+    move-result-object v1
+
+    instance-of v2, p1, Lb9a;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Lcm1;->b(ZZ)V
+
+    :cond_0
+    if-nez p3, :cond_1
+
+    instance-of p3, p2, Lb9a;
+
+    if-eqz p3, :cond_1
+
+    instance-of p2, p2, Lone/me/calls/ui/ui/pip/PipScreen;
+
+    if-nez p2, :cond_1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0}, Lta1;->a()Lcm1;
+
+    move-result-object p2
+
+    instance-of p1, p1, Lb9a;
+
+    const/4 p3, 0x1
+
+    invoke-virtual {p2, p1, p3}, Lcm1;->b(ZZ)V
+
+    :cond_1
     return-void
 .end method

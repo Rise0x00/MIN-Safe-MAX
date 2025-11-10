@@ -1,71 +1,72 @@
-.class public final Lmk6;
+.class public final synthetic Lmk6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic a:I
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lmk6;->a:I
+
+    iput-object p2, p0, Lmk6;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmk6;->a:Lbp7;
-
-    iput-object p2, p0, Lmk6;->b:Lbp7;
-
-    iput-object p3, p0, Lmk6;->c:Lbp7;
 
     return-void
 .end method
 
-.method public static a(Lmk6;JLnz3;)Ljava/lang/Object;
-    .locals 9
 
-    sget v0, Ln05;->o:I
+# virtual methods
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+    .locals 1
 
-    const/4 v0, 0x3
+    iget v0, p0, Lmk6;->a:I
 
-    sget-object v1, Ls05;->o:Ls05;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lyhh;->O(ILs05;)J
+    iget-object v0, p0, Lmk6;->b:Ljava/lang/Object;
 
-    move-result-wide v6
+    check-cast v0, Lorg/webrtc/SurfaceTextureHelper;
 
-    iget-object v0, p0, Lmk6;->c:Lbp7;
+    invoke-static {v0, p1}, Lorg/webrtc/SurfaceTextureHelper;->d(Lorg/webrtc/SurfaceTextureHelper;Landroid/graphics/SurfaceTexture;)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object p1, p0, Lmk6;->b:Ljava/lang/Object;
 
-    check-cast v0, Lr8f;
+    check-cast p1, Leod;
 
-    check-cast v0, Lwla;
+    iget-object p1, p1, Leod;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    new-instance v2, Llk6;
+    return-void
 
-    const/4 v8, 0x0
+    :pswitch_1
+    iget-object p1, p0, Lmk6;->b:Ljava/lang/Object;
 
-    move-object v3, p0
+    check-cast p1, Lnad;
 
-    move-wide v4, p1
+    invoke-virtual {p1}, Lnad;->invoke()Ljava/lang/Object;
 
-    invoke-direct/range {v2 .. v8}, Llk6;-><init>(Lmk6;JJLkotlin/coroutines/Continuation;)V
+    return-void
 
-    invoke-static {v0, v2, p3}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,55 +1,115 @@
-.class public abstract Luja;
+.class public final Luja;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz36;
+.implements Lzv4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lgla;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
+.field public b:Lecf;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgla;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Luja;->a:Lgla;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Lxdc;->call_share_picker_confirm_p2p_invite_cancel:I
+    iget-object v0, p0, Luja;->a:Lgla;
 
-    sput v0, Luja;->a:I
+    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
 
-    sget v0, Lxdc;->call_share_picker_confirm_p2p_invite_retry:I
+    return-void
+.end method
 
-    sput v0, Luja;->b:I
+.method public final c()V
+    .locals 1
 
-    sget v0, Lxdc;->call_share_picker_quote_view_progress:I
+    iget-object v0, p0, Luja;->a:Lgla;
 
-    sput v0, Luja;->c:I
+    invoke-interface {v0}, Lgla;->c()V
 
-    sget v0, Lxdc;->call_share_picker_quote_view_title:I
+    return-void
+.end method
 
-    sput v0, Luja;->d:I
+.method public final dispose()V
+    .locals 1
 
-    sget v0, Lxdc;->oneme_message_input_right_outer_icon:I
+    iget-object v0, p0, Luja;->b:Lecf;
 
-    sput v0, Luja;->e:I
+    invoke-interface {v0}, Lecf;->cancel()V
 
-    sget v0, Lxdc;->oneme_picker_quote_view:I
+    sget-object v0, Lhcf;->a:Lhcf;
 
-    sput v0, Luja;->f:I
+    iput-object v0, p0, Luja;->b:Lecf;
 
-    sget v0, Lxdc;->oneme_picker_toolbar:I
+    return-void
+.end method
 
-    sput v0, Luja;->g:I
+.method public final e(Lecf;)V
+    .locals 2
+
+    iget-object v0, p0, Luja;->b:Lecf;
+
+    invoke-static {v0, p1}, Lhcf;->f(Lecf;Lecf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Luja;->b:Lecf;
+
+    iget-object v0, p0, Luja;->a:Lgla;
+
+    invoke-interface {v0, p0}, Lgla;->d(Lzv4;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lecf;->g(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 2
+
+    iget-object v0, p0, Luja;->b:Lecf;
+
+    sget-object v1, Lhcf;->a:Lhcf;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Luja;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

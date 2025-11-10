@@ -1,107 +1,55 @@
 .class public final Lef5;
-.super Ljava/lang/Object;
+.super Lff5;
 .source "SourceFile"
-
-# interfaces
-.implements Ljag;
-.implements Lzlb;
 
 
 # instance fields
-.field public a:Ljag;
+.field public final c:Ljava/lang/Runnable;
 
-.field public b:Lef5;
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Runnable;J)V
+    .locals 0
+
+    invoke-direct {p0, p2, p3}, Lff5;-><init>(J)V
+
+    iput-object p1, p0, Lef5;->c:Ljava/lang/Runnable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
+.method public final run()V
     .locals 1
 
-    const/4 v0, 0x7
+    iget-object v0, p0, Lef5;->c:Ljava/lang/Runnable;
 
-    if-eq p1, v0, :cond_3
-
-    const/16 v0, 0x8
-
-    if-eq p1, v0, :cond_2
-
-    const/16 v0, 0x2710
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    :goto_0
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    check-cast p2, Lef5;
-
-    iput-object p2, p0, Lef5;->b:Lef5;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Ljag;
-
-    iput-object p2, p0, Lef5;->a:Ljag;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method
 
-.method public final b(JJLt76;Landroid/media/MediaFormat;)V
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lef5;->a:Ljag;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-wide v1, p1
+    invoke-super {p0}, Lff5;->toString()Ljava/lang/String;
 
-    move-wide v3, p3
+    move-result-object v1
 
-    move-object v5, p5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v6, p6
+    iget-object v1, p0, Lef5;->c:Ljava/lang/Runnable;
 
-    invoke-interface/range {v0 .. v6}, Ljag;->b(JJLt76;Landroid/media/MediaFormat;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final c()V
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lef5;->b:Lef5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lef5;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Lef5;->b:Lef5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lef5;->d()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

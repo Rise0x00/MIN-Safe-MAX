@@ -1,19 +1,20 @@
-.class public final synthetic Lks5;
+.class public final Lks5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltb4;
 
-# instance fields
-.field public final synthetic a:Lns5;
 
+# virtual methods
+.method public final a()Lvb4;
+    .locals 2
 
-# direct methods
-.method public synthetic constructor <init>(Lns5;)V
-    .locals 0
+    new-instance v0, Lms5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lks5;->a:Lns5;
+    invoke-direct {v0, v1}, Lkj0;-><init>(Z)V
 
-    return-void
+    return-object v0
 .end method

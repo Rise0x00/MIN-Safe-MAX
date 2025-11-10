@@ -3,205 +3,284 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final w0:[I
-
-.field public static final x0:[I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lz15;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:Landroid/opengl/EGLContext;
+.field public a:I
 
-.field public Y:Landroid/opengl/EGLSurface;
+.field public final b:Ljava/util/UUID;
 
-.field public Z:Landroid/graphics/SurfaceTexture;
+.field public final c:Ljava/lang/String;
 
-.field public final synthetic a:I
+.field public final d:Ljava/lang/String;
 
-.field public final b:Landroid/os/Handler;
-
-.field public final c:[I
-
-.field public o:Landroid/opengl/EGLDisplay;
+.field public final o:[B
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    const/16 v0, 0x11
+    new-instance v0, Ldd4;
 
-    new-array v1, v0, [I
+    const/16 v1, 0x8
 
-    fill-array-data v1, :array_0
+    invoke-direct {v0, v1}, Ldd4;-><init>(I)V
 
-    sput-object v1, Lz15;->w0:[I
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lz15;->x0:[I
+    sput-object v0, Lz15;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3040
-        0x4
-        0x3024
-        0x8
-        0x3023
-        0x8
-        0x3022
-        0x8
-        0x3021
-        0x8
-        0x3025
-        0x0
-        0x3027
-        0x3038
-        0x3033
-        0x4
-        0x3038
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3040
-        0x4
-        0x3024
-        0x8
-        0x3023
-        0x8
-        0x3022
-        0x8
-        0x3021
-        0x8
-        0x3025
-        0x0
-        0x3027
-        0x3038
-        0x3033
-        0x4
-        0x3038
-    .end array-data
 .end method
 
-.method public constructor <init>(Landroid/os/Handler;I)V
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 5
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    new-instance v0, Ljava/util/UUID;
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+
+    iput-object v0, p0, Lz15;->b:Ljava/util/UUID;
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz15;->c:Ljava/lang/String;
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget v1, Ljig;->a:I
+
+    iput-object v0, p0, Lz15;->d:Ljava/lang/String;
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz15;->o:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
     .locals 0
 
-    iput p2, p0, Lz15;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz15;->b:Landroid/os/Handler;
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x1
+    .line 3
+    iput-object p1, p0, Lz15;->b:Ljava/util/UUID;
 
-    new-array p1, p1, [I
+    .line 4
+    iput-object p2, p0, Lz15;->c:Ljava/lang/String;
 
-    iput-object p1, p0, Lz15;->c:[I
+    .line 5
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    .line 6
+    iput-object p3, p0, Lz15;->d:Ljava/lang/String;
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lz15;->b:Landroid/os/Handler;
-
-    const/4 p1, 0x1
-
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Lz15;->c:[I
+    .line 7
+    iput-object p4, p0, Lz15;->o:[B
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    iget p1, p0, Lz15;->a:I
+    const/4 v0, 0x0
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lz15;->b:Landroid/os/Handler;
-
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lz15;->b:Landroid/os/Handler;
-
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final run()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Lz15;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_1
+
+    return v0
+
+    :cond_1
+    check-cast p1, Lz15;
+
+    iget-object v2, p0, Lz15;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lz15;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lz15;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lz15;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lz15;->b:Ljava/util/UUID;
+
+    iget-object v3, p1, Lz15;->b:Ljava/util/UUID;
+
+    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lz15;->o:[B
+
+    iget-object p1, p1, Lz15;->o:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
 
     iget v0, p0, Lz15;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lz15;->Z:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lz15;->b:Ljava/util/UUID;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
 
-    :try_start_0
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    :catch_0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lz15;->c:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
     :cond_0
-    return-void
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_0
-    iget-object v0, p0, Lz15;->Z:Landroid/graphics/SurfaceTexture;
+    move-result v2
 
-    if-eqz v0, :cond_1
+    :goto_0
+    add-int/2addr v0, v2
 
-    :try_start_1
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+    mul-int/2addr v0, v1
 
-    :catch_1
+    iget-object v2, p0, Lz15;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lz15;->o:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lz15;->a:I
+
     :cond_1
+    iget v0, p0, Lz15;->a:I
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-object p2, p0, Lz15;->b:Ljava/util/UUID;
+
+    invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, p0, Lz15;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lz15;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lz15;->o:[B
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

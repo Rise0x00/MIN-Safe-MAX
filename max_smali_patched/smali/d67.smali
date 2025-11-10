@@ -1,17 +1,33 @@
-.class public interface abstract Ld67;
+.class public abstract Ld67;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
 
-.method public abstract b(Lw75;Li19;Lj7d;Lo2d;Landroid/graphics/ColorSpace;)Lst5;
-.end method
+.field public static final b:Ljava/util/regex/Pattern;
 
-.method public abstract c(Lx47;)Z
-.end method
 
-.method public abstract d(Lw75;Lj7d;Lo2d;)Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ld67;->a:Ljava/util/regex/Pattern;
+
+    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ld67;->b:Ljava/util/regex/Pattern;
+
+    return-void
 .end method

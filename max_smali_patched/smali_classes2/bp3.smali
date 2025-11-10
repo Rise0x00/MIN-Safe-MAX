@@ -1,157 +1,281 @@
-.class public final enum Lbp3;
-.super Ljava/lang/Enum;
+.class public final Lbp3;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lbp3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum Y:Lbp3;
-
-.field public static final enum Z:Lbp3;
-
-.field public static final enum a:Lbp3;
-
-.field public static final enum b:Lbp3;
-
-.field public static final enum c:Lbp3;
-
-.field public static final enum o:Lbp3;
-
-.field public static final enum w0:Lbp3;
-
-.field public static final enum x0:Lbp3;
-
-.field public static final synthetic y0:[Lbp3;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lbp3;
+    iput p1, p0, Lbp3;->a:I
 
-    const-string v1, "OPEN_PROFILE"
+    iput-object p2, p0, Lbp3;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lbp3;->a:Lbp3;
-
-    new-instance v1, Lbp3;
-
-    const-string v2, "SHARE_CONTACT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lbp3;->b:Lbp3;
-
-    new-instance v2, Lbp3;
-
-    const-string v3, "WRITE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lbp3;->c:Lbp3;
-
-    new-instance v3, Lbp3;
-
-    const-string v4, "SELECT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lbp3;->o:Lbp3;
-
-    new-instance v4, Lbp3;
-
-    const-string v5, "BLOCK"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lbp3;->X:Lbp3;
-
-    new-instance v5, Lbp3;
-
-    const-string v6, "DELETE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lbp3;->Y:Lbp3;
-
-    new-instance v6, Lbp3;
-
-    const-string v7, "AUDIO_CALL"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lbp3;->Z:Lbp3;
-
-    new-instance v7, Lbp3;
-
-    const-string v8, "VIDEO_CALL"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lbp3;->w0:Lbp3;
-
-    new-instance v8, Lbp3;
-
-    const-string v9, "SUSPEND"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lbp3;->x0:Lbp3;
-
-    filled-new-array/range {v0 .. v8}, [Lbp3;
-
-    move-result-object v0
-
-    sput-object v0, Lbp3;->y0:[Lbp3;
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbp3;
-    .locals 1
 
-    const-class v0, Lbp3;
+# virtual methods
+.method public onAvailable(Landroid/net/Network;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lbp3;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lbp3;
+    invoke-super {p0, p1}, Landroid/net/ConnectivityManager$NetworkCallback;->onAvailable(Landroid/net/Network;)V
 
-    return-object p0
-.end method
+    return-void
 
-.method public static values()[Lbp3;
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Lbp3;->b:Ljava/lang/Object;
 
-    sget-object v0, Lbp3;->y0:[Lbp3;
+    check-cast p1, Lcp3;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p1, Lcp3;->n:Ljava/lang/String;
+
+    const-string v1, "onAvailable"
+
+    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Lcp3;->m:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lbp3;
+    check-cast v0, Lap3;
 
-    return-object v0
+    const/4 v1, 0x1
+
+    const/16 v2, 0x3c
+
+    invoke-static {v0, v1, v2}, Lap3;->a(Lap3;ZI)Lap3;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcp3;->o(Lap3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 6
+
+    iget v0, p0, Lbp3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {}, Luyh;->e()Luyh;
+
+    move-result-object p1
+
+    sget-object v0, Ld6a;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Network capabilities changed: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, v0, p2}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lc6a;
+
+    iget-object p2, p1, Lc6a;->f:Landroid/net/ConnectivityManager;
+
+    invoke-static {p2}, Ld6a;->a(Landroid/net/ConnectivityManager;)Lb6a;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lxq3;->q(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcp3;
+
+    invoke-static {p2}, Lcp3;->j(Landroid/net/NetworkCapabilities;)Lqp3;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcp3;->j:Lqp3;
+
+    iget-object v0, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcp3;
+
+    iget-object v1, v0, Lcp3;->n:Ljava/lang/String;
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v3, La98;->d:La98;
+
+    invoke-virtual {v2, v3}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v0, v0, Lcp3;->j:Lqp3;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "onCapabilitiesChanged, current connection is "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", capabilities="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v1, v0, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcp3;
+
+    invoke-virtual {v0, p1, p2}, Lcp3;->p(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onLost(Landroid/net/Network;)V
+    .locals 4
+
+    iget p1, p0, Lbp3;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-static {}, Luyh;->e()Luyh;
+
+    move-result-object p1
+
+    sget-object v0, Ld6a;->a:Ljava/lang/String;
+
+    const-string v1, "Network connection lost"
+
+    invoke-virtual {p1, v0, v1}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lc6a;
+
+    iget-object v0, p1, Lc6a;->f:Landroid/net/ConnectivityManager;
+
+    invoke-static {v0}, Ld6a;->a(Landroid/net/ConnectivityManager;)Lb6a;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lxq3;->q(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcp3;
+
+    iget-object p1, p1, Lcp3;->n:Ljava/lang/String;
+
+    sget-object v0, Lcuh;->b:Lnxa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, La98;->d:La98;
+
+    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "onLost"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lbp3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcp3;
+
+    iget-object v0, p1, Lcp3;->m:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lap3;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x3e
+
+    invoke-static {v0, v1, v2}, Lap3;->a(Lap3;ZI)Lap3;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcp3;->o(Lap3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

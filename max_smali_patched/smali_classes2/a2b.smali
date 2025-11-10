@@ -1,47 +1,45 @@
-.class public abstract synthetic La2b;
+.class public final synthetic La2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Landroidx/appcompat/widget/AppCompatEditText;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroidx/appcompat/widget/AppCompatEditText;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lqw1;->y(I)[I
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, La2b;->$EnumSwitchMapping$0:[I
+    iput-object p1, p0, La2b;->a:Landroidx/appcompat/widget/AppCompatEditText;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x3
+
+    if-ne p2, p1, :cond_0
+
+    iget-object p1, p0, La2b;->a:Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-static {p1}, Ldci;->d(Landroid/view/View;)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

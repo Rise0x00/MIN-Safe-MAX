@@ -2,179 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String;
+# interfaces
+.implements Lo14;
 
 
 # instance fields
-.field public final a:Lvnf;
+.field public final synthetic a:I
 
-.field public final b:Le77;
+.field public final synthetic b:Lo14;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lo14;I)V
+    .locals 0
 
-    sget v0, Lt4g;->a:I
+    iput p2, p0, Lhof;->a:I
 
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lhof;->c:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lhof;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lvnf;Ljava/util/List;)V
-    .locals 2
+    iput-object p1, p0, Lhof;->b:Lo14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p2}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    invoke-static {p2}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget v1, p1, Lvnf;->a:I
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iput-object p1, p0, Lhof;->a:Lvnf;
-
-    invoke-static {p2}, Le77;->j(Ljava/util/Collection;)Le77;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhof;->b:Le77;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lhof;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
 
-    if-eqz p1, :cond_2
+    move-result v0
 
-    const-class v2, Lhof;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
 
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    move-result-object p1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lhof;
+    iget-object v0, p0, Lhof;->b:Lo14;
 
-    iget-object v2, p0, Lhof;->a:Lvnf;
+    invoke-virtual {p1, v0}, Lbolts/Task;->continueWithTask(Lo14;)Lbolts/Task;
 
-    iget-object v3, p1, Lhof;->a:Lvnf;
+    move-result-object p1
 
-    invoke-virtual {v2, v3}, Lvnf;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lhof;->b:Le77;
-
-    iget-object p1, p1, Lhof;->b:Le77;
-
-    invoke-virtual {v2, p1}, Le77;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
-.end method
+    return-object p1
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lhof;->a:Lvnf;
-
-    invoke-virtual {v0}, Lvnf;->hashCode()I
+    :pswitch_0
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
 
     move-result v0
 
-    iget-object v1, p0, Lhof;->b:Le77;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Le77;->hashCode()I
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
 
-    move-result v1
+    move-result-object p1
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
 
-    add-int/2addr v1, v0
+    move-result-object p1
 
-    return v1
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lhof;->b:Lo14;
+
+    invoke-virtual {p1, v0}, Lbolts/Task;->continueWith(Lo14;)Lbolts/Task;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

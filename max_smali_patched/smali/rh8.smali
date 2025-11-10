@@ -1,142 +1,281 @@
-.class public final Lrh8;
-.super Lm3f;
+.class public Lrh8;
+.super Lh4;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrh8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public A0:I
 
-.field public final synthetic Y:Landroid/widget/LinearLayout;
+.field public B0:Ljava/lang/String;
 
-.field public final synthetic Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public C0:F
+
+.field public X:F
+
+.field public Y:Z
+
+.field public Z:Z
+
+.field public a:Lcom/google/android/gms/maps/model/LatLng;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Lwo0;
+
+.field public o:F
+
+.field public s0:Z
+
+.field public t0:F
+
+.field public u0:F
+
+.field public v0:F
+
+.field public w0:F
+
+.field public x0:F
+
+.field public y0:I
+
+.field public z0:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Landroid/widget/LinearLayout;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lrh8;->Y:Landroid/widget/LinearLayout;
+    new-instance v0, La1i;
 
-    iput-object p3, p0, Lrh8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    const/16 v1, 0x15
 
-    const/4 p2, 0x2
+    invoke-direct {v0, v1}, La1i;-><init>(I)V
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lrh8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    iput v0, p0, Lrh8;->o:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, p0, Lrh8;->X:F
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lrh8;->Z:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lrh8;->s0:Z
+
+    const/4 v3, 0x0
+
+    iput v3, p0, Lrh8;->t0:F
+
+    iput v0, p0, Lrh8;->u0:F
+
+    iput v3, p0, Lrh8;->v0:F
+
+    iput v1, p0, Lrh8;->w0:F
+
+    iput v2, p0, Lrh8;->y0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lrh8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrh8;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lrh8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    new-instance v0, Lrh8;
+    const/16 v0, 0x4f45
 
-    iget-object v1, p0, Lrh8;->Y:Landroid/widget/LinearLayout;
+    invoke-static {p1, v0}, Luxi;->k(Landroid/os/Parcel;I)I
 
-    iget-object v2, p0, Lrh8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    move-result v0
 
-    invoke-direct {v0, p2, v1, v2}, Lrh8;-><init>(Lkotlin/coroutines/Continuation;Landroid/widget/LinearLayout;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    const/4 v1, 0x2
 
-    iput-object p1, v0, Lrh8;->X:Ljava/lang/Object;
+    iget-object v2, p0, Lrh8;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    return-object v0
-.end method
+    invoke-static {p1, v1, v2, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const/4 p2, 0x3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v1, p0, Lrh8;->b:Ljava/lang/String;
 
-    iget-object p1, p0, Lrh8;->X:Ljava/lang/Object;
+    invoke-static {p1, p2, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object p2, p0, Lrh8;->c:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const/4 v1, 0x4
 
-    move-result p1
+    invoke-static {p1, v1, p2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    if-eqz p1, :cond_0
+    iget-object p2, p0, Lrh8;->d:Lwo0;
 
-    const/4 p1, 0x0
+    if-nez p2, :cond_0
+
+    const/4 p2, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/16 p1, 0x8
+    iget-object p2, p2, Lwo0;->a:Lb77;
+
+    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object p2
 
     :goto_0
-    iget-object v0, p0, Lrh8;->Y:Landroid/widget/LinearLayout;
+    const/4 v2, 0x5
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {p1, v2, p2}, Luxi;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->h1:[Ltm7;
+    iget p2, p0, Lrh8;->o:F
 
-    iget-object p1, p0, Lrh8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    const/4 v2, 0x6
 
-    iget-object v1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0:Lan0;
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
-    sget-object v2, Lone/me/chatscreen/mediabar/MediaBarWidget;->h1:[Ltm7;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    const/16 v3, 0xc
+    iget p2, p0, Lrh8;->X:F
 
-    aget-object v3, v2, v3
+    const/4 v2, 0x7
 
-    invoke-virtual {v1}, Lan0;->getValue()Ljava/lang/Object;
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+    iget-boolean p2, p0, Lrh8;->Y:Z
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    const/16 v2, 0x8
 
-    move-result v0
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->L0:Lan0;
+    iget-boolean p2, p0, Lrh8;->Z:Z
 
-    const/16 v0, 0xb
+    const/16 v2, 0x9
 
-    aget-object v0, v2, v0
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
-    invoke-virtual {p1}, Lan0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p1
+    iget-boolean p2, p0, Lrh8;->s0:Z
 
-    check-cast p1, Lcqd;
+    const/16 v2, 0xa
 
-    goto :goto_1
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :goto_1
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
+    iget p2, p0, Lrh8;->t0:F
 
-    sget-object p1, Loyf;->a:Loyf;
+    const/16 v2, 0xb
 
-    return-object p1
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lrh8;->u0:F
+
+    const/16 v2, 0xc
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lrh8;->v0:F
+
+    const/16 v2, 0xd
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lrh8;->w0:F
+
+    const/16 v2, 0xe
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lrh8;->x0:F
+
+    const/16 v2, 0xf
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lrh8;->y0:I
+
+    const/16 v2, 0x11
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lrh8;->z0:Landroid/view/View;
+
+    new-instance v2, Lcia;
+
+    invoke-direct {v2, p2}, Lcia;-><init>(Ljava/lang/Object;)V
+
+    const/16 p2, 0x12
+
+    invoke-static {p1, p2, v2}, Luxi;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget p2, p0, Lrh8;->A0:I
+
+    const/16 v2, 0x13
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/16 p2, 0x14
+
+    iget-object v2, p0, Lrh8;->B0:Ljava/lang/String;
+
+    invoke-static {p1, p2, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    iget p2, p0, Lrh8;->C0:F
+
+    const/16 v2, 0x15
+
+    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static {p1, v0}, Luxi;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

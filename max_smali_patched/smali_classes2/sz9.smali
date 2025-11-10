@@ -1,32 +1,26 @@
 .class public final Lsz9;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lvz9;
+.field public final synthetic X:Lc0a;
 
-.field public final synthetic Y:Landroid/graphics/Rect;
-
-.field public final synthetic Z:Landroid/graphics/RectF;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lvz9;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lc0a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lsz9;->X:Lvz9;
-
-    iput-object p2, p0, Lsz9;->Y:Landroid/graphics/Rect;
-
-    iput-object p3, p0, Lsz9;->Z:Landroid/graphics/RectF;
+    iput-object p1, p0, Lsz9;->X:Lc0a;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,85 +30,89 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lg54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lsz9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lsz9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lsz9;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lsz9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
     new-instance p1, Lsz9;
 
-    iget-object v0, p0, Lsz9;->Y:Landroid/graphics/Rect;
+    iget-object v0, p0, Lsz9;->X:Lc0a;
 
-    iget-object v1, p0, Lsz9;->Z:Landroid/graphics/RectF;
-
-    iget-object v2, p0, Lsz9;->X:Lvz9;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lsz9;-><init>(Lvz9;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lsz9;-><init>(Lc0a;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 4
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Lsz9;->o:I
 
-    iget-object p1, p0, Lsz9;->X:Lvz9;
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, Lvz9;->a()Lpr5;
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    sget-wide v2, Lc0a;->T0:J
+
+    iput v1, p0, Lsz9;->o:I
+
+    invoke-static {v2, v3, p0}, Lxxi;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p0, Lsz9;->X:Lvz9;
+    sget-object v0, Lh54;->a:Lh54;
 
-    iget-object v0, v0, Lvz9;->m:Ljava/lang/String;
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {p1, v0}, Lpr5;->r(Ljava/lang/String;)Ljava/io/File;
+    return-object v0
 
-    move-result-object p1
+    :cond_2
+    :goto_0
+    sget p1, Lc0a;->U0:I
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    iget-object p1, p0, Lsz9;->X:Lc0a;
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lsz9;->X:Lvz9;
+    invoke-virtual {p1, v0}, Lc0a;->i(Z)V
 
-    iget-object v5, p0, Lsz9;->Y:Landroid/graphics/Rect;
-
-    iget-object v3, p0, Lsz9;->Z:Landroid/graphics/RectF;
-
-    iget-object p1, v2, Lvz9;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v0, Lrz9;
-
-    const/4 v6, 0x0
-
-    const/4 v4, 0x1
-
-    invoke-direct/range {v0 .. v6}, Lrz9;-><init>(Ljava/lang/String;Lvz9;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2, v0, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

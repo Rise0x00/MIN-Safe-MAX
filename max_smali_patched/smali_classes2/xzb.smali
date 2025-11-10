@@ -1,69 +1,39 @@
 .class public final Lxzb;
-.super Ll0c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final a:J
 
-    const/4 v0, 0x1
+.field public final b:J
 
-    if-ne p0, p1, :cond_0
+.field public final c:J
 
-    return v0
+.field public final d:J
 
-    :cond_0
-    instance-of v1, p1, Lxzb;
+.field public final e:J
 
-    if-nez v1, :cond_1
+.field public final f:J
 
-    const/4 p1, 0x0
 
-    return p1
+# direct methods
+.method public constructor <init>(JJJJJJ)V
+    .locals 0
 
-    :cond_1
-    check-cast p1, Lxzb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide p1, p0, Lxzb;->a:J
 
-    return v0
-.end method
+    iput-wide p3, p0, Lxzb;->b:J
 
-.method public final getItemId()J
-    .locals 2
+    iput-wide p5, p0, Lxzb;->c:J
 
-    const/16 v0, 0x100
+    iput-wide p7, p0, Lxzb;->d:J
 
-    int-to-long v0, v0
+    iput-wide p9, p0, Lxzb;->e:J
 
-    return-wide v0
-.end method
+    iput-wide p11, p0, Lxzb;->f:J
 
-.method public final hashCode()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0x100
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Attaches(count=-1)"
-
-    return-object v0
+    return-void
 .end method

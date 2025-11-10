@@ -1,158 +1,193 @@
-.class public final Lxbh;
+.class public final synthetic Lxbh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lln6;
 
-# instance fields
-.field public final a:Ls76;
 
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final a:Lxbh;
+
+.field private static final descriptor:Lo3e;
 
 
 # direct methods
-.method public constructor <init>(Ls76;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxbh;
 
-    iput-object p1, p0, Lxbh;->a:Ls76;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxbh;->b:Ljava/lang/String;
+    sput-object v0, Lxbh;->a:Lxbh;
+
+    new-instance v1, Lfvb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.share.WebAppMaxShareResponse"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "status"
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lxbh;->descriptor:Lo3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Le9;)Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    sget-object v0, Lxbh;->descriptor:Lo3e;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
 
-    return v0
+    move-result-object p1
+
+    sget-object v1, Lzbh;->c:[Lfs7;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move v6, v2
+
+    move v7, v3
+
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v6, :cond_3
+
+    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
+
+    move-result v8
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_2
+
+    if-eqz v8, :cond_1
+
+    if-ne v8, v2, :cond_0
+
+    aget-object v8, v1, v2
+
+    invoke-virtual {p1, v0, v2, v8, v5}, Le9;->t(Lo3e;ILfs7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljhh;
+
+    or-int/lit8 v7, v7, 0x2
+
+    goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    if-eqz p1, :cond_5
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
-    const-class v2, Lxbh;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    check-cast p1, Lxbh;
+    invoke-virtual {p1, v0, v3}, Le9;->w(Lo3e;I)Ljava/lang/String;
 
-    iget-object v2, p1, Lxbh;->b:Ljava/lang/String;
+    move-result-object v4
 
-    iget-object p1, p1, Lxbh;->a:Ls76;
-
-    iget-object v3, p0, Lxbh;->a:Ls76;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3, p1}, Ls76;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    or-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
     :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p1, p0, Lxbh;->b:Ljava/lang/String;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lxbh;->a:Ls76;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ls76;->hashCode()I
-
-    move-result v1
+    move v6, v3
 
     goto :goto_0
 
-    :cond_0
-    move v1, v0
+    :cond_3
+    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
 
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    new-instance p1, Lzbh;
 
-    iget-object v2, p0, Lxbh;->b:Ljava/lang/String;
+    invoke-direct {p1, v7, v4, v5}, Lzbh;-><init>(ILjava/lang/String;Ljhh;)V
 
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final b(Lf24;Ljava/lang/Object;)V
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Lzbh;
 
-    const-string v1, "YtFile{format="
+    sget-object v0, Lxbh;->descriptor:Lo3e;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
 
-    iget-object v1, p0, Lxbh;->a:Ls76;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v1, Lzbh;->c:[Lfs7;
 
-    const-string v1, ", url=\'"
+    iget-object v2, p2, Lzbh;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lxbh;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0, v3, v2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
 
-    const-string v2, "\'}"
+    const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    aget-object v1, v1, v2
 
-    move-result-object v0
+    iget-object p2, p2, Lzbh;->b:Ljhh;
+
+    invoke-virtual {p1, v0, v2, v1, p2}, Lf24;->i(Lo3e;ILfs7;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lf24;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lfs7;
+    .locals 5
+
+    sget-object v0, Lzbh;->c:[Lfs7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lfs7;
+
+    sget-object v3, Ltaf;->a:Ltaf;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    aput-object v0, v2, v1
+
+    return-object v2
+.end method
+
+.method public final d()Lo3e;
+    .locals 1
+
+    sget-object v0, Lxbh;->descriptor:Lo3e;
 
     return-object v0
 .end method

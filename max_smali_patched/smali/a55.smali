@@ -1,150 +1,214 @@
-.class public final La55;
-.super Lj45;
+.class public abstract La55;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:Ljava/lang/ref/WeakReference;
-
-
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lb55;)V
-    .locals 1
+.method public static a(Landroid/media/EncoderProfiles;)Lba0;
+    .locals 17
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getDefaultDurationSeconds()I
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    move-result v0
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getRecommendedFileFormat()I
 
-    iput-object v0, p0, La55;->a:Ljava/lang/ref/WeakReference;
+    move-result v1
 
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, La55;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final i()V
-    .locals 5
-
-    iget-object v0, p0, La55;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iget-object v1, p0, La55;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/text/InputFilter;
-
-    if-eqz v1, :cond_6
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getAudioProfiles()Ljava/util/List;
 
     move-result-object v2
 
-    if-nez v2, :cond_1
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/media/EncoderProfiles$AudioProfile;
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getCodec()I
+
+    move-result v6
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getMediaType()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getBitrate()I
+
+    move-result v7
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getSampleRate()I
+
+    move-result v8
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getChannels()I
+
+    move-result v9
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getProfile()I
+
+    move-result v10
+
+    new-instance v5, Laa0;
+
+    invoke-direct/range {v5 .. v11}, Laa0;-><init>(IIIIILjava/lang/String;)V
+
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getVideoProfiles()Ljava/util/List;
+
+    move-result-object v2
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/media/EncoderProfiles$VideoProfile;
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getCodec()I
+
+    move-result v7
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getMediaType()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitrate()I
+
+    move-result v9
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getFrameRate()I
+
+    move-result v10
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getWidth()I
+
+    move-result v11
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHeight()I
+
+    move-result v12
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getProfile()I
+
+    move-result v13
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitDepth()I
+
+    move-result v14
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getChromaSubsampling()I
+
+    move-result v15
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHdrFormat()I
+
+    move-result v16
+
+    new-instance v6, Lca0;
+
+    invoke-direct/range {v6 .. v16}, Lca0;-><init>(ILjava/lang/String;IIIIIIII)V
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x0
+    invoke-static {v0, v1, v3, v4}, Lba0;->e(IILjava/util/List;Ljava/util/List;)Lba0;
 
-    :goto_0
-    array-length v4, v2
+    move-result-object v0
 
-    if-ge v3, v4, :cond_6
+    return-object v0
+.end method
 
-    aget-object v4, v2, v3
+.method public static b(Landroid/content/Context;Landroid/content/pm/PackageManager;)Landroid/content/pm/PackageInfo;
+    .locals 2
 
-    if-ne v4, v1, :cond_5
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+    move-result-object p0
 
-    move-result v1
+    const-wide/16 v0, 0x0
 
-    if-eqz v1, :cond_6
+    invoke-static {v0, v1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-virtual {p1, p0, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
 
-    invoke-static {}, Ll45;->a()Ll45;
+    move-result-object p0
 
-    move-result-object v2
+    return-object p0
+.end method
 
-    invoke-virtual {v2, v1}, Ll45;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method public static c(Lwz1;)Ly45;
+    .locals 1
 
-    move-result-object v2
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_RECOMMENDED_TEN_BIT_DYNAMIC_RANGE_PROFILE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    if-ne v1, v2, :cond_2
+    invoke-virtual {p0, v0}, Lwz1;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_2
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+    check-cast p0, Ljava/lang/Long;
 
-    move-result v1
+    if-eqz p0, :cond_0
 
-    invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    sget-object v0, Lz45;->a:Ljava/util/HashMap;
 
-    move-result v3
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result-object p0
 
-    instance-of v0, v2, Landroid/text/Spannable;
+    check-cast p0, Ly45;
 
-    if-eqz v0, :cond_6
+    return-object p0
 
-    check-cast v2, Landroid/text/Spannable;
+    :cond_0
+    const/4 p0, 0x0
 
-    if-ltz v1, :cond_3
+    return-object p0
+.end method
 
-    if-ltz v3, :cond_3
+.method public static d(Landroid/content/pm/ShortcutInfo$Builder;)V
+    .locals 1
 
-    invoke-static {v2, v1, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p0, v0}, Landroid/content/pm/ShortcutInfo$Builder;->setExcludedFromSurfaces(I)Landroid/content/pm/ShortcutInfo$Builder;
 
-    :cond_3
-    if-ltz v1, :cond_4
-
-    invoke-static {v2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_4
-    if-ltz v3, :cond_6
-
-    invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-
-    return-void
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    :goto_1
     return-void
 .end method

@@ -1,9 +1,9 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$2;
-.super Lag6;
+.super Ltj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Loi6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lag6;",
-        "Lve6;"
+        "Ltj6;",
+        "Loi6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lzf6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lsj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$2;->invoke()V
 
-    sget-object v0, Loyf;->a:Loyf;
+    sget-object v0, Lybg;->a:Lybg;
 
     return-object v0
 .end method
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lns1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lkt1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;
 

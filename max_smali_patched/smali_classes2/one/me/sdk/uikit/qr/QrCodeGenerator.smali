@@ -40,7 +40,7 @@
 # static fields
 .field public static final a:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-.field public static final b:Lxm9;
+.field public static final b:Lk9a;
 
 .field public static final c:Z
 
@@ -48,12 +48,12 @@
 
 .field public static e:Landroid/graphics/Path;
 
-.field public static f:Ln4b;
+.field public static f:Lvcb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     new-instance v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
@@ -61,37 +61,68 @@
 
     sput-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->a:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-    sget-object v0, Lu7c;->a:Lxm9;
+    sget-object v0, Lggc;->a:Lk9a;
 
-    sput-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lxm9;
+    sput-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lk9a;
 
     :try_start_0
     const-string v0, "qrcode"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    sget-object v0, Lybg;->a:Lybg;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x1
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    sget-object v1, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lxm9;
+    new-instance v1, Lfed;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v0}, Lfed;-><init>(Ljava/lang/Throwable;)V
 
-    const-string v1, "QrCodeGenerator"
-
-    const-string v2, "Failed to load native library qrcode"
-
-    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 v0, 0x0
+    move-object v0, v1
 
     :goto_0
+    invoke-static {v0}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    instance-of v2, v1, Ljava/lang/UnsatisfiedLinkError;
+
+    const-string v3, "QrCodeGenerator"
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lk9a;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "Failed to load native library qrcode (UnsatisfiedLinkError)"
+
+    invoke-static {v3, v2, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_0
+    sget-object v2, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lk9a;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "Unexpected error while loading qrcode"
+
+    invoke-static {v3, v2, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    instance-of v0, v0, Lfed;
+
+    xor-int/lit8 v0, v0, 0x1
+
     sput-boolean v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->c:Z
 
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
@@ -195,7 +226,167 @@
     throw p1
 .end method
 
-.method public static b(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;Landroid/content/Context;IILandroid/text/Layout;IIIIIII)V
+.method public static b(Lone/me/sdk/uikit/qr/QrCodeGenerator;Ljava/lang/String;ILw5b;)Lvcb;
+    .locals 10
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-lez p2, :cond_4
+
+    add-int/lit8 p2, p2, 0x2
+
+    mul-int/lit8 v3, p2, 0x2
+
+    const/4 p0, 0x4
+
+    new-array v8, p0, [I
+
+    const-string v0, ""
+
+    invoke-static {p1, v0, v3, v8}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->nativeGenerateQR(Ljava/lang/String;Ljava/lang/String;I[I)[I
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {p3}, Lw5b;->a()Lqv2;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lqv2;->v()Lyd3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lyd3;->b:Lpc3;
+
+    iget-object p1, p1, Lpc3;->d:Lyc3;
+
+    iget p1, p1, Lyc3;->b:I
+
+    array-length p3, v1
+
+    const/4 v9, 0x0
+
+    move v0, v9
+
+    :goto_0
+    if-ge v0, p3, :cond_1
+
+    aget v2, v1, v0
+
+    const/4 v4, -0x1
+
+    if-ne v2, v4, :cond_0
+
+    move v2, v9
+
+    goto :goto_1
+
+    :cond_0
+    move v2, p1
+
+    :goto_1
+    aput v2, v1, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v3, v3, p1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    move v6, v3
+
+    move v7, v3
+
+    invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
+
+    const/4 p1, 0x1
+
+    invoke-static {v0, p2, p2, p1}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+
+    int-to-float p2, p2
+
+    int-to-float p3, v3
+
+    div-float/2addr p2, p3
+
+    new-array p3, p0, [I
+
+    :goto_2
+    if-ge v9, p0, :cond_2
+
+    aget v0, v8, v9
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p2
+
+    invoke-static {v0}, Lkhi;->c(F)I
+
+    move-result v0
+
+    aput v0, p3, v9
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    new-instance p0, Lvcb;
+
+    invoke-direct {p0, p1, p3}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p0
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "nativeGenerateQR returned null for size="
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Failed requirement."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static c(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;Landroid/content/Context;IILandroid/text/Layout;IIIIIII)V
     .locals 5
 
     sget-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->e:Landroid/graphics/Path;
@@ -209,7 +400,7 @@
     :cond_0
     new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    sget v2, Lscc;->avatar_shape:I
+    sget v2, Lbmc;->avatar_shape:I
 
     invoke-direct {v0, p2, v2}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
@@ -377,7 +568,7 @@
     throw p1
 .end method
 
-.method public static c(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;[IIIIILuxa;)V
+.method public static d(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;[IIIIILw5b;)V
     .locals 12
 
     const/4 v0, 0x2
@@ -450,21 +641,21 @@
 
     add-int/2addr v5, v7
 
-    invoke-interface/range {p8 .. p8}, Luxa;->a()Liu2;
+    invoke-interface/range {p8 .. p8}, Lw5b;->a()Lqv2;
 
     move-result-object v0
 
-    invoke-interface {v0}, Liu2;->B()Lbc3;
+    invoke-interface {v0}, Lqv2;->v()Lyd3;
 
     move-result-object v0
 
-    iget-object v0, v0, Lbc3;->b:Lsa3;
+    iget-object v0, v0, Lyd3;->b:Lpc3;
 
-    iget-object v0, v0, Lsa3;->d:Lbb3;
+    iget-object v0, v0, Lpc3;->d:Lyc3;
 
-    iget v0, v0, Lbb3;->b:I
+    iget v0, v0, Lyc3;->b:I
 
-    invoke-static {p1, v0}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {p1, v6, v7, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
@@ -484,21 +675,21 @@
 
     invoke-virtual {v5, p1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    invoke-interface/range {p8 .. p8}, Luxa;->a()Liu2;
+    invoke-interface/range {p8 .. p8}, Lw5b;->a()Lqv2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Liu2;->B()Lbc3;
+    invoke-interface {p1}, Lqv2;->v()Lyd3;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbc3;->b:Lsa3;
+    iget-object p1, p1, Lyd3;->b:Lpc3;
 
-    iget-object p1, p1, Lsa3;->d:Lbb3;
+    iget-object p1, p1, Lpc3;->d:Lyc3;
 
-    iget v6, p1, Lbb3;->c:I
+    iget v6, p1, Lyc3;->c:I
 
-    iget v7, p1, Lbb3;->d:I
+    iget v7, p1, Lyc3;->d:I
 
     const v10, 0x4256cccd    # 53.7f
 
@@ -512,9 +703,9 @@
 
     invoke-static/range {v3 .. v11}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->a(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;Landroid/graphics/Paint;IIFFFF)V
 
-    iget v6, p1, Lbb3;->e:I
+    iget v6, p1, Lyc3;->e:I
 
-    iget v7, p1, Lbb3;->f:I
+    iget v7, p1, Lyc3;->f:I
 
     const v10, 0x42f2f0a4    # 121.47f
 
@@ -537,7 +728,7 @@
     return-void
 .end method
 
-.method public static d(Landroid/graphics/Canvas;Landroid/text/Layout;Landroid/text/Layout;Landroid/graphics/Bitmap;IIIIII)V
+.method public static e(Landroid/graphics/Canvas;Landroid/text/Layout;Landroid/text/Layout;Landroid/graphics/Bitmap;IIIIII)V
     .locals 1
 
     sub-int/2addr p6, p8
@@ -677,101 +868,119 @@
 
 
 # virtual methods
-.method public final e(Landroid/content/Context;Lpr5;Lr8f;Lz7c;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lnz3;)Ljava/lang/Object;
+.method public final f(Landroid/content/Context;ILuv5;Ltlf;Llgc;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lp14;)Ljava/lang/Object;
     .locals 42
 
     move-object/from16 v1, p0
 
     move-object/from16 v4, p1
 
-    move-object/from16 v15, p5
+    move/from16 v6, p2
 
-    move-object/from16 v0, p8
+    move-object/from16 v15, p6
 
-    move-object/from16 v2, p11
+    move-object/from16 v0, p9
+
+    move-object/from16 v2, p12
 
     const-string v3, "QrCodeGenerator"
 
-    instance-of v5, v2, Lv7c;
+    const-string v14, "Cache path: "
 
-    if-eqz v5, :cond_0
+    const-string v5, "QR generation failed for type: "
 
-    move-object v5, v2
+    instance-of v7, v2, Lhgc;
 
-    check-cast v5, Lv7c;
+    if-eqz v7, :cond_0
 
-    iget v6, v5, Lv7c;->A0:I
+    move-object v7, v2
 
-    const/high16 v7, -0x80000000
+    check-cast v7, Lhgc;
 
-    and-int v8, v6, v7
+    iget v8, v7, Lhgc;->v0:I
 
-    if-eqz v8, :cond_0
+    const/high16 v9, -0x80000000
 
-    sub-int/2addr v6, v7
+    and-int v10, v8, v9
 
-    iput v6, v5, Lv7c;->A0:I
+    if-eqz v10, :cond_0
+
+    sub-int/2addr v8, v9
+
+    iput v8, v7, Lhgc;->v0:I
 
     :goto_0
-    move-object v2, v5
+    move-object v2, v7
 
     goto :goto_1
 
     :cond_0
-    new-instance v5, Lv7c;
+    new-instance v7, Lhgc;
 
-    invoke-direct {v5, v1, v2}, Lv7c;-><init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Lnz3;)V
+    invoke-direct {v7, v1, v2}, Lhgc;-><init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Lp14;)V
 
     goto :goto_0
 
     :goto_1
-    iget-object v5, v2, Lv7c;->y0:Ljava/lang/Object;
+    iget-object v7, v2, Lhgc;->t0:Ljava/lang/Object;
 
-    iget v6, v2, Lv7c;->A0:I
+    iget v8, v2, Lhgc;->v0:I
 
-    const/4 v7, 0x1
+    const/4 v9, 0x1
 
-    if-eqz v6, :cond_2
+    if-eqz v8, :cond_2
 
-    if-ne v6, v7, :cond_1
+    if-ne v8, v9, :cond_1
 
-    iget-object v0, v2, Lv7c;->x0:Landroid/graphics/Bitmap;
+    iget-object v0, v2, Lhgc;->s0:Landroid/graphics/Bitmap;
 
-    iget-object v4, v2, Lv7c;->w0:Landroid/graphics/Bitmap;
+    iget-object v4, v2, Lhgc;->Z:Landroid/graphics/Bitmap;
 
-    iget-object v6, v2, Lv7c;->Z:Ljava/lang/String;
+    iget-object v6, v2, Lhgc;->Y:Ljava/lang/String;
 
-    iget-object v7, v2, Lv7c;->Y:Lz7c;
+    iget-object v8, v2, Lhgc;->X:Llgc;
 
-    iget-object v9, v2, Lv7c;->X:Lpr5;
+    iget-object v9, v2, Lhgc;->o:Luv5;
 
-    iget-object v2, v2, Lv7c;->o:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    iget-object v2, v2, Lhgc;->d:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
     :try_start_0
-    invoke-static {v5}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {v7}, Lgxi;->b(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object/from16 v40, v3
+    move-object/from16 v38, v3
 
-    move-object v3, v5
+    move-object v10, v4
+
+    move-object/from16 v40, v5
+
+    move-object v3, v8
 
     move-object v5, v9
 
-    goto/16 :goto_9
+    move-object/from16 v39, v14
+
+    goto/16 :goto_7
 
     :catchall_0
     move-exception v0
 
-    move-object/from16 v40, v3
+    move-object/from16 v38, v3
+
+    move-object v10, v4
+
+    move-object/from16 v40, v5
 
     move-object v15, v6
 
-    move-object v3, v7
+    move-object v3, v8
 
     move-object v5, v9
 
-    goto/16 :goto_e
+    move-object/from16 v39, v14
+
+    goto/16 :goto_d
 
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -783,92 +992,65 @@
     throw v0
 
     :cond_2
-    invoke-static {v5}, Lps;->L(Ljava/lang/Object;)V
-
-    if-eqz p6, :cond_3
+    invoke-static {v7}, Lgxi;->b(Ljava/lang/Object;)V
 
     if-eqz p7, :cond_3
+
+    if-eqz p8, :cond_3
 
     if-nez v0, :cond_4
 
     :cond_3
-    :goto_2
-    const/4 v7, 0x0
+    const/4 v3, 0x0
 
-    goto/16 :goto_11
+    goto/16 :goto_10
 
     :cond_4
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/16 v7, 0x84
 
-    move-result-object v5
+    int-to-float v7, v7
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v8
 
-    iget v6, v5, Landroid/util/DisplayMetrics;->widthPixels:I
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/16 v5, 0x84
+    move-result-object v8
 
-    int-to-float v5, v5
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    mul-float/2addr v7, v8
 
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v9
-
-    invoke-static {v5}, Lv63;->r0(F)I
+    invoke-static {v7}, Lkhi;->c(F)I
 
     move-result v12
 
-    const/16 v5, 0x14
+    const/16 v7, 0x14
 
-    int-to-float v5, v5
+    int-to-float v7, v7
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v9
+    move-result-object v8
 
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v9, v5
+    mul-float/2addr v8, v7
 
-    invoke-static {v9}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
-    move-result v21
+    move-result v25
 
-    const/16 v9, 0x8
+    const/16 v8, 0x8
 
-    int-to-float v9, v9
+    int-to-float v8, v8
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v9
-
-    invoke-static {v10}, Lv63;->r0(F)I
-
-    move-result v10
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -878,33 +1060,13 @@
 
     iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v9, v11
+    mul-float/2addr v11, v8
 
-    invoke-static {v9}, Lv63;->r0(F)I
-
-    move-result v9
-
-    const/16 v11, 0x10
-
-    int-to-float v11, v11
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v11, v13
-
-    invoke-static {v11}, Lv63;->r0(F)I
+    invoke-static {v11}, Lkhi;->c(F)I
 
     move-result v11
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -914,464 +1076,328 @@
 
     iget v13, v13, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v5, v13
+    mul-float/2addr v8, v13
 
-    invoke-static {v5}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
-    move-result v5
+    move-result v26
 
-    const/16 v13, 0x34
+    const/16 v8, 0x10
 
-    int-to-float v13, v13
+    int-to-float v8, v8
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    move-result-object v14
+    move-result-object v13
 
-    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v14
+    move-result-object v13
 
-    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v13, v14
+    mul-float/2addr v8, v13
 
-    invoke-static {v13}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
-    move-result v13
+    move-result v20
 
-    const/16 v14, 0xc0
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    int-to-float v14, v14
+    move-result-object v8
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v16
-
-    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v8
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v14, v8
+    mul-float/2addr v7, v8
 
-    invoke-static {v14}, Lv63;->r0(F)I
-
-    move-result v8
-
-    sget-object v14, Lloa;->d:Lloa;
-
-    sget-object v7, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v7, v4}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lbx4;->i()Z
+    invoke-static {v7}, Lkhi;->c(F)I
 
     move-result v7
 
-    invoke-virtual {v14, v7}, Lloa;->a(Z)Luxa;
+    const/16 v8, 0x34
 
-    move-result-object v7
+    int-to-float v8, v8
 
-    const/4 v14, 0x4
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    new-array v14, v14, [I
+    move-result-object v13
 
-    move-object/from16 v30, v2
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-string v2, ""
+    move-result-object v13
 
-    invoke-static {v15, v2, v8, v14}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->nativeGenerateQR(Ljava/lang/String;Ljava/lang/String;I[I)[I
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
 
-    move-result-object v2
+    mul-float/2addr v8, v13
 
-    if-nez v2, :cond_5
+    invoke-static {v8}, Lkhi;->c(F)I
 
-    goto/16 :goto_2
+    move-result v27
 
-    :cond_5
-    invoke-interface {v7}, Luxa;->a()Liu2;
+    const/16 v8, 0xc0
 
-    move-result-object v16
+    int-to-float v8, v8
 
-    move-object/from16 v31, v3
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    invoke-interface/range {v16 .. v16}, Liu2;->B()Lbc3;
+    move-result-object v13
 
-    move-result-object v3
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v3, v3, Lbc3;->b:Lsa3;
+    move-result-object v13
 
-    iget-object v3, v3, Lsa3;->d:Lbb3;
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
 
-    iget v3, v3, Lbb3;->b:I
+    mul-float/2addr v8, v13
 
-    move/from16 v16, v3
+    invoke-static {v8}, Lkhi;->c(F)I
 
-    array-length v3, v2
+    move-result v8
 
-    move-object/from16 v23, v2
+    sget-object v13, Lewa;->d:Lewa;
 
-    const/4 v2, 0x0
+    sget-object v10, Ly53;->s0:Lvh4;
 
-    :goto_3
-    if-ge v2, v3, :cond_7
-
-    move/from16 v18, v2
-
-    aget v2, v23, v18
-
-    move/from16 v19, v3
-
-    const/4 v3, -0x1
-
-    if-ne v2, v3, :cond_6
-
-    const/4 v2, 0x0
-
-    goto :goto_4
-
-    :cond_6
-    move/from16 v2, v16
-
-    :goto_4
-    aput v2, v23, v18
-
-    add-int/lit8 v2, v18, 0x1
-
-    move/from16 v3, v19
-
-    goto :goto_3
-
-    :cond_7
-    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v8, v8, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v22
-
-    const/16 v26, 0x0
-
-    const/16 v27, 0x0
-
-    const/16 v24, 0x0
-
-    move/from16 v28, v8
-
-    move/from16 v29, v8
-
-    move/from16 v25, v8
-
-    :try_start_1
-    invoke-virtual/range {v22 .. v29}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
-
-    mul-int/lit8 v3, v21, 0x2
-
-    add-int v3, v3, v25
-
-    const/4 v8, 0x2
-
-    mul-int/2addr v10, v8
-
-    sub-int v35, v3, v10
-
-    sget-object v10, La8c;->a:La8c;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_9
-
-    :try_start_2
-    invoke-virtual {v10}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v10, v4}, Lvh4;->h(Landroid/content/Context;)Ly53;
 
     move-result-object v10
 
-    const-class v8, Lyo7;
+    invoke-virtual {v10}, Ly53;->i()Z
 
-    invoke-virtual {v10, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
+    move-result v10
+
+    invoke-virtual {v13, v10}, Lewa;->a(Z)Lw5b;
+
+    move-result-object v13
+
+    const/4 v10, 0x4
+
+    new-array v9, v10, [I
+
+    :try_start_1
+    invoke-static {v1, v15, v8, v13}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b(Lone/me/sdk/uikit/qr/QrCodeGenerator;Ljava/lang/String;ILw5b;)Lvcb;
 
     move-result-object v8
+
+    iget-object v10, v8, Lvcb;->a:Ljava/lang/Object;
+
+    move-object/from16 v19, v10
+
+    check-cast v19, Landroid/graphics/Bitmap;
+
+    iget-object v8, v8, Lvcb;->b:Ljava/lang/Object;
+
+    check-cast v8, [I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_10
+
+    const/4 v10, 0x0
+
+    move-object/from16 v28, v2
+
+    const/4 v2, 0x4
+
+    :try_start_2
+    invoke-static {v8, v10, v9, v10, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual/range {v19 .. v19}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    mul-int/lit8 v8, v25, 0x2
+
+    add-int/2addr v8, v2
+
+    const/4 v2, 0x2
+
+    mul-int/2addr v11, v2
+
+    sub-int v32, v8, v11
+
+    sget-object v11, Lmgc;->a:Lmgc;
+
+    invoke-virtual {v11}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v11
+
+    const-class v10, Lou7;
+
+    invoke-virtual {v11, v10}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object/from16 v29, v10
+
+    check-cast v29, Lou7;
+
+    new-instance v10, Landroid/text/TextPaint;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v10, v11}, Landroid/text/TextPaint;-><init>(I)V
+
+    sget-object v11, Lcbg;->i:Lorf;
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_d
+    .catchall {:try_start_2 .. :try_end_2} :catchall_f
+
+    const/16 v2, 0xc
+
+    move-object/from16 v37, v3
+
+    const/4 v3, 0x0
 
     :try_start_3
-    invoke-virtual {v8}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-static {v11, v4, v10, v3, v2}, Lorf;->c(Lorf;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;I)V
 
-    move-result-object v8
+    invoke-interface {v13}, Lw5b;->a()Lqv2;
 
-    move-object/from16 v32, v8
+    move-result-object v3
 
-    check-cast v32, Lyo7;
+    invoke-interface {v3}, Lqv2;->o()Lot0;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lot0;->d:Lrt0;
+
+    iget v3, v3, Lrt0;->e:I
+
+    invoke-virtual {v10, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget-object v3, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    const/16 v35, 0x0
+
+    const/16 v36, 0x60
+
+    const/16 v33, 0x2
+
+    const/16 v34, 0x0
+
+    move-object/from16 v30, p10
+
+    move-object/from16 v31, v10
+
+    invoke-static/range {v29 .. v36}, Lou7;->a(Lou7;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;I)Landroid/text/Layout;
+
+    move-result-object v3
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_9
+    .catchall {:try_start_3 .. :try_end_3} :catchall_e
+
+    if-eqz p11, :cond_5
 
     :try_start_4
-    new-instance v8, Landroid/text/TextPaint;
+    new-instance v10, Landroid/text/TextPaint;
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    invoke-direct {v8, v10}, Landroid/text/TextPaint;-><init>(I)V
+    invoke-direct {v10, v11}, Landroid/text/TextPaint;-><init>(I)V
 
-    sget-object v10, Lrxf;->i:Lpef;
-
-    move/from16 v18, v5
-
-    const/16 v5, 0xc
-
-    move-object/from16 v24, v7
-
-    const/4 v7, 0x0
-
-    invoke-static {v10, v4, v8, v7, v5}, Lpef;->c(Lpef;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;I)V
-
-    invoke-interface/range {v24 .. v24}, Luxa;->a()Liu2;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Liu2;->p()Lvs0;
-
-    move-result-object v7
-
-    iget-object v7, v7, Lvs0;->d:Lys0;
-
-    iget v7, v7, Lys0;->e:I
-
-    invoke-virtual {v8, v7}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v7, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
-
-    const/16 v38, 0x0
-
-    const/16 v39, 0x60
-
-    const/16 v36, 0x2
-
-    const/16 v37, 0x0
-
-    move-object/from16 v33, p9
-
-    move-object/from16 v34, v8
-
-    invoke-static/range {v32 .. v39}, Lyo7;->a(Lyo7;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;I)Landroid/text/Layout;
-
-    move-result-object v7
+    sget-object v11, Lcbg;->f:Lorf;
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_d
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    if-eqz p10, :cond_8
+    move-object/from16 p10, v3
+
+    const/4 v3, 0x0
 
     :try_start_5
-    new-instance v8, Landroid/text/TextPaint;
+    invoke-static {v11, v4, v10, v3, v2}, Lorf;->c(Lorf;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;I)V
 
-    const/4 v10, 0x1
+    invoke-interface {v13}, Lw5b;->getText()Laqf;
 
-    invoke-direct {v8, v10}, Landroid/text/TextPaint;-><init>(I)V
+    move-result-object v2
 
-    sget-object v10, Lrxf;->f:Lpef;
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    iget v2, v2, Laqf;->g:I
 
-    move-object/from16 p9, v7
+    invoke-virtual {v10, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    const/4 v7, 0x0
+    const/16 v35, 0x0
 
-    :try_start_6
-    invoke-static {v10, v4, v8, v7, v5}, Lpef;->c(Lpef;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;I)V
+    const/16 v36, 0x60
 
-    invoke-interface/range {v24 .. v24}, Luxa;->getText()Lbdf;
+    const/16 v33, 0x1
 
-    move-result-object v5
+    const/16 v34, 0x0
 
-    iget v5, v5, Lbdf;->g:I
+    move-object/from16 v30, p11
 
-    invoke-virtual {v8, v5}, Landroid/graphics/Paint;->setColor(I)V
+    move-object/from16 v31, v10
 
-    const/16 v38, 0x0
+    invoke-static/range {v29 .. v36}, Lou7;->a(Lou7;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;I)Landroid/text/Layout;
 
-    const/16 v39, 0x60
+    move-result-object v2
 
-    const/16 v36, 0x1
+    move-object/from16 v18, v2
 
-    const/16 v37, 0x0
+    :goto_2
+    const/4 v2, 0x2
 
-    move-object/from16 v33, p10
-
-    move-object/from16 v34, v8
-
-    invoke-static/range {v32 .. v39}, Lyo7;->a(Lyo7;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;I)Landroid/text/Layout;
-
-    move-result-object v5
-
-    goto :goto_6
+    goto :goto_4
 
     :catchall_1
     move-exception v0
 
-    const/4 v7, 0x0
+    const/4 v3, 0x0
 
-    :goto_5
-    move-object/from16 v5, p2
-
-    move-object/from16 v3, p4
+    :goto_3
+    move-object/from16 v3, p5
 
     move-object v2, v1
 
-    move-object/from16 v4, v22
+    move-object/from16 v40, v5
 
-    move-object/from16 v40, v31
+    move-object/from16 v39, v14
 
-    goto/16 :goto_e
+    move-object/from16 v10, v19
 
-    :cond_8
-    move-object/from16 p9, v7
+    move-object/from16 v38, v37
 
-    const/4 v7, 0x0
+    move-object/from16 v5, p3
 
-    move-object v5, v7
+    goto/16 :goto_d
 
-    :goto_6
-    if-eqz v5, :cond_9
+    :cond_5
+    move-object/from16 p10, v3
 
-    invoke-virtual {v5}, Landroid/text/Layout;->getHeight()I
+    const/4 v3, 0x0
 
-    move-result v8
+    move-object/from16 v18, v3
 
-    goto :goto_7
+    goto :goto_2
+
+    :goto_4
+    if-eqz v18, :cond_6
+
+    invoke-virtual/range {v18 .. v18}, Landroid/text/Layout;->getHeight()I
+
+    move-result v10
+
+    move/from16 v21, v10
+
+    goto :goto_5
 
     :catchall_2
     move-exception v0
 
-    goto :goto_5
+    goto :goto_3
 
-    :cond_9
-    const/4 v8, 0x0
+    :cond_6
+    const/16 v21, 0x0
 
-    :goto_7
-    if-lez v8, :cond_a
+    :goto_5
+    if-lez v21, :cond_7
 
-    const/4 v10, 0x2
+    int-to-float v2, v2
 
-    int-to-float v10, v10
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v16
-
-    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v7
-
-    invoke-static {v10}, Lv63;->r0(F)I
-
-    move-result v7
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    goto :goto_8
-
-    :cond_a
-    const/4 v7, 0x0
-
-    :goto_8
-    :try_start_7
-    invoke-virtual/range {v22 .. v22}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v10
-
-    add-int v10, v21, v10
-
-    add-int/2addr v10, v11
-
-    add-int/2addr v10, v8
-
-    add-int/2addr v10, v7
-
-    invoke-virtual/range {p9 .. p9}, Landroid/text/Layout;->getHeight()I
-
-    move-result v16
-
-    add-int v10, v10, v16
-
-    add-int/2addr v10, v9
-
-    add-int/2addr v10, v13
-
-    add-int v10, v10, v18
-
-    mul-int/lit8 v16, v12, 0x2
-
-    add-int v4, v16, v10
-
-    invoke-static {v6, v4, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    move-object/from16 p10, v5
-
-    new-instance v5, Landroid/graphics/Canvas;
-
-    invoke-direct {v5, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    move-object/from16 v26, v2
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v2, v6, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    new-instance v32, Landroid/graphics/Path;
-
-    invoke-direct/range {v32 .. v32}, Landroid/graphics/Path;-><init>()V
-
-    int-to-float v0, v6
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v2
-
-    int-to-float v3, v3
-
-    div-float/2addr v3, v2
-
-    sub-float v33, v0, v3
-
-    int-to-float v2, v12
-
-    add-float v35, v0, v3
-
-    int-to-float v0, v10
-
-    add-float v36, v2, v0
-
-    const/16 v0, 0x18
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v0
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -1381,147 +1407,254 @@
 
     iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v0, v10
+    mul-float/2addr v2, v10
 
-    invoke-static {v0}, Lv63;->r0(F)I
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    move/from16 v23, v2
+
+    goto :goto_6
+
+    :cond_7
+    const/16 v23, 0x0
+
+    :goto_6
+    :try_start_6
+    invoke-virtual/range {v19 .. v19}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    add-int v2, v25, v2
+
+    add-int v2, v2, v20
+
+    add-int v2, v2, v21
+
+    add-int v2, v2, v23
+
+    invoke-virtual/range {p10 .. p10}, Landroid/text/Layout;->getHeight()I
+
+    move-result v10
+
+    add-int/2addr v2, v10
+
+    add-int v2, v2, v26
+
+    add-int v2, v2, v27
+
+    add-int/2addr v2, v7
+
+    mul-int/lit8 v7, v12, 0x2
+
+    add-int v11, v7, v2
+
+    sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v6, v11, v7}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v7
+
+    new-instance v10, Landroid/graphics/Canvas;
+
+    invoke-direct {v10, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v6, v11}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {v0, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    new-instance v29, Landroid/graphics/Path;
+
+    invoke-direct/range {v29 .. v29}, Landroid/graphics/Path;-><init>()V
+
+    int-to-float v0, v6
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v3
+
+    int-to-float v8, v8
+
+    div-float/2addr v8, v3
+
+    sub-float v30, v0, v8
+
+    int-to-float v3, v12
+
+    add-float v32, v0, v8
+
+    int-to-float v0, v2
+
+    add-float v33, v3, v0
+
+    const/16 v0, 0x18
+
+    int-to-float v0, v0
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v0
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v8
+
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v8
+
+    invoke-static {v0}, Lkhi;->c(F)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    sget-object v39, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+    sget-object v36, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
-    move/from16 v38, v0
+    move/from16 v35, v0
 
     move/from16 v34, v2
 
-    move/from16 v37, v3
+    move/from16 v31, v3
 
-    invoke-virtual/range {v32 .. v39}, Landroid/graphics/Path;->addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
+    invoke-virtual/range {v29 .. v36}, Landroid/graphics/Path;->addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
 
-    move-object/from16 v0, v32
+    move-object/from16 v0, v29
 
-    invoke-virtual {v5}, Landroid/graphics/Canvas;->save()I
+    invoke-virtual {v10}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
-    invoke-virtual {v5, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_9
+    invoke-virtual {v10, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_c
 
-    :try_start_8
-    invoke-interface/range {v24 .. v24}, Luxa;->b()Lue0;
+    :try_start_7
+    invoke-interface {v13}, Lw5b;->b()Lcf0;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->h:I
+    iget v0, v0, Lcf0;->h:I
 
-    invoke-virtual {v5, v0}, Landroid/graphics/Canvas;->drawColor(I)V
+    invoke-virtual {v10, v0}, Landroid/graphics/Canvas;->drawColor(I)V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_d
+
+    :try_start_8
+    invoke-virtual {v10, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_c
 
+    move-object v2, v5
+
+    move-object/from16 p9, v7
+
+    move-object v8, v9
+
+    move-object v7, v10
+
+    move-object/from16 v5, v19
+
+    move/from16 v10, v25
+
+    const/4 v0, 0x1
+
+    const/4 v3, 0x0
+
+    move v9, v6
+
+    move-object/from16 v6, p7
+
     :try_start_9
-    invoke-virtual {v5, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    invoke-static/range {v5 .. v13}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->d(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;[IIIIILw5b;)V
     :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_b
 
-    move-object/from16 v17, p6
+    move-object/from16 v17, p10
 
-    move-object/from16 v18, v5
+    move-object/from16 v19, v5
 
-    move/from16 v20, v6
+    move-object/from16 v16, v7
 
-    move/from16 v23, v12
+    move/from16 v25, v10
 
-    move-object/from16 v19, v14
+    move/from16 v22, v11
 
-    move-object/from16 v16, v22
-
-    move/from16 v22, v4
+    move/from16 v24, v12
 
     :try_start_a
-    invoke-static/range {v16 .. v24}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->c(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;[IIIIILuxa;)V
+    invoke-static/range {v16 .. v25}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->e(Landroid/graphics/Canvas;Landroid/text/Layout;Landroid/text/Layout;Landroid/graphics/Bitmap;IIIIII)V
     :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_b
-
-    move/from16 v6, v22
-
-    move-object/from16 v22, v16
-
-    move/from16 v16, v6
-
-    move/from16 v6, v20
-
-    move-object/from16 v17, p9
-
-    move/from16 v20, v11
-
-    move/from16 v25, v21
-
-    move-object/from16 v19, v22
-
-    move/from16 v24, v23
-
-    move/from16 v23, v7
-
-    move/from16 v21, v8
-
-    move/from16 v22, v16
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v18, p10
-
-    :try_start_b
-    invoke-static/range {v16 .. v25}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->d(Landroid/graphics/Canvas;Landroid/text/Layout;Landroid/text/Layout;Landroid/graphics/Bitmap;IIIIII)V
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_a
-
-    move-object/from16 v18, v16
+    .catchall {:try_start_a .. :try_end_a} :catchall_a
 
     move-object/from16 v7, v17
 
-    move/from16 v8, v21
-
     move/from16 v11, v22
 
-    move/from16 v23, v24
+    move/from16 v12, v24
 
-    move/from16 v21, v25
+    move-object v5, v14
 
-    move-object/from16 v22, v19
-
-    :try_start_c
-    invoke-virtual/range {v22 .. v22}, Landroid/graphics/Bitmap;->getHeight()I
+    :try_start_b
+    invoke-virtual/range {v19 .. v19}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v14
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_9
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_9
 
-    move-object/from16 v4, p1
+    move/from16 v6, p2
 
-    move-object/from16 v3, p7
+    move-object/from16 v3, p8
 
-    move v5, v13
+    move-object/from16 v40, v2
 
-    move-object/from16 v2, v18
+    move-object/from16 v39, v5
+
+    move-object/from16 v2, v16
+
+    move-object/from16 v41, v19
 
     move/from16 v10, v20
 
-    move/from16 v13, v21
+    move/from16 v8, v21
 
-    move-object/from16 v41, v22
+    move/from16 v13, v25
 
-    move/from16 v12, v23
+    move/from16 v9, v26
 
-    move-object/from16 v0, v30
+    move/from16 v5, v27
 
-    move-object/from16 v40, v31
+    move-object/from16 v0, v28
 
-    :try_start_d
-    invoke-static/range {v2 .. v14}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;Landroid/content/Context;IILandroid/text/Layout;IIIIIII)V
+    move-object/from16 v38, v37
 
-    invoke-virtual/range {p2 .. p2}, Lpr5;->m()Ljava/io/File;
+    :try_start_c
+    invoke-static/range {v2 .. v14}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->c(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;Landroid/content/Context;IILandroid/text/Layout;IIIIIII)V
+
+    invoke-virtual/range {p3 .. p3}, Luv5;->k()Ljava/io/File;
 
     move-result-object v3
 
@@ -1530,233 +1663,296 @@
     const-string v2, "qr.png"
 
     invoke-direct {v4, v3, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_7
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_7
 
-    :try_start_e
-    move-object/from16 v2, p3
+    :try_start_d
+    move-object/from16 v2, p4
 
-    check-cast v2, Lwla;
+    check-cast v2, Lsta;
 
-    invoke-virtual {v2}, Lwla;->b()Ly24;
+    invoke-virtual {v2}, Lsta;->b()La54;
 
     move-result-object v9
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_8
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_8
 
-    :try_start_f
-    new-instance v2, Lw7c;
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_7
+    :try_start_e
+    new-instance v2, Ligc;
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_7
 
     const/4 v8, 0x0
 
     move-object/from16 v6, p1
 
-    move-object/from16 v5, p2
+    move-object/from16 v5, p3
 
-    move-object/from16 v7, v26
+    move-object/from16 v7, p9
+
+    :try_start_f
+    invoke-direct/range {v2 .. v8}, Ligc;-><init>(Ljava/io/File;Ljava/io/File;Luv5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_6
 
     :try_start_10
-    invoke-direct/range {v2 .. v8}, Lw7c;-><init>(Ljava/io/File;Ljava/io/File;Lpr5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    iput-object v1, v0, Lhgc;->d:Lone/me/sdk/uikit/qr/QrCodeGenerator;
     :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_6
+    .catchall {:try_start_10 .. :try_end_10} :catchall_7
+
+    move-object/from16 v5, p3
 
     :try_start_11
-    iput-object v1, v0, Lv7c;->o:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    iput-object v5, v0, Lhgc;->o:Luv5;
     :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_7
+    .catchall {:try_start_11 .. :try_end_11} :catchall_6
 
-    move-object/from16 v5, p2
+    move-object/from16 v3, p5
 
     :try_start_12
-    iput-object v5, v0, Lv7c;->X:Lpr5;
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_6
+    iput-object v3, v0, Lhgc;->X:Llgc;
 
-    move-object/from16 v3, p4
+    iput-object v15, v0, Lhgc;->Y:Ljava/lang/String;
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_5
+
+    move-object/from16 v10, v41
 
     :try_start_13
-    iput-object v3, v0, Lv7c;->Y:Lz7c;
+    iput-object v10, v0, Lhgc;->Z:Landroid/graphics/Bitmap;
 
-    iput-object v15, v0, Lv7c;->Z:Ljava/lang/String;
-    :try_end_13
-    .catchall {:try_start_13 .. :try_end_13} :catchall_5
+    iput-object v7, v0, Lhgc;->s0:Landroid/graphics/Bitmap;
 
-    move-object/from16 v4, v41
+    const/4 v11, 0x1
 
-    :try_start_14
-    iput-object v4, v0, Lv7c;->w0:Landroid/graphics/Bitmap;
+    iput v11, v0, Lhgc;->v0:I
 
-    iput-object v7, v0, Lv7c;->x0:Landroid/graphics/Bitmap;
-
-    const/4 v10, 0x1
-
-    iput v10, v0, Lv7c;->A0:I
-
-    invoke-static {v9, v2, v0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v9, v2, v0}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v0
-    :try_end_14
-    .catchall {:try_start_14 .. :try_end_14} :catchall_4
+    :try_end_13
+    .catchall {:try_start_13 .. :try_end_13} :catchall_4
 
-    sget-object v2, Lf34;->a:Lf34;
+    sget-object v2, Lh54;->a:Lh54;
 
-    if-ne v0, v2, :cond_b
+    if-ne v0, v2, :cond_8
 
     return-object v2
 
-    :cond_b
-    move-object v2, v3
+    :cond_8
+    move-object v2, v7
 
-    move-object v3, v0
+    move-object v7, v0
 
-    move-object v0, v7
-
-    move-object v7, v2
+    move-object v0, v2
 
     move-object v2, v1
 
     move-object v6, v15
 
-    :goto_9
-    :try_start_15
-    check-cast v3, Landroid/net/Uri;
+    :goto_7
+    :try_start_14
+    check-cast v7, Landroid/net/Uri;
 
-    new-instance v8, Lt7c;
+    new-instance v4, Legc;
 
-    invoke-direct {v8, v3, v0}, Lt7c;-><init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
+    invoke-direct {v4, v7, v0}, Legc;-><init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
 
-    new-instance v0, Ln4b;
+    new-instance v0, Lvcb;
 
-    invoke-direct {v0, v7, v8}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v3, v4}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    sput-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->f:Ln4b;
-    :try_end_15
-    .catchall {:try_start_15 .. :try_end_15} :catchall_3
+    sput-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->f:Lvcb;
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_3
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
+    if-eqz v10, :cond_9
 
-    return-object v8
+    invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_9
+    return-object v4
 
     :catchall_3
     move-exception v0
 
     move-object v15, v6
 
-    move-object v3, v7
-
-    goto :goto_e
+    goto/16 :goto_d
 
     :catchall_4
     move-exception v0
 
-    :goto_a
+    :goto_8
     move-object v2, v1
 
-    goto :goto_e
+    goto/16 :goto_d
 
     :catchall_5
     move-exception v0
 
-    :goto_b
-    move-object/from16 v4, v41
+    :goto_9
+    move-object/from16 v10, v41
 
-    goto :goto_a
+    goto :goto_8
 
     :catchall_6
     move-exception v0
 
-    :goto_c
-    move-object/from16 v3, p4
+    :goto_a
+    move-object/from16 v3, p5
 
-    goto :goto_b
+    goto :goto_9
 
     :catchall_7
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v5, p3
 
-    goto :goto_c
+    goto :goto_a
 
     :catchall_8
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v5, p3
 
-    move-object/from16 v3, p4
+    move-object/from16 v3, p5
 
-    goto :goto_b
+    goto :goto_9
 
     :catchall_9
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v3, p5
 
-    move-object/from16 v3, p4
+    move-object/from16 v40, v2
 
-    move-object/from16 v4, v22
+    move-object/from16 v39, v5
 
-    :goto_d
-    move-object/from16 v40, v31
+    :goto_b
+    move-object/from16 v10, v19
 
-    goto :goto_a
+    :goto_c
+    move-object/from16 v38, v37
+
+    move-object/from16 v5, p3
+
+    goto :goto_8
 
     :catchall_a
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v5, p3
 
-    move-object/from16 v3, p4
+    move-object/from16 v3, p5
 
-    move-object/from16 v4, v19
+    move-object/from16 v40, v2
 
-    goto :goto_d
+    move-object/from16 v39, v14
+
+    move-object/from16 v10, v19
+
+    move-object/from16 v38, v37
+
+    goto :goto_8
 
     :catchall_b
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v3, p5
 
-    move-object/from16 v3, p4
+    move-object/from16 v40, v2
 
-    move-object/from16 v4, v16
+    move-object v10, v5
 
-    goto :goto_d
+    move-object/from16 v39, v14
+
+    goto :goto_c
 
     :catchall_c
     move-exception v0
 
-    move-object/from16 v3, p4
+    move-object/from16 v3, p5
 
-    move-object v6, v5
+    move-object/from16 v40, v5
 
-    move-object/from16 v4, v22
+    move-object/from16 v39, v14
 
-    move-object/from16 v40, v31
-
-    move-object/from16 v5, p2
-
-    :try_start_16
-    invoke-virtual {v6, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    throw v0
-    :try_end_16
-    .catchall {:try_start_16 .. :try_end_16} :catchall_4
+    goto :goto_b
 
     :catchall_d
     move-exception v0
 
-    move-object/from16 v5, p2
+    move-object/from16 v3, p5
 
-    move-object/from16 v3, p4
+    move-object/from16 v40, v5
 
-    move-object/from16 v4, v22
+    move-object v7, v10
 
-    goto :goto_d
+    move-object/from16 v39, v14
 
-    :goto_e
-    :try_start_17
+    move-object/from16 v10, v19
+
+    move-object/from16 v38, v37
+
+    move-object/from16 v5, p3
+
+    :try_start_15
+    invoke-virtual {v7, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    throw v0
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_4
+
+    :catchall_e
+    move-exception v0
+
+    move-object/from16 v3, p5
+
+    move-object/from16 v40, v5
+
+    move-object/from16 v39, v14
+
+    move-object/from16 v10, v19
+
+    goto :goto_c
+
+    :catchall_f
+    move-exception v0
+
+    move-object/from16 v38, v3
+
+    move-object/from16 v40, v5
+
+    move-object/from16 v39, v14
+
+    move-object/from16 v10, v19
+
+    move-object/from16 v5, p3
+
+    move-object/from16 v3, p5
+
+    goto :goto_8
+
+    :catchall_10
+    move-exception v0
+
+    move-object/from16 v38, v3
+
+    move-object/from16 v40, v5
+
+    move-object/from16 v39, v14
+
+    move-object/from16 v5, p3
+
+    move-object/from16 v3, p5
+
+    move-object v2, v1
+
+    const/4 v10, 0x0
+
+    :goto_d
+    :try_start_16
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -1765,39 +1961,37 @@
 
     move-result-object v2
 
-    const-string v6, "encodeQR: failed"
+    const-string v4, "encodeQR: failed"
 
-    invoke-static {v2, v6, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v4, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object v2, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lxm9;
+    sget-object v2, Lone/me/sdk/uikit/qr/QrCodeGenerator;->b:Lk9a;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    move-object/from16 v6, v40
 
-    const-string v7, "QR generation failed for type: "
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v3, ", data: "
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object/from16 v6, v40
+    move-object/from16 v4, v38
 
-    invoke-static {v6, v3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, v3, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v5}, Lpr5;->m()Ljava/io/File;
+    invoke-virtual {v5}, Luv5;->k()Ljava/io/File;
 
     move-result-object v0
 
@@ -1805,50 +1999,48 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_a
 
     const-string v0, "null"
 
-    goto :goto_f
+    :cond_a
+    move-object/from16 v5, v39
 
-    :catchall_e
+    goto :goto_e
+
+    :catchall_11
     move-exception v0
 
-    goto :goto_10
+    goto :goto_f
 
-    :cond_c
-    :goto_f
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Cache path: "
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_e
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v7, 0x0
+    const/4 v3, 0x0
 
-    invoke-static {v6, v0, v7}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_17
-    .catchall {:try_start_17 .. :try_end_17} :catchall_e
+    invoke-static {v4, v0, v3}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_16
+    .catchall {:try_start_16 .. :try_end_16} :catchall_11
 
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
+    if-eqz v10, :cond_c
 
-    return-object v7
+    invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
 
-    :goto_10
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
+    goto :goto_10
 
+    :goto_f
+    if-eqz v10, :cond_b
+
+    invoke-virtual {v10}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_b
     throw v0
 
-    :goto_11
-    return-object v7
+    :cond_c
+    :goto_10
+    return-object v3
 .end method

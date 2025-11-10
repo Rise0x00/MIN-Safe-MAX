@@ -1,156 +1,236 @@
-.class public final synthetic Lgp5;
+.class public final Lgp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lpgd;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final b:Lfi;
 
-.field public final synthetic c:Lip5;
+.field public final c:Lgi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lip5;I)V
-    .locals 0
-
-    iput p3, p0, Lgp5;->a:I
-
-    iput-object p1, p0, Lgp5;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lgp5;->c:Lip5;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgp5;->a:Lpgd;
+
+    new-instance v0, Lfi;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lpgd;I)V
+
+    iput-object v0, p0, Lgp5;->b:Lfi;
+
+    new-instance v0, Lgi;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p1, v1}, Lgi;-><init>(Lpgd;I)V
+
+    iput-object v0, p0, Lgp5;->c:Lgi;
 
     return-void
 .end method
 
+.method public static b(ILjava/util/List;)Ljava/util/ArrayList;
+    .locals 6
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget v0, p0, Lgp5;->a:I
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v1
 
-    new-instance v0, Lu7g;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iget-object v1, p0, Lgp5;->b:Landroid/content/Context;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lu7g;-><init>(Landroid/content/Context;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lu7g;->setBackgroundEnabled(Z)V
-
-    iget-object v1, p0, Lgp5;->c:Lip5;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lk47;
-
-    iget-object v1, p0, Lgp5;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lk47;-><init>(Landroid/content/Context;)V
-
-    iget-object v1, p0, Lgp5;->c:Lip5;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lgp5;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v2, 0x2c
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lv63;->r0(F)I
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
 
-    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    if-ge v1, v2, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v1, p0, Lgp5;->c:Lip5;
+    move-result-object v2
 
-    iget-object v2, v1, Lip5;->P0:Landroid/graphics/drawable/ShapeDrawable;
+    check-cast v2, Ljava/lang/Long;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    new-instance v3, Ltn5;
 
-    sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    const v2, 0x7f7fffff    # Float.MAX_VALUE
+    move-result-wide v4
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationZ(F)V
+    iput-wide v4, v3, Ltn5;->a:J
 
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    add-int v2, p0, v1
 
+    int-to-long v4, v2
+
+    iput-wide v4, v3, Ltn5;->b:J
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-object v0
+.end method
 
-    :pswitch_2
-    new-instance v0, Lqo5;
 
-    iget-object v1, p0, Lgp5;->b:Landroid/content/Context;
+# virtual methods
+.method public final a(Ljava/util/List;)V
+    .locals 4
 
-    invoke-direct {v0, v1}, Lqo5;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lgp5;->a:Lpgd;
 
-    iget-object v1, p0, Lgp5;->c:Lip5;
+    invoke-virtual {v0}, Lpgd;->c()V
 
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    :try_start_0
+    new-instance v1, Loj4;
 
-    return-object v0
+    const/4 v2, 0x3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v1, v2, p0}, Loj4;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lmg3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, p1}, Lgp5;->b(ILjava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    new-instance v1, Lhi;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v1, p0, v3, p1}, Lhi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lmg3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {p1, v3, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lkg3;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, p1}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1}, Ljg3;->a()V
+
+    invoke-virtual {v0}, Lpgd;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Lpgd;->k()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Lpgd;->k()V
+
+    throw p1
+.end method
+
+.method public final c()Ljava/util/ArrayList;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    const-string v1, "SELECT id FROM favorite_stickers ORDER BY `index` ASC"
+
+    invoke-static {v0, v1}, Lfhd;->c(ILjava/lang/String;)Lfhd;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lgp5;->a:Lpgd;
+
+    invoke-virtual {v2}, Lpgd;->b()V
+
+    invoke-virtual {v2, v1}, Lpgd;->n(Lhff;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    :try_start_0
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+
+    move-result v4
+
+    invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    :goto_0
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->isNull(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    :goto_1
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_1
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v1}, Lfhd;->l()V
+
+    return-object v3
+
+    :goto_2
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v1}, Lfhd;->l()V
+
+    throw v0
 .end method

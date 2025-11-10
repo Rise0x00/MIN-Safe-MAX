@@ -1,294 +1,147 @@
 .class public final Ls2a;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ls2a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Z
 
-.field public final synthetic Z:Lt2a;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lt2a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ls2a;->Z:Lt2a;
+    new-instance v0, Lui8;
 
-    const/4 p1, 0x2
+    const/16 v1, 0xe
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lui8;-><init>(I)V
+
+    sput-object v0, Ls2a;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 3
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ls2a;->a:I
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Ls2a;->b:Z
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iput-boolean v1, p0, Ls2a;->c:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr2a;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget v0, p1, Lr2a;->a:I
+
+    iput v0, p0, Ls2a;->a:I
+
+    .line 3
+    iget-boolean v0, p1, Lr2a;->b:Z
+
+    iput-boolean v0, p0, Ls2a;->b:Z
+
+    .line 4
+    iget-boolean p1, p1, Lr2a;->c:Z
+
+    iput-boolean p1, p0, Ls2a;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Le34;
+    iget p2, p0, Ls2a;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p1, p2}, Ls2a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-boolean p2, p0, Ls2a;->b:Z
 
-    move-result-object p1
+    int-to-byte p2, p2
 
-    check-cast p1, Ls2a;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-boolean p2, p0, Ls2a;->c:Z
 
-    invoke-virtual {p1, p2}, Ls2a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    int-to-byte p2, p2
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ls2a;
-
-    iget-object v1, p0, Ls2a;->Z:Lt2a;
-
-    invoke-direct {v0, v1, p2}, Ls2a;-><init>(Lt2a;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ls2a;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Ls2a;->Z:Lt2a;
-
-    iget-object v1, v0, Lt2a;->e:Lit9;
-
-    iget-object v2, v0, Lt2a;->f:Ljava/util/concurrent/locks/ReentrantLock;
-
-    iget v3, p0, Ls2a;->X:I
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lf34;->a:Lf34;
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    iget-object v3, p0, Ls2a;->Y:Ljava/lang/Object;
-
-    check-cast v3, Le34;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object p1, v3
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v3, p0, Ls2a;->Y:Ljava/lang/Object;
-
-    check-cast v3, Le34;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object p1, v3
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls2a;->Y:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    :cond_3
-    :goto_0
-    sget-object v3, Lt2a;->i:[Ltm7;
-
-    invoke-virtual {v0}, Lt2a;->e()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    invoke-static {p1}, Lipe;->r(Le34;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    invoke-virtual {v0}, Lv2a;->b()J
-
-    move-result-wide v7
-
-    iput-object p1, p0, Ls2a;->Y:Ljava/lang/Object;
-
-    iput v5, p0, Ls2a;->X:I
-
-    invoke-static {v7, v8, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, v6, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    :goto_1
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_0
-    invoke-virtual {v1}, Lit9;->i()Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    invoke-static {v1}, Lhxf;->k(Lit9;)Lit9;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Lit9;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_5
-    const/4 v3, 0x0
-
-    :goto_2
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v3}, Lit9;->i()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v7, v0, Lt2a;->g:Lg65;
-
-    sget-object v8, Lt2a;->i:[Ltm7;
-
-    const/4 v9, 0x0
-
-    aget-object v8, v8, v9
-
-    invoke-virtual {v7, v0, v8}, Lg65;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lji7;
-
-    if-eqz v7, :cond_7
-
-    invoke-interface {v7}, Lji7;->isActive()Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_1
-    sget v7, Ln05;->o:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v7
-
-    sget-object v9, Ls05;->b:Ls05;
-
-    invoke-static {v7, v8, v9}, Lyhh;->P(JLs05;)J
-
-    move-result-wide v7
-
-    iput-wide v7, v0, Lt2a;->h:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    iput-object p1, p0, Ls2a;->Y:Ljava/lang/Object;
-
-    iput v4, p0, Ls2a;->X:I
-
-    invoke-virtual {v0, v3, p0}, Lv2a;->c(Lit9;Lnz3;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, v6, :cond_3
-
-    :goto_3
-    return-object v6
-
-    :catchall_1
-    move-exception p1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :cond_7
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_2
-    invoke-virtual {v1, v3}, Lit9;->b(Lit9;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p1
-
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :goto_4
-    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p1
-
-    :cond_8
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

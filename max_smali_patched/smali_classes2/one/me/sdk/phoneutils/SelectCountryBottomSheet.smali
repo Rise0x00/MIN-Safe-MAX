@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0006"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0007\u0018\u00002\u00020\u0001:\u0001\u0006B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0007"
     }
     d2 = {
         "Lone/me/sdk/phoneutils/SelectCountryBottomSheet;",
@@ -21,6 +21,7 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
+        "i0e",
         "phone-utils_release"
     }
     k = 0x1
@@ -34,22 +35,126 @@
 
 
 # static fields
-.field public static final synthetic E0:I
+.field public static final D0:Li0e;
+
+.field public static final synthetic E0:[Les7;
+
+
+# instance fields
+.field public final B0:Los;
+
+.field public final C0:Ljjh;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, La1a;
+
+    const-string v1, "countries"
+
+    const-string v2, "getCountries()[Lone/me/sdk/phoneutils/OneMeCountryModel;"
+
+    const-class v3, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;
+
+    invoke-direct {v0, v3, v1, v2}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lv7d;->a:Lw7d;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Les7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->E0:[Les7;
+
+    new-instance v0, Li0e;
+
+    invoke-direct {v0, v2}, Li0e;-><init>(I)V
+
+    sput-object v0, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->D0:Li0e;
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 4
 
     invoke-direct {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;)V
+
+    new-instance p1, Los;
+
+    const-class v0, [Lzta;
+
+    const-string v1, "countries"
+
+    invoke-direct {p1, v0, v1}, Los;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->B0:Los;
+
+    new-instance v0, Ljjh;
+
+    sget-object v1, Lekb;->a:Lekb;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v1
+
+    const-class v2, Lfva;
+
+    invoke-virtual {v1, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfva;
+
+    invoke-virtual {v1}, Lfva;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    new-instance v2, Lc2d;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3, p0}, Lc2d;-><init>(ILjava/lang/Object;)V
+
+    const/4 v3, 0x3
+
+    invoke-direct {v0, v1, v2, v3}, Ljjh;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
+
+    iput-object v0, p0, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->C0:Ljjh;
+
+    sget-object v1, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->E0:[Les7;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {p1, p0}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Lzta;
+
+    invoke-static {p1}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final N0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
-    .locals 7
+.method public final K0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+    .locals 2
 
     new-instance p2, Landroid/widget/LinearLayout;
 
@@ -63,212 +168,31 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance v0, Landroid/widget/TextView;
+    new-instance p1, Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget v1, Li9d;->f0:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    sget-object v1, Lrxf;->c:Lpef;
-
-    invoke-static {v1, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getText()Lbdf;
-
-    move-result-object v1
-
-    iget v1, v1, Lbdf;->e:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/16 v1, 0x11
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0xc
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    const/16 v4, 0x10
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v4
-
-    invoke-static {v5}, Lv63;->r0(F)I
-
-    move-result v5
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v6
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v6
-
-    invoke-static {v4}, Lv63;->r0(F)I
-
-    move-result v4
-
-    invoke-virtual {v1, v3, v5, v2, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Lb04;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v1, "add_country"
-
-    const-class v2, Lema;
-
-    invoke-static {v0, v1, v2}, Lihf;->q(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lema;
-
-    sget-object v1, Ldma;->a:Lema;
-
-    invoke-static {}, Lvhh;->p()Lsw7;
-
-    move-result-object v1
-
-    sget-object v2, Ldma;->b:Lema;
-
-    invoke-virtual {v1, v2}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Ldma;->a:Lema;
-
-    invoke-virtual {v1, v2}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Lsw7;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    invoke-static {v1}, Lvhh;->e(Ljava/util/List;)Lsw7;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lsw7;->listIterator(I)Ljava/util/ListIterator;
+    invoke-direct {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    move-result-object v0
+    new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    :goto_0
-    move-object v1, v0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    check-cast v1, Lqw7;
+    invoke-direct {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    invoke-virtual {v1}, Lqw7;->hasNext()Z
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    move-result v2
+    iget-object v0, p0, Lone/me/sdk/phoneutils/SelectCountryBottomSheet;->C0:Ljjh;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
 
-    invoke-virtual {v1}, Lqw7;->next()Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lu6d;)V
 
-    move-result-object v1
+    invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    check-cast v1, Lema;
-
-    new-instance v2, Lz34;
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Lz34;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v2, v1}, Lz34;->setCountryInfo(Lema;)V
-
-    new-instance v3, Ltrc;
-
-    invoke-direct {v3, p0, p1, v1}, Ltrc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_1
     return-object p2
 .end method

@@ -3,126 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Laog;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lnj5;
 
-.field public final synthetic b:Lcj5;
-
-.field public final synthetic c:Laj5;
+.field public final synthetic b:Laog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcj5;Laj5;I)V
+.method public synthetic constructor <init>(Lnj5;Laog;)V
     .locals 0
 
-    iput p3, p0, Lbj5;->a:I
-
-    iput-object p1, p0, Lbj5;->b:Lcj5;
-
-    iput-object p2, p0, Lbj5;->c:Laj5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbj5;->a:Lnj5;
+
+    iput-object p2, p0, Lbj5;->b:Laog;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final b(JJLub6;Landroid/media/MediaFormat;)V
+    .locals 8
 
-    iget p1, p0, Lbj5;->a:I
+    iget-object v0, p0, Lbj5;->a:Lnj5;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lbj5;->b:Lcj5;
+    iget-object v1, p0, Lbj5;->b:Laog;
 
-    iget-object p1, p1, Lcj5;->K0:Lc;
+    move-wide v2, p1
 
-    if-eqz p1, :cond_0
+    move-wide v4, p3
 
-    iget-object v0, p0, Lbj5;->c:Laj5;
+    move-object v6, p5
 
-    iget-wide v0, v0, Laj5;->a:J
+    move-object v7, p6
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface/range {v1 .. v7}, Laog;->b(JJLub6;Landroid/media/MediaFormat;)V
 
-    move-result-object v0
+    move-wide v1, v2
 
-    invoke-virtual {p1, v0}, Lc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-wide v3, v4
 
-    :cond_0
+    move-object v5, v6
+
+    move-object v6, v7
+
+    invoke-virtual/range {v0 .. v6}, Lnj5;->b(JJLub6;Landroid/media/MediaFormat;)V
+
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lbj5;->b:Lcj5;
-
-    iget-object p1, p1, Lcj5;->J0:Lc;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lbj5;->c:Laj5;
-
-    iget-wide v0, v0, Laj5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lbj5;->b:Lcj5;
-
-    iget-object p1, p1, Lcj5;->K0:Lc;
-
-    if-eqz p1, :cond_2
-
-    iget-object v0, p0, Lbj5;->c:Laj5;
-
-    iget-wide v0, v0, Laj5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lbj5;->b:Lcj5;
-
-    iget-object p1, p1, Lcj5;->J0:Lc;
-
-    if-eqz p1, :cond_3
-
-    iget-object v0, p0, Lbj5;->c:Laj5;
-
-    iget-wide v0, v0, Laj5;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lc;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

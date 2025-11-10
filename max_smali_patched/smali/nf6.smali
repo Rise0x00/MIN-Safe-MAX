@@ -1,11 +1,7 @@
-.class public interface abstract Lnf6;
-.super Ljava/lang/Object;
+.class public final Lnf6;
+.super Lm7d;
 .source "SourceFile"
 
-# interfaces
-.implements Lqf6;
 
-
-# virtual methods
-.method public abstract invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-.end method
+# static fields
+.field public static final synthetic E0:I

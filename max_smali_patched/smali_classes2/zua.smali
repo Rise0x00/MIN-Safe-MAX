@@ -1,41 +1,75 @@
 .class public final Lzua;
-.super Ljava/lang/Object;
+.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Li40;
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
+    if-nez p1, :cond_0
 
-# direct methods
-.method public constructor <init>(Li40;)V
-    .locals 0
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    goto :goto_0
 
-    iput-object p1, p0, Lzua;->a:Li40;
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    return-void
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 0
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    check-cast p1, Ljava/lang/Runnable;
 
-    iget-object v0, p0, Lzua;->a:Li40;
+    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p1
 
-    sget-object v1, Lgva;->a:Landroid/os/Handler;
+    return p1
+.end method
 
-    iget-object v0, v0, Li40;->h:Ljava/lang/Object;
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast v0, Ldva;
+    if-nez p1, :cond_0
 
-    sget-object v1, Lcva;->c:Lcva;
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Lgva;->b(Ldva;Lcva;)V
+    goto :goto_0
 
-    return-void
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

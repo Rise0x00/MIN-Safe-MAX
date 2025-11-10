@@ -1,84 +1,98 @@
 .class public final Lbo9;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iput-wide p1, p0, Lbo9;->a:J
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lbo9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lbo9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lbo9;
 
-    iget-wide v3, p0, Lbo9;->a:J
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-wide v5, p1, Lbo9;->a:J
+    invoke-virtual {p1, p2}, Lbo9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lbo9;->a:J
+    new-instance v0, Lbo9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lbo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lbo9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    return v0
+    iput-object p1, v0, Lbo9;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "MovieId(id="
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Lbo9;->o:Ljava/lang/Object;
 
-    iget-wide v2, p0, Lbo9;->a:J
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Les7;
+
+    iget-object v0, p0, Lbo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Ldsd;
 
     move-result-object v0
 
-    return-object v0
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

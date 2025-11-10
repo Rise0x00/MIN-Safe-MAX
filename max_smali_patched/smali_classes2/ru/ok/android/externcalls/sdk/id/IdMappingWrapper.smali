@@ -38,7 +38,7 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lxg1;",
+            "Lsh1;",
             ">;"
         }
     .end annotation
@@ -48,14 +48,14 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashMap<",
-            "Lxg1;",
+            "Lsh1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final log:Lpmc;
+.field private final log:Lcwc;
 
 .field private wasRead:Z
 
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Lpmc;)V
+.method private constructor <init>(Landroid/content/Context;Lcwc;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -92,7 +92,7 @@
 
     iput-boolean v0, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->wasRead:Z
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->appContext:Landroid/content/Context;
 
@@ -157,7 +157,7 @@
     return-void
 .end method
 
-.method private declared-synchronized ensureMappingNotOutdated(Lxg1;)V
+.method private declared-synchronized ensureMappingNotOutdated(Lsh1;)V
     .locals 1
 
     monitor-enter p0
@@ -193,7 +193,7 @@
     throw p1
 .end method
 
-.method public static get(Landroid/content/Context;Lpmc;)Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+.method public static get(Landroid/content/Context;Lcwc;)Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
     .locals 2
 
     sget-object v0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->DEFAULT:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
@@ -215,7 +215,7 @@
 
     move-result-object p0
 
-    invoke-direct {v1, p0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;-><init>(Landroid/content/Context;Lpmc;)V
+    invoke-direct {v1, p0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;-><init>(Landroid/content/Context;Lcwc;)V
 
     sput-object v1, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->DEFAULT:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
@@ -280,13 +280,13 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     const-string v2, "IdMappingWrapper"
 
     const-string v3, "getFile: empty file"
 
-    invoke-interface {v1, v2, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -540,7 +540,7 @@
 
     move-result-object v3
 
-    invoke-static {v1}, Lxg1;->a(Ljava/lang/String;)Lxg1;
+    invoke-static {v1}, Lsh1;->a(Ljava/lang/String;)Lsh1;
 
     move-result-object v6
 
@@ -566,7 +566,7 @@
 
     :catch_0
     :try_start_4
-    iget-object v3, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     const-string v4, "IdMappingWrapper"
 
@@ -590,20 +590,20 @@
 
     move-result-object v1
 
-    invoke-interface {v3, v4, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v4, v1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     const-string v1, "IdMappingWrapper"
 
     const-string v3, "empty mapping"
 
-    invoke-interface {v0, v1, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v3}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
@@ -659,7 +659,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lxg1;
+    check-cast v0, Lsh1;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->externalToInternal:Ljava/util/LinkedHashMap;
 
@@ -767,7 +767,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lxg1;
+    check-cast v3, Lsh1;
 
     if-nez v3, :cond_2
 
@@ -784,7 +784,7 @@
 
     invoke-virtual {v1, v2}, Ljava/io/BufferedWriter;->write(I)V
 
-    invoke-virtual {v3}, Lxg1;->b()Ljava/lang/String;
+    invoke-virtual {v3}, Lsh1;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -845,7 +845,7 @@
 
 
 # virtual methods
-.method public declared-synchronized addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lxg1;)V
+.method public declared-synchronized addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsh1;)V
     .locals 2
 
     monitor-enter p0
@@ -955,7 +955,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lxg1;
+.method public declared-synchronized getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsh1;
     .locals 1
 
     monitor-enter p0
@@ -983,7 +983,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lxg1;
+    check-cast p1, Lsh1;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1002,7 +1002,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+.method public declared-synchronized getByInternal(Lsh1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
     .locals 1
 
     monitor-enter p0
@@ -1022,7 +1022,7 @@
 
     :cond_0
     :try_start_1
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->ensureMappingNotOutdated(Lxg1;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->ensureMappingNotOutdated(Lsh1;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->internalToExternal:Ljava/util/LinkedHashMap;
 
@@ -1071,13 +1071,13 @@
     move-exception v0
 
     :try_start_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     const-string v2, "IdMappingWrapper"
 
     const-string v3, "read failed"
 
-    invoke-interface {v1, v2, v3, v0}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, v0}, Lcwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     const/4 v0, 0x1
@@ -1102,17 +1102,17 @@
 .method public scheduleReadCacheFromDisk()V
     .locals 3
 
-    invoke-static {}, Lxed;->b()Lked;
+    invoke-static {}, Ltpd;->b()Lgpd;
 
     move-result-object v0
 
-    new-instance v1, Lq37;
+    new-instance v1, Li87;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lq37;-><init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
+    invoke-direct {v1, p0, v2}, Li87;-><init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
 
-    invoke-virtual {v0, v1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+    invoke-virtual {v0, v1}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
 
     return-void
 .end method
@@ -1120,17 +1120,17 @@
 .method public scheduleWriteCacheToDisk()V
     .locals 3
 
-    invoke-static {}, Lxed;->b()Lked;
+    invoke-static {}, Ltpd;->b()Lgpd;
 
     move-result-object v0
 
-    new-instance v1, Lq37;
+    new-instance v1, Li87;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lq37;-><init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
+    invoke-direct {v1, p0, v2}, Li87;-><init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
 
-    invoke-virtual {v0, v1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+    invoke-virtual {v0, v1}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
 
     return-void
 .end method
@@ -1173,13 +1173,13 @@
     move-exception v0
 
     :try_start_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lpmc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->log:Lcwc;
 
     const-string v2, "IdMappingWrapper"
 
     const-string v3, "failed to commit"
 
-    invoke-interface {v1, v2, v3, v0}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v2, v3, v0}, Lcwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

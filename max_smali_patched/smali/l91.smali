@@ -1,111 +1,113 @@
 .class public final Ll91;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lsq1;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+.field public final synthetic X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+.field public synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
+.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    iput-object p1, p0, Ll91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final v()V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ll91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Ln9b;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ll91;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v2
+    move-result-object p1
 
-    move-object v4, v2
+    check-cast p1, Ll91;
 
-    check-cast v4, Ld7h;
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-virtual {v1}, Ln9b;->b()Lz9b;
+    invoke-virtual {p1, p2}, Ll91;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    return-object p2
+.end method
 
-    sget-object v5, Lz9b;->m:[Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v2, v5}, Lz9b;->c([Ljava/lang/String;)Z
+    new-instance v0, Ll91;
 
-    move-result v2
+    iget-object v1, p0, Ll91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    if-nez v2, :cond_0
+    invoke-direct {v0, v1, p2}, Ll91;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1}, Ln9b;->b()Lz9b;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object v3
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sget v8, Lzjc;->permissions_video_message_request_only_camera_title:I
+    move-result p1
 
-    sget v7, Lzjc;->permissions_calls_video_preview_request:I
+    iput-boolean p1, v0, Ll91;->o:Z
 
-    const/16 v6, 0xb7
+    return-object v0
+.end method
 
-    invoke-virtual/range {v3 .. v8}, Lz9b;->k(Ld7h;[Ljava/lang/String;III)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    return-void
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, p0, Ll91;->o:Z
+
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
+
+    iget-object v0, p0, Ll91;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0()Ly91;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ly91;->s0:La1f;
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->D0()Lt91;
+    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->D0()Lt91;
+    move-object v2, v1
 
-    move-result-object v0
+    check-cast v2, Ljava/lang/Boolean;
 
-    iget-object v0, v0, Lt91;->y0:Lmoe;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v0
+    move-result-object v2
 
-    instance-of v2, v0, Lo91;
+    invoke-virtual {v0, v1, v2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_1
+    move-result v1
 
-    check-cast v0, Lo91;
+    if-eqz v1, :cond_0
 
-    goto :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, v0, Lo91;->b:Z
-
-    :goto_1
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1, v0}, Lt91;->r(Z)V
-
-    return-void
+    return-object p1
 .end method

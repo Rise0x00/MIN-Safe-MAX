@@ -4,102 +4,251 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public final b:Landroid/graphics/Rect;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Landroid/graphics/Matrix;
-
-.field public final f:Lc2d;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/util/ArrayList;
-
-.field public final i:Ljx7;
-
-.field public j:I
+.field public final b:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lo22;Landroid/graphics/Rect;IILandroid/graphics/Matrix;Lc2d;Ljx7;I)V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput v0, p0, Lgrb;->j:I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput p8, p0, Lgrb;->a:I
+    iput-object v0, p0, Lgrb;->a:Ljava/util/ArrayList;
 
-    iput p4, p0, Lgrb;->d:I
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    iput p3, p0, Lgrb;->c:I
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput-object p2, p0, Lgrb;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Lgrb;->b:Ljava/util/LinkedHashMap;
 
-    iput-object p5, p0, Lgrb;->e:Landroid/graphics/Matrix;
+    return-void
+.end method
 
-    iput-object p6, p0, Lgrb;->f:Lc2d;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+# virtual methods
+.method public final a(Landroid/view/ViewGroup;Lfrb;)V
+    .locals 2
+
+    iget-object v0, p0, Lgrb;->b:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, p2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p2
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    if-nez p2, :cond_1
 
-    move-result-object p2
+    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iput-object p2, p0, Lgrb;->g:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
-    new-instance p2, Ljava/util/ArrayList;
+    move-result p2
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    if-eqz p2, :cond_1
 
-    iput-object p2, p0, Lgrb;->h:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    iget-object p1, p1, Lo22;->a:Ljava/util/List;
+    move-result p1
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Lgrb;->c()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final b(Lfrb;)Ljava/util/List;
+    .locals 4
+
+    iget-object v0, p0, Lgrb;->b:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    check-cast p1, Ljava/util/List;
+
+    if-eqz p1, :cond_1
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p2
+    move-result v1
 
-    if-eqz p2, :cond_0
+    if-eqz v1, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v1
 
-    check-cast p2, Ly22;
+    move-object v2, v1
 
-    iget-object p3, p0, Lgrb;->h:Ljava/util/ArrayList;
+    check-cast v2, Landroid/view/View;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    const/4 p2, 0x0
+    move-result v3
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v3, :cond_0
 
-    move-result-object p2
+    invoke-virtual {v2}, Landroid/view/View;->getAlpha()F
 
-    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v2
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    cmpg-float v2, v2, v3
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :cond_2
+    if-nez v0, :cond_3
+
+    sget-object p1, Lna5;->a:Lna5;
+
+    return-object p1
+
+    :cond_3
+    return-object v0
+.end method
+
+.method public final c()V
+    .locals 5
+
+    new-instance v0, Lhrb;
+
+    sget-object v1, Lfrb;->a:Lfrb;
+
+    invoke-virtual {p0, v1}, Lgrb;->b(Lfrb;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
 
     goto :goto_0
 
     :cond_0
-    iput-object p7, p0, Lgrb;->i:Ljx7;
+    sget-object v1, Lfrb;->b:Lfrb;
 
+    invoke-virtual {p0, v1}, Lgrb;->b(Lfrb;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    add-int/2addr v2, v4
+
+    goto :goto_1
+
+    :cond_1
+    invoke-direct {v0, v3, v2}, Lhrb;-><init>(II)V
+
+    iget-object v1, p0, Lgrb;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lerb;
+
+    check-cast v2, Lsp1;
+
+    invoke-virtual {v2, v0}, Lsp1;->C(Lhrb;)V
+
+    goto :goto_2
+
+    :cond_2
     return-void
 .end method

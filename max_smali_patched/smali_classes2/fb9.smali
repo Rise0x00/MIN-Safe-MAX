@@ -1,48 +1,287 @@
 .class public final Lfb9;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public A:J
 
-.field public final synthetic Y:Lgb9;
+.field public B:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public C:J
+
+.field public D:Ljava/util/List;
+
+.field public E:Lme9;
+
+.field public F:Lbq4;
+
+.field public G:I
+
+.field public H:I
+
+.field public a:J
+
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public g:Ljava/lang/String;
+
+.field public h:J
+
+.field public i:Llb9;
+
+.field public j:Lye9;
+
+.field public k:J
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Ld39;
+
+.field public o:I
+
+.field public p:J
+
+.field public q:Lgb9;
+
+.field public r:Ljava/lang/String;
+
+.field public s:Ljava/lang/String;
+
+.field public t:Ljava/lang/String;
+
+.field public u:Z
+
+.field public v:I
+
+.field public w:I
+
+.field public x:J
+
+.field public y:J
+
+.field public z:Lgb9;
 
 
 # direct methods
-.method public constructor <init>(Lgb9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lfb9;->Y:Lgb9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lfb9;->F:Lbq4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lgb9;
+    .locals 52
 
-    iput-object p1, p0, Lfb9;->o:Ljava/lang/Object;
+    move-object/from16 v0, p0
 
-    iget p1, p0, Lfb9;->X:I
+    new-instance v1, Lgb9;
 
-    const/high16 v0, -0x80000000
+    iget-wide v2, v0, Lfb9;->a:J
 
-    or-int/2addr p1, v0
+    iget-wide v4, v0, Lfb9;->b:J
 
-    iput p1, p0, Lfb9;->X:I
+    iget-wide v6, v0, Lfb9;->h:J
 
-    iget-object p1, p0, Lfb9;->Y:Lgb9;
+    iget-wide v8, v0, Lfb9;->c:J
 
-    const/4 v0, 0x0
+    iget-wide v10, v0, Lfb9;->d:J
 
-    invoke-virtual {p1, v0, p0}, Lgb9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-wide v12, v0, Lfb9;->e:J
 
-    move-result-object p1
+    iget-wide v14, v0, Lfb9;->f:J
 
-    return-object p1
+    move-object/from16 v16, v1
+
+    iget-object v1, v0, Lfb9;->g:Ljava/lang/String;
+
+    move-object/from16 v17, v1
+
+    iget-object v1, v0, Lfb9;->i:Llb9;
+
+    move-object/from16 v18, v1
+
+    iget-object v1, v0, Lfb9;->j:Lye9;
+
+    move-wide/from16 v19, v2
+
+    move-object v3, v1
+
+    iget-wide v1, v0, Lfb9;->k:J
+
+    move-wide/from16 v21, v1
+
+    iget-object v1, v0, Lfb9;->l:Ljava/lang/String;
+
+    iget-object v2, v0, Lfb9;->m:Ljava/lang/String;
+
+    move-object/from16 v23, v1
+
+    iget-object v1, v0, Lfb9;->n:Ld39;
+
+    move-object/from16 v24, v1
+
+    iget v1, v0, Lfb9;->o:I
+
+    move/from16 v26, v1
+
+    move-object/from16 v25, v2
+
+    iget-wide v1, v0, Lfb9;->p:J
+
+    move-wide/from16 v27, v1
+
+    iget-object v1, v0, Lfb9;->q:Lgb9;
+
+    iget-object v2, v0, Lfb9;->r:Ljava/lang/String;
+
+    move-object/from16 v29, v1
+
+    iget-object v1, v0, Lfb9;->s:Ljava/lang/String;
+
+    move-object/from16 v30, v1
+
+    iget-object v1, v0, Lfb9;->t:Ljava/lang/String;
+
+    move-object/from16 v31, v1
+
+    iget v1, v0, Lfb9;->G:I
+
+    move/from16 v32, v1
+
+    iget-boolean v1, v0, Lfb9;->u:Z
+
+    move/from16 v33, v1
+
+    iget v1, v0, Lfb9;->v:I
+
+    move/from16 v34, v1
+
+    iget v1, v0, Lfb9;->w:I
+
+    move/from16 v35, v1
+
+    iget v1, v0, Lfb9;->H:I
+
+    move/from16 v37, v1
+
+    move-object/from16 v36, v2
+
+    iget-wide v1, v0, Lfb9;->x:J
+
+    move-wide/from16 v38, v1
+
+    iget-wide v1, v0, Lfb9;->y:J
+
+    move-wide/from16 v40, v1
+
+    iget-object v1, v0, Lfb9;->z:Lgb9;
+
+    move-object/from16 v42, v1
+
+    iget-wide v1, v0, Lfb9;->A:J
+
+    move-wide/from16 v43, v1
+
+    iget v1, v0, Lfb9;->B:I
+
+    move/from16 v45, v1
+
+    iget-wide v1, v0, Lfb9;->C:J
+
+    move-wide/from16 v46, v1
+
+    iget-object v1, v0, Lfb9;->D:Ljava/util/List;
+
+    iget-object v2, v0, Lfb9;->E:Lme9;
+
+    move-object/from16 v48, v1
+
+    iget-object v1, v0, Lfb9;->F:Lbq4;
+
+    move-object/from16 v49, v48
+
+    move-object/from16 v48, v1
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v16, v17
+
+    move-object/from16 v17, v18
+
+    move-object/from16 v18, v3
+
+    move-wide/from16 v50, v46
+
+    move-object/from16 v47, v2
+
+    move-wide/from16 v2, v19
+
+    move-wide/from16 v19, v21
+
+    move-object/from16 v21, v23
+
+    move-object/from16 v23, v24
+
+    move-object/from16 v22, v25
+
+    move/from16 v24, v26
+
+    move-wide/from16 v25, v27
+
+    move-object/from16 v27, v29
+
+    move-object/from16 v29, v30
+
+    move-object/from16 v30, v31
+
+    move/from16 v31, v32
+
+    move/from16 v32, v33
+
+    move/from16 v33, v34
+
+    move/from16 v34, v35
+
+    move-object/from16 v28, v36
+
+    move/from16 v35, v37
+
+    move-wide/from16 v36, v38
+
+    move-wide/from16 v38, v40
+
+    move-object/from16 v40, v42
+
+    move-wide/from16 v41, v43
+
+    move/from16 v43, v45
+
+    move-wide/from16 v44, v50
+
+    move-object/from16 v46, v49
+
+    invoke-direct/range {v1 .. v48}, Lgb9;-><init>(JJJJJJJLjava/lang/String;Llb9;Lye9;JLjava/lang/String;Ljava/lang/String;Ld39;IJLgb9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZIIIJJLgb9;JIJLjava/util/List;Lme9;Lbq4;)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method

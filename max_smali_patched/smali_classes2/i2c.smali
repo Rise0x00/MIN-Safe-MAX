@@ -1,53 +1,96 @@
 .class public final Li2c;
-.super Lnz3;
+.super Lp2c;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ll2c;
-
-.field public o:Ll2c;
-
-.field public w0:I
+.field public final b:Lkrf;
 
 
 # direct methods
-.method public constructor <init>(Ll2c;Lnz3;)V
+.method public constructor <init>(Lkrf;)V
     .locals 0
 
-    iput-object p1, p0, Li2c;->Z:Ll2c;
+    invoke-direct {p0}, Lp2c;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li2c;->b:Lkrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Li2c;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Li2c;
+
+    iget-object v0, p0, Li2c;->b:Lkrf;
+
+    iget-object p1, p1, Li2c;->b:Lkrf;
+
+    invoke-virtual {v0, p1}, Lkrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li2c;->b:Lkrf;
+
+    invoke-virtual {v0}, Lkrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iput-object p1, p0, Li2c;->Y:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Li2c;->w0:I
+    const-string v1, "ExternalShareLink(text="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Li2c;->b:Lkrf;
 
-    iput p1, p0, Li2c;->w0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Li2c;->Z:Ll2c;
+    const-string v1, ")"
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, v1, p0}, Ll2c;->a(JLnz3;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

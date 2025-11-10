@@ -1,30 +1,28 @@
 .class public final Lzeg;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lbfg;
+.field public final synthetic Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-.field public final synthetic Z:Landroid/graphics/Bitmap;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lbfg;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lzeg;->Y:Lbfg;
-
-    iput-object p2, p0, Lzeg;->Z:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lzeg;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,17 +32,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lg54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lzeg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lzeg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lzeg;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lzeg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -53,36 +51,44 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lzeg;
+    new-instance v0, Lzeg;
 
-    iget-object v0, p0, Lzeg;->Y:Lbfg;
+    iget-object v1, p0, Lzeg;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
-    iget-object v1, p0, Lzeg;->Z:Landroid/graphics/Bitmap;
+    invoke-direct {v0, v1, p2}, Lzeg;-><init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lzeg;-><init>(Lbfg;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lzeg;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    sget-object v0, Lf34;->a:Lf34;
+    iget v0, p0, Lzeg;->o:I
 
-    iget v1, p0, Lzeg;->X:I
+    iget-object v1, p0, Lzeg;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
 
     const/4 v2, 0x1
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    if-ne v1, v2, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :try_start_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -94,33 +100,50 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lzeg;->Y:Lbfg;
+    iget-object p1, p0, Lzeg;->X:Ljava/lang/Object;
 
-    iget-object v1, p1, Lbfg;->z0:Ld71;
+    check-cast p1, Lg54;
 
-    iget-object v3, p0, Lzeg;->Z:Landroid/graphics/Bitmap;
+    :try_start_1
+    iget-object p1, v1, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->b:Ltif;
 
-    iget-object p1, p1, Lbfg;->b:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcq5;
-
-    check-cast p1, Lpr5;
-
-    invoke-virtual {p1}, Lpr5;->m()Ljava/io/File;
+    invoke-virtual {p1}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iput v2, p0, Lzeg;->X:I
+    check-cast p1, Ls05;
 
-    invoke-virtual {v1, v3, p1, p0}, Ld71;->a(Landroid/graphics/Bitmap;Ljava/io/File;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lj05;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ls05;->a()Lsqe;
 
     move-result-object p1
+
+    new-instance v3, Lcye;
+
+    const/16 v4, 0xf
+
+    invoke-direct {v3, v4, v0}, Lcye;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lkg3;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v0, p1, v4, v3}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput v2, p0, Lzeg;->o:I
+
+    invoke-static {v0, p0}, Loxi;->a(Ljg3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lh54;->a:Lh54;
 
     if-ne p1, v0, :cond_2
 
@@ -128,61 +151,94 @@
 
     :cond_2
     :goto_0
-    check-cast p1, Ljava/lang/String;
+    :try_start_2
+    sget-object p1, Lybg;->a:Lybg;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-object v0, p0, Lzeg;->Y:Lbfg;
+    goto :goto_2
 
-    iget-object v0, v0, Lbfg;->w0:Ljava/lang/String;
+    :goto_1
+    new-instance v0, Lfed;
 
-    sget-object v1, Lox9;->j:Lqpa;
+    invoke-direct {v0, p1}, Lfed;-><init>(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x0
+    move-object p1, v0
 
-    if-nez v1, :cond_3
+    :goto_2
+    nop
 
-    goto :goto_1
+    instance-of v0, p1, Lfed;
+
+    const-string v2, "UploadDraftMediaWorker"
+
+    if-nez v0, :cond_3
+
+    move-object v0, p1
+
+    check-cast v0, Lybg;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lj05;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "storeDraftUpload: finish store upload = "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
-    sget-object v3, Ly38;->o:Ly38;
+    invoke-static {p1}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v3}, Lqpa;->b(Ly38;)Z
+    move-result-object v0
 
-    move-result v4
+    if-eqz v0, :cond_6
 
-    if-eqz v4, :cond_4
+    instance-of v1, v0, Ljava/util/concurrent/CancellationException;
 
-    const-string v4, "VideoMessage Recording. Save placeholder"
+    if-nez v1, :cond_5
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    instance-of v1, v0, Ljava/lang/SecurityException;
+
+    if-nez v1, :cond_5
+
+    instance-of v1, v0, Ljava/lang/IllegalStateException;
+
+    if-nez v1, :cond_5
+
+    instance-of v1, v0, Ljava/io/IOException;
+
+    if-eqz v1, :cond_4
+
+    goto :goto_3
 
     :cond_4
-    :goto_1
-    iget-object v0, p0, Lzeg;->Y:Lbfg;
+    const-string v1, "storeDraftUpload: failed (unexpected)"
 
-    iget-object v0, v0, Lbfg;->G0:Lmoe;
+    invoke-static {v2, v1, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
 
     :cond_5
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    :goto_3
+    const-string v1, "storeDraftUpload: failed"
 
-    move-result-object v1
+    invoke-static {v2, v1, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v3, v1
+    :cond_6
+    :goto_4
+    new-instance v0, Lhed;
 
-    check-cast v3, Lqeg;
+    invoke-direct {v0, p1}, Lhed;-><init>(Ljava/lang/Object;)V
 
-    const/4 v4, 0x3
-
-    invoke-static {v3, v2, v2, p1, v4}, Lqeg;->a(Lqeg;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lqeg;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

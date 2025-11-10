@@ -1,67 +1,90 @@
-.class public abstract Lppf;
+.class public final Lppf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Lkl;
+
+
+# static fields
+.field public static final b:Lppf;
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lppf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lppf;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lppf;->b:Lppf;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lppf;->a:Ljava/util/Iterator;
+    iput-object p1, p0, Lppf;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
-.method public final hasNext()Z
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
+    if-ne p1, p0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lppf;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lppf;
+
+    iget-object v0, p0, Lppf;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lppf;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lppf;->a:Ljava/lang/String;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lppf;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    return-void
 .end method

@@ -1,121 +1,82 @@
-.class public abstract Ldpa;
-.super Ljava/lang/Object;
+.class public final Ldpa;
+.super Lfoi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Loec;->oneme_media_keyboard_bottom_panel:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Ldpa;->a:I
-
-    sget v0, Loec;->oneme_media_keyboard_emoji_container:I
-
-    sput v0, Ldpa;->b:I
-
-    sget v0, Loec;->oneme_media_keyboard_emoji_list:I
-
-    sput v0, Ldpa;->c:I
-
-    sget v0, Loec;->oneme_media_keyboard_emoji_tabs:I
-
-    sput v0, Ldpa;->d:I
-
-    sget v0, Loec;->oneme_media_keyboard_fake_search_view:I
-
-    sput v0, Ldpa;->e:I
-
-    sget v0, Loec;->oneme_media_keyboard_pager:I
-
-    sput v0, Ldpa;->f:I
-
-    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_action:I
-
-    sput v0, Ldpa;->g:I
-
-    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
-
-    sput v0, Ldpa;->h:I
-
-    sget v0, Loec;->oneme_media_keyboard_remove_action:I
-
-    sput v0, Ldpa;->i:I
-
-    sget v0, Loec;->oneme_media_keyboard_settings_action:I
-
-    sput v0, Ldpa;->j:I
-
-    sget v0, Loec;->oneme_media_keyboard_showcase_action:I
-
-    sput v0, Ldpa;->k:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_container:I
-
-    sput v0, Ldpa;->l:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_header_title:I
-
-    sput v0, Ldpa;->m:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_list:I
-
-    sput v0, Ldpa;->n:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_tabs:I
-
-    sput v0, Ldpa;->o:I
-
-    sget v0, Loec;->oneme_media_keyboard_tabs:I
-
-    sput v0, Ldpa;->p:I
-
-    sget v0, Loec;->oneme_media_keyboard_view_type_category_emoji:I
-
-    sput v0, Ldpa;->q:I
-
-    sget v0, Loec;->oneme_media_keyboard_view_type_fake_search:I
-
-    sput v0, Ldpa;->r:I
+    iput p1, p0, Ldpa;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldpa;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldpa;
+
+    iget v1, p0, Ldpa;->a:I
+
+    iget p1, p1, Ldpa;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ldpa;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Counter(value="
+
+    const-string v1, ")"
+
+    iget v2, p0, Ldpa;->a:I
+
+    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

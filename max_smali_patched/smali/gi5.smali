@@ -1,44 +1,106 @@
-.class public interface abstract Lgi5;
+.class public final synthetic Lgi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc94;
+.implements Lc38;
+.implements Ld38;
+.implements Lhr3;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:F
+
+
+# direct methods
+.method public synthetic constructor <init>(IF)V
+    .locals 0
+
+    iput p1, p0, Lgi5;->a:I
+
+    iput p2, p0, Lgi5;->b:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract R()I
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lgi5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lxub;
+
+    invoke-virtual {p1}, Lxub;->m0()V
+
+    iget-object p1, p1, Lxub;->a:Lzi5;
+
+    iget v0, p0, Lgi5;->b:F
+
+    invoke-virtual {p1, v0}, Lzi5;->z1(F)V
+
+    return-void
+
+    :pswitch_0
+    iget v0, p0, Lgi5;->b:F
+
+    check-cast p1, Lxub;
+
+    invoke-virtual {p1, v0}, Lxub;->i0(F)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract b([BIIZ)Z
-.end method
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
 
-.method public abstract d(I[BI)V
-.end method
+    iget v0, p0, Lgi5;->a:I
 
-.method public abstract getLength()J
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract getPosition()J
-.end method
+    iget v0, p0, Lgi5;->b:F
 
-.method public abstract n([BIIZ)Z
-.end method
+    check-cast p1, Lotb;
 
-.method public abstract o()J
-.end method
+    invoke-interface {p1, v0}, Lotb;->j(F)V
 
-.method public abstract p(I)V
-.end method
+    return-void
 
-.method public abstract readFully([BII)V
-.end method
+    :pswitch_0
+    iget v0, p0, Lgi5;->b:F
 
-.method public abstract s(I[BI)I
-.end method
+    check-cast p1, Lotb;
 
-.method public abstract x()V
-.end method
+    invoke-interface {p1, v0}, Lotb;->j(F)V
 
-.method public abstract y(I)V
+    return-void
+
+    :pswitch_1
+    iget v0, p0, Lgi5;->b:F
+
+    check-cast p1, Lntb;
+
+    invoke-interface {p1, v0}, Lntb;->j(F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

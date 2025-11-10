@@ -1,85 +1,55 @@
 .class public final Ls46;
-.super Lm3f;
+.super Ldj0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final c:Ldj0;
 
-.field public final synthetic Y:Lone/me/folders/list/FoldersListScreen;
+.field public d:Lo46;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
-    .locals 0
+.method public constructor <init>(Ldj0;Lay2;Ltlf;)V
+    .locals 2
 
-    iput-object p2, p0, Ls46;->Y:Lone/me/folders/list/FoldersListScreen;
+    invoke-direct {p0, p3}, Ldj0;-><init>(Ltlf;)V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ls46;->c:Ldj0;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast p3, Lsta;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ls46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p3}, Lsta;->a()La54;
 
     move-result-object p1
 
-    check-cast p1, Ls46;
+    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Ls46;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p3, Lq46;
 
-    return-object p2
-.end method
+    const/4 v0, 0x0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct {p3, p0, v0}, Lq46;-><init>(Ls46;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v0, Ls46;
+    const/4 v1, 0x3
 
-    iget-object v1, p0, Ls46;->Y:Lone/me/folders/list/FoldersListScreen;
+    invoke-static {p1, v0, v0, p3, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
-    invoke-direct {v0, p2, v1}, Ls46;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+    iget-object p2, p2, Lay2;->d:Lr13;
 
-    iput-object p1, v0, Ls46;->X:Ljava/lang/Object;
+    new-instance p3, Lr46;
 
-    return-object v0
-.end method
+    invoke-direct {p3, p0, v0}, Lr46;-><init>(Ls46;Lkotlin/coroutines/Continuation;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    new-instance v0, Ln16;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Ls46;->X:Ljava/lang/Object;
+    invoke-direct {v0, p2, p3, v1}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    check-cast p1, Lhy9;
+    invoke-static {v0, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
 
-    instance-of v0, p1, Lzc4;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lc36;->c:Lc36;
-
-    check-cast p1, Lzc4;
-
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

@@ -33,7 +33,7 @@
     .line 3
     const-string v0, "output is null"
 
-    invoke-static {p1, v0}, Lk74;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lnui;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lorg/msgpack/core/buffer/OutputStreamBufferOutput;->out:Ljava/io/OutputStream;
 

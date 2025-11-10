@@ -1,66 +1,27 @@
-.class public final Livd;
+.class public abstract Livd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
-
-# instance fields
-.field public final X:Z
-
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+# static fields
+.field public static final a:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lw35;->d:I
 
-    iput-wide p1, p0, Livd;->a:J
+    const/4 v0, 0x5
 
-    iput-object p3, p0, Livd;->b:Ljava/lang/String;
+    sget-object v1, Lb45;->d:Lb45;
 
-    iput-object p4, p0, Livd;->c:Ljava/lang/String;
+    invoke-static {v0, v1}, Lzyi;->d(ILb45;)J
 
-    iput-object p5, p0, Livd;->o:Ljava/lang/String;
+    move-result-wide v0
 
-    iput-boolean p6, p0, Livd;->X:Z
+    sput-wide v0, Livd;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Session{="
-
-    const-string v1, ", current="
-
-    iget-wide v2, p0, Livd;->a:J
-
-    iget-boolean v4, p0, Livd;->X:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

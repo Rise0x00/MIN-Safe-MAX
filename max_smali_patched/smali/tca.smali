@@ -1,262 +1,155 @@
 .class public final Ltca;
-.super Lfm3;
+.super Ljda;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxaa;
+.field public final synthetic e:I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lxaa;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ltca;->e:I
 
-    iput-object p1, p0, Ltca;->a:Lxaa;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Ltca;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljda;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(Lxda;)V
-    .locals 6
+.method public final b(Ld5e;)V
+    .locals 2
 
-    :goto_0
-    iget-object v0, p0, Ltca;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget v0, p0, Ltca;->e:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    iget-object p1, p1, Ld5e;->c:Ljava/lang/Object;
 
-    check-cast v1, Lsca;
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    if-nez v1, :cond_2
+    new-instance v0, Landroid/app/Notification$InboxStyle;
 
-    new-instance v2, Lsca;
+    invoke-direct {v0, p1}, Landroid/app/Notification$InboxStyle;-><init>(Landroid/app/Notification$Builder;)V
 
-    invoke-direct {v2, v0}, Lsca;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
+    iget-object p1, p0, Ljda;->c:Ljava/lang/Object;
 
-    :cond_0
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Ljava/lang/CharSequence;
 
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    move-object v1, v2
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    new-instance v0, Lrca;
-
-    invoke-direct {v0, p1, v1}, Lrca;-><init>(Lxda;Lsca;)V
-
-    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
-
-    :cond_3
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, [Lrca;
-
-    sget-object v3, Lsca;->Y:[Lrca;
-
-    if-ne v2, v3, :cond_5
-
-    iget-object v0, v1, Lsca;->o:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1, v0}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_4
-    invoke-interface {p1}, Lxda;->b()V
-
-    return-void
-
-    :cond_5
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Lrca;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v0}, Lrca;->h()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {v1, v0}, Lsca;->a(Lrca;)V
-
-    :cond_6
-    return-void
-.end method
-
-.method public final w(Luca;)V
-    .locals 4
-
-    :goto_0
-    iget-object v0, p0, Ltca;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsca;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lsca;->h()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    new-instance v2, Lsca;
-
-    invoke-direct {v2, v0}, Lsca;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    :cond_1
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    move-object v1, v2
-
-    :cond_2
-    iget-object v0, v1, Lsca;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_3
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    move v3, v2
-
-    :cond_3
-    :try_start_0
-    invoke-virtual {p1, v1}, Luca;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v3, :cond_4
-
-    iget-object p1, p0, Ltca;->a:Lxaa;
-
-    invoke-virtual {p1, v1}, Lraa;->a(Lxda;)V
-
-    :cond_4
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-static {p1}, Lgc5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-virtual {v0, p1}, Landroid/app/Notification$InboxStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
 
     move-result-object p1
 
-    throw p1
+    iget-boolean v0, p0, Ljda;->a:Z
 
-    :cond_5
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v3
+    iget-object v0, p0, Ljda;->d:Ljava/lang/Object;
 
-    if-eq v3, v1, :cond_1
+    check-cast v0, Ljava/lang/CharSequence;
 
-    goto :goto_0
-.end method
+    invoke-virtual {p1, v0}, Landroid/app/Notification$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
 
-.method public final x()V
-    .locals 3
+    :cond_0
+    iget-object v0, p0, Ltca;->f:Ljava/lang/Object;
 
-    iget-object v0, p0, Ltca;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lsca;
+    check-cast v1, Ljava/lang/CharSequence;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {p1, v1}, Landroid/app/Notification$InboxStyle;->addLine(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
 
-    invoke-virtual {v1}, Lsca;->h()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    return-void
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    return-void
 
-    move-result-object v2
+    :pswitch_0
+    iget-object p1, p1, Ld5e;->c:Ljava/lang/Object;
 
-    if-eq v2, v1, :cond_0
+    check-cast p1, Landroid/app/Notification$Builder;
+
+    new-instance v0, Landroid/app/Notification$BigTextStyle;
+
+    invoke-direct {v0, p1}, Landroid/app/Notification$BigTextStyle;-><init>(Landroid/app/Notification$Builder;)V
+
+    iget-object p1, p0, Ljda;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p1}, Landroid/app/Notification$BigTextStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ltca;->f:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Ljda;->a:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ljda;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$BigTextStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
 
     :cond_2
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Ltca;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "androidx.core.app.NotificationCompat$InboxStyle"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "androidx.core.app.NotificationCompat$BigTextStyle"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

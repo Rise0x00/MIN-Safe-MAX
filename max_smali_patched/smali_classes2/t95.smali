@@ -1,21 +1,33 @@
 .class public final Lt95;
-.super Lae;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
+.method public synthetic constructor <init>(IIIII)V
     .locals 0
 
-    iput p2, p0, Lt95;->b:I
+    iput p5, p0, Lt95;->a:I
 
-    iput-object p1, p0, Lt95;->c:Landroid/graphics/drawable/Drawable$Callback;
+    iput p1, p0, Lt95;->b:I
+
+    iput p2, p0, Lt95;->c:I
+
+    iput p3, p0, Lt95;->d:I
+
+    iput p4, p0, Lt95;->e:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,86 +36,95 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public a(I)Z
+    .locals 2
 
-    iget v0, p0, Lt95;->b:I
+    iget v0, p0, Lt95;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lt95;->c:Landroid/graphics/drawable/Drawable$Callback;
+    const/4 v0, 0x1
 
-    check-cast v0, Lvc8;
+    if-ne p1, v0, :cond_0
 
-    iget-object v0, v0, Lvc8;->G0:Landroid/content/res/ColorStateList;
+    iget p1, p0, Lt95;->b:I
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Lt95;->c:I
 
-    invoke-static {p1, v0}, Llx4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    sub-int/2addr p1, v1
+
+    if-le p1, v0, :cond_1
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    iget p1, p0, Lt95;->d:I
+
+    iget v1, p0, Lt95;->e:I
+
+    sub-int/2addr p1, v1
+
+    if-le p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 
     :pswitch_0
-    iget-object p1, p0, Lt95;->c:Landroid/graphics/drawable/Drawable$Callback;
+    const/4 v0, 0x1
 
-    check-cast p1, Lu95;
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {p1}, Lu95;->a()V
+    iget p1, p0, Lt95;->b:I
 
-    return-void
+    iget v1, p0, Lt95;->c:I
+
+    sub-int/2addr p1, v1
+
+    if-le p1, v0, :cond_3
+
+    goto :goto_1
+
+    :cond_2
+    iget p1, p0, Lt95;->d:I
+
+    iget v1, p0, Lt95;->e:I
+
+    sub-int/2addr p1, v1
+
+    if-le p1, v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_1
+    return v0
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x2
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final b(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
+.method public b()I
+    .locals 1
 
-    iget v0, p0, Lt95;->b:I
+    iget v0, p0, Lt95;->e:I
 
-    packed-switch v0, :pswitch_data_0
+    if-ltz v0, :cond_0
 
-    iget-object v0, p0, Lt95;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast v0, Lvc8;
-
-    iget-object v1, v0, Lvc8;->G0:Landroid/content/res/ColorStateList;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lvc8;->K0:[I
-
-    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Llx4;->g(Landroid/graphics/drawable/Drawable;I)V
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Lt95;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p1, Lu95;
-
-    invoke-virtual {p1}, Lu95;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

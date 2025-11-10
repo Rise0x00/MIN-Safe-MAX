@@ -1,64 +1,26 @@
-.class public final Lysc;
+.class public abstract Lysc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lbtc;
 
 
 # static fields
-.field public static final a:Lysc;
+.field public static media_picker_default_toolbar_title:I = 0x7f130644
 
+.field public static media_picker_default_toolbar_title_only_photo:I = 0x7f130645
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static media_picker_empty_media_data:I = 0x7f130646
 
-    new-instance v0, Lysc;
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f130680
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f130681
 
-    sput-object v0, Lysc;->a:Lysc;
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f130682
 
-    return-void
-.end method
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f130683
 
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f130684
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130685
 
-    const/4 v0, 0x1
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130686
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lysc;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x500f739a
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraNotFound"
-
-    return-object v0
-.end method
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f130687

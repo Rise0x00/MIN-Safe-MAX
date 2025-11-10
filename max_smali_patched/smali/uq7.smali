@@ -1,295 +1,127 @@
-.class public final Luq7;
-.super Ljava/lang/Object;
+.class public abstract Luq7;
+.super Lmn6;
 .source "SourceFile"
 
 
 # static fields
-.field public static final g:Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String;
-
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
+.field public static final s0:[I
 
 
 # instance fields
-.field public final a:I
+.field public final X:I
 
-.field public final b:J
+.field public Y:Lu3e;
 
-.field public final c:Ljava/lang/Object;
+.field public final Z:Z
 
-.field public final d:I
+.field public final d:Lc6;
 
-.field public final e:Lmn8;
-
-.field public final f:Lwvd;
+.field public o:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lt4g;->a:I
+    sget-object v0, Ll92;->h:[I
 
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->g:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->h:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->i:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->j:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->k:Ljava/lang/String;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luq7;->l:Ljava/lang/String;
+    sput-object v0, Luq7;->s0:[I
 
     return-void
 .end method
 
-.method public constructor <init>(IJLmn8;Lwvd;Ljava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(Lc6;I)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Luq7;->a:I
+    iput p2, p0, Lmn6;->a:I
 
-    iput-wide p2, p0, Luq7;->b:J
+    sget-object v0, Lsq7;->u0:Lsq7;
 
-    iput-object p4, p0, Luq7;->e:Lmn8;
+    iget v0, v0, Lsq7;->b:I
 
-    iput-object p5, p0, Luq7;->f:Lwvd;
-
-    iput-object p6, p0, Luq7;->c:Ljava/lang/Object;
-
-    iput p7, p0, Luq7;->d:I
-
-    return-void
-.end method
-
-.method public static a(Landroid/os/Bundle;)Luq7;
-    .locals 10
-
-    sget-object v0, Luq7;->g:Ljava/lang/String;
+    and-int/2addr v0, p2
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    if-eqz v0, :cond_0
 
-    move-result v3
+    new-instance v0, Lsoh;
 
-    sget-object v0, Luq7;->h:Ljava/lang/String;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    invoke-virtual {p0, v0, v4, v5}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v4
-
-    sget-object v0, Luq7;->i:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    move-object v6, v2
+    invoke-direct {v0, p0}, Lsoh;-><init>(Ljava/io/Closeable;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lmn8;->a(Landroid/os/Bundle;)Lmn8;
-
-    move-result-object v0
-
-    move-object v6, v0
+    move-object v0, v1
 
     :goto_0
-    sget-object v0, Luq7;->l:Ljava/lang/String;
+    new-instance v2, Lmr7;
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    invoke-direct {v2, v3, v1, v0}, Lmr7;-><init>(ILmr7;Lsoh;)V
+
+    iput-object v2, p0, Lmn6;->c:Lmr7;
+
+    sget-object v0, Lsq7;->s0:Lsq7;
+
+    iget v0, v0, Lsq7;->b:I
+
+    and-int/2addr v0, p2
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lwvd;->a(Landroid/os/Bundle;)Lwvd;
-
-    move-result-object v0
-
-    :goto_1
-    move-object v7, v0
-
-    goto :goto_2
-
-    :cond_1
-    if-eqz v3, :cond_2
-
-    new-instance v0, Lwvd;
-
-    invoke-direct {v0, v3}, Lwvd;-><init>(I)V
+    move v0, v1
 
     goto :goto_1
 
+    :cond_1
+    move v0, v3
+
+    :goto_1
+    iput-boolean v0, p0, Lmn6;->b:Z
+
+    sget-object v0, Luq7;->s0:[I
+
+    iput-object v0, p0, Luq7;->o:[I
+
+    sget-object v0, Lgm4;->a:Lx3e;
+
+    iput-object v0, p0, Luq7;->Y:Lu3e;
+
+    iput-object p1, p0, Luq7;->d:Lc6;
+
+    sget-object p1, Lsq7;->Z:Lsq7;
+
+    iget p1, p1, Lsq7;->b:I
+
+    and-int/2addr p1, p2
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x7f
+
+    iput p1, p0, Luq7;->X:I
+
     :cond_2
-    move-object v7, v2
+    sget-object p1, Lsq7;->X:Lsq7;
 
-    :goto_2
-    sget-object v0, Luq7;->k:Ljava/lang/String;
+    iget p1, p1, Lsq7;->b:I
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+    and-int/2addr p1, p2
 
-    move-result v9
+    if-eqz p1, :cond_3
 
-    const/4 v0, 0x1
-
-    if-eq v9, v0, :cond_7
-
-    sget-object v0, Luq7;->j:Ljava/lang/String;
-
-    const/4 v8, 0x2
-
-    if-eq v9, v8, :cond_8
-
-    const/4 v8, 0x3
-
-    if-eq v9, v8, :cond_4
-
-    const/4 p0, 0x4
-
-    if-ne v9, p0, :cond_3
-
-    goto :goto_4
+    move v3, v1
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
+    xor-int/lit8 p1, v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    iput-boolean p1, p0, Luq7;->Z:Z
 
-    throw p0
-
-    :cond_4
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
-
-    move-result-object p0
-
-    if-nez p0, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    invoke-static {p0}, Ldv0;->a(Landroid/os/IBinder;)Le77;
-
-    move-result-object p0
-
-    invoke-static {}, Le77;->i()Lb77;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_6
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/Bundle;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v2}, Lrm8;->b(Landroid/os/Bundle;)Lrm8;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lu67;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {v0}, Lb77;->h()Lxyc;
-
-    move-result-object v2
-
-    :cond_7
-    :goto_4
-    move-object v8, v2
-
-    goto :goto_5
-
-    :cond_8
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    if-nez p0, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    invoke-static {p0}, Lrm8;->b(Landroid/os/Bundle;)Lrm8;
-
-    move-result-object v2
-
-    goto :goto_4
-
-    :goto_5
-    new-instance v2, Luq7;
-
-    invoke-direct/range {v2 .. v9}, Luq7;-><init>(IJLmn8;Lwvd;Ljava/lang/Object;I)V
-
-    return-object v2
+    return-void
 .end method

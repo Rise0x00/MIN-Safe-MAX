@@ -210,7 +210,7 @@
     :pswitch_0
     const-string v2, "unknown usage "
 
-    invoke-static {v1, v2}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

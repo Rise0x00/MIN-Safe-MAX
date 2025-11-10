@@ -1,9 +1,9 @@
-.class public final Lzmf;
-.super Lmo7;
+.class public final synthetic Lzmf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
@@ -20,106 +20,49 @@
 
     iput-object p1, p0, Lzmf;->b:Lanf;
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, Lzmf;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lzmf;->b:Lanf;
+    check-cast p1, Lw6e;
 
-    iget-object v0, v0, Lanf;->a:Ljava/lang/String;
-
-    :try_start_0
-    invoke-static {v0}, Lps;->H(Ljava/lang/String;)Lcnf;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-string v1, "Could not find manifest for library "
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Tracer"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lwmf;
-
-    iget-object v1, p0, Lzmf;->b:Lanf;
-
-    iget-object v2, v1, Lanf;->a:Ljava/lang/String;
-
-    invoke-virtual {v1}, Lanf;->a()Lcnf;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v3}, Ljk0;->versionName()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
+    invoke-virtual {p1, v0}, Lw6e;->f(Z)V
 
     :cond_0
-    const-string v3, "NA"
+    iget-object p1, p0, Lzmf;->b:Lanf;
 
-    :cond_1
-    invoke-virtual {v1}, Lanf;->a()Lcnf;
+    invoke-virtual {p1}, Lanf;->f()Lw6e;
 
-    move-result-object v4
+    move-result-object p1
 
-    const/4 v5, 0x0
+    return-object p1
 
-    if-eqz v4, :cond_2
+    :pswitch_0
+    iget-object v0, p0, Lzmf;->b:Lanf;
 
-    invoke-interface {v4}, Ljk0;->buildUuid()Ljava/lang/String;
+    check-cast p1, Lw6e;
 
-    move-result-object v4
+    invoke-static {v0, p1}, Lanf;->c(Lanf;Lw6e;)Lw6e;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_2
-    move-object v4, v5
+    return-object p1
 
-    :goto_1
-    invoke-virtual {v1}, Lanf;->a()Lcnf;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v1}, Ljk0;->environment()Ljava/lang/String;
-
-    move-result-object v5
-
-    :cond_3
-    invoke-direct {v0, v2, v3, v4, v5}, Lwmf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

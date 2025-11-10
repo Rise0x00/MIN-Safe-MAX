@@ -1,54 +1,40 @@
-.class public final Lyoc;
+.class public abstract Lyoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lww7;
 
 
 # static fields
-.field public static final a:Lyoc;
+.field public static oneme_section_avatar:I = 0x7f0a0773
 
-.field public static final b:I
+.field public static oneme_section_description:I = 0x7f0a0774
 
-.field public static final c:J
+.field public static oneme_section_end_arrow:I = 0x7f0a0775
 
+.field public static oneme_section_end_checkbox:I = 0x7f0a0776
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static oneme_section_end_container:I = 0x7f0a0777
 
-    new-instance v0, Lyoc;
+.field public static oneme_section_end_custom_icon:I = 0x7f0a0778
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_section_end_text:I = 0x7f0a0779
 
-    sput-object v0, Lyoc;->a:Lyoc;
+.field public static oneme_section_start_icon:I = 0x7f0a077a
 
-    sget v0, Lk9d;->a:I
+.field public static oneme_section_title:I = 0x7f0a077b
 
-    sput v0, Lyoc;->b:I
+.field public static oneme_section_upper_text:I = 0x7f0a077c
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+.field public static oneme_settings_itemcontent_container:I = 0x7f0a0785
 
-    sput-wide v0, Lyoc;->c:J
+.field public static oneme_settings_itemcontent_counter:I = 0x7f0a0786
 
-    return-void
-.end method
+.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a0787
 
+.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0788
 
-# virtual methods
-.method public final getItemId()J
-    .locals 2
+.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0789
 
-    sget-wide v0, Lyoc;->c:J
+.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a078a
 
-    return-wide v0
-.end method
+.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a078b
 
-.method public final m()I
-    .locals 1
-
-    sget v0, Lyoc;->b:I
-
-    return v0
-.end method
+.field public static oneme_settingslist_rv:I = 0x7f0a084b

@@ -1,198 +1,185 @@
 .class public final Lef8;
-.super Lv2;
+.super Lxjb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Ldf8;
 
-.field public final synthetic o:Lff8;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lff8;I)V
+.method public constructor <init>(Ldf8;Ljava/util/List;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Lef8;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lef8;->o:Lff8;
+    iput-object p1, p0, Lef8;->a:Ldf8;
 
-    const/4 p1, 0x0
-
-    const/16 p2, 0x9
-
-    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Lff8;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lef8;->c:I
-
-    iput-object p2, p0, Lef8;->o:Lff8;
-
-    const/16 p2, 0x9
-
-    .line 2
-    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lef8;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lef8;->c:I
+    instance-of v0, p1, Lef8;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Lef8;
+
+    iget-object v0, p0, Lef8;->a:Ldf8;
+
+    iget-object v1, p1, Lef8;->a:Ldf8;
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    check-cast p2, Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lef8;->b:Ljava/util/List;
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    iget-object p1, p1, Lef8;->b:Ljava/util/List;
 
-    iget-object p1, p0, Lef8;->o:Lff8;
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
+    move-result p1
 
-    move-result-object p2
+    if-eqz p1, :cond_0
 
-    check-cast p2, Lyj6;
+    const/4 p1, 0x1
 
-    invoke-virtual {p1}, Lff8;->getOverlayDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lyj6;->k(Landroid/graphics/drawable/Drawable;)V
+    return p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lef8;->a:Ldf8;
+
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast p2, Lh47;
+    iget-object v1, p0, Lef8;->b:Ljava/util/List;
 
-    check-cast p1, Lh47;
-
-    iget-object p1, p0, Lef8;->o:Lff8;
-
-    invoke-static {p1, p2}, Lff8;->q(Lff8;Lh47;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    check-cast p2, La57;
-
-    check-cast p1, La57;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, La57;->getWidth()I
+    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-int/2addr v1, v0
 
-    move-result-object v1
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lef8;->a:Ldf8;
+
+    aput-object v2, v0, v1
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lef8;->b:Ljava/util/List;
+
+    aput-object v3, v0, v2
+
+    const-string v3, "a;b"
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    new-array v3, v1, [Ljava/lang/String;
 
     goto :goto_0
 
-    :cond_2
-    move-object v1, v0
+    :cond_0
+    const-string v4, ";"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
 
     :goto_0
-    if-eqz p2, :cond_3
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-interface {p2}, La57;->getWidth()I
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v2
+    const-class v5, Lef8;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "["
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_1
+    array-length v5, v3
+
+    if-ge v1, v5, :cond_2
+
+    aget-object v5, v3, v1
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v5, v0, v1
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    array-length v5, v3
+
+    sub-int/2addr v5, v2
+
+    if-eq v1, v5, :cond_1
+
+    const-string v5, ", "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :cond_3
-    move-object v2, v0
+    :cond_2
+    const-string v0, "]"
 
-    :goto_1
-    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    if-eqz p1, :cond_4
-
-    invoke-interface {p1}, La57;->getHeight()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_4
-    move-object p1, v0
-
-    :goto_2
-    if-eqz p2, :cond_5
-
-    invoke-interface {p2}, La57;->getHeight()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_5
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    :cond_6
-    new-instance p1, Lyn7;
-
-    const/4 p2, 0x5
-
-    iget-object v0, p0, Lef8;->o:Lff8;
-
-    invoke-direct {p1, p2, v0}, Lyn7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_7
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

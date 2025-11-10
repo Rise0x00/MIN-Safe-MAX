@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
-.super Lg79;
+.super Lud9;
 .source "SourceFile"
 
 
@@ -68,7 +68,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    invoke-direct {p0}, Lud9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->clear()Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
 
@@ -82,7 +82,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lfe7;->b:Ljava/lang/Object;
+    sget-object v0, Lqj7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -124,7 +124,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
+.method public static parseFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -137,7 +137,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
 
     move-result-object p0
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;-><init>()V
 
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
 
     move-result-object p0
 
@@ -191,7 +191,7 @@
 
     iput-object v3, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
 
-    sget-object v4, Lo7;->i:[B
+    sget-object v4, Lqbi;->e:[B
 
     iput-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
@@ -219,7 +219,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lg79;->cachedSize:I
+    iput v0, p0, Lud9;->cachedSize:I
 
     return-object p0
 .end method
@@ -237,7 +237,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Le83;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lca3;->h(IJ)I
 
     move-result v0
 
@@ -253,7 +253,7 @@
 
     const/4 v4, 0x2
 
-    invoke-static {v4, v1}, Le83;->f(II)I
+    invoke-static {v4, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -274,7 +274,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->thumbnail:Ljava/lang/String;
 
-    invoke-static {v1, v5}, Le83;->l(ILjava/lang/String;)I
+    invoke-static {v1, v5}, Lca3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -287,7 +287,7 @@
 
     const/4 v5, 0x4
 
-    invoke-static {v5, v1}, Le83;->f(II)I
+    invoke-static {v5, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -300,7 +300,7 @@
 
     const/4 v5, 0x5
 
-    invoke-static {v5, v1}, Le83;->f(II)I
+    invoke-static {v5, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -313,7 +313,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {v1}, Le83;->a(I)I
+    invoke-static {v1}, Lca3;->a(I)I
 
     move-result v1
 
@@ -332,7 +332,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
 
-    invoke-static {v1, v5}, Le83;->l(ILjava/lang/String;)I
+    invoke-static {v1, v5}, Lca3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -341,7 +341,7 @@
     :cond_6
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
-    sget-object v5, Lo7;->i:[B
+    sget-object v5, Lqbi;->e:[B
 
     invoke-static {v1, v5}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -353,7 +353,7 @@
 
     iget-object v5, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
-    invoke-static {v1, v5}, Le83;->b(I[B)I
+    invoke-static {v1, v5}, Lca3;->b(I[B)I
 
     move-result v1
 
@@ -366,7 +366,7 @@
 
     const/16 v1, 0x9
 
-    invoke-static {v1}, Le83;->a(I)I
+    invoke-static {v1}, Lca3;->a(I)I
 
     move-result v1
 
@@ -381,7 +381,7 @@
 
     const/16 v1, 0xa
 
-    invoke-static {v1, v5, v6}, Le83;->h(IJ)I
+    invoke-static {v1, v5, v6}, Lca3;->h(IJ)I
 
     move-result v1
 
@@ -400,7 +400,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalSiteName:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Le83;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lca3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -413,7 +413,7 @@
 
     const/16 v2, 0xc
 
-    invoke-static {v2, v1}, Le83;->i(ILg79;)I
+    invoke-static {v2, v1}, Lca3;->i(ILud9;)I
 
     move-result v1
 
@@ -432,7 +432,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->token:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Le83;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lca3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -445,7 +445,7 @@
 
     const/16 v2, 0xe
 
-    invoke-static {v2, v1}, Le83;->i(ILg79;)I
+    invoke-static {v2, v1}, Lca3;->i(ILud9;)I
 
     move-result v1
 
@@ -458,7 +458,7 @@
 
     const/16 v1, 0xf
 
-    invoke-static {v1}, Le83;->a(I)I
+    invoke-static {v1}, Lca3;->a(I)I
 
     move-result v1
 
@@ -471,7 +471,7 @@
 
     const/16 v2, 0x10
 
-    invoke-static {v2, v1}, Le83;->f(II)I
+    invoke-static {v2, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -484,7 +484,7 @@
 
     const/16 v2, 0x11
 
-    invoke-static {v2, v1}, Le83;->f(II)I
+    invoke-static {v2, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -497,7 +497,7 @@
 
     const/16 v2, 0x12
 
-    invoke-static {v2, v1}, Le83;->f(II)I
+    invoke-static {v2, v1}, Lca3;->f(II)I
 
     move-result v1
 
@@ -509,23 +509,7 @@
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Ld83;)Lg79;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
+.method public mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -536,14 +520,14 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
+    invoke-virtual {p1}, Lba3;->s()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
     .line 3
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
 
     move-result v0
 
@@ -553,7 +537,7 @@
 
     .line 4
     :sswitch_0
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -564,7 +548,7 @@
 
     .line 6
     :sswitch_1
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -575,7 +559,7 @@
 
     .line 8
     :sswitch_2
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -586,7 +570,7 @@
 
     .line 10
     :sswitch_3
-    invoke-virtual {p1}, Ld83;->f()Z
+    invoke-virtual {p1}, Lba3;->f()Z
 
     move-result v0
 
@@ -611,13 +595,13 @@
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoCollage:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;
 
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
 
     goto :goto_0
 
     .line 14
     :sswitch_5
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -642,13 +626,13 @@
     :cond_2
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->convertOptions:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
 
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
 
     goto :goto_0
 
     .line 18
     :sswitch_7
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -658,7 +642,7 @@
 
     .line 19
     :sswitch_8
-    invoke-virtual {p1}, Ld83;->q()J
+    invoke-virtual {p1}, Lba3;->q()J
 
     move-result-wide v0
 
@@ -669,7 +653,7 @@
 
     .line 21
     :sswitch_9
-    invoke-virtual {p1}, Ld83;->f()Z
+    invoke-virtual {p1}, Lba3;->f()Z
 
     move-result v0
 
@@ -679,7 +663,7 @@
 
     .line 22
     :sswitch_a
-    invoke-virtual {p1}, Ld83;->g()[B
+    invoke-virtual {p1}, Lba3;->g()[B
 
     move-result-object v0
 
@@ -689,7 +673,7 @@
 
     .line 23
     :sswitch_b
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -699,7 +683,7 @@
 
     .line 24
     :sswitch_c
-    invoke-virtual {p1}, Ld83;->f()Z
+    invoke-virtual {p1}, Lba3;->f()Z
 
     move-result v0
 
@@ -709,7 +693,7 @@
 
     .line 25
     :sswitch_d
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -720,7 +704,7 @@
 
     .line 27
     :sswitch_e
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -731,7 +715,7 @@
 
     .line 29
     :sswitch_f
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -741,7 +725,7 @@
 
     .line 30
     :sswitch_10
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {p1}, Lba3;->p()I
 
     move-result v0
 
@@ -752,7 +736,7 @@
 
     .line 32
     :sswitch_11
-    invoke-virtual {p1}, Ld83;->q()J
+    invoke-virtual {p1}, Lba3;->q()J
 
     move-result-wide v0
 
@@ -791,7 +775,23 @@
     .end sparse-switch
 .end method
 
-.method public writeTo(Le83;)V
+.method public bridge synthetic mergeFrom(Lba3;)Lud9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public writeTo(Lca3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -809,7 +809,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lca3;->x(IJ)V
 
     :cond_0
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->duration:I
@@ -818,7 +818,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lca3;->w(II)V
 
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->thumbnail:Ljava/lang/String;
@@ -835,7 +835,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->thumbnail:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Le83;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lca3;->E(ILjava/lang/String;)V
 
     :cond_2
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->width:I
@@ -844,7 +844,7 @@
 
     const/4 v4, 0x4
 
-    invoke-virtual {p1, v4, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v4, v0}, Lca3;->w(II)V
 
     :cond_3
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->height:I
@@ -853,7 +853,7 @@
 
     const/4 v4, 0x5
 
-    invoke-virtual {p1, v4, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v4, v0}, Lca3;->w(II)V
 
     :cond_4
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->live:Z
@@ -862,7 +862,7 @@
 
     const/4 v4, 0x6
 
-    invoke-virtual {p1, v4, v0}, Le83;->r(IZ)V
+    invoke-virtual {p1, v4, v0}, Lca3;->r(IZ)V
 
     :cond_5
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
@@ -877,12 +877,12 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalUrl:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v4}, Le83;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v4}, Lca3;->E(ILjava/lang/String;)V
 
     :cond_6
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
-    sget-object v4, Lo7;->i:[B
+    sget-object v4, Lqbi;->e:[B
 
     invoke-static {v0, v4}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -894,7 +894,7 @@
 
     iget-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->previewData:[B
 
-    invoke-virtual {p1, v0, v4}, Le83;->s(I[B)V
+    invoke-virtual {p1, v0, v4}, Lca3;->s(I[B)V
 
     :cond_7
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->isThumbnailInCache:Z
@@ -903,7 +903,7 @@
 
     const/16 v4, 0x9
 
-    invoke-virtual {p1, v4, v0}, Le83;->r(IZ)V
+    invoke-virtual {p1, v4, v0}, Lca3;->r(IZ)V
 
     :cond_8
     iget-wide v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->startTime:J
@@ -914,7 +914,7 @@
 
     const/16 v0, 0xa
 
-    invoke-virtual {p1, v0, v4, v5}, Le83;->x(IJ)V
+    invoke-virtual {p1, v0, v4, v5}, Lca3;->x(IJ)V
 
     :cond_9
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalSiteName:Ljava/lang/String;
@@ -929,7 +929,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->externalSiteName:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Le83;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Lca3;->E(ILjava/lang/String;)V
 
     :cond_a
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->convertOptions:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$ConvertOptions;
@@ -938,7 +938,7 @@
 
     const/16 v2, 0xc
 
-    invoke-virtual {p1, v2, v0}, Le83;->y(ILg79;)V
+    invoke-virtual {p1, v2, v0}, Lca3;->y(ILud9;)V
 
     :cond_b
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->token:Ljava/lang/String;
@@ -953,7 +953,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->token:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lca3;->E(ILjava/lang/String;)V
 
     :cond_c
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoCollage:Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video$VideoCollage;
@@ -962,7 +962,7 @@
 
     const/16 v1, 0xe
 
-    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
 
     :cond_d
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->ignoreAutoplay:Z
@@ -971,7 +971,7 @@
 
     const/16 v1, 0xf
 
-    invoke-virtual {p1, v1, v0}, Le83;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Lca3;->r(IZ)V
 
     :cond_e
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioTrackIndex:I
@@ -980,7 +980,7 @@
 
     const/16 v1, 0x10
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lca3;->w(II)V
 
     :cond_f
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->audioGroupIndex:I
@@ -989,7 +989,7 @@
 
     const/16 v1, 0x11
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lca3;->w(II)V
 
     :cond_10
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Video;->videoType:I
@@ -998,7 +998,7 @@
 
     const/16 v1, 0x12
 
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+    invoke-virtual {p1, v1, v0}, Lca3;->w(II)V
 
     :cond_11
     return-void

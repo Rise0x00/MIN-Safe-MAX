@@ -1,77 +1,172 @@
 .class public final Lbo2;
-.super Lbj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Lgu3;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lvxb;
 
-.field public final c:Ljava/util/List;
-
-.field public final o:J
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;JI)V
+.method public constructor <init>(Lgu3;Lvxb;J)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lbo2;->b:Ljava/lang/String;
+    iput-object p1, p0, Lbo2;->a:Lgu3;
 
-    iput-object p4, p0, Lbo2;->c:Ljava/util/List;
+    iput-object p2, p0, Lbo2;->b:Lvxb;
 
-    iput-wide p5, p0, Lbo2;->o:J
-
-    iput p7, p0, Lbo2;->X:I
+    iput-wide p3, p0, Lbo2;->c:J
 
     return-void
 .end method
 
+.method public static a(Ljf9;)Lbo2;
+    .locals 12
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-static {p0}, Le0i;->r(Ljf9;)I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, "ChatMessageSearchResultEvent{query=\'"
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lbo2;->b:Ljava/lang/String;
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v2, 0x0
 
-    const-string v1, "\', results="
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v5, v1
 
-    iget-object v1, p0, Lbo2;->c:Ljava/util/List;
+    move v6, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-wide v7, v3
 
-    const-string v1, ", marker="
+    :goto_0
+    if-ge v6, v0, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Ljf9;->u0()Ljava/lang/String;
 
-    iget-wide v1, p0, Lbo2;->o:J
+    move-result-object v9
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, ", total="
+    invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v10
 
-    iget v1, p0, Lbo2;->X:I
+    const/4 v11, -0x1
 
-    const/16 v2, 0x7d
+    sparse-switch v10, :sswitch_data_0
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object v0
+    :sswitch_0
+    const-string v10, "contact"
 
-    return-object v0
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v11, 0x2
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v10, "readMark"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v11, 0x1
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v10, "presence"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v11, v2
+
+    :goto_1
+    packed-switch v11, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljf9;->v()V
+
+    goto :goto_2
+
+    :pswitch_0
+    invoke-static {p0}, Lgu3;->g(Ljf9;)Lgu3;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :pswitch_1
+    invoke-static {p0, v3, v4}, Le0i;->q(Ljf9;J)J
+
+    move-result-wide v7
+
+    goto :goto_2
+
+    :pswitch_2
+    invoke-static {p0}, Lvxb;->a(Ljf9;)Lvxb;
+
+    move-result-object v5
+
+    :goto_2
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    new-instance p0, Lbo2;
+
+    invoke-direct {p0, v1, v5, v7, v8}, Lbo2;-><init>(Lgu3;Lvxb;J)V
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4c186305 -> :sswitch_2
+        -0x33b8e67d -> :sswitch_1
+        0x38b72420 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

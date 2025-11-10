@@ -1,104 +1,143 @@
-.class public final synthetic Lso1;
+.class public final Lso1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lirf;
 
-.field public final synthetic b:Lwo1;
+.field public final b:Lnrf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwo1;I)V
+.method public constructor <init>(Lirf;Lnrf;)V
     .locals 0
 
-    iput p2, p0, Lso1;->a:I
-
-    iput-object p1, p0, Lso1;->b:Lwo1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lso1;->a:Lirf;
+
+    iput-object p2, p0, Lso1;->b:Lnrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lso1;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lso1;->b:Lwo1;
+    :cond_0
+    instance-of v0, p1, Lso1;
 
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lso1;
+
+    iget-object v0, p0, Lso1;->a:Lirf;
+
+    iget-object v1, p1, Lso1;->a:Lirf;
+
+    invoke-virtual {v0, v1}, Lirf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lso1;->b:Lnrf;
+
+    iget-object p1, p1, Lso1;->b:Lnrf;
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lso1;->a:Lirf;
+
+    iget v0, v0, Lirf;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lso1;->b:Lnrf;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit16 v0, v0, 0x745f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "QuoteData(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lso1;->a:Lirf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", body="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lso1;->b:Lnrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", image=null, count=null, placeholder=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v3, Lvo1;
-
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    invoke-direct {v3, v0}, Lvo1;-><init>(Lwo1;)V
-
-    new-instance v1, Lpf1;
-
-    new-instance v4, Lso1;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v4, v0, v2}, Lso1;-><init>(Lwo1;I)V
-
-    new-instance v5, Lso1;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v5, v0, v2}, Lso1;-><init>(Lwo1;I)V
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x22
-
-    sget-object v2, Lglg;->a:Lglg;
-
-    invoke-direct/range {v1 .. v7}, Lpf1;-><init>(Lglg;Lnf1;Lve6;Lso1;Lv71;I)V
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    iget-object v0, v0, Lwo1;->Y0:Lpo1;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

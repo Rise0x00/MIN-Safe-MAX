@@ -1,126 +1,39 @@
 .class public final Lkr;
-.super Lbie;
+.super Lwf4;
 .source "SourceFile"
 
-# interfaces
-.implements Llwc;
 
+# static fields
+.field public static final b:Lkr;
 
-# instance fields
-.field public final a:I
-
-.field public b:Lkr4;
+.field public static final c:Lrf4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkr;
 
-    iput p2, p0, Lkr;->a:I
+    invoke-direct {v0}, Lwf4;-><init>()V
 
-    new-instance v0, Lkr4;
+    sput-object v0, Lkr;->b:Lkr;
 
-    new-instance v1, Ljava/io/File;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    new-array v1, v1, [Ljava/lang/String;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+    const/16 v3, 0xe
 
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    const-string v4, ":settings/appearance"
 
-    invoke-direct {v0, v1, p2}, Lkr4;-><init>(Ljava/io/File;I)V
-
-    iput-object v0, p0, Lkr;->b:Lkr4;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/content/Context;)Lbie;
-    .locals 2
-
-    new-instance v0, Lkr4;
-
-    new-instance v1, Ljava/io/File;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
-
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    iget p1, p0, Lkr;->a:I
-
-    or-int/lit8 p1, p1, 0x1
-
-    invoke-direct {v0, v1, p1}, Lkr4;-><init>(Ljava/io/File;I)V
-
-    iput-object v0, p0, Lkr;->b:Lkr4;
-
-    return-object p0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
-    .locals 1
-
-    iget-object v0, p0, Lkr;->b:Lkr4;
-
-    invoke-virtual {v0, p1, p2, p3}, Lkr4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d(I)V
-    .locals 0
-
-    iget-object p1, p0, Lkr;->b:Lkr4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ApplicationSoSource["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkr;->b:Lkr4;
-
-    invoke-virtual {v1}, Lkr4;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v4, v1, v2, v3}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lkr;->c:Lrf4;
+
+    return-void
 .end method

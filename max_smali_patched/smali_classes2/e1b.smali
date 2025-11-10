@@ -1,21 +1,19 @@
-.class public final Le1b;
-.super Ldd0;
+.class public abstract Le1b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Landroid/net/Uri;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0xc
+    sget v0, Lprc;->emoji:I
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
-
-    iput-object p1, p0, Le1b;->b:Landroid/net/Uri;
+    sput v0, Le1b;->a:I
 
     return-void
 .end method

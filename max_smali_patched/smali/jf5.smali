@@ -1,118 +1,33 @@
-.class public final synthetic Ljf5;
+.class public abstract Ljf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:I
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsu9;ZI)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    .line 2
-    const/4 v0, 0x1
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    iput v0, p0, Ljf5;->a:I
+    const-string v1, "REMOVED_TASK"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Ljf5;->o:Ljava/lang/Object;
+    sput-object v0, Ljf5;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    iput-boolean p2, p0, Ljf5;->b:Z
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    iput p3, p0, Ljf5;->c:I
+    const-string v1, "CLOSED_EMPTY"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-.method public synthetic constructor <init>(Lvf5;IZ)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljf5;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljf5;->o:Ljava/lang/Object;
-
-    iput p2, p0, Ljf5;->c:I
-
-    iput-boolean p3, p0, Ljf5;->b:Z
+    sput-object v0, Ljf5;->b:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 6
-
-    iget v0, p0, Ljf5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ljf5;->o:Ljava/lang/Object;
-
-    check-cast v0, Lsu9;
-
-    iget-boolean v1, p0, Ljf5;->b:Z
-
-    iget v2, p0, Ljf5;->c:I
-
-    invoke-virtual {v0, v2, v1}, Lsu9;->e1(IZ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ljf5;->o:Ljava/lang/Object;
-
-    check-cast v0, Lvf5;
-
-    iget-object v1, v0, Lvf5;->M0:Lie4;
-
-    iget-object v0, v0, Lvf5;->a:[Lh0d;
-
-    iget v2, p0, Ljf5;->c:I
-
-    aget-object v0, v0, v2
-
-    iget-object v0, v0, Lh0d;->e:Ljava/lang/Object;
-
-    check-cast v0, Lck0;
-
-    iget v0, v0, Lck0;->b:I
-
-    invoke-virtual {v1}, Lie4;->H()Lwc;
-
-    move-result-object v3
-
-    new-instance v4, Lrd4;
-
-    iget-boolean v5, p0, Ljf5;->b:Z
-
-    invoke-direct {v4, v3, v2, v0, v5}, Lrd4;-><init>(Lwc;IIZ)V
-
-    const/16 v0, 0x409
-
-    invoke-virtual {v1, v3, v0, v4}, Lie4;->I(Lwc;ILsx7;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

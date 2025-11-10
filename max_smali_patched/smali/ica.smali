@@ -1,216 +1,95 @@
-.class public final Lica;
+.class public abstract Lica;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxda;
-.implements Lss4;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lxda;
-
-.field public c:Lss4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lxda;I)V
+.method public static a(Landroid/app/RemoteInput;)Z
     .locals 0
 
-    iput p2, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
-    iput-object p1, p0, Lica;->b:Lxda;
+    move-result p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return p0
 .end method
 
-.method private final a(Ljava/lang/Object;)V
+.method public static b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
     .locals 0
 
-    return-void
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    .locals 0
 
-# virtual methods
-.method public final b()V
-    .locals 1
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
-    iget v0, p0, Lica;->a:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lica;->b:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final c(Lss4;)V
-    .locals 1
+.method public static d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
+    .locals 0
 
-    iget v0, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iput-object p1, p0, Lica;->c:Lss4;
-
-    iget-object p1, p0, Lica;->b:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lica;->c:Lss4;
-
-    iget-object p1, p0, Lica;->b:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+.method public static e(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    iget v0, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final g()V
-    .locals 1
+.method public static f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget v0, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lica;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final h()Z
-    .locals 1
+.method public static g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
+    .locals 0
 
-    iget v0, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lica;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public static h(Landroid/app/RemoteInput;)Ljava/lang/String;
+    .locals 0
 
-    iget v0, p0, Lica;->a:I
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lica;->b:Lxda;
+    return-object p0
+.end method
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+.method public static i(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    return-void
+    invoke-virtual {p0}, Landroid/app/Notification;->getSortKey()Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
+    move-result-object p0
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

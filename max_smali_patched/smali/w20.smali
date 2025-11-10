@@ -1,137 +1,211 @@
-.class public final synthetic Lw20;
+.class public final Lw20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
+
+# static fields
+.field public static final c:Lw20;
+
+.field public static final d:Lw20;
+
+.field public static final e:[I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[I
 
-.field public final synthetic b:I
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lw20;->a:I
+    new-instance v0, Lw20;
 
-    iput p1, p0, Lw20;->b:I
+    const/4 v1, 0x2
+
+    filled-new-array {v1}, [I
+
+    move-result-object v2
+
+    const/16 v3, 0x8
+
+    invoke-direct {v0, v3, v2}, Lw20;-><init>(I[I)V
+
+    sput-object v0, Lw20;->c:Lw20;
+
+    new-instance v0, Lw20;
+
+    const/4 v2, 0x5
+
+    const/4 v4, 0x6
+
+    filled-new-array {v1, v2, v4}, [I
+
+    move-result-object v1
+
+    invoke-direct {v0, v3, v1}, Lw20;-><init>(I[I)V
+
+    sput-object v0, Lw20;->d:Lw20;
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lw20;->e:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x5
+        0x6
+        0x12
+        0x11
+        0xe
+        0x7
+        0x8
+    .end array-data
+.end method
+
+.method public constructor <init>(I[I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p2, :cond_0
+
+    array-length v0, p2
+
+    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lw20;->a:[I
+
+    invoke-static {p2}, Ljava/util/Arrays;->sort([I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    new-array p2, p2, [I
+
+    iput-object p2, p0, Lw20;->a:[I
+
+    :goto_0
+    iput p1, p0, Lw20;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lw20;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Landroid/util/Size;
+    return v0
 
-    check-cast p2, Landroid/util/Size;
+    :cond_0
+    instance-of v1, p1, Lw20;
 
-    invoke-static {p1}, Lwfe;->a(Landroid/util/Size;)I
+    const/4 v2, 0x0
 
-    move-result p1
+    if-nez v1, :cond_1
 
-    iget v0, p0, Lw20;->b:I
+    return v2
 
-    sub-int/2addr p1, v0
+    :cond_1
+    check-cast p1, Lw20;
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+    iget-object v1, p0, Lw20;->a:[I
 
-    move-result p1
+    iget-object v3, p1, Lw20;->a:[I
 
-    invoke-static {p2}, Lwfe;->a(Landroid/util/Size;)I
-
-    move-result p2
-
-    sub-int/2addr p2, v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget v1, p0, Lw20;->b:I
-
-    sub-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([I[I)Z
 
     move-result v1
 
-    sub-int/2addr v0, v1
+    if-eqz v1, :cond_2
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lw20;->b:I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget p1, p1, Lw20;->b:I
 
-    move-result p1
+    if-ne v1, p1, :cond_2
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    return v0
 
-    move-result p2
+    :cond_2
+    return v2
+.end method
 
-    sub-int/2addr p1, p2
+.method public final hashCode()I
+    .locals 2
 
-    int-to-float p1, p1
+    iget-object v0, p0, Lw20;->a:[I
 
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    move-result p1
+    move-result v0
 
-    :goto_0
-    float-to-int p1, p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    goto :goto_1
+    iget v1, p0, Lw20;->b:I
 
-    :cond_0
-    int-to-float p1, v0
+    add-int/2addr v0, v1
 
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
+    return v0
+.end method
 
-    move-result p1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    goto :goto_0
+    iget-object v0, p0, Lw20;->a:[I
 
-    :goto_1
-    return p1
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/16 v1, 0x43
+
+    invoke-static {v1, v0}, Lm65;->d(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "AudioCapabilities[maxChannelCount="
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw20;->b:I
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", supportedEncodings="
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

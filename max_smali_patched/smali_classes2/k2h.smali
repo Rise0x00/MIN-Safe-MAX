@@ -1,19 +1,29 @@
 .class public final Lk2h;
-.super Ljava/lang/Object;
+.super Lru/ok/android/externcalls/sdk/AudioLevelListener;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
+# direct methods
+.method public constructor <init>(Lxid;)V
+    .locals 3
 
-    sget-object v0, Lj2h;->a:Lj2h;
+    new-instance v0, Landroid/os/Handler;
 
-    return-object v0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance v1, Lfsg;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, p1}, Lfsg;-><init>(ILjava/lang/Object;)V
+
+    const/16 p1, 0x1f4
+
+    invoke-direct {p0, p1, v0, v1}, Lru/ok/android/externcalls/sdk/AudioLevelListener;-><init>(SLandroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
 .end method

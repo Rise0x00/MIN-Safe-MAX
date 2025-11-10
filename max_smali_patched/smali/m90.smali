@@ -1,64 +1,71 @@
 .class public final Lm90;
-.super Lp63;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lx80;
+.field public final a:I
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lx80;)V
+.method public constructor <init>(IJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm90;->a:Lx80;
+    if-eqz p1, :cond_0
+
+    iput p1, p0, Lm90;->a:I
+
+    iput-wide p2, p0, Lm90;->b:J
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null status"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 4
 
     if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lp63;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lp63;
-
-    move-object v0, p1
-
-    check-cast v0, Lm90;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lo63;->a:Lo63;
-
-    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    instance-of v0, p1, Lm90;
 
     if-eqz v0, :cond_1
 
     check-cast p1, Lm90;
 
-    iget-object p1, p1, Lm90;->a:Lx80;
+    iget v0, p0, Lm90;->a:I
 
-    iget-object v0, p0, Lm90;->a:Lx80;
+    iget v1, p1, Lm90;->a:I
 
-    invoke-virtual {v0, p1}, Lx80;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lnx1;->c(II)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lm90;->b:J
+
+    iget-wide v2, p1, Lm90;->b:J
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
 
     :goto_0
     const/4 p1, 0x1
@@ -72,11 +79,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 6
 
-    sget-object v0, Lo63;->a:Lo63;
+    iget v0, p0, Lm90;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Lnx1;->v(I)I
 
     move-result v0
 
@@ -86,11 +93,15 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lm90;->a:Lx80;
+    const/16 v1, 0x20
 
-    invoke-virtual {v1}, Lx80;->hashCode()I
+    iget-wide v2, p0, Lm90;->b:J
 
-    move-result v1
+    ushr-long v4, v2, v1
+
+    xor-long v1, v4, v2
+
+    long-to-int v1, v1
 
     xor-int/2addr v0, v1
 
@@ -98,31 +109,66 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ClientInfo{clientType="
+    const-string v1, "BackendResponse{status="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lo63;->a:Lo63;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lm90;->a:I
 
-    const-string v1, ", androidClientInfo="
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INVALID_PAYLOAD"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "FATAL_ERROR"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "TRANSIENT_ERROR"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nextRequestWaitMillis="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lm90;->a:Lx80;
+    iget-wide v1, p0, Lm90;->b:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v3, "}"
 
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

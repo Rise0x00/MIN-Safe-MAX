@@ -1,216 +1,183 @@
 .class public final Lrb;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic x0:[Ltm7;
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final X:Lg65;
+.field public final synthetic a:I
 
-.field public final Y:Le8e;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final Z:Lmoe;
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public final b:J
-
-.field public final c:Lfb;
-
-.field public final o:Lbp7;
-
-.field public final w0:Lqb;
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
 
-    new-instance v0, Lut9;
+    iput p4, p0, Lrb;->a:I
 
-    const-string v1, "searchJob"
+    iput-object p1, p0, Lrb;->b:Ljava/lang/Object;
 
-    const-string v2, "getSearchJob()Lkotlinx/coroutines/Job;"
+    iput-object p2, p0, Lrb;->c:Ljava/lang/Object;
 
-    const-class v3, Lrb;
+    iput-object p3, p0, Lrb;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lxxc;->a:Lyxc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltm7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lrb;->x0:[Ltm7;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLfb;Lbp7;Lbp7;)V
-    .locals 5
-
-    invoke-direct {p0}, Lilg;-><init>()V
-
-    iput-wide p1, p0, Lrb;->b:J
-
-    iput-object p3, p0, Lrb;->c:Lfb;
-
-    iput-object p4, p0, Lrb;->o:Lbp7;
-
-    invoke-static {}, Lqxd;->w()Lg65;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lrb;->X:Lg65;
-
-    const/4 p1, 0x7
-
-    const/4 p2, 0x0
-
-    invoke-static {p2, p2, p1}, Lf8e;->b(III)Le8e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lrb;->Y:Le8e;
-
-    const/4 p4, 0x0
-
-    invoke-static {p4}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lrb;->Z:Lmoe;
-
-    iget-object v1, p3, Lfb;->k:Lsqc;
-
-    new-instance v2, Lf3;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, p4, v3}, Lf3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v3, Ls31;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v3, v1, p1, v2, v4}, Ls31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p1, Lqb;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v3, p0, v1}, Lqb;-><init>(Lev5;Ljava/lang/Object;I)V
-
-    iput-object p1, p0, Lrb;->w0:Lqb;
-
-    iget-object p1, p3, Lfb;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, p2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p3, Lfb;->g:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p2, Leb;
-
-    invoke-direct {p2, p3, p4}, Leb;-><init>(Lfb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, p4, p4, p2, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    :cond_0
-    iget-object p1, p3, Lfb;->m:Lrqc;
-
-    new-instance p2, Llb;
-
-    invoke-direct {p2, p0, p4}, Llb;-><init>(Lrb;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Ljx5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p3, p1, p2, v1}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    const-wide/16 p1, 0xc8
-
-    invoke-static {v0, p1, p2}, Ltp;->r(Lev5;J)Lev5;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltp;->w(Lev5;)Lev5;
-
-    move-result-object p1
-
-    new-instance p2, Lnb;
-
-    invoke-direct {p2, p0, p5, p4}, Lnb;-><init>(Lrb;Lbp7;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Ljx5;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p1, p2, p4}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q()Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lrb;->Z:Lmoe;
+    iget v0, p0, Lrb;->a:I
 
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Landroid/view/View;
 
-    check-cast v0, Ljava/lang/CharSequence;
+    iget-object p1, p0, Lrb;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    check-cast p1, Lvug;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Lvug;->dispose()V
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    iget-object p1, p0, Lrb;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->X:Ljava/lang/String;
+
+    sget-object v0, Lcuh;->b:Lnxa;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object v1, La98;->o:La98;
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "last updating blur for video message screen after stable position"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    move v0, v1
+    iget-object p1, p0, Lrb;->d:Ljava/lang/Object;
 
-    :goto_1
-    xor-int/2addr v0, v1
+    check-cast p1, Landroid/view/View;
 
-    return v0
+    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+
+    check-cast v1, Ly44;
+
+    sget-object v2, Lj54;->b:Lj54;
+
+    new-instance v3, Le79;
+
+    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
+
+    check-cast v4, Lbph;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, p1, v5, v4}, Le79;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lbph;)V
+
+    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+
+    check-cast v1, Ly44;
+
+    sget-object v2, Lj54;->a:Lj54;
+
+    new-instance v3, Lc79;
+
+    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
+
+    check-cast v4, Lrob;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, p1, v5, v4}, Lc79;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lrob;)V
+
+    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+
+    check-cast v1, Ly44;
+
+    sget-object v2, Lj54;->a:Lj54;
+
+    new-instance v3, Lqb;
+
+    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
+
+    check-cast v4, Lub;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, p1, v5, v4}, Lqb;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lub;)V
+
+    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

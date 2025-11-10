@@ -1,19 +1,14 @@
-.class public final Lfia;
+.class public interface abstract Lfia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:La5;
+# virtual methods
+.method public abstract f(Ljava/util/concurrent/Executor;Ldia;)V
+.end method
 
+.method public abstract j()Lv28;
+.end method
 
-# direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfia;->a:La5;
-
-    return-void
+.method public abstract n(Ldia;)V
 .end method

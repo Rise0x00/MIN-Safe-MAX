@@ -1,119 +1,217 @@
 .class public final Ld51;
-.super Lxg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lf51;
 
 
 # instance fields
-.field public final z0:Z
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ZZZZ)V
+    .locals 0
 
-    const-wide/16 v0, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x1
+    iput-object p1, p0, Ld51;->a:Ljava/lang/String;
 
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Ld51;-><init>(JZ)V
+    iput-boolean p2, p0, Ld51;->b:Z
 
-    return-void
-.end method
+    iput-boolean p3, p0, Ld51;->c:Z
 
-.method public constructor <init>(JZ)V
-    .locals 1
+    iput-boolean p4, p0, Ld51;->d:Z
 
-    const/4 v0, 0x2
-
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lxg;-><init>(JI)V
-
-    .line 3
-    iput-boolean p3, p0, Ld51;->z0:Z
+    iput-boolean p5, p0, Ld51;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Z
+.method public final a()Z
     .locals 1
 
-    iget-boolean v0, p0, Ld51;->z0:Z
+    iget-boolean v0, p0, Ld51;->d:Z
 
     return v0
 .end method
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 2
+.method public final b()Z
+    .locals 1
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    iget-boolean v0, p0, Ld51;->e:Z
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-instance p5, Ljava/util/ArrayList;
-
-    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x2
-
-    new-array p4, p4, [F
-
-    fill-array-data p4, :array_0
-
-    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p4, :cond_1
-
-    if-eqz p2, :cond_1
-
-    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x1
-
-    new-array p4, p4, [F
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    aput v0, p4, v1
-
-    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    return-object p1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    return v0
 .end method
 
-.method public final n(Landroid/view/View;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld51;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld51;
+
+    iget-object v1, p0, Ld51;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ld51;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Ld51;->b:Z
+
+    iget-boolean v3, p1, Ld51;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Ld51;->c:Z
+
+    iget-boolean v3, p1, Ld51;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Ld51;->d:Z
+
+    iget-boolean v3, p1, Ld51;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Ld51;->e:Z
+
+    iget-boolean p1, p1, Ld51;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ld51;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ld51;->b:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ld51;->c:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ld51;->d:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ld51;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Link(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ld51;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isNewLink="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ld51;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isFrontCameraEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideoEnabled="
+
+    const-string v2, ", isAudioEnabled="
+
+    iget-boolean v3, p0, Ld51;->c:Z
+
+    iget-boolean v4, p0, Ld51;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lnx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Ld51;->e:Z
+
+    invoke-static {v0, v2, v1}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

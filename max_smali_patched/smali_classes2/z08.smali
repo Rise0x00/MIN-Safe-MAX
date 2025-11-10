@@ -1,146 +1,421 @@
-.class public final synthetic Lz08;
+.class public final Lz08;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Landroid/text/method/TransformationMethod;
+
+
+# static fields
+.field public static final d:Ls7;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public a:Lw08;
 
-.field public final synthetic a:La18;
+.field public final b:Z
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:J
+.field public final c:Loi6;
 
 
 # direct methods
-.method public synthetic constructor <init>(La18;JZJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
+    new-instance v0, Ls7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lz08;->d:Ls7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw08;Loi6;I)V
+    .locals 1
+
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    const/4 p3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p3, 0x0
+
+    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz08;->a:La18;
+    iput-object p1, p0, Lz08;->a:Lw08;
 
-    iput-wide p2, p0, Lz08;->b:J
+    iput-boolean p3, p0, Lz08;->b:Z
 
-    iput-boolean p4, p0, Lz08;->c:Z
+    iput-object p2, p0, Lz08;->c:Loi6;
 
-    iput-wide p5, p0, Lz08;->o:J
+    return-void
+.end method
 
-    iput-wide p7, p0, Lz08;->X:J
+.method public static a(Ljava/lang/CharSequence;)V
+    .locals 5
 
+    instance-of v0, p0, Landroid/text/Spannable;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Landroid/text/Spannable;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v1
+
+    :goto_0
+    if-eqz p0, :cond_7
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const-class v2, Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v3, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_7
+
+    array-length v0, p0
+
+    :goto_1
+    if-ge v3, v0, :cond_7
+
+    aget-object v2, p0, v3
+
+    instance-of v4, v2, Lv08;
+
+    if-eqz v4, :cond_1
+
+    check-cast v2, Lv08;
+
+    iput-object v1, v2, Lv08;->a:Lw08;
+
+    goto :goto_2
+
+    :cond_1
+    instance-of v4, v2, Lxbc;
+
+    if-eqz v4, :cond_2
+
+    check-cast v2, Lxbc;
+
+    iput-object v1, v2, Lxbc;->d:Lx08;
+
+    goto :goto_2
+
+    :cond_2
+    instance-of v4, v2, Lex6;
+
+    if-eqz v4, :cond_3
+
+    check-cast v2, Lex6;
+
+    iput-object v1, v2, Lex6;->b:Lu08;
+
+    goto :goto_2
+
+    :cond_3
+    instance-of v4, v2, Lgr0;
+
+    if-eqz v4, :cond_4
+
+    check-cast v2, Lgr0;
+
+    iput-object v1, v2, Lgr0;->c:Lu08;
+
+    goto :goto_2
+
+    :cond_4
+    instance-of v4, v2, Ltb9;
+
+    if-eqz v4, :cond_5
+
+    check-cast v2, Ltb9;
+
+    iput-object v1, v2, Ltb9;->c:Ly08;
+
+    goto :goto_2
+
+    :cond_5
+    instance-of v4, v2, Lt08;
+
+    if-eqz v4, :cond_6
+
+    check-cast v2, Lt08;
+
+    iput-object v1, v2, Lt08;->d:Ls08;
+
+    :cond_6
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_7
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 8
+.method public final b(Landroid/view/View;Ljava/lang/String;La18;Landroid/text/style/ClickableSpan;)V
+    .locals 7
 
-    iget-object v0, p0, Lz08;->a:La18;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v1, v0, La18;->a:Lbp7;
+    move-result-wide v0
 
-    const-wide/16 v2, 0x0
+    sget-object v2, Lz08;->d:Ls7;
 
-    iget-wide v4, p0, Lz08;->o:J
+    iget-wide v3, v2, Ls7;->a:J
 
-    cmp-long v2, v4, v2
+    sub-long v3, v0, v3
 
-    const/4 v3, 0x0
+    const-wide/16 v5, 0x12c
 
-    if-nez v2, :cond_0
+    cmp-long v3, v3, v5
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    if-lez v3, :cond_2
 
-    move-result-object v1
+    iput-wide v0, v2, Ls7;->a:J
 
-    check-cast v1, Lo49;
+    iget-object v0, p0, Lz08;->a:Lw08;
 
-    iget-wide v4, p0, Lz08;->b:J
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1, v4, v5}, Lo49;->p(J)Lq49;
+    instance-of v0, p1, Lw08;
 
-    move-result-object v1
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lw08;
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
 
-    check-cast v1, Lo49;
+    invoke-interface {v0, p2, p3, p4}, Lw08;->b(Ljava/lang/String;La18;Landroid/text/style/ClickableSpan;)V
 
-    iget-object v1, v1, Lo49;->a:Lu94;
+    :cond_2
+    return-void
+.end method
 
-    check-cast v1, Lb94;
+.method public final c(Ljava/lang/CharSequence;)V
+    .locals 3
 
-    iget-object v1, v1, Lb94;->c:Ll6d;
+    instance-of v0, p1, Landroid/text/Spannable;
 
-    invoke-virtual {v1}, Ll6d;->d()Ljc9;
+    if-eqz v0, :cond_0
 
-    move-result-object v2
-
-    iget-wide v6, p0, Lz08;->X:J
-
-    invoke-virtual {v2, v6, v7, v4, v5}, Ljc9;->i(JJ)Lf59;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1, v2}, Ll6d;->b(Lf59;)Lq49;
-
-    move-result-object v1
+    check-cast p1, Landroid/text/Spannable;
 
     goto :goto_0
 
-    :cond_1
-    move-object v1, v3
+    :cond_0
+    const/4 p1, 0x0
 
     :goto_0
-    if-eqz v1, :cond_3
+    if-eqz p1, :cond_1
 
-    iget-boolean v2, p0, Lz08;->c:Z
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    if-nez v2, :cond_2
+    move-result v0
 
-    iget-object v2, v1, Lq49;->y0:Lg89;
+    const-class v1, Ljava/lang/Object;
 
-    sget-object v4, Lg89;->c:Lg89;
+    const/4 v2, 0x0
 
-    if-eq v2, v4, :cond_3
+    invoke-interface {p1, v2, v0, v1}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    array-length v0, p1
+
+    :goto_1
+    if-ge v2, v0, :cond_1
+
+    aget-object v1, p1, v2
+
+    invoke-virtual {p0, v1}, Lz08;->d(Ljava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lv08;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lv08;
+
+    iget-object v0, p0, Lz08;->a:Lw08;
+
+    iput-object v0, p1, Lv08;->a:Lw08;
+
+    return-void
+
+    :cond_1
+    instance-of v0, p1, Lxbc;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lxbc;
+
+    new-instance v0, Lx08;
+
+    invoke-direct {v0, p0}, Lx08;-><init>(Lz08;)V
+
+    iput-object v0, p1, Lxbc;->d:Lx08;
+
+    return-void
 
     :cond_2
-    iget-object v0, v0, La18;->b:Lbp7;
+    instance-of v0, p1, Lex6;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz v0, :cond_3
 
-    move-result-object v0
+    move-object v0, p1
 
-    check-cast v0, Lo59;
+    check-cast v0, Lex6;
 
-    invoke-static {v0, v1}, Lo59;->a(Lo59;Lq49;)Lw29;
+    new-instance v1, Lu08;
 
-    move-result-object v3
+    invoke-direct {v1, p0, p1}, Lu08;-><init>(Lz08;Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lex6;->b:Lu08;
+
+    return-void
 
     :cond_3
-    if-eqz v3, :cond_4
+    instance-of v0, p1, Lgr0;
 
-    return-object v3
+    if-eqz v0, :cond_4
+
+    move-object v0, p1
+
+    check-cast v0, Lgr0;
+
+    new-instance v1, Lu08;
+
+    invoke-direct {v1, p0, p1}, Lu08;-><init>(Lz08;Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lgr0;->c:Lu08;
+
+    return-void
 
     :cond_4
-    new-instance v0, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Ltb9;
 
-    const-string v1, "message not found or deleted"
+    if-eqz v0, :cond_5
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ltb9;
 
-    throw v0
+    new-instance v0, Ly08;
+
+    invoke-direct {v0, p0}, Ly08;-><init>(Lz08;)V
+
+    iput-object v0, p1, Ltb9;->c:Ly08;
+
+    return-void
+
+    :cond_5
+    instance-of v0, p1, Lt08;
+
+    if-eqz v0, :cond_6
+
+    move-object v0, p1
+
+    check-cast v0, Lt08;
+
+    new-instance v1, Lu08;
+
+    invoke-direct {v1, p0, p1}, Lu08;-><init>(Lz08;Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lt08;->d:Ls08;
+
+    :cond_6
+    :goto_0
+    return-void
+.end method
+
+.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 2
+
+    iget-object p2, p0, Lz08;->c:Loi6;
+
+    invoke-interface {p2}, Loi6;->invoke()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    new-instance v0, Let7;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p0}, Let7;-><init>(ILjava/lang/Object;)V
+
+    iget-boolean v1, p0, Lz08;->b:Z
+
+    invoke-static {p1, p2, v1, v0}, Lxe8;->l(Ljava/lang/CharSequence;IZLet7;)Landroid/text/Spannable;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    return-object p2
+.end method
+
+.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    .locals 0
+
+    return-void
 .end method

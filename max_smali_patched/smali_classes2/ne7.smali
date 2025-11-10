@@ -1,465 +1,203 @@
 .class public final Lne7;
-.super Ljava/lang/Object;
+.super Lex5;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lne7;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final X:Lltf;
+.field public final synthetic g:I
 
-.field public final a:Ljava/lang/String;
+.field public final h:Z
 
-.field public final b:Ljava/lang/String;
+.field public final i:Z
 
-.field public final c:Lme7;
-
-.field public final o:Ljava/lang/String;
+.field public final j:Ltj6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lma4;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Lma4;-><init>(I)V
-
-    sput-object v0, Lne7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
+.method public synthetic constructor <init>(Ltj6;ZZLtuf;Lm71;Lcwc;I)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p7, p0, Lne7;->g:I
 
-    .line 2
-    iput-object p1, p0, Lne7;->a:Ljava/lang/String;
+    invoke-direct {p0, p4, p5, p6}, Lex5;-><init>(Ltuf;Lm71;Lcwc;)V
 
-    .line 3
-    iput-object p2, p0, Lne7;->b:Ljava/lang/String;
+    iput-object p1, p0, Lne7;->j:Ltj6;
 
-    .line 4
-    iput-object p3, p0, Lne7;->c:Lme7;
+    iput-boolean p2, p0, Lne7;->h:Z
 
-    .line 5
-    iput-object p4, p0, Lne7;->o:Ljava/lang/String;
-
-    .line 6
-    iput-object p5, p0, Lne7;->X:Lltf;
+    iput-boolean p3, p0, Lne7;->i:Z
 
     return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;I)V
-    .locals 2
-
-    and-int/lit8 v0, p6, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v1
-
-    :cond_0
-    and-int/lit8 v0, p6, 0x2
-
-    if-eqz v0, :cond_1
-
-    move-object p2, v1
-
-    :cond_1
-    and-int/lit8 v0, p6, 0x4
-
-    if-eqz v0, :cond_2
-
-    move-object p3, v1
-
-    :cond_2
-    and-int/lit8 v0, p6, 0x8
-
-    if-eqz v0, :cond_3
-
-    move-object p4, v1
-
-    :cond_3
-    and-int/lit8 p6, p6, 0x10
-
-    if-eqz p6, :cond_4
-
-    move-object p6, v1
-
-    :goto_0
-    move-object p5, p4
-
-    move-object p4, p3
-
-    move-object p3, p2
-
-    move-object p2, p1
-
-    move-object p1, p0
-
-    goto :goto_1
-
-    :cond_4
-    move-object p6, p5
-
-    goto :goto_0
-
-    .line 7
-    :goto_1
-    invoke-direct/range {p1 .. p6}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
-
-    return-void
-.end method
-
-.method public static a(Lne7;Ljava/lang/String;Ljava/lang/String;Lme7;I)Lne7;
-    .locals 6
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lne7;->a:Ljava/lang/String;
-
-    :cond_0
-    move-object v1, p1
-
-    and-int/lit8 p1, p4, 0x2
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lne7;->b:Ljava/lang/String;
-
-    :cond_1
-    move-object v2, p2
-
-    and-int/lit8 p1, p4, 0x4
-
-    if-eqz p1, :cond_2
-
-    iget-object p3, p0, Lne7;->c:Lme7;
-
-    :cond_2
-    move-object v3, p3
-
-    iget-object v4, p0, Lne7;->o:Ljava/lang/String;
-
-    iget-object v5, p0, Lne7;->X:Lltf;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lne7;
-
-    invoke-direct/range {v0 .. v5}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public b()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lne7;->g:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lex5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d(Lb2f;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lne7;->g:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lne7;->j:Ltj6;
 
-    :cond_0
-    instance-of v1, p1, Lne7;
+    check-cast v0, Lyoa;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lyoa;->invoke()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    return v2
+    check-cast v0, Ljava/lang/Boolean;
 
-    :cond_1
-    check-cast p1, Lne7;
-
-    iget-object v1, p0, Lne7;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lne7;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lne7;->c:Lme7;
-
-    iget-object v3, p1, Lne7;->c:Lme7;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lne7;->o:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->o:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lne7;->X:Lltf;
-
-    iget-object p1, p1, Lne7;->X:Lltf;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lne7;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->c:Lme7;
-
-    if-nez v2, :cond_2
-
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Lme7;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->o:Ljava/lang/String;
-
-    if-nez v2, :cond_3
-
-    move v2, v0
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->X:Lltf;
-
-    if-nez v2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    :goto_4
-    add-int/2addr v1, v0
+    if-nez v0, :cond_1
 
-    return v1
-.end method
+    iget-boolean v0, p0, Lne7;->h:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    if-eqz v0, :cond_1
 
-    const-string v0, ", hint="
+    iget-boolean v0, p0, Lne7;->i:Z
 
-    const-string v1, ", emailData="
-
-    const-string v2, "InternalTwoFANavData(password="
-
-    iget-object v3, p0, Lne7;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lne7;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lne7;->c:Lme7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", phoneForLogin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lne7;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", twoFAConfig="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lne7;->X:Lltf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    iget-object v0, p0, Lne7;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lne7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lne7;->c:Lme7;
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v2, p1, p2}, Lme7;->writeToParcel(Landroid/os/Parcel;I)V
-
-    :goto_0
-    iget-object v2, p0, Lne7;->o:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lne7;->X:Lltf;
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    invoke-super {p0, p1}, Lex5;->d(Lb2f;)V
 
     :cond_1
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_0
+    return-void
 
-    invoke-virtual {v2, p1, p2}, Lltf;->writeToParcel(Landroid/os/Parcel;I)V
+    :pswitch_0
+    iget-object v0, p0, Lne7;->j:Ltj6;
+
+    check-cast v0, Lyoa;
+
+    invoke-virtual {v0}, Lyoa;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lne7;->h:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lne7;->i:Z
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-super {p0, p1}, Lex5;->d(Lb2f;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e()V
+    .locals 1
+
+    iget v0, p0, Lne7;->g:I
+
+    packed-switch v0, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lex5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lne7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x3
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lne7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "OutgoingP2PFirstDataStat"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "incomingP2PFirstDataStat"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,117 +1,153 @@
 .class public final Lbsb;
-.super Lbj0;
+.super Li6c;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
-
-.field public final c:J
+.field public final synthetic E0:I
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lbsb;->E0:I
+
+    .line 2
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 3
+    invoke-direct {p0, v0}, Lm7d;-><init>(Landroid/view/View;)V
+
+    .line 4
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x2
+
+    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    invoke-direct {p0}, Lbj0;-><init>()V
+    .line 1
+    iput p2, p0, Lbsb;->E0:I
 
-    iput-wide p1, p0, Lbsb;->b:J
-
-    iput-wide p3, p0, Lbsb;->c:J
+    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final z(Li28;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lbsb;->E0:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    const-string v2, ""
+
+    iget-object v3, p0, Lm7d;->a:Landroid/view/View;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lhle;
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Laxd;
+
+    check-cast v3, Landroid/widget/TextView;
+
+    iget-object v0, p1, Laxd;->a:Lirf;
+
+    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lbsb;
+    move-object v2, v0
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    if-nez v1, :cond_1
+    new-instance v0, Lo3;
 
-    return v2
+    const/16 v2, 0x1d
+
+    invoke-direct {v0, p1, v1, v2}, Lo3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v0, v3}, Ludi;->e(Lgj6;Landroid/view/View;)V
+
+    sget-object v0, Lcbg;->a:Lorf;
+
+    iget-object p1, p1, Laxd;->c:Lorf;
+
+    invoke-static {p1, v3}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lisb;
+
+    check-cast v3, Landroid/widget/TextView;
+
+    iget-object p1, p1, Lisb;->a:Lirf;
+
+    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lbsb;
+    move-object v2, p1
 
-    iget-wide v3, p0, Lbsb;->b:J
+    :goto_1
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-wide v5, p1, Lbsb;->b:J
+    new-instance p1, Lba;
 
-    cmp-long v1, v3, v5
+    const/4 v0, 0x3
 
-    if-eqz v1, :cond_2
+    const/16 v2, 0x1b
 
-    return v2
+    invoke-direct {p1, v0, v1, v2}, Lba;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    :cond_2
-    iget-wide v3, p0, Lbsb;->c:J
+    invoke-static {p1, v3}, Ludi;->e(Lgj6;Landroid/view/View;)V
 
-    iget-wide v5, p1, Lbsb;->c:J
+    return-void
 
-    cmp-long p1, v3, v5
+    nop
 
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lbsb;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lbsb;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
-
-    const-string v1, ", photoId="
-
-    iget-wide v2, p0, Lbsb;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lbsb;->c:J
-
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

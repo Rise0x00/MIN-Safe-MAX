@@ -1,130 +1,239 @@
-.class public abstract Lsxe;
-.super Ljava/lang/Object;
+.class public final Lsxe;
+.super Lqxe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/text/DecimalFormat;
+# instance fields
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public final s:J
+
+.field public final t:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/Long;Ljava/lang/String;Lw48;Ljava/lang/Boolean;)V
+    .locals 12
 
-    new-instance v0, Ljava/text/DecimalFormat;
+    const/4 v1, 0x2
 
-    const-string v1, "#.#"
+    move-object v0, p0
 
-    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+    move-wide v2, p1
 
-    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+    move-object v4, p3
 
-    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+    move-object/from16 v5, p4
 
-    sput-object v0, Lsxe;->a:Ljava/text/DecimalFormat;
+    move-object/from16 v6, p5
 
-    new-instance v0, Ljava/text/DecimalFormat;
+    move-object/from16 v7, p6
 
-    const-string v2, "0.0"
+    move-object/from16 v8, p23
 
-    invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+    move-object/from16 v9, p24
 
-    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+    move-object/from16 v10, p25
+
+    move-object/from16 v11, p26
+
+    invoke-direct/range {v0 .. v11}, Lqxe;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/Long;Ljava/lang/String;Lw48;Ljava/lang/Boolean;)V
+
+    move-wide/from16 p1, p7
+
+    iput-wide p1, p0, Lsxe;->m:J
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lsxe;->n:J
+
+    move-wide/from16 p1, p11
+
+    iput-wide p1, p0, Lsxe;->o:J
+
+    move-wide/from16 p1, p13
+
+    iput-wide p1, p0, Lsxe;->p:J
+
+    move-wide/from16 p1, p15
+
+    iput-wide p1, p0, Lsxe;->q:J
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lsxe;->r:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lsxe;->s:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lsxe;->t:J
 
     return-void
 .end method
 
-.method public static final a(I)Ljava/lang/String;
-    .locals 5
 
-    int-to-long v0, p0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-wide/32 v2, 0x3b9aca00
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    cmp-long p0, v0, v2
+    const-string v1, "VideoSend{ssrc="
 
-    sget-object v2, Lsxe;->a:Ljava/text/DecimalFormat;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ltz p0, :cond_0
+    iget-wide v1, p0, Ltxe;->c:J
 
-    long-to-double v0, v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
+    const-string v1, ", transportId=\'"
 
-    div-double/2addr v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    iget-object v1, p0, Ltxe;->d:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "B"
+    const-string v1, "\', trackId=\'"
 
-    invoke-static {p0, v0}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-object v1, p0, Ltxe;->e:Ljava/lang/String;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const-wide/32 v3, 0xf4240
+    const-string v1, "\', packetsSent="
 
-    cmp-long p0, v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ltz p0, :cond_1
+    iget-object v1, p0, Lqxe;->h:Ljava/math/BigInteger;
 
-    long-to-double v0, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-wide v3, 0x412e848000000000L    # 1000000.0
+    const-string v1, ", packetsLost="
 
-    div-double/2addr v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    iget-object v1, p0, Lqxe;->i:Ljava/math/BigInteger;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "M"
+    const-string v1, ", bytesSent="
 
-    invoke-static {p0, v0}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-object v1, p0, Lqxe;->j:Ljava/math/BigInteger;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    const-wide/16 v3, 0x3e8
+    const-string v1, ", nacksReceived="
 
-    cmp-long p0, v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ltz p0, :cond_2
+    iget-wide v1, p0, Lsxe;->m:J
 
-    long-to-double v0, v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-wide v3, 0x408f400000000000L    # 1000.0
+    const-string v1, ", pliReceived="
 
-    div-double/2addr v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    iget-wide v1, p0, Lsxe;->n:J
 
-    move-result-object p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v0, "K"
+    const-string v1, ", firReceived="
 
-    invoke-static {p0, v0}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-wide v1, p0, Lsxe;->o:J
 
-    return-object p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_2
-    new-instance p0, Ljava/lang/StringBuilder;
+    const-string v1, ", framesEncoded="
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lsxe;->p:J
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", adaptationChanges="
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsxe;->q:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avgEncodeMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsxe;->r:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsxe;->s:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lsxe;->t:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMediaShare="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqxe;->l:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", targetBitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqxe;->k:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltxe;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

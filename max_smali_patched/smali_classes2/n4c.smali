@@ -1,112 +1,90 @@
-.class public final Ln4c;
-.super Lm3f;
+.class public final synthetic Ln4c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lyf4;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:J
 
-.field public final synthetic Y:Lp4c;
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lp4c;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JLjava/lang/String;J)V
     .locals 0
 
-    iput-object p1, p0, Ln4c;->Y:Lp4c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Ln4c;->a:J
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Ln4c;->b:J
+
+    iput-object p3, p0, Ln4c;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Le34;
+    new-instance v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lt3c;->o:Lce5;
 
-    invoke-virtual {p0, p1, p2}, Ln4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v1}, Li2;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
-
-    check-cast p1, Ln4c;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ln4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ln4c;
-
-    iget-object v0, p0, Ln4c;->Y:Lp4c;
-
-    invoke-direct {p1, v0, p2}, Ln4c;-><init>(Lp4c;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ln4c;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    move-result-object v1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v2, v1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    check-cast v2, Lf2;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Lf2;->hasNext()Z
 
-    throw p1
+    move-result v3
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-eqz v3, :cond_1
 
-    iget-object p1, p0, Ln4c;->Y:Lp4c;
+    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
 
-    iget-object p1, p1, Lp4c;->V0:Lwrb;
+    move-result-object v2
 
-    iput v1, p0, Ln4c;->X:I
+    move-object v5, v2
 
-    invoke-virtual {p1, p0}, Lwrb;->B(Ln4c;)Ljava/lang/Object;
+    check-cast v5, Lt3c;
 
-    move-result-object p1
+    iget-object v2, v5, Lt3c;->a:Ljava/lang/String;
 
-    sget-object v0, Lf34;->a:Lf34;
+    iget-object v3, p0, Ln4c;->c:Ljava/lang/String;
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-wide v1, p0, Ln4c;->a:J
+
+    iget-wide v3, p0, Ln4c;->b:J
+
+    invoke-direct/range {v0 .. v5}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;-><init>(JJLt3c;)V
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    return-object p1
+    const-string v1, "Collection contains no element matching the predicate."
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

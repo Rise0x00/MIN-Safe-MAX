@@ -1,88 +1,170 @@
-.class public interface abstract Ljz1;
+.class public final synthetic Ljz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Liz1;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Ldx1;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
     .locals 1
 
-    new-instance v0, Liz1;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Ljz1;->a:I
 
-    sput-object v0, Ljz1;->a:Liz1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljz1;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Ljz1;->o:Ljava/lang/Object;
+
+    iput p3, p0, Ljz1;->c:I
+
+    iput-wide p4, p0, Ljz1;->b:J
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lxmf;Lzm;JI)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Ljz1;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljz1;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Ljz1;->o:Ljava/lang/Object;
+
+    iput-wide p3, p0, Ljz1;->b:J
+
+    iput p5, p0, Ljz1;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final run()V
+    .locals 6
+
+    iget v0, p0, Ljz1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljz1;->d:Ljava/lang/Object;
+
+    check-cast v0, Lxmf;
+
+    iget-object v1, p0, Ljz1;->o:Ljava/lang/Object;
+
+    check-cast v1, Lzm;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lxmf;->z0:Ljava/lang/String;
+
+    const-string v3, "persistable task execution started, force connection"
+
+    invoke-static {v2, v3}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, v0, Lxmf;->o:Lru7;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lqxb;
+
+    check-cast v2, Lsxb;
+
+    iget-object v2, v2, Lsxb;->a:Le78;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Lztd;->A(Z)V
+
+    iget-object v2, v0, Lxmf;->d:Lru7;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lfpf;
+
+    check-cast v1, Lwib;
+
+    iget-wide v3, p0, Ljz1;->b:J
+
+    iget v5, p0, Ljz1;->c:I
+
+    invoke-virtual {v2, v1, v3, v4, v5}, Lfpf;->g(Lwib;JI)V
+
+    iget-object v1, v0, Lxmf;->t0:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llph;
+
+    invoke-static {v1}, Lp6e;->x(Llph;)V
+
+    iget-object v0, v0, Lxmf;->u0:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcpf;
+
+    invoke-virtual {v0}, Lcpf;->a()V
 
     return-void
-.end method
 
-.method public abstract b(F)Ljx7;
-.end method
+    :pswitch_0
+    iget-object v0, p0, Ljz1;->d:Ljava/lang/Object;
 
-.method public abstract c(Lci3;)V
-.end method
+    check-cast v0, Ldx1;
 
-.method public abstract d(F)Ljx7;
-.end method
+    iget-object v1, p0, Ljz1;->o:Ljava/lang/Object;
 
-.method public abstract e()Landroid/graphics/Rect;
-.end method
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
 
-.method public abstract f(I)V
-.end method
+    iget-object v0, v0, Ldx1;->b:Ljava/lang/Object;
 
-.method public g(Ln47;)V
-    .locals 0
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-    return-void
-.end method
+    iget v2, p0, Ljz1;->c:I
 
-.method public abstract h(Lq35;)Ljx7;
-.end method
+    iget-wide v3, p0, Ljz1;->b:J
 
-.method public abstract i(Ljava/util/ArrayList;II)Ljx7;
-.end method
-
-.method public abstract j(Lnvd;)V
-.end method
-
-.method public abstract k(Z)Ljx7;
-.end method
-
-.method public l(II)Ljx7;
-    .locals 0
-
-    new-instance p1, Lhz1;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Lpch;->A(Ljava/lang/Object;)Li67;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public abstract m()Lci3;
-.end method
-
-.method public abstract n()V
-.end method
-
-.method public o()V
-    .locals 0
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

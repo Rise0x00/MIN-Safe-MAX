@@ -1,305 +1,412 @@
 .class public final Ld73;
-.super Lha6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ld73;
+
+
 # instance fields
-.field public final X:J
+.field public final a:Ljava/util/HashMap;
 
-.field public final Y:Z
-
-.field public final c:J
-
-.field public final o:J
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Llif;JJ)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lha6;-><init>(Llif;)V
+    new-instance v0, Ld73;
 
-    invoke-virtual {p1}, Llif;->h()I
+    invoke-direct {v0}, Ld73;-><init>()V
 
-    move-result v0
+    sput-object v0, Ld73;->c:Ld73;
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    const/4 v2, 0x1
+.method public constructor <init>()V
+    .locals 1
 
-    if-ne v0, v2, :cond_9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljif;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljif;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-wide/16 v3, 0x0
+    iput-object v0, p0, Ld73;->a:Ljava/util/HashMap;
 
-    invoke-virtual {p1, v1, v0, v3, v4}, Llif;->m(ILjif;J)Ljif;
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v3, v4, p2, p3}, Ljava/lang/Math;->max(JJ)J
+    iput-object v0, p0, Ld73;->b:Ljava/util/HashMap;
 
-    move-result-wide p2
+    return-void
+.end method
 
-    iget-boolean v0, p1, Ljif;->A0:Z
+.method public static b(Ljava/util/HashMap;Lc73;Low7;Ljava/lang/Class;)V
+    .locals 3
 
-    if-nez v0, :cond_1
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v0, p2, v3
+    move-result-object v0
+
+    check-cast v0, Low7;
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p1, Ljif;->w0:Z
-
-    if-eqz v0, :cond_0
+    if-ne p2, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iget-object p0, p1, Lc73;->b:Ljava/lang/reflect/Method;
 
-    invoke-direct {p1, v2}, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;-><init>(I)V
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Method "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " in "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " already declared with different @OnLifecycleEvent value: previous value "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", new value "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
     :goto_0
-    const-wide/high16 v5, -0x8000000000000000L
-
-    cmp-long v0, p4, v5
-
     if-nez v0, :cond_2
 
-    iget-wide p4, p1, Ljif;->C0:J
-
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    invoke-static {v3, v4, p4, p5}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p4
-
-    :goto_1
-    iget-wide v3, p1, Ljif;->C0:J
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, v3, v5
-
-    if-eqz v0, :cond_5
-
-    cmp-long v0, p4, v3
-
-    if-lez v0, :cond_3
-
-    move-wide p4, v3
-
-    :cond_3
-    cmp-long v0, p2, p4
-
-    if-gtz v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance p1, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;-><init>(I)V
-
-    throw p1
-
-    :cond_5
-    :goto_2
-    iput-wide p2, p0, Ld73;->c:J
-
-    iput-wide p4, p0, Ld73;->o:J
-
-    cmp-long v0, p4, v5
-
-    if-nez v0, :cond_6
-
-    move-wide p2, v5
-
-    goto :goto_3
-
-    :cond_6
-    sub-long p2, p4, p2
-
-    :goto_3
-    iput-wide p2, p0, Ld73;->X:J
-
-    iget-boolean p1, p1, Ljif;->x0:Z
-
-    if-eqz p1, :cond_8
-
-    if-eqz v0, :cond_7
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_8
-
-    cmp-long p1, p4, v3
-
-    if-nez p1, :cond_8
-
-    :cond_7
-    move v1, v2
-
-    :cond_8
-    iput-boolean v1, p0, Ld73;->Y:Z
-
     return-void
-
-    :cond_9
-    new-instance p1, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    invoke-direct {p1, v1}, Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;-><init>(I)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final f(ILgif;Z)Lgif;
-    .locals 10
+.method public final a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lb73;
+    .locals 12
 
-    iget-object v1, p0, Lha6;->b:Llif;
+    invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2, p2, p3}, Llif;->f(ILgif;Z)Lgif;
+    iget-object v3, p0, Ld73;->a:Ljava/util/HashMap;
 
-    iget-wide v1, p2, Lgif;->X:J
+    if-eqz v0, :cond_1
 
-    iget-wide v3, p0, Ld73;->c:J
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sub-long v6, v1, v3
+    move-result-object v4
 
-    iget-wide v1, p0, Ld73;->X:J
+    check-cast v4, Lb73;
 
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+    if-eqz v4, :cond_0
 
-    cmp-long v5, v1, v3
+    goto :goto_0
 
-    if-nez v5, :cond_0
+    :cond_0
+    invoke-virtual {p0, v0, v2}, Ld73;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lb73;
+
+    move-result-object v4
 
     :goto_0
-    move-wide v4, v3
+    iget-object v0, v4, Lb73;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
+
+    move-result-object v0
+
+    array-length v4, v0
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    :goto_1
+    if-ge v6, v4, :cond_4
+
+    aget-object v7, v0, v6
+
+    invoke-virtual {v3, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lb73;
+
+    if-eqz v8, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0, v7, v2}, Ld73;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lb73;
+
+    move-result-object v8
+
+    :goto_2
+    iget-object v7, v8, Lb73;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v7}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_3
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/util/Map$Entry;
+
+    invoke-interface {v8}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lc73;
+
+    invoke-interface {v8}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Low7;
+
+    invoke-static {v1, v9, v8, p1}, Ld73;->b(Ljava/util/HashMap;Lc73;Low7;Ljava/lang/Class;)V
+
+    goto :goto_3
+
+    :cond_3
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    :cond_0
-    sub-long v3, v1, v6
+    :cond_4
+    if-eqz p2, :cond_5
 
-    goto :goto_0
+    goto :goto_4
 
-    :goto_1
-    iget-object v1, p2, Lgif;->a:Ljava/lang/Object;
+    :cond_5
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
-    iget-object v2, p2, Lgif;->b:Ljava/lang/Object;
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object v8, Lj8;->Y:Lj8;
+    :goto_4
+    array-length v0, p2
 
-    const/4 v9, 0x0
+    move v2, v5
 
-    const/4 v3, 0x0
+    move v4, v2
 
-    move-object v0, p2
+    :goto_5
+    if-ge v2, v0, :cond_d
 
-    invoke-virtual/range {v0 .. v9}, Lgif;->g(Ljava/lang/Object;Ljava/lang/Object;IJJLj8;Z)V
+    aget-object v6, p2, v2
+
+    const-class v7, Lxma;
+
+    invoke-virtual {v6, v7}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+
+    move-result-object v7
+
+    check-cast v7, Lxma;
+
+    if-nez v7, :cond_6
+
+    goto :goto_8
+
+    :cond_6
+    invoke-virtual {v6}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
+
+    move-result-object v4
+
+    array-length v8, v4
+
+    const/4 v9, 0x1
+
+    if-lez v8, :cond_8
+
+    const-class v8, Lnx7;
+
+    aget-object v10, v4, v5
+
+    invoke-virtual {v8, v10}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    move v8, v9
+
+    goto :goto_6
+
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "invalid parameter type. Must be one and instanceof LifecycleOwner"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_8
+    move v8, v5
+
+    :goto_6
+    invoke-interface {v7}, Lxma;->value()Low7;
+
+    move-result-object v7
+
+    array-length v10, v4
+
+    const/4 v11, 0x2
+
+    if-le v10, v9, :cond_b
+
+    const-class v8, Low7;
+
+    aget-object v10, v4, v9
+
+    invoke-virtual {v8, v10}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_a
+
+    sget-object v8, Low7;->ON_ANY:Low7;
+
+    if-ne v7, v8, :cond_9
+
+    move v8, v11
+
+    goto :goto_7
+
+    :cond_9
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Second arg is supported only for ON_ANY value"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_a
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "invalid parameter type. second arg must be an event"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_b
+    :goto_7
+    array-length v4, v4
+
+    if-gt v4, v11, :cond_c
+
+    new-instance v4, Lc73;
+
+    invoke-direct {v4, v8, v6}, Lc73;-><init>(ILjava/lang/reflect/Method;)V
+
+    invoke-static {v1, v4, v7, p1}, Ld73;->b(Ljava/util/HashMap;Lc73;Low7;Ljava/lang/Class;)V
+
+    move v4, v9
+
+    :goto_8
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    :cond_c
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "cannot have more than 2 params"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_d
+    new-instance p2, Lb73;
+
+    invoke-direct {p2, v1}, Lb73;-><init>(Ljava/util/HashMap;)V
+
+    invoke-virtual {v3, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Ld73;->b:Ljava/util/HashMap;
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
-.end method
 
-.method public final m(ILjif;J)Ljif;
-    .locals 6
+    :catch_0
+    move-exception p1
 
-    const/4 p1, 0x0
+    new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    const-wide/16 p3, 0x0
+    const-string v0, "The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor."
 
-    iget-object v0, p0, Lha6;->b:Llif;
+    invoke-direct {p2, v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Llif;->m(ILjif;J)Ljif;
-
-    iget-wide p3, p2, Ljif;->F0:J
-
-    iget-wide v0, p0, Ld73;->c:J
-
-    add-long/2addr p3, v0
-
-    iput-wide p3, p2, Ljif;->F0:J
-
-    iget-wide p3, p0, Ld73;->X:J
-
-    iput-wide p3, p2, Ljif;->C0:J
-
-    iget-boolean p1, p0, Ld73;->Y:Z
-
-    iput-boolean p1, p2, Ljif;->x0:Z
-
-    iget-wide p3, p2, Ljif;->B0:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p1, p3, v2
-
-    if-eqz p1, :cond_1
-
-    invoke-static {p3, p4, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p3
-
-    iput-wide p3, p2, Ljif;->B0:J
-
-    iget-wide v4, p0, Ld73;->o:J
-
-    cmp-long p1, v4, v2
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p3, p4, v4, v5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p3
-
-    :goto_0
-    sub-long/2addr p3, v0
-
-    iput-wide p3, p2, Ljif;->B0:J
-
-    :cond_1
-    invoke-static {v0, v1}, Lr4g;->K(J)J
-
-    move-result-wide p3
-
-    iget-wide v0, p2, Ljif;->X:J
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_2
-
-    add-long/2addr v0, p3
-
-    iput-wide v0, p2, Ljif;->X:J
-
-    :cond_2
-    iget-wide v0, p2, Ljif;->Y:J
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_3
-
-    add-long/2addr v0, p3
-
-    iput-wide v0, p2, Ljif;->Y:J
-
-    :cond_3
-    return-object p2
+    throw p2
 .end method

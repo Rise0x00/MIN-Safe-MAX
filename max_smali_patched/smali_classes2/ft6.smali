@@ -1,64 +1,90 @@
 .class public final Lft6;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Ljv7;
-
-.field public c:I
+.field public final a:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>([I)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lft6;->a:Ljava/lang/String;
-
-    iput p2, p0, Lft6;->c:I
+    iput-object p1, p0, Lft6;->a:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    iget-object v0, p0, Lft6;->b:Ljv7;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Ljv7;->a:Lov7;
-
-    iget-object v0, v0, Ljv7;->b:Ljava/lang/Object;
-
-    sget-object v2, Lpv7;->b:Lpv7;
-
-    check-cast v0, Landroid/text/style/ClickableSpan;
-
-    iget-object v3, p0, Lft6;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v3, v2, v0}, Lov7;->b(Landroid/view/View;Ljava/lang/String;Lpv7;Landroid/text/style/ClickableSpan;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lft6;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lft6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lft6;
+
+    iget-object v1, p0, Lft6;->a:[I
+
+    iget-object p1, p1, Lft6;->a:[I
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lft6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lft6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "GradientsBannerDKStrokeColors(iconContainerGradient="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

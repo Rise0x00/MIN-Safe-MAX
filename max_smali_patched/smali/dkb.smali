@@ -4,714 +4,4225 @@
 
 
 # static fields
-.field public static final t:Luu8;
+.field public static final h:Ljava/util/logging/Logger;
+
+.field public static final i:Ljava/util/Map;
+
+.field public static final j:Ljava/util/Map;
+
+.field public static final k:Ljava/util/Map;
+
+.field public static final l:Ljava/util/regex/Pattern;
+
+.field public static final m:Ljava/util/regex/Pattern;
+
+.field public static final n:Ljava/util/regex/Pattern;
+
+.field public static final o:Ljava/util/regex/Pattern;
+
+.field public static final p:Ljava/util/regex/Pattern;
+
+.field public static final q:Ljava/util/regex/Pattern;
+
+.field public static final r:Ljava/util/regex/Pattern;
+
+.field public static final s:Ljava/util/regex/Pattern;
+
+.field public static final t:Ljava/util/regex/Pattern;
+
+.field public static final u:Ljava/util/regex/Pattern;
+
+.field public static final v:Ljava/util/regex/Pattern;
+
+.field public static final w:Ljava/util/regex/Pattern;
+
+.field public static final x:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final a:Llif;
+.field public final a:Lqoh;
 
-.field public final b:Luu8;
+.field public final b:Ljava/util/HashMap;
 
-.field public final c:J
+.field public final c:Lot7;
 
-.field public final d:J
+.field public final d:Ljava/util/HashSet;
 
-.field public final e:I
+.field public final e:Lnyb;
 
-.field public final f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+.field public final f:Ljava/util/HashSet;
 
-.field public final g:Z
-
-.field public final h:Lwnf;
-
-.field public final i:Lqof;
-
-.field public final j:Ljava/util/List;
-
-.field public final k:Luu8;
-
-.field public final l:Z
-
-.field public final m:I
-
-.field public final n:Lfkb;
-
-.field public final o:Z
-
-.field public final p:Z
-
-.field public volatile q:J
-
-.field public volatile r:J
-
-.field public volatile s:J
+.field public final g:Ljava/util/HashSet;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 17
 
-    new-instance v0, Luu8;
+    const/16 v0, 0x2e
 
-    new-instance v1, Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Luu8;-><init>(Ljava/lang/Object;)V
+    const/16 v1, 0x2f
 
-    sput-object v0, Ldkb;->t:Luu8;
+    invoke-static {v1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    const/16 v2, 0x20
+
+    invoke-static {v2}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v2
+
+    const/16 v3, 0x2d
+
+    invoke-static {v3}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v3
+
+    const-class v4, Ldkb;
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v4
+
+    sput-object v4, Ldkb;->h:Ljava/util/logging/Logger;
+
+    new-instance v4, Ljava/util/HashMap;
+
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    const/16 v5, 0x36
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    const-string v7, "9"
+
+    invoke-virtual {v4, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v4}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    const/16 v7, 0x56
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v4}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    new-instance v8, Ljava/util/HashSet;
+
+    invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
+
+    const/16 v9, 0x34
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    invoke-static {v9}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v10}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v8}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    new-instance v8, Ljava/util/HashSet;
+
+    invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v8, v10}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v8, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    const/16 v6, 0x37
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v10
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {v8, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    const/16 v6, 0x3e
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {v8, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v8, v4}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    invoke-static {v8}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    new-instance v4, Ljava/util/HashMap;
+
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    const/16 v6, 0x30
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x31
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x32
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v8, 0x33
+
+    invoke-static {v8}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v4, v9, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v11, 0x35
+
+    invoke-static {v11}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v11
+
+    invoke-virtual {v4, v11, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v4, v5, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v4, v10, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v12, 0x38
+
+    invoke-static {v12}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v12
+
+    invoke-virtual {v4, v12, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v13, 0x39
+
+    invoke-static {v13}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v13
+
+    invoke-virtual {v4, v13, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v14, Ljava/util/HashMap;
+
+    const/16 v15, 0x28
+
+    invoke-direct {v14, v15}, Ljava/util/HashMap;-><init>(I)V
+
+    const/16 v15, 0x41
+
+    invoke-static {v15}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v15
+
+    invoke-virtual {v14, v15, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v15, 0x42
+
+    move/from16 v16, v7
+
+    invoke-static {v15}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v7
+
+    invoke-virtual {v14, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v7, 0x43
+
+    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v7
+
+    invoke-virtual {v14, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x44
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x45
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x46
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x47
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x48
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x49
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4a
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4b
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4c
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4d
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4e
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v6, 0x4f
+
+    invoke-static {v6}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v6
+
+    invoke-virtual {v14, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x50
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x51
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x52
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x53
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x54
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x55
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static/range {v16 .. v16}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x57
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x58
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x59
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v5, 0x5a
+
+    invoke-static {v5}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v5
+
+    invoke-virtual {v14, v5, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v14}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v5
+
+    sput-object v5, Ldkb;->j:Ljava/util/Map;
+
+    new-instance v6, Ljava/util/HashMap;
+
+    const/16 v7, 0x64
+
+    invoke-direct {v6, v7}, Ljava/util/HashMap;-><init>(I)V
+
+    invoke-virtual {v6, v5}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-virtual {v6, v4}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-static {v6}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v6
+
+    sput-object v6, Ldkb;->k:Ljava/util/Map;
+
+    new-instance v6, Ljava/util/HashMap;
+
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {v6, v4}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    const/16 v7, 0x2b
+
+    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v7, 0x2a
+
+    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v7, 0x23
+
+    invoke-static {v7}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v6}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v6
+
+    sput-object v6, Ldkb;->i:Ljava/util/Map;
+
+    new-instance v6, Ljava/util/HashMap;
+
+    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
+
+    invoke-interface {v5}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Character;
+
+    invoke-virtual {v7}, Ljava/lang/Character;->charValue()C
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Character;->toLowerCase(C)C
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v8
+
+    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v6, v7, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v6, v4}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-virtual {v6, v3, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v4, 0xff0d
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2010
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2011
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2012
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2013
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2014
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2015
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, 0x2212
+
+    invoke-static {v4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v6, v1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v3, 0xff0f
+
+    invoke-static {v3}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v6, v2, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x3000
+
+    invoke-static {v1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x2060
+
+    invoke-static {v1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v6, v0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v1, 0xff0e
+
+    invoke-static {v1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v6}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    const-string v0, "[\\d]+(?:[~\u2053\u223c\uff5e][\\d]+)?"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v1, Ldkb;->j:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "[, \\[\\]]"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "[+\uff0b]+"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->l:Ljava/util/regex/Pattern;
+
+    const-string v1, "[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e]+"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->m:Ljava/util/regex/Pattern;
+
+    const-string v1, "(\\p{Nd})"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->n:Ljava/util/regex/Pattern;
+
+    const-string v1, "[+\uff0b\\p{Nd}]"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->o:Ljava/util/regex/Pattern;
+
+    const-string v1, "[\\\\/] *x"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->p:Ljava/util/regex/Pattern;
+
+    const-string v1, "[[\\P{N}&&\\P{L}]&&[^#]]+$"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->q:Ljava/util/regex/Pattern;
+
+    const-string v1, "(?:.*?[A-Za-z]){3}.*"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Ldkb;->r:Ljava/util/regex/Pattern;
+
+    const-string v1, "\\p{Nd}{2}|[+\uff0b]*+(?:[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e*]*\\p{Nd}){3,}[-x\u2010-\u2015\u2212\u30fc\uff0d-\uff0f \u00a0\u00ad\u200b\u2060\u3000()\uff08\uff09\uff3b\uff3d.\\[\\]/~\u2053\u223c\uff5e*"
+
+    const-string v2, "\\p{Nd}]*"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ldkb;->a(Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ldkb;->a(Z)Ljava/lang/String;
+
+    const-string v3, "^\\+(\\p{Nd}|[\\-\\.\\(\\)]?)*\\p{Nd}(\\p{Nd}|[\\-\\.\\(\\)]?)*$"
+
+    invoke-static {v3}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v3
+
+    sput-object v3, Ldkb;->s:Ljava/util/regex/Pattern;
+
+    const-string v3, "\\p{Nd}"
+
+    invoke-static {v0, v3}, Lnx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "["
+
+    const-string v5, "]+((\\-)*["
+
+    const-string v6, "])*"
+
+    invoke-static {v4, v3, v5, v3, v6}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v4, v0, v5, v3, v6}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "^("
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "\\.)*"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\\.?$"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ldkb;->t:Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "(?:"
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ")$"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v15}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ldkb;->u:Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")?"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v15}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ldkb;->v:Ljava/util/regex/Pattern;
+
+    const-string v0, "(\\D+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    const-string v0, "(\\$\\d)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ldkb;->w:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\(?\\$1\\)?"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ldkb;->x:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public constructor <init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-    .locals 0
+.method public constructor <init>(Lqoh;Ljava/util/HashMap;)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldkb;->a:Llif;
+    new-instance v0, Lot7;
 
-    iput-object p2, p0, Ldkb;->b:Luu8;
+    const/16 v1, 0x18
 
-    iput-wide p3, p0, Ldkb;->c:J
+    invoke-direct {v0, v1}, Lot7;-><init>(I)V
 
-    iput-wide p5, p0, Ldkb;->d:J
+    iput-object v0, p0, Ldkb;->c:Lot7;
 
-    iput p7, p0, Ldkb;->e:I
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p8, p0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    const/16 v1, 0x23
 
-    iput-boolean p9, p0, Ldkb;->g:Z
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
 
-    iput-object p10, p0, Ldkb;->h:Lwnf;
+    iput-object v0, p0, Ldkb;->d:Ljava/util/HashSet;
 
-    iput-object p11, p0, Ldkb;->i:Lqof;
+    new-instance v0, Lnyb;
 
-    iput-object p12, p0, Ldkb;->j:Ljava/util/List;
+    const/16 v1, 0x64
 
-    iput-object p13, p0, Ldkb;->k:Luu8;
+    invoke-direct {v0, v1}, Lnyb;-><init>(I)V
 
-    iput-boolean p14, p0, Ldkb;->l:Z
+    iput-object v0, p0, Ldkb;->e:Lnyb;
 
-    iput p15, p0, Ldkb;->m:I
+    new-instance v0, Ljava/util/HashSet;
 
-    move-object/from16 p1, p16
+    const/16 v1, 0x140
 
-    iput-object p1, p0, Ldkb;->n:Lfkb;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
 
-    move-wide/from16 p1, p17
+    iput-object v0, p0, Ldkb;->f:Ljava/util/HashSet;
 
-    iput-wide p1, p0, Ldkb;->q:J
+    new-instance v0, Ljava/util/HashSet;
 
-    move-wide/from16 p1, p19
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-wide p1, p0, Ldkb;->r:J
+    iput-object v0, p0, Ldkb;->g:Ljava/util/HashSet;
 
-    move-wide/from16 p1, p21
+    iput-object p1, p0, Ldkb;->a:Lqoh;
 
-    iput-wide p1, p0, Ldkb;->s:J
+    iput-object p2, p0, Ldkb;->b:Ljava/util/HashMap;
 
-    move/from16 p1, p23
+    invoke-virtual {p2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    iput-boolean p1, p0, Ldkb;->o:Z
+    move-result-object p1
 
-    move/from16 p1, p24
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    iput-boolean p1, p0, Ldkb;->p:Z
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    const-string v1, "001"
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/List;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_0
+
+    const/4 v2, 0x0
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Ldkb;->g:Ljava/util/HashSet;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Ldkb;->f:Ljava/util/HashSet;
+
+    invoke-interface {v0, v3}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, p0, Ldkb;->f:Ljava/util/HashSet;
+
+    invoke-virtual {p1, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    sget-object p1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    const-string v0, "invalid metadata (country calling code was mapped to the non-geo entity as well as specific region(s))"
+
+    sget-object v1, Ldkb;->h:Ljava/util/logging/Logger;
+
+    invoke-virtual {v1, p1, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
+
+    :cond_2
+    iget-object p1, p0, Ldkb;->d:Ljava/util/HashSet;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/util/Collection;
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
 
-.method public static h(Lqof;)Ldkb;
-    .locals 25
+.method public static a(Z)Ljava/lang/String;
+    .locals 7
 
-    new-instance v0, Ldkb;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object v10, Lwnf;->o:Lwnf;
+    const-string v1, ";ext="
 
-    sget-object v12, Lxyc;->X:Lxyc;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v16, Lfkb;->o:Lfkb;
+    const/16 v1, 0x14
 
-    const/16 v23, 0x0
+    invoke-static {v1}, Ldkb;->b(I)Ljava/lang/String;
 
-    const/16 v24, 0x0
+    move-result-object v2
 
-    sget-object v1, Llif;->a:Leif;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Ldkb;->t:Luu8;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+    move-result-object v0
 
-    const-wide/16 v5, 0x0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v7, 0x1
+    const-string v3, "[ \u00a0\\t,]*(?:e?xt(?:ensi(?:o\u0301?|\u00f3))?n?|\uff45?\uff58\uff54\uff4e?|\u0434\u043e\u0431|anexo)[:\\.\uff0e]?[ \u00a0\\t,-]*"
 
-    const/4 v8, 0x0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v9, 0x0
+    invoke-static {v1}, Ldkb;->b(I)Ljava/lang/String;
 
-    const/4 v14, 0x0
+    move-result-object v1
 
-    const/4 v15, 0x0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v17, 0x0
+    const-string v1, "#?"
 
-    const-wide/16 v19, 0x0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v21, 0x0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-object v13, v2
+    move-result-object v2
 
-    move-object/from16 v11, p0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v0 .. v24}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    const-string v4, "[ \u00a0\\t,]*(?:[x\uff58#\uff03~\uff5e]|int|\uff49\uff4e\uff54)[:\\.\uff0e]?[ \u00a0\\t,-]*"
 
-    return-object v0
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v4, 0x9
+
+    invoke-static {v4}, Ldkb;->b(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "[- ]+"
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v6, 0x6
+
+    invoke-static {v6}, Ldkb;->b(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, "#"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "|"
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v6, v0, v5}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz p0, :cond_0
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v3, "[ \u00a0\\t]*(?:,{2}|;)[:\\.\uff0e]?[ \u00a0\\t,-]*"
+
+    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v3, 0xf
+
+    invoke-static {v3}, Ldkb;->b(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v5, "[ \u00a0\\t]*(?:,)+[:\\.\uff0e]?[ \u00a0\\t,-]*"
+
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v4}, Ldkb;->b(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    return-object v2
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "(\\p{Nd}{1,"
+
+    const-string v1, "})"
+
+    invoke-static {p0, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(Lwkb;)Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-boolean v1, p0, Lwkb;->Y:Z
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lwkb;->s0:I
+
+    if-lez v1, :cond_0
+
+    new-array v1, v1, [C
+
+    const/16 v2, 0x30
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->fill([CC)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v1}, Ljava/lang/String;-><init>([C)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    iget-wide v1, p0, Lwkb;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static j(Lukb;I)Lvkb;
+    .locals 0
+
+    invoke-static {p1}, Lnx1;->v(I)I
+
+    move-result p1
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p0, p0, Lukb;->b:Lvkb;
+
+    return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Lukb;->H0:Lvkb;
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Lukb;->D0:Lvkb;
+
+    return-object p0
+
+    :pswitch_2
+    iget-object p0, p0, Lukb;->B0:Lvkb;
+
+    return-object p0
+
+    :pswitch_3
+    iget-object p0, p0, Lukb;->x0:Lvkb;
+
+    return-object p0
+
+    :pswitch_4
+    iget-object p0, p0, Lukb;->z0:Lvkb;
+
+    return-object p0
+
+    :pswitch_5
+    iget-object p0, p0, Lukb;->v0:Lvkb;
+
+    return-object p0
+
+    :pswitch_6
+    iget-object p0, p0, Lukb;->t0:Lvkb;
+
+    return-object p0
+
+    :pswitch_7
+    iget-object p0, p0, Lukb;->Z:Lvkb;
+
+    return-object p0
+
+    :pswitch_8
+    iget-object p0, p0, Lukb;->X:Lvkb;
+
+    return-object p0
+
+    :pswitch_9
+    iget-object p0, p0, Lukb;->d:Lvkb;
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_9
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static r(Ljava/lang/StringBuilder;)V
+    .locals 3
+
+    sget-object v0, Ldkb;->r:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    sget-object v2, Ldkb;->k:Ljava/util/Map;
+
+    invoke-static {p0, v2}, Ldkb;->t(Ljava/lang/CharSequence;Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v1, v0, v2}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    invoke-static {p0}, Ldkb;->s(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v1, v0, v2}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public static s(Ljava/lang/CharSequence;)Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0xa
+
+    invoke-static {v2, v3}, Ljava/lang/Character;->digit(CI)I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static t(Ljava/lang/CharSequence;Ljava/util/Map;)Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v2
+
+    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Character;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static v(IILjava/lang/StringBuilder;)V
+    .locals 3
+
+    invoke-static {p1}, Lnx1;->v(I)I
+
+    move-result p1
+
+    const/16 v0, 0x2b
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string p1, "-"
+
+    invoke-virtual {p2, v1, p1}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, p0}, Ljava/lang/StringBuilder;->insert(II)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string p1, "tel:"
+
+    invoke-virtual {p0, v1, p1}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :cond_1
+    const-string p1, " "
+
+    invoke-virtual {p2, v1, p1}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, p0}, Ljava/lang/StringBuilder;->insert(II)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :cond_2
+    invoke-virtual {p2, v1, p0}, Ljava/lang/StringBuilder;->insert(II)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public static w(Ljava/lang/StringBuilder;Lukb;I)I
+    .locals 8
+
+    invoke-static {p1, p2}, Ldkb;->j(Lukb;I)Lvkb;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p1, Lukb;->b:Lvkb;
+
+    iget-object v1, v1, Lvkb;->c:Ljava/util/ArrayList;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lvkb;->c:Ljava/util/ArrayList;
+
+    :goto_0
+    iget-object v0, v0, Lvkb;->d:Ljava/util/ArrayList;
+
+    const/4 v2, 0x3
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x2
+
+    if-ne p2, v2, :cond_7
+
+    invoke-static {p1, v4}, Ldkb;->j(Lukb;I)Lvkb;
+
+    move-result-object p2
+
+    iget-object v2, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_2
+
+    iget-object p2, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    if-eq p2, v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {p0, p1, v6}, Ldkb;->w(Ljava/lang/StringBuilder;Lukb;I)I
+
+    move-result p0
+
+    return p0
+
+    :cond_2
+    :goto_1
+    invoke-static {p1, v6}, Ldkb;->j(Lukb;I)Lvkb;
+
+    move-result-object p2
+
+    iget-object v2, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_4
+
+    iget-object v2, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-eq v2, v3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v2, v5
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    move v2, v4
+
+    :goto_3
+    iget-object v7, p2, Lvkb;->d:Ljava/util/ArrayList;
+
+    if-eqz v2, :cond_7
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iget-object v1, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object p1, p1, Lukb;->b:Lvkb;
+
+    iget-object p1, p1, Lvkb;->c:Ljava/util/ArrayList;
+
+    goto :goto_4
+
+    :cond_5
+    iget-object p1, p2, Lvkb;->c:Ljava/util/ArrayList;
+
+    :goto_4
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    move-object v1, v2
+
+    move-object v0, v7
+
+    goto :goto_5
+
+    :cond_6
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p1, v7}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    invoke-static {p1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
+
+    move-object v0, p1
+
+    move-object v1, v2
+
+    :cond_7
+    :goto_5
+    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-ne p1, v3, :cond_8
+
+    goto :goto_7
+
+    :cond_8
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    return v6
+
+    :cond_9
+    invoke-interface {v1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-ne p1, p0, :cond_a
+
+    goto :goto_6
+
+    :cond_a
+    if-le p1, p0, :cond_b
+
+    const/4 p0, 0x4
+
+    return p0
+
+    :cond_b
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    sub-int/2addr p1, v4
+
+    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    if-ge p1, p0, :cond_c
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_c
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    invoke-interface {v1, v4, p1}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-interface {p1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_d
+
+    :goto_6
+    return v4
+
+    :cond_d
+    :goto_7
+    const/4 p0, 0x5
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a(Luu8;)Ldkb;
-    .locals 26
+.method public final c(Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)I
+    .locals 6
 
-    move-object/from16 v0, p0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
-    new-instance v1, Ldkb;
+    move-result v0
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    const/4 v1, 0x0
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    if-eqz v0, :cond_2
 
-    iget-wide v4, v0, Ldkb;->c:J
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->charAt(I)C
 
-    iget-wide v6, v0, Ldkb;->d:J
+    move-result v0
 
-    iget v8, v0, Ldkb;->e:I
+    const/16 v2, 0x30
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    if-ne v0, v2, :cond_0
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    goto :goto_1
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    move-result v0
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    const/4 v2, 0x1
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    :goto_0
+    const/4 v3, 0x3
 
-    iget v14, v0, Ldkb;->m:I
+    if-gt v2, v3, :cond_2
 
-    move-object/from16 v16, v1
+    if-gt v2, v0, :cond_2
 
-    iget-object v1, v0, Ldkb;->n:Lfkb;
+    invoke-virtual {p1, v1, v2}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
 
-    move-object/from16 v18, v1
+    move-result-object v3
 
-    move-object/from16 v17, v2
+    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    iget-wide v1, v0, Ldkb;->q:J
+    move-result v3
 
-    move-wide/from16 v19, v1
+    iget-object v4, p0, Ldkb;->b:Ljava/util/HashMap;
 
-    iget-wide v1, v0, Ldkb;->r:J
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-wide/from16 v21, v1
+    move-result-object v5
 
-    iget-wide v1, v0, Ldkb;->s:J
+    invoke-virtual {v4, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-wide/from16 v23, v1
+    move-result v4
 
-    iget-boolean v1, v0, Ldkb;->o:Z
+    if-eqz v4, :cond_1
 
-    iget-boolean v2, v0, Ldkb;->p:Z
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
 
-    move/from16 v25, v2
+    move-result-object p1
 
-    move-object/from16 v2, v17
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v17, v18
+    return v3
 
-    move-wide/from16 v18, v19
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
 
-    move-wide/from16 v20, v21
+    goto :goto_0
 
-    move-wide/from16 v22, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v14
-
-    move-object/from16 v14, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    :cond_2
+    :goto_1
+    return v1
 .end method
 
-.method public final b(Luu8;JJJJLwnf;Lqof;Ljava/util/List;)Ldkb;
-    .locals 26
+.method public final d(Lwkb;I)Ljava/lang/String;
+    .locals 10
 
-    move-object/from16 v0, p0
+    iget-wide v0, p1, Lwkb;->c:J
 
-    new-instance v1, Ldkb;
+    const-wide/16 v2, 0x0
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    cmp-long v0, v0, v2
 
-    iget v8, v0, Ldkb;->e:I
+    if-nez v0, :cond_1
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    iget-object v0, p1, Lwkb;->t0:Ljava/lang/String;
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    move-result v1
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    if-gtz v1, :cond_0
 
-    iget v3, v0, Ldkb;->m:I
+    iget-boolean v1, p1, Lwkb;->a:Z
 
-    iget-object v4, v0, Ldkb;->n:Lfkb;
+    if-nez v1, :cond_1
 
-    iget-wide v5, v0, Ldkb;->q:J
+    :cond_0
+    return-object v0
 
-    iget-boolean v7, v0, Ldkb;->o:Z
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-boolean v11, v0, Ldkb;->p:Z
+    const/16 v1, 0x14
 
-    move-wide/from16 v22, p2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    move-wide/from16 v20, p8
+    const/4 v1, 0x0
 
-    move-object/from16 v12, p11
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    move-object/from16 v13, p12
+    iget v1, p1, Lwkb;->b:I
 
-    move/from16 v16, v3
+    invoke-static {p1}, Ldkb;->i(Lwkb;)Ljava/lang/String;
 
-    move-object/from16 v17, v4
+    move-result-object v2
 
-    move-wide/from16 v18, v5
+    const/4 v3, 0x1
 
-    move/from16 v24, v7
+    if-ne p2, v3, :cond_2
 
-    move/from16 v25, v11
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v3, p1
+    invoke-static {v1, v3, v0}, Ldkb;->v(IILjava/lang/StringBuilder;)V
 
-    move-wide/from16 v4, p4
+    goto/16 :goto_7
 
-    move-wide/from16 v6, p6
+    :cond_2
+    iget-object v3, p0, Ldkb;->b:Ljava/util/HashMap;
 
-    move-object/from16 v11, p10
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_7
+
+    :cond_3
+    invoke-virtual {p0, v1}, Ldkb;->l(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "001"
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {p0, v1}, Ldkb;->g(I)Lukb;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0, v3}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v3
+
+    :goto_0
+    iget-object v4, v3, Lukb;->h1:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    const/4 v5, 0x3
+
+    if-eqz v4, :cond_6
+
+    if-ne p2, v5, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-object v4, v3, Lukb;->h1:Ljava/util/ArrayList;
+
+    goto :goto_2
+
+    :cond_6
+    :goto_1
+    iget-object v4, v3, Lukb;->g1:Ljava/util/ArrayList;
+
+    :goto_2
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_7
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    iget-object v7, p0, Ldkb;->e:Lnyb;
+
+    if-eqz v6, :cond_9
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lskb;
+
+    iget-object v8, v6, Lskb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+
+    move-result v8
+
+    if-eqz v8, :cond_8
+
+    add-int/lit8 v8, v8, -0x1
+
+    iget-object v9, v6, Lskb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v9, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    :cond_8
+    iget-object v8, v6, Lskb;->a:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    goto :goto_3
+
+    :cond_9
+    const/4 v6, 0x0
+
+    :goto_3
+    const/4 v4, 0x4
+
+    if-nez v6, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    iget-object v8, v6, Lskb;->b:Ljava/lang/String;
+
+    iget-object v9, v6, Lskb;->a:Ljava/lang/String;
+
+    invoke-virtual {v7, v9}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    iget-object v6, v6, Lskb;->o:Ljava/lang/String;
+
+    if-ne p2, v5, :cond_b
+
+    if-eqz v6, :cond_b
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-lez v5, :cond_b
+
+    sget-object v5, Ldkb;->w:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v5, v8}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v6}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :cond_b
+    invoke-virtual {v2, v8}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_4
+    if-ne p2, v4, :cond_d
+
+    sget-object v5, Ldkb;->m:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v5, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_c
+
+    const-string v2, ""
+
+    invoke-virtual {v5, v2}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_c
+    invoke-virtual {v5, v2}, Ljava/util/regex/Matcher;->reset(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    const-string v5, "-"
+
+    invoke-virtual {v2, v5}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_d
+    :goto_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p1, Lwkb;->d:Z
+
+    if-eqz v2, :cond_10
+
+    iget-object v2, p1, Lwkb;->o:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_10
+
+    if-ne p2, v4, :cond_e
+
+    const-string v2, ";ext="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p1, Lwkb;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_6
+
+    :cond_e
+    iget-boolean v2, v3, Lukb;->Z0:Z
+
+    if-eqz v2, :cond_f
+
+    iget-object v2, v3, Lukb;->a1:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p1, Lwkb;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_6
+
+    :cond_f
+    const-string v2, " ext. "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p1, Lwkb;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_10
+    :goto_6
+    invoke-static {v1, p2, v0}, Ldkb;->v(IILjava/lang/StringBuilder;)V
+
+    :goto_7
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e(Ljava/lang/String;)I
+    .locals 3
+
+    invoke-virtual {p0, p1}, Ldkb;->o(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Invalid or missing region code ("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-nez p1, :cond_0
+
+    const-string p1, "null"
+
+    :cond_0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ") provided."
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Ldkb;->h:Ljava/util/logging/Logger;
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    invoke-virtual {p0, p1}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget p1, v0, Lukb;->T0:I
+
+    return p1
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Invalid region code: "
+
+    invoke-static {v1, p1}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final f(Ljava/lang/String;)Lwkb;
+    .locals 5
+
+    invoke-virtual {p0, p1}, Ldkb;->o(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    sget-object v2, Ldkb;->h:Ljava/util/logging/Logger;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Invalid or unknown region code provided: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, v0, p1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
+
+    return-object v1
+
+    :cond_0
+    invoke-virtual {p0, p1}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v0
+
+    const/4 v3, 0x2
+
+    invoke-static {v0, v3}, Ldkb;->j(Lukb;I)Lvkb;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-boolean v3, v0, Lvkb;->o:Z
+
+    if-eqz v3, :cond_1
+
+    iget-object v0, v0, Lvkb;->X:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, p1}, Ldkb;->u(Ljava/lang/String;Ljava/lang/String;)Lwkb;
+
+    move-result-object p1
+    :try_end_0
+    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v1
+
+    :goto_0
+    sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+
+    invoke-virtual {p1}, Lio/michaelrocks/libphonenumber/android/NumberParseException;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, v0, p1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
     return-object v1
 .end method
 
-.method public final c(Z)Ldkb;
-    .locals 28
+.method public final g(I)Lukb;
+    .locals 3
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->g:Ljava/util/HashSet;
 
-    new-instance v1, Ldkb;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    move-result-object v1
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    iget-wide v4, v0, Ldkb;->c:J
+    move-result v0
 
-    iget-wide v6, v0, Ldkb;->d:J
+    if-nez v0, :cond_0
 
-    iget v8, v0, Ldkb;->e:I
+    const/4 p1, 0x0
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    return-object p1
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    :cond_0
+    iget-object v0, p0, Ldkb;->a:Lqoh;
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    invoke-static {}, Lswi;->a()Ljava/util/HashMap;
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    move-result-object v1
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    move-result-object v2
 
-    move-object/from16 v16, v1
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v1, v0, Ldkb;->m:I
+    move-result-object v1
 
-    move/from16 v17, v1
+    check-cast v1, Ljava/util/List;
 
-    iget-object v1, v0, Ldkb;->n:Lfkb;
+    if-eqz v1, :cond_2
 
-    move-object/from16 v19, v1
+    const-string v2, "001"
 
-    move-object/from16 v18, v2
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    iget-wide v1, v0, Ldkb;->q:J
+    move-result v1
 
-    move-wide/from16 v20, v1
+    if-eqz v1, :cond_1
 
-    iget-wide v1, v0, Ldkb;->r:J
+    goto :goto_0
 
-    move-wide/from16 v22, v1
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-wide v1, v0, Ldkb;->s:J
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-wide/from16 v24, v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-boolean v1, v0, Ldkb;->p:Z
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-object/from16 v2, v18
+    const-string p1, " calling code belongs to a geo entity"
 
-    move-wide/from16 v26, v24
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v24, p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move/from16 v25, v1
+    move-result-object p1
 
-    move-object/from16 v1, v16
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move/from16 v16, v17
+    throw v0
 
-    move-object/from16 v17, v19
+    :cond_2
+    :goto_0
+    iget-object v1, v0, Lqoh;->c:Ljava/lang/Object;
 
-    move-wide/from16 v18, v20
+    check-cast v1, Ld5e;
 
-    move-wide/from16 v20, v22
+    iget-object v0, v0, Lqoh;->b:Ljava/lang/Object;
 
-    move-wide/from16 v22, v26
+    check-cast v0, Lk5;
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-object/from16 v16, v1
+    move-result-object v2
 
-    return-object v16
+    invoke-virtual {v0, v2}, Lk5;->o(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ld5e;->k(Ljava/lang/String;)Lar9;
+
+    move-result-object v0
+
+    check-cast v0, Lki3;
+
+    iget-object v0, v0, Lki3;->a:Lihd;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lihd;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lukb;
+
+    const-string v1, "Missing metadata for country code "
+
+    invoke-static {p1, v1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    new-instance v0, Lio/michaelrocks/libphonenumber/android/MissingMetadataException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final d(IZ)Ldkb;
-    .locals 26
+.method public final h(Ljava/lang/String;)Lukb;
+    .locals 2
 
-    move-object/from16 v0, p0
+    invoke-virtual {p0, p1}, Ldkb;->o(Ljava/lang/String;)Z
 
-    new-instance v1, Ldkb;
+    move-result v0
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    if-nez v0, :cond_0
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    const/4 p1, 0x0
 
-    iget-wide v4, v0, Ldkb;->c:J
+    return-object p1
 
-    iget-wide v6, v0, Ldkb;->d:J
+    :cond_0
+    iget-object v0, p0, Ldkb;->a:Lqoh;
 
-    iget v8, v0, Ldkb;->e:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    const-string v1, "001"
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    move-result v1
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    if-nez v1, :cond_2
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    iget-object v1, v0, Lqoh;->c:Ljava/lang/Object;
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    check-cast v1, Ld5e;
 
-    iget-object v15, v0, Ldkb;->n:Lfkb;
+    iget-object v0, v0, Lqoh;->b:Ljava/lang/Object;
 
-    move-object/from16 v16, v1
+    check-cast v0, Lk5;
 
-    move-object/from16 v17, v2
+    invoke-virtual {v0, p1}, Lk5;->o(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-wide v1, v0, Ldkb;->q:J
+    move-result-object v0
 
-    move-wide/from16 v18, v1
+    invoke-virtual {v1, v0}, Ld5e;->k(Ljava/lang/String;)Lar9;
 
-    iget-wide v1, v0, Ldkb;->r:J
+    move-result-object v0
 
-    move-wide/from16 v20, v1
+    check-cast v0, Lki3;
 
-    iget-wide v1, v0, Ldkb;->s:J
+    iget-object v0, v0, Lki3;->b:Lihd;
 
-    move-wide/from16 v22, v1
+    iget-object v0, v0, Lihd;->a:Ljava/lang/Object;
 
-    iget-boolean v1, v0, Ldkb;->o:Z
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-boolean v2, v0, Ldkb;->p:Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move/from16 v24, v1
+    move-result-object v0
 
-    move/from16 v25, v2
+    check-cast v0, Lukb;
 
-    move-object/from16 v1, v16
+    const-string v1, "Missing metadata for region code "
 
-    move-object/from16 v2, v17
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move/from16 v16, p1
+    move-result-object p1
 
-    move-object/from16 v17, v15
+    if-eqz v0, :cond_1
 
-    move/from16 v15, p2
+    return-object v0
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    :cond_1
+    new-instance v0, Lio/michaelrocks/libphonenumber/android/MissingMetadataException;
 
-    move-object/from16 v16, v1
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object v16
+    throw v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, " region code is a non-geo entity"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final e(Lcom/google/android/exoplayer2/ExoPlaybackException;)Ldkb;
-    .locals 26
+.method public final k(Ljava/lang/String;Lukb;)I
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p2, Lukb;->b:Lvkb;
 
-    new-instance v1, Ldkb;
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    move-result v0
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    if-nez v0, :cond_0
 
-    iget-wide v4, v0, Ldkb;->c:J
+    goto/16 :goto_1
 
-    iget-wide v6, v0, Ldkb;->d:J
+    :cond_0
+    iget-object v0, p2, Lukb;->t0:Lvkb;
 
-    iget v8, v0, Ldkb;->e:I
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    move-result v0
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    if-eqz v0, :cond_1
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    const/4 p1, 0x5
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    return p1
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    :cond_1
+    iget-object v0, p2, Lukb;->Z:Lvkb;
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    iget v9, v0, Ldkb;->m:I
+    move-result v0
 
-    move-object/from16 v16, v1
+    if-eqz v0, :cond_2
 
-    iget-object v1, v0, Ldkb;->n:Lfkb;
+    const/4 p1, 0x4
 
-    move-object/from16 v18, v1
+    return p1
 
-    move-object/from16 v17, v2
+    :cond_2
+    iget-object v0, p2, Lukb;->v0:Lvkb;
 
-    iget-wide v1, v0, Ldkb;->q:J
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    move-wide/from16 v19, v1
+    move-result v0
 
-    iget-wide v1, v0, Ldkb;->r:J
+    if-eqz v0, :cond_3
 
-    move-wide/from16 v21, v1
+    const/4 p1, 0x6
 
-    iget-wide v1, v0, Ldkb;->s:J
+    return p1
 
-    move-wide/from16 v23, v1
+    :cond_3
+    iget-object v0, p2, Lukb;->z0:Lvkb;
 
-    iget-boolean v1, v0, Ldkb;->o:Z
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    iget-boolean v2, v0, Ldkb;->p:Z
+    move-result v0
 
-    move/from16 v25, v2
+    if-eqz v0, :cond_4
 
-    move-object/from16 v2, v17
+    const/4 p1, 0x7
 
-    move-object/from16 v17, v18
+    return p1
 
-    move-wide/from16 v18, v19
+    :cond_4
+    iget-object v0, p2, Lukb;->x0:Lvkb;
 
-    move-wide/from16 v20, v21
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    move-wide/from16 v22, v23
+    move-result v0
 
-    move/from16 v24, v1
+    if-eqz v0, :cond_5
 
-    move-object/from16 v1, v16
+    const/16 p1, 0x8
 
-    move/from16 v16, v9
+    return p1
 
-    move-object/from16 v9, p1
+    :cond_5
+    iget-object v0, p2, Lukb;->B0:Lvkb;
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
 
-    move-object/from16 v16, v1
+    move-result v0
 
-    return-object v16
+    if-eqz v0, :cond_6
+
+    const/16 p1, 0x9
+
+    return p1
+
+    :cond_6
+    iget-object v0, p2, Lukb;->D0:Lvkb;
+
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const/16 p1, 0xa
+
+    return p1
+
+    :cond_7
+    iget-object v0, p2, Lukb;->H0:Lvkb;
+
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    const/16 p1, 0xb
+
+    return p1
+
+    :cond_8
+    iget-object v0, p2, Lukb;->d:Lvkb;
+
+    invoke-virtual {p0, p1, v0}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    iget-boolean v0, p2, Lukb;->f1:Z
+
+    if-eqz v0, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget-object p2, p2, Lukb;->X:Lvkb;
+
+    invoke-virtual {p0, p1, p2}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    :goto_0
+    const/4 p1, 0x3
+
+    return p1
+
+    :cond_a
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_b
+    iget-boolean v0, p2, Lukb;->f1:Z
+
+    if-nez v0, :cond_c
+
+    iget-object p2, p2, Lukb;->X:Lvkb;
+
+    invoke-virtual {p0, p1, p2}, Ldkb;->m(Ljava/lang/String;Lvkb;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
+    const/4 p1, 0x2
+
+    return p1
+
+    :cond_c
+    :goto_1
+    const/16 p1, 0xc
+
+    return p1
 .end method
 
-.method public final f(I)Ldkb;
-    .locals 26
+.method public final l(I)Ljava/lang/String;
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->b:Ljava/util/HashMap;
 
-    new-instance v1, Ldkb;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    move-result-object p1
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v4, v0, Ldkb;->c:J
+    move-result-object p1
 
-    iget-wide v6, v0, Ldkb;->d:J
+    check-cast p1, Ljava/util/List;
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    if-nez p1, :cond_0
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    const-string p1, "ZZ"
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    return-object p1
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    move-result-object p1
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    check-cast p1, Ljava/lang/String;
 
-    iget v8, v0, Ldkb;->m:I
-
-    move-object/from16 v16, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v18, v1
-
-    move-object/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v21, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v23, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move/from16 v25, v2
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v18
-
-    move-wide/from16 v18, v19
-
-    move-wide/from16 v20, v21
-
-    move-wide/from16 v22, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v8
-
-    move/from16 v8, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return-object p1
 .end method
 
-.method public final g(Llif;)Ldkb;
-    .locals 28
+.method public final m(Ljava/lang/String;Lvkb;)Z
+    .locals 3
 
-    move-object/from16 v0, p0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    new-instance v1, Ldkb;
+    move-result v0
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
+    iget-object v1, p2, Lvkb;->c:Ljava/util/ArrayList;
 
-    iget-wide v4, v0, Ldkb;->c:J
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    iget-wide v6, v0, Ldkb;->d:J
+    move-result v2
 
-    iget v8, v0, Ldkb;->e:I
+    if-lez v2, :cond_0
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    move-result-object v0
 
-    iget-object v11, v0, Ldkb;->h:Lwnf;
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    iget-object v12, v0, Ldkb;->i:Lqof;
+    move-result v0
 
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
+    if-nez v0, :cond_0
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    const/4 p1, 0x0
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    return p1
 
-    iget v2, v0, Ldkb;->m:I
+    :cond_0
+    iget-object v0, p0, Ldkb;->c:Lot7;
 
-    move-object/from16 v16, v1
+    invoke-virtual {v0, p1, p2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
 
-    iget-object v1, v0, Ldkb;->n:Lfkb;
+    move-result p1
 
-    move-object/from16 v18, v1
+    return p1
+.end method
 
-    move/from16 v17, v2
+.method public final n(Lwkb;)Z
+    .locals 9
 
-    iget-wide v1, v0, Ldkb;->q:J
+    iget v0, p1, Lwkb;->b:I
 
-    move-wide/from16 v19, v1
+    iget-object v1, p0, Ldkb;->b:Ljava/util/HashMap;
 
-    iget-wide v1, v0, Ldkb;->r:J
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-wide/from16 v21, v1
+    move-result-object v2
 
-    iget-wide v1, v0, Ldkb;->s:J
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-wide/from16 v23, v1
+    move-result-object v1
 
-    iget-boolean v1, v0, Ldkb;->o:Z
+    check-cast v1, Ljava/util/List;
 
-    iget-boolean v2, v0, Ldkb;->p:Z
+    const/16 v2, 0xc
 
-    move-wide/from16 v26, v23
+    const/4 v3, 0x0
 
-    move/from16 v24, v1
+    const/4 v4, 0x1
 
-    move-object/from16 v1, v16
+    const/4 v5, 0x0
 
-    move/from16 v16, v17
+    if-nez v1, :cond_0
 
-    move-object/from16 v17, v18
+    sget-object v1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
-    move-wide/from16 v18, v19
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-wide/from16 v20, v21
+    const-string v7, "Missing/invalid country_code ("
 
-    move-wide/from16 v22, v26
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move/from16 v25, v2
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-object/from16 v2, p1
+    const-string v0, ")"
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v16, v1
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v16
+    move-result-object v0
+
+    sget-object v6, Ldkb;->h:Ljava/util/logging/Logger;
+
+    invoke-virtual {v6, v1, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ne v0, v4, :cond_1
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {p1}, Ldkb;->i(Lwkb;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/String;
+
+    invoke-virtual {p0, v6}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v7
+
+    iget-boolean v8, v7, Lukb;->j1:Z
+
+    if-eqz v8, :cond_3
+
+    iget-object v8, p0, Ldkb;->e:Lnyb;
+
+    iget-object v7, v7, Lukb;->k1:Ljava/lang/String;
+
+    invoke-virtual {v8, v7}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0, v0, v7}, Ldkb;->k(Ljava/lang/String;Lukb;)I
+
+    move-result v7
+
+    if-eq v7, v2, :cond_2
+
+    :goto_0
+    move-object v5, v6
+
+    :cond_4
+    :goto_1
+    iget v0, p1, Lwkb;->b:I
+
+    const-string v1, "001"
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {p0, v0}, Ldkb;->g(I)Lukb;
+
+    move-result-object v6
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {p0, v5}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v6
+
+    :goto_2
+    if-eqz v6, :cond_8
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    invoke-virtual {p0, v5}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    iget v1, v1, Lukb;->T0:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_3
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Invalid region code: "
+
+    invoke-static {v0, v5}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    invoke-static {p1}, Ldkb;->i(Lwkb;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, v6}, Ldkb;->k(Ljava/lang/String;Lukb;)I
+
+    move-result p1
+
+    if-eq p1, v2, :cond_8
+
+    return v4
+
+    :cond_8
+    :goto_3
+    return v3
+.end method
+
+.method public final o(Ljava/lang/String;)Z
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Ldkb;->f:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final p(Ljava/lang/CharSequence;Lukb;Ljava/lang/StringBuilder;Lwkb;)I
+    .locals 7
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    if-eqz p2, :cond_1
+
+    iget-object p1, p2, Lukb;->U0:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "NonMatch"
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_2
+
+    goto/16 :goto_2
+
+    :cond_2
+    sget-object v2, Ldkb;->l:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v2, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->end()I
+
+    move-result p1
+
+    invoke-virtual {v0, v1, p1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ldkb;->r(Ljava/lang/StringBuilder;)V
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v2, p0, Ldkb;->e:Lnyb;
+
+    invoke-virtual {v2, p1}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object p1
+
+    invoke-static {v0}, Ldkb;->r(Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {p1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result p1
+
+    sget-object v2, Ldkb;->n:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v2, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ldkb;->s(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v4, "0"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v0, v1, p1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p1
+
+    const/4 p2, 0x2
+
+    if-le p1, p2, :cond_6
+
+    invoke-virtual {p0, v0, p3}, Ldkb;->c(Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iput-boolean v3, p4, Lwkb;->a:Z
+
+    iput p1, p4, Lwkb;->b:I
+
+    return p1
+
+    :cond_5
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "Country calling code supplied was not recognised."
+
+    invoke-direct {p1, v3, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const/4 p2, 0x3
+
+    const-string p3, "Phone number had an IDD, but after this was not long enough to be a viable phone number."
+
+    invoke-direct {p1, p2, p3}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    :goto_2
+    if-eqz p2, :cond_a
+
+    iget p1, p2, Lukb;->T0:I
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p2, Lukb;->b:Lvkb;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0, v5, p2, v4}, Ldkb;->q(Ljava/lang/StringBuilder;Lukb;Ljava/lang/StringBuilder;)V
+
+    iget-object v4, p0, Ldkb;->c:Lot7;
+
+    invoke-virtual {v4, v0, v2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_8
+
+    invoke-virtual {v4, v5, v2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_9
+
+    :cond_8
+    const/16 v2, 0xc
+
+    invoke-static {v0, p2, v2}, Ldkb;->w(Ljava/lang/StringBuilder;Lukb;I)I
+
+    move-result p2
+
+    const/4 v0, 0x6
+
+    if-ne p2, v0, :cond_a
+
+    :cond_9
+    invoke-virtual {p3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    iput-boolean v3, p4, Lwkb;->a:Z
+
+    iput p1, p4, Lwkb;->b:I
+
+    return p1
+
+    :cond_a
+    iput-boolean v3, p4, Lwkb;->a:Z
+
+    iput v1, p4, Lwkb;->b:I
+
+    return v1
+.end method
+
+.method public final q(Ljava/lang/StringBuilder;Lukb;Ljava/lang/StringBuilder;)V
+    .locals 9
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    iget-object v1, p2, Lukb;->c1:Ljava/lang/String;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    iget-object v2, p0, Ldkb;->e:Lnyb;
+
+    invoke-virtual {v2, v1}, Lnyb;->c(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    iget-object v2, p2, Lukb;->b:Lvkb;
+
+    iget-object v3, p0, Ldkb;->c:Lot7;
+
+    invoke-virtual {v3, p1, v2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
+
+    move-result v4
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v5
+
+    iget-object p2, p2, Lukb;->e1:Ljava/lang/String;
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    if-eqz p2, :cond_4
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1, p2}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v8, v7, v0, p2}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p2, v2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz p3, :cond_3
+
+    if-le v5, v6, :cond_3
+
+    invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p2
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, v7, p2, p3}, Ljava/lang/StringBuilder;->replace(IILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :cond_4
+    :goto_0
+    if-eqz v4, :cond_5
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p2, v2}, Lot7;->C(Ljava/lang/CharSequence;Lvkb;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz p3, :cond_6
+
+    if-lez v5, :cond_6
+
+    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_6
+
+    invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_6
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result p2
+
+    invoke-virtual {p1, v7, p2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    :cond_7
+    :goto_1
+    return-void
+.end method
+
+.method public final u(Ljava/lang/String;Ljava/lang/String;)Lwkb;
+    .locals 12
+
+    new-instance v0, Lwkb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lwkb;->b:I
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, v0, Lwkb;->c:J
+
+    const-string v2, ""
+
+    iput-object v2, v0, Lwkb;->o:Ljava/lang/String;
+
+    iput-boolean v1, v0, Lwkb;->Y:Z
+
+    const/4 v3, 0x1
+
+    iput v3, v0, Lwkb;->s0:I
+
+    iput-object v2, v0, Lwkb;->t0:Ljava/lang/String;
+
+    iput-object v2, v0, Lwkb;->v0:Ljava/lang/String;
+
+    const/4 v4, 0x5
+
+    iput v4, v0, Lwkb;->u0:I
+
+    const/4 v5, 0x2
+
+    if-eqz p1, :cond_21
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    const/16 v7, 0xfa
+
+    if-gt v6, v7, :cond_20
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v7, ";phone-context="
+
+    invoke-virtual {p1, v7}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-ne v7, v8, :cond_0
+
+    const/4 v8, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    add-int/lit8 v9, v7, 0xf
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v10
+
+    if-lt v9, v10, :cond_1
+
+    move-object v8, v2
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v10, 0x3b
+
+    invoke-virtual {p1, v10, v9}, Ljava/lang/String;->indexOf(II)I
+
+    move-result v10
+
+    if-eq v10, v8, :cond_2
+
+    invoke-virtual {p1, v9, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    :goto_0
+    if-nez v8, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v9
+
+    if-eqz v9, :cond_1f
+
+    sget-object v9, Ldkb;->s:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v9, v8}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    sget-object v9, Ldkb;->t:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v9, v8}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1f
+
+    :cond_4
+    :goto_1
+    const/4 v9, 0x4
+
+    if-eqz v8, :cond_7
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v10
+
+    const/16 v11, 0x2b
+
+    if-ne v10, v11, :cond_5
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    const-string v8, "tel:"
+
+    invoke-virtual {p1, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v8
+
+    if-ltz v8, :cond_6
+
+    add-int/2addr v8, v9
+
+    goto :goto_2
+
+    :cond_6
+    move v8, v1
+
+    :goto_2
+    invoke-virtual {p1, v8, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_4
+
+    :cond_7
+    sget-object v7, Ldkb;->o:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v7, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_9
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v7
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    invoke-virtual {p1, v7, v8}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    sget-object v7, Ldkb;->q:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v7, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_8
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v7
+
+    invoke-interface {p1, v1, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    :cond_8
+    sget-object v7, Ldkb;->p:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v7, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_a
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v7
+
+    invoke-interface {p1, v1, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_9
+    move-object p1, v2
+
+    :cond_a
+    :goto_3
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    :goto_4
+    const-string p1, ";isub="
+
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->indexOf(Ljava/lang/String;)I
+
+    move-result p1
+
+    if-lez p1, :cond_b
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v7
+
+    invoke-virtual {v6, p1, v7}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    :cond_b
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p1
+
+    sget-object v7, Ldkb;->v:Ljava/util/regex/Pattern;
+
+    if-ge p1, v5, :cond_c
+
+    move p1, v1
+
+    goto :goto_5
+
+    :cond_c
+    invoke-virtual {v7, v6}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result p1
+
+    :goto_5
+    if-eqz p1, :cond_1e
+
+    invoke-virtual {p0, p2}, Ldkb;->o(Ljava/lang/String;)Z
+
+    move-result p1
+
+    sget-object v8, Ldkb;->l:Ljava/util/regex/Pattern;
+
+    if-nez p1, :cond_e
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    invoke-virtual {v8, v6}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "Missing or invalid default region."
+
+    invoke-direct {p1, v3, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_e
+    :goto_6
+    sget-object p1, Ldkb;->u:Ljava/util/regex/Pattern;
+
+    invoke-virtual {p1, v6}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_11
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v10
+
+    invoke-virtual {v6, v1, v10}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/String;->length()I
+
+    move-result v11
+
+    if-ge v11, v5, :cond_f
+
+    move v7, v1
+
+    goto :goto_7
+
+    :cond_f
+    invoke-virtual {v7, v10}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v7
+
+    :goto_7
+    if-eqz v7, :cond_11
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v7
+
+    move v10, v3
+
+    :goto_8
+    if-gt v10, v7, :cond_11
+
+    invoke-virtual {p1, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_10
+
+    invoke-virtual {p1, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result p1
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v7
+
+    invoke-virtual {v6, p1, v7}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    goto :goto_9
+
+    :cond_10
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_8
+
+    :cond_11
+    :goto_9
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_12
+
+    iput-boolean v3, v0, Lwkb;->d:Z
+
+    iput-object v2, v0, Lwkb;->o:Ljava/lang/String;
+
+    :cond_12
+    invoke-virtual {p0, p2}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object p1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    :try_start_0
+    invoke-virtual {p0, v6, p1, v2, v0}, Ldkb;->p(Ljava/lang/CharSequence;Lukb;Ljava/lang/StringBuilder;Lwkb;)I
+
+    move-result v7
+    :try_end_0
+    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_a
+
+    :catch_0
+    move-exception v7
+
+    invoke-virtual {v8, v6}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v8
+
+    iget v10, v7, Lio/michaelrocks/libphonenumber/android/NumberParseException;->a:I
+
+    if-ne v10, v3, :cond_1d
+
+    invoke-virtual {v8}, Ljava/util/regex/Matcher;->lookingAt()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_1d
+
+    invoke-virtual {v8}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {p0, v7, p1, v2, v0}, Ldkb;->p(Ljava/lang/CharSequence;Lukb;Ljava/lang/StringBuilder;Lwkb;)I
+
+    move-result v7
+
+    if-eqz v7, :cond_1c
+
+    :goto_a
+    if-eqz v7, :cond_14
+
+    invoke-virtual {p0, v7}, Ldkb;->l(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_15
+
+    const-string p1, "001"
+
+    invoke-virtual {p1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_13
+
+    invoke-virtual {p0, v7}, Ldkb;->g(I)Lukb;
+
+    move-result-object p1
+
+    goto :goto_b
+
+    :cond_13
+    invoke-virtual {p0, v6}, Ldkb;->h(Ljava/lang/String;)Lukb;
+
+    move-result-object p1
+
+    goto :goto_b
+
+    :cond_14
+    invoke-static {v6}, Ldkb;->r(Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_15
+
+    iget p2, p1, Lukb;->T0:I
+
+    iput-boolean v3, v0, Lwkb;->a:Z
+
+    iput p2, v0, Lwkb;->b:I
+
+    :cond_15
+    :goto_b
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p2
+
+    const-string v6, "The string supplied is too short to be a phone number."
+
+    if-lt p2, v5, :cond_1b
+
+    if-eqz p1, :cond_16
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0, v7, p1, p2}, Ldkb;->q(Ljava/lang/StringBuilder;Lukb;Ljava/lang/StringBuilder;)V
+
+    const/16 p2, 0xc
+
+    invoke-static {v7, p1, p2}, Ldkb;->w(Ljava/lang/StringBuilder;Lukb;I)I
+
+    move-result p1
+
+    if-eq p1, v9, :cond_16
+
+    if-eq p1, v5, :cond_16
+
+    if-eq p1, v4, :cond_16
+
+    move-object v2, v7
+
+    :cond_16
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p1
+
+    if-lt p1, v5, :cond_1a
+
+    const/16 p2, 0x11
+
+    if-gt p1, p2, :cond_19
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result p1
+
+    if-le p1, v3, :cond_18
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result p1
+
+    const/16 p2, 0x30
+
+    if-ne p1, p2, :cond_18
+
+    iput-boolean v3, v0, Lwkb;->X:Z
+
+    iput-boolean v3, v0, Lwkb;->Y:Z
+
+    move p1, v3
+
+    :goto_c
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v1
+
+    sub-int/2addr v1, v3
+
+    if-ge p1, v1, :cond_17
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result v1
+
+    if-ne v1, p2, :cond_17
+
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_c
+
+    :cond_17
+    if-eq p1, v3, :cond_18
+
+    iput-boolean v3, v0, Lwkb;->Z:Z
+
+    iput p1, v0, Lwkb;->s0:I
+
+    :cond_18
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lwkb;->c:J
+
+    return-object v0
+
+    :cond_19
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "The string supplied is too long to be a phone number."
+
+    invoke-direct {p1, v4, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1a
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    invoke-direct {p1, v9, v6}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1b
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    invoke-direct {p1, v9, v6}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1c
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "Could not interpret numbers after plus-sign."
+
+    invoke-direct {p1, v3, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1d
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    invoke-virtual {v7}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, v10, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1e
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "The string supplied did not seem to be a phone number."
+
+    invoke-direct {p1, v5, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_1f
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "The phone-context value is invalid."
+
+    invoke-direct {p1, v5, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_20
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "The string supplied was too long to parse."
+
+    invoke-direct {p1, v4, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
+
+    :cond_21
+    new-instance p1, Lio/michaelrocks/libphonenumber/android/NumberParseException;
+
+    const-string p2, "The phone number supplied was null."
+
+    invoke-direct {p1, v5, p2}, Lio/michaelrocks/libphonenumber/android/NumberParseException;-><init>(ILjava/lang/String;)V
+
+    throw p1
 .end method

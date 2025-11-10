@@ -1,117 +1,134 @@
 .class public final Lg7d;
-.super Lq3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lg7d;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final X:I
+.field public a:I
 
-.field public final a:I
+.field public b:I
 
-.field public final b:Z
+.field public c:I
 
-.field public final c:Z
+.field public d:I
 
-.field public final o:I
+.field public e:Landroid/view/animation/Interpolator;
 
+.field public f:Z
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lbhh;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
-
-    sput-object v0, Lg7d;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lg7d;->a:I
-
-    iput-boolean p4, p0, Lg7d;->b:Z
-
-    iput-boolean p5, p0, Lg7d;->c:Z
-
-    iput p2, p0, Lg7d;->o:I
-
-    iput p3, p0, Lg7d;->X:I
-
-    return-void
-.end method
+.field public g:I
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 6
 
-    const/16 p2, 0x4f45
+    iget v0, p0, Lg7d;->d:I
 
-    invoke-static {p1, p2}, Lz84;->K(Landroid/os/Parcel;I)I
+    const/4 v1, 0x0
 
-    move-result p2
+    if-ltz v0, :cond_0
 
-    const/4 v0, 0x1
+    const/4 v2, -0x1
 
-    const/4 v1, 0x4
+    iput v2, p0, Lg7d;->d:I
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->a0(I)V
 
-    iget v0, p0, Lg7d;->a:I
+    iput-boolean v1, p0, Lg7d;->f:Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    return-void
 
-    const/4 v0, 0x2
+    :cond_0
+    iget-boolean v0, p0, Lg7d;->f:Z
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    if-eqz v0, :cond_5
 
-    iget-boolean v0, p0, Lg7d;->b:Z
+    iget-object v0, p0, Lg7d;->e:Landroid/view/animation/Interpolator;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v2, 0x1
 
-    const/4 v0, 0x3
+    if-eqz v0, :cond_2
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    iget v3, p0, Lg7d;->c:I
 
-    iget-boolean v0, p0, Lg7d;->c:Z
+    if-lt v3, v2, :cond_1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_0
 
-    invoke-static {p1, v1, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget v0, p0, Lg7d;->o:I
+    const-string v0, "If you provide an interpolator, you must set a positive duration"
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x5
+    throw p1
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    :cond_2
+    :goto_0
+    iget v3, p0, Lg7d;->c:I
 
-    iget v0, p0, Lg7d;->X:I
+    if-lt v3, v2, :cond_4
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->o1:Ll7d;
 
-    invoke-static {p1, p2}, Lz84;->L(Landroid/os/Parcel;I)V
+    iget v4, p0, Lg7d;->a:I
+
+    iget v5, p0, Lg7d;->b:I
+
+    invoke-virtual {p1, v4, v5, v3, v0}, Ll7d;->c(IIILandroid/view/animation/Interpolator;)V
+
+    iget p1, p0, Lg7d;->g:I
+
+    add-int/2addr p1, v2
+
+    iput p1, p0, Lg7d;->g:I
+
+    const/16 v0, 0xa
+
+    if-le p1, v0, :cond_3
+
+    const-string p1, "RecyclerView"
+
+    const-string v0, "Smooth Scroll action is being updated too frequently. Make sure you are not changing it unless necessary"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iput-boolean v1, p0, Lg7d;->f:Z
+
+    return-void
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Scroll duration must be a positive number"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    iput v1, p0, Lg7d;->g:I
+
+    return-void
+.end method
+
+.method public final b(IIILandroid/view/animation/BaseInterpolator;)V
+    .locals 0
+
+    iput p1, p0, Lg7d;->a:I
+
+    iput p2, p0, Lg7d;->b:I
+
+    iput p3, p0, Lg7d;->c:I
+
+    iput-object p4, p0, Lg7d;->e:Landroid/view/animation/Interpolator;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lg7d;->f:Z
 
     return-void
 .end method

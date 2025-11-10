@@ -1,52 +1,105 @@
 .class public final Lpv5;
-.super Lnz3;
+.super Lml0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lml;
 
-.field public Y:Ljava/lang/Object;
+.field public final b:Lgpd;
 
-.field public Z:Lgv5;
+.field public final c:Lhnf;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:J
 
-.field public final synthetic w0:Lpb;
+.field public final e:J
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lml;Lgpd;Lhnf;JJJ)V
     .locals 0
 
-    iput-object p1, p0, Lpv5;->w0:Lpb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpv5;->a:Lml;
+
+    iput-object p2, p0, Lpv5;->b:Lgpd;
+
+    iput-object p3, p0, Lpv5;->c:Lhnf;
+
+    iput-wide p4, p0, Lpv5;->d:J
+
+    iput-wide p6, p0, Lpv5;->e:J
+
+    iput-wide p8, p0, Lpv5;->f:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljqe;
+    .locals 7
 
-    iput-object p1, p0, Lpv5;->o:Ljava/lang/Object;
+    new-instance v0, Lbe2;
 
-    iget p1, p0, Lpv5;->X:I
+    iget-wide v3, p0, Lpv5;->e:J
 
-    const/high16 v0, -0x80000000
+    iget-wide v5, p0, Lpv5;->f:J
 
-    or-int/2addr p1, v0
+    iget-wide v1, p0, Lpv5;->d:J
 
-    iput p1, p0, Lpv5;->X:I
+    invoke-direct/range {v0 .. v6}, Lbe2;-><init>(JJJ)V
 
-    iget-object p1, p0, Lpv5;->w0:Lpb;
+    iget-object v1, p0, Lpv5;->b:Lgpd;
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Lpv5;->a:Lml;
 
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v2, Lona;
 
-    move-result-object p1
+    invoke-virtual {v2, v0, v1}, Lona;->J(Lkh;Lgpd;)Lbre;
 
-    return-object p1
+    move-result-object v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-object v3, p0, Lpv5;->c:Lhnf;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v4, Lw00;
+
+    const/16 v5, 0x19
+
+    invoke-direct {v4, v1, v2, v5}, Lw00;-><init>(JI)V
+
+    new-instance v1, Lmk8;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v0, v2, v4}, Lmk8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lfnf;
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v3, v4, v2}, Lfnf;-><init>(Lhnf;II)V
+
+    invoke-virtual {v1, v0}, Ljqe;->j(Lfnf;)Lv36;
+
+    move-result-object v0
+
+    sget-object v1, Lgc9;->d:Lgc9;
+
+    invoke-virtual {v0, v1}, Ljqe;->h(Lfj6;)Lsqe;
+
+    move-result-object v0
+
+    return-object v0
 .end method

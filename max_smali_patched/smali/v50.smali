@@ -9,20 +9,28 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Llo4;
+.field public final synthetic b:J
 
-.field public final synthetic c:Lz3;
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llo4;Lz3;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;JJI)V
     .locals 0
 
-    iput p3, p0, Lv50;->a:I
+    iput p7, p0, Lv50;->a:I
 
-    iput-object p1, p0, Lv50;->b:Llo4;
+    iput-object p1, p0, Lv50;->d:Ljava/lang/Object;
 
-    iput-object p2, p0, Lv50;->c:Lz3;
+    iput-object p2, p0, Lv50;->o:Ljava/lang/Object;
+
+    iput-wide p3, p0, Lv50;->b:J
+
+    iput-wide p5, p0, Lv50;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,66 +40,158 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 12
 
     iget v0, p0, Lv50;->a:I
 
-    iget-object v1, p0, Lv50;->c:Lz3;
+    const/16 v1, 0x3f8
 
-    iget-object v2, p0, Lv50;->b:Llo4;
+    iget-object v2, p0, Lv50;->o:Ljava/lang/Object;
+
+    iget-object v3, p0, Lv50;->d:Ljava/lang/Object;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v2, Llo4;->c:Ljava/lang/Object;
+    check-cast v3, Lnhc;
 
-    check-cast v0, Lcf5;
+    move-object v6, v2
 
-    sget v2, Lt4g;->a:I
+    check-cast v6, Ljava/lang/String;
 
-    iget-object v0, v0, Lcf5;->a:Lif5;
+    iget-object v0, v3, Lnhc;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lif5;->I0:Lie4;
+    check-cast v0, Lsi5;
 
-    invoke-virtual {v0}, Lie4;->H()Lwc;
+    sget v2, Ljig;->a:I
 
-    move-result-object v2
+    iget-object v0, v0, Lsi5;->a:Lyi5;
 
-    new-instance v3, Lde4;
+    iget-object v0, v0, Lyi5;->B0:Lyg4;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lyg4;->g()Lmd;
 
-    invoke-direct {v3, v2, v1, v4}, Lde4;-><init>(Lwc;Lz3;I)V
+    move-result-object v5
 
-    const/16 v1, 0x408
+    new-instance v4, Lxc2;
 
-    invoke-virtual {v0, v2, v1, v3}, Lie4;->I(Lwc;ILsx7;)V
+    iget-wide v7, p0, Lv50;->c:J
+
+    iget-wide v9, p0, Lv50;->b:J
+
+    invoke-direct/range {v4 .. v10}, Lxc2;-><init>(Lmd;Ljava/lang/String;JJ)V
+
+    invoke-virtual {v0, v5, v1, v4}, Lyg4;->K(Lmd;ILc38;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, v2, Llo4;->c:Ljava/lang/Object;
+    check-cast v3, Leld;
 
-    check-cast v0, Lcf5;
+    move-object v6, v2
 
-    sget v2, Lt4g;->a:I
+    check-cast v6, Ljava/lang/String;
 
-    iget-object v0, v0, Lcf5;->a:Lif5;
+    iget-object v0, v3, Leld;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lif5;->I0:Lie4;
+    check-cast v0, Lti5;
 
-    invoke-virtual {v0}, Lie4;->H()Lwc;
+    sget-object v2, Llig;->a:Ljava/lang/String;
 
-    move-result-object v2
+    iget-object v0, v0, Lti5;->a:Lzi5;
 
-    new-instance v3, Lde4;
+    iget-object v0, v0, Lzi5;->D0:Lzg4;
 
-    const/4 v4, 0x1
+    invoke-virtual {v0}, Lzg4;->H()Lnd;
 
-    invoke-direct {v3, v2, v1, v4}, Lde4;-><init>(Lwc;Lz3;I)V
+    move-result-object v5
 
-    const/16 v1, 0x407
+    new-instance v4, Lfg4;
 
-    invoke-virtual {v0, v2, v1, v3}, Lie4;->I(Lwc;ILsx7;)V
+    const/4 v11, 0x2
+
+    iget-wide v7, p0, Lv50;->c:J
+
+    iget-wide v9, p0, Lv50;->b:J
+
+    invoke-direct/range {v4 .. v11}, Lfg4;-><init>(Lnd;Ljava/lang/String;JJI)V
+
+    invoke-virtual {v0, v5, v1, v4}, Lzg4;->I(Lnd;ILd38;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v3, Ljava/util/List;
+
+    move-object v4, v2
+
+    check-cast v4, Ldhd;
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v9, v1
+
+    check-cast v9, Ls99;
+
+    const/4 v10, 0x0
+
+    iget-wide v5, p0, Lv50;->b:J
+
+    iget-wide v7, p0, Lv50;->c:J
+
+    invoke-virtual/range {v4 .. v10}, Ldhd;->f(JJLs99;Z)J
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_2
+    check-cast v3, Ltz8;
+
+    move-object v6, v2
+
+    check-cast v6, Ljava/lang/String;
+
+    iget-object v0, v3, Ltz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lti5;
+
+    sget-object v1, Llig;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lti5;->a:Lzi5;
+
+    iget-object v0, v0, Lzi5;->D0:Lzg4;
+
+    invoke-virtual {v0}, Lzg4;->H()Lnd;
+
+    move-result-object v5
+
+    new-instance v4, Lfg4;
+
+    const/4 v11, 0x0
+
+    iget-wide v7, p0, Lv50;->c:J
+
+    iget-wide v9, p0, Lv50;->b:J
+
+    invoke-direct/range {v4 .. v11}, Lfg4;-><init>(Lnd;Ljava/lang/String;JJI)V
+
+    const/16 v1, 0x3f0
+
+    invoke-virtual {v0, v5, v1, v4}, Lzg4;->I(Lnd;ILd38;)V
 
     return-void
 
@@ -99,6 +199,8 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

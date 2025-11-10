@@ -1,251 +1,128 @@
-.class public final Lb1h;
-.super Lilg;
+.class public final synthetic Lb1h;
+.super Ltj6;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic D0:[Ltm7;
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public final A0:Ljb5;
+.field public final synthetic a:I
 
-.field public final B0:Lg65;
+.field public final synthetic b:Landroid/view/View;
 
-.field public final C0:Lg65;
-
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Lbp7;
-
-.field public final Z:Lbp7;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Llvg;
-
-.field public final w0:Lbp7;
-
-.field public final x0:Lmoe;
-
-.field public final y0:Lsqc;
-
-.field public final z0:Ljb5;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lc1h;)V
+    .locals 8
 
-    new-instance v0, Lut9;
+    const/4 v0, 0x0
 
-    const-string v1, "toggleBiometryJob"
+    iput v0, p0, Lb1h;->a:I
 
-    const-string v2, "getToggleBiometryJob()Lkotlinx/coroutines/Job;"
+    iput-object p1, p0, Lb1h;->c:Ljava/lang/Object;
 
-    const-class v3, Lb1h;
+    iput-object p2, p0, Lb1h;->b:Landroid/view/View;
 
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lxxc;->a:Lyxc;
-
-    const-string v2, "loadWebAppSectionsJob"
-
-    const-string v4, "getLoadWebAppSectionsJob()Lkotlinx/coroutines/Job;"
-
-    invoke-static {v1, v3, v2, v4}, Lnd5;->g(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lut9;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ltm7;
+    const-string v7, "doOnGlobalLayout$dispose(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V"
 
     const/4 v3, 0x0
 
-    aput-object v0, v2, v3
+    const/4 v2, 0x0
 
-    const/4 v0, 0x1
+    .line 2
+    const-class v4, Lfk7;
 
-    aput-object v1, v2, v0
+    const-string v6, "dispose"
 
-    sput-object v2, Lb1h;->D0:[Ltm7;
+    move-object v1, p0
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lsj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(JJ)V
-    .locals 5
+.method public constructor <init>(Lr1h;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    .locals 8
 
-    new-instance v0, Llvg;
+    const/4 v0, 0x1
 
-    const-string v1, "webapp_biom_s_key_"
+    iput v0, p0, Lb1h;->a:I
 
-    const-string v2, "_"
+    iput-object p1, p0, Lb1h;->c:Ljava/lang/Object;
 
-    invoke-static {p1, p2, v1, v2}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p2, p0, Lb1h;->b:Landroid/view/View;
 
-    move-result-object v1
+    const-string v7, "attach$dispose(Landroid/view/ViewTreeObserver;Lone/me/sdk/contextmenu/helper/ViewWatcher$attach$listener$1;Landroid/view/View;)V"
 
-    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    .line 1
+    const-class v4, Lfk7;
 
-    const/4 v2, 0x1
+    const-string v6, "dispose"
 
-    invoke-direct {v0, v1, v2}, Llvg;-><init>(Ljava/lang/String;Z)V
+    move-object v1, p0
 
-    sget-object v1, Lkug;->a:Lkug;
+    move-object v5, p3
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lcrg;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lsm6;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v4, Lr8f;
-
-    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lilg;-><init>()V
-
-    iput-wide p1, p0, Lb1h;->b:J
-
-    iput-wide p3, p0, Lb1h;->c:J
-
-    iput-object v0, p0, Lb1h;->o:Llvg;
-
-    const-class p1, Lb1h;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb1h;->X:Ljava/lang/String;
-
-    iput-object v2, p0, Lb1h;->Y:Lbp7;
-
-    iput-object v3, p0, Lb1h;->Z:Lbp7;
-
-    iput-object v1, p0, Lb1h;->w0:Lbp7;
-
-    new-instance p1, Lx0h;
-
-    const-string p2, ""
-
-    sget-object p3, Lb75;->a:Lb75;
-
-    invoke-direct {p1, p2, p3}, Lx0h;-><init>(Ljava/lang/String;Ljava/util/List;)V
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb1h;->x0:Lmoe;
-
-    new-instance p2, Lsqc;
-
-    invoke-direct {p2, p1}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object p2, p0, Lb1h;->y0:Lsqc;
-
-    new-instance p1, Ljb5;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
-
-    iput-object p1, p0, Lb1h;->z0:Ljb5;
-
-    new-instance p1, Ljb5;
-
-    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
-
-    iput-object p1, p0, Lb1h;->A0:Ljb5;
-
-    invoke-static {}, Lqxd;->w()Lg65;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb1h;->B0:Lg65;
-
-    invoke-static {}, Lqxd;->w()Lg65;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb1h;->C0:Lg65;
-
-    invoke-virtual {p0}, Lb1h;->q()V
+    invoke-direct/range {v1 .. v7}, Lsj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q()V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lb1h;->w0:Lbp7;
+    iget v0, p0, Lb1h;->a:I
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lkt1;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lr8f;
+    check-cast v0, Landroid/view/ViewTreeObserver;
 
-    check-cast v0, Lwla;
+    iget-object v1, p0, Lb1h;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    check-cast v1, Lr1h;
 
-    move-result-object v0
+    iget-object v2, p0, Lb1h;->b:Landroid/view/View;
 
-    new-instance v1, Ly0h;
+    invoke-static {v1, v2, v0}, Lfy;->d(Lr1h;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
 
-    const/4 v2, 0x0
+    sget-object v0, Lybg;->a:Lybg;
 
-    invoke-direct {v1, p0, v2}, Ly0h;-><init>(Lb1h;Lkotlin/coroutines/Continuation;)V
+    return-object v0
 
-    iget-object v2, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    :pswitch_0
+    iget-object v0, p0, Lkt1;->receiver:Ljava/lang/Object;
 
-    sget-object v3, Lh34;->b:Lh34;
+    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-    invoke-static {v2, v0, v3, v1}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
+    iget-object v1, p0, Lb1h;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v1, Landroid/view/ViewTreeObserver;
 
-    sget-object v1, Lb1h;->D0:[Ltm7;
+    iget-object v2, p0, Lb1h;->b:Landroid/view/View;
 
-    const/4 v2, 0x1
+    invoke-static {v0, v1, v2}, Ld1h;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
 
-    aget-object v1, v1, v2
+    sget-object v0, Lybg;->a:Lybg;
 
-    iget-object v2, p0, Lb1h;->C0:Lg65;
+    return-object v0
 
-    invoke-virtual {v2, p0, v1, v0}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    nop
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

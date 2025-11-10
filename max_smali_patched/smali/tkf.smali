@@ -4,20 +4,143 @@
 
 
 # instance fields
-.field public final a:Llef;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljef;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Z
+
+.field public final d:I
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Llef;Ljef;)V
+.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltkf;->a:Llef;
+    iput-object p3, p0, Ltkf;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Ltkf;->b:Ljef;
+    iput-object p4, p0, Ltkf;->b:Ljava/lang/String;
+
+    iput-boolean p6, p0, Ltkf;->c:Z
+
+    iput p1, p0, Ltkf;->d:I
+
+    iput-object p5, p0, Ltkf;->e:Ljava/lang/String;
+
+    iput p2, p0, Ltkf;->f:I
+
+    sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {p4, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "INT"
+
+    const/4 p3, 0x0
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const/4 p1, 0x3
+
+    goto :goto_2
+
+    :cond_0
+    const-string p2, "CHAR"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-nez p2, :cond_5
+
+    const-string p2, "CLOB"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-nez p2, :cond_5
+
+    const-string p2, "TEXT"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const-string p2, "BLOB"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 p1, 0x5
+
+    goto :goto_2
+
+    :cond_2
+    const-string p2, "REAL"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "FLOA"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "DOUB"
+
+    invoke-static {p1, p2, p3}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    :goto_0
+    const/4 p1, 0x4
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x2
+
+    :goto_2
+    iput p1, p0, Ltkf;->g:I
 
     return-void
 .end method
@@ -25,53 +148,127 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Ltkf;
+    instance-of v1, p1, Ltkf;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     check-cast p1, Ltkf;
 
-    iget-object v0, p0, Ltkf;->a:Llef;
+    iget v1, p1, Ltkf;->d:I
 
-    iget-object v1, p1, Ltkf;->a:Llef;
+    iget v2, p0, Ltkf;->d:I
 
-    invoke-virtual {v0, v1}, Llef;->equals(Ljava/lang/Object;)Z
+    if-eq v2, v1, :cond_2
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Ltkf;->b:Ljef;
+    iget-object v1, p1, Ltkf;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Ltkf;->b:Ljef;
+    iget v2, p1, Ltkf;->f:I
 
-    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p1, Ltkf;->e:Ljava/lang/String;
 
-    move-result p1
+    iget-object v4, p0, Ltkf;->a:Ljava/lang/String;
 
-    if-nez p1, :cond_3
+    invoke-static {v4, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result v1
 
-    return p1
+    if-nez v1, :cond_3
+
+    goto :goto_1
 
     :cond_3
+    iget-boolean v1, p0, Ltkf;->c:Z
+
+    iget-boolean v4, p1, Ltkf;->c:Z
+
+    if-eq v1, v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v1, 0x2
+
+    iget-object v4, p0, Ltkf;->e:Ljava/lang/String;
+
+    iget v5, p0, Ltkf;->f:I
+
+    if-ne v5, v0, :cond_5
+
+    if-ne v2, v1, :cond_5
+
+    if-eqz v4, :cond_5
+
+    invoke-static {v4, v3}, Lt94;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    if-ne v5, v1, :cond_6
+
+    if-ne v2, v0, :cond_6
+
+    if-eqz v3, :cond_6
+
+    invoke-static {v3, v4}, Lt94;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    if-eqz v5, :cond_8
+
+    if-ne v5, v2, :cond_8
+
+    if-eqz v4, :cond_7
+
+    invoke-static {v4, v3}, Lt94;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    goto :goto_1
+
+    :cond_7
+    if-eqz v3, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    iget v1, p0, Ltkf;->g:I
+
+    iget p1, p1, Ltkf;->g:I
+
+    if-ne v1, p1, :cond_9
+
+    :goto_0
+    return v0
+
+    :cond_9
     :goto_1
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
 .end method
@@ -79,53 +276,102 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Ltkf;->a:Llef;
+    iget-object v0, p0, Ltkf;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Llef;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Ltkf;->b:Ljef;
+    iget v1, p0, Ltkf;->g:I
 
-    iget v1, v1, Ljef;->b:I
+    add-int/2addr v0, v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v1
+    iget-boolean v1, p0, Ltkf;->c:Z
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
+    const/16 v1, 0x4cf
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x4d5
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ltkf;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "TooltipState(title="
+    const-string v1, "Column{name=\'"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltkf;->a:Llef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", subtitle="
+    iget-object v1, p0, Ltkf;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltkf;->b:Ljef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
+    const-string v1, "\', type=\'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Ltkf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', affinity=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltkf;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', notNull="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ltkf;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", primaryKeyPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltkf;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", defaultValue=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltkf;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const-string v1, "undefined"
+
+    :cond_0
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

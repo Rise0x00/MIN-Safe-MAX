@@ -1,51 +1,62 @@
 .class public final Lhoe;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfoe;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lpoe;
 
-.field public final synthetic Y:Lioe;
+.field public final b:Z
 
-.field public Z:I
-
-.field public o:Lioe;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lioe;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lpoe;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lhoe;->Y:Lioe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lhoe;->a:Lpoe;
+
+    iput-boolean p2, p0, Lhoe;->b:Z
+
+    iput-boolean p3, p0, Lhoe;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lorg/json/JSONObject;
+    .locals 4
 
-    iput-object p1, p0, Lhoe;->X:Ljava/lang/Object;
+    new-instance v0, Lorg/json/JSONObject;
 
-    iget p1, p0, Lhoe;->Z:I
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    const/high16 v0, -0x80000000
+    const-string v1, "command"
 
-    or-int/2addr p1, v0
+    const-string v2, "change-media-settings"
 
-    iput p1, p0, Lhoe;->Z:I
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object p1, p0, Lhoe;->Y:Lioe;
+    iget-boolean v1, p0, Lhoe;->b:Z
 
-    const/4 v0, 0x0
+    iget-boolean v2, p0, Lhoe;->c:Z
 
-    invoke-virtual {p1, v0, p0}, Lioe;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v3, p0, Lhoe;->a:Lpoe;
 
-    move-result-object p1
+    invoke-static {v3, v1, v2}, Lozi;->n(Lpoe;ZZ)Lorg/json/JSONObject;
 
-    return-object p1
+    move-result-object v1
+
+    const-string v2, "mediaSettings"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    return-object v0
 .end method

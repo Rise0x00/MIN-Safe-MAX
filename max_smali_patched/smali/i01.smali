@@ -1,48 +1,26 @@
 .class public final Li01;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Leg0;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Li01;->Y:Leg0;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Liqe;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final z(Li28;)V
     .locals 1
 
-    iput-object p1, p0, Li01;->o:Ljava/lang/Object;
+    instance-of v0, p1, Ll11;
 
-    iget p1, p0, Li01;->X:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    return-void
 
-    or-int/2addr p1, v0
+    :cond_0
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    iput p1, p0, Li01;->X:I
+    check-cast v0, Lnde;
 
-    iget-object p1, p0, Li01;->Y:Leg0;
+    check-cast p1, Ldde;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p1}, Lnde;->setModelItem(Ldde;)V
 
-    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

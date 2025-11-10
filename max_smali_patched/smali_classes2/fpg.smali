@@ -1,56 +1,90 @@
-.class public final synthetic Lfpg;
+.class public final Lfpg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbee;
+.field public final a:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbee;I)V
+.method public constructor <init>([B)V
     .locals 0
 
-    iput p2, p0, Lfpg;->a:I
-
-    iput-object p1, p0, Lfpg;->b:Lbee;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfpg;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfpg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfpg;
+
+    iget-object v1, p0, Lfpg;->a:[B
+
+    iget-object p1, p1, Lfpg;->a:[B
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lfpg;->a:I
+    iget-object v0, p0, Lfpg;->a:[B
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
-    iget-object v0, p0, Lfpg;->b:Lbee;
+    move-result v0
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->a(Lbee;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :pswitch_0
-    iget-object v0, p0, Lfpg;->b:Lbee;
+    iget-object v0, p0, Lfpg;->a:[B
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->e(Lbee;)V
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    nop
+    const-string v1, "FirstFrameReady(frameByteArray="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

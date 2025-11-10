@@ -1,311 +1,162 @@
 .class public final Lsme;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lcom/google/android/gms/maps/model/LatLng;
 
-.field public final synthetic Y:Lone/me/startconversation/StartConversationScreen;
+.field public final b:F
+
+.field public final c:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
+.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;FLandroid/graphics/Bitmap;)V
     .locals 0
 
-    iput-object p2, p0, Lsme;->Y:Lone/me/startconversation/StartConversationScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lsme;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lsme;->b:F
+
+    iput-object p3, p0, Lsme;->c:Landroid/graphics/Bitmap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lks3;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lsme;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lsme;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lsme;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lsme;
-
-    iget-object v1, p0, Lsme;->Y:Lone/me/startconversation/StartConversationScreen;
-
-    invoke-direct {v0, p2, v1}, Lsme;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
-
-    iput-object p1, v0, Lsme;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsme;->X:Ljava/lang/Object;
-
-    check-cast p1, Lks3;
-
-    iget-object v0, p0, Lsme;->Y:Lone/me/startconversation/StartConversationScreen;
-
-    iget-object v1, v0, Lone/me/startconversation/StartConversationScreen;->G0:Ln4h;
-
-    iget-object v2, v0, Lone/me/startconversation/StartConversationScreen;->F0:Lsn6;
-
-    iget-object v3, v0, Lone/me/startconversation/StartConversationScreen;->E0:Ln4h;
-
-    iget-object v4, v0, Lone/me/startconversation/StartConversationScreen;->I0:Lxh0;
-
-    iget-object v5, v0, Lone/me/startconversation/StartConversationScreen;->C0:Ln4h;
-
-    sget-object v6, Lb75;->a:Lb75;
-
-    invoke-virtual {v5, v6}, Lpw7;->E(Ljava/util/List;)V
-
-    iget-object v7, v0, Lone/me/startconversation/StartConversationScreen;->H0:Lsn6;
-
-    invoke-virtual {v7, v6}, Lpw7;->E(Ljava/util/List;)V
-
-    iget-object v8, v0, Lone/me/startconversation/StartConversationScreen;->D0:Lxh0;
-
-    invoke-virtual {v8, v6}, Lpw7;->E(Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lfne;
-
-    move-result-object v9
-
-    iget-object v9, v9, Lfne;->A0:Lmx3;
-
-    iget-object v9, v9, Lmx3;->i:Lsqc;
-
-    iget-object v9, v9, Lsqc;->a:Lfoe;
-
-    invoke-interface {v9}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lks3;
-
-    invoke-virtual {v9}, Lks3;->b()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_2
-
-    iget-object v9, v0, Lone/me/startconversation/StartConversationScreen;->X:Lpr;
-
-    sget-object v10, Lone/me/startconversation/StartConversationScreen;->M0:[Ltm7;
-
-    const/4 v11, 0x2
-
-    aget-object v10, v10, v11
-
-    invoke-virtual {v9, v0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Ljava/lang/Boolean;
-
-    invoke-virtual {v9}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_2
-
-    iget-object v9, v0, Lone/me/startconversation/StartConversationScreen;->A0:Lbp7;
-
-    invoke-interface {v9}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lz9b;
-
-    sget-object v10, Lz9b;->f:[Ljava/lang/String;
-
-    invoke-virtual {v9, v10}, Lz9b;->c([Ljava/lang/String;)Z
-
-    move-result v9
-
-    new-instance v10, Lsw3;
-
-    sget v11, Lg9d;->a:I
-
-    sget v11, Lala;->a:I
-
-    if-eqz v9, :cond_0
-
-    sget v11, Lala;->o:I
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget v11, Lala;->n:I
+    instance-of v1, p1, Lsme;
 
-    :goto_0
-    if-eqz v9, :cond_1
+    const/4 v2, 0x0
 
-    const/4 v9, 0x0
+    if-nez v1, :cond_1
 
-    goto :goto_1
+    return v2
 
     :cond_1
-    sget v9, Lala;->m:I
+    check-cast p1, Lsme;
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v1, p0, Lsme;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    move-result-object v9
+    iget-object v3, p1, Lsme;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    :goto_1
-    invoke-direct {v10, v11, v9}, Lsw3;-><init>(ILjava/lang/Integer;)V
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {v10}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    move-result v1
 
-    move-result-object v9
+    if-nez v1, :cond_2
 
-    invoke-virtual {v4, v9}, Lpw7;->E(Ljava/util/List;)V
-
-    goto :goto_2
+    return v2
 
     :cond_2
-    invoke-virtual {v4, v6}, Lpw7;->E(Ljava/util/List;)V
+    iget v1, p0, Lsme;->b:F
 
-    :goto_2
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->B0()Ljava/lang/CharSequence;
+    iget v3, p1, Lsme;->b:F
 
-    move-result-object v4
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    sget-object v9, Loyf;->a:Loyf;
+    move-result v1
 
-    if-eqz v4, :cond_4
+    if-eqz v1, :cond_3
 
-    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    goto :goto_3
+    return v2
 
     :cond_3
-    iget-object v0, p1, Lks3;->a:Ljava/util/List;
+    iget-object v1, p0, Lsme;->c:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v3, v0}, Lpw7;->E(Ljava/util/List;)V
+    iget-object p1, p1, Lsme;->c:Landroid/graphics/Bitmap;
 
-    iget-object v0, p1, Lks3;->b:Ljava/util/List;
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v0}, Lpw7;->E(Ljava/util/List;)V
+    move-result p1
 
-    iget-object p1, p1, Lks3;->c:Ljava/util/List;
+    if-nez p1, :cond_4
 
-    invoke-virtual {v1, p1}, Lpw7;->E(Ljava/util/List;)V
-
-    return-object v9
+    return v2
 
     :cond_4
-    :goto_3
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lfne;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 3
 
-    iget-object p1, p1, Lfne;->C0:Lsqc;
+    iget-object v0, p0, Lsme;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-object p1, p1, Lsqc;->a:Lfoe;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/LatLng;->hashCode()I
 
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p1
+    const/16 v1, 0x1f
 
-    check-cast p1, Ljava/util/List;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v5, p1}, Lpw7;->E(Ljava/util/List;)V
+    iget v2, p0, Lsme;->b:F
 
-    invoke-static {}, Lkmc;->g()Ljava/util/List;
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {v7, p1}, Lpw7;->E(Ljava/util/List;)V
+    iget-object v1, p0, Lsme;->c:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lfne;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object p1
+    move-result v1
 
-    iget-object p1, p1, Lfne;->z0:Lsqc;
+    add-int/2addr v1, v0
 
-    iget-object p1, p1, Lsqc;->a:Lfoe;
+    return v1
+.end method
 
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p1, Lks3;
+    const-string v1, "MarkerModel(latLng="
 
-    iget-object p1, p1, Lks3;->a:Ljava/util/List;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, p1}, Lpw7;->E(Ljava/util/List;)V
+    iget-object v1, p0, Lsme;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-virtual {v2, v6}, Lpw7;->E(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/startconversation/StartConversationScreen;->C0()Lfne;
+    const-string v1, ", zoom="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lfne;->z0:Lsqc;
+    iget v1, p0, Lsme;->b:F
 
-    iget-object p1, p1, Lsqc;->a:Lfoe;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
+    const-string v1, ", icon="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lks3;
+    iget-object v1, p0, Lsme;->c:Landroid/graphics/Bitmap;
 
-    iget-object p1, p1, Lks3;->c:Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Lpw7;->E(Ljava/util/List;)V
+    const-string v1, ")"
 
-    iget-object p1, v0, Lone/me/startconversation/StartConversationScreen;->x0:Lbp7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lnh0;
-
-    iget-object p1, p1, Lnh0;->w0:Lsqc;
-
-    iget-object p1, p1, Lsqc;->a:Lfoe;
-
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {v8, p1}, Lpw7;->E(Ljava/util/List;)V
-
-    return-object v9
+    return-object v0
 .end method

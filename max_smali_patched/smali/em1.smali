@@ -1,48 +1,26 @@
-.class public final Lem1;
-.super Lnz3;
+.class public interface abstract Lem1;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Leg0;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public d(Landroid/graphics/RectF;Z)V
     .locals 0
-
-    iput-object p1, p0, Lem1;->Y:Leg0;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public e(Z)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iput-object p1, p0, Lem1;->o:Ljava/lang/Object;
+.method public abstract f(Le28;ZJ)V
+.end method
 
-    iget p1, p0, Lem1;->X:I
+.method public abstract getShouldScaleMainOpponent()Z
+.end method
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lem1;->X:I
-
-    iget-object p1, p0, Lem1;->Y:Leg0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract o(Z)V
 .end method

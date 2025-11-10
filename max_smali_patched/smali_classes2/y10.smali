@@ -1,86 +1,378 @@
 .class public final Ly10;
-.super Lcy;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final r:Ly10;
+
+
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:J
 
-.field public final Y:Ljava/lang/Long;
+.field public final b:I
 
-.field public final Z:[B
+.field public final c:J
 
-.field public final o:Ljava/lang/Long;
+.field public final d:Ljava/lang/String;
 
-.field public final w0:Ljava/lang/String;
+.field public final e:I
 
-.field public final x0:Ljava/lang/String;
+.field public final f:I
 
-.field public final y0:I
+.field public final g:Z
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:Ljava/lang/String;
+
+.field public final j:[B
+
+.field public final k:J
+
+.field public final l:Lx10;
+
+.field public final m:Ljava/lang/String;
+
+.field public final n:Lty;
+
+.field public final o:Z
+
+.field public final p:I
+
+.field public final q:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Ljava/lang/String;ZI)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Li00;->Y:Li00;
+    new-instance v0, Lw10;
 
-    invoke-direct {p0, v0, p7, p10}, Lcy;-><init>(Li00;ZZ)V
+    invoke-direct {v0}, Lw10;-><init>()V
 
-    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v1, Ly10;
 
-    move-result-object p4
+    invoke-direct {v1, v0}, Ly10;-><init>(Lw10;)V
 
-    iput-object p4, p0, Ly10;->Y:Ljava/lang/Long;
+    sput-object v1, Ly10;->r:Ly10;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-void
+.end method
 
-    move-result-object p1
+.method public constructor <init>(Lw10;)V
+    .locals 2
 
-    iput-object p1, p0, Ly10;->o:Ljava/lang/Long;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ly10;->X:Ljava/lang/String;
+    iget-wide v0, p1, Lw10;->a:J
 
-    iput-object p6, p0, Ly10;->Z:[B
+    iput-wide v0, p0, Ly10;->a:J
 
-    iput-object p8, p0, Ly10;->w0:Ljava/lang/String;
+    iget v0, p1, Lw10;->q:I
 
-    iput-object p9, p0, Ly10;->x0:Ljava/lang/String;
+    iput v0, p0, Ly10;->b:I
 
-    iput p11, p0, Ly10;->y0:I
+    iget-wide v0, p1, Lw10;->b:J
+
+    iput-wide v0, p0, Ly10;->c:J
+
+    iget-object v0, p1, Lw10;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->d:Ljava/lang/String;
+
+    iget v0, p1, Lw10;->d:I
+
+    iput v0, p0, Ly10;->e:I
+
+    iget v0, p1, Lw10;->e:I
+
+    iput v0, p0, Ly10;->f:I
+
+    iget-boolean v0, p1, Lw10;->f:Z
+
+    iput-boolean v0, p0, Ly10;->g:Z
+
+    iget-object v0, p1, Lw10;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->h:Ljava/lang/String;
+
+    iget-object v0, p1, Lw10;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->i:Ljava/lang/String;
+
+    iget-object v0, p1, Lw10;->i:[B
+
+    iput-object v0, p0, Ly10;->j:[B
+
+    iget-wide v0, p1, Lw10;->j:J
+
+    iput-wide v0, p0, Ly10;->k:J
+
+    iget-object v0, p1, Lw10;->k:Lx10;
+
+    iput-object v0, p0, Ly10;->l:Lx10;
+
+    iget-object v0, p1, Lw10;->l:Ljava/lang/String;
+
+    iput-object v0, p0, Ly10;->m:Ljava/lang/String;
+
+    iget-object v0, p1, Lw10;->m:Lty;
+
+    iput-object v0, p0, Ly10;->n:Lty;
+
+    iget-boolean v0, p1, Lw10;->n:Z
+
+    iput-boolean v0, p0, Ly10;->o:Z
+
+    iget v0, p1, Lw10;->o:I
+
+    iput v0, p0, Ly10;->p:I
+
+    iget p1, p1, Lw10;->p:I
+
+    iput p1, p0, Ly10;->q:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
+.method public final a()Lw10;
     .locals 3
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    new-instance v0, Lw10;
+
+    invoke-direct {v0}, Lw10;-><init>()V
+
+    iget-wide v1, p0, Ly10;->a:J
+
+    iput-wide v1, v0, Lw10;->a:J
+
+    iget v1, p0, Ly10;->b:I
+
+    iput v1, v0, Lw10;->q:I
+
+    iget-wide v1, p0, Ly10;->c:J
+
+    iput-wide v1, v0, Lw10;->b:J
+
+    iget-object v1, p0, Ly10;->d:Ljava/lang/String;
+
+    iput-object v1, v0, Lw10;->c:Ljava/lang/String;
+
+    iget v1, p0, Ly10;->e:I
+
+    iput v1, v0, Lw10;->d:I
+
+    iget v1, p0, Ly10;->f:I
+
+    iput v1, v0, Lw10;->e:I
+
+    iget-boolean v1, p0, Ly10;->g:Z
+
+    iput-boolean v1, v0, Lw10;->f:Z
+
+    iget-object v1, p0, Ly10;->h:Ljava/lang/String;
+
+    iput-object v1, v0, Lw10;->g:Ljava/lang/String;
+
+    iget-object v1, p0, Ly10;->i:Ljava/lang/String;
+
+    iput-object v1, v0, Lw10;->h:Ljava/lang/String;
+
+    iget-object v1, p0, Ly10;->j:[B
+
+    iput-object v1, v0, Lw10;->i:[B
+
+    iget-wide v1, p0, Ly10;->k:J
+
+    iput-wide v1, v0, Lw10;->j:J
+
+    iget-object v1, p0, Ly10;->l:Lx10;
+
+    iput-object v1, v0, Lw10;->k:Lx10;
+
+    iget-object v1, p0, Ly10;->m:Ljava/lang/String;
+
+    iput-object v1, v0, Lw10;->l:Ljava/lang/String;
+
+    iget-object v1, p0, Ly10;->n:Lty;
+
+    iput-object v1, v0, Lw10;->m:Lty;
+
+    iget-boolean v1, p0, Ly10;->o:Z
+
+    iput-boolean v1, v0, Lw10;->n:Z
+
+    iget v1, p0, Ly10;->p:I
+
+    iput v1, v0, Lw10;->o:I
+
+    iget v1, p0, Ly10;->q:I
+
+    iput v1, v0, Lw10;->p:I
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Ly10;->j:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Ly10;->w0:Ljava/lang/String;
+    const-string v1, "Video{videoId="
 
-    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    const-string v2, ", videoType="
 
-    move-result v2
+    iget-wide v3, p0, Ly10;->a:J
 
-    if-nez v2, :cond_0
+    invoke-static {v3, v4, v1, v2}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "token"
+    move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    return-object v0
+    iget v3, p0, Ly10;->b:I
+
+    if-eq v3, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq v3, v2, :cond_0
+
+    const-string v2, "null"
+
+    goto :goto_0
 
     :cond_0
-    const-string v1, "audioId"
+    const-string v2, "VIDEO_MESSAGE"
 
-    iget-object v2, p0, Ly10;->o:Ljava/lang/Long;
+    goto :goto_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    const-string v2, "VIDEO"
+
+    :goto_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", duration="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Ly10;->c:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ", thumbnail=\'"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ly10;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\', width="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ly10;->e:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", height="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ly10;->f:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", live="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Ly10;->g:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", externalUrl=\'"
+
+    const-string v3, "\', externalSiteName=\'"
+
+    iget-object v4, p0, Ly10;->h:Ljava/lang/String;
+
+    iget-object v5, p0, Ly10;->i:Ljava/lang/String;
+
+    invoke-static {v1, v2, v4, v3, v5}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "\', previewData="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", startTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Ly10;->k:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", convertOptions="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Ly10;->l:Lx10;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", token=\'"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Ly10;->m:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', videoCollage="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Ly10;->n:Lty;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", ignoreAutoplay="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Ly10;->o:Z
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", audioTrackIndex="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Ly10;->p:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", audioGroupIndex="
+
+    const-string v2, "}"
+
+    iget v3, p0, Ly10;->q:I
+
+    invoke-static {v1, v0, v3, v2}, Lmb3;->d(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

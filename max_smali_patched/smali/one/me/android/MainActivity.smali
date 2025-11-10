@@ -1,10 +1,10 @@
 .class public final Lone/me/android/MainActivity;
-.super Lu5;
+.super Lj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lw6d;
-.implements Lb8;
+.implements Lnhd;
+.implements Lq8;
 
 
 # annotations
@@ -14,12 +14,12 @@
     }
     d2 = {
         "Lone/me/android/MainActivity;",
-        "Lu5;",
-        "Lw6d;",
-        "Lb8;",
+        "Lj6;",
+        "Lnhd;",
+        "Lq8;",
         "<init>",
         "()V",
-        "l62",
+        "uea",
         "oneme_playGoogleRelease"
     }
     k = 0x1
@@ -33,25 +33,25 @@
 
 
 # static fields
-.field public static final synthetic g1:I
+.field public static final synthetic b1:I
 
 
 # instance fields
-.field public Y0:Li8d;
+.field public T0:Lyid;
 
-.field public final Z0:Z
+.field public final U0:Z
 
-.field public a1:Laa1;
+.field public V0:Lta1;
 
-.field public final b1:Ljava/lang/Object;
+.field public final W0:Ljava/lang/Object;
 
-.field public final c1:Lc55;
+.field public final X0:Lr85;
 
-.field public final d1:Ls88;
+.field public final Y0:Lse8;
 
-.field public final e1:Ln73;
+.field public final Z0:Lj93;
 
-.field public f1:Lqle;
+.field public a1:Lgye;
 
 
 # direct methods
@@ -64,70 +64,70 @@
 .method public constructor <init>()V
     .locals 3
 
-    invoke-direct {p0}, Lu5;-><init>()V
+    invoke-direct {p0}, Lj6;-><init>()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/android/MainActivity;->Z0:Z
+    iput-boolean v0, p0, Lone/me/android/MainActivity;->U0:Z
 
-    new-instance v0, Lzf7;
+    new-instance v0, Lim7;
 
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1, p0}, Lzf7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lim7;-><init>(ILjava/lang/Object;)V
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-static {v1, v0}, Llci;->i(ILoi6;)Lru7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/android/MainActivity;->b1:Ljava/lang/Object;
+    iput-object v0, p0, Lone/me/android/MainActivity;->W0:Ljava/lang/Object;
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v1
 
-    const-class v2, Lc55;
+    const-class v2, Lr85;
 
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lc55;
+    check-cast v1, Lr85;
 
-    iput-object v1, p0, Lone/me/android/MainActivity;->c1:Lc55;
+    iput-object v1, p0, Lone/me/android/MainActivity;->X0:Lr85;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Ls88;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    check-cast v0, Ls88;
+    const-class v1, Lse8;
 
-    iput-object v0, p0, Lone/me/android/MainActivity;->d1:Ls88;
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v0, Ln73;
+    move-result-object v0
+
+    check-cast v0, Lse8;
+
+    iput-object v0, p0, Lone/me/android/MainActivity;->Y0:Lse8;
+
+    new-instance v0, Lj93;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p0}, Ln73;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lj93;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lone/me/android/MainActivity;->e1:Ln73;
+    iput-object v0, p0, Lone/me/android/MainActivity;->Z0:Lj93;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O()Ljava/lang/String;
+.method public final H()Ljava/lang/String;
     .locals 1
 
     const/4 v0, 0x0
@@ -135,7 +135,7 @@
     return-object v0
 .end method
 
-.method public final R(IILandroid/content/Intent;)V
+.method public final I(IILandroid/content/Intent;)V
     .locals 3
 
     const/16 p3, 0x66
@@ -144,66 +144,66 @@
 
     if-eqz p2, :cond_0
 
-    sget-object p1, Lyka;->a:Lyka;
+    sget-object p1, Lusa;->a:Lusa;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class p2, Lmbb;
-
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
-    check-cast p1, Lmbb;
+    const-class p2, Lgkb;
 
-    check-cast p1, Lubb;
+    invoke-virtual {p1, p2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lubb;->x()V
+    move-result-object p1
 
-    new-instance p1, Lzva;
+    check-cast p1, Lgkb;
 
-    new-instance p2, Lova;
+    check-cast p1, Lokb;
 
-    sget p3, Lg9d;->n:I
+    invoke-virtual {p1}, Lokb;->x()V
 
-    invoke-direct {p2, p3}, Lova;-><init>(I)V
+    new-instance p1, Lb4b;
 
-    sget p3, Llic;->oneme_contact_saved_snackbar_title:I
+    new-instance p2, Lq3b;
 
-    invoke-static {p0, p3}, Lo7;->o(Landroid/content/Context;I)Ljava/lang/String;
+    sget p3, Lyjd;->o:I
+
+    invoke-direct {p2, p3}, Lq3b;-><init>(I)V
+
+    sget p3, Lxrc;->oneme_contact_saved_snackbar_title:I
+
+    invoke-static {p0, p3}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p3
 
-    new-instance v0, Liva;
+    new-instance v0, Lk3b;
 
     const/4 v1, 0x7
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v2, v2, v1}, Liva;-><init>(IIII)V
+    invoke-direct {v0, v2, v2, v2, v1}, Lk3b;-><init>(IIII)V
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p2, p3, v1, v0}, Lzva;-><init>(Ltva;Ljava/lang/String;Ljava/lang/String;Liva;)V
+    invoke-direct {p1, p2, p3, v1, v0}, Lb4b;-><init>(Lu3b;Ljava/lang/String;Ljava/lang/String;Lk3b;)V
 
-    invoke-static {p0, p1}, Lv63;->v0(Lu5;Lzva;)V
+    invoke-static {p0, p1}, Lkxi;->e(Lj6;Lb4b;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final S()V
+.method public final J()V
     .locals 0
 
     return-void
 .end method
 
-.method public final Z()Lo8d;
+.method public final Q()Lejd;
     .locals 3
 
-    iget-object v0, p0, Lone/me/android/MainActivity;->Y0:Li8d;
+    iget-object v0, p0, Lone/me/android/MainActivity;->T0:Lyid;
 
     const/4 v1, 0x0
 
@@ -215,19 +215,19 @@
     move-object v0, v1
 
     :goto_0
-    invoke-virtual {v0}, Li8d;->e()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lyid;->e()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-static {v0}, Le93;->v0(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v0}, Lab3;->K(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll8d;
+    check-cast v0, Lbjd;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Ll8d;->a:Lb04;
+    iget-object v0, v0, Lbjd;->a:Lc24;
 
     goto :goto_1
 
@@ -235,11 +235,11 @@
     move-object v0, v1
 
     :goto_1
-    instance-of v2, v0, Lo8d;
+    instance-of v2, v0, Lejd;
 
     if-eqz v2, :cond_2
 
-    check-cast v0, Lo8d;
+    check-cast v0, Lejd;
 
     goto :goto_2
 
@@ -249,7 +249,7 @@
     :goto_2
     if-eqz v0, :cond_3
 
-    iget-object v2, p0, Lone/me/android/MainActivity;->Y0:Li8d;
+    iget-object v2, p0, Lone/me/android/MainActivity;->T0:Lyid;
 
     if-eqz v2, :cond_3
 
@@ -259,38 +259,38 @@
     return-object v1
 .end method
 
-.method public final a0()V
+.method public final R()V
     .locals 9
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lf87;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    check-cast v0, Lf87;
+    const-class v1, Led7;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Led7;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lf87;->b:Le87;
+    sget-object v0, Led7;->b:Ldd7;
 
     if-eqz v0, :cond_4
 
-    new-instance v1, Lmf2;
+    new-instance v1, Lrga;
 
-    const/16 v2, 0xe
+    const/16 v2, 0xb
 
-    invoke-direct {v1, v2}, Lmf2;-><init>(I)V
+    invoke-direct {v1, v2}, Lrga;-><init>(I)V
 
-    iput-object p0, v0, Le87;->a:Lone/me/android/MainActivity;
+    iput-object p0, v0, Ldd7;->a:Lone/me/android/MainActivity;
 
-    iput-object v1, v0, Le87;->d:Lmf2;
+    iput-object v1, v0, Ldd7;->d:Lrga;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -304,23 +304,23 @@
     move-object v1, p0
 
     :goto_0
-    new-instance v2, La4d;
+    new-instance v2, Luoe;
 
-    new-instance v3, Lmkh;
+    new-instance v3, Ltfi;
 
-    invoke-direct {v3, v1}, Lmkh;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v1}, Ltfi;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v2, v3}, La4d;-><init>(Lmkh;)V
+    invoke-direct {v2, v3}, Luoe;-><init>(Ltfi;)V
 
-    iput-object v2, v0, Le87;->b:La4d;
+    iput-object v2, v0, Ldd7;->b:Luoe;
 
-    iget-object v1, v2, La4d;->b:Ljava/lang/Object;
+    iget-object v1, v2, Luoe;->b:Ljava/lang/Object;
 
-    check-cast v1, Lmkh;
+    check-cast v1, Ltfi;
 
-    iget-object v2, v1, Lmkh;->b:Ljava/lang/String;
+    iget-object v2, v1, Ltfi;->b:Ljava/lang/String;
 
-    sget-object v3, Lmkh;->c:Lt5f;
+    sget-object v3, Ltfi;->c:Lsw4;
 
     filled-new-array {v2}, [Ljava/lang/Object;
 
@@ -328,9 +328,9 @@
 
     const-string v4, "requestInAppReview (%s)"
 
-    invoke-virtual {v3, v4, v2}, Lt5f;->f(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v2}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v2, v1, Lmkh;->a:Lkmh;
+    iget-object v2, v1, Ltfi;->a:Lgyi;
 
     if-nez v2, :cond_3
 
@@ -348,13 +348,11 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, v3, Lt5f;->a:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
+    iget-object v2, v3, Lsw4;->a:Ljava/lang/String;
 
     const-string v3, "Play Store app is either not installed or not the official version"
 
-    invoke-static {v2, v3, v1}, Lt5f;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3, v1}, Lsw4;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -375,7 +373,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lqgh;->a:Ljava/util/HashMap;
+    sget-object v6, Lyvh;->a:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -398,7 +396,7 @@
 
     check-cast v6, Ljava/lang/String;
 
-    sget-object v8, Lqgh;->b:Ljava/util/HashMap;
+    sget-object v8, Lyvh;->b:Ljava/util/HashMap;
 
     invoke-virtual {v8, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -439,53 +437,53 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v2, v4, v3, v5, v5}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lxm3;)V
+    invoke-direct {v2, v4, v3, v5, v5}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;Lgp3;)V
 
     invoke-direct {v1, v2}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
 
-    invoke-static {v1}, Lud6;->o(Ljava/lang/Exception;)Lvmh;
+    invoke-static {v1}, Lby9;->d(Ljava/lang/Exception;)Lj1j;
 
     move-result-object v1
 
     goto :goto_2
 
     :cond_3
-    new-instance v3, Ltbf;
+    new-instance v3, Lsof;
 
-    invoke-direct {v3}, Ltbf;-><init>()V
+    invoke-direct {v3}, Lsof;-><init>()V
 
-    new-instance v4, Lvjh;
+    new-instance v4, Ld8i;
 
-    invoke-direct {v4, v1, v3, v3}, Lvjh;-><init>(Lmkh;Ltbf;Ltbf;)V
+    invoke-direct {v4, v1, v3, v3}, Ld8i;-><init>(Ltfi;Lsof;Lsof;)V
 
-    new-instance v1, Lflh;
+    new-instance v1, Lgpi;
 
-    invoke-direct {v1, v2, v3, v3, v4}, Lflh;-><init>(Lkmh;Ltbf;Ltbf;Lvjh;)V
+    invoke-direct {v1, v2, v3, v3, v4}, Lgpi;-><init>(Lgyi;Lsof;Lsof;Ld8i;)V
 
-    invoke-virtual {v2}, Lkmh;->a()Landroid/os/Handler;
+    invoke-virtual {v2}, Lgyi;->a()Landroid/os/Handler;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v1, v3, Ltbf;->a:Lvmh;
+    iget-object v1, v3, Lsof;->a:Lj1j;
 
     :goto_2
     if-eqz v1, :cond_4
 
-    new-instance v2, Ld87;
+    new-instance v2, Lcd7;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, v0, v3}, Ld87;-><init>(Le87;I)V
+    invoke-direct {v2, v0, v3}, Lcd7;-><init>(Ldd7;I)V
 
-    invoke-virtual {v1, v2}, Lvmh;->i(Lifa;)Lvmh;
+    invoke-virtual {v1, v2}, Lj1j;->i(Luma;)Lj1j;
 
     :cond_4
     return-void
 .end method
 
-.method public final b0()Z
+.method public final S()Z
     .locals 2
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -538,10 +536,181 @@
     return v0
 .end method
 
-.method public final f()Li8d;
+.method public final b()Z
+    .locals 4
+
+    invoke-virtual {p0}, Lone/me/android/MainActivity;->Q()Lejd;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lejd;->w()Lc24;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    instance-of v2, v0, Ljrd;
+
+    if-eqz v2, :cond_1
+
+    move-object v1, v0
+
+    check-cast v1, Ljrd;
+
+    :cond_1
+    const/4 v0, 0x0
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Ljrd;->u()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v0
+
+    :goto_1
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_4
+
+    const/4 v3, 0x3
+
+    if-ne v1, v3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :goto_2
+    return v2
+.end method
+
+.method public final j()Z
+    .locals 4
+
+    iget-object v0, p0, Lone/me/android/MainActivity;->W0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh21;
+
+    iget-object v0, v0, Lh21;->a:Lod8;
+
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lejd;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->G0()Lyid;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lyid;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lab3;->K(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbjd;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lbjd;->a:Lc24;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Lone/me/android/MainActivity;->Q()Lejd;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lejd;->w()Lc24;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, v1
+
+    :cond_2
+    :goto_1
+    instance-of v2, v0, Ljrd;
+
+    if-eqz v2, :cond_3
+
+    move-object v1, v0
+
+    check-cast v1, Ljrd;
+
+    :cond_3
+    const/4 v0, 0x0
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1}, Ljrd;->u()I
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_4
+    move v1, v0
+
+    :goto_2
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_6
+
+    const/4 v3, 0x2
+
+    if-ne v1, v3, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    return v0
+
+    :cond_6
+    :goto_3
+    return v2
+.end method
+
+.method public final k()Lyid;
     .locals 1
 
-    iget-object v0, p0, Lone/me/android/MainActivity;->Y0:Li8d;
+    iget-object v0, p0, Lone/me/android/MainActivity;->T0:Lyid;
 
     if-eqz v0, :cond_0
 
@@ -553,10 +722,10 @@
     return-object v0
 .end method
 
-.method public final g()Z
+.method public final m()Z
     .locals 1
 
-    iget-boolean v0, p0, Lone/me/android/MainActivity;->Z0:Z
+    iget-boolean v0, p0, Lone/me/android/MainActivity;->U0:Z
 
     return v0
 .end method
@@ -570,7 +739,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lox9;->j:Lqpa;
+    sget-object v1, Lcuh;->b:Lnxa;
 
     const/4 v2, 0x0
 
@@ -579,9 +748,9 @@
     goto :goto_0
 
     :cond_0
-    sget-object v3, Ly38;->o:Ly38;
+    sget-object v3, La98;->d:La98;
 
-    invoke-virtual {v1, v3}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v1, v3}, Lnxa;->b(La98;)Z
 
     move-result v4
 
@@ -597,29 +766,29 @@
 
     const-string v5, "@deep_link: onCreate: intent.data = "
 
-    invoke-static {v4, v5}, Lhqd;->j(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v3, v0, v4, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lone/me/android/MainActivity;->d1:Ls88;
+    iget-object v0, p0, Lone/me/android/MainActivity;->Y0:Lse8;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lone/me/android/MainActivity;->b0()Z
+    invoke-virtual {p0}, Lone/me/android/MainActivity;->S()Z
 
     move-result v1
 
-    iput-boolean v1, v0, Ls88;->i:Z
+    iput-boolean v1, v0, Lse8;->i:Z
 
-    invoke-static {p0}, Lk98;->a(Landroid/content/Context;)Lf52;
+    invoke-static {p0}, Lxni;->a(Landroid/content/Context;)Lm62;
 
     move-result-object v0
 
-    sget v1, Lqdc;->root:I
+    sget v1, Lzmc;->root:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
@@ -643,387 +812,435 @@
 
     invoke-virtual {v3, v1}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    invoke-virtual {p0, v0}, Lu5;->setContentView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lj6;->setContentView(Landroid/view/View;)V
 
-    invoke-static {p0}, Ld25;->a(Lu5;)V
+    invoke-static {p0}, Lp55;->a(Lj6;)V
 
-    invoke-super {p0, p1}, Lu5;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lj6;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {p0, v0, p1}, Lhv0;->b(Lqm;Lf52;Landroid/os/Bundle;)Li8d;
+    invoke-static {p0, v0, p1}, Liui;->a(Lsn;Lm62;Landroid/os/Bundle;)Lyid;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    iput v1, v0, Li8d;->e:I
+    iput v1, v0, Lyid;->e:I
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Li8d;->R(Z)V
+    invoke-virtual {v0, v3}, Lyid;->R(Z)V
 
-    iput-object v0, p0, Lone/me/android/MainActivity;->Y0:Li8d;
+    iput-object v0, p0, Lone/me/android/MainActivity;->T0:Lyid;
 
-    new-instance v0, Lu55;
+    new-instance v0, Li33;
 
-    const/16 v3, 0xe
+    const/16 v3, 0x14
 
-    invoke-direct {v0, p1, v3, p0}, Lu55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v3, p0}, Li33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {p0}, Lv63;->J(Lu5;)Lone/me/android/root/RootController;
+    invoke-static {p0}, Lkxi;->c(Lj6;)Lone/me/android/root/RootController;
 
     move-result-object p1
 
-    sget-object v3, Lyka;->a:Lyka;
+    sget-object v3, Lusa;->a:Lusa;
 
-    invoke-virtual {v3}, Lyka;->o()Lhma;
+    invoke-virtual {v3}, Lusa;->j()Ldua;
 
     move-result-object v4
 
-    new-instance v5, Lar;
+    new-instance v5, Lxr;
 
-    const/16 v6, 0xa
+    const/16 v6, 0xb
 
-    invoke-direct {v5, p0, p1, v0, v6}, Lar;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v5, p0, p1, v0, v6}, Lxr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v4, v5}, Lhma;->g(Lve6;)V
+    invoke-virtual {v4, v5}, Ldua;->g(Loi6;)V
 
-    invoke-static {p0, v2}, Lv63;->w0(Lu5;Landroid/content/Intent;)V
+    invoke-static {p0, v2}, Lkxi;->f(Lj6;Landroid/content/Intent;)V
 
-    sget-object p1, Li6g;->a:Li6g;
+    sget-object p1, Ldkg;->a:Ldkg;
 
-    invoke-virtual {p1}, Li6g;->b()Lsia;
+    invoke-virtual {p1}, Ldkg;->a()Lhqa;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Li6g;->b()Lsia;
+    invoke-virtual {p1}, Ldkg;->a()Lhqa;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
-    const-class v0, Laa1;
+    const-class v0, Lta1;
 
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Laa1;
+    check-cast p1, Lta1;
 
-    invoke-virtual {p0}, Ltf3;->w()Lgfa;
+    invoke-virtual {p0}, Lrh3;->v()Lsma;
 
     move-result-object v0
 
-    iget-object v4, p1, Laa1;->D0:Lyz3;
+    iget-object v4, p1, Lta1;->A0:Lz14;
 
-    invoke-virtual {v0, p0, v4}, Lgfa;->a(Lcs7;Lyea;)V
+    invoke-virtual {v0, p0, v4}, Lsma;->a(Lnx7;Lkma;)V
 
     const-string v0, "PipAppController"
 
     const-string v4, "CallIndicatorAppController attached"
 
-    invoke-static {v0, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p0, p1, Laa1;->w0:Lone/me/android/MainActivity;
+    iput-object p0, p1, Lta1;->Z:Lone/me/android/MainActivity;
 
-    invoke-static {}, Laa1;->c()Li8d;
+    invoke-static {}, Lta1;->d()Lyid;
 
     move-result-object v0
 
-    iget-object v4, p1, Laa1;->C0:Ljava/lang/Object;
+    iget-object v4, p1, Lta1;->z0:Ljava/lang/Object;
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lw91;
+    check-cast v4, Loa1;
 
-    invoke-virtual {v0, v4}, Li8d;->a(Lf04;)V
+    invoke-virtual {v0, v4}, Lyid;->a(Lg24;)V
 
-    invoke-virtual {p1, v1}, Laa1;->h(Z)V
+    invoke-virtual {p1, v1}, Lta1;->j(Z)V
 
-    iget-object v0, p1, Laa1;->a:Lst1;
+    iget-object v0, p1, Lta1;->a:Lpu1;
 
-    iget-object v1, p1, Laa1;->B0:Ljava/lang/Object;
+    iget-object v1, p1, Lta1;->y0:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lv91;
+    check-cast v1, Lna1;
 
-    check-cast v0, Lhu1;
+    check-cast v0, Lev1;
 
-    invoke-virtual {v0, v1}, Lhu1;->f(Ljo1;)V
+    invoke-virtual {v0, v1}, Lev1;->e(Lfp1;)V
 
-    iget-object v0, p1, Laa1;->o:Lav1;
+    iget-object v0, p1, Lta1;->d:Lwv1;
 
-    invoke-virtual {v0, p1}, Lav1;->d(Lfp1;)V
+    invoke-virtual {v0, p1}, Lwv1;->d(Lbq1;)V
 
-    iput-object p1, p0, Lone/me/android/MainActivity;->a1:Laa1;
+    iput-object p1, p0, Lone/me/android/MainActivity;->V0:Lta1;
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class v0, Lz48;
-
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
-    check-cast p1, Lz48;
+    const-class v0, Lfa8;
 
-    invoke-interface {p1}, Lz48;->stream()Lrqc;
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lz78;
+    check-cast p1, Lfa8;
 
-    invoke-direct {v0, p0, v2}, Lz78;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p1}, Lfa8;->stream()Li0d;
 
-    new-instance v1, Ljx5;
+    move-result-object p1
+
+    new-instance v0, Lvd8;
+
+    invoke-direct {v0, p0, v2}, Lvd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Ln16;
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v4}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
     const-class v0, Lru/ok/tamtam/logout/a;
 
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lru/ok/tamtam/logout/a;
 
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lru/ok/tamtam/logout/a;->c(Lqr7;)Lsqc;
+    invoke-static {v0}, Ledi;->c(Lpx7;)Lbx7;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lru/ok/tamtam/logout/a;->c(Lbx7;)Lj0d;
 
     move-result-object p1
 
-    iget-object v0, p0, Ltf3;->a:Les7;
+    iget-object v0, p0, Lrh3;->a:Lpx7;
 
-    sget-object v1, Ler7;->o:Ler7;
+    sget-object v1, Lpw7;->d:Lpw7;
 
-    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {p1, v0, v1}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
 
     move-result-object p1
 
-    new-instance v0, La88;
+    new-instance v0, Lwd8;
 
-    invoke-direct {v0, p0, v2}, La88;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Lwd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v4, Ljx5;
+    new-instance v4, Ln16;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, p1, v0, v5}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v4, p1, v0, v5}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
-
-    move-result-object p1
-
-    invoke-static {v4, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    iget-object p1, p0, Lone/me/android/MainActivity;->c1:Lc55;
-
-    invoke-interface {p1}, Lc55;->a()Lev5;
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
 
     move-result-object p1
 
-    new-instance v0, Lb88;
-
-    invoke-direct {v0, p0, v2}, Lb88;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v4, Ljx5;
-
-    invoke-direct {v4, p1, v0, v5}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v4, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    iget-object p1, p0, Lone/me/android/MainActivity;->X0:Lr85;
+
+    invoke-interface {p1}, Lr85;->a()Lez5;
+
+    move-result-object p1
+
+    new-instance v0, Lxd8;
+
+    invoke-direct {v0, p0, v2}, Lxd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v4, Ln16;
+
+    invoke-direct {v4, p1, v0, v5}, Ln16;-><init>(Lez5;Lej6;I)V
+
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
+
+    move-result-object p1
+
+    invoke-static {v4, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->setIntent(Landroid/content/Intent;)V
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
-    const-class v0, Lqp;
+    const-class v0, Lkq5;
 
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqp;
-
-    check-cast p1, Lzhd;
-
-    iget-object p1, p1, Lzhd;->l:Lmoe;
-
-    iget-object v0, p0, Ltf3;->a:Les7;
-
-    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Ltp;->w(Lev5;)Lev5;
+    check-cast p1, Lkq5;
+
+    check-cast p1, Luq5;
+
+    iget-object p1, p1, Luq5;->q:Ltq5;
+
+    iget-object v0, p0, Lrh3;->a:Lpx7;
+
+    invoke-static {p1, v0, v1}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
 
     move-result-object p1
 
-    new-instance v0, Lw78;
+    new-instance v0, Lqd8;
 
-    invoke-direct {v0, p0, v2}, Lw78;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Lqd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Ljx5;
+    new-instance v4, Ln16;
+
+    invoke-direct {v4, p1, v0, v5}, Ln16;-><init>(Lez5;Lej6;I)V
+
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
+
+    move-result-object p1
+
+    invoke-static {v4, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object p1
+
+    const-class v0, Ltq;
+
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltq;
+
+    check-cast p1, Latd;
+
+    iget-object p1, p1, Latd;->m:La1f;
+
+    iget-object v0, p0, Lrh3;->a:Lpx7;
+
+    invoke-static {p1, v0, v1}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lqs0;->l(Lez5;)Lez5;
+
+    move-result-object p1
+
+    new-instance v0, Lrd8;
+
+    invoke-direct {v0, p0, v2}, Lrd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Ln16;
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v4}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-virtual {v3}, Lyka;->n()Lzob;
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lzob;->a:Lt63;
-
-    invoke-virtual {p1}, Lxid;->q()Lqv5;
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
 
     move-result-object p1
 
-    new-instance v0, Ljsc;
+    invoke-static {v1, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
 
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p1}, Ljsc;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lbf3;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, v1, v0}, Lbf3;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lnf2;->e(Lnda;)Lss1;
+    invoke-virtual {v3}, Lusa;->i()Lsxb;
 
     move-result-object p1
 
-    sget-object v0, Lzw9;->d:Lrqc;
+    iget-object p1, p1, Lsxb;->a:Le78;
 
-    new-instance v1, Lg13;
+    invoke-virtual {p1}, Lztd;->t()Ltz5;
 
-    const/16 v3, 0x9
+    move-result-object p1
 
-    invoke-direct {v1, v0, v3}, Lg13;-><init>(Lev5;I)V
+    sget-object v0, Lt3a;->d:Li0d;
 
-    new-instance v0, Lgd0;
+    new-instance v1, Lr13;
 
-    const/16 v3, 0x15
+    const/16 v3, 0xd
 
-    const/4 v4, 0x3
+    invoke-direct {v1, v0, v3}, Lr13;-><init>(Lez5;I)V
 
-    invoke-direct {v0, v4, v2, v3}, Lgd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    new-instance v0, Lsd8;
 
-    new-instance v3, Ls31;
+    const/4 v3, 0x3
+
+    invoke-direct {v0, v3, v2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    new-instance v4, Li41;
 
     const/4 v5, 0x3
 
-    invoke-direct {v3, p1, v1, v0, v5}, Ls31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v4, p1, v1, v0, v5}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    new-instance p1, Lg13;
+    new-instance p1, Lr13;
 
-    const/16 v0, 0x9
+    const/16 v0, 0xd
 
-    invoke-direct {p1, v3, v0}, Lg13;-><init>(Lev5;I)V
+    invoke-direct {p1, v4, v0}, Lr13;-><init>(Lez5;I)V
 
-    new-instance v0, Lx78;
+    new-instance v0, Ltd8;
 
-    invoke-direct {v0, p0, v2}, Lx78;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Ltd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p1, v0}, Ltp;->E(Lev5;Llf6;)Lg13;
+    invoke-static {p1, v0}, Lqs0;->r(Lez5;Lej6;)Lr13;
 
     move-result-object p1
 
-    new-instance v0, Lk68;
+    new-instance v0, Lqb8;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p1, v1}, Lk68;-><init>(Lg13;I)V
+    invoke-direct {v0, p1, v1}, Lqb8;-><init>(Lr13;I)V
 
-    sget-object p1, Lone/me/main/MainScreen;->Z:Llu3;
+    sget-object p1, Lone/me/main/MainScreen;->Y:Lipd;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Lone/me/main/MainScreen;->x0:Le8e;
+    sget-object p1, Lone/me/main/MainScreen;->s0:Lake;
 
-    new-instance v1, Lgk1;
+    new-instance v1, Lbl1;
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    invoke-direct {v1, v4, v2, v3}, Lgk1;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v3, v2, v4}, Lbl1;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    new-instance v3, Ls31;
+    new-instance v3, Li41;
 
-    invoke-direct {v3, v0, p1, v1, v4}, Ls31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    const/4 v4, 0x3
 
-    iget-object p1, p0, Ltf3;->a:Les7;
+    invoke-direct {v3, v0, p1, v1, v4}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    sget-object v0, Ler7;->X:Ler7;
+    iget-object p1, p0, Lrh3;->a:Lpx7;
 
-    invoke-static {v3, p1, v0}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    sget-object v0, Lpw7;->o:Lpw7;
+
+    invoke-static {v3, p1, v0}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
 
     move-result-object p1
 
-    new-instance v0, Lg13;
+    new-instance v0, Lr13;
 
-    const/16 v1, 0x9
+    const/16 v1, 0xd
 
-    invoke-direct {v0, p1, v1}, Lg13;-><init>(Lev5;I)V
+    invoke-direct {v0, p1, v1}, Lr13;-><init>(Lez5;I)V
 
-    new-instance p1, Ly78;
+    new-instance p1, Lud8;
 
-    invoke-direct {p1, p0, v2}, Ly78;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, p0, v2}, Lud8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Ljx5;
+    new-instance v1, Ln16;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v0, p1, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, v0, p1, v2}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-virtual {p0}, Lrh3;->p()Lpx7;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/android/MainActivity;->f1:Lqle;
+    invoke-static {p1}, Ledi;->c(Lpx7;)Lbx7;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/android/MainActivity;->a1:Lgye;
 
     return-void
 .end method
@@ -1031,153 +1248,166 @@
 .method public final onDestroy()V
     .locals 4
 
-    invoke-super {p0}, Lu5;->onDestroy()V
+    invoke-super {p0}, Lj6;->onDestroy()V
 
-    iget-object v0, p0, Lone/me/android/MainActivity;->a1:Laa1;
+    iget-object v0, p0, Lone/me/android/MainActivity;->V0:Lta1;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     const-string v2, "PipAppController"
 
     const-string v3, "CallIndicatorAppController dettached"
 
-    invoke-static {v2, v3}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v1, v0, Laa1;->w0:Lone/me/android/MainActivity;
+    iput-object v1, v0, Lta1;->Z:Lone/me/android/MainActivity;
 
-    invoke-static {}, Laa1;->c()Li8d;
+    invoke-static {}, Lta1;->d()Lyid;
 
     move-result-object v2
 
-    iget-object v3, v0, Laa1;->C0:Ljava/lang/Object;
+    iget-object v3, v0, Lta1;->z0:Ljava/lang/Object;
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lw91;
-
-    invoke-virtual {v2, v3}, Li8d;->L(Lf04;)V
-
-    iget-object v2, v0, Laa1;->a:Lst1;
-
-    iget-object v3, v0, Laa1;->B0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lv91;
+    check-cast v3, Loa1;
 
-    check-cast v2, Lhu1;
+    invoke-virtual {v2, v3}, Lyid;->L(Lg24;)V
 
-    iget-object v2, v2, Lhu1;->M:Ljava/util/LinkedHashSet;
+    iget-object v2, v0, Lta1;->a:Lpu1;
+
+    iget-object v3, v0, Lta1;->y0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lna1;
+
+    check-cast v2, Lev1;
+
+    iget-object v2, v2, Lev1;->X0:Ljava/util/LinkedHashSet;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v2, v0, Laa1;->o:Lav1;
+    iget-object v2, v0, Lta1;->d:Lwv1;
 
-    invoke-virtual {v2, v0}, Lav1;->c(Lfp1;)V
+    invoke-virtual {v2, v0}, Lwv1;->c(Lbq1;)V
+
+    iget-object v2, v0, Lta1;->x0:Lgye;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v1}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    sget-object v0, Lyka;->a:Lyka;
+    iput-object v1, v0, Lta1;->x0:Lgye;
 
-    invoke-virtual {v0}, Lyka;->o()Lhma;
+    :cond_1
+    sget-object v0, Lusa;->a:Lusa;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Lhma;->f()Lo8d;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lo8d;->a0()Li8d;
+    invoke-virtual {v0}, Lusa;->j()Ldua;
 
     move-result-object v2
 
-    iget-object v3, p0, Lone/me/android/MainActivity;->e1:Ln73;
-
-    invoke-virtual {v2, v3}, Li8d;->L(Lf04;)V
-
-    invoke-virtual {v0}, Lyka;->o()Lhma;
+    invoke-virtual {v2}, Ldua;->f()Lejd;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lhma;->f()Lo8d;
+    check-cast v2, Lone/me/android/root/RootController;
+
+    invoke-virtual {v2}, Lone/me/android/root/RootController;->G0()Lyid;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lo8d;->I()Li8d;
+    iget-object v3, p0, Lone/me/android/MainActivity;->Z0:Lj93;
+
+    invoke-virtual {v2, v3}, Lyid;->L(Lg24;)V
+
+    invoke-virtual {v0}, Lusa;->j()Ldua;
 
     move-result-object v2
 
-    invoke-virtual {v2, v3}, Li8d;->L(Lf04;)V
+    invoke-virtual {v2}, Ldua;->f()Lejd;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    move-result-object v2
+
+    check-cast v2, Lone/me/android/root/RootController;
+
+    invoke-virtual {v2}, Lone/me/android/root/RootController;->F0()Lyid;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Lyid;->L(Lg24;)V
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    const-class v2, Lf87;
+    const-class v2, Led7;
 
-    invoke-virtual {v0, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lf87;
+    check-cast v0, Led7;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lf87;->b:Le87;
+    sget-object v0, Led7;->b:Ldd7;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    iput-object v1, v0, Le87;->a:Lone/me/android/MainActivity;
+    iput-object v1, v0, Ldd7;->a:Lone/me/android/MainActivity;
 
-    iput-object v1, v0, Le87;->b:La4d;
+    iput-object v1, v0, Ldd7;->b:Luoe;
 
-    iput-object v1, v0, Le87;->d:Lmf2;
+    iput-object v1, v0, Ldd7;->d:Lrga;
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
 .method public final onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 4
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Laa1;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    check-cast v0, Laa1;
+    const-class v1, Lta1;
 
-    iget-object v0, v0, Laa1;->X:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ld81;
+    check-cast v0, Lta1;
 
-    iget-object v1, v0, Ld81;->a:Lbp7;
+    iget-object v0, v0, Lta1;->o:Lru7;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt81;
+
+    iget-object v1, v0, Lt81;->a:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lst1;
+    check-cast v1, Lpu1;
 
-    check-cast v1, Lhu1;
+    check-cast v1, Lev1;
 
-    invoke-virtual {v1}, Lhu1;->u()Z
+    invoke-virtual {v1}, Lev1;->u()Z
 
     move-result v1
 
@@ -1219,7 +1449,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {v0}, Ld81;->a()V
+    invoke-virtual {v0}, Lt81;->a()V
 
     goto :goto_2
 
@@ -1245,10 +1475,10 @@
 
     const-string v1, "HandleSilenceMode"
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
-    invoke-super {p0, p1, p2}, Lu5;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lj6;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -1264,7 +1494,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lox9;->j:Lqpa;
+    sget-object v1, Lcuh;->b:Lnxa;
 
     const/4 v2, 0x0
 
@@ -1273,9 +1503,9 @@
     goto :goto_0
 
     :cond_0
-    sget-object v3, Ly38;->o:Ly38;
+    sget-object v3, La98;->d:La98;
 
-    invoke-virtual {v1, v3}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v1, v3}, Lnxa;->b(La98;)Z
 
     move-result v4
 
@@ -1287,45 +1517,45 @@
 
     const-string v5, "@deep_link: onNewIntent: intent.data = "
 
-    invoke-static {v4, v5}, Lhqd;->j(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v3, v0, v4, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lone/me/android/MainActivity;->d1:Ls88;
+    iget-object v0, p0, Lone/me/android/MainActivity;->Y0:Lse8;
 
-    invoke-virtual {p0}, Lone/me/android/MainActivity;->b0()Z
+    invoke-virtual {p0}, Lone/me/android/MainActivity;->S()Z
 
     move-result v1
 
-    iput-boolean v1, v0, Ls88;->i:Z
+    iput-boolean v1, v0, Lse8;->i:Z
 
-    invoke-super {p0, p1}, Lu5;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Lj6;->onNewIntent(Landroid/content/Intent;)V
 
-    invoke-static {p0}, Lv63;->J(Lu5;)Lone/me/android/root/RootController;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lv63;->h(Lone/me/android/root/RootController;Landroid/content/Intent;)V
-
-    sget-object v0, Lyka;->a:Lyka;
-
-    invoke-virtual {v0}, Lyka;->o()Lhma;
+    invoke-static {p0}, Lkxi;->c(Lj6;)Lone/me/android/root/RootController;
 
     move-result-object v0
 
-    new-instance v1, Lzxa;
+    invoke-static {v0, p1}, Lkxi;->a(Lone/me/android/root/RootController;Landroid/content/Intent;)V
 
-    const/16 v3, 0x10
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-direct {v1, p0, v3, p1}, Lzxa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0}, Lusa;->j()Ldua;
 
-    invoke-virtual {v0, v1}, Lhma;->g(Lve6;)V
+    move-result-object v0
 
-    invoke-static {p0, p1}, Lv63;->w0(Lu5;Landroid/content/Intent;)V
+    new-instance v1, Lb6b;
+
+    const/16 v3, 0x11
+
+    invoke-direct {v1, p0, v3, p1}, Lb6b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Ldua;->g(Loi6;)V
+
+    invoke-static {p0, p1}, Lkxi;->f(Lj6;Landroid/content/Intent;)V
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->setIntent(Landroid/content/Intent;)V
 
@@ -1335,13 +1565,13 @@
 .method public final onPause()V
     .locals 14
 
-    invoke-super {p0}, Lu5;->onPause()V
+    invoke-super {p0}, Lj6;->onPause()V
 
-    sget-object v0, Lfd7;->a:Lxt9;
+    sget-object v0, Loi7;->a:Ld1a;
 
-    iget-object v1, v0, Lxt9;->b:[Ljava/lang/Object;
+    iget-object v1, v0, Ld1a;->b:[Ljava/lang/Object;
 
-    iget-object v0, v0, Lxt9;->a:[J
+    iget-object v0, v0, Ld1a;->a:[J
 
     array-length v2, v0
 
@@ -1403,11 +1633,11 @@
 
     aget-object v10, v1, v10
 
-    check-cast v10, Lepe;
+    check-cast v10, Ls1f;
 
     const/4 v11, 0x1
 
-    iput-boolean v11, v10, Lepe;->g:Z
+    iput-boolean v11, v10, Ls1f;->g:Z
 
     :cond_0
     shr-long/2addr v5, v8
@@ -1433,15 +1663,15 @@
 .method public final onPictureInPictureModeChanged(ZLandroid/content/res/Configuration;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Ltf3;->onPictureInPictureModeChanged(ZLandroid/content/res/Configuration;)V
+    invoke-super {p0, p1, p2}, Lrh3;->onPictureInPictureModeChanged(ZLandroid/content/res/Configuration;)V
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lone/me/android/MainActivity;->a1:Laa1;
+    iget-object p1, p0, Lone/me/android/MainActivity;->V0:Lta1;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Laa1;->g()V
+    invoke-virtual {p1}, Lta1;->i()V
 
     :cond_0
     return-void
@@ -1450,44 +1680,44 @@
 .method public final onResume()V
     .locals 4
 
-    invoke-super {p0}, Lu5;->onResume()V
+    invoke-super {p0}, Lj6;->onResume()V
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lf87;
-
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v1
 
-    check-cast v1, Lf87;
+    const-class v2, Led7;
+
+    invoke-virtual {v1, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Led7;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lf87;->b:Le87;
+    sget-object v1, Led7;->b:Ldd7;
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Ley3;
+    new-instance v2, Lf04;
 
-    const/16 v3, 0x1c
+    const/16 v3, 0x1b
 
-    invoke-direct {v2, v3, v1}, Ley3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lf04;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Lyka;->i()Lb87;
+    invoke-virtual {v0}, Lusa;->f()Lad7;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iput-object v2, v0, Lb87;->k:Lve6;
+    iput-object v2, v0, Lad7;->k:Loi6;
 
     :cond_0
-    invoke-static {}, Lfd7;->a()V
+    invoke-static {}, Loi7;->a()V
 
     invoke-virtual {p0}, Landroid/app/Activity;->isInPictureInPictureMode()Z
 
@@ -1495,11 +1725,11 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lone/me/android/MainActivity;->a1:Laa1;
+    iget-object v0, p0, Lone/me/android/MainActivity;->V0:Lta1;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Laa1;->g()V
+    invoke-virtual {v0}, Lta1;->i()V
 
     :cond_1
     return-void
@@ -1508,9 +1738,9 @@
 .method public final onStart()V
     .locals 0
 
-    invoke-super {p0}, Lu5;->onStart()V
+    invoke-super {p0}, Lj6;->onStart()V
 
-    invoke-virtual {p0}, Lone/me/android/MainActivity;->a0()V
+    invoke-virtual {p0}, Lone/me/android/MainActivity;->R()V
 
     return-void
 .end method
@@ -1518,29 +1748,29 @@
 .method public final onStop()V
     .locals 3
 
-    invoke-super {p0}, Lu5;->onStop()V
+    invoke-super {p0}, Lj6;->onStop()V
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lf87;
-
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v1
 
-    check-cast v1, Lf87;
+    const-class v2, Led7;
+
+    invoke-virtual {v1, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Led7;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lf87;->b:Le87;
+    sget-object v1, Led7;->b:Ldd7;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lyka;->i()Lb87;
+    invoke-virtual {v0}, Lusa;->f()Lad7;
 
     move-result-object v0
 
@@ -1548,7 +1778,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lb87;->k:Lve6;
+    iput-object v1, v0, Lad7;->k:Loi6;
 
     :cond_0
     return-void
@@ -1557,13 +1787,13 @@
 .method public final onUserLeaveHint()V
     .locals 1
 
-    invoke-super {p0}, Lu5;->onUserLeaveHint()V
+    invoke-super {p0}, Lj6;->onUserLeaveHint()V
 
-    iget-object v0, p0, Lone/me/android/MainActivity;->a1:Laa1;
+    iget-object v0, p0, Lone/me/android/MainActivity;->V0:Lta1;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Laa1;->i()V
+    invoke-virtual {v0}, Lta1;->k()V
 
     :cond_0
     return-void
@@ -1576,7 +1806,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lfd7;->a()V
+    invoke-static {}, Loi7;->a()V
 
     :cond_0
     return-void

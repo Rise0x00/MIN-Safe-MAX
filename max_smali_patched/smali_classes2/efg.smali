@@ -2,30 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgfg;
 
-# instance fields
-.field public final a:Lbp7;
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lbp7;
+# static fields
+.field public static final a:Lefg;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lefg;
 
-    iput-object p1, p0, Lefg;->a:Lbp7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lefg;->b:Lbp7;
-
-    iput-object p3, p0, Lefg;->c:Lbp7;
-
-    iput-object p4, p0, Lefg;->d:Lbp7;
+    sput-object v0, Lefg;->a:Lefg;
 
     return-void
 .end method

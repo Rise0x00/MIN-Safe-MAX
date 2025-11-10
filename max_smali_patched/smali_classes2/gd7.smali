@@ -1,51 +1,23 @@
-.class public abstract synthetic Lgd7;
-.super Ljava/lang/Object;
+.class public final Lgd7;
+.super Ladi;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final c:Lgd7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Lgd7;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const/16 v1, 0xb
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Lgd7;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lgd7;->c:Lgd7;
 
     return-void
 .end method

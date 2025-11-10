@@ -1,150 +1,102 @@
-.class public final Lj3h;
-.super Lm3f;
+.class public final synthetic Lj3h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ln3h;
-
-.field public final synthetic w0:Ld3h;
-
-.field public final synthetic x0:Lz2h;
+.field public final synthetic b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lz2h;Ld3h;Ln3h;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/view/WarningLinkBottomSheet;I)V
     .locals 0
 
-    iput-object p3, p0, Lj3h;->Z:Ln3h;
+    iput p2, p0, Lj3h;->a:I
 
-    iput-object p2, p0, Lj3h;->w0:Ld3h;
+    iput-object p1, p0, Lj3h;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
-    iput-object p1, p0, Lj3h;->x0:Lz2h;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lj3h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj3h;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lj3h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    new-instance v0, Lj3h;
+    iget p1, p0, Lj3h;->a:I
 
-    iget-object v1, p0, Lj3h;->w0:Ld3h;
-
-    iget-object v2, p0, Lj3h;->x0:Lz2h;
-
-    iget-object v3, p0, Lj3h;->Z:Ln3h;
-
-    invoke-direct {v0, v2, v1, v3, p2}, Lj3h;-><init>(Lz2h;Ld3h;Ln3h;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lj3h;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lj3h;->X:I
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    iget-object v2, p0, Lj3h;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
-    if-ne v0, v1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget-object p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:[Les7;
+
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->D0:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lk3h;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {p1, v1, v3}, Lk3h;->a(II)V
+
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->G0:Z
+
+    invoke-virtual {v2, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->B0:Ljava/lang/String;
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v3, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->C0:Lru7;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
-    throw p1
+    check-cast v3, Len9;
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v3, p1}, Len9;->H(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lj3h;->Y:Ljava/lang/Object;
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->D0:Lru7;
 
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lj3h;->Z:Ln3h;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Ln3h;->f(Ljava/lang/Throwable;)Lsk7;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Ln3h;->g()Lec3;
-
-    move-result-object v2
-
-    iget-object v3, v0, Ln3h;->e:Llu0;
-
-    iget-object p1, p0, Lj3h;->x0:Lz2h;
-
-    iget-object v6, p1, Lz2h;->b:Ljava/lang/String;
-
-    iput v1, p0, Lj3h;->X:I
-
-    iget-object v5, p0, Lj3h;->w0:Ld3h;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lec3;->a(Ln62;Lsk7;Lnxg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    check-cast p1, Lk3h;
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {p1, v1, v1}, Lk3h;->a(II)V
 
-    return-object v0
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->G0:Z
 
-    :cond_2
+    invoke-virtual {v2, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
+
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    return-void
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

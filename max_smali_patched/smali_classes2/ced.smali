@@ -1,100 +1,84 @@
 .class public final Lced;
-.super Lmo7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p1, p0, Lced;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lced;->b:Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    iput-wide p1, p0, Lced;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lced;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrlg;
-
-    instance-of v1, v0, Lzs6;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lzs6;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Lced;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    invoke-interface {v0}, Lzs6;->j()Lys9;
+    if-nez v1, :cond_1
 
-    move-result-object v0
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    sget-object v0, Lw44;->b:Lw44;
+    check-cast p1, Lced;
 
-    :goto_1
-    return-object v0
+    iget-wide v3, p0, Lced;->a:J
 
-    :pswitch_1
-    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
+    iget-wide v5, p1, Lced;->a:J
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lced;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "RestrictionsInfo(expiration="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lced;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lrlg;
-
-    invoke-interface {v0}, Lrlg;->u()Lqlg;
-
-    move-result-object v0
-
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

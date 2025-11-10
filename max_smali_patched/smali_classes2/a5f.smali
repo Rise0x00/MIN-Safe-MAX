@@ -1,71 +1,39 @@
-.class public final synthetic La5f;
+.class public final La5f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lpgd;
 
-.field public final synthetic b:Lc5f;
+.field public final b:Lfi;
+
+.field public final c:Lhgd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc5f;I)V
-    .locals 0
-
-    iput p2, p0, La5f;->a:I
-
-    iput-object p1, p0, La5f;->b:Lc5f;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, La5f;->a:Lpgd;
+
+    new-instance v0, Lfi;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lpgd;I)V
+
+    iput-object v0, p0, La5f;->b:Lfi;
+
+    new-instance v0, Lhgd;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
+
+    iput-object v0, p0, La5f;->c:Lhgd;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, La5f;->a:I
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    check-cast p2, Ljava/lang/Float;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
-
-    move-result p2
-
-    iget-object v0, p0, La5f;->b:Lc5f;
-
-    invoke-static {v0, p1, p2}, Lc5f;->b(Lc5f;FF)V
-
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p2, p0, La5f;->b:Lc5f;
-
-    invoke-static {p2, p1}, Lc5f;->a(Lc5f;F)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

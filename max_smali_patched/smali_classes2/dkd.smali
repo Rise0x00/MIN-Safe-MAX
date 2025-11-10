@@ -1,49 +1,37 @@
-.class public final Ldkd;
-.super Lnz3;
+.class public abstract Ldkd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lekd;
+# static fields
+.field public static final a:I
 
-.field public Y:I
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lekd;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Ldkd;->X:Lekd;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Ldkd;->o:Ljava/lang/Object;
+    sget v0, Lhmc;->ic_file_24:I
 
-    iget p1, p0, Ldkd;->Y:I
+    sput v0, Ldkd;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lhmc;->ic_geolocation_24:I
 
-    or-int/2addr p1, v0
+    sput v0, Ldkd;->b:I
 
-    iput p1, p0, Ldkd;->Y:I
+    sget v0, Lhmc;->ic_microphone_24:I
 
-    iget-object p1, p0, Ldkd;->X:Lekd;
+    sput v0, Ldkd;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lhmc;->picture_plus_outline_24:I
 
-    invoke-static {p1, v0, p0}, Lekd;->b(Lekd;Ljava/lang/Throwable;Lnz3;)Ljava/lang/Object;
+    sput v0, Ldkd;->d:I
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,143 +1,112 @@
-.class public final Ls19;
-.super Lb7;
+.class public final synthetic Ls19;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ActionProvider$VisibilityListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Lrxd;
+.field public final synthetic a:I
 
-.field public final d:Landroid/view/ActionProvider;
+.field public final synthetic b:Lbp4;
+
+.field public final synthetic c:Lx19;
+
+.field public final synthetic d:Lj48;
+
+.field public final synthetic o:Lmt8;
 
 
 # direct methods
-.method public constructor <init>(Lv19;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method public synthetic constructor <init>(Lbp4;Lx19;Lj48;Lmt8;I)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lb7;-><init>(Landroid/content/Context;)V
+    iput p5, p0, Ls19;->a:I
 
-    iput-object p3, p0, Ls19;->d:Landroid/view/ActionProvider;
+    iput-object p1, p0, Ls19;->b:Lbp4;
+
+    iput-object p2, p0, Ls19;->c:Lx19;
+
+    iput-object p3, p0, Ls19;->d:Lj48;
+
+    iput-object p4, p0, Ls19;->o:Lmt8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
+    iget v0, p0, Ls19;->a:I
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Ls19;->b:Lbp4;
 
-    return v0
-.end method
+    iget v1, v0, Lbp4;->a:I
 
-.method public final b()Z
-    .locals 1
+    iget-object v0, v0, Lbp4;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
+    check-cast v0, Ln19;
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->isVisible()Z
+    iget-object v2, p0, Ls19;->c:Lx19;
 
-    move-result v0
+    iget-object v3, p0, Ls19;->d:Lj48;
 
-    return v0
-.end method
+    iget-object v4, p0, Ls19;->o:Lmt8;
 
-.method public final c()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final d(Lr19;)Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f(Ltye;)V
-    .locals 1
-
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+    invoke-interface {v2, v1, v0, v3, v4}, Lx19;->b(ILn19;Lj48;Lmt8;)V
 
     return-void
-.end method
 
-.method public final g()Z
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Ls19;->b:Lbp4;
 
-    iget-object v0, p0, Ls19;->d:Landroid/view/ActionProvider;
+    iget v1, v0, Lbp4;->a:I
 
-    invoke-virtual {v0}, Landroid/view/ActionProvider;->overridesItemVisibility()Z
+    iget-object v0, v0, Lbp4;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Ln19;
 
-    return v0
-.end method
+    iget-object v2, p0, Ls19;->c:Lx19;
 
-.method public final h(Lrxd;)V
-    .locals 0
+    iget-object v3, p0, Ls19;->d:Lj48;
 
-    iput-object p1, p0, Ls19;->c:Lrxd;
+    iget-object v4, p0, Ls19;->o:Lmt8;
 
-    iget-object p1, p0, Ls19;->d:Landroid/view/ActionProvider;
-
-    invoke-virtual {p1, p0}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
+    invoke-interface {v2, v1, v0, v3, v4}, Lx19;->I(ILn19;Lj48;Lmt8;)V
 
     return-void
-.end method
 
-.method public final onActionProviderVisibilityChanged(Z)V
-    .locals 1
+    :pswitch_1
+    iget-object v0, p0, Ls19;->b:Lbp4;
 
-    iget-object p1, p0, Ls19;->c:Lrxd;
+    iget v1, v0, Lbp4;->a:I
 
-    if-eqz p1, :cond_0
+    iget-object v0, v0, Lbp4;->c:Ljava/lang/Object;
 
-    iget-object p1, p1, Lrxd;->b:Ljava/lang/Object;
+    check-cast v0, Ln19;
 
-    check-cast p1, Lr19;
+    iget-object v2, p0, Ls19;->c:Lx19;
 
-    iget-object p1, p1, Lr19;->C0:Ln19;
+    iget-object v3, p0, Ls19;->d:Lj48;
 
-    const/4 v0, 0x1
+    iget-object v4, p0, Ls19;->o:Lmt8;
 
-    iput-boolean v0, p1, Ln19;->w0:Z
+    invoke-interface {v2, v1, v0, v3, v4}, Lx19;->J(ILn19;Lj48;Lmt8;)V
 
-    invoke-virtual {p1, v0}, Ln19;->p(Z)V
-
-    :cond_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

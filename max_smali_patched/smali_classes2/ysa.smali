@@ -1,19 +1,66 @@
-.class public abstract Lysa;
+.class public final synthetic Lysa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-# static fields
-.field public static final a:I
+
+# instance fields
+.field public final synthetic a:Lbta;
+
+.field public final synthetic b:Lcom/google/android/material/chip/Chip;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/CharSequence;
+
+.field public final synthetic f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lbta;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
+    .locals 0
 
-    sget v0, Lhfc;->dynamic_font_sizes:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lysa;->a:I
+    iput-object p1, p0, Lysa;->a:Lbta;
+
+    iput-object p2, p0, Lysa;->b:Lcom/google/android/material/chip/Chip;
+
+    iput-wide p3, p0, Lysa;->c:J
+
+    iput-wide p5, p0, Lysa;->d:J
+
+    iput-object p7, p0, Lysa;->e:Ljava/lang/CharSequence;
+
+    iput-object p8, p0, Lysa;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 9
+
+    iget-object v7, p0, Lysa;->e:Ljava/lang/CharSequence;
+
+    iget-object v8, p0, Lysa;->f:Ljava/lang/String;
+
+    iget-object v0, p0, Lysa;->a:Lbta;
+
+    iget-object v1, p0, Lysa;->b:Lcom/google/android/material/chip/Chip;
+
+    iget-wide v3, p0, Lysa;->c:J
+
+    iget-wide v5, p0, Lysa;->d:J
+
+    move v2, p2
+
+    invoke-virtual/range {v0 .. v8}, Lbta;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

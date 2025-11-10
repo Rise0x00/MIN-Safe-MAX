@@ -1,249 +1,73 @@
-.class public final Lcle;
-.super Lale;
+.class public final enum Lcle;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final l:J
+# static fields
+.field public static final enum a:Lcle;
 
-.field public final m:J
+.field public static final enum b:Lcle;
 
-.field public final n:J
-
-.field public final o:J
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public final s:J
-
-.field public final t:Ljava/lang/Double;
-
-.field public final u:Ljava/lang/Double;
-
-.field public final v:J
-
-.field public final w:J
+.field public static final synthetic c:[Lcle;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/String;JLjava/lang/Double;Ljava/lang/Double;Lkw8;JJ)V
-    .locals 12
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v1, 0x2
+    new-instance v0, Lcle;
 
-    move-object v0, p0
+    const-string v1, "CLOCKWISE"
 
-    move-wide v2, p1
+    const/4 v2, 0x0
 
-    move-object v4, p3
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-object/from16 v5, p4
+    sput-object v0, Lcle;->a:Lcle;
 
-    move-object/from16 v6, p5
+    new-instance v1, Lcle;
 
-    move-object/from16 v7, p6
+    const-string v2, "COUNTERCLOCKWISE"
 
-    move-wide/from16 v8, p7
+    const/4 v3, 0x1
 
-    move-object/from16 v10, p23
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-object/from16 v11, p28
+    sput-object v1, Lcle;->b:Lcle;
 
-    invoke-direct/range {v0 .. v11}, Lale;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lkw8;)V
+    filled-new-array {v0, v1}, [Lcle;
 
-    move-wide/from16 p1, p9
+    move-result-object v0
 
-    iput-wide p1, p0, Lcle;->l:J
-
-    move-wide/from16 p1, p11
-
-    iput-wide p1, p0, Lcle;->m:J
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Lcle;->n:J
-
-    move-wide/from16 p1, p15
-
-    iput-wide p1, p0, Lcle;->o:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lcle;->p:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lcle;->q:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lcle;->r:J
-
-    move-wide/from16 p1, p24
-
-    iput-wide p1, p0, Lcle;->s:J
-
-    move-object/from16 p1, p26
-
-    iput-object p1, p0, Lcle;->t:Ljava/lang/Double;
-
-    move-object/from16 p1, p27
-
-    iput-object p1, p0, Lcle;->u:Ljava/lang/Double;
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Lcle;->v:J
-
-    move-wide/from16 p1, p31
-
-    iput-wide p1, p0, Lcle;->w:J
+    sput-object v0, Lcle;->c:[Lcle;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lcle;
+    .locals 1
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    const-class v0, Lcle;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const-string v1, "VideoRecv{ssrc="
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p0, Lcle;
 
-    iget-wide v1, p0, Lele;->c:J
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public static values()[Lcle;
+    .locals 1
 
-    const-string v1, ", transportId=\'"
+    sget-object v0, Lcle;->c:[Lcle;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lele;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', trackId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lele;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', packetsReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->h:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", packetsLost="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->i:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bytesReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->j:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", jitterBufferMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lale;->k:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", nacksSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->l:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", pliSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->m:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", firSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->n:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDecoded="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->p:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameHeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->q:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameWidth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->r:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lele;->g:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDropped="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcle;->s:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lvpb;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lcle;
 
     return-object v0
 .end method

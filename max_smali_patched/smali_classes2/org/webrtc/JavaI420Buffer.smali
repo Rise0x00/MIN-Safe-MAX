@@ -146,11 +146,11 @@
 
     new-instance v2, Lorg/webrtc/JavaI420Buffer;
 
-    new-instance v11, Lfi7;
+    new-instance v11, Lsn7;
 
     const/4 v1, 0x0
 
-    invoke-direct {v11, v1, v0}, Lfi7;-><init>(ILjava/nio/ByteBuffer;)V
+    invoke-direct {v11, v1, v0}, Lsn7;-><init>(ILjava/nio/ByteBuffer;)V
 
     move v6, p0
 
@@ -193,7 +193,7 @@
 
     const-string v0, " bytes, but was "
 
-    invoke-static {p3, p2, p0, v0}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2, p0, v0}, Lok7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -307,13 +307,13 @@
 
     move-result v7
 
-    new-instance v8, Li56;
+    new-instance v8, Lh96;
 
-    const/16 v9, 0xb
+    const/16 v9, 0xa
 
     move-object/from16 v10, p0
 
-    invoke-direct {v8, v9, v10}, Li56;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v8, v9, v10}, Lh96;-><init>(ILjava/lang/Object;)V
 
     invoke-static/range {v0 .. v8}, Lorg/webrtc/JavaI420Buffer;->wrap(IILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/nio/ByteBuffer;ILjava/lang/Runnable;)Lorg/webrtc/JavaI420Buffer;
 

@@ -1,163 +1,159 @@
-.class public abstract Lata;
-.super Ljava/lang/Object;
+.class public final Lata;
+.super Landroid/text/method/TextKeyListener;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+# instance fields
+.field public final synthetic a:Lbta;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lbta;)V
     .locals 1
 
-    sget v0, Lpcc;->emoji_sprite_0:I
+    iput-object p1, p0, Lata;->a:Lbta;
 
-    sput v0, Lata;->a:I
+    sget-object p1, Landroid/text/method/TextKeyListener$Capitalize;->NONE:Landroid/text/method/TextKeyListener$Capitalize;
 
-    sget v0, Lpcc;->emoji_sprite_1:I
+    const/4 v0, 0x0
 
-    sput v0, Lata;->b:I
-
-    sget v0, Lpcc;->emoji_sprite_10:I
-
-    sput v0, Lata;->c:I
-
-    sget v0, Lpcc;->emoji_sprite_11:I
-
-    sput v0, Lata;->d:I
-
-    sget v0, Lpcc;->emoji_sprite_12:I
-
-    sput v0, Lata;->e:I
-
-    sget v0, Lpcc;->emoji_sprite_13:I
-
-    sput v0, Lata;->f:I
-
-    sget v0, Lpcc;->emoji_sprite_14:I
-
-    sput v0, Lata;->g:I
-
-    sget v0, Lpcc;->emoji_sprite_15:I
-
-    sput v0, Lata;->h:I
-
-    sget v0, Lpcc;->emoji_sprite_16:I
-
-    sput v0, Lata;->i:I
-
-    sget v0, Lpcc;->emoji_sprite_17:I
-
-    sput v0, Lata;->j:I
-
-    sget v0, Lpcc;->emoji_sprite_18:I
-
-    sput v0, Lata;->k:I
-
-    sget v0, Lpcc;->emoji_sprite_19:I
-
-    sput v0, Lata;->l:I
-
-    sget v0, Lpcc;->emoji_sprite_2:I
-
-    sput v0, Lata;->m:I
-
-    sget v0, Lpcc;->emoji_sprite_20:I
-
-    sput v0, Lata;->n:I
-
-    sget v0, Lpcc;->emoji_sprite_21:I
-
-    sput v0, Lata;->o:I
-
-    sget v0, Lpcc;->emoji_sprite_22:I
-
-    sput v0, Lata;->p:I
-
-    sget v0, Lpcc;->emoji_sprite_23:I
-
-    sput v0, Lata;->q:I
-
-    sget v0, Lpcc;->emoji_sprite_24:I
-
-    sput v0, Lata;->r:I
-
-    sget v0, Lpcc;->emoji_sprite_3:I
-
-    sput v0, Lata;->s:I
-
-    sget v0, Lpcc;->emoji_sprite_4:I
-
-    sput v0, Lata;->t:I
-
-    sget v0, Lpcc;->emoji_sprite_5:I
-
-    sput v0, Lata;->u:I
-
-    sget v0, Lpcc;->emoji_sprite_6:I
-
-    sput v0, Lata;->v:I
-
-    sget v0, Lpcc;->emoji_sprite_7:I
-
-    sput v0, Lata;->w:I
-
-    sget v0, Lpcc;->emoji_sprite_8:I
-
-    sput v0, Lata;->x:I
-
-    sget v0, Lpcc;->emoji_sprite_9:I
-
-    sput v0, Lata;->y:I
+    invoke-direct {p0, p1, v0}, Landroid/text/method/TextKeyListener;-><init>(Landroid/text/method/TextKeyListener$Capitalize;Z)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final clearMetaKeyState(Landroid/view/View;Landroid/text/Editable;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    .locals 3
+
+    const/16 v0, 0x43
+
+    if-ne p3, v0, :cond_2
+
+    iget-object v0, p0, Lata;->a:Lbta;
+
+    invoke-virtual {v0}, Lbta;->getEditText()Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Lbta;->C0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object p1, v0, Lbta;->C0:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lab3;->I(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {p2}, Landroid/widget/CompoundButton;->isChecked()Z
+
+    move-result p2
+
+    const/4 p3, 0x1
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {v0}, Lbta;->getCallback()Lzsa;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Ljava/lang/Number;
+
+    invoke-virtual {p4}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    check-cast p2, Lihd;
+
+    invoke-virtual {p2, v1, v2}, Lihd;->v(J)V
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    invoke-virtual {v0, p1, p2}, Lbta;->c(J)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {p1, p3}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
+
+    :goto_0
+    return p3
+
+    :cond_2
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/text/method/TextKeyListener;->onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final onKeyOther(Landroid/view/View;Landroid/text/Editable;Landroid/view/KeyEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

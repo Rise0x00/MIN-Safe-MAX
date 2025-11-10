@@ -1,116 +1,200 @@
-.class public final Lhu4;
+.class public final synthetic Lhu4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk3f;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lo10;
+.field public final synthetic b:Lju4;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;)V
+.method public synthetic constructor <init>(Lju4;I)V
     .locals 0
 
+    iput p2, p0, Lhu4;->a:I
+
+    iput-object p1, p0, Lhu4;->b:Lju4;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput-object p2, p0, Lhu4;->b:Lo10;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(FJJLnz3;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    new-instance p2, Ljava/lang/Float;
+    iget v0, p0, Lhu4;->a:I
 
-    invoke-direct {p2, p1}, Ljava/lang/Float;-><init>(F)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iget-object v0, p0, Lhu4;->b:Lju4;
 
-    iget-object p3, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->I0:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v1, v0, Lar1;->n:Lvz0;
 
-    iget-object p4, p0, Lhu4;->b:Lo10;
+    if-eqz v1, :cond_0
 
-    iget-object p4, p4, Lo10;->d:Ln10;
-
-    iget-wide p4, p4, Ln10;->a:J
-
-    new-instance v0, Ljava/lang/Long;
-
-    invoke-direct {v0, p4, p5}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p3, v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1, p6}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
+    invoke-virtual {v1, v0}, Lvz0;->B(Lar1;)V
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v1, v0, Lju4;->I:Lwpe;
 
-    return-object p1
-.end method
+    new-instance v2, Llzf;
 
-.method public final e(Ljava/io/File;Lnz3;)Ljava/lang/Object;
-    .locals 4
+    iget-wide v3, v0, Lar1;->t:J
 
-    iget-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    const/4 v0, 0x1
 
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->I0:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {v2, v3, v4, v0}, Llzf;-><init>(JI)V
 
-    iget-object v1, p0, Lhu4;->b:Lo10;
+    invoke-virtual {v1, v2}, Lwpe;->f(Llzf;)V
 
-    iget-object v1, v1, Lo10;->d:Ln10;
+    return-void
 
-    iget-wide v1, v1, Ln10;->a:J
+    :pswitch_0
+    iget-object v0, p0, Lhu4;->b:Lju4;
 
-    new-instance v3, Ljava/lang/Long;
+    invoke-virtual {v0}, Lar1;->F()Z
 
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    move-result v1
 
-    new-instance v1, Ljava/lang/Float;
+    if-eqz v1, :cond_4
 
-    const/high16 v2, 0x42c80000    # 100.0f
+    iget-object v1, v0, Lju4;->C:Ljava/util/HashMap;
 
-    invoke-direct {v1, v2}, Ljava/lang/Float;-><init>(F)V
+    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    invoke-virtual {v0, v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object v1
 
-    sget-object p2, Lf34;->a:Lf34;
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    if-ne p1, p2, :cond_0
+    move-result v2
 
-    return-object p1
+    if-eqz v2, :cond_4
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final getDownloadContext()Ljava/lang/String;
-    .locals 1
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lsh1;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lhgb;
+
+    invoke-virtual {v2}, Lhgb;->B()Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    move-result-object v2
+
+    sget-object v4, Lorg/webrtc/PeerConnection$IceConnectionState;->CONNECTED:Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v0, v3}, Lar1;->w(Lsh1;)Lwh1;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Lar1;->b:Z
+
+    iget-object v2, v0, Lar1;->e:Lfwc;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Lwh1;->k:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_0
+    const-string v3, "DIRECT_CONNECTION_TIMEOUT"
+
+    invoke-static {v2, v3, v1}, Lbt9;->d(Lfwc;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v0, Lar1;->n:Lvz0;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1, v0}, Lvz0;->B(Lar1;)V
+
+    :cond_3
+    iget-object v1, v0, Lju4;->I:Lwpe;
+
+    new-instance v2, Llzf;
+
+    iget-wide v3, v0, Lar1;->u:J
 
     const/4 v0, 0x0
 
-    return-object v0
+    invoke-direct {v2, v3, v4, v0}, Llzf;-><init>(JI)V
+
+    invoke-virtual {v1, v2}, Lwpe;->f(Llzf;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lhu4;->b:Lju4;
+
+    iget-object v1, v0, Lju4;->C:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lhgb;
+
+    invoke-virtual {v2}, Lhgb;->B()Lorg/webrtc/PeerConnection$IceConnectionState;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lju4;->W(Lhgb;Lorg/webrtc/PeerConnection$IceConnectionState;)V
+
+    goto :goto_1
+
+    :cond_5
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

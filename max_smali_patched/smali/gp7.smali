@@ -1,129 +1,74 @@
 .class public final Lgp7;
-.super Ljava/lang/Object;
+.super Ladi;
 .source "SourceFile"
 
-# interfaces
-.implements Lr6c;
+
+# static fields
+.field public static final c:Lgp7;
 
 
-# instance fields
-.field public volatile a:Ljava/util/Set;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public volatile b:Ljava/util/Set;
+    new-instance v0, Lgp7;
 
+    const/16 v1, 0xb
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
 
-    iget-object v0, p0, Lgp7;->b:Ljava/util/Set;
+    sput-object v0, Lgp7;->c:Lgp7;
 
-    if-nez v0, :cond_2
+    return-void
+.end method
 
-    monitor-enter p0
+.method public static R0(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lgp7;->b:Ljava/util/Set;
+    new-instance v0, Lsf4;
 
-    if-nez v0, :cond_1
+    invoke-direct {v0}, Lsf4;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    const-string v1, ":join"
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    iput-object v1, v0, Lsf4;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    const-string v1, "id"
 
-    move-result-object v0
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-object v0, p0, Lgp7;->b:Ljava/util/Set;
+    move-result-object p0
 
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-virtual {v0, p0, v1}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :try_start_1
-    iget-object v0, p0, Lgp7;->a:Ljava/util/Set;
+    const-string p0, "link"
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, p3, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string p0, "channel"
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p1, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string p0, "no_anim"
 
-    move-result-object v1
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    check-cast v1, Lr6c;
+    invoke-virtual {v0, p1, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lgp7;->b:Ljava/util/Set;
+    if-eqz p2, :cond_0
 
-    invoke-interface {v1}, Lr6c;->get()Ljava/lang/Object;
+    const-string p0, "title"
 
-    move-result-object v1
-
-    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
+    invoke-virtual {v0, p2, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lsf4;->a()Landroid/net/Uri;
 
-    iput-object v0, p0, Lgp7;->a:Ljava/util/Set;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object p0
 
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    :cond_1
-    :goto_2
-    monitor-exit p0
-
-    goto :goto_4
-
-    :goto_3
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v0
-
-    :cond_2
-    :goto_4
-    iget-object v0, p0, Lgp7;->b:Ljava/util/Set;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

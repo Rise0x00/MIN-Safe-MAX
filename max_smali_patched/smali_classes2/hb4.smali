@@ -1,134 +1,269 @@
 .class public final Lhb4;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lorg/webrtc/DataChannel;
 
-.field public final synthetic Y:Lib4;
+.field public final b:Lcwc;
 
-.field public final synthetic Z:Lem5;
+.field public final c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public final synthetic w0:Z
+.field public final d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+.field public final e:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lib4;Lem5;ZLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lorg/webrtc/DataChannel;Lcwc;)V
+    .locals 2
 
-    iput-object p1, p0, Lhb4;->Y:Lib4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhb4;->Z:Lem5;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput-boolean p3, p0, Lhb4;->w0:Z
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    const/4 p1, 0x1
+    iput-object v0, p0, Lhb4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lhb4;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lhb4;->e:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    iput-object p1, p0, Lhb4;->a:Lorg/webrtc/DataChannel;
+
+    iput-object p2, p0, Lhb4;->b:Lcwc;
+
+    new-instance p2, Ltz8;
+
+    const/16 v0, 0xc
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, p0, p1, v1, v0}, Ltz8;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {p1, p2}, Lorg/webrtc/DataChannel;->registerObserver(Lorg/webrtc/DataChannel$Observer;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final a(Lujd;)V
+    .locals 1
 
-    check-cast p1, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_0
 
-    new-instance v0, Lhb4;
+    iget-object v0, p0, Lhb4;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Lhb4;->Z:Lem5;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-boolean v2, p0, Lhb4;->w0:Z
+    return-void
 
-    iget-object v3, p0, Lhb4;->Y:Lib4;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v0, v3, v1, v2, p1}, Lhb4;-><init>(Lib4;Lem5;ZLkotlin/coroutines/Continuation;)V
+    const-string v0, "Illegal \'listener\' value: null"
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lhb4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final b()Z
+    .locals 2
 
-    iget v0, p0, Lhb4;->X:I
+    iget-object v0, p0, Lhb4;->a:Lorg/webrtc/DataChannel;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lorg/webrtc/DataChannel;->state()Lorg/webrtc/DataChannel$State;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
+
+    sget-object v1, Lorg/webrtc/DataChannel$State;->OPEN:Lorg/webrtc/DataChannel$State;
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c(Lujd;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lhb4;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Illegal \'listener\' value: null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final varargs d([Ljava/nio/ByteBuffer;)V
+    .locals 5
+
+    iget-object v0, p0, Lhb4;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lujd;
+
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v2, Lru/ok/android/webrtc/protocol/exceptions/RtcInternalHandleException;
+
+    invoke-direct {v2, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    const-string v1, "DataChannelRtcTransport"
+
+    const-string v3, "rtc.datachannel.listen.send"
+
+    iget-object v4, p0, Lhb4;->b:Lcwc;
+
+    invoke-interface {v4, v1, v3, v2}, Lcwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lhb4;->a:Lorg/webrtc/DataChannel;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v1, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lorg/webrtc/DataChannel;->sendMultiple(Z[Ljava/nio/ByteBuffer;)Z
 
-    throw p1
+    return-void
+.end method
+
+.method public final e(I[B)Z
+    .locals 5
+
+    if-eqz p2, :cond_2
+
+    iget-object v0, p0, Lhb4;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lujd;
+
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v2, Lru/ok/android/webrtc/protocol/exceptions/RtcInternalHandleException;
+
+    invoke-direct {v2, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    const-string v1, "DataChannelRtcTransport"
+
+    const-string v3, "rtc.datachannel.listen.send"
+
+    iget-object v4, p0, Lhb4;->b:Lcwc;
+
+    invoke-interface {v4, v1, v3, v2}, Lcwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    new-instance v0, Lorg/webrtc/DataChannel$Buffer;
+
+    const/4 v1, 0x2
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lhb4;->Y:Lib4;
+    :goto_1
+    invoke-direct {v0, p2, p1}, Lorg/webrtc/DataChannel$Buffer;-><init>(Ljava/nio/ByteBuffer;Z)V
 
-    iget-object v0, p1, Lib4;->g:Lza4;
+    iget-object p1, p0, Lhb4;->a:Lorg/webrtc/DataChannel;
 
-    iget-object v7, p0, Lhb4;->Z:Lem5;
+    invoke-virtual {p1, v0}, Lorg/webrtc/DataChannel;->send(Lorg/webrtc/DataChannel$Buffer;)Z
 
-    iget-wide v2, v7, Lem5;->a:J
+    move-result p1
 
-    move-wide v3, v2
-
-    new-instance v2, Lza4;
-
-    move-wide v4, v3
-
-    iget-boolean v3, v0, Lza4;->a:Z
-
-    move-wide v8, v4
-
-    iget-object v5, v0, Lza4;->e:Lit9;
-
-    invoke-virtual {v5, v8, v9}, Lit9;->a(J)Z
-
-    iget-boolean v6, v0, Lza4;->c:Z
-
-    iget-boolean v4, p0, Lhb4;->w0:Z
-
-    invoke-direct/range {v2 .. v7}, Lza4;-><init>(ZZLit9;ZLem5;)V
-
-    iput v1, p0, Lhb4;->X:I
-
-    invoke-static {p1, v2, p0}, Lib4;->a(Lib4;Lza4;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return p1
 
     :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    return-object p1
+    const-string p2, "Illegal \'command\' value: null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

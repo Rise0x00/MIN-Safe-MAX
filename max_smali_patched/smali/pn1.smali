@@ -1,92 +1,48 @@
-.class public final synthetic Lpn1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Lpn1;
+.super Lp14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lqn1;
 
-.field public final synthetic b:Lrn1;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrn1;I)V
+.method public constructor <init>(Lqn1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lpn1;->a:I
+    iput-object p1, p0, Lpn1;->X:Lqn1;
 
-    iput-object p1, p0, Lpn1;->b:Lrn1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lpn1;->a:I
+    iput-object p1, p0, Lpn1;->d:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Lpn1;->o:I
 
-    iget-object p1, p0, Lpn1;->b:Lrn1;
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p1, Lrn1;->K0:Lqn1;
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_0
+    iput p1, p0, Lpn1;->o:I
 
-    invoke-interface {p1}, Lqn1;->p()V
+    iget-object p1, p0, Lpn1;->X:Lqn1;
 
-    :cond_0
-    return-void
+    const/4 v0, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Lpn1;->b:Lrn1;
+    invoke-virtual {p1, v0, p0}, Lqn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lrn1;->K0:Lqn1;
+    move-result-object p1
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lqn1;->e()V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lpn1;->b:Lrn1;
-
-    iget-object p1, p1, Lrn1;->K0:Lqn1;
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lqn1;->f()V
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lpn1;->b:Lrn1;
-
-    iget-object p1, p1, Lrn1;->K0:Lqn1;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Lqn1;->m()V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

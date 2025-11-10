@@ -1,335 +1,51 @@
 .class public final Ly36;
-.super Ljava/lang/Object;
+.super La1;
 .source "SourceFile"
-
-# interfaces
-.implements Lww7;
 
 
 # instance fields
-.field public final X:Lx36;
+.field public final c:Lgpd;
 
-.field public final Y:I
-
-.field public final Z:I
-
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final o:Ljava/lang/String;
-
-.field public final w0:J
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lx36;II)V
+.method public constructor <init>(Lt26;Lgpd;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, La1;-><init>(Lr26;)V
 
-    iput-wide p1, p0, Ly36;->a:J
+    iput-object p2, p0, Ly36;->c:Lgpd;
 
-    iput-object p3, p0, Ly36;->b:Ljava/lang/String;
+    const/4 p1, 0x1
 
-    iput-object p4, p0, Ly36;->c:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, Ly36;->o:Ljava/lang/String;
-
-    iput-object p6, p0, Ly36;->X:Lx36;
-
-    iput p7, p0, Ly36;->Y:I
-
-    iput p8, p0, Ly36;->Z:I
-
-    iput-wide p1, p0, Ly36;->w0:J
+    iput-boolean p1, p0, Ly36;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final g(Lz36;)V
     .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ly36;->c:Lgpd;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ly36;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ly36;
-
-    iget-wide v0, p0, Ly36;->a:J
-
-    iget-wide v2, p1, Ly36;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ly36;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Ly36;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ly36;->c:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Ly36;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Ly36;->o:Ljava/lang/String;
-
-    iget-object v1, p1, Ly36;->o:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Ly36;->X:Lx36;
-
-    iget-object v1, p1, Ly36;->X:Lx36;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Ly36;->Y:I
-
-    iget v1, p1, Ly36;->Y:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Ly36;->Z:I
-
-    iget p1, p1, Ly36;->Z:I
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Ly36;->w0:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Ly36;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ly36;->b:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, Ly36;->c:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_0
-
-    move v3, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    iget-object v3, p0, Ly36;->o:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    iget-object v3, p0, Ly36;->X:Lx36;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Ly36;->Y:I
-
-    invoke-static {v0, v2, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Ly36;->Z:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Ly36;->Z:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FolderWidgetItem(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Ly36;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly36;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly36;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly36;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clickAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly36;->X:Lx36;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", widgetWidth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ly36;->Y:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", viewType="
-
-    const-string v2, ")"
-
-    iget v3, p0, Ly36;->Z:I
-
-    invoke-static {v0, v1, v3, v2}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lgpd;->a()Lepd;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lx36;
+
+    iget-object v2, p0, La1;->b:Lr26;
+
+    iget-boolean v3, p0, Ly36;->d:Z
+
+    invoke-direct {v1, p1, v0, v2, v3}, Lx36;-><init>(Lccf;Lepd;Lvfc;Z)V
+
+    invoke-interface {p1, v1}, Lccf;->e(Lecf;)V
+
+    invoke-virtual {v0, v1}, Lepd;->b(Ljava/lang/Runnable;)Lzv4;
+
+    return-void
 .end method

@@ -1,169 +1,209 @@
 .class public final La32;
-.super Lws7;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lzv4;
+.implements Ltg3;
 
 
 # instance fields
-.field public final synthetic q:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
     .line 1
-    iput p2, p0, La32;->q:I
+    iput p1, p0, La32;->a:I
 
-    invoke-direct {p0, p1}, Lws7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(La32;)V
+    .locals 1
 
-    const/4 p1, 0x0
+    const/4 v0, 0x2
 
-    iput p1, p0, La32;->q:I
+    iput v0, p0, La32;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 4
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 1
 
     .line 2
-    invoke-direct {p0, p2}, Lws7;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
+
+    iput v0, p0, La32;->a:I
+
+    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/view/View;I)I
+.method public c()V
     .locals 1
 
-    iget v0, p0, La32;->q:I
+    sget-object v0, Ldw4;->a:Ldw4;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public d(Lzv4;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Ldw4;->g(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, La32;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1, p2}, Lws7;->b(Landroid/view/View;I)I
+    invoke-static {p0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    move-result p1
-
-    return p1
+    return-void
 
     :pswitch_0
-    const/4 p1, 0x0
+    invoke-static {p0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    return p1
+    return-void
+
+    :pswitch_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv22;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-interface {v0}, Lv22;->cancel()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public c(Landroid/view/View;I)I
-    .locals 1
+.method public final f()Z
+    .locals 2
 
-    iget v0, p0, La32;->q:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2}, Lws7;->c(Landroid/view/View;I)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d(Landroid/util/DisplayMetrics;)F
-    .locals 1
-
-    iget v0, p0, La32;->q:I
+    iget v0, p0, La32;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1}, Lws7;->d(Landroid/util/DisplayMetrics;)F
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    check-cast v0, Lzv4;
 
-    :pswitch_0
-    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
-
-    int-to-float p1, p1
-
-    const/high16 v0, 0x42c80000    # 100.0f
-
-    div-float/2addr v0, p1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(I)Landroid/graphics/PointF;
-    .locals 1
-
-    iget v0, p0, La32;->q:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lws7;->g(I)Landroid/graphics/PointF;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h()I
-    .locals 1
-
-    iget v0, p0, La32;->q:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lws7;->h()I
+    invoke-static {v0}, Ldw4;->c(Lzv4;)Z
 
     move-result v0
 
     return v0
 
     :pswitch_0
-    const/4 v0, -0x1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
+    move-result-object v0
+
+    sget-object v1, Ldw4;->a:Ldw4;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 
     :pswitch_1
-    const/4 v0, -0x1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
     return v0
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    sget-object v0, Ldw4;->a:Ldw4;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    new-instance v0, Lio/reactivex/rxjava3/exceptions/OnErrorNotImplementedException;
+
+    invoke-direct {v0, p1}, Lio/reactivex/rxjava3/exceptions/OnErrorNotImplementedException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

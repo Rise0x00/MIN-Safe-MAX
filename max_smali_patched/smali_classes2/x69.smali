@@ -1,193 +1,244 @@
-.class public final Lx69;
-.super Lv2;
+.class public abstract Lx69;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Ly69;
+# static fields
+.field public static final a:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ly69;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lx69;->c:I
+    const-string v0, "decelerate"
 
-    packed-switch p2, :pswitch_data_0
+    const-string v1, "linear"
 
-    iput-object p1, p0, Lx69;->o:Ly69;
+    const-string v2, "standard"
 
-    const/16 p1, 0x9
+    const-string v3, "accelerate"
 
-    sget-object p2, Lv69;->a:Lv69;
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    return-void
-
-    :pswitch_0
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lx69;->o:Ly69;
-
-    const/16 p1, 0x9
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Lx69;->a:[Ljava/lang/String;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
+.method public static varargs a(Ljava/lang/String;[I)V
+    .locals 4
 
-# virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
-
-    iget v0, p0, Lx69;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Lx69;->o:Ly69;
-
-    iget-object v0, p1, Ly69;->K0:Landroid/graphics/Paint;
-
-    if-eqz p2, :cond_0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x40800000    # 4.0f
+    const/4 v0, 0x0
 
     :goto_0
-    mul-float/2addr p2, v1
+    invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
-    goto :goto_1
+    move-result v1
 
-    :cond_0
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    const-string v2, ": "
 
-    move-result-object p2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    new-instance v0, Landroid/opengl/GLException;
 
-    move-result-object p2
+    invoke-direct {v0, v1}, Landroid/opengl/GLException;-><init>(I)V
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    const/high16 v1, 0x40000000    # 2.0f
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "GLESUtils"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    move v0, v1
 
     goto :goto_0
 
-    :goto_1
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    invoke-static {v0, p1}, Lft;->g(I[I)Z
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Lone/video/gl/GLESUtils$GLESUtilsException;
+
+    new-instance v1, Landroid/opengl/GLException;
+
+    new-instance v3, Landroid/opengl/GLException;
+
+    invoke-direct {v3, v0}, Landroid/opengl/GLException;-><init>(I)V
+
+    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p0, v2, v3}, Lm65;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, v0, p0}, Landroid/opengl/GLException;-><init>(ILjava/lang/String;)V
+
+    invoke-direct {p1, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
     :cond_1
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p2, Lv69;
+.method public static b(ILjava/lang/String;)I
+    .locals 3
 
-    check-cast p1, Lv69;
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
-    iget-object p1, p0, Lx69;->o:Ly69;
+    move-result v0
 
-    const/4 p2, 0x0
+    const-string v1, "glCreateShader type="
 
-    iput-object p2, p1, Ly69;->o:Landroid/text/Layout;
+    invoke-static {p0, v1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    iput-object p2, p1, Ly69;->w0:Landroid/text/Layout;
+    move-result-object p0
 
-    iput-object p2, p1, Ly69;->x0:Landroid/text/Layout;
+    const/4 v1, 0x0
 
-    iput-object p2, p1, Ly69;->y0:Landroid/text/Layout;
+    new-array v2, v1, [I
 
-    iget-object v0, p1, Ly69;->z0:Ljava/lang/Object;
+    invoke-static {p0, v2}, Lx69;->a(Ljava/lang/String;[I)V
 
-    invoke-interface {v0}, Lbp7;->a()Z
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
-    move-result v1
+    const-string p0, "glShaderSource"
 
-    const/16 v2, 0x8
+    new-array p1, v1, [I
 
-    if-eqz v1, :cond_2
+    invoke-static {p0, p1}, Lx69;->a(Ljava/lang/String;[I)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
-    move-result-object v0
+    const-string p0, "glCompileShader"
 
-    check-cast v0, Llha;
+    new-array p1, v1, [I
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {p0, p1}, Lx69;->a(Ljava/lang/String;[I)V
 
-    :cond_2
-    iput-object p2, p1, Ly69;->D0:Landroid/text/Layout;
+    const/4 p0, 0x1
 
-    iget-object v0, p1, Ly69;->G0:Ljava/lang/Object;
+    new-array p0, p0, [I
 
-    invoke-interface {v0}, Lbp7;->a()Z
+    const p1, 0x8b81
 
-    move-result v1
+    invoke-static {v0, p1, p0, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
-    if-eqz v1, :cond_3
+    aget p0, p0, v1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz p0, :cond_0
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    :cond_0
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    move-result-object p0
 
-    :cond_3
-    iput-object p2, p1, Ly69;->B0:Landroid/text/Layout;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iput-object p2, p1, Ly69;->A0:Landroid/text/Layout;
+    const-string v0, "Could not compile shaderId: "
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "GLESUtils"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static c(ILjava/nio/Buffer;)V
+    .locals 9
+
+    invoke-static {p0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [I
+
+    const-string v2, "glEnableVertexAttribArray"
+
+    invoke-static {v2, v1}, Lx69;->a(Ljava/lang/String;[I)V
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x8
+
+    const/4 v4, 0x2
+
+    const/16 v5, 0x1406
+
+    move v3, p0
+
+    move-object v8, p1
+
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    const-string p0, "glVertexAttribPointer"
+
+    new-array p1, v0, [I
+
+    invoke-static {p0, p1}, Lx69;->a(Ljava/lang/String;[I)V
+
+    return-void
+.end method
+
+.method public static d(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lsof;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p2, Lsof;->a:Lj1j;
+
+    invoke-virtual {p0, p1}, Lj1j;->q(Ljava/lang/Object;)Z
 
     return-void
 
-    nop
+    :cond_0
+    invoke-static {p0}, Ltei;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Lsof;->c(Ljava/lang/Exception;)Z
+
+    return-void
 .end method

@@ -2,33 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lev5;
-
 
 # static fields
-.field public static final a:Lz65;
+.field public static final c:Lz65;
+
+
+# instance fields
+.field public final a:Lec7;
+
+.field public final b:Lec7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lz65;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lec7;->b:Lc46;
 
-    sput-object v0, Lz65;->a:Lz65;
+    sget-object v1, Lz8d;->o:Lz8d;
+
+    invoke-direct {v0, v1, v1}, Lz65;-><init>(Ljava/util/List;Lz8d;)V
+
+    sput-object v0, Lz65;->c:Lz65;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/util/List;Lz8d;)V
     .locals 0
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
+    invoke-static {p1}, Lec7;->k(Ljava/util/Collection;)Lec7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz65;->a:Lec7;
+
+    invoke-static {p2}, Lec7;->k(Ljava/util/Collection;)Lec7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz65;->b:Lec7;
+
+    return-void
 .end method

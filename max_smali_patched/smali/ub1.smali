@@ -1,19 +1,21 @@
 .class public final Lub1;
-.super Lwb1;
+.super Lmd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-boolean p1, p0, Lub1;->a:Z
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+
+    iput-object p1, p0, Lub1;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -41,11 +43,15 @@
     :cond_1
     check-cast p1, Lub1;
 
-    iget-boolean v1, p0, Lub1;->a:Z
+    iget-object v1, p0, Lub1;->b:Ljava/lang/String;
 
-    iget-boolean p1, p1, Lub1;->a:Z
+    iget-object p1, p1, Lub1;->b:Ljava/lang/String;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -56,9 +62,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lub1;->a:Z
+    iget-object v0, p0, Lub1;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -68,13 +74,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "TalkingState(isEnabled="
+    const-string v0, "StartNewCall(link="
 
     const-string v1, ")"
 
-    iget-boolean v2, p0, Lub1;->a:Z
+    iget-object v2, p0, Lub1;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

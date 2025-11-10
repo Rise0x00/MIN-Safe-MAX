@@ -1,122 +1,91 @@
-.class public final Lk4e;
+.class public final synthetic Lk4e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyc4;
+.implements Lqj6;
 
 
-# static fields
-.field public static final a:Lk4e;
-
-.field public static final b:Ll4e;
+# instance fields
+.field public final synthetic a:Li37;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Li37;)V
+    .locals 0
 
-    new-instance v0, Lk4e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lk4e;->a:Lk4e;
-
-    sget-object v0, Ll4e;->b:Ll4e;
-
-    sput-object v0, Lk4e;->b:Ll4e;
+    iput-object p1, p0, Lk4e;->a:Li37;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgd4;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    sget-object v0, Lk4e;->b:Ll4e;
+    instance-of v0, p1, Lk4e;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lk4e;->getFunctionDelegate()Ljj6;
+
+    move-result-object v0
+
+    check-cast p1, Lqj6;
+
+    invoke-interface {p1}, Lqj6;->getFunctionDelegate()Ljj6;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Ljj6;
+    .locals 7
+
+    new-instance v0, Lc9;
+
+    const-string v6, "onNewHost(Ljava/lang/String;)Lkotlinx/coroutines/Job;"
+
+    const/16 v2, 0x8
+
+    const/4 v1, 0x1
+
+    const-class v3, Li37;
+
+    iget-object v4, p0, Lk4e;->a:Li37;
+
+    const-string v5, "onNewHost"
+
+    invoke-direct/range {v0 .. v6}, Lc9;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
-    .locals 10
+.method public final hashCode()I
+    .locals 1
 
-    sget-object v0, Lk4e;->b:Ll4e;
+    invoke-virtual {p0}, Lk4e;->getFunctionDelegate()Ljj6;
 
-    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
+    move-result-object v0
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Ll4e;->b:Ll4e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Ll4e;->c:Lbd4;
-
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    new-instance v8, Lg;
-
-    const/16 v0, 0x1d
-
-    invoke-direct {v8, v0}, Lg;-><init>(I)V
-
-    new-instance v2, Ljd4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Lk4e;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return v0
 .end method

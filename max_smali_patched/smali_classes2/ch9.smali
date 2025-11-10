@@ -1,147 +1,48 @@
 .class public final Lch9;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lvc9;
+.super Lp14;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lgh7;
 
-.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+.method public constructor <init>(Lgh7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lch9;->a:I
+    iput-object p1, p0, Lch9;->X:Lgh7;
 
-    iput-object p1, p0, Lch9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
-
-    iget v0, p0, Lch9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lch9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lin8;
-
-    const/4 v2, -0x1
-
-    iput v2, v1, Lin8;->e:I
-
-    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->W0:Lvg9;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v3
-
-    iget-boolean v4, v2, Lvg9;->c:Z
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2, v3, v5, v5}, Lvg9;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
-
-    :goto_0
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0, v5, v5}, Lin8;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lch9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {v0}, Lb04;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    const-string v2, "ScrollEvent"
-
-    if-nez v1, :cond_1
-
-    const-string v0, "Can\'t process itemsChangedCallback for scroll because root view is null"
-
-    invoke-static {v2, v0}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lnj9;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lnj9;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lxt9;
-
-    invoke-virtual {v0, p0}, Lxt9;->h(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "Can\'t process itemsChangedCallback because scroll is not meet requirements"
-
-    invoke-static {v2, v0}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getTag()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lch9;->a:I
+    iput-object p1, p0, Lch9;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lch9;->o:I
 
-    const-string v0, "ReadMarkUpdater"
+    const/high16 v0, -0x80000000
 
-    return-object v0
+    or-int/2addr p1, v0
 
-    :pswitch_0
-    const-string v0, "ScrollEvent"
+    iput p1, p0, Lch9;->o:I
 
-    return-object v0
+    iget-object p1, p0, Lch9;->X:Lgh7;
 
-    nop
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, v0, p0}, Lgh7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

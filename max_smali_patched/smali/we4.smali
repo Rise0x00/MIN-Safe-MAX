@@ -1,23 +1,20 @@
-.class public final synthetic Lwe4;
+.class public interface abstract Lwe4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# virtual methods
+.method public abstract b()Lj52;
+.end method
 
-.field public final synthetic b:Ljava/lang/Object;
+.method public abstract c()Ljava/lang/Object;
+.end method
 
+.method public abstract d(Lpcf;)V
+.end method
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public abstract flush()V
+.end method
 
-    iput p1, p0, Lwe4;->a:I
-
-    iput-object p2, p0, Lwe4;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract release()V
 .end method

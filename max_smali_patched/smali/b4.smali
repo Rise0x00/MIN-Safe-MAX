@@ -1,53 +1,41 @@
 .class public final Lb4;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Lp4;
-
-.field public final c:I
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(ILp4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    new-instance v0, Lb4;
 
-    iput p1, p0, Lb4;->a:I
+    new-instance v1, Ld1;
 
-    iput-object p2, p0, Lb4;->b:Lp4;
+    const-string v2, "Failure occurred while trying to finish a future."
 
-    iput p3, p0, Lb4;->c:I
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v0, v1}, Lb4;-><init>(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 1
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Landroid/os/Bundle;
+    sget-boolean v0, Lg4;->d:Z
 
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
-
-    iget v1, p0, Lb4;->a:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iget v0, p0, Lb4;->c:I
-
-    iget-object v1, p0, Lb4;->b:Lp4;
-
-    iget-object v1, v1, Lp4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {v1, v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
+    iput-object p1, p0, Lb4;->a:Ljava/lang/Throwable;
 
     return-void
 .end method

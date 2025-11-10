@@ -1,53 +1,41 @@
 .class public final Lux9;
-.super Ljava/lang/Object;
+.super Lqj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ls5f;
-
-.field public final b:Lr4;
-
-.field public final c:Lrxd;
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Lgma;
-
-.field public final g:Lv11;
-
-.field public final h:Landroid/content/res/Resources;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ls5f;Lr4;Lrxd;ILgma;Lv11;)V
+.method public constructor <init>(JLxlf;J)V
     .locals 0
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-direct {p0, p1, p2, p3}, Lqj0;-><init>(JLxlf;)V
 
-    move-result-object p1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lux9;->a:Ls5f;
-
-    iput-object p3, p0, Lux9;->b:Lr4;
-
-    iput-object p4, p0, Lux9;->c:Lrxd;
-
-    iput p5, p0, Lux9;->d:I
-
-    const/4 p2, 0x6
-
-    iput p2, p0, Lux9;->e:I
-
-    iput-object p6, p0, Lux9;->f:Lgma;
-
-    iput-object p7, p0, Lux9;->g:Lv11;
-
-    iput-object p1, p0, Lux9;->h:Landroid/content/res/Resources;
+    iput-wide p4, p0, Lux9;->c:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MsgSendError{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lux9;->c:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lxjb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

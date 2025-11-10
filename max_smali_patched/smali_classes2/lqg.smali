@@ -1,102 +1,115 @@
 .class public final Llqg;
-.super Lv72;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final c:J
-
-
-# direct methods
-.method public constructor <init>(J)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1, v0}, Lv72;-><init>(Ljava/lang/Long;I)V
-
-    iput-wide p1, p0, Llqg;->c:J
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Leoh;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Llqg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Llqg;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Llqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Llqg;->c:J
+    new-instance v0, Llqg;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v1, 0x2
 
-    move-result-object v0
+    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Llqg;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Llqg;->o:Ljava/lang/Object;
 
-    return v0
+    check-cast p1, Leoh;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    iget-object v1, p1, Leoh;->b:Ldoh;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Llqg;
+    move-object v1, v0
 
-    const/4 v2, 0x0
+    :goto_0
+    sget-object v2, Ldoh;->c:Ldoh;
 
-    if-nez v1, :cond_1
+    if-eq v1, v2, :cond_4
 
-    return v2
+    if-eqz p1, :cond_1
+
+    iget-object v1, p1, Leoh;->b:Ldoh;
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Llqg;
+    move-object v1, v0
 
-    iget-wide v3, p0, Llqg;->c:J
+    :goto_1
+    sget-object v2, Ldoh;->d:Ldoh;
 
-    iget-wide v5, p1, Llqg;->c:J
-
-    cmp-long p1, v3, v5
+    if-eq v1, v2, :cond_4
 
     if-eqz p1, :cond_2
 
-    return v2
+    iget-object v0, p1, Leoh;->b:Ldoh;
 
     :cond_2
-    return v0
-.end method
+    sget-object p1, Ldoh;->X:Ldoh;
 
-.method public final hashCode()I
-    .locals 2
+    if-ne v0, p1, :cond_3
 
-    iget-wide v0, p0, Llqg;->c:J
+    goto :goto_2
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :cond_3
+    const/4 p1, 0x0
 
-    move-result v0
+    goto :goto_3
 
-    return v0
-.end method
+    :cond_4
+    :goto_2
+    const/4 p1, 0x1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :goto_3
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const-string v0, "DialogUserId(sourceId="
+    move-result-object p1
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Llqg;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,104 +1,207 @@
-.class public abstract Lu36;
+.class public final Lu36;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz36;
+.implements Lzv4;
 
-# static fields
-.field public static final a:Lqd7;
 
-.field public static final b:Lqd7;
+# instance fields
+.field public final a:Lcre;
 
-.field public static final c:Lqd7;
+.field public b:Lecf;
+
+.field public c:Z
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcre;)V
+    .locals 0
 
-    new-instance v0, Lqd7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
-
-    const/16 v2, 0x13f
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lod7;-><init>(III)V
-
-    sput-object v0, Lu36;->a:Lqd7;
-
-    new-instance v0, Lqd7;
-
-    const/16 v1, 0x140
-
-    const/16 v2, 0x21b
-
-    invoke-direct {v0, v1, v2, v3}, Lod7;-><init>(III)V
-
-    sput-object v0, Lu36;->b:Lqd7;
-
-    new-instance v0, Lqd7;
-
-    const/16 v1, 0x21c
-
-    const v2, 0x7fffffff
-
-    invoke-direct {v0, v1, v2, v3}, Lod7;-><init>(III)V
-
-    sput-object v0, Lu36;->c:Lqd7;
+    iput-object p1, p0, Lu36;->a:Lcre;
 
     return-void
 .end method
 
-.method public static a(I)I
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Lbec;->oneme_big_folder_widget_view_type:I
+    iget-boolean v0, p0, Lu36;->c:Z
 
-    if-ne p0, v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/16 p0, 0x5c
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lv63;->r0(F)I
-
-    move-result p0
-
-    return p0
+    return-void
 
     :cond_0
-    const/16 p0, 0x80
+    iget-object v0, p0, Lu36;->d:Ljava/lang/Object;
 
-    int-to-float p0, p0
+    if-eqz v0, :cond_1
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    const/4 p1, 0x1
 
-    move-result-object v0
+    iput-boolean p1, p0, Lu36;->c:Z
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object p1, p0, Lu36;->b:Lecf;
 
-    move-result-object v0
+    invoke-interface {p1}, Lecf;->cancel()V
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    sget-object p1, Lhcf;->a:Lhcf;
 
-    mul-float/2addr p0, v0
+    iput-object p1, p0, Lu36;->b:Lecf;
 
-    invoke-static {p0}, Lv63;->r0(F)I
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result p0
+    const-string v0, "Sequence contains more than one element!"
 
-    return p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lu36;->a:Lcre;
+
+    invoke-interface {v0, p1}, Lcre;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    iput-object p1, p0, Lu36;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    iget-boolean v0, p0, Lu36;->c:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lu36;->c:Z
+
+    sget-object v0, Lhcf;->a:Lhcf;
+
+    iput-object v0, p0, Lu36;->b:Lecf;
+
+    iget-object v0, p0, Lu36;->d:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lu36;->d:Ljava/lang/Object;
+
+    if-nez v0, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    iget-object v1, p0, Lu36;->a:Lcre;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v1, v0}, Lcre;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v1, v0}, Lcre;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget-object v0, p0, Lu36;->b:Lecf;
+
+    invoke-interface {v0}, Lecf;->cancel()V
+
+    sget-object v0, Lhcf;->a:Lhcf;
+
+    iput-object v0, p0, Lu36;->b:Lecf;
+
+    return-void
+.end method
+
+.method public final e(Lecf;)V
+    .locals 2
+
+    iget-object v0, p0, Lu36;->b:Lecf;
+
+    invoke-static {v0, p1}, Lhcf;->f(Lecf;Lecf;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lu36;->b:Lecf;
+
+    iget-object v0, p0, Lu36;->a:Lcre;
+
+    invoke-interface {v0, p0}, Lcre;->d(Lzv4;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lecf;->g(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 2
+
+    iget-object v0, p0, Lu36;->b:Lecf;
+
+    sget-object v1, Lhcf;->a:Lhcf;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lu36;->c:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lu36;->c:Z
+
+    sget-object v0, Lhcf;->a:Lhcf;
+
+    iput-object v0, p0, Lu36;->b:Lecf;
+
+    iget-object v0, p0, Lu36;->a:Lcre;
+
+    invoke-interface {v0, p1}, Lcre;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

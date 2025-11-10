@@ -1,51 +1,109 @@
-.class public final Ljqa;
-.super Lnz3;
+.class public final enum Ljqa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lkqa;
+# static fields
+.field public static final synthetic X:[Ljqa;
 
-.field public Y:I
+.field public static final enum a:Ljqa;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final enum b:Ljqa;
+
+.field public static final enum c:Ljqa;
+
+.field public static final enum d:Ljqa;
+
+.field public static final enum o:Ljqa;
 
 
 # direct methods
-.method public constructor <init>(Lkqa;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Ljqa;->X:Lkqa;
+    new-instance v0, Ljqa;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "ACCENT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljqa;->a:Ljqa;
+
+    new-instance v1, Ljqa;
+
+    const-string v2, "NEGATIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ljqa;->b:Ljqa;
+
+    new-instance v2, Ljqa;
+
+    const-string v3, "NEUTRAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ljqa;->c:Ljqa;
+
+    new-instance v3, Ljqa;
+
+    const-string v4, "NEUTRAL_THEMED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ljqa;->d:Ljqa;
+
+    new-instance v4, Ljqa;
+
+    const-string v5, "CONTRAST_STATIC"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ljqa;->o:Ljqa;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ljqa;
+
+    move-result-object v0
+
+    sput-object v0, Ljqa;->X:[Ljqa;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ljqa;
+    .locals 1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    const-class v0, Ljqa;
 
-    iput-object p1, p0, Ljqa;->o:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget p1, p0, Ljqa;->Y:I
+    move-result-object p0
 
-    const/high16 v0, -0x80000000
+    check-cast p0, Ljqa;
 
-    or-int/2addr p1, v0
+    return-object p0
+.end method
 
-    iput p1, p0, Ljqa;->Y:I
+.method public static values()[Ljqa;
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    sget-object v0, Ljqa;->X:[Ljqa;
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v2, p0, Ljqa;->X:Lkqa;
+    move-result-object v0
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lkqa;->a(JLnz3;Ljava/util/List;)Ljava/lang/Object;
+    check-cast v0, [Ljqa;
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

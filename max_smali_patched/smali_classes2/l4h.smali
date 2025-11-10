@@ -1,38 +1,69 @@
 .class public final Ll4h;
-.super Ltde;
+.super Lc92;
 .source "SourceFile"
 
 
-# instance fields
-.field public J0:Li4h;
+# static fields
+.field public static final c:Ll4h;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ll4h;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lc92;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Ll4h;->c:Ll4h;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final x(Lww7;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Lh4h;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
     :cond_0
-    move-object v0, p1
+    instance-of p1, p1, Ll4h;
 
-    check-cast v0, Li4h;
+    if-nez p1, :cond_1
 
-    iput-object v0, p0, Ll4h;->J0:Li4h;
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    return p1
 
-    check-cast v0, Ls1e;
+    :cond_1
+    return v0
+.end method
 
-    check-cast p1, Lh4h;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p1, Lh4h;->a:Lt1e;
+    const v0, 0x3cd4b16
 
-    invoke-virtual {v0, p1}, Ls1e;->setModelItem(Lj1e;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "External"
+
+    return-object v0
 .end method

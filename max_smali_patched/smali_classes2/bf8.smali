@@ -1,137 +1,106 @@
-.class public final Lbf8;
+.class public final synthetic Lbf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvef;
+
 
 # instance fields
-.field public final a:Lze8;
+.field public final synthetic X:Lx4e;
 
-.field public final b:Laf8;
+.field public final synthetic a:Lad2;
+
+.field public final synthetic b:Lqs3;
+
+.field public final synthetic c:Lux3;
+
+.field public final synthetic d:Lowd;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    new-instance v0, Lze8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Laf8;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+.method public synthetic constructor <init>(Lad2;Lqs3;Lux3;Lowd;ZLx4e;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lbf8;->a:Lze8;
+    iput-object p1, p0, Lbf8;->a:Lad2;
 
-    iput-object v1, p0, Lbf8;->b:Laf8;
+    iput-object p2, p0, Lbf8;->b:Lqs3;
+
+    iput-object p3, p0, Lbf8;->c:Lux3;
+
+    iput-object p4, p0, Lbf8;->d:Lowd;
+
+    iput-boolean p5, p0, Lbf8;->o:Z
+
+    iput-object p6, p0, Lbf8;->X:Lx4e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lbf8;->X:Lx4e;
 
-    if-ne p0, p1, :cond_0
+    check-cast v0, Ljud;
 
-    return v0
+    iget-object v0, v0, Ljud;->m:Lscd;
 
-    :cond_0
-    instance-of v1, p1, Lbf8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbf8;
-
-    iget-object v1, p0, Lbf8;->a:Lze8;
-
-    iget-object v3, p1, Lbf8;->a:Lze8;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lbf8;->b:Laf8;
-
-    iget-object p1, p1, Lbf8;->b:Laf8;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lbf8;->a:Lze8;
-
-    invoke-virtual {v0}, Lze8;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lbf8;->b:Laf8;
-
-    invoke-virtual {v1}, Laf8;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MediaAdaptationConfig(badNetwork="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lbf8;->a:Lze8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", goodNetwork="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lbf8;->b:Laf8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lscd;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, [Ljava/lang/String;
+
+    new-instance v1, Liwd;
+
+    iget-object v2, p0, Lbf8;->a:Lad2;
+
+    iget-object v3, p0, Lbf8;->b:Lqs3;
+
+    iget-object v4, p0, Lbf8;->c:Lux3;
+
+    iget-object v5, p0, Lbf8;->d:Lowd;
+
+    iget-boolean v6, p0, Lbf8;->o:Z
+
+    invoke-direct/range {v1 .. v6}, Liwd;-><init>(Lad2;Lqs3;Lux3;Lowd;Z)V
+
+    move-object v4, v5
+
+    move v5, v6
+
+    const/4 v6, 0x0
+
+    if-eqz v0, :cond_1
+
+    array-length v7, v0
+
+    if-nez v7, :cond_0
+
+    move-object v0, v6
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    new-instance v6, Ljwd;
+
+    invoke-direct {v6, v0, v2, v4}, Ljwd;-><init>([Ljava/lang/String;Lad2;Lowd;)V
+
+    :cond_1
+    move-object v7, v6
+
+    move-object v6, v1
+
+    new-instance v1, Lhwd;
+
+    invoke-direct/range {v1 .. v7}, Lhwd;-><init>(Lad2;Lqs3;Lowd;ZLiwd;Ljwd;)V
+
+    return-object v1
 .end method

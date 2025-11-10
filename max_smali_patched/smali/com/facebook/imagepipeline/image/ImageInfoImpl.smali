@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements La57;
+.implements Lx97;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field private final height:I
 
-.field private final qualityInfo:Lh8c;
+.field private final qualityInfo:Lohc;
 
 .field private final sizeInBytes:I
 
@@ -28,12 +28,12 @@
 
 
 # direct methods
-.method public constructor <init>(IIILh8c;Ljava/util/Map;)V
+.method public constructor <init>(IIILohc;Ljava/util/Map;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(III",
-            "Lh8c;",
+            "Lohc;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -49,7 +49,7 @@
 
     iput p3, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->sizeInBytes:I
 
-    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lh8c;
+    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lohc;
 
     iput-object p5, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->extras:Ljava/util/Map;
 
@@ -83,10 +83,10 @@
     return v0
 .end method
 
-.method public getQualityInfo()Lh8c;
+.method public getQualityInfo()Lohc;
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lh8c;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lohc;
 
     return-object v0
 .end method

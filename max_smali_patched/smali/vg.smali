@@ -1,104 +1,115 @@
-.class public final Lvg;
+.class public abstract Lvg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
+# static fields
+.field public static final a:Landroid/view/animation/LinearInterpolator;
 
-# instance fields
-.field public final X:Le04;
+.field public static final b:Lpn5;
 
-.field public Y:Z
+.field public static final c:Lon5;
 
-.field public final synthetic Z:Lxg;
+.field public static final d:Lon5;
 
-.field public final a:Landroid/view/ViewGroup;
-
-.field public final b:Landroid/view/View;
-
-.field public final c:Landroid/view/View;
-
-.field public final o:Z
+.field public static final e:Landroid/view/animation/DecelerateInterpolator;
 
 
 # direct methods
-.method public constructor <init>(Lxg;Le04;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/view/animation/LinearInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+
+    sput-object v0, Lvg;->a:Landroid/view/animation/LinearInterpolator;
+
+    new-instance v0, Lpn5;
+
+    invoke-direct {v0}, Lpn5;-><init>()V
+
+    sput-object v0, Lvg;->b:Lpn5;
+
+    new-instance v0, Lon5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lon5;-><init>(I)V
+
+    sput-object v0, Lvg;->c:Lon5;
+
+    new-instance v0, Lon5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lon5;-><init>(I)V
+
+    sput-object v0, Lvg;->d:Lon5;
+
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lvg;->e:Landroid/view/animation/DecelerateInterpolator;
+
+    return-void
+.end method
+
+.method public static a(FFF)F
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, p0, p2, p0}, Lxjb;->i(FFFF)F
 
-    iput-object p1, p0, Lvg;->Z:Lxg;
+    move-result p0
 
-    iput-object p5, p0, Lvg;->a:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Lvg;->b:Landroid/view/View;
-
-    iput-object p4, p0, Lvg;->c:Landroid/view/View;
-
-    iput-boolean p6, p0, Lvg;->o:Z
-
-    iput-object p2, p0, Lvg;->X:Le04;
-
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public final a()V
-    .locals 9
-
-    iget-boolean v0, p0, Lvg;->Y:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lvg;->Y:Z
-
-    iget-object v0, p0, Lvg;->c:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    :cond_0
-    const/4 v7, 0x1
-
-    iget-object v8, p0, Lvg;->X:Le04;
-
-    iget-object v2, p0, Lvg;->Z:Lxg;
-
-    iget-object v3, p0, Lvg;->a:Landroid/view/ViewGroup;
-
-    iget-object v4, p0, Lvg;->b:Landroid/view/View;
-
-    iget-object v5, p0, Lvg;->c:Landroid/view/View;
-
-    iget-boolean v6, p0, Lvg;->o:Z
-
-    invoke-virtual/range {v2 .. v8}, Lxg;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLe04;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onPreDraw()Z
+.method public static b(FFFFF)F
     .locals 1
 
-    invoke-virtual {p0}, Lvg;->a()V
+    cmpg-float v0, p4, p2
 
-    const/4 v0, 0x1
+    if-gtz v0, :cond_0
 
-    return v0
+    return p0
+
+    :cond_0
+    cmpl-float v0, p4, p3
+
+    if-ltz v0, :cond_1
+
+    return p1
+
+    :cond_1
+    sub-float/2addr p4, p2
+
+    sub-float/2addr p3, p2
+
+    div-float/2addr p4, p3
+
+    invoke-static {p0, p1, p4}, Lvg;->a(FFF)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static c(IFI)I
+    .locals 0
+
+    sub-int/2addr p2, p0
+
+    int-to-float p2, p2
+
+    mul-float/2addr p1, p2
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
 .end method

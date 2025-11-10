@@ -1,34 +1,22 @@
-.class public final synthetic Lo3b;
+.class public abstract Lo3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxpe;
+.implements Landroid/os/Parcelable;
 
 
 # instance fields
-.field public final synthetic a:Lxde;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxde;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo3b;->a:Lxde;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a([Lorg/webrtc/StatsReport;[Lorg/webrtc/StatsReport;[Lke0;Ljava/util/Map;Ldq1;)V
-    .locals 0
-
-    iget-object p2, p0, Lo3b;->a:Lxde;
-
-    invoke-virtual {p2, p1}, Lxde;->a(Ljava/lang/Object;)V
+    iput-wide p1, p0, Lo3b;->a:J
 
     return-void
 .end method

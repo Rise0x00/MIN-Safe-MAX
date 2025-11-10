@@ -1,85 +1,192 @@
 .class public final Lqi1;
-.super Ljava/lang/Object;
+.super Ljpe;
 .source "SourceFile"
-
-# interfaces
-.implements Lri1;
 
 
 # instance fields
-.field public final a:Z
+.field public final o:Ls95;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ls95;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljpe;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-boolean p1, p0, Lqi1;->a:Z
+    iput-object p1, p0, Lqi1;->o:Ls95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqi1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqi1;
-
-    iget-boolean v1, p0, Lqi1;->a:Z
-
-    iget-boolean p1, p1, Lqi1;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final H(Liqe;I)V
     .locals 1
 
-    iget-boolean v0, p0, Lqi1;->a:Z
+    instance-of v0, p1, Lpi1;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
+
+    check-cast p1, Li28;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Li28;
+
+    invoke-virtual {p1, p2}, Liqe;->z(Li28;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final bridge synthetic r(Lm7d;I)V
+    .locals 0
 
-    const-string v0, "Close(showSnackbar="
+    check-cast p1, Liqe;
 
-    const-string v1, ")"
+    invoke-virtual {p0, p1, p2}, Lqi1;->H(Liqe;I)V
 
-    iget-boolean v2, p0, Lqi1;->a:Z
+    return-void
+.end method
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+.method public final t(Landroid/view/ViewGroup;I)Lm7d;
+    .locals 4
 
-    move-result-object v0
+    sget v0, Lbra;->w:I
 
-    return-object v0
+    const/4 v1, 0x0
+
+    if-ne p2, v0, :cond_0
+
+    new-instance p2, Lpi1;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lnde;
+
+    invoke-direct {v0, p1, v1}, Lnde;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    :cond_0
+    sget v0, Lbra;->v:I
+
+    if-ne p2, v0, :cond_1
+
+    new-instance p2, Lg01;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lt5b;
+
+    invoke-direct {v0, p1}, Lt5b;-><init>(Landroid/content/Context;)V
+
+    const/4 p1, 0x5
+
+    invoke-direct {p2, v0, p1}, Lg01;-><init>(Landroid/view/View;I)V
+
+    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/16 v2, 0x34
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    invoke-direct {p1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 p1, 0x64
+
+    invoke-virtual {v0, p1}, Lt5b;->setMaxLengthForLabel(I)V
+
+    new-instance v2, Landroid/text/InputFilter$LengthFilter;
+
+    invoke-direct {v2, p1}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Landroid/text/InputFilter;
+
+    aput-object v2, p1, v1
+
+    invoke-virtual {v0, p1}, Lt5b;->setFilters([Landroid/text/InputFilter;)V
+
+    sget p1, Lw0b;->O:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lt5b;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+
+    new-instance p1, Ll;
+
+    const/16 v1, 0x16
+
+    iget-object v2, p0, Lqi1;->o:Ls95;
+
+    invoke-direct {p1, v1, v2}, Ll;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lt5b;->f(Lqi6;)V
+
+    sget-object p1, Lr5b;->a:Lr5b;
+
+    invoke-virtual {v0, p1}, Lt5b;->setTypingMode(Lr5b;)V
+
+    return-object p2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "unknown item viewType "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

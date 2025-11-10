@@ -20,18 +20,18 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
         "",
-        "Lnwd;",
+        "Lf8e;",
         "roomId",
-        "Lhwd;",
+        "Lz7e;",
         "room",
         "<init>",
-        "(Lnwd;Lhwd;)V",
+        "(Lf8e;Lz7e;)V",
         "component1",
-        "()Lnwd;",
+        "()Lf8e;",
         "component2",
-        "()Lhwd;",
+        "()Lz7e;",
         "copy",
-        "(Lnwd;Lhwd;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
+        "(Lf8e;Lz7e;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;",
         "",
         "toString",
         "()Ljava/lang/String;",
@@ -42,9 +42,9 @@
         "",
         "equals",
         "(Ljava/lang/Object;)Z",
-        "Lnwd;",
+        "Lf8e;",
         "getRoomId",
-        "Lhwd;",
+        "Lz7e;",
         "getRoom",
         "calls-sdk_release"
     }
@@ -59,42 +59,42 @@
 
 
 # instance fields
-.field private final room:Lhwd;
+.field private final room:Lz7e;
 
-.field private final roomId:Lnwd;
+.field private final roomId:Lf8e;
 
 
 # direct methods
-.method public constructor <init>(Lnwd;Lhwd;)V
+.method public constructor <init>(Lf8e;Lz7e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     return-void
 .end method
 
-.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;Lnwd;Lhwd;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
+.method public static synthetic copy$default(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;Lf8e;Lz7e;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
 
     if-eqz p4, :cond_0
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
     :cond_0
     and-int/lit8 p3, p3, 0x2
 
     if-eqz p3, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->copy(Lnwd;Lhwd;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->copy(Lf8e;Lz7e;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
 
     move-result-object p0
 
@@ -103,28 +103,28 @@
 
 
 # virtual methods
-.method public final component1()Lnwd;
+.method public final component1()Lf8e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
     return-object v0
 .end method
 
-.method public final component2()Lhwd;
+.method public final component2()Lz7e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     return-object v0
 .end method
 
-.method public final copy(Lnwd;Lhwd;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
+.method public final copy(Lf8e;Lz7e;)Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
     .locals 1
 
     new-instance v0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
 
-    invoke-direct {v0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;-><init>(Lnwd;Lhwd;)V
+    invoke-direct {v0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;-><init>(Lf8e;Lz7e;)V
 
     return-object v0
 .end method
@@ -150,11 +150,11 @@
     :cond_1
     check-cast p1, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
-    iget-object v3, p1, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v3, p1, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -163,11 +163,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
-    iget-object p1, p1, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object p1, p1, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -179,18 +179,18 @@
     return v0
 .end method
 
-.method public final getRoom()Lhwd;
+.method public final getRoom()Lz7e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     return-object v0
 .end method
 
-.method public final getRoomId()Lnwd;
+.method public final getRoomId()Lf8e;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
     return-object v0
 .end method
@@ -198,7 +198,7 @@
 .method public hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -206,7 +206,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     if-nez v1, :cond_0
 
@@ -215,7 +215,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Lhwd;->hashCode()I
+    invoke-virtual {v1}, Lz7e;->hashCode()I
 
     move-result v1
 
@@ -228,9 +228,9 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->roomId:Lf8e;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lhwd;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$SessionRoomInfo;->room:Lz7e;
 
     new-instance v2, Ljava/lang/StringBuilder;
 

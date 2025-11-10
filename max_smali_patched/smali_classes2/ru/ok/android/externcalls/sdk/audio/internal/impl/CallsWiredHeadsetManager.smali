@@ -30,7 +30,7 @@
         "broadcastReceiver",
         "Landroid/content/Intent;",
         "intent",
-        "Loyf;",
+        "Lybg;",
         "onReceiveBroadcast",
         "(Landroid/content/BroadcastReceiver;Landroid/content/Intent;)V",
         "handleHeadsetPlugAction",
@@ -112,7 +112,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;-><init>(Lfi4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsWiredHeadsetManager$Companion;
 
@@ -199,7 +199,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -681,7 +681,7 @@
 
     const-string v8, "Wired device plugged: name="
 
-    invoke-static {v8, v0, v5, v1, v4}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v5, v1, v4}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -700,7 +700,7 @@
 
     const-string v8, "Wired device unplugged: name="
 
-    invoke-static {v8, v0, v5, v1, v4}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v5, v1, v4}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

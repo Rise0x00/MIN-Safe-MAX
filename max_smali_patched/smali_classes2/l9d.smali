@@ -1,37 +1,23 @@
-.class public abstract Ll9d;
-.super Ljava/lang/Object;
+.class public final Ll9d;
+.super Lfg6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final f:Lma7;
 
-.field public static final b:I
+.field public g:Lr0;
 
-.field public static final c:I
-
-.field public static final d:I
+.field public h:Lr0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnmf;Lvf5;Lma7;)V
+    .locals 0
 
-    sget v0, Lycc;->ic_file_24:I
+    invoke-direct {p0, p1, p2}, Lfg6;-><init>(Lnmf;Lvf5;)V
 
-    sput v0, Ll9d;->a:I
-
-    sget v0, Lycc;->ic_geolocation_24:I
-
-    sput v0, Ll9d;->b:I
-
-    sget v0, Lycc;->ic_microphone_24:I
-
-    sput v0, Ll9d;->c:I
-
-    sget v0, Lycc;->picture_plus_outline_24:I
-
-    sput v0, Ll9d;->d:I
+    iput-object p3, p0, Ll9d;->f:Lma7;
 
     return-void
 .end method

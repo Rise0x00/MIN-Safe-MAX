@@ -363,7 +363,7 @@
     :cond_a
     if-nez p4, :cond_b
 
-    invoke-static {v0}, Luo0;->j(Lone/me/sdk/concurrent/LinkedTransferQueue34;)V
+    invoke-static {v0}, Lop0;->m(Lone/me/sdk/concurrent/LinkedTransferQueue34;)V
 
     :try_start_0
     invoke-static {v1}, Ljava/util/concurrent/ForkJoinPool;->managedBlock(Ljava/util/concurrent/ForkJoinPool$ManagedBlocker;)V
@@ -371,7 +371,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    invoke-static {}, Luo0;->h()V
+    invoke-static {}, Lop0;->j()V
 
     goto :goto_1
 
@@ -550,16 +550,6 @@
     return v1
 .end method
 
-.method public static synthetic c(Ljava/util/Collection;Ljava/lang/Object;)Z
-    .locals 0
-
-    invoke-static {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->lambda$removeAll$0(Ljava/util/Collection;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method private casHead(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
     .locals 1
 
@@ -634,7 +624,17 @@
     return v2
 .end method
 
-.method public static bridge synthetic d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+.method public static synthetic d(Ljava/util/Collection;Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-static {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->lambda$removeAll$0(Ljava/util/Collection;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryCasSuccessor(Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
@@ -1242,11 +1242,11 @@
 .method public clear()V
     .locals 2
 
-    new-instance v0, Llq3;
+    new-instance v0, Lc83;
 
-    const/4 v1, 0x1
+    const/16 v1, 0x16
 
-    invoke-direct {v0, v1}, Llq3;-><init>(I)V
+    invoke-direct {v0, v1}, Lc83;-><init>(I)V
 
     invoke-direct {p0, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->bulkRemove(Ljava/util/function/Predicate;)Z
 
@@ -2042,11 +2042,11 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lzv7;
+    new-instance v0, Lk18;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lzv7;-><init>(ILjava/util/Collection;)V
+    invoke-direct {v0, v1, p1}, Lk18;-><init>(ILjava/util/Collection;)V
 
     invoke-direct {p0, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->bulkRemove(Ljava/util/function/Predicate;)Z
 
@@ -2086,11 +2086,11 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lzv7;
+    new-instance v0, Lk18;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lzv7;-><init>(ILjava/util/Collection;)V
+    invoke-direct {v0, v1, p1}, Lk18;-><init>(ILjava/util/Collection;)V
 
     invoke-direct {p0, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->bulkRemove(Ljava/util/function/Predicate;)Z
 

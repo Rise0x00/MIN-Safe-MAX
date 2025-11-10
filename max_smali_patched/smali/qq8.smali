@@ -1,122 +1,44 @@
-.class public final Lqq8;
+.class public final synthetic Lqq8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic a:Ltq8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ltq8;)V
     .locals 0
-
-    iput p1, p0, Lqq8;->a:I
-
-    iput-object p2, p0, Lqq8;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method private final a(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/view/animation/Animation;)V
-    .locals 0
+    iput-object p1, p0, Lqq8;->a:Ltq8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public final binderDied()V
+    .locals 3
 
-    iget p1, p0, Lqq8;->a:I
+    iget-object v0, p0, Lqq8;->a:Ltq8;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, v0, Ltq8;->a:Lxp8;
 
-    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lmr8;
+    new-instance v1, Lh96;
 
-    iget-object p1, p1, Lmr8;->B0:Lor8;
+    const/16 v2, 0xe
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v2, v0}, Lh96;-><init>(ILjava/lang/Object;)V
 
-    iput-boolean v0, p1, Lor8;->N0:Z
-
-    invoke-virtual {p1}, Lor8;->n()V
+    invoke-virtual {v0, v1}, Lxp8;->z(Ljava/lang/Runnable;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/mediarouter/app/d;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    iget p1, p0, Lqq8;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 1
-
-    iget p1, p0, Lqq8;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
-
-    check-cast p1, Lmr8;
-
-    iget-object p1, p1, Lmr8;->B0:Lor8;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lor8;->N0:Z
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

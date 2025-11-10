@@ -1,91 +1,80 @@
-.class public final Lo76;
+.class public final synthetic Lo76;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqi6;
+
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+.field public final synthetic a:I
 
-.field public final b:Ln76;
-
-.field public final c:Ljava/util/ArrayList;
+.field public final synthetic b:Lp76;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lp76;I)V
+    .locals 0
+
+    iput p2, p0, Lo76;->a:I
+
+    iput-object p1, p0, Lo76;->b:Lp76;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
-
-    iput-object v0, p0, Lo76;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    new-instance v0, Ln76;
-
-    invoke-direct {v0, p0}, Ln76;-><init>(Lo76;)V
-
-    iput-object v0, p0, Lo76;->b:Ln76;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lo76;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method public static synthetic b(Lo76;Ljava/lang/String;Lve6;)Ll76;
-    .locals 1
-
-    sget-object v0, Lb75;->a:Lb75;
-
-    invoke-virtual {p0, p1, v0, p2}, Lo76;->a(Ljava/lang/String;Ljava/lang/Iterable;Lve6;)Ll76;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Lve6;)Ll76;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ll76;
+    iget v0, p0, Lo76;->a:I
 
-    new-instance v1, Lly1;
+    check-cast p1, Lw76;
 
-    const/4 v6, 0x6
+    packed-switch v0, :pswitch_data_0
 
-    move-object v4, p0
+    iget-object v0, p0, Lo76;->b:Lp76;
 
-    move-object v5, p1
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
 
-    move-object v2, p2
+    check-cast v0, Lb86;
 
-    move-object v3, p3
+    if-eqz v0, :cond_0
 
-    invoke-direct/range {v1 .. v6}, Lly1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    check-cast v0, Lg52;
 
-    invoke-direct {v0, v5, v1}, Ll76;-><init>(Ljava/lang/String;Lly1;)V
+    invoke-virtual {v0, p1}, Lg52;->d(Lw76;)V
 
-    iget-object p1, v4, Lo76;->c:Ljava/util/ArrayList;
+    :cond_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    const/4 p2, 0x0
+    return-object p1
 
-    iget-object p3, v0, Ll76;->b:Lm76;
+    :pswitch_0
+    iget-object v0, p0, Lo76;->b:Lp76;
 
-    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    check-cast v0, Lb86;
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, p3}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+    check-cast v0, Lg52;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lg52;->d(Lw76;)V
+
+    :cond_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

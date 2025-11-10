@@ -1,177 +1,98 @@
-.class public final Lj51;
+.class public final synthetic Lj51;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk51;
+.implements Lyf4;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Ljef;
-
-.field public final f:Ljef;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    iput p2, p0, Lj51;->a:I
+
+    iput-object p1, p0, Lj51;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    sget p1, Lxja;->H:I
-
-    iput p1, p0, Lj51;->b:I
-
-    sget p1, Lwja;->M:I
-
-    iput p1, p0, Lj51;->c:I
-
-    sget p1, Lwja;->L:I
-
-    iput p1, p0, Lj51;->d:I
-
-    sget p1, Laka;->x2:I
-
-    new-instance v0, Ljef;
-
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
-
-    iput-object v0, p0, Lj51;->e:Ljef;
-
-    iput-object v0, p0, Lj51;->f:Ljef;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lj51;->c:I
+    iget v0, p0, Lj51;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
+    new-instance v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    iget-object v0, p0, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    new-instance v2, Lxj7;
 
-    return-object v0
-.end method
+    const/4 v7, 0x0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    const/16 v8, 0x1d
 
-    const/4 v0, 0x1
+    const/4 v3, 0x0
 
-    if-ne p0, p1, :cond_0
+    iget-object v4, p0, Lj51;->b:Ljava/lang/String;
 
-    return v0
+    const/4 v5, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lj51;
+    const/4 v6, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct/range {v2 .. v8}, Lxj7;-><init>(Ljava/lang/String;Ljava/lang/String;Lwj7;Ljava/lang/String;Lw6g;I)V
 
-    if-nez v1, :cond_1
+    const/4 v5, 0x2
 
-    return v2
+    move-object v4, v2
 
-    :cond_1
-    check-cast p1, Lj51;
+    const-string v2, "SETTINGS"
 
-    iget-object v1, p0, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    invoke-direct/range {v1 .. v6}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lxj7;ILfi4;)V
 
-    iget-object p1, p1, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    return-object v1
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    new-instance v0, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    move-result p1
+    iget-object v1, p0, Lj51;->b:Ljava/lang/String;
 
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getContentDescription()Loef;
-    .locals 1
-
-    iget-object v0, p0, Lj51;->f:Ljef;
+    invoke-direct {v0, v1}, Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;-><init>(Ljava/lang/String;)V
 
     return-object v0
-.end method
 
-.method public final getIcon()I
-    .locals 1
+    :pswitch_1
+    new-instance v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    iget v0, p0, Lj51;->d:I
+    iget-object v1, p0, Lj51;->b:Ljava/lang/String;
 
-    return v0
-.end method
-
-.method public final getId()I
-    .locals 1
-
-    iget v0, p0, Lj51;->b:I
-
-    return v0
-.end method
-
-.method public final getTitle()Loef;
-    .locals 1
-
-    iget-object v0, p0, Lj51;->e:Ljef;
+    invoke-direct {v0, v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;-><init>(Ljava/lang/String;)V
 
     return-object v0
-.end method
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_2
+    new-instance v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    iget-object v0, p0, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iget-object v1, p0, Lj51;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WiredHeadset(device="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lj51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;-><init>(Ljava/lang/String;)V
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

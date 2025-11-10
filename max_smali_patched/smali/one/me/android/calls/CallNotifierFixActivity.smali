@@ -47,9 +47,9 @@
 
     if-lt p1, v0, :cond_0
 
-    invoke-static {p0}, Lns;->j(Lone/me/android/calls/CallNotifierFixActivity;)V
+    invoke-static {p0}, Lmt;->j(Lone/me/android/calls/CallNotifierFixActivity;)V
 
-    invoke-static {p0}, Lns;->m(Lone/me/android/calls/CallNotifierFixActivity;)V
+    invoke-static {p0}, Lmt;->m(Lone/me/android/calls/CallNotifierFixActivity;)V
 
     goto :goto_0
 
@@ -63,19 +63,19 @@
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
     :goto_0
-    sget-object p1, Lyka;->a:Lyka;
+    sget-object p1, Lusa;->a:Lusa;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class v0, Ljz0;
-
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object p1
 
-    check-cast p1, Ljz0;
+    const-class v0, Lzz0;
+
+    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzz0;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -83,7 +83,7 @@
 
     const-string v1, "CallNotifierFixActivity"
 
-    invoke-virtual {p1, p0, v0, v1}, Ljz0;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {p1, p0, v0, v1}, Lzz0;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

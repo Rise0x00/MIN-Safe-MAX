@@ -1,590 +1,420 @@
 .class public final Lvmh;
-.super Lcom/google/android/gms/tasks/Task;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lc92;
 
-.field public final b:Ljd;
-
-.field public c:Z
-
-.field public volatile d:Z
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Exception;
+.field public b:Lonh;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/view/View;Lc92;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p2, p0, Lvmh;->a:Lc92;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object p2, Ltyg;->a:Ljava/util/WeakHashMap;
 
-    iput-object v0, p0, Lvmh;->a:Ljava/lang/Object;
+    invoke-static {p1}, Liyg;->a(Landroid/view/View;)Lonh;
 
-    new-instance v0, Ljd;
+    move-result-object p1
 
-    invoke-direct {v0}, Ljd;-><init>()V
+    if-eqz p1, :cond_2
 
-    iput-object v0, p0, Lvmh;->b:Ljd;
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1e
+
+    if-lt p2, v0, :cond_0
+
+    new-instance p2, Lfnh;
+
+    invoke-direct {p2, p1}, Lfnh;-><init>(Lonh;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x1d
+
+    if-lt p2, v0, :cond_1
+
+    new-instance p2, Ldnh;
+
+    invoke-direct {p2, p1}, Ldnh;-><init>(Lonh;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p2, Lcnh;
+
+    invoke-direct {p2, p1}, Lcnh;-><init>(Lonh;)V
+
+    :goto_0
+    invoke-virtual {p2}, Lgnh;->b()Lonh;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    iput-object p1, p0, Lvmh;->b:Lonh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/Executor;Lhfa;)Lvmh;
-    .locals 1
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 19
 
-    new-instance v0, Lhkh;
+    move-object/from16 v0, p0
 
-    invoke-direct {v0, p1, p2}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lhfa;)V
+    move-object/from16 v3, p1
 
-    iget-object p1, p0, Lvmh;->b:Ljd;
+    move-object/from16 v8, p2
 
-    invoke-virtual {p1, v0}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/util/concurrent/Executor;Lifa;)Lvmh;
-    .locals 1
-
-    new-instance v0, Lhkh;
-
-    invoke-direct {v0, p1, p2}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lifa;)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v0}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/util/concurrent/Executor;Lkfa;)Lvmh;
-    .locals 1
-
-    new-instance v0, Lhkh;
-
-    invoke-direct {v0, p1, p2}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lkfa;)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v0}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object p0
-.end method
-
-.method public final d(Ljava/util/concurrent/Executor;Lsfa;)Lvmh;
-    .locals 1
-
-    new-instance v0, Lhkh;
-
-    invoke-direct {v0, p1, p2}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lsfa;)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v0}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object p0
-.end method
-
-.method public final e()Ljava/lang/Exception;
-    .locals 2
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lvmh;->f:Ljava/lang/Exception;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final f()Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lvmh;->c:Z
-
-    const-string v2, "Task is not yet complete"
-
-    invoke-static {v2, v1}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    iget-boolean v1, p0, Lvmh;->d:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lvmh;->f:Ljava/lang/Exception;
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lvmh;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Lcom/google/android/gms/tasks/RuntimeExecutionException;
-
-    invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :cond_1
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "Task is already canceled."
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final g()Z
-    .locals 2
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lvmh;->c:Z
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final h()Z
-    .locals 3
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lvmh;->c:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-boolean v1, p0, Lvmh;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lvmh;->f:Ljava/lang/Exception;
-
-    if-nez v1, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return v2
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final i(Lifa;)Lvmh;
-    .locals 2
-
-    sget-object v0, Lacf;->a:Lg30;
-
-    new-instance v1, Lhkh;
-
-    invoke-direct {v1, v0, p1}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lifa;)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v1}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object p0
-.end method
-
-.method public final j(Ljava/util/concurrent/Executor;Llz3;)Lvmh;
-    .locals 3
-
-    new-instance v0, Lvmh;
-
-    invoke-direct {v0}, Lvmh;-><init>()V
-
-    new-instance v1, Lqih;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, p2, v0, v2}, Lqih;-><init>(Ljava/util/concurrent/Executor;Llz3;Lvmh;I)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v1}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object v0
-.end method
-
-.method public final k(Ljava/util/concurrent/Executor;Llz3;)Lvmh;
-    .locals 3
-
-    new-instance v0, Lvmh;
-
-    invoke-direct {v0}, Lvmh;-><init>()V
-
-    new-instance v1, Lqih;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, p2, v0, v2}, Lqih;-><init>(Ljava/util/concurrent/Executor;Llz3;Lvmh;I)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v1}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object v0
-.end method
-
-.method public final l(Ljava/util/concurrent/Executor;Lb0f;)Lvmh;
-    .locals 2
-
-    new-instance v0, Lvmh;
-
-    invoke-direct {v0}, Lvmh;-><init>()V
-
-    new-instance v1, Lhkh;
-
-    invoke-direct {v1, p1, p2, v0}, Lhkh;-><init>(Ljava/util/concurrent/Executor;Lb0f;Lvmh;)V
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v1}, Ljd;->w(Lxlh;)V
-
-    invoke-virtual {p0}, Lvmh;->q()V
-
-    return-object v0
-.end method
-
-.method public final m(Ljava/lang/Exception;)V
-    .locals 2
-
-    const-string v0, "Exception must not be null"
-
-    invoke-static {p1, v0}, Lhv0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Lvmh;->p()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lvmh;->c:Z
-
-    iput-object p1, p0, Lvmh;->f:Ljava/lang/Exception;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, p0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final n(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Lvmh;->p()V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lvmh;->c:Z
-
-    iput-object p1, p0, Lvmh;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object p1, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, p0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final o()V
-    .locals 2
-
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lvmh;->c:Z
-
-    if-eqz v1, :cond_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lvmh;->c:Z
-
-    iput-boolean v1, p0, Lvmh;->d:Z
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lvmh;->b:Ljd;
-
-    invoke-virtual {v0, p0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final p()V
-    .locals 4
-
-    iget-boolean v0, p0, Lvmh;->c:Z
-
-    if-eqz v0, :cond_4
-
-    sget v0, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;->a:I
-
-    invoke-virtual {p0}, Lvmh;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lvmh;->e()Ljava/lang/Exception;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    invoke-virtual {p0}, Lvmh;->h()Z
+    invoke-virtual {v3}, Landroid/view/View;->isLaidOut()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    iget-boolean v1, p0, Lvmh;->d:Z
+    invoke-static/range {p1 .. p2}, Lonh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lonh;
 
-    if-eqz v1, :cond_0
+    move-result-object v1
 
-    const-string v1, "cancellation"
+    iput-object v1, v0, Lvmh;->b:Lonh;
 
-    goto :goto_0
+    invoke-static/range {p1 .. p2}, Lwmh;->i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object v1
+
+    return-object v1
 
     :cond_0
-    const-string v1, "unknown issue"
+    invoke-static/range {p1 .. p2}, Lonh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lonh;
 
-    goto :goto_0
+    move-result-object v1
+
+    iget-object v2, v1, Lonh;->a:Lmnh;
+
+    iget-object v4, v0, Lvmh;->b:Lonh;
+
+    if-nez v4, :cond_1
+
+    sget-object v4, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v3}, Liyg;->a(Landroid/view/View;)Lonh;
+
+    move-result-object v4
+
+    iput-object v4, v0, Lvmh;->b:Lonh;
 
     :cond_1
-    invoke-virtual {p0}, Lvmh;->f()Ljava/lang/Object;
+    iget-object v4, v0, Lvmh;->b:Lonh;
+
+    if-nez v4, :cond_2
+
+    iput-object v1, v0, Lvmh;->b:Lonh;
+
+    invoke-static/range {p1 .. p2}, Lwmh;->i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return-object v1
+
+    :cond_2
+    invoke-static {v3}, Lwmh;->j(Landroid/view/View;)Lc92;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    iget-object v4, v4, Lc92;->b:Ljava/lang/Object;
+
+    check-cast v4, Landroid/view/WindowInsets;
+
+    invoke-static {v4, v8}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-static/range {p1 .. p2}, Lwmh;->i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object v1
 
-    const-string v2, "result "
+    return-object v1
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :cond_3
+    iget-object v4, v0, Lvmh;->b:Lonh;
 
-    move-result-object v1
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    :goto_0
+    const/16 v9, 0x100
+
+    if-gt v6, v9, :cond_5
+
+    invoke-virtual {v2, v6}, Lmnh;->f(I)Lli7;
+
+    move-result-object v9
+
+    iget-object v10, v4, Lonh;->a:Lmnh;
+
+    invoke-virtual {v10, v6}, Lmnh;->f(I)Lli7;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Lli7;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    or-int/2addr v7, v6
+
+    :cond_4
+    shl-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    :cond_2
-    const-string v1, "failure"
+    :cond_5
+    if-nez v7, :cond_6
 
-    :goto_0
-    new-instance v2, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;
-
-    const-string v3, "Complete with: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p1 .. p2}, Lwmh;->i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object v1
 
-    invoke-direct {v2, v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-object v1
+
+    :cond_6
+    iget-object v4, v0, Lvmh;->b:Lonh;
+
+    and-int/lit8 v6, v7, 0x8
+
+    if-eqz v6, :cond_8
+
+    const/16 v6, 0x8
+
+    invoke-virtual {v2, v6}, Lmnh;->f(I)Lli7;
+
+    move-result-object v9
+
+    iget v9, v9, Lli7;->d:I
+
+    iget-object v10, v4, Lonh;->a:Lmnh;
+
+    invoke-virtual {v10, v6}, Lmnh;->f(I)Lli7;
+
+    move-result-object v6
+
+    iget v6, v6, Lli7;->d:I
+
+    if-le v9, v6, :cond_7
+
+    sget-object v6, Lwmh;->e:Landroid/view/animation/PathInterpolator;
 
     goto :goto_1
 
-    :cond_3
-    new-instance v2, Ljava/lang/IllegalStateException;
+    :cond_7
+    sget-object v6, Lwmh;->f:Lon5;
 
-    const-string v0, "DuplicateTaskCompletionException can only be created from completed Task."
+    goto :goto_1
 
-    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :cond_8
+    sget-object v6, Lwmh;->g:Landroid/view/animation/DecelerateInterpolator;
 
     :goto_1
-    throw v2
+    new-instance v9, Lanh;
 
-    :cond_4
-    return-void
-.end method
+    const-wide/16 v10, 0xa0
 
-.method public final q()V
-    .locals 2
+    invoke-direct {v9, v7, v6, v10, v11}, Lanh;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    iget-object v0, p0, Lvmh;->a:Ljava/lang/Object;
+    iget-object v6, v9, Lanh;->a:Lzmh;
 
-    monitor-enter v0
+    const/4 v10, 0x0
 
-    :try_start_0
-    iget-boolean v1, p0, Lvmh;->c:Z
+    invoke-virtual {v6, v10}, Lzmh;->d(F)V
 
-    if-nez v1, :cond_0
+    const/4 v6, 0x2
 
-    monitor-exit v0
+    new-array v6, v6, [F
 
-    return-void
+    fill-array-data v6, :array_0
 
-    :catchall_0
-    move-exception v1
+    invoke-static {v6}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    goto :goto_0
+    move-result-object v6
 
-    :cond_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v10, v9, Lanh;->a:Lzmh;
 
-    iget-object v0, p0, Lvmh;->b:Ljd;
+    invoke-virtual {v10}, Lzmh;->a()J
 
-    invoke-virtual {v0, p0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
+    move-result-wide v10
 
-    return-void
+    invoke-virtual {v6, v10, v11}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v10
 
-    throw v1
+    invoke-virtual {v2, v7}, Lmnh;->f(I)Lli7;
+
+    move-result-object v2
+
+    iget-object v6, v4, Lonh;->a:Lmnh;
+
+    invoke-virtual {v6, v7}, Lmnh;->f(I)Lli7;
+
+    move-result-object v6
+
+    iget v11, v2, Lli7;->a:I
+
+    iget v12, v6, Lli7;->a:I
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->min(II)I
+
+    move-result v11
+
+    iget v12, v2, Lli7;->b:I
+
+    iget v13, v6, Lli7;->b:I
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->min(II)I
+
+    move-result v14
+
+    iget v15, v2, Lli7;->c:I
+
+    iget v5, v6, Lli7;->c:I
+
+    move-object/from16 v16, v1
+
+    invoke-static {v15, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    move-object/from16 v17, v4
+
+    iget v4, v2, Lli7;->d:I
+
+    move/from16 v18, v7
+
+    iget v7, v6, Lli7;->d:I
+
+    invoke-static {v4, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v11, v14, v1, v0}, Lli7;->b(IIII)Lli7;
+
+    move-result-object v0
+
+    iget v1, v2, Lli7;->a:I
+
+    iget v2, v6, Lli7;->a:I
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    invoke-static {v15, v5}, Ljava/lang/Math;->max(II)I
+
+    move-result v5
+
+    invoke-static {v4, v7}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    invoke-static {v1, v2, v5, v4}, Lli7;->b(IIII)Lli7;
+
+    move-result-object v1
+
+    new-instance v7, Leld;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v7, v0, v2, v1}, Leld;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 v0, 0x0
+
+    invoke-static {v3, v9, v8, v0}, Lwmh;->f(Landroid/view/View;Lanh;Landroid/view/WindowInsets;Z)V
+
+    new-instance v1, Lumh;
+
+    move-object v6, v3
+
+    move-object v2, v9
+
+    move-object/from16 v3, v16
+
+    move-object/from16 v4, v17
+
+    move/from16 v5, v18
+
+    invoke-direct/range {v1 .. v6}, Lumh;-><init>(Lanh;Lonh;Lonh;ILandroid/view/View;)V
+
+    move-object v0, v3
+
+    move-object v3, v6
+
+    invoke-virtual {v10, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v1, Lph;
+
+    const/4 v4, 0x6
+
+    invoke-direct {v1, v2, v4, v3}, Lph;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v10, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v1, Lkph;
+
+    move-object v4, v2
+
+    const/4 v2, 0x7
+
+    move-object v5, v7
+
+    const/4 v7, 0x0
+
+    move-object v6, v10
+
+    invoke-direct/range {v1 .. v7}, Lkph;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+
+    invoke-static {v3, v1}, Li7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Li7b;
+
+    move-object/from16 v1, p0
+
+    iput-object v0, v1, Lvmh;->b:Lonh;
+
+    invoke-static/range {p1 .. p2}, Lwmh;->i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

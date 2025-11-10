@@ -1,124 +1,31 @@
-.class public abstract Lr1;
+.class public abstract synthetic Lr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lim7;
 
-
-# instance fields
-.field public a:I
-
-.field public b:Ljava/lang/Object;
-
-
-# virtual methods
-.method public abstract a()V
-.end method
-
-.method public final hasNext()Z
-    .locals 3
-
-    iget v0, p0, Lr1;->a:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_0
-
-    return v1
+# direct methods
+.method public static synthetic a(Lsun/misc/Unsafe;Lx1;JLg1;Lg1;)Z
+    .locals 1
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v1, "hasNext called when the iterator is in the FAILED state."
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    throw v0
+    const/4 p0, 0x1
 
-    :cond_1
-    return v2
-
-    :cond_2
-    const/4 v0, 0x3
-
-    iput v0, p0, Lr1;->a:I
-
-    invoke-virtual {p0}, Lr1;->a()V
-
-    iget v0, p0, Lr1;->a:I
-
-    if-ne v0, v2, :cond_3
-
-    return v2
-
-    :cond_3
-    return v1
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lr1;->a:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    iput v1, p0, Lr1;->a:I
-
-    iget-object v0, p0, Lr1;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lr1;->a:I
-
-    invoke-virtual {p0}, Lr1;->a()V
-
-    iget v0, p0, Lr1;->a:I
-
-    if-ne v0, v2, :cond_1
-
-    iput v1, p0, Lr1;->a:I
-
-    iget-object v0, p0, Lr1;->b:Ljava/lang/Object;
-
-    return-object v0
+    return p0
 
     :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    move-result-object v0
 
-    throw v0
-.end method
+    if-eq v0, p4, :cond_0
 
-.method public final remove()V
-    .locals 2
+    const/4 p0, 0x0
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return p0
 .end method

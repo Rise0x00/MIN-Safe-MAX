@@ -159,7 +159,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, v2, v0}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

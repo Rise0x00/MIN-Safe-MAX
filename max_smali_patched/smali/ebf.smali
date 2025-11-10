@@ -1,227 +1,291 @@
-.class public final Lebf;
-.super Ljava/lang/Object;
+.class public abstract Lebf;
+.super Ldbf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lebf;
-
-.field public static final e:Lebf;
-
-.field public static final f:Lebf;
-
-.field public static final g:Lebf;
-
-.field public static final h:Lebf;
-
-.field public static final i:Lebf;
-
-
-# instance fields
-.field public final a:[F
-
-.field public final b:[F
-
-.field public final c:[F
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
+.method public static k(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 10
 
-    new-instance v0, Lebf;
+    const/16 v0, 0xa
 
-    invoke-direct {v0}, Lebf;-><init>()V
+    invoke-static {v0}, Ljoi;->b(I)V
 
-    sput-object v0, Lebf;->d:Lebf;
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    iget-object v1, v0, Lebf;->b:[F
+    move-result v1
 
+    if-nez v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
     const/4 v2, 0x0
 
-    const v3, 0x3f0ccccd    # 0.55f
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
-    aput v3, v1, v2
+    move-result v3
+
+    const/16 v4, 0x30
+
+    invoke-static {v3, v4}, Lp9i;->c(II)I
+
+    move-result v4
+
+    const v5, -0x7fffffff
+
+    if-gez v4, :cond_3
 
     const/4 v4, 0x1
 
-    const v5, 0x3f3d70a4    # 0.74f
+    if-ne v1, v4, :cond_1
 
-    aput v5, v1, v4
+    goto :goto_2
 
-    iget-object v0, v0, Lebf;->a:[F
+    :cond_1
+    const/16 v6, 0x2d
 
-    const v1, 0x3eb33333    # 0.35f
+    if-ne v3, v6, :cond_2
 
-    aput v1, v0, v2
+    const/high16 v5, -0x80000000
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    move v3, v4
 
-    aput v6, v0, v4
+    goto :goto_0
 
-    new-instance v0, Lebf;
+    :cond_2
+    const/16 v6, 0x2b
 
-    invoke-direct {v0}, Lebf;-><init>()V
+    if-ne v3, v6, :cond_6
 
-    sput-object v0, Lebf;->e:Lebf;
+    move v3, v2
 
-    iget-object v7, v0, Lebf;->b:[F
+    goto :goto_0
 
-    const v8, 0x3e99999a    # 0.3f
+    :cond_3
+    move v3, v2
 
-    aput v8, v7, v2
+    move v4, v3
 
-    const/high16 v9, 0x3f000000    # 0.5f
+    :goto_0
+    const v6, -0x38e38e3
 
-    aput v9, v7, v4
+    move v7, v6
 
-    const/4 v10, 0x2
+    :goto_1
+    if-ge v4, v1, :cond_8
 
-    const v11, 0x3f333333    # 0.7f
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
-    aput v11, v7, v10
+    move-result v8
 
-    iget-object v0, v0, Lebf;->a:[F
+    invoke-static {v8, v0}, Ljava/lang/Character;->digit(II)I
 
-    aput v1, v0, v2
+    move-result v8
 
-    aput v6, v0, v4
+    if-gez v8, :cond_4
 
-    new-instance v0, Lebf;
+    goto :goto_2
 
-    invoke-direct {v0}, Lebf;-><init>()V
+    :cond_4
+    if-ge v2, v7, :cond_5
 
-    sput-object v0, Lebf;->f:Lebf;
+    if-ne v7, v6, :cond_6
 
-    iget-object v7, v0, Lebf;->b:[F
+    div-int/lit8 v7, v5, 0xa
 
-    const v12, 0x3e851eb8    # 0.26f
+    if-ge v2, v7, :cond_5
 
-    aput v12, v7, v4
+    goto :goto_2
 
-    const v13, 0x3ee66666    # 0.45f
+    :cond_5
+    mul-int/lit8 v2, v2, 0xa
 
-    aput v13, v7, v10
+    add-int v9, v5, v8
 
-    iget-object v0, v0, Lebf;->a:[F
+    if-ge v2, v9, :cond_7
 
-    aput v1, v0, v2
+    :cond_6
+    :goto_2
+    const/4 p0, 0x0
 
-    aput v6, v0, v4
+    return-object p0
 
-    new-instance v0, Lebf;
+    :cond_7
+    sub-int/2addr v2, v8
 
-    invoke-direct {v0}, Lebf;-><init>()V
+    add-int/lit8 v4, v4, 0x1
 
-    sput-object v0, Lebf;->g:Lebf;
+    goto :goto_1
 
-    iget-object v1, v0, Lebf;->b:[F
+    :cond_8
+    if-eqz v3, :cond_9
 
-    aput v3, v1, v2
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput v5, v1, v4
+    move-result-object p0
 
-    iget-object v0, v0, Lebf;->a:[F
+    return-object p0
 
-    aput v8, v0, v4
+    :cond_9
+    neg-int p0, v2
 
-    const v1, 0x3ecccccd    # 0.4f
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput v1, v0, v10
+    move-result-object p0
 
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->h:Lebf;
-
-    iget-object v3, v0, Lebf;->b:[F
-
-    aput v8, v3, v2
-
-    aput v9, v3, v4
-
-    aput v11, v3, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v8, v0, v4
-
-    aput v1, v0, v10
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->i:Lebf;
-
-    iget-object v2, v0, Lebf;->b:[F
-
-    aput v12, v2, v4
-
-    aput v13, v2, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v8, v0, v4
-
-    aput v1, v0, v10
-
-    return-void
+    return-object p0
 .end method
 
-.method public constructor <init>()V
-    .locals 9
+.method public static l(Ljava/lang/String;)Ljava/lang/Long;
+    .locals 19
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x3
+    const/16 v1, 0xa
 
-    new-array v1, v0, [F
+    invoke-static {v1}, Ljoi;->b(I)V
 
-    iput-object v1, p0, Lebf;->a:[F
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    new-array v2, v0, [F
+    move-result v2
 
-    iput-object v2, p0, Lebf;->b:[F
+    if-nez v2, :cond_0
 
-    new-array v0, v0, [F
+    goto :goto_2
 
-    iput-object v0, p0, Lebf;->c:[F
-
+    :cond_0
     const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
 
-    aput v4, v1, v3
+    move-result v4
+
+    const/16 v5, 0x30
+
+    invoke-static {v4, v5}, Lp9i;->c(II)I
+
+    move-result v5
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-gez v5, :cond_3
 
     const/4 v5, 0x1
 
-    const/high16 v6, 0x3f000000    # 0.5f
+    if-ne v2, v5, :cond_1
 
-    aput v6, v1, v5
+    goto :goto_2
 
-    const/4 v7, 0x2
+    :cond_1
+    const/16 v8, 0x2d
 
-    const/high16 v8, 0x3f800000    # 1.0f
+    if-ne v4, v8, :cond_2
 
-    aput v8, v1, v7
+    const-wide/high16 v6, -0x8000000000000000L
 
-    aput v4, v2, v3
+    move v3, v5
 
-    aput v6, v2, v5
+    goto :goto_0
 
-    aput v8, v2, v7
+    :cond_2
+    const/16 v8, 0x2b
 
-    const v1, 0x3e75c28f    # 0.24f
+    if-ne v4, v8, :cond_6
 
-    aput v1, v0, v3
+    move/from16 v18, v5
 
-    const v2, 0x3f051eb8    # 0.52f
+    move v5, v3
 
-    aput v2, v0, v5
+    move/from16 v3, v18
 
-    aput v1, v0, v7
+    goto :goto_0
 
-    return-void
+    :cond_3
+    move v5, v3
+
+    :goto_0
+    const-wide v8, -0x38e38e38e38e38eL    # -2.772000429909333E291
+
+    const-wide/16 v10, 0x0
+
+    move-wide v12, v8
+
+    :goto_1
+    if-ge v3, v2, :cond_8
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    invoke-static {v4, v1}, Ljava/lang/Character;->digit(II)I
+
+    move-result v4
+
+    if-gez v4, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_5
+
+    cmp-long v12, v12, v8
+
+    if-nez v12, :cond_6
+
+    int-to-long v12, v1
+
+    div-long v12, v6, v12
+
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    int-to-long v14, v1
+
+    mul-long/2addr v10, v14
+
+    int-to-long v14, v4
+
+    add-long v16, v6, v14
+
+    cmp-long v4, v10, v16
+
+    if-gez v4, :cond_7
+
+    :cond_6
+    :goto_2
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_7
+    sub-long/2addr v10, v14
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_8
+    if-eqz v5, :cond_9
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_9
+    neg-long v0, v10
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
 .end method

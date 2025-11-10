@@ -1,198 +1,216 @@
 .class public final Lnm3;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Ls5f;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lnm3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    iput-object p1, p0, Lnm3;->a:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lnm3;->b:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lnm3;->c:Z
-
-    new-instance p1, Lzh1;
-
-    const/16 p2, 0x16
-
-    invoke-direct {p1, p2, p0}, Lzh1;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lnm3;->d:Ls5f;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Lorg/json/JSONObject;)Lnm3;
-    .locals 5
 
-    :try_start_0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnm3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lnm3;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lnm3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
     new-instance v0, Lnm3;
 
-    const-string v1, "host"
+    iget-object v1, p0, Lnm3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0, p2, v1}, Lnm3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
+
+    iput-object p1, v0, Lnm3;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lnm3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    iget-object v1, v0, Lone/me/login/confirm/ConfirmPhoneScreen;->Z:Ljava/lang/Object;
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnm3;->o:Ljava/lang/Object;
+
+    check-cast p1, La5a;
+
+    instance-of v2, p1, Lgm3;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    sget-object p1, Lw98;->a:Lw98;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object p1
+
+    const-class v1, Lqhb;
+
+    invoke-virtual {p1, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqhb;
+
+    invoke-virtual {p1}, Lqhb;->c()V
+
+    invoke-static {v0}, Ldci;->b(Lc24;)V
+
+    sget-object p1, Loa8;->c:Loa8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, ":chat-list"
+
+    invoke-virtual {p1}, Ladi;->p0()Ltf4;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v3}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v2, p1, Lim3;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lc24;->getRouter()Lyid;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lyid;->D()Z
+
+    sget-object v0, Loa8;->c:Loa8;
+
+    check-cast p1, Lim3;
+
+    iget-object p1, p1, Lim3;->b:Lpf4;
+
+    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v2, p1, Lhm3;
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    const-string v2, "port"
+    check-cast v1, Lpj7;
 
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    check-cast p1, Lhm3;
 
-    move-result-object v2
+    iget-object v2, p1, Lhm3;->b:Ljava/lang/String;
 
-    const-string v3, "tls"
+    iget-object v4, v0, Lone/me/login/confirm/ConfirmPhoneScreen;->d:Los;
 
-    const/4 v4, 0x1
+    sget-object v5, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Les7;
 
-    invoke-virtual {p0, v3, v4}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+    const/4 v6, 0x1
 
-    move-result p0
+    aget-object v5, v5, v6
 
-    invoke-direct {v0, v1, v2, p0}, Lnm3;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v4, v0}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
 
-    :catch_0
-    const/4 p0, 0x0
+    check-cast v0, Ljava/lang/String;
 
-    return-object p0
-.end method
+    iget-object p1, p1, Lhm3;->c:Lfyb;
 
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    new-instance v4, Lone/me/login/inputname/InputNameScreen;
 
-    const/4 v0, 0x1
+    invoke-direct {v4, v2, v0, p1}, Lone/me/login/inputname/InputNameScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lfyb;)V
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v4, v3, v3}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lnm3;
+    const-string v0, "InputNameScreen"
 
-    const/4 v2, 0x0
+    invoke-virtual {v1, p1, v0}, Lpj7;->b(Lbjd;Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnm3;
-
-    iget-object v1, p0, Lnm3;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lnm3;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lnm3;->b:Ljava/lang/String;
+    instance-of v2, p1, Lfm3;
 
-    iget-object v3, p1, Lnm3;->b:Ljava/lang/String;
+    if-eqz v2, :cond_3
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-nez v1, :cond_3
+    check-cast p1, Lpj7;
 
-    return v2
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lpj7;->a(Z)V
+
+    goto :goto_0
 
     :cond_3
-    iget-boolean v1, p0, Lnm3;->c:Z
+    instance-of v1, p1, Lpf4;
 
-    iget-boolean p1, p1, Lnm3;->c:Z
+    if-eqz v1, :cond_4
 
-    if-eq v1, p1, :cond_4
+    invoke-static {v0}, Ldci;->b(Lc24;)V
 
-    return v2
+    sget-object v0, Loa8;->c:Loa8;
+
+    check-cast p1, Lpf4;
+
+    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
 
     :cond_4
-    return v0
-.end method
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lnm3;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lnm3;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lnm3;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "|port="
-
-    const-string v1, "|tls="
-
-    const-string v2, "ConnectionHost{host="
-
-    iget-object v3, p0, Lnm3;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lnm3;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "}"
-
-    iget-boolean v2, p0, Lnm3;->c:Z
-
-    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

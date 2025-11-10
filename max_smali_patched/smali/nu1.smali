@@ -1,162 +1,224 @@
-.class public final Lnu1;
+.class public final synthetic Lnu1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
+
 
 # instance fields
-.field public final a:Le8e;
+.field public final synthetic a:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Lru7;
+
+.field public final synthetic c:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
-    .locals 2
+.method public synthetic constructor <init>(Lru7;Lru7;I)V
+    .locals 0
+
+    iput p3, p0, Lnu1;->a:I
+
+    iput-object p1, p0, Lnu1;->b:Lru7;
+
+    iput-object p2, p0, Lnu1;->c:Lru7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lnu1;->a:Le8e;
-
-    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lr8f;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lov0;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(La33;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    .line 3
-    new-instance v0, Lku1;
+    iget v0, p0, Lnu1;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, v1}, Lku1;-><init>(Lnu1;La33;Lkotlin/coroutines/Continuation;)V
+    invoke-static {}, Lbw0;->a()Lqef;
 
-    const/4 p1, 0x3
+    move-result-object v0
 
-    iget-object v2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lnu1;->b:Lru7;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final onEvent(Laj0;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    check-cast v1, Ltlf;
 
-    .line 5
-    new-instance v0, Lmu1;
+    check-cast v1, Lsta;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Lsta;->b()La54;
 
-    invoke-direct {v0, p0, p1, v1}, Lmu1;-><init>(Lnu1;Laj0;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    const/4 p1, 0x3
+    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
 
-    iget-object v2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object v0
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    iget-object v1, p0, Lnu1;->c:Lru7;
 
-    return-void
-.end method
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-.method public final onEvent(Lft7;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    move-result-object v1
 
-    .line 4
-    new-instance v0, Llu1;
+    check-cast v1, Ly44;
 
-    const/4 v1, 0x0
+    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
 
-    invoke-direct {v0, p0, p1, v1}, Llu1;-><init>(Lnu1;Lft7;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    const/4 p1, 0x3
+    return-object v0
 
-    iget-object v2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    :pswitch_0
+    new-instance v0, Lr71;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    iget-object v1, p0, Lnu1;->b:Lru7;
 
-    return-void
-.end method
+    iget-object v2, p0, Lnu1;->c:Lru7;
 
-.method public final onEvent(Lrx3;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    invoke-direct {v0, v1, v2}, Lr71;-><init>(Lru7;Lru7;)V
 
-    .line 2
-    new-instance v0, Lju1;
+    return-object v0
 
-    const/4 v1, 0x0
+    :pswitch_1
+    iget-object v0, p0, Lnu1;->b:Lru7;
 
-    invoke-direct {v0, p0, p1, v1}, Lju1;-><init>(Lnu1;Lrx3;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    const/4 p1, 0x3
+    move-result-object v0
 
-    iget-object v2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast v0, Ltlf;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    check-cast v0, Lsta;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Lsta;->b()La54;
 
-.method public final onEvent(Lu58;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    move-result-object v0
 
-    .line 1
-    new-instance p1, Liu1;
+    const/4 v1, 0x1
 
-    const/4 v0, 0x0
+    const-string v2, "shortcuts"
 
-    invoke-direct {p1, p0, v0}, Liu1;-><init>(Lnu1;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1, v2}, La54;->limitedParallelism(ILjava/lang/String;)La54;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    iget-object v2, p0, Lnu1;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lnu1;->c:Lru7;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v1
+
+    check-cast v1, Ly44;
+
+    invoke-virtual {v0, v1}, Lp0;->plus(Ly44;)Ly44;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-static {}, Lfbi;->a()Lxn7;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnu1;->b:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltlf;
+
+    check-cast v1, Lsta;
+
+    invoke-virtual {v1}, Lsta;->a()La54;
+
+    move-result-object v1
+
+    const-string v2, "non-contacts"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v3, v2}, La54;->limitedParallelism(ILjava/lang/String;)La54;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lyo7;->plus(Ly44;)Ly44;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnu1;->c:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly44;
+
+    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    invoke-static {}, Lbw0;->a()Lqef;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnu1;->b:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ltlf;
+
+    check-cast v1, Lsta;
+
+    invoke-virtual {v1}, Lsta;->b()La54;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lnu1;->c:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly44;
+
+    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

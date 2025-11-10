@@ -1,70 +1,29 @@
-.class public abstract Lype;
-.super Ljava/lang/Object;
+.class public Lype;
+.super La3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Ljava/lang/String;
+
+
 # direct methods
-.method public static a([B)Lt38;
-    .locals 10
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-    :try_start_0
-    new-instance v0, Lru/ok/tamtam/nano/Protos$LogEvent;
+    invoke-direct {p0, p1}, La3;-><init>(I)V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$LogEvent;-><init>()V
+    iput-object p2, p0, Lype;->b:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    return-void
+.end method
 
-    move-result-object p0
 
-    check-cast p0, Lru/ok/tamtam/nano/Protos$LogEvent;
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->time:J
-
-    iget-object v7, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->type:Ljava/lang/String;
-
-    iget-object v8, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->event:Ljava/lang/String;
-
-    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->params:[B
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Lvb4;->i([B)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map;
-
-    :goto_0
-    move-object v9, v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->userId:J
-
-    iget-wide v5, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->sessionId:J
-
-    new-instance v0, Lt38;
-
-    invoke-direct/range {v0 .. v9}, Lt38;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lype;->b:Ljava/lang/String;
 
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

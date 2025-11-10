@@ -4,32 +4,20 @@
 
 
 # instance fields
-.field public final a:F
+.field public final a:I
 
-.field public final b:F
+.field public b:Ljava/nio/FloatBuffer;
 
-.field public final c:F
-
-.field public final d:I
-
-.field public final e:I
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(FFFII)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxq6;->a:F
-
-    iput p2, p0, Lxq6;->b:F
-
-    iput p3, p0, Lxq6;->c:F
-
-    iput p4, p0, Lxq6;->d:I
-
-    iput p5, p0, Lxq6;->e:I
+    iput p2, p0, Lxq6;->a:I
 
     return-void
 .end method

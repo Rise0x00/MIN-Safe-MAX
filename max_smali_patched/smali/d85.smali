@@ -1,37 +1,73 @@
-.class public interface abstract Ld85;
-.super Ljava/lang/Object;
+.class public final Ld85;
+.super Lkzi;
 .source "SourceFile"
 
 
-# static fields
-.field public static final n:Lqd6;
+# instance fields
+.field public final synthetic a:Lkzi;
+
+.field public final synthetic b:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkzi;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 0
 
-    new-instance v0, Lqd6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ld85;->a:Lkzi;
 
-    invoke-direct {v0, v1}, Lqd6;-><init>(I)V
-
-    sput-object v0, Ld85;->n:Lqd6;
+    iput-object p2, p0, Ld85;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract k(Landroidx/camera/video/internal/encoder/EncodeException;)V
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Ld85;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    :try_start_0
+    iget-object v1, p0, Ld85;->a:Lkzi;
+
+    invoke-virtual {v1, p1}, Lkzi;->a(Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    throw p1
 .end method
 
-.method public abstract o()V
-.end method
+.method public final b(Lmr9;)V
+    .locals 2
 
-.method public abstract p(Lrz3;)V
-.end method
+    iget-object v0, p0, Ld85;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.method public abstract q(Lt75;)V
+    :try_start_0
+    iget-object v1, p0, Ld85;->a:Lkzi;
+
+    invoke-virtual {v1, p1}, Lkzi;->b(Lmr9;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+
+    throw p1
 .end method

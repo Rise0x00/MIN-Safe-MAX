@@ -1,126 +1,98 @@
 .class public final Lu80;
-.super Ln96;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzha;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Lu80;
 
-.field public Y:Z
+.field public static final b:Lmr5;
 
-.field public Z:F
-
-.field public w0:Z
+.field public static final c:Lmr5;
 
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 7
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    new-instance v0, Lu80;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    sput-object v0, Lu80;->a:Lu80;
 
-    move-result-object v1
+    new-instance v0, Lny;
 
-    iget v2, v1, Landroid/graphics/Rect;->right:I
+    const/4 v1, 0x1
 
-    iget v3, v1, Landroid/graphics/Rect;->left:I
+    invoke-direct {v0, v1}, Lny;-><init>(I)V
 
-    sub-int/2addr v2, v3
+    const-class v1, Ljec;
 
-    iget v4, v1, Landroid/graphics/Rect;->bottom:I
+    invoke-static {v1, v0}, Lnx1;->o(Ljava/lang/Class;Lny;)Ljava/util/HashMap;
 
-    iget v1, v1, Landroid/graphics/Rect;->top:I
+    move-result-object v0
 
-    sub-int/2addr v4, v1
+    new-instance v2, Lmr5;
 
-    iget v5, p0, Lu80;->Z:F
+    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    iget-boolean v6, p0, Lu80;->Y:Z
+    move-result-object v0
 
-    if-nez v6, :cond_0
+    const-string v3, "eventsDroppedCount"
 
-    const/high16 v6, 0x43b40000    # 360.0f
+    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    sub-float v5, v6, v5
+    sput-object v2, Lu80;->b:Lmr5;
 
-    :cond_0
-    div-int/lit8 v2, v2, 0x2
+    new-instance v0, Lny;
 
-    add-int/2addr v2, v3
+    const/4 v2, 0x3
 
-    int-to-float v2, v2
+    invoke-direct {v0, v2}, Lny;-><init>(I)V
 
-    div-int/lit8 v4, v4, 0x2
+    invoke-static {v1, v0}, Lnx1;->o(Ljava/lang/Class;Lny;)Ljava/util/HashMap;
 
-    add-int/2addr v4, v1
+    move-result-object v0
 
-    int-to-float v1, v4
+    new-instance v1, Lmr5;
 
-    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
+    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-super {p0, p1}, Ln96;->draw(Landroid/graphics/Canvas;)V
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    const-string v2, "reason"
 
-    iget-boolean p1, p0, Lu80;->w0:Z
+    invoke-direct {v1, v2, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    if-nez p1, :cond_1
+    sput-object v1, Lu80;->c:Lmr5;
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lu80;->w0:Z
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x14
-
-    add-long/2addr v0, v2
-
-    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    :cond_1
     return-void
 .end method
 
-.method public final run()V
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    const/4 v0, 0x0
+    check-cast p1, Ly88;
 
-    iput-boolean v0, p0, Lu80;->w0:Z
+    check-cast p2, Laia;
 
-    iget v0, p0, Lu80;->Z:F
+    sget-object v0, Lu80;->b:Lmr5;
 
-    iget v1, p0, Lu80;->X:I
+    iget-wide v1, p1, Ly88;->a:J
 
-    int-to-float v1, v1
+    invoke-interface {p2, v0, v1, v2}, Laia;->e(Lmr5;J)Laia;
 
-    const/high16 v2, 0x41a00000    # 20.0f
+    sget-object v0, Lu80;->c:Lmr5;
 
-    div-float/2addr v2, v1
+    iget-object p1, p1, Ly88;->b:Lx88;
 
-    const/high16 v1, 0x43b40000    # 360.0f
-
-    mul-float/2addr v2, v1
-
-    float-to-int v1, v2
-
-    int-to-float v1, v1
-
-    add-float/2addr v0, v1
-
-    iput v0, p0, Lu80;->Z:F
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
 
     return-void
 .end method

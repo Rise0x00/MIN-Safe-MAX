@@ -1,49 +1,66 @@
 .class public final Ly8e;
-.super Ltde;
+.super Lmmf;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final C()V
-    .locals 2
+# instance fields
+.field public c:Ljava/lang/String;
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-    check-cast v0, Lu8e;
+# direct methods
+.method public constructor <init>(Ljf9;)V
+    .locals 0
 
-    iget-object v0, v0, Lu8e;->o:Lw8e;
-
-    iget-object v1, v0, Lw8e;->b:Lv8e;
-
-    invoke-virtual {v1}, Lv8e;->d()V
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lw8e;->c:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
     return-void
 .end method
 
-.method public final x(Lww7;)V
+
+# virtual methods
+.method public final d(Ljf9;Ljava/lang/String;)V
     .locals 1
 
-    check-cast p1, Lx8e;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lnxc;->a:Landroid/view/View;
+    const-string v0, "token"
 
-    check-cast p1, Lu8e;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lu8e;->o:Lw8e;
+    move-result p2
 
-    const/4 v0, 0x1
+    if-nez p2, :cond_0
 
-    iput-boolean v0, p1, Lw8e;->c:Z
-
-    iget-object p1, p1, Lw8e;->b:Lv8e;
-
-    invoke-virtual {p1}, Lv8e;->c()V
+    invoke-virtual {p1}, Ljf9;->v()V
 
     return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ljf9;->u0()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ly8e;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ly8e;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Lxvc;->g(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "{token=\'"
+
+    const-string v2, "\'}"
+
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

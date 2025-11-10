@@ -1,160 +1,480 @@
-.class public abstract Ltdc;
-.super Ljava/lang/Object;
+.class public final Ltdc;
+.super Lck0;
+.source "SourceFile"
 
 
-# static fields
-.field public static action_bar:I = 0x7f0a00a7
+# instance fields
+.field public final h:Lub4;
 
-.field public static action_bar_activity_content:I = 0x7f0a00a8
+.field public final i:Lcb9;
 
-.field public static action_bar_container:I = 0x7f0a00a9
+.field public final j:Lo25;
 
-.field public static action_bar_root:I = 0x7f0a00aa
+.field public final k:Lbp6;
 
-.field public static action_bar_spinner:I = 0x7f0a00ab
+.field public final l:I
 
-.field public static action_bar_subtitle:I = 0x7f0a00ac
+.field public final m:Lub6;
 
-.field public static action_bar_title:I = 0x7f0a00ad
+.field public n:Z
 
-.field public static action_context_bar:I = 0x7f0a00af
+.field public o:J
 
-.field public static action_menu_divider:I = 0x7f0a00b2
+.field public p:Z
 
-.field public static action_menu_presenter:I = 0x7f0a00b3
+.field public q:Z
 
-.field public static action_mode_bar:I = 0x7f0a00b4
+.field public r:Lu2g;
 
-.field public static action_mode_bar_stub:I = 0x7f0a00b5
+.field public s:Lqs8;
 
-.field public static action_mode_close_button:I = 0x7f0a00b6
 
-.field public static activity_chooser_view_content:I = 0x7f0a00b9
+# direct methods
+.method public constructor <init>(Lqs8;Lub4;Lcb9;Lo25;Lbp6;ILub6;)V
+    .locals 0
 
-.field public static add:I = 0x7f0a00ba
+    invoke-direct {p0}, Lck0;-><init>()V
 
-.field public static alertTitle:I = 0x7f0a00c1
+    iput-object p1, p0, Ltdc;->s:Lqs8;
 
-.field public static buttonPanel:I = 0x7f0a0115
+    iput-object p2, p0, Ltdc;->h:Lub4;
 
-.field public static checkbox:I = 0x7f0a02ae
+    iput-object p3, p0, Ltdc;->i:Lcb9;
 
-.field public static checked:I = 0x7f0a02af
+    iput-object p4, p0, Ltdc;->j:Lo25;
 
-.field public static content:I = 0x7f0a02e2
+    iput-object p5, p0, Ltdc;->k:Lbp6;
 
-.field public static contentPanel:I = 0x7f0a02e3
+    iput p6, p0, Ltdc;->l:I
 
-.field public static custom:I = 0x7f0a02f4
+    iput-object p7, p0, Ltdc;->m:Lub6;
 
-.field public static customPanel:I = 0x7f0a02f5
+    const/4 p1, 0x1
 
-.field public static decor_content_parent:I = 0x7f0a0300
+    iput-boolean p1, p0, Ltdc;->n:Z
 
-.field public static default_activity_button:I = 0x7f0a0302
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-.field public static edit_query:I = 0x7f0a0334
+    iput-wide p1, p0, Ltdc;->o:J
 
-.field public static expand_activities_button:I = 0x7f0a0378
+    return-void
+.end method
 
-.field public static expanded_menu:I = 0x7f0a0379
 
-.field public static group_divider:I = 0x7f0a0402
+# virtual methods
+.method public final a(Lqs8;)Z
+    .locals 5
 
-.field public static home:I = 0x7f0a040c
+    invoke-virtual {p0}, Ltdc;->i()Lqs8;
 
-.field public static icon:I = 0x7f0a0413
+    move-result-object v0
 
-.field public static image:I = 0x7f0a041a
+    iget-object v0, v0, Lqs8;->b:Lgs8;
 
-.field public static listMode:I = 0x7f0a0465
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static list_item:I = 0x7f0a0466
+    iget-object p1, p1, Lqs8;->b:Lgs8;
 
-.field public static message:I = 0x7f0a053b
+    if-eqz p1, :cond_0
 
-.field public static multiply:I = 0x7f0a05f0
+    iget-object v1, p1, Lgs8;->a:Landroid/net/Uri;
 
-.field public static none:I = 0x7f0a0602
+    iget-object v2, v0, Lgs8;->a:Landroid/net/Uri;
 
-.field public static normal:I = 0x7f0a0603
+    invoke-virtual {v1, v2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
-.field public static off:I = 0x7f0a060b
+    move-result v1
 
-.field public static on:I = 0x7f0a060d
+    if-eqz v1, :cond_0
 
-.field public static parentPanel:I = 0x7f0a08f4
+    iget-wide v1, p1, Lgs8;->h:J
 
-.field public static progress_circular:I = 0x7f0a09fd
+    iget-wide v3, v0, Lgs8;->h:J
 
-.field public static progress_horizontal:I = 0x7f0a09fe
+    cmp-long v1, v1, v3
 
-.field public static radio:I = 0x7f0a0a01
+    if-nez v1, :cond_0
 
-.field public static screen:I = 0x7f0a0b2e
+    iget-object p1, p1, Lgs8;->f:Ljava/lang/String;
 
-.field public static scrollIndicatorDown:I = 0x7f0a0b30
+    iget-object v0, v0, Lgs8;->f:Ljava/lang/String;
 
-.field public static scrollIndicatorUp:I = 0x7f0a0b31
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static scrollView:I = 0x7f0a0b32
+    move-result p1
 
-.field public static search_badge:I = 0x7f0a0b34
+    if-eqz p1, :cond_0
 
-.field public static search_bar:I = 0x7f0a0b35
+    const/4 p1, 0x1
 
-.field public static search_button:I = 0x7f0a0b36
+    return p1
 
-.field public static search_close_btn:I = 0x7f0a0b39
+    :cond_0
+    const/4 p1, 0x0
 
-.field public static search_edit_frame:I = 0x7f0a0b3b
+    return p1
+.end method
 
-.field public static search_go_btn:I = 0x7f0a0b3c
+.method public final c(Lo19;Lcg4;J)Lxu8;
+    .locals 16
 
-.field public static search_mag_icon:I = 0x7f0a0b3d
+    move-object/from16 v8, p0
 
-.field public static search_plate:I = 0x7f0a0b3f
+    iget-object v0, v8, Ltdc;->h:Lub4;
 
-.field public static search_src_text:I = 0x7f0a0b40
+    invoke-interface {v0}, Lub4;->a()Lxb4;
 
-.field public static search_voice_btn:I = 0x7f0a0b41
+    move-result-object v2
 
-.field public static select_dialog_listview:I = 0x7f0a0b4a
+    iget-object v0, v8, Ltdc;->r:Lu2g;
 
-.field public static shortcut:I = 0x7f0a0bc3
+    if-eqz v0, :cond_0
 
-.field public static spacer:I = 0x7f0a0bda
+    invoke-interface {v2, v0}, Lxb4;->I(Lu2g;)V
 
-.field public static split_action_bar:I = 0x7f0a0be0
+    :cond_0
+    invoke-virtual {v8}, Ltdc;->i()Lqs8;
 
-.field public static src_atop:I = 0x7f0a0be5
+    move-result-object v0
 
-.field public static src_in:I = 0x7f0a0be6
+    iget-object v0, v0, Lqs8;->b:Lgs8;
 
-.field public static src_over:I = 0x7f0a0be7
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static submenuarrow:I = 0x7f0a0bf3
+    new-instance v1, Lodc;
 
-.field public static submit_area:I = 0x7f0a0bf4
+    move-object v3, v1
 
-.field public static tabMode:I = 0x7f0a0bff
+    iget-object v1, v0, Lgs8;->a:Landroid/net/Uri;
 
-.field public static textSpacerNoButtons:I = 0x7f0a0c13
+    iget-object v4, v8, Lck0;->g:Lkub;
 
-.field public static textSpacerNoTitle:I = 0x7f0a0c14
+    invoke-static {v4}, Ligi;->i(Ljava/lang/Object;)V
 
-.field public static title:I = 0x7f0a0c31
+    iget-object v4, v8, Ltdc;->i:Lcb9;
 
-.field public static titleDividerNoCustom:I = 0x7f0a0c32
+    iget-object v4, v4, Lcb9;->b:Ljava/lang/Object;
 
-.field public static title_template:I = 0x7f0a0c33
+    check-cast v4, Ldm5;
 
-.field public static topPanel:I = 0x7f0a0c47
+    move-object v5, v3
 
-.field public static unchecked:I = 0x7f0a0c63
+    new-instance v3, Lngd;
 
-.field public static uniform:I = 0x7f0a0c64
+    invoke-direct {v3, v4}, Lngd;-><init>(Ldm5;)V
 
-.field public static up:I = 0x7f0a0c67
+    move-object v4, v5
 
-.field public static wrap_content:I = 0x7f0a0d81
+    new-instance v5, Lh25;
+
+    iget-object v6, v8, Lck0;->d:Lh25;
+
+    iget-object v6, v6, Lh25;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    const/4 v7, 0x0
+
+    move-object/from16 v9, p1
+
+    invoke-direct {v5, v6, v7, v9}, Lh25;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILo19;)V
+
+    invoke-virtual/range {p0 .. p1}, Lck0;->b(Lo19;)Lxg6;
+
+    move-result-object v7
+
+    iget-object v10, v0, Lgs8;->f:Ljava/lang/String;
+
+    iget-wide v11, v0, Lgs8;->h:J
+
+    invoke-static {v11, v12}, Llig;->U(J)J
+
+    move-result-wide v13
+
+    const/4 v15, 0x0
+
+    move-object v0, v4
+
+    iget-object v4, v8, Ltdc;->j:Lo25;
+
+    iget-object v6, v8, Ltdc;->k:Lbp6;
+
+    iget v11, v8, Ltdc;->l:I
+
+    iget-object v12, v8, Ltdc;->m:Lub6;
+
+    move-object/from16 v9, p2
+
+    invoke-direct/range {v0 .. v15}, Lodc;-><init>(Landroid/net/Uri;Lxb4;Lngd;Lo25;Lh25;Lbp6;Lxg6;Ltdc;Lcg4;Ljava/lang/String;ILub6;JLh9d;)V
+
+    return-object v0
+.end method
+
+.method public final declared-synchronized i()Lqs8;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ltdc;->s:Lqs8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final k()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final m(Lu2g;)V
+    .locals 2
+
+    iput-object p1, p0, Ltdc;->r:Lu2g;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lck0;->g:Lkub;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Ltdc;->j:Lo25;
+
+    invoke-interface {v1, p1, v0}, Lo25;->c(Landroid/os/Looper;Lkub;)V
+
+    invoke-interface {v1}, Lo25;->prepare()V
+
+    invoke-virtual {p0}, Ltdc;->u()V
+
+    return-void
+.end method
+
+.method public final o(Lxu8;)V
+    .locals 7
+
+    check-cast p1, Lodc;
+
+    iget-boolean v0, p1, Lodc;->H0:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lodc;->E0:[Lemd;
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Lemd;->h()V
+
+    iget-object v5, v4, Lemd;->h:Ld25;
+
+    if-eqz v5, :cond_0
+
+    iget-object v6, v4, Lemd;->e:Lh25;
+
+    invoke-interface {v5, v6}, Ld25;->c(Lh25;)V
+
+    iput-object v1, v4, Lemd;->h:Ld25;
+
+    iput-object v1, v4, Lemd;->g:Lub6;
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Lodc;->w0:Li78;
+
+    invoke-virtual {v0, p1}, Li78;->s(Lv48;)V
+
+    iget-object v0, p1, Lodc;->B0:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iput-object v1, p1, Lodc;->C0:Lvu8;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lodc;->Z0:Z
+
+    return-void
+.end method
+
+.method public final q()V
+    .locals 1
+
+    iget-object v0, p0, Ltdc;->j:Lo25;
+
+    invoke-interface {v0}, Lo25;->release()V
+
+    return-void
+.end method
+
+.method public final declared-synchronized t(Lqs8;)V
+    .locals 0
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Ltdc;->s:Lqs8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final u()V
+    .locals 20
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lgre;
+
+    iget-wide v6, v0, Ltdc;->o:J
+
+    iget-boolean v14, v0, Ltdc;->p:Z
+
+    iget-boolean v2, v0, Ltdc;->q:Z
+
+    invoke-virtual {v0}, Ltdc;->i()Lqs8;
+
+    move-result-object v3
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v3, Lqs8;->c:Lfs8;
+
+    :goto_0
+    move-object/from16 v19, v2
+
+    move-object/from16 v18, v3
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x0
+
+    move-wide v8, v6
+
+    invoke-direct/range {v1 .. v19}, Lgre;-><init>(JJJJJJZZZLi0e;Lqs8;Lfs8;)V
+
+    iget-boolean v2, v0, Ltdc;->n:Z
+
+    if-eqz v2, :cond_1
+
+    new-instance v2, Lqdc;
+
+    invoke-direct {v2, v1}, Lie6;-><init>(Lmvf;)V
+
+    move-object v1, v2
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lck0;->n(Lmvf;)V
+
+    return-void
+.end method
+
+.method public final v(JLiyd;Z)V
+    .locals 2
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, p1, v0
+
+    if-nez v0, :cond_0
+
+    iget-wide p1, p0, Ltdc;->o:J
+
+    :cond_0
+    invoke-interface {p3}, Liyd;->c()Z
+
+    move-result p3
+
+    iget-boolean v0, p0, Ltdc;->n:Z
+
+    if-nez v0, :cond_1
+
+    iget-wide v0, p0, Ltdc;->o:J
+
+    cmp-long v0, v0, p1
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Ltdc;->p:Z
+
+    if-ne v0, p3, :cond_1
+
+    iget-boolean v0, p0, Ltdc;->q:Z
+
+    if-ne v0, p4, :cond_1
+
+    return-void
+
+    :cond_1
+    iput-wide p1, p0, Ltdc;->o:J
+
+    iput-boolean p3, p0, Ltdc;->p:Z
+
+    iput-boolean p4, p0, Ltdc;->q:Z
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Ltdc;->n:Z
+
+    invoke-virtual {p0}, Ltdc;->u()V
+
+    return-void
+.end method

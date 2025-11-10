@@ -2,92 +2,139 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
+.field public X:J
+
+.field public final synthetic Y:Lepd;
+
 .field public final a:Ljava/lang/Object;
 
-.field public final b:Lnf6;
+.field public final b:La32;
 
-.field public final c:Lnf6;
+.field public final c:J
 
-.field public final d:Ljava/lang/Object;
+.field public d:J
 
-.field public final e:Lm3f;
-
-.field public final f:Lnf6;
-
-.field public g:Ljava/lang/Object;
-
-.field public h:I
-
-.field public final synthetic i:Lfpd;
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lfpd;Ljava/lang/Object;Lnf6;Lnf6;Ljava/lang/Object;Lm3f;Lnf6;)V
+.method public constructor <init>(Lepd;JLjava/lang/Runnable;JLa32;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldpd;->i:Lfpd;
+    iput-object p1, p0, Ldpd;->Y:Lepd;
 
-    iput-object p2, p0, Ldpd;->a:Ljava/lang/Object;
+    iput-object p4, p0, Ldpd;->a:Ljava/lang/Object;
 
-    iput-object p3, p0, Ldpd;->b:Lnf6;
+    iput-object p7, p0, Ldpd;->b:La32;
 
-    iput-object p4, p0, Ldpd;->c:Lnf6;
+    iput-wide p8, p0, Ldpd;->c:J
 
-    iput-object p5, p0, Ldpd;->d:Ljava/lang/Object;
+    iput-wide p5, p0, Ldpd;->o:J
 
-    iput-object p6, p0, Ldpd;->e:Lm3f;
-
-    iput-object p7, p0, Ldpd;->f:Lnf6;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ldpd;->h:I
+    iput-wide p2, p0, Ldpd;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final run()V
+    .locals 15
 
-    iget-object v0, p0, Ldpd;->g:Ljava/lang/Object;
+    iget-object v0, p0, Ldpd;->a:Ljava/lang/Object;
 
-    instance-of v1, v0, Lkotlinx/coroutines/internal/Segment;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Ldpd;->b:La32;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, La32;->f()Z
 
-    check-cast v0, Lkotlinx/coroutines/internal/Segment;
+    move-result v1
 
-    iget v1, p0, Ldpd;->h:I
+    if-nez v1, :cond_2
 
-    iget-object v3, p0, Ldpd;->i:Lfpd;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v3, v3, Lfpd;->a:Lw24;
+    iget-object v2, p0, Ldpd;->Y:Lepd;
 
-    invoke-virtual {v0, v1, v2, v3}, Lkotlinx/coroutines/internal/Segment;->onCancellation(ILjava/lang/Throwable;Lw24;)V
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    invoke-static {v1}, Lepd;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v3
+
+    sget-wide v5, Lgpd;->b:J
+
+    add-long v7, v3, v5
+
+    iget-wide v9, p0, Ldpd;->o:J
+
+    cmp-long v7, v7, v9
+
+    const-wide/16 v11, 0x1
+
+    iget-wide v13, p0, Ldpd;->c:J
+
+    if-ltz v7, :cond_1
+
+    add-long/2addr v9, v13
+
+    add-long/2addr v9, v5
+
+    cmp-long v5, v3, v9
+
+    if-ltz v5, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, v0, Lvs4;
+    iget-wide v5, p0, Ldpd;->X:J
 
-    if-eqz v1, :cond_1
+    iget-wide v7, p0, Ldpd;->d:J
 
-    move-object v2, v0
+    add-long/2addr v7, v11
 
-    check-cast v2, Lvs4;
+    iput-wide v7, p0, Ldpd;->d:J
+
+    mul-long/2addr v7, v13
+
+    add-long/2addr v7, v5
+
+    goto :goto_1
 
     :cond_1
-    if-eqz v2, :cond_2
+    :goto_0
+    add-long v7, v3, v13
 
-    invoke-interface {v2}, Lvs4;->dispose()V
+    iget-wide v5, p0, Ldpd;->d:J
+
+    add-long/2addr v5, v11
+
+    iput-wide v5, p0, Ldpd;->d:J
+
+    mul-long/2addr v13, v5
+
+    sub-long v5, v7, v13
+
+    iput-wide v5, p0, Ldpd;->X:J
+
+    :goto_1
+    iput-wide v3, p0, Ldpd;->o:J
+
+    sub-long/2addr v7, v3
+
+    invoke-virtual {v2, p0, v7, v8, v1}, Lepd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
     :cond_2
     return-void

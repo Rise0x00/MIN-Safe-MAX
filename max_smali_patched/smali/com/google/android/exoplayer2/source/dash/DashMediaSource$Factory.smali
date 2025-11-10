@@ -4,58 +4,58 @@
 
 
 # instance fields
-.field public final a:Lr4;
+.field public final a:Lvs6;
 
-.field public final b:Lg94;
+.field public final b:Ltb4;
 
-.field public final c:Lx7;
+.field public final c:Lgj4;
 
-.field public final d:Lmed;
+.field public final d:Lrtd;
 
-.field public final e:Lmf2;
+.field public final e:Lu55;
 
 .field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Lg94;)V
+.method public constructor <init>(Ltb4;)V
     .locals 2
 
-    new-instance v0, Lr4;
+    new-instance v0, Lvs6;
 
-    invoke-direct {v0, p1}, Lr4;-><init>(Ljava/lang/Object;)V
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1, p1}, Lvs6;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->a:Lr4;
+    iput-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->a:Lvs6;
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->b:Lg94;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->b:Ltb4;
 
-    new-instance p1, Lx7;
+    new-instance p1, Lgj4;
 
-    invoke-direct {p1}, Lx7;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->c:Lx7;
+    invoke-direct {p1, v0}, Lgj4;-><init>(I)V
 
-    new-instance p1, Lmf2;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->c:Lgj4;
 
-    const/16 v0, 0xb
+    new-instance p1, Lu55;
 
-    invoke-direct {p1, v0}, Lmf2;-><init>(I)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->e:Lmf2;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->e:Lu55;
 
     const-wide/16 v0, 0x7530
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->f:J
 
-    new-instance p1, Lmed;
+    new-instance p1, Lrtd;
 
-    const/16 v0, 0xa
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1, v0}, Lmed;-><init>(I)V
-
-    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->d:Lmed;
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Factory;->d:Lrtd;
 
     return-void
 .end method

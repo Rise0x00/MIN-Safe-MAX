@@ -2,197 +2,232 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrrf;
-
 
 # instance fields
-.field public final a:Ljavax/net/ssl/X509TrustManager;
+.field public final a:J
 
-.field public final b:Ljava/lang/reflect/Method;
+.field public final b:Llvf;
+
+.field public final c:I
+
+.field public final d:Ln19;
+
+.field public final e:J
+
+.field public final f:Llvf;
+
+.field public final g:I
+
+.field public final h:Ln19;
+
+.field public final i:J
+
+.field public final j:J
 
 
 # direct methods
-.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Ljava/lang/reflect/Method;)V
+.method public constructor <init>(JLlvf;ILn19;JLlvf;ILn19;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+    iput-wide p1, p0, Lmd;->a:J
 
-    iput-object p2, p0, Lmd;->b:Ljava/lang/reflect/Method;
+    iput-object p3, p0, Lmd;->b:Llvf;
+
+    iput p4, p0, Lmd;->c:I
+
+    iput-object p5, p0, Lmd;->d:Ln19;
+
+    iput-wide p6, p0, Lmd;->e:J
+
+    iput-object p8, p0, Lmd;->f:Llvf;
+
+    iput p9, p0, Lmd;->g:I
+
+    iput-object p10, p0, Lmd;->h:Ln19;
+
+    iput-wide p11, p0, Lmd;->i:J
+
+    iput-wide p13, p0, Lmd;->j:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Lmd;->b:Ljava/lang/reflect/Method;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+    if-ne p0, p1, :cond_0
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    move-result-object p1
+    const-class v2, Lmd;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Ljava/security/cert/TrustAnchor;
+    move-result-object v3
 
-    invoke-virtual {p1}, Ljava/security/cert/TrustAnchor;->getTrustedCert()Ljava/security/cert/X509Certificate;
-
-    move-result-object p1
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type java.security.cert.TrustAnchor"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :catch_1
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :goto_0
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "unable to get issues and signature"
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-eq p0, p1, :cond_1
-
-    instance-of v0, p1, Lmd;
-
-    if-eqz v0, :cond_0
-
+    :cond_1
     check-cast p1, Lmd;
 
-    iget-object v0, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+    iget-wide v2, p0, Lmd;->a:J
 
-    iget-object v1, p1, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+    iget-wide v4, p1, Lmd;->a:J
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v2, v2, v4
 
-    move-result v0
+    if-nez v2, :cond_2
 
-    if-eqz v0, :cond_0
+    iget v2, p0, Lmd;->c:I
 
-    iget-object v0, p0, Lmd;->b:Ljava/lang/reflect/Method;
+    iget v3, p1, Lmd;->c:I
 
-    iget-object p1, p1, Lmd;->b:Ljava/lang/reflect/Method;
+    if-ne v2, v3, :cond_2
 
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-wide v2, p0, Lmd;->e:J
+
+    iget-wide v4, p1, Lmd;->e:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lmd;->g:I
+
+    iget v3, p1, Lmd;->g:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-wide v2, p0, Lmd;->i:J
+
+    iget-wide v4, p1, Lmd;->i:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Lmd;->j:J
+
+    iget-wide v4, p1, Lmd;->j:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lmd;->b:Llvf;
+
+    iget-object v3, p1, Lmd;->b:Llvf;
+
+    invoke-static {v2, v3}, Lxmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lmd;->d:Ln19;
+
+    iget-object v3, p1, Lmd;->d:Ln19;
+
+    invoke-static {v2, v3}, Lxmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lmd;->f:Llvf;
+
+    iget-object v3, p1, Lmd;->f:Llvf;
+
+    invoke-static {v2, v3}, Lxmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lmd;->h:Ln19;
+
+    iget-object p1, p1, Lmd;->h:Ln19;
+
+    invoke-static {v2, p1}, Lxmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
-    goto :goto_0
+    return v0
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
+    :cond_2
     :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lmd;->b:Ljava/lang/reflect/Method;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
     return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final hashCode()I
+    .locals 12
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lmd;->a:J
 
-    const-string v1, "CustomTrustRootIndex(trustManager="
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+    iget v0, p0, Lmd;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v1, ", findByIssuerAndSignatureMethod="
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lmd;->e:J
 
-    iget-object v1, p0, Lmd;->b:Ljava/lang/reflect/Method;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v6
 
-    const-string v1, ")"
+    iget v0, p0, Lmd;->g:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v8
+
+    iget-wide v0, p0, Lmd;->i:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    iget-wide v0, p0, Lmd;->j:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v11
+
+    iget-object v3, p0, Lmd;->b:Llvf;
+
+    iget-object v5, p0, Lmd;->d:Ln19;
+
+    iget-object v7, p0, Lmd;->f:Llvf;
+
+    iget-object v9, p0, Lmd;->h:Ln19;
+
+    filled-new-array/range {v2 .. v11}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,64 +1,133 @@
-.class public Lnaf;
-.super Ljava/lang/Object;
+.class public final Lnaf;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lmaf;
+# interfaces
+.implements Ljh8;
+.implements Landroid/text/style/UpdateAppearance;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic a:I
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lmaf;
+    iput p1, p0, Lnaf;->a:I
 
-    invoke-direct {v0}, Lnaf;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    sput-object v0, Lnaf;->b:Lmaf;
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    return-void
-.end method
+    const/4 p1, 0x7
 
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Lnaf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput p1, p0, Lnaf;->b:I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+
+    const/4 p1, 0x4
+
+    iput p1, p0, Lnaf;->b:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final copy()Lh44;
+    .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lnaf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lnaf;
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lnaf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1}, Lnaf;-><init>(I)V
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    return-object v0
 
-    move-result v0
+    :pswitch_0
+    new-instance v0, Lnaf;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-direct {v0, v1}, Lnaf;-><init>(I)V
 
-    :cond_0
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lnaf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lnaf;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lnaf;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lnaf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
     return-void
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

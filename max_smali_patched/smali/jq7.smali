@@ -2,15 +2,20 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Locd;
 
+# instance fields
+.field public a:Z
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.field public b:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public c:Z
 
-    return-void
-.end method
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/lang/String;
+
+.field public f:I
+
+.field public g:Z
+
+.field public h:Lu55;

@@ -1,21 +1,23 @@
 .class public final Lyh;
-.super Lwh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lyh;
+.field public static final a:Li0e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lyh;
+    new-instance v0, Li0e;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x6
 
-    sput-object v0, Lyh;->c:Lyh;
+    invoke-direct {v0, v1}, Li0e;-><init>(I)V
+
+    sput-object v0, Lyh;->a:Li0e;
 
     return-void
 .end method

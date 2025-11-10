@@ -1,232 +1,153 @@
 .class public final Lxz9;
-.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Lej6;
 
 
 # instance fields
-.field public G0:Z
+.field public final synthetic X:Ljava/lang/String;
 
-.field public final H0:Ljava/lang/Object;
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public final synthetic Z:Lrs8;
+
+.field public final synthetic o:Lc0a;
+
+.field public final synthetic s0:Ljava/lang/String;
+
+.field public final synthetic t0:Ljava/lang/String;
+
+.field public final synthetic u0:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Lc0a;Ljava/lang/String;Ljava/lang/String;Lrs8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lxz9;->o:Lc0a;
 
-    const/4 p1, 0x1
+    iput-object p2, p0, Lxz9;->X:Ljava/lang/String;
 
-    iput-boolean p1, p0, Lxz9;->G0:Z
+    iput-object p3, p0, Lxz9;->Y:Ljava/lang/String;
 
-    new-instance v0, Lzf7;
+    iput-object p4, p0, Lxz9;->Z:Lrs8;
 
-    const/16 v1, 0x15
+    iput-object p5, p0, Lxz9;->s0:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p0}, Lzf7;-><init>(ILjava/lang/Object;)V
+    iput-object p6, p0, Lxz9;->t0:Ljava/lang/String;
 
-    const/4 v1, 0x3
+    iput-object p7, p0, Lxz9;->u0:Landroid/os/Bundle;
 
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+    const/4 p1, 0x2
 
-    move-result-object v0
-
-    iput-object v0, p0, Lxz9;->H0:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance p1, Lzj6;
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Lzj6;-><init>(Landroid/content/res/Resources;)V
-
-    invoke-direct {p0}, Lxz9;->getShimmerDrawable()Lwz9;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lzj6;->d:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {}, Lf8d;->a()Lf8d;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lzj6;->p:Lf8d;
-
-    invoke-virtual {p1}, Lzj6;->a()Lyj6;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljy4;->setHierarchy(Lgy4;)V
+    invoke-direct {p0, p1, p8}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method private final getShimmerDrawable()Lwz9;
-    .locals 1
-
-    iget-object v0, p0, Lxz9;->H0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwz9;
-
-    return-object v0
-.end method
-
-.method public static q(Luxa;)Ls8e;
-    .locals 3
-
-    new-instance v0, Lkbh;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lkbh;-><init>(I)V
-
-    iget-object v1, v0, Lkbh;->b:Ljava/lang/Object;
-
-    check-cast v1, Ls8e;
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, v1, Ls8e;->j:Z
-
-    invoke-interface {p0}, Luxa;->b()Lue0;
-
-    move-result-object v2
-
-    iget v2, v2, Lue0;->m:I
-
-    invoke-virtual {v0, v2}, Lkbh;->y(I)V
-
-    invoke-interface {p0}, Luxa;->b()Lue0;
-
-    move-result-object p0
-
-    iget p0, p0, Lue0;->l:I
-
-    iput p0, v1, Ls8e;->d:I
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p0}, Lkbh;->w(F)V
-
-    const/16 p0, 0x40
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v1
-
-    invoke-static {p0}, Lv63;->r0(F)I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Lkbh;->A(I)V
-
-    invoke-virtual {v0}, Lkbh;->q()Ls8e;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Ljy4;->onAttachedToWindow()V
-
-    iget-boolean v0, p0, Lxz9;->G0:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
-
-    iget-boolean v0, p0, Lxz9;->G0:Z
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lxz9;->getShimmerDrawable()Lwz9;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lv8e;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 1
-
-    invoke-super {p0}, Ljy4;->onDetachedFromWindow()V
-
-    iget-boolean v0, p0, Lxz9;->G0:Z
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lxz9;->getShimmerDrawable()Lwz9;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lv8e;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onThemeChanged(Luxa;)V
-    .locals 1
-
-    invoke-direct {p0}, Lxz9;->getShimmerDrawable()Lwz9;
-
-    move-result-object v0
-
-    invoke-static {p1}, Lxz9;->q(Luxa;)Ls8e;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lv8e;->b(Ls8e;)V
-
-    return-void
-.end method
-
-.method public final p(La57;Landroid/graphics/drawable/Animatable;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p1, 0x0
+    check-cast p1, Lg54;
 
-    iput-boolean p1, p0, Lxz9;->G0:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {p0}, Lxz9;->getShimmerDrawable()Lwz9;
+    invoke-virtual {p0, p1, p2}, Lxz9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lv8e;->d()V
+    check-cast p1, Lxz9;
 
-    iget-boolean p1, p0, Lxz9;->G0:Z
+    sget-object p2, Lybg;->a:Lybg;
 
-    xor-int/lit8 p1, p1, 0x1
+    invoke-virtual {p1, p2}, Lxz9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+    return-object p2
+.end method
 
-    return-void
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 9
+
+    new-instance v0, Lxz9;
+
+    iget-object v6, p0, Lxz9;->t0:Ljava/lang/String;
+
+    iget-object v7, p0, Lxz9;->u0:Landroid/os/Bundle;
+
+    iget-object v1, p0, Lxz9;->o:Lc0a;
+
+    iget-object v2, p0, Lxz9;->X:Ljava/lang/String;
+
+    iget-object v3, p0, Lxz9;->Y:Ljava/lang/String;
+
+    iget-object v4, p0, Lxz9;->Z:Lrs8;
+
+    iget-object v5, p0, Lxz9;->s0:Ljava/lang/String;
+
+    move-object v8, p2
+
+    invoke-direct/range {v0 .. v8}, Lxz9;-><init>(Lc0a;Ljava/lang/String;Ljava/lang/String;Lrs8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object v4, p0, Lxz9;->t0:Ljava/lang/String;
+
+    iget-object v5, p0, Lxz9;->u0:Landroid/os/Bundle;
+
+    iget-object v0, p0, Lxz9;->X:Ljava/lang/String;
+
+    iget-object v1, p0, Lxz9;->Y:Ljava/lang/String;
+
+    iget-object v2, p0, Lxz9;->Z:Lrs8;
+
+    iget-object v3, p0, Lxz9;->s0:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v5}, Lc0a;->h(Ljava/lang/String;Ljava/lang/String;Lrs8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lqs8;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lxz9;->o:Lc0a;
+
+    iget-object v1, v0, Lc0a;->w0:Lxp8;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lxp8;->D()V
+
+    iget-object v1, v1, Lxp8;->c:Lwp8;
+
+    invoke-interface {v1}, Lwp8;->isConnected()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string p1, "MediaController"
+
+    const-string v1, "The controller is not connected. Ignoring setMediaItem()."
+
+    invoke-static {p1, v1}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v1, p1}, Lwp8;->O(Lqs8;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Lc0a;->p()V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

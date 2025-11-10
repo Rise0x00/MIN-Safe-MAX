@@ -1,120 +1,193 @@
 .class public final Lvhf;
-.super Ljava/lang/Object;
+.super Lh24;
 .source "SourceFile"
-
-# interfaces
-.implements Luhf;
 
 
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public final d:Lfj8;
 
-.field public b:Ljava/lang/Long;
+.field public final o:Ljava/lang/String;
 
 
-# virtual methods
-.method public final getMsSinceBoot()J
-    .locals 2
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    const/4 v0, 0x0
 
-    move-result-wide v0
+    .line 1
+    invoke-direct {p0, v0}, Lvhf;-><init>(I)V
 
-    return-wide v0
+    return-void
 .end method
 
-.method public final getServerTimeMs()Ljava/lang/Long;
-    .locals 6
+.method public constructor <init>(I)V
+    .locals 1
 
-    iget-object v0, p0, Lvhf;->b:Ljava/lang/Long;
+    .line 2
+    new-instance p1, Lfj8;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-direct {p1, v0}, Lfj8;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    .line 3
+    invoke-direct {p0}, Lh24;-><init>()V
 
-    move-result-wide v2
+    .line 4
+    iput-object p1, p0, Lvhf;->d:Lfj8;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    .line 5
+    const-class p1, Lvhf;
 
-    move-result-wide v4
-
-    sub-long/2addr v4, v2
-
-    iget-object v0, p0, Lvhf;->a:Ljava/lang/Long;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final localTimeMs()J
-    .locals 2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
-    .locals 2
-
-    invoke-virtual {p0}, Lvhf;->getServerTimeMs()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    sub-long/2addr p1, v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    .line 6
+    iput-object p1, p0, Lvhf;->o:Ljava/lang/String;
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 .end method
 
-.method public final utcTimeMs()J
-    .locals 2
 
-    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+# virtual methods
+.method public final a()V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lvhf;->d:Lfj8;
 
-    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+    invoke-virtual {v0}, Lnh;->a()V
 
-    move-result-wide v0
+    return-void
+.end method
 
-    return-wide v0
+.method public final f(Lh24;Lc24;)V
+    .locals 1
+
+    iget-object v0, p0, Lvhf;->d:Lfj8;
+
+    invoke-virtual {v0, p1, p2}, Lnh;->f(Lh24;Lc24;)V
+
+    return-void
+.end method
+
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf24;)V
+    .locals 12
+
+    sget-object v0, La98;->d:La98;
+
+    const/4 v1, 0x0
+
+    if-nez p2, :cond_2
+
+    if-nez p4, :cond_2
+
+    iget-object p1, p0, Lvhf;->o:Ljava/lang/String;
+
+    sget-object p2, Lcuh;->b:Lnxa;
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p2, v0}, Lnxa;->b(La98;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    const-string p3, "Already swiped controller manually, skip performChange"
+
+    invoke-virtual {p2, v0, p1, p3, v1}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual/range {p5 .. p5}, Lf24;->n()V
+
+    return-void
+
+    :cond_2
+    if-nez p2, :cond_5
+
+    if-eqz p4, :cond_5
+
+    iget-object v2, p0, Lvhf;->o:Ljava/lang/String;
+
+    sget-object v3, Lcuh;->b:Lnxa;
+
+    if-nez v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v3, v0}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "Showing controller without animation"
+
+    invoke-virtual {v3, v0, v2, v4, v1}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_1
+    new-instance v5, Lhqe;
+
+    const/4 v0, 0x1
+
+    invoke-direct {v5, v0}, Lhqe;-><init>(Z)V
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    move-object v8, p3
+
+    move/from16 v9, p4
+
+    move-object/from16 v10, p5
+
+    invoke-virtual/range {v5 .. v10}, Lhqe;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf24;)V
+
+    return-void
+
+    :cond_5
+    iget-object v6, p0, Lvhf;->d:Lfj8;
+
+    move-object v7, p1
+
+    move-object v8, p2
+
+    move-object v9, p3
+
+    move/from16 v10, p4
+
+    move-object/from16 v11, p5
+
+    invoke-virtual/range {v6 .. v11}, Lnh;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf24;)V
+
+    return-void
+.end method
+
+.method public final h(Landroid/os/Bundle;)V
+    .locals 1
+
+    iget-object v0, p0, Lvhf;->d:Lfj8;
+
+    invoke-virtual {v0, p1}, Lnh;->h(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public final i(Landroid/os/Bundle;)V
+    .locals 1
+
+    iget-object v0, p0, Lvhf;->d:Lfj8;
+
+    invoke-virtual {v0, p1}, Lnh;->i(Landroid/os/Bundle;)V
+
+    return-void
 .end method

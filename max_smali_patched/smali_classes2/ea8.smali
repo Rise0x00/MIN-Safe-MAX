@@ -1,157 +1,71 @@
 .class public final Lea8;
-.super Ljava/lang/Object;
+.super Lrj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lrb8;
+.field public final b:Z
 
 .field public final c:Z
 
+.field public final d:Z
+
+.field public final o:Lo0a;
+
 
 # direct methods
-.method public constructor <init>(JLrb8;Z)V
+.method public constructor <init>(JZZZLo0a;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
 
-    iput-wide p1, p0, Lea8;->a:J
-
-    iput-object p3, p0, Lea8;->b:Lrb8;
+    iput-boolean p3, p0, Lea8;->b:Z
 
     iput-boolean p4, p0, Lea8;->c:Z
+
+    iput-boolean p5, p0, Lea8;->d:Z
+
+    iput-object p6, p0, Lea8;->o:Lo0a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final toString()Ljava/lang/String;
     .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lea8;->o:Lo0a;
 
-    if-ne p0, p1, :cond_0
+    iget v0, v0, Lo0a;->d:I
 
-    return v0
+    const-string v1, "LoginEvent(requestId="
 
-    :cond_0
-    const/4 v1, 0x0
+    const-string v2, ", isFirstLogin="
 
-    if-eqz p1, :cond_4
+    iget-wide v3, p0, Lrj0;->a:J
 
-    const-class v2, Lea8;
+    iget-boolean v5, p0, Lea8;->b:Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v3, v4, v1, v2, v5}, Lcd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v2, ", hasNewMessages="
 
-    move-result v2
+    const-string v3, ", videoChatHistory="
 
-    if-nez v2, :cond_1
+    iget-boolean v4, p0, Lea8;->c:Z
 
-    goto :goto_0
+    iget-boolean v5, p0, Lea8;->d:Z
 
-    :cond_1
-    check-cast p1, Lea8;
+    invoke-static {v2, v3, v1, v4, v5}, Lmb3;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    iget-wide v2, p0, Lea8;->a:J
+    const-string v2, ", chats="
 
-    iget-wide v4, p1, Lea8;->a:J
+    const-string v3, ")"
 
-    cmp-long v2, v2, v4
-
-    if-eqz v2, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-boolean v2, p0, Lea8;->c:Z
-
-    iget-boolean v3, p1, Lea8;->c:Z
-
-    if-eq v2, v3, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-object v2, p0, Lea8;->b:Lrb8;
-
-    iget-object p1, p1, Lea8;->b:Lrb8;
-
-    if-ne v2, p1, :cond_4
-
-    return v0
-
-    :cond_4
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    const/16 v0, 0x20
-
-    iget-wide v1, p0, Lea8;->a:J
-
-    ushr-long v3, v1, v0
-
-    xor-long v0, v1, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lea8;->b:Lrb8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lea8;->c:Z
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Key{contactId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lea8;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", markerWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lea8;->b:Lrb8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active="
-
-    const-string v2, "}"
-
-    iget-boolean v3, p0, Lea8;->c:Z
-
-    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v0, v3}, Lmb3;->d(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

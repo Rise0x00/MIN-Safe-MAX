@@ -1,101 +1,120 @@
-.class public final Lsd6;
+.class public final synthetic Lsd6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw47;
+.implements Loi6;
 
 
-# static fields
-.field public static final a:Lsd6;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:[B
+.field public final synthetic b:Lae6;
 
-.field public static final c:[B
+.field public final synthetic c:Lb8b;
 
-.field public static final d:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lae6;Lb8b;II)V
+    .locals 0
 
-    new-instance v0, Lsd6;
+    iput p4, p0, Lsd6;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsd6;->b:Lae6;
 
-    sput-object v0, Lsd6;->a:Lsd6;
+    iput-object p2, p0, Lsd6;->c:Lb8b;
 
-    sget-object v0, Li82;->b:Ljava/nio/charset/Charset;
+    iput p3, p0, Lsd6;->d:I
 
-    const-string v1, "<svg"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    invoke-static {v1}, Lnu3;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Lsd6;->b:[B
-
-    const-string v1, "<?xm"
-
-    invoke-static {v1}, Lnu3;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Lsd6;->c:[B
-
-    sput v0, Lsd6;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[B)Lx47;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    sget-object p1, Lsd6;->b:[B
+    iget v0, p0, Lsd6;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p2, p1, v0}, Lnu3;->l([B[BI)Z
+    iget-object v0, p0, Lsd6;->b:Lae6;
 
-    move-result p1
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    sget-object p1, Lsd6;->c:[B
+    move-result-object v0
 
-    invoke-static {p2, p1, v0}, Lnu3;->l([B[BI)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p1
+    move-result v1
 
-    if-eqz p1, :cond_0
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lsd6;->c:Lb8b;
+
+    iget v3, p0, Lsd6;->d:I
+
+    invoke-interface {v1, v2, v3}, Lz7b;->m(Lb8b;I)V
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lx47;->c:Lx47;
+    sget-object v0, Lybg;->a:Lybg;
 
-    return-object p1
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lsd6;->c:Lb8b;
+
+    iget v3, p0, Lsd6;->d:I
+
+    invoke-interface {v1, v2, v3}, Lz7b;->x(Lb8b;I)V
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    sget-object p1, Ly6b;->a:Lx47;
+    sget-object v0, Lybg;->a:Lybg;
 
-    return-object p1
-.end method
+    return-object v0
 
-.method public final b()I
-    .locals 1
+    nop
 
-    sget v0, Lsd6;->d:I
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

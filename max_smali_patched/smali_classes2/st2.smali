@@ -1,218 +1,198 @@
 .class public final Lst2;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Liy1;
+.implements Lej6;
 
 
 # instance fields
-.field public a:J
+.field public final synthetic X:Lt92;
 
-.field public b:Ljava/lang/Object;
+.field public final synthetic Y:Lvu2;
 
-.field public c:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
-
-    packed-switch p1, :pswitch_data_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance p1, Ljava/text/SimpleDateFormat;
-
-    const-string v0, "yyyy-MM-dd\'T\'XXX HH:mm:"
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {p1, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    iput-object p1, p0, Lst2;->b:Ljava/lang/Object;
-
-    .line 3
-    const-string p1, ""
-
-    iput-object p1, p0, Lst2;->c:Ljava/lang/Object;
-
-    return-void
-
-    .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    new-instance p1, Lq35;
-
-    invoke-direct {p1, p0}, Lq35;-><init>(Lst2;)V
-
-    iput-object p1, p0, Lst2;->b:Ljava/lang/Object;
-
-    .line 6
-    new-instance p1, Lq35;
-
-    invoke-direct {p1, p0}, Lq35;-><init>(Lst2;)V
-
-    iput-object p1, p0, Lst2;->c:Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Liy1;Lw7f;J)V
+.method public constructor <init>(Lt92;Lvu2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lst2;->X:Lt92;
 
-    .line 8
-    iput-object p1, p0, Lst2;->b:Ljava/lang/Object;
+    iput-object p2, p0, Lst2;->Y:Lvu2;
 
-    .line 9
-    iput-object p2, p0, Lst2;->c:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    .line 10
-    iput-wide p3, p0, Lst2;->a:J
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c()Lw7f;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lst2;->c:Ljava/lang/Object;
+    check-cast p1, Lg54;
 
-    check-cast v0, Lw7f;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    invoke-virtual {p0, p1, p2}, Lst2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lst2;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lst2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public d()Lfy1;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lst2;->b:Ljava/lang/Object;
+    new-instance p1, Lst2;
 
-    check-cast v0, Liy1;
+    iget-object v0, p0, Lst2;->X:Lt92;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lst2;->Y:Lvu2;
 
-    invoke-interface {v0}, Liy1;->d()Lfy1;
+    invoke-direct {p1, v0, v1, p2}, Lst2;-><init>(Lt92;Lvu2;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lst2;->X:Lt92;
+
+    iget-wide v1, v0, Lt92;->a:J
+
+    iget v3, p0, Lst2;->o:I
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_1
+
+    if-ne v3, v4, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_0
-    sget-object v0, Lfy1;->a:Lfy1;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-object v0
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public e()I
-    .locals 1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lst2;->b:Ljava/lang/Object;
+    throw p1
 
-    check-cast v0, Liy1;
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lst2;->Y:Lvu2;
 
-    invoke-interface {v0}, Liy1;->e()I
+    iget-object v3, p1, Lvu2;->y0:Lru7;
+
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll83;
+
+    check-cast v3, Lztd;
+
+    invoke-virtual {v3}, Lztd;->s()J
+
+    move-result-wide v5
+
+    iget-object v0, v0, Lt92;->b:Lvd2;
+
+    invoke-virtual {v0, v5, v6}, Lvd2;->e(J)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_2
 
-    :cond_0
-    const/4 v0, 0x1
+    sget-object v0, Lss2;->c:Lss2;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public f()Ldy1;
-    .locals 1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lst2;->b:Ljava/lang/Object;
+    const-string v3, ":profile/attaches?id="
 
-    check-cast v0, Liy1;
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Liy1;->f()Ldy1;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lpf4;
 
-    :cond_0
-    sget-object v0, Ldy1;->a:Ldy1;
+    invoke-direct {v1, v0}, Lpf4;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public getTimestamp()J
-    .locals 4
+    :cond_2
+    sget-object v0, Lss2;->c:Lss2;
 
-    iget-object v0, p0, Lst2;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lvu2;->A()Z
 
-    check-cast v0, Liy1;
+    move-result v3
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v0}, Liy1;->getTimestamp()J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    const-string v5, ":profile?id="
 
-    return-wide v0
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    iget-wide v0, p0, Lst2;->a:J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-wide/16 v2, -0x1
+    const-string v1, "&type=local_chat&is_opened_from_dialog="
 
-    cmp-long v2, v0, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-wide v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "No timestamp is available."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public k()Ley1;
-    .locals 1
-
-    iget-object v0, p0, Lst2;->b:Ljava/lang/Object;
-
-    check-cast v0, Liy1;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Liy1;->k()Ley1;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    new-instance v1, Lpf4;
+
+    invoke-direct {v1, v0}, Lpf4;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    iget-object p1, p1, Lvu2;->b1:Lake;
+
+    iput v4, p0, Lst2;->o:I
+
+    invoke-virtual {p1, v1, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_3
+
     return-object v0
 
-    :cond_0
-    sget-object v0, Ley1;->a:Ley1;
+    :cond_3
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-    return-object v0
+    return-object p1
 .end method

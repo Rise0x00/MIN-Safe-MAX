@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfl;
+.implements Lfm;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lfl;"
+        "Lfm;"
     }
 .end annotation
 
@@ -24,7 +24,7 @@
 
 .field private final collector:Ljava/lang/String;
 
-.field private file:Ljava/io/File;
+.field private final items:Lat0;
 
 .field private final platform:Ljava/lang/String;
 
@@ -35,7 +35,7 @@
 
     const-string v0, "log.externalLog"
 
-    invoke-static {v0}, Lbm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Ldn;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,105 +55,51 @@
 
     iput-object p3, p0, Lru/ok/android/onelog/OneLogApiRequest;->platform:Ljava/lang/String;
 
-    iput-object p4, p0, Lru/ok/android/onelog/OneLogApiRequest;->file:Ljava/io/File;
+    iput-object p4, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lat0;
 
     return-void
-.end method
-
-.method private writeItems(Lcm7;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lru/ok/android/api/json/JsonSerializeException;
-        }
-    .end annotation
-
-    invoke-interface {p1}, Lcm7;->u()V
-
-    new-instance v0, Ljava/io/InputStreamReader;
-
-    new-instance v1, Ljava/io/FileInputStream;
-
-    iget-object v2, p0, Lru/ok/android/onelog/OneLogApiRequest;->file:Ljava/io/File;
-
-    invoke-direct {v1, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    const-string v2, "UTF-8"
-
-    invoke-direct {v0, v1, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
-
-    :try_start_0
-    invoke-interface {p1, v0}, Lcm7;->M(Ljava/io/InputStreamReader;)V
-    :try_end_0
-    .catch Lru/ok/android/api/json/JsonSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Ljava/io/Reader;->close()V
-
-    invoke-interface {p1}, Lcm7;->t()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    :try_start_1
-    new-instance v1, Lru/ok/android/api/json/JsonSerializeException;
-
-    invoke-direct {v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_0
-    invoke-virtual {v0}, Ljava/io/Reader;->close()V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public bridge synthetic canRepeat()Z
+.method public canRepeat()Z
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lat0;
+
+    invoke-virtual {v0}, Lat0;->canRepeat()Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Ldl;
+.method public bridge synthetic getConfigExtractor()Lbm;
     .locals 1
 
-    sget-object v0, Ldl;->e:Lzu3;
+    sget-object v0, Lbm;->f:Ly1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lpl7;
+.method public bridge synthetic getFailParser()Lar7;
     .locals 1
 
-    sget-object v0, Lmf2;->b:Lmf2;
+    sget-object v0, Low3;->a:Low3;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lpl7;
+.method public getOkParser()Lar7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpl7;"
+            "Lar7;"
         }
     .end annotation
 
-    sget-object v0, Lsl7;->a:Lj2a;
+    sget-object v0, Ldr7;->a:Lay6;
 
     return-object v0
 .end method
@@ -166,18 +112,18 @@
     return v0
 .end method
 
-.method public getScope()Ltl;
+.method public getScope()Lum;
     .locals 1
 
-    sget-object v0, Ltl;->c:Ltl;
+    sget-object v0, Lum;->c:Lum;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lul;
+.method public bridge synthetic getScopeAfter()Lvm;
     .locals 1
 
-    sget-object v0, Lul;->a:Lul;
+    sget-object v0, Lvm;->a:Lvm;
 
     return-object v0
 .end method
@@ -230,7 +176,7 @@
     return v0
 .end method
 
-.method public writeParams(Lcm7;)V
+.method public writeParams(Lnr7;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -241,46 +187,48 @@
 
     const-string v0, "collector"
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-interface {p1, v0}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->collector:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lnr7;->h(Ljava/lang/String;)V
 
     const-string v0, "data"
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-interface {p1, v0}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
 
-    invoke-interface {p1}, Lcm7;->s()V
+    invoke-interface {p1}, Lnr7;->p()V
 
     const-string v0, "application"
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-interface {p1, v0}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->application:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lnr7;->h(Ljava/lang/String;)V
 
     const-string v0, "platform"
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-interface {p1, v0}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->platform:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lnr7;->h(Ljava/lang/String;)V
 
     const-string v0, "items"
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-interface {p1, v0}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
 
-    invoke-direct {p0, p1}, Lru/ok/android/onelog/OneLogApiRequest;->writeItems(Lcm7;)V
+    iget-object v0, p0, Lru/ok/android/onelog/OneLogApiRequest;->items:Lat0;
 
-    invoke-interface {p1}, Lcm7;->q()V
+    invoke-virtual {v0, p1}, Lat0;->write(Lnr7;)V
+
+    invoke-interface {p1}, Lnr7;->n()V
 
     return-void
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lcm7;)V
+.method public bridge synthetic writeSupplyParams(Lnr7;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

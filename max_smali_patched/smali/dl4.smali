@@ -1,215 +1,79 @@
 .class public final Ldl4;
-.super Lmof;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final F:Z
+.field public a:Lm7d;
 
-.field public final G:Z
+.field public b:Lm7d;
 
-.field public final H:Z
+.field public c:I
 
-.field public final I:Z
+.field public d:I
 
-.field public J:Z
+.field public e:I
 
-.field public final K:Z
-
-.field public final L:Z
-
-.field public final M:Landroid/util/SparseArray;
-
-.field public final N:Landroid/util/SparseBooleanArray;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 17
-    invoke-direct {p0}, Lmof;-><init>()V
-
-    .line 18
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Ldl4;->M:Landroid/util/SparseArray;
-
-    .line 19
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    iput-object v0, p0, Ldl4;->N:Landroid/util/SparseBooleanArray;
-
-    const/4 v0, 0x1
-
-    .line 20
-    iput-boolean v0, p0, Ldl4;->F:Z
-
-    .line 21
-    iput-boolean v0, p0, Ldl4;->G:Z
-
-    .line 22
-    iput-boolean v0, p0, Ldl4;->H:Z
-
-    .line 23
-    iput-boolean v0, p0, Ldl4;->I:Z
-
-    .line 24
-    iput-boolean v0, p0, Ldl4;->J:Z
-
-    .line 25
-    iput-boolean v0, p0, Ldl4;->K:Z
-
-    .line 26
-    iput-boolean v0, p0, Ldl4;->L:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Lfl4;)V
-    .locals 6
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    invoke-virtual {p0, p1}, Lmof;->d(Loof;)V
-
-    .line 3
-    iget-boolean v0, p1, Lfl4;->o0:Z
-
-    iput-boolean v0, p0, Ldl4;->F:Z
-
-    .line 4
-    iget-boolean v0, p1, Lfl4;->p0:Z
-
-    iput-boolean v0, p0, Ldl4;->G:Z
-
-    .line 5
-    iget-boolean v0, p1, Lfl4;->q0:Z
-
-    iput-boolean v0, p0, Ldl4;->H:Z
-
-    .line 6
-    iget-boolean v0, p1, Lfl4;->r0:Z
-
-    iput-boolean v0, p0, Ldl4;->I:Z
-
-    .line 7
-    iget-boolean v0, p1, Lfl4;->s0:Z
-
-    iput-boolean v0, p0, Ldl4;->J:Z
-
-    .line 8
-    iget-boolean v0, p1, Lfl4;->t0:Z
-
-    iput-boolean v0, p0, Ldl4;->K:Z
-
-    .line 9
-    iget-boolean v0, p1, Lfl4;->u0:Z
-
-    iput-boolean v0, p0, Ldl4;->L:Z
-
-    .line 10
-    iget-object v0, p1, Lfl4;->v0:Landroid/util/SparseArray;
-
-    .line 11
-    new-instance v1, Landroid/util/SparseArray;
-
-    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
-
-    const/4 v2, 0x0
-
-    .line 12
-    :goto_0
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    .line 13
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v3
-
-    new-instance v4, Ljava/util/HashMap;
-
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/util/Map;
-
-    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v1, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 14
-    :cond_0
-    iput-object v1, p0, Ldl4;->M:Landroid/util/SparseArray;
-
-    .line 15
-    iget-object p1, p1, Lfl4;->w0:Landroid/util/SparseBooleanArray;
-
-    .line 16
-    invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->clone()Landroid/util/SparseBooleanArray;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldl4;->N:Landroid/util/SparseBooleanArray;
-
-    return-void
-.end method
+.field public f:I
 
 
 # virtual methods
-.method public final a(Lhof;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lmof;->D:Ljava/util/HashMap;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Lhof;->a:Lvnf;
+    const-string v1, "ChangeInfo{oldHolder="
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-object v1, p0, Ldl4;->a:Lm7d;
 
-.method public final b()Loof;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lfl4;
+    const-string v1, ", newHolder="
 
-    invoke-direct {v0, p0}, Lfl4;-><init>(Ldl4;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldl4;->b:Lm7d;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldl4;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldl4;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", toX="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldl4;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", toY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldl4;->f:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final c()Lmof;
-    .locals 0
-
-    invoke-super {p0}, Lmof;->c()Lmof;
-
-    return-object p0
-.end method
-
-.method public final f([Ljava/lang/String;)Lmof;
-    .locals 0
-
-    invoke-static {p1}, Lmof;->e([Ljava/lang/String;)Lxyc;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmof;->p:Le77;
-
-    return-object p0
 .end method

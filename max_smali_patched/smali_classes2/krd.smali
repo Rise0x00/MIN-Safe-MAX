@@ -1,221 +1,159 @@
-.class public final Lkrd;
+.class public final synthetic Lkrd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/view/ViewGroup;
+.field public final synthetic a:Llrd;
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic b:Lsh1;
+
+.field public final synthetic c:Landroid/util/Size;
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
-    .locals 1
+.method public synthetic constructor <init>(Llrd;Lsh1;Landroid/util/Size;J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkrd;->a:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lkrd;->a:Llrd;
 
-    new-instance p1, Lm6d;
+    iput-object p2, p0, Lkrd;->b:Lsh1;
 
-    const/16 v0, 0x9
+    iput-object p3, p0, Lkrd;->c:Landroid/util/Size;
 
-    invoke-direct {p1, v0, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkrd;->b:Ljava/lang/Object;
+    iput-wide p4, p0, Lkrd;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final run()V
+    .locals 8
 
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lkrd;->a:Llrd;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object v6, p0, Lkrd;->b:Lsh1;
 
-    move-result-object v0
+    iget-object v0, p0, Lkrd;->c:Landroid/util/Size;
 
-    check-cast v0, Lird;
+    iget-wide v2, p0, Lkrd;->d:J
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v4, v1, Llrd;->d:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v4, v6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v4, :cond_0
+
+    monitor-exit v1
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    iget-object v4, v1, Llrd;->c:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v4, v6}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Long;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    const-string v4, "width"
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v5
+
+    invoke-static {v5}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
+
+    move-result-object v5
+
+    new-instance v7, Lvcb;
+
+    invoke-direct {v7, v4, v5}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-string v4, "height"
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
 
     move-result v0
 
-    return v0
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
     move-result-object v0
 
-    check-cast v0, Lird;
+    new-instance v5, Lvcb;
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-direct {v5, v4, v0}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c(II)V
-    .locals 3
-
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    filled-new-array {v7, v5}, [Lvcb;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    invoke-static {v0}, Lyg8;->h([Lvcb;)Ljava/util/Map;
 
-    const/4 v1, 0x0
+    move-result-object v4
 
-    const/16 v2, 0xc
+    invoke-static {}, Lie;->a()Lgpd;
 
-    invoke-static {v0, p1, p2, v1, v2}, Lhd6;->z(Landroid/view/View;IIII)V
+    move-result-object v7
 
-    return-void
-.end method
+    new-instance v0, Lwf2;
 
-.method public final d(II)V
-    .locals 1
+    const/4 v5, 0x4
 
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v5}, Lwf2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v7, v0}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
 
-    move-result-object v0
+    iget-object v0, v1, Llrd;->c:Ljava/util/LinkedHashMap;
 
-    check-cast v0, Lird;
+    invoke-interface {v0, v6}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+    iget-object v0, v1, Llrd;->d:Ljava/util/LinkedHashSet;
 
-    return-void
-.end method
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.method public final e(Landroid/text/Layout;)V
-    .locals 2
+    goto :goto_0
 
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    if-nez p1, :cond_1
-
-    invoke-interface {v0}, Lbp7;->a()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lird;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
+    goto :goto_1
 
     :cond_1
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lird;
-
-    iput-object p1, v0, Lird;->a:Landroid/text/Layout;
-
-    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget v1, v0, Lird;->b:I
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    if-nez p1, :cond_3
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v1, -0x2
-
-    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    iget-object v1, p0, Lkrd;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_3
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    :goto_0
+    monitor-exit v1
 
     return-void
-.end method
 
-.method public final f(I)V
-    .locals 2
+    :goto_1
+    monitor-exit v1
 
-    iget-object v0, p0, Lkrd;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lird;
-
-    iput p1, v0, Lird;->b:I
-
-    iget-object v1, v0, Lird;->a:Landroid/text/Layout;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    return-void
+    throw v0
 .end method

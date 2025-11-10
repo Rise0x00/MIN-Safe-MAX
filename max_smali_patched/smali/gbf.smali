@@ -1,76 +1,69 @@
 .class public final Lgbf;
-.super Ljava/lang/Object;
+.super Lbu7;
 .source "SourceFile"
 
 # interfaces
-.implements Lmz3;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lubf;
-
-.field public final synthetic c:Lmz3;
-
-.field public final synthetic d:Ljava/util/concurrent/Executor;
+.field public final synthetic a:[C
 
 
 # direct methods
-.method public synthetic constructor <init>(Lubf;Lmz3;Ljava/util/concurrent/Executor;I)V
+.method public constructor <init>([C)V
     .locals 0
 
-    iput p4, p0, Lgbf;->a:I
+    iput-object p1, p0, Lgbf;->a:[C
 
-    iput-object p1, p0, Lgbf;->b:Lubf;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lgbf;->c:Lmz3;
-
-    iput-object p3, p0, Lgbf;->d:Ljava/util/concurrent/Executor;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lgbf;->a:I
+    check-cast p1, Ljava/lang/CharSequence;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Ljava/lang/Number;
 
-    iget-object v0, p0, Lgbf;->b:Lubf;
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
 
-    iget-object v1, p0, Lgbf;->c:Lmz3;
+    move-result p2
 
-    iget-object v2, p0, Lgbf;->d:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lgbf;->a:[C
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1, p1, v2, v3}, Lbolts/Task;->access$100(Lubf;Lmz3;Lbolts/Task;Ljava/util/concurrent/Executor;Lg22;)V
+    invoke-static {p1, v0, p2, v1}, Lxaf;->I(Ljava/lang/CharSequence;[CIZ)I
 
-    return-object v3
+    move-result p1
 
-    :pswitch_0
-    iget-object v0, p0, Lgbf;->b:Lubf;
+    if-gez p1, :cond_0
 
-    iget-object v1, p0, Lgbf;->c:Lmz3;
+    const/4 p1, 0x0
 
-    iget-object v2, p0, Lgbf;->d:Ljava/util/concurrent/Executor;
+    return-object p1
 
-    const/4 v3, 0x0
+    :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v0, v1, p1, v2, v3}, Lbolts/Task;->access$000(Lubf;Lmz3;Lbolts/Task;Ljava/util/concurrent/Executor;Lg22;)V
+    move-result-object p1
 
-    return-object v3
+    const/4 p2, 0x1
 
-    nop
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p2
+
+    new-instance v0, Lvcb;
+
+    invoke-direct {v0, p1, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v0
 .end method

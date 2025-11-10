@@ -3,282 +3,89 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:Ljava/util/List;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
-.field public final c:J
+.field public final c:I
 
-.field public final d:Ljava/lang/Thread;
+.field public final d:Ljava/util/concurrent/Executor;
 
-.field public final e:Ljava/util/List;
+.field public final e:Lesg;
+
+.field public final f:La3a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lmpg;->a:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-wide p2, p0, Lmpg;->b:J
+    move-result-object v0
 
-    iput-wide p4, p0, Lmpg;->c:J
+    const/4 v1, 0x2
 
-    iput-object p6, p0, Lmpg;->d:Ljava/lang/Thread;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p7, p0, Lmpg;->e:Ljava/util/List;
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x7
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lmpg;->g:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static a(Lmpg;JLjava/lang/Thread;I)Lmpg;
-    .locals 8
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lesg;La3a;)V
+    .locals 2
 
-    iget-object v1, p0, Lmpg;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v2, p0, Lmpg;->b:J
+    sget-object v0, Lmpg;->g:Ljava/util/List;
 
-    and-int/lit8 p4, p4, 0x4
+    const/4 v1, 0x3
 
-    if-eqz p4, :cond_0
+    invoke-static {v1, v0}, Lhf8;->b(ILjava/util/Collection;)V
 
-    iget-wide p1, p0, Lmpg;->c:J
-
-    :cond_0
-    move-wide v4, p1
-
-    iget-object v7, p0, Lmpg;->e:Ljava/util/List;
-
-    new-instance v0, Lmpg;
-
-    move-object v6, p3
-
-    invoke-direct/range {v0 .. v7}, Lmpg;-><init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final b(J)J
-    .locals 4
-
-    iget-wide v0, p0, Lmpg;->b:J
-
-    iget-wide v2, p0, Lmpg;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Ln05;->d(JJ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-wide v2, p1
-
-    :cond_0
-    invoke-static {p1, p2, v2, v3}, Ln05;->g(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iput v1, p0, Lmpg;->a:I
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput v0, p0, Lmpg;->b:I
 
-    return v0
+    iput v0, p0, Lmpg;->c:I
 
-    :cond_0
-    instance-of v1, p1, Lmpg;
+    iput-object p1, p0, Lmpg;->d:Ljava/util/concurrent/Executor;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lmpg;->e:Lesg;
 
-    if-nez v1, :cond_1
+    iput-object p3, p0, Lmpg;->f:La3a;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lmpg;
-
-    iget-object v1, p0, Lmpg;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lmpg;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lmpg;->b:J
-
-    iget-wide v5, p1, Lmpg;->b:J
-
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lmpg;->c:J
-
-    iget-wide v5, p1, Lmpg;->c:J
-
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    iget-object v3, p1, Lmpg;->d:Ljava/lang/Thread;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lmpg;->e:Ljava/util/List;
-
-    iget-object p1, p1, Lmpg;->e:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lmpg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    sget v2, Ln05;->o:I
-
-    iget-wide v2, p0, Lmpg;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lmpg;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lmpg;->e:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-wide v0, p0, Lmpg;->b:J
-
-    invoke-static {v0, v1}, Ln05;->j(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lmpg;->c:J
-
-    invoke-static {v1, v2}, Ln05;->j(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ", submitTime="
-
-    const-string v3, ", startTime="
-
-    const-string v4, "WatchdogTask(submitThread="
-
-    iget-object v5, p0, Lmpg;->a:Ljava/lang/String;
-
-    invoke-static {v4, v5, v2, v0, v3}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", runningThread="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stacktrace="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lmpg;->e:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lqw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

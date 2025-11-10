@@ -1,75 +1,86 @@
-.class public final Lxh3;
-.super Lu2;
+.class public final synthetic Lxh3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzec;
 
 
 # instance fields
-.field public final a:Llf6;
-
-.field public final synthetic b:Lyh3;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lyh3;Llf6;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lxh3;->b:Lyh3;
+    iput p1, p0, Lxh3;->a:I
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    iput-object p2, p0, Lxh3;->a:Llf6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    sget-object p1, Lzh3;->a:Lkotlinx/coroutines/internal/Symbol;
+    iget v0, p0, Lxh3;->a:I
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const/4 v1, 0x0
 
-    const-string v0, "not implemented"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    return-object v1
 
-    throw p1
-.end method
+    :pswitch_0
+    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Luxe;
 
-.method public final getSize()I
-    .locals 1
+    return-object v1
 
-    iget-object v0, p0, Lxh3;->b:Lyh3;
-
-    invoke-virtual {v0}, Lyh3;->getSize()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    sget-object v0, Lyh3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iget-object v1, p0, Lxh3;->b:Lyh3;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_1
+    invoke-static {}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->b()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v0
 
-    check-cast v0, Lvh3;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_2
+    invoke-static {}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->h()Ljava/util/concurrent/ScheduledExecutorService;
 
-    new-instance v1, Luh3;
+    move-result-object v0
 
-    iget-object v2, p0, Lxh3;->a:Llf6;
+    return-object v0
 
-    invoke-direct {v1, v0, v2}, Luh3;-><init>(Lvh3;Llf6;)V
+    :pswitch_3
+    invoke-static {}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->c()Ljava/util/concurrent/ScheduledExecutorService;
 
-    return-object v1
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    invoke-static {}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->f()Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,116 +1,157 @@
 .class public final Ljef;
-.super Loef;
+.super Logf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Lief;
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final b:I
+.field public final synthetic X:Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lief;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljef;->CREATOR:Lief;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljef;->X:Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
 
-    iput p1, p0, Ljef;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ltdf;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Ljef;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljef;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ljef;
 
-    iget v1, p0, Ljef;->b:I
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget p1, p1, Ljef;->b:I
+    invoke-virtual {p1, p2}, Ljef;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Ljef;->b:I
+    new-instance v0, Ljef;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, p0, Ljef;->X:Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Ljef;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;Lkotlin/coroutines/Continuation;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Resource(resId="
-
-    const-string v1, ")"
-
-    iget v2, p0, Ljef;->b:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Ljef;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget p2, p0, Ljef;->b:I
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object p1, p0, Ljef;->o:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Ltdf;
+
+    iget-object v0, p0, Ljef;->X:Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->P0()V
+
+    goto :goto_2
+
+    :cond_0
+    iget-object v1, p1, Ltdf;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    sget-object v3, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object v3
+
+    const/16 v4, 0x8
+
+    const/4 v5, 0x0
+
+    if-eqz v2, :cond_1
+
+    move v6, v5
+
+    goto :goto_0
+
+    :cond_1
+    move v6, v4
+
+    :goto_0
+    invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lcd5;
+
+    move-result-object v3
+
+    if-nez v2, :cond_2
+
+    move v4, v5
+
+    :cond_2
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object v2
+
+    iget-object p1, p1, Ltdf;->a:Lsdf;
+
+    sget-object v3, Lsdf;->c:Lsdf;
+
+    if-ne p1, v3, :cond_3
+
+    sget p1, Ln1b;->r:I
+
+    goto :goto_1
+
+    :cond_3
+    sget p1, Ln1b;->s:I
+
+    :goto_1
+    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object p1, v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lydf;
+
+    invoke-virtual {p1, v1}, Lb28;->E(Ljava/util/List;)V
+
+    :goto_2
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

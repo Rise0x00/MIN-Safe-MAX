@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;",
         "listener",
-        "Loyf;",
+        "Lybg;",
         "addContactCallListener",
         "(Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;)V",
         "removeContactCallListener",

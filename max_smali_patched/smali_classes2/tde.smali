@@ -1,34 +1,133 @@
-.class public abstract Ltde;
-.super Lnxc;
+.class public final Ltde;
+.super Lwde;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lirf;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lirf;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltde;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Ltde;->b:Lirf;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public A(Lww7;Ljava/lang/Object;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0, p1}, Ltde;->x(Lww7;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ltde;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ltde;
+
+    iget-object v0, p0, Ltde;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Ltde;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Ltde;->b:Lirf;
+
+    iget-object p1, p1, Ltde;->b:Lirf;
+
+    invoke-virtual {v0, p1}, Lirf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public B()V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Ltde;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ltde;->b:Lirf;
+
+    iget v1, v1, Lirf;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public C()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public D()V
-    .locals 0
+    const-string v1, "CopyToClipboard(textToCopy="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public abstract x(Lww7;)V
+    iget-object v1, p0, Ltde;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", snackbarTitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltde;->b:Lirf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

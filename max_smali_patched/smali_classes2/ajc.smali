@@ -1,70 +1,78 @@
-.class public abstract Lajc;
-.super Ljava/lang/Object;
+.class public final Lajc;
+.super Logf;
+.source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
-# static fields
-.field public static app_host:I = 0x7f130063
+# instance fields
+.field public final synthetic X:Lcjc;
 
-.field public static app_host_1:I = 0x7f130064
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static app_host_2:I = 0x7f130065
 
-.field public static app_host_3:I = 0x7f130066
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lcjc;)V
+    .locals 0
 
-.field public static app_host_prod:I = 0x7f130067
+    iput-object p2, p0, Lajc;->X:Lcjc;
 
-.field public static app_host_prod_port:I = 0x7f130068
+    const/4 p2, 0x2
 
-.field public static app_host_redirects:I = 0x7f130069
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static app_scheme:I = 0x7f13006d
+    return-void
+.end method
 
-.field public static folder_path:I = 0x7f130537
 
-.field public static link_call_join_path:I = 0x7f1305ae
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static link_chat_join_path:I = 0x7f1305af
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static link_chat_path:I = 0x7f1305b0
+    invoke-virtual {p0, p1, p2}, Lajc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static link_host_api:I = 0x7f1305b8
+    move-result-object p1
 
-.field public static link_private_channel_path:I = 0x7f1305bf
+    check-cast p1, Lajc;
 
-.field public static link_private_contact_path:I = 0x7f1305c0
+    sget-object p2, Lybg;->a:Lybg;
 
-.field public static link_startwebapp_path:I = 0x7f1305c3
+    invoke-virtual {p1, p2}, Lajc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static link_stickerset_path:I = 0x7f1305c4
+    return-object p2
+.end method
 
-.field public static oneme_settings_app_version:I = 0x7f13095c
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_settings_check_updates:I = 0x7f130966
+    new-instance v0, Lajc;
 
-.field public static oneme_settings_dump_heap:I = 0x7f130968
+    iget-object v1, p0, Lajc;->X:Lcjc;
 
-.field public static oneme_settings_dump_threads:I = 0x7f130969
+    invoke-direct {v0, p2, v1}, Lajc;-><init>(Lkotlin/coroutines/Continuation;Lcjc;)V
 
-.field public static oneme_settings_iar_market_build_condition:I = 0x7f13096a
+    iput-object p1, v0, Lajc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_iar_time_condition:I = 0x7f13096b
+    return-object v0
+.end method
 
-.field public static oneme_settings_new_messages_screen:I = 0x7f130987
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_settings_old_dev_menu:I = 0x7f130988
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-.field public static oneme_settings_old_logs_menu:I = 0x7f130989
+    iget-object p1, p0, Lajc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_send_logs:I = 0x7f1309d2
+    check-cast p1, Lwy1;
 
-.field public static oneme_settings_thread_state_count:I = 0x7f1309ee
+    iget-object v0, p0, Lajc;->X:Lcjc;
 
-.field public static oneme_settings_thread_tracer:I = 0x7f1309ef
+    invoke-static {v0, p1}, Lcjc;->b(Lcjc;Lwy1;)V
 
-.field public static oneme_settings_thread_viewer_state:I = 0x7f1309f0
+    sget-object p1, Lybg;->a:Lybg;
 
-.field public static oneme_settings_user_id:I = 0x7f130a24
-
-.field public static oneme_settings_web_app_ssl:I = 0x7f130a25
-
-.field public static web_scheme:I = 0x7f130e6c
+    return-object p1
+.end method

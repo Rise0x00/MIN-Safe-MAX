@@ -4,440 +4,187 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:Ljava/lang/String;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p6, p0, Lva0;->a:Ljava/lang/String;
-
-    iput p1, p0, Lva0;->b:I
-
-    iput-object p7, p0, Lva0;->c:Ljava/lang/String;
-
-    iput-object p8, p0, Lva0;->d:Ljava/lang/String;
-
-    iput-wide p2, p0, Lva0;->e:J
-
-    iput-wide p4, p0, Lva0;->f:J
-
-    iput-object p9, p0, Lva0;->g:Ljava/lang/String;
+    iput-wide p1, p0, Lva0;->a:J
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Lua0;
+.method public static a(Ljava/io/BufferedReader;)Lva0;
     .locals 3
 
-    new-instance v0, Lua0;
+    new-instance v0, Landroid/util/JsonReader;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
 
-    iget-object v1, p0, Lva0;->a:Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {v0}, Landroid/util/JsonReader;->beginObject()V
 
-    iput-object v1, v0, Lua0;->b:Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0}, Landroid/util/JsonReader;->hasNext()Z
 
-    iget v1, p0, Lva0;->b:I
+    move-result p0
 
-    iput v1, v0, Lua0;->a:I
+    if-eqz p0, :cond_2
 
-    iget-object v1, p0, Lva0;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
-    iput-object v1, v0, Lua0;->c:Ljava/lang/Object;
+    move-result-object p0
 
-    iget-object v1, p0, Lva0;->d:Ljava/lang/String;
+    const-string v1, "nextRequestWaitMillis"
 
-    iput-object v1, v0, Lua0;->d:Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v1, p0, Lva0;->e:J
+    move-result p0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eqz p0, :cond_1
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/util/JsonReader;->peek()Landroid/util/JsonToken;
 
-    iput-object v1, v0, Lua0;->f:Ljava/lang/Object;
+    move-result-object p0
 
-    iget-wide v1, p0, Lva0;->f:J
+    sget-object v1, Landroid/util/JsonToken;->STRING:Landroid/util/JsonToken;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-ne p0, v1, :cond_0
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
-    iput-object v1, v0, Lua0;->g:Ljava/lang/Object;
+    move-result-object p0
 
-    iget-object v1, p0, Lva0;->g:Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    iput-object v1, v0, Lua0;->e:Ljava/lang/Object;
+    move-result-wide v1
 
-    return-object v0
+    new-instance p0, Lva0;
+
+    invoke-direct {p0, v1, v2}, Lva0;-><init>(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/util/JsonReader;->close()V
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {v0}, Landroid/util/JsonReader;->nextLong()J
+
+    move-result-wide v1
+
+    new-instance p0, Lva0;
+
+    invoke-direct {p0, v1, v2}, Lva0;-><init>(J)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v0}, Landroid/util/JsonReader;->close()V
+
+    return-object p0
+
+    :cond_1
+    :try_start_2
+    invoke-virtual {v0}, Landroid/util/JsonReader;->skipValue()V
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p0, Ljava/io/IOException;
+
+    const-string v1, "Response is missing nextRequestWaitMillis field."
+
+    invoke-direct {p0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/util/JsonReader;->close()V
+
+    throw p0
 .end method
 
+
+# virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_3
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lva0;
+    instance-of v1, p1, Lva0;
 
-    if-eqz v0, :cond_5
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lva0;
 
-    iget-object v0, p0, Lva0;->a:Ljava/lang/String;
+    iget-wide v3, p0, Lva0;->a:J
 
-    if-nez v0, :cond_1
+    iget-wide v5, p1, Lva0;->a:J
 
-    iget-object v0, p1, Lva0;->a:Ljava/lang/String;
+    cmp-long p1, v3, v5
 
-    if-nez v0, :cond_5
+    if-nez p1, :cond_1
 
-    goto :goto_0
+    return v0
 
     :cond_1
-    iget-object v1, p1, Lva0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    :goto_0
-    iget v0, p1, Lva0;->b:I
-
-    iget-object v1, p1, Lva0;->g:Ljava/lang/String;
-
-    iget-object v2, p1, Lva0;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lva0;->c:Ljava/lang/String;
-
-    iget v4, p0, Lva0;->b:I
-
-    invoke-static {v4, v0}, Lqw1;->c(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lva0;->c:Ljava/lang/String;
-
-    if-nez v0, :cond_2
-
-    if-nez v3, :cond_5
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    :goto_1
-    iget-object v0, p0, Lva0;->d:Ljava/lang/String;
-
-    if-nez v0, :cond_3
-
-    if-nez v2, :cond_5
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    :goto_2
-    iget-wide v2, p0, Lva0;->e:J
-
-    iget-wide v4, p1, Lva0;->e:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_5
-
-    iget-wide v2, p0, Lva0;->f:J
-
-    iget-wide v4, p1, Lva0;->f:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lva0;->g:Ljava/lang/String;
-
-    if-nez p1, :cond_4
-
-    if-nez v1, :cond_5
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    :goto_3
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_5
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 8
+    .locals 5
 
-    const/4 v0, 0x0
+    const/16 v0, 0x20
 
-    iget-object v1, p0, Lva0;->a:Ljava/lang/String;
+    iget-wide v1, p0, Lva0;->a:J
 
-    if-nez v1, :cond_0
+    ushr-long v3, v1, v0
 
-    move v1, v0
+    xor-long v0, v3, v1
 
-    goto :goto_0
+    long-to-int v0, v0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    const v1, 0xf4243
 
-    move-result v1
-
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v2
-
-    iget v3, p0, Lva0;->b:I
-
-    invoke-static {v3}, Lqw1;->u(I)I
-
-    move-result v3
-
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lva0;->c:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lva0;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-wide v3, p0, Lva0;->e:J
-
-    const/16 v5, 0x20
-
-    ushr-long v6, v3, v5
-
-    xor-long/2addr v3, v6
-
-    long-to-int v3, v3
-
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-wide v3, p0, Lva0;->f:J
-
-    ushr-long v5, v3, v5
-
-    xor-long/2addr v3, v5
-
-    long-to-int v3, v3
-
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v2, p0, Lva0;->g:Ljava/lang/String;
-
-    if-nez v2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_3
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "PersistedInstallationEntry{firebaseInstallationId="
+    const-string v1, "LogResponse{nextRequestWaitMillis="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lva0;->a:Ljava/lang/String;
+    iget-wide v1, p0, Lva0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "}"
 
-    const-string v1, ", registrationStatus="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lva0;->b:I
-
-    if-eq v2, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "REGISTER_ERROR"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "REGISTERED"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "UNREGISTERED"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "NOT_GENERATED"
-
-    goto :goto_0
-
-    :cond_4
-    const-string v1, "ATTEMPT_MIGRATION"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", authToken="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lva0;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", refreshToken="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lva0;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", expiresInSecs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lva0;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tokenCreationEpochInSecs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lva0;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fisError="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lva0;->g:Ljava/lang/String;
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

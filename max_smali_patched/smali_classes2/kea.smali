@@ -1,103 +1,117 @@
-.class public abstract Lkea;
+.class public final Lkea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lm3b;
+.field public final a:J
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lm3b;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkea;->a:Lm3b;
+    iput-wide p1, p0, Lkea;->a:J
+
+    iput-wide p3, p0, Lkea;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm3b;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lkea;->a:Lm3b;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lm3b;->a:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast v1, Lak3;
+    return v0
 
-    iput-object v1, p1, Lm3b;->a:Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lkea;
 
-    iget-object v1, v0, Lm3b;->o:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v1, Lpl;
+    if-nez v1, :cond_1
 
-    iput-object v1, p1, Lm3b;->o:Ljava/lang/Object;
+    return v2
 
-    iget-object v1, v0, Lm3b;->b:Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lkea;
 
-    check-cast v1, Lckf;
+    iget-wide v3, p0, Lkea;->a:J
 
-    iput-object v1, p1, Lm3b;->b:Ljava/lang/Object;
+    iget-wide v5, p1, Lkea;->a:J
 
-    iget-object v1, v0, Lm3b;->c:Ljava/lang/Object;
+    cmp-long v1, v3, v5
 
-    check-cast v1, Lh8d;
+    if-eqz v1, :cond_2
 
-    iput-object v1, p1, Lm3b;->c:Ljava/lang/Object;
+    return v2
 
-    iget-object v1, v0, Lm3b;->Z:Ljava/lang/Object;
+    :cond_2
+    iget-wide v3, p0, Lkea;->b:J
 
-    check-cast v1, Lwl;
+    iget-wide v5, p1, Lkea;->b:J
 
-    iput-object v1, p1, Lm3b;->Z:Ljava/lang/Object;
+    cmp-long p1, v3, v5
 
-    iget-object v1, v0, Lm3b;->Y:Ljava/lang/Object;
+    if-eqz p1, :cond_3
 
-    check-cast v1, Lam;
+    return v2
 
-    iput-object v1, p1, Lm3b;->Y:Ljava/lang/Object;
-
-    iget-object v1, v0, Lm3b;->X:Ljava/lang/Object;
-
-    check-cast v1, Lkw8;
-
-    iput-object v1, p1, Lm3b;->X:Ljava/lang/Object;
-
-    iget-object v0, v0, Lm3b;->w0:Ljava/lang/Object;
-
-    iput-object v0, p1, Lm3b;->w0:Ljava/lang/Object;
-
-    return-void
+    :cond_3
+    return v0
 .end method
 
-.method public abstract b()Lal;
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lkea;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lkea;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public c()Lzk;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    const/4 v0, 0x0
+    const-string v0, "NotificationReadMarkDb(chatServerId="
+
+    const-string v1, ", mark="
+
+    iget-wide v2, p0, Lkea;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lkea;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public d()Lel;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract e()Llea;
-.end method
-
-.method public abstract f()Laad;
-.end method
-
-.method public abstract g()Lm3b;
 .end method

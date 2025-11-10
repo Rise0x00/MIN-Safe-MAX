@@ -1,59 +1,28 @@
-.class public final Lwh3;
+.class public interface abstract Lwh3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Llm7;
 
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
+# static fields
+.field public static final n:Lbc2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbc2;
 
-    iput-object p1, p0, Lwh3;->a:Ljava/lang/Object;
+    const/16 v1, 0x9
 
-    iput-object p2, p0, Lwh3;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lbc2;-><init>(I)V
+
+    sput-object v0, Lwh3;->n:Lbc2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lwh3;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lwh3;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    sget-object p1, Lzh3;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "not implemented"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract d(Lcom/google/firebase/components/ComponentRegistrar;)Ljava/util/List;
 .end method

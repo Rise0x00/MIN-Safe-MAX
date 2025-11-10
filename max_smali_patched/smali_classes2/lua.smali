@@ -1,109 +1,93 @@
-.class public abstract Llua;
-.super Ljava/lang/Object;
+.class public final enum Llua;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Llua;
 
-.field public static final b:I
+.field public static final enum b:Llua;
 
-.field public static final c:I
+.field public static final enum c:Llua;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public static final synthetic d:[Llua;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_cancel:I
+    new-instance v0, Llua;
 
-    sput v0, Llua;->a:I
+    const-string v1, "Themed"
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_camera:I
+    const/4 v2, 0x0
 
-    sput v0, Llua;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_gallery:I
+    sput-object v0, Llua;->a:Llua;
 
-    sput v0, Llua;->c:I
+    new-instance v1, Llua;
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+    const-string v2, "ContrastPinned"
 
-    sput v0, Llua;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lrfc;->oneme_settings_collapsingstoolbar:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Llua;->e:I
+    new-instance v2, Llua;
 
-    sget v0, Lrfc;->oneme_settings_container:I
+    const-string v3, "NeutralFade"
 
-    sput v0, Llua;->f:I
+    const/4 v4, 0x2
 
-    sget v0, Lrfc;->oneme_settings_list_screen_appbar:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Llua;->g:I
+    sput-object v2, Llua;->b:Llua;
 
-    sget v0, Lrfc;->oneme_settings_list_screen_pinned_toolbar:I
+    new-instance v3, Llua;
 
-    sput v0, Llua;->h:I
+    const-string v4, "AccentRed"
 
-    sget v0, Lrfc;->oneme_settings_toolbar:I
+    const/4 v5, 0x3
 
-    sput v0, Llua;->i:I
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lrfc;->oneme_settings_topbar:I
+    sput-object v3, Llua;->c:Llua;
 
-    sput v0, Llua;->j:I
+    filled-new-array {v0, v1, v2, v3}, [Llua;
 
-    sget v0, Lrfc;->oneme_settings_topbar_avatar:I
+    move-result-object v0
 
-    sput v0, Llua;->k:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_container:I
-
-    sput v0, Llua;->l:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_dotdivider:I
-
-    sput v0, Llua;->m:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_name:I
-
-    sput v0, Llua;->n:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_nick:I
-
-    sput v0, Llua;->o:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_phone:I
-
-    sput v0, Llua;->p:I
+    sput-object v0, Llua;->d:[Llua;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Llua;
+    .locals 1
+
+    const-class v0, Llua;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Llua;
+
+    return-object p0
+.end method
+
+.method public static values()[Llua;
+    .locals 1
+
+    sget-object v0, Llua;->d:[Llua;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Llua;
+
+    return-object v0
 .end method

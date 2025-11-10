@@ -1,202 +1,335 @@
 .class public final Lkg5;
-.super Lr4;
+.super Lepd;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:Llg5;
+.field public final X:Lai3;
+
+.field public final a:Z
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lsr8;
+
+.field public volatile d:Z
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Llg5;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
+    .locals 1
 
-    iput-object p1, p0, Lkg5;->b:Llg5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {p0, p1}, Lr4;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object v0, p0, Lkg5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Lai3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lkg5;->X:Lai3;
+
+    iput-object p1, p0, Lkg5;->b:Ljava/util/concurrent/Executor;
+
+    new-instance p1, Lsr8;
+
+    const/16 v0, 0x15
+
+    invoke-direct {p1, v0}, Lsr8;-><init>(I)V
+
+    iput-object p1, p0, Lkg5;->c:Lsr8;
+
+    iput-boolean p2, p0, Lkg5;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(I)Lp4;
-    .locals 1
+.method public final b(Ljava/lang/Runnable;)Lzv4;
+    .locals 3
 
-    iget-object v0, p0, Lkg5;->b:Llg5;
+    sget-object v0, Lia5;->a:Lia5;
 
-    invoke-virtual {v0, p1}, Llg5;->r(I)Lp4;
+    iget-boolean v1, p0, Lkg5;->d:Z
 
-    move-result-object p1
-
-    iget-object p1, p1, Lp4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p1
-
-    new-instance v0, Lp4;
-
-    invoke-direct {v0, p1}, Lp4;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    if-eqz v1, :cond_0
 
     return-object v0
-.end method
 
-.method public final q(I)Lp4;
-    .locals 2
+    :cond_0
+    iget-boolean v1, p0, Lkg5;->a:Z
 
-    const/4 v0, 0x2
+    if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lkg5;->b:Llg5;
+    new-instance v1, Ljg5;
 
-    if-ne p1, v0, :cond_0
+    iget-object v2, p0, Lkg5;->X:Lai3;
 
-    iget p1, v1, Llg5;->k:I
+    invoke-direct {v1, p1, v2}, Ljg5;-><init>(Ljava/lang/Runnable;Law4;)V
+
+    iget-object p1, p0, Lkg5;->X:Lai3;
+
+    invoke-virtual {p1, v1}, Lai3;->a(Lzv4;)Z
 
     goto :goto_0
 
-    :cond_0
-    iget p1, v1, Llg5;->l:I
+    :cond_1
+    new-instance v1, Lig5;
+
+    invoke-direct {v1, p1}, Lig5;-><init>(Ljava/lang/Runnable;)V
 
     :goto_0
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lkg5;->c:Lsr8;
 
-    if-ne p1, v0, :cond_1
+    invoke-virtual {p1, v1}, Lsr8;->offer(Ljava/lang/Object;)Z
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lkg5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lkg5;->p(I)Lp4;
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :try_start_0
+    iget-object p1, p0, Lkg5;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v1
+
+    :catch_0
+    move-exception p1
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lkg5;->d:Z
+
+    iget-object v1, p0, Lkg5;->c:Lsr8;
+
+    invoke-virtual {v1}, Lsr8;->clear()V
+
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    return-object v0
+
+    :cond_2
+    return-object v1
+.end method
+
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+    .locals 9
+
+    sget-object v1, Lia5;->a:Lia5;
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, p2, v2
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lkg5;->b(Ljava/lang/Runnable;)Lzv4;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public final x(IILandroid/os/Bundle;)Z
-    .locals 7
-
-    iget-object v0, p0, Lkg5;->b:Llg5;
-
-    iget-object v1, v0, Llg5;->i:Landroid/view/View;
-
-    const/4 v2, -0x1
-
-    if-eq p1, v2, :cond_8
-
-    const/4 v2, 0x1
-
-    if-eq p2, v2, :cond_7
-
-    const/4 v3, 0x2
-
-    if-eq p2, v3, :cond_6
-
-    const/16 v3, 0x40
-
-    const/4 v4, 0x0
-
-    const/high16 v5, 0x10000
-
-    const/high16 v6, -0x80000000
-
-    if-eq p2, v3, :cond_2
-
-    const/16 v3, 0x80
-
-    if-eq p2, v3, :cond_0
-
-    invoke-virtual {v0, p1, p2, p3}, Llg5;->s(IILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
 
     :cond_0
-    iget p2, v0, Llg5;->k:I
+    iget-boolean v0, p0, Lkg5;->d:Z
 
-    if-ne p2, p1, :cond_1
+    if-eqz v0, :cond_1
 
-    iput v6, v0, Llg5;->k:I
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {v0, p1, v5}, Llg5;->x(II)V
-
-    return v2
+    return-object v1
 
     :cond_1
-    return v4
+    new-instance v0, La32;
 
-    :cond_2
-    iget-object p2, v0, Llg5;->h:Landroid/view/accessibility/AccessibilityManager;
+    const/4 v2, 0x2
 
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+    invoke-direct {v0, v2}, La32;-><init>(I)V
 
-    move-result p3
+    new-instance v5, La32;
 
-    if-eqz p3, :cond_5
+    invoke-direct {v5, v0}, La32;-><init>(La32;)V
 
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+    new-instance v2, Lkod;
 
-    move-result p2
+    new-instance v3, Lpq3;
 
-    if-nez p2, :cond_3
+    const/4 v8, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v4, p0
+
+    move-object v7, p1
+
+    invoke-direct/range {v3 .. v8}, Lpq3;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZLjava/lang/Object;I)V
+
+    iget-object p1, v4, Lkg5;->X:Lai3;
+
+    invoke-direct {v2, v3, p1}, Lkod;-><init>(Ljava/lang/Runnable;Law4;)V
+
+    iget-object p1, v4, Lkg5;->X:Lai3;
+
+    invoke-virtual {p1, v2}, Lai3;->a(Lzv4;)Z
+
+    iget-object p1, v4, Lkg5;->b:Ljava/util/concurrent/Executor;
+
+    instance-of v3, p1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v3, :cond_2
+
+    :try_start_0
+    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-interface {p1, v2, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Lkod;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_3
-    iget p2, v0, Llg5;->k:I
+    :catch_0
+    move-exception v0
 
-    if-eq p2, p1, :cond_5
+    move-object p1, v0
 
-    if-eq p2, v6, :cond_4
+    const/4 p2, 0x1
 
-    iput v6, v0, Llg5;->k:I
+    iput-boolean p2, v4, Lkg5;->d:Z
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, p2, v5}, Llg5;->x(II)V
+    return-object v1
 
-    :cond_4
-    iput p1, v0, Llg5;->k:I
+    :cond_2
+    sget-object p1, Llg5;->a:Lgpd;
 
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p1, v2, p2, p3, p4}, Lgpd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
 
-    const p2, 0x8000
+    move-result-object p1
 
-    invoke-virtual {v0, p1, p2}, Llg5;->x(II)V
+    new-instance p2, Lfw4;
 
-    return v2
+    invoke-direct {p2, p1}, Lfw4;-><init>(Lzv4;)V
 
-    :cond_5
+    invoke-virtual {v2, p2}, Lkod;->a(Ljava/util/concurrent/Future;)V
+
     :goto_0
-    return v4
+    invoke-static {v0, v2}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
-    :cond_6
-    invoke-virtual {v0, p1}, Llg5;->j(I)Z
+    return-object v5
+.end method
 
-    move-result p1
+.method public final dispose()V
+    .locals 1
 
-    return p1
+    iget-boolean v0, p0, Lkg5;->d:Z
 
-    :cond_7
-    invoke-virtual {v0, p1}, Llg5;->w(I)Z
+    if-nez v0, :cond_0
 
-    move-result p1
+    const/4 v0, 0x1
 
-    return p1
+    iput-boolean v0, p0, Lkg5;->d:Z
 
-    :cond_8
-    sget-object p1, Lskg;->a:Ljava/util/WeakHashMap;
+    iget-object v0, p0, Lkg5;->X:Lai3;
 
-    invoke-virtual {v1, p2, p3}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+    invoke-virtual {v0}, Lai3;->dispose()V
 
-    move-result p1
+    iget-object v0, p0, Lkg5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return p1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lkg5;->c:Lsr8;
+
+    invoke-virtual {v0}, Lsr8;->clear()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lkg5;->d:Z
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget-object v0, p0, Lkg5;->c:Lsr8;
+
+    const/4 v1, 0x1
+
+    :cond_0
+    iget-boolean v2, p0, Lkg5;->d:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lsr8;->clear()V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v0}, Lsr8;->poll()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    if-nez v2, :cond_3
+
+    iget-boolean v2, p0, Lkg5;->d:Z
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v0}, Lsr8;->clear()V
+
+    return-void
+
+    :cond_2
+    iget-object v2, p0, Lkg5;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    neg-int v1, v1
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_3
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+
+    iget-boolean v2, p0, Lkg5;->d:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lsr8;->clear()V
+
+    return-void
 .end method

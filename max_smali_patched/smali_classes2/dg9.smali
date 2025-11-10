@@ -1,129 +1,212 @@
 .class public final Ldg9;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public final synthetic Y:Lng9;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final c:Ljg9;
 
-.field public final synthetic w0:Lo10;
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lng9;Ljava/lang/String;Lo10;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/CharSequence;Ljg9;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Ldg9;->Y:Lng9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ldg9;->Z:Ljava/lang/String;
+    iput-wide p1, p0, Ldg9;->a:J
 
-    iput-object p3, p0, Ldg9;->w0:Lo10;
+    iput-object p3, p0, Ldg9;->b:Ljava/lang/CharSequence;
 
-    const/4 p1, 0x2
+    iput-object p4, p0, Ldg9;->c:Ljg9;
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p5, p0, Ldg9;->d:Z
+
+    iput-boolean p6, p0, Ldg9;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Le34;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ldg9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldg9;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ldg9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Ldg9;
-
-    iget-object v0, p0, Ldg9;->Z:Ljava/lang/String;
-
-    iget-object v1, p0, Ldg9;->w0:Lo10;
-
-    iget-object v2, p0, Ldg9;->Y:Lng9;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Ldg9;-><init>(Lng9;Ljava/lang/String;Lo10;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ldg9;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Ldg9;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Ldg9;
 
-    iget-object p1, p0, Ldg9;->Y:Lng9;
+    iget-wide v3, p0, Ldg9;->a:J
 
-    iget-object p1, p1, Lng9;->z0:Lybd;
+    iget-wide v5, p1, Ldg9;->a:J
 
-    iget-object v0, p0, Ldg9;->w0:Lo10;
+    cmp-long v1, v3, v5
 
-    iget-object v0, v0, Lo10;->b:Lc10;
+    if-eqz v1, :cond_2
 
-    iget-boolean v0, v0, Lc10;->X:Z
-
-    iput v1, p0, Ldg9;->X:I
-
-    iget-object v1, p0, Ldg9;->Z:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0, p0}, Lybd;->b(Ljava/lang/String;ZLnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    return-object p1
+    iget-object v1, p0, Ldg9;->b:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Ldg9;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ldg9;->c:Ljg9;
+
+    iget-object v3, p1, Ldg9;->c:Ljg9;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Ldg9;->d:Z
+
+    iget-boolean v3, p1, Ldg9;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Ldg9;->e:Z
+
+    iget-boolean p1, p1, Ldg9;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ldg9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ldg9;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v2, v0, v1}, Lm65;->e(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget-object v2, p0, Ldg9;->c:Ljg9;
+
+    invoke-virtual {v2}, Ljg9;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Ldg9;->d:Z
+
+    invoke-static {v2, v1, v0}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ldg9;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "EditMessageData(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ldg9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldg9;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", quoteData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldg9;->c:Ljg9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hasMediaAttaches="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ldg9;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", shouldInsertOriginalText="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Ldg9;->e:Z
+
+    invoke-static {v0, v1, v3, v2}, Lpa9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

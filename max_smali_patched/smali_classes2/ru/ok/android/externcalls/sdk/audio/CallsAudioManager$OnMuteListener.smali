@@ -22,7 +22,7 @@
         "",
         "",
         "mute",
-        "Loyf;",
+        "Lybg;",
         "onMute",
         "(Z)V",
         "onMutedForever",

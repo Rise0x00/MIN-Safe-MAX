@@ -1,88 +1,109 @@
 .class public final Lqm2;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Z
 
-.field public final synthetic Y:Lvm2;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lvm2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lqm2;->Y:Lvm2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-boolean p1, p0, Lqm2;->a:Z
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lqm2;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lxn8;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lqm2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lqm2;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lqm2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-boolean v1, p0, Lqm2;->a:Z
 
-    invoke-virtual {p1, p2}, Lqm2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v3, p1, Lqm2;->a:Z
 
-    return-object p2
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lqm2;->b:Z
+
+    iget-boolean p1, p1, Lqm2;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lqm2;
+    iget-boolean v0, p0, Lqm2;->a:Z
 
-    iget-object v1, p0, Lqm2;->Y:Lvm2;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-direct {v0, v1, p2}, Lqm2;-><init>(Lvm2;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lqm2;->X:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-boolean v1, p0, Lqm2;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-string v0, ", hasNext="
 
-    iget-object p1, p0, Lqm2;->X:Ljava/lang/Object;
+    const-string v1, ")"
 
-    check-cast p1, Lxn8;
+    const-string v2, "LoadingState(hasPrev="
 
-    iget-object v0, p0, Lqm2;->Y:Lvm2;
+    iget-boolean v3, p0, Lqm2;->a:Z
 
-    iget-object v0, v0, Lvm2;->N0:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-boolean v4, p0, Lqm2;->b:Z
 
-    new-instance v1, Lyz0;
+    invoke-static {v2, v3, v0, v4, v1}, Lcd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x5
+    move-result-object v0
 
-    invoke-direct {v1, v2, p1}, Lyz0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

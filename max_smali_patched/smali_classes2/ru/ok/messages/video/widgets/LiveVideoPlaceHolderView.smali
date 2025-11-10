@@ -3,64 +3,230 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljgf;
+.implements Litf;
 
 
 # instance fields
-.field public K0:Liqa;
+.field public final F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public L0:Lt63;
+.field public final G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-.field public N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-.field public O0:Landroid/graphics/drawable/GradientDrawable;
-
-.field public P0:Ln10;
+.field public final H0:Landroid/graphics/drawable/GradientDrawable;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 5
 
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-virtual {p0}, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->u()V
+    invoke-static {}, Lgn;->a()Lri3;
+
+    move-result-object p1
+
+    check-cast p1, Lusa;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object p1
+
+    const-class p2, Lgya;
+
+    invoke-virtual {p1, p2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgya;
+
+    invoke-static {}, Lgn;->a()Lri3;
+
+    move-result-object p1
+
+    check-cast p1, Lusa;
+
+    invoke-virtual {p1}, Lusa;->i()Lsxb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lsxb;->a:Le78;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-static {}, Lau4;->a()Lau4;
+
+    move-result-object p1
+
+    new-instance p2, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {p2}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    iput-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->H0:Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p2, Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iput-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget v0, Ltpc;->view_not_started_live_video__title:I
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    const/16 v0, 0x11
+
+    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    iget v2, p1, Lau4;->x:F
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p2, v3, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v4, Lmkd;->U1:I
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {p2, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance p2, Lmq3;
+
+    const/4 v2, -0x2
+
+    invoke-direct {p2, v3, v2}, Lmq3;-><init>(II)V
+
+    iput v3, p2, Lmq3;->i:I
+
+    iput v3, p2, Lmq3;->t:I
+
+    iput v3, p2, Lmq3;->v:I
+
+    sget v4, Ltpc;->view_not_started_live_video__subtitle:I
+
+    iput v4, p2, Lmq3;->k:I
+
+    const/4 v4, 0x2
+
+    iput v4, p2, Lmq3;->K:I
+
+    iget v4, p1, Lau4;->e:I
+
+    iput v4, p2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iput v4, p2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    iget-object v4, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0, v4, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance p2, Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {p2, v4, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iput-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget v4, Ltpc;->view_not_started_live_video__subtitle:I
+
+    invoke-virtual {p2, v4}, Landroid/view/View;->setId(I)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    iget v0, p1, Lau4;->x:F
+
+    invoke-virtual {p2, v3, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
+
+    iget-object p2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p2, v1, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    new-instance p2, Lmq3;
+
+    invoke-direct {p2, v3, v2}, Lmq3;-><init>(II)V
+
+    sget v0, Ltpc;->view_not_started_live_video__title:I
+
+    iput v0, p2, Lmq3;->j:I
+
+    iput v3, p2, Lmq3;->t:I
+
+    iput v3, p2, Lmq3;->v:I
+
+    iput v3, p2, Lmq3;->l:I
+
+    iget p1, p1, Lau4;->e:I
+
+    iput p1, p2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    iput p1, p2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    iget-object p1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0}, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->b()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->O0:Landroid/graphics/drawable/GradientDrawable;
+.method public final b()V
+    .locals 2
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget v2, Lo9d;->b:I
+    sget v1, Lgkd;->a:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->H0:Landroid/graphics/drawable/GradientDrawable;
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -70,397 +236,9 @@
 .method public setCorners([F)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->O0:Landroid/graphics/drawable/GradientDrawable;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->H0:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
-
-    return-void
-.end method
-
-.method public final u()V
-    .locals 7
-
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object v0
-
-    check-cast v0, Lyka;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Liqa;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Liqa;
-
-    iput-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->K0:Liqa;
-
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object v0
-
-    check-cast v0, Lyka;
-
-    invoke-virtual {v0}, Lyka;->n()Lzob;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lzob;->a:Lt63;
-
-    iput-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->L0:Lt63;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-static {}, Ltq4;->a()Ltq4;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    iput-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->O0:Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    iput-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget v2, Ljgc;->view_not_started_live_video__title:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget v4, v0, Ltq4;->H:F
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1, v5, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    sget v6, Lt9d;->q3:I
-
-    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lao3;
-
-    const/4 v4, -0x2
-
-    invoke-direct {v1, v5, v4}, Lao3;-><init>(II)V
-
-    iput v5, v1, Lao3;->i:I
-
-    iput v5, v1, Lao3;->t:I
-
-    iput v5, v1, Lao3;->v:I
-
-    sget v6, Ljgc;->view_not_started_live_video__subtitle:I
-
-    iput v6, v1, Lao3;->k:I
-
-    const/4 v6, 0x2
-
-    iput v6, v1, Lao3;->K:I
-
-    iget v6, v0, Ltq4;->e:I
-
-    iput v6, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    iput v6, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    iget-object v6, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0, v6, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-direct {v1, v6, v3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    iput-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget v6, Ljgc;->view_not_started_live_video__subtitle:I
-
-    invoke-virtual {v1, v6}, Landroid/view/View;->setId(I)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget v2, v0, Ltq4;->H:F
-
-    invoke-virtual {v1, v5, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v3, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    new-instance v1, Lao3;
-
-    invoke-direct {v1, v5, v4}, Lao3;-><init>(II)V
-
-    sget v2, Ljgc;->view_not_started_live_video__title:I
-
-    iput v2, v1, Lao3;->j:I
-
-    iput v5, v1, Lao3;->t:I
-
-    iput v5, v1, Lao3;->v:I
-
-    iput v5, v1, Lao3;->l:I
-
-    iget v0, v0, Ltq4;->e:I
-
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p0}, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->c()V
-
-    return-void
-.end method
-
-.method public final v()V
-    .locals 12
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->P0:Ln10;
-
-    if-eqz v0, :cond_3
-
-    iget-boolean v1, v0, Ln10;->g:Z
-
-    if-eqz v1, :cond_3
-
-    iget-wide v0, v0, Ln10;->k:J
-
-    iget-object v2, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->L0:Lt63;
-
-    invoke-virtual {v2}, Lxid;->k()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->K0:Liqa;
-
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->P0:Ln10;
-
-    iget-wide v1, v1, Ln10;->k:J
-
-    iget-object v3, v0, Liqa;->a:Landroid/content/Context;
-
-    iget-object v0, v0, Liqa;->c:Lt63;
-
-    invoke-virtual {v0}, Lxid;->k()J
-
-    move-result-wide v4
-
-    invoke-virtual {v0}, Lxid;->r()Ljava/util/Locale;
-
-    move-result-object v0
-
-    sget-object v6, Liff;->b:[Ljava/lang/String;
-
-    sub-long/2addr v1, v4
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v1, v4
-
-    if-gtz v4, :cond_1
-
-    const-string v0, "0:00:00"
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v4, v1, v2}, Ljava/util/concurrent/TimeUnit;->toHours(J)J
-
-    move-result-wide v4
-
-    const-wide/32 v6, 0x36ee80
-
-    mul-long/2addr v6, v4
-
-    sub-long v6, v1, v6
-
-    const-wide/32 v8, 0xea60
-
-    div-long v10, v6, v8
-
-    mul-long/2addr v8, v10
-
-    sub-long/2addr v6, v8
-
-    const-wide/16 v8, 0x3e8
-
-    div-long/2addr v6, v8
-
-    const-wide/32 v8, 0x5265c00
-
-    cmp-long v1, v1, v8
-
-    if-gez v1, :cond_2
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "%d:%02d:%02d"
-
-    invoke-static {v0, v2, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    const-wide/16 v0, 0x18
-
-    div-long v6, v4, v0
-
-    mul-long/2addr v0, v6
-
-    sub-long/2addr v4, v0
-
-    long-to-int v0, v6
-
-    sget v1, Lqhc;->tt_dates_days:I
-
-    invoke-static {v1, v0, v3}, Lve7;->v(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    long-to-int v1, v4
-
-    sget v2, Lqhc;->tt_dates_hours:I
-
-    invoke-static {v2, v1, v3}, Lve7;->v(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    invoke-static {v0, v2, v1}, Lvl3;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    iget-object v1, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->M0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->N0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_2
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->P0:Ln10;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v0, Ln10;->d:Ljava/lang/String;
-
-    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->O0:Landroid/graphics/drawable/GradientDrawable;
-
-    const/16 v1, 0xff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->O0:Landroid/graphics/drawable/GradientDrawable;
-
-    const/16 v1, 0x7f
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
     return-void
 .end method

@@ -1,90 +1,123 @@
 .class public final Lxha;
-.super Ljava/lang/Object;
+.super Lvt0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:La5;
+.field public e:Ljava/util/LinkedList;
 
 
-# direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lxha;->e:Ljava/util/LinkedList;
 
-    iput-object p1, p0, Lxha;->a:La5;
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwha;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lwha;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lwha;->a:Ljava/lang/ref/SoftReference;
+
+    iput-object v1, v0, Lwha;->b:Ljava/lang/ref/SoftReference;
+
+    iput-object v1, v0, Lwha;->c:Ljava/lang/ref/SoftReference;
+
+    :cond_0
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lwha;->a:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lwha;->b:Ljava/lang/ref/SoftReference;
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lwha;->c:Ljava/lang/ref/SoftReference;
+
+    iget-object p1, p0, Lvt0;->c:Ljava/util/LinkedList;
+
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
+.method public final b()Ljava/lang/Object;
+    .locals 4
 
-# virtual methods
-.method public final a(Z)I
-    .locals 3
+    iget-object v0, p0, Lvt0;->c:Ljava/util/LinkedList;
 
-    const-class v0, Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-    iget-object v1, p0, Lxha;->a:La5;
+    move-result-object v0
 
-    sget-object v2, Lbx4;->y0:Lsed;
+    check-cast v0, Lwha;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v1, v0, Lwha;->a:Ljava/lang/ref/SoftReference;
 
-    move-result-object p1
+    const/4 v2, 0x0
 
-    check-cast p1, Landroid/content/Context;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2, p1}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    move-object v1, v2
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lbx4;->h()Luxa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Luxa;->a()Liu2;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Liu2;->j()Lvs0;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lvs0;->d:Lys0;
-
-    iget p1, p1, Lys0;->b:I
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    check-cast p1, Landroid/content/Context;
+    :goto_0
+    iget-object v3, v0, Lwha;->a:Ljava/lang/ref/SoftReference;
 
-    invoke-virtual {v2, p1}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    if-eqz v3, :cond_1
 
-    move-result-object p1
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    invoke-virtual {p1}, Lbx4;->h()Luxa;
+    iput-object v2, v0, Lwha;->a:Ljava/lang/ref/SoftReference;
 
-    move-result-object p1
+    :cond_1
+    iget-object v3, v0, Lwha;->b:Ljava/lang/ref/SoftReference;
 
-    invoke-interface {p1}, Luxa;->a()Liu2;
+    if-eqz v3, :cond_2
 
-    move-result-object p1
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    invoke-interface {p1}, Liu2;->p()Lvs0;
+    iput-object v2, v0, Lwha;->b:Ljava/lang/ref/SoftReference;
 
-    move-result-object p1
+    :cond_2
+    iget-object v3, v0, Lwha;->c:Ljava/lang/ref/SoftReference;
 
-    iget-object p1, p1, Lvs0;->d:Lys0;
+    if-eqz v3, :cond_3
 
-    iget p1, p1, Lys0;->b:I
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
 
-    return p1
+    iput-object v2, v0, Lwha;->c:Ljava/lang/ref/SoftReference;
+
+    :cond_3
+    iget-object v2, p0, Lxha;->e:Ljava/util/LinkedList;
+
+    invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-object v1
 .end method

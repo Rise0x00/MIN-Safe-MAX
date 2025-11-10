@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcb7;
+.implements Ldg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcb7;"
+        "Ldg7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/disk/usage/DiskUsageInitializer;",
-        "Lcb7;",
-        "Lza8;",
+        "Ldg7;",
+        "Luqi;",
         "<init>",
         "()V",
         "tracer-disk-usage_release"
@@ -62,13 +62,13 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    sget-object v0, Llnf;->a:Ls5f;
+    sget-object v0, Lw0g;->a:Ltif;
 
-    new-instance v0, Lvm;
+    new-instance v0, Lxn;
 
-    const/4 v1, 0x3
+    const/4 v1, 0x2
 
-    invoke-direct {v0, p1, v1}, Lvm;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lxn;-><init>(Landroid/content/Context;I)V
 
     new-instance p1, Landroid/os/Handler;
 
@@ -78,15 +78,15 @@
 
     invoke-direct {p1, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v1, Le30;
+    new-instance v1, Lj30;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, v0, v2}, Le30;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v1, v0, v2}, Lj30;-><init>(Ljava/lang/Runnable;I)V
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sget-object p1, Lza8;->x0:Lza8;
+    sget-object p1, Luqi;->c:Luqi;
 
     return-object p1
 .end method

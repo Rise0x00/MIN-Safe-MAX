@@ -1,168 +1,89 @@
 .class public final Lj02;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llr3;
 
 
 # instance fields
-.field public final a:Lcsd;
+.field public final synthetic a:Ljava/util/concurrent/Executor;
 
-.field public final b:Low1;
+.field public final synthetic b:Lf22;
 
-.field public final c:Ljava/lang/Object;
-
-.field public d:Z
+.field public final synthetic c:Lk02;
 
 
 # direct methods
-.method public constructor <init>(Lcsd;Low1;)V
-    .locals 1
+.method public constructor <init>(Lsw7;Ljava/util/concurrent/Executor;Lf22;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lj02;->c:Lk02;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lj02;->a:Ljava/util/concurrent/Executor;
 
-    iput-object v0, p0, Lj02;->c:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lj02;->d:Z
-
-    iput-object p1, p0, Lj02;->a:Lcsd;
-
-    iput-object p2, p0, Lj02;->b:Low1;
+    iput-object p3, p0, Lj02;->b:Lf22;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCameraAccessPrioritiesChanged()V
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Lj02;->c:Ljava/lang/Object;
+    check-cast p1, Ldwg;
 
-    monitor-enter v0
+    instance-of v0, p1, Lyvg;
 
-    :try_start_0
-    iget-boolean v1, p0, Lj02;->d:Z
+    if-eqz v0, :cond_1
 
-    if-nez v1, :cond_0
+    invoke-static {}, Lbmh;->t()Z
 
-    iget-object v1, p0, Lj02;->a:Lcsd;
+    move-result v0
 
-    new-instance v2, Lzv1;
+    if-nez v0, :cond_0
 
-    const/4 v3, 0x7
+    new-instance v0, Ljx1;
 
-    invoke-direct {v2, v3, p0}, Lzv1;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x4
 
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v1, p0}, Ljx1;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_0
+    iget-object v1, p0, Lj02;->a:Ljava/util/concurrent/Executor;
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final onCameraAvailable(Ljava/lang/String;)V
-    .locals 4
-
-    iget-object v0, p0, Lj02;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lj02;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lj02;->a:Lcsd;
-
-    new-instance v2, Li02;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, p1, v3}, Li02;-><init>(Lj02;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
+    iget-object v0, p0, Lj02;->c:Lk02;
+
+    iget-object v1, v0, Lk02;->k:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ld6d;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Lk02;->j:Ld6d;
+
+    if-ne v2, v1, :cond_1
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lk02;->j:Ld6d;
+
+    :cond_1
     :goto_0
-    monitor-exit v0
+    iget-object v0, p0, Lj02;->b:Lf22;
+
+    invoke-virtual {v0, p1}, Lf22;->accept(Ljava/lang/Object;)V
 
     return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final onCameraUnavailable(Ljava/lang/String;)V
-    .locals 4
-
-    iget-object v0, p0, Lj02;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lj02;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lj02;->a:Lcsd;
-
-    new-instance v2, Li02;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, p1, v3}, Li02;-><init>(Lj02;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method

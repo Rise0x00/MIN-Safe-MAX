@@ -1,57 +1,189 @@
 .class public final Lmog;
-.super Landroid/media/VolumeProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/hardware/display/DisplayManager$DisplayListener;
+.implements Llog;
 
 
 # instance fields
-.field public final synthetic a:Lemb;
+.field public final synthetic a:I
+
+.field public final b:Landroid/hardware/display/DisplayManager;
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lemb;IIILjava/lang/String;)V
+.method public constructor <init>(Landroid/hardware/display/DisplayManager;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lmog;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lpog;Landroid/hardware/display/DisplayManager;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lmog;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmog;->c:Ljava/lang/Object;
+
+    .line 2
+    iput-object p2, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
+
+    return-void
+.end method
+
+.method private final a(I)V
     .locals 0
 
-    iput-object p1, p0, Lmog;->a:Lemb;
+    return-void
+.end method
 
-    invoke-direct {p0, p2, p3, p4, p5}, Landroid/media/VolumeProvider;-><init>(IIILjava/lang/String;)V
+.method private final b(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(I)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAdjustVolume(I)V
-    .locals 4
+.method public g(Luff;)V
+    .locals 2
 
-    iget-object v0, p0, Lmog;->a:Lemb;
+    iput-object p1, p0, Lmog;->c:Ljava/lang/Object;
 
-    iget-object v1, v0, Lemb;->f:Landroid/os/Handler;
+    const/4 v0, 0x0
 
-    new-instance v2, Ldmb;
+    invoke-static {v0}, Ljig;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
-    const/4 v3, 0x1
+    move-result-object v0
 
-    invoke-direct {v2, v0, p1, v3}, Ldmb;-><init>(Lemb;II)V
+    iget-object v1, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
 
-    invoke-static {v1, v2}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-virtual {v1, p0, v0}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Luff;->f(Landroid/view/Display;)V
 
     return-void
 .end method
 
-.method public final onSetVolumeTo(I)V
-    .locals 4
+.method public h()V
+    .locals 1
 
-    iget-object v0, p0, Lmog;->a:Lemb;
+    iget-object v0, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
 
-    iget-object v1, v0, Lemb;->f:Landroid/os/Handler;
+    invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    new-instance v2, Ldmb;
+    const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    iput-object v0, p0, Lmog;->c:Ljava/lang/Object;
 
-    invoke-direct {v2, v0, p1, v3}, Ldmb;-><init>(Lemb;II)V
+    return-void
+.end method
 
-    invoke-static {v1, v2}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+.method public final onDisplayAdded(I)V
+    .locals 0
+
+    iget p1, p0, Lmog;->a:I
+
+    return-void
+.end method
+
+.method public final onDisplayChanged(I)V
+    .locals 2
+
+    iget v0, p0, Lmog;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmog;->c:Ljava/lang/Object;
+
+    check-cast v0, Luff;
+
+    if-eqz v0, :cond_0
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Luff;->f(Landroid/view/Display;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lmog;->c:Ljava/lang/Object;
+
+    check-cast p1, Lpog;
+
+    iget-object v0, p0, Lmog;->b:Landroid/hardware/display/DisplayManager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lpog;->a(Lpog;Landroid/view/Display;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onDisplayRemoved(I)V
+    .locals 0
+
+    iget p1, p0, Lmog;->a:I
 
     return-void
 .end method

@@ -7,21 +7,21 @@
 
 
 # instance fields
-.field public a:Ltaf;
+.field public a:Ltnf;
 
 .field public b:Landroid/view/Surface;
 
 .field public c:Landroid/graphics/SurfaceTexture;
 
-.field public o:Lijg;
+.field public d:Ljxg;
 
-.field public w0:I
+.field public o:I
 
-.field public x0:I
+.field public s0:I
 
-.field public y0:I
+.field public t0:I
 
-.field public z0:I
+.field public u0:I
 
 
 # direct methods
@@ -35,27 +35,27 @@
 
 
 # virtual methods
-.method public final a(Lijg;)V
+.method public final a(Ljxg;)V
     .locals 1
 
-    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
-    invoke-interface {p1}, Lijg;->g()I
+    invoke-interface {p1}, Ljxg;->z()I
 
     move-result p1
 
-    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->z0:I
+    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->u0:I
 
     invoke-virtual {p0}, Lru/ok/messages/video/widgets/VideoView;->d()V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     if-eqz p1, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p1, Ltaf;
+    new-instance p1, Ltnf;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -63,11 +63,11 @@
 
     invoke-direct {p1, v0}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {p1, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     const/4 v0, 0x0
 
@@ -81,33 +81,33 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->z0:I
+    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->u0:I
 
-    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
-    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
-    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->y0:I
+    iput v1, p0, Lru/ok/messages/video/widgets/VideoView;->t0:I
 
-    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Ltaf;->setListener(Lsaf;)V
+    invoke-virtual {v1, v0}, Ltnf;->setListener(Lsnf;)V
 
-    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {v1, v0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     :cond_0
     iget-object v1, p0, Lru/ok/messages/video/widgets/VideoView;->b:Landroid/view/Surface;
@@ -136,11 +136,11 @@
 
     if-nez p4, :cond_0
 
-    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
-    iput p2, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iput p2, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
-    iput p3, p0, Lru/ok/messages/video/widgets/VideoView;->y0:I
+    iput p3, p0, Lru/ok/messages/video/widgets/VideoView;->t0:I
 
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -163,11 +163,11 @@
 
     if-lez p4, :cond_4
 
-    iget p4, p0, Lru/ok/messages/video/widgets/VideoView;->z0:I
+    iget p4, p0, Lru/ok/messages/video/widgets/VideoView;->u0:I
 
     if-eqz p4, :cond_4
 
-    new-instance p4, Lss;
+    new-instance p4, Lrt;
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -179,21 +179,21 @@
 
     const/16 v2, 0x8
 
-    invoke-direct {p4, v0, v1, v2}, Lss;-><init>(III)V
+    invoke-direct {p4, v0, v1, v2}, Lrt;-><init>(III)V
 
-    new-instance v2, Lss;
+    new-instance v2, Lrt;
 
     const/16 v3, 0x8
 
-    invoke-direct {v2, p1, p2, v3}, Lss;-><init>(III)V
+    invoke-direct {v2, p1, p2, v3}, Lrt;-><init>(III)V
 
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
-    iget v4, p0, Lru/ok/messages/video/widgets/VideoView;->z0:I
+    iget v4, p0, Lru/ok/messages/video/widgets/VideoView;->u0:I
 
-    invoke-static {v2, p4, v4}, Lhd6;->q(Lss;Lss;I)Landroid/graphics/Matrix;
+    invoke-static {v2, p4, v4}, Lzxi;->a(Lrt;Lrt;I)Landroid/graphics/Matrix;
 
     move-result-object p4
 
@@ -243,30 +243,30 @@
     invoke-virtual {v3, v2, p4, v0, v1}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     :cond_2
-    iget-object p4, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object p4, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     if-eqz p4, :cond_3
 
     invoke-virtual {p4, v3}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
 
     :cond_3
-    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iput p1, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
-    iput p2, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iput p2, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
-    iput p3, p0, Lru/ok/messages/video/widgets/VideoView;->y0:I
+    iput p3, p0, Lru/ok/messages/video/widgets/VideoView;->t0:I
 
     :cond_4
     :goto_0
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     if-eqz p1, :cond_6
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
     if-lez p2, :cond_5
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
     if-lez p2, :cond_5
 
@@ -287,7 +287,7 @@
 .method public final d()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
     const/4 v1, 0x0
 
@@ -298,12 +298,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Lijg;->r()I
+    invoke-interface {v0}, Ljxg;->b()I
 
     move-result v0
 
     :goto_0
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
     if-nez v2, :cond_1
 
@@ -312,12 +312,12 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {v2}, Lijg;->I()I
+    invoke-interface {v2}, Ljxg;->B()I
 
     move-result v2
 
     :goto_1
-    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
     if-nez v3, :cond_2
 
@@ -326,7 +326,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-interface {v3}, Lijg;->c0()I
+    invoke-interface {v3}, Ljxg;->M()I
 
     move-result v3
 
@@ -339,13 +339,13 @@
 .method public getVideoScreenShot()Landroid/graphics/drawable/BitmapDrawable;
     .locals 8
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_5
 
-    iget v2, p0, Lru/ok/messages/video/widgets/VideoView;->y0:I
+    iget v2, p0, Lru/ok/messages/video/widgets/VideoView;->t0:I
 
     if-nez v2, :cond_5
 
@@ -355,7 +355,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {v0}, Landroid/view/View;->isShown()Z
 
@@ -363,24 +363,24 @@
 
     if-eqz v0, :cond_5
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
     if-lez v0, :cond_5
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
     if-gtz v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {v2}, Landroid/view/View;->getHeight()I
 
@@ -432,7 +432,7 @@
 
     mul-int/2addr v2, v3
 
-    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
     invoke-virtual {v3, v0, v2}, Landroid/view/TextureView;->getBitmap(II)Landroid/graphics/Bitmap;
 
@@ -459,11 +459,11 @@
 .method public final onMeasure(II)V
     .locals 2
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
     if-lez v0, :cond_0
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
     if-lez v0, :cond_0
 
@@ -475,11 +475,11 @@
 
     move-result p2
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
-    iget v1, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iget v1, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
-    invoke-static {p1, p2, v0, v1}, Lpih;->B(IIII)[I
+    invoke-static {p1, p2, v0, v1}, Lkbi;->d(IIII)[I
 
     move-result-object p1
 
@@ -503,11 +503,11 @@
 
     invoke-super {p0, p2, p1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    iget p1, p0, Lru/ok/messages/video/widgets/VideoView;->w0:I
+    iget p1, p0, Lru/ok/messages/video/widgets/VideoView;->o:I
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->x0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoView;->s0:I
 
-    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->y0:I
+    iget v0, p0, Lru/ok/messages/video/widgets/VideoView;->t0:I
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lru/ok/messages/video/widgets/VideoView;->c(IIIZ)V
 
@@ -552,7 +552,7 @@
 
     invoke-virtual {p0}, Lru/ok/messages/video/widgets/VideoView;->d()V
 
-    iget-object p2, p0, Lru/ok/messages/video/widgets/VideoView;->o:Lijg;
+    iget-object p2, p0, Lru/ok/messages/video/widgets/VideoView;->d:Ljxg;
 
     if-nez p2, :cond_2
 
@@ -561,15 +561,15 @@
     :cond_2
     iget-object p3, p0, Lru/ok/messages/video/widgets/VideoView;->b:Landroid/view/Surface;
 
-    invoke-interface {p2, p3}, Lijg;->V(Landroid/view/Surface;)V
+    invoke-interface {p2, p3}, Ljxg;->J(Landroid/view/Surface;)V
 
-    iget-object p2, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltaf;
+    iget-object p2, p0, Lru/ok/messages/video/widgets/VideoView;->a:Ltnf;
 
-    new-instance p3, Lrze;
+    new-instance p3, Li4g;
 
-    invoke-direct {p3, p0, p1}, Lrze;-><init>(Lru/ok/messages/video/widgets/VideoView;Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {p3, p0, p1}, Li4g;-><init>(Lru/ok/messages/video/widgets/VideoView;Landroid/graphics/SurfaceTexture;)V
 
-    invoke-virtual {p2, p3}, Ltaf;->setListener(Lsaf;)V
+    invoke-virtual {p2, p3}, Ltnf;->setListener(Lsnf;)V
 
     return-void
 .end method

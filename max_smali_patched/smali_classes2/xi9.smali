@@ -1,90 +1,57 @@
-.class public final synthetic Lxi9;
+.class public abstract Lxi9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
+# static fields
+.field public static final a:Lru7;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lru7;
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:J
+.field public static final c:Lru7;
 
 
 # direct methods
-.method public synthetic constructor <init>(JIIZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p4, p0, Lxi9;->a:I
+    sget-object v0, Lyi9;->a:Lyi9;
 
-    iput p3, p0, Lxi9;->b:I
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
-    iput-boolean p5, p0, Lxi9;->c:Z
+    move-result-object v1
 
-    iput-wide p1, p0, Lxi9;->d:J
+    const-class v2, Lbr;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v1
+
+    sput-object v1, Lxi9;->a:Lru7;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v1
+
+    const-class v2, Lgdg;
+
+    invoke-virtual {v1, v2}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v1
+
+    sput-object v1, Lxi9;->b:Lru7;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lrw8;
+
+    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v0
+
+    sput-object v0, Lxi9;->c:Lru7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Lxi9;->a:I
-
-    check-cast p1, Lzi9;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lzi9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lxi9;->b:I
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lxi9;->c:Z
-
-    iget-wide v6, p0, Lxi9;->d:J
-
-    invoke-direct/range {v0 .. v8}, Lzi9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lzi9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lxi9;->b:I
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lxi9;->c:Z
-
-    iget-wide v6, p0, Lxi9;->d:J
-
-    invoke-direct/range {v0 .. v8}, Lzi9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

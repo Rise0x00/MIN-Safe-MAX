@@ -1,262 +1,279 @@
 .class public final Lxnd;
-.super Ltnd;
+.super Laed;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final j:Loz9;
+.field public X:I
 
-.field public final k:Loz9;
+.field public Y:I
 
-.field public final l:J
+.field public Z:I
+
+.field public c:Lc1a;
+
+.field public d:[J
+
+.field public o:I
+
+.field public s0:J
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lc1a;
 
 
 # direct methods
-.method public constructor <init>(Ldnc;JJJJJLjava/util/List;JLoz9;Loz9;JJ)V
-    .locals 17
+.method public constructor <init>(Lc1a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    iput-object p1, p0, Lxnd;->v0:Lc1a;
 
-    move-object/from16 v1, p1
+    const/4 p1, 0x2
 
-    move-wide/from16 v2, p2
-
-    move-wide/from16 v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p10
-
-    move-object/from16 v10, p12
-
-    move-wide/from16 v11, p13
-
-    move-wide/from16 v13, p17
-
-    move-wide/from16 v15, p19
-
-    invoke-direct/range {v0 .. v16}, Ltnd;-><init>(Ldnc;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p15
-
-    iput-object v1, v0, Lxnd;->j:Loz9;
-
-    move-object/from16 v1, p16
-
-    iput-object v1, v0, Lxnd;->k:Loz9;
-
-    move-wide/from16 v1, p8
-
-    iput-wide v1, v0, Lxnd;->l:J
+    invoke-direct {p0, p1, p2}, Laed;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lo1d;)Ldnc;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lxnd;->j:Loz9;
+    check-cast p1, Lc3e;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p1, Lo1d;->a:Lr76;
+    invoke-virtual {p0, p1, p2}, Lxnd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v6, p1, Lr76;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget v1, p1, Lr76;->w0:I
+    check-cast p1, Lxnd;
 
-    const-wide/16 v4, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p1, p2}, Lxnd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual/range {v0 .. v6}, Loz9;->h(IJJLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    new-instance v7, Ldnc;
-
-    const-wide/16 v8, 0x0
-
-    const-wide/16 v11, -0x1
-
-    invoke-direct/range {v7 .. v12}, Ldnc;-><init>(JLjava/lang/String;J)V
-
-    return-object v7
-
-    :cond_0
-    iget-object p1, p0, Ldod;->c:Ljava/lang/Object;
-
-    check-cast p1, Ldnc;
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final e(J)J
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Ltnd;->f:Ljava/util/List;
+    new-instance v0, Lxnd;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lxnd;->v0:Lc1a;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-direct {v0, v1, p2}, Lxnd;-><init>(Lc1a;Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
+    iput-object p1, v0, Lxnd;->u0:Ljava/lang/Object;
 
-    int-to-long p1, p1
-
-    return-wide p1
-
-    :cond_0
-    iget-wide v0, p0, Lxnd;->l:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide p1, p0, Ltnd;->d:J
-
-    sub-long/2addr v0, p1
-
-    const-wide/16 p1, 0x1
-
-    add-long/2addr v0, p1
-
-    return-wide v0
-
-    :cond_1
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Ldod;->a:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Ltnd;->e:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    const-wide/32 v0, 0xf4240
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
-
-    sget v1, Lnm0;->a:I
-
-    new-instance v1, Ljava/math/BigDecimal;
-
-    invoke-direct {v1, p1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    new-instance p1, Ljava/math/BigDecimal;
-
-    invoke-direct {p1, p2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v1, p1, p2, v0}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toBigIntegerExact()Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_2
-    return-wide v2
+    return-object v0
 .end method
 
-.method public final i(Lk1d;J)Ldnc;
-    .locals 16
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
     move-object/from16 v0, p0
 
-    iget-wide v1, v0, Ltnd;->d:J
+    iget v1, v0, Lxnd;->t0:I
 
-    iget-object v3, v0, Ltnd;->f:Ljava/util/List;
+    const/4 v2, 0x0
 
-    if-eqz v3, :cond_0
+    const/16 v3, 0x8
 
-    sub-long v1, p2, v1
+    const/4 v4, 0x1
 
-    long-to-int v1, v1
+    if-eqz v1, :cond_1
 
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-ne v1, v4, :cond_0
 
-    move-result-object v1
+    iget v1, v0, Lxnd;->Z:I
 
-    check-cast v1, Lznd;
+    iget v5, v0, Lxnd;->Y:I
 
-    iget-wide v1, v1, Lznd;->a:J
+    iget-wide v6, v0, Lxnd;->s0:J
+
+    iget v8, v0, Lxnd;->X:I
+
+    iget v9, v0, Lxnd;->o:I
+
+    iget-object v10, v0, Lxnd;->d:[J
+
+    iget-object v11, v0, Lxnd;->c:Lc1a;
+
+    iget-object v12, v0, Lxnd;->u0:Ljava/lang/Object;
+
+    check-cast v12, Lc3e;
+
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lxnd;->u0:Ljava/lang/Object;
+
+    check-cast v1, Lc3e;
+
+    iget-object v5, v0, Lxnd;->v0:Lc1a;
+
+    iget-object v6, v5, Lc1a;->a:[J
+
+    array-length v7, v6
+
+    add-int/lit8 v7, v7, -0x2
+
+    if-ltz v7, :cond_5
+
+    move v8, v2
 
     :goto_0
-    move-wide v7, v1
+    aget-wide v9, v6, v8
 
-    move-object/from16 v1, p1
+    not-long v11, v9
+
+    const/4 v13, 0x7
+
+    shl-long/2addr v11, v13
+
+    and-long/2addr v11, v9
+
+    const-wide v13, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v11, v13
+
+    cmp-long v11, v11, v13
+
+    if-eqz v11, :cond_4
+
+    sub-int v11, v8, v7
+
+    not-int v11, v11
+
+    ushr-int/lit8 v11, v11, 0x1f
+
+    rsub-int/lit8 v11, v11, 0x8
+
+    move v12, v11
+
+    move-object v11, v5
+
+    move v5, v12
+
+    move-object v12, v1
+
+    move v1, v2
+
+    move-wide/from16 v17, v9
+
+    move-object v10, v6
+
+    move v9, v7
+
+    move-wide/from16 v6, v17
+
+    :goto_1
+    if-ge v1, v5, :cond_3
+
+    const-wide/16 v13, 0xff
+
+    and-long/2addr v13, v6
+
+    const-wide/16 v15, 0x80
+
+    cmp-long v13, v13, v15
+
+    if-gez v13, :cond_2
+
+    shl-int/lit8 v2, v8, 0x3
+
+    add-int/2addr v2, v1
+
+    new-instance v3, Lxf8;
+
+    iget-object v13, v11, Lc1a;->b:[Ljava/lang/Object;
+
+    aget-object v13, v13, v2
+
+    iget-object v14, v11, Lc1a;->c:[Ljava/lang/Object;
+
+    aget-object v2, v14, v2
+
+    const/4 v14, 0x1
+
+    invoke-direct {v3, v13, v14, v2}, Lxf8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object v12, v0, Lxnd;->u0:Ljava/lang/Object;
+
+    iput-object v11, v0, Lxnd;->c:Lc1a;
+
+    iput-object v10, v0, Lxnd;->d:[J
+
+    iput v9, v0, Lxnd;->o:I
+
+    iput v8, v0, Lxnd;->X:I
+
+    iput-wide v6, v0, Lxnd;->s0:J
+
+    iput v5, v0, Lxnd;->Y:I
+
+    iput v1, v0, Lxnd;->Z:I
+
+    iput v4, v0, Lxnd;->t0:I
+
+    invoke-virtual {v12, v3, v0}, Lc3e;->b(Ljava/lang/Object;Laed;)V
+
+    sget-object v1, Lh54;->a:Lh54;
+
+    return-object v1
+
+    :cond_2
+    :goto_2
+    shr-long/2addr v6, v3
+
+    add-int/2addr v1, v4
 
     goto :goto_1
 
-    :cond_0
-    sub-long v1, p2, v1
+    :cond_3
+    if-ne v5, v3, :cond_5
 
-    iget-wide v3, v0, Ltnd;->e:J
+    move v7, v9
 
-    mul-long/2addr v1, v3
+    move-object v6, v10
+
+    move-object v5, v11
+
+    move-object v1, v12
+
+    :cond_4
+    if-eq v8, v7, :cond_5
+
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    :goto_1
-    iget-object v1, v1, Lo1d;->a:Lr76;
+    :cond_5
+    sget-object v1, Lybg;->a:Lybg;
 
-    iget-object v9, v1, Lr76;->a:Ljava/lang/String;
-
-    iget v4, v1, Lr76;->w0:I
-
-    iget-object v3, v0, Lxnd;->k:Loz9;
-
-    move-wide/from16 v5, p2
-
-    invoke-virtual/range {v3 .. v9}, Loz9;->h(IJJLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v13
-
-    new-instance v10, Ldnc;
-
-    const-wide/16 v11, 0x0
-
-    const-wide/16 v14, -0x1
-
-    invoke-direct/range {v10 .. v15}, Ldnc;-><init>(JLjava/lang/String;J)V
-
-    return-object v10
+    return-object v1
 .end method

@@ -2,154 +2,218 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public final b:J
+
+.field public final c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricFragment;)V
-    .locals 1
+.method public constructor <init>(JJJJJJI)V
+    .locals 12
 
-    const/4 v0, 0x0
+    move-wide v0, p3
 
-    iput v0, p0, Ljn0;->a:I
+    move-wide/from16 v4, p5
 
-    .line 1
+    move-wide/from16 v6, p7
+
+    move-wide/from16 v8, p9
+
+    move-wide/from16 v10, p11
+
+    packed-switch p13, :pswitch_data_0
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-wide p1, p0, Ljn0;->a:J
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-wide v0, p0, Ljn0;->b:J
 
-    iput-object v0, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+    const-wide/16 v2, 0x0
 
-    return-void
-.end method
+    iput-wide v2, p0, Ljn0;->d:J
 
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;I)V
-    .locals 0
+    iput-wide v4, p0, Ljn0;->e:J
 
-    iput p2, p0, Ljn0;->a:I
+    iput-wide v6, p0, Ljn0;->f:J
 
-    packed-switch p2, :pswitch_data_0
+    iput-wide v8, p0, Ljn0;->g:J
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide v10, p0, Ljn0;->c:J
 
-    .line 4
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    invoke-static/range {v0 .. v11}, Ljn0;->a(JJJJJJ)J
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    move-result-wide p1
 
-    iput-object p2, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+    iput-wide p1, p0, Ljn0;->h:J
 
     return-void
 
-    .line 5
     :pswitch_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    iput-wide p1, p0, Ljn0;->a:J
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-wide v0, p0, Ljn0;->b:J
 
-    iput-object p2, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Ljn0;->d:J
+
+    iput-wide v4, p0, Ljn0;->e:J
+
+    iput-wide v6, p0, Ljn0;->f:J
+
+    iput-wide v8, p0, Ljn0;->g:J
+
+    iput-wide v10, p0, Ljn0;->c:J
+
+    invoke-static/range {v0 .. v11}, Ljn0;->b(JJJJJJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ljn0;->h:J
 
     return-void
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method
 
+.method public static a(JJJJJJ)J
+    .locals 4
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    const-wide/16 v0, 0x1
 
-    iget v0, p0, Ljn0;->a:I
+    add-long v2, p6, v0
 
-    packed-switch v0, :pswitch_data_0
+    cmp-long v2, v2, p8
 
-    iget-object v0, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+    if-gez v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    add-long v2, p2, v0
 
-    move-result-object v1
+    cmp-long v2, v2, p4
 
-    if-eqz v1, :cond_0
+    if-ltz v2, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->n:Z
+    goto :goto_0
 
     :cond_0
-    return-void
+    sub-long/2addr p0, p2
 
-    :pswitch_0
-    iget-object v0, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+    sub-long v2, p8, p6
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    long-to-float v2, v2
 
-    move-result-object v1
+    sub-long/2addr p4, p2
 
-    if-eqz v1, :cond_1
+    long-to-float p2, p4
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    div-float/2addr v2, p2
 
-    move-result-object v0
+    long-to-float p0, p0
 
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
+    mul-float/2addr p0, v2
 
-    const/4 v1, 0x0
+    float-to-long p0, p0
 
-    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->m:Z
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Ljig;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
 
     :cond_1
-    return-void
+    :goto_0
+    return-wide p6
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Ljn0;->b:Ljava/lang/ref/WeakReference;
+.method public static b(JJJJJJ)J
+    .locals 4
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const-wide/16 v0, 0x1
 
-    move-result-object v1
+    add-long v2, p6, v0
 
-    if-eqz v1, :cond_2
+    cmp-long v2, v2, p8
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-gez v2, :cond_1
 
-    move-result-object v0
+    add-long v2, p2, v0
 
-    check-cast v0, Landroidx/biometric/BiometricFragment;
+    cmp-long v2, v2, p4
 
-    invoke-virtual {v0}, Landroidx/biometric/BiometricFragment;->b1()V
+    if-ltz v2, :cond_0
 
-    :cond_2
-    return-void
+    goto :goto_0
 
-    nop
+    :cond_0
+    sub-long/2addr p0, p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sub-long v2, p8, p6
+
+    long-to-float v2, v2
+
+    sub-long/2addr p4, p2
+
+    long-to-float p2, p4
+
+    div-float/2addr v2, p2
+
+    long-to-float p0, p0
+
+    mul-float/2addr p0, v2
+
+    float-to-long p0, p0
+
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Llig;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_1
+    :goto_0
+    return-wide p6
 .end method

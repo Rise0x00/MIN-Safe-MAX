@@ -1,81 +1,81 @@
 .class public final Liw6;
-.super Llk0;
+.super Lgpd;
 .source "SourceFile"
 
 
 # instance fields
-.field public g:I
+.field public final c:Landroid/os/Handler;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liw6;->c:Landroid/os/Handler;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()I
-    .locals 1
+.method public final a()Lepd;
+    .locals 2
 
-    iget v0, p0, Liw6;->g:I
+    new-instance v0, Lgw6;
 
-    return v0
-.end method
+    iget-object v1, p0, Liw6;->c:Landroid/os/Handler;
 
-.method public final k()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lgw6;-><init>(Landroid/os/Handler;)V
 
     return-object v0
 .end method
 
-.method public final r(JJJLjava/util/List;[Loi8;)V
-    .locals 0
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+    .locals 3
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    if-eqz p1, :cond_1
 
-    move-result-wide p1
+    if-eqz p4, :cond_0
 
-    iget p3, p0, Liw6;->g:I
+    new-instance v0, Lhw6;
 
-    invoke-virtual {p0, p3, p1, p2}, Llk0;->q(IJ)Z
+    iget-object v1, p0, Liw6;->c:Landroid/os/Handler;
 
-    move-result p3
+    invoke-direct {v0, v1, p1}, Lhw6;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    if-nez p3, :cond_0
+    invoke-static {v1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    return-void
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p2
+
+    invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    return-object v0
 
     :cond_0
-    iget p3, p0, Llk0;->b:I
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    add-int/lit8 p3, p3, -0x1
+    const-string p2, "unit == null"
 
-    :goto_0
-    if-ltz p3, :cond_2
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p3, p1, p2}, Llk0;->q(IJ)Z
-
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Liw6;->g:I
-
-    return-void
+    throw p1
 
     :cond_1
-    add-int/lit8 p3, p3, -0x1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    goto :goto_0
+    const-string p2, "run == null"
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method

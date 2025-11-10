@@ -24,18 +24,18 @@
         "(Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;Lru/ok/android/externcalls/sdk/asr/internal/listeners/AsrListenerManager;)V",
         "",
         "fileName",
-        "Lnwd;",
+        "Lf8e;",
         "sessionRoomId",
         "Lkotlin/Function0;",
-        "Loyf;",
+        "Lybg;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "startRecord",
-        "(Ljava/lang/String;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/lang/String;Lf8e;Loi6;Lqi6;)V",
         "stopRecord",
-        "(Lnwd;Lve6;Lxe6;)V",
+        "(Lf8e;Loi6;Lqi6;)V",
         "Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;",
         "listener",
         "addAsrRecordListener",
@@ -96,41 +96,41 @@
     return-void
 .end method
 
-.method public startRecord(Ljava/lang/String;Lnwd;Lve6;Lxe6;)V
+.method public startRecord(Ljava/lang/String;Lf8e;Loi6;Lqi6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lf8e;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/AsrManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;->startRecord(Ljava/lang/String;Lnwd;Lve6;Lxe6;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;->startRecord(Ljava/lang/String;Lf8e;Loi6;Lqi6;)V
 
     return-void
 .end method
 
-.method public stopRecord(Lnwd;Lve6;Lxe6;)V
+.method public stopRecord(Lf8e;Loi6;Lqi6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lf8e;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/AsrManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;
 
-    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;->stopRecord(Lnwd;Lve6;Lxe6;)V
+    invoke-interface {v0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutor;->stopRecord(Lf8e;Loi6;Lqi6;)V
 
     return-void
 .end method

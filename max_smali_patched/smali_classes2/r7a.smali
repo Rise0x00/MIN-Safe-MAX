@@ -1,48 +1,26 @@
 .class public final Lr7a;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/android/services/NotificationTamService;
+.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-.field public final synthetic Y:J
-
-.field public final synthetic Z:J
-
-.field public final synthetic w0:J
-
-.field public final synthetic x0:Z
-
-.field public final synthetic y0:J
-
-.field public final synthetic z0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lr7a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    iput-object p2, p0, Lr7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iput-wide p2, p0, Lr7a;->Y:J
+    const/4 p2, 0x2
 
-    iput-wide p4, p0, Lr7a;->Z:J
-
-    iput-wide p6, p0, Lr7a;->w0:J
-
-    iput-boolean p8, p0, Lr7a;->x0:Z
-
-    iput-wide p9, p0, Lr7a;->y0:J
-
-    iput-object p11, p0, Lr7a;->z0:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p12}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -52,207 +30,166 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lr7a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lr7a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lr7a;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lr7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 13
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lr7a;
 
-    iget-wide v9, p0, Lr7a;->y0:J
+    iget-object v1, p0, Lr7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iget-object v11, p0, Lr7a;->z0:Ljava/lang/String;
+    invoke-direct {v0, p2, v1}, Lr7a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
 
-    iget-object v1, p0, Lr7a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-wide v2, p0, Lr7a;->Y:J
-
-    iget-wide v4, p0, Lr7a;->Z:J
-
-    iget-wide v6, p0, Lr7a;->w0:J
-
-    iget-boolean v8, p0, Lr7a;->x0:Z
-
-    move-object v12, p2
-
-    invoke-direct/range {v0 .. v12}, Lr7a;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lr7a;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lr7a;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    iget-object p1, p0, Lr7a;->o:Ljava/lang/Object;
 
-    iget-object v0, p1, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Ls5f;
+    check-cast p1, Lad0;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    sget-object v0, Lwc0;->a:Lwc0;
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-object v1, v0
+    move-result v0
 
-    check-cast v1, Llqc;
+    iget-object v1, p0, Lr7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_0
 
-    const/4 v9, 0x0
+    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
 
-    const/16 v11, 0x58
+    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->x0:Lru7;
 
-    iget-wide v2, p0, Lr7a;->Y:J
-
-    iget-wide v4, p0, Lr7a;->Z:J
-
-    iget-wide v6, p0, Lr7a;->w0:J
-
-    const/4 v8, 0x0
-
-    iget-boolean v10, p0, Lr7a;->x0:Z
-
-    invoke-static/range {v1 .. v11}, Llqc;->e(Llqc;JJJZZZI)J
-
-    iget-object v0, v1, Llqc;->b:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lara;
-
-    invoke-virtual {v0, v2, v3}, Lara;->a(J)V
-
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->w0:Ls5f;
-
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lq9a;
+    check-cast p1, Luib;
 
-    invoke-virtual {p1}, Lq9a;->e()Lr9a;
+    new-instance v0, Lamh;
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1, v2}, Lamh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    sget-object v1, Lr9a;->d:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "onNotificationMarkAsRead: pushId="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Lr7a;->y0:J
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", eventKey="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lr7a;->z0:Ljava/lang/String;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez v4, :cond_0
+    invoke-virtual {p1, v0}, Luib;->i(Lamh;)V
 
     goto :goto_0
 
     :cond_0
+    instance-of v0, p1, Lxc0;
+
+    if-eqz v0, :cond_1
+
     :try_start_0
-    invoke-virtual {p1}, Lr9a;->b()Lqc;
+    check-cast p1, Lxc0;
 
-    move-result-object v0
+    iget-object p1, p1, Lxc0;->a:Landroid/content/Intent;
 
-    const-string v5, "Action"
+    const/16 v0, 0x22b
 
-    const-string v6, "trid"
+    invoke-virtual {v1, p1, v0}, Lc24;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0:Lru7;
 
-    move-result-object v2
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    new-instance v3, Ln4b;
+    move-result-object p1
 
-    invoke-direct {v3, v6, v2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    check-cast p1, Le5a;
 
-    const-string v2, "eKey"
+    sget-object v0, Ldqd;->E0:Ldqd;
 
-    new-instance v6, Ln4b;
-
-    invoke-direct {v6, v2, v4}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v2, "p_op"
-
-    const-string v4, "m_as_read"
-
-    new-instance v7, Ln4b;
-
-    invoke-direct {v7, v2, v4}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v3, v6, v7}, [Ln4b;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ly6b;->d([Ln4b;)Lds;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v5, v2}, Lqc;->b(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {p1, v0}, Le5a;->g(Le5a;Ldqd;)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    const-class p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    const-string v2, "onNotificationMarkAsRead: failed"
-
-    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1}, Lr9a;->c()Lec5;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
+    const-string v0, "failed open camera"
 
-    const-string v2, "failed to log mark as read"
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, v2}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p1, Lcna;
+    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lk8a;
 
-    invoke-virtual {p1, v1}, Lcna;->c(Ljava/lang/Throwable;)V
+    move-result-object p1
+
+    iget-object p1, p1, Lk8a;->b:Lr6a;
+
+    invoke-virtual {p1}, Lr6a;->b()V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v0, p1, Lzc0;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lzc0;
+
+    iget-object p1, p1, Lzc0;->a:Landroid/content/Intent;
+
+    const/16 v0, 0x29a
+
+    invoke-virtual {v1, p1, v0}, Lc24;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    :cond_2
+    instance-of v0, p1, Lyc0;
+
+    if-eqz v0, :cond_3
+
+    sget-object v0, Lkv8;->c:Lkv8;
+
+    check-cast p1, Lyc0;
+
+    iget-object v1, p1, Lyc0;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lyc0;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lkv8;->R0(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

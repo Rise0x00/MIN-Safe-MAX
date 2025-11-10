@@ -1,124 +1,224 @@
-.class public final synthetic Llv9;
+.class public final Llv9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwo3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lks1;
 
-.field public final synthetic b:Lmv9;
+.field public final b:F
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Long;
+
+.field public final e:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmv9;I)V
+.method public constructor <init>(Lks1;FZLjava/lang/Long;Z)V
     .locals 0
 
-    iput p2, p0, Llv9;->a:I
-
-    iput-object p1, p0, Llv9;->b:Lmv9;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llv9;->a:Lks1;
+
+    iput p2, p0, Llv9;->b:F
+
+    iput-boolean p3, p0, Llv9;->c:Z
+
+    iput-object p4, p0, Llv9;->d:Ljava/lang/Long;
+
+    iput-boolean p5, p0, Llv9;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Llv9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljava/lang/String;
+    return v0
 
-    iget-object v0, p0, Llv9;->b:Lmv9;
+    :cond_0
+    instance-of v1, p1, Llv9;
 
-    iget-object v1, v0, Lmv9;->c:Lru/ok/messages/media/trim/FrgTrimVideo;
+    const/4 v2, 0x0
 
-    iget-wide v2, v0, Lmv9;->w0:J
+    if-nez v1, :cond_1
 
-    iget-wide v4, v0, Lmv9;->x0:J
+    return v2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_1
+    check-cast p1, Llv9;
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v1, p0, Llv9;->a:Lks1;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    iget-object v3, p1, Llv9;->a:Lks1;
 
-    const-string v6, "ru.ok.tamtam.extra.START_POSITION"
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v6, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    move-result v1
 
-    const-string v2, "ru.ok.tamtam.extra.END_POSITION"
+    if-nez v1, :cond_2
 
-    invoke-virtual {v0, v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    return v2
 
-    const-string v2, "ru.ok.tamtam.extra.THUMBNAIL_URI"
+    :cond_2
+    iget v1, p0, Llv9;->b:F
 
-    invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget v3, p1, Llv9;->b:F
 
-    invoke-virtual {v1}, Lru/ok/messages/views/fragments/base/FrgBase;->T0()Lu5;
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    move-result-object p1
+    move-result v1
 
-    const/4 v2, -0x1
+    if-eqz v1, :cond_3
 
-    invoke-virtual {p1, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+    return v2
 
-    invoke-virtual {v1}, Lru/ok/messages/media/trim/FrgTrimVideo;->d1()V
+    :cond_3
+    iget-boolean v1, p0, Llv9;->c:Z
 
-    invoke-virtual {v1}, Lru/ok/messages/views/fragments/base/FrgBase;->R0()V
+    iget-boolean v3, p1, Llv9;->c:Z
 
-    return-void
+    if-eq v1, v3, :cond_4
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
+    return v2
 
-    iget-object p1, p0, Llv9;->b:Lmv9;
+    :cond_4
+    iget-object v1, p0, Llv9;->d:Ljava/lang/Long;
 
-    iget-object v0, p1, Lmv9;->Y:Lvp8;
+    iget-object v3, p1, Llv9;->d:Ljava/lang/Long;
 
-    check-cast v0, Lj18;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lj18;->e()J
+    move-result v1
 
-    move-result-wide v0
+    if-nez v1, :cond_5
 
-    iput-wide v0, p1, Lmv9;->y0:J
+    return v2
 
-    iget-wide v2, p1, Lmv9;->x0:J
+    :cond_5
+    iget-boolean v1, p0, Llv9;->e:Z
 
-    cmp-long v2, v0, v2
+    iget-boolean p1, p1, Llv9;->e:Z
 
-    if-lez v2, :cond_0
+    if-eq v1, p1, :cond_6
 
-    invoke-virtual {p1}, Lmv9;->d1()V
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Llv9;->a:Lks1;
+
+    invoke-virtual {v0}, Lks1;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Llv9;->b:F
+
+    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llv9;->c:Z
+
+    invoke-static {v0, v2}, Lngi;->a(IZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Llv9;->d:Ljava/lang/Long;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p1, Lv2;->b:Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p1, Lpv9;
-
-    check-cast p1, Lsw9;
-
-    iget-object p1, p1, Lsw9;->C0:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
-
-    invoke-virtual {p1, v0, v1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->setPointerPosition(J)V
+    move-result v2
 
     :goto_0
-    return-void
+    add-int/2addr v0, v2
 
-    nop
+    mul-int/2addr v0, v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v1, p0, Llv9;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MovieStateUpdate(trackKey="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llv9;->a:Lks1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", volume="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Llv9;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPaused="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Llv9;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", position="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llv9;->d:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMuted="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Llv9;->e:Z
+
+    invoke-static {v0, v2, v1}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

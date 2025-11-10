@@ -1,154 +1,52 @@
-.class public final Lmpc;
+.class public abstract Lmpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a0873
 
-.field public final b:Ljava/lang/String;
+.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a0874
 
-.field public final c:Lkoc;
+.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a0875
 
+.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0876
 
-# direct methods
-.method public constructor <init>(JLkoc;Ljava/lang/String;)V
-    .locals 0
+.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a0877
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a0878
 
-    iput-wide p1, p0, Lmpc;->a:J
+.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a0879
 
-    iput-object p4, p0, Lmpc;->b:Ljava/lang/String;
+.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a087a
 
-    iput-object p3, p0, Lmpc;->c:Lkoc;
+.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a087b
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a087c
 
+.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a087d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static oneme_stickers_settings_menu_share:I = 0x7f0a087e
 
-    const/4 v0, 0x1
+.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a087f
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a0880
 
-    return v0
+.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a0881
 
-    :cond_0
-    instance-of v1, p1, Lmpc;
+.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a0882
 
-    const/4 v2, 0x0
+.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a0883
 
-    if-nez v1, :cond_1
+.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a0884
 
-    return v2
+.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a0885
 
-    :cond_1
-    check-cast p1, Lmpc;
+.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a0886
 
-    iget-wide v3, p0, Lmpc;->a:J
+.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a0887
 
-    iget-wide v5, p1, Lmpc;->a:J
+.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a0888
 
-    cmp-long v1, v3, v5
+.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a0889
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lmpc;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lmpc;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lmpc;->c:Lkoc;
-
-    iget-object p1, p1, Lmpc;->c:Lkoc;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lmpc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lmpc;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lmpc;->c:Lkoc;
-
-    invoke-virtual {v1}, Lkoc;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "PlayingState(msgId="
-
-    const-string v1, ", url="
-
-    iget-wide v2, p0, Lmpc;->a:J
-
-    iget-object v4, p0, Lmpc;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", reaction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmpc;->c:Lkoc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_stickers_settings_toolbar:I = 0x7f0a088a

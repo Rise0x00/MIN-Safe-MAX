@@ -6,14 +6,20 @@
 # static fields
 .field public static final a:I
 
+.field public static final b:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lohc;->oneme_settings_privacy_twofa_delete_user_days_left_notif:I
+    sget v0, Ltnc;->oneme_file_download_warning_confirm:I
 
     sput v0, Ljua;->a:I
+
+    sget v0, Ltnc;->oneme_file_download_warning_deny:I
+
+    sput v0, Ljua;->b:I
 
     return-void
 .end method

@@ -1,206 +1,919 @@
-.class public final synthetic Lia4;
-.super Ljava/lang/Object;
+.class public Lia4;
+.super Lma4;
 .source "SourceFile"
-
-# interfaces
-.implements Lgge;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final Y:Landroid/os/Handler;
 
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-.field public final synthetic c:Lrhf;
+.field public Z:Lol0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;Lrhf;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p3, p0, Lia4;->a:I
+    invoke-direct {p0}, Lma4;-><init>()V
 
-    iput-object p1, p0, Lia4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+    new-instance v0, Landroid/os/Handler;
 
-    iput-object p2, p0, Lia4;->c:Lrhf;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lia4;->Y:Landroid/os/Handler;
+
+    new-instance v0, Lpai;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lpai;-><init>(I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)V
-    .locals 5
+.method public l(Lorg/xmlpull/v1/XmlPullParser;Landroid/net/Uri;)Lha4;
+    .locals 41
 
-    iget v0, p0, Lia4;->a:I
+    move-object/from16 v1, p1
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v12, 0x0
 
-    iget-object v0, p0, Lia4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+    new-array v0, v12, [Ljava/lang/String;
 
-    iget-boolean v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->T0:Z
+    const-string v2, "profiles"
 
-    if-eqz v1, :cond_0
+    const/4 v13, 0x0
+
+    invoke-interface {v1, v13, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lia4;->c:Lrhf;
+    const-string v0, ","
 
-    invoke-virtual {v1, p1}, Lpw7;->C(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lphf;
+    :goto_0
+    array-length v2, v0
 
-    iget-object v0, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->Q0:Lla4;
+    move v3, v12
 
-    if-eqz v0, :cond_3
+    :goto_1
+    const/4 v14, 0x1
 
-    check-cast v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    if-ge v3, v2, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    aget-object v4, v0, v3
 
-    const-string v2, "minute = "
+    const-string v5, "urn:dvb:dash:profile:dvb-dash:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v4, v5, v12}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v4
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v4, :cond_1
 
-    move-result-object v1
+    move v11, v14
 
-    const-string v2, "ScheduledSendPickerViewModel"
-
-    invoke-static {v2, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e:Lmoe;
-
-    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lda4;
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_1
-    iget-object v3, v2, Lda4;->c:Lphf;
-
-    invoke-static {v3, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x3
-
-    const/4 v4, 0x0
-
-    invoke-static {v2, v4, v4, p1, v3}, Lda4;->a(Lda4;Lpa4;Lphf;Lphf;I)Lda4;
-
-    move-result-object p1
-
-    invoke-virtual {v1, v4, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->h()Z
-
-    :cond_3
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lia4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
-
-    iget-boolean v1, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->S0:Z
-
-    if-eqz v1, :cond_4
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    :cond_2
+    move v11, v12
+
+    :goto_2
+    const-string v0, "availabilityStartTime"
+
+    invoke-interface {v1, v13, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-nez v0, :cond_3
+
+    move-wide/from16 v16, v2
+
+    goto :goto_3
+
+    :cond_3
+    invoke-static {v0}, Llig;->X(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    move-wide/from16 v16, v4
+
+    :goto_3
+    const-string v0, "mediaPresentationDuration"
+
+    invoke-static {v1, v0, v2, v3}, Lma4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+
+    move-result-wide v18
+
+    const-string v0, "minBufferTime"
+
+    invoke-static {v1, v0, v2, v3}, Lma4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+
+    move-result-wide v20
+
+    const-string v0, "type"
+
+    invoke-interface {v1, v13, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v4, "dynamic"
+
+    invoke-virtual {v4, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v22
+
+    if-eqz v22, :cond_4
+
+    const-string v0, "minimumUpdatePeriod"
+
+    invoke-static {v1, v0, v2, v3}, Lma4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    move-wide/from16 v23, v4
+
+    goto :goto_4
+
     :cond_4
-    iget-object v1, p0, Lia4;->c:Lrhf;
+    move-wide/from16 v23, v2
 
-    invoke-virtual {v1, p1}, Lpw7;->C(I)Ljava/lang/Object;
+    :goto_4
+    if-eqz v22, :cond_5
 
-    move-result-object p1
+    const-string v0, "timeShiftBufferDepth"
 
-    check-cast p1, Lphf;
+    invoke-static {v1, v0, v2, v3}, Lma4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
-    iget-object v0, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->Q0:Lla4;
+    move-result-wide v4
 
-    if-eqz v0, :cond_7
+    move-wide v9, v4
 
-    check-cast v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    goto :goto_5
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :cond_5
+    move-wide v9, v2
 
-    const-string v2, "hour = "
+    :goto_5
+    if-eqz v22, :cond_6
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "suggestedPresentationDelay"
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0, v2, v3}, Lma4;->j(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-wide v4
 
-    move-result-object v1
+    move-wide/from16 v27, v4
 
-    const-string v2, "ScheduledSendPickerViewModel"
+    goto :goto_6
 
-    invoke-static {v2, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_6
+    move-wide/from16 v27, v2
 
-    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e:Lmoe;
+    :goto_6
+    const-string v0, "publishTime"
 
-    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
+    invoke-interface {v1, v13, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_7
+
+    move-wide/from16 v29, v2
+
+    goto :goto_7
+
+    :cond_7
+    invoke-static {v0}, Llig;->X(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    move-wide/from16 v29, v4
+
+    :goto_7
+    const-wide/16 v25, 0x0
+
+    if-eqz v22, :cond_8
+
+    move-wide/from16 v4, v25
+
+    goto :goto_8
+
+    :cond_8
+    move-wide v4, v2
+
+    :goto_8
+    invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v6, Ljl0;
+
+    if-eqz v11, :cond_9
+
+    move v7, v14
+
+    goto :goto_9
+
+    :cond_9
+    const/high16 v7, -0x80000000
+
+    :goto_9
+    invoke-direct {v6, v0, v7, v14, v0}, Ljl0;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    filled-new-array {v6}, [Ljl0;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbei;->l([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    new-instance v35, Ljava/util/ArrayList;
+
+    invoke-direct/range {v35 .. v35}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    if-eqz v22, :cond_a
+
+    move-wide v7, v2
+
+    goto :goto_a
+
+    :cond_a
+    move-wide/from16 v7, v25
+
+    :goto_a
+    move/from16 v31, v12
+
+    move/from16 v32, v31
+
+    move-object/from16 v33, v13
+
+    move-object/from16 v34, v33
+
+    move-object/from16 v36, v34
+
+    move-object/from16 v37, v36
+
+    :goto_b
+    invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    const-string v2, "BaseURL"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_d
+
+    if-nez v31, :cond_b
+
+    invoke-static {v1, v4, v5}, Lma4;->d(Lorg/xmlpull/v1/XmlPullParser;J)J
+
+    move-result-wide v4
+
+    move/from16 v31, v14
+
+    :cond_b
+    invoke-static {v1, v0, v11}, Lma4;->e(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Z)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    check-cast v2, Lda4;
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    if-nez v2, :cond_5
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
-    goto :goto_1
+    move-result v2
 
-    :cond_5
-    iget-object v3, v2, Lda4;->b:Lphf;
+    if-le v2, v14, :cond_c
 
-    invoke-static {v3, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_6
+    move v3, v12
 
-    goto :goto_1
+    :goto_c
+    if-ge v3, v2, :cond_c
 
-    :cond_6
-    const/4 v3, 0x5
+    new-instance v12, Ljl0;
 
-    const/4 v4, 0x0
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-static {v2, v4, p1, v4, v3}, Lda4;->a(Lda4;Lpa4;Lphf;Lphf;I)Lda4;
+    move-result-object v40
+
+    move-object/from16 v15, v40
+
+    check-cast v15, Ljl0;
+
+    iget-object v15, v15, Ljl0;->a:Ljava/lang/String;
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v40
+
+    move-object/from16 v13, v40
+
+    check-cast v13, Ljl0;
+
+    iget-object v13, v13, Ljl0;->b:Ljava/lang/String;
+
+    invoke-direct {v12, v15, v3, v14, v13}, Ljl0;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    invoke-virtual {v6, v3, v12}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v3, v3, 0x1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    goto :goto_c
+
+    :cond_c
+    :goto_d
+    move-object v12, v0
+
+    :goto_e
+    move-wide v2, v7
+
+    move-object/from16 v13, v35
+
+    const-wide v38, -0x7fffffffffffffffL    # -4.9E-324
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v35, v6
+
+    goto/16 :goto_17
+
+    :cond_d
+    const-string v2, "ProgramInformation"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    invoke-static {v1}, Lma4;->n(Lorg/xmlpull/v1/XmlPullParser;)Ladc;
+
+    move-result-object v33
+
+    goto :goto_d
+
+    :cond_e
+    const-string v2, "UTCTiming"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_f
+
+    const-string v2, "schemeIdUri"
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v12, "value"
+
+    invoke-interface {v1, v3, v12}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    new-instance v3, Lti4;
+
+    const/4 v13, 0x1
+
+    invoke-direct {v3, v2, v12, v13}, Lti4;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    move-object v12, v0
+
+    move-object/from16 v34, v3
+
+    goto :goto_e
+
+    :cond_f
+    const-string v2, "Location"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lxai;->f(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v36
+
+    goto :goto_d
+
+    :cond_10
+    const-string v2, "ServiceDescription"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_11
+
+    invoke-static {v1}, Lma4;->w(Lorg/xmlpull/v1/XmlPullParser;)Lds8;
+
+    move-result-object v37
+
+    goto :goto_d
+
+    :cond_11
+    const-string v2, "Period"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_19
+
+    if-nez v32, :cond_19
+
+    if-eqz v31, :cond_13
+
+    invoke-virtual {v6}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_12
+
+    move-object v2, v0
+
+    goto :goto_f
+
+    :cond_12
+    move-object v2, v6
+
+    :goto_f
+    move-object v12, v0
+
+    move-object v15, v6
+
+    move-object/from16 v13, v35
+
+    const-wide v38, -0x7fffffffffffffffL    # -4.9E-324
+
+    move-object/from16 v0, p0
+
+    move-wide v5, v4
+
+    move-wide v3, v7
+
+    move-wide/from16 v7, v16
+
+    goto :goto_11
+
+    :cond_13
+    new-instance v2, Ljl0;
+
+    invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual/range {p2 .. p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    if-eqz v11, :cond_14
+
+    move v13, v14
+
+    goto :goto_10
+
+    :cond_14
+    const/high16 v13, -0x80000000
+
+    :goto_10
+    invoke-direct {v2, v3, v13, v14, v12}, Ljl0;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    filled-new-array {v2}, [Ljl0;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    goto :goto_f
+
+    :goto_11
+    invoke-virtual/range {v0 .. v11}, Lma4;->m(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;JJJJZ)Landroid/util/Pair;
+
+    move-result-object v2
+
+    move-wide/from16 v16, v7
+
+    iget-object v7, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v7, Lshb;
+
+    move-object/from16 v35, v15
+
+    iget-wide v14, v7, Lshb;->b:J
+
+    cmp-long v14, v14, v38
+
+    if-nez v14, :cond_16
+
+    if-eqz v22, :cond_15
+
+    move-wide v2, v3
+
+    move-wide v4, v5
+
+    const/16 v32, 0x1
+
+    goto/16 :goto_17
+
+    :cond_15
+    invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unable to determine start of period "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-static {v3, v1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v1
+
+    throw v1
+
+    :cond_16
+    iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Long;
+
+    if-nez v2, :cond_17
+
+    goto :goto_12
+
+    :cond_17
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    cmp-long v3, v3, v38
+
+    if-nez v3, :cond_18
+
+    move-wide/from16 v2, v38
+
+    goto :goto_13
+
+    :cond_18
+    :goto_12
+    iget-wide v3, v7, Lshb;->b:J
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v14
+
+    add-long v2, v14, v3
+
+    :goto_13
+    invoke-virtual {v13, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_14
+    move-wide v4, v5
+
+    goto :goto_17
+
+    :cond_19
+    move-object v12, v0
+
+    move-object/from16 v13, v35
+
+    const-wide v38, -0x7fffffffffffffffL    # -4.9E-324
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v35, v6
+
+    move-wide v5, v4
+
+    move-wide v3, v7
+
+    const-string v2, "vk:Attrs"
+
+    invoke-static {v1, v2}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1d
+
+    :cond_1a
+    invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    const-string v7, "vk:XPlaybackDuration"
+
+    invoke-static {v1, v7}, Lyg8;->f(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1b
+
+    invoke-interface {v1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1c
+
+    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v14
+
+    goto :goto_15
+
+    :cond_1b
+    invoke-static {v1}, Lma4;->b(Lorg/xmlpull/v1/XmlPullParser;)V
+
+    invoke-static {v1, v2}, Lyg8;->e(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1a
+
+    :cond_1c
+    move-wide/from16 v14, v25
+
+    :goto_15
+    new-instance v2, Lx50;
+
+    const/4 v7, 0x4
+
+    invoke-direct {v2, v0, v14, v15, v7}, Lx50;-><init>(Ljava/lang/Object;JI)V
+
+    iget-object v7, v0, Lia4;->Y:Landroid/os/Handler;
+
+    invoke-virtual {v7, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_16
+
+    :cond_1d
+    invoke-static {v1}, Lma4;->b(Lorg/xmlpull/v1/XmlPullParser;)V
+
+    :goto_16
+    move-wide v2, v3
+
+    goto :goto_14
+
+    :goto_17
+    const-string v6, "MPD"
+
+    invoke-static {v1, v6}, Lyg8;->e(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_22
+
+    cmp-long v1, v18, v38
+
+    if-nez v1, :cond_1e
+
+    cmp-long v1, v2, v38
+
+    if-eqz v1, :cond_1f
+
+    move-wide/from16 v18, v2
+
+    :cond_1e
+    :goto_18
+    const/4 v6, 0x0
+
+    goto :goto_19
+
+    :cond_1f
+    if-eqz v22, :cond_20
+
+    goto :goto_18
+
+    :cond_20
+    const-string v1, "Unable to determine duration of static manifest."
+
+    const/4 v6, 0x0
+
+    invoke-static {v6, v1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v1
+
+    throw v1
+
+    :goto_19
+    invoke-virtual {v13}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_21
+
+    new-instance v15, Lha4;
+
+    move-wide/from16 v25, v9
+
+    move-object/from16 v35, v13
+
+    move-object/from16 v31, v33
+
+    move-object/from16 v32, v34
+
+    move-object/from16 v34, v36
+
+    move-object/from16 v33, v37
+
+    invoke-direct/range {v15 .. v35}, Lha4;-><init>(JJJZJJJJLadc;Lti4;Lds8;Landroid/net/Uri;Ljava/util/ArrayList;)V
+
+    return-object v15
+
+    :cond_21
+    const-string v1, "No periods found."
+
+    invoke-static {v6, v1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object v1
+
+    throw v1
+
+    :cond_22
+    move-wide v7, v2
+
+    move-object v0, v12
+
+    move-object/from16 v6, v35
+
+    move-wide/from16 v2, v38
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x1
+
+    move-object/from16 v35, v13
+
+    const/4 v13, 0x0
+
+    goto/16 :goto_b
+.end method
+
+.method public final p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lhzd;JJJJJZ)Lka4;
+    .locals 9
+
+    const/4 v0, 0x0
+
+    const-string v1, "quality"
+
+    invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    invoke-super/range {p0 .. p28}, Lma4;->p(Lorg/xmlpull/v1/XmlPullParser;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lhzd;JJJJJZ)Lka4;
 
     move-result-object p1
 
-    invoke-virtual {v1, v4, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p2, p1, Lka4;->a:Lub6;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->f()V
+    invoke-static {v0}, Lxaf;->J(Ljava/lang/CharSequence;)Z
 
-    :cond_7
-    :goto_1
-    return-void
+    move-result p3
 
-    nop
+    if-nez p3, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p3, p2, Lub6;->l:Lyq9;
+
+    const/4 v1, 0x0
+
+    if-nez p3, :cond_1
+
+    new-instance p3, Lyq9;
+
+    new-array v2, v1, [Lwq9;
+
+    invoke-direct {p3, v2}, Lyq9;-><init>([Lwq9;)V
+
+    :cond_1
+    new-instance v2, Lsig;
+
+    invoke-direct {v2, v0}, Lsig;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lwq9;
+
+    aput-object v2, v0, v1
+
+    invoke-virtual {p3, v0}, Lyq9;->a([Lwq9;)Lyq9;
+
+    move-result-object p3
+
+    invoke-virtual {p2}, Lub6;->a()Lrb6;
+
+    move-result-object p2
+
+    iput-object p3, p2, Lrb6;->k:Lyq9;
+
+    new-instance p3, Lub6;
+
+    invoke-direct {p3, p2}, Lub6;-><init>(Lrb6;)V
+
+    new-instance p2, Lka4;
+
+    iget-object v0, p1, Lka4;->b:Lec7;
+
+    iget-object v1, p1, Lka4;->c:Lhzd;
+
+    iget-object v2, p1, Lka4;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lka4;->e:Ljava/util/ArrayList;
+
+    iget-object v4, p1, Lka4;->f:Ljava/util/ArrayList;
+
+    iget-object v5, p1, Lka4;->h:Ljava/util/List;
+
+    iget-object v6, p1, Lka4;->i:Ljava/util/List;
+
+    iget-wide v7, p1, Lka4;->g:J
+
+    move-object p4, p2
+
+    move-object p5, p3
+
+    move-object p6, v0
+
+    move-object/from16 p7, v1
+
+    move-object/from16 p8, v2
+
+    move-object/from16 p9, v3
+
+    move-object/from16 p10, v4
+
+    move-object/from16 p11, v5
+
+    move-object/from16 p12, v6
+
+    move-wide/from16 p13, v7
+
+    invoke-direct/range {p4 .. p14}, Lka4;-><init>(Lub6;Ljava/util/List;Lhzd;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
+
+    move-object p1, p4
+
+    :cond_2
+    return-object p1
 .end method

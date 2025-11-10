@@ -1,35 +1,23 @@
-.class public final Ldt0;
+.class public abstract Ldt0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ldt0;
-
-.field public b:I
-
-.field public c:Ljava/util/LinkedList;
-
-.field public d:Ldt0;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "BrdcstRcvrCnstrntTrckr"
 
-    const-string v1, "LinkedEntry(key: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ldt0;->b:I
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Ldt0;->a:Ljava/lang/String;
+
+    return-void
 .end method

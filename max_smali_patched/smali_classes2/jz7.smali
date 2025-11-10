@@ -2,52 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsz7;
 
-# instance fields
-.field public final a:Lbp7;
 
-.field public final b:Lbp7;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ljz7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Ljz7;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljz7;
 
-    iput-object p1, p0, Ljz7;->a:Lbp7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljz7;->b:Lbp7;
+    sput-object v0, Ljz7;->a:Ljz7;
+
+    new-instance v0, Lmu7;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lmu7;-><init>(I)V
+
+    sput-object v0, Ljz7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a(Ljz7;Landroid/content/Context;Lhf0;Lm3f;)Ljava/lang/Object;
-    .locals 3
 
-    iget-object v0, p0, Ljz7;->a:Lbp7;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    return v0
+.end method
 
-    check-cast v0, Lr8f;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast v0, Lwla;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    new-instance v1, Liz7;
+    :cond_0
+    instance-of p1, p1, Ljz7;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    invoke-direct {v1, p0, p2, p1, v2}, Liz7;-><init>(Ljz7;Lhf0;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x0
 
-    invoke-static {v0, v1, p3}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p0
+    :cond_1
+    return v0
+.end method
 
-    return-object p0
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x4057c762
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Progress"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

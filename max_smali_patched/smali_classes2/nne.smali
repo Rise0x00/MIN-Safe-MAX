@@ -3,21 +3,41 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lcy;
+# static fields
+.field public static final c:Lnne;
 
-.field public final b:Leab;
+
+# instance fields
+.field public final a:Lmne;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lcy;Leab;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lnne;
+
+    sget-object v1, Lmne;->a:Lmne;
+
+    sget-object v2, Lna5;->a:Lna5;
+
+    invoke-direct {v0, v1, v2}, Lnne;-><init>(Lmne;Ljava/util/List;)V
+
+    sput-object v0, Lnne;->c:Lnne;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmne;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnne;->a:Lcy;
+    iput-object p1, p0, Lnne;->a:Lmne;
 
-    iput-object p2, p0, Lnne;->b:Leab;
+    iput-object p2, p0, Lnne;->b:Ljava/util/List;
 
     return-void
 .end method
@@ -45,24 +65,20 @@
     :cond_1
     check-cast p1, Lnne;
 
-    iget-object v1, p0, Lnne;->a:Lcy;
+    iget-object v1, p0, Lnne;->a:Lmne;
 
-    iget-object v3, p1, Lnne;->a:Lcy;
+    iget-object v3, p1, Lnne;->a:Lmne;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eq v1, v3, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lnne;->b:Leab;
+    iget-object v1, p0, Lnne;->b:Ljava/util/List;
 
-    iget-object p1, p1, Lnne;->b:Leab;
+    iget-object p1, p1, Lnne;->b:Ljava/util/List;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -77,23 +93,15 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lnne;->a:Lcy;
+    iget-object v0, p0, Lnne;->a:Lmne;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lnne;->b:Leab;
+    iget-object v1, p0, Lnne;->b:Ljava/util/List;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -109,19 +117,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StartMessage(media="
+    const-string v1, "ShowcaseState(state="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lnne;->a:Lcy;
+    iget-object v1, p0, Lnne;->a:Lmne;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", text="
+    const-string v1, ", content="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lnne;->b:Leab;
+    iget-object v1, p0, Lnne;->b:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

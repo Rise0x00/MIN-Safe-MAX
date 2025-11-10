@@ -1,248 +1,227 @@
 .class public final Lqr;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Collection;
-.implements Lim7;
+.implements Lgj6;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public synthetic X:Lw5b;
 
-.field public final b:Z
+.field public final synthetic Y:Landroid/widget/TextView;
+
+.field public final synthetic Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+.field public synthetic o:Landroid/widget/LinearLayout;
+
+.field public final synthetic s0:Landroid/widget/TextView;
+
+.field public final synthetic t0:Landroid/widget/TextView;
+
+.field public final synthetic u0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic v0:Loq2;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/Object;Z)V
+.method public constructor <init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Loq2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqr;->Y:Landroid/widget/TextView;
 
-    iput-object p1, p0, Lqr;->a:[Ljava/lang/Object;
+    iput-object p2, p0, Lqr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iput-boolean p2, p0, Lqr;->b:Z
+    iput-object p3, p0, Lqr;->s0:Landroid/widget/TextView;
+
+    iput-object p4, p0, Lqr;->t0:Landroid/widget/TextView;
+
+    iput-object p5, p0, Lqr;->u0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p6, p0, Lqr;->v0:Loq2;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p7}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    check-cast p2, Lw5b;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-object v7, p3
 
-    throw p1
+    check-cast v7, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Lqr;
+
+    iget-object v5, p0, Lqr;->u0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iget-object v6, p0, Lqr;->v0:Loq2;
+
+    iget-object v1, p0, Lqr;->Y:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lqr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    iget-object v3, p0, Lqr;->s0:Landroid/widget/TextView;
+
+    iget-object v4, p0, Lqr;->t0:Landroid/widget/TextView;
+
+    invoke-direct/range {v0 .. v7}, Lqr;-><init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Loq2;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lqr;->o:Landroid/widget/LinearLayout;
+
+    iput-object p2, v0, Lqr;->X:Lw5b;
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {v0, p1}, Lqr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string v0, "Operation is not supported for read-only collection"
+    iget-object p1, p0, Lqr;->o:Landroid/widget/LinearLayout;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lqr;->X:Lw5b;
 
-    throw p1
-.end method
-
-.method public final clear()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Lqr;->a:[Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Lhs;->V([Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 3
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lqr;->a:[Ljava/lang/Object;
-
-    invoke-static {v2, v0}, Lhs;->V([Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    iget-object v0, p0, Lqr;->a:[Ljava/lang/Object;
-
-    array-length v0, v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    new-instance v0, Lu1;
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lqr;->a:[Ljava/lang/Object;
-
-    invoke-direct {v0, v1, v2}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Lqr;->a:[Ljava/lang/Object;
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 3
-
-    .line 2
-    iget-object v0, p0, Lqr;->a:[Ljava/lang/Object;
-
-    iget-boolean v1, p0, Lqr;->b:Z
-
-    const-class v2, [Ljava/lang/Object;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0}, Lw5b;->b()Lcf0;
 
     move-result-object v1
 
-    .line 3
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v1, v1, Lcf0;->k:I
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
+
+    move-result-object p1
+
+    iget p1, p1, Laqf;->g:I
+
+    iget-object v1, p0, Lqr;->Y:Landroid/widget/TextView;
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p1, p0, Lqr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    iget-object v1, p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->d:Ld0d;
+
+    sget-object v2, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Les7;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
+
+    move-result-object v2
+
+    iget v2, v2, Laqf;->e:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->g:I
+
+    iget-object v2, p0, Lqr;->s0:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->g:I
+
+    iget-object v2, p0, Lqr;->t0:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
+
+    move-result-object v1
+
+    new-instance v2, Lpr;
+
+    iget-object v3, p0, Lqr;->v0:Loq2;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, p1, v4}, Lpr;-><init>(Loq2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {v1, v4, v4, v2, v3}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+
+    invoke-interface {v0}, Lw5b;->b()Lcf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lcf0;->h:I
+
+    iget-object v1, p0, Lqr;->u0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, v0}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->x0()Les;
+
+    move-result-object p1
+
+    iget-object v0, p1, Les;->C0:La1f;
+
+    :cond_0
+    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lyr;
+
+    iget-object v3, v2, Lyr;->a:Ljava/lang/Object;
+
+    invoke-virtual {p1, v3}, Les;->z(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Les;->y()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    iget-object v2, v2, Lyr;->b:Ljava/lang/Object;
+
+    new-instance v5, Lyr;
+
+    invoke-direct {v5, v3, v2, v4}, Lyr;-><init>(Ljava/util/List;Ljava/util/List;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v1, v5}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    return-object v0
-
-    .line 4
-    :cond_0
-    array-length v1, v0
-
-    invoke-static {v0, v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

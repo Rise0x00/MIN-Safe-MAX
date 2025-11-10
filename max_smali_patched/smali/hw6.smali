@@ -1,81 +1,188 @@
 .class public final Lhw6;
-.super Lkk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Lzv4;
 
 
 # instance fields
-.field public g:I
+.field public final synthetic a:I
+
+.field public volatile b:Z
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lhw6;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lhw6;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lhw6;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Runnable;Lepd;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lhw6;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p1, p0, Lhw6;->c:Ljava/lang/Object;
+
+    .line 6
+    iput-object p2, p0, Lhw6;->d:Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()I
+.method public final dispose()V
     .locals 1
 
-    iget v0, p0, Lhw6;->g:I
+    iget v0, p0, Lhw6;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final k()I
-    .locals 1
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    iput-boolean v0, p0, Lhw6;->b:Z
 
-    return v0
-.end method
+    iget-object v0, p0, Lhw6;->d:Ljava/lang/Object;
 
-.method public final m()Ljava/lang/Object;
-    .locals 1
+    check-cast v0, Lepd;
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final t(JJJLjava/util/List;[Lni8;)V
-    .locals 0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    iget p3, p0, Lhw6;->g:I
-
-    invoke-virtual {p0, p3, p1, p2}, Lkk0;->s(IJ)Z
-
-    move-result p3
-
-    if-nez p3, :cond_0
+    invoke-interface {v0}, Lzv4;->dispose()V
 
     return-void
 
-    :cond_0
-    iget p3, p0, Lkk0;->b:I
+    :pswitch_0
+    iget-object v0, p0, Lhw6;->c:Ljava/lang/Object;
 
-    add-int/lit8 p3, p3, -0x1
+    check-cast v0, Landroid/os/Handler;
 
-    :goto_0
-    if-ltz p3, :cond_2
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p0, p3, p1, p2}, Lkk0;->s(IJ)Z
+    const/4 v0, 0x1
 
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Lhw6;->g:I
+    iput-boolean v0, p0, Lhw6;->b:Z
 
     return-void
 
-    :cond_1
-    add-int/lit8 p3, p3, -0x1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Lhw6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lhw6;->b:Z
+
+    return v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Lhw6;->b:Z
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lhw6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lhw6;->b:Z
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lhw6;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v0
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-virtual {p0}, Lhw6;->dispose()V
 
-    throw p1
+    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Lhw6;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

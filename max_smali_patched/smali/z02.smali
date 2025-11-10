@@ -1,33 +1,89 @@
-.class public final Lz02;
+.class public interface abstract Lz02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ld02;
+# virtual methods
+.method public abstract a()Ljava/util/Set;
+.end method
 
-.field public final b:Lcsd;
+.method public abstract b()I
+.end method
 
-.field public final c:Leqd;
+.method public abstract c()Z
+.end method
 
-.field public final d:Low1;
+.method public abstract d()Ljava/lang/String;
+.end method
 
+.method public abstract e()Lq38;
+.end method
 
-# direct methods
-.method public constructor <init>(Lcsd;Leqd;Low1;)V
-    .locals 1
+.method public abstract f(Ljava/util/concurrent/Executor;Lcx1;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public g()Lz02;
+    .locals 0
 
-    const/4 v0, 0x0
+    return-object p0
+.end method
 
-    iput-object v0, p0, Lz02;->a:Ld02;
+.method public abstract h()I
+.end method
 
-    iput-object p1, p0, Lz02;->b:Lcsd;
+.method public abstract i()Lavf;
+.end method
 
-    iput-object p2, p0, Lz02;->c:Leqd;
+.method public j()Lt12;
+    .locals 3
 
-    iput-object p3, p0, Lz02;->d:Low1;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    return-void
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    new-instance v1, Ly02;
+
+    invoke-direct {v1, p0}, Ly02;-><init>(Lz02;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lcw7;
+
+    invoke-interface {p0}, Lz02;->h()I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Lcw7;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lt12;
+
+    invoke-direct {v1, v0}, Lt12;-><init>(Ljava/util/LinkedHashSet;)V
+
+    return-object v1
+.end method
+
+.method public abstract k()Ljava/lang/String;
+.end method
+
+.method public abstract l(I)I
+.end method
+
+.method public abstract m()Z
+.end method
+
+.method public abstract n()Lgc5;
+.end method
+
+.method public abstract o()Lnx6;
+.end method
+
+.method public abstract p(I)Ljava/util/List;
+.end method
+
+.method public abstract q()Lq38;
+.end method
+
+.method public abstract r(Lyy1;)V
 .end method

@@ -1,55 +1,51 @@
 .class public final Lp79;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final synthetic Y:Lt79;
 
-.field public final c:Z
+.field public Z:I
 
-.field public final d:Z
+.field public d:Lt79;
 
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
+.field public o:Lt79;
 
 
 # direct methods
-.method public constructor <init>(ZZZZZZZZZZ)V
+.method public constructor <init>(Lt79;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp79;->Y:Lt79;
 
-    iput-boolean p1, p0, Lp79;->a:Z
-
-    iput-boolean p2, p0, Lp79;->b:Z
-
-    iput-boolean p3, p0, Lp79;->c:Z
-
-    iput-boolean p4, p0, Lp79;->d:Z
-
-    iput-boolean p5, p0, Lp79;->e:Z
-
-    iput-boolean p6, p0, Lp79;->f:Z
-
-    iput-boolean p7, p0, Lp79;->g:Z
-
-    iput-boolean p8, p0, Lp79;->h:Z
-
-    iput-boolean p9, p0, Lp79;->i:Z
-
-    iput-boolean p10, p0, Lp79;->j:Z
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lp79;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lp79;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lp79;->Z:I
+
+    iget-object p1, p0, Lp79;->Y:Lt79;
+
+    invoke-virtual {p1, p0}, Lt79;->B(Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

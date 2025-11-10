@@ -12,11 +12,11 @@
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "Lkotlin/Function1;",
         "",
-        "Loyf;",
+        "Lybg;",
         "onError",
-        "Ldce;",
+        "Lboe;",
         "get",
-        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lxe6;)Ldce;",
+        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lqi6;)Lboe;",
         "calls-sdk_release"
     }
     k = 0x2
@@ -30,19 +30,19 @@
 
 
 # direct methods
-.method public static final get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lxe6;)Ldce;
+.method public static final get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lqi6;)Lboe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
-            "Lxe6;",
+            "Lqi6;",
             ")",
-            "Ldce;"
+            "Lboe;"
         }
     .end annotation
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
+    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lboe;
 
     move-result-object v0
 
@@ -54,10 +54,10 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;-><init>()V
 
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
+    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lboe;
 
     move-result-object p0
 

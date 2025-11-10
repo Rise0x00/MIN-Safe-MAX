@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Loi6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+.field public final synthetic b:Lae6;
 
-.field public final synthetic c:I
+.field public final synthetic c:Lb8b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;II)V
+.method public synthetic constructor <init>(Lae6;Lb8b;I)V
     .locals 0
 
     iput p3, p0, Lvd6;->a:I
 
-    iput-object p1, p0, Lvd6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    iput-object p1, p0, Lvd6;->b:Lae6;
 
-    iput p2, p0, Lvd6;->c:I
+    iput-object p2, p0, Lvd6;->c:Lb8b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,280 +31,354 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 12
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lvd6;->a:I
 
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    iget v5, p0, Lvd6;->c:I
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lvd6;->b:Lae6;
 
-    iget-object p1, p0, Lvd6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput-object v4, p1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->Q1:Lyqd;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Lru/ok/messages/views/fragments/base/FrgBase;->W0()V
+    move-result-object v0
 
-    if-ne v5, v3, :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
+    move-result v1
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    sget v0, Lt9d;->e3:I
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Loch;->z(Landroid/content/Context;I)V
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->f(Lb8b;)V
 
     goto :goto_0
 
     :cond_0
-    if-ne v5, v2, :cond_1
+    sget-object v0, Lybg;->a:Lybg;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget v0, Lt9d;->h3:I
-
-    invoke-static {p1, v0}, Loch;->z(Landroid/content/Context;I)V
-
-    goto :goto_0
-
-    :cond_1
-    if-ne v5, v1, :cond_2
-
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget v0, Lt9d;->u:I
-
-    invoke-static {p1, v0}, Loch;->z(Landroid/content/Context;I)V
-
-    :cond_2
-    :goto_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    check-cast p1, Ljava/io/File;
+    iget-object v0, p0, Lvd6;->b:Lae6;
 
-    iget-object v7, p0, Lvd6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput-object v4, v7, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->Q1:Lyqd;
-
-    invoke-virtual {v7}, Lru/ok/messages/views/fragments/base/FrgBase;->W0()V
-
-    if-ne v5, v3, :cond_4
-
-    new-instance v8, Line;
-
-    iget-object v0, v7, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
-
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsg3;
-
-    check-cast v0, Lyka;
-
-    invoke-virtual {v0}, Lyka;->h()Lpr5;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    iget-object v1, v7, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, v1, Lbb8;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Lsg3;
+    if-eqz v1, :cond_1
 
-    check-cast v1, Lyka;
-
-    invoke-virtual {v1}, Lyka;->f()Lop4;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v3, v7, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
+    check-cast v1, Lz7b;
 
-    iget-object v3, v3, Lbb8;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lvd6;->c:Lb8b;
 
-    check-cast v3, Lsg3;
-
-    check-cast v3, Lyka;
-
-    invoke-virtual {v3}, Lyka;->n()Lzob;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lzob;->b:Lltd;
-
-    invoke-direct {v8, v0, v1, v3}, Line;-><init>(Lpr5;Lop4;Lltd;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v7}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object p1
+    invoke-interface {v1, v2}, Lz7b;->l(Lb8b;)V
 
     goto :goto_1
 
-    :cond_3
-    invoke-static {}, Lem;->b()Lsg3;
+    :cond_1
+    sget-object v0, Lybg;->a:Lybg;
 
-    move-result-object p1
+    return-object v0
 
-    :goto_1
-    check-cast p1, Lyka;
+    :pswitch_1
+    iget-object v0, p0, Lvd6;->b:Lae6;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result-object p1
-
-    const-class v0, Lr8f;
-
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr8f;
-
-    move-object v10, p1
-
-    check-cast v10, Lwla;
-
-    invoke-virtual {v10}, Lwla;->b()Ly24;
-
-    move-result-object p1
-
-    new-instance v6, Lhne;
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v6 .. v11}, Lhne;-><init>(Landroidx/fragment/app/a;Line;Ljava/lang/String;Lwla;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v0, Lbo6;->a:Lbo6;
-
-    invoke-static {v0, p1, v4, v6, v2}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    goto :goto_2
-
-    :cond_4
-    if-ne v5, v2, :cond_5
-
-    invoke-virtual {v7}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    iget-object v1, v7, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, v1, Lbb8;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Lsg3;
+    if-eqz v1, :cond_2
 
-    check-cast v1, Lyka;
-
-    invoke-virtual {v1}, Lyka;->h()Lpr5;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    sget-object v2, Lf09;->l:Ljava/util/ArrayList;
+    check-cast v1, Lz7b;
 
-    :try_start_0
-    invoke-virtual {v1, v0, p1}, Lpr5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+    iget-object v2, p0, Lvd6;->c:Lb8b;
 
-    move-result-object p1
-
-    new-instance v1, Lr26;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v0, v2}, Lr26;-><init>(Landroid/content/Context;I)V
-
-    const-string v0, "image/*"
-
-    iget-object v2, v1, Lr26;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/content/Intent;
-
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {v1, p1}, Lr26;->x(Landroid/net/Uri;)V
-
-    invoke-virtual {v1, v4}, Lr26;->y(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v1}, Lr26;->z()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-interface {v1, v2}, Lz7b;->i(Lb8b;)V
 
     goto :goto_2
 
-    :catch_0
-    move-exception v0
+    :cond_2
+    sget-object v0, Lybg;->a:Lybg;
 
-    move-object p1, v0
+    return-object v0
 
-    const-string v0, "f09"
+    :pswitch_2
+    iget-object v0, p0, Lvd6;->b:Lae6;
 
-    const-string v1, "sharePhoto error"
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    goto :goto_2
+    move-result-object v0
+
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->r(Lb8b;)V
+
+    goto :goto_3
+
+    :cond_3
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lvd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->b(Lb8b;)V
+
+    goto :goto_4
+
+    :cond_4
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lvd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->u(Lb8b;)V
+
+    goto :goto_5
 
     :cond_5
-    if-ne v5, v1, :cond_6
+    sget-object v0, Lybg;->a:Lybg;
 
-    invoke-virtual {v7}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_5
+    iget-object v0, p0, Lvd6;->b:Lae6;
 
-    iget-object v0, v7, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, v7, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-object v2, v7, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lzid;
+    move-result-object v0
 
-    invoke-virtual {v2}, Lzid;->n()Lo49;
+    :goto_6
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v2
+    move-result v1
 
-    iget-object v3, v7, Lru/ok/messages/views/fragments/base/FrgBase;->t1:Lbb8;
+    if-eqz v1, :cond_6
 
-    iget-object v3, v3, Lbb8;->b:Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v3, Lsg3;
+    move-result-object v1
 
-    check-cast v3, Lyka;
+    check-cast v1, Lz7b;
 
-    invoke-virtual {v3}, Lyka;->h()Lpr5;
+    iget-object v2, p0, Lvd6;->c:Lb8b;
 
-    move-result-object v3
+    invoke-interface {v1, v2}, Lz7b;->a(Lb8b;)V
 
-    invoke-static {p1, v0, v1, v2, v3}, Lbf0;->z(Landroid/content/Context;Lw29;Lo10;Lo49;Lpr5;)V
+    goto :goto_6
 
     :cond_6
-    :goto_2
-    return-void
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lvd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_7
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->v(Lb8b;)V
+
+    goto :goto_7
+
+    :cond_7
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Lvd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_8
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->p(Lb8b;)V
+
+    goto :goto_8
+
+    :cond_8
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Lvd6;->b:Lae6;
+
+    iget-object v0, v0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_9
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz7b;
+
+    iget-object v2, p0, Lvd6;->c:Lb8b;
+
+    invoke-interface {v1, v2}, Lz7b;->j(Lb8b;)V
+
+    goto :goto_9
+
+    :cond_9
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

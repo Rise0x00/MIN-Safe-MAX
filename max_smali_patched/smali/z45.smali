@@ -1,193 +1,271 @@
-.class public final Lz45;
-.super Landroid/view/inputmethod/InputConnectionWrapper;
+.class public abstract Lz45;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/widget/EditText;
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-.field public final b:Lh9a;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 5
 
-    new-instance v0, Lh9a;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/16 v1, 0xb
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {v0, v1}, Lh9a;-><init>(I)V
+    sput-object v0, Lz45;->a:Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    new-instance v1, Ljava/util/HashMap;
 
-    invoke-direct {p0, p2, v1}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lz45;->a:Landroid/widget/EditText;
+    sput-object v1, Lz45;->b:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lz45;->b:Lh9a;
+    const-wide/16 v2, 0x1
 
-    sget-object p1, Ll45;->m:Ll45;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz p1, :cond_3
+    move-result-object v2
 
-    invoke-static {}, Ll45;->a()Ll45;
+    sget-object v3, Ly45;->d:Ly45;
 
-    move-result-object p1
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ll45;->b()I
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result p2
+    move-result-object v2
 
-    const/4 v0, 0x1
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne p2, v0, :cond_3
+    const-wide/16 v2, 0x2
 
-    if-nez p3, :cond_0
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v2
 
-    :cond_0
-    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    sget-object v3, Ly45;->e:Ly45;
 
-    if-nez p2, :cond_1
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p2, Landroid/os/Bundle;
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+    move-result-object v3
 
-    iput-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    check-cast v3, Ly45;
 
-    :cond_1
-    iget-object p1, p1, Ll45;->e:Lh45;
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v2
 
-    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p1, Lh45;->c:Ljava/lang/Object;
+    const-wide/16 v2, 0x4
 
-    check-cast v0, Luk9;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, v0, Luk9;->a:Lnk9;
+    move-result-object v2
 
-    const/4 v2, 0x4
+    sget-object v3, Ly45;->f:Ly45;
 
-    invoke-virtual {v0, v2}, Lq98;->a(I)I
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-wide/16 v2, 0x8
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    sget-object v3, Ly45;->g:Ly45;
+
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-wide/16 v0, 0x40
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x80
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x10
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-wide/16 v3, 0x20
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    sget-object v3, Ly45;->h:Ly45;
 
-    iget-object v1, v0, Lq98;->o:Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
-    check-cast v1, Ljava/nio/ByteBuffer;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget v0, v0, Lq98;->a:I
+    move-result-object v2
 
-    add-int/2addr v2, v0
+    check-cast v2, Ljava/lang/Long;
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    sget-object v4, Lz45;->a:Ljava/util/HashMap;
 
-    move-result v1
+    invoke-virtual {v4, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    const-string v0, "android.support.text.emoji.emojiCompat_metadataVersion"
+    goto :goto_0
 
-    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    :cond_0
+    sget-object v1, Lz45;->b:Ljava/util/HashMap;
 
-    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lh45;->a:Ljava/lang/Object;
+    const-wide/16 v0, 0x400
 
-    check-cast p1, Ll45;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-boolean p1, p1, Ll45;->h:Z
+    move-result-object v0
 
-    const-string p3, "android.support.text.emoji.emojiCompat_replaceAll"
+    const-wide/16 v1, 0x800
 
-    invoke-virtual {p2, p3, p1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_3
+    move-result-object v1
+
+    const-wide/16 v2, 0x100
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-wide/16 v3, 0x200
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    sget-object v3, Ly45;->i:Ly45;
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    sget-object v4, Lz45;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v1, Lz45;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     return-void
 .end method
 
-
-# virtual methods
-.method public final deleteSurroundingText(II)Z
+.method public static a(Ly45;Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/lang/Long;
     .locals 2
 
-    iget-object v0, p0, Lz45;->a:Landroid/widget/EditText;
+    sget-object v0, Lz45;->b:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget-object v1, p0, Lz45;->b:Lh9a;
+    check-cast p0, Ljava/util/List;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p0, :cond_1
 
-    const/4 v1, 0x0
+    invoke-static {p1}, La5;->v(Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/util/Set;
 
-    invoke-static {p0, v0, p1, p2, v1}, Lh9a;->e(Lz45;Landroid/text/Editable;IIZ)Z
+    move-result-object p1
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingText(II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final deleteSurroundingTextInCodePoints(II)Z
-    .locals 2
-
-    iget-object v0, p0, Lz45;->a:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lz45;->b:Lh9a;
+    check-cast v0, Ljava/lang/Long;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    const/4 v1, 0x1
+    move-result v1
 
-    invoke-static {p0, v0, p1, p2, v1}, Lh9a;->e(Lz45;Landroid/text/Editable;IIZ)Z
+    if-eqz v1, :cond_0
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingTextInCodePoints(II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 
     :cond_1
-    :goto_0
-    return v1
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

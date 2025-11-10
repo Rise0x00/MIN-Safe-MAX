@@ -1,173 +1,51 @@
 .class public final Lap9;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:I
+.field public final synthetic Y:Lhp9;
 
-.field public final c:I
+.field public Z:I
 
-.field public final d:I
+.field public d:Lhp9;
 
-.field public final e:Landroid/net/Uri;
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;II)V
+.method public constructor <init>(Lhp9;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lap9;->Y:Lhp9;
 
-    iput-object p2, p0, Lap9;->a:Ljava/lang/String;
-
-    iput p1, p0, Lap9;->b:I
-
-    iput p3, p0, Lap9;->c:I
-
-    iput p4, p0, Lap9;->d:I
-
-    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lap9;->e:Landroid/net/Uri;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lap9;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lap9;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lap9;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lap9;->Z:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lap9;->Y:Lhp9;
 
-    return v2
+    invoke-virtual {p1, p0}, Lhp9;->L(Lp14;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lap9;
+    move-result-object p1
 
-    iget-object v1, p0, Lap9;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lap9;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lap9;->b:I
-
-    iget v3, p1, Lap9;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lap9;->c:I
-
-    iget v3, p1, Lap9;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lap9;->d:I
-
-    iget p1, p1, Lap9;->d:I
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lap9;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lap9;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lap9;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lap9;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", width="
-
-    const-string v1, ", height="
-
-    iget v2, p0, Lap9;->b:I
-
-    const-string v3, "Item(url="
-
-    iget-object v4, p0, Lap9;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4, v0, v1}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", bitrate="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lap9;->c:I
-
-    iget v4, p0, Lap9;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

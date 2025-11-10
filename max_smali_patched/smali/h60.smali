@@ -1,18 +1,18 @@
 .class public final Lh60;
-.super Lv2;
+.super Ladi;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Y:[I
+.field public static final X:[I
 
 
 # instance fields
-.field public X:I
-
 .field public c:Z
 
-.field public o:Z
+.field public d:Z
+
+.field public o:I
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lh60;->Y:[I
+    sput-object v0, Lh60;->X:[I
 
     return-void
 .end method

@@ -1,52 +1,114 @@
-.class public final Lmg4;
+.class public final synthetic Lmg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ldz4;
+.implements Ld38;
 
 
 # instance fields
-.field public final a:Lxy4;
+.field public final synthetic a:I
 
-.field public b:Lty4;
-
-.field public c:Z
-
-.field public final synthetic o:Log4;
+.field public final synthetic b:Lnd;
 
 
 # direct methods
-.method public constructor <init>(Log4;Lxy4;)V
+.method public synthetic constructor <init>(Lnd;I)V
     .locals 0
+
+    .line 1
+    iput p2, p0, Lmg4;->a:I
+
+    iput-object p1, p0, Lmg4;->b:Lnd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmg4;->o:Log4;
+    return-void
+.end method
 
-    iput-object p2, p0, Lmg4;->a:Lxy4;
+.method public synthetic constructor <init>(Lnd;Lye4;I)V
+    .locals 0
+
+    .line 2
+    iput p3, p0, Lmg4;->a:I
+
+    iput-object p1, p0, Lmg4;->b:Lnd;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final release()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lmg4;->o:Log4;
+    iget v0, p0, Lmg4;->a:I
 
-    iget-object v0, v0, Log4;->u:Landroid/os/Handler;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lmg4;->b:Lnd;
 
-    new-instance v1, Ltd4;
+    check-cast p1, Lod;
 
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, p0}, Ltd4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-interface {p1, v0}, Lod;->v(Lnd;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lmg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->S0(Lnd;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lmg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->I0(Lnd;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lmg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->W(Lnd;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lmg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->u0(Lnd;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lmg4;->b:Lnd;
+
+    check-cast p1, Lod;
+
+    invoke-interface {p1, v0}, Lod;->r0(Lnd;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

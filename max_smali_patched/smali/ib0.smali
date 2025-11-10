@@ -3,100 +3,30 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lib0;
-
-.field public static final e:Ljava/util/Set;
-
-.field public static final f:Lrn3;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ljb0;
 
 .field public final b:I
 
-.field public final c:Lqb0;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lib0;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lib0;-><init>(IILqb0;)V
-
-    sput-object v0, Lib0;->d:Lib0;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v4, -0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v2, v4}, [Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lib0;->e:Ljava/util/Set;
-
-    new-instance v0, Lib0;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lib0;-><init>(IILqb0;)V
-
-    new-instance v1, Lrn3;
-
-    invoke-direct {v1, v0}, Lrn3;-><init>(Ljava/lang/Object;)V
-
-    sput-object v1, Lib0;->f:Lrn3;
-
-    return-void
-.end method
-
-.method public constructor <init>(IILqb0;)V
+.method public constructor <init>(Ljb0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lib0;->a:I
+    if-eqz p1, :cond_0
 
-    if-eqz p2, :cond_0
+    iput-object p1, p0, Lib0;->a:Ljb0;
 
     iput p2, p0, Lib0;->b:I
-
-    iput-object p3, p0, Lib0;->c:Lqb0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null streamState"
+    const-string p2, "Null quality"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -106,67 +36,53 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lib0;
+    instance-of v1, p1, Lib0;
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lib0;
 
-    iget v0, p1, Lib0;->a:I
+    iget-object v1, p0, Lib0;->a:Ljb0;
 
-    iget-object v1, p1, Lib0;->c:Lqb0;
+    iget-object v3, p1, Lib0;->a:Ljb0;
 
-    iget v2, p0, Lib0;->a:I
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-ne v2, v0, :cond_2
+    move-result v1
 
-    iget v0, p0, Lib0;->b:I
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Lib0;->b:I
 
     iget p1, p1, Lib0;->b:I
 
-    invoke-static {v0, p1}, Lqw1;->c(II)Z
+    if-ne v1, p1, :cond_1
 
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lib0;->c:Lqb0;
-
-    if-nez p1, :cond_1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
+    return v0
 
     :cond_1
-    invoke-virtual {p1, v1}, Lqb0;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lib0;->a:I
+    iget-object v0, p0, Lib0;->a:Ljb0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -174,30 +90,8 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lib0;->b:I
+    iget v1, p0, Lib0;->b:I
 
-    invoke-static {v2}, Lqw1;->u(I)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lib0;->c:Lqb0;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lqb0;->hashCode()I
-
-    move-result v1
-
-    :goto_0
     xor-int/2addr v0, v1
 
     return v0
@@ -208,56 +102,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StreamInfo{id="
+    const-string v1, "QualityRatio{quality="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lib0;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", streamState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lib0;->b:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "INACTIVE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ACTIVE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inProgressTransformationInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lib0;->c:Lqb0;
+    iget-object v1, p0, Lib0;->a:Ljb0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string v1, ", aspectRatio="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lib0;->b:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

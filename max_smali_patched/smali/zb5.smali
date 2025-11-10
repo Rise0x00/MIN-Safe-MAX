@@ -1,69 +1,129 @@
-.class public final Lzb5;
+.class public final synthetic Lzb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:[Ltb5;
+.field public final synthetic a:I
 
-.field public final b:[J
+.field public final synthetic b:Lac5;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic c:Lv28;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Ltb5;)V
+.method public synthetic constructor <init>(Lac5;Lv28;I)V
     .locals 0
 
+    iput p3, p0, Lzb5;->a:I
+
+    iput-object p1, p0, Lzb5;->b:Lac5;
+
+    iput-object p2, p0, Lzb5;->c:Lv28;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzb5;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lzb5;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Lzb5;->b:[J
-
-    iput-object p4, p0, Lzb5;->a:[Ltb5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public final run()V
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lzb5;->a:I
 
-    iget-object v1, p0, Lzb5;->c:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lnd5;->d(ILjava/lang/String;)I
+    iget-object v0, p0, Lzb5;->c:Lv28;
 
-    move-result v0
+    iget-object v1, p0, Lzb5;->b:Lac5;
 
-    iget-object v2, p0, Lzb5;->d:Ljava/lang/String;
+    iget-object v1, v1, Lac5;->c:Ljava/util/ArrayList;
 
-    invoke-static {v0, v2}, Lnd5;->d(ILjava/lang/String;)I
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    move-result v0
+    return-void
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lzb5;->b:Lac5;
 
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x1
 
-    const-string v0, "/"
+    iget-object v2, p0, Lzb5;->c:Lv28;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v2, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    invoke-interface {v2}, Ljava/util/concurrent/Future;->isDone()Z
 
-    return-object v0
+    move-result v1
+
+    const/4 v3, 0x0
+
+    invoke-static {v3, v1}, Loui;->f(Ljava/lang/String;Z)V
+
+    :try_start_0
+    invoke-interface {v2}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmg7;
+
+    invoke-virtual {v1}, Lmg7;->a()V
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v1
+
+    :goto_0
+    iget-object v0, v0, Lac5;->d:Lfc5;
+
+    iget-object v0, v0, Lfc5;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unable to cancel the input buffer: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lafi;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,103 +2,36 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lur7;
-
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic b:Lib6;
+.field public final b:I
 
-.field public final synthetic c:Les7;
+.field public final c:I
 
-.field public final synthetic o:Landroidx/fragment/app/c;
+.field public final d:Z
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/c;Ljava/lang/String;Lib6;Les7;)V
+.method public constructor <init>(Landroid/net/Uri;IIZI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lya6;->o:Landroidx/fragment/app/c;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Lya6;->a:Ljava/lang/String;
+    iput-object p1, p0, Lya6;->a:Landroid/net/Uri;
 
-    iput-object p3, p0, Lya6;->b:Lib6;
+    iput p2, p0, Lya6;->b:I
 
-    iput-object p4, p0, Lya6;->c:Les7;
+    iput p3, p0, Lya6;->c:I
 
-    return-void
-.end method
+    iput-boolean p4, p0, Lya6;->d:Z
 
+    iput p5, p0, Lya6;->e:I
 
-# virtual methods
-.method public final d(Lcs7;Ldr7;)V
-    .locals 4
-
-    iget-object p1, p0, Lya6;->o:Landroidx/fragment/app/c;
-
-    iget-object v0, p1, Landroidx/fragment/app/c;->l:Ljava/util/Map;
-
-    sget-object v1, Ldr7;->ON_START:Ldr7;
-
-    iget-object v2, p0, Lya6;->a:Ljava/lang/String;
-
-    if-ne p2, v1, :cond_0
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Bundle;
-
-    if-eqz v1, :cond_0
-
-    iget-object v3, p0, Lya6;->b:Lib6;
-
-    invoke-interface {v3, v2, v1}, Lib6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Clearing fragment result with key "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "FragmentManager"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Ldr7;->ON_DESTROY:Ldr7;
-
-    if-ne p2, v0, :cond_1
-
-    iget-object p2, p0, Lya6;->c:Les7;
-
-    invoke-virtual {p2, p0}, Les7;->f(Lyr7;)V
-
-    iget-object p1, p1, Landroidx/fragment/app/c;->m:Ljava/util/Map;
-
-    invoke-interface {p1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
     return-void
 .end method

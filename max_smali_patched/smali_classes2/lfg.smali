@@ -1,306 +1,549 @@
-.class public final Llfg;
+.class public final synthetic Llfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic a:I
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lbp7;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lr8f;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;I)V
     .locals 0
 
+    iput p2, p0, Llfg;->a:I
+
+    iput-object p1, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llfg;->a:Lbp7;
-
-    iput-object p2, p0, Llfg;->b:Lbp7;
-
-    iput-object p3, p0, Llfg;->c:Lbp7;
-
-    iput-object p4, p0, Llfg;->d:Lbp7;
-
-    check-cast p5, Lwla;
-
-    invoke-virtual {p5}, Lwla;->b()Ly24;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Llfg;->e:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
-.method public static a(Llfg;ILjava/lang/Long;Lxie;Ljava/lang/Long;Ljfg;ILjava/lang/Long;I)V
-    .locals 3
 
-    and-int/lit8 v0, p8, 0x8
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
 
-    const/4 v1, 0x0
+    iget v0, p0, Llfg;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    move-object p4, v1
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Leb9;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leb9;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Liw0;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liw0;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lsf9;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsf9;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lid;
+
+    invoke-virtual {v0, v1}, Lt5;->a(Ljava/lang/Class;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lwo3;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwo3;
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lb00;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb00;
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lbud;->k()Ltlf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lbud;->i()Lqxb;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lbud;->f()Lgt5;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lphf;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lphf;
+
+    return-object v0
+
+    :pswitch_9
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lxfg;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxfg;
+
+    return-object v0
+
+    :pswitch_a
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lsab;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsab;
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lbud;->c()Lad2;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Lbs5;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbs5;
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lnlf;
+
+    move-result-object v0
+
+    check-cast v0, Lbud;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Llph;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llph;
+
+    return-object v0
+
+    :pswitch_e
+    iget-object v0, p0, Llfg;->b:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+    invoke-virtual {v0}, La38;->getInputData()Lfb4;
+
+    move-result-object v0
+
+    new-instance v1, Lkf9;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    const-string v2, "path"
+
+    invoke-virtual {v0, v2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    if-nez v2, :cond_0
+
+    move-object v2, v3
 
     :cond_0
-    and-int/lit8 v0, p8, 0x10
+    iput-object v2, v1, Lkf9;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    const-string v2, "attachLocalId"
 
-    move-object p5, v1
+    invoke-virtual {v0, v2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    move-object v2, v3
 
     :cond_1
-    and-int/lit8 v0, p8, 0x20
+    iput-object v2, v1, Lkf9;->f:Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    const-string v2, "lastModified"
 
-    const/4 p6, 0x0
+    const-wide/16 v4, 0x0
 
-    :cond_2
-    and-int/lit8 p8, p8, 0x40
+    invoke-virtual {v0, v2, v4, v5}, Lfb4;->d(Ljava/lang/String;J)J
 
-    if-eqz p8, :cond_3
+    move-result-wide v6
 
-    move-object p7, v1
+    iput-wide v6, v1, Lkf9;->c:J
 
-    :cond_3
-    iget-object p8, p0, Llfg;->a:Lbp7;
+    const-string v2, "key.messageId"
 
-    iget-object p0, p0, Llfg;->b:Lbp7;
+    invoke-virtual {v0, v2, v4, v5}, Lfb4;->d(Ljava/lang/String;J)J
 
-    invoke-interface {p8}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result-wide v7
 
-    move-result-object p8
+    const-string v2, "key.chatId"
 
-    check-cast p8, Lqc;
+    invoke-virtual {v0, v2, v4, v5}, Lfb4;->d(Ljava/lang/String;J)J
 
-    new-instance v0, Lr98;
+    move-result-wide v10
 
-    invoke-direct {v0}, Lr98;-><init>()V
+    const-string v2, "key.attachLocalId"
 
-    if-eqz p2, :cond_4
+    invoke-virtual {v0, v2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+    move-result-object v2
 
-    move-result-wide v1
+    if-nez v2, :cond_2
 
-    const-string p2, "local_message_id"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p2, v1}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    if-eqz p4, :cond_5
-
-    invoke-virtual {p4}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    const-string p2, "message_id"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p4
-
-    invoke-virtual {v0, p2, p4}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    iget p2, p3, Lxie;->b:I
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    const-string p4, "source_type"
-
-    invoke-virtual {v0, p4, p2}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-wide p2, p3, Lxie;->a:J
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    const-string p3, "source_id"
-
-    invoke-virtual {v0, p3, p2}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p5, :cond_6
-
-    const-string p2, "reason"
-
-    invoke-interface {p5}, Ljfg;->getTitle()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {v0, p2, p3}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_6
-    if-eqz p6, :cond_9
-
-    const/4 p2, 0x1
-
-    if-eq p6, p2, :cond_8
-
-    const/4 p2, 0x2
-
-    if-ne p6, p2, :cond_7
+    move-object v9, v3
 
     goto :goto_0
 
-    :cond_7
-    const/4 p0, 0x0
+    :cond_2
+    move-object v9, v2
 
-    throw p0
-
-    :cond_8
     :goto_0
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v6, Lrd9;
 
-    move-result-object p2
+    invoke-direct/range {v6 .. v11}, Lrd9;-><init>(JLjava/lang/String;J)V
 
-    const-string p3, "startType"
+    iput-object v6, v1, Lkf9;->a:Lrd9;
 
-    invoke-virtual {v0, p3, p2}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "uploadType"
 
-    :cond_9
-    if-eqz p7, :cond_a
+    invoke-virtual {v0, v2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p7}, Ljava/lang/Number;->longValue()J
+    move-result-object v2
 
-    move-result-wide p2
+    if-nez v2, :cond_3
 
-    const-string p4, "videoDuration"
+    move-object v2, v3
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_3
+    invoke-static {v2}, Lijf;->D(Ljava/lang/String;)I
 
-    move-result-object p2
+    move-result v2
 
-    invoke-virtual {v0, p4, p2}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput v2, v1, Lkf9;->d:I
 
-    :cond_a
-    invoke-virtual {v0}, Lr98;->b()Lr98;
+    iget-object v2, v0, Lfb4;->a:Ljava/util/HashMap;
 
-    move-result-object p2
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-    new-instance p3, Lqe7;
+    move-result-object v2
 
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+    const-string v4, "messageUpload.videoConvertOptions"
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-interface {v2, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide p4
+    move-result-object v2
 
-    iput-wide p4, p3, Lqe7;->a:J
+    if-eqz v2, :cond_5
 
-    const-string p4, "VIDEO_MESSAGE"
+    new-instance v2, Lx10;
 
-    iput-object p4, p3, Lqe7;->c:Ljava/lang/String;
+    const/4 v4, 0x2
 
-    const/4 p4, 0x1
+    invoke-direct {v2, v4}, Lx10;-><init>(I)V
 
-    if-eq p1, p4, :cond_f
+    const-string v4, "messageUpload.videoConvertOptions.mute"
 
-    const/4 p4, 0x2
+    const/4 v5, 0x0
 
-    if-eq p1, p4, :cond_e
+    invoke-virtual {v0, v4, v5}, Lfb4;->b(Ljava/lang/String;Z)Z
 
-    const/4 p4, 0x3
+    move-result v4
 
-    if-eq p1, p4, :cond_d
+    iput-boolean v4, v2, Lx10;->d:Z
 
-    const/4 p4, 0x4
+    const-string v4, "messageUpload.videoConvertOptions.quality"
 
-    if-eq p1, p4, :cond_c
+    invoke-virtual {v0, v4}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 p4, 0x5
+    move-result-object v4
 
-    if-ne p1, p4, :cond_b
-
-    const-string p1, "video_message_error"
+    if-nez v4, :cond_4
 
     goto :goto_1
 
-    :cond_b
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_c
-    const-string p1, "video_message_send"
-
-    goto :goto_1
-
-    :cond_d
-    const-string p1, "video_message_hands_free_mode_on"
-
-    goto :goto_1
-
-    :cond_e
-    const-string p1, "video_message_delete"
-
-    goto :goto_1
-
-    :cond_f
-    const-string p1, "video_message_start_recording"
+    :cond_4
+    move-object v3, v4
 
     :goto_1
-    iput-object p1, p3, Lqe7;->o:Ljava/lang/String;
+    invoke-static {v3}, Lkhc;->valueOf(Ljava/lang/String;)Lkhc;
 
-    invoke-interface {p0}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object p1
+    iput-object v3, v2, Lx10;->c:Lkhc;
 
-    check-cast p1, Lr63;
+    const-string v3, "messageUpload.videoConvertOptions.startTrimPosition"
 
-    check-cast p1, Lxid;
+    invoke-virtual {v0, v3}, Lfb4;->c(Ljava/lang/String;)F
 
-    invoke-virtual {p1}, Lxid;->p()J
+    move-result v3
 
-    move-result-wide p4
+    iput v3, v2, Lx10;->a:F
 
-    iput-wide p4, p3, Lqe7;->b:J
+    const-string v3, "messageUpload.videoConvertOptions.endTrimPosition"
 
-    invoke-virtual {p3, p2}, Lqe7;->c(Ljava/util/Map;)V
+    invoke-virtual {v0, v3}, Lfb4;->c(Ljava/lang/String;)F
 
-    invoke-interface {p0}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p0
+    iput v0, v2, Lx10;->b:F
 
-    check-cast p0, Lr63;
+    new-instance v0, Lsmg;
 
-    check-cast p0, Lt63;
+    invoke-direct {v0, v2}, Lsmg;-><init>(Lx10;)V
 
-    invoke-virtual {p0}, Lt63;->A()J
+    goto :goto_2
 
-    move-result-wide p0
+    :cond_5
+    const/4 v0, 0x0
 
-    iput-wide p0, p3, Lqe7;->X:J
+    :goto_2
+    iput-object v0, v1, Lkf9;->e:Lsmg;
 
-    invoke-virtual {p3}, Lqe7;->d()Lt38;
+    new-instance v0, Llf9;
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Llf9;-><init>(Lkf9;)V
 
-    invoke-virtual {p8, p0}, Lqc;->i(Lt38;)Z
+    return-object v0
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

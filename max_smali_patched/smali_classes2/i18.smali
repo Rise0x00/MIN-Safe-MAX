@@ -1,158 +1,748 @@
 .class public final Li18;
-.super Ljava/lang/Object;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Lqsf;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public final b:Lpmc;
+.field public final G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public volatile c:Z
+.field public final H0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field public volatile d:Z
+.field public final I0:Landroidx/appcompat/widget/AppCompatImageView;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lpmc;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 17
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-object p1, p0, Li18;->a:Landroid/content/Context;
+    move-object/from16 v1, p1
 
-    iput-object p2, p0, Li18;->b:Lpmc;
+    invoke-direct/range {p0 .. p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    const-string p2, "android.permission.RECORD_AUDIO"
+    new-instance v2, Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, p2}, Lo7;->d(Landroid/content/Context;Ljava/lang/String;)I
+    const/4 v3, 0x0
 
-    move-result p2
+    invoke-direct {v2, v1, v3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 v0, 0x0
+    sget v4, Lvza;->t:I
 
-    const/4 v1, 0x1
+    invoke-virtual {v2, v4}, Landroid/view/View;->setId(I)V
 
-    if-nez p2, :cond_0
+    new-instance v4, Landroid/view/ViewGroup$LayoutParams;
 
-    move p2, v1
+    const/4 v5, 0x0
 
-    goto :goto_0
+    const/4 v6, -0x2
 
-    :cond_0
-    move p2, v0
+    invoke-direct {v4, v5, v6}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    :goto_0
-    iput-boolean p2, p0, Li18;->c:Z
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const-string p2, "android.permission.CAMERA"
+    const/4 v4, 0x2
 
-    invoke-static {p1, p2}, Lo7;->d(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-virtual {v2, v4}, Landroid/view/View;->setTextAlignment(I)V
 
-    move-result p1
+    const/4 v7, 0x1
 
-    if-nez p1, :cond_1
+    invoke-virtual {v2, v7}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    move v0, v1
+    sget-object v8, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
-    :cond_1
-    iput-boolean v0, p0, Li18;->d:Z
+    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    sget v9, Lxza;->E:I
+
+    invoke-virtual {v1, v9}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v9
+
+    invoke-virtual {v2, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object v9, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v9, v2}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v10
+
+    invoke-interface {v10}, Lw5b;->getText()Laqf;
+
+    move-result-object v10
+
+    iget v10, v10, Laqf;->g:I
+
+    invoke-virtual {v2, v10}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v10, Lsw2;->a:Lorf;
+
+    sget-object v10, Lcbg;->f:Lorf;
+
+    invoke-static {v10, v2}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
+
+    iput-object v2, v0, Li18;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance v10, Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-direct {v10, v1, v3}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v11, Lvza;->u:I
+
+    invoke-virtual {v10, v11}, Landroid/view/View;->setId(I)V
+
+    new-instance v11, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v11, v5, v6}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v10, v11}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v10, v4}, Landroid/view/View;->setTextAlignment(I)V
+
+    invoke-virtual {v10, v7}, Landroid/widget/TextView;->setSingleLine(Z)V
+
+    invoke-virtual {v10, v8}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    invoke-virtual {v9, v10}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Lw5b;->getText()Laqf;
+
+    move-result-object v8
+
+    iget v8, v8, Laqf;->j:I
+
+    invoke-virtual {v10, v8}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v8, Lcbg;->h:Lorf;
+
+    invoke-static {v8, v10}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
+
+    iput-object v10, v0, Li18;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance v8, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-direct {v8, v1, v3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v11, Lvza;->v:I
+
+    invoke-virtual {v8, v11}, Landroid/view/View;->setId(I)V
+
+    new-instance v11, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v12, 0x18
+
+    int-to-float v12, v12
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v13
+
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v13, v12
+
+    invoke-static {v13}, Lkhi;->c(F)I
+
+    move-result v13
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v14
+
+    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v14, v12
+
+    invoke-static {v14}, Lkhi;->c(F)I
+
+    move-result v14
+
+    invoke-direct {v11, v13, v14}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v8, v11}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v11, Lyjd;->l0:I
+
+    invoke-virtual {v8, v11}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    float-to-double v13, v11
+
+    const-wide/high16 v15, 0x400c000000000000L    # 3.5
+
+    mul-double/2addr v13, v15
+
+    invoke-static {v13, v14}, Lkhi;->b(D)I
+
+    move-result v11
+
+    int-to-float v4, v4
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v13
+
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v13, v4
+
+    invoke-static {v13}, Lkhi;->c(F)I
+
+    move-result v13
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v14
+
+    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
+
+    float-to-double v5, v14
+
+    mul-double/2addr v5, v15
+
+    invoke-static {v5, v6}, Lkhi;->b(D)I
+
+    move-result v5
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v6
+
+    invoke-static {v4}, Lkhi;->c(F)I
+
+    move-result v4
+
+    invoke-virtual {v8, v11, v13, v5, v4}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v9, v8}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lw5b;->getText()Laqf;
+
+    move-result-object v4
+
+    iget v4, v4, Laqf;->j:I
+
+    invoke-static {v4}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v4
+
+    invoke-virtual {v8, v4}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    iput-object v8, v0, Li18;->H0:Landroidx/appcompat/widget/AppCompatImageView;
+
+    new-instance v4, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-direct {v4, v1, v3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v1, Lvza;->w:I
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v12
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v12, v5
+
+    invoke-static {v12}, Lkhi;->c(F)I
+
+    move-result v5
+
+    invoke-direct {v1, v3, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v1, Lyjd;->H1:I
+
+    invoke-virtual {v4, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
+
+    invoke-virtual {v9, v4}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->j:I
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    iput-object v4, v0, Li18;->I0:Landroidx/appcompat/widget/AppCompatImageView;
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v3, -0x1
+
+    const/4 v5, -0x2
+
+    invoke-direct {v1, v3, v5}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 v1, 0xc
+
+    int-to-float v1, v1
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v1
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    const/16 v5, 0x8
+
+    int-to-float v5, v5
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v6, v5
+
+    invoke-static {v6}, Lkhi;->c(F)I
+
+    move-result v6
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v11
+
+    invoke-static {v1}, Lkhi;->c(F)I
+
+    move-result v1
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v11
+
+    invoke-static {v5}, Lkhi;->c(F)I
+
+    move-result v5
+
+    invoke-virtual {v0, v3, v6, v1, v5}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-static {v0}, Loui;->g(Landroidx/constraintlayout/widget/ConstraintLayout;)Lwq3;
+
+    move-result-object v1
+
+    invoke-virtual {v2}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    const/4 v5, 0x6
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v1, v3, v5, v6, v5}, Lwq3;->d(IIII)V
+
+    const/4 v11, 0x3
+
+    invoke-virtual {v1, v3, v11, v6, v11}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v10}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    const/4 v12, 0x4
+
+    invoke-virtual {v1, v3, v12, v6, v11}, Lwq3;->d(IIII)V
+
+    new-instance v6, Lola;
+
+    const/4 v13, 0x5
+
+    invoke-direct {v6, v1, v12, v3, v13}, Lola;-><init>(Ljava/lang/Object;III)V
+
+    int-to-float v7, v7
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v14
+
+    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v14, v7
+
+    invoke-static {v14}, Lkhi;->c(F)I
+
+    move-result v14
+
+    invoke-virtual {v6, v14}, Lola;->e(I)V
+
+    invoke-virtual {v8}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    const/4 v14, 0x7
+
+    invoke-virtual {v1, v3, v14, v6, v5}, Lwq3;->d(IIII)V
+
+    new-instance v6, Lola;
+
+    invoke-direct {v6, v1, v14, v3, v13}, Lola;-><init>(Ljava/lang/Object;III)V
+
+    const/16 v3, 0x10
+
+    int-to-float v3, v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v15
+
+    iget v15, v15, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v15, v3
+
+    invoke-static {v15}, Lkhi;->c(F)I
+
+    move-result v15
+
+    invoke-virtual {v6, v15}, Lola;->e(I)V
+
+    invoke-virtual {v10}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    const/4 v10, 0x0
+
+    invoke-virtual {v1, v6, v5, v10, v5}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v2}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    invoke-virtual {v1, v6, v11, v2, v12}, Lwq3;->d(IIII)V
+
+    new-instance v2, Lola;
+
+    invoke-direct {v2, v1, v11, v6, v13}, Lola;-><init>(Ljava/lang/Object;III)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v15
+
+    iget v15, v15, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v7, v15, v2}, Lnx1;->q(FFLola;)V
+
+    invoke-virtual {v1, v6, v12, v10, v12}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v8}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    invoke-virtual {v1, v6, v14, v2, v5}, Lwq3;->d(IIII)V
+
+    new-instance v2, Lola;
+
+    invoke-direct {v2, v1, v14, v6, v13}, Lola;-><init>(Ljava/lang/Object;III)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v6, v3
+
+    invoke-static {v6}, Lkhi;->c(F)I
+
+    move-result v6
+
+    invoke-virtual {v2, v6}, Lola;->e(I)V
+
+    invoke-virtual {v8}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v1, v2, v11, v6, v11}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v1, v2, v12, v6, v12}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v4}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    invoke-virtual {v1, v2, v14, v6, v5}, Lwq3;->d(IIII)V
+
+    new-instance v5, Lola;
+
+    invoke-direct {v5, v1, v14, v2, v13}, Lola;-><init>(Ljava/lang/Object;III)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v5, v2}, Lola;->e(I)V
+
+    invoke-virtual {v4}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v1, v2, v11, v6, v11}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v1, v2, v12, v6, v12}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v1, v2, v14, v6, v14}, Lwq3;->d(IIII)V
+
+    invoke-virtual {v1, v0}, Lwq3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+
+    invoke-virtual {v9, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Li18;->onThemeChanged(Lw5b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 10
+.method public final onThemeChanged(Lw5b;)V
+    .locals 3
 
-    const-string v0, "android.permission.RECORD_AUDIO"
+    sget-object v0, Ly53;->s0:Lvh4;
 
-    iget-object v1, p0, Li18;->a:Landroid/content/Context;
+    invoke-virtual {v0, p0}, Lvh4;->i(Landroid/view/View;)Lw5b;
 
-    invoke-static {v1, v0}, Lo7;->d(Landroid/content/Context;Ljava/lang/String;)I
+    move-result-object v1
 
-    move-result v0
+    invoke-interface {v1}, Lw5b;->getText()Laqf;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    const/4 v2, 0x0
+    iget v1, v1, Laqf;->g:I
 
-    if-nez v0, :cond_0
+    iget-object v2, p0, Li18;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move v0, v1
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto :goto_0
+    invoke-virtual {v0, p0}, Lvh4;->i(Landroid/view/View;)Lw5b;
 
-    :cond_0
-    move v0, v2
+    move-result-object v0
 
-    :goto_0
-    const-string v3, "android.permission.CAMERA"
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
 
-    iget-object v4, p0, Li18;->a:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-static {v4, v3}, Lo7;->d(Landroid/content/Context;Ljava/lang/String;)I
+    iget v0, v0, Laqf;->j:I
 
-    move-result v3
+    iget-object v1, p0, Li18;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    if-nez v3, :cond_1
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    move v3, v1
+    invoke-interface {p1}, Lw5b;->getIcon()Le77;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_1
-    move v3, v2
+    iget p1, p1, Le77;->k:I
 
-    :goto_1
-    iget-object v4, p0, Li18;->b:Lpmc;
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    iget-boolean v5, p0, Li18;->c:Z
+    move-result-object p1
 
-    iget-boolean v6, p0, Li18;->d:Z
+    iget-object v0, p0, Li18;->H0:Landroidx/appcompat/widget/AppCompatImageView;
 
-    const-string v7, ", video: "
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    const-string v8, "call permissions state updated, audio: "
+    return-void
+.end method
 
-    const-string v9, "->"
+.method public final setLink(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-static {v8, v5, v9, v0, v7}, Lfl7;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li18;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result-object v5
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final setOnShareLinkClickListener(Lqi6;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lqi6;",
+            ")V"
+        }
+    .end annotation
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    new-instance v0, Llr6;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x6
 
-    move-result-object v5
+    invoke-direct {v0, p0, v1, p1}, Llr6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v6, "LocalMediaPermissionProvider"
+    iget-object p1, p0, Li18;->H0:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-interface {v4, v6, v5}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    iget-boolean v4, p0, Li18;->c:Z
+    return-void
+.end method
 
-    if-eq v4, v0, :cond_2
+.method public final setOnShareQrCodeClickListener(Loi6;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Loi6;",
+            ")V"
+        }
+    .end annotation
 
-    iput-boolean v0, p0, Li18;->c:Z
+    new-instance v0, Lc7;
 
-    move v2, v1
+    const/4 v1, 0x6
 
-    :cond_2
-    iget-boolean v0, p0, Li18;->d:Z
+    invoke-direct {v0, v1, p1}, Lc7;-><init>(ILoi6;)V
 
-    if-eq v0, v3, :cond_3
+    iget-object p1, p0, Li18;->I0:Landroidx/appcompat/widget/AppCompatImageView;
 
-    iput-boolean v3, p0, Li18;->d:Z
+    invoke-static {p1, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    return v1
-
-    :cond_3
-    return v2
+    return-void
 .end method

@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;",
         "listener",
-        "Loyf;",
+        "Lybg;",
         "addAsrRecordListener",
         "(Lru/ok/android/externcalls/sdk/asr/listener/AsrRecordListener;)V",
         "removeAsrRecordListener",

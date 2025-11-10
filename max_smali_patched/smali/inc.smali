@@ -1,176 +1,46 @@
-.class public final Linc;
+.class public abstract Linc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a0623
 
-.field public final b:Ljava/lang/Integer;
+.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a0624
 
-.field public final c:Z
+.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0625
 
+.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a0626
 
-# direct methods
-.method public constructor <init>(ILjava/lang/Integer;Z)V
-    .locals 0
+.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a0627
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a0628
 
-    iput p1, p0, Linc;->a:I
+.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a0629
 
-    iput-object p2, p0, Linc;->b:Ljava/lang/Integer;
+.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a062a
 
-    iput-boolean p3, p0, Linc;->c:Z
+.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a062b
 
-    return-void
-.end method
+.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a062c
 
+.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a062d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a062e
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a062f
 
-    goto :goto_1
+.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a0630
 
-    :cond_0
-    instance-of v0, p1, Linc;
+.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a0631
 
-    if-nez v0, :cond_1
+.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a0632
 
-    goto :goto_0
+.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a0633
 
-    :cond_1
-    check-cast p1, Linc;
+.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0634
 
-    iget v0, p0, Linc;->a:I
+.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0635
 
-    iget v1, p1, Linc;->a:I
+.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a0636
 
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Linc;->b:Ljava/lang/Integer;
-
-    iget-object v1, p1, Linc;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Linc;->c:Z
-
-    iget-boolean p1, p1, Linc;->c:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Linc;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    sget-object v1, Lfnc;->b:Lfnc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Linc;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Linc;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RateCallButtonData(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Linc;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", size="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lfnc;->b:Lfnc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linc;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Linc;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a0637

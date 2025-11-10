@@ -1,113 +1,362 @@
 .class public final Lc4f;
-.super Lm3f;
+.super Lewb;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:F
 
-.field public final synthetic Y:Li4f;
+.field public final b:I
+
+.field public final c:[I
+
+.field public final synthetic d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Li4f;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lc4f;->Y:Li4f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p1
+
+    iput p1, p0, Lc4f;->b:I
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lc4f;->c:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    check-cast p1, Ly0g;
+    iget-object v0, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lone/me/stickerspreview/set/StickerSetBottomSheet;->K0(Lone/me/stickerspreview/set/StickerSetBottomSheet;)I
 
-    invoke-virtual {p0, p1, p2}, Lc4f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
-
-    check-cast p1, Lc4f;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lc4f;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final c()I
+    .locals 1
+
+    invoke-virtual {p0}, Lc4f;->e()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final e()I
     .locals 2
 
-    new-instance v0, Lc4f;
+    iget-object v0, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    iget-object v1, p0, Lc4f;->Y:Li4f;
+    invoke-virtual {v0}, Lc24;->getView()Landroid/view/View;
 
-    invoke-direct {v0, v1, p2}, Lc4f;-><init>(Li4f;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    iput-object p1, v0, Lc4f;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lc4f;->X:Ljava/lang/Object;
-
-    check-cast p1, Ly0g;
-
-    iget-object v0, p0, Lc4f;->Y:Li4f;
-
-    iget-object v0, v0, Li4f;->b:Ljava/lang/String;
-
-    sget-object v1, Lox9;->j:Lqpa;
-
-    if-nez v1, :cond_0
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Ly38;->o:Ly38;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v2}, Lqpa;->b(Ly38;)Z
+    :goto_0
+    iget v0, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->B0:I
 
-    move-result v3
+    sub-int/2addr v1, v0
 
-    if-eqz v3, :cond_1
+    return v1
+.end method
 
-    new-instance v3, Ljava/lang/StringBuilder;
+.method public final f()Landroid/view/View;
+    .locals 1
 
-    const-string v4, "uploadFile: "
+    sget-object v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Les7;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    return-object v0
+.end method
+
+.method public final g(Liwb;Liwb;)Liwb;
+    .locals 2
+
+    sget-object v0, Liwb;->a:Liwb;
+
+    if-ne p2, v0, :cond_0
+
+    sget-object v1, Liwb;->c:Liwb;
+
+    if-ne p1, v1, :cond_0
+
+    sget-object p1, Liwb;->b:Liwb;
+
+    return-object p1
+
+    :cond_0
+    if-ne p2, v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    return-object p2
+.end method
+
+.method public final m(I)V
+    .locals 4
+
+    sget-object v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Les7;
+
+    iget-object v0, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+
+    invoke-virtual {v0}, Lc24;->getParentController()Lc24;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lb4f;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lb4f;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lone/me/stickerspreview/StickerPreviewScreen;
+
+    iget-object v1, v0, Lone/me/stickerspreview/StickerPreviewScreen;->s0:Ld0d;
+
+    sget-object v2, Lone/me/stickerspreview/StickerPreviewScreen;->z0:[Les7;
+
+    const/4 v3, 0x4
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/view/ViewGroup;
+
+    :cond_1
+    if-nez v2, :cond_2
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result v0
+
+    if-gt p1, v0, :cond_3
+
+    int-to-float p1, p1
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    sub-float/2addr p1, v0
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+.end method
+
+.method public final n(Liwb;FF)Z
+    .locals 8
+
+    iget v0, p0, Lc4f;->a:F
+
+    sub-float v0, p3, v0
+
+    iput p3, p0, Lc4f;->a:F
+
+    iget-object v1, p0, Lc4f;->d:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+
+    iget-object v2, v1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->z0:Ld0d;
+
+    sget-object v3, Lone/me/stickerspreview/set/StickerSetBottomSheet;->D0:[Les7;
+
+    const/4 v4, 0x2
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v2, v1, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v2, Liwb;->c:Liwb;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v2, v0, p1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v4, 0x1
+
+    if-ne p1, v2, :cond_0
+
+    move p1, v4
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v3
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    iget v5, p0, Lc4f;->b:I
+
+    int-to-float v5, v5
+
+    cmpg-float v2, v2, v5
+
+    if-gez v2, :cond_1
+
+    goto :goto_2
 
     :cond_1
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v2, p0, Lc4f;->c:[I
 
-    return-object p1
+    invoke-virtual {v1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    aget v5, v2, v3
+
+    aget v2, v2, v4
+
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+
+    move-result v6
+
+    add-int/2addr v6, v5
+
+    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+
+    move-result v7
+
+    add-int/2addr v7, v2
+
+    int-to-float v5, v5
+
+    cmpl-float v5, p2, v5
+
+    if-ltz v5, :cond_2
+
+    int-to-float v5, v6
+
+    cmpg-float p2, p2, v5
+
+    if-gtz p2, :cond_2
+
+    int-to-float p2, v2
+
+    cmpl-float p2, p3, p2
+
+    if-ltz p2, :cond_2
+
+    int-to-float p2, v7
+
+    cmpg-float p2, p3, p2
+
+    if-gtz p2, :cond_2
+
+    move p2, v4
+
+    goto :goto_1
+
+    :cond_2
+    move p2, v3
+
+    :goto_1
+    if-eqz p1, :cond_5
+
+    if-eqz p2, :cond_5
+
+    const/4 p1, -0x1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->canScrollVertically(I)Z
+
+    move-result p1
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->canScrollVertically(I)Z
+
+    move-result p2
+
+    const/4 p3, 0x0
+
+    cmpl-float v1, v0, p3
+
+    if-lez v1, :cond_3
+
+    if-eqz p1, :cond_5
+
+    :cond_3
+    cmpg-float p1, v0, p3
+
+    if-gez p1, :cond_4
+
+    if-nez p2, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    return v3
+
+    :cond_5
+    :goto_3
+    return v4
 .end method

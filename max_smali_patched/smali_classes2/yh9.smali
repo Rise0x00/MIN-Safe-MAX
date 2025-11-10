@@ -1,124 +1,78 @@
 .class public final Lyh9;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzh9;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-.field public final b:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lyh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    iput-wide p1, p0, Lyh9;->a:J
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Lyh9;->b:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lyh9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lyh9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lyh9;
 
-    iget-wide v3, p0, Lyh9;->a:J
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-wide v5, p1, Lyh9;->a:J
+    invoke-virtual {p1, p2}, Lyh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyh9;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lyh9;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lyh9;->a:J
+    new-instance v0, Lyh9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lyh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lyh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lyh9;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "DownloadFailed(messageId="
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lyh9;->a:J
-
-    iget-object v4, p0, Lyh9;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lyh9;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lyh9;->o:Ljava/lang/Object;
+
+    check-cast p1, Lfg9;
+
+    iget-object v0, p0, Lyh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-static {v0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->y0(Lone/me/sdk/messagewrite/MessageWriteWidget;Lfg9;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

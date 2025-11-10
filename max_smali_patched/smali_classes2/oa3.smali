@@ -2,162 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lsa3;
 
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public synthetic constructor <init>(Lsa3;Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
+    iput p3, p0, Loa3;->a:I
+
+    iput-object p1, p0, Loa3;->b:Lsa3;
+
+    iput-object p2, p0, Loa3;->c:Landroid/graphics/drawable/Drawable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Loa3;->a:I
-
-    iput p2, p0, Loa3;->b:I
-
-    iput p3, p0, Loa3;->c:I
-
-    iput p4, p0, Loa3;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 2
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Loa3;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Loa3;
-
     iget v0, p0, Loa3;->a:I
 
-    iget v1, p1, Loa3;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v0, v1, :cond_2
+    iget-object v0, p0, Loa3;->b:Lsa3;
 
-    goto :goto_0
+    iget-object v1, p0, Loa3;->c:Landroid/graphics/drawable/Drawable;
 
-    :cond_2
-    iget v0, p0, Loa3;->b:I
+    invoke-static {v0, v1}, Lsa3;->C(Lsa3;Landroid/graphics/drawable/Drawable;)V
 
-    iget v1, p1, Loa3;->b:I
+    return-void
 
-    if-eq v0, v1, :cond_3
+    :pswitch_0
+    iget-object v0, p0, Loa3;->b:Lsa3;
 
-    goto :goto_0
+    iget-object v1, p0, Loa3;->c:Landroid/graphics/drawable/Drawable;
 
-    :cond_3
-    iget v0, p0, Loa3;->c:I
+    invoke-static {v0, v1}, Lsa3;->A(Lsa3;Landroid/graphics/drawable/Drawable;)V
 
-    iget v1, p1, Loa3;->c:I
+    return-void
 
-    if-eq v0, v1, :cond_4
+    nop
 
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Loa3;->d:I
-
-    iget p1, p1, Loa3;->d:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Loa3;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Loa3;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loa3;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Loa3;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", neutral="
-
-    const-string v1, ", themed="
-
-    const-string v2, "CommonActionBackgroundColors(error="
-
-    iget v3, p0, Loa3;->a:I
-
-    iget v4, p0, Loa3;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", themedFade="
-
-    const-string v2, ")"
-
-    iget v3, p0, Loa3;->c:I
-
-    iget v4, p0, Loa3;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

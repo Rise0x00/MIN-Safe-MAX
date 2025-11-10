@@ -1,48 +1,47 @@
 .class public final Lsod;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ltod;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ltod;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lsod;->Y:Ltod;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Lms0;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onCreate(Landroid/os/Bundle;)V
+    .locals 2
 
-    iput-object p1, p0, Lsod;->o:Ljava/lang/Object;
+    invoke-super {p0, p1}, Lms0;->onCreate(Landroid/os/Bundle;)V
 
-    iget p1, p0, Lsod;->X:I
+    const/4 p1, -0x1
 
-    const/high16 v0, -0x80000000
+    :try_start_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lsod;->X:I
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget-object p1, p0, Lsod;->Y:Ltod;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    sget v1, Lykc;->picker_width:I
 
-    invoke-virtual {p1, v0, p0}, Ltod;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result-object p1
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p1
+    goto :goto_0
+
+    :catchall_0
+    move v0, p1
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, v0, p1}, Landroid/view/Window;->setLayout(II)V
+
+    :cond_0
+    return-void
 .end method

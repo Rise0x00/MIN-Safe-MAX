@@ -1,80 +1,111 @@
-.class public final synthetic Lq36;
-.super Ljava/lang/Object;
+.class public final Lq36;
+.super Lfcf;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lz36;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final Z:Lz3e;
 
-.field public final synthetic b:Lr36;
+.field public final s0:Lw3e;
+
+.field public final t0:Ln36;
+
+.field public u0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr36;I)V
+.method public constructor <init>(Lz3e;Lw3e;Ln36;)V
     .locals 0
 
-    iput p2, p0, Lq36;->a:I
+    invoke-direct {p0}, Lfcf;-><init>()V
 
-    iput-object p1, p0, Lq36;->b:Lr36;
+    iput-object p1, p0, Lq36;->Z:Lz3e;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lq36;->s0:Lw3e;
+
+    iput-object p3, p0, Lq36;->t0:Ln36;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-wide v0, p0, Lq36;->u0:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lq36;->u0:J
+
+    iget-object v0, p0, Lq36;->Z:Lz3e;
+
+    invoke-virtual {v0, p1}, Lz3e;->b(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final c()V
     .locals 1
 
-    iget v0, p0, Lq36;->a:I
+    iget-object v0, p0, Lq36;->t0:Ln36;
 
-    check-cast p1, Ly36;
+    invoke-virtual {v0}, Ln36;->cancel()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lq36;->Z:Lz3e;
 
-    iget-object v0, p0, Lq36;->b:Lr36;
+    invoke-virtual {v0}, Lz3e;->c()V
 
-    iget-object v0, v0, Lr36;->Y:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lc46;
+.method public final cancel()V
+    .locals 1
 
-    if-eqz v0, :cond_0
+    invoke-super {p0}, Lfcf;->cancel()V
 
-    check-cast v0, Lfx1;
+    iget-object v0, p0, Lq36;->t0:Ln36;
 
-    invoke-virtual {v0, p1}, Lfx1;->f(Ly36;)V
+    invoke-virtual {v0}, Ln36;->cancel()V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 5
+
+    sget-object v0, Ldb5;->a:Ldb5;
+
+    invoke-virtual {p0, v0}, Lfcf;->h(Lecf;)V
+
+    iget-wide v0, p0, Lq36;->u0:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iput-wide v2, p0, Lq36;->u0:J
+
+    invoke-virtual {p0, v0, v1}, Lfcf;->f(J)V
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v0, p0, Lq36;->t0:Ln36;
 
-    return-object p1
+    const-wide/16 v1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lq36;->b:Lr36;
+    invoke-virtual {v0, v1, v2}, Ln36;->g(J)V
 
-    iget-object v0, v0, Lr36;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lq36;->s0:Lw3e;
 
-    check-cast v0, Lc46;
+    invoke-virtual {v0, p1}, Lw3e;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
-
-    check-cast v0, Lfx1;
-
-    invoke-virtual {v0, p1}, Lfx1;->f(Ly36;)V
-
-    :cond_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

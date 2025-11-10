@@ -1,374 +1,244 @@
 .class public final Lztf;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Loi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Lztf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    iput p1, p0, Lztf;->a:I
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lztf;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lztf;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lztf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lztf;->b:Ljava/lang/Object;
 
-    check-cast p1, Lztf;
+    check-cast v0, Landroid/os/Bundle;
 
-    sget-object p2, Loyf;->a:Loyf;
+    const-string v1, "default"
 
-    invoke-virtual {p1, p2}, Lztf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    return-object p2
-.end method
+    const-string v2, "arg_key_scope_id"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v0, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    new-instance v0, Lztf;
+    move-result v3
 
-    iget-object v1, p0, Lztf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    if-nez v3, :cond_0
 
-    invoke-direct {v0, p2, v1}, Lztf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
-
-    iput-object p1, v0, Lztf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lztf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lgvf;
-
-    iget-object v0, p0, Lztf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    iget-object v1, v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->Y:Ljava/lang/Object;
-
-    iget-object v2, v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->o:Ljava/lang/Object;
-
-    sget-object v3, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
-
-    instance-of v3, p1, Ldvf;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lke7;
-
-    check-cast p1, Ldvf;
-
-    iget-object v9, p1, Ldvf;->a:Ljava/lang/String;
-
-    iget-object v10, p1, Ldvf;->b:Lne7;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lwtf;
-
-    move-result-object p1
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lje7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "CREATE_HINT"
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct/range {v5 .. v10}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lne7;)V
-
-    invoke-static {v5, v4, v4}, Lvr0;->e(Lb04;Lxg;Lxg;)Ll8d;
-
-    move-result-object p1
-
-    const-string v0, "CREATE_HINT"
-
-    invoke-virtual {v1, p1, v0}, Lke7;->a(Ll8d;Ljava/lang/String;)V
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_0
-    instance-of v3, p1, Lcvf;
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lke7;
-
-    check-cast p1, Lcvf;
-
-    iget-object v9, p1, Lcvf;->a:Ljava/lang/String;
-
-    iget-object v10, p1, Lcvf;->b:Lne7;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lwtf;
-
-    move-result-object p1
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lje7;
+    instance-of v2, v0, Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v2, :cond_1
 
-    new-instance v5, Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    move-object v1, v0
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    check-cast v1, Ljava/lang/String;
 
-    move-result-object v6
-
-    const-string v7, "ADD_EMAIL"
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct/range {v5 .. v10}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lne7;)V
-
-    invoke-static {v5, v4, v4}, Lvr0;->e(Lb04;Lxg;Lxg;)Ll8d;
-
-    move-result-object p1
-
-    const-string v0, "ADD_EMAIL"
-
-    invoke-virtual {v1, p1, v0}, Lke7;->a(Ll8d;Ljava/lang/String;)V
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_1
-    instance-of v3, p1, Lfvf;
+    instance-of v2, v0, Lzpd;
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_2
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast v0, Lzpd;
 
-    move-result-object v1
-
-    check-cast v1, Lke7;
-
-    check-cast p1, Lfvf;
-
-    iget-object v9, p1, Lfvf;->a:Ljava/lang/String;
-
-    iget-object v10, p1, Lfvf;->b:Lne7;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lwtf;
-
-    move-result-object p1
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lje7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "VERIFY_EMAIL"
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct/range {v5 .. v10}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lne7;)V
-
-    invoke-static {v5, v4, v4}, Lvr0;->e(Lb04;Lxg;Lxg;)Ll8d;
-
-    move-result-object p1
-
-    const-string v0, "VERIFY_EMAIL"
-
-    invoke-virtual {v1, p1, v0}, Lke7;->a(Ll8d;Ljava/lang/String;)V
-
-    goto/16 :goto_0
+    iget-object v1, v0, Lzpd;->a:Ljava/lang/String;
 
     :cond_2
-    sget-object v1, Levf;->a:Levf;
-
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {v0}, Lb04;->getActivity()Landroid/app/Activity;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lj40;->D(Landroid/app/Activity;)V
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->E0()Lwtf;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    const-string v0, ":settings/privacy"
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_6
-
-    const/4 v3, 0x2
-
-    if-ne p1, v3, :cond_5
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lje7;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    if-ne p1, v1, :cond_3
-
-    sget-object p1, Lbvf;->c:Lbvf;
-
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v4}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_4
-    sget-object p1, Lktf;->a:Lktf;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class v0, Lc9b;
-
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lc9b;
-
-    invoke-virtual {p1}, Lc9b;->c()V
-
-    sget-object p1, Lbvf;->c:Lbvf;
-
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
-
-    move-result-object p1
-
-    const-string v0, ":chat-list"
-
-    invoke-virtual {p1, v0, v4}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_6
-    sget-object p1, Lbvf;->c:Lbvf;
-
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v4}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_7
-    sget-object p1, Lbvf;->c:Lbvf;
-
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
-
-    move-result-object p1
-
-    const-string v0, ":settings/privacy/onboarding-twofa?state=finish"
-
-    invoke-virtual {p1, v0, v4}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance v0, Lzpd;
 
-    return-object p1
+    invoke-direct {v0, v1}, Lzpd;-><init>(Ljava/lang/String;)V
 
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return-object v0
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :pswitch_0
+    new-instance v0, Lqfh;
 
-    throw p1
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Ly8h;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1}, Lqfh;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lqfh;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Lui1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lqfh;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Lddh;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Le5f;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Le5f;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Leif;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Lui1;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Lt8g;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Leif;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Leif;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Ls8d;
+
+    iget-object v1, p0, Lztf;->b:Ljava/lang/Object;
+
+    check-cast v1, Le5f;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2, v1}, Ls8d;-><init>(ILoi6;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,103 +1,72 @@
-.class public abstract Lzoa;
+.class public final Lzoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Lapa;
 
-.field public static final d:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public final synthetic d:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+    .locals 0
 
-    sget v0, Lnec;->oneme_contact_not_found_bottom_sheet_negative_button:I
+    iput p4, p0, Lzoa;->a:I
 
-    sput v0, Lzoa;->a:I
+    iput-object p1, p0, Lzoa;->b:Lapa;
 
-    sget v0, Lnec;->oneme_contact_not_found_bottom_sheet_positive_button:I
+    iput-object p2, p0, Lzoa;->c:Landroid/graphics/drawable/Drawable;
 
-    sput v0, Lzoa;->b:I
+    iput-object p3, p0, Lzoa;->d:Ljava/lang/Runnable;
 
-    sget v0, Lnec;->oneme_invite_action_view_type:I
-
-    sput v0, Lzoa;->c:I
-
-    sget v0, Lnec;->oneme_invite_by_link_action_menu_item:I
-
-    sput v0, Lzoa;->d:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_action_menu_item:I
-
-    sput v0, Lzoa;->e:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_continue_button:I
-
-    sput v0, Lzoa;->f:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_description:I
-
-    sput v0, Lzoa;->g:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_input:I
-
-    sput v0, Lzoa;->h:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_title:I
-
-    sput v0, Lzoa;->i:I
-
-    sget v0, Lnec;->oneme_invite_by_phone_toolbar:I
-
-    sput v0, Lzoa;->j:I
-
-    sget v0, Lnec;->oneme_invite_by_qr_bottom_sheet_qr_code:I
-
-    sput v0, Lzoa;->k:I
-
-    sget v0, Lnec;->oneme_invite_by_qr_bottom_sheet_qr_code_share:I
-
-    sput v0, Lzoa;->l:I
-
-    sget v0, Lnec;->oneme_invite_friends_to_max_bottom_sheet_image_stack:I
-
-    sput v0, Lzoa;->m:I
-
-    sget v0, Lnec;->oneme_invite_friends_to_max_bottom_sheet_invite_button:I
-
-    sput v0, Lzoa;->n:I
-
-    sget v0, Lnec;->oneme_invite_friends_to_max_bottom_sheet_title:I
-
-    sput v0, Lzoa;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lzoa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iget-object v1, p0, Lzoa;->d:Ljava/lang/Runnable;
+
+    iget-object v2, p0, Lzoa;->b:Lapa;
+
+    invoke-static {v2, v0, v1}, Lapa;->e(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iget-object v1, p0, Lzoa;->d:Ljava/lang/Runnable;
+
+    iget-object v2, p0, Lzoa;->b:Lapa;
+
+    invoke-static {v2, v0, v1}, Lapa;->e(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

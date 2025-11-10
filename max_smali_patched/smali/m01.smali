@@ -1,118 +1,293 @@
-.class public final Lm01;
-.super Lm3f;
+.class public final synthetic Lm01;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Loi6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lp01;
+.field public final synthetic b:Lf11;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lp01;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lf11;ZI)V
     .locals 0
 
-    iput-object p1, p0, Lm01;->Y:Lp01;
+    iput p3, p0, Lm01;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lm01;->b:Lf11;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lm01;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    check-cast p1, Le34;
+    iget v0, p0, Lm01;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lm01;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lm01;->b:Lf11;
 
-    move-result-object p1
+    iget-boolean v5, p0, Lm01;->c:Z
 
-    check-cast p1, Lm01;
+    sget-object v1, Lcuh;->b:Lnxa;
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lm01;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lm01;
-
-    iget-object v0, p0, Lm01;->Y:Lp01;
-
-    invoke-direct {p1, v0, p2}, Lm01;-><init>(Lp01;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lm01;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v2, La98;->d:La98;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    throw p1
+    if-eqz v3, :cond_1
+
+    const-string v3, "Screen sharing in call was changed on "
+
+    const-string v4, " success"
+
+    invoke-static {v3, v4, v5}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :goto_0
+    iget-object v9, v0, Lf11;->E0:La1f;
 
-    iget-object p1, p0, Lm01;->Y:Lp01;
+    :cond_2
+    invoke-virtual {v9}, La1f;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p1, Lp01;->w0:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object v10
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-object v1, v10
 
-    move-result-object v0
+    check-cast v1, Lga;
 
-    check-cast v0, Lgs;
+    const/4 v7, 0x0
 
-    iput v1, p0, Lm01;->X:I
+    const/16 v8, 0x77
 
-    invoke-static {p1, v0, p0}, Lp01;->a(Lp01;Lgs;Lnz3;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    sget-object v0, Lf34;->a:Lf34;
+    const/4 v4, 0x0
 
-    if-ne p1, v0, :cond_2
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lga;->a(Lga;ZZZZZZI)Lga;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, v0, Lf11;->C0:Lake;
+
+    new-instance v1, Ljb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v5}, Ljb;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
+
+    :goto_1
+    sget-object v0, Lybg;->a:Lybg;
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    :pswitch_0
+    iget-object v0, p0, Lm01;->b:Lf11;
 
-    return-object p1
+    iget-boolean v3, p0, Lm01;->c:Z
+
+    sget-object v1, Lcuh;->b:Lnxa;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v2, La98;->d:La98;
+
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "Cameras in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v4, v5, v3}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v4, v5}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_2
+    iget-object v9, v0, Lf11;->E0:La1f;
+
+    :cond_5
+    invoke-virtual {v9}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Lga;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7d
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lga;->a(Lga;ZZZZZZI)Lga;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object v0, v0, Lf11;->C0:Lake;
+
+    new-instance v1, Ldb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v3}, Ldb;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :pswitch_1
+    iget-object v0, p0, Lm01;->b:Lf11;
+
+    iget-boolean v4, p0, Lm01;->c:Z
+
+    sget-object v1, Lcuh;->b:Lnxa;
+
+    if-nez v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    sget-object v2, La98;->d:La98;
+
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    const-string v3, "Microphone in call was changed on "
+
+    const-string v5, " success"
+
+    invoke-static {v3, v5, v4}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v6, v3, v5}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    iget-object v9, v0, Lf11;->E0:La1f;
+
+    :cond_8
+    invoke-virtual {v9}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    move-object v1, v10
+
+    check-cast v1, Lga;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7b
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v8}, Lga;->a(Lga;ZZZZZZI)Lga;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v10, v1}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    iget-object v0, v0, Lf11;->C0:Lake;
+
+    new-instance v1, Lfb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v4}, Lfb;-><init>(ZZ)V
+
+    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
+
+    goto/16 :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

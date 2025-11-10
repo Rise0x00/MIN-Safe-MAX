@@ -3,138 +3,246 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzub;
+.implements Lhub;
 
 
 # instance fields
-.field public final a:Loef;
+.field public final a:Landroid/app/Application;
 
-.field public final b:Ljava/lang/Integer;
+.field public final b:Lvf5;
+
+.field public final c:Lvh5;
+
+.field public final d:Lru7;
+
+.field public final e:Loub;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Lru7;
+
+.field public final h:Lru7;
+
+.field public final i:Let;
 
 
 # direct methods
-.method public constructor <init>(Loef;Ljava/lang/Integer;)V
+.method public constructor <init>(Landroid/app/Application;Lvf5;Lvh5;Lru7;Loub;Lru7;Lru7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyub;->a:Loef;
+    iput-object p1, p0, Lyub;->a:Landroid/app/Application;
 
-    iput-object p2, p0, Lyub;->b:Ljava/lang/Integer;
+    iput-object p2, p0, Lyub;->b:Lvf5;
+
+    iput-object p3, p0, Lyub;->c:Lvh5;
+
+    iput-object p4, p0, Lyub;->d:Lru7;
+
+    iput-object p5, p0, Lyub;->e:Loub;
+
+    const-class p1, Lyub;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lyub;->f:Ljava/lang/String;
+
+    iput-object p6, p0, Lyub;->g:Lru7;
+
+    iput-object p7, p0, Lyub;->h:Lru7;
+
+    new-instance p1, Let;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Let;-><init>(I)V
+
+    iput-object p1, p0, Lyub;->i:Let;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lfvg;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lyub;->f:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lyub;
+    sget-object v1, Lcuh;->b:Lnxa;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyub;
-
-    iget-object v1, p0, Lyub;->a:Loef;
-
-    iget-object v3, p1, Lyub;->a:Loef;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyub;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lyub;->b:Ljava/lang/Integer;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lyub;->a:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lyub;->b:Ljava/lang/Integer;
-
     if-nez v1, :cond_0
-
-    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sget-object v3, La98;->d:La98;
 
-    move-result v1
+    invoke-virtual {v1, v3}, Lnxa;->b(La98;)Z
 
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Players pool. Free player, "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    add-int/2addr v0, v1
+    invoke-interface {p1}, Lfvg;->stop()V
 
-    return v0
+    invoke-interface {p1, v2}, Lfvg;->b0(Landroid/view/Surface;)V
+
+    iget-object v0, p0, Lyub;->i:Let;
+
+    invoke-virtual {v0, p1}, Let;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final get()Lfvg;
+    .locals 12
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lyub;->i:Let;
 
-    const-string v1, "ShowSnackbar(title="
+    invoke-virtual {v0}, Let;->isEmpty()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-object v1, p0, Lyub;->a:Loef;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lyub;->f:Ljava/lang/String;
 
-    const-string v1, ", iconRes="
+    const-string v1, "Players pool. Pool is empty create new player"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lyub;->b:Ljava/lang/Integer;
+    iget-object v0, p0, Lyub;->g:Lru7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lkq5;
+
+    check-cast v0, Luq5;
+
+    invoke-virtual {v0}, Luq5;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lc8b;
+
+    iget-object v1, p0, Lyub;->a:Landroid/app/Application;
+
+    iget-object v2, p0, Lyub;->b:Lvf5;
+
+    iget-object v3, p0, Lyub;->e:Loub;
+
+    iget-object v4, p0, Lyub;->h:Lru7;
+
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lfr;
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lc8b;-><init>(Landroid/content/Context;Lvf5;Loub;Lfr;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v5, Lgvg;
+
+    iget-object v6, p0, Lyub;->a:Landroid/app/Application;
+
+    iget-object v7, p0, Lyub;->b:Lvf5;
+
+    iget-object v8, p0, Lyub;->c:Lvh5;
+
+    iget-object v9, p0, Lyub;->d:Lru7;
+
+    iget-object v10, p0, Lyub;->e:Loub;
+
+    iget-object v0, p0, Lyub;->h:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v11, v0
+
+    check-cast v11, Lfr;
+
+    invoke-direct/range {v5 .. v11}, Lgvg;-><init>(Landroid/content/Context;Lvf5;Lvh5;Lru7;Loub;Lfr;)V
+
+    return-object v5
+
+    :cond_1
+    iget-object v0, p0, Lyub;->i:Let;
+
+    iget v1, v0, Let;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v1}, Let;->e(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfvg;
+
+    iget-object v1, p0, Lyub;->f:Ljava/lang/String;
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v3, La98;->d:La98;
+
+    invoke-virtual {v2, v3}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Players pool. Pool has player, "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v3, v1, v4, v5}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_0
     return-object v0
 .end method

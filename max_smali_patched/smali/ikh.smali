@@ -1,39 +1,71 @@
-.class public final Likh;
-.super Lcfh;
+.class public abstract synthetic Likh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lt5f;
-
-.field public final e:Ltbf;
-
-.field public final synthetic f:Lmkh;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lmkh;Ltbf;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lt5f;
+    invoke-static {}, Landroid/text/Layout$Alignment;->values()[Landroid/text/Layout$Alignment;
 
-    const-string v1, "OnRequestInstallCallback"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lt5f;-><init>(Ljava/lang/String;)V
+    array-length v0, v0
 
-    iput-object p1, p0, Likh;->f:Lmkh;
+    new-array v0, v0, [I
 
-    const/4 p1, 0x3
+    sput-object v0, Likh;->a:[I
 
-    invoke-direct {p0, p1}, Lcfh;-><init>(I)V
+    :try_start_0
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    const-string p1, "com.google.android.play.core.inappreview.protocol.IInAppReviewServiceCallback"
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    move-result v1
 
-    iput-object v0, p0, Likh;->d:Lt5f;
+    const/4 v2, 0x1
 
-    iput-object p2, p0, Likh;->e:Ltbf;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
+    :catch_0
+    :try_start_1
+    sget-object v0, Likh;->a:[I
+
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Likh;->a:[I
+
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
 .end method

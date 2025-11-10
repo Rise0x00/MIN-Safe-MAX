@@ -1,66 +1,62 @@
-.class public final synthetic Llug;
+.class public final Llug;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Loi6;
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:I
-
-.field public final synthetic a:J
-
-.field public final synthetic b:Lhqg;
-
-.field public final synthetic c:Ljava/lang/Long;
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic b:Lopg;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLhqg;Ljava/lang/Long;Ljava/lang/String;ZI)V
+.method public synthetic constructor <init>(Lopg;I)V
     .locals 0
 
+    iput p2, p0, Llug;->a:I
+
+    iput-object p1, p0, Llug;->b:Lopg;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Llug;->a:J
-
-    iput-object p3, p0, Llug;->b:Lhqg;
-
-    iput-object p4, p0, Llug;->c:Ljava/lang/Long;
-
-    iput-object p5, p0, Llug;->o:Ljava/lang/String;
-
-    iput-boolean p6, p0, Llug;->X:Z
-
-    iput p7, p0, Llug;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    iget v0, p0, Llug;->a:I
 
-    iget-wide v1, p0, Llug;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v3, p0, Llug;->b:Lhqg;
+    iget-object v0, p0, Llug;->b:Lopg;
 
-    iget-object v4, p0, Llug;->c:Ljava/lang/Long;
+    const/4 v1, 0x0
 
-    iget-object v5, p0, Llug;->o:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-boolean v6, p0, Llug;->X:Z
-
-    iget v7, p0, Llug;->Y:I
-
-    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLhqg;Ljava/lang/Long;Ljava/lang/String;ZI)V
+    sget-object v0, Lybg;->a:Lybg;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Llug;->b:Lopg;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

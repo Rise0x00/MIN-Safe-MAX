@@ -1,65 +1,23 @@
 .class public final Lez9;
-.super Lxn3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lfr6;
+
+.field public final b:J
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lfr6;J)V
+    .locals 0
 
-    const-string v0, "NetworkNotRoamingCtrlr"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lez9;->a:Lfr6;
+
+    iput-wide p2, p0, Lez9;->b:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lbah;)Z
-    .locals 1
-
-    iget-object p1, p1, Lbah;->j:Lro3;
-
-    iget p1, p1, Lro3;->a:I
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final b(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p1, Lfz9;
-
-    iget-boolean v0, p1, Lfz9;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean p1, p1, Lfz9;->d:Z
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
 .end method

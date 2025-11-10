@@ -1,200 +1,43 @@
 .class public final Ln0g;
-.super Lbj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Z
+.field public final a:Ltif;
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Ljava/util/Set;
+.field public final b:Ltif;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJJ)V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    .line 1
-    sget-object v5, Ll75;->a:Ll75;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v6, 0x0
+    new-instance v0, La0g;
 
-    move-object v0, p0
+    const/4 v1, 0x1
 
-    move-wide v1, p2
+    invoke-direct {v0, p1, v1}, La0g;-><init>(Landroid/content/Context;I)V
 
-    move-wide v3, p4
+    new-instance p1, Ltif;
 
-    .line 2
-    invoke-direct/range {v0 .. v6}, Ln0g;-><init>(JJLjava/util/Set;Z)V
+    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
 
-    return-void
-.end method
+    iput-object p1, p0, Ln0g;->a:Ltif;
 
-.method public constructor <init>(JJLjava/util/Set;Z)V
-    .locals 0
+    new-instance p1, Loe;
 
-    .line 3
-    invoke-direct {p0}, Lbj0;-><init>()V
+    const/16 v0, 0xd
 
-    .line 4
-    iput-wide p1, p0, Ln0g;->b:J
+    invoke-direct {p1, v0, p0}, Loe;-><init>(ILjava/lang/Object;)V
 
-    .line 5
-    iput-wide p3, p0, Ln0g;->c:J
+    new-instance v0, Ltif;
 
-    .line 6
-    iput-object p5, p0, Ln0g;->o:Ljava/util/Set;
+    invoke-direct {v0, p1}, Ltif;-><init>(Loi6;)V
 
-    .line 7
-    iput-boolean p6, p0, Ln0g;->X:Z
+    iput-object v0, p0, Ln0g;->b:Ltif;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ln0g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ln0g;
-
-    iget-wide v3, p0, Ln0g;->b:J
-
-    iget-wide v5, p1, Ln0g;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Ln0g;->c:J
-
-    iget-wide v5, p1, Ln0g;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ln0g;->o:Ljava/util/Set;
-
-    iget-object v3, p1, Ln0g;->o:Ljava/util/Set;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Ln0g;->X:Z
-
-    iget-boolean p1, p1, Ln0g;->X:Z
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Ln0g;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ln0g;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Ln0g;->o:Ljava/util/Set;
-
-    invoke-static {v2, v0, v1}, Lnd5;->f(Ljava/util/Set;II)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Ln0g;->X:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "UpdateMessageEvent(chatId="
-
-    const-string v1, ", messageId="
-
-    iget-wide v2, p0, Ln0g;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Ln0g;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", reactionsToAnimate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln0g;->o:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", reactionsChanged="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Ln0g;->X:Z
-
-    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

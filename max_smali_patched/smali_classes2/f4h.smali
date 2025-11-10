@@ -1,50 +1,56 @@
 .class public final Lf4h;
-.super Ljava/lang/Object;
+.super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
 # interfaces
-.implements Li4h;
-
-
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget v0, Lbza;->h:I
-
-    iput v0, p0, Lf4h;->a:I
-
-    return-void
-.end method
+.implements Lzv4;
 
 
 # virtual methods
-.method public final f()I
+.method public final dispose()V
     .locals 1
 
-    const/4 v0, 0x4
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzv4;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lzv4;->dispose()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzv4;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lzv4;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
-.end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lf4h;->a:I
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
     return v0
 .end method

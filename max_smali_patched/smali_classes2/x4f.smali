@@ -1,221 +1,60 @@
 .class public final Lx4f;
-.super Landroid/widget/FrameLayout;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Le5f;
 
 
 # instance fields
-.field public final synthetic a:Lf5f;
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljf9;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Lf5f;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx4f;->a:Lf5f;
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public getOnRequestInterceptTouchEvent()Lve6;
+.method public final d(Ljf9;Ljava/lang/String;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lve6;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lx4f;->a:Lf5f;
+    const-string v0, "url"
 
-    iget-object v0, v0, Lf5f;->b:Lve6;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Ljf9;->u0()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx4f;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ljf9;->v()V
+
+    return-void
 .end method
 
-.method public getOnTouch()Lxe6;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lxe6;"
-        }
-    .end annotation
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lx4f;->a:Lf5f;
+    iget-object v0, p0, Lx4f;->c:Ljava/lang/String;
 
-    iget-object v0, v0, Lf5f;->a:Lxe6;
+    const-string v1, "{url=\'"
 
-    return-object v0
-.end method
+    const-string v2, "\'}"
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    iget-object v0, p0, Lx4f;->a:Lf5f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lf5f;->a:Lxe6;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    iget-object v0, p0, Lx4f;->a:Lf5f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lf5f;->a:Lxe6;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final requestDisallowInterceptTouchEvent(Z)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    iget-object p1, p0, Lx4f;->a:Lf5f;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lf5f;->b:Lve6;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public setOnRequestInterceptTouchEvent(Lve6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lve6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lx4f;->a:Lf5f;
-
-    iput-object p1, v0, Lf5f;->b:Lve6;
-
-    return-void
-.end method
-
-.method public setOnTouch(Lxe6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lxe6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lx4f;->a:Lf5f;
-
-    iput-object p1, v0, Lf5f;->a:Lxe6;
-
-    return-void
+    return-object v0
 .end method

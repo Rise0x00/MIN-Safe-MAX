@@ -1,57 +1,91 @@
-.class public final Lej7;
-.super Lwi7;
+.class public abstract Lej7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/lang/Object;
-
-.field public final b:Llj7;
-
-.field public final c:Lfj7;
-
-.field public final o:Ll33;
-
-
 # direct methods
-.method public constructor <init>(Llj7;Lfj7;Ll33;Ljava/lang/Object;)V
+.method public static a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)[Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;)[TT;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getParcelableArrayExtra(Ljava/lang/String;Ljava/lang/Class;)[Ljava/lang/Object;
 
-    iput-object p1, p0, Lej7;->b:Llj7;
+    move-result-object p0
 
-    iput-object p2, p0, Lej7;->c:Lfj7;
-
-    iput-object p3, p0, Lej7;->o:Ll33;
-
-    iput-object p4, p0, Lej7;->X:Ljava/lang/Object;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "+TT;>;)",
+            "Ljava/util/ArrayList<",
+            "TT;>;"
+        }
+    .end annotation
 
-# virtual methods
-.method public final c()Z
-    .locals 1
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
+    move-result-object p0
 
-    return v0
+    return-object p0
 .end method
 
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 3
+.method public static c(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lej7;->o:Ll33;
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lej7;->X:Ljava/lang/Object;
+    move-result-object p0
 
-    iget-object v1, p0, Lej7;->b:Llj7;
+    return-object p0
+.end method
 
-    iget-object v2, p0, Lej7;->c:Lfj7;
+.method public static d(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T::",
+            "Ljava/io/Serializable;",
+            ">(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-    invoke-static {v1, v2, p1, v0}, Llj7;->access$continueCompleting(Llj7;Lfj7;Ll33;Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;Ljava/lang/Class;)Ljava/io/Serializable;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method

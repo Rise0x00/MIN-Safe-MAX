@@ -1,25 +1,22 @@
-.class public final Lm2h;
+.class public final synthetic Lm2h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgs1;
 
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
 
-    sget-object v0, Ln2h;->a:Ljava/lang/Object;
+# instance fields
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;)V
+    .locals 0
 
-    check-cast v0, Lum7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object p1, p0, Lm2h;->a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+
+    return-void
 .end method

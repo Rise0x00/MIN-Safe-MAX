@@ -1,175 +1,312 @@
 .class public final Ln12;
-.super Ljava/lang/Object;
+.super Lsk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lo12;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A0:J
 
-.field public final b:Ljava/lang/Object;
+.field public final w0:Lze4;
+
+.field public final x0:Lbjg;
+
+.field public y0:J
+
+.field public z0:Lm12;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput p1, p0, Ln12;->a:I
+    const/4 v0, 0x6
 
-    iput-object p2, p0, Ln12;->b:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lsk0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lze4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lze4;-><init>(I)V
+
+    iput-object v0, p0, Ln12;->w0:Lze4;
+
+    new-instance v0, Lbjg;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lbjg;-><init>(IZ)V
+
+    iput-object v0, p0, Ln12;->x0:Lbjg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Throwable;)V
+.method public final a(ILjava/lang/Object;)V
     .locals 1
 
-    iget v0, p0, Ln12;->a:I
+    const/16 v0, 0x8
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Ln12;->b:Ljava/lang/Object;
+    check-cast p2, Lm12;
 
-    check-cast p1, Lvs4;
-
-    invoke-interface {p1}, Lvs4;->dispose()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ln12;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxe6;
-
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ln12;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    iput-object p2, p0, Ln12;->z0:Lm12;
 
     :cond_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final f()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Ln12;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisposeOnCancel["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ln12;->b:Ljava/lang/Object;
-
-    check-cast v1, Lvs4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "CameraMotionRenderer"
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final h()Z
+    .locals 1
 
-    const-string v1, "CancelHandler.UserSupplied["
+    invoke-virtual {p0}, Lsk0;->g()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-object v1, p0, Ln12;->b:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v1, Lxe6;
+.method public final i()Z
+    .locals 1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final j()V
+    .locals 1
+
+    iget-object v0, p0, Ln12;->z0:Lm12;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lm12;->c()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final l(JZ)V
+    .locals 0
+
+    const-wide/high16 p1, -0x8000000000000000L
+
+    iput-wide p1, p0, Ln12;->A0:J
+
+    iget-object p1, p0, Ln12;->z0:Lm12;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lm12;->c()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p([Lsb6;JJ)V
+    .locals 0
+
+    iput-wide p4, p0, Ln12;->y0:J
+
+    return-void
+.end method
+
+.method public final t(JJ)V
+    .locals 4
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Lsk0;->g()Z
+
+    move-result p3
+
+    if-nez p3, :cond_6
+
+    iget-wide p3, p0, Ln12;->A0:J
+
+    const-wide/32 v0, 0x186a0
+
+    add-long/2addr v0, p1
+
+    cmp-long p3, p3, v0
+
+    if-gez p3, :cond_6
+
+    iget-object p3, p0, Ln12;->w0:Lze4;
+
+    invoke-virtual {p3}, Lze4;->w()V
+
+    iget-object p4, p0, Lsk0;->b:Ltz8;
+
+    invoke-virtual {p4}, Ltz8;->h()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p4, p3, v0}, Lsk0;->q(Ltz8;Lze4;I)I
+
+    move-result p4
+
+    const/4 v1, -0x4
+
+    if-ne p4, v1, :cond_6
+
+    const/4 p4, 0x4
+
+    invoke-virtual {p3, p4}, Lqy;->j(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    iget-wide v1, p3, Lze4;->X:J
+
+    iput-wide v1, p0, Ln12;->A0:J
+
+    iget-object v1, p0, Ln12;->z0:Lm12;
+
+    if-eqz v1, :cond_0
+
+    const/high16 v1, -0x80000000
+
+    invoke-virtual {p3, v1}, Lqy;->j(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p3}, Lze4;->z()V
+
+    iget-object p3, p3, Lze4;->d:Ljava/nio/ByteBuffer;
+
+    sget v1, Ljig;->a:I
+
+    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-eq v1, v2, :cond_3
+
+    const/4 p3, 0x0
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
 
-    move-result-object v1
+    move-result v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Ln12;->x0:Lbjg;
 
-    const/16 v1, 0x40
+    invoke-virtual {v3, v2, v1}, Lbjg;->C(I[B)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
-    invoke-static {p0}, Lvb4;->q(Ljava/lang/Object;)Ljava/lang/String;
+    move-result p3
 
-    move-result-object v1
+    add-int/2addr p3, p4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p3}, Lbjg;->E(I)V
 
-    const/16 v1, 0x5d
+    const/4 p3, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    new-array p4, p3, [F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    if-ge v0, p3, :cond_4
 
-    move-result-object v0
+    invoke-virtual {v3}, Lbjg;->h()I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
 
-    const-string v1, "CancelFutureOnCancel["
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    aput v1, p4, v0
 
-    iget-object v1, p0, Ln12;->b:Ljava/lang/Object;
+    add-int/lit8 v0, v0, 0x1
 
-    check-cast v1, Ljava/util/concurrent/ScheduledFuture;
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_4
+    move-object p3, p4
 
-    const/16 v1, 0x5d
+    :goto_2
+    if-nez p3, :cond_5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_5
+    iget-object p4, p0, Ln12;->z0:Lm12;
 
-    move-result-object v0
+    iget-wide v0, p0, Ln12;->A0:J
 
-    return-object v0
+    iget-wide v2, p0, Ln12;->y0:J
 
-    nop
+    sub-long/2addr v0, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p4, v0, v1, p3}, Lm12;->b(J[F)V
+
+    goto/16 :goto_0
+
+    :cond_6
+    :goto_3
+    return-void
+.end method
+
+.method public final x(Lsb6;)I
+    .locals 1
+
+    const-string v0, "application/x-camera-motion"
+
+    iget-object p1, p1, Lsb6;->v0:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x4
+
+    invoke-static {p1, v0, v0}, Lsk0;->b(III)I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-static {v0, v0, v0}, Lsk0;->b(III)I
+
+    move-result p1
+
+    return p1
 .end method

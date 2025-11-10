@@ -1,94 +1,133 @@
-.class public final Li62;
-.super Lm3f;
+.class public final synthetic Li62;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic X:Lj62;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lj62;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Li62;->X:Lj62;
+    iput p2, p0, Li62;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Li62;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Le34;
+    iget v0, p0, Li62;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Li62;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    sget-object v0, Lbud;->a:Lbud;
+
+    invoke-virtual {v0}, Lbud;->j()Lowd;
+
+    move-result-object v0
+
+    iget-object v1, p0, Li62;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p1, v1}, Lowd;->i(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    check-cast p1, Li62;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Li62;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Li62;
-
-    iget-object v0, p0, Li62;->X:Lj62;
-
-    invoke-direct {p1, v0, p2}, Li62;-><init>(Lj62;Lkotlin/coroutines/Continuation;)V
-
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :pswitch_0
+    check-cast p1, Ljava/lang/Runnable;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-string v0, "watchdog-"
 
-    iget-object p1, p0, Li62;->X:Lj62;
+    iget-object v1, p0, Li62;->b:Ljava/lang/String;
 
-    iget-object v0, p1, Lj62;->o:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lm13;
+    new-instance v1, Lqg5;
 
-    iget-wide v1, p1, Lj62;->b:J
+    const/4 v2, 0x3
 
-    check-cast v0, Lm23;
+    invoke-direct {v1, p1, v2}, Lqg5;-><init>(Ljava/lang/Runnable;I)V
 
-    invoke-virtual {v0}, Lm23;->M()Lub2;
+    invoke-static {v0, v1}, Lmrh;->b(Ljava/lang/String;Loi6;)V
+
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    const-string v0, "watchdog-"
+
+    iget-object v1, p0, Li62;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lub2;->Q(J)V
+    new-instance v1, Lqg5;
 
-    iget-object p1, p1, Lj62;->Z:Ljb5;
+    const/4 v2, 0x2
 
-    sget-object v0, Lz1c;->b:Lz1c;
+    invoke-direct {v1, p1, v2}, Lqg5;-><init>(Ljava/lang/Runnable;I)V
 
-    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lmrh;->b(Ljava/lang/String;Loi6;)V
 
-    sget-object p1, Loyf;->a:Loyf;
+    goto :goto_1
 
-    return-object p1
+    :pswitch_2
+    iget-object v0, p0, Li62;->b:Ljava/lang/String;
+
+    check-cast p1, Lfd2;
+
+    iput-object v0, p1, Lfd2;->g:Ljava/lang/String;
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

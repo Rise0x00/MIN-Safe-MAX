@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lw12;
+.implements Lv22;
 
 
 # instance fields

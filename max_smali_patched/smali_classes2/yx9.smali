@@ -1,11 +1,15 @@
-.class public interface abstract Lyx9;
-.super Ljava/lang/Object;
+.class public final Lyx9;
+.super Lkh;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract onFailed(Ljava/lang/Throwable;)V
-.end method
+.method public final P()S
+    .locals 1
 
-.method public abstract onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    sget-object v0, Lo8b;->c:Lv40;
+
+    const/16 v0, 0x41
+
+    return v0
 .end method

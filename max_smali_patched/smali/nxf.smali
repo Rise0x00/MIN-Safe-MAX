@@ -1,396 +1,359 @@
 .class public final Lnxf;
-.super Landroid/text/style/ReplacementSpan;
+.super Lwi0;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Landroid/text/TextPaint;
-
-.field public final a:Landroid/graphics/Paint$FontMetricsInt;
-
-.field public final b:Lmxf;
-
-.field public c:S
-
-.field public o:F
-
-
-# direct methods
-.method public constructor <init>(Lmxf;)V
-    .locals 1
-
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
-
-    new-instance v0, Landroid/graphics/Paint$FontMetricsInt;
-
-    invoke-direct {v0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
-
-    iput-object v0, p0, Lnxf;->a:Landroid/graphics/Paint$FontMetricsInt;
-
-    const/4 v0, -0x1
-
-    iput-short v0, p0, Lnxf;->c:S
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p0, Lnxf;->o:F
-
-    const-string v0, "rasterizer cannot be null"
-
-    invoke-static {p1, v0}, Ll74;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lnxf;->b:Lmxf;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 18
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 11
 
-    move-object/from16 v0, p0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    move-object/from16 v1, p2
+    move-result v0
 
-    move-object/from16 v2, p9
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    instance-of v3, v1, Landroid/text/Spanned;
+    move-result v1
 
-    const/4 v4, 0x0
+    sub-int v2, v1, v0
 
-    if-eqz v3, :cond_4
+    iget-object v3, p0, Lwi0;->b:Ll50;
 
-    check-cast v1, Landroid/text/Spanned;
+    iget v3, v3, Ll50;->c:I
 
-    const-class v3, Landroid/text/style/CharacterStyle;
+    const/high16 v4, 0x60000000
 
-    move/from16 v5, p3
+    const/high16 v5, 0x50000000
 
-    move/from16 v6, p4
+    const/high16 v6, 0x10000000
 
-    invoke-interface {v1, v5, v6, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    const/16 v7, 0x16
 
-    move-result-object v1
+    const/16 v8, 0x15
 
-    check-cast v1, [Landroid/text/style/CharacterStyle;
+    const/4 v9, 0x4
 
-    array-length v3, v1
+    const/4 v10, 0x3
 
-    if-eqz v3, :cond_3
+    if-eq v3, v10, :cond_2
 
-    array-length v3, v1
+    if-eq v3, v9, :cond_3
 
-    const/4 v5, 0x0
+    if-eq v3, v8, :cond_1
 
-    const/4 v6, 0x1
+    if-eq v3, v7, :cond_3
 
-    if-ne v3, v6, :cond_0
+    if-eq v3, v6, :cond_4
 
-    aget-object v3, v1, v5
+    if-eq v3, v5, :cond_1
 
-    if-ne v3, v0, :cond_0
+    if-ne v3, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    div-int/lit8 v2, v2, 0x3
+
+    :cond_2
+    mul-int/lit8 v2, v2, 0x2
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    div-int/lit8 v2, v2, 0x2
+
+    :cond_4
+    :goto_1
+    invoke-virtual {p0, v2}, Lwi0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lwi0;->b:Ll50;
+
+    iget v3, v3, Ll50;->c:I
+
+    if-eq v3, v10, :cond_b
+
+    if-eq v3, v9, :cond_a
+
+    if-eq v3, v8, :cond_9
+
+    if-eq v3, v7, :cond_8
+
+    if-eq v3, v6, :cond_7
+
+    if-eq v3, v5, :cond_6
+
+    if-ne v3, v4, :cond_5
+
+    :goto_2
+    if-ge v0, v1, :cond_c
+
+    add-int/lit8 v3, v0, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
 
     goto :goto_2
 
-    :cond_0
-    iget-object v3, v0, Lnxf;->X:Landroid/text/TextPaint;
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-nez v3, :cond_1
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    new-instance v3, Landroid/text/TextPaint;
+    throw p1
 
-    invoke-direct {v3}, Landroid/text/TextPaint;-><init>()V
+    :cond_6
+    :goto_3
+    if-ge v0, v1, :cond_c
 
-    iput-object v3, v0, Lnxf;->X:Landroid/text/TextPaint;
+    add-int/lit8 v3, v0, 0x1
 
-    :cond_1
-    move-object v4, v3
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    invoke-virtual {v4, v2}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+    move-result v3
 
-    :goto_0
-    array-length v3, v1
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    if-ge v5, v3, :cond_2
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
-    aget-object v3, v1, v5
+    move-result v3
 
-    invoke-virtual {v3, v4}, Landroid/text/style/CharacterStyle;->updateDrawState(Landroid/text/TextPaint;)V
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    move-object v10, v4
+    add-int/lit8 v0, v0, 0x3
 
     goto :goto_3
 
-    :cond_3
-    :goto_2
-    instance-of v1, v2, Landroid/text/TextPaint;
+    :cond_7
+    :goto_4
+    if-ge v0, v1, :cond_c
 
-    if-eqz v1, :cond_2
+    add-int/lit8 v3, v0, 0x1
 
-    move-object v4, v2
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    check-cast v4, Landroid/text/TextPaint;
+    move-result v3
 
-    goto :goto_1
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    :cond_4
-    instance-of v1, v2, Landroid/text/TextPaint;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
-    if-eqz v1, :cond_2
+    move-result v3
 
-    move-object v4, v2
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    check-cast v4, Landroid/text/TextPaint;
-
-    goto :goto_1
-
-    :goto_3
-    if-eqz v10, :cond_5
-
-    iget v1, v10, Landroid/text/TextPaint;->bgColor:I
-
-    if-eqz v1, :cond_5
-
-    iget-short v1, v0, Lnxf;->c:S
-
-    int-to-float v1, v1
-
-    add-float v8, p5, v1
-
-    move/from16 v1, p6
-
-    int-to-float v7, v1
-
-    move/from16 v1, p8
-
-    int-to-float v9, v1
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v1
-
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getStyle()Landroid/graphics/Paint$Style;
-
-    move-result-object v3
-
-    iget v4, v10, Landroid/text/TextPaint;->bgColor:I
-
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    move-object/from16 v5, p1
-
-    move/from16 v6, p5
-
-    invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {v10, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v10, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_5
-    invoke-static {}, Ll45;->a()Ll45;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move/from16 v1, p7
-
-    int-to-float v1, v1
-
-    if-eqz v10, :cond_6
+    add-int/lit8 v0, v0, 0x2
 
     goto :goto_4
 
-    :cond_6
-    move-object v10, v2
+    :cond_8
+    :goto_5
+    if-ge v0, v1, :cond_c
 
-    :goto_4
-    iget-object v2, v0, Lnxf;->b:Lmxf;
+    add-int/lit8 v3, v0, 0x2
 
-    iget-object v3, v2, Lmxf;->b:Luk9;
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    iget-object v4, v3, Luk9;->d:Landroid/graphics/Typeface;
+    move-result v3
 
-    invoke-virtual {v10}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    move-result-object v5
+    add-int/lit8 v3, v0, 0x3
 
-    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    iget v2, v2, Lmxf;->a:I
+    move-result v3
 
-    mul-int/lit8 v13, v2, 0x2
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    iget-object v12, v3, Luk9;->b:[C
+    add-int/lit8 v0, v0, 0x4
 
-    const/4 v14, 0x2
+    goto :goto_5
 
-    move-object/from16 v11, p1
+    :cond_9
+    :goto_6
+    if-ge v0, v1, :cond_c
 
-    move/from16 v15, p5
+    add-int/lit8 v3, v0, 0x1
 
-    move/from16 v16, v1
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    move-object/from16 v17, v10
+    move-result v3
 
-    invoke-virtual/range {v11 .. v17}, Landroid/graphics/Canvas;->drawText([CIIFFLandroid/graphics/Paint;)V
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v10, v5}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_6
+
+    :cond_a
+    :goto_7
+    if-ge v0, v1, :cond_c
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
+
+    move-result v3
+
+    const/high16 v4, -0x40800000    # -1.0f
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-static {v3, v4, v5}, Llig;->h(FFF)F
+
+    move-result v3
+
+    const v4, 0x46fffe00    # 32767.0f
+
+    mul-float/2addr v3, v4
+
+    float-to-int v3, v3
+
+    int-to-short v3, v3
+
+    and-int/lit16 v4, v3, 0xff
+
+    int-to-byte v4, v4
+
+    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    shr-int/lit8 v3, v3, 0x8
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_7
+
+    :cond_b
+    :goto_8
+    if-ge v0, v1, :cond_c
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v3, v3, -0x80
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_8
+
+    :cond_c
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-void
 .end method
 
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 4
+.method public final g(Ll50;)Ll50;
+    .locals 3
 
-    iget-object p2, p0, Lnxf;->a:Landroid/graphics/Paint$FontMetricsInt;
+    iget v0, p1, Ll50;->c:I
 
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
+    const/4 v1, 0x3
 
-    iget p1, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    const/4 v2, 0x2
 
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    if-eq v0, v1, :cond_1
 
-    sub-int/2addr p1, p3
+    if-eq v0, v2, :cond_1
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+    const/high16 v1, 0x10000000
 
-    move-result p1
+    if-eq v0, v1, :cond_1
 
-    int-to-float p1, p1
+    const/16 v1, 0x15
 
-    const/high16 p3, 0x3f800000    # 1.0f
+    if-eq v0, v1, :cond_1
 
-    mul-float/2addr p1, p3
+    const/high16 v1, 0x50000000
 
-    iget-object p3, p0, Lnxf;->b:Lmxf;
+    if-eq v0, v1, :cond_1
 
-    invoke-virtual {p3}, Lmxf;->b()Lmk9;
+    const/16 v1, 0x16
 
-    move-result-object p4
+    if-eq v0, v1, :cond_1
 
-    const/16 v0, 0xe
+    const/high16 v1, 0x60000000
 
-    invoke-virtual {p4, v0}, Lq98;->a(I)I
+    if-eq v0, v1, :cond_1
 
-    move-result v1
+    const/4 v1, 0x4
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-object v3, p4, Lq98;->o:Ljava/lang/Object;
-
-    check-cast v3, Ljava/nio/ByteBuffer;
-
-    iget p4, p4, Lq98;->a:I
-
-    add-int/2addr v1, p4
-
-    invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result p4
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p4, v2
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    :goto_0
-    int-to-float p4, p4
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ll50;)V
 
-    div-float/2addr p1, p4
-
-    iput p1, p0, Lnxf;->o:F
-
-    invoke-virtual {p3}, Lmxf;->b()Lmk9;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Lq98;->a(I)I
-
-    move-result p4
-
-    if-eqz p4, :cond_1
-
-    iget-object v0, p1, Lq98;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/nio/ByteBuffer;
-
-    iget p1, p1, Lq98;->a:I
-
-    add-int/2addr p4, p1
-
-    invoke-virtual {v0, p4}, Ljava/nio/ByteBuffer;->getShort(I)S
+    throw v0
 
     :cond_1
-    invoke-virtual {p3}, Lmxf;->b()Lmk9;
+    :goto_0
+    if-eq v0, v2, :cond_2
 
-    move-result-object p1
+    new-instance v0, Ll50;
 
-    const/16 p3, 0xc
+    iget v1, p1, Ll50;->a:I
 
-    invoke-virtual {p1, p3}, Lq98;->a(I)I
+    iget p1, p1, Ll50;->b:I
 
-    move-result p3
+    invoke-direct {v0, v1, p1, v2}, Ll50;-><init>(III)V
 
-    if-eqz p3, :cond_2
-
-    iget-object p4, p1, Lq98;->o:Ljava/lang/Object;
-
-    check-cast p4, Ljava/nio/ByteBuffer;
-
-    iget p1, p1, Lq98;->a:I
-
-    add-int/2addr p3, p1
-
-    invoke-virtual {p4, p3}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v2
+    return-object v0
 
     :cond_2
-    int-to-float p1, v2
+    sget-object p1, Ll50;->e:Ll50;
 
-    iget p3, p0, Lnxf;->o:F
-
-    mul-float/2addr p1, p3
-
-    float-to-int p1, p1
-
-    int-to-short p1, p1
-
-    iput-short p1, p0, Lnxf;->c:S
-
-    if-eqz p5, :cond_3
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    :cond_3
-    return p1
+    return-object p1
 .end method

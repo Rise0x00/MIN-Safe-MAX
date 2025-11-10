@@ -1,25 +1,109 @@
-.class public final Lo2b;
+.class public abstract Lo2b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/LinkedBlockingDeque;
+# static fields
+.field public static final a:I
 
-.field public volatile b:Lno7;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lbpc;->oneme_settings_change_avatar_cancel:I
 
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingDeque;
+    sput v0, Lo2b;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
+    sget v0, Lbpc;->oneme_settings_change_avatar_upload_from_camera:I
 
-    iput-object v0, p0, Lo2b;->a:Ljava/util/concurrent/LinkedBlockingDeque;
+    sput v0, Lo2b;->b:I
+
+    sget v0, Lbpc;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Lo2b;->c:I
+
+    sget v0, Lbpc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Lo2b;->d:I
+
+    sget v0, Lbpc;->oneme_settings_collapsingstoolbar:I
+
+    sput v0, Lo2b;->e:I
+
+    sget v0, Lbpc;->oneme_settings_container:I
+
+    sput v0, Lo2b;->f:I
+
+    sget v0, Lbpc;->oneme_settings_list_screen_appbar:I
+
+    sput v0, Lo2b;->g:I
+
+    sget v0, Lbpc;->oneme_settings_list_screen_pinned_toolbar:I
+
+    sput v0, Lo2b;->h:I
+
+    sget v0, Lbpc;->oneme_settings_toolbar:I
+
+    sput v0, Lo2b;->i:I
+
+    sget v0, Lbpc;->oneme_settings_topbar:I
+
+    sput v0, Lo2b;->j:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_avatar:I
+
+    sput v0, Lo2b;->k:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_container:I
+
+    sput v0, Lo2b;->l:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_dotdivider:I
+
+    sput v0, Lo2b;->m:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_name:I
+
+    sput v0, Lo2b;->n:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_nick:I
+
+    sput v0, Lo2b;->o:I
+
+    sget v0, Lbpc;->oneme_settings_topbar_phone:I
+
+    sput v0, Lo2b;->p:I
 
     return-void
 .end method

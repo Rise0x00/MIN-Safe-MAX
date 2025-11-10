@@ -1,98 +1,365 @@
 .class public final Lhx8;
-.super Lm3f;
+.super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/view/LayoutInflater;
 
-.field public final synthetic Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+.field public final b:Landroid/graphics/drawable/Drawable;
+
+.field public final c:Landroid/graphics/drawable/Drawable;
+
+.field public final d:Landroid/graphics/drawable/Drawable;
+
+.field public final o:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
+    .locals 5
 
-    iput-object p2, p0, Lhx8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    const/4 v0, 0x0
 
-    const/4 p2, 0x2
+    invoke-direct {p0, p1, v0, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lhx8;->a:Landroid/view/LayoutInflater;
+
+    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget v1, Ldkc;->mediaRouteDefaultIconDrawable:I
+
+    sget v2, Ldkc;->mediaRouteTvIconDrawable:I
+
+    sget v3, Ldkc;->mediaRouteSpeakerIconDrawable:I
+
+    sget v4, Ldkc;->mediaRouteSpeakerGroupIconDrawable:I
+
+    filled-new-array {v1, v2, v3, v4}, [I
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v0, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lhx8;->b:Landroid/graphics/drawable/Drawable;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lhx8;->c:Landroid/graphics/drawable/Drawable;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lhx8;->d:Landroid/graphics/drawable/Drawable;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhx8;->o:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final areAllItemsEnabled()Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lhx8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
+.end method
+
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lhx8;->a:Landroid/view/LayoutInflater;
+
+    sget v1, Lkqc;->mr_chooser_list_item:I
+
+    invoke-virtual {p2, v1, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lhx8;
+    check-cast p1, Lvy8;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget p3, Lsmc;->mr_chooser_route_name:I
 
-    invoke-virtual {p1, p2}, Lhx8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return-object p2
-.end method
+    move-result-object p3
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast p3, Landroid/widget/TextView;
 
-    new-instance v0, Lhx8;
+    sget v1, Lsmc;->mr_chooser_route_desc:I
 
-    iget-object v1, p0, Lhx8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {v0, p2, v1}, Lhx8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+    move-result-object v1
 
-    iput-object p1, v0, Lhx8;->X:Ljava/lang/Object;
+    check-cast v1, Landroid/widget/TextView;
 
-    return-object v0
-.end method
+    iget-object v2, p1, Lvy8;->d:Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-virtual {p3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v2, p1, Lvy8;->e:Ljava/lang/String;
 
-    iget-object p1, p0, Lhx8;->X:Ljava/lang/Object;
+    iget v3, p1, Lvy8;->h:I
 
-    check-cast p1, Lfx8;
+    const/4 v4, 0x1
 
-    sget-object v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Ltm7;
+    const/4 v5, 0x2
 
-    iget-object v0, p0, Lhx8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    if-eq v3, v5, :cond_1
 
-    iget-object v0, v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->o:Lan0;
+    if-ne v3, v4, :cond_2
 
-    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Ltm7;
+    :cond_1
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const/4 v2, 0x2
+    move-result v3
 
-    aget-object v1, v1, v2
+    if-nez v3, :cond_2
 
-    invoke-virtual {v0}, Lan0;->getValue()Ljava/lang/Object;
+    const/16 v3, 0x50
+
+    invoke-virtual {p3, v3}, Landroid/widget/TextView;->setGravity(I)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v0, 0x10
+
+    invoke-virtual {p3, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/16 p3, 0x8
+
+    invoke-virtual {v1, p3}, Landroid/view/View;->setVisibility(I)V
+
+    const-string p3, ""
+
+    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    iget-boolean p3, p1, Lvy8;->g:Z
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setEnabled(Z)V
+
+    sget p3, Lsmc;->mr_chooser_route_icon:I
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/ImageView;
+
+    if-eqz p3, :cond_7
+
+    iget-object v0, p1, Lvy8;->f:Landroid/net/Uri;
+
+    if-eqz v0, :cond_3
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Landroid/graphics/drawable/Drawable;->createFromStream(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to load "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Low8;
+    const-string v2, "MediaRouteChooserDialog"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    sget-object p1, Lbx8;->a:Lbx8;
+    :cond_3
+    iget v0, p1, Lvy8;->m:I
 
-    invoke-virtual {v0, p1}, Low8;->setSelected(Lex8;)V
+    if-eq v0, v4, :cond_6
 
-    sget-object p1, Loyf;->a:Loyf;
+    if-eq v0, v5, :cond_5
 
-    return-object p1
+    invoke-virtual {p1}, Lvy8;->e()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lhx8;->o:Landroid/graphics/drawable/Drawable;
+
+    :goto_1
+    move-object v0, p1
+
+    goto :goto_2
+
+    :cond_4
+    iget-object p1, p0, Lhx8;->b:Landroid/graphics/drawable/Drawable;
+
+    goto :goto_1
+
+    :cond_5
+    iget-object p1, p0, Lhx8;->d:Landroid/graphics/drawable/Drawable;
+
+    goto :goto_1
+
+    :cond_6
+    iget-object p1, p0, Lhx8;->c:Landroid/graphics/drawable/Drawable;
+
+    goto :goto_1
+
+    :goto_2
+    invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_7
+    return-object p2
+.end method
+
+.method public final isEnabled(I)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvy8;
+
+    iget-boolean p1, p1, Lvy8;->g:Z
+
+    return p1
+.end method
+
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 0
+
+    invoke-virtual {p0, p3}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvy8;
+
+    iget-boolean p3, p1, Lvy8;->g:Z
+
+    if-eqz p3, :cond_1
+
+    sget p3, Lsmc;->mr_chooser_route_icon:I
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/ImageView;
+
+    sget p4, Lsmc;->mr_chooser_route_progress_bar:I
+
+    invoke-virtual {p2, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/ProgressBar;
+
+    if-eqz p3, :cond_0
+
+    if-eqz p2, :cond_0
+
+    const/16 p4, 0x8
+
+    invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    invoke-virtual {p1}, Lvy8;->l()V
+
+    :cond_1
+    return-void
 .end method

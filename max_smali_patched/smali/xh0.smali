@@ -1,305 +1,146 @@
 .class public final Lxh0;
-.super Lzce;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Li28;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:J
 
-.field public final Y:Lone/me/sdk/arch/Widget;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lqw3;Ljava/util/concurrent/ExecutorService;)V
-    .locals 1
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lxh0;->X:I
+    iput-wide p1, p0, Lxh0;->a:J
 
-    .line 1
-    invoke-direct {p0, p2}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
-
-    check-cast p1, Lone/me/sdk/arch/Widget;
-
-    iput-object p1, p0, Lxh0;->Y:Lone/me/sdk/arch/Widget;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzv3;Ljava/util/concurrent/ExecutorService;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxh0;->X:I
-
-    .line 2
-    invoke-direct {p0, p2}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
-
-    .line 3
-    check-cast p1, Lone/me/sdk/arch/Widget;
-
-    iput-object p1, p0, Lxh0;->Y:Lone/me/sdk/arch/Widget;
+    iput-object p3, p0, Lxh0;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Ltde;I)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lxh0;->X:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ltw3;
+    return v0
 
-    invoke-virtual {p0, p1, p2}, Lxh0;->J(Ltw3;I)V
+    :cond_0
+    instance-of v1, p1, Lxh0;
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    check-cast p1, Lzh0;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object p2
+    :cond_1
+    check-cast p1, Lxh0;
 
-    check-cast p2, Lww7;
+    iget-wide v3, p0, Lxh0;->a:J
 
-    check-cast p2, Loh0;
+    iget-wide v5, p1, Lxh0;->a:J
 
-    invoke-virtual {p1, p2}, Lzh0;->F(Loh0;)V
+    cmp-long v1, v3, v5
 
-    return-void
+    if-eqz v1, :cond_2
 
-    nop
+    return v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_2
+    iget-object v1, p0, Lxh0;->b:Ljava/util/List;
 
-.method public J(Ltw3;I)V
-    .locals 8
+    iget-object p1, p1, Lxh0;->b:Ljava/util/List;
 
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lww7;
-
-    check-cast p2, Lsw3;
-
-    new-instance v0, Lw11;
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x18
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lxh0;->Y:Lone/me/sdk/arch/Widget;
-
-    const-class v3, Lqw3;
-
-    const-string v4, "onButtonClick"
-
-    const-string v5, "onButtonClick()V"
-
-    invoke-direct/range {v0 .. v7}, Lw11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {p1, p2}, Ltw3;->F(Lsw3;)V
-
-    iget-object p2, p2, Lsw3;->b:Ljava/lang/Integer;
-
-    invoke-virtual {p1, p2, v0}, Ltw3;->G(Ljava/lang/Integer;Lve6;)V
-
-    return-void
-.end method
-
-.method public l(I)I
-    .locals 1
-
-    iget v0, p0, Lxh0;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lzce;->l(I)I
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_3
 
-    :pswitch_0
-    invoke-virtual {p0, p1}, Lpw7;->C(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object p1
-
-    check-cast p1, Lww7;
-
-    check-cast p1, Lsw3;
-
-    iget p1, p1, Lsw3;->c:I
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    return v0
 .end method
 
-.method public final r(Lnxc;I)V
-    .locals 1
-
-    iget v0, p0, Lxh0;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ltw3;
-
-    invoke-virtual {p0, p1, p2}, Lxh0;->J(Ltw3;I)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lzh0;
-
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lww7;
-
-    check-cast p2, Loh0;
-
-    invoke-virtual {p1, p2}, Lzh0;->F(Loh0;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public s(Lnxc;ILjava/util/List;)V
-    .locals 8
-
-    iget v0, p0, Lxh0;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3}, Lpwc;->s(Lnxc;ILjava/util/List;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ltw3;
-
-    invoke-static {p3}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    if-eqz p3, :cond_0
-
-    instance-of p2, p3, Lrw3;
-
-    if-eqz p2, :cond_1
-
-    check-cast p3, Lrw3;
-
-    new-instance v0, Lw11;
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x19
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lxh0;->Y:Lone/me/sdk/arch/Widget;
-
-    const-class v3, Lqw3;
-
-    const-string v4, "onButtonClick"
-
-    const-string v5, "onButtonClick()V"
-
-    invoke-direct/range {v0 .. v7}, Lw11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    iget-object p2, p3, Lrw3;->a:Ljava/lang/Integer;
-
-    invoke-virtual {p1, p2, v0}, Ltw3;->G(Ljava/lang/Integer;Lve6;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lxh0;->J(Ltw3;I)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
+.method public final getItemId()J
     .locals 2
 
-    iget p2, p0, Lxh0;->X:I
+    iget-wide v0, p0, Lxh0;->a:J
 
-    packed-switch p2, :pswitch_data_0
+    return-wide v0
+.end method
 
-    new-instance p2, Ltw3;
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-wide v0, p0, Lxh0;->a:J
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v0, Lbna;
+    move-result v0
 
-    const/4 v1, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v0, p1, v1}, Lbna;-><init>(Landroid/content/Context;I)V
+    iget-object v1, p0, Lxh0;->b:Ljava/util/List;
 
-    invoke-direct {p2, v0}, Lnxc;-><init>(Landroid/view/View;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+    move-result v1
 
-    const/4 v1, -0x1
+    add-int/2addr v1, v0
 
-    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    return v1
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.method public final m()I
+    .locals 1
 
-    return-object p2
+    const/4 v0, 0x0
 
-    :pswitch_0
-    new-instance p2, Lzh0;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxh0;->Y:Lone/me/sdk/arch/Widget;
+    const-string v1, "BannerViewPagerListItem(itemId="
 
-    invoke-direct {p2, p1, v0}, Lzh0;-><init>(Landroid/content/Context;Lzv3;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p2
+    iget-wide v1, p0, Lxh0;->a:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", items="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxh0;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

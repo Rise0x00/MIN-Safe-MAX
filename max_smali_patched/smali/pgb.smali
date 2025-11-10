@@ -1,251 +1,63 @@
 .class public final Lpgb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lpj8;
 
-.field public final synthetic Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public final b:Late;
+
+.field public final c:F
+
+.field public final d:Lzif;
+
+.field public e:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 3
 
-    iput-object p1, p0, Lpgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-lez p1, :cond_0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpgb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpgb;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lpgb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lpgb;
-
-    iget-object v1, p0, Lpgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    invoke-direct {v0, v1, p2}, Lpgb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lpgb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lpgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    iget-object v1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->w0:Lpeb;
-
-    iget-object v2, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->x0:Lpeb;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpgb;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    if-eqz p1, :cond_4
-
-    invoke-static {p1}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/chats/picker/members/PickerMembersListWidget;->D0:[Ltm7;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
-
-    move-result-object p1
-
-    invoke-static {p1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    iget-object p1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->A0:Lykf;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Loh7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    :cond_1
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2, v4}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lpwc;Z)V
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ly6b;->l(Landroidx/recyclerview/widget/RecyclerView;)Lykf;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->A0:Lykf;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->C0()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    iget-object v1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->B0:Lny6;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->o0(Lvwc;)V
-
-    :cond_2
-    iput-object v3, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->B0:Lny6;
-
-    iget-object v1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->C0:Lkwe;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->o0(Lvwc;)V
-
-    :cond_3
-    iput-object v3, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->C0:Lkwe;
-
-    goto :goto_1
-
-    :cond_4
     :goto_0
-    sget-object p1, Lone/me/chats/picker/members/PickerMembersListWidget;->D0:[Ltm7;
+    invoke-static {v1}, Ligi;->c(Z)V
 
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const/high16 v1, 0x3f000000    # 0.5f
 
-    move-result-object p1
+    iput v1, p0, Lpgb;->c:F
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
+    sget-object v1, Lzif;->a:Lzif;
 
-    move-result-object p1
+    iput-object v1, p0, Lpgb;->d:Lzif;
 
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, Lpj8;
 
-    move-result p1
+    invoke-direct {v1}, Lpj8;-><init>()V
 
-    if-nez p1, :cond_8
+    iput-object v1, p0, Lpgb;->a:Lpj8;
 
-    iget-object p1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->A0:Lykf;
+    new-instance v1, Late;
 
-    if-eqz p1, :cond_5
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-direct {v1, p1, v2}, Late;-><init>(II)V
 
-    move-result-object v2
+    iput-object v1, p0, Lpgb;->b:Late;
 
-    invoke-virtual {p1, v2}, Loh7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    iput-boolean v0, p0, Lpgb;->e:Z
 
-    :cond_5
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1, v4}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lpwc;Z)V
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ly6b;->l(Landroidx/recyclerview/widget/RecyclerView;)Lykf;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->A0:Lykf;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->C0()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    iget-object v1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->B0:Lny6;
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->o0(Lvwc;)V
-
-    :cond_6
-    iput-object v3, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->B0:Lny6;
-
-    iget-object v1, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->C0:Lkwe;
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->o0(Lvwc;)V
-
-    :cond_7
-    iput-object v3, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->C0:Lkwe;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/members/PickerMembersListWidget;->E0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lone/me/chats/picker/members/PickerMembersListWidget;->B0(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
-
-    :cond_8
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

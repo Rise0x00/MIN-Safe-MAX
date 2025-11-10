@@ -1,0 +1,41 @@
+.class public final Lboh;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lyof;
+
+.field public final b:Leb6;
+
+.field public final c:Lbph;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "WMFgUpdater"
+
+    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/work/impl/WorkDatabase;Lwzb;Lu2c;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lboh;->b:Leb6;
+
+    iput-object p3, p0, Lboh;->a:Lyof;
+
+    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->x()Lbph;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lboh;->c:Lbph;
+
+    return-void
+.end method

@@ -1,96 +1,26 @@
-.class public abstract Lbm;
+.class public interface abstract Lbm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Landroid/net/Uri;
+.field public static final f:Ly1j;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "https://api.ok.ru"
+    new-instance v0, Ly1j;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    sput-object v0, Lbm;->a:Landroid/net/Uri;
+    sput-object v0, Lbm;->f:Ly1j;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 3
 
-    const/16 v0, 0x2f
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x2e
-
-    invoke-static {p0, v2, v0, v1}, Lgye;->Z(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "ok://api/api/"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ok://api/api/"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/16 p0, 0xd
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/16 v0, 0x2f
-
-    const/16 v1, 0x2e
-
-    invoke-static {p0, v0, v1, v2}, Lgye;->Z(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unknown uri "
-
-    invoke-static {p0, v1}, Lhqd;->j(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+# virtual methods
+.method public abstract k(Lam;Ljava/lang/Object;)Lam;
 .end method

@@ -1,97 +1,112 @@
 .class public final La8d;
-.super Lv4b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lb8d;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lb8d;I)V
+    .locals 0
+
+    iput p2, p0, La8d;->a:I
+
+    iput-object p1, p0, La8d;->b:Lb8d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ld6e;FF)V
-    .locals 5
+.method public final run()V
+    .locals 4
 
-    mul-float v0, p3, p2
+    iget v0, p0, La8d;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v2, 0x43340000    # 180.0f
+    iget-object v0, p0, La8d;->b:Lb8d;
 
-    const/high16 v3, 0x42b40000    # 90.0f
+    iget-object v1, v0, Lb8d;->i:Lg8d;
 
-    invoke-virtual {p1, v1, v0, v2, v3}, Ld6e;->d(FFFF)V
+    iget-object v2, v1, Lg8d;->x0:Lb8d;
 
-    const/high16 v0, 0x40000000    # 2.0f
+    if-ne v2, v0, :cond_1
 
-    mul-float/2addr p3, v0
+    sget-boolean v0, Lg8d;->A0:Z
 
-    mul-float/2addr p3, p2
+    if-eqz v0, :cond_0
 
-    new-instance p2, Lz5e;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, v1, v1, p3, p3}, Lz5e;-><init>(FFFF)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput v2, p2, Lz5e;->f:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput v3, p2, Lz5e;->g:F
+    const-string v2, ": Service connection died"
 
-    iget-object v3, p1, Ld6e;->g:Ljava/util/ArrayList;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v3, Lx5e;
+    move-result-object v0
 
-    invoke-direct {v3, p2}, Lx5e;-><init>(Lz5e;)V
+    const-string v2, "MediaRouteProviderProxy"
 
-    invoke-virtual {p1, v2}, Ld6e;->a(F)V
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p2, p1, Ld6e;->h:Ljava/util/ArrayList;
+    :cond_0
+    invoke-virtual {v1}, Lg8d;->k()V
 
-    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :cond_1
+    return-void
 
-    const/high16 p2, 0x43870000    # 270.0f
+    :pswitch_0
+    iget-object v0, p0, La8d;->b:Lb8d;
 
-    iput p2, p1, Ld6e;->e:F
+    iget-object v0, v0, Lb8d;->h:Landroid/util/SparseArray;
 
-    add-float v2, v1, p3
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    const/high16 v3, 0x3f000000    # 0.5f
+    move-result v1
 
-    mul-float/2addr v2, v3
+    const/4 v2, 0x0
 
-    sub-float/2addr p3, v1
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-    div-float/2addr p3, v0
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    float-to-double v0, p2
+    move-result-object v3
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    check-cast v3, Ld8d;
 
-    move-result-wide v3
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+    const/4 v3, 0x0
 
-    move-result-wide v3
+    invoke-static {v3, v3}, Ld8d;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    double-to-float p2, v3
+    add-int/lit8 v2, v2, 0x1
 
-    mul-float/2addr p2, p3
+    goto :goto_0
 
-    add-float/2addr p2, v2
-
-    iput p2, p1, Ld6e;->c:F
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    double-to-float p2, v0
-
-    mul-float/2addr p3, p2
-
-    add-float/2addr p3, v2
-
-    iput p3, p1, Ld6e;->d:F
+    :cond_2
+    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

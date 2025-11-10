@@ -1,149 +1,94 @@
-.class public final synthetic Lrl1;
-.super Ljava/lang/Object;
+.class public final Lrl1;
+.super Lbm1;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxm1;
+.field public final D:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxm1;I)V
+.method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput p2, p0, Lrl1;->a:I
+    invoke-direct {p0}, Lbm1;-><init>()V
 
-    iput-object p1, p0, Lrl1;->b:Lxm1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrl1;->D:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lrl1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lrl1;->b:Lxm1;
-
-    iget-object v0, v0, Lxm1;->y0:Lufd;
-
-    iget-boolean v0, v0, Lufd;->e:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x6
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    new-instance v1, Landroidx/recyclerview/widget/b;
-
-    invoke-direct {v1}, Landroidx/recyclerview/widget/b;-><init>()V
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2, v0}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lrl1;->b:Lxm1;
-
-    iget-object v0, v0, Lxm1;->z0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llm5;
-
-    check-cast v0, Lnm5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
+    instance-of v1, p1, Lrl1;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lrl1;
+
+    iget-object v1, p0, Lrl1;->D:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lrl1;->D:Ljava/lang/CharSequence;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lrl1;->D:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RecordStart(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrl1;->D:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lrl1;->b:Lxm1;
-
-    iget-object v0, v0, Lxm1;->z0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llm5;
-
-    check-cast v0, Lnm5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->group-call-chat-support:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    goto :goto_1
-
-    :pswitch_2
-    iget-object v0, p0, Lrl1;->b:Lxm1;
-
-    iget-object v0, v0, Lxm1;->z0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llm5;
-
-    check-cast v0, Lnm5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,63 +1,78 @@
-.class public final Lwoc;
+.class public abstract Lwoc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static audio_record__action_view:I = 0x7f0a00d2
 
-.field public final synthetic b:Lxoc;
+.field public static audio_record__action_view_background:I = 0x7f0a00d3
 
-.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
+.field public static audio_record__action_view_bg_container:I = 0x7f0a00d4
 
+.field public static audio_record__action_view_container:I = 0x7f0a00d5
 
-# direct methods
-.method public constructor <init>(Lxoc;Lone/me/rlottie/RLottieImageView;)V
-    .locals 0
+.field public static audio_record__audio_hand_free_record_view:I = 0x7f0a00d6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static audio_record__audio_record_root:I = 0x7f0a00d7
 
-    iput-object p1, p0, Lwoc;->b:Lxoc;
+.field public static audio_record__cancel_view:I = 0x7f0a00d8
 
-    iput-object p2, p0, Lwoc;->c:Lone/me/rlottie/RLottieImageView;
+.field public static audio_record__dot_view:I = 0x7f0a00d9
 
-    return-void
-.end method
+.field public static audio_record__duration_view:I = 0x7f0a00da
 
+.field public static audio_record__hand_free_dot_view:I = 0x7f0a00db
 
-# virtual methods
-.method public final onAllFramesRendered(Lone/me/rlottie/RLottieDrawable;Z)V
-    .locals 2
+.field public static audio_record__hand_free_duration_view:I = 0x7f0a00dc
 
-    iget-object p1, p0, Lwoc;->b:Lxoc;
+.field public static audio_record__lock_view:I = 0x7f0a00dd
 
-    iget-object p2, p1, Lxoc;->a:Ljava/lang/String;
+.field public static audio_record__pause_recording_button:I = 0x7f0a00de
 
-    iget-boolean v0, p0, Lwoc;->a:Z
+.field public static audio_record__play_pause_listening_button:I = 0x7f0a00df
 
-    const-string v1, "Reaction effect. OnAllFramesRendered, called:"
+.field public static audio_record__play_recording_button:I = 0x7f0a00e0
 
-    invoke-static {v1, p2, v0}, Lfl7;->p(Ljava/lang/String;Ljava/lang/String;Z)V
+.field public static audio_record__recording_panel:I = 0x7f0a00e1
 
-    iget-boolean p2, p0, Lwoc;->a:Z
+.field public static audio_record__remove_button:I = 0x7f0a00e2
 
-    if-eqz p2, :cond_0
+.field public static audio_record__swipe_remove_button:I = 0x7f0a00e3
 
-    return-void
+.field public static audio_record__wave_container:I = 0x7f0a00e4
 
-    :cond_0
-    new-instance p2, Lq7b;
+.field public static audio_record__wave_view:I = 0x7f0a00e5
 
-    const/4 v0, 0x2
+.field public static writebar__add_link_bottom_sheet_button_add:I = 0x7f0a0d41
 
-    iget-object v1, p0, Lwoc;->c:Lone/me/rlottie/RLottieImageView;
+.field public static writebar__add_link_bottom_sheet_input:I = 0x7f0a0d42
 
-    invoke-direct {p2, p0, p1, v1, v0}, Lq7b;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+.field public static writebar__container:I = 0x7f0a0d43
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+.field public static writebar__miui_menu:I = 0x7f0a0d44
 
-    return-void
-.end method
+.field public static writebar__record_controls:I = 0x7f0a0d45
+
+.field public static writebar__root:I = 0x7f0a0d46
+
+.field public static writebar__suggestion_close_button:I = 0x7f0a0d47
+
+.field public static writebar__suggestion_close_panel:I = 0x7f0a0d48
+
+.field public static writebar__suggestion_container:I = 0x7f0a0d49
+
+.field public static writebar__suggestion_item:I = 0x7f0a0d4a
+
+.field public static writebar__suggestion_not_found:I = 0x7f0a0d4b
+
+.field public static writebar__suggestion_panel:I = 0x7f0a0d4c
+
+.field public static writebar__suggestion_popup_drag_layout:I = 0x7f0a0d4d
+
+.field public static writebar__suggestion_popup_layout:I = 0x7f0a0d4e
+
+.field public static writebar__suggestion_popup_layout_content:I = 0x7f0a0d4f
+
+.field public static writebar__suggestion_popup_layout_list:I = 0x7f0a0d50
+
+.field public static writebar__suggestion_title:I = 0x7f0a0d51

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Lqsf;
 
 
 # annotations
@@ -14,14 +14,14 @@
     d2 = {
         "Lru/ok/messages/views/widgets/audiowave/AudioWaveView;",
         "Landroid/view/View;",
-        "Lrff;",
-        "Lt60;",
+        "Lqsf;",
+        "Lb70;",
         "listener",
-        "Loyf;",
+        "Lybg;",
         "setListener",
-        "(Lt60;)V",
+        "(Lb70;)V",
         "",
-        "F0",
+        "u0",
         "Z",
         "isIncomingMessage",
         "()Z",
@@ -44,91 +44,46 @@
 
 
 # instance fields
-.field public final A0:Landroid/graphics/Paint;
+.field public final a:F
 
-.field public final B0:Landroid/graphics/Paint;
+.field public final b:Landroid/graphics/Paint;
 
-.field public final C0:Landroid/graphics/Paint;
+.field public final c:Landroid/graphics/Paint;
 
-.field public final D0:Landroid/graphics/Path;
+.field public final d:Landroid/graphics/Paint;
 
-.field public E0:Z
+.field public final o:Landroid/graphics/Paint;
 
-.field public F0:Z
+.field public final s0:Landroid/graphics/Path;
 
-.field public G0:Z
+.field public t0:Z
 
-.field public H0:Lt60;
+.field public u0:Z
 
-.field public final I0:[B
-
-.field public final a:[I
-
-.field public final b:F
-
-.field public final c:F
-
-.field public final o:F
-
-.field public final w0:F
-
-.field public x0:[B
-
-.field public y0:I
-
-.field public final z0:Landroid/graphics/Paint;
+.field public v0:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x4
-
-    invoke-direct {p0, p1, p2, v0}, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    and-int/2addr p3, v0
+    invoke-direct {p0, p1, p2, v0}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 v1, 0x0
-
-    if-eqz p3, :cond_0
-
-    move-object p2, v1
-
-    :cond_0
-    const/4 p3, 0x0
-
-    .line 2
-    invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 3
-    new-array p1, v0, [I
-
-    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a:[I
-
-    .line 4
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->D0:Landroid/graphics/Path;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->s0:Landroid/graphics/Path;
 
     const/4 p1, 0x1
 
-    .line 5
-    invoke-virtual {p0, p1, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    const/4 p2, 0x0
 
-    .line 6
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -138,15 +93,17 @@
 
     iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    const/high16 v0, 0x40a00000    # 5.0f
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    mul-float/2addr p2, v0
+    move-result-object p2
 
-    .line 7
-    iput p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->b:F
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    .line 8
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object p2
 
@@ -160,27 +117,7 @@
 
     mul-float/2addr p2, v0
 
-    .line 9
-    iput p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:F
-
-    .line 10
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v0
-
-    .line 11
-    iput p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:F
-
-    .line 12
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -192,208 +129,78 @@
 
     mul-float/2addr v1, v0
 
-    .line 13
-    iput v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->w0:F
+    iput v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a:F
 
-    .line 14
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, p1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 15
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 16
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 17
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 18
-    iput-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->z0:Landroid/graphics/Paint;
+    iput-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->b:Landroid/graphics/Paint;
 
-    .line 19
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2, p1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 20
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 21
-    iput-object p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->B0:Landroid/graphics/Paint;
+    iput-object p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->d:Landroid/graphics/Paint;
 
-    .line 22
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2, p1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 23
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 24
-    iput-object p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->C0:Landroid/graphics/Paint;
+    iput-object p2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:Landroid/graphics/Paint;
 
-    .line 25
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->A0:Landroid/graphics/Paint;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:Landroid/graphics/Paint;
 
-    .line 26
-    invoke-static {p0}, Lvu0;->c(Landroid/view/View;)V
+    invoke-static {p0}, Lnxi;->a(Landroid/view/View;)V
 
-    .line 27
-    invoke-static {p0}, Lvu0;->q(Landroid/view/View;)Z
+    invoke-static {p0}, Lnxi;->c(Landroid/view/View;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 28
     invoke-virtual {p0, p1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 29
-    :cond_1
-    new-array p1, p3, [B
-
-    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->I0:[B
-
+    :cond_0
     return-void
 .end method
 
 .method private final getDataWidth()I
-    .locals 3
-
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->x0:[B
-
-    if-nez v0, :cond_0
+    .locals 1
 
     const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    array-length v1, v0
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:F
-
-    mul-float/2addr v1, v2
-
-    array-length v0, v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    int-to-float v0, v0
-
-    iget v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:F
-
-    mul-float/2addr v0, v2
-
-    add-float/2addr v0, v1
-
-    float-to-int v0, v0
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/MotionEvent;)F
-    .locals 5
-
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a:[I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    const/4 v1, 0x0
-
-    aget v0, v0, v1
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    :goto_0
-    move p1, v3
-
-    goto :goto_1
-
-    :cond_0
-    add-int v4, v0, v1
-
-    int-to-float v4, v4
-
-    cmpl-float v4, p1, v4
-
-    if-ltz v4, :cond_1
-
-    move p1, v2
-
-    goto :goto_1
-
-    :cond_1
-    int-to-float v0, v0
-
-    cmpg-float v4, p1, v0
-
-    if-gtz v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    sub-float/2addr p1, v0
-
-    int-to-float v0, v1
-
-    div-float/2addr p1, v0
-
-    :goto_1
-    cmpg-float v0, p1, v3
-
-    if-nez v0, :cond_3
-
-    const-wide/16 v0, 0x0
-
-    const-wide/16 v3, 0x1
-
-    sub-long/2addr v0, v3
-
-    long-to-float p1, v0
-
-    div-float/2addr v2, p1
-
-    return v2
-
-    :cond_3
-    return p1
-.end method
-
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 10
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->D0:Landroid/graphics/Path;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->s0:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->isEmpty()Z
 
@@ -418,11 +225,7 @@
 
     long-to-float v2, v2
 
-    const-wide/16 v3, 0x0
-
-    long-to-float v3, v3
-
-    div-float/2addr v2, v3
+    div-float/2addr v2, v2
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
@@ -436,7 +239,7 @@
 
     add-float/2addr v2, v3
 
-    iget-boolean v3, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
+    iget-boolean v3, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -458,13 +261,13 @@
 
     mul-float/2addr v5, v4
 
-    invoke-static {v5}, Lv63;->r0(F)I
+    invoke-static {v5}, Lkhi;->c(F)I
 
     move-result v4
 
     int-to-float v4, v4
 
-    iget-boolean v5, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
+    iget-boolean v5, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
 
     const/4 v6, 0x2
 
@@ -488,7 +291,7 @@
 
     mul-float/2addr v7, v5
 
-    invoke-static {v7}, Lv63;->r0(F)I
+    invoke-static {v7}, Lkhi;->c(F)I
 
     move-result v5
 
@@ -499,7 +302,7 @@
     :cond_1
     const/4 v5, 0x0
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -521,7 +324,7 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Lv63;->r0(F)I
+    invoke-static {v6}, Lkhi;->c(F)I
 
     move-result v6
 
@@ -551,7 +354,7 @@
 
     cmpl-float v8, v7, v8
 
-    if-lez v8, :cond_3
+    if-lez v8, :cond_4
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
@@ -561,29 +364,22 @@
 
     sub-float/2addr v7, v6
 
-    :cond_3
-    iget-object v6, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->H0:Lt60;
-
-    if-eqz v6, :cond_5
-
-    invoke-interface {v6, v7}, Lt60;->a(F)V
-
     goto :goto_1
 
-    :cond_4
+    :cond_3
     move v7, v5
 
-    :cond_5
+    :cond_4
     :goto_1
-    iget-object v6, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->z0:Landroid/graphics/Paint;
+    iget-object v6, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->b:Landroid/graphics/Paint;
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_5
 
     invoke-virtual {p1, v0, v6}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     return-void
 
-    :cond_6
+    :cond_5
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v3
@@ -597,7 +393,7 @@
 
     invoke-virtual {p1, v5, v5, v2, v8}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    iget-object v8, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->A0:Landroid/graphics/Paint;
+    iget-object v8, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
     :try_end_0
@@ -630,15 +426,15 @@
 
     invoke-virtual {p1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    iget v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->w0:F
+    iget v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a:F
 
     add-float/2addr v0, v4
 
-    iget-object v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->C0:Landroid/graphics/Paint;
+    iget-object v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v1, v0, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->B0:Landroid/graphics/Paint;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v1, v4, v0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -667,10 +463,10 @@
     return-void
 .end method
 
-.method public final onThemeChanged(Luxa;)V
+.method public final onThemeChanged(Lw5b;)V
     .locals 3
 
-    iget-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->F0:Z
+    iget-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->u0:Z
 
     if-eqz p1, :cond_1
 
@@ -680,7 +476,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Ltk4;->e0:Ltk4;
+    sget-object p1, Lon4;->e0:Lon4;
 
     goto :goto_0
 
@@ -689,14 +485,14 @@
 
     move-result-object p1
 
-    sget-object v0, Lvaf;->a0:Ls5f;
+    sget-object v0, Lvnf;->a0:Ltif;
 
-    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+    invoke-static {p1}, Lri7;->o(Landroid/content/Context;)Lvnf;
 
     move-result-object p1
 
     :goto_0
-    iget-object p1, p1, Lvaf;->h:Lvs0;
+    iget-object p1, p1, Lvnf;->h:Lot0;
 
     goto :goto_2
 
@@ -707,7 +503,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Ltk4;->e0:Ltk4;
+    sget-object p1, Lon4;->e0:Lon4;
 
     goto :goto_1
 
@@ -716,39 +512,39 @@
 
     move-result-object p1
 
-    sget-object v0, Lvaf;->a0:Ls5f;
+    sget-object v0, Lvnf;->a0:Ltif;
 
-    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+    invoke-static {p1}, Lri7;->o(Landroid/content/Context;)Lvnf;
 
     move-result-object p1
 
     :goto_1
-    iget-object p1, p1, Lvaf;->g:Lvs0;
+    iget-object p1, p1, Lvnf;->g:Lot0;
 
     :goto_2
-    iget-object v0, p1, Lvs0;->a:Los0;
+    iget-object v0, p1, Lot0;->a:Lht0;
 
-    iget v1, v0, Los0;->e:I
+    iget v1, v0, Lht0;->e:I
 
-    iget v0, v0, Los0;->f:I
+    iget v0, v0, Lht0;->f:I
 
-    iget-object v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->z0:Landroid/graphics/Paint;
+    iget-object v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->b:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->B0:Landroid/graphics/Paint;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p1, Lvs0;->c:Lxs0;
+    iget-object p1, p1, Lot0;->c:Lqt0;
 
-    iget p1, p1, Lxs0;->a:I
+    iget p1, p1, Lqt0;->a:I
 
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->C0:Landroid/graphics/Paint;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->o:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->A0:Landroid/graphics/Paint;
+    iget-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->c:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -756,128 +552,96 @@
 .end method
 
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 4
+    .locals 3
 
-    iget-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
+    iget-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
 
-    if-eqz v0, :cond_7
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_5
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_0
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_3
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->E0:Z
-
-    if-eqz v0, :cond_2
-
-    iput-boolean v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->E0:Z
-
-    :cond_2
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->H0:Lt60;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a(Landroid/view/MotionEvent;)F
-
-    move-result p1
-
-    invoke-interface {v0, p1}, Lt60;->d(F)V
-
-    return v1
-
-    :cond_3
-    iput-boolean v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->E0:Z
-
-    iput-boolean v2, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
-
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->H0:Lt60;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a(Landroid/view/MotionEvent;)F
-
-    invoke-interface {v0}, Lt60;->b()V
-
-    :cond_4
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    invoke-interface {p1, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    return v1
-
-    :cond_5
-    iput-boolean v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->E0:Z
-
-    iput-boolean v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->G0:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    iget-object v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->H0:Lt60;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->a(Landroid/view/MotionEvent;)F
-
-    move-result p1
-
-    invoke-interface {v0, p1}, Lt60;->e(F)V
-
-    :cond_6
-    :goto_0
-    return v1
-
-    :cond_7
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_5
+
+    const/4 v1, 0x0
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v2, 0x2
+
+    if-eq p1, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-eq p1, v2, :cond_4
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->t0:Z
+
+    if-eqz p1, :cond_3
+
+    iput-boolean v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->t0:Z
+
+    :cond_3
+    :goto_0
+    return v0
+
+    :cond_4
+    iput-boolean v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->t0:Z
+
+    iput-boolean v1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    return v0
+
+    :cond_5
+    iput-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->t0:Z
+
+    iput-boolean v0, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->v0:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    return v0
 .end method
 
 .method public final setIncomingMessage(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->F0:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->u0:Z
 
     return-void
 .end method
 
-.method public final setListener(Lt60;)V
+.method public final setListener(Lb70;)V
     .locals 0
-
-    iput-object p1, p0, Lru/ok/messages/views/widgets/audiowave/AudioWaveView;->H0:Lt60;
 
     return-void
 .end method

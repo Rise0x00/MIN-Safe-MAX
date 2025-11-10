@@ -22,25 +22,25 @@
         "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "Lkotlin/Function1;",
         "",
-        "Loyf;",
+        "Lybg;",
         "onError",
-        "Ldce;",
+        "Lboe;",
         "getSignalingOrPassExceptionToOnError",
-        "(Lxe6;)Ldce;",
+        "(Lqi6;)Lboe;",
         "",
         "fileName",
-        "Lnwd;",
+        "Lf8e;",
         "sessionRoomId",
         "Lkotlin/Function0;",
         "onSuccess",
         "startRecord",
-        "(Ljava/lang/String;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/lang/String;Lf8e;Loi6;Lqi6;)V",
         "stopRecord",
-        "(Lnwd;Lve6;Lxe6;)V",
+        "(Lf8e;Loi6;Lqi6;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "getActiveRoomId",
-        "()Lnwd;",
+        "()Lf8e;",
         "activeRoomId",
         "calls-sdk_release"
     }
@@ -73,64 +73,64 @@
     return-void
 .end method
 
-.method public static synthetic a(Lve6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lqi6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->startRecord$lambda$0(Lve6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->startRecord$lambda$1(Lqi6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lve6;Lorg/json/JSONObject;)V
+.method public static synthetic b(Loi6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->stopRecord$lambda$2(Lve6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->stopRecord$lambda$2(Loi6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lxe6;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lqi6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->startRecord$lambda$1(Lxe6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->stopRecord$lambda$3(Lqi6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lxe6;Lorg/json/JSONObject;)V
+.method public static synthetic d(Loi6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->stopRecord$lambda$3(Lxe6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->startRecord$lambda$0(Loi6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final getActiveRoomId()Lnwd;
+.method private final getActiveRoomId()Lf8e;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lnwd;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lf8e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private final getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
+.method private final getSignalingOrPassExceptionToOnError(Lqi6;)Lboe;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxe6;",
+            "Lqi6;",
             ")",
-            "Ldce;"
+            "Lboe;"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lboe;
 
     move-result-object v0
 
@@ -142,7 +142,7 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;-><init>()V
 
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     const/4 p1, 0x0
@@ -153,18 +153,18 @@
     return-object v0
 .end method
 
-.method private static final startRecord$lambda$0(Lve6;Lorg/json/JSONObject;)V
+.method private static final startRecord$lambda$0(Loi6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Loi6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final startRecord$lambda$1(Lxe6;Lorg/json/JSONObject;)V
+.method private static final startRecord$lambda$1(Lqi6;Lorg/json/JSONObject;)V
     .locals 6
 
     if-eqz p0, :cond_0
@@ -181,26 +181,26 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/asr/exceptions/AsrException;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Throwable;ILof4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/asr/exceptions/AsrException;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Throwable;ILfi4;)V
 
-    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final stopRecord$lambda$2(Lve6;Lorg/json/JSONObject;)V
+.method private static final stopRecord$lambda$2(Loi6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Loi6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final stopRecord$lambda$3(Lxe6;Lorg/json/JSONObject;)V
+.method private static final stopRecord$lambda$3(Lqi6;Lorg/json/JSONObject;)V
     .locals 6
 
     if-eqz p0, :cond_0
@@ -217,9 +217,9 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/asr/exceptions/AsrException;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Throwable;ILof4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/asr/exceptions/AsrException;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Throwable;ILfi4;)V
 
-    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -227,27 +227,27 @@
 
 
 # virtual methods
-.method public startRecord(Ljava/lang/String;Lnwd;Lve6;Lxe6;)V
+.method public startRecord(Ljava/lang/String;Lf8e;Loi6;Lqi6;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lf8e;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
     if-nez p2, :cond_0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getActiveRoomId()Lnwd;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getActiveRoomId()Lf8e;
 
     move-result-object p2
 
     :cond_0
-    invoke-direct {p0, p4}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
+    invoke-direct {p0, p4}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lqi6;)Lboe;
 
     move-result-object v0
 
@@ -261,27 +261,27 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
+    invoke-static {v2, v1}, Lozi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lqn6;
 
     move-result-object v1
 
     const-string v2, "fileName"
 
-    iget-object v3, v1, Lxj6;->a:Lorg/json/JSONObject;
+    iget-object v3, v1, Lqn6;->a:Lorg/json/JSONObject;
 
     invoke-virtual {v3, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    instance-of p1, p2, Lmwd;
+    instance-of p1, p2, Le8e;
 
     if-eqz p1, :cond_2
 
     const-string p1, "roomId"
 
-    check-cast p2, Lmwd;
+    check-cast p2, Le8e;
 
-    iget p2, p2, Lmwd;->a:I
+    iget p2, p2, Le8e;->a:I
 
-    invoke-virtual {v1, p2, p1}, Lxj6;->b(ILjava/lang/String;)V
+    invoke-virtual {v1, p2, p1}, Lqn6;->b(ILjava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -294,19 +294,19 @@
 
     :cond_2
     :goto_0
-    new-instance p1, Lvs;
+    new-instance p1, Lut;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p2, p3}, Lvs;-><init>(ILve6;)V
+    invoke-direct {p1, p2, p3}, Lut;-><init>(ILoi6;)V
 
-    new-instance p2, Lws;
+    new-instance p2, Lvt;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, p3, p4}, Lws;-><init>(ILxe6;)V
+    invoke-direct {p2, p3, p4}, Lvt;-><init>(ILqi6;)V
 
-    invoke-virtual {v0, v1, p3, p1, p2}, Ldce;->d(Lgce;ZLcce;Lcce;)V
+    invoke-virtual {v0, v1, p3, p1, p2}, Lboe;->d(Lfoe;ZLyne;Lyne;)V
 
     return-void
 
@@ -318,26 +318,26 @@
     throw p2
 .end method
 
-.method public stopRecord(Lnwd;Lve6;Lxe6;)V
+.method public stopRecord(Lf8e;Loi6;Lqi6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lf8e;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getActiveRoomId()Lnwd;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getActiveRoomId()Lf8e;
 
     move-result-object p1
 
     :cond_0
-    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
+    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lqi6;)Lboe;
 
     move-result-object v0
 
@@ -351,21 +351,21 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
+    invoke-static {v2, v1}, Lozi;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lqn6;
 
     move-result-object v1
 
-    instance-of v2, p1, Lmwd;
+    instance-of v2, p1, Le8e;
 
     if-eqz v2, :cond_2
 
     const-string v2, "roomId"
 
-    check-cast p1, Lmwd;
+    check-cast p1, Le8e;
 
-    iget p1, p1, Lmwd;->a:I
+    iget p1, p1, Le8e;->a:I
 
-    invoke-virtual {v1, p1, v2}, Lxj6;->b(ILjava/lang/String;)V
+    invoke-virtual {v1, p1, v2}, Lqn6;->b(ILjava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -378,19 +378,19 @@
 
     :cond_2
     :goto_0
-    new-instance p1, Lvs;
+    new-instance p1, Lut;
 
     const/4 v2, 0x1
 
-    invoke-direct {p1, v2, p2}, Lvs;-><init>(ILve6;)V
+    invoke-direct {p1, v2, p2}, Lut;-><init>(ILoi6;)V
 
-    new-instance p2, Lws;
+    new-instance p2, Lvt;
 
-    invoke-direct {p2, v2, p3}, Lws;-><init>(ILxe6;)V
+    invoke-direct {p2, v2, p3}, Lvt;-><init>(ILqi6;)V
 
     const/4 p3, 0x0
 
-    invoke-virtual {v0, v1, p3, p1, p2}, Ldce;->d(Lgce;ZLcce;Lcce;)V
+    invoke-virtual {v0, v1, p3, p1, p2}, Lboe;->d(Lfoe;ZLyne;Lyne;)V
 
     return-void
 

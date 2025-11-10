@@ -64,7 +64,7 @@
 
     .line 4
     :goto_0
-    invoke-static {v1}, Lpih;->o(Z)V
+    invoke-static {v1}, Ligi;->h(Z)V
 
     .line 5
     new-instance p1, Ljava/lang/StringBuilder;

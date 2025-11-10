@@ -555,1095 +555,1095 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lxac;->actionBarDivider:I
+    sget v0, Likc;->actionBarDivider:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarDivider:I
 
-    sget v0, Lxac;->actionBarItemBackground:I
+    sget v0, Likc;->actionBarItemBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarItemBackground:I
 
-    sget v0, Lxac;->actionBarPopupTheme:I
+    sget v0, Likc;->actionBarPopupTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarPopupTheme:I
 
-    sget v0, Lxac;->actionBarSize:I
+    sget v0, Likc;->actionBarSize:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarSize:I
 
-    sget v0, Lxac;->actionBarSplitStyle:I
+    sget v0, Likc;->actionBarSplitStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarSplitStyle:I
 
-    sget v0, Lxac;->actionBarStyle:I
+    sget v0, Likc;->actionBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarStyle:I
 
-    sget v0, Lxac;->actionBarTabBarStyle:I
+    sget v0, Likc;->actionBarTabBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarTabBarStyle:I
 
-    sget v0, Lxac;->actionBarTabStyle:I
+    sget v0, Likc;->actionBarTabStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarTabStyle:I
 
-    sget v0, Lxac;->actionBarTabTextStyle:I
+    sget v0, Likc;->actionBarTabTextStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarTabTextStyle:I
 
-    sget v0, Lxac;->actionBarTheme:I
+    sget v0, Likc;->actionBarTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarTheme:I
 
-    sget v0, Lxac;->actionBarWidgetTheme:I
+    sget v0, Likc;->actionBarWidgetTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionBarWidgetTheme:I
 
-    sget v0, Lxac;->actionButtonStyle:I
+    sget v0, Likc;->actionButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionButtonStyle:I
 
-    sget v0, Lxac;->actionDropDownStyle:I
+    sget v0, Likc;->actionDropDownStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionDropDownStyle:I
 
-    sget v0, Lxac;->actionLayout:I
+    sget v0, Likc;->actionLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionLayout:I
 
-    sget v0, Lxac;->actionMenuTextAppearance:I
+    sget v0, Likc;->actionMenuTextAppearance:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionMenuTextAppearance:I
 
-    sget v0, Lxac;->actionMenuTextColor:I
+    sget v0, Likc;->actionMenuTextColor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionMenuTextColor:I
 
-    sget v0, Lxac;->actionModeBackground:I
+    sget v0, Likc;->actionModeBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeBackground:I
 
-    sget v0, Lxac;->actionModeCloseButtonStyle:I
+    sget v0, Likc;->actionModeCloseButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeCloseButtonStyle:I
 
-    sget v0, Lxac;->actionModeCloseContentDescription:I
+    sget v0, Likc;->actionModeCloseContentDescription:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeCloseContentDescription:I
 
-    sget v0, Lxac;->actionModeCloseDrawable:I
+    sget v0, Likc;->actionModeCloseDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeCloseDrawable:I
 
-    sget v0, Lxac;->actionModeCopyDrawable:I
+    sget v0, Likc;->actionModeCopyDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeCopyDrawable:I
 
-    sget v0, Lxac;->actionModeCutDrawable:I
+    sget v0, Likc;->actionModeCutDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeCutDrawable:I
 
-    sget v0, Lxac;->actionModeFindDrawable:I
+    sget v0, Likc;->actionModeFindDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeFindDrawable:I
 
-    sget v0, Lxac;->actionModePasteDrawable:I
+    sget v0, Likc;->actionModePasteDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModePasteDrawable:I
 
-    sget v0, Lxac;->actionModePopupWindowStyle:I
+    sget v0, Likc;->actionModePopupWindowStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModePopupWindowStyle:I
 
-    sget v0, Lxac;->actionModeSelectAllDrawable:I
+    sget v0, Likc;->actionModeSelectAllDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeSelectAllDrawable:I
 
-    sget v0, Lxac;->actionModeShareDrawable:I
+    sget v0, Likc;->actionModeShareDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeShareDrawable:I
 
-    sget v0, Lxac;->actionModeSplitBackground:I
+    sget v0, Likc;->actionModeSplitBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeSplitBackground:I
 
-    sget v0, Lxac;->actionModeStyle:I
+    sget v0, Likc;->actionModeStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeStyle:I
 
-    sget v0, Lxac;->actionModeTheme:I
+    sget v0, Likc;->actionModeTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeTheme:I
 
-    sget v0, Lxac;->actionModeWebSearchDrawable:I
+    sget v0, Likc;->actionModeWebSearchDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionModeWebSearchDrawable:I
 
-    sget v0, Lxac;->actionOverflowButtonStyle:I
+    sget v0, Likc;->actionOverflowButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionOverflowButtonStyle:I
 
-    sget v0, Lxac;->actionOverflowMenuStyle:I
+    sget v0, Likc;->actionOverflowMenuStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionOverflowMenuStyle:I
 
-    sget v0, Lxac;->actionProviderClass:I
+    sget v0, Likc;->actionProviderClass:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionProviderClass:I
 
-    sget v0, Lxac;->actionViewClass:I
+    sget v0, Likc;->actionViewClass:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->actionViewClass:I
 
-    sget v0, Lxac;->activityChooserViewStyle:I
+    sget v0, Likc;->activityChooserViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->activityChooserViewStyle:I
 
-    sget v0, Lxac;->alertDialogButtonGroupStyle:I
+    sget v0, Likc;->alertDialogButtonGroupStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->alertDialogButtonGroupStyle:I
 
-    sget v0, Lxac;->alertDialogCenterButtons:I
+    sget v0, Likc;->alertDialogCenterButtons:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->alertDialogCenterButtons:I
 
-    sget v0, Lxac;->alertDialogStyle:I
+    sget v0, Likc;->alertDialogStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->alertDialogStyle:I
 
-    sget v0, Lxac;->alertDialogTheme:I
+    sget v0, Likc;->alertDialogTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->alertDialogTheme:I
 
-    sget v0, Lxac;->allowStacking:I
+    sget v0, Likc;->allowStacking:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->allowStacking:I
 
-    sget v0, Lxac;->alphabeticModifiers:I
+    sget v0, Likc;->alphabeticModifiers:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->alphabeticModifiers:I
 
-    sget v0, Lxac;->arrowHeadLength:I
+    sget v0, Likc;->arrowHeadLength:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->arrowHeadLength:I
 
-    sget v0, Lxac;->arrowShaftLength:I
+    sget v0, Likc;->arrowShaftLength:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->arrowShaftLength:I
 
-    sget v0, Lxac;->autoCompleteTextViewStyle:I
+    sget v0, Likc;->autoCompleteTextViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoCompleteTextViewStyle:I
 
-    sget v0, Lxac;->autoSizeMaxTextSize:I
+    sget v0, Likc;->autoSizeMaxTextSize:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoSizeMaxTextSize:I
 
-    sget v0, Lxac;->autoSizeMinTextSize:I
+    sget v0, Likc;->autoSizeMinTextSize:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoSizeMinTextSize:I
 
-    sget v0, Lxac;->autoSizePresetSizes:I
+    sget v0, Likc;->autoSizePresetSizes:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoSizePresetSizes:I
 
-    sget v0, Lxac;->autoSizeStepGranularity:I
+    sget v0, Likc;->autoSizeStepGranularity:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoSizeStepGranularity:I
 
-    sget v0, Lxac;->autoSizeTextType:I
+    sget v0, Likc;->autoSizeTextType:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->autoSizeTextType:I
 
-    sget v0, Lxac;->background:I
+    sget v0, Likc;->background:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->background:I
 
-    sget v0, Lxac;->backgroundSplit:I
+    sget v0, Likc;->backgroundSplit:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->backgroundSplit:I
 
-    sget v0, Lxac;->backgroundStacked:I
+    sget v0, Likc;->backgroundStacked:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->backgroundStacked:I
 
-    sget v0, Lxac;->backgroundTint:I
+    sget v0, Likc;->backgroundTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->backgroundTint:I
 
-    sget v0, Lxac;->backgroundTintMode:I
+    sget v0, Likc;->backgroundTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->backgroundTintMode:I
 
-    sget v0, Lxac;->barLength:I
+    sget v0, Likc;->barLength:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->barLength:I
 
-    sget v0, Lxac;->borderlessButtonStyle:I
+    sget v0, Likc;->borderlessButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->borderlessButtonStyle:I
 
-    sget v0, Lxac;->buttonBarButtonStyle:I
+    sget v0, Likc;->buttonBarButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonBarButtonStyle:I
 
-    sget v0, Lxac;->buttonBarNegativeButtonStyle:I
+    sget v0, Likc;->buttonBarNegativeButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonBarNegativeButtonStyle:I
 
-    sget v0, Lxac;->buttonBarNeutralButtonStyle:I
+    sget v0, Likc;->buttonBarNeutralButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonBarNeutralButtonStyle:I
 
-    sget v0, Lxac;->buttonBarPositiveButtonStyle:I
+    sget v0, Likc;->buttonBarPositiveButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonBarPositiveButtonStyle:I
 
-    sget v0, Lxac;->buttonBarStyle:I
+    sget v0, Likc;->buttonBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonBarStyle:I
 
-    sget v0, Lxac;->buttonCompat:I
+    sget v0, Likc;->buttonCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonCompat:I
 
-    sget v0, Lxac;->buttonGravity:I
+    sget v0, Likc;->buttonGravity:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonGravity:I
 
-    sget v0, Lxac;->buttonIconDimen:I
+    sget v0, Likc;->buttonIconDimen:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonIconDimen:I
 
-    sget v0, Lxac;->buttonPanelSideLayout:I
+    sget v0, Likc;->buttonPanelSideLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonPanelSideLayout:I
 
-    sget v0, Lxac;->buttonStyle:I
+    sget v0, Likc;->buttonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonStyle:I
 
-    sget v0, Lxac;->buttonStyleSmall:I
+    sget v0, Likc;->buttonStyleSmall:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonStyleSmall:I
 
-    sget v0, Lxac;->buttonTint:I
+    sget v0, Likc;->buttonTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonTint:I
 
-    sget v0, Lxac;->buttonTintMode:I
+    sget v0, Likc;->buttonTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->buttonTintMode:I
 
-    sget v0, Lxac;->checkMarkCompat:I
+    sget v0, Likc;->checkMarkCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->checkMarkCompat:I
 
-    sget v0, Lxac;->checkMarkTint:I
+    sget v0, Likc;->checkMarkTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->checkMarkTint:I
 
-    sget v0, Lxac;->checkMarkTintMode:I
+    sget v0, Likc;->checkMarkTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->checkMarkTintMode:I
 
-    sget v0, Lxac;->checkboxStyle:I
+    sget v0, Likc;->checkboxStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->checkboxStyle:I
 
-    sget v0, Lxac;->checkedTextViewStyle:I
+    sget v0, Likc;->checkedTextViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->checkedTextViewStyle:I
 
-    sget v0, Lxac;->closeIcon:I
+    sget v0, Likc;->closeIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->closeIcon:I
 
-    sget v0, Lxac;->closeItemLayout:I
+    sget v0, Likc;->closeItemLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->closeItemLayout:I
 
-    sget v0, Lxac;->collapseContentDescription:I
+    sget v0, Likc;->collapseContentDescription:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->collapseContentDescription:I
 
-    sget v0, Lxac;->collapseIcon:I
+    sget v0, Likc;->collapseIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->collapseIcon:I
 
-    sget v0, Lxac;->color:I
+    sget v0, Likc;->color:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->color:I
 
-    sget v0, Lxac;->colorAccent:I
+    sget v0, Likc;->colorAccent:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorAccent:I
 
-    sget v0, Lxac;->colorBackgroundFloating:I
+    sget v0, Likc;->colorBackgroundFloating:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorBackgroundFloating:I
 
-    sget v0, Lxac;->colorButtonNormal:I
+    sget v0, Likc;->colorButtonNormal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorButtonNormal:I
 
-    sget v0, Lxac;->colorControlActivated:I
+    sget v0, Likc;->colorControlActivated:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorControlActivated:I
 
-    sget v0, Lxac;->colorControlHighlight:I
+    sget v0, Likc;->colorControlHighlight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorControlHighlight:I
 
-    sget v0, Lxac;->colorControlNormal:I
+    sget v0, Likc;->colorControlNormal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorControlNormal:I
 
-    sget v0, Lxac;->colorError:I
+    sget v0, Likc;->colorError:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorError:I
 
-    sget v0, Lxac;->colorPrimary:I
+    sget v0, Likc;->colorPrimary:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorPrimary:I
 
-    sget v0, Lxac;->colorPrimaryDark:I
+    sget v0, Likc;->colorPrimaryDark:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorPrimaryDark:I
 
-    sget v0, Lxac;->colorSwitchThumbNormal:I
+    sget v0, Likc;->colorSwitchThumbNormal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->colorSwitchThumbNormal:I
 
-    sget v0, Lxac;->commitIcon:I
+    sget v0, Likc;->commitIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->commitIcon:I
 
-    sget v0, Lxac;->contentDescription:I
+    sget v0, Likc;->contentDescription:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentDescription:I
 
-    sget v0, Lxac;->contentInsetEnd:I
+    sget v0, Likc;->contentInsetEnd:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetEnd:I
 
-    sget v0, Lxac;->contentInsetEndWithActions:I
+    sget v0, Likc;->contentInsetEndWithActions:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetEndWithActions:I
 
-    sget v0, Lxac;->contentInsetLeft:I
+    sget v0, Likc;->contentInsetLeft:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetLeft:I
 
-    sget v0, Lxac;->contentInsetRight:I
+    sget v0, Likc;->contentInsetRight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetRight:I
 
-    sget v0, Lxac;->contentInsetStart:I
+    sget v0, Likc;->contentInsetStart:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetStart:I
 
-    sget v0, Lxac;->contentInsetStartWithNavigation:I
+    sget v0, Likc;->contentInsetStartWithNavigation:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->contentInsetStartWithNavigation:I
 
-    sget v0, Lxac;->controlBackground:I
+    sget v0, Likc;->controlBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->controlBackground:I
 
-    sget v0, Lxac;->customNavigationLayout:I
+    sget v0, Likc;->customNavigationLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->customNavigationLayout:I
 
-    sget v0, Lxac;->defaultQueryHint:I
+    sget v0, Likc;->defaultQueryHint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->defaultQueryHint:I
 
-    sget v0, Lxac;->dialogCornerRadius:I
+    sget v0, Likc;->dialogCornerRadius:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dialogCornerRadius:I
 
-    sget v0, Lxac;->dialogPreferredPadding:I
+    sget v0, Likc;->dialogPreferredPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dialogPreferredPadding:I
 
-    sget v0, Lxac;->dialogTheme:I
+    sget v0, Likc;->dialogTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dialogTheme:I
 
-    sget v0, Lxac;->displayOptions:I
+    sget v0, Likc;->displayOptions:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->displayOptions:I
 
-    sget v0, Lxac;->divider:I
+    sget v0, Likc;->divider:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->divider:I
 
-    sget v0, Lxac;->dividerHorizontal:I
+    sget v0, Likc;->dividerHorizontal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dividerHorizontal:I
 
-    sget v0, Lxac;->dividerPadding:I
+    sget v0, Likc;->dividerPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dividerPadding:I
 
-    sget v0, Lxac;->dividerVertical:I
+    sget v0, Likc;->dividerVertical:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dividerVertical:I
 
-    sget v0, Lxac;->drawableBottomCompat:I
+    sget v0, Likc;->drawableBottomCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableBottomCompat:I
 
-    sget v0, Lxac;->drawableEndCompat:I
+    sget v0, Likc;->drawableEndCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableEndCompat:I
 
-    sget v0, Lxac;->drawableLeftCompat:I
+    sget v0, Likc;->drawableLeftCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableLeftCompat:I
 
-    sget v0, Lxac;->drawableRightCompat:I
+    sget v0, Likc;->drawableRightCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableRightCompat:I
 
-    sget v0, Lxac;->drawableSize:I
+    sget v0, Likc;->drawableSize:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableSize:I
 
-    sget v0, Lxac;->drawableStartCompat:I
+    sget v0, Likc;->drawableStartCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableStartCompat:I
 
-    sget v0, Lxac;->drawableTint:I
+    sget v0, Likc;->drawableTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableTint:I
 
-    sget v0, Lxac;->drawableTintMode:I
+    sget v0, Likc;->drawableTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableTintMode:I
 
-    sget v0, Lxac;->drawableTopCompat:I
+    sget v0, Likc;->drawableTopCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawableTopCompat:I
 
-    sget v0, Lxac;->drawerArrowStyle:I
+    sget v0, Likc;->drawerArrowStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->drawerArrowStyle:I
 
-    sget v0, Lxac;->dropDownListViewStyle:I
+    sget v0, Likc;->dropDownListViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dropDownListViewStyle:I
 
-    sget v0, Lxac;->dropdownListPreferredItemHeight:I
+    sget v0, Likc;->dropdownListPreferredItemHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->dropdownListPreferredItemHeight:I
 
-    sget v0, Lxac;->editTextBackground:I
+    sget v0, Likc;->editTextBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->editTextBackground:I
 
-    sget v0, Lxac;->editTextColor:I
+    sget v0, Likc;->editTextColor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->editTextColor:I
 
-    sget v0, Lxac;->editTextStyle:I
+    sget v0, Likc;->editTextStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->editTextStyle:I
 
-    sget v0, Lxac;->elevation:I
+    sget v0, Likc;->elevation:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->elevation:I
 
-    sget v0, Lxac;->emojiCompatEnabled:I
+    sget v0, Likc;->emojiCompatEnabled:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->emojiCompatEnabled:I
 
-    sget v0, Lxac;->expandActivityOverflowButtonDrawable:I
+    sget v0, Likc;->expandActivityOverflowButtonDrawable:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->expandActivityOverflowButtonDrawable:I
 
-    sget v0, Lxac;->firstBaselineToTopHeight:I
+    sget v0, Likc;->firstBaselineToTopHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->firstBaselineToTopHeight:I
 
-    sget v0, Lxac;->fontFamily:I
+    sget v0, Likc;->fontFamily:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->fontFamily:I
 
-    sget v0, Lxac;->fontVariationSettings:I
+    sget v0, Likc;->fontVariationSettings:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->fontVariationSettings:I
 
-    sget v0, Lxac;->gapBetweenBars:I
+    sget v0, Likc;->gapBetweenBars:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->gapBetweenBars:I
 
-    sget v0, Lxac;->goIcon:I
+    sget v0, Likc;->goIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->goIcon:I
 
-    sget v0, Lxac;->height:I
+    sget v0, Likc;->height:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->height:I
 
-    sget v0, Lxac;->hideOnContentScroll:I
+    sget v0, Likc;->hideOnContentScroll:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->hideOnContentScroll:I
 
-    sget v0, Lxac;->homeAsUpIndicator:I
+    sget v0, Likc;->homeAsUpIndicator:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->homeAsUpIndicator:I
 
-    sget v0, Lxac;->homeLayout:I
+    sget v0, Likc;->homeLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->homeLayout:I
 
-    sget v0, Lxac;->icon:I
+    sget v0, Likc;->icon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->icon:I
 
-    sget v0, Lxac;->iconTint:I
+    sget v0, Likc;->iconTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->iconTint:I
 
-    sget v0, Lxac;->iconTintMode:I
+    sget v0, Likc;->iconTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->iconTintMode:I
 
-    sget v0, Lxac;->iconifiedByDefault:I
+    sget v0, Likc;->iconifiedByDefault:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->iconifiedByDefault:I
 
-    sget v0, Lxac;->imageButtonStyle:I
+    sget v0, Likc;->imageButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->imageButtonStyle:I
 
-    sget v0, Lxac;->indeterminateProgressStyle:I
+    sget v0, Likc;->indeterminateProgressStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->indeterminateProgressStyle:I
 
-    sget v0, Lxac;->initialActivityCount:I
+    sget v0, Likc;->initialActivityCount:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->initialActivityCount:I
 
-    sget v0, Lxac;->isLightTheme:I
+    sget v0, Likc;->isLightTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->isLightTheme:I
 
-    sget v0, Lxac;->itemPadding:I
+    sget v0, Likc;->itemPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->itemPadding:I
 
-    sget v0, Lxac;->lastBaselineToBottomHeight:I
+    sget v0, Likc;->lastBaselineToBottomHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->lastBaselineToBottomHeight:I
 
-    sget v0, Lxac;->layout:I
+    sget v0, Likc;->layout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->layout:I
 
-    sget v0, Lxac;->lineHeight:I
+    sget v0, Likc;->lineHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->lineHeight:I
 
-    sget v0, Lxac;->listChoiceBackgroundIndicator:I
+    sget v0, Likc;->listChoiceBackgroundIndicator:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listChoiceBackgroundIndicator:I
 
-    sget v0, Lxac;->listChoiceIndicatorMultipleAnimated:I
+    sget v0, Likc;->listChoiceIndicatorMultipleAnimated:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listChoiceIndicatorMultipleAnimated:I
 
-    sget v0, Lxac;->listChoiceIndicatorSingleAnimated:I
+    sget v0, Likc;->listChoiceIndicatorSingleAnimated:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listChoiceIndicatorSingleAnimated:I
 
-    sget v0, Lxac;->listDividerAlertDialog:I
+    sget v0, Likc;->listDividerAlertDialog:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listDividerAlertDialog:I
 
-    sget v0, Lxac;->listItemLayout:I
+    sget v0, Likc;->listItemLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listItemLayout:I
 
-    sget v0, Lxac;->listLayout:I
+    sget v0, Likc;->listLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listLayout:I
 
-    sget v0, Lxac;->listMenuViewStyle:I
+    sget v0, Likc;->listMenuViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listMenuViewStyle:I
 
-    sget v0, Lxac;->listPopupWindowStyle:I
+    sget v0, Likc;->listPopupWindowStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPopupWindowStyle:I
 
-    sget v0, Lxac;->listPreferredItemHeight:I
+    sget v0, Likc;->listPreferredItemHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemHeight:I
 
-    sget v0, Lxac;->listPreferredItemHeightLarge:I
+    sget v0, Likc;->listPreferredItemHeightLarge:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemHeightLarge:I
 
-    sget v0, Lxac;->listPreferredItemHeightSmall:I
+    sget v0, Likc;->listPreferredItemHeightSmall:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemHeightSmall:I
 
-    sget v0, Lxac;->listPreferredItemPaddingEnd:I
+    sget v0, Likc;->listPreferredItemPaddingEnd:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemPaddingEnd:I
 
-    sget v0, Lxac;->listPreferredItemPaddingLeft:I
+    sget v0, Likc;->listPreferredItemPaddingLeft:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemPaddingLeft:I
 
-    sget v0, Lxac;->listPreferredItemPaddingRight:I
+    sget v0, Likc;->listPreferredItemPaddingRight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemPaddingRight:I
 
-    sget v0, Lxac;->listPreferredItemPaddingStart:I
+    sget v0, Likc;->listPreferredItemPaddingStart:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->listPreferredItemPaddingStart:I
 
-    sget v0, Lxac;->logo:I
+    sget v0, Likc;->logo:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->logo:I
 
-    sget v0, Lxac;->logoDescription:I
+    sget v0, Likc;->logoDescription:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->logoDescription:I
 
-    sget v0, Lxac;->maxButtonHeight:I
+    sget v0, Likc;->maxButtonHeight:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->maxButtonHeight:I
 
-    sget v0, Lxac;->measureWithLargestChild:I
+    sget v0, Likc;->measureWithLargestChild:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->measureWithLargestChild:I
 
-    sget v0, Lxac;->menu:I
+    sget v0, Likc;->menu:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->menu:I
 
-    sget v0, Lxac;->multiChoiceItemLayout:I
+    sget v0, Likc;->multiChoiceItemLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->multiChoiceItemLayout:I
 
-    sget v0, Lxac;->navigationContentDescription:I
+    sget v0, Likc;->navigationContentDescription:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->navigationContentDescription:I
 
-    sget v0, Lxac;->navigationIcon:I
+    sget v0, Likc;->navigationIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->navigationIcon:I
 
-    sget v0, Lxac;->navigationMode:I
+    sget v0, Likc;->navigationMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->navigationMode:I
 
-    sget v0, Lxac;->numericModifiers:I
+    sget v0, Likc;->numericModifiers:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->numericModifiers:I
 
-    sget v0, Lxac;->overlapAnchor:I
+    sget v0, Likc;->overlapAnchor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->overlapAnchor:I
 
-    sget v0, Lxac;->paddingBottomNoButtons:I
+    sget v0, Likc;->paddingBottomNoButtons:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->paddingBottomNoButtons:I
 
-    sget v0, Lxac;->paddingEnd:I
+    sget v0, Likc;->paddingEnd:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->paddingEnd:I
 
-    sget v0, Lxac;->paddingStart:I
+    sget v0, Likc;->paddingStart:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->paddingStart:I
 
-    sget v0, Lxac;->paddingTopNoTitle:I
+    sget v0, Likc;->paddingTopNoTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->paddingTopNoTitle:I
 
-    sget v0, Lxac;->panelBackground:I
+    sget v0, Likc;->panelBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->panelBackground:I
 
-    sget v0, Lxac;->panelMenuListTheme:I
+    sget v0, Likc;->panelMenuListTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->panelMenuListTheme:I
 
-    sget v0, Lxac;->panelMenuListWidth:I
+    sget v0, Likc;->panelMenuListWidth:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->panelMenuListWidth:I
 
-    sget v0, Lxac;->popupMenuStyle:I
+    sget v0, Likc;->popupMenuStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->popupMenuStyle:I
 
-    sget v0, Lxac;->popupTheme:I
+    sget v0, Likc;->popupTheme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->popupTheme:I
 
-    sget v0, Lxac;->popupWindowStyle:I
+    sget v0, Likc;->popupWindowStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->popupWindowStyle:I
 
-    sget v0, Lxac;->preserveIconSpacing:I
+    sget v0, Likc;->preserveIconSpacing:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->preserveIconSpacing:I
 
-    sget v0, Lxac;->progressBarPadding:I
+    sget v0, Likc;->progressBarPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->progressBarPadding:I
 
-    sget v0, Lxac;->progressBarStyle:I
+    sget v0, Likc;->progressBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->progressBarStyle:I
 
-    sget v0, Lxac;->queryBackground:I
+    sget v0, Likc;->queryBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->queryBackground:I
 
-    sget v0, Lxac;->queryHint:I
+    sget v0, Likc;->queryHint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->queryHint:I
 
-    sget v0, Lxac;->radioButtonStyle:I
+    sget v0, Likc;->radioButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->radioButtonStyle:I
 
-    sget v0, Lxac;->ratingBarStyle:I
+    sget v0, Likc;->ratingBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->ratingBarStyle:I
 
-    sget v0, Lxac;->ratingBarStyleIndicator:I
+    sget v0, Likc;->ratingBarStyleIndicator:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->ratingBarStyleIndicator:I
 
-    sget v0, Lxac;->ratingBarStyleSmall:I
+    sget v0, Likc;->ratingBarStyleSmall:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->ratingBarStyleSmall:I
 
-    sget v0, Lxac;->searchHintIcon:I
+    sget v0, Likc;->searchHintIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->searchHintIcon:I
 
-    sget v0, Lxac;->searchIcon:I
+    sget v0, Likc;->searchIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->searchIcon:I
 
-    sget v0, Lxac;->searchViewStyle:I
+    sget v0, Likc;->searchViewStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->searchViewStyle:I
 
-    sget v0, Lxac;->seekBarStyle:I
+    sget v0, Likc;->seekBarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->seekBarStyle:I
 
-    sget v0, Lxac;->selectableItemBackground:I
+    sget v0, Likc;->selectableItemBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->selectableItemBackground:I
 
-    sget v0, Lxac;->selectableItemBackgroundBorderless:I
+    sget v0, Likc;->selectableItemBackgroundBorderless:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->selectableItemBackgroundBorderless:I
 
-    sget v0, Lxac;->showAsAction:I
+    sget v0, Likc;->showAsAction:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->showAsAction:I
 
-    sget v0, Lxac;->showDividers:I
+    sget v0, Likc;->showDividers:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->showDividers:I
 
-    sget v0, Lxac;->showText:I
+    sget v0, Likc;->showText:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->showText:I
 
-    sget v0, Lxac;->showTitle:I
+    sget v0, Likc;->showTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->showTitle:I
 
-    sget v0, Lxac;->singleChoiceItemLayout:I
+    sget v0, Likc;->singleChoiceItemLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->singleChoiceItemLayout:I
 
-    sget v0, Lxac;->spinBars:I
+    sget v0, Likc;->spinBars:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->spinBars:I
 
-    sget v0, Lxac;->spinnerDropDownItemStyle:I
+    sget v0, Likc;->spinnerDropDownItemStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->spinnerDropDownItemStyle:I
 
-    sget v0, Lxac;->spinnerStyle:I
+    sget v0, Likc;->spinnerStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->spinnerStyle:I
 
-    sget v0, Lxac;->splitTrack:I
+    sget v0, Likc;->splitTrack:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->splitTrack:I
 
-    sget v0, Lxac;->srcCompat:I
+    sget v0, Likc;->srcCompat:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->srcCompat:I
 
-    sget v0, Lxac;->state_above_anchor:I
+    sget v0, Likc;->state_above_anchor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->state_above_anchor:I
 
-    sget v0, Lxac;->subMenuArrow:I
+    sget v0, Likc;->subMenuArrow:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->subMenuArrow:I
 
-    sget v0, Lxac;->submitBackground:I
+    sget v0, Likc;->submitBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->submitBackground:I
 
-    sget v0, Lxac;->subtitle:I
+    sget v0, Likc;->subtitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->subtitle:I
 
-    sget v0, Lxac;->subtitleTextAppearance:I
+    sget v0, Likc;->subtitleTextAppearance:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->subtitleTextAppearance:I
 
-    sget v0, Lxac;->subtitleTextColor:I
+    sget v0, Likc;->subtitleTextColor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->subtitleTextColor:I
 
-    sget v0, Lxac;->subtitleTextStyle:I
+    sget v0, Likc;->subtitleTextStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->subtitleTextStyle:I
 
-    sget v0, Lxac;->suggestionRowLayout:I
+    sget v0, Likc;->suggestionRowLayout:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->suggestionRowLayout:I
 
-    sget v0, Lxac;->switchMinWidth:I
+    sget v0, Likc;->switchMinWidth:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->switchMinWidth:I
 
-    sget v0, Lxac;->switchPadding:I
+    sget v0, Likc;->switchPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->switchPadding:I
 
-    sget v0, Lxac;->switchStyle:I
+    sget v0, Likc;->switchStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->switchStyle:I
 
-    sget v0, Lxac;->switchTextAppearance:I
+    sget v0, Likc;->switchTextAppearance:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->switchTextAppearance:I
 
-    sget v0, Lxac;->textAllCaps:I
+    sget v0, Likc;->textAllCaps:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAllCaps:I
 
-    sget v0, Lxac;->textAppearanceLargePopupMenu:I
+    sget v0, Likc;->textAppearanceLargePopupMenu:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceLargePopupMenu:I
 
-    sget v0, Lxac;->textAppearanceListItem:I
+    sget v0, Likc;->textAppearanceListItem:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceListItem:I
 
-    sget v0, Lxac;->textAppearanceListItemSecondary:I
+    sget v0, Likc;->textAppearanceListItemSecondary:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceListItemSecondary:I
 
-    sget v0, Lxac;->textAppearanceListItemSmall:I
+    sget v0, Likc;->textAppearanceListItemSmall:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceListItemSmall:I
 
-    sget v0, Lxac;->textAppearancePopupMenuHeader:I
+    sget v0, Likc;->textAppearancePopupMenuHeader:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearancePopupMenuHeader:I
 
-    sget v0, Lxac;->textAppearanceSearchResultSubtitle:I
+    sget v0, Likc;->textAppearanceSearchResultSubtitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceSearchResultSubtitle:I
 
-    sget v0, Lxac;->textAppearanceSearchResultTitle:I
+    sget v0, Likc;->textAppearanceSearchResultTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceSearchResultTitle:I
 
-    sget v0, Lxac;->textAppearanceSmallPopupMenu:I
+    sget v0, Likc;->textAppearanceSmallPopupMenu:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textAppearanceSmallPopupMenu:I
 
-    sget v0, Lxac;->textColorAlertDialogListItem:I
+    sget v0, Likc;->textColorAlertDialogListItem:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textColorAlertDialogListItem:I
 
-    sget v0, Lxac;->textColorSearchUrl:I
+    sget v0, Likc;->textColorSearchUrl:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textColorSearchUrl:I
 
-    sget v0, Lxac;->textLocale:I
+    sget v0, Likc;->textLocale:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->textLocale:I
 
-    sget v0, Lxac;->theme:I
+    sget v0, Likc;->theme:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->theme:I
 
-    sget v0, Lxac;->thickness:I
+    sget v0, Likc;->thickness:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->thickness:I
 
-    sget v0, Lxac;->thumbTextPadding:I
+    sget v0, Likc;->thumbTextPadding:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->thumbTextPadding:I
 
-    sget v0, Lxac;->thumbTint:I
+    sget v0, Likc;->thumbTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->thumbTint:I
 
-    sget v0, Lxac;->thumbTintMode:I
+    sget v0, Likc;->thumbTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->thumbTintMode:I
 
-    sget v0, Lxac;->tickMark:I
+    sget v0, Likc;->tickMark:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tickMark:I
 
-    sget v0, Lxac;->tickMarkTint:I
+    sget v0, Likc;->tickMarkTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tickMarkTint:I
 
-    sget v0, Lxac;->tickMarkTintMode:I
+    sget v0, Likc;->tickMarkTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tickMarkTintMode:I
 
-    sget v0, Lxac;->tint:I
+    sget v0, Likc;->tint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tint:I
 
-    sget v0, Lxac;->tintMode:I
+    sget v0, Likc;->tintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tintMode:I
 
-    sget v0, Lxac;->title:I
+    sget v0, Likc;->title:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->title:I
 
-    sget v0, Lxac;->titleMargin:I
+    sget v0, Likc;->titleMargin:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMargin:I
 
-    sget v0, Lxac;->titleMarginBottom:I
+    sget v0, Likc;->titleMarginBottom:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMarginBottom:I
 
-    sget v0, Lxac;->titleMarginEnd:I
+    sget v0, Likc;->titleMarginEnd:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMarginEnd:I
 
-    sget v0, Lxac;->titleMarginStart:I
+    sget v0, Likc;->titleMarginStart:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMarginStart:I
 
-    sget v0, Lxac;->titleMarginTop:I
+    sget v0, Likc;->titleMarginTop:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMarginTop:I
 
-    sget v0, Lxac;->titleMargins:I
+    sget v0, Likc;->titleMargins:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleMargins:I
 
-    sget v0, Lxac;->titleTextAppearance:I
+    sget v0, Likc;->titleTextAppearance:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleTextAppearance:I
 
-    sget v0, Lxac;->titleTextColor:I
+    sget v0, Likc;->titleTextColor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleTextColor:I
 
-    sget v0, Lxac;->titleTextStyle:I
+    sget v0, Likc;->titleTextStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->titleTextStyle:I
 
-    sget v0, Lxac;->toolbarNavigationButtonStyle:I
+    sget v0, Likc;->toolbarNavigationButtonStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->toolbarNavigationButtonStyle:I
 
-    sget v0, Lxac;->toolbarStyle:I
+    sget v0, Likc;->toolbarStyle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->toolbarStyle:I
 
-    sget v0, Lxac;->tooltipForegroundColor:I
+    sget v0, Likc;->tooltipForegroundColor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tooltipForegroundColor:I
 
-    sget v0, Lxac;->tooltipFrameBackground:I
+    sget v0, Likc;->tooltipFrameBackground:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tooltipFrameBackground:I
 
-    sget v0, Lxac;->tooltipText:I
+    sget v0, Likc;->tooltipText:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->tooltipText:I
 
-    sget v0, Lxac;->track:I
+    sget v0, Likc;->track:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->track:I
 
-    sget v0, Lxac;->trackTint:I
+    sget v0, Likc;->trackTint:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->trackTint:I
 
-    sget v0, Lxac;->trackTintMode:I
+    sget v0, Likc;->trackTintMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->trackTintMode:I
 
-    sget v0, Lxac;->viewInflaterClass:I
+    sget v0, Likc;->viewInflaterClass:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->viewInflaterClass:I
 
-    sget v0, Lxac;->voiceIcon:I
+    sget v0, Likc;->voiceIcon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->voiceIcon:I
 
-    sget v0, Lxac;->windowActionBar:I
+    sget v0, Likc;->windowActionBar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowActionBar:I
 
-    sget v0, Lxac;->windowActionBarOverlay:I
+    sget v0, Likc;->windowActionBarOverlay:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowActionBarOverlay:I
 
-    sget v0, Lxac;->windowActionModeOverlay:I
+    sget v0, Likc;->windowActionModeOverlay:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowActionModeOverlay:I
 
-    sget v0, Lxac;->windowFixedHeightMajor:I
+    sget v0, Likc;->windowFixedHeightMajor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowFixedHeightMajor:I
 
-    sget v0, Lxac;->windowFixedHeightMinor:I
+    sget v0, Likc;->windowFixedHeightMinor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowFixedHeightMinor:I
 
-    sget v0, Lxac;->windowFixedWidthMajor:I
+    sget v0, Likc;->windowFixedWidthMajor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowFixedWidthMajor:I
 
-    sget v0, Lxac;->windowFixedWidthMinor:I
+    sget v0, Likc;->windowFixedWidthMinor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowFixedWidthMinor:I
 
-    sget v0, Lxac;->windowMinWidthMajor:I
+    sget v0, Likc;->windowMinWidthMajor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowMinWidthMajor:I
 
-    sget v0, Lxac;->windowMinWidthMinor:I
+    sget v0, Likc;->windowMinWidthMinor:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowMinWidthMinor:I
 
-    sget v0, Lxac;->windowNoTitle:I
+    sget v0, Likc;->windowNoTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$attr;->windowNoTitle:I
 

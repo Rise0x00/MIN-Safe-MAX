@@ -1,81 +1,48 @@
 .class public final Ldhe;
-.super Lnxc;
-.source "SourceFile"
-
-# interfaces
-.implements Lsb7;
+.super Lp14;
 
 
 # instance fields
-.field public final J0:I
+.field public final synthetic X:Lzv8;
 
-.field public final K0:Lmb7;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final L0:Lll3;
-
-.field public final synthetic M0:Lehe;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lehe;ILmb7;Lll3;)V
+.method public constructor <init>(Lzv8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ldhe;->M0:Lehe;
+    iput-object p1, p0, Ldhe;->X:Lzv8;
 
-    invoke-direct {p0, p4}, Lnxc;-><init>(Landroid/view/View;)V
-
-    iput p2, p0, Ldhe;->J0:I
-
-    iput-object p3, p0, Ldhe;->K0:Lmb7;
-
-    iput-object p4, p0, Ldhe;->L0:Lll3;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ldhe;->L0:Lll3;
+    iput-object p1, p0, Ldhe;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget p1, p0, Ldhe;->o:I
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->length()I
+    const/high16 v0, -0x80000000
 
-    move-result p1
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setSelection(I)V
+    iput p1, p0, Ldhe;->o:I
 
-    return-void
-.end method
+    iget-object p1, p0, Ldhe;->X:Lzv8;
 
-.method public final x()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ldhe;->L0:Lll3;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    if-nez v0, :cond_1
+    invoke-virtual {p1, v0, p0}, Lzv8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v0, ""
+    move-result-object p1
 
-    :cond_1
-    return-object v0
+    return-object p1
 .end method

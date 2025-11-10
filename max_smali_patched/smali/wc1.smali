@@ -7,20 +7,12 @@
 
 
 # static fields
-.field public static final X:Li1e;
-
 .field public static final a:Lwc1;
-
-.field public static final b:J
-
-.field public static final c:Ljef;
-
-.field public static final o:Ljp7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
     new-instance v0, Lwc1;
 
@@ -28,129 +20,46 @@
 
     sput-object v0, Lwc1;->a:Lwc1;
 
-    sget-wide v0, Lnja;->e:J
-
-    sput-wide v0, Lwc1;->b:J
-
-    sget v0, Lpja;->j:I
-
-    new-instance v1, Ljef;
-
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
-
-    sput-object v1, Lwc1;->c:Ljef;
-
-    new-instance v0, Ljp7;
-
-    sget v1, Llja;->j:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Ljp7;-><init>(III)V
-
-    sput-object v0, Lwc1;->o:Ljp7;
-
-    sget-object v0, Li1e;->a:Li1e;
-
-    sput-object v0, Lwc1;->X:Li1e;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Llp7;
-    .locals 1
-
-    sget-object v0, Lwc1;->o:Ljp7;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lwc1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
 .method public final getItemId()J
     .locals 2
 
-    sget-wide v0, Lwc1;->b:J
+    const-wide v0, 0x7ffffffffffffffeL
 
     return-wide v0
 .end method
 
-.method public final getTitle()Loef;
-    .locals 1
+.method public final h(Li28;)Z
+    .locals 4
 
-    sget-object v0, Lwc1;->c:Ljef;
+    const-wide v0, 0x7ffffffffffffffeL
 
-    return-object v0
-.end method
+    invoke-interface {p1}, Li28;->getItemId()J
 
-.method public final getType()Li1e;
-    .locals 1
+    move-result-wide v2
 
-    sget-object v0, Lwc1;->X:Li1e;
+    cmp-long p1, v0, v2
 
-    return-object v0
-.end method
+    if-nez p1, :cond_0
 
-.method public final hashCode()I
-    .locals 1
+    const/4 p1, 0x1
 
-    const v0, 0x1553d49d
+    return p1
 
-    return v0
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final m()I
     .locals 1
 
-    sget v0, Lmja;->m:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShareLink"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     return v0
 .end method

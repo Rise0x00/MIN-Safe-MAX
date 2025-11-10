@@ -1,37 +1,108 @@
-.class public abstract Lrk4;
+.class public final synthetic Lrk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfxb;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
+    iput p1, p0, Lrk4;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/os/Looper;)Landroid/os/Handler;
-    .locals 0
 
-    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/os/Handler;Lf12;J)Z
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Z
     .locals 1
 
-    const-string v0, "retry_token"
+    iget v0, p0, Lrk4;->a:I
 
-    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p0
+    check-cast p1, Ljava/lang/String;
 
-    return p0
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    :pswitch_1
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    return p1
+
+    :pswitch_2
+    check-cast p1, Ljava/lang/String;
+
+    if-eqz p1, :cond_3
+
+    const/4 p1, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_3
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

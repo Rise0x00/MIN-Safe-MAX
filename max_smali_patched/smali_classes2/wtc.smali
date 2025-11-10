@@ -1,64 +1,24 @@
-.class public final Lwtc;
+.class public abstract Lwtc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lxtc;
 
 
 # static fields
-.field public static final a:Lwtc;
+.field public static share_bottom_button_copy_link:I = 0x7f130cfa
 
+.field public static share_confirm_cancel:I = 0x7f130cfc
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static share_confirm_close:I = 0x7f130cfd
 
-    new-instance v0, Lwtc;
+.field public static share_confirmation_close_title:I = 0x7f130cfe
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static share_message_hint:I = 0x7f130d07
 
-    sput-object v0, Lwtc;->a:Lwtc;
+.field public static share_search_hint:I = 0x7f130d09
 
-    return-void
-.end method
+.field public static share_success_link_send:I = 0x7f130d0a
 
+.field public static share_toolbar_action_cancel_selection:I = 0x7f130d0c
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static share_toolbar_action_select:I = 0x7f130d0d
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lwtc;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x4fb612c0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowCloseConfirmationDialog"
-
-    return-object v0
-.end method
+.field public static share_toolbar_title:I = 0x7f130d0e

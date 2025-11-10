@@ -1,14 +1,25 @@
-.class public interface abstract Lt4b;
+.class public abstract Lt4b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract G()Z
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract H()Ljava/lang/Object;
-.end method
+.field public static final b:I
 
-.method public abstract e()Ljava/lang/Object;
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lnpc;->oneme_stickers_showcase_sets_list:I
+
+    sput v0, Lt4b;->a:I
+
+    sget v0, Lnpc;->oneme_stickers_showcase_toolbar:I
+
+    sput v0, Lt4b;->b:I
+
+    return-void
 .end method

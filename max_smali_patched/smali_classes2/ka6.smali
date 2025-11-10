@@ -1,217 +1,200 @@
 .class public final Lka6;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lma6;
+
+.field public o:Lja6;
+
+.field public final synthetic s0:Lt7d;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lma6;Lt7d;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lka6;->Z:Lma6;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p2, p0, Lka6;->s0:Lt7d;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqza;Landroid/net/Uri;JZI)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    check-cast p1, Lf0c;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lka6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Lka6;
 
-    if-eqz v1, :cond_0
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lka6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    move-object v2, v1
-
-    check-cast v2, Lka6;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-wide v5, p3
-
-    move v7, p5
-
-    move v8, p6
-
-    invoke-virtual/range {v2 .. v8}, Lka6;->a(Lqza;Landroid/net/Uri;JZI)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final b(Lb0b;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Lka6;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lka6;->Z:Lma6;
 
-    move-result-object v0
+    iget-object v2, p0, Lka6;->s0:Lt7d;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v0, v1, v2, p2}, Lka6;-><init>(Lma6;Lt7d;Lkotlin/coroutines/Continuation;)V
 
-    move-result v1
+    iput-object p1, v0, Lka6;->Y:Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lka6;
-
-    invoke-virtual {v1, p1, p2, p3}, Lka6;->b(Lb0b;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Lqza;Landroid/net/Uri;JZ)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    iget-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Lka6;->Z:Lma6;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, v0, Lma6;->X:Le2h;
 
-    move-result-object v0
+    iget v2, p0, Lka6;->X:I
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v3, 0x2
 
-    move-result v1
+    const/4 v4, 0x1
 
-    if-eqz v1, :cond_0
+    sget-object v5, Lh54;->a:Lh54;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v2, :cond_2
 
-    move-result-object v1
+    if-eq v2, v4, :cond_1
 
-    move-object v2, v1
+    if-ne v2, v3, :cond_0
 
-    check-cast v2, Lka6;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    move-object v3, p1
+    goto :goto_2
 
-    move-object v4, p2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-wide v5, p3
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move v7, p5
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual/range {v2 .. v7}, Lka6;->c(Lqza;Landroid/net/Uri;JZ)V
+    throw p1
+
+    :cond_1
+    iget-object v1, p0, Lka6;->o:Lja6;
+
+    iget-object v2, p0, Lka6;->Y:Ljava/lang/Object;
+
+    check-cast v2, Lf0c;
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
+    :cond_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-.method public final d(Lqza;Landroid/net/Uri;JZ)V
-    .locals 8
+    iget-object p1, p0, Lka6;->Y:Ljava/lang/Object;
 
-    iget-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    move-object v2, p1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    check-cast v2, Lf0c;
 
-    move-result-object v0
+    new-instance p1, Lja6;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v6, p0, Lka6;->s0:Lt7d;
 
-    move-result v1
+    const/4 v7, 0x0
 
-    if-eqz v1, :cond_0
+    invoke-direct {p1, v6, v7, v2}, Lja6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Le2h;->c(Ler;)V
 
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lka6;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-wide v5, p3
-
-    move v7, p5
-
-    invoke-virtual/range {v2 .. v7}, Lka6;->d(Lqza;Landroid/net/Uri;JZ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(Lqza;Landroid/net/Uri;JZ)V
-    .locals 8
-
-    iget-object v0, p0, Lka6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Le2h;->d()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    move-object v2, v1
+    iput-object v2, p0, Lka6;->Y:Ljava/lang/Object;
 
-    check-cast v2, Lka6;
+    iput-object p1, p0, Lka6;->o:Lja6;
 
-    move-object v3, p1
+    iput v4, p0, Lka6;->X:I
 
-    move-object v4, p2
+    move-object v4, v2
 
-    move-wide v5, p3
+    check-cast v4, Lc0c;
 
-    move v7, p5
+    iget-object v4, v4, Lc0c;->a:Lfv0;
 
-    invoke-virtual/range {v2 .. v7}, Lka6;->e(Lqza;Landroid/net/Uri;JZ)V
+    invoke-interface {v4, v1, p0}, Lb2e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    return-void
+    if-ne v1, v5, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move-object v1, p1
+
+    :goto_0
+    new-instance p1, Li33;
+
+    const/16 v4, 0xe
+
+    invoke-direct {p1, v0, v4, v1}, Li33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lka6;->Y:Ljava/lang/Object;
+
+    iput-object v0, p0, Lka6;->o:Lja6;
+
+    iput v3, p0, Lka6;->X:I
+
+    invoke-static {v2, p1, p0}, Lavi;->a(Lf0c;Loi6;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v5, :cond_4
+
+    :goto_1
+    return-object v5
+
+    :cond_4
+    :goto_2
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

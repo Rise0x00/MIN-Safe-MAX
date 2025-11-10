@@ -1,13 +1,80 @@
-.class public abstract Lkng;
+.class public final synthetic Lkng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrt1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbx4;
+
 
 # direct methods
-.method public static a(Landroid/view/View;I)V
+.method public synthetic constructor <init>(Lbx4;I)V
     .locals 0
 
-    invoke-static {p0, p1}, Lyzc;->w(Landroid/view/View;I)V
+    iput p2, p0, Lkng;->a:I
+
+    iput-object p1, p0, Lkng;->b:Lbx4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final B(Lqt1;)Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lkng;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkng;->b:Lbx4;
+
+    iput-object p1, v0, Lbx4;->n:Ljava/lang/Object;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReadyToReleaseFuture "
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lkng;->b:Lbx4;
+
+    iput-object p1, v0, Lbx4;->l:Ljava/lang/Object;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "ReleasedFuture "
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

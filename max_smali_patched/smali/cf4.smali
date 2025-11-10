@@ -2,98 +2,193 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq1f;
-
-
-# static fields
-.field public static final b:J
-
 
 # instance fields
-.field public final a:Landroid/app/ActivityManager;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lsb6;
+
+.field public final c:Lsb6;
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x5
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lcf4;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/app/ActivityManager;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lsb6;Lsb6;II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcf4;->a:Landroid/app/ActivityManager;
+    if-eqz p4, :cond_1
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 7
-
-    new-instance v0, Ld19;
-
-    iget-object v1, p0, Lcf4;->a:Landroid/app/ActivityManager;
-
-    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
-
-    move-result v1
-
-    const/high16 v2, 0x100000
-
-    mul-int/2addr v1, v2
-
-    const v2, 0x7fffffff
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    const/high16 v2, 0x2000000
-
-    if-ge v1, v2, :cond_0
-
-    const/high16 v1, 0x400000
+    if-nez p5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/high16 v2, 0x4000000
+    const/4 v0, 0x0
 
-    if-ge v1, v2, :cond_1
+    goto :goto_1
 
-    const/high16 v1, 0x600000
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lggi;->c(Z)V
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-object p1, p0, Lcf4;->a:Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lcf4;->b:Lsb6;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lcf4;->c:Lsb6;
+
+    iput p4, p0, Lcf4;->d:I
+
+    iput p5, p0, Lcf4;->e:I
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lcf4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    div-int/lit8 v1, v1, 0x4
+    check-cast p1, Lcf4;
 
+    iget v2, p0, Lcf4;->d:I
+
+    iget v3, p1, Lcf4;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lcf4;->e:I
+
+    iget v3, p1, Lcf4;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lcf4;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lcf4;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcf4;->b:Lsb6;
+
+    iget-object v3, p1, Lcf4;->b:Lsb6;
+
+    invoke-virtual {v2, v3}, Lsb6;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcf4;->c:Lsb6;
+
+    iget-object p1, p1, Lcf4;->c:Lsb6;
+
+    invoke-virtual {v2, p1}, Lsb6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
     :goto_0
-    const v6, 0x7fffffff
+    return v1
+.end method
 
-    sget-wide v4, Lcf4;->b:J
+.method public final hashCode()I
+    .locals 3
 
-    const/16 v2, 0x100
+    const/16 v0, 0x20f
 
-    const v3, 0x7fffffff
+    iget v1, p0, Lcf4;->d:I
 
-    invoke-direct/range {v0 .. v6}, Ld19;-><init>(IIIJI)V
+    add-int/2addr v0, v1
 
-    return-object v0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lcf4;->e:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcf4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lcf4;->b:Lsb6;
+
+    invoke-virtual {v2}, Lsb6;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lcf4;->c:Lsb6;
+
+    invoke-virtual {v0}, Lsb6;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method

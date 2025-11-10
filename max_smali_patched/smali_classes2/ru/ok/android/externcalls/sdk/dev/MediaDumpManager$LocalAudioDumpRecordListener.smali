@@ -22,7 +22,7 @@
         "",
         "",
         "dirPath",
-        "Loyf;",
+        "Lybg;",
         "onRecordStarted",
         "(Ljava/lang/String;)V",
         "onRecordCompleted",

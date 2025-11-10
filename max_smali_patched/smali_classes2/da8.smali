@@ -1,23 +1,15 @@
-.class public final Lda8;
-.super Ljava/lang/Object;
+.class public abstract Lda8;
+.super Lfe5;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/graphics/Bitmap;
-
-.field public final b:Ldo0;
-
-
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Ldo0;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lybg;->a:Lybg;
 
-    iput-object p1, p0, Lda8;->a:Landroid/graphics/Bitmap;
-
-    iput-object p2, p0, Lda8;->b:Ldo0;
+    invoke-direct {p0, v0, p1}, Lfe5;-><init>(Ljava/lang/Object;Ljava/lang/Throwable;)V
 
     return-void
 .end method

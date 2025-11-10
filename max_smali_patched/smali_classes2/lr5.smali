@@ -1,47 +1,29 @@
 .class public final Llr5;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lnr5;
+# static fields
+.field public static final synthetic a:Llr5;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:Lkr5;
 
 
 # direct methods
-.method public constructor <init>(Lnr5;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Llr5;->X:Lnr5;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Llr5;->o:Ljava/lang/Object;
+    new-instance v0, Llr5;
 
-    iget p1, p0, Llr5;->Y:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Llr5;->a:Llr5;
 
-    or-int/2addr p1, v0
+    new-instance v0, Lkr5;
 
-    iput p1, p0, Llr5;->Y:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Llr5;->X:Lnr5;
+    sput-object v0, Llr5;->b:Lkr5;
 
-    invoke-virtual {p1, p0}, Lnr5;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

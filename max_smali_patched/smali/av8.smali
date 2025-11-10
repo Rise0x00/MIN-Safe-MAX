@@ -1,343 +1,199 @@
-.class public final synthetic Lav8;
+.class public Lav8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public final b:I
 
-.field public final synthetic Z:Ljava/lang/Object;
+.field public final c:I
 
-.field public final synthetic a:I
+.field public final d:J
 
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/work/impl/WorkDatabase;Lbah;Lbah;Ljava/util/List;Ljava/lang/String;Ljava/util/Set;Z)V
-    .locals 0
+.method public constructor <init>(Lav8;)V
+    .locals 2
 
     .line 1
-    const/4 p4, 0x2
-
-    iput p4, p0, Lav8;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lav8;->o:Ljava/lang/Object;
+    .line 2
+    iget-object v0, p1, Lav8;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Lav8;->X:Ljava/lang/Object;
+    iput-object v0, p0, Lav8;->a:Ljava/lang/Object;
 
-    iput-object p3, p0, Lav8;->Y:Ljava/lang/Object;
+    .line 3
+    iget v0, p1, Lav8;->b:I
 
-    iput-object p5, p0, Lav8;->Z:Ljava/lang/Object;
+    iput v0, p0, Lav8;->b:I
 
-    iput-object p6, p0, Lav8;->b:Ljava/lang/Object;
+    .line 4
+    iget v0, p1, Lav8;->c:I
 
-    iput-boolean p7, p0, Lav8;->c:Z
+    iput v0, p0, Lav8;->c:I
+
+    .line 5
+    iget-wide v0, p1, Lav8;->d:J
+
+    iput-wide v0, p0, Lav8;->d:J
+
+    .line 6
+    iget p1, p1, Lav8;->e:I
+
+    iput p1, p0, Lav8;->e:I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/io/IOException;ZI)V
+.method public constructor <init>(Ljava/lang/Object;IIJI)V
     .locals 0
 
-    .line 2
-    iput p7, p0, Lav8;->a:I
-
-    iput-object p1, p0, Lav8;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lav8;->X:Ljava/lang/Object;
-
-    iput-object p3, p0, Lav8;->Y:Ljava/lang/Object;
-
-    iput-object p4, p0, Lav8;->Z:Ljava/lang/Object;
-
-    iput-object p5, p0, Lav8;->b:Ljava/lang/Object;
-
-    iput-boolean p6, p0, Lav8;->c:Z
-
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput-object p1, p0, Lav8;->a:Ljava/lang/Object;
+
+    .line 9
+    iput p2, p0, Lav8;->b:I
+
+    .line 10
+    iput p3, p0, Lav8;->c:I
+
+    .line 11
+    iput-wide p4, p0, Lav8;->d:J
+
+    .line 12
+    iput p6, p0, Lav8;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 18
+.method public final a()Z
+    .locals 2
 
-    move-object/from16 v1, p0
+    iget v0, p0, Lav8;->b:I
 
-    iget v0, v1, Lav8;->a:I
+    const/4 v1, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eq v0, v1, :cond_0
 
-    iget-object v0, v1, Lav8;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Landroidx/work/impl/WorkDatabase;
-
-    iget-object v2, v1, Lav8;->X:Ljava/lang/Object;
-
-    move-object v3, v2
-
-    check-cast v3, Lbah;
-
-    iget-object v2, v1, Lav8;->Y:Ljava/lang/Object;
-
-    check-cast v2, Lbah;
-
-    iget-object v4, v1, Lav8;->Z:Ljava/lang/Object;
-
-    move-object v13, v4
-
-    check-cast v13, Ljava/lang/String;
-
-    iget-object v4, v1, Lav8;->b:Ljava/lang/Object;
-
-    move-object v14, v4
-
-    check-cast v14, Ljava/util/Set;
-
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->x()Ldah;
-
-    move-result-object v15
-
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->y()Lfah;
-
-    move-result-object v4
-
-    iget-object v5, v2, Lbah;->b:Lg9h;
-
-    iget v8, v2, Lbah;->k:I
-
-    iget-wide v9, v2, Lbah;->n:J
-
-    iget v2, v2, Lbah;->t:I
-
-    const/4 v6, 0x1
-
-    add-int/lit8 v11, v2, 0x1
-
-    const v12, 0x7dbfd
-
-    move-object v2, v4
-
-    const/4 v4, 0x0
-
-    move v7, v6
-
-    const/4 v6, 0x0
-
-    move/from16 v16, v7
-
-    const/4 v7, 0x0
-
-    move/from16 v17, v16
-
-    move-object/from16 v16, v0
-
-    move/from16 v0, v17
-
-    invoke-static/range {v3 .. v12}, Lbah;->b(Lbah;Ljava/lang/String;Lg9h;Ljava/lang/String;Lu84;IJII)Lbah;
-
-    move-result-object v3
-
-    iget-object v4, v15, Ldah;->a:Ljava/lang/Object;
-
-    check-cast v4, Landroidx/work/impl/WorkDatabase_Impl;
-
-    invoke-virtual {v4}, Lx5d;->b()V
-
-    invoke-virtual {v4}, Lx5d;->c()V
-
-    :try_start_0
-    iget-object v5, v15, Ldah;->c:Ljava/lang/Object;
-
-    check-cast v5, Lvg4;
-
-    invoke-virtual {v5, v3}, Lga5;->C(Ljava/lang/Object;)I
-
-    invoke-virtual {v4}, Lx5d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    invoke-virtual {v4}, Lx5d;->k()V
-
-    iget-object v3, v2, Lfah;->a:Ljava/lang/Object;
-
-    check-cast v3, Landroidx/work/impl/WorkDatabase_Impl;
-
-    invoke-virtual {v3}, Lx5d;->b()V
-
-    iget-object v4, v2, Lfah;->c:Ljava/lang/Object;
-
-    check-cast v4, Lcah;
-
-    invoke-virtual {v4}, Lw2;->f()Lh2f;
-
-    move-result-object v5
-
-    invoke-interface {v5, v0, v13}, Lf2f;->f(ILjava/lang/String;)V
-
-    invoke-virtual {v3}, Lx5d;->c()V
-
-    :try_start_1
-    invoke-interface {v5}, Lh2f;->C()I
-
-    invoke-virtual {v3}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v3}, Lx5d;->k()V
-
-    invoke-virtual {v4, v5}, Lw2;->v(Lh2f;)V
-
-    invoke-virtual {v2, v13, v14}, Lfah;->s(Ljava/lang/String;Ljava/util/Set;)V
-
-    iget-boolean v0, v1, Lav8;->c:Z
-
-    if-nez v0, :cond_0
-
-    const-wide/16 v2, -0x1
-
-    invoke-virtual {v15, v2, v3, v13}, Ldah;->r(JLjava/lang/String;)V
-
-    invoke-virtual/range {v16 .. v16}, Landroidx/work/impl/WorkDatabase;->w()Lu9h;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v13}, Lu9h;->h(Ljava/lang/String;)V
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
 
-    :catchall_0
-    move-exception v0
+    return v0
+.end method
 
-    invoke-virtual {v3}, Lx5d;->k()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-virtual {v4, v5}, Lw2;->v(Lh2f;)V
+    const/4 v0, 0x1
 
-    throw v0
+    if-ne p0, p1, :cond_0
 
-    :catchall_1
-    move-exception v0
+    return v0
 
-    invoke-virtual {v4}, Lx5d;->k()V
+    :cond_0
+    instance-of v1, p1, Lav8;
 
-    throw v0
+    const/4 v2, 0x0
 
-    :pswitch_0
-    iget-object v0, v1, Lav8;->o:Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    check-cast v0, Lnv8;
+    return v2
 
-    iget-object v2, v1, Lav8;->X:Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lav8;
 
-    check-cast v2, Landroid/util/Pair;
+    iget-object v1, p0, Lav8;->a:Ljava/lang/Object;
 
-    iget-object v3, v1, Lav8;->Y:Ljava/lang/Object;
+    iget-object v3, p1, Lav8;->a:Ljava/lang/Object;
 
-    move-object v7, v3
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    check-cast v7, Lhz7;
+    move-result v1
 
-    iget-object v3, v1, Lav8;->Z:Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
-    move-object v8, v3
+    iget v1, p0, Lav8;->b:I
 
-    check-cast v8, Lnn8;
+    iget v3, p1, Lav8;->b:I
 
-    iget-object v3, v1, Lav8;->b:Ljava/lang/Object;
+    if-ne v1, v3, :cond_2
 
-    move-object v9, v3
+    iget v1, p0, Lav8;->c:I
 
-    check-cast v9, Ljava/io/IOException;
+    iget v3, p1, Lav8;->c:I
 
-    iget-object v0, v0, Lnv8;->b:Lsv8;
+    if-ne v1, v3, :cond_2
 
-    iget-object v0, v0, Lsv8;->j:Ljava/lang/Object;
+    iget-wide v3, p0, Lav8;->d:J
 
-    move-object v4, v0
+    iget-wide v5, p1, Lav8;->d:J
 
-    check-cast v4, Lie4;
+    cmp-long v1, v3, v5
 
-    iget-object v0, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
+    if-nez v1, :cond_2
 
-    check-cast v0, Ljava/lang/Integer;
+    iget v1, p0, Lav8;->e:I
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    iget p1, p1, Lav8;->e:I
 
-    move-result v5
+    if-ne v1, p1, :cond_2
 
-    iget-object v0, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
+    return v0
 
-    move-object v6, v0
+    :cond_2
+    return v2
+.end method
 
-    check-cast v6, Lvu8;
+.method public final hashCode()I
+    .locals 3
 
-    iget-boolean v10, v1, Lav8;->c:Z
+    iget-object v0, p0, Lav8;->a:Ljava/lang/Object;
 
-    invoke-virtual/range {v4 .. v10}, Lie4;->a(ILvu8;Lhz7;Lnn8;Ljava/io/IOException;Z)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v0
 
-    :pswitch_1
-    iget-object v0, v1, Lav8;->o:Ljava/lang/Object;
+    add-int/lit16 v0, v0, 0x20f
 
-    check-cast v0, Lim4;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, v1, Lav8;->X:Ljava/lang/Object;
+    iget v1, p0, Lav8;->b:I
 
-    move-object v3, v2
+    add-int/2addr v0, v1
 
-    check-cast v3, Lev8;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, v1, Lav8;->Y:Ljava/lang/Object;
+    iget v1, p0, Lav8;->c:I
 
-    move-object v6, v2
+    add-int/2addr v0, v1
 
-    check-cast v6, Lgz7;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, v1, Lav8;->Z:Ljava/lang/Object;
+    iget-wide v1, p0, Lav8;->d:J
 
-    move-object v7, v2
+    long-to-int v1, v1
 
-    check-cast v7, Lnn8;
+    add-int/2addr v0, v1
 
-    iget-object v2, v1, Lav8;->b:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-object v8, v2
+    iget v1, p0, Lav8;->e:I
 
-    check-cast v8, Ljava/io/IOException;
+    add-int/2addr v0, v1
 
-    iget v4, v0, Lim4;->a:I
-
-    iget-object v0, v0, Lim4;->c:Ljava/lang/Object;
-
-    move-object v5, v0
-
-    check-cast v5, Luu8;
-
-    iget-boolean v9, v1, Lav8;->c:Z
-
-    invoke-interface/range {v3 .. v9}, Lev8;->b(ILuu8;Lgz7;Lnn8;Ljava/io/IOException;Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -2,151 +2,274 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Ltya;
+.field public final b:Z
 
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final c:Z
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltya;Landroid/widget/ScrollView;I)V
-    .locals 0
+.method public constructor <init>(Lx4e;)V
+    .locals 11
 
-    iput p3, p0, Loub;->a:I
-
-    iput-object p1, p0, Loub;->b:Ltya;
-
-    iput-object p2, p0, Loub;->c:Landroid/widget/ScrollView;
+    sget-object v0, La98;->d:La98;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const-class v1, Loub;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    check-cast p1, Ljud;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->player-load-control:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Ljud;->r(Ljava/lang/Enum;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, v0}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "Server player control params="
+
+    invoke-static {v4, p1}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v0, v1, v4, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    if-eqz p1, :cond_2
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    const-string v2, "Failed to parse player control params"
+
+    invoke-static {v1, v2, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    move-object v2, v3
+
+    :goto_1
+    const/4 p1, 0x4
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x1f4
+
+    const/16 v6, 0x32c8
+
+    const/16 v7, 0x1388
+
+    const/16 v8, 0xbb8
+
+    const/4 v9, 0x0
+
+    if-eqz v2, :cond_3
+
+    const-string v10, "mp_autoplay_enabled"
+
+    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v10
+
+    iput-boolean v10, p0, Loub;->a:Z
+
+    const-string v10, "time_over_size"
+
+    invoke-virtual {v2, v10, v9}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v9
+
+    iput-boolean v9, p0, Loub;->c:Z
+
+    const-string v9, "buffer_after_rebuffer_ms"
+
+    invoke-virtual {v2, v9, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v8
+
+    iput v8, p0, Loub;->d:I
+
+    const-string v8, "min_buffer_ms"
+
+    invoke-virtual {v2, v8, v7}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    iput v7, p0, Loub;->e:I
+
+    const-string v7, "max_buffer_ms"
+
+    invoke-virtual {v2, v7, v6}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    iput v6, p0, Loub;->f:I
+
+    const-string v6, "buffer_ms"
+
+    invoke-virtual {v2, v6, v5}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v5
+
+    iput v5, p0, Loub;->g:I
+
+    const-string v5, "use_min_size_lc"
+
+    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    iput-boolean v4, p0, Loub;->b:Z
+
+    const-string v4, "min_size_lc_fmt_mis_sf"
+
+    invoke-virtual {v2, v4, p1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    iput p1, p0, Loub;->h:I
+
+    goto :goto_2
+
+    :cond_3
+    iput-boolean v9, p0, Loub;->a:Z
+
+    iput-boolean v9, p0, Loub;->c:Z
+
+    iput v8, p0, Loub;->d:I
+
+    iput v7, p0, Loub;->e:I
+
+    iput v6, p0, Loub;->f:I
+
+    iput v5, p0, Loub;->g:I
+
+    iput-boolean v4, p0, Loub;->b:Z
+
+    iput p1, p0, Loub;->h:I
+
+    :goto_2
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-nez p1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {p1, v0}, Lnxa;->b(La98;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {p0}, Loub;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final toString()Ljava/lang/String;
     .locals 5
 
-    iget v0, p0, Loub;->a:I
+    const-string v0, "\n        isMinSizeLoadControlRequested="
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "\n        isPlaybackPrioritizeTimeOverSize="
 
-    iget-object v0, p0, Loub;->b:Ltya;
+    const-string v2, "PlayerControl(\n        isAutoPlayEnabledDuringMediaProcessing="
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-boolean v3, p0, Loub;->a:Z
 
-    move-result-object v1
+    iget-boolean v4, p0, Loub;->b:Z
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-static {v2, v3, v0, v4, v1}, Lok7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_0
+    move-result-object v0
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-boolean v1, p0, Loub;->c:Z
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v1, 0x0
+    const-string v1, "\n        playbackMinBufferMs="
 
-    :goto_0
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    iget v1, p0, Loub;->e:I
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 v1, 0x0
+    const-string v1, "\n        playbackMaxBufferMs="
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v1, "\n        playbackBufferMs="
 
-    add-int/2addr v0, v1
+    const-string v2, "\n        playbackBufferAfterRebufferMs="
 
-    iget-object v1, p0, Loub;->c:Landroid/widget/ScrollView;
+    iget v3, p0, Loub;->f:I
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+    iget v4, p0, Loub;->g:I
 
-    move-result v2
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+    const-string v1, "\n        formatMaxInputSizeScaleUpFactor="
 
-    move-result v3
+    const-string v2, "\n        )\n        "
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
+    iget v3, p0, Loub;->d:I
 
-    move-result v4
+    iget v4, p0, Loub;->h:I
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
+    invoke-static {v0, v3, v1, v4, v2}, Lcd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Loub;->b:Ltya;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_3
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Loub;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

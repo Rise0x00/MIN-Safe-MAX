@@ -3,56 +3,65 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb57;
+.implements Lex1;
 
 
 # instance fields
-.field public final a:Liy1;
+.field public a:Lqt1;
+
+.field public final b:Ltt1;
+
+.field public final c:Liy1;
 
 
 # direct methods
 .method public constructor <init>(Liy1;)V
-    .locals 0
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljy1;->a:Liy1;
+    new-instance v0, Lxid;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1, p0}, Lxid;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lcmi;->a(Lrt1;)Ltt1;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljy1;->b:Ltt1;
+
+    iput-object p1, p0, Ljy1;->c:Liy1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lkd5;)V
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 1
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    iget-object v0, p0, Ljy1;->c:Liy1;
 
-    invoke-interface {v0, p1}, Liy1;->b(Lkd5;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    invoke-interface {v0, p1}, Liy1;->c(Landroid/hardware/camera2/TotalCaptureResult;)Z
 
-.method public final c()Lw7f;
-    .locals 1
+    move-result v0
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    if-nez v0, :cond_0
 
-    invoke-interface {v0}, Liy1;->c()Lw7f;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    return p1
 
-    return-object v0
-.end method
+    :cond_0
+    iget-object v0, p0, Ljy1;->a:Lqt1;
 
-.method public final getTimestamp()J
-    .locals 2
+    invoke-virtual {v0, p1}, Lqt1;->b(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    const/4 p1, 0x1
 
-    invoke-interface {v0}, Liy1;->getTimestamp()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return p1
 .end method

@@ -7,7 +7,7 @@
 
 
 # direct methods
-.method public static c(Ldp5;[BLjava/io/File;)V
+.method public static c(Lht5;[BLjava/io/File;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -32,15 +32,15 @@
 
     invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v9, v0, Ldp5;->b:Ljava/lang/Object;
+    iget-object v9, v0, Lht5;->b:Ljava/lang/Object;
 
-    check-cast v9, Li9f;
+    check-cast v9, Lkh;
 
-    iget-object v0, v0, Ldp5;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lht5;->c:Ljava/lang/Object;
 
     check-cast v0, Ljava/io/InputStream;
 
-    iget-object v10, v9, Li9f;->b:Ljava/lang/Object;
+    iget-object v10, v9, Lkh;->b:Ljava/lang/Object;
 
     check-cast v10, Ljava/lang/String;
 
@@ -65,7 +65,7 @@
     :cond_0
     new-instance v8, Ljava/io/File;
 
-    iget-object v9, v9, Li9f;->b:Ljava/lang/Object;
+    iget-object v9, v9, Lkh;->b:Ljava/lang/Object;
 
     check-cast v9, Ljava/lang/String;
 
@@ -297,7 +297,7 @@
 
     invoke-static {v11, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v8}, Lu5f;->b(Ljava/io/File;)V
+    invoke-static {v8}, Luif;->b(Ljava/io/File;)V
 
     throw v0
     :try_end_7
@@ -356,8 +356,8 @@
     return-void
 .end method
 
-.method public abstract m()[Li9f;
+.method public abstract l()[Lkh;
 .end method
 
-.method public abstract n(Ljava/io/File;)V
+.method public abstract w(Ljava/io/File;)V
 .end method

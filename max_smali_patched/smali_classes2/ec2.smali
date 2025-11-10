@@ -1,97 +1,117 @@
-.class public final Lec2;
+.class public final synthetic Lec2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final l:Lec2;
+# interfaces
+.implements Lhxb;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lad2;
 
-.field public final b:Z
+.field public final synthetic b:Z
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
-
-    new-instance v0, Lec2;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v0 .. v11}, Lec2;-><init>(ZZZZZZZZZZZ)V
-
-    sput-object v0, Lec2;->l:Lec2;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZZZZZZ)V
+.method public synthetic constructor <init>(Lad2;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lec2;->a:Z
+    iput-object p1, p0, Lec2;->a:Lad2;
 
     iput-boolean p2, p0, Lec2;->b:Z
 
     iput-boolean p3, p0, Lec2;->c:Z
 
-    iput-boolean p4, p0, Lec2;->d:Z
-
-    iput-boolean p5, p0, Lec2;->e:Z
-
-    iput-boolean p6, p0, Lec2;->f:Z
-
-    iput-boolean p7, p0, Lec2;->g:Z
-
-    iput-boolean p8, p0, Lec2;->h:Z
-
-    iput-boolean p9, p0, Lec2;->i:Z
-
-    iput-boolean p10, p0, Lec2;->j:Z
-
-    iput-boolean p11, p0, Lec2;->k:Z
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Comparable;)Z
+    .locals 2
+
+    check-cast p1, Lt92;
+
+    iget-object v0, p1, Lt92;->b:Lvd2;
+
+    iget v0, v0, Lvd2;->m:I
+
+    iget-boolean v1, p0, Lec2;->b:Z
+
+    if-gtz v0, :cond_0
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Lt92;->l0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_0
+    iget-boolean v0, p0, Lec2;->c:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lec2;->a:Lad2;
+
+    iget-object v0, v0, Lad2;->m:Lqxb;
+
+    check-cast v0, Lsxb;
+
+    iget-object v0, v0, Lsxb;->a:Le78;
+
+    invoke-virtual {p1, v0}, Lt92;->X(Ll83;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lt92;->C()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_1
+    invoke-virtual {p1}, Lt92;->H()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p1}, Lt92;->h0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lt92;->k0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Lt92;->l0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    return p1
 .end method

@@ -1,105 +1,127 @@
 .class public final Lva1;
-.super Lzce;
+.super Lmd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Leqd;
+.field public final b:Lw31;
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Leqd;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method public constructor <init>(Lw31;Z)V
+    .locals 1
 
-    invoke-direct {p0, p2}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lva1;->X:Leqd;
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+
+    iput-object p1, p0, Lva1;->b:Lw31;
+
+    iput-boolean p2, p0, Lva1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Ltde;I)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    instance-of v0, p1, Lua1;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_1
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lua1;
-
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lww7;
-
-    instance-of v0, p2, Lxc1;
-
-    if-nez v0, :cond_0
-
-    return-void
+    return v0
 
     :cond_0
-    invoke-virtual {p1, p2}, Lua1;->x(Lww7;)V
+    instance-of v1, p1, Lva1;
 
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
+    const/4 v2, 0x0
 
-    check-cast p1, Ls1e;
+    if-nez v1, :cond_1
 
-    new-instance v0, Ljb;
-
-    check-cast p2, Lxc1;
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lva1;->X:Leqd;
-
-    invoke-direct {v0, v2, v1, p2}, Ljb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
+    return v2
 
     :cond_1
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
+    check-cast p1, Lva1;
 
-    move-result-object p2
+    iget-object v1, p0, Lva1;->b:Lw31;
 
-    check-cast p2, Lww7;
+    iget-object v3, p1, Lva1;->b:Lw31;
 
-    invoke-virtual {p1, p2}, Ltde;->x(Lww7;)V
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lva1;->c:Z
+
+    iget-boolean p1, p1, Lva1;->c:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final bridge synthetic r(Lnxc;I)V
-    .locals 0
-
-    check-cast p1, Ltde;
-
-    invoke-virtual {p0, p1, p2}, Lva1;->H(Ltde;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
+.method public final hashCode()I
     .locals 2
 
-    new-instance p2, Lua1;
+    iget-object v0, p0, Lva1;->b:Lw31;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lw31;->hashCode()I
 
-    move-result-object p1
+    move-result v0
 
-    new-instance v0, Ls1e;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lva1;->c:Z
 
-    invoke-direct {v0, p1, v1}, Ls1e;-><init>(Landroid/content/Context;I)V
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-direct {p2, v0}, Lnxc;-><init>(Landroid/view/View;)V
+    move-result v1
 
-    return-object p2
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenIncomingCall(chatInfo="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lva1;->b:Lw31;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lva1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

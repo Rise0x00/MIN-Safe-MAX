@@ -1,76 +1,178 @@
 .class public final Lyk6;
-.super Ljava/lang/Object;
+.super Lzk6;
 .source "SourceFile"
 
 
-# instance fields
-.field public volatile a:J
+# static fields
+.field public static final e:Lyk6;
 
-.field public volatile b:J
+.field public static final f:Landroid/net/Uri;
 
-.field public final synthetic c:Lzk6;
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lzk6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyk6;
 
-    iput-object p1, p0, Lyk6;->c:Lzk6;
+    const-string v1, "_size > 0"
+
+    invoke-direct {v0, v1}, Lzk6;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lyk6;->e:Lyk6;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_1
+
+    const-string v0, "external"
+
+    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "no content uri for MediaStore.Video.Media"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    :goto_0
+    sput-object v0, Lyk6;->f:Landroid/net/Uri;
+
+    const-string v0, "_id"
+
+    sput-object v0, Lyk6;->g:Ljava/lang/String;
+
+    const-string v0, "bucket_id"
+
+    sput-object v0, Lyk6;->h:Ljava/lang/String;
+
+    const-string v0, "bucket_display_name"
+
+    sput-object v0, Lyk6;->i:Ljava/lang/String;
+
+    const-string v0, "_data"
+
+    sput-object v0, Lyk6;->j:Ljava/lang/String;
+
+    const-string v0, "date_modified"
+
+    sput-object v0, Lyk6;->k:Ljava/lang/String;
+
+    const-string v0, "mime_type"
+
+    sput-object v0, Lyk6;->l:Ljava/lang/String;
+
+    const-string v0, "duration"
+
+    sput-object v0, Lyk6;->m:Ljava/lang/String;
+
+    const-string v0, "video/mp4"
+
+    sput-object v0, Lyk6;->n:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lqe2;)V
-    .locals 4
-    .annotation runtime Lxye;
-    .end annotation
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget-wide v0, p1, Lbj0;->a:J
+    sget-object v0, Lyk6;->i:Ljava/lang/String;
 
-    iget-wide v2, p0, Lyk6;->b:J
+    return-object v0
+.end method
 
-    cmp-long v0, v0, v2
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    if-eqz v0, :cond_0
+    sget-object v0, Lyk6;->h:Ljava/lang/String;
 
-    return-void
+    return-object v0
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final c()Ljava/lang/String;
+    .locals 1
 
-    const-string v1, "onEvent "
+    sget-object v0, Lyk6;->j:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v0, Lyk6;->k:Ljava/lang/String;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    const-string v0, "zk6"
+.method public final e()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object v0, Lyk6;->m:Ljava/lang/String;
 
-    iget-object p1, p0, Lyk6;->c:Lzk6;
+    return-object v0
+.end method
 
-    iget-object p1, p1, Lzk6;->c:Lub2;
+.method public final f()Ljava/lang/String;
+    .locals 1
 
-    iget-wide v0, p0, Lyk6;->a:J
+    sget-object v0, Lyk6;->g:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lub2;->z(J)Lm82;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final h()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lyk6;->c:Lzk6;
+    sget-object v0, Lyk6;->l:Ljava/lang/String;
 
-    iget-object v0, v0, Lzk6;->d:Lqe3;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Llj7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
+.method public final j()Landroid/net/Uri;
+    .locals 1
 
-    return-void
+    sget-object v0, Lyk6;->f:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final k()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lyk6;->n:Ljava/lang/String;
+
+    return-object v0
 .end method

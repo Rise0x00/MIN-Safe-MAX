@@ -1,211 +1,30 @@
 .class public final Lqwc;
-.super Landroid/database/Observable;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Supplier;
+
+
+# instance fields
+.field public a:J
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
+    iget-wide v0, p0, Lqwc;->a:J
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    const-wide/16 v2, 0x1
 
-    move-result v0
+    sub-long v2, v0, v2
 
-    xor-int/lit8 v0, v0, 0x1
+    iput-wide v2, p0, Lqwc;->a:J
 
-    return v0
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final b()V
-    .locals 2
+    move-result-object v0
 
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1}, Lrwc;->a()V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(II)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1, p1, p2}, Lrwc;->e(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(IILjava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1, p1, p2, p3}, Lrwc;->c(IILjava/lang/Object;)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(II)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1, p1, p2}, Lrwc;->d(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(II)V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1, p1, p2}, Lrwc;->f(II)V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_0
-
-    iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrwc;
-
-    invoke-virtual {v1}, Lrwc;->g()V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

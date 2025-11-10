@@ -1,43 +1,53 @@
 .class public final Lf5b;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxg1;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lt4b;
+.field public final synthetic Y:Lg5b;
 
-.field public final c:Lt4b;
+.field public Z:I
 
-.field public final d:Lt4b;
+.field public d:Lg5b;
 
-.field public final e:Lt4b;
-
-.field public final f:Lt4b;
-
-.field public final g:Lt4b;
+.field public o:Ljava/util/Iterator;
 
 
 # direct methods
-.method public constructor <init>(Lxg1;Lt4b;Lt4b;Lt4b;Lt4b;Lt4b;Lt4b;)V
+.method public constructor <init>(Lg5b;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf5b;->Y:Lg5b;
 
-    iput-object p1, p0, Lf5b;->a:Lxg1;
-
-    iput-object p2, p0, Lf5b;->b:Lt4b;
-
-    iput-object p3, p0, Lf5b;->c:Lt4b;
-
-    iput-object p4, p0, Lf5b;->d:Lt4b;
-
-    iput-object p5, p0, Lf5b;->e:Lt4b;
-
-    iput-object p6, p0, Lf5b;->f:Lt4b;
-
-    iput-object p7, p0, Lf5b;->g:Lt4b;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lf5b;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lf5b;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lf5b;->Z:I
+
+    iget-object p1, p0, Lf5b;->Y:Lg5b;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lg5b;->l(Lz4b;Ljava/io/File;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -17,11 +17,11 @@
         "attrs",
         "<init>",
         "(Landroid/content/Context;Landroid/util/AttributeSet;)V",
-        "Lej2;",
+        "Lik2;",
         "listener",
-        "Loyf;",
+        "Lybg;",
         "setListener",
-        "(Lej2;)V",
+        "(Lik2;)V",
         "media-gallery-widget_release"
     }
     k = 0x1
@@ -126,7 +126,7 @@
 
     int-to-float v2, v1
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -138,7 +138,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Lkhi;->c(F)I
 
     move-result v2
 
@@ -162,7 +162,7 @@
     return-void
 .end method
 
-.method public final setListener(Lej2;)V
+.method public final setListener(Lik2;)V
     .locals 0
 
     return-void

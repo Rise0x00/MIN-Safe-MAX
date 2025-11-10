@@ -1,106 +1,167 @@
-.class public final synthetic Lui5;
+.class public final Lui5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lzng;
+.implements Lm12;
+.implements Lqub;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lzng;
 
-.field public final synthetic b:Lxi5;
+.field public b:Lm12;
+
+.field public c:Lzng;
+
+.field public d:Lm12;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lxi5;I)V
-    .locals 0
+# virtual methods
+.method public final a(ILjava/lang/Object;)V
+    .locals 1
 
-    iput p2, p0, Lui5;->a:I
+    const/4 v0, 0x7
 
-    iput-object p1, p0, Lui5;->b:Lxi5;
+    if-eq p1, v0, :cond_3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_2
+
+    const/16 v0, 0x2710
+
+    if-eq p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    check-cast p2, Lfwe;
+
+    if-nez p2, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lui5;->c:Lzng;
+
+    iput-object p1, p0, Lui5;->d:Lm12;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p2}, Lfwe;->getVideoFrameMetadataListener()Lzng;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lui5;->c:Lzng;
+
+    invoke-virtual {p2}, Lfwe;->getCameraMotionListener()Lm12;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lui5;->d:Lm12;
+
+    return-void
+
+    :cond_2
+    check-cast p2, Lm12;
+
+    iput-object p2, p0, Lui5;->b:Lm12;
+
+    return-void
+
+    :cond_3
+    check-cast p2, Lzng;
+
+    iput-object p2, p0, Lui5;->a:Lzng;
 
     return-void
 .end method
 
+.method public final b(J[F)V
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+    iget-object v0, p0, Lui5;->d:Lm12;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2, p3}, Lm12;->b(J[F)V
+
+    :cond_0
+    iget-object v0, p0, Lui5;->b:Lm12;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1, p2, p3}, Lm12;->b(J[F)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Lui5;->d:Lm12;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lm12;->c()V
+
+    :cond_0
+    iget-object v0, p0, Lui5;->b:Lm12;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lm12;->c()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d(JJLsb6;Landroid/media/MediaFormat;)V
     .locals 8
 
-    iget v0, p0, Lui5;->a:I
+    iget-object v0, p0, Lui5;->c:Lzng;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lui5;->b:Lxi5;
+    move-wide v1, p1
 
-    invoke-virtual {v0}, Lxi5;->b()Lvib;
+    move-wide v3, p3
 
-    move-result-object v0
+    move-object v5, p5
 
-    iget-object v0, v0, Lvib;->Y:Ljava/lang/Object;
+    move-object v6, p6
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface/range {v0 .. v6}, Lzng;->d(JJLsb6;Landroid/media/MediaFormat;)V
 
-    move-result-object v0
+    move-object v7, v6
 
-    check-cast v0, Lhbg;
+    move-object v6, v5
 
-    return-object v0
+    move-wide v4, v3
 
-    :pswitch_0
-    sget-object v0, Lx31;->a:Lx31;
+    move-wide v2, v1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_0
+    move-wide v2, p1
 
-    const-class v2, Lp5b;
+    move-wide v4, p3
 
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-object v6, p5
 
-    move-result-object v1
+    move-object v7, p6
 
-    move-object v3, v1
+    :goto_0
+    iget-object v1, p0, Lui5;->a:Lzng;
 
-    check-cast v3, Lp5b;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lx31;->b()Lav1;
+    invoke-interface/range {v1 .. v7}, Lzng;->d(JJLsb6;Landroid/media/MediaFormat;)V
 
-    move-result-object v5
-
-    iget-object v0, p0, Lui5;->b:Lxi5;
-
-    iget-object v1, v0, Lxi5;->e:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v4, v1
-
-    check-cast v4, Lst1;
-
-    new-instance v6, Lr4;
-
-    invoke-direct {v6, v0}, Lr4;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {}, Lhk1;->b()Lbp7;
-
-    move-result-object v7
-
-    new-instance v2, Lvib;
-
-    invoke-direct/range {v2 .. v7}, Lvib;-><init>(Lp5b;Lst1;Lav1;Ltib;Lbp7;)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

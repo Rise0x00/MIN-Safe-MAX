@@ -1,139 +1,100 @@
-.class public Llof;
+.class public final Llof;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo14;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:Z
-
-.field public l:Le77;
-
-.field public m:I
-
-.field public n:Le77;
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:Le77;
-
-.field public s:Le77;
-
-.field public t:I
-
-.field public u:Z
-
-.field public v:Z
-
-.field public w:Z
-
-.field public x:Ljof;
-
-.field public y:Lp77;
+.field public final synthetic c:Ltof;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Ltof;I)V
+    .locals 0
+
+    iput p3, p0, Llof;->a:I
+
+    iput-object p1, p0, Llof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p2, p0, Llof;->c:Ltof;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0x7fffffff
-
-    iput v0, p0, Llof;->a:I
-
-    iput v0, p0, Llof;->b:I
-
-    iput v0, p0, Llof;->c:I
-
-    iput v0, p0, Llof;->d:I
-
-    iput v0, p0, Llof;->i:I
-
-    iput v0, p0, Llof;->j:I
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Llof;->k:Z
-
-    sget-object v1, Le77;->b:Ld06;
-
-    sget-object v1, Lxyc;->X:Lxyc;
-
-    iput-object v1, p0, Llof;->l:Le77;
-
-    const/4 v2, 0x0
-
-    iput v2, p0, Llof;->m:I
-
-    iput-object v1, p0, Llof;->n:Le77;
-
-    iput v2, p0, Llof;->o:I
-
-    iput v0, p0, Llof;->p:I
-
-    iput v0, p0, Llof;->q:I
-
-    iput-object v1, p0, Llof;->r:Le77;
-
-    iput-object v1, p0, Llof;->s:Le77;
-
-    iput v2, p0, Llof;->t:I
-
-    iput-boolean v2, p0, Llof;->u:Z
-
-    iput-boolean v2, p0, Llof;->v:Z
-
-    iput-boolean v2, p0, Llof;->w:Z
-
-    sget-object v0, Ljof;->b:Ljof;
-
-    iput-object v0, p0, Llof;->x:Ljof;
-
-    sget v0, Lp77;->c:I
-
-    sget-object v0, Ldzc;->y0:Ldzc;
-
-    iput-object v0, p0, Llof;->y:Lp77;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(II)Llof;
-    .locals 0
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
+    .locals 3
 
-    iput p1, p0, Llof;->i:I
+    iget v0, p0, Llof;->a:I
 
-    iput p2, p0, Llof;->j:I
+    packed-switch v0, :pswitch_data_0
 
-    const/4 p1, 0x1
+    const/4 v0, 0x0
 
-    iput-boolean p1, p0, Llof;->k:Z
+    const/4 v1, 0x1
 
-    return-object p0
+    iget-object v2, p0, Llof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Llof;->c:Ltof;
+
+    invoke-virtual {v0, p1}, Ltof;->c(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Llof;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Llof;->c:Ltof;
+
+    invoke-virtual {v0, p1}, Ltof;->c(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

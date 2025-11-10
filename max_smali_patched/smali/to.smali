@@ -1,89 +1,146 @@
-.class public abstract Lto;
+.class public final Lto;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/widget/TextView;
+
+.field public final b:Lcua;
+
+
 # direct methods
-.method public static a(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;IILandroid/widget/TextView;Landroid/text/TextPaint;Lwo;)Landroid/text/StaticLayout;
-    .locals 2
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    iput-object p1, p0, Lto;->a:Landroid/widget/TextView;
 
-    move-result v1
+    new-instance v0, Lcua;
 
-    invoke-static {p0, v0, v1, p5, p2}, Landroid/text/StaticLayout$Builder;->obtain(Ljava/lang/CharSequence;IILandroid/text/TextPaint;I)Landroid/text/StaticLayout$Builder;
+    invoke-direct {v0, p1}, Lcua;-><init>(Landroid/widget/TextView;)V
 
-    move-result-object p0
+    iput-object v0, p0, Lto;->b:Lcua;
 
-    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setAlignment(Landroid/text/Layout$Alignment;)Landroid/text/StaticLayout$Builder;
+    return-void
+.end method
 
-    move-result-object p1
 
-    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingExtra()F
+# virtual methods
+.method public final a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    .locals 1
 
-    move-result p2
+    iget-object v0, p0, Lto;->b:Lcua;
 
-    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingMultiplier()F
+    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
 
-    move-result p5
+    check-cast v0, Lmzi;
 
-    invoke-virtual {p1, p2, p5}, Landroid/text/StaticLayout$Builder;->setLineSpacing(FF)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p1
-
-    invoke-virtual {p4}, Landroid/widget/TextView;->getIncludeFontPadding()Z
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setIncludePad(Z)Landroid/text/StaticLayout$Builder;
+    invoke-virtual {v0, p1}, Lmzi;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
 
     move-result-object p1
 
-    invoke-virtual {p4}, Landroid/widget/TextView;->getBreakStrategy()I
+    return-object p1
+.end method
 
-    move-result p2
+.method public final b()Z
+    .locals 1
 
-    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setBreakStrategy(I)Landroid/text/StaticLayout$Builder;
+    iget-object v0, p0, Lto;->b:Lcua;
+
+    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmzi;
+
+    invoke-virtual {v0}, Lmzi;->d()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(Landroid/util/AttributeSet;I)V
+    .locals 3
+
+    iget-object v0, p0, Lto;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v1, Lsvc;->AppCompatTextView:[I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, p1, v1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
-
-    invoke-virtual {p4}, Landroid/widget/TextView;->getHyphenationFrequency()I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setHyphenationFrequency(I)Landroid/text/StaticLayout$Builder;
-
-    move-result-object p1
-
-    const/4 p2, -0x1
-
-    if-ne p3, p2, :cond_0
-
-    const p3, 0x7fffffff
-
-    :cond_0
-    invoke-virtual {p1, p3}, Landroid/text/StaticLayout$Builder;->setMaxLines(I)Landroid/text/StaticLayout$Builder;
 
     :try_start_0
-    invoke-virtual {p6, p0, p4}, Lwo;->a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+    sget p2, Lsvc;->AppCompatTextView_emojiCompatEnabled:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    if-eqz p2, :cond_0
+
+    sget p2, Lsvc;->AppCompatTextView_emojiCompatEnabled:I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v0
     :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :catch_0
-    const-string p1, "ACTVAutoSizeHelper"
+    :catchall_0
+    move-exception p2
 
-    const-string p2, "Failed to obtain TextDirectionHeuristic, auto size may be incorrect"
+    goto :goto_1
 
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_0
     :goto_0
-    invoke-virtual {p0}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    move-result-object p0
+    invoke-virtual {p0, v0}, Lto;->e(Z)V
 
-    return-object p0
+    return-void
+
+    :goto_1
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    throw p2
+.end method
+
+.method public final d(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lto;->b:Lcua;
+
+    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmzi;
+
+    invoke-virtual {v0, p1}, Lmzi;->e(Z)V
+
+    return-void
+.end method
+
+.method public final e(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lto;->b:Lcua;
+
+    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmzi;
+
+    invoke-virtual {v0, p1}, Lmzi;->f(Z)V
+
+    return-void
 .end method

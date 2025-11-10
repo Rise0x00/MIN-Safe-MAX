@@ -1,105 +1,122 @@
-.class public final enum Lnug;
-.super Ljava/lang/Enum;
+.class public final Lnug;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lnug;
-
-.field public static final enum b:Lnug;
-
-.field public static final enum c:Lnug;
-
-.field public static final enum o:Lnug;
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lnug;
-
-    const/4 v1, 0x0
-
-    const-string v2, "success"
-
-    const-string v3, "SUCCESS"
-
-    invoke-direct {v0, v3, v1, v2}, Lnug;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lnug;->b:Lnug;
-
-    new-instance v1, Lnug;
-
-    const/4 v2, 0x1
-
-    const-string v3, "downloading"
-
-    const-string v4, "DOWNLOADING"
-
-    invoke-direct {v1, v4, v2, v3}, Lnug;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lnug;->c:Lnug;
-
-    new-instance v2, Lnug;
-
-    const/4 v3, 0x2
-
-    const-string v4, "cancelled"
-
-    const-string v5, "CANCELLED"
-
-    invoke-direct {v2, v5, v3, v4}, Lnug;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lnug;->o:Lnug;
-
-    filled-new-array {v0, v1, v2}, [Lnug;
-
-    move-result-object v0
-
-    sput-object v0, Lnug;->X:[Lnug;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lnug;->a:I
 
-    iput-object p3, p0, Lnug;->a:Ljava/lang/String;
+    iput-object p1, p0, Lnug;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnug;
-    .locals 1
 
-    const-class v0, Lnug;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lnug;->a:I
 
-    move-result-object p0
+    sget-object v1, Lybg;->a:Lybg;
 
-    check-cast p0, Lnug;
+    const/16 v2, 0x8
 
-    return-object p0
-.end method
+    const/4 v3, 0x1
 
-.method public static values()[Lnug;
-    .locals 1
+    iget-object v4, p0, Lnug;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    sget-object v0, Lnug;->X:[Lnug;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast p1, Landroid/widget/ImageView;
+
+    sget v0, Lpsa;->B:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    new-instance v0, Lmug;
+
+    invoke-direct {v0, v4, v3}, Lmug;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+
+    invoke-static {p1, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
+
+    sget v0, Lpsa;->z:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
+
+    sget v0, Lyjd;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Les7;
+
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, [Lnug;
+    const-string v5, "camera"
 
-    return-object v0
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    const/4 v5, 0x0
+
+    if-le v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v5
+
+    :goto_0
+    invoke-virtual {p1, v3}, Landroid/view/View;->setEnabled(Z)V
+
+    new-instance v0, Lmug;
+
+    invoke-direct {v0, v4, v5}, Lmug;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+
+    invoke-static {p1, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

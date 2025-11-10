@@ -1,79 +1,121 @@
 .class public final Lki4;
-.super Ljava/lang/Object;
+.super Lyj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lnxc;
+.field public final X:Ljava/lang/Object;
 
-.field public b:Lnxc;
+.field public final synthetic o:I
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+    .locals 6
 
-.field public e:I
+    iput p1, p0, Lki4;->o:I
 
-.field public f:I
+    const/4 v1, 0x1
+
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lyj0;-><init>(IJJ)V
+
+    iput-object p6, v0, Lki4;->X:Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a()J
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lki4;->o:I
 
-    const-string v1, "ChangeInfo{oldHolder="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lyj0;->c()V
 
-    iget-object v1, p0, Lki4;->a:Lnxc;
+    iget-object v0, p0, Lki4;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, Lii4;
 
-    const-string v1, ", newHolder="
+    iget-wide v1, p0, Lyj0;->d:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Lii4;->i(J)J
 
-    iget-object v1, p0, Lki4;->b:Lnxc;
+    move-result-wide v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-wide v0
 
-    const-string v1, ", fromX="
+    :pswitch_0
+    invoke-virtual {p0}, Lyj0;->c()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lki4;->X:Ljava/lang/Object;
 
-    iget v1, p0, Lki4;->c:I
+    check-cast v0, Lii4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lyj0;->d:J
 
-    const-string v1, ", fromY="
+    invoke-virtual {v0, v1, v2}, Lii4;->i(J)J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    iget v1, p0, Lki4;->d:I
+    return-wide v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    nop
 
-    const-string v1, ", toX="
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final b()J
+    .locals 3
 
-    iget v1, p0, Lki4;->e:I
+    iget v0, p0, Lki4;->o:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, ", toY="
+    invoke-virtual {p0}, Lyj0;->c()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lki4;->X:Ljava/lang/Object;
 
-    iget v1, p0, Lki4;->f:I
+    check-cast v0, Lii4;
 
-    const/16 v2, 0x7d
+    iget-wide v1, p0, Lyj0;->d:J
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lii4;->g(J)J
 
-    move-result-object v0
+    move-result-wide v0
 
-    return-object v0
+    return-wide v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lyj0;->c()V
+
+    iget-object v0, p0, Lki4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lii4;
+
+    iget-wide v1, p0, Lyj0;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lii4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,84 +1,109 @@
-.class public abstract Lkd9;
-.super Ljava/lang/Object;
+.class public final enum Lkd9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lcfd;
+.field public static final synthetic X:[Lkd9;
+
+.field public static final enum a:Lkd9;
+
+.field public static final enum b:Lkd9;
+
+.field public static final enum c:Lkd9;
+
+.field public static final enum d:Lkd9;
+
+.field public static final enum o:Lkd9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 7
 
-    new-instance v0, Ljzf;
+    new-instance v0, Lkd9;
 
-    const-string v1, "messages-list-scope"
+    const-string v1, "SIMPLE"
 
-    invoke-direct {v0, v1}, Ljzf;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    sget-object v1, Lihf;->f:Lcfd;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz v1, :cond_0
+    sput-object v0, Lkd9;->a:Lkd9;
 
-    iget-object v2, v0, Ljzf;->c:Ljava/util/ArrayList;
+    new-instance v1, Lkd9;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v2, "CONTACT"
 
-    new-instance v1, Lvp7;
+    const/4 v3, 0x1
 
-    const/16 v2, 0x1c
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2}, Lvp7;-><init>(I)V
+    sput-object v1, Lkd9;->b:Lkd9;
 
-    const-class v2, Lid9;
+    new-instance v2, Lkd9;
 
-    invoke-virtual {v0, v2, v1}, Ljzf;->e(Ljava/lang/Class;Lhd7;)V
+    const-string v3, "MEDIA"
 
-    new-instance v1, Ltp7;
+    const/4 v4, 0x2
 
-    const/16 v2, 0xc
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2}, Ltp7;-><init>(I)V
+    sput-object v2, Lkd9;->c:Lkd9;
 
-    const-class v2, Ljd9;
+    new-instance v3, Lkd9;
 
-    invoke-virtual {v0, v2, v1}, Ljzf;->e(Ljava/lang/Class;Lhd7;)V
+    const-string v4, "STICKER"
 
-    new-instance v1, Ltp7;
+    const/4 v5, 0x3
 
-    const/16 v2, 0xd
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2}, Ltp7;-><init>(I)V
+    sput-object v3, Lkd9;->d:Lkd9;
 
-    const-class v2, Lhl6;
+    new-instance v4, Lkd9;
 
-    invoke-virtual {v0, v2, v1}, Ljzf;->e(Ljava/lang/Class;Lhd7;)V
+    const-string v5, "FORWARD"
 
-    new-instance v1, Ltp7;
+    const/4 v6, 0x4
 
-    const/16 v2, 0xe
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2}, Ltp7;-><init>(I)V
+    sput-object v4, Lkd9;->o:Lkd9;
 
-    const-class v2, Lpj9;
-
-    invoke-virtual {v0, v2, v1}, Ljzf;->e(Ljava/lang/Class;Lhd7;)V
-
-    invoke-virtual {v0}, Ljzf;->a()Lcfd;
+    filled-new-array {v0, v1, v2, v3, v4}, [Lkd9;
 
     move-result-object v0
 
-    sput-object v0, Lkd9;->a:Lcfd;
+    sput-object v0, Lkd9;->X:[Lkd9;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public static valueOf(Ljava/lang/String;)Lkd9;
+    .locals 1
 
-    const-string v1, "Trying to access DI graph before initialization!"
+    const-class v0, Lkd9;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    throw v0
+    move-result-object p0
+
+    check-cast p0, Lkd9;
+
+    return-object p0
+.end method
+
+.method public static values()[Lkd9;
+    .locals 1
+
+    sget-object v0, Lkd9;->X:[Lkd9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkd9;
+
+    return-object v0
 .end method

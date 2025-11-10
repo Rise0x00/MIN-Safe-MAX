@@ -1,205 +1,64 @@
 .class public final Lb1;
-.super Lhv0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final A(Lm1;)Lk1;
-    .locals 2
+# static fields
+.field public static final c:Lb1;
 
-    sget-object v0, Lk1;->c:Lk1;
+.field public static final d:Lb1;
 
-    monitor-enter p1
 
-    :try_start_0
-    iget-object v1, p1, Lm1;->c:Lk1;
+# instance fields
+.field public final a:Z
 
-    if-eq v1, v0, :cond_0
+.field public final b:Ljava/lang/Throwable;
 
-    iput-object v0, p1, Lm1;->c:Lk1;
 
-    goto :goto_0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    :catchall_0
-    move-exception v0
+    sget-boolean v0, Lx1;->d:Z
 
-    goto :goto_1
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    sput-object v1, Lb1;->d:Lb1;
+
+    sput-object v1, Lb1;->c:Lb1;
+
+    return-void
 
     :cond_0
-    :goto_0
-    monitor-exit p1
+    new-instance v0, Lb1;
 
-    return-object v1
+    const/4 v2, 0x0
 
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, v1, v2}, Lb1;-><init>(Ljava/lang/Throwable;Z)V
 
-    throw v0
-.end method
+    sput-object v0, Lb1;->d:Lb1;
 
-.method public final K(Lk1;Lk1;)V
-    .locals 0
+    new-instance v0, Lb1;
 
-    iput-object p2, p1, Lk1;->b:Lk1;
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lb1;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Lb1;->c:Lb1;
 
     return-void
 .end method
 
-.method public final L(Lk1;Ljava/lang/Thread;)V
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    iput-object p2, p1, Lk1;->a:Ljava/lang/Thread;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p2, p0, Lb1;->a:Z
+
+    iput-object p1, p0, Lb1;->b:Ljava/lang/Throwable;
 
     return-void
-.end method
-
-.method public final d(Lm1;Lv0;Lv0;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lm1;->b:Lv0;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lm1;->b:Lv0;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final e(Lm1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lm1;->a:Ljava/lang/Object;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lm1;->a:Ljava/lang/Object;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final f(Lm1;Lk1;Lk1;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lm1;->c:Lk1;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lm1;->c:Lk1;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final z(Lm1;)Lv0;
-    .locals 2
-
-    sget-object v0, Lv0;->d:Lv0;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v1, p1, Lm1;->b:Lv0;
-
-    if-eq v1, v0, :cond_0
-
-    iput-object v0, p1, Lm1;->b:Lv0;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p1
-
-    return-object v1
-
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method

@@ -1,147 +1,39 @@
-.class public abstract Lfdd;
+.class public final Lfdd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[J
+# instance fields
+.field public final a:Landroid/content/res/ColorStateList;
+
+.field public final b:Landroid/content/res/Configuration;
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [J
+    iput-object p1, p0, Lfdd;->a:Landroid/content/res/ColorStateList;
 
-    fill-array-data v0, :array_0
+    iput-object p2, p0, Lfdd;->b:Landroid/content/res/Configuration;
 
-    sput-object v0, Lfdd;->a:[J
+    if-nez p3, :cond_0
 
-    new-instance v0, Lwt9;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lwt9;-><init>(I)V
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 8
-        -0x7f7f7f7f7f7f7f01L    # -2.937446524423077E-306
-        -0x1
-    .end array-data
-.end method
-
-.method public static final a(I)I
-    .locals 1
-
-    const/4 v0, 0x7
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x6
-
-    return p0
-
-    :cond_0
-    div-int/lit8 v0, p0, 0x8
-
-    sub-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static final varargs b([Ln4b;)Lwt9;
-    .locals 5
-
-    new-instance v0, Lwt9;
-
-    array-length v1, p0
-
-    invoke-direct {v0, v1}, Lwt9;-><init>(I)V
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p0, v2
-
-    iget-object v4, v3, Ln4b;->a:Ljava/lang/Object;
-
-    iget-object v3, v3, Ln4b;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0, v4, v3}, Lwt9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    return-object v0
-.end method
+    invoke-virtual {p3}, Landroid/content/res/Resources$Theme;->hashCode()I
 
-.method public static final c(I)I
-    .locals 0
+    move-result p1
 
-    if-nez p0, :cond_0
+    :goto_0
+    iput p1, p0, Lfdd;->c:I
 
-    const/4 p0, 0x6
-
-    return p0
-
-    :cond_0
-    mul-int/lit8 p0, p0, 0x2
-
-    add-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public static final d(I)I
-    .locals 1
-
-    if-lez p0, :cond_0
-
-    const/4 v0, -0x1
-
-    invoke-static {p0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
-
-    move-result p0
-
-    ushr-int p0, v0, p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final e(I)I
-    .locals 2
-
-    const/4 v0, 0x7
-
-    if-ne p0, v0, :cond_0
-
-    const/16 p0, 0x8
-
-    return p0
-
-    :cond_0
-    add-int/lit8 v1, p0, -0x1
-
-    div-int/2addr v1, v0
-
-    add-int/2addr v1, p0
-
-    return v1
+    return-void
 .end method

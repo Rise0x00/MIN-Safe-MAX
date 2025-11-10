@@ -1,103 +1,97 @@
-.class public abstract Lrka;
-.super Ljava/lang/Object;
+.class public final Lrka;
+.super Ltka;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+# instance fields
+.field public final Y:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lv3e;JLjava/util/concurrent/TimeUnit;Lgpd;)V
+    .locals 0
 
-    sget v0, Lfcc;->file_fill_24:I
+    invoke-direct/range {p0 .. p5}, Ltka;-><init>(Lv3e;JLjava/util/concurrent/TimeUnit;Lgpd;)V
 
-    sput v0, Lrka;->a:I
+    move-object p1, p0
 
-    sget v0, Lfcc;->geolocation_fill_24:I
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput v0, Lrka;->b:I
+    const/4 p3, 0x1
 
-    sget v0, Lfcc;->ic_arrow_down_24:I
+    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    sput v0, Lrka;->c:I
+    iput-object p2, p1, Lrka;->Y:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sget v0, Lfcc;->ic_arrow_up_24:I
+    return-void
+.end method
 
-    sput v0, Lrka;->d:I
 
-    sget v0, Lfcc;->ic_camera_add_36:I
+# virtual methods
+.method public final a()V
+    .locals 2
 
-    sput v0, Lrka;->e:I
+    const/4 v0, 0x0
 
-    sget v0, Lfcc;->ic_clear_24:I
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Lrka;->f:I
+    move-result-object v0
 
-    sget v0, Lfcc;->ic_cross_12:I
+    iget-object v1, p0, Ltka;->a:Lv3e;
 
-    sput v0, Lrka;->g:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lfcc;->ic_file_mode_24:I
+    invoke-virtual {v1, v0}, Lv3e;->b(Ljava/lang/Object;)V
 
-    sput v0, Lrka;->h:I
+    :cond_0
+    iget-object v0, p0, Lrka;->Y:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sget v0, Lfcc;->ic_media_mode_24:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    sput v0, Lrka;->i:I
+    move-result v0
 
-    sget v0, Lfcc;->ic_snack_file_24:I
+    if-nez v0, :cond_1
 
-    sput v0, Lrka;->j:I
+    invoke-virtual {v1}, Lv3e;->c()V
 
-    sget v0, Lfcc;->ic_snack_media_24:I
+    :cond_1
+    return-void
+.end method
 
-    sput v0, Lrka;->k:I
+.method public final run()V
+    .locals 3
 
-    sget v0, Lfcc;->ic_videocam_20:I
+    iget-object v0, p0, Lrka;->Y:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput v0, Lrka;->l:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    sget v0, Lfcc;->media_fill_24:I
+    move-result v1
 
-    sput v0, Lrka;->m:I
+    const/4 v2, 0x2
 
-    sget v0, Lfcc;->profile_fill_24:I
+    if-ne v1, v2, :cond_1
 
-    sput v0, Lrka;->n:I
+    const/4 v1, 0x0
 
-    sget v0, Lfcc;->wallet_fill_24:I
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Lrka;->o:I
+    move-result-object v1
 
+    iget-object v2, p0, Ltka;->a:Lv3e;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v2, v1}, Lv3e;->b(Ljava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {v2}, Lv3e;->c()V
+
+    :cond_1
     return-void
 .end method

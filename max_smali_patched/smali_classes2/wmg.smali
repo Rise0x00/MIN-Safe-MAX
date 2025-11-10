@@ -2,117 +2,125 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
 
 # instance fields
-.field public a:Lqle;
+.field public final a:Lsw8;
 
-.field public final synthetic b:Lm3f;
+.field public final b:Lymg;
 
-.field public final synthetic c:Landroid/view/View;
+.field public final c:Lfu5;
+
+.field public final d:Lhd;
+
+.field public final e:Lmpd;
+
+.field public final f:Lgpd;
+
+.field public final g:Llpd;
+
+.field public final h:Le4h;
+
+.field public final i:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lnf6;Landroid/view/View;)V
-    .locals 0
+.method public constructor <init>(Lsw8;Lymg;Lfu5;Lhd;Lmpd;Lgpd;Llpd;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lm3f;
+    new-instance v0, Le4h;
 
-    iput-object p1, p0, Lwmg;->b:Lm3f;
+    invoke-direct {v0}, Le4h;-><init>()V
 
-    iput-object p2, p0, Lwmg;->c:Landroid/view/View;
+    iput-object v0, p0, Lwmg;->h:Le4h;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lwmg;->i:Ljava/util/HashMap;
+
+    iput-object p1, p0, Lwmg;->a:Lsw8;
+
+    iput-object p2, p0, Lwmg;->b:Lymg;
+
+    iput-object p3, p0, Lwmg;->c:Lfu5;
+
+    iput-object p4, p0, Lwmg;->d:Lhd;
+
+    iput-object p5, p0, Lwmg;->e:Lmpd;
+
+    iput-object p6, p0, Lwmg;->f:Lgpd;
+
+    iput-object p7, p0, Lwmg;->g:Llpd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 6
+.method public final declared-synchronized a(Lnmg;)V
+    .locals 5
 
-    iget-object v0, p0, Lwmg;->a:Lqle;
+    monitor-enter p0
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    iget-object v0, p0, Lwmg;->i:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ld0;->isActive()Z
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    iget-object v0, p0, Lwmg;->b:Lymg;
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    invoke-virtual {v0}, Lymg;->a()Lsqe;
 
     move-result-object v0
 
-    iget-object v0, v0, Lbx4;->x0:Ljava/lang/Object;
+    new-instance v1, Ltmg;
 
-    check-cast v0, Lsqc;
+    const/4 v2, 0x2
 
-    new-instance v1, Lumg;
+    invoke-direct {v1, p1, v2}, Ltmg;-><init>(Lnmg;I)V
 
-    iget-object v2, p0, Lwmg;->b:Lm3f;
+    new-instance v2, Lkg3;
 
-    iget-object v3, p0, Lwmg;->c:Landroid/view/View;
+    const/4 v3, 0x2
 
-    const/4 v4, 0x0
+    invoke-direct {v2, v0, v3, v1}, Lkg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v1, v2, v3, p1, v4}, Lumg;-><init>(Lnf6;Landroid/view/View;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v2}, Ljg3;->k()Leia;
 
-    new-instance v5, Lqv5;
+    move-result-object v0
 
-    invoke-direct {v5, v1, v0}, Lqv5;-><init>(Llf6;Lev5;)V
+    sget-object v1, Lsag;->d:Le9a;
 
-    new-instance v0, Lvmg;
+    new-instance v2, Ltmg;
 
-    invoke-direct {v0, v2, v3, v4}, Lvmg;-><init>(Lnf6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    const/4 v3, 0x0
 
-    new-instance v1, Ljx5;
+    invoke-direct {v2, p1, v3}, Ltmg;-><init>(Lnmg;I)V
 
-    const/4 v2, 0x1
+    new-instance v3, Lgk0;
 
-    invoke-direct {v1, v5, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    const/16 v4, 0xf
 
-    invoke-static {p1}, Lelg;->b(Landroid/view/View;)Lqr7;
+    invoke-direct {v3, v4, p1}, Lgk0;-><init>(ILjava/lang/Object;)V
 
-    move-result-object p1
+    invoke-static {v0, v1, v2, v3}, Lpni;->c(Leia;Lir3;Lir3;Lu6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwmg;->a:Lqle;
+    monitor-exit p0
 
     return-void
-.end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+    :catchall_0
+    move-exception p1
 
-    iget-object p1, p0, Lwmg;->a:Lqle;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, v0}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    iput-object v0, p0, Lwmg;->a:Lqle;
-
-    return-void
+    throw p1
 .end method

@@ -1,76 +1,48 @@
-.class public final synthetic Lx96;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lve6;
+.class public final Lx96;
+.super Lp14;
 
 
 # instance fields
-.field public final synthetic a:Lba6;
+.field public final synthetic X:Lh13;
 
-.field public final synthetic b:Lzk0;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lba6;Lzk0;II)V
+.method public constructor <init>(Lh13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx96;->X:Lh13;
 
-    iput-object p1, p0, Lx96;->a:Lba6;
-
-    iput-object p2, p0, Lx96;->b:Lzk0;
-
-    iput p3, p0, Lx96;->c:I
-
-    iput p4, p0, Lx96;->o:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lx96;->a:Lba6;
+    iput-object p1, p0, Lx96;->d:Ljava/lang/Object;
 
-    iget-object v0, v0, Lba6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget p1, p0, Lx96;->o:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iput p1, p0, Lx96;->o:I
 
-    move-result v1
+    iget-object p1, p0, Lx96;->X:Lh13;
 
-    if-eqz v1, :cond_0
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lh13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Lyza;
-
-    iget-object v2, p0, Lx96;->b:Lzk0;
-
-    iget v3, p0, Lx96;->c:I
-
-    iget v4, p0, Lx96;->o:I
-
-    invoke-interface {v1, v2, v3, v4}, Lyza;->u(Lzk0;II)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,28 +1,24 @@
-.class public final Lxtf;
+.class public final synthetic Lxtf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqi6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final synthetic b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Landroid/widget/ScrollView;I)V
+.method public synthetic constructor <init>(Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;I)V
     .locals 0
 
-    iput p3, p0, Lxtf;->a:I
+    iput p2, p0, Lxtf;->a:I
 
-    iput-object p1, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    iput-object p2, p0, Lxtf;->c:Landroid/widget/ScrollView;
+    iput-object p1, p0, Lxtf;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,119 +27,66 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
     iget v0, p0, Lxtf;->a:I
 
+    sget-object v1, Lybg;->a:Lybg;
+
+    iget-object v2, p0, Lxtf;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->o:[Les7;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object p1, v2, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->c:Lru7;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast p1, Lvtf;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    new-instance v0, Lutf;
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-direct {v0, p1, v2}, Lutf;-><init>(Lvtf;Lkotlin/coroutines/Continuation;)V
 
-    :goto_0
-    if-eqz v1, :cond_1
+    const/4 v3, 0x1
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    invoke-static {p1, v2, v0, v3}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_1
-    const/4 v1, 0x0
+    iget-object v2, p1, Lvtf;->c:Lpqe;
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    sget-object v3, Lvtf;->o:[Les7;
 
-    move-result v0
+    const/4 v4, 0x0
 
-    add-int/2addr v0, v1
+    aget-object v3, v3, v4
 
-    iget-object v1, p0, Lxtf;->c:Landroid/widget/ScrollView;
+    invoke-virtual {v2, p1, v3, v0}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
+    return-object v1
 
     :pswitch_0
-    iget-object v0, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v2}, Lc24;->getOnBackPressedDispatcher()Lsma;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result-object p1
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-virtual {p1}, Lsma;->d()V
 
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_3
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lxtf;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
+    :cond_0
+    return-object v1
 
     :pswitch_data_0
     .packed-switch 0x0

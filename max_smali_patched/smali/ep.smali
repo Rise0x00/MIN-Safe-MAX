@@ -1,369 +1,260 @@
 .class public final Lep;
-.super Lvu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkp;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public final synthetic i:I
+.field public a:Lzc;
+
+.field public b:Lfp;
+
+.field public c:Ljava/lang/CharSequence;
+
+.field public final synthetic d:Llp;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Llp;)V
     .locals 0
 
-    iput p1, p0, Lep;->i:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lep;->d:Llp;
 
     return-void
 .end method
 
-.method public static A(Lg5g;)Ltb5;
-    .locals 8
 
-    invoke-virtual {p0}, Lg5g;->n()Ljava/lang/String;
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, Lep;->a:Lzc;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lg5g;->n()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
-    move-result-object v2
+    move-result v0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
 
-    invoke-virtual {p0}, Lg5g;->m()J
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-wide v3
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lg5g;->m()J
+.method public final b()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    move-result-wide v5
-
-    iget-object v0, p0, Lg5g;->a:[B
-
-    iget v7, p0, Lg5g;->b:I
-
-    iget p0, p0, Lg5g;->c:I
-
-    invoke-static {v0, v7, p0}, Ljava/util/Arrays;->copyOfRange([BII)[B
-
-    move-result-object v7
-
-    new-instance v0, Ltb5;
-
-    invoke-direct/range {v0 .. v7}, Ltb5;-><init>(Ljava/lang/String;Ljava/lang/String;JJ[B)V
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
+.method public final c()I
+    .locals 1
 
-# virtual methods
-.method public final j(Lkk9;Ljava/nio/ByteBuffer;)Lfk9;
-    .locals 17
+    const/4 v0, 0x0
 
-    move-object/from16 v0, p0
+    return v0
+.end method
 
-    iget v1, v0, Lep;->i:I
+.method public final dismiss()V
+    .locals 1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lep;->a:Lzc;
 
-    packed-switch v1, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    new-instance v1, Lfk9;
+    invoke-virtual {v0}, Lqo;->dismiss()V
 
-    new-instance v3, Lg5g;
+    const/4 v0, 0x0
 
-    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v4
-
-    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
-
-    move-result v5
-
-    invoke-direct {v3, v5, v4}, Lg5g;-><init>(I[B)V
-
-    invoke-static {v3}, Lep;->A(Lg5g;)Ltb5;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ldk9;
-
-    aput-object v3, v4, v2
-
-    invoke-direct {v1, v4}, Lfk9;-><init>([Ldk9;)V
-
-    return-object v1
-
-    :pswitch_0
-    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v1
-
-    const/16 v3, 0x74
-
-    if-ne v1, v3, :cond_8
-
-    new-instance v1, Lb42;
-
-    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v3
-
-    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
-
-    move-result v5
-
-    const/4 v6, 0x2
-
-    invoke-direct {v1, v3, v5, v6, v2}, Lb42;-><init>([BIIB)V
-
-    const/16 v3, 0xc
-
-    invoke-virtual {v1, v3}, Lb42;->t(I)V
-
-    invoke-virtual {v1, v3}, Lb42;->i(I)I
-
-    move-result v5
-
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v7
-
-    add-int/2addr v7, v5
-
-    const/4 v5, 0x4
-
-    sub-int/2addr v7, v5
-
-    const/16 v8, 0x2c
-
-    invoke-virtual {v1, v8}, Lb42;->t(I)V
-
-    invoke-virtual {v1, v3}, Lb42;->i(I)I
-
-    move-result v8
-
-    invoke-virtual {v1, v8}, Lb42;->u(I)V
-
-    const/16 v8, 0x10
-
-    invoke-virtual {v1, v8}, Lb42;->t(I)V
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v10
-
-    if-ge v10, v7, :cond_6
-
-    const/16 v10, 0x30
-
-    invoke-virtual {v1, v10}, Lb42;->t(I)V
-
-    const/16 v10, 0x8
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v11
-
-    invoke-virtual {v1, v5}, Lb42;->t(I)V
-
-    invoke-virtual {v1, v3}, Lb42;->i(I)I
-
-    move-result v12
-
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v13
-
-    add-int/2addr v13, v12
-
-    const/4 v12, 0x0
-
-    const/4 v14, 0x0
-
-    :goto_1
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v15
-
-    if-ge v15, v13, :cond_3
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v15
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v2
-
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v16
-
-    add-int v3, v16, v2
-
-    if-ne v15, v6, :cond_1
-
-    invoke-virtual {v1, v8}, Lb42;->i(I)I
-
-    move-result v2
-
-    invoke-virtual {v1, v10}, Lb42;->t(I)V
-
-    const/4 v15, 0x3
-
-    if-ne v2, v15, :cond_2
-
-    :goto_2
-    invoke-virtual {v1}, Lb42;->f()I
-
-    move-result v2
-
-    if-ge v2, v3, :cond_2
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v2
-
-    sget-object v12, Lj82;->a:Ljava/nio/charset/Charset;
-
-    new-array v15, v2, [B
-
-    invoke-virtual {v1, v2, v15}, Lb42;->l(I[B)V
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, v15, v12}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v12
-
-    const/4 v15, 0x0
-
-    :goto_3
-    if-ge v15, v12, :cond_0
-
-    invoke-virtual {v1, v10}, Lb42;->i(I)I
-
-    move-result v4
-
-    invoke-virtual {v1, v4}, Lb42;->u(I)V
-
-    add-int/lit8 v15, v15, 0x1
-
-    goto :goto_3
+    iput-object v0, p0, Lep;->a:Lzc;
 
     :cond_0
-    move-object v12, v2
+    return-void
+.end method
 
-    goto :goto_2
+.method public final e(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set horizontal offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final f()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lep;->c:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    iput-object p1, p0, Lep;->c:Ljava/lang/CharSequence;
+
+    return-void
+.end method
+
+.method public final i(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set popup background for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final k(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set vertical offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final l(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set horizontal (original) offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final n(II)V
+    .locals 4
+
+    iget-object v0, p0, Lep;->b:Lfp;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lyc;
+
+    iget-object v1, p0, Lep;->d:Llp;
+
+    invoke-virtual {v1}, Llp;->getPopupContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Lyc;-><init>(Landroid/content/Context;)V
+
+    iget-object v2, p0, Lep;->c:Ljava/lang/CharSequence;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0, v2}, Lyc;->setTitle(Ljava/lang/CharSequence;)Lyc;
 
     :cond_1
-    const/16 v4, 0x15
+    iget-object v2, p0, Lep;->b:Lfp;
 
-    if-ne v15, v4, :cond_2
-
-    sget-object v4, Lj82;->a:Ljava/nio/charset/Charset;
-
-    new-array v14, v2, [B
-
-    invoke-virtual {v1, v2, v14}, Lb42;->l(I[B)V
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, v14, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-
-    move-object v14, v2
-
-    :cond_2
-    mul-int/lit8 v3, v3, 0x8
-
-    invoke-virtual {v1, v3}, Lb42;->q(I)V
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xc
-
-    goto :goto_1
-
-    :cond_3
-    mul-int/lit8 v13, v13, 0x8
-
-    invoke-virtual {v1, v13}, Lb42;->q(I)V
-
-    if-eqz v12, :cond_5
-
-    if-eqz v14, :cond_5
-
-    new-instance v2, Lcp;
-
-    invoke-virtual {v14}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v12, v14}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_4
-
-    :cond_4
-    new-instance v3, Ljava/lang/String;
-
-    invoke-direct {v3, v12}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_4
-    invoke-direct {v2, v11, v3}, Lcp;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {v9, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_5
-    const/4 v2, 0x0
-
-    const/16 v3, 0xc
-
-    goto/16 :goto_0
-
-    :cond_6
-    invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {v1}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    iget-object v3, v0, Lyc;->a:Luc;
 
-    goto :goto_5
+    iput-object v2, v3, Luc;->p:Landroid/widget/ListAdapter;
 
-    :cond_7
-    new-instance v4, Lfk9;
+    iput-object p0, v3, Luc;->q:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-direct {v4, v9}, Lfk9;-><init>(Ljava/util/List;)V
+    iput v1, v3, Luc;->t:I
 
-    goto :goto_6
+    const/4 v1, 0x1
 
-    :cond_8
-    :goto_5
-    const/4 v4, 0x0
+    iput-boolean v1, v3, Luc;->s:Z
 
-    :goto_6
-    return-object v4
+    invoke-virtual {v0}, Lyc;->create()Lzc;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput-object v0, p0, Lep;->a:Lzc;
+
+    iget-object v0, v0, Lzc;->X:Lxc;
+
+    iget-object v0, v0, Lxc;->f:Landroidx/appcompat/app/AlertController$RecycleListView;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTextDirection(I)V
+
+    invoke-virtual {v0, p2}, Landroid/view/View;->setTextAlignment(I)V
+
+    iget-object p1, p0, Lep;->a:Lzc;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
+
+    return-void
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
+
+    iget-object p1, p0, Lep;->d:Llp;
+
+    invoke-virtual {p1, p2}, Landroid/widget/AdapterView;->setSelection(I)V
+
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lep;->b:Lfp;
+
+    invoke-virtual {v0, p2}, Lfp;->getItemId(I)J
+
+    move-result-wide v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, p2, v0, v1}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
+
+    :cond_0
+    invoke-virtual {p0}, Lep;->dismiss()V
+
+    return-void
+.end method
+
+.method public final p(Landroid/widget/ListAdapter;)V
+    .locals 0
+
+    check-cast p1, Lfp;
+
+    iput-object p1, p0, Lep;->b:Lfp;
+
+    return-void
 .end method

@@ -1,48 +1,97 @@
 .class public final Lkd2;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final l:Lkd2;
 
 
 # instance fields
-.field public X:I
+.field public final a:Z
 
-.field public final synthetic Y:Lpb;
+.field public final b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    iput-object p1, p0, Lkd2;->Y:Lpb;
+    new-instance v0, Lkd2;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v11}, Lkd2;-><init>(ZZZZZZZZZZZ)V
+
+    sput-object v0, Lkd2;->l:Lkd2;
 
     return-void
 .end method
 
+.method public constructor <init>(ZZZZZZZZZZZ)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkd2;->o:Ljava/lang/Object;
+    iput-boolean p1, p0, Lkd2;->a:Z
 
-    iget p1, p0, Lkd2;->X:I
+    iput-boolean p2, p0, Lkd2;->b:Z
 
-    const/high16 v0, -0x80000000
+    iput-boolean p3, p0, Lkd2;->c:Z
 
-    or-int/2addr p1, v0
+    iput-boolean p4, p0, Lkd2;->d:Z
 
-    iput p1, p0, Lkd2;->X:I
+    iput-boolean p5, p0, Lkd2;->e:Z
 
-    iget-object p1, p0, Lkd2;->Y:Lpb;
+    iput-boolean p6, p0, Lkd2;->f:Z
 
-    const/4 v0, 0x0
+    iput-boolean p7, p0, Lkd2;->g:Z
 
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-boolean p8, p0, Lkd2;->h:Z
 
-    move-result-object p1
+    iput-boolean p9, p0, Lkd2;->i:Z
 
-    return-object p1
+    iput-boolean p10, p0, Lkd2;->j:Z
+
+    iput-boolean p11, p0, Lkd2;->k:Z
+
+    return-void
 .end method

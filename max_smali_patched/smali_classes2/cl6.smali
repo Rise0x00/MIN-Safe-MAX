@@ -1,47 +1,75 @@
 .class public final Lcl6;
-.super Lnz3;
+.super Lel6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lfl6;
+# static fields
+.field public static final a:Lcl6;
 
-.field public Y:I
+.field public static final b:Ljava/util/List;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Luk6;
 
 
 # direct methods
-.method public constructor <init>(Lfl6;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcl6;->X:Lfl6;
+    new-instance v0, Lcl6;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcl6;->a:Lcl6;
+
+    sget-object v0, Lwk6;->e:Lwk6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcl6;->b:Ljava/util/List;
+
+    new-instance v0, Luk6;
+
+    sget v1, Lk1b;->c:I
+
+    invoke-direct {v0, v1}, Luk6;-><init>(I)V
+
+    sput-object v0, Lcl6;->c:Luk6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lcl6;->o:Ljava/lang/Object;
+    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
 
-    iget p1, p0, Lcl6;->Y:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final c()Lh4;
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget-object v0, Lcl6;->c:Luk6;
 
-    iput p1, p0, Lcl6;->Y:I
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lcl6;->X:Lfl6;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Lfl6;->b(Lnz3;)Ljava/lang/Object;
+    sget-object v0, Lcl6;->b:Ljava/util/List;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    return-object p1
+.method public final f()Luk6;
+    .locals 1
+
+    sget-object v0, Lcl6;->c:Luk6;
+
+    return-object v0
 .end method

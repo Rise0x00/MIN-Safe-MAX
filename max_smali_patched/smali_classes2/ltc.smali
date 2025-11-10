@@ -1,64 +1,54 @@
-.class public final Lltc;
+.class public abstract Lltc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lotc;
 
 
 # static fields
-.field public static final a:Lltc;
+.field public static audio_record_active_call_error_snackbar_title:I = 0x7f130088
 
+.field public static audio_record_confirm_exit_accept:I = 0x7f13008b
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static audio_record_confirm_exit_description:I = 0x7f13008c
 
-    new-instance v0, Lltc;
+.field public static audio_record_confirm_exit_title:I = 0x7f13008d
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static audio_record_error_common:I = 0x7f130090
 
-    sput-object v0, Lltc;->a:Lltc;
+.field public static audio_record_error_limit:I = 0x7f130091
 
-    return-void
-.end method
+.field public static audio_record_error_short:I = 0x7f130092
 
+.field public static audio_record_hold_to_start:I = 0x7f130093
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static channel_input_hint:I = 0x7f1302c6
 
-    const/4 v0, 0x1
+.field public static chat_input_hint:I = 0x7f130321
 
-    if-ne p0, p1, :cond_0
+.field public static messagewrite_edit_quote_title:I = 0x7f1306ef
 
-    return v0
+.field public static reply_quote_self:I = 0x7f130c88
 
-    :cond_0
-    instance-of p1, p1, Lltc;
+.field public static reply_quote_to_somebody:I = 0x7f130c89
 
-    if-nez p1, :cond_1
+.field public static video_message_record_error_common:I = 0x7f130e60
 
-    const/4 p1, 0x0
+.field public static video_message_record_error_no_camera:I = 0x7f130e61
 
-    return p1
+.field public static video_record_active_call_error_snackbar_title:I = 0x7f130e6c
 
-    :cond_1
-    return v0
-.end method
+.field public static writebar__add_link_button:I = 0x7f130e8f
 
-.method public final hashCode()I
-    .locals 1
+.field public static writebar__add_link_error_has_space:I = 0x7f130e90
 
-    const v0, -0x3c2612a4
+.field public static writebar__add_link_error_not_valid_link:I = 0x7f130e91
 
-    return v0
-.end method
+.field public static writebar__add_link_error_not_valid_scheme:I = 0x7f130e92
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static writebar__add_link_error_short_link:I = 0x7f130e93
 
-    const-string v0, "PopUp"
+.field public static writebar__add_link_title:I = 0x7f130e94
 
-    return-object v0
-.end method
+.field public static writebar_commands_not_found:I = 0x7f130e95
+
+.field public static writebar_mentions_not_found:I = 0x7f130e96
+
+.field public static writebar_mentions_title:I = 0x7f130e97

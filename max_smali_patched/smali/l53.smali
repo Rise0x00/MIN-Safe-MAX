@@ -1,792 +1,244 @@
-.class public final Ll53;
-.super Ljava/lang/Object;
+.class public abstract Ll53;
+.super Lm26;
 .source "SourceFile"
-
-# interfaces
-.implements Lfm7;
-.implements Lj53;
 
 
 # static fields
-.field public static final b:Ljava/util/Map;
-
-.field public static final c:Ljava/util/HashMap;
-
-.field public static final o:Ljava/util/LinkedHashMap;
+.field public static final x0:I
 
 
 # instance fields
-.field public final a:Ljava/lang/Class;
+.field public o:I
+
+.field public s0:I
+
+.field public t0:Lj53;
+
+.field public final u0:Ls43;
+
+.field public final v0:I
+
+.field public final w0:Lk53;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 24
+    .locals 1
 
-    const-class v22, Ljf6;
+    sget v0, Lquc;->Widget_MaterialComponents_ChipGroup:I
 
-    const-class v23, Lkf6;
-
-    const-class v1, Lve6;
-
-    const-class v2, Lxe6;
-
-    const-class v3, Llf6;
-
-    const-class v4, Lnf6;
-
-    const-class v5, Lpf6;
-
-    const-class v6, Lrf6;
-
-    const-class v7, Lsf6;
-
-    const-class v8, Ltf6;
-
-    const-class v9, Luf6;
-
-    const-class v10, Lvf6;
-
-    const-class v11, Lwe6;
-
-    const-class v12, Lye6;
-
-    const-class v13, Lze6;
-
-    const-class v14, Laf6;
-
-    const-class v15, Lbf6;
-
-    const-class v16, Lcf6;
-
-    const-class v17, Ldf6;
-
-    const-class v18, Lef6;
-
-    const-class v19, Lff6;
-
-    const-class v20, Lgf6;
-
-    const-class v21, Lif6;
-
-    filled-new-array/range {v1 .. v23}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v0, v2}, Lg93;->V(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    add-int/lit8 v5, v3, 0x1
-
-    if-ltz v3, :cond_0
-
-    check-cast v4, Ljava/lang/Class;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    new-instance v6, Ln4b;
-
-    invoke-direct {v6, v4, v3}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v3, v5
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lf93;->U()V
-
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    invoke-static {v1}, Lwa8;->Z(Ljava/util/ArrayList;)Ljava/util/Map;
-
-    move-result-object v0
-
-    sput-object v0, Ll53;->b:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    const-string v1, "boolean"
-
-    const-string v3, "kotlin.Boolean"
-
-    invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "char"
-
-    const-string v4, "kotlin.Char"
-
-    invoke-virtual {v0, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "byte"
-
-    const-string v5, "kotlin.Byte"
-
-    invoke-virtual {v0, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "short"
-
-    const-string v6, "kotlin.Short"
-
-    invoke-virtual {v0, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "int"
-
-    const-string v7, "kotlin.Int"
-
-    invoke-virtual {v0, v1, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "float"
-
-    const-string v8, "kotlin.Float"
-
-    invoke-virtual {v0, v1, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "long"
-
-    const-string v9, "kotlin.Long"
-
-    invoke-virtual {v0, v1, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "double"
-
-    const-string v10, "kotlin.Double"
-
-    invoke-virtual {v0, v1, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    const-string v11, "java.lang.Boolean"
-
-    invoke-virtual {v1, v11, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Character"
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Byte"
-
-    invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Short"
-
-    invoke-virtual {v1, v3, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Integer"
-
-    invoke-virtual {v1, v3, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Float"
-
-    invoke-virtual {v1, v3, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Long"
-
-    invoke-virtual {v1, v3, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "java.lang.Double"
-
-    invoke-virtual {v1, v3, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    const-string v4, "java.lang.Object"
-
-    const-string v5, "kotlin.Any"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.String"
-
-    const-string v5, "kotlin.String"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.CharSequence"
-
-    const-string v5, "kotlin.CharSequence"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Throwable"
-
-    const-string v5, "kotlin.Throwable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Cloneable"
-
-    const-string v5, "kotlin.Cloneable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Number"
-
-    const-string v5, "kotlin.Number"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Comparable"
-
-    const-string v5, "kotlin.Comparable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Enum"
-
-    const-string v5, "kotlin.Enum"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.annotation.Annotation"
-
-    const-string v5, "kotlin.Annotation"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.lang.Iterable"
-
-    const-string v5, "kotlin.collections.Iterable"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Iterator"
-
-    const-string v5, "kotlin.collections.Iterator"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Collection"
-
-    const-string v5, "kotlin.collections.Collection"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.List"
-
-    const-string v5, "kotlin.collections.List"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Set"
-
-    const-string v5, "kotlin.collections.Set"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.ListIterator"
-
-    const-string v5, "kotlin.collections.ListIterator"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Map"
-
-    const-string v5, "kotlin.collections.Map"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "java.util.Map$Entry"
-
-    const-string v5, "kotlin.collections.Map.Entry"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "kotlin.jvm.internal.StringCompanionObject"
-
-    const-string v5, "kotlin.String.Companion"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "kotlin.jvm.internal.EnumCompanionObject"
-
-    const-string v5, "kotlin.Enum.Companion"
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {v3, v1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    const/4 v4, -0x1
-
-    const/4 v5, 0x6
-
-    const/16 v6, 0x2e
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "kotlin.jvm.internal."
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v6, v2, v5}, Lyxe;->r0(Ljava/lang/CharSequence;CII)I
-
-    move-result v5
-
-    if-ne v5, v4, :cond_2
-
-    move-object v4, v1
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    invoke-virtual {v1, v5, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_2
-    const-string v5, "CompanionObject"
-
-    invoke-static {v7, v4, v5}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ".Companion"
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Ll53;->b:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Class;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "kotlin.Function"
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v7, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_4
-    sput-object v3, Ll53;->c:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->size()I
-
-    move-result v1
-
-    invoke-static {v1}, Lwa8;->V(I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_4
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map$Entry;
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v3, v6, v2, v5}, Lyxe;->r0(Ljava/lang/CharSequence;CII)I
-
-    move-result v8
-
-    if-ne v8, v4, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    add-int/lit8 v8, v8, 0x1
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v9
-
-    invoke-virtual {v3, v8, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v3
-
-    :goto_5
-    invoke-interface {v0, v7, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_4
-
-    :cond_6
-    sput-object v0, Ll53;->o:Ljava/util/LinkedHashMap;
+    sput v0, Ll53;->x0:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v3, Lgkc;->chipGroupStyle:I
 
-    iput-object p1, p0, Ll53;->a:Ljava/lang/Class;
+    const/4 v1, 0x0
+
+    sget v4, Ll53;->x0:I
+
+    invoke-static {p1, v1, v3, v4}, Ljj8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1, v1, v3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const/4 v6, 0x0
+
+    iput-boolean v6, p0, Lm26;->c:Z
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p1
+
+    sget-object v0, Ldvc;->FlowLayout:[I
+
+    invoke-virtual {p1, v1, v0, v6, v6}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget v0, Ldvc;->FlowLayout_lineSpacing:I
+
+    invoke-virtual {p1, v0, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v0
+
+    iput v0, p0, Lm26;->a:I
+
+    sget v0, Ldvc;->FlowLayout_itemSpacing:I
+
+    invoke-virtual {p1, v0, v6}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v0
+
+    iput v0, p0, Lm26;->b:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    new-instance p1, Ls43;
+
+    invoke-direct {p1}, Ls43;-><init>()V
+
+    iput-object p1, p0, Ll53;->u0:Ls43;
+
+    new-instance v7, Lk53;
+
+    move-object v8, p0
+
+    check-cast v8, Lbta;
+
+    invoke-direct {v7, v8}, Lk53;-><init>(Lbta;)V
+
+    iput-object v7, p0, Ll53;->w0:Lk53;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v2, Ldvc;->ChipGroup:[I
+
+    new-array v5, v6, [I
+
+    invoke-static/range {v0 .. v5}, Lzsf;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    sget v1, Ldvc;->ChipGroup_chipSpacing:I
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    sget v2, Ldvc;->ChipGroup_chipSpacingHorizontal:I
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Ll53;->setChipSpacingHorizontal(I)V
+
+    sget v2, Ldvc;->ChipGroup_chipSpacingVertical:I
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll53;->setChipSpacingVertical(I)V
+
+    sget v1, Ldvc;->ChipGroup_singleLine:I
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll53;->setSingleLine(Z)V
+
+    sget v1, Ldvc;->ChipGroup_singleSelection:I
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll53;->setSingleSelection(Z)V
+
+    sget v1, Ldvc;->ChipGroup_selectionRequired:I
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Ll53;->setSelectionRequired(Z)V
+
+    sget v1, Ldvc;->ChipGroup_checkedChip:I
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    iput v1, p0, Ll53;->v0:I
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    new-instance v0, Ls9d;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, v8}, Ls9d;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p1, Ls43;->o:Ljava/lang/Object;
+
+    invoke-super {p0, v7}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+
+    sget-object p1, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     return-void
+.end method
+
+.method private getVisibleChipCount()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    instance-of v2, v2, Lcom/google/android/material/chip/Chip;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Class;
+.method public final checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 1
 
-    iget-object v0, p0, Ll53;->a:Ljava/lang/Class;
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Ll53;->a:Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isAnonymousClass()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    return-object v2
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Class;->isLocalClass()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    const/16 v3, 0x24
-
-    if-eqz v2, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lyxe;->G0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Class;->getEnclosingConstructor()Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lyxe;->G0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    const/4 v2, 0x6
-
-    invoke-static {v1, v3, v0, v2}, Lyxe;->n0(Ljava/lang/CharSequence;CII)I
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
 
     move-result v0
 
-    const/4 v2, -0x1
-
-    if-ne v0, v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    return-object v1
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
-
-    move-result v1
-
-    sget-object v3, Ll53;->o:Ljava/util/LinkedHashMap;
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
-
-    move-result v1
-
-    const-string v4, "Array"
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :cond_5
-    if-nez v2, :cond_6
-
-    return-object v4
-
-    :cond_6
-    return-object v2
-
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    if-nez v1, :cond_8
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_8
-    return-object v1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Ll53;
-
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lpih;->D(Lfm7;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    check-cast p1, Lfm7;
-
-    invoke-static {p1}, Lpih;->D(Lfm7;)Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
+    instance-of p1, p1, Lh53;
 
     if-eqz p1, :cond_0
 
@@ -800,42 +252,506 @@
     return p1
 .end method
 
-.method public final hashCode()I
+.method public final generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .locals 2
+
+    new-instance v0, Lh53;
+
+    const/4 v1, -0x2
+
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    return-object v0
+.end method
+
+.method public final generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lh53;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 2
+    invoke-direct {v0, v1, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-object v0
+.end method
+
+.method public final generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    invoke-static {p0}, Lpih;->D(Lfm7;)Ljava/lang/Class;
+    .line 3
+    new-instance v0, Lh53;
 
-    move-result-object v0
+    .line 4
+    invoke-direct {v0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-object v0
+.end method
+
+.method public getCheckedChipId()I
+    .locals 1
+
+    iget-object v0, p0, Ll53;->u0:Ls43;
+
+    invoke-virtual {v0}, Ls43;->f()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public getCheckedChipIds()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ll53;->u0:Ls43;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ll53;->a:Ljava/lang/Class;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " (Kotlin reflection is not available)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ls43;->e(Ll53;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public getChipSpacingHorizontal()I
+    .locals 1
+
+    iget v0, p0, Ll53;->o:I
+
+    return v0
+.end method
+
+.method public getChipSpacingVertical()I
+    .locals 1
+
+    iget v0, p0, Ll53;->s0:I
+
+    return v0
+.end method
+
+.method public final onFinishInflate()V
+    .locals 3
+
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
+
+    const/4 v0, -0x1
+
+    iget v1, p0, Ll53;->v0:I
+
+    if-eq v1, v0, :cond_1
+
+    iget-object v0, p0, Ll53;->u0:Ls43;
+
+    iget-object v2, v0, Ls43;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyi8;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, v1}, Ls43;->a(Lyi8;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Ls43;->g()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    iget-boolean v0, p0, Lm26;->c:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Ll53;->getVisibleChipCount()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    :goto_0
+    invoke-virtual {p0}, Lm26;->getRowCount()I
+
+    move-result v1
+
+    iget-object v2, p0, Ll53;->u0:Ls43;
+
+    iget-boolean v2, v2, Ls43;->a:Z
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x2
+
+    :goto_1
+    invoke-static {v1, v0, v2}, Lg5;->a(III)Lg5;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lg5;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCollectionInfo(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;)V
+
+    return-void
+.end method
+
+.method public setChipSpacing(I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ll53;->setChipSpacingHorizontal(I)V
+
+    invoke-virtual {p0, p1}, Ll53;->setChipSpacingVertical(I)V
+
+    return-void
+.end method
+
+.method public setChipSpacingHorizontal(I)V
+    .locals 1
+
+    iget v0, p0, Ll53;->o:I
+
+    if-eq v0, p1, :cond_0
+
+    iput p1, p0, Ll53;->o:I
+
+    invoke-virtual {p0, p1}, Lm26;->setItemSpacing(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setChipSpacingHorizontalResource(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ll53;->setChipSpacingHorizontal(I)V
+
+    return-void
+.end method
+
+.method public setChipSpacingResource(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ll53;->setChipSpacing(I)V
+
+    return-void
+.end method
+
+.method public setChipSpacingVertical(I)V
+    .locals 1
+
+    iget v0, p0, Ll53;->s0:I
+
+    if-eq v0, p1, :cond_0
+
+    iput p1, p0, Ll53;->s0:I
+
+    invoke-virtual {p0, p1}, Lm26;->setLineSpacing(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setChipSpacingVerticalResource(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ll53;->setChipSpacingVertical(I)V
+
+    return-void
+.end method
+
+.method public setDividerDrawableHorizontal(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Changing divider drawables have no effect. ChipGroup do not use divider drawables as spacing."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setDividerDrawableVertical(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Changing divider drawables have no effect. ChipGroup do not use divider drawables as spacing."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setFlexWrap(I)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Changing flex wrap not allowed. ChipGroup exposes a singleLine attribute instead."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setOnCheckedChangeListener(Li53;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Ll53;->setOnCheckedStateChangeListener(Lj53;)V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lj1e;
+
+    invoke-direct {v0, p0, p1}, Lj1e;-><init>(Ll53;Li53;)V
+
+    invoke-virtual {p0, v0}, Ll53;->setOnCheckedStateChangeListener(Lj53;)V
+
+    return-void
+.end method
+
+.method public setOnCheckedStateChangeListener(Lj53;)V
+    .locals 0
+
+    iput-object p1, p0, Ll53;->t0:Lj53;
+
+    return-void
+.end method
+
+.method public setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+    .locals 1
+
+    iget-object v0, p0, Ll53;->w0:Lk53;
+
+    iput-object p1, v0, Lk53;->a:Landroid/view/ViewGroup$OnHierarchyChangeListener;
+
+    return-void
+.end method
+
+.method public setSelectionRequired(Z)V
+    .locals 1
+
+    iget-object v0, p0, Ll53;->u0:Ls43;
+
+    iput-boolean p1, v0, Ls43;->b:Z
+
+    return-void
+.end method
+
+.method public setShowDividerHorizontal(I)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Changing divider modes has no effect. ChipGroup do not use divider drawables as spacing."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setShowDividerVertical(I)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Changing divider modes has no effect. ChipGroup do not use divider drawables as spacing."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setSingleLine(I)V
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ll53;->setSingleLine(Z)V
+
+    return-void
+.end method
+
+.method public setSingleLine(Z)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lm26;->setSingleLine(Z)V
+
+    return-void
+.end method
+
+.method public setSingleSelection(I)V
+    .locals 1
+
+    .line 7
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Ll53;->setSingleSelection(Z)V
+
+    return-void
+.end method
+
+.method public setSingleSelection(Z)V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Ll53;->u0:Ls43;
+
+    iget-boolean v1, v0, Ls43;->a:Z
+
+    if-eq v1, p1, :cond_1
+
+    .line 2
+    iput-boolean p1, v0, Ls43;->a:Z
+
+    .line 3
+    iget-object p1, v0, Ls43;->d:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result p1
+
+    .line 4
+    iget-object v1, v0, Ls43;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lyi8;
+
+    const/4 v3, 0x0
+
+    .line 5
+    invoke-virtual {v0, v2, v3}, Ls43;->h(Lyi8;Z)Z
+
+    goto :goto_0
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    .line 6
+    invoke-virtual {v0}, Ls43;->g()V
+
+    :cond_1
+    return-void
 .end method

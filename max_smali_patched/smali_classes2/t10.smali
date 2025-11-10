@@ -2,65 +2,106 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Lu10;
+.field public b:I
 
+.field public c:I
 
-# direct methods
-.method public synthetic constructor <init>(Lu10;I)V
-    .locals 0
+.field public d:Ljava/lang/String;
 
-    iput p2, p0, Lt10;->a:I
+.field public e:J
 
-    iput-object p1, p0, Lt10;->b:Lu10;
+.field public f:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public g:Ljava/lang/String;
 
-    return-void
-.end method
+.field public h:Ljava/lang/String;
+
+.field public i:Ljava/util/List;
+
+.field public j:I
+
+.field public k:J
+
+.field public l:Ljava/lang/String;
+
+.field public m:Z
+
+.field public n:I
+
+.field public o:Ljava/lang/String;
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public a()Lu10;
+    .locals 2
 
-    iget v0, p0, Lt10;->a:I
+    iget-object v0, p0, Lt10;->i:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lt10;->b:Lu10;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iget-object v0, v0, Lu10;->o:Landroid/animation/ValueAnimator;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+    iput-object v0, p0, Lt10;->i:Ljava/util/List;
 
     :cond_0
-    return-void
+    iget v0, p0, Lt10;->j:I
 
-    :pswitch_0
-    iget-object v0, p0, Lt10;->b:Lu10;
+    const/4 v1, 0x1
 
-    iget-object v0, v0, Lu10;->o:Landroid/animation/ValueAnimator;
+    if-nez v0, :cond_1
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+    iput v1, p0, Lt10;->j:I
 
     :cond_1
-    return-void
+    iget v0, p0, Lt10;->n:I
 
-    nop
+    if-nez v0, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput v1, p0, Lt10;->n:I
+
+    :cond_2
+    new-instance v0, Lu10;
+
+    invoke-direct {v0, p0}, Lu10;-><init>(Lt10;)V
+
+    return-object v0
+.end method
+
+.method public b()Lp2f;
+    .locals 2
+
+    iget-object v0, p0, Lt10;->i:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lt10;->i:Ljava/util/List;
+
+    :cond_0
+    iget v0, p0, Lt10;->j:I
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_1
+
+    iput v1, p0, Lt10;->j:I
+
+    :cond_1
+    iget v0, p0, Lt10;->n:I
+
+    if-nez v0, :cond_2
+
+    iput v1, p0, Lt10;->n:I
+
+    :cond_2
+    new-instance v0, Lp2f;
+
+    invoke-direct {v0, p0}, Lp2f;-><init>(Lt10;)V
+
+    return-object v0
 .end method

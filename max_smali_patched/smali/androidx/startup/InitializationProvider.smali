@@ -65,18 +65,18 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Ltz7;->l(Landroid/content/Context;)Ltz7;
+    invoke-static {v0}, Lw48;->y(Landroid/content/Context;)Lw48;
 
     move-result-object v0
 
-    iget-object v1, v0, Ltz7;->c:Ljava/lang/Object;
+    iget-object v1, v0, Lw48;->d:Ljava/lang/Object;
 
     check-cast v1, Landroid/content/Context;
 
     :try_start_0
     const-string v2, "Startup"
 
-    invoke-static {v2}, Lo7;->D(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Ljzh;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -108,7 +108,7 @@
 
     iget-object v1, v1, Landroid/content/pm/ProviderInfo;->metaData:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Ltz7;->j(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lw48;->w(Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

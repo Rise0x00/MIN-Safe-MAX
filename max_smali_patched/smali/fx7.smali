@@ -2,16 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljx7;
+
 
 # virtual methods
-.method public abstract e(II)V
-.end method
-
-.method public abstract f(II)V
-.end method
-
-.method public abstract g(II)V
-.end method
-
-.method public abstract h(IILjava/lang/Object;)V
+.method public abstract d(Lnx7;Low7;)V
 .end method

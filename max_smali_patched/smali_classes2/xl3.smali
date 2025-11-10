@@ -1,167 +1,128 @@
-.class public abstract synthetic Lxl3;
+.class public final Lxl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final c:I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final d:I
 
-.field public static final synthetic $EnumSwitchMapping$2:[I
 
-.field public static final synthetic $EnumSwitchMapping$3:[I
+# instance fields
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public static final synthetic $EnumSwitchMapping$4:[I
+.field public b:Landroid/content/res/Configuration;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 3
 
-    const/4 v0, 0x2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const/16 v1, 0x1f
 
-    move-result-object v1
+    if-lt v0, v1, :cond_0
 
-    array-length v1, v1
+    const v2, 0x10003d84
 
-    new-array v1, v1, [I
+    goto :goto_0
 
-    const/4 v2, 0x1
+    :cond_0
+    const/16 v2, 0x3d84
 
-    const/4 v3, 0x0
+    :goto_0
+    sput v2, Lxl3;->c:I
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-lt v0, v1, :cond_1
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/high16 v0, 0x50000000
 
-    :catch_1
-    sput-object v1, Lxl3;->$EnumSwitchMapping$0:[I
+    goto :goto_1
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    :cond_1
+    const/high16 v0, 0x40000000    # 2.0f
 
-    move-result-object v1
+    :goto_1
+    sput v0, Lxl3;->d:I
 
-    array-length v1, v1
+    return-void
+.end method
 
-    new-array v1, v1, [I
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    :try_start_2
-    aput v2, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :catch_2
-    :try_start_3
-    aput v0, v1, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    :catch_3
-    sput-object v1, Lxl3;->$EnumSwitchMapping$1:[I
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    const/4 v1, 0x4
+    iput-object v0, p0, Lxl3;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-static {v1}, Lqw1;->y(I)[I
+    new-instance v0, Landroid/content/res/Configuration;
 
-    move-result-object v4
-
-    array-length v4, v4
-
-    new-array v4, v4, [I
-
-    :try_start_4
-    aput v2, v4, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v0, v4, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    const/4 v5, 0x3
-
-    :try_start_6
-    aput v5, v4, v0
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    aput v1, v4, v5
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    sput-object v4, Lxl3;->$EnumSwitchMapping$2:[I
-
-    invoke-static {v5}, Lqw1;->y(I)[I
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    :try_start_8
-    aput v2, v1, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    :try_start_9
-    aput v0, v1, v2
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    :try_start_a
-    aput v5, v1, v0
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    sput-object v1, Lxl3;->$EnumSwitchMapping$3:[I
-
-    invoke-static {v5}, Lqw1;->y(I)[I
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    array-length v1, v1
+    invoke-direct {v0, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    new-array v1, v1, [I
+    iput-object v0, p0, Lxl3;->b:Landroid/content/res/Configuration;
 
-    :try_start_b
-    aput v2, v1, v3
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+    new-instance v0, Lvl3;
 
-    :catch_b
-    :try_start_c
-    aput v0, v1, v2
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+    const/4 v1, 0x0
 
-    :catch_c
-    :try_start_d
-    aput v5, v1, v0
-    :try_end_d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+    invoke-direct {v0, p0, v1, p1}, Lvl3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    :catch_d
-    sput-object v1, Lxl3;->$EnumSwitchMapping$4:[I
+    invoke-virtual {p1, v0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(ILwl3;)V
+    .locals 2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lxl3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, p1
+
+    :cond_1
+    :goto_0
+    check-cast v1, Ljava/util/Set;
+
+    invoke-interface {v1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

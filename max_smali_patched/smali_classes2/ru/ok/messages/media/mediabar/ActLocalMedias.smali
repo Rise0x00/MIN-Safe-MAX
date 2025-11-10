@@ -1,125 +1,126 @@
 .class public Lru/ok/messages/media/mediabar/ActLocalMedias;
-.super Lv5;
+.super Lj6;
 .source "SourceFile"
 
 # interfaces
-.implements Lke6;
-.implements Lie6;
-.implements Llkf;
-.implements Lag8;
+.implements Lci6;
+.implements Lbi6;
+.implements Lyxf;
+.implements Lvl8;
 .implements Landroid/view/View$OnSystemUiVisibilityChangeListener;
-.implements Lupd;
-.implements Lspd;
-.implements Lwp8;
-.implements Lhf8;
+.implements La1e;
+.implements Ly0e;
+.implements Ldw8;
+.implements Ldl8;
+.implements Lq8;
 
 
 # static fields
-.field public static final synthetic w1:I
+.field public static final synthetic q1:I
 
 
 # instance fields
-.field public final Z0:Ljava/util/ArrayList;
+.field public final T0:Ljava/util/ArrayList;
 
-.field public a1:I
+.field public U0:I
 
-.field public b1:Ljava/lang/String;
+.field public V0:Ljava/lang/String;
 
-.field public c1:Ly08;
+.field public W0:Lb68;
 
-.field public d1:Lso8;
+.field public X0:Ltu8;
 
-.field public e1:Z
+.field public Y0:Z
 
-.field public f1:Z
+.field public Z0:Z
 
-.field public g1:Landroidx/viewpager2/widget/ViewPager2;
+.field public a1:Landroidx/viewpager2/widget/ViewPager2;
 
-.field public h1:Lw13;
+.field public b1:Lzh3;
 
-.field public i1:Landroid/view/View;
+.field public c1:Landroid/view/View;
 
-.field public j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+.field public d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-.field public k1:Lco7;
+.field public e1:Lqt7;
 
-.field public l1:Lss4;
+.field public f1:Lzv4;
 
-.field public m1:Ldv9;
+.field public g1:Lc2a;
 
-.field public n1:Liw9;
+.field public h1:Ld3a;
 
-.field public o1:Lvp8;
+.field public i1:Lm68;
 
-.field public p1:Lvp8;
+.field public j1:Lm68;
 
-.field public q1:Landroid/widget/Toast;
+.field public k1:Landroid/widget/Toast;
 
-.field public r1:Z
+.field public l1:Z
 
-.field public s1:Lyv8;
+.field public m1:Lq29;
 
-.field public t1:Lq3;
+.field public n1:Lh4;
 
-.field public final u1:Ls5f;
+.field public final o1:Ltif;
 
-.field public final v1:La6;
+.field public final p1:Lp6;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lu5;-><init>()V
+    invoke-direct {p0}, Lj6;-><init>()V
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
+    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
 
-    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Z
+    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Z
 
-    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->r1:Z
+    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->t1:Lq3;
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Lh4;
 
-    new-instance v0, Lz5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, Lz5;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->u1:Ls5f;
-
-    new-instance v0, La6;
+    new-instance v0, Ln6;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, La6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+    invoke-direct {v0, v1, p0}, Ln6;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->v1:La6;
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Ltif;
+
+    new-instance v0, Lp6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lp6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lp6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final O()Ljava/lang/String;
+.method public final H()Ljava/lang/String;
     .locals 1
 
     const-string v0, "LOCAL_MEDIA_VIEWER"
@@ -127,10 +128,10 @@
     return-object v0
 .end method
 
-.method public final R(IILandroid/content/Intent;)V
+.method public final I(IILandroid/content/Intent;)V
     .locals 12
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -141,13 +142,13 @@
     return-void
 
     :cond_0
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lb18;
+    check-cast v1, Le68;
 
     const/4 v2, 0x1
 
@@ -177,51 +178,51 @@
 
     move-result-object p3
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    iget-object v4, v0, Ldv9;->x0:Lb9g;
+    iget-object v4, v0, Lc2a;->s0:Lsmg;
 
-    invoke-virtual {v4}, Lb9g;->a()Lm10;
+    invoke-virtual {v4}, Lsmg;->a()Lx10;
 
     move-result-object v4
 
     long-to-float p1, p1
 
-    iget-wide v5, v0, Ldv9;->w0:J
+    iget-wide v5, v0, Lc2a;->Z:J
 
     long-to-float p2, v5
 
     div-float/2addr p1, p2
 
-    iput p1, v4, Lm10;->a:F
+    iput p1, v4, Lx10;->a:F
 
     long-to-float p1, v2
 
     div-float/2addr p1, p2
 
-    iput p1, v4, Lm10;->b:F
+    iput p1, v4, Lx10;->b:F
 
-    new-instance p1, Lb9g;
+    new-instance p1, Lsmg;
 
-    invoke-direct {p1, v4}, Lb9g;-><init>(Lm10;)V
+    invoke-direct {p1, v4}, Lsmg;-><init>(Lx10;)V
 
-    iput-object p1, v0, Ldv9;->x0:Lb9g;
+    iput-object p1, v0, Lc2a;->s0:Lsmg;
 
-    invoke-virtual {v0}, Ldv9;->f1()V
+    invoke-virtual {v0}, Lc2a;->U0()V
 
-    iget-object p1, v0, Ldv9;->A0:Lwpd;
+    iget-object p1, v0, Lc2a;->v0:Lc1e;
 
-    iget-object p2, v0, Ldv9;->X:Lb18;
+    iget-object p2, v0, Lc2a;->o:Le68;
 
-    iget-object v0, p1, Lwpd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p1, Lc1e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->size()I
 
     move-result v0
 
-    invoke-virtual {p1, p2, v0}, Lwpd;->a(Lb18;I)I
+    invoke-virtual {p1, p2, v0}, Lc1e;->a(Le68;I)I
 
-    invoke-virtual {p1, p2}, Lwpd;->h(Lb18;)Lypd;
+    invoke-virtual {p1, p2}, Lc1e;->h(Le68;)Le1e;
 
     move-result-object p2
 
@@ -230,9 +231,9 @@
     goto :goto_1
 
     :cond_1
-    iput-object p3, p2, Lypd;->d:Ljava/lang/String;
+    iput-object p3, p2, Le1e;->d:Ljava/lang/String;
 
-    iget-object p1, p1, Lwpd;->g:Ljava/util/Set;
+    iget-object p1, p1, Lc1e;->g:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -249,9 +250,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lspd;
+    check-cast v0, Ly0e;
 
-    invoke-interface {v0, p2}, Lspd;->l(Lypd;)V
+    invoke-interface {v0, p2}, Ly0e;->n(Le1e;)V
 
     goto :goto_0
 
@@ -259,11 +260,11 @@
     :goto_1
     if-eqz v1, :cond_e
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    iget-wide v2, v1, Lb18;->b:J
+    iget-wide v2, v1, Le68;->b:J
 
-    invoke-virtual {p1, v2, v3}, Lso8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
+    invoke-virtual {p1, v2, v3}, Ltu8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
 
     move-result-object p1
 
@@ -273,14 +274,14 @@
 
     check-cast p1, Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->h1()V
+    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->G0()V
 
     :cond_3
-    new-instance p1, Lc62;
+    new-instance p1, Lj72;
 
-    invoke-direct {p1, v1, p3}, Lc62;-><init>(Lb18;Ljava/lang/String;)V
+    invoke-direct {p1, v1, p3}, Lj72;-><init>(Le68;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->t1:Lq3;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Lh4;
 
     goto/16 :goto_6
 
@@ -305,48 +306,48 @@
 
     move-result-object p2
 
-    check-cast p2, Lb54;
+    check-cast p2, Lf74;
 
     if-eqz p1, :cond_b
 
-    iget-object p3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object p3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    iget-boolean v1, p3, Ldv9;->E0:Z
+    iget-boolean v1, p3, Lc2a;->z0:Z
 
-    iget-object v2, p3, Ldv9;->A0:Lwpd;
+    iget-object v2, p3, Lc2a;->v0:Lc1e;
 
-    iget-object v3, p3, Ldv9;->y0:Lkcb;
+    iget-object v3, p3, Lc2a;->t0:Lelb;
 
     if-eqz v3, :cond_5
 
-    new-instance v4, Lbf4;
+    new-instance v4, Lc56;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    iget-object v5, v3, Lkcb;->a:Landroid/net/Uri;
+    iget-object v5, v3, Lelb;->a:Landroid/net/Uri;
 
-    iput-object v5, v4, Lbf4;->a:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->a:Ljava/lang/Object;
 
-    iget-object v5, v3, Lkcb;->b:Landroid/net/Uri;
+    iget-object v5, v3, Lelb;->b:Landroid/net/Uri;
 
-    iput-object v5, v4, Lbf4;->b:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->b:Ljava/lang/Object;
 
-    iget-object v5, v3, Lkcb;->c:Lb54;
+    iget-object v5, v3, Lelb;->c:Lf74;
 
-    iput-object v5, v4, Lbf4;->c:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->c:Ljava/lang/Object;
 
-    iget-object v5, v3, Lkcb;->o:Ld35;
+    iget-object v5, v3, Lelb;->d:Lr65;
 
-    iput-object v5, v4, Lbf4;->d:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->d:Ljava/lang/Object;
 
-    iget-object v5, v3, Lkcb;->X:Landroid/net/Uri;
+    iget-object v5, v3, Lelb;->o:Landroid/net/Uri;
 
-    iput-object v5, v4, Lbf4;->e:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->e:Ljava/lang/Object;
 
     goto :goto_2
 
     :cond_5
-    new-instance v4, Lbf4;
+    new-instance v4, Lc56;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
@@ -355,72 +356,72 @@
 
     if-eqz v3, :cond_7
 
-    iget-object v3, v3, Lkcb;->X:Landroid/net/Uri;
+    iget-object v3, v3, Lelb;->o:Landroid/net/Uri;
 
     if-nez v3, :cond_6
 
     goto :goto_3
 
     :cond_6
-    iput-object v5, v4, Lbf4;->e:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->e:Ljava/lang/Object;
 
-    iput-object v5, v4, Lbf4;->c:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->c:Ljava/lang/Object;
 
     goto :goto_4
 
     :cond_7
     :goto_3
-    iput-object p2, v4, Lbf4;->c:Ljava/lang/Object;
+    iput-object p2, v4, Lc56;->c:Ljava/lang/Object;
 
     :goto_4
-    iput-object p1, v4, Lbf4;->b:Ljava/lang/Object;
+    iput-object p1, v4, Lc56;->b:Ljava/lang/Object;
 
     if-nez p2, :cond_8
 
-    iput-object v5, v4, Lbf4;->b:Ljava/lang/Object;
+    iput-object v5, v4, Lc56;->b:Ljava/lang/Object;
 
     :cond_8
-    new-instance v6, Lkcb;
+    new-instance v6, Lelb;
 
-    iget-object p2, v4, Lbf4;->a:Ljava/lang/Object;
+    iget-object p2, v4, Lc56;->a:Ljava/lang/Object;
 
     move-object v7, p2
 
     check-cast v7, Landroid/net/Uri;
 
-    iget-object p2, v4, Lbf4;->b:Ljava/lang/Object;
+    iget-object p2, v4, Lc56;->b:Ljava/lang/Object;
 
     move-object v8, p2
 
     check-cast v8, Landroid/net/Uri;
 
-    iget-object p2, v4, Lbf4;->c:Ljava/lang/Object;
+    iget-object p2, v4, Lc56;->c:Ljava/lang/Object;
 
     move-object v9, p2
 
-    check-cast v9, Lb54;
+    check-cast v9, Lf74;
 
-    iget-object p2, v4, Lbf4;->d:Ljava/lang/Object;
+    iget-object p2, v4, Lc56;->d:Ljava/lang/Object;
 
     move-object v10, p2
 
-    check-cast v10, Ld35;
+    check-cast v10, Lr65;
 
-    iget-object p2, v4, Lbf4;->e:Ljava/lang/Object;
+    iget-object p2, v4, Lc56;->e:Ljava/lang/Object;
 
     move-object v11, p2
 
     check-cast v11, Landroid/net/Uri;
 
-    invoke-direct/range {v6 .. v11}, Lkcb;-><init>(Landroid/net/Uri;Landroid/net/Uri;Lb54;Ld35;Landroid/net/Uri;)V
+    invoke-direct/range {v6 .. v11}, Lelb;-><init>(Landroid/net/Uri;Landroid/net/Uri;Lf74;Lr65;Landroid/net/Uri;)V
 
-    iput-object v6, p3, Ldv9;->y0:Lkcb;
+    iput-object v6, p3, Lc2a;->t0:Lelb;
 
-    invoke-virtual {p3}, Ldv9;->e1()V
+    invoke-virtual {p3}, Lc2a;->T0()V
 
-    iget-object p2, p3, Ldv9;->X:Lb18;
+    iget-object p2, p3, Lc2a;->o:Le68;
 
-    invoke-virtual {v2, p2}, Lwpd;->j(Lb18;)Z
+    invoke-virtual {v2, p2}, Lc1e;->j(Le68;)Z
 
     move-result p2
 
@@ -428,12 +429,12 @@
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {p3}, Ldv9;->d1()V
+    invoke-virtual {p3}, Lc2a;->S0()V
 
     :cond_9
-    iget-object p2, p3, Ldv9;->X:Lb18;
+    iget-object p2, p3, Lc2a;->o:Le68;
 
-    invoke-virtual {v2, p2}, Lwpd;->j(Lb18;)Z
+    invoke-virtual {v2, p2}, Lc1e;->j(Le68;)Z
 
     move-result p2
 
@@ -441,40 +442,40 @@
 
     if-nez v1, :cond_a
 
-    invoke-virtual {p3}, Ldv9;->d1()V
+    invoke-virtual {p3}, Lc2a;->S0()V
 
     :cond_a
-    new-instance p2, Lyu9;
+    new-instance p2, Lx1a;
 
     const/4 v1, 0x4
 
-    invoke-direct {p2, p3, v1}, Lyu9;-><init>(Ldv9;I)V
+    invoke-direct {p2, p3, v1}, Lx1a;-><init>(Lc2a;I)V
 
-    invoke-virtual {p3, p2}, Ldv9;->g1(Lwf6;)V
+    invoke-virtual {p3, p2}, Lc2a;->V0(Lpj6;)V
 
-    new-instance p2, Lyu9;
+    new-instance p2, Lx1a;
 
     const/4 v1, 0x3
 
-    invoke-direct {p2, p3, v1}, Lyu9;-><init>(Ldv9;I)V
+    invoke-direct {p2, p3, v1}, Lx1a;-><init>(Lc2a;I)V
 
-    invoke-virtual {p3, p2}, Ldv9;->g1(Lwf6;)V
+    invoke-virtual {p3, p2}, Lc2a;->V0(Lpj6;)V
 
-    iget p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lb18;
+    check-cast p2, Le68;
 
     if-eqz p2, :cond_e
 
-    new-instance p3, La62;
+    new-instance p3, Lh72;
 
-    invoke-direct {p3, p2, p1}, La62;-><init>(Lb18;Landroid/net/Uri;)V
+    invoke-direct {p3, p2, p1}, Lh72;-><init>(Le68;Landroid/net/Uri;)V
 
-    iput-object p3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->t1:Lq3;
+    iput-object p3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Lh4;
 
     goto/16 :goto_6
 
@@ -497,15 +498,15 @@
 
     const-string p3, "crop"
 
-    invoke-static {p2, p3, p1}, Lox9;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p2, p3, p1}, Lcuh;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget p1, Lt9d;->i:I
+    sget p1, Lmkd;->g:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v2, p0, p1}, Loch;->A(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1, v2}, Luyh;->j(Landroid/content/Context;Ljava/lang/String;I)V
 
     invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->finish()V
 
@@ -536,100 +537,100 @@
 
     move-object v6, p1
 
-    check-cast v6, Ld35;
+    check-cast v6, Lr65;
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    iget-object p2, p1, Ldv9;->y0:Lkcb;
+    iget-object p2, p1, Lc2a;->t0:Lelb;
 
     if-eqz p2, :cond_d
 
-    new-instance p3, Lbf4;
+    new-instance p3, Lc56;
 
     invoke-direct {p3}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p2, Lkcb;->a:Landroid/net/Uri;
+    iget-object v0, p2, Lelb;->a:Landroid/net/Uri;
 
-    iput-object v0, p3, Lbf4;->a:Ljava/lang/Object;
+    iput-object v0, p3, Lc56;->a:Ljava/lang/Object;
 
-    iget-object v0, p2, Lkcb;->b:Landroid/net/Uri;
+    iget-object v0, p2, Lelb;->b:Landroid/net/Uri;
 
-    iput-object v0, p3, Lbf4;->b:Ljava/lang/Object;
+    iput-object v0, p3, Lc56;->b:Ljava/lang/Object;
 
-    iget-object v0, p2, Lkcb;->c:Lb54;
+    iget-object v0, p2, Lelb;->c:Lf74;
 
-    iput-object v0, p3, Lbf4;->c:Ljava/lang/Object;
+    iput-object v0, p3, Lc56;->c:Ljava/lang/Object;
 
-    iget-object v0, p2, Lkcb;->o:Ld35;
+    iget-object v0, p2, Lelb;->d:Lr65;
 
-    iput-object v0, p3, Lbf4;->d:Ljava/lang/Object;
+    iput-object v0, p3, Lc56;->d:Ljava/lang/Object;
 
-    iget-object p2, p2, Lkcb;->X:Landroid/net/Uri;
+    iget-object p2, p2, Lelb;->o:Landroid/net/Uri;
 
-    iput-object p2, p3, Lbf4;->e:Ljava/lang/Object;
+    iput-object p2, p3, Lc56;->e:Ljava/lang/Object;
 
     goto :goto_5
 
     :cond_d
-    new-instance p3, Lbf4;
+    new-instance p3, Lc56;
 
     invoke-direct {p3}, Ljava/lang/Object;-><init>()V
 
     :goto_5
-    iput-object v7, p3, Lbf4;->e:Ljava/lang/Object;
+    iput-object v7, p3, Lc56;->e:Ljava/lang/Object;
 
-    iput-object v6, p3, Lbf4;->d:Ljava/lang/Object;
+    iput-object v6, p3, Lc56;->d:Ljava/lang/Object;
 
-    new-instance v2, Lkcb;
+    new-instance v2, Lelb;
 
-    iget-object p2, p3, Lbf4;->a:Ljava/lang/Object;
+    iget-object p2, p3, Lc56;->a:Ljava/lang/Object;
 
     move-object v3, p2
 
     check-cast v3, Landroid/net/Uri;
 
-    iget-object p2, p3, Lbf4;->b:Ljava/lang/Object;
+    iget-object p2, p3, Lc56;->b:Ljava/lang/Object;
 
     move-object v4, p2
 
     check-cast v4, Landroid/net/Uri;
 
-    iget-object p2, p3, Lbf4;->c:Ljava/lang/Object;
+    iget-object p2, p3, Lc56;->c:Ljava/lang/Object;
 
     move-object v5, p2
 
-    check-cast v5, Lb54;
+    check-cast v5, Lf74;
 
-    invoke-direct/range {v2 .. v7}, Lkcb;-><init>(Landroid/net/Uri;Landroid/net/Uri;Lb54;Ld35;Landroid/net/Uri;)V
+    invoke-direct/range {v2 .. v7}, Lelb;-><init>(Landroid/net/Uri;Landroid/net/Uri;Lf74;Lr65;Landroid/net/Uri;)V
 
-    iput-object v2, p1, Ldv9;->y0:Lkcb;
+    iput-object v2, p1, Lc2a;->t0:Lelb;
 
-    invoke-virtual {p1}, Ldv9;->e1()V
+    invoke-virtual {p1}, Lc2a;->T0()V
 
-    new-instance p2, Lyu9;
+    new-instance p2, Lx1a;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, p1, p3}, Lyu9;-><init>(Ldv9;I)V
+    invoke-direct {p2, p1, p3}, Lx1a;-><init>(Lc2a;I)V
 
-    invoke-virtual {p1, p2}, Ldv9;->g1(Lwf6;)V
+    invoke-virtual {p1, p2}, Lc2a;->V0(Lpj6;)V
 
     if-eqz v1, :cond_e
 
-    new-instance p1, Lb62;
+    new-instance p1, Li72;
 
-    invoke-direct {p1, v1, v7}, Lb62;-><init>(Lb18;Landroid/net/Uri;)V
+    invoke-direct {p1, v1, v7}, Li72;-><init>(Le68;Landroid/net/Uri;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->t1:Lq3;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Lh4;
 
     :cond_e
     :goto_6
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
 
     return-void
 .end method
 
-.method public final S()V
+.method public final J()V
     .locals 3
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -651,58 +652,17 @@
     goto :goto_0
 
     :cond_0
-    invoke-super {p0}, Lu5;->S()V
+    invoke-super {p0}, Lj6;->J()V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public final a()Lvp8;
+.method public final Q()Lru/ok/messages/media/mediabar/FrgLocalMedia;
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lu5;->O0:Lbb8;
-
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsg3;
-
-    check-cast v0, Lyka;
-
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
-
-    move-result-object v0
-
-    new-instance v1, Lz40;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v3, v2, v3, v3}, Lz40;-><init>(IZZZ)V
-
-    sget-object v2, Lyp8;->c:Lyp8;
-
-    invoke-virtual {v0, v2, v1}, Lxp8;->l(Lyp8;Lz40;)Lj18;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
-
-    return-object v0
-.end method
-
-.method public final a0()Lru/ok/messages/media/mediabar/FrgLocalMedia;
-    .locals 4
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 v1, 0x0
 
@@ -720,7 +680,7 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -734,16 +694,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lb18;
+    check-cast v0, Le68;
 
     :goto_0
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    iget-wide v2, v0, Lb18;->b:J
+    iget-wide v2, v0, Le68;->b:J
 
-    invoke-virtual {v1, v2, v3}, Lso8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
+    invoke-virtual {v1, v2, v3}, Ltu8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
 
     move-result-object v0
 
@@ -753,108 +713,16 @@
     return-object v1
 .end method
 
-.method public final b(ZZZ)V
-    .locals 1
-
-    iput-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Lss4;
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p2}, Lss4;->h()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Lss4;
-
-    invoke-interface {p2}, Lss4;->g()V
-
-    const/4 p2, 0x0
-
-    iput-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Lss4;
-
-    :cond_0
-    if-eqz p1, :cond_3
-
-    iget-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Z
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {p0, p0}, Lu5;->W(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Lw5;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p2, p0, v0}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    sget-object p1, Landroid/os/Build;->BRAND:Ljava/lang/String;
-
-    const-string p2, "meizu"
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, p2, v0}, Lgye;->X(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0, p3}, Lru/ok/messages/media/mediabar/ActLocalMedias;->l0(Z)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    invoke-virtual {p0, p3}, Lru/ok/messages/media/mediabar/ActLocalMedias;->l0(Z)V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0, p3}, Lru/ok/messages/media/mediabar/ActLocalMedias;->l0(Z)V
-
-    invoke-static {p0}, Lbf0;->s(Landroidx/fragment/app/b;)V
-
-    new-instance p1, Lw5;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, p0, p2}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    const-wide/16 p2, 0x64
-
-    invoke-static {p1, p2, p3}, Lk74;->R(Ljava/lang/Runnable;J)Lss4;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Lss4;
-
-    return-void
-.end method
-
-.method public final b0()V
+.method public final R()V
     .locals 4
 
     const-string v0, "endTransition: onStart"
 
     const-string v1, "ru.ok.messages.media.mediabar.ActLocalMedias"
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -866,19 +734,19 @@
 
     const-string v0, "endTransition: bottom visible"
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    iget-boolean v0, v0, Ly08;->a:Z
+    iget-boolean v0, v0, Lb68;->a:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iget-object v3, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Z0:Log;
+    iget-object v3, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->U0:Ldh;
 
-    invoke-virtual {v3}, Log;->a()Z
+    invoke-virtual {v3}, Ldh;->a()Z
 
     const/4 v3, 0x0
 
@@ -887,12 +755,12 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->h0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z()V
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v0, v0, Lw13;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
@@ -904,11 +772,11 @@
 
     const-string v0, "endTransition: top visible"
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v0, v0, Lw13;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
@@ -920,44 +788,28 @@
     return-void
 .end method
 
-.method public final c0()Le18;
+.method public final S()Lh68;
     .locals 1
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->j()Le18;
+    invoke-virtual {v0}, Lusa;->g()Lh68;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final d()V
+.method public final T()V
     .locals 3
 
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->b(ZZZ)V
-
-    return-void
-.end method
-
-.method public final d0()V
-    .locals 3
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -968,7 +820,7 @@
     return-void
 
     :cond_0
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     const/4 v2, 0x0
 
@@ -976,7 +828,7 @@
 
     move-result v1
 
-    iput v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -990,42 +842,34 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     :cond_1
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb18;
+    check-cast v0, Le68;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    invoke-virtual {v1, v0}, Ldv9;->c1(Lb18;)V
+    invoke-virtual {v1, v0}, Lc2a;->R0(Le68;)V
 
     return-void
 .end method
 
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    return v0
-.end method
-
-.method public final e0()V
+.method public final U()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->u1:Ls5f;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Ltif;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lco2;
+    check-cast v0, Lfp2;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -1040,56 +884,54 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->A()Lff6;
 
     move-result-object v0
 
-    new-instance v1, Lx5;
+    new-instance v1, Ll6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lx5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ll6;-><init>(ILjava/lang/Object;)V
 
     const-string v2, "ru.ok.messages.media.mediabar.ActLocalMedias"
 
-    invoke-static {v2, v0, p0, v1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->c1(Ljava/lang/String;Lfb6;Lu5;Lyo3;)V
+    invoke-static {v2, v0, p0, v1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C0(Ljava/lang/String;Lff6;Lj6;Lkr3;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->A()Lff6;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->d1(Ljava/lang/String;Lfb6;)V
+    invoke-static {v2, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->D0(Ljava/lang/String;Lff6;)V
 
     return-void
 
     :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->g0(Lin4;)V
+    invoke-virtual {p0, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->W(Lbq4;)V
 
     return-void
 .end method
 
-.method public final f0(ZZ)V
+.method public final V(ZZ)V
     .locals 2
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
-
-    check-cast p1, Lj18;
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, v1}, Lj18;->s(F)V
+    invoke-virtual {p1, v1}, Lm68;->l(F)V
 
     if-eqz p2, :cond_3
 
-    sget p1, Lt9d;->Z2:I
+    sget p1, Lmkd;->I1:I
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:Landroid/widget/Toast;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Landroid/widget/Toast;
 
     if-eqz p2, :cond_0
 
@@ -1100,24 +942,22 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:Landroid/widget/Toast;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Landroid/widget/Toast;
 
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     return-void
 
     :cond_1
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
-    check-cast p1, Lj18;
-
-    invoke-virtual {p1}, Lj18;->u()V
+    invoke-virtual {p1}, Lm68;->m()V
 
     if-eqz p2, :cond_3
 
-    sget p1, Lt9d;->X2:I
+    sget p1, Lmkd;->G1:I
 
-    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:Landroid/widget/Toast;
+    iget-object p2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Landroid/widget/Toast;
 
     if-eqz p2, :cond_2
 
@@ -1128,12 +968,816 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:Landroid/widget/Toast;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Landroid/widget/Toast;
 
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     :cond_3
     return-void
+.end method
+
+.method public final W(Lbq4;)V
+    .locals 3
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lh68;->f:Lc1e;
+
+    invoke-virtual {v1}, Lc1e;->b()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget-boolean v1, v1, Lb68;->b:Z
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Q()Lru/ok/messages/media/mediabar/FrgLocalMedia;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
+
+    invoke-virtual {v1}, Lc2a;->S0()V
+
+    :cond_1
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    iget v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Parcelable;
+
+    const-string v2, "act:local_medias:send_result"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v0, "act:local_medias:delayed_attrs"
+
+    invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
+
+    const/4 p1, -0x1
+
+    invoke-virtual {p0, p1, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget-boolean p1, p1, Lb68;->a:Z
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lh68;->f:Lc1e;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lc1e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le1e;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Le1e;->e:Z
+
+    goto :goto_0
+
+    :cond_2
+    invoke-super {p0}, Lj6;->finish()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0}, Lj6;->G()V
+
+    return-void
+.end method
+
+.method public final X(Ljava/util/Set;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
+
+    return-void
+.end method
+
+.method public final Y(ZZ)V
+    .locals 3
+
+    iput-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lzv4;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lzv4;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->dispose()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lzv4;
+
+    :cond_0
+    if-eqz p1, :cond_3
+
+    iget-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Z
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p0, p0}, Lj6;->N(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance v0, Lk6;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, v1}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    sget-object p1, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    const-string v0, "meizu"
+
+    const/4 v1, 0x1
+
+    invoke-static {p1, v0, v1}, Lfbf;->q(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, p2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(Z)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    invoke-virtual {p0, p2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(Z)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0, p2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0(Z)V
+
+    invoke-static {p0}, Lhci;->c(Landroidx/fragment/app/b;)V
+
+    new-instance p1, Lk6;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p0, p2}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    invoke-static {}, Lie;->a()Lgpd;
+
+    move-result-object p2
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x64
+
+    invoke-virtual {p2, p1, v1, v2, v0}, Lgpd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lzv4;
+
+    return-void
+.end method
+
+.method public final Z()V
+    .locals 3
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget-boolean v1, v1, Lb68;->a:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lm6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lm6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    sget-object v2, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v0, v1}, Lhyg;->u(Landroid/view/View;Lima;)V
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    new-instance v1, Lk6;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, p0, v2}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Landroid/view/View;
+
+    new-instance v1, Lm6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Lm6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    sget-object v2, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v0, v1}, Lhyg;->u(Landroid/view/View;Lima;)V
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    new-instance v1, Lk6;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p0, v2}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final a()Lm68;
+    .locals 11
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lj6;->J0:Lch8;
+
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lri3;
+
+    check-cast v0, Lusa;
+
+    invoke-virtual {v0}, Lusa;->h()Lew8;
+
+    move-result-object v4
+
+    iget-object v0, v4, Lew8;->b:Ljava/util/HashMap;
+
+    sget-object v2, Lfw8;->c:Lfw8;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm68;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lm68;->c()V
+
+    const/4 v3, 0x0
+
+    iput-object v3, v1, Lm68;->g:Lbw8;
+
+    :cond_0
+    iget-object v1, v4, Lew8;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lzh5;
+
+    if-nez v3, :cond_1
+
+    new-instance v5, Lzh5;
+
+    iget-object v6, v4, Lew8;->d:Landroid/content/Context;
+
+    iget-object v7, v4, Lew8;->e:Lvf5;
+
+    iget-object v8, v4, Lew8;->k:Luh5;
+
+    iget-object v9, v4, Lew8;->i:Lnv7;
+
+    iget-object v3, v4, Lew8;->f:Lsxb;
+
+    iget-object v10, v3, Lsxb;->a:Le78;
+
+    invoke-direct/range {v5 .. v10}, Lzh5;-><init>(Landroid/content/Context;Lvf5;Luh5;Lnv7;Le78;)V
+
+    invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object v3, v5
+
+    :cond_1
+    new-instance v1, Lm68;
+
+    iget-object v5, v4, Lew8;->d:Landroid/content/Context;
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lm68;-><init>(Lfw8;Lzh5;Lew8;Landroid/content/Context;FZZ)V
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
+
+    :cond_2
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
+
+    return-object v0
+.end method
+
+.method public final a0(Landroid/net/Uri;Ljava/io/File;Lf74;)V
+    .locals 2
+
+    invoke-static {p2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lru/ok/messages/media/crop/ActTamCropImage;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "ru.ok.tamtam.extra.SOURCE_URI"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string p1, "ru.ok.tamtam.extra.RESULT_URI"
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string p1, "ru.ok.tamtam.extra.CROP_STATE"
+
+    invoke-virtual {v0, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string p1, "ru.ok.tamtam.extra.SAVE_AS_PNG"
+
+    const/4 p2, 0x0
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final b0()V
+    .locals 2
+
+    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y(ZZ)V
+
+    return-void
+.end method
+
+.method public final c0()V
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->z()V
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z()V
+
+    return-void
+.end method
+
+.method public final d0(I)V
+    .locals 6
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v1
+
+    add-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    sget v2, Lfkd;->F:I
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
+
+    const-string v4, "SELECTED_MEDIA_ALBUM"
+
+    invoke-static {v3, v4}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
+
+    iget-object v3, v3, Ltu8;->w0:Ljava/util/List;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
+
+    move-result-object v3
+
+    iget-object v5, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v5, v4}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v3, v3, Lh68;->f:Lc1e;
+
+    invoke-virtual {v3}, Lc1e;->b()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v4, 0x0
+
+    if-nez v5, :cond_2
+
+    :goto_0
+    move v3, v4
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v3, v3, Lh68;->g:Ljava/lang/Object;
+
+    invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lgl6;
+
+    if-nez v3, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v3, v3, Lgl6;->b:I
+
+    :goto_1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {p1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v2, "%d %s %d"
+
+    invoke-static {v1, v2, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, v0, Lzh3;->d:Ljava/lang/Object;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_4
+    return-void
+.end method
+
+.method public final e0(Z)V
+    .locals 5
+
+    iget-object p1, p0, Lj6;->J0:Lch8;
+
+    iget-object p1, p1, Lch8;->b:Ljava/lang/Object;
+
+    check-cast p1, Lri3;
+
+    check-cast p1, Lusa;
+
+    invoke-virtual {p1}, Lusa;->b()Ldh;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
+
+    iget-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    iget-object v0, v0, Lzh3;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/appcompat/widget/Toolbar;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p1, v0}, Ldh;->e(Landroid/view/View;)Lgr4;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v0}, Ldh;->f(Landroid/view/View;)Lgr4;
+
+    :goto_0
+    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
+
+    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ln2a;
+
+    check-cast v0, Ld3a;
+
+    iget-object v1, v0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-static {v1}, Ltyg;->a(Landroid/view/View;)Lo0h;
+
+    move-result-object v1
+
+    iget-object v2, v1, Lo0h;->a:Ljava/lang/ref/WeakReference;
+
+    new-instance v3, Lc3a;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v0, v4}, Lc3a;-><init>(Ld3a;I)V
+
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+
+    :cond_2
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v3}, Lo0h;->a(F)V
+
+    new-instance v3, Lc3a;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v0, v4}, Lc3a;-><init>(Ld3a;I)V
+
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
+
+    :cond_3
+    iget-object v0, v0, Ld3a;->d:Ldh;
+
+    iget-object v0, v0, Ldh;->a:Lpp4;
+
+    const-wide/16 v3, 0xc8
+
+    invoke-virtual {v1, v3, v4}, Lo0h;->c(J)V
+
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
+
+    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
+
+    check-cast v0, Ln2a;
+
+    check-cast v0, Ld3a;
+
+    iget-object v1, v0, Lf3;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/view/View;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ld3a;->A(Landroid/view/View;Z)V
+
+    :cond_5
+    :goto_1
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget-boolean v0, v0, Lb68;->a:Z
+
+    if-eqz v0, :cond_7
+
+    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    invoke-virtual {p1, v0}, Ldh;->e(Landroid/view/View;)Lgr4;
+
+    goto :goto_2
+
+    :cond_6
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    invoke-virtual {p1, v0}, Ldh;->f(Landroid/view/View;)Lgr4;
+
+    :cond_7
+    :goto_2
+    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
+
+    if-eqz p1, :cond_9
+
+    iget-object p1, p1, Ltu8;->y0:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/messages/media/mediabar/FrgLocalMedia;
+
+    if-nez v0, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/FrgLocalMedia;->D0()V
+
+    goto :goto_3
+
+    :cond_9
+    return-void
+.end method
+
+.method public final f()Lvnf;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lq29;->e0:Lq29;
+
+    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
+
+    return-object v0
 .end method
 
 .method public final finish()V
@@ -1145,35 +1789,43 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lu5;->O0:Lbb8;
+    iget-object v2, p0, Lj6;->J0:Lch8;
 
-    iget-object v2, v2, Lbb8;->b:Ljava/lang/Object;
+    iget-object v2, v2, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v2, Lsg3;
+    check-cast v2, Lri3;
 
-    check-cast v2, Lyka;
+    check-cast v2, Lusa;
 
-    invoke-virtual {v2}, Lyka;->m()Lly9;
-
-    move-result-object v2
-
-    sget-object v3, Lhfd;->T0:Lhfd;
-
-    sget-object v4, Lu4b;->g:Lu4b;
-
-    invoke-virtual {v2, v3, v4}, Lly9;->f(Lhfd;Lu4b;)V
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v2
 
-    iget-object v2, v2, Le18;->f:Lwpd;
+    const-class v3, Le5a;
+
+    invoke-virtual {v2, v3}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le5a;
+
+    sget-object v3, Ldqd;->O0:Ldqd;
+
+    sget-object v4, Lddb;->g:Lddb;
+
+    invoke-virtual {v2, v3, v4}, Le5a;->f(Ldqd;Lddb;)V
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lh68;->f:Lc1e;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     new-instance v3, Ljava/util/ArrayList;
 
-    iget-object v2, v2, Lwpd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v2, v2, Lc1e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
@@ -1192,14 +1844,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lypd;
+    check-cast v3, Le1e;
 
-    iput-boolean v0, v3, Lypd;->e:Z
+    iput-boolean v0, v3, Le1e;->e:Z
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
     if-eqz v2, :cond_1
 
@@ -1239,671 +1891,69 @@
 
     const-string v1, "ru.ok.tamtam.extra.EXTRA_CHANGE_LOCAL_MEDIA_RESULT"
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->t1:Lq3;
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Lh4;
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     invoke-virtual {p0, v0, v2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    invoke-super {p0}, Lu5;->finish()V
+    invoke-super {p0}, Lj6;->finish()V
 
     return-void
 .end method
 
-.method public final g0(Lin4;)V
-    .locals 3
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
-
-    move-result-object v1
-
-    iget-object v1, v1, Le18;->f:Lwpd;
-
-    invoke-virtual {v1}, Lwpd;->b()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
-
-    iget-boolean v1, v1, Ly08;->b:Z
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->a0()Lru/ok/messages/media/mediabar/FrgLocalMedia;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
-
-    invoke-virtual {v1}, Ldv9;->d1()V
-
-    :cond_1
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    iget v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    const-string v2, "act:local_medias:send_result"
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string v0, "act:local_medias:delayed_attrs"
-
-    invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
-
-    const/4 p1, -0x1
-
-    invoke-virtual {p0, p1, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
-
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
-
-    iget-boolean p1, p1, Ly08;->a:Z
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
-
-    move-result-object p1
-
-    iget-object p1, p1, Le18;->f:Lwpd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lwpd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lypd;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lypd;->e:Z
-
-    goto :goto_0
-
-    :cond_2
-    invoke-super {p0}, Lu5;->finish()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0}, Lu5;->N()V
-
-    return-void
-.end method
-
-.method public final h()Lvp8;
-    .locals 4
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lu5;->O0:Lbb8;
-
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsg3;
-
-    check-cast v0, Lyka;
-
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
-
-    move-result-object v0
-
-    new-instance v1, Lz40;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v2, v3, v3}, Lz40;-><init>(IZZZ)V
-
-    sget-object v2, Lyp8;->a:Lyp8;
-
-    invoke-virtual {v0, v2, v1}, Lxp8;->l(Lyp8;Lz40;)Lj18;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
-
-    return-object v0
-.end method
-
-.method public final h0()V
-    .locals 3
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
-
-    iget-boolean v1, v1, Ly08;->a:Z
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ly5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Ly5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    sget-object v2, Lskg;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v0, v1}, Lgkg;->u(Landroid/view/View;Lwea;)V
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    new-instance v1, Lw5;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, p0, v2}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Landroid/view/View;
-
-    new-instance v1, Ly5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Ly5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    sget-object v2, Lskg;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v0, v1}, Lgkg;->u(Landroid/view/View;Lwea;)V
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    new-instance v1, Lw5;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, p0, v2}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final i0(Landroid/net/Uri;Ljava/io/File;Lb54;)V
-    .locals 2
-
-    invoke-static {p2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object p2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lru/ok/messages/media/crop/ActTamCropImage;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "ru.ok.tamtam.extra.SOURCE_URI"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.RESULT_URI"
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.CROP_STATE"
-
-    invoke-virtual {v0, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.SAVE_AS_PNG"
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-.method public final j0()V
+.method public final j()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x()V
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->h0()V
-
-    return-void
+    return v0
 .end method
 
-.method public final k0(I)V
-    .locals 6
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v1
-
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    sget v2, Ln9d;->I:I
-
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
-
-    const-string v4, "SELECTED_MEDIA_ALBUM"
-
-    invoke-static {v3, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
-
-    iget-object v3, v3, Lso8;->B0:Ljava/util/List;
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
-
-    move-result-object v3
-
-    iget-object v5, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v5, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v3, v3, Le18;->f:Lwpd;
-
-    invoke-virtual {v3}, Lwpd;->b()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    if-nez v5, :cond_2
-
-    :goto_0
-    move v3, v4
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v3, v3, Le18;->g:Ljava/lang/Object;
-
-    invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Loh6;
-
-    if-nez v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v3, v3, Loh6;->b:I
-
-    :goto_1
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {p1, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "%d %s %d"
-
-    invoke-static {v1, v2, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lw13;->l(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final l(Lypd;)V
+.method public final n(Le1e;)V
     .locals 0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
 
     return-void
-.end method
-
-.method public final l0(Z)V
-    .locals 5
-
-    iget-object p1, p0, Lu5;->O0:Lbb8;
-
-    iget-object p1, p1, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsg3;
-
-    check-cast p1, Lyka;
-
-    invoke-virtual {p1}, Lyka;->c()Log;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
-
-    iget-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    iget-object v0, v0, Lw13;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/appcompat/widget/Toolbar;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1, v0}, Log;->d(Landroid/view/View;)Llo4;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1, v0}, Log;->e(Landroid/view/View;)Llo4;
-
-    :goto_0
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
-
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpv9;
-
-    check-cast v0, Liw9;
-
-    iget-object v1, v0, Lw2;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    invoke-static {v1}, Lskg;->a(Landroid/view/View;)Lmmg;
-
-    move-result-object v1
-
-    iget-object v2, v1, Lmmg;->a:Ljava/lang/ref/WeakReference;
-
-    new-instance v3, Lhw9;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v0, v4}, Lhw9;-><init>(Liw9;I)V
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/view/View;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Landroid/view/ViewPropertyAnimator;->withStartAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    :cond_2
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, v3}, Lmmg;->a(F)V
-
-    new-instance v3, Lhw9;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v0, v4}, Lhw9;-><init>(Liw9;I)V
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/view/View;
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Landroid/view/ViewPropertyAnimator;->withEndAction(Ljava/lang/Runnable;)Landroid/view/ViewPropertyAnimator;
-
-    :cond_3
-    iget-object v0, v0, Liw9;->o:Log;
-
-    iget-object v0, v0, Log;->a:Ld16;
-
-    const-wide/16 v3, 0xc8
-
-    invoke-virtual {v1, v3, v4}, Lmmg;->c(J)V
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
-
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpv9;
-
-    check-cast v0, Liw9;
-
-    iget-object v1, v0, Lw2;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Liw9;->C(Landroid/view/View;Z)V
-
-    :cond_5
-    :goto_1
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
-
-    iget-boolean v0, v0, Ly08;->a:Z
-
-    if-eqz v0, :cond_7
-
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    invoke-virtual {p1, v0}, Log;->d(Landroid/view/View;)Llo4;
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    invoke-virtual {p1, v0}, Log;->e(Landroid/view/View;)Llo4;
-
-    :cond_7
-    :goto_2
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
-
-    if-eqz p1, :cond_9
-
-    iget-object p1, p1, Lso8;->D0:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/messages/media/mediabar/FrgLocalMedia;
-
-    if-nez v0, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/FrgLocalMedia;->f1()V
-
-    goto :goto_3
-
-    :cond_9
-    return-void
-.end method
-
-.method public final n()Lw13;
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
-
-    return-object v0
 .end method
 
 .method public final onBackPressed()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    iget-boolean v0, v0, Ly08;->y0:Z
+    iget-boolean v0, v0, Lb68;->t0:Z
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object v0
 
-    iget-object v0, v0, Le18;->f:Lwpd;
+    iget-object v0, v0, Lh68;->f:Lc1e;
 
-    iget-object v1, v0, Lwpd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v1, v0, Lc1e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
 
-    invoke-virtual {v0}, Lwpd;->n()V
+    invoke-virtual {v0}, Lc1e;->n()V
 
-    iget-object v1, v0, Lwpd;->b:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v1, v0, Lc1e;->b:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    iget-object v1, v0, Lwpd;->h:Lqp;
+    iget-object v1, v0, Lc1e;->h:Ltq;
 
-    check-cast v1, Lsp;
+    check-cast v1, Leig;
 
-    iget-object v1, v1, Lh3;->g:Lep7;
+    iget-object v1, v1, Ly3;->h:Luu7;
 
     const-string v2, "app.send.media.as.collage"
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v3}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v3}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -1911,40 +1961,40 @@
 
     const/4 v1, 0x3
 
-    iput v1, v0, Lwpd;->l:I
+    iput v1, v0, Lc1e;->k:I
 
     goto :goto_0
 
     :cond_0
-    iput v3, v0, Lwpd;->l:I
+    iput v3, v0, Lc1e;->k:I
 
     :cond_1
     :goto_0
-    invoke-super {p0}, Lu5;->onBackPressed()V
+    invoke-super {p0}, Lj6;->onBackPressed()V
 
     return-void
 .end method
 
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 3
+    .locals 4
 
-    invoke-super {p0, p1}, Lqm;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lsn;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, v0, Lw13;->a:Ljava/lang/Object;
+    iget-object v1, v0, Lzh3;->a:Ljava/lang/Object;
 
-    check-cast v1, Lrob;
+    check-cast v1, Ltz8;
 
-    iget-object v0, v0, Lw13;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Lrob;->g()Landroidx/fragment/app/b;
+    invoke-virtual {v1}, Ltz8;->u()Landroidx/fragment/app/b;
 
     move-result-object v2
 
@@ -1957,11 +2007,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lrob;->g()Landroidx/fragment/app/b;
+    invoke-virtual {v1}, Ltz8;->u()Landroidx/fragment/app/b;
 
     move-result-object v1
 
-    invoke-static {v1}, Lxq4;->a(Landroid/content/Context;)I
+    invoke-static {v1}, Leu4;->a(Landroidx/fragment/app/b;)I
 
     move-result v1
 
@@ -1971,94 +2021,196 @@
 
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->h0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z()V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Lco7;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Lqt7;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
-    iget v1, v0, Lco7;->c:I
+    iget v1, v0, Lqt7;->c:I
+
+    const/4 v2, 0x0
 
     if-eq p1, v1, :cond_2
 
-    iput p1, v0, Lco7;->c:I
+    iput p1, v0, Lqt7;->c:I
 
-    iget-object p1, v0, Lco7;->b:Lbo7;
+    iget-object p1, v0, Lqt7;->b:Lpt7;
 
-    const/4 v0, 0x0
-
-    iput v0, p1, Lbo7;->o:I
+    iput v2, p1, Lpt7;->d:I
 
     :cond_2
-    new-instance p1, Lw5;
+    new-instance p1, Lk6;
 
-    const/4 v0, 0x0
+    invoke-direct {p1, p0, v2}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
 
-    invoke-direct {p1, p0, v0}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+    invoke-static {}, Lie;->a()Lgpd;
 
-    const-wide/16 v0, 0x12c
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lk74;->R(Ljava/lang/Runnable;J)Lss4;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v2, 0x12c
+
+    invoke-virtual {v0, p1, v2, v3, v1}, Lgpd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
 
     return-void
 .end method
 
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 15
+    .locals 22
+
+    move-object/from16 v2, p0
 
     move-object/from16 v0, p1
 
-    invoke-super/range {p0 .. p1}, Lu5;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lj6;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lu5;->V()V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->a()Lvp8;
+    const/16 v3, 0x1c
 
-    move-result-object v1
+    if-lt v1, v3, :cond_0
 
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->h()Lvp8;
+    move-result-object v3
 
-    move-result-object v1
+    invoke-virtual {v3}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    move-result-object v3
 
-    if-eqz v0, :cond_0
+    invoke-static {v3}, Lx4;->t(Landroid/view/WindowManager$LayoutParams;)V
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    :cond_0
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->a()Lm68;
 
-    check-cast v1, Lj18;
+    move-result-object v3
 
-    const-string v3, "MediaPlayerController.Volume"
+    iput-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
-    invoke-virtual {v1, v3}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
+
+    const/4 v11, 0x0
+
+    if-nez v3, :cond_3
+
+    iget-object v3, v2, Lj6;->J0:Lch8;
+
+    iget-object v3, v3, Lch8;->b:Ljava/lang/Object;
+
+    check-cast v3, Lri3;
+
+    check-cast v3, Lusa;
+
+    invoke-virtual {v3}, Lusa;->h()Lew8;
+
+    move-result-object v15
+
+    iget-object v3, v15, Lew8;->b:Ljava/util/HashMap;
+
+    sget-object v13, Lfw8;->a:Lfw8;
+
+    invoke-virtual {v3, v13}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
+    check-cast v4, Lm68;
 
-    move-result v4
+    if-eqz v4, :cond_1
 
-    iput v4, v1, Lj18;->h:F
+    invoke-virtual {v4}, Lm68;->c()V
 
-    const-string v4, "MediaPlayerController.Looping"
+    iput-object v11, v4, Lm68;->g:Lbw8;
 
-    invoke-virtual {v1, v4}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    :cond_1
+    iget-object v4, v15, Lew8;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v13}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
-    invoke-virtual {v0, v5}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    check-cast v5, Lzh5;
+
+    if-nez v5, :cond_2
+
+    new-instance v16, Lzh5;
+
+    iget-object v5, v15, Lew8;->d:Landroid/content/Context;
+
+    iget-object v6, v15, Lew8;->e:Lvf5;
+
+    iget-object v7, v15, Lew8;->k:Luh5;
+
+    iget-object v8, v15, Lew8;->i:Lnv7;
+
+    iget-object v9, v15, Lew8;->f:Lsxb;
+
+    iget-object v9, v9, Lsxb;->a:Le78;
+
+    move-object/from16 v17, v5
+
+    move-object/from16 v18, v6
+
+    move-object/from16 v19, v7
+
+    move-object/from16 v20, v8
+
+    move-object/from16 v21, v9
+
+    invoke-direct/range {v16 .. v21}, Lzh5;-><init>(Landroid/content/Context;Lvf5;Luh5;Lnv7;Le78;)V
+
+    move-object/from16 v5, v16
+
+    invoke-virtual {v4, v13, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    move-object v14, v5
+
+    new-instance v12, Lm68;
+
+    iget-object v4, v15, Lew8;->d:Landroid/content/Context;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x1
+
+    const/16 v19, 0x1
+
+    move-object/from16 v16, v4
+
+    invoke-direct/range {v12 .. v19}, Lm68;-><init>(Lfw8;Lzh5;Lew8;Landroid/content/Context;FZZ)V
+
+    invoke-virtual {v3, v13, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object v12, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
+
+    :cond_3
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
+
+    iput-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
+
+    if-eqz v0, :cond_4
+
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
+
+    const-string v4, "MediaPlayerController.Volume"
+
+    invoke-virtual {v3, v4}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
 
     move-result v5
 
-    iput-boolean v5, v1, Lj18;->i:Z
+    iput v5, v3, Lm68;->h:F
 
-    const-string v5, "MediaPlayerController.PlayWhenReady"
+    const-string v5, "MediaPlayerController.Looping"
 
-    invoke-virtual {v1, v5}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2066,65 +2218,166 @@
 
     move-result v6
 
-    iput-boolean v6, v1, Lj18;->j:Z
+    iput-boolean v6, v3, Lm68;->i:Z
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    const-string v6, "MediaPlayerController.PlayWhenReady"
 
-    check-cast v1, Lj18;
+    invoke-virtual {v3, v6}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v7
+
+    iput-boolean v7, v3, Lm68;->j:Z
+
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
+
+    invoke-virtual {v3, v4}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    iput v4, v3, Lm68;->h:F
+
+    invoke-virtual {v3, v5}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v4
+
+    iput-boolean v4, v3, Lm68;->i:Z
+
+    invoke-virtual {v3, v6}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v4
+
+    iput-boolean v4, v3, Lm68;->j:Z
+
+    :cond_4
+    sget v3, Lqqc;->act_local_medias:I
+
+    invoke-virtual {v2, v3}, Lj6;->setContentView(I)V
+
+    new-instance v3, Ltz8;
+
+    invoke-direct {v3, v2}, Ltz8;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+
+    sget v4, Ltpc;->toolbar:I
+
+    invoke-virtual {v2, v4}, Lsn;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/appcompat/widget/Toolbar;
+
+    new-instance v5, Lk6a;
+
+    invoke-direct {v5, v3, v4}, Lk6a;-><init>(Ltz8;Landroidx/appcompat/widget/Toolbar;)V
+
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->f()Lvnf;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
+    iput-object v3, v5, Lk6a;->b:Ljava/lang/Object;
+
+    new-instance v3, Lzh3;
+
+    invoke-direct {v3, v5}, Lzh3;-><init>(Lk6a;)V
+
+    iget-object v4, v3, Lzh3;->b:Ljava/lang/Object;
+
+    check-cast v4, Landroidx/appcompat/widget/Toolbar;
+
+    if-nez v4, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    new-instance v5, Luff;
+
+    const/4 v6, 0x7
+
+    invoke-direct {v5, v6, v3}, Luff;-><init>(ILjava/lang/Object;)V
+
+    sget-object v6, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v4, v5}, Lhyg;->u(Landroid/view/View;Lima;)V
+
+    :goto_0
+    iput-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
+
+    const/16 v3, 0x21
+
+    if-lt v1, v3, :cond_6
+
+    sget-object v3, Lk0i;->d:[Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_6
+    sget-object v3, Lbqd;->a:Laqd;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Laqd;->c:[Ljava/lang/String;
+
+    :goto_1
+    invoke-static {v2, v3}, Lk0i;->c(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v3
 
-    iput v3, v1, Lj18;->h:F
+    const/4 v12, 0x1
 
-    invoke-virtual {v1, v4}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v13, 0x0
 
-    move-result-object v3
+    if-eqz v3, :cond_7
 
-    invoke-virtual {v0, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    move v1, v12
 
-    move-result v3
+    goto :goto_2
 
-    iput-boolean v3, v1, Lj18;->i:Z
+    :cond_7
+    const/16 v3, 0x22
 
-    invoke-virtual {v1, v5}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    if-lt v1, v3, :cond_8
 
-    move-result-object v3
+    const-string v1, "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
 
-    invoke-virtual {v0, v3}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v3
-
-    iput-boolean v3, v1, Lj18;->j:Z
-
-    :cond_0
-    sget v1, Lghc;->act_local_medias:I
-
-    invoke-virtual {p0, v1}, Lv5;->Z(I)Lw13;
+    filled-new-array {v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
-
-    invoke-static {p0}, Lio7;->e(Landroid/content/Context;)Z
+    invoke-static {v2, v1}, Lk0i;->c(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    goto :goto_2
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->finish()V
+    :cond_8
+    move v1, v13
+
+    :goto_2
+    if-nez v1, :cond_9
+
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->finish()V
 
     return-void
 
-    :cond_1
-    new-instance v1, Lco7;
+    :cond_9
+    new-instance v1, Lqt7;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
@@ -2132,15 +2385,15 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v3, p0}, Lco7;-><init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    invoke-direct {v1, v3, v2}, Lqt7;-><init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
 
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Lco7;
+    iput-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Lqt7;
 
-    iget-object v3, p0, Ltf3;->a:Les7;
+    iget-object v3, v2, Lrh3;->a:Lpx7;
 
-    invoke-virtual {v3, v1}, Les7;->a(Lyr7;)V
+    invoke-virtual {v3, v1}, Lpx7;->a(Ljx7;)V
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -2150,54 +2403,48 @@
 
     move-result-object v1
 
-    check-cast v1, Ly08;
+    check-cast v1, Lb68;
 
-    iput-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iput-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->p()Lvaf;
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->f()Lvnf;
 
     move-result-object v1
 
-    iget v1, v1, Lvaf;->L:I
+    iget v1, v1, Lvnf;->L:I
 
-    invoke-virtual {p0, v1}, Lu5;->U(I)V
+    invoke-virtual {v2, v1}, Lj6;->M(I)V
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    new-instance v3, Lh5;
+    new-instance v3, Lo6;
 
-    const/4 v11, 0x1
+    invoke-direct {v3, v13, v2}, Lo6;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v3, v11, p0}, Lh5;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, v1, Lw13;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_a
 
     invoke-virtual {v1, v3}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    :cond_2
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    :cond_a
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    sget v3, Lq9d;->a:I
+    sget v3, Likd;->y:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v4, v1, Lzh3;->c:Ljava/lang/Object;
 
-    sget v3, Lq9d;->y:I
+    check-cast v4, Lvnf;
 
-    iget-object v4, v1, Lw13;->c:Ljava/lang/Object;
-
-    check-cast v4, Lvaf;
-
-    iget v4, v4, Lvaf;->w:I
-
-    iget-object v1, v1, Lw13;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz v1, :cond_3
+    iget v4, v4, Lvnf;->w:I
+
+    if-eqz v1, :cond_b
 
     invoke-virtual {v1, v3}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(I)V
 
@@ -2205,18 +2452,18 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_b
 
-    invoke-static {v1, v4}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v1, v4}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
 
-    :cond_3
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    :cond_b
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
 
-    iget v3, v3, Lvaf;->w:I
+    iget v3, v3, Lvnf;->w:I
 
-    iget-object v1, v1, Lw13;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar;
 
@@ -2224,183 +2471,181 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_c
 
-    invoke-static {v1, v3}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v1, v3}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
 
-    :cond_4
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    :cond_c
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
 
-    iget v3, v3, Lvaf;->N:I
+    iget v3, v3, Lvnf;->N:I
 
-    iget-object v1, v1, Lw13;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_d
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    :cond_5
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    :cond_d
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Lq29;
 
-    iget v3, v3, Lvaf;->F:I
+    iget v3, v3, Lvnf;->F:I
 
-    iget-object v1, v1, Lw13;->o:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->d:Ljava/lang/Object;
 
     check-cast v1, Landroid/widget/TextView;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_e
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    :cond_6
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    :cond_e
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v3, p0, Lu5;->O0:Lbb8;
+    iget-object v3, v2, Lj6;->J0:Lch8;
 
-    iget-object v3, v3, Lbb8;->c:Ljava/lang/Object;
+    iget-object v3, v3, Lch8;->c:Ljava/lang/Object;
 
-    check-cast v3, Ltq4;
+    check-cast v3, Lau4;
 
-    iget v3, v3, Ltq4;->a:I
+    iget v3, v3, Lau4;->a:I
 
-    iget-object v1, v1, Lw13;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v1, Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_f
 
     int-to-float v3, v3
 
-    sget-object v4, Lskg;->a:Ljava/util/WeakHashMap;
+    sget-object v4, Ltyg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {v1, v3}, Lgkg;->s(Landroid/view/View;F)V
+    invoke-static {v1, v3}, Lhyg;->s(Landroid/view/View;F)V
 
-    :cond_7
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    :cond_f
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    iget-object v3, v1, Ly08;->X:Ljava/lang/String;
+    iget-object v3, v1, Lb68;->o:Ljava/lang/String;
 
-    iput-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
+    iput-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
-    const/4 v12, 0x0
+    if-nez v0, :cond_10
 
-    if-nez v0, :cond_8
+    iget v0, v1, Lb68;->Y:I
 
-    iget v0, v1, Ly08;->Z:I
+    iput v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    iput v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    goto :goto_3
 
-    goto :goto_0
-
-    :cond_8
+    :cond_10
     const-string v1, "ru.ok.tamtam.extra.SELECTED_POS"
 
-    invoke-virtual {v0, v1, v12}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v1, v13}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     const-string v1, "ru.ok.tamtam.extra.UI_VISIBILITY"
 
-    invoke-virtual {v0, v1, v11}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v12}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
+    iput-boolean v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
 
-    :goto_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Le18;->a(Ljava/lang/String;)Ljava/util/List;
+    :goto_3
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object v0
 
-    iget-object v13, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
-    invoke-virtual {v13, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Lh68;->a(Ljava/lang/String;)Ljava/util/List;
 
-    sget v0, Ljgc;->act_local_medias__preview:I
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lqm;->findViewById(I)Landroid/view/View;
+    iget-object v14, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
+
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    sget v0, Ltpc;->act_local_medias__preview:I
+
+    invoke-virtual {v2, v0}, Lsn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iput-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
-    const-string v14, "SELECTED_MEDIA_ALBUM"
+    const-string v15, "SELECTED_MEDIA_ALBUM"
 
-    invoke-static {v1, v14}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v15}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setShouldApplyHighlight(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    iget-boolean v1, v1, Ly08;->b:Z
+    iget-boolean v1, v1, Lb68;->b:Z
 
     invoke-virtual {v0, v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setMessageEdit(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    invoke-virtual {v0, v11}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setFullScreen(Z)V
+    invoke-virtual {v0, v12}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setFullScreen(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    invoke-virtual {v0, p0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setListener(Lag8;)V
+    invoke-virtual {v0, v2}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setListener(Lvl8;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iget-object v0, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Landroid/view/View;
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->I0:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->u1:Ls5f;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Ltif;
 
-    invoke-virtual {v3}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lco2;
-
-    invoke-virtual {v0, v3}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setChatMode(Lco2;)V
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
-    iget-object v3, p0, Lu5;->O0:Lbb8;
-
-    iget-object v3, v3, Lbb8;->b:Ljava/lang/Object;
-
-    check-cast v3, Lsg3;
-
-    check-cast v3, Lyka;
-
-    invoke-virtual {v3}, Lyka;->n()Lzob;
+    invoke-virtual {v3}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    iget-object v3, v3, Lzob;->b:Lltd;
+    check-cast v3, Lfp2;
+
+    invoke-virtual {v0, v3}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setChatMode(Lfp2;)V
+
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    iget-object v3, v2, Lj6;->J0:Lch8;
+
+    iget-object v3, v3, Lch8;->b:Ljava/lang/Object;
+
+    check-cast v3, Lri3;
+
+    check-cast v3, Lusa;
+
+    invoke-virtual {v3}, Lusa;->i()Lsxb;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lsxb;->b:Lhvb;
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2408,30 +2653,30 @@
 
     const/4 v3, 0x3
 
-    invoke-static {v3}, Lkmc;->f(I)Z
+    invoke-static {v3}, Lnei;->c(I)Z
 
     move-result v3
 
     invoke-virtual {v0, v3}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->setAnimojisEnabled(Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    iget-boolean v0, v0, Ly08;->a:Z
+    iget-boolean v0, v0, Lb68;->a:Z
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_11
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_9
-    sget v0, Ljgc;->act_local_medias__fl_root:I
+    :cond_11
+    sget v0, Ltpc;->act_local_medias__fl_root:I
 
-    invoke-virtual {p0, v0}, Lqm;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v0}, Lsn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    sget v1, Ljgc;->act_local_medias__vs_toolbox:I
+    sget v1, Ltpc;->act_local_medias__vs_toolbox:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2439,208 +2684,224 @@
 
     check-cast v1, Landroid/view/ViewStub;
 
-    new-instance v3, Liw9;
+    new-instance v3, Ld3a;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v4, p0, Lu5;->O0:Lbb8;
+    iget-object v4, v2, Lj6;->J0:Lch8;
 
-    iget-object v4, v4, Lbb8;->b:Ljava/lang/Object;
+    iget-object v4, v4, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v4, Lsg3;
+    check-cast v4, Lri3;
 
-    check-cast v4, Lyka;
+    check-cast v4, Lusa;
 
-    invoke-virtual {v4}, Lyka;->c()Log;
+    invoke-virtual {v4}, Lusa;->b()Ldh;
 
     move-result-object v4
 
-    invoke-direct {v3, v0, v1, v4}, Liw9;-><init>(Landroid/content/Context;Landroid/view/ViewStub;Log;)V
+    invoke-direct {v3, v0, v1, v4}, Ld3a;-><init>(Landroid/content/Context;Landroid/view/ViewStub;Ldh;)V
 
-    iput-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Liw9;
+    iput-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Ld3a;
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, v2, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
     move-object v1, v0
 
-    new-instance v0, Ldv9;
+    new-instance v0, Lc2a;
 
     move-object v3, v1
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->n1:Liw9;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Ld3a;
 
-    iget-object v4, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v4, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
     move-object v5, v3
 
-    iget-boolean v3, v4, Ly08;->a:Z
+    iget-boolean v3, v4, Lb68;->a:Z
 
-    iget-boolean v4, v4, Ly08;->c:Z
+    iget-boolean v4, v4, Lb68;->c:Z
 
-    check-cast v5, Lyka;
+    check-cast v5, Lusa;
 
     move-object v6, v5
 
-    invoke-virtual {v6}, Lyka;->b()Lqc;
+    invoke-virtual {v6}, Lusa;->a()Lhd;
 
     move-result-object v5
 
-    invoke-virtual {v6}, Lyka;->j()Le18;
+    invoke-virtual {v6}, Lusa;->g()Lh68;
 
     move-result-object v7
 
-    iget-object v7, v7, Le18;->f:Lwpd;
+    iget-object v7, v7, Lh68;->f:Lc1e;
 
     move-object v8, v6
 
     move-object v6, v7
 
-    invoke-virtual {v8}, Lyka;->h()Lpr5;
+    invoke-virtual {v8}, Lusa;->e()Luv5;
 
     move-result-object v7
 
     move-object v9, v8
 
-    new-instance v8, Lmle;
+    new-instance v8, Lpqe;
 
     const/16 v10, 0x19
 
-    invoke-direct {v8, v10, p0}, Lmle;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v8, v10, v2}, Lpqe;-><init>(ILjava/lang/Object;)V
 
     move-object v10, v9
 
-    invoke-virtual {v10}, Lyka;->g()Lec5;
+    invoke-virtual {v10}, Lusa;->d()Lvf5;
 
     move-result-object v9
 
-    invoke-virtual {v10}, Lyka;->n()Lzob;
+    invoke-virtual {v10}, Lusa;->i()Lsxb;
 
     move-result-object v10
 
-    iget-object v10, v10, Lzob;->c:Lsp;
+    iget-object v10, v10, Lsxb;->c:Leig;
 
-    invoke-virtual {v10}, Lzhd;->n()Li8g;
+    iget-object v10, v10, Ly3;->h:Luu7;
+
+    const-string v13, "app.media.video.compress"
+
+    invoke-virtual {v10, v13, v11}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    move-object v2, p0
+    if-nez v10, :cond_12
 
-    invoke-direct/range {v0 .. v10}, Ldv9;-><init>(Liw9;Lru/ok/messages/media/mediabar/ActLocalMedias;ZZLqc;Lwpd;Lpr5;Lmle;Lec5;Li8g;)V
+    sget-object v10, Ldmg;->c:Ldmg;
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    goto :goto_4
 
-    sget v0, Ljgc;->act_local_medias__vs_toolbox:I
+    :cond_12
+    invoke-static {v10}, Ldmg;->valueOf(Ljava/lang/String;)Ldmg;
 
-    invoke-virtual {p0, v0}, Lqm;->findViewById(I)Landroid/view/View;
+    move-result-object v10
+
+    :goto_4
+    invoke-direct/range {v0 .. v10}, Lc2a;-><init>(Ld3a;Lru/ok/messages/media/mediabar/ActLocalMedias;ZZLhd;Lc1e;Luv5;Lpqe;Lvf5;Ldmg;)V
+
+    iput-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
+
+    sget v0, Ltpc;->act_local_medias__vs_toolbox:I
+
+    invoke-virtual {v2, v0}, Lsn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Landroid/view/View;
+    iput-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Landroid/view/View;
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->d0()V
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->T()V
 
-    sget v0, Ljgc;->act_local_medias__view_pager:I
+    sget v0, Ltpc;->act_local_medias__view_pager:I
 
-    invoke-virtual {p0, v0}, Lqm;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v0}, Lsn;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iput-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    new-instance v0, Lso8;
+    new-instance v0, Ltu8;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    invoke-direct {v0, p0, v13, v1}, Lso8;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Ljava/util/ArrayList;Ly08;)V
+    invoke-direct {v0, v2, v14, v1}, Ltu8;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Ljava/util/ArrayList;Lb68;)V
 
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iput-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->v1:La6;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lp6;
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lfmg;)V
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lh0h;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lpwc;)V
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lp6d;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
-    invoke-static {v0, v14}, Lk98;->d(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {v0, v15}, Lxvc;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_13
 
-    goto :goto_1
+    goto :goto_5
 
-    :cond_a
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    :cond_13
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    new-instance v1, La6;
+    new-instance v1, Lp6;
 
-    invoke-direct {v1, p0, v11}, La6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+    invoke-direct {v1, v2, v12}, Lp6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lfmg;)V
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lh0h;)V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
-
-    move-result-object v0
-
-    iget-object v0, v0, Le18;->f:Lwpd;
-
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
-
-    invoke-virtual {v0, v1}, Lwpd;->i(I)Lypd;
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object v0
 
-    if-eqz v0, :cond_b
+    iget-object v0, v0, Lh68;->f:Lc1e;
 
-    iput-boolean v11, v0, Lypd;->e:Z
+    iget v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    :cond_b
-    :goto_1
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {v0, v1}, Lc1e;->i(I)Le1e;
 
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v12}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+    if-eqz v0, :cond_14
 
-    iget v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput-boolean v12, v0, Le1e;->e:Z
 
-    invoke-virtual {p0, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->k0(I)V
+    :cond_14
+    :goto_5
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    iget v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    invoke-virtual {v0, v1, v3}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
 
-    iget v3, v1, Ly08;->z0:I
+    iget v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    iget v1, v1, Ly08;->A0:I
+    invoke-virtual {v2, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->d0(I)V
 
-    iget-object v0, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->O0:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
+
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    iget-object v1, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget v3, v1, Lb68;->u0:I
+
+    iget v1, v1, Lb68;->v0:I
+
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->J0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
@@ -2648,7 +2909,7 @@
 
     instance-of v4, v4, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_15
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
@@ -2658,157 +2919,187 @@
 
     invoke-virtual {v0, v3, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
 
-    :cond_c
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    :cond_15
+    invoke-virtual {v2}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const-string v1, "ru.ok.tamtam.extra.WITH_TRANSITION"
 
-    invoke-virtual {v0, v1, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_19
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->h1:Lw13;
+    iget-object v0, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Lzh3;
 
-    iget-object v0, v0, Lw13;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lzh3;->b:Ljava/lang/Object;
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_16
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_d
-    sget-object v0, Lzcd;->e:Lzcd;
+    :cond_16
+    sget-object v0, Lqnd;->c:Lqnd;
 
-    sget-object v1, Lzcd;->h:Lzcd;
+    sget-object v1, Lqnd;->f:Lqnd;
 
-    invoke-static {v0, v1}, Liy4;->b(Lud6;Lud6;)Landroid/transition/TransitionSet;
+    sget v3, Ls15;->c:I
 
-    move-result-object v3
+    new-instance v3, Landroid/transition/TransitionSet;
 
-    iget-object v4, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    invoke-direct {v3}, Landroid/transition/TransitionSet;-><init>()V
 
-    iget-object v4, v4, Ly08;->w0:Landroid/graphics/Rect;
+    new-instance v4, Landroid/transition/ChangeBounds;
 
-    if-eqz v4, :cond_e
+    invoke-direct {v4}, Landroid/transition/ChangeBounds;-><init>()V
 
-    new-instance v5, Lw63;
+    invoke-virtual {v3, v4}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    invoke-direct {v5, v4, v11}, Lw63;-><init>(Landroid/graphics/Rect;Z)V
+    new-instance v4, Ls15;
+
+    invoke-direct {v4, v0, v1}, Ls15;-><init>(Layi;Layi;)V
+
+    invoke-virtual {v3, v4}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    iget-object v4, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
+
+    iget-object v4, v4, Lb68;->Z:Landroid/graphics/Rect;
+
+    if-eqz v4, :cond_17
+
+    new-instance v5, Ls83;
+
+    invoke-direct {v5, v4, v12}, Ls83;-><init>(Landroid/graphics/Rect;Z)V
 
     invoke-virtual {v3, v5}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    :cond_e
-    new-instance v5, Liy4;
+    :cond_17
+    new-instance v5, Ls15;
 
-    invoke-direct {v5, v0, v1}, Liy4;-><init>(Lud6;Lud6;)V
+    invoke-direct {v5, v0, v1}, Ls15;-><init>(Layi;Layi;)V
 
     invoke-virtual {v3, v5}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    new-instance v5, Lb6;
+    new-instance v5, Lq6;
 
-    invoke-direct {v5, p0, v4}, Lb6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
+    invoke-direct {v5, v2, v4}, Lq6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
 
-    invoke-virtual {p0, v5}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
+    invoke-virtual {v2, v5}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
 
-    new-instance v5, Lc6;
+    new-instance v5, Lr6;
 
-    invoke-direct {v5, v12, p0}, Lc6;-><init>(ILjava/lang/Object;)V
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v6, v2}, Lr6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v3, v5}, Landroid/transition/TransitionSet;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/TransitionSet;
 
-    iget-object v5, p0, Lu5;->O0:Lbb8;
+    iget-object v5, v2, Lj6;->J0:Lch8;
 
-    iget-object v5, v5, Lbb8;->b:Ljava/lang/Object;
+    iget-object v5, v5, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v5, Lsg3;
+    check-cast v5, Lri3;
 
-    check-cast v5, Lyka;
+    check-cast v5, Lusa;
 
-    invoke-virtual {v5}, Lyka;->c()Log;
+    invoke-virtual {v5}, Lusa;->b()Ldh;
 
     move-result-object v5
 
-    iget-object v5, v5, Log;->a:Ld16;
+    iget-object v5, v5, Ldh;->a:Lpp4;
 
     const-wide/16 v5, 0xc8
 
     invoke-virtual {v3, v5, v6}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v7
 
     invoke-virtual {v7, v3}, Landroid/view/Window;->setSharedElementEnterTransition(Landroid/transition/Transition;)V
 
-    invoke-virtual {p0}, Landroid/app/Activity;->postponeEnterTransition()V
+    invoke-virtual {v2}, Landroid/app/Activity;->postponeEnterTransition()V
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v3, v2, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    new-instance v7, Lw5;
+    new-instance v7, Lk6;
 
-    invoke-direct {v7, p0, v11}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+    invoke-direct {v7, v2, v12}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
 
     invoke-virtual {v3}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v3
 
-    new-instance v8, Lsng;
+    new-instance v8, Lt1h;
 
-    invoke-direct {v8, v3, v7}, Lsng;-><init>(Landroid/view/ViewTreeObserver;Lw5;)V
+    invoke-direct {v8, v3, v7}, Lt1h;-><init>(Landroid/view/ViewTreeObserver;Lk6;)V
 
     invoke-virtual {v3, v8}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    invoke-static {v1, v0}, Liy4;->b(Lud6;Lud6;)Landroid/transition/TransitionSet;
+    new-instance v3, Landroid/transition/TransitionSet;
+
+    invoke-direct {v3}, Landroid/transition/TransitionSet;-><init>()V
+
+    new-instance v7, Landroid/transition/ChangeBounds;
+
+    invoke-direct {v7}, Landroid/transition/ChangeBounds;-><init>()V
+
+    invoke-virtual {v3, v7}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    new-instance v7, Ls15;
+
+    invoke-direct {v7, v1, v0}, Ls15;-><init>(Layi;Layi;)V
+
+    invoke-virtual {v3, v7}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    if-eqz v4, :cond_18
+
+    new-instance v0, Ls83;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v4, v1}, Ls83;-><init>(Landroid/graphics/Rect;Z)V
+
+    invoke-virtual {v3, v0}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+
+    :cond_18
+    iget-object v0, v2, Lj6;->J0:Lch8;
+
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lri3;
+
+    check-cast v0, Lusa;
+
+    invoke-virtual {v0}, Lusa;->b()Ldh;
 
     move-result-object v0
 
-    if-eqz v4, :cond_f
+    iget-object v0, v0, Ldh;->a:Lpp4;
 
-    new-instance v1, Lw63;
+    invoke-virtual {v3, v5, v6}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
 
-    invoke-direct {v1, v4, v12}, Lw63;-><init>(Landroid/graphics/Rect;Z)V
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
+    move-result-object v0
 
-    :cond_f
-    iget-object v1, p0, Lu5;->O0:Lbb8;
+    invoke-virtual {v0, v3}, Landroid/view/Window;->setSharedElementReturnTransition(Landroid/transition/Transition;)V
 
-    iget-object v1, v1, Lbb8;->b:Ljava/lang/Object;
+    goto :goto_6
 
-    check-cast v1, Lsg3;
+    :cond_19
+    invoke-virtual {v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->R()V
 
-    check-cast v1, Lyka;
-
-    invoke-virtual {v1}, Lyka;->c()Log;
-
-    move-result-object v1
-
-    iget-object v1, v1, Log;->a:Ld16;
-
-    invoke-virtual {v0, v5, v6}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/view/Window;->setSharedElementReturnTransition(Landroid/transition/Transition;)V
-
-    goto :goto_2
-
-    :cond_10
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->b0()V
-
-    :goto_2
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lu5;->W(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    :goto_6
+    invoke-virtual {v2, v11}, Lj6;->N(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
 
     return-void
 .end method
@@ -2816,60 +3107,60 @@
 .method public final onDestroy()V
     .locals 2
 
-    invoke-super {p0}, Lu5;->onDestroy()V
+    invoke-super {p0}, Lj6;->onDestroy()V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->p(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->p(Lm68;)V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->p(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->p(Lm68;)V
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->v1:La6;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lp6;
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->g(Lfmg;)V
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->g(Lh0h;)V
 
     :cond_2
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->q1:Landroid/widget/Toast;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->k1:Landroid/widget/Toast;
 
     if-eqz v0, :cond_3
 
@@ -2879,14 +3170,14 @@
     return-void
 .end method
 
-.method public onEvent(Lf18;)V
+.method public onEvent(Li68;)V
     .locals 9
-    .annotation runtime Lxye;
+    .annotation runtime Lxbf;
     .end annotation
 
-    iget-object v0, p1, Lf18;->b:Ljava/lang/String;
+    iget-object v0, p1, Li68;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2894,24 +3185,22 @@
 
     if-eqz v0, :cond_a
 
-    iget-boolean v0, p0, Lu5;->T0:Z
+    iget-boolean v0, p0, Lj6;->O0:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lu5;->U0:Ljava/util/HashSet;
-
-    invoke-static {v0, p1}, Lvu0;->y(Ljava/util/Set;Lbj0;)V
+    invoke-virtual {p0, p1}, Lj6;->K(Lrj0;)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Le18;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Lh68;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
 
@@ -2926,7 +3215,7 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2941,9 +3230,9 @@
     goto/16 :goto_3
 
     :cond_2
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
 
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2962,19 +3251,19 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    new-instance v2, Lso8;
+    new-instance v2, Ltu8;
 
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->c1:Ly08;
+    iget-object v3, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->W0:Lb68;
 
-    invoke-direct {v2, p0, v0, v3}, Lso8;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Ljava/util/ArrayList;Ly08;)V
+    invoke-direct {v2, p0, v0, v3}, Ltu8;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Ljava/util/ArrayList;Lb68;)V
 
-    iput-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iput-object v2, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lpwc;)V
+    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lp6d;)V
 
-    iget v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -3008,11 +3297,11 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {v0, v1}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb18;
+    check-cast v0, Le68;
 
     const/4 v1, 0x0
 
@@ -3043,11 +3332,11 @@
 
     move-result-object v3
 
-    check-cast v3, Lb18;
+    check-cast v3, Le68;
 
-    iget-wide v5, v3, Lb18;->b:J
+    iget-wide v5, v3, Le68;->b:J
 
-    iget-wide v7, v0, Lb18;->b:J
+    iget-wide v7, v0, Le68;->b:J
 
     cmp-long v3, v5, v7
 
@@ -3069,17 +3358,17 @@
     if-eq p1, v4, :cond_6
 
     :goto_2
-    iput p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iput p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2;->setCurrentItem(I)V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->d0()V
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->T()V
 
-    iget p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->k0(I)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->d0(I)V
 
     :cond_a
     :goto_3
@@ -3089,48 +3378,48 @@
 .method public final onPause()V
     .locals 2
 
-    invoke-super {p0}, Lu5;->onPause()V
+    invoke-super {p0}, Lj6;->onPause()V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->m(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->l(Lm68;)V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->m(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->l(Lm68;)V
 
     :cond_1
     return-void
@@ -3139,84 +3428,92 @@
 .method public final onResume()V
     .locals 4
 
-    invoke-super {p0}, Lu5;->onResume()V
+    invoke-super {p0}, Lj6;->onResume()V
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->m()Lly9;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    sget-object v1, Lhfd;->U0:Lhfd;
+    const-class v1, Le5a;
 
-    sget-object v2, Lu4b;->g:Lu4b;
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Lly9;->f(Lhfd;Lu4b;)V
+    move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->h0()V
+    check-cast v0, Le5a;
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    sget-object v1, Ldqd;->P0:Ldqd;
+
+    sget-object v2, Lddb;->g:Lddb;
+
+    invoke-virtual {v0, v1, v2}, Le5a;->f(Ldqd;Lddb;)V
+
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z()V
+
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->k(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->k(Lm68;)V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lu5;->O0:Lbb8;
+    iget-object v0, p0, Lj6;->J0:Lch8;
 
-    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lsg3;
+    check-cast v0, Lri3;
 
-    check-cast v0, Lyka;
+    check-cast v0, Lusa;
 
-    invoke-virtual {v0}, Lyka;->k()Lxp8;
+    invoke-virtual {v0}, Lusa;->h()Lew8;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
-    invoke-virtual {v0, v1}, Lxp8;->k(Lvp8;)V
+    invoke-virtual {v0, v1}, Lew8;->k(Lm68;)V
 
     :cond_1
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->r1:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Z
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_2
 
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
 
-    invoke-virtual {p0, v0, v1, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->b(ZZZ)V
+    invoke-virtual {p0, v0, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y(ZZ)V
 
     :cond_2
-    iput-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->r1:Z
+    iput-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Z
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -3227,24 +3524,24 @@
     goto :goto_0
 
     :cond_3
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb18;
+    check-cast v0, Le68;
 
     if-nez v0, :cond_4
 
     goto :goto_0
 
     :cond_4
-    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lso8;
+    iget-object v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->X0:Ltu8;
 
-    iget-wide v2, v0, Lb18;->b:J
+    iget-wide v2, v0, Le68;->b:J
 
-    invoke-virtual {v1, v2, v3}, Lso8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
+    invoke-virtual {v1, v2, v3}, Ltu8;->F(J)Lru/ok/messages/media/mediabar/FrgLocalMedia;
 
     move-result-object v0
 
@@ -3254,7 +3551,7 @@
 
     check-cast v0, Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->h1()V
+    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->G0()V
 
     :cond_5
     :goto_0
@@ -3264,21 +3561,21 @@
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 6
 
-    invoke-super {p0, p1}, Lu5;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lj6;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     const-string v0, "ru.ok.tamtam.extra.SELECTED_POS"
 
-    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:I
+    iget v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->U0:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "ru.ok.tamtam.extra.UI_VISIBILITY"
 
-    iget-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
+    iget-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->i1:Lm68;
 
     const-string v1, "MediaPlayerController.PlayWhenReady"
 
@@ -3288,60 +3585,56 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lj18;
-
-    invoke-virtual {v0, v3}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    iget v5, v0, Lj18;->h:F
+    iget v5, v0, Lm68;->h:F
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    invoke-virtual {v0, v2}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-boolean v5, v0, Lj18;->i:Z
+    iget-boolean v5, v0, Lm68;->i:Z
 
     invoke-virtual {p1, v4, v5}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v1}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-boolean v0, v0, Lj18;->j:Z
+    iget-boolean v0, v0, Lm68;->j:Z
 
     invoke-virtual {p1, v4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->p1:Lvp8;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->j1:Lm68;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lj18;
-
-    invoke-virtual {v0, v3}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    iget v4, v0, Lj18;->h:F
+    iget v4, v0, Lm68;->h:F
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
-    invoke-virtual {v0, v2}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-boolean v3, v0, Lj18;->i:Z
+    iget-boolean v3, v0, Lm68;->i:Z
 
     invoke-virtual {p1, v2, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v1}, Lj18;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-boolean v0, v0, Lj18;->j:Z
+    iget-boolean v0, v0, Lm68;->j:Z
 
     invoke-virtual {p1, v1, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -3352,42 +3645,42 @@
 .method public final onStart()V
     .locals 3
 
-    invoke-super {p0}, Lu5;->onStart()V
+    invoke-super {p0}, Lj6;->onStart()V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object v0
 
-    iget-object v0, v0, Le18;->f:Lwpd;
+    iget-object v0, v0, Lh68;->f:Lc1e;
 
-    iget-object v1, v0, Lwpd;->c:Ljava/util/Set;
+    iget-object v1, v0, Lc1e;->c:Ljava/util/Set;
 
     invoke-interface {v1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lwpd;->g:Ljava/util/Set;
+    iget-object v0, v0, Lc1e;->g:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    iget-object v1, v0, Ldv9;->A0:Lwpd;
+    iget-object v1, v0, Lc2a;->v0:Lc1e;
 
-    iget-object v2, v0, Ldv9;->X:Lb18;
+    iget-object v2, v0, Lc2a;->o:Le68;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0, v2}, Ldv9;->c1(Lb18;)V
+    invoke-virtual {v0, v2}, Lc2a;->R0(Le68;)V
 
     :cond_0
-    iget-object v2, v1, Lwpd;->c:Ljava/util/Set;
+    iget-object v2, v1, Lc1e;->c:Ljava/util/Set;
 
     invoke-interface {v2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object v2, v1, Lwpd;->d:Ljava/util/Set;
+    iget-object v2, v1, Lc1e;->d:Ljava/util/Set;
 
     invoke-interface {v2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lwpd;->f:Ljava/util/Set;
+    iget-object v1, v1, Lc1e;->f:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -3397,55 +3690,55 @@
 .method public final onStop()V
     .locals 3
 
-    invoke-super {p0}, Lu5;->onStop()V
+    invoke-super {p0}, Lj6;->onStop()V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Le18;
+    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->S()Lh68;
 
     move-result-object v0
 
-    iget-object v0, v0, Le18;->f:Lwpd;
+    iget-object v0, v0, Lh68;->f:Lc1e;
 
-    iget-object v1, v0, Lwpd;->c:Ljava/util/Set;
+    iget-object v1, v0, Lc1e;->c:Ljava/util/Set;
 
     invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lwpd;->g:Ljava/util/Set;
+    iget-object v0, v0, Lc1e;->g:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->m1:Ldv9;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Lc2a;
 
-    iget-object v1, v0, Ldv9;->A0:Lwpd;
+    iget-object v1, v0, Lc2a;->v0:Lc1e;
 
-    iget-object v2, v1, Lwpd;->c:Ljava/util/Set;
-
-    invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    iget-object v2, v1, Lwpd;->d:Ljava/util/Set;
+    iget-object v2, v1, Lc1e;->c:Ljava/util/Set;
 
     invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lwpd;->f:Ljava/util/Set;
+    iget-object v2, v1, Lc1e;->d:Ljava/util/Set;
+
+    invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    iget-object v1, v1, Lc1e;->f:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Ldv9;->G0:Lqs1;
+    iget-object v0, v0, Lc2a;->B0:Lnt1;
 
-    invoke-static {v0}, Liad;->b(Lss4;)V
+    invoke-static {v0}, Lzkd;->b(Lzv4;)V
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Liad;->b(Lss4;)V
+    invoke-static {v0}, Lzkd;->b(Lzv4;)V
 
     return-void
 .end method
 
 .method public final onSystemUiVisibilityChange(I)V
-    .locals 2
-
-    if-eqz p1, :cond_1
+    .locals 4
 
     const/4 v0, 0x2
+
+    if-eqz p1, :cond_1
 
     if-ne p1, v0, :cond_0
 
@@ -3461,53 +3754,32 @@
     const/4 p1, 0x1
 
     :goto_1
-    iput-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Z
+    iput-boolean p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Z
 
-    iget-boolean v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Z
+    iget-boolean v1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
     if-eqz p1, :cond_2
 
-    new-instance p1, Lw5;
+    new-instance p1, Lk6;
 
-    const/4 v0, 0x2
+    invoke-direct {p1, p0, v0}, Lk6;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
 
-    invoke-direct {p1, p0, v0}, Lw5;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+    invoke-static {}, Lie;->a()Lgpd;
 
-    const-wide/16 v0, 0x64
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lk74;->R(Ljava/lang/Runnable;J)Lss4;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, p1, v2, v3, v1}, Lgpd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->l1:Lss4;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lzv4;
 
     :cond_2
-    return-void
-.end method
-
-.method public final p()Lvaf;
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lyv8;->e0:Lyv8;
-
-    iput-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->s1:Lyv8;
-
-    return-object v0
-.end method
-
-.method public final r0(Ljava/util/Set;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
-
     return-void
 .end method

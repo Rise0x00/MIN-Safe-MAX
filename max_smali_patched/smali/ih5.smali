@@ -1,43 +1,66 @@
 .class public final Lih5;
-.super Lgd4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lih5;
+# instance fields
+.field public final a:J
 
-.field public static final c:Lbd4;
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JJ)V
+    .locals 3
 
-    new-instance v0, Lih5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    const-wide/16 v0, 0x0
 
-    sput-object v0, Lih5;->b:Lih5;
+    cmp-long v2, p3, v0
 
-    const/4 v1, 0x0
+    if-nez v2, :cond_0
 
-    new-array v1, v1, [Ljava/lang/String;
+    iput-wide v0, p0, Lih5;->a:J
 
-    const-string v2, "params"
+    const-wide/16 p1, 0x1
 
-    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    iput-wide p1, p0, Lih5;->b:J
 
-    move-result-object v2
+    return-void
 
-    const/16 v3, 0xc
+    :cond_0
+    iput-wide p1, p0, Lih5;->a:J
 
-    const-string v4, ":external_callback"
+    iput-wide p3, p0, Lih5;->b:J
 
-    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-wide v1, p0, Lih5;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lih5;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lih5;->c:Lbd4;
-
-    return-void
+    return-object v0
 .end method

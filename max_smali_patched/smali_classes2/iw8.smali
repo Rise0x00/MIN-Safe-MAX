@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lkw8;
-
-.field public final synthetic c:Lrpf;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkw8;Lrpf;I)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
     iput p3, p0, Liw8;->a:I
 
-    iput-object p1, p0, Liw8;->b:Lkw8;
-
-    iput-object p2, p0, Liw8;->c:Lrpf;
+    iput-wide p1, p0, Liw8;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,43 +27,127 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
     iget v0, p0, Liw8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Liw8;->b:Lkw8;
+    check-cast p1, Ljava/util/Set;
 
-    iget-object v1, p0, Liw8;->c:Lrpf;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    invoke-virtual {v0, v1}, Lkw8;->c(Lrpf;)V
+    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    return-void
+    new-instance p1, Luk2;
+
+    const/4 v1, 0x4
+
+    iget-wide v2, p0, Liw8;->b:J
+
+    invoke-direct {p1, v2, v3, v1}, Luk2;-><init>(JI)V
+
+    new-instance v1, Lb6;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2, p1}, Lb6;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Liw8;->b:Lkw8;
+    check-cast p1, Lrp9;
 
-    iget-object v1, p0, Liw8;->c:Lrpf;
+    new-instance v0, Lrp9;
 
-    invoke-virtual {v0, v1}, Lkw8;->h(Lrpf;)V
+    const-wide/16 v4, 0x0
 
-    return-void
+    const/16 v8, 0x1a
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    iget-wide v6, p0, Liw8;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
+
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Liw8;->b:Lkw8;
+    check-cast p1, Lrp9;
 
-    iget-object v1, p0, Liw8;->c:Lrpf;
+    new-instance v0, Lrp9;
 
-    invoke-virtual {v0, v1}, Lkw8;->h(Lrpf;)V
+    const-wide/16 v6, 0x0
 
-    return-void
+    const/16 v8, 0x26
 
-    nop
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Liw8;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    :pswitch_2
+    check-cast p1, Lrp9;
+
+    new-instance v0, Lrp9;
+
+    const-wide/16 v6, 0x0
+
+    const/16 v8, 0x2e
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    iget-wide v4, p0, Liw8;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    :pswitch_3
+    check-cast p1, Lhw8;
+
+    new-instance p1, Lhw8;
+
+    iget-wide v0, p0, Liw8;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lh9e;->c([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+
+    move-result-object v2
+
+    invoke-direct {p1, v0, v1, v2}, Lhw8;-><init>(JLjava/util/LinkedHashSet;)V
+
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

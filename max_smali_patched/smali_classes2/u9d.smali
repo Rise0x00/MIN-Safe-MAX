@@ -1,49 +1,27 @@
-.class public abstract Lu9d;
+.class public final Lu9d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lru7;
 
-.field public static final b:I
+.field public final b:Lru7;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+.field public final c:Lru7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru7;Lru7;Lru7;)V
+    .locals 0
 
-    sget v0, Lglc;->TamTamTheme_Base_Dark:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lu9d;->a:I
+    iput-object p3, p0, Lu9d;->a:Lru7;
 
-    sget v0, Lglc;->TamTamTheme_Base_PopupNotification:I
+    iput-object p1, p0, Lu9d;->b:Lru7;
 
-    sput v0, Lu9d;->b:I
-
-    sget v0, Lglc;->Theme_Transparent:I
-
-    sput v0, Lu9d;->c:I
-
-    sget v0, Lglc;->Theme_Transparent_DarkMenuOverflow:I
-
-    sput v0, Lu9d;->d:I
-
-    sget v0, Lglc;->Theme_Transparent_WhiteMenuOverflow:I
-
-    sput v0, Lu9d;->e:I
-
-    sget v0, Lglc;->Theme_Transparent_WhiteMenuOverflow_NoCaps:I
-
-    sput v0, Lu9d;->f:I
+    iput-object p2, p0, Lu9d;->c:Lru7;
 
     return-void
 .end method

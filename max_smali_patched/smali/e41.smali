@@ -1,207 +1,175 @@
 .class public final Le41;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final synthetic X:Ll41;
 
-.field public final b:Ljava/util/List;
+.field public final synthetic Y:Z
 
-.field public final c:Ljava/util/LinkedHashMap;
-
-.field public final d:Landroid/graphics/Point;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;Lsw7;Ljava/util/LinkedHashMap;Landroid/graphics/Point;)V
+.method public constructor <init>(Ll41;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Le41;->X:Ll41;
 
-    iput-object p1, p0, Le41;->a:Landroid/os/Bundle;
+    iput-boolean p2, p0, Le41;->Y:Z
 
-    iput-object p2, p0, Le41;->b:Ljava/util/List;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Le41;->c:Ljava/util/LinkedHashMap;
-
-    iput-object p4, p0, Le41;->d:Landroid/graphics/Point;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lt92;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Le41;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Le41;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Le41;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Le41;
+
+    iget-object v1, p0, Le41;->X:Ll41;
+
+    iget-boolean v2, p0, Le41;->Y:Z
+
+    invoke-direct {v0, v1, v2, p2}, Le41;-><init>(Ll41;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Le41;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 15
+
+    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Le41;->o:Ljava/lang/Object;
+
+    check-cast v1, Lt92;
+
+    iget-object v2, p0, Le41;->X:Ll41;
+
+    iget-object v2, v2, Ll41;->i:La1f;
+
+    iget-boolean v3, p0, Le41;->Y:Z
+
+    :goto_0
+    invoke-virtual {v2}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v5, v4
+
+    check-cast v5, Lw31;
+
+    invoke-virtual {v1}, Lt92;->n0()V
+
+    iget-object v9, v1, Lt92;->t0:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    const-string v6, ""
+
+    :goto_1
+    move-object v12, v6
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {v1}, Lt92;->o0()V
+
+    iget-object v6, v1, Lt92;->w0:Ljava/lang/CharSequence;
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Le41;
+    :goto_2
+    iget-wide v6, v1, Lt92;->a:J
 
-    if-nez v0, :cond_1
+    sget-object v8, Lhl0;->d:Lhl0;
 
-    goto :goto_0
+    sget-object v10, Lgl0;->a:Lgl0;
 
-    :cond_1
-    check-cast p1, Le41;
+    invoke-virtual {v1, v8, v10}, Lt92;->i(Lhl0;Lgl0;)Ljava/lang/String;
 
-    iget-object v0, p0, Le41;->a:Landroid/os/Bundle;
+    move-result-object v10
 
-    iget-object v1, p1, Le41;->a:Landroid/os/Bundle;
+    invoke-virtual {v1}, Lt92;->g()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-wide v13
 
-    move-result v0
+    xor-int/lit8 v8, v3, 0x1
 
-    if-nez v0, :cond_2
+    iget-object v11, v1, Lt92;->b:Lvd2;
 
-    goto :goto_0
+    move-object/from16 p1, v1
 
-    :cond_2
-    iget-object v0, p0, Le41;->b:Ljava/util/List;
+    iget-wide v0, v11, Lvd2;->a:J
 
-    iget-object v1, p1, Le41;->b:Ljava/util/List;
+    new-instance v11, Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v11, v6, v7}, Ljava/lang/Long;-><init>(J)V
 
-    move-result v0
+    move v6, v8
 
-    if-nez v0, :cond_3
+    new-instance v8, Ljava/lang/Long;
 
-    goto :goto_0
+    invoke-direct {v8, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    :cond_3
-    iget-object v0, p0, Le41;->c:Ljava/util/LinkedHashMap;
+    move-object v7, v11
 
-    iget-object v1, p1, Le41;->c:Ljava/util/LinkedHashMap;
+    new-instance v11, Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v11, v13, v14}, Ljava/lang/Long;-><init>(J)V
 
-    move-result v0
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_4
+    move v13, v6
 
-    goto :goto_0
+    new-instance v6, Lw31;
 
-    :cond_4
-    iget-object v0, p0, Le41;->d:Landroid/graphics/Point;
+    invoke-direct/range {v6 .. v13}, Lw31;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;Z)V
 
-    iget-object p1, p1, Le41;->d:Landroid/graphics/Point;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Le41;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2, v4, v6}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/16 v1, 0x1f
+    if-eqz v0, :cond_1
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Le41;->b:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Le41;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Le41;->d:Landroid/graphics/Point;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/graphics/Point;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v2, v0
-
-    return v2
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallContextMenuInfo(bundle="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Le41;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", actions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le41;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", statParam="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le41;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", anchor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le41;->d:Landroid/graphics/Point;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lybg;->a:Lybg;
 
     return-object v0
+
+    :cond_1
+    move-object/from16 v1, p1
+
+    goto :goto_0
 .end method

@@ -1,19 +1,21 @@
 .class public final Lqb1;
-.super Lwb1;
+.super Lmd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo4g;
+.field public final b:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lo4g;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lqb1;->a:Lo4g;
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+
+    iput-object p1, p0, Lqb1;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -41,11 +43,15 @@
     :cond_1
     check-cast p1, Lqb1;
 
-    iget-object v1, p0, Lqb1;->a:Lo4g;
+    iget-object v1, p0, Lqb1;->b:Ljava/lang/CharSequence;
 
-    iget-object p1, p1, Lqb1;->a:Lo4g;
+    iget-object p1, p1, Lqb1;->b:Ljava/lang/CharSequence;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -56,7 +62,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lqb1;->a:Lo4g;
+    iget-object v0, p0, Lqb1;->b:Ljava/lang/CharSequence;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -70,11 +76,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ButtonAction(state="
+    const-string v1, "CopyLink(link="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqb1;->a:Lo4g;
+    iget-object v1, p0, Lqb1;->b:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

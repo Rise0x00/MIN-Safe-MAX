@@ -1,23 +1,14 @@
-.class public final Llc;
+.class public interface abstract Llc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[B
+# virtual methods
+.method public abstract a([B)[B
+.end method
 
-.field public final b:I
+.method public abstract b([B[B[B)[B
+.end method
 
-
-# direct methods
-.method public constructor <init>(I[B)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Llc;->a:[B
-
-    iput p1, p0, Llc;->b:I
-
-    return-void
+.method public abstract c([B[B[B)[B
 .end method

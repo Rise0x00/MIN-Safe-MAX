@@ -1,92 +1,105 @@
-.class public final Lovg;
-.super Lpvg;
+.class public final enum Lovg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final synthetic a:[Lovg;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lovg;
 
-    iput-wide p1, p0, Lovg;->a:J
+    const-string v1, "LOWEST"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Lovg;
+
+    const-string v2, "HIGHEST"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lovg;
+
+    const-string v3, "MAX_QVGA"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lovg;
+
+    const-string v4, "MAX_480P"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lovg;
+
+    const-string v5, "MAX_720P"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lovg;
+
+    const-string v6, "MAX_1080P"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v6, Lovg;
+
+    const-string v7, "MAX_2160P"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array/range {v0 .. v6}, [Lovg;
+
+    move-result-object v0
+
+    sput-object v0, Lovg;->a:[Lovg;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lovg;
+    .locals 1
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    const-class v0, Lovg;
 
-    iget-wide v0, p0, Lovg;->a:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return-wide v0
+    move-result-object p0
+
+    check-cast p0, Lovg;
+
+    return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public static values()[Lovg;
+    .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lovg;->a:[Lovg;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lovg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lovg;
-
-    iget-wide v3, p0, Lovg;->a:J
-
-    iget-wide v5, p1, Lovg;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lovg;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Error(requestId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lovg;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, [Lovg;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lovg;
 
     return-object v0
 .end method

@@ -1,91 +1,97 @@
-.class public final Lbk3;
-.super Lm3f;
+.class public final enum Lbk3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lbk3;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum b:Lbk3;
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
+.field public static final enum c:Lbk3;
+
+.field public static final enum d:Lbk3;
+
+.field public static final synthetic o:[Lbk3;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p2, p0, Lbk3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
+    new-instance v0, Lbk3;
 
-    const/4 p2, 0x2
+    const-string v1, "ALWAYS_OVERRIDE"
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lbk3;->a:Lbk3;
+
+    new-instance v1, Lbk3;
+
+    const-string v2, "HIGH_PRIORITY_REQUIRED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbk3;->b:Lbk3;
+
+    new-instance v2, Lbk3;
+
+    const-string v3, "REQUIRED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lbk3;->c:Lbk3;
+
+    new-instance v3, Lbk3;
+
+    const-string v4, "OPTIONAL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lbk3;->d:Lbk3;
+
+    filled-new-array {v0, v1, v2, v3}, [Lbk3;
+
+    move-result-object v0
+
+    sput-object v0, Lbk3;->o:[Lbk3;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbk3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbk3;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lbk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lbk3;
-
-    iget-object v1, p0, Lbk3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lbk3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
-
-    iput-object p1, v0, Lbk3;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lbk3;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-class v0, Lbk3;
 
-    iget-object p1, p0, Lbk3;->X:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p1, Lhy9;
+    move-result-object p0
 
-    instance-of v0, p1, Lzc4;
+    check-cast p0, Lbk3;
 
-    if-eqz v0, :cond_0
+    return-object p0
+.end method
 
-    sget-object v0, Lye1;->c:Lye1;
+.method public static values()[Lbk3;
+    .locals 1
 
-    check-cast p1, Lzc4;
+    sget-object v0, Lbk3;->o:[Lbk3;
 
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
+    invoke-virtual {v0}, [Lbk3;->clone()Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    iget-object v0, p0, Lbk3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
+    check-cast v0, [Lbk3;
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

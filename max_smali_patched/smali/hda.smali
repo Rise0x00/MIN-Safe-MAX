@@ -1,97 +1,221 @@
 .class public final Lhda;
-.super Ljda;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final Z:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Ljava/lang/CharSequence;
+
+.field public final b:J
+
+.field public final c:Lojb;
+
+.field public final d:Landroid/os/Bundle;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/CharSequence;JLojb;)V
+    .locals 1
 
-    invoke-direct/range {p0 .. p5}, Ljda;-><init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object p1, p0
+    new-instance v0, Landroid/os/Bundle;
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const/4 p3, 0x1
+    iput-object v0, p0, Lhda;->d:Landroid/os/Bundle;
 
-    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    iput-object p1, p0, Lhda;->a:Ljava/lang/CharSequence;
 
-    iput-object p2, p1, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-wide p2, p0, Lhda;->b:J
+
+    iput-object p4, p0, Lhda;->c:Lojb;
 
     return-void
+.end method
+
+.method public static a(Ljava/util/ArrayList;)[Landroid/os/Bundle;
+    .locals 9
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Landroid/os/Bundle;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_6
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lhda;
+
+    iget-object v4, v3, Lhda;->c:Lojb;
+
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v6, v3, Lhda;->a:Ljava/lang/CharSequence;
+
+    if-eqz v6, :cond_0
+
+    const-string v7, "text"
+
+    invoke-virtual {v5, v7, v6}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    const-string v6, "time"
+
+    iget-wide v7, v3, Lhda;->b:J
+
+    invoke-virtual {v5, v6, v7, v8}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+
+    if-eqz v4, :cond_2
+
+    const-string v6, "sender"
+
+    iget-object v7, v4, Lojb;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v7, 0x1c
+
+    if-lt v6, v7, :cond_1
+
+    invoke-static {v4}, Lnjb;->b(Lojb;)Landroid/app/Person;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lgda;->a(Landroid/app/Person;)Landroid/os/Parcelable;
+
+    move-result-object v4
+
+    const-string v6, "sender_person"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v6, "person"
+
+    invoke-virtual {v4}, Lojb;->b()Landroid/os/Bundle;
+
+    move-result-object v4
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_2
+    :goto_1
+    iget-object v4, v3, Lhda;->e:Ljava/lang/String;
+
+    if-eqz v4, :cond_3
+
+    const-string v6, "type"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object v4, v3, Lhda;->f:Landroid/net/Uri;
+
+    if-eqz v4, :cond_4
+
+    const-string v6, "uri"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :cond_4
+    iget-object v3, v3, Lhda;->d:Landroid/os/Bundle;
+
+    if-eqz v3, :cond_5
+
+    const-string v4, "extras"
+
+    invoke-virtual {v5, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_5
+    aput-object v5, v0, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final b()Landroid/app/Notification$MessagingStyle$Message;
+    .locals 7
 
-    const/4 v0, 0x0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v1, 0x1c
+
+    const/4 v2, 0x0
+
+    iget-wide v3, p0, Lhda;->b:J
+
+    iget-object v5, p0, Lhda;->a:Ljava/lang/CharSequence;
+
+    iget-object v6, p0, Lhda;->c:Lojb;
+
+    if-lt v0, v1, :cond_1
+
+    if-nez v6, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v6}, Lnjb;->b(Lojb;)Landroid/app/Person;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-static {v5, v3, v4, v2}, Lgda;->b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
 
     move-result-object v0
 
-    iget-object v1, p0, Ljda;->a:Lksd;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Lksd;->f(Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v1}, Lksd;->b()V
+    goto :goto_2
 
     :cond_1
-    return-void
-.end method
+    if-nez v6, :cond_2
 
-.method public final run()V
-    .locals 3
+    goto :goto_1
 
-    iget-object v0, p0, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+    :cond_2
+    iget-object v2, v6, Lojb;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    :goto_1
+    invoke-static {v5, v3, v4, v2}, Lfda;->a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x2
+    :goto_2
+    iget-object v1, p0, Lhda;->e:Ljava/lang/String;
 
-    if-ne v1, v2, :cond_1
+    if-eqz v1, :cond_3
 
-    const/4 v1, 0x0
+    iget-object v2, p0, Lhda;->f:Landroid/net/Uri;
 
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lfda;->b(Landroid/app/Notification$MessagingStyle$Message;Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
 
-    move-result-object v1
-
-    iget-object v2, p0, Ljda;->a:Lksd;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2, v1}, Lksd;->f(Ljava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v2}, Lksd;->b()V
-
-    :cond_1
-    return-void
+    :cond_3
+    return-object v0
 .end method

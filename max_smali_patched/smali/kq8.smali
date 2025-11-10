@@ -1,93 +1,80 @@
-.class public final Lkq8;
-.super Landroid/content/BroadcastReceiver;
+.class public final synthetic Lkq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lrq8;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Ltq8;
 
-.field public final c:Ljava/util/ArrayList;
+.field public final synthetic c:Lqs8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public synthetic constructor <init>(Ltq8;Lqs8;I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput p3, p0, Lkq8;->a:I
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lkq8;->b:Ltq8;
 
-    iput-boolean v0, p0, Lkq8;->b:Z
+    iput-object p2, p0, Lkq8;->c:Lqs8;
 
-    iput-object p1, p0, Lkq8;->a:Landroid/content/Context;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lkq8;->c:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public final d(Lv67;I)V
+    .locals 3
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    iget v0, p0, Lkq8;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
+    iget-object v0, p0, Lkq8;->b:Ltq8;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, v0, Ltq8;->c:Ldr8;
 
-    move-result p1
+    iget-object v1, p0, Lkq8;->c:Lqs8;
 
-    if-eqz p1, :cond_0
+    const/4 v2, 0x1
 
-    const-string p1, "noConnectivity"
+    invoke-virtual {v1, v2}, Lqs8;->d(Z)Landroid/os/Bundle;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-interface {p1, v0, p2, v1, v2}, Lv67;->K(Lp67;ILandroid/os/Bundle;Z)V
 
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iget-boolean p2, p0, Lkq8;->b:Z
-
-    if-eq p2, p1, :cond_0
-
-    iput-boolean p1, p0, Lkq8;->b:Z
-
-    iget-object p1, p0, Lkq8;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lnq8;
-
-    invoke-virtual {p2}, Lnq8;->c()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lkq8;->b:Ltq8;
+
+    iget-object v0, v0, Ltq8;->c:Ldr8;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lkq8;->c:Lqs8;
+
+    invoke-virtual {v2, v1}, Lqs8;->d(Z)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-interface {p1, v0, p2, v1}, Lv67;->E(Lp67;ILandroid/os/Bundle;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

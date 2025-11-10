@@ -1,19 +1,15 @@
-.class public final Lta6;
+.class public abstract Lta6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llo4;
-
-
 # direct methods
-.method public constructor <init>(Llo4;)V
+.method public static a(Landroid/content/res/TypedArray;I)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getType(I)I
 
-    iput-object p1, p0, Lta6;->a:Llo4;
+    move-result p0
 
-    return-void
+    return p0
 .end method

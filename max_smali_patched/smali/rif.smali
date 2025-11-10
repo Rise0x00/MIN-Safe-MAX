@@ -1,89 +1,111 @@
-.class public final Lrif;
+.class public final synthetic Lrif;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj4d;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
-.field public final c:Lj4d;
+.field public final synthetic b:Lsif;
 
 
 # direct methods
-.method public constructor <init>(JLj4d;)V
-    .locals 2
+.method public synthetic constructor <init>(Lsif;I)V
+    .locals 0
+
+    iput p2, p0, Lrif;->a:I
+
+    iput-object p1, p0, Lrif;->b:Lsif;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const-string v1, "Timeout must be non-negative."
-
-    invoke-static {v1, v0}, Ll74;->h(Ljava/lang/String;Z)V
-
-    iput-wide p1, p0, Lrif;->b:J
-
-    iput-object p3, p0, Lrif;->c:Lj4d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    iget-wide v0, p0, Lrif;->b:J
+    iget v0, p0, Lrif;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b(Lt02;)Li4d;
-    .locals 7
+    iget-object v0, p0, Lrif;->b:Lsif;
 
-    iget-object v0, p0, Lrif;->c:Lj4d;
+    const-string v1, "Session call super.close()"
 
-    invoke-interface {v0, p1}, Lj4d;->b(Lt02;)Li4d;
+    invoke-virtual {v0, v1}, Lsif;->l(Ljava/lang/String;)V
 
-    move-result-object v0
+    iget-object v1, v0, Lsif;->g:Lwui;
 
-    const-wide/16 v1, 0x0
+    const-string v2, "Need to call openCaptureSession before using this API."
 
-    iget-wide v3, p0, Lrif;->b:J
+    invoke-static {v1, v2}, Loui;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
-    cmp-long v1, v3, v1
+    iget-object v1, v0, Lsif;->b:Lzq5;
 
-    if-lez v1, :cond_0
+    iget-object v2, v1, Lzq5;->b:Ljava/lang/Object;
 
-    iget-wide v1, p1, Lt02;->c:J
+    monitor-enter v2
 
-    iget-wide v5, v0, Li4d;->a:J
+    :try_start_0
+    iget-object v1, v1, Lzq5;->d:Ljava/lang/Object;
 
-    sub-long/2addr v3, v5
+    check-cast v1, Ljava/util/LinkedHashSet;
 
-    cmp-long p1, v1, v3
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    if-ltz p1, :cond_0
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object p1, Li4d;->d:Li4d;
+    iget-object v1, v0, Lsif;->g:Lwui;
 
-    return-object p1
+    iget-object v1, v1, Lwui;->b:Ljava/lang/Object;
 
-    :cond_0
-    return-object v0
+    check-cast v1, Ltz8;
+
+    iget-object v1, v1, Ltz8;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
+
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
+
+    iget-object v1, v0, Lsif;->d:Ln3e;
+
+    new-instance v2, Lrif;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3}, Lrif;-><init>(Lsif;I)V
+
+    invoke-virtual {v1, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lrif;->b:Lsif;
+
+    invoke-virtual {v0, v0}, Lsif;->g(Lsif;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

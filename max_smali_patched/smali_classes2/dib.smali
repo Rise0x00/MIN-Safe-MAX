@@ -2,102 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfib;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldib;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Le8e;
-
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lw3b;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lw3b;-><init>(I)V
+
+    sput-object v0, Ldib;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldib;->a:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Ldib;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput p1, p0, Ldib;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(La33;)V
-    .locals 4
-    .annotation runtime Lxye;
-    .end annotation
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Lit9;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Lit9;-><init>(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object p1, p1, La33;->b:Ljava/util/Collection;
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lit9;->a(J)Z
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Loid;
+    instance-of v1, p1, Ldib;
 
-    const/16 v0, 0x10
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Loid;-><init>(I)V
+    if-nez v1, :cond_1
 
-    new-instance v0, Lcib;
+    return v2
 
-    invoke-direct {v0, p0, p1, v1}, Lcib;-><init>(Ldib;Loid;Lkotlin/coroutines/Continuation;)V
+    :cond_1
+    check-cast p1, Ldib;
 
-    const/4 p1, 0x3
+    iget v1, p0, Ldib;->a:I
 
-    iget-object v2, p0, Ldib;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget p1, p1, Ldib;->a:I
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ldib;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Drawable(drawableResId="
+
+    const-string v1, ")"
+
+    iget v2, p0, Ldib;->a:I
+
+    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Ldib;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

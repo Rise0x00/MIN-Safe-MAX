@@ -1,552 +1,152 @@
-.class public final Lvch;
-.super Ljava/lang/Thread;
+.class public final synthetic Lvch;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lln6;
 
-# instance fields
-.field public X:Ljava/nio/ByteBuffer;
 
-.field public Y:Lorg/webrtc/EncodedImage;
+# static fields
+.field public static final a:Lvch;
 
-.field public final synthetic Z:Lqc6;
-
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public c:Lv84;
-
-.field public volatile o:Z
+.field private static final descriptor:Lo3e;
 
 
 # direct methods
-.method public constructor <init>(Lqc6;Lv84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lvch;->Z:Lqc6;
+    new-instance v0, Lvch;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/lang/Object;
+    sput-object v0, Lvch;->a:Lvch;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lfvb;
 
-    iput-object p1, p0, Lvch;->a:Ljava/lang/Object;
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneRequest"
 
-    new-instance p1, Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
 
-    iput-object p1, p0, Lvch;->b:Ljava/lang/Object;
+    const-string v0, "requestId"
 
-    iput-object p2, p0, Lvch;->c:Lv84;
+    const/4 v2, 0x0
 
-    const-string p1, "SSFrameSender"
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    sput-object v1, Lvch;->descriptor:Lo3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 18
+.method public final a(Le9;)Ljava/lang/Object;
+    .locals 8
 
-    move-object/from16 v1, p0
+    sget-object v0, Lvch;->descriptor:Lo3e;
 
-    :cond_0
-    :goto_0
-    iget-boolean v0, v1, Lvch;->o:Z
+    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    const/4 v3, 0x0
 
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
+    move v4, v1
 
-    if-eqz v0, :cond_10
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-virtual {p1, v0, v2}, Le9;->w(Lo3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
 
     :cond_1
-    iget-object v3, v1, Lvch;->b:Ljava/lang/Object;
+    move v4, v2
 
-    monitor-enter v3
-
-    :try_start_0
-    iget-object v0, v1, Lvch;->c:Lv84;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lv84;->a:Lorg/webrtc/DataChannel;
-
-    invoke-virtual {v0}, Lorg/webrtc/DataChannel;->bufferedAmount()J
-
-    move-result-wide v4
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    const-wide/16 v4, 0x0
+    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
 
-    :goto_1
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_4
+    new-instance p1, Lxch;
 
-    :goto_2
-    iget-boolean v0, v1, Lvch;->o:Z
+    invoke-direct {p1, v5, v3}, Lxch;-><init>(ILjava/lang/String;)V
 
-    const-wide/32 v6, 0x7a1200
+    return-object p1
+.end method
 
-    const/4 v3, 0x1
+.method public final b(Lf24;Ljava/lang/Object;)V
+    .locals 2
 
-    if-eqz v0, :cond_3
+    check-cast p2, Lxch;
 
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
+    sget-object v0, Lvch;->descriptor:Lo3e;
 
-    if-eqz v0, :cond_4
+    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
 
-    :cond_3
-    cmp-long v0, v4, v6
+    move-result-object p1
 
-    if-gez v0, :cond_e
+    iget-object p2, p2, Lxch;->a:Ljava/lang/String;
 
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_4
+    invoke-virtual {p1, v0, v1, p2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
 
-    iget-object v0, v1, Lvch;->Z:Lqc6;
-
-    iget-object v0, v0, Lqc6;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto/16 :goto_8
-
-    :cond_4
-    iget-boolean v0, v1, Lvch;->o:Z
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    if-eqz v0, :cond_10
-
-    :cond_5
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    const/4 v8, 0x0
-
-    if-nez v0, :cond_7
-
-    iget-object v0, v1, Lvch;->Z:Lqc6;
-
-    iget-object v0, v0, Lqc6;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/EncodedImage;
-
-    iput-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, v0, Lorg/webrtc/EncodedImage;->buffer:Ljava/nio/ByteBuffer;
-
-    iput-object v0, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    move v13, v3
-
-    goto :goto_3
-
-    :cond_7
-    move v13, v8
-
-    :goto_3
-    sub-long/2addr v6, v4
-
-    const-wide/16 v9, 0xfa0
-
-    cmp-long v0, v6, v9
-
-    if-gez v0, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    const-wide/32 v6, 0x7a11f5
-
-    sub-long/2addr v6, v4
-
-    const-wide/16 v4, 0x1f40
-
-    invoke-static {v6, v7, v4, v5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v4
-
-    iget-object v0, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    int-to-long v6, v0
-
-    cmp-long v0, v4, v6
-
-    if-ltz v0, :cond_9
-
-    iget-object v0, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    int-to-long v4, v0
-
-    move v14, v3
-
-    goto :goto_4
-
-    :cond_9
-    move v14, v8
-
-    :goto_4
-    iget-object v0, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    long-to-int v6, v4
-
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    iget-object v6, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v6}, Ljava/nio/Buffer;->position()I
-
-    move-result v7
-
-    int-to-long v9, v7
-
-    add-long/2addr v9, v4
-
-    long-to-int v7, v9
-
-    invoke-virtual {v6, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    new-instance v9, Lw84;
-
-    iget-object v6, v1, Lvch;->Z:Lqc6;
-
-    iget-object v6, v6, Lqc6;->e:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v10
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v11
-
-    iget-object v6, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    iget-object v6, v6, Lorg/webrtc/EncodedImage;->frameType:Lorg/webrtc/EncodedImage$FrameType;
-
-    sget-object v7, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
-
-    if-ne v6, v7, :cond_a
-
-    move v15, v3
-
-    goto :goto_5
-
-    :cond_a
-    move v15, v8
-
-    :goto_5
-    const/16 v16, 0x0
-
-    move-object/from16 v17, v0
-
-    invoke-direct/range {v9 .. v17}, Lw84;-><init>(IJZZZZLjava/nio/ByteBuffer;)V
-
-    iget-object v6, v1, Lvch;->b:Ljava/lang/Object;
-
-    monitor-enter v6
-
-    :try_start_1
-    iget-object v7, v1, Lvch;->c:Lv84;
-
-    if-eqz v7, :cond_b
-
-    invoke-virtual {v9}, Lw84;->a()Ljava/nio/ByteBuffer;
-
-    move-result-object v9
-
-    filled-new-array {v9, v0}, [Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v7, v0}, Lv84;->d([Ljava/nio/ByteBuffer;)V
-
-    goto :goto_6
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_7
-
-    :cond_b
-    move v8, v3
-
-    :goto_6
-    monitor-exit v6
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object v0, v1, Lvch;->Z:Lqc6;
-
-    iget-object v0, v0, Lqc6;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    neg-long v4, v4
-
-    long-to-int v4, v4
-
-    invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    if-eqz v8, :cond_c
-
-    iput-boolean v3, v1, Lvch;->o:Z
-
-    goto :goto_a
-
-    :cond_c
-    if-eqz v14, :cond_0
-
-    iget-object v0, v1, Lvch;->Z:Lqc6;
-
-    iget-object v0, v0, Lqc6;->f:Lcif;
-
-    invoke-virtual {v0}, Lcif;->a()V
-
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {v0}, Lorg/webrtc/EncodedImage;->release()V
-
-    :cond_d
-    iput-object v2, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    iput-object v2, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    goto/16 :goto_0
-
-    :goto_7
-    :try_start_2
-    monitor-exit v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-
-    :cond_e
-    :goto_8
-    iget-object v4, v1, Lvch;->a:Ljava/lang/Object;
-
-    monitor-enter v4
-
-    :try_start_3
-    iget-object v0, v1, Lvch;->a:Ljava/lang/Object;
-
-    const-wide/16 v5, 0x32
-
-    invoke-virtual {v0, v5, v6}, Ljava/lang/Object;->wait(J)V
-    :try_end_3
-    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_9
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_e
-
-    :catch_0
-    :goto_9
-    :try_start_4
-    monitor-exit v4
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    iget-object v5, v1, Lvch;->b:Ljava/lang/Object;
-
-    monitor-enter v5
-
-    :try_start_5
-    iget-object v0, v1, Lvch;->c:Lv84;
-
-    if-eqz v0, :cond_f
-
-    iget-object v0, v0, Lv84;->a:Lorg/webrtc/DataChannel;
-
-    invoke-virtual {v0}, Lorg/webrtc/DataChannel;->bufferedAmount()J
-
-    move-result-wide v3
-
-    monitor-exit v5
-
-    move-wide v4, v3
-
-    goto/16 :goto_2
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_d
-
-    :cond_f
-    iput-boolean v3, v1, Lvch;->o:Z
-
-    monitor-exit v5
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :cond_10
-    :goto_a
-    iget-object v3, v1, Lvch;->b:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_6
-    iget-object v0, v1, Lvch;->c:Lv84;
-
-    if-eqz v0, :cond_11
-
-    new-instance v4, Lw84;
-
-    iget-object v0, v1, Lvch;->Z:Lqc6;
-
-    iget-object v0, v0, Lqc6;->e:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v5
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    const/4 v11, 0x1
-
-    const/4 v12, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x1
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v4 .. v12}, Lw84;-><init>(IJZZZZLjava/nio/ByteBuffer;)V
-
-    iget-object v0, v1, Lvch;->c:Lv84;
-
-    invoke-virtual {v4}, Lw84;->a()Ljava/nio/ByteBuffer;
-
-    move-result-object v4
-
-    filled-new-array {v4}, [Ljava/nio/ByteBuffer;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lv84;->d([Ljava/nio/ByteBuffer;)V
-
-    goto :goto_b
-
-    :catchall_3
-    move-exception v0
-
-    goto :goto_c
-
-    :cond_11
-    :goto_b
-    monitor-exit v3
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    iget-object v0, v1, Lvch;->X:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_12
-
-    iget-object v3, v1, Lvch;->Z:Lqc6;
-
-    iget-object v3, v3, Lqc6;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    invoke-virtual {v3, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    :cond_12
-    iget-object v0, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    if-eqz v0, :cond_13
-
-    invoke-virtual {v0}, Lorg/webrtc/EncodedImage;->release()V
-
-    :cond_13
-    iput-object v2, v1, Lvch;->Y:Lorg/webrtc/EncodedImage;
-
-    iput-object v2, v1, Lvch;->X:Ljava/nio/ByteBuffer;
+    invoke-virtual {p1}, Lf24;->m()V
 
     return-void
+.end method
 
-    :goto_c
-    :try_start_7
-    monitor-exit v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+.method public final c()[Lfs7;
+    .locals 3
 
-    throw v0
+    const/4 v0, 0x1
 
-    :goto_d
-    :try_start_8
-    monitor-exit v5
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+    new-array v0, v0, [Lfs7;
 
-    throw v0
+    sget-object v1, Ltaf;->a:Ltaf;
 
-    :goto_e
-    :try_start_9
-    monitor-exit v4
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+    const/4 v2, 0x0
 
-    throw v0
+    aput-object v1, v0, v2
 
-    :catchall_4
-    move-exception v0
+    return-object v0
+.end method
 
-    :try_start_a
-    monitor-exit v3
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_4
+.method public final d()Lo3e;
+    .locals 1
 
-    throw v0
+    sget-object v0, Lvch;->descriptor:Lo3e;
+
+    return-object v0
 .end method

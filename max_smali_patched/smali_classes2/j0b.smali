@@ -1,41 +1,61 @@
 .class public final Lj0b;
-.super Ljava/lang/Object;
+.super Lk0b;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lpl4;
-
-
-# instance fields
-.field public final a:Lk0b;
-
-.field public final b:I
+.field public static final a:Lj0b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lpl4;
+    new-instance v0, Lj0b;
 
-    const/16 v1, 0xd
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lpl4;-><init>(I)V
-
-    sput-object v0, Lj0b;->c:Lpl4;
+    sput-object v0, Lj0b;->a:Lj0b;
 
     return-void
 .end method
 
-.method public constructor <init>(Lk0b;I)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lj0b;->a:Lk0b;
+    const/4 v0, 0x1
 
-    iput p2, p0, Lj0b;->b:I
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lj0b;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x7e6ebce
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Stub"
+
+    return-object v0
 .end method

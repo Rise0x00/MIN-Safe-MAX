@@ -1,222 +1,444 @@
-.class public final synthetic Lae6;
+.class public final Lae6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Lz7b;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Loje;
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;I)V
-    .locals 0
-
-    iput p2, p0, Lae6;->a:I
-
-    iput-object p1, p0, Lae6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Loje;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Loje;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lae6;->a:Loje;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lae6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(Lb8b;)V
+    .locals 2
 
-    iget v0, p0, Lae6;->a:I
+    new-instance v0, Lvd6;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x3
 
-    iget-object v0, p0, Lae6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
 
-    iget-object v1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    iget-object v1, v1, Lo10;->d:Ln10;
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    iget-wide v1, v1, Ln10;->a:J
+    return-void
+.end method
 
-    const-wide/16 v3, 0x0
+.method public final b(Lb8b;)V
+    .locals 2
 
-    cmp-long v1, v1, v3
+    new-instance v0, Lvd6;
 
-    if-nez v1, :cond_0
+    const/4 v1, 0x5
 
-    iget-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lzid;
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
 
-    invoke-virtual {v1}, Lzid;->n()Lo49;
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    move-result-object v3
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    iget-object v4, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
+    return-void
+.end method
 
-    iget-object v1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
+.method public final c(Lb8b;)V
+    .locals 2
 
-    iget-object v5, v1, Lo10;->r:Ljava/lang/String;
+    new-instance v0, Li33;
 
-    iget-object v0, v0, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lzid;
+    check-cast p1, Lr7b;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    const/16 v1, 0x12
 
-    move-result-object v0
+    invoke-direct {v0, p0, v1, p1}, Li33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-class v1, Lv89;
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    move-object v6, v0
+.method public final d(Lr7b;Lprf;Z)V
+    .locals 6
 
-    check-cast v6, Lv89;
+    new-instance v0, Lom1;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v5, 0x1
 
-    new-instance v2, Lm49;
+    move-object v1, p0
 
-    const/4 v7, 0x0
+    move-object v2, p1
 
-    invoke-direct/range {v2 .. v7}, Lm49;-><init>(Lo49;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;I)V
+    move-object v4, p2
 
-    new-instance v0, Lmu8;
+    move v3, p3
+
+    invoke-direct/range {v0 .. v5}, Lom1;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZLjava/lang/Object;I)V
+
+    iget-object p1, v1, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final e(Lone/video/exo/error/OneVideoExoPlaybackException;Lxwg;Lb8b;)V
+    .locals 6
+
+    new-instance v0, Lmq;
+
+    const/4 v5, 0x2
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v0 .. v5}, Lmq;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, v1, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final f(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final g(Lb8b;F)V
+    .locals 1
+
+    new-instance v0, Ltd6;
+
+    invoke-direct {v0, p0, p1, p2}, Ltd6;-><init>(Lae6;Lb8b;F)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final h(Lr7b;Ldxg;)V
+    .locals 2
+
+    new-instance v0, Lxd6;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lxd6;-><init>(Lae6;Lr7b;Ldxg;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final i(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final j(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final k(Lr7b;Ldxg;)V
+    .locals 2
+
+    new-instance v0, Lxd6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lxd6;-><init>(Lae6;Lr7b;Ldxg;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final l(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Lmu8;-><init>(I)V
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
 
-    iget-object v1, v3, Lo49;->h:Lked;
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    invoke-static {v2, v0, v1}, Liad;->a(Le6;Lwo3;Lked;)Lqs1;
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->v1()V
-
-    :goto_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lae6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.method public final m(Lb8b;I)V
+    .locals 2
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->g1()Lce6;
+    new-instance v0, Lsd6;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p0, p1, p2, v1}, Lsd6;-><init>(Lae6;Lb8b;II)V
 
-    check-cast v0, Lru/ok/messages/media/attaches/ActAttachesView;
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/ActAttachesView;->d()V
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    :cond_1
     return-void
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lae6;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.method public final n(Lb8b;Z)V
+    .locals 2
 
-    iget-boolean v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->s1:Z
+    new-instance v0, Lud6;
 
-    if-nez v1, :cond_2
+    const/4 v1, 0x1
 
-    goto :goto_2
+    invoke-direct {v0, p0, p1, p2, v1}, Lud6;-><init>(Lae6;Lb8b;ZI)V
 
-    :cond_2
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->x1()V
+    iget-object p1, p0, Lae6;->a:Loje;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
 
-    move-result-object v1
-
-    instance-of v2, v1, Lqm;
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v1}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    :cond_3
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->g1()Lce6;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_8
-
-    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
-
-    iget-object v2, v2, Lo10;->r:Ljava/lang/String;
-
-    check-cast v1, Lru/ok/messages/media/attaches/ActAttachesView;
-
-    iget-object v3, v1, Lru/ok/messages/media/attaches/ActAttachesView;->a1:Lv10;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_7
-
-    iget-object v1, v1, Lru/ok/messages/media/attaches/ActAttachesView;->k1:Landroidx/viewpager/widget/ViewPager;
-
-    if-nez v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v1}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
-
-    move-result v1
-
-    invoke-virtual {v3, v1}, Lv10;->g(I)Lp4b;
-
-    move-result-object v1
-
-    if-nez v1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v1, v1, Lp4b;->a:Ljava/lang/Object;
-
-    check-cast v1, Lo10;
-
-    if-nez v1, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    iget-object v1, v1, Lo10;->r:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lk98;->d(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    :cond_7
-    :goto_1
-    if-eqz v4, :cond_8
-
-    iget-object v1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->R1:Lqu9;
-
-    if-nez v1, :cond_8
-
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->r1()V
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->v1()V
-
-    :goto_2
     return-void
+.end method
 
-    nop
+.method public final o(Lr7b;Ll60;)V
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance v0, Lxr;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lxr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final p(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final q(Lb8b;Ly7b;Lq12;Lq12;)V
+    .locals 7
+
+    new-instance v0, Lh74;
+
+    const/4 v6, 0x1
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v6}, Lh74;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, v1, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final r(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final s(Lql0;II)V
+    .locals 1
+
+    new-instance v0, Lwd6;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lwd6;-><init>(Lae6;Lql0;II)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final t(Lb8b;J)V
+    .locals 1
+
+    new-instance v0, Lyd6;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lyd6;-><init>(Lae6;Lb8b;J)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final u(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final v(Lb8b;)V
+    .locals 2
+
+    new-instance v0, Lvd6;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, p1, v1}, Lvd6;-><init>(Lae6;Lb8b;I)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final w(Lb8b;Z)V
+    .locals 2
+
+    new-instance v0, Lud6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lud6;-><init>(Lae6;Lb8b;ZI)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
+.end method
+
+.method public final x(Lb8b;I)V
+    .locals 2
+
+    new-instance v0, Lsd6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lsd6;-><init>(Lae6;Lb8b;II)V
+
+    iget-object p1, p0, Lae6;->a:Loje;
+
+    invoke-virtual {p1, v0}, Loje;->f(Loi6;)V
+
+    return-void
 .end method

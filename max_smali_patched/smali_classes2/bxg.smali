@@ -1,86 +1,49 @@
 .class public final Lbxg;
-.super Lcxg;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lcxg;
+
+.field public Y:I
+
+.field public d:Lcxg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lcxg;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbxg;->X:Lcxg;
 
-    iput-object p1, p0, Lbxg;->a:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbxg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbxg;
-
-    iget-object v1, p0, Lbxg;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lbxg;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lbxg;->a:Ljava/lang/String;
+    iput-object p1, p0, Lbxg;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget p1, p0, Lbxg;->Y:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iput p1, p0, Lbxg;->Y:I
 
-    const-string v0, "OpenLinkExternal(url="
+    iget-object p1, p0, Lbxg;->X:Lcxg;
 
-    const-string v1, ")"
+    invoke-virtual {p1, p0}, Lcxg;->a(Lp14;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lbxg;->a:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

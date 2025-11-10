@@ -1,112 +1,204 @@
-.class public abstract Ljdc;
+.class public final Ljdc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lfmd;
 
 
-# static fields
-.field public static mr_art:I = 0x7f0a05a4
+# instance fields
+.field public final a:I
 
-.field public static mr_cast_checkbox:I = 0x7f0a05a5
+.field public final synthetic b:Lndc;
 
-.field public static mr_cast_close_button:I = 0x7f0a05a6
 
-.field public static mr_cast_divider:I = 0x7f0a05a7
+# direct methods
+.method public constructor <init>(Lndc;I)V
+    .locals 0
 
-.field public static mr_cast_group_icon:I = 0x7f0a05a8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static mr_cast_group_name:I = 0x7f0a05a9
+    iput-object p1, p0, Ljdc;->b:Lndc;
 
-.field public static mr_cast_group_progress_bar:I = 0x7f0a05aa
+    iput p2, p0, Ljdc;->a:I
 
-.field public static mr_cast_header_name:I = 0x7f0a05ab
+    return-void
+.end method
 
-.field public static mr_cast_list:I = 0x7f0a05ac
 
-.field public static mr_cast_meta_art:I = 0x7f0a05ad
+# virtual methods
+.method public final b()V
+    .locals 3
 
-.field public static mr_cast_meta_background:I = 0x7f0a05ae
+    iget v0, p0, Ljdc;->a:I
 
-.field public static mr_cast_meta_black_scrim:I = 0x7f0a05af
+    iget-object v1, p0, Ljdc;->b:Lndc;
 
-.field public static mr_cast_meta_subtitle:I = 0x7f0a05b0
+    iget-object v2, v1, Lndc;->B0:[Ldmd;
 
-.field public static mr_cast_meta_title:I = 0x7f0a05b1
+    aget-object v0, v2, v0
 
-.field public static mr_cast_mute_button:I = 0x7f0a05b2
+    invoke-virtual {v0}, Ldmd;->t()V
 
-.field public static mr_cast_route_icon:I = 0x7f0a05b3
+    iget-object v0, v1, Lndc;->t0:Lw48;
 
-.field public static mr_cast_route_name:I = 0x7f0a05b4
+    iget-object v2, v1, Lndc;->d:Lu55;
 
-.field public static mr_cast_route_progress_bar:I = 0x7f0a05b5
+    iget v1, v1, Lndc;->K0:I
 
-.field public static mr_cast_stop_button:I = 0x7f0a05b6
+    invoke-virtual {v2, v1}, Lu55;->i(I)I
 
-.field public static mr_cast_volume_layout:I = 0x7f0a05b7
+    move-result v1
 
-.field public static mr_cast_volume_slider:I = 0x7f0a05b8
+    iget-object v2, v0, Lw48;->d:Ljava/lang/Object;
 
-.field public static mr_chooser_list:I = 0x7f0a05b9
+    check-cast v2, Ljava/io/IOException;
 
-.field public static mr_chooser_route_desc:I = 0x7f0a05ba
+    if-nez v2, :cond_3
 
-.field public static mr_chooser_route_icon:I = 0x7f0a05bb
+    iget-object v0, v0, Lw48;->c:Ljava/lang/Object;
 
-.field public static mr_chooser_route_name:I = 0x7f0a05bc
+    check-cast v0, Lr48;
 
-.field public static mr_chooser_route_progress_bar:I = 0x7f0a05bd
+    if-eqz v0, :cond_2
 
-.field public static mr_chooser_title:I = 0x7f0a05be
+    const/high16 v2, -0x80000000
 
-.field public static mr_close:I = 0x7f0a05bf
+    if-ne v1, v2, :cond_0
 
-.field public static mr_control_divider:I = 0x7f0a05c0
+    iget v1, v0, Lr48;->b:I
 
-.field public static mr_control_playback_ctrl:I = 0x7f0a05c1
+    :cond_0
+    iget-object v2, v0, Lr48;->d:Ljava/io/IOException;
 
-.field public static mr_control_subtitle:I = 0x7f0a05c2
+    if-eqz v2, :cond_2
 
-.field public static mr_control_title:I = 0x7f0a05c3
+    iget v0, v0, Lr48;->o:I
 
-.field public static mr_control_title_container:I = 0x7f0a05c4
+    if-gt v0, v1, :cond_1
 
-.field public static mr_custom_control:I = 0x7f0a05c5
+    goto :goto_0
 
-.field public static mr_default_control:I = 0x7f0a05c6
+    :cond_1
+    throw v2
 
-.field public static mr_dialog_area:I = 0x7f0a05c7
+    :cond_2
+    :goto_0
+    return-void
 
-.field public static mr_expandable_area:I = 0x7f0a05c8
+    :cond_3
+    throw v2
+.end method
 
-.field public static mr_group_expand_collapse:I = 0x7f0a05c9
+.method public final d()Z
+    .locals 3
 
-.field public static mr_group_volume_route_name:I = 0x7f0a05ca
+    iget-object v0, p0, Ljdc;->b:Lndc;
 
-.field public static mr_media_main_control:I = 0x7f0a05cb
+    invoke-virtual {v0}, Lndc;->D()Z
 
-.field public static mr_name:I = 0x7f0a05cc
+    move-result v1
 
-.field public static mr_picker_close_button:I = 0x7f0a05cd
+    if-nez v1, :cond_0
 
-.field public static mr_picker_header_name:I = 0x7f0a05ce
+    iget-object v1, v0, Lndc;->B0:[Ldmd;
 
-.field public static mr_picker_list:I = 0x7f0a05cf
+    iget v2, p0, Ljdc;->a:I
 
-.field public static mr_picker_route_icon:I = 0x7f0a05d0
+    aget-object v1, v1, v2
 
-.field public static mr_picker_route_name:I = 0x7f0a05d1
+    iget-boolean v0, v0, Lndc;->T0:Z
 
-.field public static mr_picker_route_progress_bar:I = 0x7f0a05d2
+    invoke-virtual {v1, v0}, Ldmd;->r(Z)Z
 
-.field public static mr_playback_control:I = 0x7f0a05d3
+    move-result v0
 
-.field public static mr_title_bar:I = 0x7f0a05d4
+    if-eqz v0, :cond_0
 
-.field public static mr_volume_control:I = 0x7f0a05d5
+    const/4 v0, 0x1
 
-.field public static mr_volume_group_list:I = 0x7f0a05d6
+    return v0
 
-.field public static mr_volume_item_icon:I = 0x7f0a05d7
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static mr_volume_slider:I = 0x7f0a05d8
+    return v0
+.end method
 
-.field public static volume_item_container:I = 0x7f0a0d69
+.method public final h(J)I
+    .locals 4
+
+    iget-object v0, p0, Ljdc;->b:Lndc;
+
+    invoke-virtual {v0}, Lndc;->D()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v1, p0, Ljdc;->a:I
+
+    invoke-virtual {v0, v1}, Lndc;->x(I)V
+
+    iget-object v2, v0, Lndc;->B0:[Ldmd;
+
+    aget-object v2, v2, v1
+
+    iget-boolean v3, v0, Lndc;->T0:Z
+
+    invoke-virtual {v2, p1, p2, v3}, Ldmd;->p(JZ)I
+
+    move-result p1
+
+    invoke-virtual {v2, p1}, Ldmd;->z(I)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0, v1}, Lndc;->y(I)V
+
+    :cond_1
+    return p1
+.end method
+
+.method public final u(Ltz8;Lze4;I)I
+    .locals 5
+
+    iget-object v0, p0, Ljdc;->b:Lndc;
+
+    invoke-virtual {v0}, Lndc;->D()Z
+
+    move-result v1
+
+    const/4 v2, -0x3
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    :cond_0
+    iget v1, p0, Ljdc;->a:I
+
+    invoke-virtual {v0, v1}, Lndc;->x(I)V
+
+    iget-object v3, v0, Lndc;->B0:[Ldmd;
+
+    aget-object v3, v3, v1
+
+    iget-boolean v4, v0, Lndc;->T0:Z
+
+    invoke-virtual {v3, p1, p2, p3, v4}, Ldmd;->w(Ltz8;Lze4;IZ)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {v0, v1}, Lndc;->y(I)V
+
+    :cond_1
+    return p1
+.end method

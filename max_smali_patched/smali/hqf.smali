@@ -1,68 +1,117 @@
-.class public interface abstract Lhqf;
+.class public final Lhqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final f0:Lhaf;
+.field public static final d:Ljava/util/regex/Pattern;
 
-.field public static final g0:Lhaf;
+.field public static final e:Lpc7;
 
-.field public static final h0:Lhaf;
+.field public static final f:Lpc7;
 
-.field public static final i0:Lhaf;
+.field public static final g:Lpc7;
 
-.field public static final j0:Lgqf;
+.field public static final h:Lpc7;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lhaf;
+    const-string v0, "\\s+"
 
-    const/16 v1, 0x1a
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {v0, v1}, Lhaf;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lhqf;->f0:Lhaf;
+    sput-object v0, Lhqf;->d:Ljava/util/regex/Pattern;
 
-    new-instance v0, Lhaf;
+    const-string v0, "auto"
 
-    const/16 v1, 0x1b
+    const-string v1, "none"
 
-    invoke-direct {v0, v1}, Lhaf;-><init>(I)V
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    sput-object v0, Lhqf;->g0:Lhaf;
+    move-result-object v0
 
-    new-instance v0, Lhaf;
+    const/4 v1, 0x2
 
-    const/16 v1, 0x1c
+    invoke-static {v1, v0}, Lpc7;->j(I[Ljava/lang/Object;)Lpc7;
 
-    invoke-direct {v0, v1}, Lhaf;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lhqf;->h0:Lhaf;
+    sput-object v0, Lhqf;->e:Lpc7;
 
-    new-instance v0, Lhaf;
+    const-string v0, "dot"
 
-    const/16 v1, 0x1d
+    const-string v2, "sesame"
 
-    invoke-direct {v0, v1}, Lhaf;-><init>(I)V
+    const-string v3, "circle"
 
-    sput-object v0, Lhqf;->i0:Lhaf;
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
 
-    new-instance v0, Lgqf;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x3
 
-    invoke-direct {v0, v1}, Lgqf;-><init>(I)V
+    invoke-static {v2, v0}, Lpc7;->j(I[Ljava/lang/Object;)Lpc7;
 
-    sput-object v0, Lhqf;->j0:Lgqf;
+    move-result-object v0
+
+    sput-object v0, Lhqf;->f:Lpc7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lpc7;->j(I[Ljava/lang/Object;)Lpc7;
+
+    move-result-object v0
+
+    sput-object v0, Lhqf;->g:Lpc7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lpc7;->j(I[Ljava/lang/Object;)Lpc7;
+
+    move-result-object v0
+
+    sput-object v0, Lhqf;->h:Lpc7;
 
     return-void
 .end method
 
+.method public constructor <init>(III)V
+    .locals 0
 
-# virtual methods
-.method public abstract a(Lfqf;Liqf;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lhqf;->a:I
+
+    iput p2, p0, Lhqf;->b:I
+
+    iput p3, p0, Lhqf;->c:I
+
+    return-void
 .end method

@@ -1,24 +1,24 @@
-.class public final Lmm1;
+.class public final synthetic Lmm1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lev5;
+.implements Loi6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lu62;
+.field public final synthetic b:Ltn1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu62;I)V
+.method public synthetic constructor <init>(Ltn1;I)V
     .locals 0
 
     iput p2, p0, Lmm1;->a:I
 
-    iput-object p1, p0, Lmm1;->b:Lu62;
+    iput-object p1, p0, Lmm1;->b:Ltn1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,117 +27,98 @@
 
 
 # virtual methods
-.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lmm1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ldoa;
+    iget-object v0, p0, Lmm1;->b:Ltn1;
 
-    const/16 v1, 0xe
+    iget-object v0, v0, Ltn1;->t0:Lqqd;
 
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
+    iget-boolean v0, v0, Lqqd;->e:Z
 
-    iget-object p1, p0, Lmm1;->b:Lu62;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, p2}, Lt62;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_0
+    const/4 v0, 0x6
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    const/16 v0, 0x8
 
     :goto_0
-    return-object p1
+    new-instance v1, Landroidx/recyclerview/widget/b;
+
+    invoke-direct {v1}, Landroidx/recyclerview/widget/b;-><init>()V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2, v0}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    return-object v1
 
     :pswitch_0
-    new-instance v0, Le13;
+    iget-object v0, p0, Lmm1;->b:Ltn1;
 
-    const/16 v1, 0xd
+    iget-object v0, v0, Ltn1;->u0:Lru7;
 
-    invoke-direct {v0, p1, v1}, Le13;-><init>(Lgv5;I)V
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Lmm1;->b:Lu62;
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p2}, Lt62;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v0, Lkq5;
 
-    move-result-object p1
+    check-cast v0, Luq5;
 
-    sget-object p2, Lf34;->a:Lf34;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p1, p2, :cond_1
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    goto :goto_1
+    const/4 v2, 0x0
 
-    :cond_1
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, v1, v2}, Lhud;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
 
     :goto_1
-    return-object p1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_1
-    new-instance v0, Le13;
+    iget-object v0, p0, Lmm1;->b:Ltn1;
 
-    const/16 v1, 0xc
+    iget-object v0, v0, Ltn1;->u0:Lru7;
 
-    invoke-direct {v0, p1, v1}, Le13;-><init>(Lgv5;I)V
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Lmm1;->b:Lu62;
+    move-result-object v0
 
-    invoke-virtual {p1, v0, p2}, Lt62;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v0, Lkq5;
 
-    move-result-object p1
+    check-cast v0, Luq5;
 
-    sget-object p2, Lf34;->a:Lf34;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p1, p2, :cond_2
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->group-call-chat-support:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    goto :goto_2
+    const/4 v2, 0x0
 
-    :cond_2
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, v1, v2}, Lhud;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
 
-    :goto_2
-    return-object p1
+    move-result v0
 
-    :pswitch_2
-    new-instance v0, Leg0;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, p1, v1}, Leg0;-><init>(Lgv5;I)V
-
-    iget-object p1, p0, Lmm1;->b:Lu62;
-
-    invoke-virtual {p1, v0, p2}, Lt62;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
-
-    :goto_3
-    return-object p1
+    goto :goto_1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

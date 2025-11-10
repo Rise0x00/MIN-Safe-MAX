@@ -2,150 +2,153 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly2e;
+.implements Lf35;
+
 
 # instance fields
-.field public final a:Lvmh;
+.field public final a:Ly2e;
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ly2e;II)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lvmh;
+    iput-object p1, p0, Ltbf;->a:Ly2e;
 
-    invoke-direct {v0}, Lvmh;-><init>()V
+    iput p2, p0, Ltbf;->b:I
 
-    iput-object v0, p0, Ltbf;->a:Lvmh;
+    iput p3, p0, Ltbf;->c:I
+
+    if-ltz p2, :cond_2
+
+    if-ltz p3, :cond_1
+
+    if-lt p3, p2, :cond_0
 
     return-void
+
+    :cond_0
+    const-string p1, "endIndex should be not less than startIndex, but was "
+
+    const-string v0, " < "
+
+    invoke-static {p1, p3, p2, v0}, Lok7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_1
+    const-string p1, "endIndex should be non-negative, but is "
+
+    invoke-static {p3, p1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_2
+    const-string p1, "startIndex should be non-negative, but is "
+
+    invoke-static {p2, p1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Exception;)V
-    .locals 1
-
-    iget-object v0, p0, Ltbf;->a:Lvmh;
-
-    invoke-virtual {v0, p1}, Lvmh;->m(Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Ltbf;->a:Lvmh;
-
-    invoke-virtual {v0, p1}, Lvmh;->n(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final c(Ljava/lang/Exception;)Z
+.method public final a(I)Ly2e;
     .locals 3
 
-    iget-object v0, p0, Ltbf;->a:Lvmh;
+    iget v0, p0, Ltbf;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Ltbf;->b:I
 
-    const-string v1, "Exception must not be null"
+    sub-int/2addr v0, v1
 
-    invoke-static {p1, v1}, Lhv0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    if-lt p1, v0, :cond_0
 
-    iget-object v1, v0, Lvmh;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-boolean v2, v0, Lvmh;->c:Z
-
-    if-eqz v2, :cond_0
-
-    monitor-exit v1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    const/4 v2, 0x1
+    new-instance v0, Ltbf;
 
-    iput-boolean v2, v0, Lvmh;->c:Z
+    iget-object v2, p0, Ltbf;->a:Ly2e;
 
-    iput-object p1, v0, Lvmh;->f:Ljava/lang/Exception;
+    add-int/2addr p1, v1
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, v2, v1, p1}, Ltbf;-><init>(Ly2e;II)V
 
-    iget-object p1, v0, Lvmh;->b:Ljd;
-
-    invoke-virtual {p1, v0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
-
-    return v2
-
-    :goto_0
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 3
+.method public final b(I)Ly2e;
+    .locals 4
 
-    iget-object v0, p0, Ltbf;->a:Lvmh;
+    iget v0, p0, Ltbf;->c:I
 
-    iget-object v1, v0, Lvmh;->a:Ljava/lang/Object;
+    iget v1, p0, Ltbf;->b:I
 
-    monitor-enter v1
+    sub-int v2, v0, v1
 
-    :try_start_0
-    iget-boolean v2, v0, Lvmh;->c:Z
+    if-lt p1, v2, :cond_0
 
-    if-eqz v2, :cond_0
+    sget-object p1, Lwa5;->a:Lwa5;
 
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 v2, 0x1
+    new-instance v2, Ltbf;
 
-    iput-boolean v2, v0, Lvmh;->c:Z
+    iget-object v3, p0, Ltbf;->a:Ly2e;
 
-    iput-object p1, v0, Lvmh;->e:Ljava/lang/Object;
+    add-int/2addr v1, p1
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v2, v3, v1, v0}, Ltbf;-><init>(Ly2e;II)V
 
-    iget-object p1, v0, Lvmh;->b:Ljd;
+    return-object v2
+.end method
 
-    invoke-virtual {p1, v0}, Ljd;->x(Lcom/google/android/gms/tasks/Task;)V
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    return-void
+    new-instance v0, Lnn6;
 
-    :goto_0
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {v0, p0}, Lnn6;-><init>(Ltbf;)V
 
-    throw p1
+    return-object v0
 .end method

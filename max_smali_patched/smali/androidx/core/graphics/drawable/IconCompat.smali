@@ -224,7 +224,7 @@
 
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ll27;->b(Ljava/lang/Object;)I
+    invoke-static {v0}, Lf77;->b(Ljava/lang/Object;)I
 
     move-result v0
 
@@ -270,7 +270,7 @@
 
     iget-object v0, p0, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ll27;->e(Ljava/lang/Object;)Landroid/net/Uri;
+    invoke-static {v0}, Lf77;->e(Ljava/lang/Object;)Landroid/net/Uri;
 
     move-result-object v0
 

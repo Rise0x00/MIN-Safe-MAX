@@ -2,34 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbo1;
+
 
 # instance fields
-.field public a:Lk8e;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.field public b:Li40;
 
-.field public c:Lmt9;
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public d:Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:Lpmc;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.field public f:Lwg1;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-.field public g:Lpy0;
+    iput-object v0, p0, Lh8e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.field public h:Lose;
+    return-void
+.end method
 
-.field public i:Ljava/lang/Integer;
 
-.field public j:Z
+# virtual methods
+.method public final a(Lqoh;)V
+    .locals 2
 
-.field public k:Lorg/webrtc/EglBase$Context;
+    iget-object v0, p0, Lh8e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.field public l:Li18;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-.field public m:Luhf;
+    move-result-object v0
 
-.field public n:Lm7d;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.field public o:Lh8d;
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbo1;
+
+    invoke-interface {v1, p1}, Lbo1;->a(Lqoh;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method

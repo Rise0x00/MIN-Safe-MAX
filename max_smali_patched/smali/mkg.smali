@@ -4,77 +4,24 @@
 
 
 # direct methods
-.method public static a(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
+    const-string v0, "[-_./;:]"
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/view/View;)Landroid/view/contentcapture/ContentCaptureSession;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->getContentCaptureSession()Landroid/view/contentcapture/ContentCaptureSession;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/View;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/View;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/view/View;->getSystemGestureExclusionRects()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-    .locals 0
-
-    invoke-virtual/range {p0 .. p6}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public static e(Landroid/view/View;Lux3;)V
-    .locals 0
+.method public static final a()V
+    .locals 2
 
-    const/4 p1, 0x0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setContentCaptureSession(Landroid/view/contentcapture/ContentCaptureSession;)V
+    const-string v1, "Internal error: this code path should never get executed"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-.method public static f(Landroid/view/View;Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/View;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)V"
-        }
-    .end annotation
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemGestureExclusionRects(Ljava/util/List;)V
-
-    return-void
+    throw v0
 .end method

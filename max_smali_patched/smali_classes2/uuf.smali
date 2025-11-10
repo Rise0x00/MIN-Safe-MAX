@@ -1,103 +1,120 @@
 .class public final Luuf;
-.super Lgd4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Luuf;
-
-.field public static final c:Lbd4;
-
-.field public static final d:Lbd4;
-
-.field public static final e:Lbd4;
-
-.field public static final f:Lbd4;
-
-.field public static final g:Lbd4;
+# interfaces
+.implements Ltuf;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
+# instance fields
+.field public a:Ljava/lang/Long;
 
-    new-instance v0, Luuf;
+.field public b:Ljava/lang/Long;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
 
-    sput-object v0, Luuf;->b:Luuf;
+# virtual methods
+.method public final getMsSinceBoot()J
+    .locals 2
 
-    const-string v1, "state"
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v1
+    return-wide v0
+.end method
 
-    const-string v2, ":settings/privacy/onboarding-twofa"
+.method public final getServerTimeMs()Ljava/lang/Long;
+    .locals 6
 
-    const/4 v3, 0x0
-
-    const/16 v4, 0xe
-
-    invoke-static {v0, v2, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v1
-
-    sput-object v1, Luuf;->c:Lbd4;
-
-    const-string v1, "src"
-
-    const-string v2, "track_id"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v5, ":settings/privacy/creation-twofa"
-
-    invoke-static {v0, v5, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v1
-
-    sput-object v1, Luuf;->d:Lbd4;
+    iget-object v0, p0, Luuf;->b:Ljava/lang/Long;
 
     const/4 v1, 0x0
 
-    new-array v5, v1, [Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    const-string v6, ":settings/privacy/profile-deletion"
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    invoke-static {v0, v6, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    move-result-wide v2
 
-    move-result-object v5
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    sput-object v5, Luuf;->e:Lbd4;
+    move-result-wide v4
 
-    const-string v5, ":twofa/password/check"
+    sub-long/2addr v4, v2
 
-    new-array v1, v1, [Ljava/lang/String;
+    iget-object v0, p0, Luuf;->a:Ljava/lang/Long;
 
-    invoke-static {v0, v5, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    sput-object v1, Luuf;->f:Lbd4;
+    move-result-wide v0
 
-    const-string v1, "phone"
+    add-long/2addr v0, v4
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    const-string v4, ":twofa/auth/password/check"
-
-    invoke-static {v0, v4, v1, v3, v2}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    sput-object v0, Luuf;->g:Lbd4;
+    return-object v0
 
-    return-void
+    :cond_0
+    return-object v1
+.end method
+
+.method public final localTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
+    .locals 2
+
+    invoke-virtual {p0}, Luuf;->getServerTimeMs()Ljava/lang/Long;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    sub-long/2addr p1, v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final utcTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

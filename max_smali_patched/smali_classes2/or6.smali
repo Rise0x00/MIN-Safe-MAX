@@ -3,101 +3,76 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final b:Lor6;
+.implements Li28;
 
 
 # instance fields
-.field public final a:Z
+.field public final X:Landroid/net/Uri;
+
+.field public final Y:Lgu3;
+
+.field public final Z:Ljava/util/List;
+
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Laxb;
+
+.field public final d:Laxb;
+
+.field public final o:Z
+
+.field public final s0:I
+
+.field public final t0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lor6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lor6;-><init>(Z)V
-
-    sput-object v0, Lor6;->b:Lor6;
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
+.method public constructor <init>(JLjava/lang/String;Laxb;Laxb;ZLandroid/net/Uri;Lgu3;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lor6;->a:Z
+    iput-wide p1, p0, Lor6;->a:J
+
+    iput-object p3, p0, Lor6;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lor6;->c:Laxb;
+
+    iput-object p5, p0, Lor6;->d:Laxb;
+
+    iput-boolean p6, p0, Lor6;->o:Z
+
+    iput-object p7, p0, Lor6;->X:Landroid/net/Uri;
+
+    iput-object p8, p0, Lor6;->Y:Lgu3;
+
+    iput-object p9, p0, Lor6;->Z:Ljava/util/List;
+
+    sget p3, Lvsa;->p:I
+
+    iput p3, p0, Lor6;->s0:I
+
+    iput-wide p1, p0, Lor6;->t0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-wide v0, p0, Lor6;->t0:J
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lor6;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lor6;
-
-    iget-boolean v1, p0, Lor6;->a:Z
-
-    iget-boolean p1, p1, Lor6;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-wide v0
 .end method
 
-.method public final hashCode()I
+.method public final m()I
     .locals 1
 
-    iget-boolean v0, p0, Lor6;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
+    iget v0, p0, Lor6;->s0:I
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "GroupOptions(isPremium="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lor6;->a:Z
-
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

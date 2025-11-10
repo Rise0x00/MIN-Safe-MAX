@@ -1,91 +1,99 @@
-.class public final synthetic Lsu;
-.super Ljava/lang/Object;
+.class public final Lsu;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Z
 
-.field public final synthetic b:Lit9;
+.field public d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lit9;I)V
+.method public constructor <init>(Ljf9;)V
     .locals 0
 
-    iput p2, p0, Lsu;->a:I
-
-    iput-object p1, p0, Lsu;->b:Lit9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d(Ljf9;Ljava/lang/String;)V
     .locals 2
 
-    iget v0, p0, Lsu;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, "success"
 
-    check-cast p1, Lreb;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v0, p1, Lreb;->a:J
+    move-result v0
 
-    iget-object p1, p0, Lsu;->b:Lit9;
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, v0, v1}, Lit9;->a(J)Z
+    const-string v0, "updateTime"
 
-    move-result p1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    xor-int/lit8 p1, p1, 0x1
+    move-result p2
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez p2, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljf9;->v()V
 
-    return-object p1
+    return-void
 
-    :pswitch_0
-    check-cast p1, Liv6;
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    invoke-interface {p1}, Liv6;->getId()J
+    invoke-static {p1, v0, v1}, Le0i;->q(Ljf9;J)J
 
-    move-result-wide v0
+    move-result-wide p1
 
-    iget-object p1, p0, Lsu;->b:Lit9;
+    iput-wide p1, p0, Lsu;->d:J
 
-    invoke-virtual {p1, v0, v1}, Lit9;->d(J)Z
+    return-void
 
-    move-result p1
-
-    goto :goto_0
-
-    :pswitch_1
-    check-cast p1, Liv6;
-
-    invoke-interface {p1}, Liv6;->getId()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Lsu;->b:Lit9;
-
-    invoke-virtual {p1, v0, v1}, Lit9;->d(J)Z
+    :cond_1
+    invoke-static {p1}, Le0i;->k(Ljf9;)Z
 
     move-result p1
 
-    goto :goto_0
+    iput-boolean p1, p0, Lsu;->c:Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-boolean v0, p0, Lsu;->c:Z
+
+    iget-wide v1, p0, Lsu;->d:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response{success="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

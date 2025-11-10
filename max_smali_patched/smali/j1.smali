@@ -1,270 +1,141 @@
 .class public final Lj1;
-.super Lhv0;
+.super Llci;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lsun/misc/Unsafe;
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public static final f:J
+.field public final b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public static final g:J
+.field public final c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public static final h:J
+.field public final d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public static final i:J
-
-.field public static final j:J
+.field public final e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
+    .locals 0
 
-    const-string v0, "a"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "b"
+    iput-object p1, p0, Lj1;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    const-class v2, Lk1;
+    iput-object p2, p0, Lj1;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    :try_start_0
-    invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
+    iput-object p3, p0, Lj1;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    move-result-object v3
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p4, p0, Lj1;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    goto :goto_0
-
-    :catch_0
-    :try_start_1
-    new-instance v3, Li1;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v3}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsun/misc/Unsafe;
-    :try_end_1
-    .catch Ljava/security/PrivilegedActionException; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_0
-    :try_start_2
-    const-class v4, Lm1;
-
-    const-string v5, "c"
-
-    invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v5
-
-    sput-wide v5, Lj1;->g:J
-
-    invoke-virtual {v4, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v5
-
-    sput-wide v5, Lj1;->f:J
-
-    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v4
-
-    sput-wide v4, Lj1;->h:J
-
-    invoke-virtual {v2, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v4
-
-    sput-wide v4, Lj1;->i:J
-
-    invoke-virtual {v2, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lj1;->j:J
-
-    sput-object v3, Lj1;->e:Lsun/misc/Unsafe;
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_1
+    iput-object p5, p0, Lj1;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     return-void
-
-    :catch_1
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_2
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Could not initialize intrinsics"
-
-    invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final A(Lm1;)Lk1;
-    .locals 3
-
-    sget-object v0, Lk1;->c:Lk1;
+.method public final a(Ly1;Lh1;Lh1;)Z
+    .locals 2
 
     :cond_0
-    iget-object v1, p1, Lm1;->c:Lk1;
+    iget-object v0, p0, Lj1;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    invoke-virtual {p0, p1, v1, v0}, Lj1;->f(Lm1;Lk1;Lk1;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_0
+    if-eq v0, p2, :cond_0
 
-    :goto_0
-    return-object v1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final K(Lk1;Lk1;)V
-    .locals 3
+.method public final b(Ly1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
+    :cond_0
+    iget-object v0, p0, Lj1;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    sget-wide v1, Lj1;->j:J
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final c(Ly1;Lw1;Lw1;)Z
+    .locals 2
+
+    :cond_0
+    iget-object v0, p0, Lj1;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final k(Lw1;Lw1;)V
+    .locals 1
+
+    iget-object v0, p0, Lj1;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final L(Lk1;Ljava/lang/Thread;)V
-    .locals 3
+.method public final l(Lw1;Ljava/lang/Thread;)V
+    .locals 1
 
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
+    iget-object v0, p0, Lj1;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    sget-wide v1, Lj1;->i:J
-
-    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
-.end method
-
-.method public final d(Lm1;Lv0;Lv0;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->f:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lg1;->a(Lsun/misc/Unsafe;Lm1;JLv0;Lv0;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final e(Lm1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->h:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lh1;->a(Lsun/misc/Unsafe;Lm1;JLjava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final f(Lm1;Lk1;Lk1;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->g:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lf1;->a(Lsun/misc/Unsafe;Lm1;JLk1;Lk1;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final z(Lm1;)Lv0;
-    .locals 3
-
-    sget-object v0, Lv0;->d:Lv0;
-
-    :cond_0
-    iget-object v1, p1, Lm1;->b:Lv0;
-
-    if-ne v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0, p1, v1, v0}, Lj1;->d(Lm1;Lv0;Lv0;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :goto_0
-    return-object v1
 .end method

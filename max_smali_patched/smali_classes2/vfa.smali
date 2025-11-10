@@ -1,64 +1,41 @@
-.class public final synthetic Lvfa;
-.super Ljava/lang/Object;
+.class public final Lvfa;
+.super Leq;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/String;
+# static fields
+.field public static final a:Lvfa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lvfa;->a:I
+    new-instance v0, Lvfa;
 
-    iput-object p1, p0, Lvfa;->b:Ljava/lang/String;
+    invoke-direct {v0}, Leq;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lvfa;->a:Lvfa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final getExecutors()Lfva;
+    .locals 2
 
-    iget v0, p0, Lvfa;->a:I
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lvfa;->b:Ljava/lang/String;
+    const-class v1, Lfva;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lvfa;->b:Ljava/lang/String;
+    check-cast v0, Lfva;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvfa;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lru/ok/android/onelog/OneLogImpl;->a(Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

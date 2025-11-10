@@ -1,48 +1,126 @@
 .class public final Lx30;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lfr8;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ly30;
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ly30;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lx30;->Y:Ly30;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lx30;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lx30;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lx30;->c:Ljava/lang/String;
+
+    iput p4, p0, Lx30;->d:I
+
+    iput p5, p0, Lx30;->e:I
+
+    iput p6, p0, Lx30;->f:I
+
+    iput-object p7, p0, Lx30;->g:Ljava/lang/String;
+
+    iput-object p8, p0, Lx30;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lx30;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lx30;->b:Ljava/lang/String;
 
-    iget p1, p0, Lx30;->X:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    or-int/2addr p1, v0
+    const-string v0, ", sampleMimeType: "
 
-    iput p1, p0, Lx30;->X:I
+    const-string v1, ", codecs: "
 
-    iget-object p1, p0, Lx30;->Y:Ly30;
+    const-string v2, "AudioFormat(id: "
 
-    const/4 v0, 0x0
+    iget-object v3, p0, Lx30;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Ly30;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v4, p0, Lx30;->b:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v2, v3, v0, v4, v1}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    move-result-object v0
+
+    iget-object v1, p0, Lx30;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitrate: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lx30;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sampleRate: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channelCount: "
+
+    const-string v2, ", label: "
+
+    iget v3, p0, Lx30;->e:I
+
+    iget v4, p0, Lx30;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lmb3;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget-object v1, p0, Lx30;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", language: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx30;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

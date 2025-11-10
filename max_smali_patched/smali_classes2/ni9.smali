@@ -1,48 +1,48 @@
 .class public final Lni9;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lwi9;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public final synthetic Y:Ly30;
+.field public final b:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Ly30;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
-    iput-object p1, p0, Lni9;->Y:Ly30;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lni9;->a:J
+
+    iput-wide p3, p0, Lni9;->b:J
+
+    iput-wide p5, p0, Lni9;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Z
     .locals 1
 
-    iput-object p1, p0, Lni9;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lni9;->X:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final j()J
+    .locals 2
 
-    or-int/2addr p1, v0
+    iget-wide v0, p0, Lni9;->a:J
 
-    iput p1, p0, Lni9;->X:I
-
-    iget-object p1, p0, Lni9;->Y:Ly30;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ly30;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method

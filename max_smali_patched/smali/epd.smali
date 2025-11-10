@@ -1,49 +1,119 @@
-.class public final Lepd;
-.super Lnz3;
+.class public abstract Lepd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lfpd;
-
-.field public Z:I
-
-.field public o:Lfpd;
+# interfaces
+.implements Lzv4;
 
 
 # direct methods
-.method public constructor <init>(Lfpd;Lnz3;)V
-    .locals 0
+.method public static a(Ljava/util/concurrent/TimeUnit;)J
+    .locals 3
 
-    iput-object p1, p0, Lepd;->Y:Lfpd;
+    sget-boolean v0, Lgpd;->a:Z
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    if-nez v0, :cond_0
 
-    return-void
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public b(Ljava/lang/Runnable;)Lzv4;
+    .locals 3
 
-    iput-object p1, p0, Lepd;->X:Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    iget p1, p0, Lepd;->Z:I
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lepd;->Z:I
-
-    iget-object p1, p0, Lepd;->Y:Lfpd;
-
-    invoke-virtual {p1, p0}, Lfpd;->d(Lnz3;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0, v1, v2}, Lepd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public abstract c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+.end method
+
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lzv4;
+    .locals 15
+
+    move-wide/from16 v0, p2
+
+    move-object/from16 v2, p6
+
+    new-instance v3, La32;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v4}, La32;-><init>(I)V
+
+    new-instance v12, La32;
+
+    invoke-direct {v12, v3}, La32;-><init>(La32;)V
+
+    move-wide/from16 v4, p4
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v13
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v4}, Lepd;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v10
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v4
+
+    add-long v7, v4, v10
+
+    new-instance v5, Ldpd;
+
+    move-object v6, p0
+
+    move-object/from16 v9, p1
+
+    invoke-direct/range {v5 .. v14}, Ldpd;-><init>(Lepd;JLjava/lang/Runnable;JLa32;J)V
+
+    invoke-virtual {p0, v5, v0, v1, v2}, Lepd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+
+    move-result-object v0
+
+    sget-object v1, Lia5;->a:Lia5;
+
+    if-ne v0, v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-static {v3, v0}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
+
+    return-object v12
 .end method

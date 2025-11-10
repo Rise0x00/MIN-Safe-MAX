@@ -1,98 +1,129 @@
-.class public final synthetic Lnj1;
+.class public final Lnj1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxe6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final b:Lirf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
+.method public constructor <init>(ILirf;)V
     .locals 0
 
-    iput p2, p0, Lnj1;->a:I
-
-    iput-object p1, p0, Lnj1;->b:Lone/me/calls/ui/ui/call/CallScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lnj1;->a:I
+
+    iput-object p2, p0, Lnj1;->b:Lirf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lnj1;->a:I
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Loyf;->a:Loyf;
-
-    iget-object v2, p0, Lnj1;->b:Lone/me/calls/ui/ui/call/CallScreen;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->S0:Lza8;
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lxm1;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lxm1;->v(Z)V
+    goto :goto_1
 
     :cond_0
-    return-object v1
+    instance-of v0, p1, Lnj1;
 
-    :pswitch_0
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, v2, Lone/me/calls/ui/ui/call/CallScreen;->y0:Z
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lxm1;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lxm1;->v(Z)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->S0:Lza8;
+    check-cast p1, Lnj1;
+
+    iget v0, p0, Lnj1;->a:I
+
+    iget v1, p1, Lnj1;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
 
     :cond_2
+    iget-object v0, p0, Lnj1;->b:Lirf;
+
+    iget-object p1, p1, Lnj1;->b:Lirf;
+
+    invoke-virtual {v0, p1}, Lirf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
     :goto_0
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/call/CallScreen;->J0()Llib;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
 
-    invoke-virtual {p1}, Llib;->c()V
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object v1
+    return p1
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget v0, p0, Lnj1;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnj1;->b:Lirf;
+
+    iget v1, v1, Lirf;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChipData(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lnj1;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnj1;->b:Lirf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
+.implements Law0;
 
 
 # instance fields

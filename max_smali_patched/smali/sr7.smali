@@ -1,25 +1,24 @@
-.class public final Lsr7;
-.super Lu65;
+.class public interface abstract Lsr7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# interfaces
+.implements Lpr7;
+.implements Ljj6;
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public abstract isExternal()Z
+.end method
 
-    sget p2, Lf1d;->b:I
+.method public abstract isInfix()Z
+.end method
 
-    invoke-static {p1}, Ld1d;->b(Landroid/app/Activity;)V
+.method public abstract isInline()Z
+.end method
 
-    return-void
+.method public abstract isOperator()Z
+.end method
+
+.method public abstract isSuspend()Z
 .end method

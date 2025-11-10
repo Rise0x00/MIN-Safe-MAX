@@ -1,99 +1,1218 @@
 .class public final Lii4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lnxc;
+.field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/view/View;
+.field public final c:Ljava/lang/Object;
 
-.field public final synthetic d:I
+.field public final d:Ljava/lang/Object;
 
-.field public final synthetic e:Landroid/view/ViewPropertyAnimator;
+.field public final e:Ljava/lang/Object;
 
-.field public final synthetic f:Lmi4;
+.field public final f:J
+
+.field public final g:J
 
 
 # direct methods
-.method public constructor <init>(Lmi4;Lnxc;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
+.method public synthetic constructor <init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Lii4;->f:Lmi4;
+    iput p9, p0, Lii4;->a:I
 
-    iput-object p2, p0, Lii4;->a:Lnxc;
+    iput-wide p1, p0, Lii4;->f:J
 
-    iput p3, p0, Lii4;->b:I
+    iput-object p3, p0, Lii4;->c:Ljava/lang/Object;
 
-    iput-object p4, p0, Lii4;->c:Landroid/view/View;
+    iput-object p4, p0, Lii4;->d:Ljava/lang/Object;
 
-    iput p5, p0, Lii4;->d:I
+    iput-wide p6, p0, Lii4;->g:J
 
-    iput-object p6, p0, Lii4;->e:Landroid/view/ViewPropertyAnimator;
+    iput-object p5, p0, Lii4;->b:Ljava/lang/Object;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p8, p0, Lii4;->e:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+.method public a(JLvbd;)Lii4;
+    .locals 19
 
-    iget p1, p0, Lii4;->b:I
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x0
+    iget-object v1, v0, Lii4;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Lii4;->c:Landroid/view/View;
+    check-cast v1, Lvbd;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v1}, Lvbd;->c()Lab4;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationX(F)V
+    move-result-object v9
+
+    move-object v1, v9
+
+    invoke-virtual/range {p3 .. p3}, Lvbd;->c()Lab4;
+
+    move-result-object v9
+
+    if-nez v1, :cond_0
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Lil0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lew0;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x2
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
 
     :cond_0
-    iget p1, p0, Lii4;->d:I
+    move-object/from16 v18, v9
 
-    if-eqz p1, :cond_1
+    move-object v9, v1
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    move-object/from16 v1, v18
+
+    invoke-interface {v9}, Lab4;->A()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Lil0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lew0;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x2
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
 
     :cond_1
-    return-void
+    move-object v2, v9
+
+    move-object v9, v1
+
+    move-object v1, v2
+
+    move-wide/from16 v2, p1
+
+    invoke-interface {v1, v2, v3}, Lab4;->D(J)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v4, v6
+
+    if-nez v6, :cond_2
+
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Lil0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lew0;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x2
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_2
+    invoke-interface {v1}, Lab4;->C()J
+
+    move-result-wide v6
+
+    invoke-interface {v1, v6, v7}, Lab4;->b(J)J
+
+    move-result-wide v10
+
+    add-long/2addr v4, v6
+
+    const-wide/16 v12, 0x1
+
+    sub-long v12, v4, v12
+
+    invoke-interface {v1, v12, v13}, Lab4;->b(J)J
+
+    move-result-wide v14
+
+    invoke-interface {v1, v12, v13, v2, v3}, Lab4;->d(JJ)J
+
+    move-result-wide v12
+
+    add-long/2addr v12, v14
+
+    invoke-interface {v9}, Lab4;->C()J
+
+    move-result-wide v14
+
+    move-wide/from16 v16, v4
+
+    invoke-interface {v9, v14, v15}, Lab4;->b(J)J
+
+    move-result-wide v4
+
+    cmp-long v8, v12, v4
+
+    iget-wide v12, v0, Lii4;->g:J
+
+    if-nez v8, :cond_3
+
+    sub-long v4, v16, v14
+
+    :goto_0
+    add-long/2addr v4, v12
+
+    :goto_1
+    move-wide v7, v4
+
+    goto :goto_2
+
+    :cond_3
+    if-ltz v8, :cond_5
+
+    cmp-long v8, v4, v10
+
+    if-gez v8, :cond_4
+
+    invoke-interface {v9, v10, v11, v2, v3}, Lab4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v6
+
+    sub-long v4, v12, v4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-interface {v1, v4, v5, v2, v3}, Lab4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v14
+
+    goto :goto_0
+
+    :goto_2
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Lil0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lew0;
+
+    const/4 v10, 0x2
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_5
+    new-instance v1, Lcom/google/android/exoplayer2/source/BehindLiveWindowException;
+
+    invoke-direct {v1}, Lcom/google/android/exoplayer2/source/BehindLiveWindowException;-><init>()V
+
+    throw v1
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public b(JLwbd;)Lii4;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lii4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lwbd;
+
+    invoke-virtual {v1}, Lwbd;->c()Lbb4;
+
+    move-result-object v9
+
+    move-object v1, v9
+
+    invoke-virtual/range {p3 .. p3}, Lwbd;->c()Lbb4;
+
+    move-result-object v9
+
+    if-nez v1, :cond_0
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Ljl0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x0
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_0
+    move-object/from16 v18, v9
+
+    move-object v9, v1
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v9}, Lbb4;->A()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Ljl0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x0
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v2, v9
+
+    move-object v9, v1
+
+    move-object v1, v2
+
+    move-wide/from16 v2, p1
+
+    invoke-interface {v1, v2, v3}, Lbb4;->D(J)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v4, v6
+
+    if-nez v6, :cond_2
+
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Ljl0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x0
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_2
+    invoke-static {v9}, Ligi;->i(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lbb4;->C()J
+
+    move-result-wide v6
+
+    invoke-interface {v1, v6, v7}, Lbb4;->b(J)J
+
+    move-result-wide v10
+
+    add-long/2addr v4, v6
+
+    const-wide/16 v12, 0x1
+
+    sub-long v12, v4, v12
+
+    invoke-interface {v1, v12, v13}, Lbb4;->b(J)J
+
+    move-result-wide v14
+
+    invoke-interface {v1, v12, v13, v2, v3}, Lbb4;->d(JJ)J
+
+    move-result-wide v12
+
+    add-long/2addr v12, v14
+
+    invoke-interface {v9}, Lbb4;->C()J
+
+    move-result-wide v14
+
+    move-wide/from16 v16, v4
+
+    invoke-interface {v9, v14, v15}, Lbb4;->b(J)J
+
+    move-result-wide v4
+
+    cmp-long v8, v12, v4
+
+    iget-wide v12, v0, Lii4;->g:J
+
+    if-nez v8, :cond_3
+
+    sub-long v4, v16, v14
+
+    :goto_0
+    add-long/2addr v4, v12
+
+    :goto_1
+    move-wide v7, v4
+
+    goto :goto_2
+
+    :cond_3
+    if-ltz v8, :cond_5
+
+    cmp-long v8, v4, v10
+
+    if-gez v8, :cond_4
+
+    invoke-interface {v9, v10, v11, v2, v3}, Lbb4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v6
+
+    sub-long v4, v12, v4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-interface {v1, v4, v5, v2, v3}, Lbb4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v14
+
+    goto :goto_0
+
+    :goto_2
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Ljl0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lc63;
+
+    const/4 v10, 0x0
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_5
+    new-instance v1, Landroidx/media3/exoplayer/source/BehindLiveWindowException;
+
+    invoke-direct {v1}, Landroidx/media3/exoplayer/source/BehindLiveWindowException;-><init>()V
+
+    throw v1
+.end method
+
+.method public c(JLwbd;)Lii4;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lii4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lwbd;
+
+    invoke-virtual {v1}, Lwbd;->c()Lbb4;
+
+    move-result-object v9
+
+    move-object v1, v9
+
+    invoke-virtual/range {p3 .. p3}, Lwbd;->c()Lbb4;
+
+    move-result-object v9
+
+    if-nez v1, :cond_0
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Ljl0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x1
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_0
+    move-object/from16 v18, v9
+
+    move-object v9, v1
+
+    move-object/from16 v1, v18
+
+    invoke-interface {v9}, Lbb4;->A()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    move-object v9, v1
+
+    new-instance v1, Lii4;
+
+    iget-object v2, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v2
+
+    check-cast v5, Ljl0;
+
+    iget-object v2, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v2
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x1
+
+    move-wide/from16 v2, p1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v2, v9
+
+    move-object v9, v1
+
+    move-object v1, v2
+
+    move-wide/from16 v2, p1
+
+    invoke-interface {v1, v2, v3}, Lbb4;->D(J)J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v4, v6
+
+    if-nez v6, :cond_2
+
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Ljl0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lc63;
+
+    iget-wide v7, v0, Lii4;->g:J
+
+    const/4 v10, 0x1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_2
+    invoke-static {v9}, Ligi;->i(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lbb4;->C()J
+
+    move-result-wide v6
+
+    invoke-interface {v1, v6, v7}, Lbb4;->b(J)J
+
+    move-result-wide v10
+
+    add-long/2addr v4, v6
+
+    const-wide/16 v12, 0x1
+
+    sub-long v12, v4, v12
+
+    invoke-interface {v1, v12, v13}, Lbb4;->b(J)J
+
+    move-result-wide v14
+
+    invoke-interface {v1, v12, v13, v2, v3}, Lbb4;->d(JJ)J
+
+    move-result-wide v12
+
+    add-long/2addr v12, v14
+
+    invoke-interface {v9}, Lbb4;->C()J
+
+    move-result-wide v14
+
+    move-wide/from16 v16, v4
+
+    invoke-interface {v9, v14, v15}, Lbb4;->b(J)J
+
+    move-result-wide v4
+
+    cmp-long v8, v12, v4
+
+    iget-wide v12, v0, Lii4;->g:J
+
+    if-nez v8, :cond_3
+
+    sub-long v4, v16, v14
+
+    :goto_0
+    add-long/2addr v4, v12
+
+    :goto_1
+    move-wide v7, v4
+
+    goto :goto_2
+
+    :cond_3
+    if-ltz v8, :cond_5
+
+    cmp-long v8, v4, v10
+
+    if-gez v8, :cond_4
+
+    invoke-interface {v9, v10, v11, v2, v3}, Lbb4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v6
+
+    sub-long v4, v12, v4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-interface {v1, v4, v5, v2, v3}, Lbb4;->u(JJ)J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v14
+
+    goto :goto_0
+
+    :goto_2
+    new-instance v1, Lii4;
+
+    iget-object v4, v0, Lii4;->d:Ljava/lang/Object;
+
+    move-object v5, v4
+
+    check-cast v5, Ljl0;
+
+    iget-object v4, v0, Lii4;->b:Ljava/lang/Object;
+
+    move-object v6, v4
+
+    check-cast v6, Lc63;
+
+    const/4 v10, 0x1
+
+    move-object/from16 v4, p3
+
+    invoke-direct/range {v1 .. v10}, Lii4;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    return-object v1
+
+    :cond_5
+    new-instance v1, Landroidx/media3/exoplayer/source/BehindLiveWindowException;
+
+    invoke-direct {v1}, Landroidx/media3/exoplayer/source/BehindLiveWindowException;-><init>()V
+
+    throw v1
+.end method
+
+.method public d(J)J
+    .locals 3
+
+    iget v0, p0, Lii4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, v1, v2, p1, p2}, Lbb4;->h(JJ)J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lii4;->g:J
+
+    :goto_0
+    add-long/2addr p1, v0
+
+    return-wide p1
+
+    :pswitch_0
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, v1, v2, p1, p2}, Lbb4;->h(JJ)J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lii4;->g:J
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(J)J
+    .locals 7
+
+    iget v0, p0, Lii4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lab4;
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, v1, v2, p1, p2}, Lab4;->h(JJ)J
+
+    move-result-wide v3
+
+    iget-wide v5, p0, Lii4;->g:J
+
+    add-long/2addr v3, v5
+
+    invoke-interface {v0, v1, v2, p1, p2}, Lab4;->E(JJ)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v3
+
+    :goto_0
+    const-wide/16 v0, 0x1
+
+    sub-long/2addr p1, v0
+
+    return-wide p1
+
+    :pswitch_0
+    invoke-virtual {p0, p1, p2}, Lii4;->d(J)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v2, Lbb4;
+
+    invoke-static {v2}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lii4;->f:J
+
+    invoke-interface {v2, v3, v4, p1, p2}, Lbb4;->E(JJ)J
+
+    move-result-wide p1
+
+    :goto_1
+    add-long/2addr p1, v0
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {p0, p1, p2}, Lii4;->d(J)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v2, Lbb4;
+
+    invoke-static {v2}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lii4;->f:J
+
+    invoke-interface {v2, v3, v4, p1, p2}, Lbb4;->E(JJ)J
+
+    move-result-wide p1
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f()J
+    .locals 3
+
+    iget v0, p0, Lii4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, v1, v2}, Lbb4;->D(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, v1, v2}, Lbb4;->D(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g(J)J
+    .locals 5
+
+    iget v0, p0, Lii4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0, p1, p2}, Lii4;->i(J)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v2, Lab4;
+
+    iget-wide v3, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v3
+
+    iget-wide v3, p0, Lii4;->f:J
+
+    invoke-interface {v2, p1, p2, v3, v4}, Lab4;->d(JJ)J
+
+    move-result-wide p1
+
+    :goto_0
+    add-long/2addr p1, v0
+
+    return-wide p1
+
+    :pswitch_0
+    invoke-virtual {p0, p1, p2}, Lii4;->i(J)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v2, Lbb4;
+
+    invoke-static {v2}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v3
+
+    iget-wide v3, p0, Lii4;->f:J
+
+    invoke-interface {v2, p1, p2, v3, v4}, Lbb4;->d(JJ)J
+
+    move-result-wide p1
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {p0, p1, p2}, Lii4;->i(J)J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v2, Lbb4;
+
+    invoke-static {v2}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v3
+
+    iget-wide v3, p0, Lii4;->f:J
+
+    invoke-interface {v2, p1, p2, v3, v4}, Lbb4;->d(JJ)J
+
+    move-result-wide p1
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(J)J
+    .locals 3
+
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->f:J
+
+    invoke-interface {v0, p1, p2, v1, v2}, Lbb4;->u(JJ)J
+
+    move-result-wide p1
+
+    iget-wide v0, p0, Lii4;->g:J
+
+    add-long/2addr p1, v0
+
+    return-wide p1
+.end method
+
+.method public final i(J)J
+    .locals 3
+
+    iget v0, p0, Lii4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lab4;
+
+    iget-wide v1, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v1
+
+    invoke-interface {v0, p1, p2}, Lab4;->b(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :pswitch_0
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v1
+
+    invoke-interface {v0, p1, p2}, Lbb4;->b(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :pswitch_1
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v1, p0, Lii4;->g:J
+
+    sub-long/2addr p1, v1
+
+    invoke-interface {v0, p1, p2}, Lbb4;->b(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(JJ)Z
     .locals 2
 
-    iget-object p1, p0, Lii4;->e:Landroid/view/ViewPropertyAnimator;
+    iget v0, p0, Lii4;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
 
-    iget-object p1, p0, Lii4;->f:Lmi4;
+    check-cast v0, Lbb4;
 
-    iget-object v0, p0, Lii4;->a:Lnxc;
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Luwc;->c(Lnxc;)V
+    invoke-interface {v0}, Lbb4;->A()Z
 
-    iget-object v1, p1, Lmi4;->p:Ljava/util/ArrayList;
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lmi4;->j()V
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    cmp-long v0, p3, v0
 
-    iget-object p1, p0, Lii4;->f:Lmi4;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, p1, p2}, Lii4;->g(J)J
 
-    return-void
+    move-result-wide p1
+
+    cmp-long p1, p1, p3
+
+    if-gtz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lii4;->e:Ljava/lang/Object;
+
+    check-cast v0, Lbb4;
+
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lbb4;->A()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, p3, v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {p0, p1, p2}, Lii4;->g(J)J
+
+    move-result-wide p1
+
+    cmp-long p1, p1, p3
+
+    if-gtz p1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x0
+
+    goto :goto_3
+
+    :cond_5
+    :goto_2
+    const/4 p1, 0x1
+
+    :goto_3
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

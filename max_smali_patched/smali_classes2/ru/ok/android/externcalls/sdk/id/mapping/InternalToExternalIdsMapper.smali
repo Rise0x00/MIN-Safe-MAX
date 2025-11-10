@@ -11,7 +11,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper<",
-        "Lxg1;",
+        "Lsh1;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         ">;"
     }
@@ -24,20 +24,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/id/mapping/InternalToExternalIdsMapper;",
         "Lru/ok/android/externcalls/sdk/id/mapping/IdsMapper;",
-        "Lxg1;",
+        "Lsh1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
-        "Lru/ok/android/externcalls/sdk/api/OkApiService;",
+        "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
         "okApiService",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/OkApiService;)V",
+        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;)V",
         "",
         "from",
         "",
         "map",
         "(Ljava/util/Collection;)Ljava/util/Map;",
-        "Lru/ok/android/externcalls/sdk/api/OkApiService;",
+        "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -51,16 +51,16 @@
 
 
 # instance fields
-.field private final okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+.field private final okApiService:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiService;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/id/mapping/InternalToExternalIdsMapper;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/id/mapping/InternalToExternalIdsMapper;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
     return-void
 .end method
@@ -73,16 +73,16 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lxg1;",
+            "Lsh1;",
             ">;)",
             "Ljava/util/Map<",
-            "Lxg1;",
+            "Lsh1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
     .end annotation
 
-    sget-boolean v0, Lim9;->a:Z
+    sget-boolean v0, Lbt9;->a:Z
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -104,18 +104,18 @@
 
     if-eqz v0, :cond_0
 
-    sget-object p1, Lc75;->a:Lc75;
+    sget-object p1, Loa5;->a:Loa5;
 
     return-object p1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/mapping/InternalToExternalIdsMapper;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiService;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/mapping/InternalToExternalIdsMapper;->okApiService:Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getExternalIdsByOkIds(Ljava/util/Collection;)Lude;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getExternalIdsByOkIds(Ljava/util/Collection;)Ljqe;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lude;->e()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljqe;->e()Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,146 +1,111 @@
 .class public final Ljm;
-.super Lx;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ljm;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public Y:F
+.field public final b:Lihd;
 
-.field public Z:Z
+.field public final c:Lkl;
 
-.field public c:Z
-
-.field public o:Z
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lihd;Lkl;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lw;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Ljm;->b:Lihd;
 
-    invoke-direct {v0, v1}, Lw;-><init>(I)V
+    iput-object p2, p0, Ljm;->c:Lkl;
 
-    sput-object v0, Ljm;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p3, p0, Ljm;->d:Ljava/lang/String;
 
-    return-void
-.end method
+    filled-new-array {p1, p2, p3}, [Ljava/lang/Object;
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 2
+    move-result-object p1
 
-    invoke-direct {p0, p1, p2}, Lx;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    iput-boolean p2, p0, Ljm;->c:Z
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    move p2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move p2, v0
-
-    :goto_1
-    iput-boolean p2, p0, Ljm;->o:Z
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p2
-
-    iput p2, p0, Ljm;->X:I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
-
-    move-result p2
-
-    iput p2, p0, Ljm;->Y:F
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+    invoke-static {p1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p1
 
-    if-eqz p1, :cond_2
-
-    move v0, v1
-
-    :cond_2
-    iput-boolean v0, p0, Ljm;->Z:Z
+    iput p1, p0, Ljm;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-super {p0, p1, p2}, Lx;->writeToParcel(Landroid/os/Parcel;I)V
+    const/4 v0, 0x0
 
-    iget-boolean p2, p0, Ljm;->c:Z
+    if-nez p1, :cond_0
 
-    int-to-byte p2, p2
+    return v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    :cond_0
+    const/4 v1, 0x1
 
-    iget-boolean p2, p0, Ljm;->o:Z
+    if-ne p1, p0, :cond_1
 
-    int-to-byte p2, p2
+    return v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    :cond_1
+    instance-of v2, p1, Ljm;
 
-    iget p2, p0, Ljm;->X:I
+    if-nez v2, :cond_2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    return v0
 
-    iget p2, p0, Ljm;->Y:F
+    :cond_2
+    check-cast p1, Ljm;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    iget-object v2, p0, Ljm;->b:Lihd;
 
-    iget-boolean p2, p0, Ljm;->Z:Z
+    iget-object v3, p1, Ljm;->b:Lihd;
 
-    int-to-byte p2, p2
+    invoke-static {v2, v3}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    move-result v2
 
-    return-void
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Ljm;->c:Lkl;
+
+    iget-object v3, p1, Ljm;->c:Lkl;
+
+    invoke-static {v2, v3}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Ljm;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Ljm;->d:Ljava/lang/String;
+
+    invoke-static {v2, p1}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ljm;->a:I
+
+    return v0
 .end method

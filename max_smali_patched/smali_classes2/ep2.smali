@@ -1,67 +1,77 @@
 .class public final Lep2;
-.super Lnz3;
+.super Lrj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
+.field public final b:Ljava/lang/String;
 
-.field public Y:J
+.field public final c:Ljava/util/List;
 
-.field public Z:J
+.field public final d:J
 
-.field public o:Lfp2;
-
-.field public w0:Z
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Lfp2;
-
-.field public z0:I
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lfp2;Lnz3;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;JI)V
     .locals 0
 
-    iput-object p1, p0, Lep2;->y0:Lfp2;
+    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lep2;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lep2;->c:Ljava/util/List;
+
+    iput-wide p5, p0, Lep2;->d:J
+
+    iput p7, p0, Lep2;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lep2;->x0:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lep2;->z0:I
+    const-string v1, "ChatMessageSearchResultEvent{query=\'"
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lep2;->b:Ljava/lang/String;
 
-    iput p1, p0, Lep2;->z0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v5, 0x0
+    const-string v1, "\', results="
 
-    const/4 v7, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lep2;->y0:Lfp2;
+    iget-object v1, p0, Lep2;->c:Ljava/util/List;
 
-    const-wide/16 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-wide/16 v3, 0x0
+    const-string v1, ", marker="
 
-    move-object v8, p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v0 .. v8}, Lfp2;->a(JJJZLnz3;)Ljava/lang/Object;
+    iget-wide v1, p0, Lep2;->d:J
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", total="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lep2;->o:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

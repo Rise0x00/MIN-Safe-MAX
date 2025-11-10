@@ -1,23 +1,17 @@
-.class public abstract Ly44;
+.class public interface abstract Ly44;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+# virtual methods
+.method public abstract fold(Ljava/lang/Object;Lej6;)Ljava/lang/Object;
+.end method
 
+.method public abstract get(Lx44;)Lw44;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public abstract minusKey(Lx44;)Ly44;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Ly44;->a:Ljava/util/LinkedHashMap;
-
-    return-void
+.method public abstract plus(Ly44;)Ly44;
 .end method

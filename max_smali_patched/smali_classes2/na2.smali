@@ -1,270 +1,236 @@
 .class public final Lna2;
-.super Lxl;
+.super Lbj2;
 .source "SourceFile"
-
-# interfaces
-.implements Loaf;
-.implements Lcab;
 
 
 # instance fields
-.field public final X:J
-
-.field public final Y:J
-
-.field public final Z:Z
-
-.field public final o:J
+.field public final synthetic E0:I
 
 
 # direct methods
-.method public constructor <init>(JJJJZ)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    iput p2, p0, Lna2;->E0:I
 
-    iput-wide p3, p0, Lna2;->o:J
-
-    iput-wide p5, p0, Lna2;->X:J
-
-    iput-wide p7, p0, Lna2;->Y:J
-
-    iput-boolean p9, p0, Lna2;->Z:Z
+    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
+.method public E()V
     .locals 3
 
-    invoke-virtual {p0}, Lxl;->m()Lub2;
+    iget v0, p0, Lna2;->E0:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lna2;->o:J
+    :pswitch_0
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
+    :pswitch_1
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    move-result-object v0
+    check-cast v0, Lsk2;
 
-    if-eqz v0, :cond_1
+    iget-object v1, v0, Lsk2;->I0:Lt40;
 
-    iget-object v0, v0, Lm82;->b:Lpc2;
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    iget-object v0, v0, Lpc2;->c:Lnc2;
+    iget-object v1, v0, Lsk2;->J0:Lgye;
 
-    sget-object v1, Lnc2;->o:Lnc2;
+    const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    sget-object v1, Lnc2;->X:Lnc2;
-
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v1, v2}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    const/4 v0, 0x3
+    iput-object v2, v0, Lsk2;->J0:Lgye;
 
-    return v0
+    iput-object v2, v0, Lsk2;->K0:Ljava/lang/Long;
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+
+    check-cast v0, Lgh2;
+
+    iget-object v1, v0, Lgh2;->I0:Lt40;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object v1, v0, Lgh2;->J0:Lt40;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object v1, v0, Lgh2;->K0:Lgye;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, v2}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_1
-    const/4 v0, 0x1
+    iput-object v2, v0, Lgh2;->K0:Lgye;
 
-    return v0
-.end method
+    iget-object v1, v0, Lgh2;->L0:Lgye;
 
-.method public final d(Ll9f;)V
-    .locals 4
+    if-eqz v1, :cond_2
 
-    iget-object p1, p0, Lxl;->c:Lyl;
+    invoke-virtual {v1, v2}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    if-eqz p1, :cond_0
+    :cond_2
+    iput-object v2, v0, Lgh2;->L0:Lgye;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iget-object p1, p1, Lyl;->L:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lv53;
-
-    iget-wide v0, p0, Lna2;->o:J
-
-    iget-wide v2, p0, Lna2;->Y:J
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Lv53;->a(JJ)V
+    iput-object v2, v0, Lgh2;->M0:Ljava/lang/Long;
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final e(Lv8f;)V
-    .locals 0
-
-    instance-of p1, p1, Lm8f;
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lna2;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 10
-
-    invoke-virtual {p0}, Lxl;->s()Licf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Licf;->d(J)V
-
-    invoke-virtual {p0}, Lxl;->o()Lo49;
-
-    move-result-object v3
-
-    iget-wide v6, p0, Lna2;->Y:J
-
-    sget-object v8, Lg89;->b:Lg89;
-
-    iget-wide v4, p0, Lna2;->o:J
-
-    invoke-virtual/range {v3 .. v8}, Lo49;->x(JJLg89;)V
-
-    invoke-virtual {p0}, Lxl;->m()Lub2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lna2;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lub2;->w(J)V
-
-    invoke-virtual {p0}, Lxl;->l()Lov0;
-
-    move-result-object v0
-
-    new-instance v3, La33;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x7c
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v3 .. v9}, La33;-><init>(Ljava/util/Collection;ZZLhn4;Lrqb;I)V
-
-    invoke-virtual {v0, v3}, Lov0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g()[B
+.method public final F(Lj49;Lqi6;Lej6;)V
     .locals 3
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatClear;
+    iget v0, p0, Lna2;->E0:I
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatClear;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lxl;->a:J
+    check-cast p1, Li49;
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->requestId:J
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    iget-wide v1, p0, Lna2;->o:J
+    check-cast v0, Lsk2;
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->chatId:J
+    iget-wide v1, p1, Li49;->a:J
 
-    iget-wide v1, p0, Lna2;->X:J
+    long-to-int v1, v1
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->chatServerId:J
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    iget-wide v1, p0, Lna2;->Y:J
+    invoke-virtual {v0, p1}, Lsk2;->setupVideo(Li49;)V
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->lastEventTime:J
+    invoke-super {p0, p1, p2, p3}, Lbj2;->F(Lj49;Lqi6;Lej6;)V
 
-    iget-boolean v1, p0, Lna2;->Z:Z
+    return-void
 
-    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClear;->forAll:Z
+    :pswitch_0
+    check-cast p1, Lh49;
 
-    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    move-result-object v0
+    check-cast v0, Lck2;
 
-    return-object v0
+    iget-wide v1, p1, Lh49;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {v0, p1}, Lck2;->setItem(Lh49;)V
+
+    invoke-super {p0, p1, p2, p3}, Lbj2;->F(Lj49;Lqi6;Lej6;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p1, Le49;
+
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+
+    check-cast v0, Lgh2;
+
+    iget-wide v1, p1, Le49;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    invoke-virtual {v0, p1}, Lgh2;->setupAudio(Le49;)V
+
+    invoke-super {p0, p1, p2, p3}, Lbj2;->F(Lj49;Lqi6;Lej6;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getId()J
-    .locals 2
+.method public final z(Li28;)V
+    .locals 3
 
-    iget-wide v0, p0, Lxl;->a:J
+    iget v0, p0, Lna2;->E0:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getType()Ldab;
-    .locals 1
+    check-cast p1, Li49;
 
-    sget-object v0, Ldab;->y0:Ldab;
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    return-object v0
-.end method
+    check-cast v0, Lsk2;
 
-.method public final h()I
-    .locals 1
+    iget-wide v1, p1, Li49;->a:J
 
-    const v0, 0xf4240
+    long-to-int v1, v1
 
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-.method public final i()Li9f;
-    .locals 4
+    invoke-virtual {v0, p1}, Lsk2;->setupVideo(Li49;)V
 
-    new-instance v0, Llt;
+    return-void
 
-    const/4 v1, 0x0
+    :pswitch_0
+    check-cast p1, Lh49;
 
-    const/16 v2, 0x1a
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    invoke-direct {v0, v1, v2}, Llt;-><init>(Ln0b;I)V
+    check-cast v0, Lck2;
 
-    const-string v1, "chatId"
+    iget-wide v1, p1, Lh49;->a:J
 
-    iget-wide v2, p0, Lna2;->X:J
+    long-to-int v1, v1
 
-    invoke-virtual {v0, v2, v3, v1}, Li9f;->j(JLjava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    const-string v1, "lastEventTime"
+    invoke-virtual {v0, p1}, Lck2;->setItem(Lh49;)V
 
-    iget-wide v2, p0, Lna2;->Y:J
+    return-void
 
-    invoke-virtual {v0, v2, v3, v1}, Li9f;->j(JLjava/lang/String;)V
+    :pswitch_1
+    check-cast p1, Le49;
 
-    const-string v1, "forAll"
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    iget-boolean v2, p0, Lna2;->Z:Z
+    check-cast v0, Lgh2;
 
-    invoke-virtual {v0, v1, v2}, Li9f;->e(Ljava/lang/String;Z)V
+    iget-wide v1, p1, Le49;->a:J
 
-    return-object v0
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    invoke-virtual {v0, p1}, Lgh2;->setupAudio(Le49;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

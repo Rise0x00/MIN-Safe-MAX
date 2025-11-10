@@ -1,23 +1,28 @@
-.class public final Lwr9;
+.class public abstract Lwr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lin6;
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lin6;J)V
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwr9;->a:Lin6;
+    iput p1, p0, Lwr9;->a:I
 
-    iput-wide p2, p0, Lwr9;->b:J
+    iput p2, p0, Lwr9;->b:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Lbh6;)V
 .end method

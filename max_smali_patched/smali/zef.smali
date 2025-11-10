@@ -1,176 +1,217 @@
 .class public final Lzef;
-.super Ljava/lang/Object;
+.super Landroid/view/ActionMode;
 .source "SourceFile"
 
-# interfaces
-.implements Lqfa;
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lq7;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lq7;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
+
+    iput-object p1, p0, Lzef;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lzef;->b:Lq7;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Ldy3;)Ldy3;
-    .locals 9
+.method public final finish()V
+    .locals 1
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    const-string v1, "ReceiveContent"
+    invoke-virtual {v0}, Lq7;->a()V
 
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    return-void
+.end method
 
-    move-result v0
+.method public final getCustomView()Landroid/view/View;
+    .locals 1
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "onReceive: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lq7;->b()Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    return-object v0
+.end method
 
-    :cond_0
-    iget-object v0, p2, Ldy3;->a:Lcy3;
+.method public final getMenu()Landroid/view/Menu;
+    .locals 3
 
-    invoke-interface {v0}, Lcy3;->l()I
+    new-instance v0, Lc99;
 
-    move-result v1
+    iget-object v1, p0, Lzef;->b:Lq7;
 
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_1
-
-    return-object p2
-
-    :cond_1
-    invoke-interface {v0}, Lcy3;->b()Landroid/content/ClipData;
-
-    move-result-object p2
-
-    invoke-interface {v0}, Lcy3;->getFlags()I
-
-    move-result v0
-
-    check-cast p1, Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lq7;->c()Li89;
 
     move-result-object v1
 
-    check-cast v1, Landroid/text/Editable;
+    iget-object v2, p0, Lzef;->a:Landroid/content/Context;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {v0, v2, v1}, Lc99;-><init>(Landroid/content/Context;Li89;)V
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final getMenuInflater()Landroid/view/MenuInflater;
+    .locals 1
 
-    move v3, v2
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move v4, v3
+    invoke-virtual {v0}, Lq7;->d()Landroid/view/MenuInflater;
 
-    :goto_0
-    invoke-virtual {p2}, Landroid/content/ClipData;->getItemCount()I
+    move-result-object v0
 
-    move-result v5
+    return-object v0
+.end method
 
-    if-ge v3, v5, :cond_6
+.method public final getSubtitle()Ljava/lang/CharSequence;
+    .locals 1
 
-    invoke-virtual {p2, v3}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move-result-object v5
+    invoke-virtual {v0}, Lq7;->e()Ljava/lang/CharSequence;
 
-    const/4 v6, 0x1
+    move-result-object v0
 
-    and-int/lit8 v7, v0, 0x1
+    return-object v0
+.end method
 
-    if-eqz v7, :cond_2
+.method public final getTag()Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v5, p1}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move-result-object v5
+    iget-object v0, v0, Lq7;->a:Ljava/lang/Object;
 
-    instance-of v7, v5, Landroid/text/Spanned;
+    return-object v0
+.end method
 
-    if-eqz v7, :cond_3
+.method public final getTitle()Ljava/lang/CharSequence;
+    .locals 1
 
-    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move-result-object v5
+    invoke-virtual {v0}, Lq7;->f()Ljava/lang/CharSequence;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_2
-    invoke-virtual {v5, p1}, Landroid/content/ClipData$Item;->coerceToStyledText(Landroid/content/Context;)Ljava/lang/CharSequence;
+    return-object v0
+.end method
 
-    move-result-object v5
+.method public final getTitleOptionalHint()Z
+    .locals 1
 
-    :cond_3
-    :goto_1
-    if-eqz v5, :cond_5
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    if-nez v4, :cond_4
+    iget-boolean v0, v0, Lq7;->b:Z
 
-    invoke-static {v1}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+    return v0
+.end method
 
-    move-result v4
+.method public final invalidate()V
+    .locals 1
 
-    invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move-result v7
+    invoke-virtual {v0}, Lq7;->g()V
 
-    invoke-static {v4, v7}, Ljava/lang/Math;->min(II)I
+    return-void
+.end method
 
-    move-result v8
+.method public final isTitleOptional()Z
+    .locals 1
 
-    invoke-static {v2, v8}, Ljava/lang/Math;->max(II)I
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    move-result v8
+    invoke-virtual {v0}, Lq7;->i()Z
 
-    invoke-static {v4, v7}, Ljava/lang/Math;->max(II)I
+    move-result v0
 
-    move-result v4
+    return v0
+.end method
 
-    invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
+.method public final setCustomView(Landroid/view/View;)V
+    .locals 1
 
-    move-result v4
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    invoke-static {v1, v4}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    invoke-virtual {v0, p1}, Lq7;->j(Landroid/view/View;)V
 
-    invoke-interface {v1, v8, v4, v5}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
+    return-void
+.end method
 
-    move v4, v6
+.method public final setSubtitle(I)V
+    .locals 1
 
-    goto :goto_2
+    .line 2
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    :cond_4
-    invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    invoke-virtual {v0, p1}, Lq7;->k(I)V
 
-    move-result v6
+    return-void
+.end method
 
-    const-string v7, "\n"
+.method public final setSubtitle(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-interface {v1, v6, v7}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
+    .line 1
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    invoke-static {v1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    invoke-virtual {v0, p1}, Lq7;->l(Ljava/lang/CharSequence;)V
 
-    move-result v6
+    return-void
+.end method
 
-    invoke-interface {v1, v6, v5}, Landroid/text/Editable;->insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
+.method public final setTag(Ljava/lang/Object;)V
+    .locals 1
 
-    :cond_5
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
+    iget-object v0, p0, Lzef;->b:Lq7;
 
-    goto :goto_0
+    iput-object p1, v0, Lq7;->a:Ljava/lang/Object;
 
-    :cond_6
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    return-object p1
+.method public final setTitle(I)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lzef;->b:Lq7;
+
+    invoke-virtual {v0, p1}, Lq7;->m(I)V
+
+    return-void
+.end method
+
+.method public final setTitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lzef;->b:Lq7;
+
+    invoke-virtual {v0, p1}, Lq7;->n(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final setTitleOptionalHint(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lzef;->b:Lq7;
+
+    invoke-virtual {v0, p1}, Lq7;->o(Z)V
+
+    return-void
 .end method

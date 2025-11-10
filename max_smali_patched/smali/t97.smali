@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract b()Lm2a;
+.method public abstract a(I[B)Lu97;
 .end method
 
-.method public abstract isActive()Z
+.method public abstract b()I
 .end method

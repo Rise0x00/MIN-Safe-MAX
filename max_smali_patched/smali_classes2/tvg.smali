@@ -1,160 +1,69 @@
 .class public final Ltvg;
-.super Lvvg;
+.super Luvg;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltvg;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Lx7a;
-
-.field public final e:Z
+.field public final a:Lkhc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lx7a;Z)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lrvg;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lrvg;-><init>(I)V
+
+    sput-object v0, Ltvg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkhc;)V
     .locals 0
 
-    invoke-direct {p0}, Lik7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltvg;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Ltvg;->d:Lx7a;
-
-    iput-boolean p3, p0, Ltvg;->e:Z
+    iput-object p1, p0, Ltvg;->a:Lkhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltvg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ltvg;
-
-    iget-object v1, p0, Ltvg;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Ltvg;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ltvg;->d:Lx7a;
-
-    iget-object v3, p1, Ltvg;->d:Lx7a;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Ltvg;->e:Z
-
-    iget-boolean p1, p1, Ltvg;->e:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final f()Z
+.method public final describeContents()I
     .locals 1
 
-    iget-boolean v0, p0, Ltvg;->e:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v0, p0, Ltvg;->c:Ljava/lang/String;
+    iget-object p2, p0, Ltvg;->a:Lkhc;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p2
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltvg;->d:Lx7a;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Ltvg;->e:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Notification(queryId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltvg;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", notificationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltvg;->d:Lx7a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Ltvg;->e:Z
-
-    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

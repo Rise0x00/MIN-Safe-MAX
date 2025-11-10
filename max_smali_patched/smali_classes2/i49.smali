@@ -1,179 +1,366 @@
-.class public final synthetic Li49;
-.super Ljava/lang/Object;
+.class public final Li49;
+.super Lj49;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Lwje;
+
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:Landroid/net/Uri;
+
+.field public final s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+.method public constructor <init>(JJJLjava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Lwje;)V
     .locals 0
 
-    iput p2, p0, Li49;->a:I
-
-    iput-object p1, p0, Li49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Li49;->a:J
+
+    iput-wide p3, p0, Li49;->b:J
+
+    iput-wide p5, p0, Li49;->c:J
+
+    iput-object p7, p0, Li49;->d:Ljava/lang/String;
+
+    iput-object p8, p0, Li49;->o:Landroid/net/Uri;
+
+    iput-object p9, p0, Li49;->X:Ljava/lang/String;
+
+    iput-object p10, p0, Li49;->Y:Ljava/lang/String;
+
+    iput-object p11, p0, Li49;->Z:Lwje;
+
+    sget p1, Lioc;->profile_media_view_type_video_msg:I
+
+    iput p1, p0, Li49;->s0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    iget v0, p0, Li49;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Li49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    :cond_0
+    instance-of v1, p1, Li49;
 
-    invoke-virtual {v1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0()Lb19;
+    if-nez v1, :cond_1
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {v0}, Lb19;->w()Z
+    :cond_1
+    check-cast p1, Li49;
+
+    iget-wide v1, p0, Li49;->a:J
+
+    iget-wide v3, p1, Li49;->a:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v1, p0, Li49;->b:J
+
+    iget-wide v3, p1, Li49;->b:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v1, p0, Li49;->c:J
+
+    iget-wide v3, p1, Li49;->c:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v1, p0, Li49;->d:Ljava/lang/String;
+
+    iget-object v2, p1, Li49;->d:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v1, p0, Li49;->o:Landroid/net/Uri;
+
+    iget-object v2, p1, Li49;->o:Landroid/net/Uri;
+
+    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Li49;->X:Ljava/lang/String;
+
+    iget-object v2, p1, Li49;->X:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v1, p0, Li49;->Y:Ljava/lang/String;
+
+    iget-object v2, p1, Li49;->Y:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v1, p0, Li49;->Z:Lwje;
+
+    iget-object p1, p1, Li49;->Z:Lwje;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_9
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Li49;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Li49;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/16 v1, 0x1f
 
-    move-result-object v0
+    mul-int/2addr v0, v1
 
-    return-object v0
+    iget-wide v2, p0, Li49;->b:J
 
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
 
-    new-instance v2, Lb19;
+    move-result v0
 
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Lpr;
+    iget-wide v2, p0, Li49;->c:J
 
-    sget-object v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
 
-    const/4 v4, 0x6
+    move-result v0
 
-    aget-object v4, v3, v4
+    iget-object v2, p0, Li49;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Ljava/lang/Number;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    iget-object v3, p0, Li49;->o:Landroid/net/Uri;
 
-    move-result-wide v4
+    if-nez v3, :cond_0
 
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Lpr;
-
-    const/4 v6, 0x7
-
-    aget-object v6, v3, v6
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Lpr;
-
-    const/16 v8, 0x8
-
-    aget-object v3, v3, v8
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    move-wide v3, v4
-
-    move-wide v5, v6
-
-    move-wide v7, v0
-
-    invoke-direct/range {v2 .. v8}, Lb19;-><init>(JJJ)V
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Lpr;
-
-    sget-object v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    const/16 v3, 0x9
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1, v2}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lb04;->getTargetController()Lb04;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lcz3;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lcz3;
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
+
+    move-result v3
 
     :goto_0
-    if-eqz v0, :cond_1
+    add-int/2addr v0, v3
 
-    invoke-interface {v0}, Lcz3;->onDismiss()V
+    mul-int/2addr v0, v1
 
-    :cond_1
-    sget-object v0, Loyf;->a:Loyf;
+    iget-object v3, p0, Li49;->X:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v3, p0, Li49;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3}, Lmb3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v3, p0, Li49;->Z:Lwje;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    invoke-static {v2}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v3
+
+    return v0
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Li49;->c:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Li49;->b:J
+
+    return-wide v0
+.end method
+
+.method public final l()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Li49;->s0:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "VideoMsg(itemId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Li49;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Li49;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachId="
+
+    const-string v2, ", attachLocalId="
+
+    iget-wide v3, p0, Li49;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Li49;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", preview="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li49;->o:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    const-string v2, ", state="
+
+    iget-object v3, p0, Li49;->X:Ljava/lang/String;
+
+    iget-object v4, p0, Li49;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v3, v1, v4, v2}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Li49;->Z:Lwje;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isContentLevel=false)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

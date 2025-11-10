@@ -1,136 +1,149 @@
-.class public final Lin;
-.super Landroidx/appcompat/widget/ContentFrameLayout;
+.class public final synthetic Lin;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic A0:Lkn;
+.field public final synthetic a:Lpn;
+
+.field public final synthetic b:Landroid/content/res/ColorStateList;
+
+.field public final synthetic c:Landroid/content/res/ColorStateList;
+
+.field public final synthetic d:Lbj8;
+
+.field public final synthetic o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lkn;Ljz3;)V
+.method public synthetic constructor <init>(Lpn;Landroid/content/res/ColorStateList;Landroid/content/res/ColorStateList;Lbj8;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lin;->A0:Lkn;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lin;->a:Lpn;
 
-    invoke-direct {p0, p2, p1}, Landroidx/appcompat/widget/ContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p2, p0, Lin;->b:Landroid/content/res/ColorStateList;
+
+    iput-object p3, p0, Lin;->c:Landroid/content/res/ColorStateList;
+
+    iput-object p4, p0, Lin;->d:Lbj8;
+
+    iput-object p5, p0, Lin;->o:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    iget-object v0, p0, Lin;->A0:Lkn;
+    iget-object v0, p0, Lin;->a:Lpn;
 
-    invoke-virtual {v0, p1}, Lkn;->t(Landroid/view/KeyEvent;)Z
+    iget-object v1, v0, Lpn;->E0:Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    iget-object v2, p0, Lin;->b:Landroid/content/res/ColorStateList;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    const/4 v2, -0x5
-
-    if-lt v0, v2, :cond_0
-
-    if-lt v1, v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v2
 
-    add-int/lit8 v2, v2, 0x5
+    iget-object v3, p0, Lin;->c:Landroid/content/res/ColorStateList;
 
-    if-gt v0, v2, :cond_0
+    invoke-virtual {v3}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    move-result v3
 
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x5
-
-    if-le v1, v0, :cond_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Lin;->A0:Lkn;
-
-    invoke-virtual {v0, p1}, Lkn;->y(I)Ljn;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Lkn;->r(Ljn;Z)V
-
-    return v1
-
-    :cond_1
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-static {v2, p1, v3}, Lwgi;->f(IFI)I
 
     move-result p1
 
-    return p1
-.end method
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-.method public final setBackgroundResource(I)V
-    .locals 1
+    move-result-object v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v3, p0, Lin;->d:Lbj8;
 
-    move-result-object v0
+    invoke-virtual {v3, v2}, Lbj8;->k(Landroid/content/res/ColorStateList;)V
 
-    invoke-static {v0, p1}, Lqxd;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lpn;->I0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lpn;->J0:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    iget-object v4, p0, Lin;->o:Ljava/lang/Integer;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, v0, Lpn;->I0:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Ly05;->g(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, v3, Lbj8;->a:Laj8;
+
+    iget-object v0, v0, Laj8;->c:Landroid/content/res/ColorStateList;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_3
     return-void
 .end method

@@ -1,49 +1,34 @@
-.class public final Lel6;
-.super Lnz3;
+.class public abstract Lel6;
+.super Lfl6;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lfl6;
-
-.field public Z:I
-
-.field public o:Lfl6;
-
-
-# direct methods
-.method public constructor <init>(Lfl6;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lel6;->Y:Lfl6;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract f()Luk6;
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0}, Lel6;->f()Luk6;
 
-    iput-object p1, p0, Lel6;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    iget p1, p0, Lel6;->Z:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    const-string v2, "Virtual(name="
 
-    or-int/2addr p1, v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput p1, p0, Lel6;->Z:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lel6;->Y:Lfl6;
+    const-string v0, ")"
 
-    invoke-virtual {p1, p0}, Lfl6;->d(Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

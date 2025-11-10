@@ -4,58 +4,128 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:[I
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>([IF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lgjg;->a:Ljava/lang/String;
+    iput-object p1, p0, Lgjg;->a:[I
 
-    iput-wide p1, p0, Lgjg;->b:J
-
-    iput-object p4, p0, Lgjg;->c:Ljava/lang/String;
+    iput p2, p0, Lgjg;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lgjg;->c:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgjg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgjg;
+
+    iget-object v1, p0, Lgjg;->a:[I
+
+    iget-object v3, p1, Lgjg;->a:[I
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lgjg;->b:F
+
+    iget p1, p1, Lgjg;->b:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lgjg;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
-    xor-int/lit8 v0, v0, 0x1
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v1, "VideoUploadInfo{url=\'"
+    iget v1, p0, Lgjg;->b:F
 
-    const-string v2, "\', videoId="
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
 
-    iget-wide v3, p0, Lgjg;->b:J
+    move-result v1
 
-    iget-object v5, p0, Lgjg;->a:Ljava/lang/String;
+    add-int/2addr v1, v0
 
-    invoke-static {v1, v3, v4, v5, v2}, Lhqd;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v1
+.end method
 
-    move-result-object v1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-string v2, ", token=\'"
+    iget-object v0, p0, Lgjg;->a:[I
 
-    const-string v3, "\'}"
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    invoke-static {v1, v2, v0, v3}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Gradient(colors="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lgjg;->b:F
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,117 +1,114 @@
-.class public final Leoc;
-.super Lgoc;
-.source "SourceFile"
+.class public abstract Leoc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a0277
 
-.field public final b:J
+.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a0278
 
+.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a0279
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.field public static messages_contact_attach_chat_action:I = 0x7f0a0534
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static messages_contact_attach_profile_action:I = 0x7f0a0535
 
-    iput-wide p1, p0, Leoc;->a:J
+.field public static messages_list_chat_description_view_id:I = 0x7f0a0536
 
-    iput-wide p3, p0, Leoc;->b:J
+.field public static messages_list_chat_description_view_type:I = 0x7f0a0537
 
-    return-void
-.end method
+.field public static messages_list_confirm_cancel:I = 0x7f0a0538
 
+.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a0539
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static messages_list_confirm_complaint_fake:I = 0x7f0a053a
 
-    const/4 v0, 0x1
+.field public static messages_list_confirm_complaint_other:I = 0x7f0a053b
 
-    if-ne p0, p1, :cond_0
+.field public static messages_list_confirm_complaint_porno:I = 0x7f0a053c
 
-    return v0
+.field public static messages_list_confirm_complaint_spam:I = 0x7f0a053d
 
-    :cond_0
-    instance-of v1, p1, Leoc;
+.field public static messages_list_confirm_complaint_threat:I = 0x7f0a053e
 
-    const/4 v2, 0x0
+.field public static messages_list_confirm_delete:I = 0x7f0a053f
 
-    if-nez v1, :cond_1
+.field public static messages_list_confirm_delete_for_all:I = 0x7f0a0540
 
-    return v2
+.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a0541
 
-    :cond_1
-    check-cast p1, Leoc;
+.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a0542
 
-    iget-wide v3, p0, Leoc;->a:J
+.field public static messages_list_context_action_copy:I = 0x7f0a0543
 
-    iget-wide v5, p1, Leoc;->a:J
+.field public static messages_list_context_action_copy_photo:I = 0x7f0a0544
 
-    cmp-long v1, v3, v5
+.field public static messages_list_context_action_delete:I = 0x7f0a0545
 
-    if-eqz v1, :cond_2
+.field public static messages_list_context_action_delete_for_all:I = 0x7f0a0546
 
-    return v2
+.field public static messages_list_context_action_edit:I = 0x7f0a0547
 
-    :cond_2
-    iget-wide v3, p0, Leoc;->b:J
+.field public static messages_list_context_action_forward:I = 0x7f0a0548
 
-    iget-wide v5, p1, Leoc;->b:J
+.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a0549
 
-    cmp-long p1, v3, v5
+.field public static messages_list_context_action_pin:I = 0x7f0a054a
 
-    if-eqz p1, :cond_3
+.field public static messages_list_context_action_reply:I = 0x7f0a054b
 
-    return v2
+.field public static messages_list_context_action_report:I = 0x7f0a054c
 
-    :cond_3
-    return v0
-.end method
+.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a054d
 
-.method public final hashCode()I
-    .locals 3
+.field public static messages_list_context_action_select:I = 0x7f0a054e
 
-    iget-wide v0, p0, Leoc;->a:J
+.field public static messages_list_context_action_share_externally:I = 0x7f0a054f
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.field public static messages_list_context_action_share_post:I = 0x7f0a0550
 
-    move-result v0
+.field public static messages_list_context_action_unpin:I = 0x7f0a0551
 
-    mul-int/lit8 v0, v0, 0x1f
+.field public static messages_list_context_actions_view_type:I = 0x7f0a0552
 
-    iget-wide v1, p0, Leoc;->b:J
+.field public static messages_list_context_content_container:I = 0x7f0a0553
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+.field public static messages_list_context_member_view_type:I = 0x7f0a0554
 
-    move-result v1
+.field public static messages_list_context_members_member_cell:I = 0x7f0a0555
 
-    add-int/2addr v1, v0
+.field public static messages_list_context_members_member_reaction:I = 0x7f0a0556
 
-    return v1
-.end method
+.field public static messages_list_context_reactions_container:I = 0x7f0a0557
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.field public static messages_list_item_alias:I = 0x7f0a0558
 
-    const-string v0, "Success(messageId="
+.field public static messages_list_item_date:I = 0x7f0a0559
 
-    const-string v1, ", totalBytes="
+.field public static messages_list_item_keyboard_buttons:I = 0x7f0a055a
 
-    iget-wide v2, p0, Leoc;->a:J
+.field public static messages_list_item_single_image:I = 0x7f0a055b
 
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static messages_list_item_text:I = 0x7f0a055c
 
-    move-result-object v0
+.field public static messages_list_item_title:I = 0x7f0a055d
 
-    const-string v1, ")"
+.field public static messages_list_item_video_duration:I = 0x7f0a055e
 
-    iget-wide v2, p0, Leoc;->b:J
+.field public static messages_list_reactions_badge:I = 0x7f0a055f
 
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+.field public static messages_list_recycler_view:I = 0x7f0a0560
 
-    move-result-object v0
+.field public static messages_list_scroll_btn:I = 0x7f0a0561
 
-    return-object v0
-.end method
+.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a0562
+
+.field public static messages_list_vh_message_subtitle:I = 0x7f0a0563
+
+.field public static messages_list_vh_message_title:I = 0x7f0a0564
+
+.field public static messages_list_warning_link_subtitle:I = 0x7f0a0565
+
+.field public static messages_list_warning_link_title:I = 0x7f0a0566
+
+.field public static messages_share_attach_open_url_action:I = 0x7f0a0567

@@ -1,68 +1,65 @@
 .class public final La6a;
-.super Li6a;
+.super Ljq3;
 .source "SourceFile"
 
 
-# instance fields
-.field public e:[I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    const-string v0, "NetworkNotRoamingCtrlr"
+
+    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Lyqd;)V
-    .locals 4
+.method public final a(Lzoh;)Z
+    .locals 1
 
-    iget-object p1, p1, Lyqd;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lzoh;->j:Ldr3;
 
-    check-cast p1, Landroid/app/Notification$Builder;
+    iget p1, p1, Ldr3;->a:I
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x4
 
-    const/16 v1, 0x22
+    if-ne p1, v0, :cond_0
 
-    if-lt v0, v1, :cond_0
+    const/4 p1, 0x1
 
-    invoke-static {}, Li5a;->a()Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v3, v1, v3, v2}, Lo5a;->a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    iget-object v1, p0, La6a;->e:[I
-
-    iget-object v2, p0, La6a;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
-
-    invoke-static {v0, v1, v2}, Li5a;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Li5a;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
-
-    return-void
+    return p1
 
     :cond_0
-    invoke-static {}, Li5a;->a()Landroid/app/Notification$MediaStyle;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    return p1
+.end method
 
-    iget-object v1, p0, La6a;->e:[I
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v2, p0, La6a;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    check-cast p1, Lb6a;
 
-    invoke-static {v0, v1, v2}, Li5a;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+    iget-boolean v0, p1, Lb6a;->a:Z
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    invoke-static {p1, v0}, Li5a;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
+    iget-boolean p1, p1, Lb6a;->d:Z
 
-    return-void
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

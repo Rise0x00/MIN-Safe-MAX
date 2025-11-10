@@ -28,63 +28,65 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 0
 
     iget p1, p0, Llo1;->a:I
 
-    iget-object v0, p0, Llo1;->b:Lno1;
-
     packed-switch p1, :pswitch_data_0
 
-    iget-object p1, v0, Lno1;->P0:Lmo1;
+    iget-object p1, p0, Llo1;->b:Lno1;
+
+    iget-object p1, p1, Lno1;->F0:Lmo1;
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lsj1;
-
-    iget-object p1, p1, Lsj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->S0:Lza8;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lxm1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lxm1;->w0:Lkq1;
-
-    invoke-virtual {p1}, Lkq1;->h()V
+    invoke-interface {p1}, Lmo1;->l()V
 
     :cond_0
     return-void
 
     :pswitch_0
-    iget-object p1, v0, Lno1;->P0:Lmo1;
+    iget-object p1, p0, Llo1;->b:Lno1;
+
+    iget-object p1, p1, Lno1;->F0:Lmo1;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, v0, Lno1;->U0:Lch1;
-
-    check-cast p1, Lsj1;
-
-    iget-object p1, p1, Lsj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->S0:Lza8;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lxm1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lxm1;->w0:Lkq1;
-
-    invoke-virtual {p1, v0}, Lkq1;->f(Lch1;)V
+    invoke-interface {p1}, Lmo1;->f()V
 
     :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Llo1;->b:Lno1;
+
+    iget-object p1, p1, Lno1;->F0:Lmo1;
+
+    if-eqz p1, :cond_2
+
+    invoke-interface {p1}, Lmo1;->g()V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Llo1;->b:Lno1;
+
+    iget-object p1, p1, Lno1;->F0:Lmo1;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lmo1;->h()V
+
+    :cond_3
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

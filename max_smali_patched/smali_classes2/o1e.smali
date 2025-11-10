@@ -1,73 +1,129 @@
-.class public final enum Lo1e;
-.super Ljava/lang/Enum;
+.class public final Lo1e;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final enum a:Lo1e;
 
-.field public static final enum b:Lo1e;
+# instance fields
+.field public final synthetic X:Lsoh;
 
-.field public static final synthetic c:[Lo1e;
+.field public final synthetic Y:Ldpb;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lsoh;Ldpb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lo1e;
+    iput-object p1, p0, Lo1e;->X:Lsoh;
 
-    const-string v1, "NONE"
+    iput-object p2, p0, Lo1e;->Y:Ldpb;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lo1e;->a:Lo1e;
-
-    new-instance v1, Lo1e;
-
-    const-string v2, "DARK"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lo1e;->b:Lo1e;
-
-    filled-new-array {v0, v1}, [Lo1e;
-
-    move-result-object v0
-
-    sput-object v0, Lo1e;->c:[Lo1e;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lo1e;
-    .locals 1
 
-    const-class v0, Lo1e;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lg54;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lo1e;
+    invoke-virtual {p0, p1, p2}, Lo1e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lo1e;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lo1e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lo1e;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lo1e;->c:[Lo1e;
+    new-instance p1, Lo1e;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lo1e;->X:Lsoh;
 
-    move-result-object v0
+    iget-object v1, p0, Lo1e;->Y:Ldpb;
 
-    check-cast v0, [Lo1e;
+    invoke-direct {p1, v0, v1, p2}, Lo1e;-><init>(Lsoh;Ldpb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lo1e;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lo1e;->X:Lsoh;
+
+    iget-object p1, p1, Lsoh;->a:Ljava/lang/Object;
+
+    check-cast p1, Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lu23;
+
+    iget-object v0, p0, Lo1e;->Y:Ldpb;
+
+    iget-wide v2, v0, Ldpb;->a:J
+
+    iput v1, p0, Lo1e;->o:I
+
+    check-cast p1, Lw33;
+
+    invoke-virtual {p1, v2, v3, p0}, Lw33;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

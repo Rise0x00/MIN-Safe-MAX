@@ -1,25 +1,48 @@
-.class public abstract Lzja;
-.super Ljava/lang/Object;
+.class public final Lzja;
+.super Leia;
 .source "SourceFile"
 
+# interfaces
+.implements Llnd;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzja;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    sget v0, Lthc;->call_users_in_wait_room_count:I
+    iget-object v0, p0, Lzja;->a:Ljava/lang/Object;
 
-    sput v0, Lzja;->a:I
+    return-object v0
+.end method
 
-    sget v0, Lthc;->call_users_info_count:I
+.method public final o(Lgla;)V
+    .locals 2
 
-    sput v0, Lzja;->b:I
+    new-instance v0, Lvka;
+
+    iget-object v1, p0, Lzja;->a:Ljava/lang/Object;
+
+    invoke-direct {v0, p1, v1}, Lvka;-><init>(Lgla;Ljava/lang/Object;)V
+
+    invoke-interface {p1, v0}, Lgla;->d(Lzv4;)V
+
+    invoke-virtual {v0}, Lvka;->run()V
 
     return-void
 .end method

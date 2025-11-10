@@ -1,63 +1,46 @@
 .class public final Lu8a;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# static fields
-.field public static final b:Lu8a;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lu8a;
+    const-string v0, "AOUIE\u0410\u041e\u0423\u042b\u0418\u042d\u0415\u042e\u042f\u0401"
 
-    sget-object v1, Loyf;->a:Loyf;
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
-    invoke-direct {v0, v1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    sput-object v0, Lu8a;->b:Lu8a;
+    invoke-static {v0}, Ljava/util/Arrays;->sort([C)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public static a(Ljava/lang/StringBuilder;IC)Z
+    .locals 2
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    add-int/2addr p1, v0
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v1
+
+    if-ge p1, v1, :cond_0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result p0
+
+    if-ne p0, p2, :cond_0
 
     return v0
 
     :cond_0
-    instance-of p1, p1, Lu8a;
+    const/4 p0, 0x0
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x36e4154d
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OpenSettings"
-
-    return-object v0
+    return p0
 .end method

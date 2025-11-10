@@ -1,28 +1,40 @@
 .class public final Laue;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
 .field public X:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Ljava/util/ArrayList;
 
-.field public final synthetic Z:Leue;
+.field public final synthetic Z:Lqn3;
+
+.field public o:Lqn3;
+
+.field public final synthetic s0:Ldue;
+
+.field public final synthetic t0:Lwte;
 
 
 # direct methods
-.method public constructor <init>(Leue;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/ArrayList;Lqn3;Ldue;Lwte;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Laue;->Z:Leue;
+    iput-object p1, p0, Laue;->Y:Ljava/util/ArrayList;
+
+    iput-object p2, p0, Laue;->Z:Lqn3;
+
+    iput-object p3, p0, Laue;->s0:Ldue;
+
+    iput-object p4, p0, Laue;->t0:Lwte;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,17 +44,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lwld;
+    check-cast p1, Lg54;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Laue;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Laue;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Laue;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Laue;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -51,42 +63,42 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
     new-instance v0, Laue;
 
-    iget-object v1, p0, Laue;->Z:Leue;
+    iget-object v3, p0, Laue;->s0:Ldue;
 
-    invoke-direct {v0, v1, p2}, Laue;-><init>(Leue;Lkotlin/coroutines/Continuation;)V
+    iget-object v4, p0, Laue;->t0:Lwte;
 
-    iput-object p1, v0, Laue;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Laue;->Y:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Laue;->Z:Lqn3;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Laue;-><init>(Ljava/util/ArrayList;Lqn3;Ldue;Lwte;Lkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 9
 
-    sget-object v0, Lf34;->a:Lf34;
+    iget v0, p0, Laue;->X:I
 
-    iget v1, p0, Laue;->X:I
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x1
+    if-ne v0, v1, :cond_0
 
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Laue;->o:Lqn3;
 
-    if-ne v1, v3, :cond_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Laue;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lwld;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -98,133 +110,90 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Laue;->Y:Ljava/lang/Object;
+    iget-object p1, p0, Laue;->Y:Ljava/util/ArrayList;
 
-    check-cast p1, Lwld;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    const-class v1, Leue;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object v4, Lox9;->j:Lqpa;
+    move-result v3
 
-    if-nez v4, :cond_2
+    if-eqz v3, :cond_3
 
-    goto :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :cond_2
-    sget-object v5, Ly38;->o:Ly38;
+    move-result-object v3
 
-    invoke-virtual {v4, v5}, Lqpa;->b(Ly38;)Z
+    add-int/lit8 v4, v2, 0x1
 
-    move-result v6
+    const/4 v5, 0x0
 
-    if-eqz v6, :cond_4
+    if-ltz v2, :cond_2
 
-    if-eqz p1, :cond_3
+    check-cast v3, Ltg7;
 
-    move v6, v3
+    iget-object v6, p0, Laue;->s0:Ldue;
+
+    iget-object v6, v6, Ldue;->a:Lbx7;
+
+    new-instance v7, Lzte;
+
+    iget-object v8, p0, Laue;->t0:Lwte;
+
+    invoke-direct {v7, v2, v8, v3, v5}, Lzte;-><init>(ILwte;Ltg7;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    invoke-static {v6, v5, v5, v7, v2}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+
+    move v2, v4
 
     goto :goto_0
 
+    :cond_2
+    invoke-static {}, Lbb3;->j()V
+
+    throw v5
+
     :cond_3
-    const/4 v6, 0x0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    :goto_0
-    const-string v7, "Sets loader. Section with sets exist:"
+    move-result p1
 
-    invoke-static {v7, v6}, Lq89;->j(Ljava/lang/String;Z)Ljava/lang/String;
+    int-to-long v2, p1
 
-    move-result-object v6
+    const-wide/16 v4, 0x64
 
-    invoke-virtual {v4, v5, v1, v6, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    mul-long/2addr v2, v4
+
+    iget-object v0, p0, Laue;->Z:Lqn3;
+
+    iput-object v0, p0, Laue;->o:Lqn3;
+
+    iput v1, p0, Laue;->X:I
+
+    invoke-static {v2, v3, p0}, Lxxi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lh54;->a:Lh54;
+
+    if-ne p1, v1, :cond_4
+
+    return-object v1
 
     :cond_4
     :goto_1
-    instance-of v1, p1, Lese;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    if-eqz v1, :cond_6
-
-    iget-object v1, p0, Laue;->Z:Leue;
-
-    iget-object v1, v1, Leue;->d:Lmoe;
-
-    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    iget-object v1, p0, Laue;->Z:Leue;
-
-    iget-object v1, v1, Leue;->a:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbse;
-
-    move-object v4, p1
-
-    check-cast v4, Lese;
-
-    iget-object v4, v4, Lese;->c:Ljava/util/List;
-
-    invoke-virtual {v1, v4}, Lbse;->x(Ljava/util/List;)Ldee;
-
-    move-result-object v1
-
-    iput-object p1, p0, Laue;->Y:Ljava/lang/Object;
-
-    iput v3, p0, Laue;->X:I
-
-    invoke-static {v1, p0}, Lbv0;->h(Lude;Lnz3;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v0, :cond_5
-
-    return-object v0
-
-    :cond_5
-    move-object v0, p1
-
-    move-object p1, v1
-
-    :goto_2
-    check-cast p1, Ljava/util/List;
-
-    iget-object v1, p0, Laue;->Z:Leue;
-
-    iget-object v1, v1, Leue;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v3, Lyz0;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v3, v4, v0}, Lyz0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    iget-object v0, p0, Laue;->Z:Leue;
-
-    iget-object v0, v0, Leue;->d:Lmoe;
-
-    invoke-virtual {v0, v2, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_6
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

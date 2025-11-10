@@ -1,44 +1,80 @@
-.class public interface abstract Lho;
+.class public final synthetic Lho;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/window/OnBackInvokedCallback;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lho;->a:I
+
+    iput-object p2, p0, Lho;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()Z
-.end method
+.method public final onBackInvoked()V
+    .locals 1
 
-.method public abstract b()Landroid/graphics/drawable/Drawable;
-.end method
+    iget v0, p0, Lho;->a:I
 
-.method public abstract c()I
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract dismiss()V
-.end method
+    iget-object v0, p0, Lho;->b:Ljava/lang/Object;
 
-.method public abstract e(I)V
-.end method
+    check-cast v0, Ljava/lang/Runnable;
 
-.method public abstract f()Ljava/lang/CharSequence;
-.end method
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-.method public abstract h(Ljava/lang/CharSequence;)V
-.end method
+    return-void
 
-.method public abstract j(Landroid/graphics/drawable/Drawable;)V
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lho;->b:Ljava/lang/Object;
 
-.method public abstract k(I)V
-.end method
+    check-cast v0, Loi6;
 
-.method public abstract m(I)V
-.end method
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-.method public abstract n(II)V
-.end method
+    return-void
 
-.method public abstract o()I
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lho;->b:Ljava/lang/Object;
 
-.method public abstract p(Landroid/widget/ListAdapter;)V
+    check-cast v0, Lgi8;
+
+    invoke-interface {v0}, Lgi8;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lho;->b:Ljava/lang/Object;
+
+    check-cast v0, Loo;
+
+    invoke-virtual {v0}, Loo;->D()Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

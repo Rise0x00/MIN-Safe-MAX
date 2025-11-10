@@ -3,60 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Lv4e;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhud;
+.field public final synthetic e:Lhud;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhud;I)V
+.method public synthetic constructor <init>(Lhud;)V
     .locals 0
 
-    iput p2, p0, Lgud;->a:I
-
-    iput-object p1, p0, Lgud;->b:Lhud;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgud;->e:Lhud;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a()V
+    .locals 2
 
-    iget v0, p0, Lgud;->a:I
+    iget-object v0, p0, Lgud;->e:Lhud;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lhud;->j:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v0, p0, Lgud;->b:Lhud;
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    invoke-virtual {v0}, Lhud;->x()V
+    iget-object v0, v0, Ly3;->f:Lake;
 
-    return-void
+    sget-object v1, Lybg;->a:Lybg;
 
-    :pswitch_0
-    iget-object v0, p0, Lgud;->b:Lhud;
-
-    invoke-virtual {v0}, Lstd;->q()Licf;
-
-    move-result-object v1
-
-    iget-wide v2, v0, Lhud;->b:J
-
-    invoke-virtual {v1, v2, v3}, Licf;->c(J)V
+    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

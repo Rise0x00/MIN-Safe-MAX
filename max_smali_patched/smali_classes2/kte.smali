@@ -1,206 +1,176 @@
-.class public final synthetic Lkte;
-.super Ljava/lang/Object;
+.class public final Lkte;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lru7;
 
-.field public final synthetic b:Lone/me/stickerssearch/StickersSearchScreen;
+.field public final synthetic Y:Lmte;
+
+.field public final synthetic Z:Lru7;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
+.method public constructor <init>(Lru7;Lmte;Lru7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lkte;->a:I
+    iput-object p1, p0, Lkte;->X:Lru7;
 
-    iput-object p1, p0, Lkte;->b:Lone/me/stickerssearch/StickersSearchScreen;
+    iput-object p2, p0, Lkte;->Y:Lmte;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lkte;->Z:Lru7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkte;->a:I
+    check-cast p1, Lg54;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lkte;->b:Lone/me/stickerssearch/StickersSearchScreen;
+    invoke-virtual {p0, p1, p2}, Lkte;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->y0:[Ltm7;
+    check-cast p1, Lkte;
 
-    new-instance v0, Lbna;
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, p2}, Lkte;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    invoke-direct {v0, v2, v1}, Lbna;-><init>(Landroid/content/Context;I)V
+    return-object p1
+.end method
 
-    sget v1, Lg9d;->M0:I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {v0, v1}, Lbna;->setIcon(I)V
+    new-instance p1, Lkte;
 
-    sget v1, Li9d;->d:I
+    iget-object v0, p0, Lkte;->Y:Lmte;
 
-    new-instance v2, Ljef;
+    iget-object v1, p0, Lkte;->Z:Lru7;
 
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+    iget-object v2, p0, Lkte;->X:Lru7;
 
-    invoke-virtual {v0, v2}, Lbna;->setTitle(Loef;)V
+    invoke-direct {p1, v2, v0, v1, p2}, Lkte;-><init>(Lru7;Lmte;Lru7;Lkotlin/coroutines/Continuation;)V
 
-    sget v1, Li9d;->c:I
+    return-object p1
+.end method
 
-    new-instance v2, Ljef;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+    iget v0, p0, Lkte;->o:I
 
-    invoke-virtual {v0, v2}, Lbna;->setSubtitle(Loef;)V
+    const/4 v1, 0x2
 
-    return-object v0
+    const/4 v2, 0x1
 
-    :pswitch_0
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->y0:[Ltm7;
+    sget-object v3, Lh54;->a:Lh54;
 
-    new-instance v0, Lnsa;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    if-eq v0, v2, :cond_1
 
-    move-result-object v1
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v0, v1}, Lnsa;-><init>(Landroid/content/Context;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    goto :goto_2
 
-    const/4 v2, -0x2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/16 v2, 0x11
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    throw p1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    sget-object v1, Lfsa;->a:Lfsa;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lnsa;->setAppearance(Lgsa;)V
+    :cond_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    sget-object v1, Lhsa;->a:Lhsa;
+    iget-object p1, p0, Lkte;->X:Lru7;
 
-    invoke-virtual {v0, v1}, Lnsa;->setSize(Llsa;)V
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_1
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->y0:[Ltm7;
+    check-cast p1, Lu23;
 
-    new-instance v3, Lute;
+    iget-object v0, p0, Lkte;->Y:Lmte;
 
-    iget-object v0, v2, Lone/me/stickerssearch/StickersSearchScreen;->a:Lpr;
+    iget-wide v4, v0, Lmte;->a:J
 
-    sget-object v4, Lone/me/stickerssearch/StickersSearchScreen;->y0:[Ltm7;
+    check-cast p1, Lw33;
 
-    aget-object v1, v4, v1
+    invoke-virtual {p1, v4, v5}, Lw33;->N(J)Lj0d;
 
-    invoke-virtual {v0, v2}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    move-result-object p1
+
+    new-instance v0, Lr13;
+
+    const/16 v4, 0xd
+
+    invoke-direct {v0, p1, v4}, Lr13;-><init>(Lez5;I)V
+
+    iput v2, p0, Lkte;->o:I
+
+    invoke-static {v0, p0}, Lqs0;->o(Lez5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    check-cast p1, Lt92;
+
+    iget-object v0, p0, Lkte;->Z:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    check-cast v0, Lpt9;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    iput v1, p0, Lkte;->o:I
 
-    move-result-wide v4
+    invoke-virtual {v0, p1, p0}, Lpt9;->R(Lt92;Logf;)Ljava/lang/Object;
 
-    sget-object v0, Lite;->a:Lite;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    if-ne p1, v3, :cond_4
 
-    move-result-object v1
-
-    const-class v2, Lcte;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v6
-
-    new-instance v7, Lobe;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Loqe;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v8, Leue;
-
-    invoke-virtual {v2, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v2
-
-    invoke-direct {v7, v1, v2}, Lobe;-><init>(Lbp7;Lbp7;)V
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lnah;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Llm5;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lr8f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Lr8f;
-
-    invoke-direct/range {v3 .. v10}, Lute;-><init>(JLbp7;Lobe;Lbp7;Lbp7;Lr8f;)V
-
+    :goto_1
     return-object v3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_4
+    :goto_2
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

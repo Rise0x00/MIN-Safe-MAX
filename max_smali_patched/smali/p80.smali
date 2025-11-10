@@ -3,18 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmaa;
+.implements Lzha;
 
 
 # static fields
 .field public static final a:Lp80;
 
-.field public static final b:Lfn5;
+.field public static final b:Lmr5;
+
+.field public static final c:Lmr5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Lp80;
 
@@ -22,29 +24,21 @@
 
     sput-object v0, Lp80;->a:Lp80;
 
-    new-instance v0, Lpx;
+    const-string v0, "networkType"
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpx;-><init>(I)V
-
-    const-class v1, Lb6c;
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
+    invoke-static {v0}, Lmr5;->c(Ljava/lang/String;)Lmr5;
 
     move-result-object v0
 
-    new-instance v1, Lfn5;
+    sput-object v0, Lp80;->b:Lmr5;
 
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    const-string v0, "mobileSubtype"
+
+    invoke-static {v0}, Lmr5;->c(Ljava/lang/String;)Lmr5;
 
     move-result-object v0
 
-    const-string v2, "messagingClientEvent"
-
-    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lp80;->b:Lfn5;
+    sput-object v0, Lp80;->c:Lmr5;
 
     return-void
 .end method
@@ -52,17 +46,25 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+    .locals 2
 
-    check-cast p1, Lbk9;
+    check-cast p1, Lx5a;
 
-    check-cast p2, Lnaa;
+    check-cast p2, Laia;
 
-    sget-object v0, Lp80;->b:Lfn5;
+    check-cast p1, Lxa0;
 
-    iget-object p1, p1, Lbk9;->a:Lak9;
+    iget-object v0, p1, Lxa0;->a:Lw5a;
 
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    sget-object v1, Lp80;->b:Lmr5;
+
+    invoke-interface {p2, v1, v0}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
+
+    sget-object v0, Lp80;->c:Lmr5;
+
+    iget-object p1, p1, Lxa0;->b:Lv5a;
+
+    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
 
     return-void
 .end method

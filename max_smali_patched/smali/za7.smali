@@ -1,199 +1,109 @@
-.class public final Lza7;
-.super Lm43;
+.class public final enum Lza7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum b:Lza7;
+
+.field public static final enum c:Lza7;
+
+.field public static final enum d:Lza7;
+
+.field public static final synthetic o:[Lza7;
+
+
 # instance fields
-.field public A0:J
-
-.field public volatile B0:Z
-
-.field public final y0:Lkv0;
-
-.field public z0:Ls9h;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Li94;Lq94;Lr76;ILjava/lang/Object;Lkv0;)V
-    .locals 11
-
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v3, 0x2
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    invoke-direct/range {v0 .. v10}, Lm43;-><init>(Li94;Lq94;ILr76;ILjava/lang/Object;JJ)V
-
-    move-object/from16 p1, p6
-
-    iput-object p1, p0, Lza7;->y0:Lkv0;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final e()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lza7;->B0:Z
-
-    return-void
-.end method
-
-.method public final load()V
+.method static constructor <clinit>()V
     .locals 7
 
-    iget-wide v0, p0, Lza7;->A0:J
+    new-instance v0, Lza7;
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    iget-object v1, p0, Lza7;->y0:Lkv0;
-
-    iget-object v2, p0, Lza7;->z0:Ls9h;
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-virtual/range {v1 .. v6}, Lkv0;->a(Ls9h;JJ)V
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lm43;->b:Lq94;
-
-    iget-wide v1, p0, Lza7;->A0:J
-
-    invoke-virtual {v0, v1, v2}, Lq94;->b(J)Lq94;
-
-    move-result-object v0
-
-    new-instance v1, Lgh4;
-
-    iget-object v2, p0, Lm43;->x0:Lrpe;
-
-    iget-wide v3, v0, Lq94;->f:J
-
-    invoke-virtual {v2, v0}, Lrpe;->P(Lq94;)J
-
-    move-result-wide v5
-
-    invoke-direct/range {v1 .. v6}, Lgh4;-><init>(Lc94;JJ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :goto_0
-    :try_start_1
-    iget-boolean v0, p0, Lza7;->B0:Z
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lza7;->y0:Lkv0;
-
-    iget-object v0, v0, Lkv0;->a:Lei5;
-
-    sget-object v2, Lkv0;->y0:Lc7;
-
-    invoke-interface {v0, v1, v2}, Lei5;->i(Lgi5;Lc7;)I
-
-    move-result v0
+    const-string v1, "FULL_FETCH"
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
-    if-eq v0, v3, :cond_1
+    invoke-direct {v0, v1, v2, v3}, Lza7;-><init>(Ljava/lang/String;II)V
 
-    move v4, v3
+    sput-object v0, Lza7;->b:Lza7;
 
-    goto :goto_1
+    new-instance v1, Lza7;
 
-    :cond_1
-    move v4, v2
+    const-string v2, "DISK_CACHE"
 
-    :goto_1
-    invoke-static {v4}, Lyhh;->g(Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const/4 v4, 0x2
 
-    if-nez v0, :cond_2
+    invoke-direct {v1, v2, v3, v4}, Lza7;-><init>(Ljava/lang/String;II)V
 
-    move v2, v3
+    sput-object v1, Lza7;->c:Lza7;
 
-    :cond_2
-    if-eqz v2, :cond_3
+    new-instance v2, Lza7;
 
-    goto :goto_0
+    const-string v3, "ENCODED_MEMORY_CACHE"
 
-    :catchall_0
-    move-exception v0
+    const/4 v5, 0x3
 
-    goto :goto_2
+    invoke-direct {v2, v3, v4, v5}, Lza7;-><init>(Ljava/lang/String;II)V
 
-    :cond_3
-    :try_start_2
-    iget-wide v0, v1, Lgh4;->o:J
+    new-instance v3, Lza7;
 
-    iget-object v2, p0, Lm43;->b:Lq94;
+    const-string v4, "BITMAP_MEMORY_CACHE"
 
-    iget-wide v2, v2, Lq94;->f:J
+    const/4 v6, 0x4
 
-    sub-long/2addr v0, v2
+    invoke-direct {v3, v4, v5, v6}, Lza7;-><init>(Ljava/lang/String;II)V
 
-    iput-wide v0, p0, Lza7;->A0:J
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    sput-object v3, Lza7;->d:Lza7;
 
-    iget-object v0, p0, Lm43;->x0:Lrpe;
+    filled-new-array {v0, v1, v2, v3}, [Lza7;
 
-    invoke-static {v0}, Lps;->d(Li94;)V
+    move-result-object v0
+
+    sput-object v0, Lza7;->o:[Lza7;
 
     return-void
+.end method
 
-    :catchall_1
-    move-exception v0
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    goto :goto_3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :goto_2
-    :try_start_3
-    iget-wide v1, v1, Lgh4;->o:J
+    iput p3, p0, Lza7;->a:I
 
-    iget-object v3, p0, Lm43;->b:Lq94;
+    return-void
+.end method
 
-    iget-wide v3, v3, Lq94;->f:J
+.method public static valueOf(Ljava/lang/String;)Lza7;
+    .locals 1
 
-    sub-long/2addr v1, v3
+    const-class v0, Lza7;
 
-    iput-wide v1, p0, Lza7;->A0:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    move-result-object p0
 
-    :goto_3
-    iget-object v1, p0, Lm43;->x0:Lrpe;
+    check-cast p0, Lza7;
 
-    invoke-static {v1}, Lps;->d(Li94;)V
+    return-object p0
+.end method
 
-    throw v0
+.method public static values()[Lza7;
+    .locals 1
+
+    sget-object v0, Lza7;->o:[Lza7;
+
+    invoke-virtual {v0}, [Lza7;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lza7;
+
+    return-object v0
 .end method

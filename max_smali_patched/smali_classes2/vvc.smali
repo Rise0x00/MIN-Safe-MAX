@@ -1,88 +1,103 @@
-.class public final Lvvc;
+.class public final synthetic Lvvc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Laj1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
+
+.field public final synthetic c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+    .locals 0
+
+    iput p3, p0, Lvvc;->a:I
+
+    iput-object p1, p0, Lvvc;->b:Lone/me/rlottie/RLottieDrawable;
+
+    iput-object p2, p0, Lvvc;->c:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lvvc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRecordStarted(Lyi1;)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    iget-object v0, p0, Lvvc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Lvvc;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lvvc;->c:Ljava/lang/Runnable;
 
-    move-result-object v0
+    iget-object v2, p0, Lvvc;->b:Lone/me/rlottie/RLottieDrawable;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    move-result-object v1
+    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
 
-    check-cast v1, Laj1;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v1, p1}, Laj1;->onRecordStarted(Lyi1;)V
+    const/4 v0, 0x0
 
-    goto :goto_0
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
 
-    :cond_0
-    return-void
-.end method
-
-.method public final onRecordStopped(Lzi1;)V
-    .locals 2
-
-    iget-object v0, p0, Lvvc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Laj1;
-
-    invoke-interface {v1, p1}, Laj1;->onRecordStopped(Lzi1;)V
-
-    goto :goto_0
+    invoke-static {}, Laq0;->c()V
 
     :cond_0
     return-void
+
+    :pswitch_0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+
+    :try_start_0
+    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->r1:Laq0;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Laq0;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lp4a;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0}, Lp4a;->u(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    new-instance v0, Lvvc;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v2, v1, v3}, Lvvc;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+
+    invoke-static {v0}, Lne;->d(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

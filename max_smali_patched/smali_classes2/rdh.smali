@@ -1,105 +1,87 @@
-.class public final enum Lrdh;
-.super Ljava/lang/Enum;
+.class public final Lrdh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lrdh;
-
-.field public static final enum b:Lrdh;
-
-.field public static final enum c:Lrdh;
-
-.field public static final enum o:Lrdh;
+# interfaces
+.implements Lmeh;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lrdh;
-
-    const/4 v1, 0x0
-
-    const-string v2, "tcp_relay"
-
-    const-string v3, "TCP_RELAY"
-
-    invoke-direct {v0, v3, v1, v2}, Lrdh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lrdh;->b:Lrdh;
-
-    new-instance v1, Lrdh;
-
-    const/4 v2, 0x1
-
-    const-string v3, "udp_relay"
-
-    const-string v4, "UDP_RELAY"
-
-    invoke-direct {v1, v4, v2, v3}, Lrdh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lrdh;->c:Lrdh;
-
-    new-instance v2, Lrdh;
-
-    const/4 v3, 0x2
-
-    const-string v4, "srflx"
-
-    const-string v5, "SRFLX"
-
-    invoke-direct {v2, v5, v3, v4}, Lrdh;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lrdh;->o:Lrdh;
-
-    filled-new-array {v0, v1, v2}, [Lrdh;
-
-    move-result-object v0
-
-    sput-object v0, Lrdh;->X:[Lrdh;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lrdh;->a:Ljava/lang/String;
+    iput-boolean p1, p0, Lrdh;->a:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrdh;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const-class v0, Lrdh;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_0
+    instance-of v0, p1, Lrdh;
 
-    check-cast p0, Lrdh;
+    if-nez v0, :cond_1
 
-    return-object p0
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lrdh;
+
+    iget-boolean v0, p0, Lrdh;->a:Z
+
+    iget-boolean p1, p1, Lrdh;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static values()[Lrdh;
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lrdh;->X:[Lrdh;
+    iget-boolean v0, p0, Lrdh;->a:Z
 
-    invoke-virtual {v0}, [Lrdh;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CloseScreen(isFromBridge="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lrdh;->a:Z
+
+    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lrdh;
 
     return-object v0
 .end method

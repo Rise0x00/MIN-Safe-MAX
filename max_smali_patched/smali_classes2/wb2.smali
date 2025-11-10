@@ -1,66 +1,82 @@
 .class public final Lwb2;
-.super Ll9f;
+.super Lrj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ln82;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    invoke-direct {p0}, Lrj0;-><init>()V
+
+    iput-wide p1, p0, Lwb2;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const-string v0, "chat"
+    const/4 v0, 0x1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne p0, p1, :cond_0
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Ln82;->d(Ls89;)Ln82;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwb2;->c:Ln82;
-
-    return-void
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Ls89;->B()V
+    instance-of v1, p1, Lwb2;
 
-    return-void
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwb2;
+
+    iget-wide v3, p0, Lwb2;->b:J
+
+    iget-wide v5, p1, Lwb2;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lwb2;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, Lwb2;->c:Ln82;
+    const-string v0, "ChatClearEvent(chatId="
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    const-string v2, "{chat="
+    iget-wide v2, p0, Lwb2;->b:J
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

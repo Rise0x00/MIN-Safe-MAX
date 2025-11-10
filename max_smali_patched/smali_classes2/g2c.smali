@@ -1,117 +1,153 @@
-.class public final enum Lg2c;
-.super Ljava/lang/Enum;
+.class public final Lg2c;
+.super Logf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lg2c;
-
-.field public static final synthetic Y:Lla5;
-
-.field public static final enum b:Lg2c;
-
-.field public static final enum c:Lg2c;
-
-.field public static final enum o:Lg2c;
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lg2c;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lc72;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lg2c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lg2c;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lg2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lg2c;
 
-    const-string v1, "ESIA_CONNECTION"
+    iget-object v1, p0, Lg2c;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-direct {v0, p2, v1}, Lg2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+
+    iput-object p1, v0, Lg2c;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg2c;->o:Ljava/lang/Object;
+
+    check-cast p1, Lc72;
+
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Les7;
+
+    iget-object v0, p0, Lg2c;->X:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0()Lv6b;
+
+    move-result-object v1
+
+    iget v2, p1, Lc72;->a:I
+
+    invoke-virtual {v1, v2}, Lv6b;->setTitle(I)V
+
+    invoke-static {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->x0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v1
+
+    iget-boolean v2, p1, Lc72;->c:Z
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+
+    invoke-static {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->x0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    move-result-object v1
+
+    iget-boolean v2, p1, Lc72;->d:Z
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->y0()Lp4c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
 
     const/4 v2, 0x0
 
+    if-eqz v1, :cond_2
+
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lg2c;-><init>(Ljava/lang/String;II)V
+    if-ne v1, v3, :cond_1
 
-    sput-object v0, Lg2c;->b:Lg2c;
-
-    new-instance v1, Lg2c;
-
-    const-string v2, "SECOND_FACTOR_PASSWORD_ENABLED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Lg2c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lg2c;->c:Lg2c;
-
-    new-instance v2, Lg2c;
-
-    const-string v3, "SECOND_FACTOR_HAS_EMAIL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v2, v3, v4, v5}, Lg2c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lg2c;->o:Lg2c;
-
-    new-instance v3, Lg2c;
-
-    const-string v4, "SECOND_FACTOR_HAS_HINT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v3, v4, v5, v6}, Lg2c;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lg2c;
+    invoke-static {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->x0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
 
     move-result-object v0
 
-    sput-object v0, Lg2c;->X:[Lg2c;
+    iget-boolean p1, p1, Lc72;->b:Z
 
-    new-instance v1, Lla5;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
+    goto :goto_0
 
-    sput-object v1, Lg2c;->Y:Lla5;
+    :cond_0
+    const/16 v2, 0x8
 
-    return-void
-.end method
+    :goto_0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    goto :goto_1
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iput p3, p0, Lg2c;->a:I
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    return-void
-.end method
+    throw p1
 
-.method public static valueOf(Ljava/lang/String;)Lg2c;
-    .locals 1
+    :cond_2
+    invoke-static {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->x0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const-class v0, Lg2c;
+    move-result-object p1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object p0
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-    check-cast p0, Lg2c;
-
-    return-object p0
-.end method
-
-.method public static values()[Lg2c;
-    .locals 1
-
-    sget-object v0, Lg2c;->X:[Lg2c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lg2c;
-
-    return-object v0
+    return-object p1
 .end method

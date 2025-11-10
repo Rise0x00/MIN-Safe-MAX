@@ -4,16 +4,8 @@
 
 
 # instance fields
-.field public final synthetic a:La5;
+.field public a:Ljava/lang/ref/SoftReference;
 
+.field public b:Ljava/lang/ref/SoftReference;
 
-# direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwha;->a:La5;
-
-    return-void
-.end method
+.field public c:Ljava/lang/ref/SoftReference;

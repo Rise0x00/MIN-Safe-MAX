@@ -1,91 +1,76 @@
-.class public final enum Ltoc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Ltoc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum b:Ltoc;
+.field public static check_button:I = 0x7f0a0299
 
-.field public static final synthetic c:[Ltoc;
+.field public static check_button_parent:I = 0x7f0a029a
 
-.field public static final synthetic o:Lla5;
+.field public static check_button_view_stub:I = 0x7f0a029b
 
+.field public static media_bar_view__iv_constructor:I = 0x7f0a048e
 
-# instance fields
-.field public final a:I
+.field public static media_bar_view__iv_contact:I = 0x7f0a048f
 
+.field public static media_bar_view__iv_drawing:I = 0x7f0a0490
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public static media_bar_view__iv_file:I = 0x7f0a0491
 
-    new-instance v0, Ltoc;
+.field public static media_bar_view__iv_gallery:I = 0x7f0a0492
 
-    const-string v1, "EMOJI"
+.field public static media_bar_view__iv_location:I = 0x7f0a0494
 
-    const/4 v2, 0x0
+.field public static media_bar_view__iv_photo:I = 0x7f0a0495
 
-    invoke-direct {v0, v1, v2, v2}, Ltoc;-><init>(Ljava/lang/String;II)V
+.field public static media_bar_view__iv_video:I = 0x7f0a0497
 
-    sput-object v0, Ltoc;->b:Ltoc;
+.field public static media_bar_view__ll_constructor:I = 0x7f0a0498
 
-    new-instance v1, Ltoc;
+.field public static media_bar_view__ll_contact:I = 0x7f0a0499
 
-    const-string v2, "STICKER"
+.field public static media_bar_view__ll_drawing:I = 0x7f0a049a
 
-    const/4 v3, 0x1
+.field public static media_bar_view__ll_file:I = 0x7f0a049b
 
-    invoke-direct {v1, v2, v3, v3}, Ltoc;-><init>(Ljava/lang/String;II)V
+.field public static media_bar_view__ll_gallery:I = 0x7f0a049c
 
-    filled-new-array {v0, v1}, [Ltoc;
+.field public static media_bar_view__ll_layout_create:I = 0x7f0a049d
 
-    move-result-object v0
+.field public static media_bar_view__ll_location:I = 0x7f0a049e
 
-    sput-object v0, Ltoc;->c:[Ltoc;
+.field public static media_bar_view__ll_photo:I = 0x7f0a049f
 
-    new-instance v1, Lla5;
+.field public static media_bar_view__ll_video:I = 0x7f0a04a0
 
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
+.field public static media_bar_view__tv_constructor:I = 0x7f0a04a1
 
-    sput-object v1, Ltoc;->o:Lla5;
+.field public static media_bar_view__tv_contact:I = 0x7f0a04a2
 
-    return-void
-.end method
+.field public static media_bar_view__tv_drawing:I = 0x7f0a04a3
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.field public static media_bar_view__tv_file:I = 0x7f0a04a4
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static media_bar_view__tv_gallery:I = 0x7f0a04a5
 
-    iput p3, p0, Ltoc;->a:I
+.field public static media_bar_view__tv_location:I = 0x7f0a04a7
 
-    return-void
-.end method
+.field public static media_bar_view__tv_photo:I = 0x7f0a04a8
 
-.method public static valueOf(Ljava/lang/String;)Ltoc;
-    .locals 1
+.field public static media_bar_view__tv_video:I = 0x7f0a04aa
 
-    const-class v0, Ltoc;
+.field public static media_permissions_view_button:I = 0x7f0a04b4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+.field public static media_permissions_view_title:I = 0x7f0a04b5
 
-    move-result-object p0
+.field public static quick_camera_view__cv_camera:I = 0x7f0a09e6
 
-    check-cast p0, Ltoc;
+.field public static row_media_bar_actions__icon:I = 0x7f0a0a7a
 
-    return-object p0
-.end method
+.field public static row_media_bar_actions__title:I = 0x7f0a0a7b
 
-.method public static values()[Ltoc;
-    .locals 1
+.field public static select_album_content_container:I = 0x7f0a0b21
 
-    sget-object v0, Ltoc;->c:[Ltoc;
+.field public static simple_drawee_view:I = 0x7f0a0b9f
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ltoc;
-
-    return-object v0
-.end method
+.field public static video_info:I = 0x7f0a0c3f

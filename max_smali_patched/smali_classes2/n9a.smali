@@ -1,49 +1,33 @@
 .class public final Ln9a;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lq9a;
+.field public a:Z
 
-.field public Y:I
+.field public b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Z
 
+.field public d:Z
 
-# direct methods
-.method public constructor <init>(Lq9a;Lnz3;)V
-    .locals 0
+.field public e:I
 
-    iput-object p1, p0, Ln9a;->X:Lq9a;
+.field public f:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public g:Ljava/lang/String;
 
-    return-void
-.end method
+.field public h:I
 
+.field public i:I
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public j:I
 
-    iput-object p1, p0, Ln9a;->o:Ljava/lang/Object;
+.field public k:I
 
-    iget p1, p0, Ln9a;->Y:I
+.field public l:I
 
-    const/high16 v0, -0x80000000
+.field public m:Z
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ln9a;->Y:I
-
-    iget-object p1, p0, Ln9a;->X:Lq9a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lq9a;->h(Ljava/util/List;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.field public n:Lyoa;

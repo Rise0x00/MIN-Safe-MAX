@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILof4;)V
+.method public synthetic constructor <init>(IIILjava/lang/Long;ZZILfi4;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x4
@@ -350,7 +350,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->timeToUploadNextFileMs:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -443,13 +443,13 @@
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxEventCount:I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-static {v2, v0, v1}, Lijf;->m(III)I
 
     move-result v0
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->maxLocalFileCount:I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-static {v2, v0, v1}, Lijf;->m(III)I
 
     move-result v0
 
@@ -473,7 +473,7 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsUploadConfig;->compressContent:Z
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
 
     move-result v0
 
@@ -509,7 +509,7 @@
 
     const-string v8, "ConversationAnalyticsUploadConfig(maxLocalFileSizeKb="
 
-    invoke-static {v8, v0, v6, v1, v7}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v0, v6, v1, v7}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -525,19 +525,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     const-string v1, ", disableUploadWhenCallIsActiveProvider="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ")"
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v2, v0, v4, v5}, Lcd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
 
     move-result-object v0
 

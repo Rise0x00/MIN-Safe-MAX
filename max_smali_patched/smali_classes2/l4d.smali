@@ -1,55 +1,125 @@
-.class public abstract Ll4d;
-.super Ljava/lang/Object;
+.class public final Ll4d;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lhd7;
+.implements Lej6;
 
 
 # instance fields
-.field public a:Ljava/lang/ref/SoftReference;
+.field public final synthetic X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    .locals 0
+
+    iput-object p2, p0, Ll4d;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(La5;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ll4d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ll4d;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ll4d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Ll4d;->a:Ljava/lang/ref/SoftReference;
+    new-instance v0, Ll4d;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Ll4d;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p2, v1}, Ll4d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+    iput-object p1, v0, Ll4d;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ll4d;->o:Ljava/lang/Object;
+
+    check-cast p1, Lt3d;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->g1:[Les7;
+
+    iget-object v0, p0, Ll4d;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+
+    move-result-object v1
+
+    new-instance v2, Lnd1;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, p1, v3, v0}, Lnd1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v2}, Lnd1;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v1
+    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
 
-    :goto_0
-    if-eqz v0, :cond_1
+    move-result p1
 
-    return-object v0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v2}, Lnd1;->invoke()Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, p1}, Ll4d;->b(La5;)Ljava/lang/Object;
+    new-instance p1, Lvr0;
 
-    move-result-object p1
+    const/16 v0, 0xd
 
-    if-eqz p1, :cond_2
+    invoke-direct {p1, v0, v2}, Lvr0;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Ljava/lang/ref/SoftReference;
+    invoke-virtual {v1, p1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
-
-    :cond_2
-    iput-object v1, p0, Ll4d;->a:Ljava/lang/ref/SoftReference;
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
-.end method
-
-.method public abstract b(La5;)Ljava/lang/Object;
 .end method

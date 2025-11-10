@@ -1,129 +1,372 @@
-.class public final enum Lv6h;
-.super Ljava/lang/Enum;
+.class public final Lv6h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lv6h;
+.field public static final Companion:Lu6h;
 
-.field public static final enum Y:Lv6h;
+.field public static final h:[Lfs7;
 
-.field public static final synthetic Z:[Lv6h;
 
-.field public static final enum a:Lv6h;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final enum b:Lv6h;
+.field public final b:Z
 
-.field public static final enum c:Lv6h;
+.field public final c:Ljava/util/List;
 
-.field public static final enum o:Lv6h;
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 4
 
-    new-instance v0, Lv6h;
+    new-instance v0, Lu6h;
 
-    const-string v1, "ADAPTIVE_ICON"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lv6h;->Companion:Lu6h;
+
+    new-instance v0, Lvs;
+
+    sget-object v1, Ltaf;->a:Ltaf;
+
+    invoke-direct {v0, v1}, Lvs;-><init>(Lfs7;)V
+
+    const/4 v1, 0x7
+
+    new-array v1, v1, [Lfs7;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lv6h;->a:Lv6h;
+    aput-object v3, v1, v2
 
-    new-instance v1, Lv6h;
+    const/4 v2, 0x1
 
-    const-string v2, "PICTURE"
+    aput-object v3, v1, v2
 
-    const/4 v3, 0x1
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    aput-object v0, v1, v2
 
-    sput-object v1, Lv6h;->b:Lv6h;
+    const/4 v0, 0x3
 
-    new-instance v2, Lv6h;
+    aput-object v3, v1, v0
 
-    const-string v3, "TITLE_BIG"
+    const/4 v0, 0x4
 
-    const/4 v4, 0x2
+    aput-object v3, v1, v0
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x5
 
-    sput-object v2, Lv6h;->c:Lv6h;
+    aput-object v3, v1, v0
 
-    new-instance v3, Lv6h;
+    const/4 v0, 0x6
 
-    const-string v4, "TITLE_STANDARD"
+    aput-object v3, v1, v0
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lv6h;->o:Lv6h;
-
-    new-instance v4, Lv6h;
-
-    const-string v5, "DESCRIPTION"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lv6h;->X:Lv6h;
-
-    new-instance v5, Lv6h;
-
-    const-string v6, "FILE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Lv6h;
-
-    const-string v7, "KEYBOARD"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lv6h;->Y:Lv6h;
-
-    filled-new-array/range {v0 .. v6}, [Lv6h;
-
-    move-result-object v0
-
-    sput-object v0, Lv6h;->Z:[Lv6h;
+    sput-object v1, Lv6h;->h:[Lfs7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lv6h;
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/String;ZLjava/util/List;ZZZLjava/lang/String;)V
+    .locals 2
 
-    const-class v0, Lv6h;
+    and-int/lit8 v0, p1, 0x7f
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/16 v1, 0x7f
 
-    move-result-object p0
+    if-ne v1, v0, :cond_0
 
-    check-cast p0, Lv6h;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    iput-object p2, p0, Lv6h;->a:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lv6h;->b:Z
+
+    iput-object p4, p0, Lv6h;->c:Ljava/util/List;
+
+    iput-boolean p5, p0, Lv6h;->d:Z
+
+    iput-boolean p6, p0, Lv6h;->e:Z
+
+    iput-boolean p7, p0, Lv6h;->f:Z
+
+    iput-object p8, p0, Lv6h;->g:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lt6h;->a:Lt6h;
+
+    invoke-virtual {p2}, Lt6h;->d()Lo3e;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lbi3;->b(IILo3e;)V
+
+    const/4 p1, 0x0
+
+    throw p1
 .end method
 
-.method public static values()[Lv6h;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
+    .locals 0
 
-    sget-object v0, Lv6h;->Z:[Lv6h;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    .line 3
+    iput-object p1, p0, Lv6h;->a:Ljava/lang/String;
+
+    const/4 p1, 0x1
+
+    .line 4
+    iput-boolean p1, p0, Lv6h;->b:Z
+
+    .line 5
+    iput-object p2, p0, Lv6h;->c:Ljava/util/List;
+
+    .line 6
+    iput-boolean p3, p0, Lv6h;->d:Z
+
+    .line 7
+    iput-boolean p4, p0, Lv6h;->e:Z
+
+    .line 8
+    iput-boolean p5, p0, Lv6h;->f:Z
+
+    .line 9
+    iput-object p6, p0, Lv6h;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lv6h;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lv6h;
+
+    iget-object v1, p0, Lv6h;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lv6h;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lv6h;->b:Z
+
+    iget-boolean v3, p1, Lv6h;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lv6h;->c:Ljava/util/List;
+
+    iget-object v3, p1, Lv6h;->c:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lv6h;->d:Z
+
+    iget-boolean v3, p1, Lv6h;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lv6h;->e:Z
+
+    iget-boolean v3, p1, Lv6h;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lv6h;->f:Z
+
+    iget-boolean v3, p1, Lv6h;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lv6h;->g:Ljava/lang/String;
+
+    iget-object p1, p1, Lv6h;->g:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lv6h;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lv6h;->b:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lv6h;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lijf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lv6h;->d:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lv6h;->e:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lv6h;->f:Z
+
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lv6h;->g:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppBiometryInfoResponse(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lv6h;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", available="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lv6h;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lv6h;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", accessRequested="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lv6h;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", accessGranted="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tokenSaved="
+
+    const-string v2, ", deviceId="
+
+    iget-boolean v3, p0, Lv6h;->e:Z
+
+    iget-boolean v4, p0, Lv6h;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lnx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lv6h;->g:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lv6h;
 
     return-object v0
 .end method

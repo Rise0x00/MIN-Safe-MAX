@@ -3,72 +3,100 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Lrb0;
+
+.field public static final e:Ljava/util/Set;
+
+.field public static final f:Ldq3;
+
+
 # instance fields
-.field public final a:Landroid/util/Size;
+.field public final a:I
 
-.field public final b:Ljava/util/HashMap;
+.field public final b:I
 
-.field public final c:Landroid/util/Size;
-
-.field public final d:Ljava/util/HashMap;
-
-.field public final e:Landroid/util/Size;
-
-.field public final f:Ljava/util/HashMap;
-
-.field public final g:Ljava/util/HashMap;
+.field public final c:Lzb0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Size;Ljava/util/HashMap;Landroid/util/Size;Ljava/util/HashMap;Landroid/util/Size;Ljava/util/HashMap;Ljava/util/HashMap;)V
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lrb0;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lrb0;-><init>(IILzb0;)V
+
+    sput-object v0, Lrb0;->d:Lrb0;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v4, -0x1
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    filled-new-array {v2, v4}, [Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lrb0;->e:Ljava/util/Set;
+
+    new-instance v0, Lrb0;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lrb0;-><init>(IILzb0;)V
+
+    new-instance v1, Ldq3;
+
+    invoke-direct {v1, v0}, Ldq3;-><init>(Ljava/lang/Object;)V
+
+    sput-object v1, Lrb0;->f:Ldq3;
+
+    return-void
+.end method
+
+.method public constructor <init>(IILzb0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_2
+    iput p1, p0, Lrb0;->a:I
 
-    iput-object p1, p0, Lrb0;->a:Landroid/util/Size;
+    if-eqz p2, :cond_0
 
-    iput-object p2, p0, Lrb0;->b:Ljava/util/HashMap;
+    iput p2, p0, Lrb0;->b:I
 
-    if-eqz p3, :cond_1
-
-    iput-object p3, p0, Lrb0;->c:Landroid/util/Size;
-
-    iput-object p4, p0, Lrb0;->d:Ljava/util/HashMap;
-
-    if-eqz p5, :cond_0
-
-    iput-object p5, p0, Lrb0;->e:Landroid/util/Size;
-
-    iput-object p6, p0, Lrb0;->f:Ljava/util/HashMap;
-
-    iput-object p7, p0, Lrb0;->g:Ljava/util/HashMap;
+    iput-object p3, p0, Lrb0;->c:Lzb0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null recordSize"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null previewSize"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null analysisSize"
+    const-string p2, "Null streamState"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -78,7 +106,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
 
     if-ne p1, p0, :cond_0
 
@@ -87,86 +115,49 @@
     :cond_0
     instance-of v0, p1, Lrb0;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     check-cast p1, Lrb0;
 
-    iget-object v0, p0, Lrb0;->a:Landroid/util/Size;
+    iget v0, p1, Lrb0;->a:I
 
-    iget-object v1, p1, Lrb0;->a:Landroid/util/Size;
+    iget-object v1, p1, Lrb0;->c:Lzb0;
 
-    invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+    iget v2, p0, Lrb0;->a:I
 
-    move-result v0
+    if-ne v2, v0, :cond_2
 
-    if-eqz v0, :cond_1
+    iget v0, p0, Lrb0;->b:I
 
-    iget-object v0, p0, Lrb0;->b:Ljava/util/HashMap;
+    iget p1, p1, Lrb0;->b:I
 
-    iget-object v1, p1, Lrb0;->b:Ljava/util/HashMap;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lrb0;->c:Landroid/util/Size;
-
-    iget-object v1, p1, Lrb0;->c:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lrb0;->d:Ljava/util/HashMap;
-
-    iget-object v1, p1, Lrb0;->d:Ljava/util/HashMap;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lrb0;->e:Landroid/util/Size;
-
-    iget-object v1, p1, Lrb0;->e:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lrb0;->f:Ljava/util/HashMap;
-
-    iget-object v1, p1, Lrb0;->f:Ljava/util/HashMap;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lrb0;->g:Ljava/util/HashMap;
-
-    iget-object p1, p1, Lrb0;->g:Ljava/util/HashMap;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lnx1;->c(II)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lrb0;->c:Lzb0;
+
+    if-nez p1, :cond_1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v1}, Lzb0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     :goto_0
     const/4 p1, 0x1
 
     return p1
 
-    :cond_1
+    :cond_2
     const/4 p1, 0x0
 
     return p1
@@ -175,11 +166,7 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lrb0;->a:Landroid/util/Size;
-
-    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lrb0;->a:I
 
     const v1, 0xf4243
 
@@ -187,19 +174,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lrb0;->b:Ljava/util/HashMap;
+    iget v2, p0, Lrb0;->b:I
 
-    invoke-interface {v2}, Ljava/util/Map;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lrb0;->c:Landroid/util/Size;
-
-    invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
+    invoke-static {v2}, Lnx1;->v(I)I
 
     move-result v2
 
@@ -207,105 +184,72 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lrb0;->d:Ljava/util/HashMap;
+    iget-object v1, p0, Lrb0;->c:Lzb0;
 
-    invoke-interface {v2}, Ljava/util/Map;->hashCode()I
+    if-nez v1, :cond_0
 
-    move-result v2
+    const/4 v1, 0x0
 
-    xor-int/2addr v0, v2
+    goto :goto_0
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lrb0;->e:Landroid/util/Size;
-
-    invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lrb0;->f:Ljava/util/HashMap;
-
-    invoke-interface {v2}, Ljava/util/Map;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lrb0;->g:Ljava/util/HashMap;
-
-    invoke-interface {v1}, Ljava/util/Map;->hashCode()I
+    :cond_0
+    invoke-virtual {v1}, Lzb0;->hashCode()I
 
     move-result v1
 
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SurfaceSizeDefinition{analysisSize="
+    const-string v1, "StreamInfo{id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lrb0;->a:Landroid/util/Size;
+    iget v1, p0, Lrb0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", s720pSizeMap="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrb0;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", previewSize="
+    const-string v1, ", streamState="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lrb0;->c:Landroid/util/Size;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lrb0;->b:I
 
-    const-string v1, ", s1440pSizeMap="
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INACTIVE"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "ACTIVE"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inProgressTransformationInfo="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lrb0;->d:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recordSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrb0;->e:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maximumSizeMap="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrb0;->f:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", ultraMaximumSizeMap="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrb0;->g:Ljava/util/HashMap;
+    iget-object v1, p0, Lrb0;->c:Lzb0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,168 +1,31 @@
 .class public final Lysg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lru7;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lru7;
 
-.field public final synthetic Z:Lmtg;
+.field public final c:Lru7;
 
-.field public final synthetic w0:Lwqg;
-
-.field public final synthetic x0:Lvsg;
+.field public final d:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lwqg;Lvsg;Lmtg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;)V
     .locals 0
 
-    iput-object p3, p0, Lysg;->Z:Lmtg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lysg;->w0:Lwqg;
+    iput-object p1, p0, Lysg;->a:Lru7;
 
-    iput-object p2, p0, Lysg;->x0:Lvsg;
+    iput-object p2, p0, Lysg;->b:Lru7;
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Lysg;->c:Lru7;
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lysg;->d:Lru7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lysg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lysg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lysg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lysg;
-
-    iget-object v1, p0, Lysg;->w0:Lwqg;
-
-    iget-object v2, p0, Lysg;->x0:Lvsg;
-
-    iget-object v3, p0, Lysg;->Z:Lmtg;
-
-    invoke-direct {v0, v1, v2, v3, p2}, Lysg;-><init>(Lwqg;Lvsg;Lmtg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lysg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lysg;->X:I
-
-    iget-object v1, p0, Lysg;->x0:Lvsg;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lysg;->Z:Lmtg;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lysg;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v0, v3, Lmtg;->a:Lwk7;
-
-    new-instance v4, Lzqg;
-
-    iget-object v5, p0, Lysg;->w0:Lwqg;
-
-    iget-object v5, v5, Lwqg;->b:Ljava/lang/String;
-
-    sget-object v6, Lf0f;->Companion:Le0f;
-
-    invoke-direct {v4, v5, p1}, Lzqg;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Lzqg;->Companion:Lyqg;
-
-    invoke-virtual {p1}, Lyqg;->serializer()Lum7;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, v4}, Lwk7;->b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v0, v3, Lmtg;->g:Llu0;
-
-    new-instance v4, Ljk7;
-
-    iget-object v5, v1, Lvsg;->a:Ljava/lang/String;
-
-    invoke-direct {v4, v5, p1}, Ljk7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Lysg;->X:I
-
-    invoke-interface {v0, v4, p0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    iget-object p1, v1, Lvsg;->a:Ljava/lang/String;
-
-    invoke-static {v3, p1}, Lmtg;->e(Lmtg;Ljava/lang/String;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

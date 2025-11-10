@@ -1,205 +1,147 @@
-.class public final enum Ld59;
-.super Ljava/lang/Enum;
+.class public final Ld59;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum A0:Ld59;
+# instance fields
+.field public final a:J
 
-.field public static final enum B0:Ld59;
+.field public final b:J
 
-.field public static final synthetic C0:[Ld59;
+.field public final c:Liw0;
 
-.field public static final enum X:Ld59;
+.field public final d:Lake;
 
-.field public static final enum Y:Ld59;
-
-.field public static final enum Z:Ld59;
-
-.field public static final enum a:Ld59;
-
-.field public static final enum b:Ld59;
-
-.field public static final enum c:Ld59;
-
-.field public static final enum o:Ld59;
-
-.field public static final enum w0:Ld59;
-
-.field public static final enum x0:Ld59;
-
-.field public static final enum y0:Ld59;
-
-.field public static final enum z0:Ld59;
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(JJLiw0;Ltlf;)V
+    .locals 0
 
-    new-instance v0, Ld59;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-wide p1, p0, Ld59;->a:J
 
-    const/4 v2, 0x0
+    iput-wide p3, p0, Ld59;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p5, p0, Ld59;->c:Liw0;
 
-    sput-object v0, Ld59;->a:Ld59;
+    const/4 p1, 0x0
 
-    new-instance v1, Ld59;
+    const/4 p2, 0x7
 
-    const-string v2, "USER_MENTION"
+    invoke-static {p1, p1, p2}, Lbke;->b(III)Lake;
 
-    const/4 v3, 0x1
+    move-result-object p1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Ld59;->d:Lake;
 
-    sput-object v1, Ld59;->b:Ld59;
+    check-cast p6, Lsta;
 
-    new-instance v2, Ld59;
+    invoke-virtual {p6}, Lsta;->a()La54;
 
-    const-string v3, "GROUP_MENTION"
+    move-result-object p1
 
-    const/4 v4, 0x2
+    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object p1
 
-    sput-object v2, Ld59;->c:Ld59;
+    iput-object p1, p0, Ld59;->e:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v3, Ld59;
-
-    const-string v4, "MONOSPACED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ld59;->o:Ld59;
-
-    new-instance v4, Ld59;
-
-    const-string v5, "STRONG"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ld59;->X:Ld59;
-
-    new-instance v5, Ld59;
-
-    const-string v6, "EMPHASIZED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Ld59;->Y:Ld59;
-
-    new-instance v6, Ld59;
-
-    const-string v7, "LINK"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Ld59;->Z:Ld59;
-
-    new-instance v7, Ld59;
-
-    const-string v8, "STRIKETHROUGH"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Ld59;->w0:Ld59;
-
-    new-instance v8, Ld59;
-
-    const-string v9, "UNDERLINE"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Ld59;->x0:Ld59;
-
-    new-instance v9, Ld59;
-
-    const-string v10, "HEADING"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Ld59;->y0:Ld59;
-
-    new-instance v10, Ld59;
-
-    const-string v11, "CODE"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Ld59;->z0:Ld59;
-
-    new-instance v11, Ld59;
-
-    const-string v12, "ANIMOJI"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Ld59;->A0:Ld59;
-
-    new-instance v12, Ld59;
-
-    const-string v13, "QUOTE"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Ld59;->B0:Ld59;
-
-    filled-new-array/range {v0 .. v12}, [Ld59;
-
-    move-result-object v0
-
-    sput-object v0, Ld59;->C0:[Ld59;
+    invoke-virtual {p5, p0}, Liw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ld59;
-    .locals 1
 
-    const-class v0, Ld59;
+# virtual methods
+.method public final onEvent(Lk43;)V
+    .locals 3
+    .annotation runtime Lxbf;
+    .end annotation
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 7
+    iget-object p1, p1, Lk43;->b:Ljava/util/Collection;
 
-    move-result-object p0
+    iget-wide v0, p0, Ld59;->b:J
 
-    check-cast p0, Ld59;
-
-    return-object p0
-.end method
-
-.method public static values()[Ld59;
-    .locals 1
-
-    sget-object v0, Ld59;->C0:[Ld59;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    check-cast v0, [Ld59;
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    .line 8
+    :cond_0
+    new-instance p1, Lb59;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lb59;-><init>(Ld59;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Ld59;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+
+    return-void
+.end method
+
+.method public final onEvent(Lzdg;)V
+    .locals 4
+    .annotation runtime Lxbf;
+    .end annotation
+
+    .line 1
+    iget-wide v0, p1, Lzdg;->b:J
+
+    .line 2
+    iget-wide v2, p0, Ld59;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    .line 3
+    iget-wide v0, p1, Lzdg;->c:J
+
+    .line 4
+    iget-wide v2, p0, Ld59;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    iget-boolean p1, p1, Lzdg;->d:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance p1, Lc59;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lc59;-><init>(Ld59;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Ld59;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

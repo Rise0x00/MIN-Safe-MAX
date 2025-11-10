@@ -1,25 +1,25 @@
 .class public final Lj76;
-.super Lnz3;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lm76;
 
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+.field public Y:I
 
-.field public Z:I
+.field public d:Lm76;
 
-.field public o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lm76;Lp14;)V
     .locals 0
 
-    iput-object p1, p0, Lj76;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iput-object p1, p0, Lj76;->X:Lm76;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,19 +29,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lj76;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lj76;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lj76;->Z:I
+    iget p1, p0, Lj76;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lj76;->Z:I
+    iput p1, p0, Lj76;->Y:I
 
-    iget-object p1, p0, Lj76;->Y:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    iget-object p1, p0, Lj76;->X:Lm76;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lm76;->a(Lm76;Lca6;Lp14;)Ljava/lang/Object;
 
     move-result-object p1
 

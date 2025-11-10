@@ -1,103 +1,69 @@
-.class public abstract Ldza;
-.super Ljava/lang/Object;
+.class public final enum Ldza;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Ldza;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public static final synthetic b:[Ldza;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    sget v0, Lqkc;->web_app_root_biometry_open_settings_dialog_accept:I
+    new-instance v0, Ldza;
 
-    sput v0, Ldza;->a:I
+    const-string v1, "SMALL"
 
-    sget v0, Lqkc;->web_app_root_biometry_open_settings_dialog_title:I
+    const/4 v2, 0x0
 
-    sput v0, Ldza;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lqkc;->web_app_root_biometry_request_dialog_accept:I
+    new-instance v1, Ldza;
 
-    sput v0, Ldza;->c:I
+    const-string v2, "MEDIUM"
 
-    sget v0, Lqkc;->web_app_root_biometry_request_dialog_decline:I
+    const/4 v3, 0x1
 
-    sput v0, Ldza;->d:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lqkc;->web_app_root_biometry_request_dialog_default_reason:I
+    sput-object v1, Ldza;->a:Ldza;
 
-    sput v0, Ldza;->e:I
+    filled-new-array {v0, v1}, [Ldza;
 
-    sget v0, Lqkc;->web_app_root_biometry_request_dialog_title:I
+    move-result-object v0
 
-    sput v0, Ldza;->f:I
-
-    sget v0, Lqkc;->web_app_root_biometry_setting:I
-
-    sput v0, Ldza;->g:I
-
-    sget v0, Lqkc;->web_app_root_biometry_setting_description:I
-
-    sput v0, Ldza;->h:I
-
-    sget v0, Lqkc;->web_app_root_choose_media_bottomsheet_gallery:I
-
-    sput v0, Ldza;->i:I
-
-    sget v0, Lqkc;->web_app_root_choose_media_bottomsheet_title:I
-
-    sput v0, Ldza;->j:I
-
-    sget v0, Lqkc;->web_app_root_max_share_quote_title:I
-
-    sput v0, Ldza;->k:I
-
-    sget v0, Lqkc;->web_app_root_setting_open_webapp:I
-
-    sput v0, Ldza;->l:I
-
-    sget v0, Lqkc;->web_app_root_settings_header_subtitle:I
-
-    sput v0, Ldza;->m:I
-
-    sget v0, Lqkc;->web_app_root_settings_header_title:I
-
-    sput v0, Ldza;->n:I
-
-    sget v0, Lqkc;->web_app_root_settings_webapps:I
-
-    sput v0, Ldza;->o:I
+    sput-object v0, Ldza;->b:[Ldza;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ldza;
+    .locals 1
+
+    const-class v0, Ldza;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ldza;
+
+    return-object p0
+.end method
+
+.method public static values()[Ldza;
+    .locals 1
+
+    sget-object v0, Ldza;->b:[Ldza;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ldza;
+
+    return-object v0
 .end method

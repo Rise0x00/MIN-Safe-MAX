@@ -2,21 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqu4;
-
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Intent;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lou4;->a:I
+    iput-object p1, p0, Lou4;->a:Landroid/content/Intent;
+
+    iput-object p2, p0, Lou4;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -24,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -44,40 +45,83 @@
     :cond_1
     check-cast p1, Lou4;
 
-    iget v1, p0, Lou4;->a:I
+    iget-object v1, p0, Lou4;->a:Landroid/content/Intent;
 
-    iget p1, p1, Lou4;->a:I
+    iget-object v3, p1, Lou4;->a:Landroid/content/Intent;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Lou4;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lou4;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Lou4;->a:I
+    iget-object v0, p0, Lou4;->a:Landroid/content/Intent;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lou4;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "DownloadFailed(textFailRes="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DirectionsIntentHolder(intent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lou4;->a:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tag="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lou4;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget v2, p0, Lou4;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

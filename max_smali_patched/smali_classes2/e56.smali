@@ -1,116 +1,333 @@
-.class public final synthetic Le56;
-.super Ljava/lang/Object;
+.class public final Le56;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lf56;
 
-.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+.method public constructor <init>(Lf56;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Le56;->a:I
+    iput-object p1, p0, Le56;->X:Lf56;
 
-    iput-object p1, p0, Le56;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iput-object p2, p0, Le56;->Y:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Le56;->a:I
+    check-cast p1, Lg54;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Le56;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    invoke-virtual {p0, p1, p2}, Le56;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->w0:[Ltm7;
+    check-cast p1, Le56;
 
-    new-instance v0, Lbna;
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, p2}, Le56;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object p1
 
-    invoke-direct {v0, v3, v1}, Lbna;-><init>(Landroid/content/Context;I)V
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget v1, Lg9d;->O:I
+    new-instance p1, Le56;
 
-    invoke-virtual {v0, v1}, Lbna;->setIcon(I)V
+    iget-object v0, p0, Le56;->X:Lf56;
 
-    sget v1, Ljoa;->o:I
+    iget-object v1, p0, Le56;->Y:Ljava/lang/String;
 
-    new-instance v3, Ljef;
+    invoke-direct {p1, v0, v1, p2}, Le56;-><init>(Lf56;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v3}, Lbna;->setTitle(Loef;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget-object v0, Lybg;->a:Lybg;
+
+    sget-object v1, Lh54;->a:Lh54;
+
+    iget v2, p0, Le56;->o:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_2
+
+    if-eq v2, v5, :cond_1
+
+    if-ne v2, v4, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_3
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :try_start_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_5
+
+    :cond_2
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Le56;->X:Lf56;
+
+    iget-object p1, p1, Lf56;->e:Lcg7;
+
+    iget-object p1, p1, Lcg7;->a:Ljava/lang/Object;
+
+    check-cast p1, Ly96;
+
+    iget-object v2, p0, Le56;->Y:Ljava/lang/String;
+
+    invoke-interface {p1, v2}, Ly96;->u(Ljava/lang/String;)Lt0f;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lt0f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lo46;
+
+    if-nez p1, :cond_3
+
+    goto/16 :goto_4
+
+    :cond_3
+    iget-boolean p1, p1, Lo46;->B0:Z
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Le56;->X:Lf56;
+
+    iget-object p1, p1, Lf56;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Le56;->Y:Ljava/lang/String;
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_4
+
+    goto/16 :goto_4
+
+    :cond_4
+    sget-object v4, La98;->X:La98;
+
+    invoke-virtual {v2, v4}, Lnxa;->b(La98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    const-string v5, "Folder("
+
+    const-string v6, ") can\'t be deleted"
+
+    invoke-static {v5, v1, v6}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    sget v3, Ljoa;->l:I
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Lg56;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v4}, Lg56;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-virtual {v0, v1, v3}, Lbna;->v(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v4, p1, v1, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
 
-    :pswitch_0
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->w0:[Ltm7;
+    :cond_5
+    new-instance p1, Lj86;
 
-    new-instance v0, Lt56;
+    iget-object v2, p0, Le56;->Y:Ljava/lang/String;
 
-    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lpr;
+    sget-object v6, Ldod;->a:Ld1a;
 
-    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->w0:[Ltm7;
+    new-instance v6, Ld1a;
 
-    aget-object v1, v4, v1
+    invoke-direct {v6, v5}, Ld1a;-><init>(I)V
 
-    invoke-virtual {v3, v2}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v6, v2}, Ld1a;->d(Ljava/lang/Object;)I
+
+    move-result v7
+
+    iget-object v8, v6, Ld1a;->b:[Ljava/lang/Object;
+
+    aput-object v2, v8, v7
+
+    invoke-direct {p1, v6}, Lj86;-><init>(Ld1a;)V
+
+    iget-object v2, p0, Le56;->X:Lf56;
+
+    :try_start_1
+    iget-object v6, v2, Lf56;->c:Lru7;
+
+    invoke-interface {v6}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lml;
+
+    iget-object v7, v2, Lf56;->a:Ljava/lang/String;
+
+    iget-object v2, v2, Lf56;->d:Lru7;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lvf5;
+
+    iput v5, p0, Le56;->o:I
+
+    invoke-static {v6, p1, v7, v2, p0}, Ldxi;->c(Lml;Lkh;Ljava/lang/String;Lvf5;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne p1, v1, :cond_6
+
+    goto :goto_2
+
+    :goto_0
+    new-instance v2, Lfed;
+
+    invoke-direct {v2, p1}, Lfed;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v2
+
+    :cond_6
+    :goto_1
+    iget-object v2, p0, Le56;->X:Lf56;
+
+    invoke-static {p1}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_7
+
+    iget-object v2, v2, Lf56;->a:Ljava/lang/String;
+
+    const-string v6, "Not deleted folder due error"
+
+    invoke-static {v2, v6, v5}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    check-cast p1, Lk86;
+
+    iget-object v2, p0, Le56;->X:Lf56;
+
+    iget-object v2, v2, Lf56;->e:Lcg7;
+
+    iget-object v2, v2, Lcg7;->a:Ljava/lang/Object;
+
+    check-cast v2, Ly96;
+
+    iget-wide v5, p1, Lk86;->c:J
+
+    iget-object p1, p0, Le56;->Y:Ljava/lang/String;
+
+    iput v4, p0, Le56;->o:I
+
+    invoke-interface {v2, v5, v6, p1, p0}, Ly96;->G(JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_8
+
+    :goto_2
+    return-object v1
+
+    :cond_8
+    :goto_3
+    iget-object p1, p0, Le56;->X:Lf56;
+
+    iget-object p1, p1, Lf56;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Le56;->Y:Ljava/lang/String;
+
+    sget-object v2, Lcuh;->b:Lnxa;
+
+    if-nez v2, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    sget-object v4, La98;->d:La98;
+
+    invoke-virtual {v2, v4}, Lnxa;->b(La98;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    const-string v5, "Successfully deleted folder("
+
+    const-string v6, ")"
+
+    invoke-static {v5, v1, v6}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Number;
+    invoke-virtual {v2, v4, p1, v1, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, v1, v2}, Lt56;-><init>(J)V
-
+    :cond_a
+    :goto_4
     return-object v0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_5
+    throw p1
 .end method

@@ -1,175 +1,96 @@
-.class public final Lp88;
-.super Lm3f;
+.class public final synthetic Lp88;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lqi6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ls88;
+.field public final synthetic b:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Ls88;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru7;I)V
     .locals 0
 
-    iput-object p1, p0, Lp88;->Z:Ls88;
+    iput p2, p0, Lp88;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lp88;->b:Lru7;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Le34;
+    iget v0, p0, Lp88;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lp88;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lp88;->b:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lp88;
+    check-cast p1, Lqs3;
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-virtual {p1, v0, v1}, Lqs3;->m(J)Z
 
-    invoke-virtual {p1, p2}, Lp88;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    new-instance v0, Lp88;
+    const-string v0, "LogController"
 
-    iget-object v1, p0, Lp88;->Z:Ls88;
+    const-string v1, "Failed to store event"
 
-    invoke-direct {v0, v1, p2}, Lp88;-><init>(Ls88;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p1, v0, Lp88;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lp88;->b:Lru7;
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lp88;->X:I
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lf34;->a:Lf34;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Lp88;->Y:Ljava/lang/Object;
-
-    check-cast v0, Le34;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp88;->Y:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Le34;
-
-    iput-object v0, p0, Lp88;->Y:Ljava/lang/Object;
-
-    iput v3, p0, Lp88;->X:I
-
-    const-wide/16 v5, 0x2710
-
-    invoke-static {v5, v6, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    invoke-static {v0}, Lipe;->r(Le34;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    iget-object p1, p0, Lp88;->Z:Ls88;
-
-    iget-object v0, p1, Ls88;->a:Lr8f;
-
-    check-cast v0, Lwla;
-
-    invoke-virtual {v0}, Lwla;->c()Le88;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v3, Lo88;
+    check-cast v0, Lvf5;
 
-    const/4 v5, 0x0
+    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
 
-    invoke-direct {v3, p1, v5}, Lo88;-><init>(Ls88;Lkotlin/coroutines/Continuation;)V
+    const-string v2, "Error in log buffer"
 
-    iput-object v5, p0, Lp88;->Y:Ljava/lang/Object;
+    const-string v3, "ONEME-18649"
 
-    iput v2, p0, Lp88;->X:I
+    invoke-direct {v1, v2, v3, p1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v0, v3, p0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lvf5;->b(Lvf5;Ljava/lang/Throwable;)V
 
-    move-result-object p1
+    sget-object p1, Lybg;->a:Lybg;
 
-    if-ne p1, v4, :cond_5
+    return-object p1
 
-    :goto_1
-    return-object v4
-
-    :cond_5
-    :goto_2
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

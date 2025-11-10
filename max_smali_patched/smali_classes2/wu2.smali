@@ -1,122 +1,174 @@
 .class public final Lwu2;
-.super Ljava/lang/Object;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Ljava/util/List;
 
-.field public final synthetic b:Lhy9;
+.field public d:I
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;Lhy9;I)V
+.method public constructor <init>(Ljf9;)V
     .locals 0
 
-    iput p3, p0, Lwu2;->a:I
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
-    iput-object p2, p0, Lwu2;->b:Lhy9;
+    iget-object p1, p0, Lwu2;->c:Ljava/util/List;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p1, :cond_0
 
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p1, p0, Lwu2;->c:Ljava/util/List;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final d(Ljf9;Ljava/lang/String;)V
+    .locals 2
 
-    iget v0, p0, Lwu2;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    check-cast p1, Lome;
+    move-result v0
 
-    invoke-virtual {p1}, Lome;->d1()V
+    const/4 v1, -0x1
 
-    iget-object v0, p0, Lwu2;->b:Lhy9;
+    sparse-switch v0, :sswitch_data_0
 
-    check-cast v0, Llu2;
+    goto :goto_0
 
-    iget-wide v0, v0, Llu2;->b:J
+    :sswitch_0
+    const-string v0, "total"
 
-    const-string v2, ":start-conversation/add-subscribers?id="
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v1, v2}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+    move-result p2
 
-    move-result-object v0
+    if-nez p2, :cond_0
 
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x2
 
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "result"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "marker"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    :goto_0
+    packed-switch v1, :pswitch_data_0
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Ljf9;->v()V
 
-    return-object p1
+    return-void
 
     :pswitch_0
-    check-cast p1, Lome;
+    invoke-virtual {p1}, Ljf9;->q0()I
 
-    invoke-virtual {p1}, Lome;->d1()V
+    move-result p1
 
-    iget-object v0, p0, Lwu2;->b:Lhy9;
+    iput p1, p0, Lwu2;->d:I
 
-    check-cast v0, Lmu2;
+    return-void
 
-    iget-wide v0, v0, Lmu2;->b:J
-
-    const-string v2, ":profile/edit/link?id="
-
-    const-string v3, "&type=local_chat&flow=create"
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    :pswitch_1
+    invoke-static {p1}, Luz;->g(Ljf9;)Luz;
 
     move-result-object p1
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lwu2;->c:Ljava/util/List;
 
-    invoke-virtual {p1, v0, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    return-void
 
-    sget-object p1, Loyf;->a:Loyf;
+    :pswitch_2
+    invoke-static {p1}, Le0i;->t(Ljf9;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object p1
 
-    :pswitch_1
-    check-cast p1, Lome;
+    iput-object p1, p0, Lwu2;->o:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lome;->d1()V
+    return-void
 
-    iget-object v0, p0, Lwu2;->b:Lhy9;
-
-    check-cast v0, Lnu2;
-
-    iget-wide v0, v0, Lnu2;->b:J
-
-    invoke-virtual {p1, v0, v1}, Lome;->c1(J)Lzc4;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lv2;->N0(Lzc4;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :sswitch_data_0
+    .sparse-switch
+        -0x40736bc6 -> :sswitch_2
+        -0x37b237e3 -> :sswitch_1
+        0x696db44 -> :sswitch_0
+    .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lwu2;->c:Ljava/util/List;
+
+    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
+
+    move-result v0
+
+    iget v1, p0, Lwu2;->d:I
+
+    iget-object v2, p0, Lwu2;->o:Ljava/lang/String;
+
+    const-string v3, ", total="
+
+    const-string v4, ", marker=\'"
+
+    const-string v5, "{result="
+
+    invoke-static {v5, v0, v3, v1, v4}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\'}"
+
+    invoke-static {v0, v2, v1}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

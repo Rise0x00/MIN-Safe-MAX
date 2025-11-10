@@ -1,134 +1,155 @@
 .class public final Luq;
-.super Lm3f;
+.super Lk64;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final a:Luq;
 
-# instance fields
-.field public X:Ljp2;
+.field public static b:Lru7;
 
-.field public Y:I
+.field public static final c:Ltif;
 
-.field public final synthetic Z:Ljp2;
-
-.field public final synthetic w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public static final d:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Ljp2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Luq;->Z:Ljp2;
+    new-instance v0, Luq;
 
-    iput-object p2, p0, Luq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Luq;->a:Luq;
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lm;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lm;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Luq;->c:Ltif;
+
+    new-instance v0, Lm;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lm;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Luq;->d:Ltif;
 
     return-void
 .end method
 
+.method public static c()Lf0g;
+    .locals 1
+
+    sget-object v0, Luq;->d:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf0g;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 3
 
-    check-cast p1, Le34;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Luq;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Luq;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Luq;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Luq;
-
-    iget-object v0, p0, Luq;->Z:Ljp2;
-
-    iget-object v1, p0, Luq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    invoke-direct {p1, v0, v1, p2}, Luq;-><init>(Ljp2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Luq;->Y:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Luq;->X:Ljp2;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {}, Luq;->c()Lf0g;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_3
 
-    throw p1
+    invoke-static {v0, p2, p1}, Lf0g;->b(Lkhe;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :goto_0
+    instance-of p1, p2, Ljava/lang/Error;
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->w0:[Ltm7;
+    if-nez p1, :cond_2
 
-    iget-object p1, p0, Luq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    sget-object p1, Luq;->b:Lru7;
 
-    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->B0()Lhr;
+    if-eqz p1, :cond_3
 
-    move-result-object p1
-
-    iget-object v0, p0, Luq;->Z:Ljp2;
-
-    iput-object v0, p0, Luq;->X:Ljp2;
-
-    iput v1, p0, Luq;->Y:I
-
-    invoke-virtual {p1, p0}, Lhr;->s(Lnz3;)Ljava/lang/Object;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v1, Lf34;->a:Lf34;
+    check-cast p1, Lhvb;
 
-    if-ne p1, v1, :cond_2
+    if-eqz p1, :cond_3
 
-    return-object v1
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->tracer-non-fatal-crashed-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Ljud;->j(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_3
 
     :cond_2
-    :goto_0
-    check-cast p1, Lip2;
+    invoke-static {}, Luq;->c()Lf0g;
 
-    invoke-virtual {v0, p1}, Ljp2;->a(Lip2;)V
+    move-result-object p1
 
-    sget-object p1, Loyf;->a:Loyf;
+    if-eqz p1, :cond_3
 
-    return-object p1
+    invoke-static {v0, p2, v0}, Lf0g;->b(Lkhe;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    sget-object v0, Luq;->c:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb0g;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1, p2}, Lb0g;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

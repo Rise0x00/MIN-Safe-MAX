@@ -1,184 +1,130 @@
 .class public final Lry5;
-.super Ljava/lang/Object;
+.super Lx6d;
 .source "SourceFile"
 
 # interfaces
-.implements Lyz5;
-.implements Lss4;
+.implements Loy5;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lry5;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:Z
+.field public X:F
 
-.field public final a:Lnee;
+.field public Y:I
 
-.field public final b:Lyl0;
+.field public Z:F
 
-.field public final c:Ljava/lang/Object;
+.field public o:F
 
-.field public o:Leze;
+.field public s0:I
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:Z
 
 
 # direct methods
-.method public constructor <init>(Lnee;Ljava/lang/Object;Lyl0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldd4;
 
-    iput-object p1, p0, Lry5;->a:Lnee;
+    const/16 v1, 0xc
 
-    iput-object p3, p0, Lry5;->b:Lyl0;
+    invoke-direct {v0, v1}, Ldd4;-><init>(I)V
 
-    iput-object p2, p0, Lry5;->c:Ljava/lang/Object;
+    sput-object v0, Lry5;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-boolean v0, p0, Lry5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lry5;->X:Z
-
-    sget-object v0, Lgze;->a:Lgze;
-
-    iput-object v0, p0, Lry5;->o:Leze;
-
-    iget-object v0, p0, Lry5;->a:Lnee;
-
-    iget-object v1, p0, Lry5;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final d(Leze;)V
-    .locals 2
-
-    iget-object v0, p0, Lry5;->o:Leze;
-
-    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lry5;->o:Leze;
-
-    iget-object v0, p0, Lry5;->a:Lnee;
-
-    invoke-interface {v0, p0}, Lnee;->c(Lss4;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Leze;->i(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lry5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lry5;->b:Lyl0;
-
-    iget-object v1, p0, Lry5;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Lyl0;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lry5;->o:Leze;
-
-    invoke-interface {v0}, Leze;->cancel()V
-
-    invoke-virtual {p0, p1}, Lry5;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final g()V
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lry5;->o:Leze;
-
-    invoke-interface {v0}, Leze;->cancel()V
-
-    sget-object v0, Lgze;->a:Lgze;
-
-    iput-object v0, p0, Lry5;->o:Leze;
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 2
-
-    iget-object v0, p0, Lry5;->o:Leze;
-
-    sget-object v1, Lgze;->a:Lgze;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-boolean v0, p0, Lry5;->X:Z
+    iget p2, p0, Lry5;->o:F
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    iget p2, p0, Lry5;->X:F
 
-    return-void
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    :cond_0
-    const/4 v0, 0x1
+    iget p2, p0, Lry5;->Y:I
 
-    iput-boolean v0, p0, Lry5;->X:Z
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    sget-object v0, Lgze;->a:Lgze;
+    iget p2, p0, Lry5;->Z:F
 
-    iput-object v0, p0, Lry5;->o:Leze;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-object v0, p0, Lry5;->a:Lnee;
+    iget p2, p0, Lry5;->s0:I
 
-    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lry5;->t0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lry5;->u0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lry5;->v0:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lry5;->w0:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

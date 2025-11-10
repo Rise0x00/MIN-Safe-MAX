@@ -1,400 +1,79 @@
 .class public final Luid;
-.super Ljava/lang/Object;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:La5;
+.field public final b:Landroid/graphics/Rect;
+
+.field public final c:F
 
 
 # direct methods
-.method public synthetic constructor <init>(La5;I)V
+.method public constructor <init>(Landroid/graphics/Rect;FI)V
     .locals 0
 
-    iput p2, p0, Luid;->a:I
+    iput p3, p0, Luid;->a:I
 
-    iput-object p1, p0, Luid;->b:La5;
+    packed-switch p3, :pswitch_data_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+    iput-object p1, p0, Luid;->b:Landroid/graphics/Rect;
+
+    iput p2, p0, Luid;->c:F
 
     return-void
+
+    :pswitch_0
+    iput-object p1, p0, Luid;->b:Landroid/graphics/Rect;
+
+    iput p2, p0, Luid;->c:F
+
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 1
 
-    iget v0, p0, Luid;->a:I
+    iget p1, p0, Luid;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Luid;->b:La5;
+    iget-object p1, p0, Luid;->b:Landroid/graphics/Rect;
 
-    const-class v1, Liqa;
+    iget v0, p0, Luid;->c:F
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Luid;->b:La5;
+    iget-object p1, p0, Luid;->b:Landroid/graphics/Rect;
 
-    const-class v1, Llm3;
+    iget v0, p0, Luid;->c:F
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Llm5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lmid;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lz79;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lktd;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lgpb;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lxob;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lxob;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lec5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Ltk;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lu94;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lz56;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lp8f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lgpb;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Liqa;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lmu4;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Llr4;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lb89;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lktd;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Ltk;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lec5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lr63;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Ltk;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lm9f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Ljna;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lj57;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lcq5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lov0;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Luid;->b:La5;
-
-    const-class v1, Lln5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

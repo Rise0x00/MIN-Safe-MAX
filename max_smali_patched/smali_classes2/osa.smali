@@ -1,68 +1,97 @@
-.class public final Losa;
-.super Lsn;
+.class public abstract Losa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrff;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
 
 
-# virtual methods
-.method public final b(ZLuxa;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p2}, Luxa;->getIcon()Lk27;
-
-    move-result-object p1
-
-    iget p1, p1, Lk27;->k:I
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p2}, Luxa;->i()Ljye;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ljye;->b:Loye;
-
-    iget p1, p1, Loye;->b:I
-
-    :goto_0
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Luxa;)V
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    sget v0, Lplc;->file_fill_24:I
 
-    move-result v0
+    sput v0, Losa;->a:I
 
-    invoke-virtual {p0, v0, p1}, Losa;->b(ZLuxa;)V
+    sget v0, Lplc;->geolocation_fill_24:I
 
-    return-void
-.end method
+    sput v0, Losa;->b:I
 
-.method public setChecked(Z)V
-    .locals 1
+    sget v0, Lplc;->ic_arrow_down_24:I
 
-    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
+    sput v0, Losa;->c:I
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    sget v0, Lplc;->ic_arrow_up_24:I
 
-    invoke-virtual {v0, p0}, Lsed;->l(Landroid/view/View;)Luxa;
+    sput v0, Losa;->d:I
 
-    move-result-object v0
+    sget v0, Lplc;->ic_camera_add_36:I
 
-    invoke-virtual {p0, p1, v0}, Losa;->b(ZLuxa;)V
+    sput v0, Losa;->e:I
+
+    sget v0, Lplc;->ic_clear_24:I
+
+    sput v0, Losa;->f:I
+
+    sget v0, Lplc;->ic_cross_12:I
+
+    sput v0, Losa;->g:I
+
+    sget v0, Lplc;->ic_file_mode_24:I
+
+    sput v0, Losa;->h:I
+
+    sget v0, Lplc;->ic_media_mode_24:I
+
+    sput v0, Losa;->i:I
+
+    sget v0, Lplc;->ic_snack_file_24:I
+
+    sput v0, Losa;->j:I
+
+    sget v0, Lplc;->ic_snack_media_24:I
+
+    sput v0, Losa;->k:I
+
+    sget v0, Lplc;->ic_videocam_20:I
+
+    sput v0, Losa;->l:I
+
+    sget v0, Lplc;->profile_fill_24:I
+
+    sput v0, Losa;->m:I
+
+    sget v0, Lplc;->wallet_fill_24:I
+
+    sput v0, Losa;->n:I
 
     return-void
 .end method

@@ -1,106 +1,47 @@
 .class public final Lqw2;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final a:J
 
-.field public o:J
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Lnrf;
+
+.field public final d:Z
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/CharSequence;
+
+.field public final g:Li6b;
+
+.field public final h:Lbe0;
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public constructor <init>(JLjava/lang/CharSequence;Lnrf;ZLjava/lang/String;Ljava/lang/CharSequence;Li6b;Lbe0;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Lqw2;->c:Ljava/util/List;
+    iput-wide p1, p0, Lqw2;->a:J
 
-    if-nez p1, :cond_0
+    iput-object p3, p0, Lqw2;->b:Ljava/lang/CharSequence;
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput-object p4, p0, Lqw2;->c:Lnrf;
 
-    iput-object p1, p0, Lqw2;->c:Ljava/util/List;
+    iput-boolean p5, p0, Lqw2;->d:Z
 
-    :cond_0
-    return-void
-.end method
+    iput-object p6, p0, Lqw2;->e:Ljava/lang/String;
 
+    iput-object p7, p0, Lqw2;->f:Ljava/lang/CharSequence;
 
-# virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+    iput-object p8, p0, Lqw2;->g:Li6b;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "marker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "chats"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ls89;->B()V
+    iput-object p9, p0, Lqw2;->h:Lbe0;
 
     return-void
-
-    :cond_0
-    invoke-static {p1}, Lbz;->b(Ls89;)Lbz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqw2;->c:Ljava/util/List;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Ls89;->A0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lqw2;->o:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-wide v0, p0, Lqw2;->o:J
-
-    iget-object v2, p0, Lqw2;->c:Ljava/util/List;
-
-    invoke-static {v2}, Lkmc;->e(Ljava/util/Collection;)I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "marker="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", chats="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

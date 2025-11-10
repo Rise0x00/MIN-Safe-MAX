@@ -1,222 +1,168 @@
-.class public final synthetic Lxqg;
-.super Ljava/lang/Object;
+.class public final Lxqg;
+.super Ladi;
 .source "SourceFile"
 
-# interfaces
-.implements Ltj6;
 
+# instance fields
+.field public final synthetic c:I
 
-# static fields
-.field public static final a:Lxqg;
-
-.field private static final descriptor:Ldsd;
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lfqg;)V
+    .locals 1
 
-    new-instance v0, Lxqg;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lxqg;->c:I
 
-    sput-object v0, Lxqg;->a:Lxqg;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    new-instance v1, Lnmb;
+    iput-object p1, p0, Lxqg;->d:Landroid/view/View;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryAuthResponse"
+    const/16 p1, 0xc
 
-    const/4 v3, 0x3
+    .line 1
+    invoke-direct {p0, p1, v0}, Ladi;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
+    return-void
+.end method
 
-    const-string v0, "requestId"
+.method public constructor <init>(Lyqg;)V
+    .locals 1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
+    iput v0, p0, Lxqg;->c:I
 
-    const-string v0, "token"
+    iput-object p1, p0, Lxqg;->d:Landroid/view/View;
 
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
+    const/16 p1, 0xc
 
-    const-string v0, "status"
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lxqg;->descriptor:Ldsd;
+    .line 2
+    invoke-direct {p0, p1, v0}, Ladi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 11
-
-    sget-object v0, Lxqg;->descriptor:Ldsd;
-
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
-
-    move-result-object p1
-
-    sget-object v1, Lzqg;->d:[Lum7;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move v7, v2
-
-    move v8, v3
-
-    move-object v5, v4
-
-    move-object v6, v5
-
-    :goto_0
-    if-eqz v7, :cond_4
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v9
-
-    const/4 v10, -0x1
-
-    if-eq v9, v10, :cond_3
-
-    if-eqz v9, :cond_2
-
-    if-eq v9, v2, :cond_1
-
-    const/4 v10, 0x2
-
-    if-ne v9, v10, :cond_0
-
-    aget-object v9, v1, v10
-
-    invoke-virtual {p1, v0, v10, v9, v6}, Lp8;->t(Ldsd;ILum7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lf0f;
-
-    or-int/lit8 v8, v8, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v9}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v5
-
-    or-int/lit8 v8, v8, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0, v3}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v8, v8, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v7, v3
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance p1, Lzqg;
-
-    invoke-direct {p1, v8, v4, v5, v6}, Lzqg;-><init>(ILjava/lang/String;Ljava/lang/String;Lf0f;)V
-
-    return-object p1
-.end method
-
-.method public final b(Le04;Ljava/lang/Object;)V
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 4
 
-    check-cast p2, Lzqg;
+    iget v0, p0, Lxqg;->c:I
 
-    sget-object v0, Lxqg;->descriptor:Ldsd;
+    iget-object v1, p0, Lxqg;->d:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v1, Lzqg;->d:[Lum7;
+    move-result v0
 
-    iget-object v2, p2, Lzqg;->a:Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    const/4 v3, 0x0
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-virtual {p1, v0, v3, v2}, Le04;->l(Ldsd;ILjava/lang/String;)V
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x1
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v3, p2, Lzqg;->b:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0, v2, v3}, Le04;->l(Ldsd;ILjava/lang/String;)V
+    check-cast v1, Lfqg;
 
-    const/4 v2, 0x2
+    iget-object p1, v1, Lfqg;->E0:Landroid/animation/ValueAnimator;
 
-    aget-object v1, v1, v2
+    if-eqz p1, :cond_0
 
-    iget-object p2, p2, Lzqg;->c:Lf0f;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    invoke-virtual {p1, v0, v2, v1, p2}, Le04;->i(Ldsd;ILum7;Ljava/lang/Object;)V
+    :cond_0
+    iget p1, v1, Lfqg;->A0:F
 
-    invoke-virtual {p1}, Le04;->m()V
+    const/4 p2, 0x0
 
+    cmpg-float p2, p1, p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Lfqg;->g()F
+
+    move-result p2
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    const/4 v2, 0x0
+
+    aput p1, v0, v2
+
+    const/4 p1, 0x1
+
+    aput p2, v0, p1
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p2
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {p2, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v0, Lcqg;
+
+    invoke-direct {v0, v1, p1}, Lcqg;-><init>(Lfqg;I)V
+
+    invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v0, Leqg;
+
+    invoke-direct {v0, v1, p1}, Leqg;-><init>(Lfqg;I)V
+
+    invoke-virtual {p2, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
+
+    iput-object p2, v1, Lfqg;->E0:Landroid/animation/ValueAnimator;
+
+    :cond_2
+    :goto_0
     return-void
-.end method
 
-.method public final c()[Lum7;
-    .locals 5
+    :pswitch_0
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v0, Lzqg;->d:[Lum7;
+    move-result v0
 
-    const/4 v1, 0x2
+    if-nez v0, :cond_3
 
-    aget-object v0, v0, v1
+    check-cast p2, Lepg;
 
-    const/4 v2, 0x3
+    check-cast p1, Lepg;
 
-    new-array v2, v2, [Lum7;
+    check-cast v1, Lyqg;
 
-    sget-object v3, Luxe;->a:Luxe;
+    invoke-static {v1}, Lyqg;->i(Lyqg;)V
 
-    const/4 v4, 0x0
+    :cond_3
+    return-void
 
-    aput-object v3, v2, v4
-
-    const/4 v4, 0x1
-
-    aput-object v3, v2, v4
-
-    aput-object v0, v2, v1
-
-    return-object v2
-.end method
-
-.method public final d()Ldsd;
-    .locals 1
-
-    sget-object v0, Lxqg;->descriptor:Ldsd;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

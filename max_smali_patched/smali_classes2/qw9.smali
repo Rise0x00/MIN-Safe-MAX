@@ -1,79 +1,240 @@
-.class public final synthetic Lqw9;
-.super Ljava/lang/Object;
+.class public final Lqw9;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lzo3;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final c:J
+
+.field public final d:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(J)V
+.method public constructor <init>(JLjava/util/LinkedHashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqw9;->a:J
+    iput-wide p1, p0, Lqw9;->c:J
+
+    iput-object p3, p0, Lqw9;->d:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
+.method public static final e(Ljf9;)Lqw9;
+    .locals 12
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+    invoke-virtual {p0}, Ljf9;->l()Z
 
-    check-cast p1, Lmv9;
+    move-result v0
 
-    iget-wide v0, p0, Lqw9;->a:J
+    if-nez v0, :cond_0
 
-    iput-wide v0, p1, Lmv9;->w0:J
-
-    iget-object v2, p1, Lmv9;->Y:Lvp8;
-
-    check-cast v2, Lj18;
-
-    invoke-virtual {v2}, Lj18;->j()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p1}, Lmv9;->X0()V
+    goto :goto_0
 
     :cond_0
-    iget-object v2, p1, Lv2;->b:Ljava/lang/Object;
+    invoke-static {p0}, Le0i;->r(Ljf9;)I
 
-    check-cast v2, Lpv9;
+    move-result v0
 
-    check-cast v2, Lsw9;
+    if-nez v0, :cond_1
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    :goto_0
+    const/4 p0, 0x0
 
-    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    return-object p0
 
-    move-result-wide v3
+    :cond_1
+    new-instance v1, Ljava/util/LinkedHashSet;
 
-    invoke-static {v3, v4}, Lve7;->u(J)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    move-result-object v3
+    const/4 v2, 0x0
 
-    iget-object v2, v2, Lsw9;->A0:Landroid/widget/TextView;
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move v5, v2
 
-    invoke-virtual {p1}, Lmv9;->c1()V
+    move-wide v6, v3
 
-    iget-object p1, p1, Lmv9;->z0:Li7c;
+    :goto_1
+    if-ge v5, v0, :cond_6
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p0}, Le0i;->t(Ljf9;)Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    const-string v9, "chatId"
+
+    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    invoke-static {p0, v3, v4}, Le0i;->q(Ljf9;J)J
+
+    move-result-wide v6
+
+    goto :goto_3
+
+    :cond_3
+    const-string v9, "messageIds"
+
+    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    invoke-static {p0}, Le0i;->j(Ljf9;)I
+
+    move-result v8
+
+    move v9, v2
+
+    :goto_2
+    if-ge v9, v8, :cond_5
+
+    invoke-virtual {p0}, Ljf9;->r0()J
+
+    move-result-wide v10
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-interface {v1, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {p0}, Ljf9;->v()V
+
+    :cond_5
+    :goto_3
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    new-instance p0, Lqw9;
+
+    invoke-direct {p0, v6, v7, v1}, Lqw9;-><init>(JLjava/util/LinkedHashSet;)V
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lqw9;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lqw9;
+
+    iget-wide v0, p0, Lqw9;->c:J
+
+    iget-wide v2, p1, Lqw9;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lqw9;->d:Ljava/util/LinkedHashSet;
+
+    iget-object p1, p1, Lqw9;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lqw9;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqw9;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lqw9;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqw9;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Li7c;->f(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

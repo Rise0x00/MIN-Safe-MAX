@@ -4,43 +4,20 @@
 
 
 # direct methods
-.method public static a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
     .locals 0
 
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->checkOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Landroid/content/Context;)Landroid/app/AppOpsManager;
-    .locals 1
+.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
+    .locals 0
 
-    const-class v0, Landroid/app/AppOpsManager;
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/AppOpsManager;
-
-    return-object p0
+    return-void
 .end method

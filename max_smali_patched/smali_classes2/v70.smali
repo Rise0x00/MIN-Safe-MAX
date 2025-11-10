@@ -1,130 +1,92 @@
 .class public final Lv70;
-.super Lz;
+.super Lmmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public final c:Lbt;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lbt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lv70;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lv70;->b:Ljava/lang/String;
+    iput-object p1, p0, Lv70;->c:Lbt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getScope()Ltl;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    sget-object v0, Ltl;->b:Ltl;
+    if-ne p0, p1, :cond_0
 
-    return-object v0
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    const-string v0, "auth.anonymLogin"
-
-    invoke-static {v0}, Lbm;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final populateParams(Lml;)V
-    .locals 5
-
-    const-string v0, "referrer"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "deviceId"
-
-    iget-object v2, p0, Lv70;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v2}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ljq0;
-
-    const-string v3, "verification_supported"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v0, v3, v4}, Ljq0;-><init>(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1, v0}, Lml;->a(Lll;)V
-
-    const-string v0, "verification_token"
-
-    invoke-virtual {p1, v0, v1}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "verification_supported_v"
-
-    const-string v1, "1"
-
-    invoke-virtual {p1, v0, v1}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "client"
-
-    const-string v1, "test"
-
-    invoke-virtual {p1, v0, v1}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ljq0;
-
-    const-string v3, "gen_token"
-
-    invoke-direct {v0, v3, v4}, Ljq0;-><init>(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1, v0}, Lml;->a(Lll;)V
-
-    if-nez v2, :cond_0
-
-    move-object v2, v1
+    goto :goto_1
 
     :cond_0
-    const-string v0, "\", \"client_version\": 1}"
+    instance-of v0, p1, Lv70;
 
-    iget-object v1, p0, Lv70;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    const-string v3, "{\"auth_token\": \""
-
-    const-string v4, "\", \"version\": 3, \"device_id\": \""
-
-    invoke-static {v3, v1, v4, v2, v0}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-string v1, "{\"version\": 2, \"device_id\": \""
+    check-cast p1, Lv70;
 
-    invoke-static {v1, v2, v0}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lv70;->c:Lbt;
+
+    iget-object p1, p1, Lv70;->c:Lbt;
+
+    invoke-virtual {v0, p1}, Llpe;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lv70;->c:Lbt;
+
+    invoke-virtual {v0}, Llpe;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lv70;->c:Lbt;
+
+    invoke-static {v0}, Lxvc;->h(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    const-string v1, "session_data"
+    const-string v1, "Response(tokenTypes=\'"
 
-    invoke-virtual {p1, v1, v0}, Lml;->b(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "\')"
 
-    return-void
+    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

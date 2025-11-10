@@ -1,59 +1,61 @@
 .class public final Ltp6;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:J
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lup6;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
+
+
+# direct methods
+.method public constructor <init>(Lup6;Lp14;)V
+    .locals 0
+
+    iput-object p1, p0, Ltp6;->Z:Lup6;
+
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ltp6;->Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ltp6;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ltp6;
+    or-int/2addr p1, v0
 
-    if-nez v1, :cond_1
+    iput p1, p0, Ltp6;->s0:I
 
-    const/4 p1, 0x0
+    const/4 v3, 0x0
 
-    return p1
+    const/4 v4, 0x0
 
-    :cond_1
-    check-cast p1, Ltp6;
+    iget-object v0, p0, Ltp6;->Z:Lup6;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide/16 v1, 0x0
 
-    return v0
-.end method
+    move-object v5, p0
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual/range {v0 .. v5}, Lup6;->a(JLjava/lang/Long;Ljava/lang/String;Lp14;)Ljava/lang/Object;
 
-    const v0, -0xf2f2f3
+    move-result-object p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "GradientsLoadingIconPrimaryStaticColors(filled=-15921907, transparent=-15921907)"
-
-    return-object v0
+    return-object p1
 .end method

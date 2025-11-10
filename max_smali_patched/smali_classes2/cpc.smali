@@ -1,92 +1,68 @@
-.class public final Lcpc;
+.class public abstract Lcpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
-# instance fields
-.field public final synthetic a:Landroid/view/View;
+# static fields
+.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a078e
 
-.field public final synthetic b:Lj15;
+.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a078f
 
-.field public final synthetic c:F
+.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a0790
 
+.field public static oneme_settings_media_gif_always:I = 0x7f0a0791
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;Lj15;F)V
-    .locals 0
+.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a0792
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_media_gif_wifi:I = 0x7f0a0793
 
-    iput-object p1, p0, Lcpc;->a:Landroid/view/View;
+.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a0794
 
-    iput-object p2, p0, Lcpc;->b:Lj15;
+.field public static oneme_settings_media_item_gif:I = 0x7f0a0795
 
-    iput p3, p0, Lcpc;->c:F
+.field public static oneme_settings_media_item_gif_available:I = 0x7f0a0796
 
-    return-void
-.end method
+.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a0797
 
+.field public static oneme_settings_media_item_photo:I = 0x7f0a0798
 
-# virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_settings_media_item_playlist_enabled:I = 0x7f0a0799
 
-    return-void
-.end method
+.field public static oneme_settings_media_item_video:I = 0x7f0a079a
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_settings_media_item_video_caching:I = 0x7f0a079b
 
-    return-void
-.end method
+.field public static oneme_settings_media_item_video_messages:I = 0x7f0a079c
 
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_settings_media_item_video_quality:I = 0x7f0a079d
 
-    return-void
-.end method
+.field public static oneme_settings_media_photo_always:I = 0x7f0a079e
 
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a079f
 
-    return-void
-.end method
+.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07a0
 
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 3
+.field public static oneme_settings_media_quality_1080:I = 0x7f0a07a1
 
-    new-instance p1, Leke;
+.field public static oneme_settings_media_quality_480:I = 0x7f0a07a2
 
-    iget-object v0, p0, Lcpc;->a:Landroid/view/View;
+.field public static oneme_settings_media_quality_720:I = 0x7f0a07a3
 
-    iget-object v1, p0, Lcpc;->b:Lj15;
+.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07a4
 
-    iget v2, p0, Lcpc;->c:F
+.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07a5
 
-    invoke-direct {p1, v0, v1, v2}, Leke;-><init>(Ljava/lang/Object;Lyhh;F)V
+.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07a6
 
-    const/4 v0, 0x0
+.field public static oneme_settings_media_screen_list:I = 0x7f0a07a7
 
-    iput v0, p1, Leke;->a:F
+.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07a8
 
-    new-instance v0, Lfke;
+.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07a9
 
-    invoke-direct {v0, v2}, Lfke;-><init>(F)V
+.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07aa
 
-    const/high16 v1, 0x43c80000    # 400.0f
+.field public static oneme_settings_media_video_messages_always:I = 0x7f0a07ab
 
-    invoke-virtual {v0, v1}, Lfke;->b(F)V
+.field public static oneme_settings_media_video_messages_dont_load:I = 0x7f0a07ac
 
-    const v1, 0x3f2e147b    # 0.68f
-
-    invoke-virtual {v0, v1}, Lfke;->a(F)V
-
-    iput-object v0, p1, Leke;->m:Lfke;
-
-    invoke-virtual {p1}, Leke;->g()V
-
-    return-void
-.end method
+.field public static oneme_settings_media_video_messages_wifi:I = 0x7f0a07ad

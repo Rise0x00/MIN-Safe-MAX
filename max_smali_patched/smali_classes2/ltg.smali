@@ -1,152 +1,131 @@
-.class public final Lltg;
-.super Lm3f;
+.class public abstract Lltg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final a:Ljava/util/List;
 
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lmtg;
-
-.field public final synthetic w0:Lvsg;
-
-.field public final synthetic x0:Lytg;
+.field public static final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lmtg;Lvsg;Lytg;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    iput-object p1, p0, Lltg;->Z:Lmtg;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lltg;->w0:Lvsg;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iput-object p3, p0, Lltg;->x0:Lytg;
+    invoke-static {v0, v1}, Luy5;->a(FF)J
 
-    const/4 p1, 0x2
+    move-result-wide v2
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v4, Luy5;
+
+    invoke-direct {v4, v2, v3}, Luy5;-><init>(J)V
+
+    const/high16 v2, 0x44610000    # 900.0f
+
+    invoke-static {v2, v1}, Luy5;->a(FF)J
+
+    move-result-wide v5
+
+    new-instance v3, Luy5;
+
+    invoke-direct {v3, v5, v6}, Luy5;-><init>(J)V
+
+    const v5, 0x44c1c000    # 1550.0f
+
+    invoke-static {v5, v0}, Luy5;->a(FF)J
+
+    move-result-wide v6
+
+    new-instance v8, Luy5;
+
+    invoke-direct {v8, v6, v7}, Luy5;-><init>(J)V
+
+    const v6, 0x44dac000    # 1750.0f
+
+    invoke-static {v6, v1}, Luy5;->a(FF)J
+
+    move-result-wide v9
+
+    new-instance v7, Luy5;
+
+    invoke-direct {v7, v9, v10}, Luy5;-><init>(J)V
+
+    const/high16 v9, 0x44fa0000    # 2000.0f
+
+    invoke-static {v9, v1}, Luy5;->a(FF)J
+
+    move-result-wide v10
+
+    new-instance v12, Luy5;
+
+    invoke-direct {v12, v10, v11}, Luy5;-><init>(J)V
+
+    filled-new-array {v4, v3, v8, v7, v12}, [Luy5;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    sput-object v3, Lltg;->a:Ljava/util/List;
+
+    new-instance v3, Lks;
+
+    const v4, 0x3ba3d70a    # 0.005f
+
+    invoke-direct {v3, v0, v0, v4, v0}, Lks;-><init>(FFFF)V
+
+    new-instance v4, Lks;
+
+    const v7, 0x3f03d70a    # 0.515f
+
+    const/high16 v8, 0x43370000    # 183.0f
+
+    invoke-direct {v4, v2, v0, v7, v8}, Lks;-><init>(FFFF)V
+
+    new-instance v0, Lks;
+
+    const v2, 0x3f5be76d    # 0.859f
+
+    const/high16 v7, 0x43890000    # 274.0f
+
+    const v8, 0x3f05e354    # 0.523f
+
+    invoke-direct {v0, v5, v8, v2, v7}, Lks;-><init>(FFFF)V
+
+    new-instance v2, Lks;
+
+    const v5, 0x3f7020c5    # 0.938f
+
+    const v7, 0x43988000    # 305.0f
+
+    const v8, 0x3f445a1d    # 0.767f
+
+    invoke-direct {v2, v6, v8, v5, v7}, Lks;-><init>(FFFF)V
+
+    new-instance v5, Lks;
+
+    const v6, 0x3f7eb852    # 0.995f
+
+    const/high16 v7, 0x43b40000    # 360.0f
+
+    invoke-direct {v5, v9, v6, v1, v7}, Lks;-><init>(FFFF)V
+
+    filled-new-array {v3, v4, v0, v2, v5}, [Lks;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lltg;->b:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lltg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lltg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lltg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lltg;
-
-    iget-object v1, p0, Lltg;->w0:Lvsg;
-
-    iget-object v2, p0, Lltg;->x0:Lytg;
-
-    iget-object v3, p0, Lltg;->Z:Lmtg;
-
-    invoke-direct {v0, v3, v1, v2, p2}, Lltg;-><init>(Lmtg;Lvsg;Lytg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lltg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lltg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lltg;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    sget-object v0, Lmtg;->i:Ljava/util/List;
-
-    iget-object v0, p0, Lltg;->Z:Lmtg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lmtg;->f(Ljava/lang/Throwable;)Lsk7;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lmtg;->g()Lec3;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lmtg;->g:Llu0;
-
-    iget-object p1, p0, Lltg;->x0:Lytg;
-
-    iget-object v6, p1, Lytg;->b:Ljava/lang/String;
-
-    iput v1, p0, Lltg;->X:I
-
-    iget-object v5, p0, Lltg;->w0:Lvsg;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lec3;->a(Ln62;Lsk7;Lnxg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

@@ -1,73 +1,20 @@
-.class public final enum Ldtc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Ldtc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Ldtc;
+.field public static audio_onboarding_intro:I = 0x7f130087
 
-.field public static final enum b:Ldtc;
+.field public static pinbars_group_call_bar_button_text:I = 0x7f130b27
 
-.field public static final synthetic c:[Ldtc;
+.field public static pinbars_group_call_bar_title:I = 0x7f130b28
 
+.field public static pinbars_snackbar_unpinned:I = 0x7f130b29
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public static unknown_contact_add_to_contact:I = 0x7f130e3e
 
-    new-instance v0, Ldtc;
+.field public static unknown_contact_block_contact:I = 0x7f130e3f
 
-    const-string v1, "VIDEO_MSG"
+.field public static unknown_contact_snackbar_add_contact:I = 0x7f130e40
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ldtc;->a:Ldtc;
-
-    new-instance v1, Ldtc;
-
-    const-string v2, "AUDIO_MSG"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ldtc;->b:Ldtc;
-
-    filled-new-array {v0, v1}, [Ldtc;
-
-    move-result-object v0
-
-    sput-object v0, Ldtc;->c:[Ldtc;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ldtc;
-    .locals 1
-
-    const-class v0, Ldtc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ldtc;
-
-    return-object p0
-.end method
-
-.method public static values()[Ldtc;
-    .locals 1
-
-    sget-object v0, Ldtc;->c:[Ldtc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldtc;
-
-    return-object v0
-.end method
+.field public static videomsg_player_type:I = 0x7f130e6e

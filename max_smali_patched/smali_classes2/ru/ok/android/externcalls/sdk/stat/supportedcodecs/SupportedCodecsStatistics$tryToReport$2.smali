@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lir3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiService;Lsob;Lpmc;)V
+    value = Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lnxb;Lcwc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lwo3;"
+        "Lir3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "it",
-        "Loyf;",
+        "Lybg;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -48,14 +48,14 @@
 
 
 # instance fields
-.field final synthetic $rtcLog:Lpmc;
+.field final synthetic $rtcLog:Lcwc;
 
 
 # direct methods
-.method public constructor <init>(Lpmc;)V
+.method public constructor <init>(Lcwc;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lpmc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lcwc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,27 +79,18 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lpmc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;->$rtcLog:Lcwc;
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Failed to send supported codecs with error: "
 
-    const-string v2, "Failed to send supported codecs with error: "
+    .line 3
+    const-string v2, "SupportedCodecsStatistics"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "SupportedCodecsStatistics"
-
-    invoke-interface {v0, v1, p1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1, v0, v2}, Lo3h;->p(Ljava/lang/String;Ljava/lang/String;Lcwc;Ljava/lang/String;)V
 
     return-void
 .end method

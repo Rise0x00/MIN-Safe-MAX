@@ -1,60 +1,57 @@
 .class public final Lgod;
-.super Ljava/lang/Object;
+.super Ls0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:Lr94;
-
-
-# direct methods
-.method public constructor <init>(JLr94;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lgod;->a:J
-
-    iput-object p3, p0, Lgod;->b:Lr94;
-
-    return-void
-.end method
+.implements Ljava/util/concurrent/Callable;
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final call()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lgod;
+    sget-object v0, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
-    iget-wide v0, p1, Lgod;->a:J
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    sget p1, Lt4g;->a:I
+    move-result-object v1
 
-    iget-wide v2, p0, Lgod;->a:J
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
 
-    cmp-long p1, v2, v0
+    const/4 v1, 0x0
 
-    if-gez p1, :cond_0
+    :try_start_0
+    iget-object v2, p0, Ls0;->a:Ljava/lang/Runnable;
 
-    const/4 p1, -0x1
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    return p1
+    :try_start_1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    :cond_0
-    if-nez p1, :cond_1
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
 
-    const/4 p1, 0x0
+    return-object v1
 
-    return p1
+    :catchall_0
+    move-exception v0
 
-    :cond_1
-    const/4 p1, 0x1
+    goto :goto_0
 
-    return p1
+    :catchall_1
+    move-exception v2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Ls0;->c:Ljava/lang/Thread;
+
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

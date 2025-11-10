@@ -4,36 +4,56 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:[Llf5;
 
-.field public final b:J
+.field public final b:[J
 
-.field public final c:Z
+.field public final c:Ljava/lang/String;
 
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JJZZZ)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Llf5;)V
     .locals 0
-
-    iput-object p1, p0, Lrf5;->f:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lrf5;->a:J
-
-    iput-wide p4, p0, Lrf5;->b:J
-
-    iput-boolean p6, p0, Lrf5;->c:Z
-
-    iput-boolean p7, p0, Lrf5;->d:Z
-
-    iput-boolean p8, p0, Lrf5;->e:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lrf5;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lrf5;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lrf5;->b:[J
+
+    iput-object p4, p0, Lrf5;->a:[Llf5;
+
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lrf5;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lrf5;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,61 +1,73 @@
 .class public final Laug;
-.super Lik7;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lgj6;
 
-# static fields
-.field public static final c:Laug;
 
+# instance fields
+.field public synthetic X:Z
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Laug;
-
-    invoke-direct {v0}, Lik7;-><init>()V
-
-    sput-object v0, Laug;->c:Laug;
-
-    return-void
-.end method
+.field public synthetic o:J
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Number;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    return v0
+    move-result-wide v0
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p2, Laug;
+
+    const/4 v2, 0x3
+
+    invoke-direct {p2, v2, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-wide v0, p2, Laug;->o:J
+
+    iput-boolean p1, p2, Laug;->X:Z
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {p2, p1}, Laug;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-wide v0, p0, Laug;->o:J
+
+    iget-boolean p1, p0, Laug;->X:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
 
     :cond_0
-    instance-of p1, p1, Laug;
-
-    if-nez p1, :cond_1
-
     const/4 p1, 0x0
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x15a8525c
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "RequestScreenMaxBrightness"
-
-    return-object v0
+    return-object p1
 .end method

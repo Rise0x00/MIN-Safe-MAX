@@ -2,677 +2,451 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln1g;
+
 
 # instance fields
-.field public final a:Landroid/content/res/ColorStateList;
+.field public final a:Ln1g;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lscf;
 
-.field public final c:I
+.field public final c:Lhdb;
 
-.field public final d:I
+.field public d:I
 
-.field public final e:F
+.field public e:I
 
-.field public final f:F
+.field public f:[B
 
-.field public final g:F
+.field public g:Lucf;
 
-.field public final h:Z
+.field public h:Lub6;
 
-.field public final i:F
-
-.field public j:Landroid/content/res/ColorStateList;
-
-.field public k:F
-
-.field public final l:I
-
-.field public m:Z
-
-.field public n:Landroid/graphics/Typeface;
+.field public i:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 6
+.method public constructor <init>(Ln1g;Lscf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lzcf;->a:Ln1g;
 
-    iput-boolean v0, p0, Lzcf;->m:Z
+    iput-object p2, p0, Lzcf;->b:Lscf;
 
-    sget-object v1, Lqlc;->TextAppearance:[I
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    iput p1, p0, Lzcf;->d:I
 
-    move-result-object v1
+    iput p1, p0, Lzcf;->e:I
 
-    sget v2, Lqlc;->TextAppearance_android_textSize:I
+    sget-object p1, Llig;->b:[B
 
-    const/4 v3, 0x0
+    iput-object p1, p0, Lzcf;->f:[B
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    new-instance p1, Lhdb;
 
-    move-result v2
+    invoke-direct {p1}, Lhdb;-><init>()V
 
-    iput v2, p0, Lzcf;->k:F
-
-    sget v2, Lqlc;->TextAppearance_android_textColor:I
-
-    invoke-static {p1, v1, v2}, Lj40;->v(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lzcf;->j:Landroid/content/res/ColorStateList;
-
-    sget v2, Lqlc;->TextAppearance_android_textColorHint:I
-
-    invoke-static {p1, v1, v2}, Lj40;->v(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
-
-    sget v2, Lqlc;->TextAppearance_android_textColorLink:I
-
-    invoke-static {p1, v1, v2}, Lj40;->v(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
-
-    sget v2, Lqlc;->TextAppearance_android_textStyle:I
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, p0, Lzcf;->c:I
-
-    sget v2, Lqlc;->TextAppearance_android_typeface:I
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v1, v2, v4}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, p0, Lzcf;->d:I
-
-    sget v2, Lqlc;->TextAppearance_fontFamily:I
-
-    sget v4, Lqlc;->TextAppearance_android_fontFamily:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v4
-
-    :goto_0
-    invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v4
-
-    iput v4, p0, Lzcf;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lzcf;->b:Ljava/lang/String;
-
-    sget v2, Lqlc;->TextAppearance_textAllCaps:I
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    sget v0, Lqlc;->TextAppearance_android_shadowColor:I
-
-    invoke-static {p1, v1, v0}, Lj40;->v(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lzcf;->a:Landroid/content/res/ColorStateList;
-
-    sget v0, Lqlc;->TextAppearance_android_shadowDx:I
-
-    invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v0
-
-    iput v0, p0, Lzcf;->e:F
-
-    sget v0, Lqlc;->TextAppearance_android_shadowDy:I
-
-    invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v0
-
-    iput v0, p0, Lzcf;->f:F
-
-    sget v0, Lqlc;->TextAppearance_android_shadowRadius:I
-
-    invoke-virtual {v1, v0, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v0
-
-    iput v0, p0, Lzcf;->g:F
-
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
-
-    sget-object v0, Lqlc;->MaterialTextAppearance:[I
-
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    sget p2, Lqlc;->MaterialTextAppearance_android_letterSpacing:I
-
-    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p2
-
-    iput-boolean p2, p0, Lzcf;->h:Z
-
-    sget p2, Lqlc;->MaterialTextAppearance_android_letterSpacing:I
-
-    invoke-virtual {p1, p2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result p2
-
-    iput p2, p0, Lzcf;->i:F
-
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    iput-object p1, p0, Lzcf;->c:Lhdb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(JIIILl1g;)V
+    .locals 8
 
-    iget-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    iget v1, p0, Lzcf;->c:I
+    iget-object v0, p0, Lzcf;->g:Lucf;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lzcf;->b:Ljava/lang/String;
+    iget-object v1, p0, Lzcf;->a:Ln1g;
 
-    if-eqz v0, :cond_0
+    move-wide v2, p1
 
-    invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    move v4, p3
 
-    move-result-object v0
+    move v5, p4
 
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
+    move v6, p5
 
-    :cond_0
-    iget-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
+    move-object v7, p6
 
-    if-nez v0, :cond_4
+    invoke-interface/range {v1 .. v7}, Ln1g;->a(JIIILl1g;)V
 
-    const/4 v0, 0x1
-
-    iget v2, p0, Lzcf;->d:I
-
-    if-eq v2, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq v2, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq v2, v0, :cond_1
-
-    sget-object v0, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
-
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
-
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v0, Landroid/graphics/Typeface;->SERIF:Landroid/graphics/Typeface;
-
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    goto :goto_0
-
-    :cond_3
-    sget-object v0, Landroid/graphics/Typeface;->SANS_SERIF:Landroid/graphics/Typeface;
-
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    :goto_0
-    iget-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    :cond_4
     return-void
-.end method
-
-.method public final b(Landroid/content/Context;)Landroid/graphics/Typeface;
-    .locals 2
-
-    iget-boolean v0, p0, Lzcf;->m:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    return-object p1
 
     :cond_0
-    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
+    move v5, p4
 
-    move-result v0
+    move v6, p5
 
-    if-nez v0, :cond_1
+    move-object v7, p6
 
-    :try_start_0
-    iget v0, p0, Lzcf;->l:I
+    move p5, p3
 
-    invoke-static {p1, v0}, La3d;->a(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    move-wide p3, p1
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    if-eqz p1, :cond_1
-
-    iget v0, p0, Lzcf;->c:I
-
-    invoke-static {p1, v0}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzcf;->n:Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Error loading font "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzcf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "TextAppearance"
-
-    invoke-static {v1, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :catch_1
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lzcf;->a()V
+    if-nez v7, :cond_1
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lzcf;->m:Z
-
-    iget-object p1, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    return-object p1
-.end method
-
-.method public final c(Landroid/content/Context;Lve7;)V
-    .locals 9
-
-    invoke-virtual {p0, p1}, Lzcf;->d(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lzcf;->b(Landroid/content/Context;)Landroid/graphics/Typeface;
-
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Lzcf;->a()V
+    :cond_1
+    move p1, v1
 
     :goto_0
-    const/4 v1, 0x1
+    const-string p2, "DRM on subtitles is not supported"
 
-    iget v3, p0, Lzcf;->l:I
+    invoke-static {p2, p1}, Ligi;->b(Ljava/lang/Object;Z)V
 
-    if-nez v3, :cond_1
+    iget p1, p0, Lzcf;->e:I
 
-    iput-boolean v1, p0, Lzcf;->m:Z
+    sub-int/2addr p1, v6
 
-    :cond_1
-    iget-boolean v0, p0, Lzcf;->m:Z
+    sub-int v2, p1, v5
 
-    if-eqz v0, :cond_2
-
-    iget-object p1, p0, Lzcf;->n:Landroid/graphics/Typeface;
-
-    invoke-virtual {p2, p1, v1}, Lve7;->M(Landroid/graphics/Typeface;Z)V
-
-    return-void
-
-    :cond_2
     :try_start_0
-    new-instance v6, Lxcf;
+    iget-object v0, p0, Lzcf;->g:Lucf;
 
-    invoke-direct {v6, p0, p2}, Lxcf;-><init>(Lzcf;Lve7;)V
+    iget-object v3, p0, Lzcf;->f:[B
 
-    sget-object v0, La3d;->a:Ljava/lang/ThreadLocal;
+    sget-object v4, Ltcf;->c:Ltcf;
 
-    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/4 p1, -0x4
-
-    invoke-virtual {v6, p1}, Ltp;->i(I)V
-
-    return-void
-
-    :cond_3
-    new-instance v4, Landroid/util/TypedValue;
-
-    invoke-direct {v4}, Landroid/util/TypedValue;-><init>()V
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v2, p1
-
-    invoke-static/range {v2 .. v8}, La3d;->b(Landroid/content/Context;ILandroid/util/TypedValue;ILtp;ZZ)Landroid/graphics/Typeface;
+    new-instance p1, Lbo5;
     :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
 
-    return-void
+    const/4 p6, 0x4
+
+    move-object p2, p0
+
+    :try_start_1
+    invoke-direct/range {p1 .. p6}, Lbo5;-><init>(Ljava/lang/Object;JII)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-object v6, p2
+
+    move-object p6, p1
+
+    move-object p1, v0
+
+    move p3, v2
+
+    move-object p2, v3
+
+    move-object p5, v4
+
+    move p4, v5
+
+    :try_start_2
+    invoke-interface/range {p1 .. p6}, Lucf;->A([BIILtcf;Lhr3;)V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+
+    move v5, p4
+
+    goto :goto_4
 
     :catch_0
     move-exception v0
 
+    move v5, p4
+
+    :goto_1
     move-object p1, v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Error loading font "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lzcf;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "TextAppearance"
-
-    invoke-static {v2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    iput-boolean v1, p0, Lzcf;->m:Z
-
-    const/4 p1, -0x3
-
-    invoke-virtual {p2, p1}, Lve7;->L(I)V
-
-    goto :goto_1
+    goto :goto_3
 
     :catch_1
-    iput-boolean v1, p0, Lzcf;->m:Z
+    move-exception v0
 
-    invoke-virtual {p2, v1}, Lve7;->L(I)V
+    move-object v6, p2
 
-    :goto_1
-    return-void
-.end method
-
-.method public final d(Landroid/content/Context;)Z
-    .locals 8
-
-    const/4 v0, 0x0
-
-    iget v2, p0, Lzcf;->l:I
-
-    if-eqz v2, :cond_1
-
-    sget-object v1, La3d;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {p1}, Landroid/content/Context;->isRestricted()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v3, Landroid/util/TypedValue;
-
-    invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v1, p1
-
-    invoke-static/range {v1 .. v7}, La3d;->b(Landroid/content/Context;ILandroid/util/TypedValue;ILtp;ZZ)Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(Landroid/content/Context;Landroid/text/TextPaint;Lve7;)V
-    .locals 2
-
-    invoke-virtual {p0, p1, p2, p3}, Lzcf;->f(Landroid/content/Context;Landroid/text/TextPaint;Lve7;)V
-
-    iget-object p1, p0, Lzcf;->j:Landroid/content/res/ColorStateList;
-
-    if-eqz p1, :cond_0
-
-    iget-object p3, p2, Landroid/text/TextPaint;->drawableState:[I
-
-    invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v0
-
-    invoke-virtual {p1, p3, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 p1, -0x1000000
-
-    :goto_0
-    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object p1, p0, Lzcf;->a:Landroid/content/res/ColorStateList;
-
-    if-eqz p1, :cond_1
-
-    iget-object p3, p2, Landroid/text/TextPaint;->drawableState:[I
-
-    invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v0
-
-    invoke-virtual {p1, p3, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result p1
+    :goto_2
+    move p3, v2
 
     goto :goto_1
 
-    :cond_1
-    const/4 p1, 0x0
+    :catch_2
+    move-exception v0
 
-    :goto_1
-    iget p3, p0, Lzcf;->g:F
+    move-object v6, p0
 
-    iget v0, p0, Lzcf;->e:F
+    goto :goto_2
 
-    iget v1, p0, Lzcf;->f:F
+    :goto_3
+    iget-boolean p2, v6, Lzcf;->i:Z
 
-    invoke-virtual {p2, p3, v0, v1, p1}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    if-eqz p2, :cond_3
 
+    const-string p2, "SubtitleTranscodingTO"
+
+    const-string p4, "Parsing subtitles failed, ignoring sample."
+
+    invoke-static {p2, p4, p1}, Lpyh;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_4
+    add-int v2, p3, v5
+
+    iput v2, v6, Lzcf;->d:I
+
+    iget p1, v6, Lzcf;->e:I
+
+    if-ne v2, p1, :cond_2
+
+    iput v1, v6, Lzcf;->d:I
+
+    iput v1, v6, Lzcf;->e:I
+
+    :cond_2
     return-void
+
+    :cond_3
+    throw p1
 .end method
 
-.method public final f(Landroid/content/Context;Landroid/text/TextPaint;Lve7;)V
+.method public final b(Lhdb;II)V
     .locals 1
 
-    invoke-virtual {p0, p1}, Lzcf;->d(Landroid/content/Context;)Z
+    iget-object v0, p0, Lzcf;->g:Lucf;
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lzcf;->a:Ln1g;
 
-    invoke-virtual {p0, p1}, Lzcf;->b(Landroid/content/Context;)Landroid/graphics/Typeface;
-
-    move-result-object p3
-
-    invoke-virtual {p0, p1, p2, p3}, Lzcf;->g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
+    invoke-interface {v0, p1, p2, p3}, Ln1g;->b(Lhdb;II)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lzcf;->a()V
+    invoke-virtual {p0, p2}, Lzcf;->e(I)V
 
-    iget-object v0, p0, Lzcf;->n:Landroid/graphics/Typeface;
+    iget-object p3, p0, Lzcf;->f:[B
 
-    invoke-virtual {p0, p1, p2, v0}, Lzcf;->g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
+    iget v0, p0, Lzcf;->e:I
 
-    new-instance v0, Lycf;
+    invoke-virtual {p1, v0, p3, p2}, Lhdb;->h(I[BI)V
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lycf;-><init>(Lzcf;Landroid/content/Context;Landroid/text/TextPaint;Lve7;)V
+    iget p1, p0, Lzcf;->e:I
 
-    invoke-virtual {p0, p1, v0}, Lzcf;->c(Landroid/content/Context;Lve7;)V
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lzcf;->e:I
 
     return-void
 .end method
 
-.method public final g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
-    .locals 0
+.method public final c(Lqb4;IZ)I
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iget-object v0, p0, Lzcf;->g:Lucf;
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    iget-object v0, p0, Lzcf;->a:Ln1g;
 
-    move-result-object p1
-
-    invoke-static {p1, p3}, Lio7;->q(Landroid/content/res/Configuration;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    move-object p3, p1
-
-    :cond_0
-    invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    invoke-virtual {p3}, Landroid/graphics/Typeface;->getStyle()I
+    invoke-interface {v0, p1, p2, p3}, Ln1g;->c(Lqb4;IZ)I
 
     move-result p1
 
-    not-int p1, p1
+    return p1
 
-    iget p3, p0, Lzcf;->c:I
+    :cond_0
+    invoke-virtual {p0, p2}, Lzcf;->e(I)V
 
-    and-int/2addr p1, p3
+    iget-object v0, p0, Lzcf;->f:[B
 
-    and-int/lit8 p3, p1, 0x1
+    iget v1, p0, Lzcf;->e:I
+
+    invoke-interface {p1, v0, v1, p2}, Lqb4;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_2
 
     if-eqz p3, :cond_1
 
-    const/4 p3, 0x1
+    return p2
+
+    :cond_1
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    iget p2, p0, Lzcf;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lzcf;->e:I
+
+    return p1
+.end method
+
+.method public final d(Lub6;)V
+    .locals 6
+
+    iget-object v0, p1, Lub6;->n:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p1, Lub6;->n:Ljava/lang/String;
+
+    invoke-static {v0}, Lcs9;->h(Ljava/lang/String;)I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Ligi;->c(Z)V
+
+    iget-object v1, p0, Lzcf;->h:Lub6;
+
+    invoke-virtual {p1, v1}, Lub6;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lzcf;->b:Lscf;
+
+    if-nez v1, :cond_2
+
+    iput-object p1, p0, Lzcf;->h:Lub6;
+
+    invoke-interface {v2, p1}, Lscf;->c(Lub6;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v2, p1}, Lscf;->k(Lub6;)Lucf;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_1
+    iput-object v1, p0, Lzcf;->g:Lucf;
+
+    :cond_2
+    iget-object v1, p0, Lzcf;->g:Lucf;
+
+    iget-object v3, p0, Lzcf;->a:Ln1g;
+
+    if-nez v1, :cond_3
+
+    invoke-interface {v3, p1}, Ln1g;->d(Lub6;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p1}, Lub6;->a()Lrb6;
+
+    move-result-object v1
+
+    const-string v4, "application/x-media3-cues"
+
+    invoke-static {v4}, Lcs9;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v1, Lrb6;->m:Ljava/lang/String;
+
+    iput-object v0, v1, Lrb6;->j:Ljava/lang/String;
+
+    const-wide v4, 0x7fffffffffffffffL
+
+    iput-wide v4, v1, Lrb6;->r:J
+
+    invoke-interface {v2, p1}, Lscf;->u(Lub6;)I
+
+    move-result p1
+
+    iput p1, v1, Lrb6;->K:I
+
+    invoke-static {v1, v3}, Lo3h;->o(Lrb6;Ln1g;)V
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 4
+
+    iget-object v0, p0, Lzcf;->f:[B
+
+    array-length v0, v0
+
+    iget v1, p0, Lzcf;->e:I
+
+    sub-int/2addr v0, v1
+
+    if-lt v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Lzcf;->d:I
+
+    sub-int/2addr v1, v0
+
+    mul-int/lit8 v0, v1, 0x2
+
+    add-int/2addr p1, v1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iget-object v0, p0, Lzcf;->f:[B
+
+    array-length v2, v0
+
+    if-gt p1, v2, :cond_1
+
+    move-object p1, v0
 
     goto :goto_0
 
     :cond_1
-    const/4 p3, 0x0
+    new-array p1, p1, [B
 
     :goto_0
-    invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    iget v2, p0, Lzcf;->d:I
 
-    and-int/lit8 p1, p1, 0x2
+    const/4 v3, 0x0
 
-    if-eqz p1, :cond_2
+    invoke-static {v0, v2, p1, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/high16 p1, -0x41800000    # -0.25f
+    iput v3, p0, Lzcf;->d:I
 
-    goto :goto_1
+    iput v1, p0, Lzcf;->e:I
 
-    :cond_2
-    const/4 p1, 0x0
+    iput-object p1, p0, Lzcf;->f:[B
 
-    :goto_1
-    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setTextSkewX(F)V
-
-    iget p1, p0, Lzcf;->k:F
-
-    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    iget-boolean p1, p0, Lzcf;->h:Z
-
-    if-eqz p1, :cond_3
-
-    iget p1, p0, Lzcf;->i:F
-
-    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setLetterSpacing(F)V
-
-    :cond_3
     return-void
 .end method

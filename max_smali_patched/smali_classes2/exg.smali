@@ -1,53 +1,21 @@
 .class public final Lexg;
-.super Lnz3;
+.super Ldxg;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ldxg;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lfxg;
-
-.field public o:Lfxg;
-
-.field public w0:I
+.field public final d:Lihd;
 
 
 # direct methods
-.method public constructor <init>(Lfxg;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lexg;->Z:Lfxg;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lihd;Ljava/lang/String;Lyng;)V
     .locals 1
 
-    iput-object p1, p0, Lexg;->Y:Ljava/lang/Object;
+    const/16 v0, 0xb
 
-    iget p1, p0, Lexg;->w0:I
+    invoke-direct {p0, p2, v0, p3}, Lkh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/high16 v0, -0x80000000
+    iput-object p1, p0, Lexg;->d:Lihd;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lexg;->w0:I
-
-    iget-object p1, p0, Lexg;->Z:Lfxg;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lfxg;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,85 +1,54 @@
-.class public final Ls04;
+.class public abstract Ls04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv04;
-
-
-# instance fields
-.field public final a:I
-
 
 # direct methods
-.method public constructor <init>(I)V
+.method public static a(Landroid/content/Context;I)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
 
-    iput p1, p0, Ls04;->a:I
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls04;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ls04;
-
-    iget v1, p0, Ls04;->a:I
-
-    iget p1, p1, Ls04;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static c(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
-    iget v0, p0, Ls04;->a:I
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object p0
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Seeking(progress="
-
-    const-string v1, ")"
-
-    iget v2, p0, Ls04;->a:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

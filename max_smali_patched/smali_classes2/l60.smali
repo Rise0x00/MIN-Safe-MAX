@@ -1,21 +1,21 @@
 .class public final Ll60;
-.super Li9f;
+.super Lkh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final o:Lbb8;
+.field public final d:Lihd;
 
 
 # direct methods
-.method public constructor <init>(Lbb8;Ljava/lang/String;Ls30;)V
+.method public constructor <init>(Lihd;Ljava/lang/String;Lx30;)V
     .locals 1
 
-    const/16 v0, 0xa
+    const/16 v0, 0xb
 
-    invoke-direct {p0, p2, v0, p3}, Li9f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p0, p2, v0, p3}, Lkh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object p1, p0, Ll60;->o:Lbb8;
+    iput-object p1, p0, Ll60;->d:Lihd;
 
     return-void
 .end method
@@ -25,11 +25,11 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Li9f;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lkh;->c:Ljava/lang/Object;
 
-    check-cast v0, Lhl8;
+    check-cast v0, Lfr8;
 
-    check-cast v0, Ls30;
+    check-cast v0, Lx30;
 
     new-instance v1, Ljava/lang/StringBuilder;
 

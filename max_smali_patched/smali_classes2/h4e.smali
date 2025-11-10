@@ -1,26 +1,57 @@
 .class public final Lh4e;
-.super Ltde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lks1;
+
+.field public final b:Lg4e;
+
+
+# direct methods
+.method public constructor <init>(Lks1;Lg4e;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh4e;->a:Lks1;
+
+    iput-object p2, p0, Lh4e;->b:Lg4e;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final x(Lww7;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    instance-of v0, p1, Lqmd;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v1, "DisplayLayoutItem{videoTrackParticipantKey="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    iget-object v1, p0, Lh4e;->a:Lks1;
 
-    check-cast v0, Ls1e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lj1e;
+    const-string v1, ", layout="
 
-    invoke-virtual {v0, p1}, Ls1e;->setModelItem(Lj1e;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget-object v1, p0, Lh4e;->b:Lg4e;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

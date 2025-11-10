@@ -1,51 +1,125 @@
 .class public final Lhq1;
-.super Lnz3;
+.super Lami;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lkq1;
+.field public final a:J
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lkq1;Lnz3;)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput-object p1, p0, Lhq1;->X:Lkq1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lhq1;->a:J
+
+    iput-boolean p3, p0, Lhq1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lhq1;->b:Z
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lhq1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhq1;
+
+    iget-wide v3, p0, Lhq1;->a:J
+
+    iget-wide v5, p1, Lhq1;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lhq1;->b:Z
+
+    iget-boolean p1, p1, Lhq1;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Lhq1;->o:Ljava/lang/Object;
+    iget-wide v0, p0, Lhq1;->a:J
 
-    iget p1, p0, Lhq1;->Y:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput p1, p0, Lhq1;->Y:I
+    iget-boolean v1, p0, Lhq1;->b:Z
 
-    const/4 p1, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    iget-object v1, p0, Lhq1;->X:Lkq1;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1, p1, v0, p0}, Lkq1;->c(ILandroid/os/Bundle;Lnz3;)Ljava/lang/Object;
+    return v1
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-object p1
+    const-string v0, "User(userId="
+
+    const-string v1, ", isVideo="
+
+    iget-wide v2, p0, Lhq1;->a:J
+
+    iget-boolean v4, p0, Lhq1;->b:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lcd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

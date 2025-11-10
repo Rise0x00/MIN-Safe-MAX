@@ -1,349 +1,147 @@
-.class public abstract Loka;
-.super Ljava/lang/Object;
+.class public final Loka;
+.super Ljava/util/ArrayList;
 .source "SourceFile"
 
-
-# static fields
-.field public static final A:I
-
-.field public static final B:I
-
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+# interfaces
+.implements Lkka;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# instance fields
+.field public volatile a:I
+
+
+# virtual methods
+.method public final a()V
     .locals 1
 
-    sget v0, Lbec;->chat_item_view_type:I
+    sget-object v0, Lbea;->a:Lbea;
 
-    sput v0, Loka;->a:I
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lbec;->chat_item_view_type_pinned:I
+    iget v0, p0, Loka;->a:I
 
-    sput v0, Loka;->b:I
+    add-int/lit8 v0, v0, 0x1
 
-    sget v0, Lbec;->chats_list_folders_container:I
+    iput v0, p0, Loka;->a:I
 
-    sput v0, Loka;->c:I
+    return-void
+.end method
 
-    sget v0, Lbec;->chats_list_folders_pager:I
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    sput v0, Loka;->d:I
+    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lbec;->chats_list_folders_tabs:I
+    iget p1, p0, Loka;->a:I
 
-    sput v0, Loka;->e:I
+    add-int/lit8 p1, p1, 0x1
 
-    sget v0, Lbec;->chats_list_pinbars_view:I
+    iput p1, p0, Loka;->a:I
 
-    sput v0, Loka;->f:I
+    return-void
+.end method
 
-    sget v0, Lbec;->chats_list_search_recycler_view:I
+.method public final d(Lika;)V
+    .locals 5
 
-    sput v0, Loka;->g:I
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Lbec;->chats_list_search_root_view:I
+    move-result v0
 
-    sput v0, Loka;->h:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lbec;->chats_list_search_toolbar:I
+    goto :goto_1
 
-    sput v0, Loka;->i:I
+    :cond_0
+    iget-object v0, p1, Lika;->b:Lgla;
 
-    sget v0, Lbec;->chats_list_toolbar:I
+    const/4 v1, 0x1
 
-    sput v0, Loka;->j:I
+    :cond_1
+    iget-boolean v2, p1, Lika;->d:Z
 
-    sget v0, Lbec;->chats_list_view:I
+    if-eqz v2, :cond_2
 
-    sput v0, Loka;->k:I
+    goto :goto_1
 
-    sget v0, Lbec;->chats_search_chat_view_type:I
+    :cond_2
+    iget v2, p0, Loka;->a:I
 
-    sput v0, Loka;->l:I
+    iget-object v3, p1, Lika;->c:Ljava/io/Serializable;
 
-    sget v0, Lbec;->chats_search_contact_view_type:I
+    check-cast v3, Ljava/lang/Integer;
 
-    sput v0, Loka;->m:I
+    if-eqz v3, :cond_3
 
-    sget v0, Lbec;->chats_search_empty_view_type:I
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    sput v0, Loka;->n:I
+    move-result v3
 
-    sget v0, Lbec;->chats_search_global_chat_view_type:I
+    goto :goto_0
 
-    sput v0, Loka;->o:I
+    :cond_3
+    const/4 v3, 0x0
 
-    sget v0, Lbec;->chats_search_global_contact_view_type:I
+    :goto_0
+    if-ge v3, v2, :cond_6
 
-    sput v0, Loka;->p:I
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    sget v0, Lbec;->chats_search_loading_view_type:I
+    move-result-object v4
 
-    sput v0, Loka;->q:I
+    invoke-static {v0, v4}, Lbea;->a(Lgla;Ljava/lang/Object;)Z
 
-    sget v0, Lbec;->chats_search_message_view_type:I
+    move-result v4
 
-    sput v0, Loka;->r:I
+    if-eqz v4, :cond_4
 
-    sget v0, Lbec;->chats_search_recent_header_view_type:I
+    goto :goto_1
 
-    sput v0, Loka;->s:I
+    :cond_4
+    iget-boolean v4, p1, Lika;->d:Z
 
-    sget v0, Lbec;->chats_search_recent_view_type:I
+    if-eqz v4, :cond_5
 
-    sput v0, Loka;->t:I
+    goto :goto_1
 
-    sget v0, Lbec;->fake_chat_contact_item_view_type:I
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
 
-    sput v0, Loka;->u:I
+    goto :goto_0
 
-    sget v0, Lbec;->fake_chat_phone_item_view_type:I
+    :cond_6
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput v0, Loka;->v:I
+    move-result-object v2
 
-    sget v0, Lbec;->oneme_chat_action_add_favorite:I
+    iput-object v2, p1, Lika;->c:Ljava/io/Serializable;
 
-    sput v0, Loka;->w:I
+    neg-int v1, v1
 
-    sget v0, Lbec;->oneme_chat_action_add_to_folder:I
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
 
-    sput v0, Loka;->x:I
+    move-result v1
 
-    sget v0, Lbec;->oneme_chat_action_block:I
+    if-nez v1, :cond_1
 
-    sput v0, Loka;->y:I
+    :goto_1
+    return-void
+.end method
 
-    sget v0, Lbec;->oneme_chat_action_clear_chat_history:I
+.method public final e(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sput v0, Loka;->z:I
+    new-instance v0, Lzda;
 
-    sget v0, Lbec;->oneme_chat_action_clear_saved_messages:I
+    invoke-direct {v0, p1}, Lzda;-><init>(Ljava/lang/Throwable;)V
 
-    sput v0, Loka;->A:I
+    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    sget v0, Lbec;->oneme_chat_action_close_channel:I
+    iget p1, p0, Loka;->a:I
 
-    sput v0, Loka;->B:I
+    add-int/lit8 p1, p1, 0x1
 
-    sget v0, Lbec;->oneme_chat_action_close_chat:I
-
-    sput v0, Loka;->C:I
-
-    sget v0, Lbec;->oneme_chat_action_delete_channel:I
-
-    sput v0, Loka;->D:I
-
-    sget v0, Lbec;->oneme_chat_action_delete_chat:I
-
-    sput v0, Loka;->E:I
-
-    sget v0, Lbec;->oneme_chat_action_leave:I
-
-    sput v0, Loka;->F:I
-
-    sget v0, Lbec;->oneme_chat_action_mark_as_read:I
-
-    sput v0, Loka;->G:I
-
-    sget v0, Lbec;->oneme_chat_action_mark_as_unread:I
-
-    sput v0, Loka;->H:I
-
-    sget v0, Lbec;->oneme_chat_action_move_rights_and_leave:I
-
-    sput v0, Loka;->I:I
-
-    sget v0, Lbec;->oneme_chat_action_mute:I
-
-    sput v0, Loka;->J:I
-
-    sget v0, Lbec;->oneme_chat_action_remove_favorite:I
-
-    sput v0, Loka;->K:I
-
-    sget v0, Lbec;->oneme_chat_action_remove_from_folder:I
-
-    sput v0, Loka;->L:I
-
-    sget v0, Lbec;->oneme_chat_action_select:I
-
-    sput v0, Loka;->M:I
-
-    sget v0, Lbec;->oneme_chat_action_suspend_and_delete_bot:I
-
-    sput v0, Loka;->N:I
-
-    sget v0, Lbec;->oneme_chat_action_suspend_bot:I
-
-    sput v0, Loka;->O:I
-
-    sget v0, Lbec;->oneme_chat_action_unmute:I
-
-    sput v0, Loka;->P:I
-
-    sget v0, Lbec;->oneme_confirm_block:I
-
-    sput v0, Loka;->Q:I
-
-    sget v0, Lbec;->oneme_confirm_cancel:I
-
-    sput v0, Loka;->R:I
-
-    sget v0, Lbec;->oneme_confirm_delete:I
-
-    sput v0, Loka;->S:I
-
-    sget v0, Lbec;->oneme_confirm_delete_for_all:I
-
-    sput v0, Loka;->T:I
-
-    sget v0, Lbec;->oneme_confirm_leave:I
-
-    sput v0, Loka;->U:I
-
-    sget v0, Lbec;->oneme_confirm_mute_1_day:I
-
-    sput v0, Loka;->V:I
-
-    sget v0, Lbec;->oneme_confirm_mute_1_hour:I
-
-    sput v0, Loka;->W:I
-
-    sget v0, Lbec;->oneme_confirm_mute_4_hour:I
-
-    sput v0, Loka;->X:I
-
-    sget v0, Lbec;->oneme_confirm_mute_infinite:I
-
-    sput v0, Loka;->Y:I
-
-    sget v0, Lbec;->oneme_contacts_picker_toolbar:I
-
-    sput v0, Loka;->Z:I
-
-    sget v0, Lbec;->oneme_picker_chat_item_view_type:I
-
-    sput v0, Loka;->a0:I
-
-    sget v0, Lbec;->oneme_picker_container_chats:I
-
-    sput v0, Loka;->b0:I
-
-    sget v0, Lbec;->oneme_picker_main_container:I
-
-    sput v0, Loka;->c0:I
-
-    sget v0, Lbec;->oneme_picker_members_list_view:I
-
-    sput v0, Loka;->d0:I
+    iput p1, p0, Loka;->a:I
 
     return-void
 .end method

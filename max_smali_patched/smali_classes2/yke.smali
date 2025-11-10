@@ -1,181 +1,49 @@
 .class public final Lyke;
-.super Lale;
+.super Liqe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final l:D
+# virtual methods
+.method public final D()V
+    .locals 2
 
-.field public final m:D
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-.field public final n:J
+    check-cast v0, Luke;
 
-.field public final o:J
+    iget-object v0, v0, Luke;->d:Lwke;
 
-.field public final p:J
+    iget-object v1, v0, Lwke;->b:Lvke;
 
-.field public final q:J
+    invoke-virtual {v1}, Lvke;->d()V
 
-.field public final r:J
+    const/4 v1, 0x0
 
-.field public final s:J
+    iput-boolean v1, v0, Lwke;->c:Z
 
-
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;DDJLjava/lang/String;JJJJJJLkw8;)V
-    .locals 12
-
-    const/4 v1, 0x1
-
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-wide/from16 v8, p11
-
-    move-object/from16 v10, p13
-
-    move-object/from16 v11, p26
-
-    invoke-direct/range {v0 .. v11}, Lale;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lkw8;)V
-
-    move-wide/from16 p1, p7
-
-    iput-wide p1, p0, Lyke;->l:D
-
-    move-wide/from16 p1, p9
-
-    iput-wide p1, p0, Lyke;->m:D
-
-    move-wide/from16 p1, p14
-
-    iput-wide p1, p0, Lyke;->n:J
-
-    move-wide/from16 p1, p16
-
-    iput-wide p1, p0, Lyke;->o:J
-
-    move-wide/from16 p1, p18
-
-    iput-wide p1, p0, Lyke;->p:J
-
-    move-wide/from16 p1, p20
-
-    iput-wide p1, p0, Lyke;->q:J
-
-    move-wide/from16 p1, p22
-
-    iput-wide p1, p0, Lyke;->r:J
-
-    move-wide/from16 p1, p24
-
-    iput-wide p1, p0, Lyke;->s:J
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     return-void
 .end method
 
+.method public final z(Li28;)V
+    .locals 1
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    check-cast p1, Lxke;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lm7d;->a:Landroid/view/View;
 
-    const-string v1, "AudioRecv{ssrc="
+    check-cast p1, Luke;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Luke;->d:Lwke;
 
-    iget-wide v1, p0, Lele;->c:J
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-boolean v0, p1, Lwke;->c:Z
 
-    const-string v1, ", transportId=\'"
+    iget-object p1, p1, Lwke;->b:Lvke;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lvke;->c()V
 
-    iget-object v1, p0, Lele;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', trackId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lele;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', packetsReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->h:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", packetsLost="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->i:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bytesReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lale;->j:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", jitterBufferMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lale;->k:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioLevel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lyke;->l:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", totalAudioEnergy="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lyke;->m:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lele;->g:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

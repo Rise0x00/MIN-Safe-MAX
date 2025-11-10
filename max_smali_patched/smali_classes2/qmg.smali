@@ -1,157 +1,149 @@
-.class public final enum Lqmg;
-.super Ljava/lang/Enum;
+.class public final Lqmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lqmg;
-
-.field public static final enum Y:Lqmg;
-
-.field public static final synthetic Z:[Lqmg;
-
-.field public static final enum b:Lqmg;
-
-.field public static final enum c:Lqmg;
-
-.field public static final enum o:Lqmg;
-
-.field public static final synthetic w0:Lla5;
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Integer;
+.field public final synthetic X:Lrmg;
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lkhc;
+
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lrmg;Ljava/lang/String;Lkhc;FFZ)V
+    .locals 0
 
-    new-instance v0, Lqmg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lqmg;->X:Lrmg;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lqmg;->a:Ljava/lang/String;
 
-    const-string v3, "None"
+    iput-object p3, p0, Lqmg;->b:Lkhc;
 
-    invoke-direct {v0, v3, v1, v2}, Lqmg;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    iput p4, p0, Lqmg;->c:F
 
-    sput-object v0, Lqmg;->b:Lqmg;
+    iput p5, p0, Lqmg;->d:F
 
-    new-instance v1, Lqmg;
+    iput-boolean p6, p0, Lqmg;->o:Z
 
-    sget v2, Lg9d;->Y:I
+    return-void
+.end method
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Lqmg;->X:Lrmg;
+
+    iget-object v1, v0, Lrmg;->c:Lhgd;
+
+    iget-object v0, v0, Lrmg;->a:Lpgd;
+
+    invoke-virtual {v1}, Lf3;->a()Lhh6;
 
     move-result-object v2
 
-    const-string v3, "Timer"
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    iget-object v4, p0, Lqmg;->a:Ljava/lang/String;
 
-    invoke-direct {v1, v3, v4, v2}, Lqmg;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    if-nez v4, :cond_0
 
-    sput-object v1, Lqmg;->c:Lqmg;
+    invoke-interface {v2, v3}, Lgff;->S(I)V
 
-    new-instance v2, Lqmg;
+    goto :goto_0
 
-    sget v3, Lg9d;->k:I
+    :cond_0
+    invoke-interface {v2, v3, v4}, Lgff;->f(ILjava/lang/String;)V
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :goto_0
+    iget-object v3, p0, Lqmg;->b:Lkhc;
 
-    move-result-object v3
+    iget v3, v3, Lkhc;->b:I
 
-    const-string v4, "Send"
+    int-to-long v3, v3
 
     const/4 v5, 0x2
 
-    invoke-direct {v2, v4, v5, v3}, Lqmg;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    invoke-interface {v2, v5, v3, v4}, Lgff;->k(IJ)V
 
-    sput-object v2, Lqmg;->o:Lqmg;
+    iget v3, p0, Lqmg;->c:F
 
-    new-instance v3, Lqmg;
+    float-to-double v3, v3
 
-    sget v4, Lg9d;->i:I
+    const/4 v5, 0x3
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v2, v5, v3, v4}, Lgff;->g(ID)V
 
-    move-result-object v4
+    iget v3, p0, Lqmg;->d:F
 
-    const-string v5, "Seen"
+    float-to-double v3, v3
 
-    const/4 v6, 0x3
+    const/4 v5, 0x4
 
-    invoke-direct {v3, v5, v6, v4}, Lqmg;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    invoke-interface {v2, v5, v3, v4}, Lgff;->g(ID)V
 
-    sput-object v3, Lqmg;->X:Lqmg;
+    iget-boolean v3, p0, Lqmg;->o:Z
 
-    new-instance v4, Lqmg;
+    int-to-long v3, v3
 
-    sget v5, Lg9d;->H:I
+    const/4 v5, 0x5
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v2, v5, v3, v4}, Lgff;->k(IJ)V
 
-    move-result-object v5
+    :try_start_0
+    invoke-virtual {v0}, Lpgd;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v6, "Error"
+    :try_start_1
+    invoke-virtual {v2}, Lhh6;->w()I
 
-    const/4 v7, 0x4
+    invoke-virtual {v0}, Lpgd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-direct {v4, v6, v7, v5}, Lqmg;-><init>(Ljava/lang/String;ILjava/lang/Integer;)V
+    :try_start_2
+    invoke-virtual {v0}, Lpgd;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    sput-object v4, Lqmg;->Y:Lqmg;
+    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
 
-    filled-new-array {v0, v1, v2, v3, v4}, [Lqmg;
-
-    move-result-object v0
-
-    sput-object v0, Lqmg;->Z:[Lqmg;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lqmg;->w0:Lla5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lqmg;->a:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lqmg;
-    .locals 1
-
-    const-class v0, Lqmg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lqmg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lqmg;
-    .locals 1
-
-    sget-object v0, Lqmg;->Z:[Lqmg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lqmg;
+    const/4 v0, 0x0
 
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v3
+
+    :try_start_3
+    invoke-virtual {v0}, Lpgd;->k()V
+
+    throw v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
+
+    throw v0
 .end method

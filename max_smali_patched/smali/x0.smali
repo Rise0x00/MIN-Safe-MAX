@@ -1,173 +1,194 @@
 .class public final Lx0;
-.super Lhv0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lref;
 
 
 # instance fields
-.field public final e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic a:Ln15;
 
-.field public final f:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic c:Ljava/lang/Object;
 
-.field public final h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic d:I
 
-.field public final i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic e:Ly0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
+.method public constructor <init>(Ly0;Ln15;Ljava/lang/String;Ljava/lang/Object;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx0;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iput-object p1, p0, Lx0;->e:Ly0;
 
-    iput-object p2, p0, Lx0;->f:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iput-object p2, p0, Lx0;->a:Ln15;
 
-    iput-object p3, p0, Lx0;->g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iput-object p3, p0, Lx0;->b:Ljava/lang/String;
 
-    iput-object p4, p0, Lx0;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iput-object p4, p0, Lx0;->c:Ljava/lang/Object;
 
-    iput-object p5, p0, Lx0;->i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iput p5, p0, Lx0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A(Lm1;)Lk1;
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 8
 
-    sget-object v0, Lk1;->c:Lk1;
+    iget-object v0, p0, Lx0;->e:Ly0;
 
-    iget-object v1, p0, Lx0;->g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget-object v1, p0, Lx0;->a:Ln15;
 
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->getAndSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v7, p0, Lx0;->b:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v2, p0, Lx0;->c:Ljava/lang/Object;
 
-    check-cast p1, Lk1;
+    iget v3, p0, Lx0;->d:I
 
-    return-object p1
-.end method
+    check-cast v0, Lasb;
 
-.method public final K(Lk1;Lk1;)V
-    .locals 1
+    check-cast v2, Lab7;
 
-    iget-object v0, p0, Lx0;->f:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget-object v0, v0, Lasb;->m:Lma7;
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v3}, Lnx1;->v(I)I
 
-    return-void
-.end method
+    move-result v4
 
-.method public final L(Lk1;Ljava/lang/Thread;)V
-    .locals 1
+    if-eqz v4, :cond_5
 
-    iget-object v0, p0, Lx0;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    const/4 v5, 0x1
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eq v4, v5, :cond_4
 
-    return-void
-.end method
+    const/4 v5, 0x2
 
-.method public final d(Lm1;Lv0;Lv0;)Z
-    .locals 2
+    if-ne v4, v5, :cond_0
+
+    sget-object v3, Lza7;->d:Lza7;
+
+    :goto_0
+    move-object v5, v3
+
+    goto :goto_2
 
     :cond_0
-    iget-object v0, p0, Lx0;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v2, "Cache level"
 
-    if-eqz v1, :cond_1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x1
+    const/4 v2, 0x1
 
-    return p1
+    if-eq v3, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v3, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq v3, v2, :cond_1
+
+    const-string v2, "null"
+
+    goto :goto_1
 
     :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "BITMAP_MEMORY_CACHE"
+
+    goto :goto_1
+
+    :cond_2
+    const-string v2, "DISK_CACHE"
+
+    goto :goto_1
+
+    :cond_3
+    const-string v2, "FULL_FETCH"
+
+    :goto_1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "is not supported. "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    sget-object v3, Lza7;->c:Lza7;
+
+    goto :goto_0
+
+    :cond_5
+    sget-object v3, Lza7;->b:Lza7;
+
+    goto :goto_0
+
+    :goto_2
+    instance-of v3, v1, Lzrb;
+
+    if-eqz v3, :cond_6
+
+    check-cast v1, Lzrb;
+
+    monitor-enter v1
+
+    monitor-exit v1
+
+    :cond_6
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v3, v2
+
+    move-object v2, v0
+
+    invoke-virtual/range {v2 .. v7}, Lma7;->b(Lab7;Ljava/lang/Object;Lza7;Lfe6;Ljava/lang/String;)Lr0;
 
     move-result-object v0
 
-    if-eq v0, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method
 
-.method public final e(Lm1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :cond_0
-    iget-object v0, p0, Lx0;->i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lnni;->d(Ljava/lang/Object;)Lu2c;
 
     move-result-object v0
 
-    if-eq v0, p2, :cond_0
+    iget-object v1, p0, Lx0;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return p1
-.end method
+    move-result-object v1
 
-.method public final f(Lm1;Lk1;Lk1;)Z
-    .locals 2
+    const-string v2, "request"
 
-    :cond_0
-    iget-object v0, p0, Lx0;->g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {v0, v1, v2}, Lu2c;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lu2c;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eq v0, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final z(Lm1;)Lv0;
-    .locals 2
-
-    sget-object v0, Lv0;->d:Lv0;
-
-    iget-object v1, p0, Lx0;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->getAndSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lv0;
-
-    return-object p1
+    return-object v0
 .end method

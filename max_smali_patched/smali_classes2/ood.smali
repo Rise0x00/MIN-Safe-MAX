@@ -1,97 +1,101 @@
-.class public final Lood;
+.class public final synthetic Lood;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqod;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Loh6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Loh6;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lood;->a:I
 
-    iput-object p1, p0, Lood;->a:Loh6;
+    iput-object p1, p0, Lood;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget p1, p0, Lood;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    const-string p1, "ScheduledSendPickerDialogFragment"
 
-    :cond_0
-    instance-of v1, p1, Lood;
+    const-string v0, "handle nav click"
 
-    const/4 v2, 0x0
+    invoke-static {p1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
+    new-instance p1, Lpod;
 
-    return v2
+    iget-object v0, p0, Lood;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    :cond_1
-    check-cast p1, Lood;
+    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
 
-    iget-object v1, p0, Lood;->a:Loh6;
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p1, Lood;->a:Loh6;
+    move-result-object v1
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast v1, Landroid/os/Parcelable;
 
-    move-result p1
+    invoke-direct {p1, v1}, Lpod;-><init>(Landroid/os/Parcelable;)V
 
-    if-nez p1, :cond_2
+    invoke-virtual {v0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->B0(Lrod;)V
 
-    return v2
+    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->s0()V
 
-    :cond_2
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Lood;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-object v0, p0, Lood;->a:Loh6;
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->A0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    invoke-virtual {v0}, Loh6;->hashCode()I
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "ScheduledSendPickerViewModel"
+
+    const-string v1, "onSendClick"
+
+    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->h()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p1, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->m:La1f;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lx4a;
 
-    const-string v1, "OnAlbumSelected(album="
+    invoke-direct {v0}, Lx4a;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lood;->a:Loh6;
+    invoke-virtual {p1, v1, v0}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
 
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

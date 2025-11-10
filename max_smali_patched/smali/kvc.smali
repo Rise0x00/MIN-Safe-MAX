@@ -1,81 +1,65 @@
-.class public final enum Lkvc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lkvc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Lkvc;
+.field public static CardView:[I = null
 
-.field public static final enum b:Lkvc;
+.field public static CardView_android_minHeight:I = 0x1
 
-.field public static final synthetic c:[Lkvc;
+.field public static CardView_android_minWidth:I = 0x0
+
+.field public static CardView_cardBackgroundColor:I = 0x2
+
+.field public static CardView_cardCornerRadius:I = 0x3
+
+.field public static CardView_cardElevation:I = 0x4
+
+.field public static CardView_cardMaxElevation:I = 0x5
+
+.field public static CardView_cardPreventCornerOverlap:I = 0x6
+
+.field public static CardView_cardUseCompatPadding:I = 0x7
+
+.field public static CardView_contentPadding:I = 0x8
+
+.field public static CardView_contentPaddingBottom:I = 0x9
+
+.field public static CardView_contentPaddingLeft:I = 0xa
+
+.field public static CardView_contentPaddingRight:I = 0xb
+
+.field public static CardView_contentPaddingTop:I = 0xc
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Lkvc;
+    const/16 v0, 0xd
 
-    const-string v1, "UNDEFINE"
+    new-array v0, v0, [I
 
-    const/4 v2, 0x0
+    fill-array-data v0, :array_0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lkvc;
-
-    const-string v2, "OWNER_EXIT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkvc;->a:Lkvc;
-
-    new-instance v2, Lkvc;
-
-    const-string v3, "RECORD_STOP"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lkvc;->b:Lkvc;
-
-    filled-new-array {v0, v1, v2}, [Lkvc;
-
-    move-result-object v0
-
-    sput-object v0, Lkvc;->c:[Lkvc;
+    sput-object v0, Lkvc;->CardView:[I
 
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Lkvc;
-    .locals 1
-
-    const-class v0, Lkvc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lkvc;
-
-    return-object p0
-.end method
-
-.method public static values()[Lkvc;
-    .locals 1
-
-    sget-object v0, Lkvc;->c:[Lkvc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkvc;
-
-    return-object v0
+    :array_0
+    .array-data 4
+        0x101013f
+        0x1010140
+        0x7f0400bc
+        0x7f0400bd
+        0x7f0400be
+        0x7f0400c0
+        0x7f0400c1
+        0x7f0400c2
+        0x7f040302
+        0x7f040303
+        0x7f040305
+        0x7f040306
+        0x7f040308
+    .end array-data
 .end method

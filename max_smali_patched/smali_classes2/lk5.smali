@@ -1,92 +1,116 @@
-.class public final synthetic Llk5;
+.class public abstract Llk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(IJZ)V
-    .locals 0
-
-    iput p1, p0, Llk5;->a:I
-
-    iput-wide p2, p0, Llk5;->b:J
-
-    iput-boolean p4, p0, Llk5;->c:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public abstract a()[B
+.end method
 
-    iget v0, p0, Llk5;->a:I
+.method public final b(Ljava/nio/ByteBuffer;II)I
+    .locals 3
 
-    iget-boolean v1, p0, Llk5;->c:Z
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    iget-wide v2, p0, Llk5;->b:J
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result v1
 
-    move-result-object v0
+    sub-int/2addr v0, v1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v1, 0x4
 
-    move-result-object v1
+    const-string v2, "extension underflow"
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    if-lt v0, v1, :cond_3
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    const-string v1, "il5"
+    move-result v0
 
-    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
+    const v1, 0xffff
 
-    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    and-int/2addr v0, v1
 
-    return-void
+    if-ne v0, p2, :cond_2
 
-    :pswitch_0
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    move-result-object v0
+    move-result p2
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    and-int/2addr p2, v1
 
-    move-result-object v1
+    if-lt p2, p3, :cond_1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    move-result-object v0
+    move-result p3
 
-    const-string v1, "ok5"
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
+    move-result p1
 
-    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    sub-int/2addr p3, p1
 
-    return-void
+    if-lt p3, p2, :cond_0
 
-    nop
+    return p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " can\'t be less than "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, " bytes"
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    invoke-direct {p1, v2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

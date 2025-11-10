@@ -3,90 +3,94 @@
 
 
 # static fields
-.field public static AsyncViewStub:[I = null
+.field public static add_24:I = 0x7f0802d5
 
-.field public static AsyncViewStub_layout:I = 0x0
+.field public static call_24:I = 0x7f080305
 
-.field public static LongRoundedTitleSubtitleButton:[I = null
+.field public static call_fill_16:I = 0x7f080307
 
-.field public static LongRoundedTitleSubtitleButton_lrts_subtitle:I = 0x0
+.field public static calls_avd:I = 0x7f08030a
 
-.field public static LongRoundedTitleSubtitleButton_lrts_title:I = 0x1
+.field public static cancel_10:I = 0x7f08030c
 
-.field public static PopupLayout:[I = null
+.field public static cancel_outline_28:I = 0x7f08030d
 
-.field public static PopupLayout_sensitivity:I = 0x0
+.field public static chat_24:I = 0x7f080312
 
-.field public static RoundedRectConstraintLayout:[I = null
+.field public static check_24:I = 0x7f080318
 
-.field public static RoundedRectConstraintLayout_roundRadius:I = 0x0
+.field public static contact_24:I = 0x7f080340
 
-.field public static RoundedRectFrameLayout:[I = null
+.field public static contacts_avd:I = 0x7f080343
 
-.field public static RoundedRectFrameLayout_cornersRadius:I = 0x0
+.field public static copy_24:I = 0x7f080344
 
-.field public static TamLoadingView:[I = null
+.field public static download_24:I = 0x7f080362
 
-.field public static TamLoadingView_tlv_auto_repeat:I = 0x0
+.field public static edit_outline_24:I = 0x7f08036b
 
-.field public static TamLoadingView_tlv_network_fetch:I = 0x1
+.field public static file_24:I = 0x7f0803e0
 
+.field public static forward_24:I = 0x7f0804e3
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.field public static ic_add_16:I = 0x7f0804fc
 
-    const v0, 0x7f040594
+.field public static ic_arrow_left_outline_28:I = 0x7f08052c
 
-    filled-new-array {v0}, [I
+.field public static ic_cancel_filled_24:I = 0x7f080576
 
-    move-result-object v0
+.field public static ic_cancel_outline_24:I = 0x7f080577
 
-    sput-object v0, Lxlc;->AsyncViewStub:[I
+.field public static ic_cancel_outline_28:I = 0x7f080578
 
-    const v0, 0x7f040609
+.field public static ic_channel_outline_28:I = 0x7f08057d
 
-    const v1, 0x7f04060a
+.field public static ic_check_filled_24:I = 0x7f080585
 
-    filled-new-array {v0, v1}, [I
+.field public static ic_delete_filled_apart_24:I = 0x7f0805bd
 
-    move-result-object v0
+.field public static ic_delete_filled_cut_out_24:I = 0x7f0805be
 
-    sput-object v0, Lxlc;->LongRoundedTitleSubtitleButton:[I
+.field public static ic_done_28:I = 0x7f0805c7
 
-    const v0, 0x7f04074f
+.field public static ic_heart_fill_24:I = 0x7f080636
 
-    filled-new-array {v0}, [I
+.field public static ic_heart_outline_24:I = 0x7f080637
 
-    move-result-object v0
+.field public static ic_mention_24:I = 0x7f080674
 
-    sput-object v0, Lxlc;->PopupLayout:[I
+.field public static ic_message_filled_28:I = 0x7f08067c
 
-    const v0, 0x7f040728
+.field public static ic_more_vertical_filled_16:I = 0x7f080699
 
-    filled-new-array {v0}, [I
+.field public static ic_next_16:I = 0x7f080727
 
-    move-result-object v0
+.field public static ic_online_24:I = 0x7f080733
 
-    sput-object v0, Lxlc;->RoundedRectConstraintLayout:[I
+.field public static ic_phone_28:I = 0x7f080743
 
-    const v0, 0x7f04031a
+.field public static ic_search_outline_16:I = 0x7f080783
 
-    filled-new-array {v0}, [I
+.field public static ic_settings_filled_28:I = 0x7f080793
 
-    move-result-object v0
+.field public static ic_stub_outline_24:I = 0x7f0807ba
 
-    sput-object v0, Lxlc;->RoundedRectFrameLayout:[I
+.field public static ic_swap_24:I = 0x7f0807bf
 
-    const v0, 0x7f040898
+.field public static ic_users_28:I = 0x7f0807df
 
-    const v1, 0x7f040899
+.field public static ic_users_outline_28:I = 0x7f0807e0
 
-    filled-new-array {v0, v1}, [I
+.field public static link_24:I = 0x7f080828
 
-    move-result-object v0
+.field public static media_24:I = 0x7f080896
 
-    sput-object v0, Lxlc;->TamLoadingView:[I
+.field public static microphone_on_24:I = 0x7f0808a4
 
-    return-void
-.end method
+.field public static setting_24:I = 0x7f08095b
+
+.field public static settings_outline_24:I = 0x7f08095c
+
+.field public static share_24_android:I = 0x7f08095d
+
+.field public static support_24:I = 0x7f080973

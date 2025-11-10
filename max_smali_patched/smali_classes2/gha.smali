@@ -1,70 +1,146 @@
 .class public final Lgha;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lhha;
 
-.field public final synthetic b:Llha;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Llha;I)V
+.method public constructor <init>(Lhha;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lgha;->a:I
+    iput-object p1, p0, Lgha;->X:Lhha;
 
-    iput-object p1, p0, Lgha;->b:Llha;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgha;->a:I
+    check-cast p1, Lg54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lgha;->b:Llha;
+    invoke-virtual {p0, p1, p2}, Lgha;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Llha;->H0:Lve6;
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    check-cast p1, Lgha;
 
-    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lgha;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lgha;
+
+    iget-object v0, p0, Lgha;->X:Lhha;
+
+    invoke-direct {p1, v0, p2}, Lgha;-><init>(Lhha;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lgha;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_0
-    iget-object v0, p0, Lgha;->b:Llha;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Llha;->H0:Lve6;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
+    throw p1
 
     :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lgha;->X:Lhha;
 
-    nop
+    :try_start_1
+    iput v1, p0, Lgha;->o:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p1, Lhha;->a:Lpgd;
+
+    new-instance v1, Loj4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2, p1}, Loj4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lkwi;->c(Lpgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    const-string v0, "NotificationsTrackerMessagesDao"
+
+    const-string v1, "onLogout: failed"
+
+    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

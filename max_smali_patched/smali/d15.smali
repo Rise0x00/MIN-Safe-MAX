@@ -1,55 +1,291 @@
-.class public final Ld15;
+.class public abstract synthetic Ld15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:Landroid/util/SparseArray;
-
-
 # direct methods
-.method public constructor <init>(IZIIIIIIILandroid/util/SparseArray;)V
+.method public static bridge synthetic A(Landroid/media/MediaCodecInfo;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isHardwareAccelerated()Z
 
-    iput p1, p0, Ld15;->a:I
+    move-result p0
 
-    iput-boolean p2, p0, Ld15;->b:Z
+    return p0
+.end method
 
-    iput p3, p0, Ld15;->c:I
+.method public static bridge synthetic B(Landroid/graphics/Insets;)I
+    .locals 0
 
-    iput p4, p0, Ld15;->d:I
+    iget p0, p0, Landroid/graphics/Insets;->bottom:I
 
-    iput p5, p0, Ld15;->e:I
+    return p0
+.end method
 
-    iput p6, p0, Ld15;->f:I
+.method public static bridge synthetic C(Landroid/media/MediaCodecInfo;)Z
+    .locals 0
 
-    iput p7, p0, Ld15;->g:I
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isVendor()Z
 
-    iput p8, p0, Ld15;->h:I
+    move-result p0
 
-    iput p9, p0, Ld15;->i:I
+    return p0
+.end method
 
-    iput-object p10, p0, Ld15;->j:Landroid/util/SparseArray;
+.method public static bridge synthetic D(Landroid/media/MediaCodecInfo;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isAlias()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic a(Landroid/graphics/Insets;)I
+    .locals 0
+
+    iget p0, p0, Landroid/graphics/Insets;->top:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic b(Landroid/graphics/drawable/ColorStateListDrawable;)Landroid/content/res/ColorStateList;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/ColorStateListDrawable;->getColorStateList()Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic c(Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/content/ContentResolver;->loadThumbnail(Landroid/net/Uri;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic d(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/media/ThumbnailUtils;->createVideoThumbnail(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/ColorStateListDrawable;
+    .locals 0
+
+    check-cast p0, Landroid/graphics/drawable/ColorStateListDrawable;
+
+    return-object p0
+.end method
+
+.method public static synthetic f()Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+    .locals 4
+
+    new-instance v0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+
+    const/16 v1, 0x500
+
+    const/16 v2, 0x2d0
+
+    const/16 v3, 0x3c
+
+    invoke-direct {v0, v1, v2, v3}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;-><init>(III)V
+
+    return-object v0
+.end method
+
+.method public static synthetic g(III)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+    .locals 1
+
+    new-instance v0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;-><init>(III)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic h(Ljava/lang/Object;)Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+    .locals 0
+
+    check-cast p0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
+    .locals 1
+
+    new-instance v0, Landroid/media/session/MediaSession;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic j(Landroid/media/session/MediaController;)Landroid/os/Bundle;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/session/MediaController;->getSessionInfo()Landroid/os/Bundle;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic k(Landroid/app/NotificationManager;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationManager;->getNotificationDelegate()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic l(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Ljavax/net/ssl/SSLSocket;->getApplicationProtocol()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Landroid/media/MediaCodecInfo$VideoCapabilities;)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getSupportedPerformancePoints()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic n()V
+    .locals 1
+
+    new-instance v0, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;
+
+    return-void
+.end method
+
+.method public static bridge synthetic o(Lxc9;Ljava/util/ArrayList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setSystemGestureExclusionRects(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic p(Landroid/app/NotificationManager;)V
+    .locals 1
+
+    const-string v0, "com.google.android.gms"
+
+    invoke-virtual {p0, v0}, Landroid/app/NotificationManager;->setNotificationDelegate(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic q(Landroid/graphics/drawable/GradientDrawable;[I[F)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/GradientDrawable;->setColors([I[F)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic r(Landroid/media/session/MediaController$TransportControls;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/session/MediaController$TransportControls;->setPlaybackSpeed(F)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic s(Landroid/view/Window;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setStatusBarContrastEnforced(Z)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic t(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljavax/net/ssl/SSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;->covers(Landroid/media/MediaCodecInfo$VideoCapabilities$PerformancePoint;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic v(Landroid/media/MediaCodecInfo;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isSoftwareOnly()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic w(Landroid/graphics/Insets;)I
+    .locals 0
+
+    iget p0, p0, Landroid/graphics/Insets;->right:I
+
+    return p0
+.end method
+
+.method public static bridge synthetic x(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/media/ThumbnailUtils;->createImageThumbnail(Ljava/io/File;Landroid/util/Size;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic y(Landroid/app/NotificationManager;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/app/NotificationManager;->setNotificationDelegate(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic z(Landroid/view/Window;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setNavigationBarContrastEnforced(Z)V
 
     return-void
 .end method

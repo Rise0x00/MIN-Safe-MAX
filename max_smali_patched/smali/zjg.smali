@@ -1,20 +1,25 @@
-.class public interface abstract Lzjg;
+.class public abstract Lzjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract A(Landroid/view/View;)I
-.end method
+# static fields
+.field public static final a:Ljava/util/Map;
 
-.method public abstract G()I
-.end method
 
-.method public abstract O()I
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract S(I)Landroid/view/View;
-.end method
+    new-instance v0, Ljava/util/WeakHashMap;
 
-.method public abstract U(Landroid/view/View;)I
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v0
+
+    sput-object v0, Lzjg;->a:Ljava/util/Map;
+
+    return-void
 .end method

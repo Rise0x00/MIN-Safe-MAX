@@ -4,130 +4,163 @@
 
 
 # instance fields
-.field public final a:Ljef;
+.field public final a:Lru7;
 
-.field public final b:Ljava/lang/Integer;
+.field public final b:Lru7;
+
+.field public final c:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Ljef;Ljava/lang/Integer;)V
+.method public constructor <init>(Lru7;Lru7;Lru7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg62;->a:Ljef;
+    iput-object p3, p0, Lg62;->a:Lru7;
 
-    iput-object p2, p0, Lg62;->b:Ljava/lang/Integer;
+    iput-object p1, p0, Lg62;->b:Lru7;
+
+    iput-object p2, p0, Lg62;->c:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(JLjava/lang/String;Lq10;)Ljava/lang/Long;
+    .locals 11
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lg62;->a:Lru7;
 
-    goto :goto_1
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of v0, p1, Lg62;
+    move-result-object v1
 
-    if-nez v0, :cond_1
+    check-cast v1, Lu23;
 
-    goto :goto_0
+    check-cast v1, Lw33;
 
-    :cond_1
-    check-cast p1, Lg62;
+    invoke-virtual {v1}, Lw33;->M()Lad2;
 
-    iget-object v0, p0, Lg62;->a:Ljef;
+    move-result-object v1
 
-    iget-object v1, p1, Lg62;->a:Ljef;
+    sget-object v2, Lgd2;->b:Lgd2;
 
-    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1, p2, v2}, Lad2;->c(JLgd2;)V
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lg62;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lg62;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lg62;->a:Ljef;
-
-    iget v0, v0, Ljef;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lg62;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg62;->a:Ljef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lg62;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lu23;
+
+    new-instance v1, Lfe1;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, v2}, Lfe1;-><init>(I)V
+
+    check-cast v0, Lw33;
+
+    invoke-virtual {v0, p1, p2, v1}, Lw33;->I(JLqi6;)Lt92;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance p1, Ljava/lang/Long;
+
+    const-wide/16 p2, 0x0
+
+    invoke-direct {p1, p2, p3}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
+
+    :cond_0
+    iget-object v0, p0, Lg62;->c:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liw0;
+
+    new-instance v1, Lk43;
+
+    new-instance v2, Ljava/lang/Long;
+
+    invoke-direct {v2, p1, p2}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x7c
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Lk43;-><init>(Ljava/util/Collection;ZZLaq4;Lgzb;I)V
+
+    invoke-virtual {v0, v1}, Liw0;->c(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lg62;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lml;
+
+    check-cast v0, Lona;
+
+    iget-object v1, v0, Lona;->e:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llph;
+
+    new-instance v2, Lh62;
+
+    invoke-virtual {v0}, Lona;->x()Lqxb;
+
+    move-result-object v0
+
+    check-cast v0, Lsxb;
+
+    iget-object v0, v0, Lsxb;->a:Le78;
+
+    invoke-virtual {v0}, Lztd;->k()J
+
+    move-result-wide v3
+
+    invoke-static {p3}, Lx0j;->d(Ljava/lang/String;)J
+
+    move-result-wide v9
+
+    move-wide v6, p1
+
+    move-object v5, p3
+
+    move-object v8, p4
+
+    invoke-direct/range {v2 .. v10}, Lh62;-><init>(JLjava/lang/String;JLq10;J)V
+
+    invoke-virtual {v1, v2}, Llph;->c(Le5e;)J
+
+    move-result-wide p1
+
+    new-instance p3, Ljava/lang/Long;
+
+    invoke-direct {p3, p1, p2}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p3
 .end method

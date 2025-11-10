@@ -1,218 +1,324 @@
 .class public final La93;
-.super Ljava/lang/Object;
+.super Lie6;
 .source "SourceFile"
-
-# interfaces
-.implements Lmm;
 
 
 # instance fields
-.field public final synthetic a:Lc93;
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:Z
 
 
 # direct methods
-.method public constructor <init>(Lc93;)V
-    .locals 0
+.method public constructor <init>(Lmvf;JJZ)V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lie6;-><init>(Lmvf;)V
 
-    iput-object p1, p0, La93;->a:Lc93;
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v0, p4, v0
+
+    if-eqz v0, :cond_0
+
+    cmp-long v1, p4, p2
+
+    if-ltz v1, :cond_1
+
+    :cond_0
+    move-wide v1, p4
+
+    move-wide p3, p2
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    move-wide p5, p4
+
+    move-wide p3, p2
+
+    const/4 p2, 0x2
+
+    invoke-direct/range {p1 .. p6}, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;-><init>(IJJ)V
+
+    throw p1
+
+    :goto_0
+    invoke-virtual {p1}, Lmvf;->h()I
+
+    move-result p2
+
+    const/4 p5, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne p2, v3, :cond_a
+
+    new-instance p2, Lkvf;
+
+    invoke-direct {p2}, Lkvf;-><init>()V
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {p1, p5, p2, v4, v5}, Lmvf;->m(ILkvf;J)Lkvf;
+
+    move-result-object p1
+
+    invoke-static {v4, v5, p3, p4}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p2
+
+    if-nez p6, :cond_3
+
+    iget-boolean p4, p1, Lkvf;->k:Z
+
+    if-nez p4, :cond_3
+
+    cmp-long p4, p2, v4
+
+    if-eqz p4, :cond_3
+
+    iget-boolean p4, p1, Lkvf;->h:Z
+
+    if-eqz p4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p1, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    invoke-direct {p1, v3}, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;-><init>(I)V
+
+    throw p1
+
+    :cond_3
+    :goto_1
+    if-nez v0, :cond_4
+
+    iget-wide v0, p1, Lkvf;->m:J
+
+    goto :goto_2
+
+    :cond_4
+    invoke-static {v4, v5, v1, v2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :goto_2
+    iget-wide v4, p1, Lkvf;->m:J
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p4, v4, v6
+
+    if-eqz p4, :cond_6
+
+    cmp-long p4, v0, v4
+
+    if-lez p4, :cond_5
+
+    move-wide v0, v4
+
+    :cond_5
+    cmp-long p4, p2, v0
+
+    if-lez p4, :cond_6
+
+    move-wide p2, v0
+
+    :cond_6
+    iput-wide p2, p0, La93;->f:J
+
+    iput-wide v0, p0, La93;->g:J
+
+    cmp-long p4, v0, v6
+
+    if-nez p4, :cond_7
+
+    move-wide p2, v6
+
+    goto :goto_3
+
+    :cond_7
+    sub-long p2, v0, p2
+
+    :goto_3
+    iput-wide p2, p0, La93;->h:J
+
+    iget-boolean p1, p1, Lkvf;->i:Z
+
+    if-eqz p1, :cond_9
+
+    if-eqz p4, :cond_8
+
+    cmp-long p1, v4, v6
+
+    if-eqz p1, :cond_9
+
+    cmp-long p1, v0, v4
+
+    if-nez p1, :cond_9
+
+    :cond_8
+    move p5, v3
+
+    :cond_9
+    iput-boolean p5, p0, La93;->i:Z
 
     return-void
+
+    :cond_a
+    new-instance p1, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    invoke-direct {p1, p5}, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;-><init>(I)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final h0(Lnm;I)V
-    .locals 11
+.method public final f(ILhvf;Z)Lhvf;
+    .locals 10
 
-    iget-object p1, p0, La93;->a:Lc93;
-
-    iget-object v0, p1, Lc93;->C0:Ly83;
-
-    iput p2, p1, Lc93;->Q0:I
-
-    iget-object v1, p1, Lc93;->S0:Lq8h;
+    iget-object v1, p0, Lie6;->e:Lmvf;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, v2, p2, p3}, Lmvf;->f(ILhvf;Z)Lhvf;
 
-    invoke-virtual {v1}, Lq8h;->d()I
+    iget-wide v1, p2, Lhvf;->e:J
 
-    move-result v1
+    iget-wide v3, p0, La93;->f:J
+
+    sub-long v6, v1, v3
+
+    iget-wide v1, p0, La93;->h:J
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v5, v1, v3
+
+    if-nez v5, :cond_0
+
+    :goto_0
+    move-wide v4, v3
+
+    goto :goto_1
+
+    :cond_0
+    sub-long v3, v1, v6
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v1, p2, Lhvf;->a:Ljava/lang/Object;
+
+    iget-object v2, p2, Lhvf;->b:Ljava/lang/Object;
+
+    sget-object v8, Lz8;->f:Lz8;
+
+    const/4 v9, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p2
+
+    invoke-virtual/range {v0 .. v9}, Lhvf;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLz8;Z)V
+
+    return-object p2
+.end method
+
+.method public final m(ILkvf;J)Lkvf;
+    .locals 6
+
+    const/4 p1, 0x0
+
+    const-wide/16 p3, 0x0
+
+    iget-object v0, p0, Lie6;->e:Lmvf;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lmvf;->m(ILkvf;J)Lkvf;
+
+    iget-wide p3, p2, Lkvf;->p:J
+
+    iget-wide v0, p0, La93;->f:J
+
+    add-long/2addr p3, v0
+
+    iput-wide p3, p2, Lkvf;->p:J
+
+    iget-wide p3, p0, La93;->h:J
+
+    iput-wide p3, p2, Lkvf;->m:J
+
+    iget-boolean p1, p0, La93;->i:Z
+
+    iput-boolean p1, p2, Lkvf;->i:Z
+
+    iget-wide p3, p2, Lkvf;->l:J
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, p3, v2
+
+    if-eqz p1, :cond_1
+
+    invoke-static {p3, p4, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p3
+
+    iput-wide p3, p2, Lkvf;->l:J
+
+    iget-wide v4, p0, La93;->g:J
+
+    cmp-long p1, v4, v2
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    invoke-static {p3, p4, v4, v5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p3
 
     :goto_0
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+    sub-long/2addr p3, v0
 
-    move-result v3
-
-    move v4, v2
-
-    :goto_1
-    if-ge v4, v3, :cond_3
-
-    invoke-virtual {p1, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v6
-
-    check-cast v6, Lz83;
-
-    invoke-static {v5}, Lc93;->b(Landroid/view/View;)Lvlg;
-
-    move-result-object v7
-
-    iget v8, v6, Lz83;->a:I
-
-    const/4 v9, 0x1
-
-    if-eq v8, v9, :cond_2
-
-    const/4 v5, 0x2
-
-    if-eq v8, v5, :cond_1
-
-    goto :goto_2
+    iput-wide p3, p2, Lkvf;->l:J
 
     :cond_1
-    neg-int v5, p2
+    invoke-static {v0, v1}, Llig;->l0(J)J
 
-    int-to-float v5, v5
+    move-result-wide p3
 
-    iget v6, v6, Lz83;->b:F
+    iget-wide v0, p2, Lkvf;->e:J
 
-    mul-float/2addr v5, v6
+    cmp-long p1, v0, v2
 
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+    if-eqz p1, :cond_2
 
-    move-result v5
+    add-long/2addr v0, p3
 
-    invoke-virtual {v7, v5}, Lvlg;->b(I)Z
-
-    goto :goto_2
+    iput-wide v0, p2, Lkvf;->e:J
 
     :cond_2
-    neg-int v6, p2
+    iget-wide v0, p2, Lkvf;->f:J
 
-    invoke-static {v5}, Lc93;->b(Landroid/view/View;)Lvlg;
+    cmp-long p1, v0, v2
 
-    move-result-object v8
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    add-long/2addr v0, p3
 
-    move-result-object v9
-
-    check-cast v9, Lz83;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v10
-
-    iget v8, v8, Lvlg;->b:I
-
-    sub-int/2addr v10, v8
-
-    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
-
-    move-result v5
-
-    sub-int/2addr v10, v5
-
-    iget v5, v9, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    sub-int/2addr v10, v5
-
-    invoke-static {v6, v2, v10}, Lbv0;->t(III)I
-
-    move-result v5
-
-    invoke-virtual {v7, v5}, Lvlg;->b(I)Z
-
-    :goto_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
+    iput-wide v0, p2, Lkvf;->f:J
 
     :cond_3
-    invoke-virtual {p1}, Lc93;->d()V
-
-    iget-object v2, p1, Lc93;->H0:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v2, :cond_4
-
-    if-lez v1, :cond_4
-
-    sget-object v2, Lskg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    sget-object v3, Lskg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
-
-    move-result v3
-
-    sub-int v3, v2, v3
-
-    sub-int/2addr v3, v1
-
-    invoke-virtual {p1}, Lc93;->getScrimVisibleHeightTrigger()I
-
-    move-result v1
-
-    sub-int/2addr v2, v1
-
-    int-to-float v1, v2
-
-    int-to-float v2, v3
-
-    div-float/2addr v1, v2
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static {v4, v1}, Ljava/lang/Math;->min(FF)F
-
-    move-result v1
-
-    iput v1, v0, Ly83;->d:F
-
-    const/high16 v5, 0x3f000000    # 0.5f
-
-    invoke-static {v4, v1, v5, v1}, Lvpb;->f(FFFF)F
-
-    move-result v1
-
-    iput v1, v0, Ly83;->e:F
-
-    iget p1, p1, Lc93;->Q0:I
-
-    add-int/2addr p1, v3
-
-    iput p1, v0, Ly83;->f:I
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {v0, p1}, Ly83;->p(F)V
-
-    return-void
+    return-object p2
 .end method

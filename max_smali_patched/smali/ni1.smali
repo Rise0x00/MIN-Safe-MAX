@@ -1,106 +1,203 @@
 .class public final Lni1;
-.super Lm3f;
+.super Ladi;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic c:I
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public final synthetic d:Loi1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-    .locals 0
+.method public constructor <init>(Lhrb;Loi1;)V
+    .locals 1
 
-    iput-object p2, p0, Lni1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    const/4 v0, 0x2
 
-    const/4 p2, 0x2
+    iput v0, p0, Lni1;->c:I
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lni1;->d:Loi1;
+
+    const/16 p2, 0xc
+
+    .line 3
+    invoke-direct {p0, p2, p1}, Ladi;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Loi1;I)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput p2, p0, Lni1;->c:I
 
-    invoke-virtual {p0, p1, p2}, Lni1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p1, p0, Lni1;->d:Loi1;
 
-    move-result-object p1
+    const/16 p1, 0xc
 
-    check-cast p1, Lni1;
+    packed-switch p2, :pswitch_data_0
 
-    sget-object p2, Loyf;->a:Loyf;
+    const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lni1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0, p1, p2}, Ladi;-><init>(ILjava/lang/Object;)V
 
-    return-object p2
+    return-void
+
+    .line 2
+    :pswitch_0
+    sget-object p2, Lli1;->a:Lli1;
+
+    invoke-direct {p0, p1, p2}, Ladi;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
 
-    new-instance v0, Lni1;
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v1, p0, Lni1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget v0, p0, Lni1;->c:I
 
-    invoke-direct {v0, p2, v1}, Lni1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p1, v0, Lni1;->X:Ljava/lang/Object;
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    if-nez v0, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p2, Lhrb;
 
-    iget-object p1, p0, Lni1;->X:Ljava/lang/Object;
+    check-cast p1, Lhrb;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object p1, p0, Lni1;->d:Loi1;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getBottom()I
+
+    move-result v2
+
+    invoke-virtual {p1, p2, v0, v1, v2}, Loi1;->c(IIII)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast p2, Lli1;
+
+    check-cast p1, Lli1;
+
+    if-eq p1, p2, :cond_4
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    iget-object v0, p0, Lni1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget-object p2, p0, Lni1;->d:Loi1;
 
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->N0:Lmqc;
+    if-eqz p1, :cond_3
 
-    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->O0:[Ltm7;
+    const/4 v0, 0x1
 
-    const/4 v3, 0x7
+    if-eq p1, v0, :cond_2
 
-    aget-object v2, v2, v3
+    const/4 v0, 0x2
 
-    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    if-ne p1, v0, :cond_1
 
-    move-result-object v0
+    new-instance p1, Ldrb;
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance v0, Lvhd;
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x5
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1, p2}, Lvhd;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2}, Loi1;->b(Loi1;)Llb1;
+
+    move-result-object v1
+
+    invoke-direct {p1, p2, v0, v1}, Ldrb;-><init>(Landroid/view/View;Lvhd;Llb1;)V
 
     goto :goto_0
 
-    :cond_0
-    const/16 p1, 0x8
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Lqrb;
+
+    new-instance v0, Lwui;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p2}, Lwui;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2}, Loi1;->b(Loi1;)Llb1;
+
+    move-result-object v1
+
+    invoke-direct {p1, p2, v0, v1}, Lqrb;-><init>(Landroid/view/View;Lwui;Llb1;)V
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p1, Lrrb;->a:Lvh4;
 
     :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    iput-object p1, p2, Loi1;->d:Ltrb;
 
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_4
+    return-void
 
-    return-object p1
+    :pswitch_1
+    check-cast p2, Lw5b;
+
+    check-cast p1, Lw5b;
+
+    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    iget-object p1, p0, Lni1;->d:Loi1;
+
+    invoke-static {p1}, Loi1;->a(Loi1;)Lfs1;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lfs1;->setCustomTheme(Lw5b;)V
+
+    :cond_5
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

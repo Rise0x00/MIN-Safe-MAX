@@ -26,13 +26,13 @@
 # instance fields
 .field public final a:Ljava/lang/Class;
 
-.field public final b:Lcfd;
+.field public final b:Lypd;
 
 .field public final c:Ljava/lang/Exception;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Lcfd;Ljava/lang/Exception;)V
+.method public constructor <init>(Ljava/lang/Class;Lypd;Ljava/lang/Exception;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -41,7 +41,7 @@
 
     iput-object p1, p0, Lscout/exception/ObjectCreationFailedException;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lscout/exception/ObjectCreationFailedException;->b:Lcfd;
+    iput-object p2, p0, Lscout/exception/ObjectCreationFailedException;->b:Lypd;
 
     iput-object p3, p0, Lscout/exception/ObjectCreationFailedException;->c:Ljava/lang/Exception;
 
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lscout/exception/ObjectCreationFailedException;->b:Lcfd;
+    iget-object v1, p0, Lscout/exception/ObjectCreationFailedException;->b:Lypd;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

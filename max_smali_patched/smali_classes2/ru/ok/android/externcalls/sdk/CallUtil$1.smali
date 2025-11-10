@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqmc;
+.implements Ldwc;
 
 
 # annotations

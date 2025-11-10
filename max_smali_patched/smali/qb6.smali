@@ -1,49 +1,113 @@
-.class public final synthetic Lqb6;
+.class public final Lqb6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhf6;
-.implements Lp0d;
-
 
 # instance fields
-.field public final synthetic a:Lwb6;
+.field public A:I
+
+.field public B:I
+
+.field public C:I
+
+.field public D:I
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:Ljava/lang/String;
+
+.field public i:Lxq9;
+
+.field public j:Ljava/lang/String;
+
+.field public k:Ljava/lang/String;
+
+.field public l:I
+
+.field public m:Ljava/util/List;
+
+.field public n:Lb25;
+
+.field public o:J
+
+.field public p:I
+
+.field public q:I
+
+.field public r:F
+
+.field public s:I
+
+.field public t:F
+
+.field public u:[B
+
+.field public v:I
+
+.field public w:Lkb3;
+
+.field public x:I
+
+.field public y:I
+
+.field public z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwb6;)V
-    .locals 0
-
-    iput-object p1, p0, Lqb6;->a:Lwb6;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, -0x1
 
+    iput v0, p0, Lqb6;->f:I
 
-# virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iput v0, p0, Lqb6;->g:I
 
-    check-cast p1, Lonf;
+    iput v0, p0, Lqb6;->l:I
 
-    iget-object v0, p0, Lqb6;->a:Lwb6;
+    const-wide v1, 0x7fffffffffffffffL
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide v1, p0, Lqb6;->o:J
 
-    return-object p1
-.end method
+    iput v0, p0, Lqb6;->p:I
 
-.method public d(JLy4b;)V
-    .locals 1
+    iput v0, p0, Lqb6;->q:I
 
-    iget-object v0, p0, Lqb6;->a:Lwb6;
+    const/high16 v1, -0x40800000    # -1.0f
 
-    iget-object v0, v0, Lwb6;->Y0:[Lcof;
+    iput v1, p0, Lqb6;->r:F
 
-    invoke-static {p1, p2, p3, v0}, Lve7;->j(JLy4b;[Lcof;)V
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, p0, Lqb6;->t:F
+
+    iput v0, p0, Lqb6;->v:I
+
+    iput v0, p0, Lqb6;->x:I
+
+    iput v0, p0, Lqb6;->y:I
+
+    iput v0, p0, Lqb6;->z:I
+
+    iput v0, p0, Lqb6;->C:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqb6;->D:I
 
     return-void
 .end method

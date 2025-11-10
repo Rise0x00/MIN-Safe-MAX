@@ -1,146 +1,49 @@
 .class public final Lkd4;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkd4;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic X:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
+
+.field public Y:I
+
+.field public d:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lma4;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lma4;-><init>(I)V
-
-    sput-object v0, Lkd4;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkd4;->X:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
 
-    iput-object p1, p0, Lkd4;->a:Landroid/net/Uri;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static final a(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    const-string p0, ""
-
-    :cond_0
-    const-string v0, "/"
-
-    invoke-static {p0, v0}, Lyxe;->x0(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lkd4;->o:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Lkd4;->Y:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    instance-of v0, p1, Lkd4;
+    or-int/2addr p1, v0
 
-    if-nez v0, :cond_0
+    iput p1, p0, Lkd4;->Y:I
 
-    goto :goto_0
+    iget-object p1, p0, Lkd4;->X:Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;
 
-    :cond_0
-    check-cast p1, Lkd4;
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/android/services/DbCleanUpScheduler$DbCleanUpWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lkd4;->a:Landroid/net/Uri;
+    move-result-object p1
 
-    iget-object v0, p0, Lkd4;->a:Landroid/net/Uri;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkd4;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lkd4;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lkd4;->a:Landroid/net/Uri;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
+    return-object p1
 .end method

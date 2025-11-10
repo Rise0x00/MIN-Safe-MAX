@@ -1,61 +1,99 @@
-.class public final Lce3;
+.class public abstract Lce3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lce3;
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lce3;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    sput-object v0, Lce3;->a:Lce3;
+    move-result-wide v1
+
+    long-to-int v1, v1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lce3;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/res/Resources;I)Z
+    .locals 5
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const-string v0, "FirebaseMessaging"
 
-    const/4 v0, 0x1
+    const-string v1, "Adaptive icons cannot be used in notifications. Ignoring icon id: "
 
-    if-ne p0, p1, :cond_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
+    const/16 v3, 0x1a
+
+    const/4 v4, 0x1
+
+    if-eq v2, v3, :cond_0
+
+    return v4
 
     :cond_0
-    instance-of p1, p1, Lce3;
+    const/4 v2, 0x0
 
-    if-nez p1, :cond_1
+    const/4 v3, 0x0
 
-    const/4 p1, 0x0
+    :try_start_0
+    invoke-virtual {p0, p1, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-    return p1
+    move-result-object p0
+
+    instance-of p0, p0, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    if-eqz p0, :cond_1
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v3
 
     :cond_1
-    return v0
-.end method
+    return v4
 
-.method public final hashCode()I
-    .locals 1
+    :catch_0
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const v0, 0x6e6b21b6
+    const-string v1, "Couldn\'t find resource "
 
-    return v0
-.end method
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v0, "ShowReportSuccessSnackbar"
+    const-string p1, ", treating it as an invalid icon"
 
-    return-object v0
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
 .end method

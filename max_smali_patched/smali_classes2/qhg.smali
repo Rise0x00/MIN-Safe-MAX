@@ -1,217 +1,97 @@
-.class public final Lqhg;
-.super Ljava/lang/Object;
+.class public final enum Lqhg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final enum a:Lqhg;
 
-.field public b:Z
+.field public static final enum b:Lqhg;
 
-.field public c:Z
+.field public static final enum c:Lqhg;
 
-.field public d:Z
+.field public static final enum d:Lqhg;
 
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
-
-.field public h:Z
-
-.field public i:J
-
-.field public j:J
-
-.field public k:J
-
-.field public l:Ld8c;
-
-.field public m:Lp8g;
-
-.field public n:Ln10;
-
-.field public o:Landroid/graphics/drawable/BitmapDrawable;
-
-.field public p:Landroid/net/Uri;
-
-.field public q:Z
-
-.field public r:Z
-
-.field public s:Z
+.field public static final synthetic o:[Lqhg;
 
 
 # direct methods
-.method public constructor <init>(Lqhg;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqhg;
 
-    iget-boolean v0, p1, Lqhg;->a:Z
+    const-string v1, "ALL"
 
-    iput-boolean v0, p0, Lqhg;->a:Z
+    const/4 v2, 0x0
 
-    iget-boolean v0, p1, Lqhg;->b:Z
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-boolean v0, p0, Lqhg;->b:Z
+    sput-object v0, Lqhg;->a:Lqhg;
 
-    iget-boolean v0, p1, Lqhg;->c:Z
+    new-instance v1, Lqhg;
 
-    iput-boolean v0, p0, Lqhg;->c:Z
+    const-string v2, "USER_FOLDER"
 
-    iget-boolean v0, p1, Lqhg;->d:Z
+    const/4 v3, 0x1
 
-    iput-boolean v0, p0, Lqhg;->d:Z
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-boolean v0, p1, Lqhg;->e:Z
+    sput-object v1, Lqhg;->b:Lqhg;
 
-    iput-boolean v0, p0, Lqhg;->e:Z
+    new-instance v2, Lqhg;
 
-    iget-boolean v0, p1, Lqhg;->f:Z
+    const-string v3, "CREATE_FOLDER"
 
-    iput-boolean v0, p0, Lqhg;->f:Z
+    const/4 v4, 0x2
 
-    iget-boolean v0, p1, Lqhg;->g:Z
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-boolean v0, p0, Lqhg;->g:Z
+    sput-object v2, Lqhg;->c:Lqhg;
 
-    iget-boolean v0, p1, Lqhg;->h:Z
+    new-instance v3, Lqhg;
 
-    iput-boolean v0, p0, Lqhg;->h:Z
+    const-string v4, "RECOMMENDED_FOLDER"
 
-    iget-wide v0, p1, Lqhg;->i:J
+    const/4 v5, 0x3
 
-    iput-wide v0, p0, Lqhg;->i:J
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v0, p1, Lqhg;->j:J
+    sput-object v3, Lqhg;->d:Lqhg;
 
-    iput-wide v0, p0, Lqhg;->j:J
+    filled-new-array {v0, v1, v2, v3}, [Lqhg;
 
-    iget-wide v0, p1, Lqhg;->k:J
+    move-result-object v0
 
-    iput-wide v0, p0, Lqhg;->k:J
-
-    iget-object v0, p1, Lqhg;->l:Ld8c;
-
-    iput-object v0, p0, Lqhg;->l:Ld8c;
-
-    iget-object v0, p1, Lqhg;->m:Lp8g;
-
-    iput-object v0, p0, Lqhg;->m:Lp8g;
-
-    iget-object v0, p1, Lqhg;->n:Ln10;
-
-    iput-object v0, p0, Lqhg;->n:Ln10;
-
-    iget-object v0, p1, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iput-object v0, p0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iget-object v0, p1, Lqhg;->p:Landroid/net/Uri;
-
-    iput-object v0, p0, Lqhg;->p:Landroid/net/Uri;
-
-    iget-boolean v0, p1, Lqhg;->q:Z
-
-    iput-boolean v0, p0, Lqhg;->q:Z
-
-    iget-boolean v0, p1, Lqhg;->r:Z
-
-    iput-boolean v0, p0, Lqhg;->r:Z
-
-    iget-boolean p1, p1, Lqhg;->s:Z
-
-    iput-boolean p1, p0, Lqhg;->s:Z
+    sput-object v0, Lqhg;->o:[Lqhg;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lqhg;
+    .locals 1
 
-# virtual methods
-.method public a()Lqhg;
-    .locals 3
+    const-class v0, Lqhg;
 
-    new-instance v0, Lqhg;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    iget-boolean v1, p0, Lqhg;->a:Z
+    check-cast p0, Lqhg;
 
-    iput-boolean v1, v0, Lqhg;->a:Z
+    return-object p0
+.end method
 
-    iget-boolean v1, p0, Lqhg;->b:Z
+.method public static values()[Lqhg;
+    .locals 1
 
-    iput-boolean v1, v0, Lqhg;->b:Z
+    sget-object v0, Lqhg;->o:[Lqhg;
 
-    iget-boolean v1, p0, Lqhg;->c:Z
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iput-boolean v1, v0, Lqhg;->c:Z
+    move-result-object v0
 
-    iget-boolean v1, p0, Lqhg;->d:Z
-
-    iput-boolean v1, v0, Lqhg;->d:Z
-
-    iget-boolean v1, p0, Lqhg;->e:Z
-
-    iput-boolean v1, v0, Lqhg;->e:Z
-
-    iget-boolean v1, p0, Lqhg;->f:Z
-
-    iput-boolean v1, v0, Lqhg;->f:Z
-
-    iget-boolean v1, p0, Lqhg;->g:Z
-
-    iput-boolean v1, v0, Lqhg;->g:Z
-
-    iget-boolean v1, p0, Lqhg;->h:Z
-
-    iput-boolean v1, v0, Lqhg;->h:Z
-
-    iget-wide v1, p0, Lqhg;->i:J
-
-    iput-wide v1, v0, Lqhg;->i:J
-
-    iget-wide v1, p0, Lqhg;->j:J
-
-    iput-wide v1, v0, Lqhg;->j:J
-
-    iget-wide v1, p0, Lqhg;->k:J
-
-    iput-wide v1, v0, Lqhg;->k:J
-
-    iget-object v1, p0, Lqhg;->l:Ld8c;
-
-    iput-object v1, v0, Lqhg;->l:Ld8c;
-
-    iget-object v1, p0, Lqhg;->m:Lp8g;
-
-    iput-object v1, v0, Lqhg;->m:Lp8g;
-
-    iget-object v1, p0, Lqhg;->n:Ln10;
-
-    iput-object v1, v0, Lqhg;->n:Ln10;
-
-    iget-object v1, p0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iput-object v1, v0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iget-object v1, p0, Lqhg;->p:Landroid/net/Uri;
-
-    iput-object v1, v0, Lqhg;->p:Landroid/net/Uri;
-
-    iget-boolean v1, p0, Lqhg;->q:Z
-
-    iput-boolean v1, v0, Lqhg;->q:Z
-
-    iget-boolean v1, p0, Lqhg;->r:Z
-
-    iput-boolean v1, v0, Lqhg;->r:Z
-
-    iget-boolean v1, p0, Lqhg;->s:Z
-
-    iput-boolean v1, v0, Lqhg;->s:Z
+    check-cast v0, [Lqhg;
 
     return-object v0
 .end method

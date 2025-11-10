@@ -1,74 +1,48 @@
 .class public final Lhv4;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Le0g;
 
 
 # instance fields
-.field public final synthetic X:Ljv4;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljv4;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ls95;)V
     .locals 0
 
-    iput-object p1, p0, Lhv4;->X:Ljv4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iget-object p1, p1, Ls95;->a:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast p1, Ljava/lang/Boolean;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    :goto_0
+    iput-boolean p1, p0, Lhv4;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhv4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhv4;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lhv4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Lrw4;
     .locals 1
 
-    new-instance p1, Lhv4;
+    sget-object v0, Lxvc;->a:Lrw4;
 
-    iget-object v0, p0, Lhv4;->X:Ljv4;
-
-    invoke-direct {p1, v0, p2}, Lhv4;-><init>(Ljv4;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhv4;->X:Ljv4;
-
-    invoke-virtual {p1}, Ljv4;->i()Ljava/io/File;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

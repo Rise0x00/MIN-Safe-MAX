@@ -4,20 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lopd;)V
-.end method
-
-.method public abstract b(Lqpd;)V
-.end method
-
-.method public abstract c()Lsqc;
-.end method
-
-.method public abstract d(Lzz9;)V
-.end method
-
-.method public abstract e()Lrqc;
-.end method
-
-.method public abstract g()Llff;
+.method public abstract a()V
 .end method

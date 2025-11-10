@@ -1,120 +1,53 @@
-.class public final Lwog;
-.super Logd;
+.class public interface abstract Lwog;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:I
+# virtual methods
+.method public abstract d()V
+.end method
 
-.field public final c:I
+.method public abstract e()V
+.end method
 
-.field public final d:I
+.method public abstract f(I)Z
+.end method
 
-.field public final e:Ljava/nio/ByteBuffer;
+.method public abstract flush()V
+.end method
 
+.method public abstract g(I)I
+.end method
 
-# direct methods
-.method public constructor <init>([B)V
-    .locals 9
+.method public abstract h(Lv40;)V
+.end method
 
-    invoke-direct {p0}, Logd;-><init>()V
+.method public abstract i(Ljava/util/List;)V
+.end method
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+.method public abstract j(I)V
+.end method
 
-    move-result-object p1
+.method public abstract k(I)Landroid/view/Surface;
+.end method
 
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+.method public abstract l(J)V
+.end method
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+.method public abstract m(IILub6;Ljava/util/List;J)V
+.end method
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+.method public abstract n(ILandroid/graphics/Bitmap;Leq3;)Z
+.end method
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+.method public abstract o()Z
+.end method
 
-    move-result v0
+.method public abstract p(Ltff;)V
+.end method
 
-    const v1, 0xffff
+.method public abstract q(I)V
+.end method
 
-    and-int/2addr v0, v1
-
-    iput v0, p0, Lwog;->b:I
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Lqw1;->y(I)[I
-
-    move-result-object v2
-
-    array-length v3, v2
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :goto_0
-    if-ge v5, v3, :cond_3
-
-    aget v6, v2, v5
-
-    const/4 v7, 0x1
-
-    if-eq v6, v7, :cond_1
-
-    const/4 v8, 0x2
-
-    if-ne v6, v8, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    const/4 v7, 0x0
-
-    :goto_1
-    if-ne v7, v0, :cond_2
-
-    move v4, v6
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_2
-    iput v4, p0, Lwog;->c:I
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v0
-
-    and-int/2addr v0, v1
-
-    iput v0, p0, Lwog;->d:I
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    iput-byte v0, p0, Logd;->a:B
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwog;->e:Ljava/nio/ByteBuffer;
-
-    return-void
+.method public abstract release()V
 .end method

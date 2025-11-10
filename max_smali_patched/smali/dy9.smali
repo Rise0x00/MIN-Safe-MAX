@@ -1,148 +1,172 @@
 .class public final Ldy9;
-.super Lv1b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final b:Ldy9;
-
-.field public static final c:Ldy9;
+.implements Ldb7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldy9;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ldy9;-><init>(I)V
-
-    sput-object v0, Ldy9;->b:Ldy9;
-
-    new-instance v0, Ldy9;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ldy9;-><init>(I)V
-
-    sput-object v0, Ldy9;->c:Ldy9;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p1, p0, Ldy9;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ldy9;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lv1b;
-    .locals 1
+.method public final createImageTranscoder(Lu97;Z)Lcb7;
+    .locals 5
 
     iget v0, p0, Ldy9;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "Dependency \':native-imagetranscoder\' is needed to use the default native image transcoder."
 
-    sget-object v0, Ldy9;->b:Ldy9;
+    :try_start_0
+    const-class v2, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;
 
-    return-object v0
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    :pswitch_0
-    sget-object v0, Ldy9;->c:Ldy9;
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    return-object v0
+    filled-new-array {v3, v4, v4}, [Ljava/lang/Class;
 
-    nop
+    move-result-object v3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    move-result-object v2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldb7;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_6
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-interface {v0, p1, p2}, Ldb7;->createImageTranscoder(Lu97;Z)Lcb7;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lzi3;
 
     iget v0, p0, Ldy9;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {p1, p2, v0}, Lzi3;-><init>(ZI)V
 
-    check-cast p1, Ljava/lang/Comparable;
+    :cond_0
+    return-object p1
 
-    check-cast p2, Ljava/lang/Comparable;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p1, 0x0
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    :catch_1
+    move-exception p1
 
-    move-result p1
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_4
+    move-exception p1
+
+    goto :goto_4
+
+    :catch_5
+    move-exception p1
+
+    goto :goto_5
+
+    :catch_6
+    move-exception p1
+
+    goto :goto_6
 
     :goto_0
-    return p1
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Comparable;
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p2, Ljava/lang/Comparable;
+    throw p2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_1
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    throw p2
 
-    move-result p1
+    :goto_2
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    return p1
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    throw p2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    iget v0, p0, Ldy9;->a:I
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    packed-switch v0, :pswitch_data_0
+    throw p2
 
-    const-string v0, "Ordering.natural().reverse()"
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    return-object v0
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_0
-    const-string v0, "Ordering.natural()"
+    throw p2
 
-    return-object v0
+    :goto_5
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    nop
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p2
+
+    :goto_6
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

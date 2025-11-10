@@ -3,47 +3,21 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Ld1a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ldod;->c:Ljava/lang/Object;
+    new-instance v0, Ld1a;
 
-    iput-wide p2, p0, Ldod;->a:J
+    const/4 v1, 0x0
 
-    iput-wide p4, p0, Ldod;->b:J
+    invoke-direct {v0, v1}, Ld1a;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldod;->a:Ld1a;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a(Lo1d;)Ldnc;
-    .locals 0
-
-    iget-object p1, p0, Ldod;->c:Ljava/lang/Object;
-
-    check-cast p1, Ldnc;
-
-    return-object p1
-.end method
-
-.method public b(Lp1d;)Lenc;
-    .locals 0
-
-    iget-object p1, p0, Ldod;->c:Ljava/lang/Object;
-
-    check-cast p1, Lenc;
-
-    return-object p1
 .end method

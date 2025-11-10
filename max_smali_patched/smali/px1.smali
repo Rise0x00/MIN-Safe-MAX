@@ -1,147 +1,256 @@
-.class public final synthetic Lpx1;
+.class public final Lpx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lus1;
-.implements Lhu;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Lqx1;
+.field public b:J
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqx1;I)V
-    .locals 0
-
-    iput p2, p0, Lpx1;->a:I
-
-    iput-object p1, p0, Lpx1;->b:Lqx1;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lpx1;->a:J
+
+    iput-wide v0, p0, Lpx1;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljx7;
-    .locals 8
+.method public a()I
+    .locals 6
 
-    iget v0, p0, Lpx1;->a:I
+    iget-object v0, p0, Lpx1;->c:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Void;
+    check-cast v0, Lrx1;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lrx1;->c()Z
 
-    sget-wide v0, Lqx1;->g:J
+    move-result v0
 
-    iget-object p1, p0, Lpx1;->b:Lqx1;
+    if-nez v0, :cond_0
 
-    iget-object v4, p1, Lqx1;->e:Ljava/util/concurrent/ScheduledExecutorService;
+    const/16 v0, 0x2bc
 
-    iget-object p1, p1, Lqx1;->a:Ljw1;
+    return v0
 
-    new-instance v2, Lb71;
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    const/4 v3, 0x6
+    move-result-wide v0
 
-    invoke-direct {v2, v3}, Lb71;-><init>(I)V
+    iget-wide v2, p0, Lpx1;->b:J
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    const-wide/16 v4, -0x1
 
-    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    cmp-long v2, v2, v4
 
-    move-result-wide v5
+    if-nez v2, :cond_1
 
-    new-instance v0, Llx1;
+    iput-wide v0, p0, Lpx1;->b:J
 
-    invoke-direct {v0, v2}, Llx1;-><init>(Lb71;)V
+    :cond_1
+    iget-wide v2, p0, Lpx1;->b:J
 
-    invoke-virtual {p1, v0}, Ljw1;->p(Liw1;)V
+    sub-long/2addr v0, v2
 
-    new-instance v1, Luu1;
+    const-wide/32 v2, 0x1d4c0
 
-    const/16 v2, 0x8
+    cmp-long v2, v0, v2
 
-    invoke-direct {v1, p1, v2, v0}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-gtz v2, :cond_2
 
-    iget-object p1, p1, Ljw1;->c:Lcsd;
+    const/16 v0, 0x3e8
 
-    iget-object v3, v0, Llx1;->b:Lws1;
+    return v0
 
-    iget-object v0, v3, Lws1;->b:Lvs1;
+    :cond_2
+    const-wide/32 v2, 0x493e0
 
-    invoke-virtual {v0, v1, p1}, Lp3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    cmp-long v0, v0, v2
 
-    new-instance v2, Lab2;
+    if-gtz v0, :cond_3
 
-    const/4 v7, 0x7
+    const/16 v0, 0x7d0
 
-    invoke-direct/range {v2 .. v7}, Lab2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+    return v0
 
-    invoke-static {v2}, Lvr0;->k(Lus1;)Lws1;
+    :cond_3
+    const/16 v0, 0xfa0
 
-    move-result-object p1
+    return v0
+.end method
 
-    return-object p1
+.method public b()I
+    .locals 5
 
-    :pswitch_0
-    iget-object p1, p0, Lpx1;->b:Lqx1;
+    iget-wide v0, p0, Lpx1;->a:J
 
-    iget-boolean v0, p1, Lqx1;->f:Z
+    iget-object v2, p0, Lpx1;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v2, Lrx1;
 
-    iget-object p1, p1, Lqx1;->a:Ljw1;
+    invoke-virtual {v2}, Lrx1;->c()Z
 
-    iget-object p1, p1, Ljw1;->h:Lm06;
+    move-result v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide/16 v3, 0x0
 
-    new-instance v0, Lkp5;
+    if-nez v2, :cond_1
 
-    const/4 v1, 0x3
+    cmp-long v2, v0, v3
 
-    invoke-direct {v0, v1, p1}, Lkp5;-><init>(ILjava/lang/Object;)V
+    const/16 v3, 0x2710
 
-    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
+    if-lez v2, :cond_0
 
-    move-result-object p1
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    return v3
+
+    :cond_1
+    cmp-long v2, v0, v3
+
+    const v3, 0x1b7740
+
+    if-lez v2, :cond_2
+
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_2
+    return v3
+.end method
+
+.method public c(Ljava/lang/Exception;)V
+    .locals 7
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lpx1;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Exception;
+
+    if-nez v2, :cond_0
+
+    iput-object p1, p0, Lpx1;->c:Ljava/lang/Object;
+
+    :cond_0
+    iget-wide v2, p0, Lpx1;->a:J
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Llh4;->l0:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    sget v3, Llh4;->n0:I
+
+    if-lez v3, :cond_1
+
+    const/4 v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    sget-object p1, Li67;->c:Li67;
+    :cond_1
+    const/4 v3, 0x0
 
     :goto_0
-    return-object p1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    nop
+    if-nez v3, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+    const-wide/16 v2, 0xc8
 
-.method public o(Lts1;)Ljava/lang/String;
-    .locals 2
+    add-long/2addr v2, v0
 
-    iget-object v0, p0, Lpx1;->b:Lqx1;
+    iput-wide v2, p0, Lpx1;->a:J
 
-    iget-object v0, v0, Lqx1;->a:Ljw1;
+    goto :goto_1
 
-    iget-object v0, v0, Ljw1;->j:Lfmf;
+    :catchall_0
+    move-exception p1
 
-    const/4 v1, 0x1
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0, p1, v1}, Lfmf;->a(Lts1;Z)V
+    throw p1
 
-    const-string p1, "TorchOn"
+    :cond_2
+    :goto_1
+    iget-wide v2, p0, Lpx1;->a:J
 
-    return-object p1
+    cmp-long v6, v2, v4
+
+    if-eqz v6, :cond_4
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_4
+
+    iget-object v0, p0, Lpx1;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Exception;
+
+    if-eq v0, p1, :cond_3
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_3
+    iget-object p1, p0, Lpx1;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Exception;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lpx1;->c:Ljava/lang/Object;
+
+    iput-wide v4, p0, Lpx1;->a:J
+
+    iput-wide v4, p0, Lpx1;->b:J
+
+    throw p1
+
+    :cond_4
+    const-wide/16 v2, 0x32
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lpx1;->b:J
+
+    return-void
 .end method

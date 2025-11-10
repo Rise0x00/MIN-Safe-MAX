@@ -1,81 +1,130 @@
 .class public final Lpq7;
-.super Ljava/io/OutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqb5;
+
+
+# static fields
+.field public static final X:Lnq7;
+
+.field public static final Y:Lnq7;
+
+.field public static final Z:Loq7;
+
+.field public static final o:Lmq7;
 
 
 # instance fields
-.field public a:J
+.field public final a:Ljava/util/HashMap;
+
+.field public final b:Ljava/util/HashMap;
+
+.field public final c:Lmq7;
+
+.field public d:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lmq7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lmq7;-><init>(I)V
+
+    sput-object v0, Lpq7;->o:Lmq7;
+
+    new-instance v0, Lnq7;
+
+    invoke-direct {v0, v1}, Lnq7;-><init>(I)V
+
+    sput-object v0, Lpq7;->X:Lnq7;
+
+    new-instance v0, Lnq7;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lnq7;-><init>(I)V
+
+    sput-object v0, Lpq7;->Y:Lnq7;
+
+    new-instance v0, Loq7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpq7;->Z:Loq7;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lpq7;->a:Ljava/util/HashMap;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Lpq7;->b:Ljava/util/HashMap;
+
+    sget-object v2, Lpq7;->o:Lmq7;
+
+    iput-object v2, p0, Lpq7;->c:Lmq7;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lpq7;->d:Z
+
+    sget-object v2, Lpq7;->X:Lnq7;
+
+    const-class v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lpq7;->Y:Lnq7;
+
+    const-class v3, Ljava/lang/Boolean;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lpq7;->Z:Loq7;
+
+    const-class v3, Ljava/util/Date;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final write(I)V
-    .locals 4
+.method public final d(Ljava/lang/Class;Lzha;)Lqb5;
+    .locals 1
 
-    .line 1
-    iget-wide v0, p0, Lpq7;->a:J
+    iget-object v0, p0, Lpq7;->a:Ljava/util/HashMap;
 
-    const-wide/16 v2, 0x1
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-long/2addr v0, v2
+    iget-object p2, p0, Lpq7;->b:Ljava/util/HashMap;
 
-    iput-wide v0, p0, Lpq7;->a:J
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public final write([B)V
-    .locals 4
-
-    .line 2
-    iget-wide v0, p0, Lpq7;->a:J
-
-    array-length p1, p1
-
-    int-to-long v2, p1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lpq7;->a:J
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 2
-
-    if-ltz p2, :cond_0
-
-    .line 3
-    array-length v0, p1
-
-    if-gt p2, v0, :cond_0
-
-    if-ltz p3, :cond_0
-
-    add-int/2addr p2, p3
-
-    array-length p1, p1
-
-    if-gt p2, p1, :cond_0
-
-    if-ltz p2, :cond_0
-
-    .line 4
-    iget-wide p1, p0, Lpq7;->a:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lpq7;->a:J
-
-    return-void
-
-    .line 5
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
+    return-object p0
 .end method

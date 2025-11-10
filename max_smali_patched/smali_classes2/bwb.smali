@@ -1,93 +1,97 @@
-.class public final Lbwb;
-.super Lgd4;
+.class public final synthetic Lbwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
 
-# static fields
-.field public static final b:Lbwb;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Lbd4;
-
-.field public static final e:Lbd4;
-
-.field public static final f:Lbd4;
+.field public final synthetic b:Lkwb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lkwb;I)V
+    .locals 0
 
-    new-instance v0, Lbwb;
+    iput p2, p0, Lbwb;->a:I
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iput-object p1, p0, Lbwb;->b:Lkwb;
 
-    sput-object v0, Lbwb;->b:Lbwb;
-
-    const-string v1, "id"
-
-    const-string v2, "type"
-
-    filled-new-array {v1, v2}, [Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, ":profile/edit"
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0xe
-
-    invoke-static {v0, v4, v3, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v3
-
-    sput-object v3, Lbwb;->c:Lbd4;
-
-    const-string v3, ":profile/member_permissions"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v3, v4, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v3
-
-    sput-object v3, Lbwb;->d:Lbd4;
-
-    const-string v3, "flow"
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":profile/edit/link"
-
-    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v1
-
-    sput-object v1, Lbwb;->e:Lbd4;
-
-    const-string v1, "contact_id"
-
-    const-string v2, "permissions_type"
-
-    const-string v3, "chat_id"
-
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":profile/edit/admin_permission"
-
-    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v0
-
-    sput-object v0, Lbwb;->f:Lbd4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lbwb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lbwb;->b:Lkwb;
+
+    iget-object v0, v0, Lkwb;->a:Lewb;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lewb;->k()V
+
+    :cond_0
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lawb;
+
+    iget-object v1, p0, Lbwb;->b:Lkwb;
+
+    iget-object v1, v1, Lkwb;->a:Lewb;
+
+    invoke-direct {v0, v1}, Lawb;-><init>(Lewb;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lbwb;->b:Lkwb;
+
+    iget-object v0, v0, Lkwb;->a:Lewb;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lewb;->h()V
+
+    :cond_1
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lbwb;->b:Lkwb;
+
+    iget-object v0, v0, Lkwb;->a:Lewb;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lewb;->k()V
+
+    :cond_2
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

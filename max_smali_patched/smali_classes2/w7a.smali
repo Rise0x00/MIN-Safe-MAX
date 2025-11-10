@@ -2,24 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li28;
+
 
 # virtual methods
-.method public final serializer()Lum7;
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
 
-    sget-object v0, Lx7a;->a:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lum7;
-
-    return-object v0
+    return v0
 .end method

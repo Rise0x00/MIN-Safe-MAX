@@ -1,311 +1,202 @@
-.class public final synthetic Ltq5;
+.class public final Ltq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lt0f;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Luq5;
 
-.field public final synthetic b:Ldr5;
+.field public final synthetic b:Lru/ok/tamtam/android/prefs/PmsKey;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldr5;I)V
+.method public constructor <init>(Luq5;Lru/ok/tamtam/android/prefs/PmsKey;)V
     .locals 0
 
-    iput p2, p0, Ltq5;->a:I
-
-    iput-object p1, p0, Ltq5;->b:Ldr5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltq5;->a:Luq5;
+
+    iput-object p2, p0, Ltq5;->b:Lru/ok/tamtam/android/prefs/PmsKey;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final b()Ljava/util/List;
+    .locals 1
 
-    iget v0, p0, Ltq5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltq5;->b:Ldr5;
-
-    iget-object v1, v0, Ldr5;->i:Ljava/io/File;
-
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v3, v2, [Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
-
-    move-result-object v1
-
-    sget-object v3, Ljava/nio/file/StandardOpenOption;->READ:Ljava/nio/file/StandardOpenOption;
-
-    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v3
-
-    iget-object v0, v0, Ldr5;->e:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Ltq5;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
-
-    new-array v2, v2, [Ljava/nio/file/attribute/FileAttribute;
-
-    invoke-static {v1, v3, v0, v2}, Ljava/nio/channels/AsynchronousFileChannel;->open(Ljava/nio/file/Path;Ljava/util/Set;Ljava/util/concurrent/ExecutorService;[Ljava/nio/file/attribute/FileAttribute;)Ljava/nio/channels/AsynchronousFileChannel;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ltq5;->b:Ldr5;
+.method public final d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v1, v0, Ldr5;->h:Ljava/net/URI;
+    instance-of v0, p2, Lqq5;
 
-    iget v2, v0, Ldr5;->a:I
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x1
+    move-object v0, p2
 
-    if-ne v2, v3, :cond_0
+    check-cast v0, Lqq5;
 
-    const-string v2, "application/octet-stream"
+    iget v1, v0, Lqq5;->o:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lqq5;->o:I
 
     goto :goto_0
 
     :cond_0
-    const-string v2, "application/x-binary; charset=x-user-defined"
+    new-instance v0, Lqq5;
+
+    invoke-direct {v0, p0, p2}, Lqq5;-><init>(Ltq5;Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object p2, v0, Lqq5;->d:Ljava/lang/Object;
 
-    const-string v4, "POST "
+    iget v1, v0, Lqq5;->o:I
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Ljava/net/URI;->getRawPath()Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    move-result-object v4
+    if-eq v1, v2, :cond_1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/16 v4, 0x3f
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/net/URI;->getRawQuery()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " HTTP/1.1\nHost: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/net/URI;->getHost()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nContent-Type: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Ldr5;->i:Ljava/io/File;
-
-    iget-object v4, v0, Ldr5;->b:Ljava/lang/String;
-
-    iget v5, v0, Ldr5;->a:I
-
-    const/4 v6, 0x5
-
-    if-ne v5, v6, :cond_3
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
+    invoke-static {p2}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_2
 
+    :cond_2
+    invoke-static {p2}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Ltq5;->a:Luq5;
+
+    iget-object p2, p2, Ly3;->f:Lake;
+
+    new-instance v1, Lrq5;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v4, v3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    new-instance v3, Ltz5;
+
+    invoke-direct {v3, v1, p2}, Ltz5;-><init>(Lej6;Lez5;)V
+
+    iput v2, v0, Lqq5;->o:I
+
+    new-instance p2, Ls3;
+
+    const/16 v1, 0x14
+
+    invoke-direct {p2, p1, v1, p0}, Ls3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v3, p2, v0}, Ltz5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lh54;->a:Lh54;
+
+    if-ne p1, p2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget-object p1, Lybg;->a:Lybg;
+
+    :goto_1
+    if-ne p1, p2, :cond_4
+
+    return-object p2
+
     :cond_4
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_3
-
-    :cond_5
     :goto_2
-    invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "StateFlow collection never ends"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final f()Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    iget-object v1, p0, Ltq5;->a:Luq5;
+
+    iget-object v2, p0, Ltq5;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v1, v2}, Lhud;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v1, Lhud;->i:Ljud;
+
+    :goto_0
+    iget-object v1, v1, Ly3;->h:Luu7;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const-class v3, Ljava/lang/Boolean;
 
-    move-result v2
+    invoke-static {v3}, Lv7d;->a(Ljava/lang/Class;)La73;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v2
-
-    :goto_3
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Content-Disposition: attachment; filename="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\n"
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "X-Uploading-Mode: parallel\nConnection: keep-alive\nUser-Agent: "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Ldr5;->c:Lepf;
-
-    iget-object v2, v2, Lepf;->e:Ls5f;
-
-    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-boolean v2, v0, Ldr5;->u:Z
-
-    if-eqz v2, :cond_7
-
-    iget-object v2, v0, Ldr5;->d:Ljava/lang/String;
-
-    sget-object v3, Lox9;->j:Lqpa;
-
-    if-nez v3, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    sget-object v4, Ly38;->o:Ly38;
-
-    invoke-virtual {v3, v4}, Lqpa;->b(Ly38;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    const-string v5, "Prepared sharedHeaders: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_4
-    sget-object v2, Li82;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    iget-object v0, v0, Ldr5;->g:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, v2, v0, v3}, Llzi;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;La73;)Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, Lpt0;
-
-    array-length v2, v1
-
-    invoke-interface {v0, v2}, Lpt0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-object v0
+.end method
 
-    nop
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0}, Ltq5;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

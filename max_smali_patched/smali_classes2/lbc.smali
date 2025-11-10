@@ -1,50 +1,96 @@
-.class public abstract Llbc;
-.super Ljava/lang/Object;
+.class public final Llbc;
+.super Lvbc;
+.source "SourceFile"
 
 
-# static fields
-.field public static onechat_react_add_tension:I = 0x7f0703c0
+# instance fields
+.field public final a:Lkrf;
 
-.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
 
-.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
+# direct methods
+.method public constructor <init>(Lkrf;)V
+    .locals 0
 
-.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static onechat_react_change_tension:I = 0x7f0703c4
+    iput-object p1, p0, Llbc;->a:Lkrf;
 
-.field public static onechat_react_counter_padding:I = 0x7f0703c5
+    return-void
+.end method
 
-.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
 
-.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static onechat_react_move_tension:I = 0x7f0703c8
+    if-ne p0, p1, :cond_0
 
-.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
+    goto :goto_1
 
-.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
+    :cond_0
+    instance-of v0, p1, Llbc;
 
-.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
+    if-nez v0, :cond_1
 
-.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
+    goto :goto_0
 
-.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
+    :cond_1
+    check-cast p1, Llbc;
 
-.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
+    iget-object v0, p0, Llbc;->a:Lkrf;
 
-.field public static onechat_react_panel_size:I = 0x7f0703cf
+    iget-object p1, p1, Llbc;->a:Lkrf;
 
-.field public static onechat_react_panel_text_size:I = 0x7f0703d0
+    invoke-virtual {v0, p1}, Lkrf;->equals(Ljava/lang/Object;)Z
 
-.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
+    move-result p1
 
-.field public static onechat_react_scale_1_step:I = 0x7f0703d2
+    if-nez p1, :cond_2
 
-.field public static onechat_react_scale_2_step:I = 0x7f0703d3
+    :goto_0
+    const/4 p1, 0x0
 
-.field public static onechat_react_scale_3_step:I = 0x7f0703d4
+    return p1
 
-.field public static onechat_react_side_margin:I = 0x7f0703d5
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-.field public static onechat_react_text_size_small:I = 0x7f0703d6
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Llbc;->a:Lkrf;
+
+    invoke-virtual {v0}, Lkrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExternalShareChannelLink(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llbc;->a:Lkrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

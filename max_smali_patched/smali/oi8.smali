@@ -1,34 +1,49 @@
-.class public interface abstract Loi8;
+.class public final Loi8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final L:Lxm9;
+.field public static final e:Lh0;
+
+
+# instance fields
+.field public final a:Lu44;
+
+.field public final b:Lu44;
+
+.field public final c:Lu44;
+
+.field public final d:Lu44;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lxm9;
+    new-instance v0, Lh0;
 
-    const/16 v1, 0xe
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lxm9;-><init>(I)V
+    invoke-direct {v0, v1}, Lh0;-><init>(F)V
 
-    sput-object v0, Loi8;->L:Lxm9;
+    sput-object v0, Loi8;->e:Lh0;
 
     return-void
 .end method
 
+.method public constructor <init>(Lu44;Lu44;Lu44;Lu44;)V
+    .locals 0
 
-# virtual methods
-.method public abstract a()J
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract b()J
-.end method
+    iput-object p1, p0, Loi8;->a:Lu44;
 
-.method public abstract next()Z
+    iput-object p3, p0, Loi8;->b:Lu44;
+
+    iput-object p4, p0, Loi8;->c:Lu44;
+
+    iput-object p2, p0, Loi8;->d:Lu44;
+
+    return-void
 .end method

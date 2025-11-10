@@ -1,48 +1,15 @@
-.class public final Lmca;
-.super Lraa;
+.class public abstract Lmca;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lucd;
-
-
-# instance fields
-.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public static a(Landroid/app/Notification$Action;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
 
-    iput-object p1, p0, Lmca;->a:Ljava/lang/Object;
+    move-result p0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lmca;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final p(Lxda;)V
-    .locals 2
-
-    new-instance v0, Llda;
-
-    iget-object v1, p0, Lmca;->a:Ljava/lang/Object;
-
-    invoke-direct {v0, p1, v1}, Llda;-><init>(Lxda;Ljava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
-
-    invoke-virtual {v0}, Llda;->run()V
-
-    return-void
+    return p0
 .end method

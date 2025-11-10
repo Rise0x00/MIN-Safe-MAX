@@ -19,7 +19,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
-        "Lfz0;",
+        "Lvz0;",
         "call",
         "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
         "mappings",
@@ -27,7 +27,7 @@
         "Lru/ok/android/externcalls/sdk/Conversation$State;",
         "stateProvider",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lfz0;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lve6;)V",
+        "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lvz0;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Loi6;)V",
         "Lorg/json/JSONObject;",
         "error",
         "Lru/ok/android/externcalls/sdk/participant/AddByLinkFailedException;",
@@ -38,21 +38,21 @@
         "(Lorg/json/JSONObject;)Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsFailedException;",
         "Lkotlin/Function1;",
         "",
-        "Loyf;",
+        "Lybg;",
         "onError",
-        "Ldce;",
+        "Lboe;",
         "provideSignaling",
         "withSignaling",
-        "(Lxe6;Lxe6;)V",
+        "(Lqi6;Lqi6;)V",
         "",
         "link",
         "Ljava/lang/Runnable;",
         "onSuccess",
-        "Lxo3;",
+        "Ljr3;",
         "addParticipantByLink",
-        "(Ljava/lang/String;Ljava/lang/Runnable;Lxo3;)V",
+        "(Ljava/lang/String;Ljava/lang/Runnable;Ljr3;)V",
         "",
-        "Lxg1;",
+        "Lsh1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "participantsIds",
         "",
@@ -60,13 +60,13 @@
         "isShowChatHistory",
         "Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;",
         "addParticipants",
-        "(Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;)V",
-        "Lz61;",
+        "(Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;)V",
+        "Lo71;",
         "addParticipantsExtIds",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
-        "Lfz0;",
+        "Lvz0;",
         "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
-        "Lve6;",
+        "Loi6;",
         "ListenerAddParticipantsResponse",
         "calls-sdk_release"
     }
@@ -81,31 +81,31 @@
 
 
 # instance fields
-.field private final call:Lfz0;
+.field private final call:Lvz0;
 
 .field private final mappings:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
 .field private final signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-.field private final stateProvider:Lve6;
+.field private final stateProvider:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lfz0;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lve6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lvz0;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Loi6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
-            "Lfz0;",
+            "Lvz0;",
             "Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;",
-            "Lve6;",
+            "Loi6;",
             ")V"
         }
     .end annotation
@@ -114,19 +114,19 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->call:Lfz0;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->call:Lvz0;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->mappings:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Lve6;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Loi6;
 
     return-void
 .end method
 
-.method public static final synthetic access$getCall$p(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;)Lfz0;
+.method public static final synthetic access$getCall$p(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;)Lvz0;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->call:Lfz0;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->call:Lvz0;
 
     return-object p0
 .end method
@@ -159,7 +159,7 @@
     return-object p0
 .end method
 
-.method public static synthetic addParticipants$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic addParticipants$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p7, p6, 0x2
@@ -192,12 +192,12 @@
     move-object p5, v0
 
     :cond_3
-    invoke-virtual/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;)V
+    invoke-virtual/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;)V
 
     return-void
 .end method
 
-.method public static synthetic addParticipantsExtIds$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic addParticipantsExtIds$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p7, p6, 0x2
@@ -230,7 +230,7 @@
     move-object p5, v0
 
     :cond_3
-    invoke-virtual/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;)V
+    invoke-virtual/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;)V
 
     return-void
 .end method
@@ -424,20 +424,20 @@
     .end sparse-switch
 .end method
 
-.method private final withSignaling(Lxe6;Lxe6;)V
+.method private final withSignaling(Lqi6;Lqi6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxe6;",
-            "Lxe6;",
+            "Lqi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lboe;
 
     move-result-object v0
 
@@ -451,18 +451,18 @@
 
     invoke-direct {p2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 
     :cond_1
-    invoke-interface {p2, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static synthetic withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lxe6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lqi6;Lqi6;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -472,21 +472,21 @@
     const/4 p1, 0x0
 
     :cond_0
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling(Lxe6;Lxe6;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling(Lqi6;Lqi6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Lxo3;)V
+.method public final addParticipantByLink(Ljava/lang/String;Ljava/lang/Runnable;Ljr3;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Runnable;",
-            "Lxo3;",
+            "Ljr3;",
             ")V"
         }
     .end annotation
@@ -497,32 +497,32 @@
 
     new-instance v1, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;
 
-    invoke-direct {v1, p1, p3, p2, p0}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;-><init>(Ljava/lang/String;Lxo3;Ljava/lang/Runnable;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;)V
+    invoke-direct {v1, p1, p3, p2, p0}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantByLink$2;-><init>(Ljava/lang/String;Ljr3;Ljava/lang/Runnable;Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;)V
 
-    invoke-direct {p0, v0, v1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling(Lxe6;Lxe6;)V
+    invoke-direct {p0, v0, v1}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling(Lqi6;Lqi6;)V
 
     return-void
 .end method
 
-.method public final addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;)V
+.method public final addParticipants(Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lxg1;",
+            "Lsh1;",
             ">;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Lxe6;",
-            "Lxe6;",
+            "Lqi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -547,36 +547,36 @@
 
     move-object v8, p5
 
-    invoke-direct/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;-><init>(Ljava/util/Collection;Ljava/lang/Boolean;ZLru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lxe6;Lxe6;)V
+    invoke-direct/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipants$1;-><init>(Ljava/util/Collection;Ljava/lang/Boolean;ZLru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lqi6;Lqi6;)V
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
-    invoke-static {p0, p2, v2, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lxe6;Lxe6;ILjava/lang/Object;)V
+    invoke-static {p0, p2, v2, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lqi6;Lqi6;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLxe6;Lxe6;)V
+.method public final addParticipantsExtIds(Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lz61;",
+            "Lo71;",
             ">;",
             "Ljava/lang/Boolean;",
             "Z",
-            "Lxe6;",
-            "Lxe6;",
+            "Lqi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Lve6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->stateProvider:Loi6;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -601,13 +601,13 @@
 
     move-object v8, p5
 
-    invoke-direct/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantsExtIds$1;-><init>(Ljava/util/Collection;Ljava/lang/Boolean;ZLru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lxe6;Lxe6;)V
+    invoke-direct/range {v2 .. v8}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands$addParticipantsExtIds$1;-><init>(Ljava/util/Collection;Ljava/lang/Boolean;ZLru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lqi6;Lqi6;)V
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
-    invoke-static {p0, p2, v2, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lxe6;Lxe6;ILjava/lang/Object;)V
+    invoke-static {p0, p2, v2, p1, p2}, Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;->withSignaling$default(Lru/ok/android/externcalls/sdk/participant/AddParticipantsCommands;Lqi6;Lqi6;ILjava/lang/Object;)V
 
     return-void
 .end method

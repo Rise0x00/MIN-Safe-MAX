@@ -1,126 +1,128 @@
-.class public final Lcn7;
+.class public abstract Lcn7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # instance fields
-.field public final a:Ljava/io/Serializable;
+.field public a:Lr6d;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Lcn7;->a:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcn7;->a:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzo6;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iget-object p1, p1, Lzo6;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    iput-object p1, p0, Lcn7;->a:Ljava/io/Serializable;
-
-    return-void
-.end method
+.field public b:Lp6d;
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
 
-    iget-object v0, p0, Lcn7;->a:Ljava/io/Serializable;
+    invoke-virtual {p0, p1}, Lcn7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    check-cast v0, Ljava/util/LinkedHashMap;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lp6d;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    check-cast v1, Ljava/util/List;
+    iput-object v0, p0, Lcn7;->b:Lp6d;
+
+    invoke-virtual {p0, p1, v0}, Lcn7;->c(Landroidx/recyclerview/widget/RecyclerView;Lp6d;)Lr6d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcn7;->a:Lr6d;
+
+    invoke-virtual {v0, p1}, Lp6d;->z(Lr6d;)V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "require not null adapter"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 4
+
+    iget-object v0, p0, Lcn7;->b:Lp6d;
+
+    if-nez v0, :cond_0
+
+    iget-object v1, p0, Lcn7;->a:Lr6d;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
     :cond_0
-    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lp6d;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn7;->b:Lp6d;
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn7;->b:Lp6d;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lp6d;
+
+    move-result-object p1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "adapter was changed! cached adapter = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recyclerView.adapter = "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "adapter was changed"
+
+    invoke-static {v1, v0, p1}, Lox1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    iget-object p1, p0, Lcn7;->b:Lp6d;
+
+    iget-object v0, p0, Lcn7;->a:Lr6d;
+
+    if-eqz p1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1, v0}, Lp6d;->B(Lr6d;)V
+
+    :cond_2
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcn7;->b:Lp6d;
+
+    iput-object p1, p0, Lcn7;->a:Lr6d;
 
     return-void
 .end method
 
-.method public b()I
-    .locals 3
-
-    iget-object v0, p0, Lcn7;->a:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    return v1
+.method public abstract c(Landroidx/recyclerview/widget/RecyclerView;Lp6d;)Lr6d;
 .end method

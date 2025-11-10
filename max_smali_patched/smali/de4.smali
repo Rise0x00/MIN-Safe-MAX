@@ -1,68 +1,42 @@
-.class public final synthetic Lde4;
+.class public interface abstract annotation Lde4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsx7;
+.implements Ljava/lang/annotation/Annotation;
 
 
-# instance fields
-.field public final synthetic a:I
+# annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lde4;
+        c = ""
+        f = ""
+        i = {}
+        l = {}
+        m = ""
+        n = {}
+        s = {}
+        v = 0x1
+    .end subannotation
+.end annotation
 
-.field public final synthetic b:Lwc;
-
-.field public final synthetic c:Lz3;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lwc;Lz3;I)V
-    .locals 0
-
-    iput p3, p0, Lde4;->a:I
-
-    iput-object p1, p0, Lde4;->b:Lwc;
-
-    iput-object p2, p0, Lde4;->c:Lz3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public abstract c()Ljava/lang/String;
+.end method
 
-    iget v0, p0, Lde4;->a:I
+.method public abstract f()Ljava/lang/String;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract l()[I
+.end method
 
-    iget-object v0, p0, Lde4;->c:Lz3;
+.method public abstract m()Ljava/lang/String;
+.end method
 
-    check-cast p1, Lxc;
-
-    iget-object v1, p0, Lde4;->b:Lwc;
-
-    invoke-interface {p1, v1, v0}, Lxc;->s0(Lwc;Lz3;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lde4;->c:Lz3;
-
-    check-cast p1, Lxc;
-
-    iget-object v1, p0, Lde4;->b:Lwc;
-
-    invoke-interface {p1, v1, v0}, Lxc;->K0(Lwc;Lz3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract v()I
 .end method

@@ -1,61 +1,86 @@
-.class public final Lu31;
-.super Lnz3;
+.class public final synthetic Lu31;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public A0:I
+.field public final synthetic a:I
 
-.field public X:Ljava/lang/String;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Ljava/lang/CharSequence;
-
-.field public o:Lv31;
-
-.field public w0:Ljava/lang/Long;
-
-.field public x0:I
-
-.field public synthetic y0:Ljava/lang/Object;
-
-.field public final synthetic z0:Lv31;
+.field public final synthetic b:Lv31;
 
 
 # direct methods
-.method public constructor <init>(Lv31;Lnz3;)V
+.method public synthetic constructor <init>(Lv31;I)V
     .locals 0
 
-    iput-object p1, p0, Lu31;->z0:Lv31;
+    iput p2, p0, Lu31;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lu31;->b:Lv31;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lu31;->y0:Ljava/lang/Object;
+    iget v0, p0, Lu31;->a:I
 
-    iget p1, p0, Lu31;->A0:I
+    iget-object v1, p0, Lu31;->b:Lv31;
 
-    const/high16 v0, -0x80000000
+    const-wide/16 v2, 0xfa
 
-    or-int/2addr p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput p1, p0, Lu31;->A0:I
+    sget v0, Lv31;->C0:I
 
-    iget-object p1, p0, Lu31;->z0:Lv31;
+    new-instance v0, Ls51;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Lv31;->d()Z
 
-    invoke-static {p1, v0, p0}, Lv31;->a(Lv31;Let7;Lnz3;)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object p1
+    invoke-direct {v0, v2, v3, v1}, Ls51;-><init>(JZ)V
 
-    return-object p1
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lv31;->C0:I
+
+    new-instance v0, Lgp1;
+
+    invoke-virtual {v1}, Lv31;->d()Z
+
+    move-result v1
+
+    invoke-direct {v0, v2, v3, v1}, Lgp1;-><init>(JZ)V
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lv31;->C0:I
+
+    new-instance v0, Lfk1;
+
+    invoke-virtual {v1}, Lv31;->d()Z
+
+    move-result v1
+
+    invoke-direct {v0, v2, v3, v1}, Lfk1;-><init>(JZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

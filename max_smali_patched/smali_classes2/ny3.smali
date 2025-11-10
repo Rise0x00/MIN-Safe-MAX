@@ -1,199 +1,159 @@
-.class public final Lny3;
+.class public final synthetic Lny3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf8;
+
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:J
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
+.field public final synthetic a:Lpy3;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lny3;->a:I
+.method public synthetic constructor <init>(Lpy3;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(Lny3;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lny3;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iget-wide v0, p1, Lny3;->b:J
-
-    iput-wide v0, p0, Lny3;->b:J
-
-    .line 4
-    iget-object v0, p1, Lny3;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lny3;->c:Ljava/lang/String;
-
-    .line 5
-    iget-object v0, p1, Lny3;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lny3;->d:Ljava/lang/String;
-
-    .line 6
-    iget-object p1, p1, Lny3;->e:Ljava/lang/String;
-
-    iput-object p1, p0, Lny3;->e:Ljava/lang/String;
+    iput-object p1, p0, Lny3;->a:Lpy3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
-    .locals 3
+.method public final a(Lyid;)V
+    .locals 6
 
-    iget-object v0, p0, Lny3;->d:Ljava/lang/String;
+    iget-object v0, p0, Lny3;->a:Lpy3;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lpy3;->b:Lru7;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    const/4 v1, 0x0
 
-    move-result v1
+    :try_start_0
+    invoke-virtual {p1}, Lyid;->d()Landroid/app/Activity;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    goto :goto_0
+    if-eqz p1, :cond_2
 
-    :cond_0
-    const-string v1, "image/"
+    new-instance v2, Lp66;
 
-    const/4 v2, 0x1
+    const/16 v3, 0xb
 
-    invoke-static {v0, v1, v2}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-direct {v2, p1, v3}, Lp66;-><init>(Landroid/content/Context;I)V
 
-    move-result v1
+    iget-object v3, v2, Lp66;->d:Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    check-cast v3, Landroid/content/Intent;
 
-    const-string v1, "djvu"
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lyxe;->c0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    move-result-object v4
 
-    move-result v0
+    check-cast v4, Lx4e;
 
-    if-nez v0, :cond_1
+    check-cast v4, Ljud;
 
-    goto :goto_1
+    const-string v5, "invite-header"
 
-    :cond_1
-    :goto_0
-    const/4 v2, 0x0
+    iget-object v4, v4, Ly3;->h:Luu7;
 
-    :goto_1
-    return v2
-.end method
+    invoke-virtual {v4, v5, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-.method public b()Z
-    .locals 3
+    move-result-object v4
 
-    iget-object v0, p0, Lny3;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    if-eqz v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "video/"
+    sget v4, Lfkd;->A:I
 
-    const/4 v2, 0x1
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    move-result-object v4
 
-    move-result v0
+    :goto_0
+    iput-object v4, v2, Lp66;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    const-string v4, "text/plain"
+
+    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lx4e;
+
+    check-cast v0, Ljud;
+
+    const-string v4, "invite-long"
+
+    iget-object v5, v0, Ly3;->h:Luu7;
+
+    invoke-virtual {v5, v4, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 v2, 0x0
+    sget v4, Lfkd;->G:I
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljud;->l()Ljava/lang/String;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v4, 0x1
+
+    invoke-static {v0, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
 
     :goto_1
-    return v2
-.end method
+    const-string p1, "android.intent.extra.TEXT"
 
-.method public toString()Ljava/lang/String;
-    .locals 7
+    invoke-virtual {v3, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    iget v0, p0, Lny3;->a:I
+    invoke-virtual {v2}, Lp66;->M()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :cond_2
+    const-string p1, "Required value was null."
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return-object v0
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget-wide v0, p0, Lny3;->b:J
+    throw v0
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v2, p0, Lny3;->c:Ljava/lang/String;
+    :catch_0
+    const-string p1, "ContactsDeepLinkFactory"
 
-    iget-object v3, p0, Lny3;->d:Ljava/lang/String;
+    const-string v0, "shareInvite: failed, no activity found"
 
-    iget-object v4, p0, Lny3;->e:Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v5, "ContentUriParams{contentLength="
-
-    const-string v6, ", contentName=\'"
-
-    invoke-static {v5, v0, v1, v6, v2}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\', mimeType=\'"
-
-    const-string v2, "\', path=\'"
-
-    invoke-static {v0, v1, v3, v2, v4}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "\'}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

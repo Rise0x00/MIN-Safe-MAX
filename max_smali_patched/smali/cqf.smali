@@ -1,17 +1,31 @@
 .class public final Lcqf;
-.super Ljava/lang/Object;
+.super Ladi;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Landroid/view/View;
+.field public final c:Z
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ltqf;
+# direct methods
+.method public constructor <init>(Lbqf;Z)V
+    .locals 1
 
-.field public d:Landroid/view/WindowId;
+    const/16 v0, 0x10
 
-.field public e:Liqf;
+    invoke-direct {p0, v0, p1}, Ladi;-><init>(ILjava/lang/Object;)V
 
-.field public f:Landroid/animation/Animator;
+    iput-boolean p2, p0, Lcqf;->c:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final i0()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcqf;->c:Z
+
+    return v0
+.end method

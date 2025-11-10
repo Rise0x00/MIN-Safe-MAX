@@ -3,107 +3,92 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Liyd;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
 
-.field public final b:Landroid/os/Handler;
+.field public final a:Lln0;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lln0;JJJJJ)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lin0;->a:I
-
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    new-instance v0, Landroid/os/Handler;
+    iput-object p1, p0, Lin0;->a:Lln0;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput-wide p2, p0, Lin0;->b:J
 
-    move-result-object v1
+    iput-wide p4, p0, Lin0;->c:J
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-wide p6, p0, Lin0;->d:J
 
-    iput-object v0, p0, Lin0;->b:Landroid/os/Handler;
+    iput-wide p8, p0, Lin0;->o:J
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lin0;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lin0;->b:Landroid/os/Handler;
+    iput-wide p10, p0, Lin0;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Lgyd;
+    .locals 13
+
+    iget-object v0, p0, Lin0;->a:Lln0;
+
+    invoke-interface {v0, p1, p2}, Lln0;->b(J)J
+
+    move-result-wide v1
+
+    iget-wide v9, p0, Lin0;->o:J
+
+    iget-wide v11, p0, Lin0;->X:J
+
+    const-wide/16 v3, 0x0
+
+    iget-wide v5, p0, Lin0;->c:J
+
+    iget-wide v7, p0, Lin0;->d:J
+
+    invoke-static/range {v1 .. v12}, Ljn0;->b(JJJJJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lgyd;
+
+    new-instance v3, Lmyd;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lmyd;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lgyd;-><init>(Lmyd;Lmyd;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
     .locals 2
 
-    iget v0, p0, Lin0;->a:I
+    iget-wide v0, p0, Lin0;->b:J
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lin0;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " is shutting down"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lin0;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

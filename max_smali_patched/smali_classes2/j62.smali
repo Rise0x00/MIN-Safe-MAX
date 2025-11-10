@@ -1,53 +1,156 @@
 .class public final Lj62;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lbp7;
+.field public final a:Lru7;
 
-.field public final Y:Lbp7;
+.field public final b:Lru7;
 
-.field public final Z:Ljb5;
-
-.field public final b:J
-
-.field public final c:Lbp7;
-
-.field public final o:Lbp7;
-
-.field public final w0:Ljb5;
+.field public final c:Lru7;
 
 
 # direct methods
-.method public constructor <init>(JLbp7;Lbp7;Lbp7;Lbp7;)V
+.method public constructor <init>(Lru7;Lru7;Lru7;)V
     .locals 0
 
-    invoke-direct {p0}, Lilg;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lj62;->b:J
+    iput-object p1, p0, Lj62;->a:Lru7;
 
-    iput-object p5, p0, Lj62;->c:Lbp7;
+    iput-object p2, p0, Lj62;->b:Lru7;
 
-    iput-object p3, p0, Lj62;->o:Lbp7;
-
-    iput-object p4, p0, Lj62;->X:Lbp7;
-
-    iput-object p6, p0, Lj62;->Y:Lbp7;
-
-    new-instance p1, Ljb5;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
-
-    iput-object p1, p0, Lj62;->Z:Ljb5;
-
-    new-instance p1, Ljb5;
-
-    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
-
-    iput-object p1, p0, Lj62;->w0:Ljb5;
+    iput-object p3, p0, Lj62;->c:Lru7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(JLjava/lang/String;)Ljava/lang/Long;
+    .locals 10
+
+    const-class v0, Lj62;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "changeChatTitle, chatId = "
+
+    invoke-static {p1, p2, v1, v0}, Lox1;->r(JLjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lj62;->c:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lu23;
+
+    check-cast v1, Lw33;
+
+    invoke-virtual {v1}, Lw33;->M()Lad2;
+
+    move-result-object v1
+
+    sget-object v2, Lgd2;->a:Lgd2;
+
+    invoke-virtual {v1, p1, p2, v2}, Lad2;->c(JLgd2;)V
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu23;
+
+    new-instance v1, Li62;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p3, v2}, Li62;-><init>(Ljava/lang/String;I)V
+
+    check-cast v0, Lw33;
+
+    invoke-virtual {v0, p1, p2, v1}, Lw33;->I(JLqi6;)Lt92;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lj62;->b:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liw0;
+
+    new-instance v2, Lk43;
+
+    new-instance v3, Ljava/lang/Long;
+
+    invoke-direct {v3, p1, p2}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x7c
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v2 .. v8}, Lk43;-><init>(Ljava/util/Collection;ZZLaq4;Lgzb;I)V
+
+    invoke-virtual {v1, v2}, Liw0;->c(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lj62;->a:Lru7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lml;
+
+    iget-object v0, v0, Lt92;->b:Lvd2;
+
+    iget-wide v5, v0, Lvd2;->a:J
+
+    const/4 v9, 0x0
+
+    move-object v2, v1
+
+    check-cast v2, Lona;
+
+    const/4 v8, 0x0
+
+    move-wide v3, p1
+
+    move-object v7, p3
+
+    invoke-virtual/range {v2 .. v9}, Lona;->l(JJLjava/lang/String;Ljava/lang/String;Lq10;)J
+
+    move-result-wide p1
+
+    new-instance p3, Ljava/lang/Long;
+
+    invoke-direct {p3, p1, p2}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p3
+
+    :cond_0
+    new-instance p1, Ljava/lang/Long;
+
+    const-wide/16 p2, 0x0
+
+    invoke-direct {p1, p2, p3}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
 .end method

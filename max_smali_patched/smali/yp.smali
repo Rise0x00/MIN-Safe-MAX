@@ -1,21 +1,37 @@
 .class public final Lyp;
-.super Lbp;
+.super Lxp;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyp;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lyp;
-
-    invoke-direct {v0}, Lbp;-><init>()V
-
-    sput-object v0, Lyp;->a:Lyp;
+    invoke-direct {p0}, Lxp;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+    .locals 0
+
+    invoke-static {p2}, Ly4;->f(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
+
+    return-void
+.end method
+
+.method public b(Landroid/widget/TextView;)Z
+    .locals 0
+
+    invoke-static {p1}, Ly4;->w(Landroid/widget/TextView;)Z
+
+    move-result p1
+
+    return p1
 .end method

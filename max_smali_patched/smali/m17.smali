@@ -1,33 +1,39 @@
-.class public abstract Lm17;
+.class public final Lm17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static final b:Ljava/util/regex/Pattern;
+.field public final b:Lsb6;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/net/Uri;Lsb6;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lm17;->a:Landroid/net/Uri;
 
-    move-result-object v0
+    iput-object p2, p0, Lm17;->b:Lsb6;
 
-    sput-object v0, Lm17;->a:Ljava/util/regex/Pattern;
+    iput-object p3, p0, Lm17;->c:Ljava/lang/String;
 
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+    iput-object p4, p0, Lm17;->d:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p5, p0, Lm17;->e:Ljava/lang/String;
 
-    move-result-object v0
-
-    sput-object v0, Lm17;->b:Ljava/util/regex/Pattern;
+    iput-object p6, p0, Lm17;->f:Ljava/lang/String;
 
     return-void
 .end method

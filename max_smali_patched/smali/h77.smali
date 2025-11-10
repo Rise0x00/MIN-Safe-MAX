@@ -1,73 +1,53 @@
-.class public final Lh77;
+.class public abstract Lh77;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public static a(Ljava/lang/Object;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    iput-object p1, p0, Lh77;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
 
-    iput-object p2, p0, Lh77;->b:Ljava/lang/Object;
+    move-result p0
 
-    iput-object p3, p0, Lh77;->c:Ljava/lang/Object;
-
-    return-void
+    return p0
 .end method
 
+.method public static b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
 
-# virtual methods
-.method public final a()Ljava/lang/IllegalArgumentException;
-    .locals 5
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    const-string v2, "Multiple entries with same key: "
+    return-object p0
+.end method
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public static c(Ljava/lang/Object;)I
+    .locals 0
 
-    iget-object v2, p0, Lh77;->a:Ljava/lang/Object;
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
 
-    const-string v3, "="
+    move-result p0
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p0
+.end method
 
-    iget-object v4, p0, Lh77;->b:Ljava/lang/Object;
+.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
+    .locals 0
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p0, Landroid/graphics/drawable/Icon;
 
-    const-string v4, " and "
+    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lh77;->c:Ljava/lang/Object;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return-object p0
 .end method

@@ -1,54 +1,86 @@
-.class public final Lt19;
-.super Landroid/widget/FrameLayout;
+.class public final synthetic Lt19;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx83;
+.implements Lhr3;
 
 
 # instance fields
-.field public final a:Landroid/view/CollapsibleActionView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lxg6;
+
+.field public final synthetic c:Lk48;
+
+.field public final synthetic d:Lmt8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public synthetic constructor <init>(Lxg6;Lk48;Lmt8;I)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput p4, p0, Lt19;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Lt19;->b:Lxg6;
 
-    invoke-direct {p0, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    iput-object p2, p0, Lt19;->c:Lk48;
 
-    move-object v0, p1
+    iput-object p3, p0, Lt19;->d:Lmt8;
 
-    check-cast v0, Landroid/view/CollapsibleActionView;
-
-    iput-object v0, p0, Lt19;->a:Landroid/view/CollapsibleActionView;
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActionViewCollapsed()V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lt19;->a:Landroid/view/CollapsibleActionView;
+    iget v0, p0, Lt19;->a:I
 
-    invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewCollapsed()V
+    check-cast p1, Ly19;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lt19;->b:Lxg6;
+
+    iget v1, v0, Lxg6;->b:I
+
+    iget-object v0, v0, Lxg6;->c:Ljava/lang/Object;
+
+    check-cast v0, Lo19;
+
+    iget-object v2, p0, Lt19;->c:Lk48;
+
+    iget-object v3, p0, Lt19;->d:Lmt8;
+
+    invoke-interface {p1, v1, v0, v2, v3}, Ly19;->d(ILo19;Lk48;Lmt8;)V
 
     return-void
-.end method
 
-.method public final onActionViewExpanded()V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lt19;->b:Lxg6;
 
-    iget-object v0, p0, Lt19;->a:Landroid/view/CollapsibleActionView;
+    iget v1, v0, Lxg6;->b:I
 
-    invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewExpanded()V
+    iget-object v0, v0, Lxg6;->c:Ljava/lang/Object;
+
+    check-cast v0, Lo19;
+
+    iget-object v2, p0, Lt19;->c:Lk48;
+
+    iget-object v3, p0, Lt19;->d:Lmt8;
+
+    invoke-interface {p1, v1, v0, v2, v3}, Ly19;->u(ILo19;Lk48;Lmt8;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

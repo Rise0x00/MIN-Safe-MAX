@@ -1,146 +1,68 @@
 .class public final Lp0b;
-.super Lhy9;
+.super Lwo;
 .source "SourceFile"
 
-
-# instance fields
-.field public final b:J
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
+# interfaces
+.implements Lqsf;
 
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Z)V
-    .locals 1
+# virtual methods
+.method public final b(ZLw5b;)V
+    .locals 0
 
-    sget-object v0, Loyf;->a:Loyf;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-interface {p2}, Lw5b;->getIcon()Le77;
 
-    iput-wide p1, p0, Lp0b;->b:J
+    move-result-object p1
 
-    iput-boolean p4, p0, Lp0b;->c:Z
+    iget p1, p1, Le77;->k:I
 
-    iput-object p3, p0, Lp0b;->d:Ljava/lang/String;
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2}, Lw5b;->i()Libf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Libf;->b:Lnbf;
+
+    iget p1, p1, Lnbf;->b:I
+
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
+.method public final onThemeChanged(Lw5b;)V
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lp0b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lp0b;
-
-    iget-wide v3, p0, Lp0b;->b:J
-
-    iget-wide v5, p1, Lp0b;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lp0b;->c:Z
-
-    iget-boolean v3, p1, Lp0b;->c:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lp0b;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lp0b;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lp0b;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
-    const/16 v1, 0x1f
+    invoke-virtual {p0, v0, p1}, Lp0b;->b(ZLw5b;)V
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lp0b;->c:Z
-
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lp0b;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public setChecked(Z)V
+    .locals 1
 
-    const-string v0, "OpenChatCall(chatId="
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    const-string v1, ", isVideo="
+    sget-object v0, Ly53;->s0:Lvh4;
 
-    iget-wide v2, p0, Lp0b;->b:J
-
-    iget-boolean v4, p0, Lp0b;->c:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Lvh4;->i(Landroid/view/View;)Lw5b;
 
     move-result-object v0
 
-    const-string v1, ", link="
+    invoke-virtual {p0, p1, v0}, Lp0b;->b(ZLw5b;)V
 
-    const-string v2, ")"
-
-    iget-object v3, p0, Lp0b;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lhqd;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

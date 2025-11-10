@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final a()Lnx7;
+.method public final a()Lz28;
     .locals 7
 
     const/4 v0, 0x0
@@ -48,13 +48,13 @@
     :try_start_0
     new-instance v1, Ljava/io/File;
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v2
 
     const-string v3, "tracer_sample_file_path"
 
-    invoke-virtual {v2, v3}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    invoke-static {}, Lnx7;->b()Lmx7;
+    invoke-static {}, Lz28;->b()Ly28;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v2
 
@@ -91,7 +91,7 @@
 
     const-wide/16 v4, -0x1
 
-    invoke-virtual {v2, v3, v4, v5}, Lu84;->d(Ljava/lang/String;J)J
+    invoke-virtual {v2, v3, v4, v5}, Lfb4;->d(Ljava/lang/String;J)J
 
     move-result-wide v2
 
@@ -108,27 +108,27 @@
     move-object v0, v4
 
     :cond_1
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v2
 
     const-string v3, "tracer_sample_file_name"
 
-    invoke-virtual {v2, v3}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v3
 
     const-string v4, "tracer_version_code"
 
-    invoke-virtual {v3, v4, v5, v6}, Lu84;->d(Ljava/lang/String;J)J
+    invoke-virtual {v3, v4, v5, v6}, Lfb4;->d(Ljava/lang/String;J)J
 
     move-result-wide v3
 
-    invoke-virtual {p0}, Lox7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, La38;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -136,7 +136,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lox7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, La38;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -144,11 +144,11 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lihf;->p(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
+    invoke-static {v5, v6}, Ltti;->b(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/PackageInfo;
 
     move-result-object v5
 
-    invoke-static {v5}, Lipe;->o(Landroid/content/pm/PackageInfo;)J
+    invoke-static {v5}, Lsti;->b(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v5
 
@@ -158,7 +158,7 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    invoke-static {}, Lnx7;->b()Lmx7;
+    invoke-static {}, Lz28;->b()Ly28;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     :cond_3
     :goto_1
-    invoke-static {}, Lnx7;->b()Lmx7;
+    invoke-static {}, Lz28;->b()Ly28;
 
     move-result-object v0
 
@@ -201,9 +201,9 @@
 .method public final b(Ljava/lang/String;Ljava/lang/Long;)Ljava/lang/String;
     .locals 9
 
-    sget-object v0, Lomf;->a:Lomf;
+    sget-object v0, Lb0g;->a:Lb0g;
 
-    invoke-static {}, Lomf;->a()Ljava/lang/String;
+    invoke-static {}, Lb0g;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -214,17 +214,17 @@
     return-object v1
 
     :cond_0
-    new-instance v2, Lr98;
+    new-instance v2, Lsf8;
 
-    invoke-direct {v2}, Lr98;-><init>()V
+    invoke-direct {v2}, Lsf8;-><init>()V
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v3
 
     const-string v4, "tracer_custom_properties_keys"
 
-    iget-object v3, v3, Lu84;->a:Ljava/util/HashMap;
+    iget-object v3, v3, Lfb4;->a:Ljava/util/HashMap;
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -258,17 +258,17 @@
 
     aget-object v7, v3, v6
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v8
 
-    invoke-virtual {v8, v7}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v8, v7}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_3
 
-    invoke-virtual {v2, v7, v8}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v7, v8}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     add-int/lit8 v6, v6, 0x1
@@ -276,13 +276,13 @@
     goto :goto_1
 
     :cond_4
-    invoke-virtual {v2}, Lr98;->b()Lr98;
+    invoke-virtual {v2}, Lsf8;->b()Lsf8;
 
     move-result-object v2
 
-    sget-object v3, Lomf;->a:Lomf;
+    sget-object v3, Lb0g;->a:Lb0g;
 
-    sget-object v3, Lomf;->e:Lzwd;
+    sget-object v3, Lb0g;->e:Lq8e;
 
     if-eqz v3, :cond_5
 
@@ -292,11 +292,11 @@
     move-object v3, v1
 
     :goto_2
-    invoke-virtual {v3}, Lzwd;->c()Lh7f;
+    invoke-virtual {v3}, Lq8e;->c()Likf;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lr98;->isEmpty()Z
+    invoke-virtual {v2}, Lsf8;->isEmpty()Z
 
     move-result v5
 
@@ -305,7 +305,7 @@
     goto :goto_3
 
     :cond_6
-    iget-object v5, v3, Lh7f;->m:Ljava/util/Map;
+    iget-object v5, v3, Likf;->m:Ljava/util/Map;
 
     new-instance v6, Ljava/util/LinkedHashMap;
 
@@ -315,22 +315,22 @@
 
     const/16 v2, 0x2fff
 
-    invoke-static {v3, v4, v6, v2}, Lh7f;->a(Lh7f;ZLjava/util/Map;I)Lh7f;
+    invoke-static {v3, v4, v6, v2}, Likf;->a(Likf;ZLjava/util/Map;I)Likf;
 
     move-result-object v3
 
     :goto_3
-    invoke-static {v3}, Ltp;->A0(Lh7f;)Lorg/json/JSONObject;
+    invoke-static {v3}, Lpw3;->d(Likf;)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v3
 
     const-string v5, "tracer_feature_name"
 
-    invoke-virtual {v3, v5}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -346,13 +346,13 @@
 
     invoke-virtual {v2, p2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
     const-string p2, "tracer_has_attr1"
 
-    invoke-virtual {p1, p2, v4}, Lu84;->b(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, p2, v4}, Lfb4;->b(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -360,13 +360,13 @@
 
     if-eqz p1, :cond_7
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
     const-string p2, "tracer_attr1"
 
-    invoke-virtual {p1, p2, v6, v7}, Lu84;->d(Ljava/lang/String;J)J
+    invoke-virtual {p1, p2, v6, v7}, Lfb4;->d(Ljava/lang/String;J)J
 
     move-result-wide p1
 
@@ -375,25 +375,25 @@
     invoke-virtual {v2, v3, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     :cond_7
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
     const-string p2, "tracer_has_attr2"
 
-    invoke-virtual {p1, p2, v4}, Lu84;->b(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, p2, v4}, Lfb4;->b(Ljava/lang/String;Z)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
     const-string p2, "tracer_attr2"
 
-    invoke-virtual {p1, p2, v6, v7}, Lu84;->d(Ljava/lang/String;J)J
+    invoke-virtual {p1, p2, v6, v7}, Lfb4;->d(Ljava/lang/String;J)J
 
     move-result-wide p1
 
@@ -402,23 +402,23 @@
     invoke-virtual {v2, v3, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     :cond_8
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
     const-string p2, "tracer_feature_tag"
 
-    invoke-virtual {p1, p2}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_9
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -427,21 +427,21 @@
     invoke-virtual {v2, v3, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_9
-    invoke-static {}, Lomf;->c()Ljava/util/Map;
+    invoke-static {}, Lb0g;->c()Ljava/util/Map;
 
     move-result-object p1
 
-    sget-object v3, Lkmc;->a:Lzzc;
+    sget-object v3, Lkna;->b:Lrw4;
 
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    instance-of v3, p1, Lr24;
+    instance-of v3, p1, Lt44;
 
     if-eqz v3, :cond_a
 
-    check-cast p1, Lr24;
+    check-cast p1, Lt44;
 
     goto :goto_4
 
@@ -451,16 +451,16 @@
     :goto_4
     if-nez p1, :cond_b
 
-    new-instance p1, Lr6d;
+    new-instance p1, Lihd;
 
-    const/16 v3, 0xd
+    const/16 v3, 0xb
 
-    invoke-direct {p1, v3}, Lr6d;-><init>(I)V
+    invoke-direct {p1, v3}, Lihd;-><init>(I)V
 
-    invoke-virtual {p1}, Lr6d;->r()Lr24;
+    invoke-virtual {p1}, Lihd;->f()Lt44;
 
     :cond_b
-    const-string p1, "http://127.0.0.1"
+    const-string p1, "https://127.0.0.1"
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -486,7 +486,7 @@
 
     move-result-object p1
 
-    new-instance v0, Lkw8;
+    new-instance v0, Lc9i;
 
     const-string v3, "application/json; charset=utf-8"
 
@@ -494,62 +494,62 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Loid;->f(Ljava/lang/String;Ljava/lang/String;)Ldp5;
+    invoke-static {v3, v4}, Ls72;->c(Ljava/lang/String;Ljava/lang/String;)Lht5;
 
     move-result-object v3
 
-    invoke-direct {v0, p1, v3}, Lkw8;-><init>(Ljava/lang/String;Lb17;)V
+    invoke-direct {v0, p1, v3}, Lc9i;-><init>(Ljava/lang/String;Lr57;)V
 
     invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
-    sget-object p1, Lomf;->h:Ls5f;
+    sget-object p1, Lb0g;->h:Ltif;
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lh17;
+    check-cast p1, Ly57;
 
-    invoke-virtual {p1, v0}, Lh17;->b(Lkw8;)Lc17;
+    invoke-virtual {p1, v0}, Ly57;->b(Lc9i;)Ls57;
 
     move-result-object p1
 
     :try_start_0
-    iget-object v0, p1, Lc17;->o:Ljava/io/Closeable;
+    iget-object v0, p1, Ls57;->d:Ljava/io/Closeable;
 
-    check-cast v0, Ldp5;
+    check-cast v0, Lht5;
 
     new-instance v2, Lorg/json/JSONObject;
 
-    iget-object v0, v0, Ldp5;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lht5;->c:Ljava/lang/Object;
 
     check-cast v0, [B
 
-    invoke-static {v0}, Lgye;->W([B)Ljava/lang/String;
+    invoke-static {v0}, Lfbf;->p([B)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v5}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v3
 
-    invoke-virtual {v3, p2}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, p2}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {v2, v0, p2}, Le2a;->t(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0, p2}, Le9a;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget p2, p1, Lc17;->b:I
+    iget p2, p1, Ls57;->b:I
 
     const/16 v0, 0xc8
 
@@ -579,7 +579,7 @@
     :catchall_1
     move-exception v0
 
-    invoke-static {p1, p2}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, p2}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v0
 .end method
@@ -587,7 +587,7 @@
 .method public final c(Ljava/io/File;Ljava/lang/String;)V
     .locals 9
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v0
 
@@ -595,7 +595,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lu84;->b(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v2}, Lfb4;->b(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -603,11 +603,11 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lox7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, La38;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, La38;->getId()Ljava/util/UUID;
 
     move-result-object v3
 
@@ -615,7 +615,7 @@
 
     move-result-object v3
 
-    invoke-static {}, Lgh5;->r()Ljava/lang/String;
+    invoke-static {}, Lzui;->a()Ljava/lang/String;
 
     move-result-object v4
 
@@ -644,7 +644,7 @@
 
     const/16 v7, 0x2d
 
-    invoke-static {v4, v6, v7, v1}, Lgye;->Z(Ljava/lang/String;CCZ)Ljava/lang/String;
+    invoke-static {v4, v6, v7, v1}, Lfbf;->s(Ljava/lang/String;CCZ)Ljava/lang/String;
 
     move-result-object v4
 
@@ -667,7 +667,7 @@
 
     invoke-direct {v5, v0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-static {v5}, Lq9e;->r(Ljava/io/File;)V
+    invoke-static {v5}, Lv0j;->b(Ljava/io/File;)V
 
     const-string v0, ".tmp"
 
@@ -675,12 +675,12 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v5, v0}, Lvv5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
     :try_start_0
-    invoke-static {p1, v0}, Lvb4;->v(Ljava/io/File;Ljava/io/File;)V
+    invoke-static {p1, v0}, Lvxi;->b(Ljava/io/File;Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -705,25 +705,25 @@
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     :goto_1
-    sget-object v0, Lomf;->a:Lomf;
+    sget-object v0, Lb0g;->a:Lb0g;
 
-    invoke-static {}, Lomf;->c()Ljava/util/Map;
+    invoke-static {}, Lb0g;->c()Ljava/util/Map;
 
     move-result-object v0
 
-    sget-object v3, Lkmc;->a:Lzzc;
+    sget-object v3, Lkna;->b:Lrw4;
 
     invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v3, v0, Lr24;
+    instance-of v3, v0, Lt44;
 
     const/4 v4, 0x0
 
     if-eqz v3, :cond_2
 
-    check-cast v0, Lr24;
+    check-cast v0, Lt44;
 
     goto :goto_2
 
@@ -733,16 +733,16 @@
     :goto_2
     if-nez v0, :cond_3
 
-    new-instance v0, Lr6d;
+    new-instance v0, Lihd;
 
-    const/16 v3, 0xd
+    const/16 v3, 0xb
 
-    invoke-direct {v0, v3}, Lr6d;-><init>(I)V
+    invoke-direct {v0, v3}, Lihd;-><init>(I)V
 
-    invoke-virtual {v0}, Lr6d;->r()Lr24;
+    invoke-virtual {v0}, Lihd;->f()Lt44;
 
     :cond_3
-    const-string v0, "http://127.0.0.1"
+    const-string v0, "https://127.0.0.1"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -772,11 +772,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v3, Leqd;
+    new-instance v3, Lpqe;
 
-    invoke-direct {v3, p1}, Leqd;-><init>(Ljava/lang/Object;)V
+    const/16 v5, 0x12
 
-    new-instance v5, La17;
+    invoke-direct {v3, v5, p1}, Lpqe;-><init>(ILjava/lang/Object;)V
+
+    new-instance v5, Lq57;
 
     const-string v6, "application/octet-stream"
 
@@ -784,15 +786,15 @@
 
     const-string v8, "sample"
 
-    invoke-direct {v5, v7, v8, v6, v3}, La17;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb17;)V
+    invoke-direct {v5, v7, v8, v6, v3}, Lq57;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lr57;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v3, Lq35;
+    new-instance v3, Lg75;
 
-    sget-object v5, Lbnc;->b:Lg3;
+    sget-object v5, Lowc;->b:Lp3;
 
-    invoke-virtual {v5}, Lg3;->d()J
+    invoke-virtual {v5}, Lp3;->d()J
 
     move-result-wide v5
 
@@ -814,26 +816,26 @@
 
     move-result-object v2
 
-    invoke-static {v0}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-static {v0}, Lab3;->X(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-direct {v3, v2, v0}, Lq35;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v3, v2, v0}, Lg75;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
-    new-instance v0, Lkw8;
+    new-instance v0, Lc9i;
 
-    invoke-direct {v0, p2, v3}, Lkw8;-><init>(Ljava/lang/String;Lb17;)V
+    invoke-direct {v0, p2, v3}, Lc9i;-><init>(Ljava/lang/String;Lr57;)V
 
     :try_start_1
-    sget-object p2, Lomf;->h:Ls5f;
+    sget-object p2, Lb0g;->h:Ltif;
 
-    invoke-virtual {p2}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lh17;
+    check-cast p2, Ly57;
 
-    invoke-virtual {p2, v0}, Lh17;->b(Lkw8;)Lc17;
+    invoke-virtual {p2, v0}, Ly57;->b(Lc9i;)Ls57;
 
     move-result-object p2
     :try_end_1
@@ -841,23 +843,23 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
     :try_start_2
-    iget v0, p2, Lc17;->b:I
+    iget v0, p2, Ls57;->b:I
 
-    iget-object v2, p2, Lc17;->c:Ljava/lang/Object;
+    iget-object v2, p2, Ls57;->c:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
-    iget-object v3, p2, Lc17;->o:Ljava/io/Closeable;
+    iget-object v3, p2, Ls57;->d:Ljava/io/Closeable;
 
-    check-cast v3, Ldp5;
+    check-cast v3, Lht5;
 
-    iget-object v3, v3, Ldp5;->c:Ljava/lang/Object;
+    iget-object v3, v3, Lht5;->c:Ljava/lang/Object;
 
     check-cast v3, [B
 
     if-eqz v3, :cond_4
 
-    invoke-static {v3}, Lgye;->W([B)Ljava/lang/String;
+    invoke-static {v3}, Lfbf;->p([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -870,23 +872,23 @@
 
     :cond_4
     :goto_3
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v3
 
     const-string v5, "tracer_feature_name"
 
-    invoke-virtual {v3, v5}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v5}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
+    invoke-virtual {p0}, La38;->getInputData()Lfb4;
 
     move-result-object v5
 
     const-string v6, "tracer_feature_tag"
 
-    invoke-virtual {v5, v6}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Lfb4;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -897,7 +899,7 @@
     :cond_5
     const-string v6, "{"
 
-    invoke-static {v4, v6, v1}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v4, v6, v1}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v1
     :try_end_2
@@ -914,7 +916,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :try_start_4
-    invoke-static {v1, v3, v5}, Le2a;->t(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3, v5}, Le9a;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
     :catch_1
     :cond_6
@@ -960,7 +962,7 @@
     move-exception v1
 
     :try_start_6
-    invoke-static {p2, v0}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p2, v0}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
     :try_end_6

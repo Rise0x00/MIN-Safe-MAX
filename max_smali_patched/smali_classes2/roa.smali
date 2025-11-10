@@ -1,43 +1,61 @@
-.class public abstract Lroa;
-.super Ljava/lang/Object;
+.class public final Lroa;
+.super Ltoa;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+.field public static final a:Lroa;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lgjc;->oneme_in_app_review_close:I
+    new-instance v0, Lroa;
 
-    sput v0, Lroa;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lgjc;->oneme_in_app_review_not_now:I
-
-    sput v0, Lroa;->b:I
-
-    sget v0, Lgjc;->oneme_in_app_review_send:I
-
-    sput v0, Lroa;->c:I
-
-    sget v0, Lgjc;->oneme_in_app_review_subtitle:I
-
-    sput v0, Lroa;->d:I
-
-    sget v0, Lgjc;->oneme_in_app_review_thanks:I
-
-    sput v0, Lroa;->e:I
+    sput-object v0, Lroa;->a:Lroa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lroa;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x601c8f50
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "None"
+
+    return-object v0
 .end method

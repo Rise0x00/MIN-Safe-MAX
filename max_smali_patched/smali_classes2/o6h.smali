@@ -1,7 +1,3 @@
 .class public final Lo6h;
-.super Ljava/lang/Object;
+.super Lp6h;
 .source "SourceFile"
-
-
-# instance fields
-.field public volatile a:F

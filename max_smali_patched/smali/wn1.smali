@@ -3,141 +3,228 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljef;
-
-.field public final b:Loef;
-
-
 # direct methods
-.method public constructor <init>(Ljef;Loef;)V
-    .locals 0
+.method public static final a(I)Ljava/lang/String;
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->t0:Lwn1;
 
-    iput-object p1, p0, Lwn1;->a:Ljef;
+    sget v0, Lc5e;->a:I
 
-    iput-object p2, p0, Lwn1;->b:Loef;
+    if-nez p0, :cond_0
 
-    return-void
-.end method
+    const/4 p0, 0x0
 
+    invoke-static {p0}, Lwn1;->b(I)Ljava/lang/String;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
+    return-object p0
 
     :cond_0
-    instance-of v0, p1, Lwn1;
+    const/4 v0, -0x1
 
-    if-nez v0, :cond_1
+    if-ne p0, v0, :cond_1
 
-    goto :goto_0
+    sget p0, Lc5e;->f:I
+
+    invoke-static {p0}, Lwn1;->b(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_1
-    check-cast p1, Lwn1;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lwn1;->a:Ljef;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v1, p1, Lwn1;->a:Ljef;
+    sget-object v1, Lone/me/calls/impl/service/CallServiceImpl;->v0:Ljava/util/Set;
 
-    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
+    move-result-object v1
 
     :cond_2
-    iget-object v0, p0, Lwn1;->b:Loef;
-
-    iget-object p1, p1, Lwn1;->b:Loef;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
     :goto_0
-    const/4 p1, 0x0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    return p1
+    move-result v2
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    if-eqz v2, :cond_3
 
-    return p1
-.end method
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 2
+    move-result-object v2
 
-    iget-object v0, p0, Lwn1;->a:Ljef;
+    check-cast v2, Ljava/lang/Number;
 
-    iget v0, v0, Ljef;->b:I
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result v2
 
-    move-result v0
+    sget v3, Lc5e;->f:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eq v2, v3, :cond_2
 
-    iget-object v1, p0, Lwn1;->b:Loef;
+    and-int v3, p0, v2
 
-    if-nez v1, :cond_0
+    if-eqz v3, :cond_2
 
-    const/4 v1, 0x0
+    invoke-static {v2}, Lwn1;->b(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    :cond_3
+    const/4 v4, 0x0
 
-    move-result v1
+    const/16 v5, 0x3e
 
-    :goto_0
-    add-int/2addr v0, v1
+    const-string v1, "|"
 
-    mul-int/lit16 v0, v0, 0x745f
+    const/4 v2, 0x0
 
-    return v0
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public static b(I)Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget v0, Lc5e;->b:I
 
-    const-string v1, "QuoteData(title="
+    if-ne p0, v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string p0, "mediaPlayback"
 
-    iget-object v1, p0, Lwn1;->a:Ljef;
+    return-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget v0, Lc5e;->f:I
 
-    const-string v1, ", body="
+    if-ne p0, v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p0, "manifest"
 
-    iget-object v1, p0, Lwn1;->b:Loef;
+    return-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_1
+    sget v0, Lc5e;->c:I
 
-    const-string v1, ", image=null, count=null, placeholder=null)"
+    if-ne p0, v0, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p0, "mediaProjection"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p0
+
+    :cond_2
+    sget v0, Lc5e;->e:I
+
+    if-ne p0, v0, :cond_3
+
+    const-string p0, "microphone"
+
+    return-object p0
+
+    :cond_3
+    sget v0, Lc5e;->d:I
+
+    if-ne p0, v0, :cond_4
+
+    const-string p0, "camera"
+
+    return-object p0
+
+    :cond_4
+    if-nez p0, :cond_5
+
+    const-string p0, "none"
+
+    return-object p0
+
+    :cond_5
+    const-string v0, "unknown("
+
+    const-string v1, ")"
+
+    invoke-static {p0, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c()Landroid/os/Handler;
+    .locals 2
+
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->u0:Landroid/os/Handler;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->u0:Landroid/os/Handler;
+
+    :cond_0
+    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->u0:Landroid/os/Handler;
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static d(Landroid/content/Context;)V
+    .locals 4
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lone/me/calls/impl/service/CallServiceImpl;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "ACTION"
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {}, Lwn1;->c()Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Lzd;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, p0, v3, v0}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

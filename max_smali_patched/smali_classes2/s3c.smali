@@ -1,233 +1,86 @@
-.class public final synthetic Ls3c;
-.super Ljava/lang/Object;
+.class public final Ls3c;
+.super La5a;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Lilg;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(JLewe;Z)V
+.method public constructor <init>(J)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    sget-object v0, Lybg;->a:Lybg;
 
-    iput v0, p0, Ls3c;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, La5a;-><init>(Ljava/lang/Object;)V
 
     iput-wide p1, p0, Ls3c;->b:J
-
-    iput-object p3, p0, Ls3c;->o:Lilg;
-
-    iput-boolean p4, p0, Ls3c;->c:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lp4c;JZ)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Ls3c;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ls3c;->o:Lilg;
-
-    iput-wide p2, p0, Ls3c;->b:J
-
-    iput-boolean p4, p0, Ls3c;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 23
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    iget v1, v0, Ls3c;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v1, :pswitch_data_0
-
-    iget-object v1, v0, Ls3c;->o:Lilg;
-
-    check-cast v1, Lewe;
-
-    move-object/from16 v2, p1
-
-    check-cast v2, Lcqe;
-
-    iget-wide v3, v2, Lcqe;->a:J
-
-    iget-object v5, v2, Lcqe;->w0:Ljava/lang/String;
-
-    if-nez v5, :cond_0
-
-    const-string v5, ""
+    return v0
 
     :cond_0
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    instance-of v1, p1, Ls3c;
 
-    move-result v6
+    const/4 v2, 0x0
 
-    if-nez v6, :cond_1
+    if-nez v1, :cond_1
 
-    iget-object v5, v2, Lcqe;->o:Ljava/lang/String;
+    return v2
 
     :cond_1
-    move-object v13, v5
+    check-cast p1, Ls3c;
 
-    new-instance v6, Lzqe;
+    iget-wide v3, p0, Ls3c;->b:J
 
-    iget-wide v7, v2, Lcqe;->a:J
+    iget-wide v5, p1, Ls3c;->b:J
 
-    iget-wide v11, v2, Lcqe;->z0:J
+    cmp-long p1, v3, v5
 
-    iget-object v14, v2, Lcqe;->A0:Ljava/lang/String;
+    if-eqz p1, :cond_2
 
-    iget-object v1, v1, Lewe;->w0:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llm5;
-
-    check-cast v1, Lnm5;
-
-    invoke-virtual {v1}, Lnm5;->v()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v2, Lcqe;->D0:Ljava/lang/String;
-
-    :goto_0
-    move-object v15, v1
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    goto :goto_0
+.method public final hashCode()I
+    .locals 2
 
-    :goto_1
-    iget-wide v9, v0, Ls3c;->b:J
+    iget-wide v0, p0, Ls3c;->b:J
 
-    iget-boolean v1, v0, Ls3c;->c:Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz v1, :cond_3
+    move-result v0
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->abs(J)J
+    return v0
+.end method
 
-    move-result-wide v1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    sub-long v3, v1, v3
+    const-string v0, "BackToChat(chatId="
 
-    :cond_3
-    move-wide/from16 v20, v3
+    const-string v1, ")"
 
-    const/16 v22, 0xfc0
+    iget-wide v2, p0, Ls3c;->b:J
 
-    const/16 v16, 0x0
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v17, 0x0
+    move-result-object v0
 
-    const/16 v18, 0x0
-
-    const/16 v19, 0x0
-
-    invoke-direct/range {v6 .. v22}, Lzqe;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIZZJI)V
-
-    return-object v6
-
-    :pswitch_0
-    iget-object v1, v0, Ls3c;->o:Lilg;
-
-    move-object v3, v1
-
-    check-cast v3, Lp4c;
-
-    move-object/from16 v1, p1
-
-    check-cast v1, Lcva;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v8, 0x3
-
-    if-eqz v1, :cond_5
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_5
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_5
-
-    if-eq v1, v8, :cond_5
-
-    const/4 v2, 0x4
-
-    if-ne v1, v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v1
-
-    :cond_5
-    iget-object v1, v3, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lk4c;
-
-    const/4 v7, 0x0
-
-    iget-wide v4, v0, Ls3c;->b:J
-
-    iget-boolean v6, v0, Ls3c;->c:Z
-
-    invoke-direct/range {v2 .. v7}, Lk4c;-><init>(Lp4c;JZLkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x0
-
-    invoke-static {v1, v3, v3, v2, v8}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    :goto_2
-    sget-object v1, Loyf;->a:Loyf;
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,79 +1,154 @@
-.class public abstract Lpoa;
+.class public final synthetic Lpoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
+.field public final synthetic b:Lapa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lapa;I)V
+    .locals 0
 
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view:I
+    iput p2, p0, Lpoa;->a:I
 
-    sput v0, Lpoa;->a:I
+    iput-object p1, p0, Lpoa;->b:Lapa;
 
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_icon:I
-
-    sput v0, Lpoa;->b:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
-
-    sput v0, Lpoa;->c:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
-
-    sput v0, Lpoa;->d:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
-
-    sput v0, Lpoa;->e:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
-
-    sput v0, Lpoa;->f:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_title:I
-
-    sput v0, Lpoa;->g:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view:I
-
-    sput v0, Lpoa;->h:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
-
-    sput v0, Lpoa;->i:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_icon:I
-
-    sput v0, Lpoa;->j:I
-
-    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_title:I
-
-    sput v0, Lpoa;->k:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lpoa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpoa;->b:Lapa;
+
+    invoke-static {v0}, Lapa;->a(Lapa;)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lxlc;->call_fill_16:I
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    iget-object v2, p0, Lpoa;->b:Lapa;
+
+    invoke-virtual {v1, v2}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v1}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    const/4 v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lkhi;->c(F)I
+
+    move-result v1
+
+    sget-object v2, Ly53;->s0:Lvh4;
+
+    iget-object v3, p0, Lpoa;->b:Lapa;
+
+    invoke-virtual {v2, v3}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lw5b;->b()Lcf0;
+
+    move-result-object v4
+
+    iget v4, v4, Lcf0;->l:I
+
+    invoke-virtual {v0, v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    invoke-virtual {v2, v3}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    move-result-object v1
+
+    iget v1, v1, Le77;->k:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x42000000    # 32.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

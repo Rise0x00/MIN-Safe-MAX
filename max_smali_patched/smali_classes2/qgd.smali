@@ -1,235 +1,171 @@
-.class public final Lqgd;
+.class public abstract Lqgd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+
 
 # instance fields
-.field public final a:J
+.field public final a:Landroid/content/Context;
 
-.field public final b:J
+.field public final b:Lfva;
 
-.field public final c:J
+.field public final c:[Ljava/lang/Object;
 
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:J
-
-.field public final h:J
-
-.field public final i:J
-
-.field public final j:J
-
-.field public final k:J
-
-.field public final l:D
-
-.field public final m:D
-
-.field public final n:D
-
-.field public final o:D
-
-.field public final p:Lgd6;
+.field public final d:Ltif;
 
 
 # direct methods
-.method public constructor <init>(JJJJJJJJJJJDDDDLgd6;)V
+.method public constructor <init>(Landroid/content/Context;Lfva;[Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqgd;->a:J
+    iput-object p1, p0, Lqgd;->a:Landroid/content/Context;
 
-    iput-wide p3, p0, Lqgd;->b:J
+    iput-object p2, p0, Lqgd;->b:Lfva;
 
-    iput-wide p5, p0, Lqgd;->c:J
+    iput-object p3, p0, Lqgd;->c:[Ljava/lang/Object;
 
-    iput-wide p7, p0, Lqgd;->d:J
+    new-instance p1, Ly4b;
 
-    iput-wide p9, p0, Lqgd;->e:J
+    const/16 p2, 0x1d
 
-    iput-wide p11, p0, Lqgd;->f:J
+    invoke-direct {p1, p2, p0}, Ly4b;-><init>(ILjava/lang/Object;)V
 
-    iput-wide p13, p0, Lqgd;->g:J
+    new-instance p2, Ltif;
 
-    move-wide p1, p15
+    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
 
-    iput-wide p1, p0, Lqgd;->h:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lqgd;->i:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lqgd;->j:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lqgd;->k:J
-
-    move-wide/from16 p1, p23
-
-    iput-wide p1, p0, Lqgd;->l:D
-
-    move-wide/from16 p1, p25
-
-    iput-wide p1, p0, Lqgd;->m:D
-
-    move-wide/from16 p1, p27
-
-    iput-wide p1, p0, Lqgd;->n:D
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Lqgd;->o:D
-
-    move-object/from16 p1, p31
-
-    iput-object p1, p0, Lqgd;->p:Lgd6;
+    iput-object p2, p0, Lqgd;->d:Ltif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final close()V
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lqgd;->d:Ltif;
 
-    const-string v1, "ScreenshareRecvStat{packetsRecvStat="
+    invoke-virtual {v0}, Ltif;->e()Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-wide v1, p0, Lqgd;->a:J
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lqgd;->d:Ltif;
 
-    const-string v1, ", frameStartsRecvStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recvOdditiesStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", completeFramesStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", keyFramesEnqStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deltaFramesEnqStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDroppedOnEnqStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->g:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDecodedStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->h:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", decodeErrors="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->i:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allocatedBuffersStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->j:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allocatedMemStat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->k:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", packetReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->l:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameReceivedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->m:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodedEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->n:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameDecodeErrorEventRateMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqgd;->o:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lpgd;
+
+    iget-object v1, v0, Lpgd;->a:Lbh6;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lbh6;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/database/sqlite/SQLiteDatabase;
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v2
+
+    :goto_0
+    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v0, Lpgd;->i:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$WriteLock;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    :try_start_0
+    iget-object v3, v0, Lpgd;->e:Lsk7;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v0, Lpgd;->d:Lfff;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v2, v0
+
+    :goto_1
+    invoke-interface {v2}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final l()Lpgd;
+    .locals 1
+
+    iget-object v0, p0, Lqgd;->d:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpgd;
+
     return-object v0
+.end method
+
+.method public final w()Lah3;
+    .locals 3
+
+    new-instance v0, Le6;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1, p0}, Le6;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lah3;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, v0}, Lah3;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
 .end method

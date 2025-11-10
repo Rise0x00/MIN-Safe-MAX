@@ -1,148 +1,182 @@
 .class public final Lou;
-.super Ljava/lang/Object;
+.super Lui0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/nio/channels/CompletionHandler;
-
-
-# static fields
-.field public static final b:Lou;
-
-.field public static final c:Lou;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
+
+.field public final o:[J
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lou;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lou;-><init>(I)V
-
-    sput-object v0, Lou;->b:Lou;
-
-    new-instance v0, Lou;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lou;-><init>(I)V
-
-    sput-object v0, Lou;->c:Lou;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(JI[JJ)V
     .locals 0
 
-    iput p1, p0, Lou;->a:I
+    invoke-direct {p0, p1, p2, p3}, Lui0;-><init>(JI)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lou;->o:[J
+
+    iput-wide p5, p0, Lou;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final completed(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final f()[B
+    .locals 3
 
-    iget v0, p0, Lou;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsListModify;-><init>()V
 
-    check-cast p1, Ljava/lang/Void;
+    iget v1, p0, Lui0;->d:I
 
-    check-cast p2, Ly12;
+    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result v1
 
-    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->assetType:I
 
-    return-void
+    iget-wide v1, p0, Lzm;->a:J
 
-    :pswitch_0
-    check-cast p2, Ly12;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->requestId:J
 
-    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    iget-object v1, p0, Lou;->o:[J
 
-    return-void
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->ids:[J
 
-    nop
+    iget-wide v1, p0, Lou;->X:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->modifyTime:J
+
+    invoke-static {v0}, Lud9;->toByteArray(Lud9;)[B
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final failed(Ljava/lang/Throwable;Ljava/lang/Object;)V
+.method public final getType()Lxib;
     .locals 1
 
-    iget v0, p0, Lou;->a:I
+    sget-object v0, Lxib;->R0:Lxib;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    check-cast p2, Ly12;
+.method public final h()Lkh;
+    .locals 5
 
-    instance-of v0, p1, Ljava/nio/channels/AsynchronousCloseException;
+    new-instance v0, Lfma;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    invoke-interface {p2}, Ly12;->isCancelled()Z
+    const/4 v2, 0x4
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Lfma;-><init>(Lo8b;I)V
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Lui0;->d:I
 
-    goto :goto_0
+    if-eqz v1, :cond_2
+
+    iget-object v2, p0, Lou;->o:[J
+
+    if-eqz v2, :cond_1
+
+    const-string v3, "type"
+
+    invoke-static {v1}, Lnx1;->d(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v1}, Lkh;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "ids"
+
+    invoke-virtual {v0, v1, v2}, Lkh;->q(Ljava/lang/String;[J)V
+
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Lou;->X:J
+
+    cmp-long v1, v3, v1
+
+    if-ltz v1, :cond_0
+
+    const-string v1, "updateTime"
+
+    invoke-virtual {v0, v3, v4, v1}, Lkh;->u(JLjava/lang/String;)V
 
     :cond_0
-    new-instance v0, Lv3d;
-
-    invoke-direct {v0, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {p2, v0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p2, Ly12;
-
-    instance-of v0, p1, Ljava/nio/channels/AsynchronousCloseException;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ly12;->isCancelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    new-instance v0, Lv3d;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v0, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    const-string v1, "ids must not be null"
 
-    invoke-interface {p2, v0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :goto_1
+    throw v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final t(Lmmf;)V
+    .locals 4
+
+    check-cast p1, Lpu;
+
+    iget-boolean v0, p1, Lpu;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Lpu;->d:J
+
+    invoke-virtual {p0, v2, v3}, Lui0;->u(J)V
+
+    iget-object p1, p0, Lzm;->c:Lan;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Lan;->b()Liw0;
+
+    move-result-object p1
+
+    new-instance v0, Lqu;
+
+    iget-wide v1, p0, Lzm;->a:J
+
+    invoke-direct {v0, v1, v2}, Lrj0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Liw0;->c(Ljava/lang/Object;)V
+
     return-void
 
-    nop
+    :cond_1
+    new-instance p1, Lxlf;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to modify asset list"
+
+    invoke-direct {p1, v0, v2, v1}, Lxlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lui0;->j(Lxlf;)V
+
+    return-void
 .end method

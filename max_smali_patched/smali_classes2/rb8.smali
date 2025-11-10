@@ -1,91 +1,48 @@
-.class public final enum Lrb8;
-.super Ljava/lang/Enum;
-.source "SourceFile"
-
-
-# static fields
-.field public static final enum b:Lrb8;
-
-.field public static final enum c:Lrb8;
-
-.field public static final synthetic o:[Lrb8;
+.class public final Lrb8;
+.super Lp14;
 
 
 # instance fields
-.field public final a:F
+.field public final synthetic X:Lgh7;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lrb8;
-
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const-string v3, "NOT_FOCUSED"
-
-    invoke-direct {v0, v2, v1, v3}, Lrb8;-><init>(FILjava/lang/String;)V
-
-    sput-object v0, Lrb8;->b:Lrb8;
-
-    new-instance v1, Lrb8;
-
-    const/4 v2, 0x1
-
-    const v3, 0x3fa66666    # 1.3f
-
-    const-string v4, "FOCUSED"
-
-    invoke-direct {v1, v3, v2, v4}, Lrb8;-><init>(FILjava/lang/String;)V
-
-    sput-object v1, Lrb8;->c:Lrb8;
-
-    filled-new-array {v0, v1}, [Lrb8;
-
-    move-result-object v0
-
-    sput-object v0, Lrb8;->o:[Lrb8;
-
-    return-void
-.end method
-
-.method public constructor <init>(FILjava/lang/String;)V
+.method public constructor <init>(Lgh7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p3, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lrb8;->X:Lgh7;
 
-    iput p1, p0, Lrb8;->a:F
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrb8;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lrb8;
+    iput-object p1, p0, Lrb8;->d:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lrb8;->o:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lrb8;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lrb8;->o:I
 
-.method public static values()[Lrb8;
-    .locals 1
+    iget-object p1, p0, Lrb8;->X:Lgh7;
 
-    sget-object v0, Lrb8;->o:[Lrb8;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Lrb8;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lgh7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lrb8;
-
-    return-object v0
+    return-object p1
 .end method

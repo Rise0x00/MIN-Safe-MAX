@@ -1,73 +1,144 @@
-.class public final enum Lgo9;
-.super Ljava/lang/Enum;
+.class public final Lgo9;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final enum a:Lgo9;
 
-.field public static final enum b:Lgo9;
+# instance fields
+.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
 
-.field public static final synthetic c:[Lgo9;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
-    new-instance v0, Lgo9;
+    iput-object p2, p0, Lgo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const-string v1, "MOVIE"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lgo9;->a:Lgo9;
-
-    new-instance v1, Lgo9;
-
-    const-string v2, "STREAM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lgo9;->b:Lgo9;
-
-    filled-new-array {v0, v1}, [Lgo9;
-
-    move-result-object v0
-
-    sput-object v0, Lgo9;->c:[Lgo9;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgo9;
-    .locals 1
 
-    const-class v0, Lgo9;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lgo9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lgo9;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Lgo9;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lgo9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lgo9;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lgo9;->c:[Lgo9;
+    new-instance v0, Lgo9;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lgo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lgo9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    check-cast v0, [Lgo9;
+    iput-object p1, v0, Lgo9;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgo9;->o:Ljava/lang/Object;
+
+    check-cast p1, Lx45;
+
+    iget-object v0, p0, Lgo9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->I0:Locg;
+
+    if-eqz v1, :cond_2
+
+    iput-object p1, v1, Locg;->Y:Lx45;
+
+    iget-object v2, v1, Locg;->X:Landroid/widget/FrameLayout;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v3
+
+    :goto_0
+    instance-of v4, v2, Landroid/widget/TextView;
+
+    if-eqz v4, :cond_1
+
+    move-object v3, v2
+
+    check-cast v3, Landroid/widget/TextView;
+
+    :cond_1
+    if-eqz v3, :cond_2
+
+    sget-object v2, Lsw2;->g:Lorf;
+
+    iget-object v1, v1, Locg;->Y:Lx45;
+
+    invoke-virtual {v2, v3, v1}, Lorf;->b(Landroid/widget/TextView;Lx45;)V
+
+    :cond_2
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->J0:Lmxb;
+
+    if-eqz v1, :cond_3
+
+    iput-object p1, v1, Lmxb;->c:Ljava/lang/Object;
+
+    :cond_3
+    iget-object p1, v0, Lone/me/messages/list/ui/MessagesListWidget;->K0:Lw8f;
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lw8f;->j()V
+
+    :cond_4
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

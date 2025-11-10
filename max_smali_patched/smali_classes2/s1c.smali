@@ -1,21 +1,22 @@
 .class public final Ls1c;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lu1c;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
-
-    iput-object p1, p0, Ls1c;->b:Landroid/content/Intent;
+    iput p1, p0, Ls1c;->a:I
 
     return-void
 .end method
@@ -43,15 +44,11 @@
     :cond_1
     check-cast p1, Ls1c;
 
-    iget-object v1, p0, Ls1c;->b:Landroid/content/Intent;
+    iget v1, p0, Ls1c;->a:I
 
-    iget-object p1, p1, Ls1c;->b:Landroid/content/Intent;
+    iget p1, p1, Ls1c;->a:I
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -62,9 +59,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ls1c;->b:Landroid/content/Intent;
+    iget v0, p0, Ls1c;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
@@ -72,23 +69,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CropAvatarOld(intent="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ls1c;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "ShowPhoto(index="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Ls1c;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

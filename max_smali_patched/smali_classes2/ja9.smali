@@ -1,48 +1,52 @@
 .class public final Lja9;
-.super Lnz3;
+.super Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+.source "SourceFile"
+
+# interfaces
+.implements Lpv2;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg68;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lg68;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 7
 
-    iput-object p1, p0, Lja9;->Y:Lg68;
+    iput-object p1, p0, Lja9;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v5, 0xe
+
+    const/4 v6, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lkx5;ZZILfi4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lot0;)V
     .locals 1
 
-    iput-object p1, p0, Lja9;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lot0;->b:Lpt0;
 
-    iget p1, p0, Lja9;->X:I
+    iget p1, p1, Lpt0;->i:I
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lja9;->a:Landroid/graphics/drawable/Drawable;
 
-    or-int/2addr p1, v0
+    invoke-static {v0, p1}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
 
-    iput p1, p0, Lja9;->X:I
-
-    iget-object p1, p0, Lja9;->Y:Lg68;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg68;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,10 +1,41 @@
-.class public abstract Lwdc;
+.class public final Lwdc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_permission_dialog_check_cancel:I = 0x7f0a01af
+# instance fields
+.field public final a:Lvdc;
 
-.field public static call_permission_dialog_check_continue:I = 0x7f0a01b0
+.field public final b:Lvdc;
 
-.field public static call_start_no_network_connection_neutral_button:I = 0x7f0a0206
+.field public final c:I
+
+.field public final d:Z
+
+
+# direct methods
+.method public constructor <init>(Lvdc;Lvdc;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwdc;->a:Lvdc;
+
+    iput-object p2, p0, Lwdc;->b:Lvdc;
+
+    iput p3, p0, Lwdc;->c:I
+
+    if-ne p1, p2, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lwdc;->d:Z
+
+    return-void
+.end method

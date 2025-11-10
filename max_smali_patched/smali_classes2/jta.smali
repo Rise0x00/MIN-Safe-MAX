@@ -1,19 +1,79 @@
-.class public abstract Ljta;
-.super Ljava/lang/Object;
+.class public final Ljta;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public A0:I
+
+.field public B0:I
+
+.field public synthetic C0:Ljava/lang/Object;
+
+.field public final synthetic D0:Lqta;
+
+.field public E0:I
+
+.field public X:Ljava/lang/Object;
+
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Ljava/lang/CharSequence;
+
+.field public u0:Lka9;
+
+.field public v0:Z
+
+.field public w0:Z
+
+.field public x0:J
+
+.field public y0:J
+
+.field public z0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqta;Lp14;)V
+    .locals 0
 
-    sget v0, Lqcc;->ic_row_10:I
+    iput-object p1, p0, Ljta;->D0:Lqta;
 
-    sput v0, Ljta;->a:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ljta;->C0:Ljava/lang/Object;
+
+    iget p1, p0, Ljta;->E0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ljta;->E0:I
+
+    iget-object p1, p0, Ljta;->D0:Lqta;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lqta;->a(Lqta;Llg8;Lnz;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

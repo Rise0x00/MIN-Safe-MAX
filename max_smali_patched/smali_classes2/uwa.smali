@@ -1,48 +1,79 @@
-.class public final Luwa;
-.super Lnz3;
+.class public abstract Luwa;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lwe9;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Luwa;->Y:Lwe9;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Luwa;->o:Ljava/lang/Object;
+    sget v0, Ltsc;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    iget p1, p0, Luwa;->X:I
+    sput v0, Luwa;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Ltsc;->oneme_contact_not_found_bottom_sheet_subtitle:I
 
-    or-int/2addr p1, v0
+    sput v0, Luwa;->b:I
 
-    iput p1, p0, Luwa;->X:I
+    sget v0, Ltsc;->oneme_contact_not_found_bottom_sheet_title:I
 
-    iget-object p1, p0, Luwa;->Y:Lwe9;
+    sput v0, Luwa;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Ltsc;->oneme_found_contact_is_self_error:I
 
-    invoke-virtual {p1, v0, p0}, Lwe9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    sput v0, Luwa;->d:I
 
-    move-result-object p1
+    sget v0, Ltsc;->oneme_invite_by_link_action:I
 
-    return-object p1
+    sput v0, Luwa;->e:I
+
+    sget v0, Ltsc;->oneme_invite_by_phone_action:I
+
+    sput v0, Luwa;->f:I
+
+    sget v0, Ltsc;->oneme_invite_by_phone_continue_button:I
+
+    sput v0, Luwa;->g:I
+
+    sget v0, Ltsc;->oneme_invite_by_phone_description:I
+
+    sput v0, Luwa;->h:I
+
+    sget v0, Ltsc;->oneme_invite_by_phone_hint_default:I
+
+    sput v0, Luwa;->i:I
+
+    sget v0, Ltsc;->oneme_invite_by_phone_title:I
+
+    sput v0, Luwa;->j:I
+
+    sget v0, Ltsc;->oneme_invite_friends_to_max_bottom_sheet_title:I
+
+    sput v0, Luwa;->k:I
+
+    return-void
 .end method

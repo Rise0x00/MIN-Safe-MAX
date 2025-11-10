@@ -2,146 +2,196 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzwc;
-
 
 # instance fields
-.field public X:Z
-
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
-
-.field public final b:Ls03;
-
-.field public final c:Lbp7;
-
-.field public o:Z
+.field public final synthetic a:Lt5;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Ls03;Lbp7;)V
+.method public constructor <init>(Lt5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvx2;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    iput-object p2, p0, Lvx2;->b:Ls03;
-
-    iput-object p3, p0, Lvx2;->c:Lbp7;
+    iput-object p1, p0, Lvx2;->a:Lt5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
+.method public final a(Ljava/lang/String;)Lsy2;
+    .locals 19
 
-    return-void
-.end method
+    move-object/from16 v1, p1
 
-.method public final d(Landroid/view/View;)V
-    .locals 3
+    new-instance v0, Lnd1;
 
-    iget-object v0, p0, Lvx2;->a:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->I(Landroid/view/View;)Landroid/view/View;
+    move-object/from16 v11, p0
 
-    move-result-object v1
+    iget-object v3, v11, Lvx2;->a:Lt5;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, v1, v2, v3}, Lnd1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v0, 0x0
+    new-instance v2, Ltif;
 
-    goto :goto_0
+    invoke-direct {v2, v0}, Ltif;-><init>(Loi6;)V
 
-    :cond_0
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Lnxc;
+    new-instance v0, Lnd1;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v0, v3, v4, v2}, Lnd1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v4, Ltif;
+
+    invoke-direct {v4, v0}, Ltif;-><init>(Loi6;)V
+
+    new-instance v14, Lix2;
+
+    const-class v0, Lkf2;
+
+    invoke-virtual {v3, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
 
     move-result-object v0
 
-    :goto_0
-    instance-of v1, v0, Lmf7;
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    iget-boolean v0, p0, Lvx2;->o:Z
-
-    if-eqz v0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    iput-boolean v2, p0, Lvx2;->o:Z
+    invoke-direct {v14, v2, v0, v4}, Lix2;-><init>(Ltif;Lru7;Ltif;)V
 
     new-instance v0, Lux2;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v2, v3, v4}, Lux2;-><init>(Ltif;Lt5;Ltif;)V
 
-    invoke-direct {v0, p1, p0, v1}, Lux2;-><init>(Landroid/view/View;Lvx2;I)V
+    new-instance v4, Ltif;
 
-    invoke-static {p1, v0}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
+    invoke-direct {v4, v0}, Ltif;-><init>(Loi6;)V
 
-    return-void
+    new-instance v12, Lb07;
 
-    :cond_2
-    instance-of v1, v0, Lcj5;
+    new-instance v13, Lqoh;
 
-    if-nez v1, :cond_5
+    const/16 v0, 0x9
 
-    instance-of v1, v0, Lyi5;
+    invoke-direct {v13, v2, v0, v3}, Lqoh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    if-eqz v1, :cond_3
+    new-instance v15, Lopd;
 
-    goto :goto_1
+    const/16 v0, 0xd
 
-    :cond_3
-    instance-of v0, v0, Lqv2;
+    invoke-direct {v15, v0}, Lopd;-><init>(I)V
 
-    if-eqz v0, :cond_6
+    new-instance v0, Lcua;
 
-    iget-boolean v0, p0, Lvx2;->X:Z
+    const-string v5, "ChatsListLoader:"
 
-    if-eqz v0, :cond_4
+    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object v5
 
-    :cond_4
-    iput-boolean v2, p0, Lvx2;->X:Z
+    const/16 v6, 0x14
 
-    new-instance v0, Lux2;
+    invoke-direct {v0, v6, v5}, Lcua;-><init>(ILjava/lang/Object;)V
 
-    const/4 v1, 0x1
+    const/16 v18, 0x20
 
-    invoke-direct {v0, p1, p0, v1}, Lux2;-><init>(Landroid/view/View;Lvx2;I)V
+    const/16 v16, 0x14
 
-    invoke-static {p1, v0}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
+    move-object/from16 v17, v0
 
-    return-void
+    invoke-direct/range {v12 .. v18}, Lb07;-><init>(Lhz6;Lwb4;Lwb4;ILcua;I)V
 
-    :cond_5
-    :goto_1
-    iget-boolean v0, p0, Lvx2;->X:Z
+    new-instance v0, Lpk2;
 
-    if-eqz v0, :cond_7
+    const/16 v5, 0x14
 
-    :cond_6
-    :goto_2
-    return-void
+    invoke-direct {v0, v5, v14}, Lpk2;-><init>(ILjava/lang/Object;)V
 
-    :cond_7
-    iput-boolean v2, p0, Lvx2;->X:Z
+    move-object v5, v2
 
-    new-instance v0, Lsg6;
+    move-object v2, v4
 
-    const/4 v1, 0x6
+    new-instance v4, Ltif;
 
-    invoke-direct {v0, p1, v1, p0}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v4, v0}, Ltif;-><init>(Loi6;)V
 
-    invoke-static {p1, v0}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
+    const-class v0, Ltlf;
 
-    return-void
+    invoke-virtual {v3, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ltlf;
+
+    const-class v7, Lb54;
+
+    invoke-virtual {v3, v7}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lb54;
+
+    const-class v8, Ldj0;
+
+    invoke-virtual {v3, v8}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ldj0;
+
+    invoke-virtual {v5}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lay2;
+
+    invoke-virtual {v3, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltlf;
+
+    move-object v9, v6
+
+    move-object v6, v7
+
+    new-instance v7, Ls46;
+
+    invoke-direct {v7, v8, v5, v0}, Ls46;-><init>(Ldj0;Lay2;Ltlf;)V
+
+    const-class v0, Ldu3;
+
+    invoke-virtual {v3, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v8, v0
+
+    check-cast v8, Ldu3;
+
+    const-class v0, Lu23;
+
+    invoke-virtual {v3, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
+
+    move-result-object v10
+
+    const-class v0, Lru/ok/tamtam/logout/a;
+
+    invoke-virtual {v3, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/tamtam/logout/a;
+
+    move-object v5, v9
+
+    move-object v9, v0
+
+    new-instance v0, Lsy2;
+
+    move-object v3, v12
+
+    invoke-direct/range {v0 .. v10}, Lsy2;-><init>(Ljava/lang/String;Ltif;Lb07;Ltif;Ltlf;Lb54;Ls46;Ldu3;Lru/ok/tamtam/logout/a;Lru7;)V
+
+    return-object v0
 .end method

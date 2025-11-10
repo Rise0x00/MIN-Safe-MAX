@@ -21,10 +21,6 @@
 
 .field private static final MSG_FLUSH:I = 0x1
 
-.field private static final MSG_REGISTER_AGENT:I = 0x20
-
-.field private static final MSG_UNREGISTER_AGENT:I = 0x21
-
 .field private static final MSG_UPLOAD_MAX_TIMEOUT:I = 0x11
 
 .field private static final MSG_UPLOAD_SILENCE_TIMEOUT:I = 0x10
@@ -33,8 +29,6 @@
 
 
 # instance fields
-.field private final agency:Lru/ok/android/onelog/Agency;
-
 .field private final appender:Lru/ok/android/onelog/FileAppender;
 
 .field private final collector:Ljava/lang/String;
@@ -96,12 +90,6 @@
 
     iput-object v0, p0, Lru/ok/android/onelog/Worker;->appender:Lru/ok/android/onelog/FileAppender;
 
-    new-instance p1, Lru/ok/android/onelog/Agency;
-
-    invoke-direct {p1, v0}, Lru/ok/android/onelog/Agency;-><init>(Lru/ok/android/onelog/OneLogAppender;)V
-
-    iput-object p1, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
-
     return-void
 .end method
 
@@ -133,22 +121,6 @@
     .locals 0
 
     invoke-direct {p0}, Lru/ok/android/onelog/Worker;->handleUploadMaxTimeout()V
-
-    return-void
-.end method
-
-.method public static synthetic access$500(Lru/ok/android/onelog/Worker;Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lru/ok/android/onelog/Worker;->handleRegisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$600(Lru/ok/android/onelog/Worker;Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lru/ok/android/onelog/Worker;->handleUnregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
 
     return-void
 .end method
@@ -245,9 +217,9 @@
     invoke-virtual {p0}, Lru/ok/android/onelog/Worker;->drop()V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
+    iget-object v0, p0, Lru/ok/android/onelog/Worker;->appender:Lru/ok/android/onelog/FileAppender;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/onelog/Agency;->append(Lru/ok/android/onelog/OneLogItem;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/onelog/FileAppender;->append(Lru/ok/android/onelog/OneLogItem;)V
 
     iget p1, p0, Lru/ok/android/onelog/Worker;->count:I
 
@@ -301,10 +273,6 @@
 .method private handleFlush(Landroid/os/ConditionVariable;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
-
-    invoke-virtual {v0}, Lru/ok/android/onelog/Agency;->flush()V
-
     invoke-virtual {p1}, Landroid/os/ConditionVariable;->open()V
 
     invoke-static {}, Lru/ok/android/onelog/OneLogImpl;->getInstance()Lru/ok/android/onelog/OneLogImpl;
@@ -330,26 +298,6 @@
     invoke-direct {p0}, Lru/ok/android/onelog/Worker;->startUpload()V
 
     :cond_0
-    return-void
-.end method
-
-.method private handleRegisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
-
-    invoke-virtual {v0, p1}, Lru/ok/android/onelog/Agency;->registerAgent(Lru/ok/android/onelog/OneLogAgent;)V
-
-    return-void
-.end method
-
-.method private handleUnregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
-
-    invoke-virtual {v0, p1}, Lru/ok/android/onelog/Agency;->unregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-
     return-void
 .end method
 
@@ -513,10 +461,6 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/onelog/Worker;->agency:Lru/ok/android/onelog/Agency;
-
-    invoke-virtual {v0}, Lru/ok/android/onelog/Agency;->flush()V
-
     const/4 v0, 0x0
 
     iput v0, p0, Lru/ok/android/onelog/Worker;->count:I
@@ -659,24 +603,6 @@
     return-void
 .end method
 
-.method public registerAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 2
-
-    invoke-direct {p0}, Lru/ok/android/onelog/Worker;->obtainHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    const/16 v1, 0x20
-
-    invoke-static {v0, v1, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    return-void
-.end method
-
 .method public setMaxMillisToUpload(Ljava/lang/String;J)V
     .locals 2
 
@@ -708,24 +634,6 @@
     .locals 0
 
     iput-wide p1, p0, Lru/ok/android/onelog/Worker;->millisToUploadAny:J
-
-    return-void
-.end method
-
-.method public unregisterAgent(Lru/ok/android/onelog/OneLogAgent;)V
-    .locals 2
-
-    invoke-direct {p0}, Lru/ok/android/onelog/Worker;->obtainHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    const/16 v1, 0x21
-
-    invoke-static {v0, v1, p1}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 .end method

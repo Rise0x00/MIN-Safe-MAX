@@ -1,69 +1,48 @@
 .class public final Lv53;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic X:Lo53;
 
-.field public final b:Lbp7;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
+.method public constructor <init>(Lo53;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lv53;->X:Lo53;
 
-    iput-object p1, p0, Lv53;->a:Lbp7;
-
-    iput-object p2, p0, Lv53;->b:Lbp7;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJ)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p1, p0, Lv53;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lv53;->o:I
 
-    invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/high16 v0, -0x80000000
 
-    move-result-object v1
+    or-int/2addr p1, v0
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    iput p1, p0, Lv53;->o:I
 
-    move-result-object v0
+    iget-object p1, p0, Lv53;->X:Lo53;
 
-    const-string v1, "v53"
+    const/4 v0, 0x0
 
-    const-string v2, "clearChat id=%d, time=%d"
+    invoke-virtual {p1, v0, p0}, Lo53;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-object v0, p0, Lv53;->a:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lub2;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lub2;->o(JJ)V
-
-    iget-object p3, p0, Lv53;->b:Lbp7;
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lara;
-
-    invoke-virtual {p3, p1, p2}, Lara;->d(J)V
-
-    return-void
+    return-object p1
 .end method

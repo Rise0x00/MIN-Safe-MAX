@@ -1,213 +1,125 @@
-.class public abstract Loef;
+.class public final Loef;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
 
+# instance fields
+.field public final a:Lhdf;
 
-# static fields
-.field public static final a:Lnef;
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lhdf;Z)V
+    .locals 0
 
-    new-instance v0, Lnef;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, ""
+    iput-object p1, p0, Loef;->a:Lhdf;
 
-    invoke-direct {v0, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    sput-object v0, Loef;->a:Lnef;
+    iput-boolean p2, p0, Loef;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltde;)Ljava/lang/CharSequence;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b(Landroid/content/Context;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
-    .locals 3
-
-    instance-of v0, p0, Ljef;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Ljef;
-
-    iget v0, v0, Ljef;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 
     :cond_0
-    instance-of v0, p0, Llef;
+    instance-of v1, p1, Loef;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_1
 
-    move-object v0, p0
-
-    check-cast v0, Llef;
-
-    iget-object v2, v0, Llef;->c:Ljava/util/List;
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-interface {v2, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    array-length v2, v1
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget v0, v0, Llef;->b:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return v2
 
     :cond_1
-    instance-of v0, p0, Lfef;
+    check-cast p1, Loef;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Loef;->a:Lhdf;
 
-    move-object v0, p0
+    iget-object v3, p1, Loef;->a:Lhdf;
 
-    check-cast v0, Lfef;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget v1, v0, Lfef;->c:I
+    move-result v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v1, :cond_2
 
-    move-result-object v2
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    iget v0, v0, Lfef;->b:I
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return v2
 
     :cond_2
-    instance-of v0, p0, Lnef;
+    iget-boolean v1, p0, Loef;->b:Z
 
-    if-eqz v0, :cond_3
+    iget-boolean p1, p1, Loef;->b:Z
 
-    move-object p1, p0
+    if-eq v1, p1, :cond_3
 
-    check-cast p1, Lnef;
-
-    iget-object p1, p1, Lnef;->b:Ljava/lang/CharSequence;
-
-    return-object p1
+    return v2
 
     :cond_3
-    instance-of v0, p0, Lhef;
-
-    if-eqz v0, :cond_4
-
-    move-object v0, p0
-
-    check-cast v0, Lhef;
-
-    iget-object v2, v0, Lhef;->o:Ljava/util/List;
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-interface {v2, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    array-length v2, v1
-
-    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget v2, v0, Lhef;->b:I
-
-    iget v0, v0, Lhef;->c:I
-
-    invoke-virtual {p1, v2, v0, v1}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return v0
 .end method
 
-.method public final d(Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Loef;->a:Lhdf;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lhdf;->hashCode()I
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+    iget-boolean v1, p0, Loef;->b:Z
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    return-object p1
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Item(suggest="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Loef;->a:Lhdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fromContacts="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Loef;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

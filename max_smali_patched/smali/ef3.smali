@@ -1,134 +1,61 @@
-.class public final Lef3;
+.class public abstract Lef3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
-
 
 # static fields
-.field public static final b:Lef3;
+.field public static final a:Lcf3;
 
-.field public static final c:Lef3;
+.field public static final b:Ldf3;
 
-
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Ldf3;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lef3;
+    new-instance v0, Lcf3;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lef3;-><init>(I)V
+    sput-object v0, Lef3;->a:Lcf3;
 
-    sput-object v0, Lef3;->b:Lef3;
+    new-instance v0, Ldf3;
 
-    new-instance v0, Lef3;
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1}, Ldf3;-><init>(I)V
+
+    sput-object v0, Lef3;->b:Ldf3;
+
+    new-instance v0, Ldf3;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lef3;-><init>(I)V
+    invoke-direct {v0, v1}, Ldf3;-><init>(I)V
 
-    sput-object v0, Lef3;->c:Lef3;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lef3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Ljava/lang/Object;)V
-    .locals 0
+    sput-object v0, Lef3;->c:Ldf3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getContext()Lw24;
-    .locals 2
-
-    iget v0, p0, Lef3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lv65;->a:Lv65;
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This continuation is already complete"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract a(II)Lef3;
 .end method
 
-.method public final resumeWith(Ljava/lang/Object;)V
-    .locals 1
-
-    iget p1, p0, Lef3;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "This continuation is already complete"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract b(JJ)Lef3;
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 1
+.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lef3;
+.end method
 
-    iget v0, p0, Lef3;->a:I
+.method public abstract d(ZZ)Lef3;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract e(ZZ)Lef3;
+.end method
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "This continuation is already complete"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract f()I
 .end method

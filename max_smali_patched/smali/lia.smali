@@ -1,85 +1,88 @@
 .class public final Llia;
-.super Ljava/lang/Object;
+.super Ljqe;
 .source "SourceFile"
 
 # interfaces
-.implements Lmia;
+.implements Lak6;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lak8;
+
+.field public final b:Lwj6;
+
+.field public final c:Lx1d;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lak8;Lwj6;Lx1d;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Llia;->a:I
+    iput-object p1, p0, Llia;->a:Lak8;
+
+    iput-object p2, p0, Llia;->b:Lwj6;
+
+    iput-object p3, p0, Llia;->c:Lx1d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final b()Leia;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lkia;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llia;
+    iget-object v1, p0, Llia;->c:Lx1d;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    iget-object v3, p0, Llia;->a:Lak8;
 
-    return v2
+    iget-object v4, p0, Llia;->b:Lwj6;
 
-    :cond_1
-    check-cast p1, Llia;
-
-    iget v1, p0, Llia;->a:I
-
-    iget p1, p1, Llia;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Llia;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Resource(iconRes="
-
-    const-string v1, ")"
-
-    iget v2, p0, Llia;->a:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v3, v4, v1, v2}, Lkia;-><init>(Leia;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     return-object v0
+.end method
+
+.method public final l(Lcre;)V
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Llia;->b:Lwj6;
+
+    iget-object v0, v0, Lwj6;->a:Ljava/lang/Object;
+
+    const-string v1, "The initialSupplier returned a null value"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v1, Ljia;
+
+    iget-object v2, p0, Llia;->c:Lx1d;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, p1, v0, v2, v3}, Ljia;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lx1d;I)V
+
+    iget-object p1, p0, Llia;->a:Lak8;
+
+    invoke-virtual {p1, v1}, Leia;->a(Lgla;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lia5;->d(Ljava/lang/Throwable;Lcre;)V
+
+    return-void
 .end method

@@ -23,7 +23,7 @@
         "",
         "w",
         "h",
-        "Loyf;",
+        "Lybg;",
         "onTextureSizeChanged",
         "(II)V",
         "onFrameSizeChanged",

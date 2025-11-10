@@ -21,7 +21,7 @@
         "()V",
         "Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
         "config",
-        "Loyf;",
+        "Lybg;",
         "init",
         "(Lone/me/sdk/media/ffmpeg/WebmConfig$Config;)V",
         "Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
@@ -29,9 +29,9 @@
         "()Lone/me/sdk/media/ffmpeg/WebmConfig$Config;",
         "setConfig",
         "getConfig$annotations",
-        "Lwx9;",
+        "Lp4a;",
         "getLogger",
-        "()Lwx9;",
+        "()Lp4a;",
         "getLogger$annotations",
         "logger",
         "Config",
@@ -95,14 +95,14 @@
     return-void
 .end method
 
-.method public static final getLogger()Lwx9;
+.method public static final getLogger()Lp4a;
     .locals 1
 
     invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getConfig()Lone/me/sdk/media/ffmpeg/WebmConfig$Config;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->getLogger()Lwx9;
+    invoke-virtual {v0}, Lone/me/sdk/media/ffmpeg/WebmConfig$Config;->getLogger()Lp4a;
 
     move-result-object v0
 

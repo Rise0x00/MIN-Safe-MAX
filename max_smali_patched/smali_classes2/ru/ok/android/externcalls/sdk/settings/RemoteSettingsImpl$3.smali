@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lir3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lpmc;)V
+    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lcwc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lwo3;"
+        "Lir3;"
     }
 .end annotation
 
@@ -34,7 +34,7 @@
         "",
         "",
         "settings",
-        "Loyf;",
+        "Lybg;",
         "accept",
         "(Ljava/util/Map;)V",
         "<anonymous>"
@@ -91,7 +91,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$3;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lpmc;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lcwc;
 
     move-result-object v0
 
@@ -115,7 +115,7 @@
 
     const-string v2, "RemoteSettings"
 
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$3;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;

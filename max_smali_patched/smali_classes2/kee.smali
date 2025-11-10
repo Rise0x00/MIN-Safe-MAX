@@ -1,72 +1,63 @@
-.class public abstract Lkee;
-.super Ljava/lang/Object;
+.class public final Lkee;
+.super Lmd0;
 .source "SourceFile"
 
-# interfaces
-.implements Lhd7;
 
-
-# instance fields
-.field public volatile a:Ljava/lang/Object;
+# static fields
+.field public static final b:Lkee;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkee;
 
-    sget-object v0, Lkjd;->b:Ljava/lang/Object;
+    const/16 v1, 0x11
 
-    iput-object v0, p0, Lkee;->a:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lmd0;-><init>(I)V
+
+    sput-object v0, Lkee;->b:Lkee;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(La5;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lkee;->a:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    sget-object v1, Lkjd;->b:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    return-object v0
+    return v0
 
     :cond_0
-    monitor-enter p0
+    instance-of p1, p1, Lkee;
 
-    :try_start_0
-    iget-object v0, p0, Lkee;->a:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    if-eq v0, v1, :cond_1
+    const/4 p1, 0x0
 
-    goto :goto_0
+    return p1
 
     :cond_1
-    invoke-virtual {p0, p1}, Lkee;->b(La5;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lkee;->a:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
+    return v0
 .end method
 
-.method public abstract b(La5;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x48cff30e
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenCachingScreen"
+
+    return-object v0
 .end method

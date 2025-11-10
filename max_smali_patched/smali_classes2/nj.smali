@@ -1,39 +1,57 @@
-.class public final synthetic Lnj;
-.super Ljava/lang/Object;
+.class public final Lnj;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Lc9d;
 
 
 # instance fields
-.field public final synthetic a:Loj;
+.field public X:Ljava/util/ArrayList;
+
+.field public Y:Ljava/util/Map;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lbk;
+
+.field public o:Ljava/util/ArrayList;
+
+.field public final synthetic s0:Lbk;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Loj;)V
+.method public constructor <init>(Lbk;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnj;->s0:Lbk;
 
-    iput-object p1, p0, Lnj;->a:Loj;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lv84;Z)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Lnj;->a:Loj;
+    iput-object p1, p0, Lnj;->Z:Ljava/lang/Object;
 
-    iget-object p1, p1, Loj;->g:Lh45;
+    iget p1, p0, Lnj;->t0:I
 
-    if-eqz p1, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Lh45;->a()V
+    or-int/2addr p1, v0
 
-    :cond_0
-    return-void
+    iput p1, p0, Lnj;->t0:I
+
+    iget-object p1, p0, Lnj;->s0:Lbk;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lbk;->b(Lbk;Lyu;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

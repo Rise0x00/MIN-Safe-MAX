@@ -1,14 +1,23 @@
-.class public abstract Lj45;
+.class public final Lj45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public h(Ljava/lang/Throwable;)V
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(II)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract i()V
+    iput p1, p0, Lj45;->a:I
+
+    iput p2, p0, Lj45;->b:I
+
+    return-void
 .end method

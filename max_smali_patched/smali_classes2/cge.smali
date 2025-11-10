@@ -1,42 +1,42 @@
 .class public final Lcge;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Liqe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# virtual methods
+.method public final z(Li28;)V
+    .locals 4
 
-.field public final synthetic b:Lru/ok/messages/views/widgets/SlideOutLayout;
+    instance-of v0, p1, Ltxd;
 
-
-# direct methods
-.method public constructor <init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
-    .locals 0
-
-    iput-object p1, p0, Lcge;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
-
-    iput p2, p0, Lcge;->a:I
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    if-nez v0, :cond_0
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, Lcge;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
-
-    iget-object p1, p1, Lru/ok/messages/views/widgets/SlideOutLayout;->C0:Ldge;
-
-    if-eqz p1, :cond_0
-
-    iget v0, p0, Lcge;->a:I
-
-    invoke-interface {p1, v0}, Ldge;->I(I)V
 
     :cond_0
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+
+    move-object v1, v0
+
+    check-cast v1, Lnde;
+
+    move-object v2, p1
+
+    check-cast v2, Ltxd;
+
+    iget-wide v2, v2, Ltxd;->d:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    check-cast v0, Lnde;
+
+    check-cast p1, Ldde;
+
+    invoke-virtual {v0, p1}, Lnde;->setModelItem(Ldde;)V
+
     return-void
 .end method

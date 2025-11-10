@@ -1,113 +1,127 @@
-.class public final enum Ll4g;
-.super Ljava/lang/Enum;
+.class public final Ll4g;
+.super Lk4g;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Ll4g;
-
-.field public static final synthetic Y:[Ll4g;
-
-.field public static final enum c:Ll4g;
-
-.field public static final enum o:Ll4g;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public b:Z
 
-.field public final b:I
+.field public c:Ljava/util/Iterator;
+
+.field public d:Z
+
+.field public final synthetic e:Lpu5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Ll4g;
-
-    const-string v1, "TTL_1M"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const-string v4, "1M"
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ll4g;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v0, Ll4g;->c:Ll4g;
-
-    new-instance v1, Ll4g;
-
-    const-string v2, "3M"
-
-    const/4 v4, 0x3
-
-    const-string v5, "TTL_3M"
-
-    invoke-direct {v1, v5, v3, v4, v2}, Ll4g;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v1, Ll4g;->o:Ll4g;
-
-    new-instance v2, Ll4g;
-
-    const-string v3, "6M"
-
-    const/4 v4, 0x6
-
-    const-string v5, "TTL_6M"
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v4, v3}, Ll4g;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v2, Ll4g;->X:Ll4g;
-
-    filled-new-array {v0, v1, v2}, [Ll4g;
-
-    move-result-object v0
-
-    sput-object v0, Ll4g;->Y:[Ll4g;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+.method public constructor <init>(Lpu5;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Ll4g;->e:Lpu5;
 
-    iput-object p4, p0, Ll4g;->a:Ljava/lang/String;
-
-    iput p3, p0, Ll4g;->b:I
+    invoke-direct {p0, p2}, Lp4g;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll4g;
-    .locals 1
 
-    const-class v0, Ll4g;
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Ll4g;->e:Lpu5;
 
-    move-result-object p0
+    iget-object v0, v0, Lpu5;->o:Ly2e;
 
-    check-cast p0, Ll4g;
+    check-cast v0, Lly5;
 
-    return-object p0
-.end method
+    iget-boolean v1, p0, Ll4g;->d:Z
 
-.method public static values()[Ll4g;
-    .locals 1
+    const/4 v2, 0x1
 
-    sget-object v0, Ll4g;->Y:[Ll4g;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, [Ll4g;->clone()Ljava/lang/Object;
+    iget-object v4, p0, Lp4g;->a:Ljava/lang/Object;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Ll4g;->c:Ljava/util/Iterator;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Lly5;->d:Ljava/lang/Object;
+
+    check-cast v1, Lqi6;
+
+    invoke-interface {v1, v4}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-object v3
+
+    :cond_0
+    iget-object v0, v0, Lly5;->c:Lqi6;
+
+    invoke-interface {v0, v4}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Ll4g;
+    check-cast v0, Ly2e;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ly2e;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, v3
+
+    :goto_0
+    iput-object v0, p0, Ll4g;->c:Ljava/util/Iterator;
+
+    if-nez v0, :cond_2
+
+    iput-boolean v2, p0, Ll4g;->d:Z
+
+    :cond_2
+    iget-object v0, p0, Ll4g;->c:Ljava/util/Iterator;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_3
+
+    iget-object v0, p0, Ll4g;->c:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
+
+    :cond_3
+    iget-boolean v0, p0, Ll4g;->b:Z
+
+    if-nez v0, :cond_4
+
+    iput-boolean v2, p0, Ll4g;->b:Z
+
+    return-object v4
+
+    :cond_4
+    return-object v3
 .end method

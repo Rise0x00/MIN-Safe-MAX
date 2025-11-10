@@ -1,80 +1,73 @@
-.class public final Lvwa;
-.super Lm3f;
+.class public abstract Lvwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic Y:Lone/me/geo/view/OneMeSupportMapFragment;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lvwa;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Luxa;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvwa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvwa;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lvwa;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lvwa;
-
-    iget-object v1, p0, Lvwa;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
-
-    invoke-direct {v0, v1, p2}, Lvwa;-><init>(Lone/me/geo/view/OneMeSupportMapFragment;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lvwa;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget v0, Lrlc;->add_8:I
 
-    iget-object p1, p0, Lvwa;->X:Ljava/lang/Object;
+    sput v0, Lvwa;->a:I
 
-    check-cast p1, Luxa;
+    sget v0, Lrlc;->apple_outline_24:I
 
-    iget-object v0, p0, Lvwa;->Y:Lone/me/geo/view/OneMeSupportMapFragment;
+    sput v0, Lvwa;->b:I
 
-    invoke-virtual {v0, p1}, Lone/me/geo/view/OneMeSupportMapFragment;->R0(Luxa;)V
+    sget v0, Lrlc;->ball_outline_24:I
 
-    sget-object p1, Loyf;->a:Loyf;
+    sput v0, Lvwa;->c:I
 
-    return-object p1
+    sget v0, Lrlc;->car_outline_24:I
+
+    sput v0, Lvwa;->d:I
+
+    sget v0, Lrlc;->fire_24:I
+
+    sput v0, Lvwa;->e:I
+
+    sget v0, Lrlc;->flags_outline_24:I
+
+    sput v0, Lvwa;->f:I
+
+    sget v0, Lrlc;->lamp_outline_24:I
+
+    sput v0, Lvwa;->g:I
+
+    sget v0, Lrlc;->paw_outline_24:I
+
+    sput v0, Lvwa;->h:I
+
+    sget v0, Lrlc;->remove_outline_24:I
+
+    sput v0, Lvwa;->i:I
+
+    sget v0, Lrlc;->symbols_outline_24:I
+
+    sput v0, Lvwa;->j:I
+
+    return-void
 .end method

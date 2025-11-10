@@ -18,16 +18,16 @@
         "Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lx61;",
+        "Lm71;",
         "getEventualStatSender",
         "<init>",
-        "(Lve6;)V",
+        "(Loi6;)V",
         "Lorg/webrtc/CandidatePairChangeEvent;",
         "event",
-        "Loyf;",
+        "Lybg;",
         "onSelectedCandidatePairChanged",
         "(Lorg/webrtc/CandidatePairChangeEvent;)V",
-        "Lve6;",
+        "Loi6;",
         "Companion",
         "calls-sdk_release"
     }
@@ -49,32 +49,17 @@
     .end annotation
 .end field
 
-.field public static final KEY_LOCAL_CANDIDATE:Ljava/lang/String; = "local"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 .field public static final KEY_REASON:Ljava/lang/String; = "reason"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final KEY_REMOTE_CANDIDATE:Ljava/lang/String; = "remote"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final KEY_SDP:Ljava/lang/String; = "sdp"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
 
 # instance fields
-.field private final getEventualStatSender:Lve6;
+.field private final getEventualStatSender:Loi6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lve6;"
+            "Loi6;"
         }
     .end annotation
 .end field
@@ -88,26 +73,26 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;-><init>(Lfi4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->Companion:Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lve6;)V
+.method public constructor <init>(Loi6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Loi6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Lve6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Loi6;
 
     return-void
 .end method
@@ -167,13 +152,13 @@
 
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Lve6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Loi6;
 
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lx61;
+    check-cast p1, Lm71;
 
     if-eqz p1, :cond_0
 
@@ -185,11 +170,13 @@
 
     move-result-object v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x0
 
-    const-string v2, "ice_candidates_changed"
+    const/4 v2, 0x4
 
-    invoke-static {p1, v2, v0, v1}, Lx61;->a(Lx61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;I)V
+    const-string v3, "ice_candidates_changed"
+
+    invoke-static {p1, v3, v0, v1, v2}, Lm71;->a(Lm71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void

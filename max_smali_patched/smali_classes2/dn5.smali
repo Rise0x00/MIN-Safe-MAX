@@ -1,32 +1,42 @@
-.class public final synthetic Ldn5;
+.class public final Ldn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
+.implements Li28;
+
+
+# static fields
+.field public static final a:Ldn5;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ldn5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ldn5;->a:Ldn5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final load(Ljava/lang/String;)V
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    :try_start_0
-    const-string p1, "ffmpg"
+    sget v0, Lwwa;->r:I
 
-    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lwx9;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lwx9;->q(Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method

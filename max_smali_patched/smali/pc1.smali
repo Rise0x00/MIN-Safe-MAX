@@ -1,240 +1,145 @@
 .class public final Lpc1;
-.super Lm3f;
+.super Ltc1;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput-object p2, p0, Lpc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lpc1;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpc1;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lpc1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lpc1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lpc1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v1, p0, Lpc1;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, p2}, Lpc1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lpc1;->a:Ljava/lang/CharSequence;
 
-    return-object p2
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpc1;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lpc1;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v0, Lpc1;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lpc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    iget-object v1, p0, Lpc1;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {v0, p2, v1}, Lpc1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+    if-nez v1, :cond_0
 
-    iput-object p1, v0, Lpc1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lpc1;->X:Ljava/lang/Object;
-
-    check-cast v1, Lcc1;
-
-    iget-object v2, v0, Lpc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:Lmqc;
-
-    sget-object v4, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0:[Ltm7;
-
-    const/4 v5, 0x6
-
-    aget-object v4, v4, v5
-
-    invoke-interface {v3, v2, v4}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lhr1;
-
-    iget-object v4, v1, Lcc1;->a:Lqd0;
-
-    invoke-virtual {v3, v4}, Lhr1;->setAvatar(Lqd0;)V
-
-    iget-object v4, v1, Lcc1;->c:Lve8;
-
-    sget-object v5, Lve8;->b:Lve8;
-
-    if-ne v4, v5, :cond_0
-
-    sget-object v6, Lo4g;->b:Lo4g;
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    sget-object v6, Lo4g;->o:Lo4g;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    invoke-virtual {v3, v6}, Lhr1;->setButtonAction(Lo4g;)V
+    mul-int/lit8 v1, v1, 0x1f
 
-    if-ne v4, v5, :cond_1
+    iget-object v2, p0, Lpc1;->b:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    if-nez v2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 v4, 0x0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     :goto_1
-    iget-boolean v5, v1, Lcc1;->d:Z
+    add-int/2addr v1, v0
 
-    invoke-virtual {v3, v4, v5}, Lhr1;->F(ZZ)V
+    return v1
+.end method
 
-    const/4 v4, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v3, v4, v4}, Lhr1;->G(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Landroid/widget/TextView;
+    const-string v1, "Name(name="
 
-    move-result-object v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, v1, Lcc1;->e:Loef;
+    iget-object v1, p0, Lpc1;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    const-string v1, ", accessibility="
 
-    invoke-virtual {v4, v5}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    iget-object v1, p0, Lpc1;->b:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->B0()Lt7d;
+    const-string v1, ")"
 
-    move-result-object v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
-
-    move-object v7, v3
-
-    check-cast v7, Landroid/graphics/drawable/Drawable;
-
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->B0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v6, v3
-
-    check-cast v6, Landroid/graphics/drawable/Drawable;
-
-    iget-object v8, v1, Lcc1;->b:Lve8;
-
-    sget v3, Luic;->call_microphone_enabled_accessibility:I
-
-    new-instance v9, Ljef;
-
-    invoke-direct {v9, v3}, Ljef;-><init>(I)V
-
-    sget v3, Luic;->call_microphone_disabled_accessibility:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v3}, Ljef;-><init>(I)V
-
-    invoke-static/range {v5 .. v10}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0(Lt7d;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lve8;Ljef;Ljef;)V
-
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->E0()Lt7d;
-
-    move-result-object v11
-
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v13, v3
-
-    check-cast v13, Landroid/graphics/drawable/Drawable;
-
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v12, v3
-
-    check-cast v12, Landroid/graphics/drawable/Drawable;
-
-    iget-object v14, v1, Lcc1;->c:Lve8;
-
-    sget v3, Luic;->call_video_enabled_accessibility:I
-
-    new-instance v15, Ljef;
-
-    invoke-direct {v15, v3}, Ljef;-><init>(I)V
-
-    sget v3, Luic;->call_video_disabled_accessibility:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, v3}, Ljef;-><init>(I)V
-
-    move-object/from16 v16, v4
-
-    invoke-static/range {v11 .. v16}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0(Lt7d;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lve8;Ljef;Ljef;)V
-
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lfwa;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lcc1;->f:Ljava/util/List;
-
-    invoke-virtual {v2, v3}, Lfwa;->setAvatars(Ljava/util/List;)V
-
-    iget-object v1, v1, Lcc1;->g:Loef;
-
-    invoke-virtual {v2, v1}, Lfwa;->setTitle(Loef;)V
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    return-object v1
+    return-object v0
 .end method

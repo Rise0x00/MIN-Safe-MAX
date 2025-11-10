@@ -1,85 +1,51 @@
 .class public final Lchd;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic X:Ldhd;
 
-.field public final synthetic b:F
+.field public Y:I
+
+.field public d:Ldhd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;F)V
+.method public constructor <init>(Ldhd;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lchd;->X:Ldhd;
 
-    iput-object p1, p0, Lchd;->a:Landroid/view/View;
-
-    iput p2, p0, Lchd;->b:F
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iput-object p1, p0, Lchd;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lchd;->Y:I
 
-    check-cast v0, Ljava/lang/Float;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    or-int/2addr p1, v0
 
-    move-result v0
+    iput p1, p0, Lchd;->Y:I
 
-    iget-object v1, p0, Lchd;->a:Landroid/view/View;
+    iget-object p1, p0, Lchd;->X:Ldhd;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    const-wide/16 v0, 0x0
 
-    iget v0, p0, Lchd;->b:F
+    invoke-virtual {p1, v0, v1, p0}, Ldhd;->l(JLp14;)Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    cmpg-float v3, v0, v2
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    sub-float/2addr v2, v0
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result v0
-
-    cmpl-float v0, v0, v2
-
-    if-ltz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    int-to-float v0, v0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result p1
-
-    sub-float/2addr v0, p1
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

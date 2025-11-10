@@ -1,41 +1,99 @@
-.class public abstract Loed;
-.super Lpc5;
+.class public final Loed;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lref;
 
 
 # instance fields
-.field public a:Ld34;
+.field public final a:Ljava/util/Set;
+
+.field public b:Lref;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loed;->a:Ljava/util/Set;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Loed;->b:Lref;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final dispatch(Lw24;Ljava/lang/Runnable;)V
-    .locals 1
+.method public final a(Lref;)V
+    .locals 3
 
-    iget-object p1, p0, Loed;->a:Ld34;
+    iput-object p1, p0, Loed;->b:Lref;
 
-    const/4 v0, 0x6
+    iget-object v0, p0, Loed;->a:Ljava/util/Set;
 
-    invoke-static {p1, p2, v0}, Ld34;->o(Ld34;Ljava/lang/Runnable;I)V
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lned;
+
+    invoke-virtual {v1}, Lr0;->g()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1, p1}, Lned;->p(Lref;)V
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
-.method public final dispatchYield(Lw24;Ljava/lang/Runnable;)V
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    iget-object p1, p0, Loed;->a:Ld34;
+    new-instance v0, Lned;
 
-    const/4 v0, 0x2
+    invoke-direct {v0}, Lr0;-><init>()V
 
-    invoke-static {p1, p2, v0}, Ld34;->o(Ld34;Ljava/lang/Runnable;I)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    iput-object v1, v0, Lned;->h:Lr0;
 
-.method public final n()Ljava/util/concurrent/Executor;
-    .locals 1
+    iget-object v1, p0, Loed;->b:Lref;
 
-    iget-object v0, p0, Loed;->a:Ld34;
+    invoke-virtual {v0, v1}, Lned;->p(Lref;)V
+
+    iget-object v1, p0, Loed;->a:Ljava/util/Set;
+
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-object v0
 .end method

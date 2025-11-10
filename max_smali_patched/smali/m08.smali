@@ -1,79 +1,78 @@
-.class public final Lm08;
+.class public final synthetic Lm08;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw47;
+.implements Loi6;
 
 
-# static fields
-.field public static final a:Lm08;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:[B
+.field public final synthetic b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
+    .locals 0
 
-    new-instance v0, Lm08;
+    iput p2, p0, Lm08;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lm08;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
-    sput-object v0, Lm08;->a:Lm08;
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lm08;->b:[B
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :array_0
-    .array-data 1
-        0x3t
-        0x0t
-        0x8t
-        0x0t
-    .end array-data
 .end method
 
 
 # virtual methods
-.method public final a(I[B)Lx47;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x4
+    iget v0, p0, Lm08;->a:I
 
-    if-lt p1, v0, :cond_0
+    iget-object v1, p0, Lm08;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
-    sget-object p1, Lm08;->b:[B
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->d:I
 
-    invoke-static {p2, p1, v0}, Lnu3;->l([B[BI)Z
+    invoke-virtual {v1}, Lc24;->getRouter()Lyid;
 
-    move-result p1
+    move-result-object v0
 
-    if-eqz p1, :cond_0
+    return-object v0
 
-    sget-object p1, Lps;->b:Lx47;
+    :pswitch_0
+    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->d:I
 
-    return-object p1
+    new-instance v0, Lii1;
 
-    :cond_0
-    sget-object p1, Lx47;->c:Lx47;
+    new-instance v2, Lm08;
 
-    return-object p1
-.end method
+    const/4 v3, 0x1
 
-.method public final b()I
-    .locals 1
+    invoke-direct {v2, v1, v3}, Lm08;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
 
-    const/4 v0, 0x4
+    new-instance v3, Ltif;
 
-    return v0
+    invoke-direct {v3, v2}, Ltif;-><init>(Loi6;)V
+
+    new-instance v2, Lamh;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v1, v4}, Lamh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-direct {v0, v3, v2}, Lii1;-><init>(Ltif;Lamh;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

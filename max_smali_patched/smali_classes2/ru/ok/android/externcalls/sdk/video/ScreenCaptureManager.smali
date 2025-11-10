@@ -14,7 +14,7 @@
         "",
         "enabled",
         "isFastScreenShareEnabled",
-        "Loyf;",
+        "Lybg;",
         "setScreenCaptureEnabled",
         "(ZZ)V",
         "setAudioCaptureEnabled",

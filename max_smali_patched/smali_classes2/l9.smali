@@ -1,162 +1,104 @@
 .class public final Ll9;
-.super Lm3f;
+.super Li94;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final v0:J
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
+.field public final w0:Ljava/lang/String;
+
+.field public final x0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lone/me/profile/screens/addadmins/AddChatAdminsScreen;)V
     .locals 0
 
-    iput-object p2, p0, Ll9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
+    invoke-direct {p0, p5}, Li94;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Ll9;->v0:J
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ll9;->w0:Ljava/lang/String;
+
+    iput-object p4, p0, Ll9;->x0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final E(Lyid;I)V
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Lyid;->n()Z
 
-    invoke-virtual {p0, p1, p2}, Ll9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Ll9;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ll9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ll9;
-
-    iget-object v1, p0, Ll9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Ll9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;)V
-
-    iput-object p1, v0, Ll9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ll9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lqv7;
-
-    iget-object v0, p1, Lqv7;->b:Loef;
-
-    iget-object v1, p0, Ll9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->N0()Lrxa;
+    iget-object v0, p0, Ll9;->x0:Ljava/util/List;
 
-    move-result-object v2
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v0
+    check-cast p2, Lm9;
 
-    sget-object v3, Loxa;->a:Loxa;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, v0, v3}, Lrxa;->h(Ljava/lang/String;Loxa;)V
+    new-instance v1, Lone/me/members/list/MembersListWidget;
 
-    goto :goto_1
+    new-instance p2, Ls59;
 
-    :cond_1
-    :goto_0
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->N0()Lrxa;
+    sget-object v0, Lco2;->b:Lco2;
 
-    move-result-object v0
+    const/16 v2, 0xc
 
-    invoke-virtual {v0}, Lrxa;->e()V
+    iget-wide v3, p0, Ll9;->v0:J
 
-    :goto_1
-    iget-object v0, v1, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->A0:Lmqc;
+    invoke-direct {p2, v3, v4, v0, v2}, Ls59;-><init>(JLco2;I)V
 
-    sget-object v2, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->D0:[Ltm7;
+    const/4 v0, 0x0
 
-    const/4 v3, 0x2
+    iget-object v2, p0, Ll9;->w0:Ljava/lang/String;
 
-    aget-object v2, v2, v3
+    invoke-direct {v1, v2, p2, v0}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Ls59;Lfi4;)V
 
-    invoke-interface {v0, v1, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    sget-object p2, Lb24;->b:Lb24;
 
-    move-result-object v0
+    invoke-virtual {v1, p2}, Lc24;->setRetainViewMode(Lb24;)V
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance v0, Lbjd;
 
-    iget-object v1, p1, Lqv7;->a:Ljava/lang/String;
+    const/4 v5, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const/4 v6, -0x1
 
-    move-result v1
+    const/4 v2, 0x0
 
-    if-lez v1, :cond_2
+    const/4 v3, 0x0
 
-    iget-object p1, p1, Lqv7;->b:Loef;
+    const/4 v4, 0x0
 
-    sget-object v1, Loef;->a:Lnef;
+    invoke-direct/range {v0 .. v6}, Lbjd;-><init>(Lc24;Ljava/lang/String;Lh24;Lh24;ZI)V
 
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Lyid;->S(Lbjd;)V
 
-    move-result p1
+    return-void
+.end method
 
-    if-eqz p1, :cond_2
+.method public final j()I
+    .locals 1
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Ll9;->x0:Ljava/util/List;
 
-    goto :goto_2
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    :cond_2
-    const/4 p1, 0x0
+    move-result v0
 
-    :goto_2
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return v0
 .end method

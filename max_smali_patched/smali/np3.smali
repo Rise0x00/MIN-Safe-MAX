@@ -1,80 +1,147 @@
-.class public final synthetic Lnp3;
-.super Ljava/lang/Object;
+.class public final Lnp3;
+.super Lh4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnp3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:[I
 
-.field public final synthetic b:Lxe6;
+.field public final a:Lwhd;
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:[I
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILxe6;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, La1i;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, La1i;-><init>(I)V
+
+    sput-object v0, Lnp3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwhd;ZZ[II[I)V
     .locals 0
 
-    iput p1, p0, Lnp3;->a:I
-
-    iput-object p2, p0, Lnp3;->b:Lxe6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnp3;->a:Lwhd;
+
+    iput-boolean p2, p0, Lnp3;->b:Z
+
+    iput-boolean p3, p0, Lnp3;->c:Z
+
+    iput-object p4, p0, Lnp3;->d:[I
+
+    iput p5, p0, Lnp3;->o:I
+
+    iput-object p6, p0, Lnp3;->X:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget p1, p0, Lnp3;->a:I
+    const/16 v0, 0x4f45
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {p1, v0}, Luxi;->k(Landroid/os/Parcel;I)I
 
-    iget-object p1, p0, Lnp3;->b:Lxe6;
+    move-result v0
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    const/4 v1, 0x1
 
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Lnp3;->a:Lwhd;
+
+    invoke-static {p1, v1, v2, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/4 p2, 0x2
+
+    const/4 v1, 0x4
+
+    invoke-static {p1, p2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Lnp3;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p2, 0x3
+
+    invoke-static {p1, p2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Lnp3;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lnp3;->d:[I
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1, v1}, Luxi;->k(Landroid/os/Parcel;I)I
+
+    move-result v2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-static {p1, v2}, Luxi;->l(Landroid/os/Parcel;I)V
+
+    :goto_0
+    const/4 p2, 0x5
+
+    invoke-static {p1, p2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+
+    iget p2, p0, Lnp3;->o:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lnp3;->X:[I
+
+    if-nez p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x6
+
+    invoke-static {p1, v1}, Luxi;->k(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-static {p1, v1}, Luxi;->l(Landroid/os/Parcel;I)V
+
+    :goto_1
+    invoke-static {p1, v0}, Luxi;->l(Landroid/os/Parcel;I)V
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lnp3;->b:Lxe6;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lnp3;->b:Lxe6;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lnp3;->b:Lxe6;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

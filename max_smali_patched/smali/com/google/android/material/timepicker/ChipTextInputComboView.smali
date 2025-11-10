@@ -24,7 +24,7 @@
 
     move-result-object p1
 
-    sget p2, Ldhc;->material_time_chip:I
+    sget p2, Lnqc;->material_time_chip:I
 
     invoke-virtual {p1, p2, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -38,7 +38,7 @@
 
     invoke-virtual {p2, v1}, Lcom/google/android/material/chip/Chip;->setAccessibilityClassName(Ljava/lang/CharSequence;)V
 
-    sget v1, Ldhc;->material_time_input:I
+    sget v1, Lnqc;->material_time_input:I
 
     invoke-virtual {p1, v1, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget p1, Lodc;->material_label:I
+    sget p1, Lxmc;->material_label:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -92,7 +92,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    sget-object p2, Lskg;->a:Ljava/util/WeakHashMap;
+    sget-object p2, Ltyg;->a:Ljava/util/WeakHashMap;
 
     invoke-static {}, Landroid/view/View;->generateViewId()I
 
@@ -239,11 +239,11 @@
 
     invoke-virtual {v3}, Landroid/view/View;->requestFocus()Z
 
-    new-instance p1, Leg;
+    new-instance p1, Lug;
 
-    const/4 v0, 0x7
+    const/4 v0, 0x5
 
-    invoke-direct {p1, v3, v0}, Leg;-><init>(Landroid/view/View;I)V
+    invoke-direct {p1, v3, v0}, Lug;-><init>(Landroid/view/View;I)V
 
     invoke-virtual {v3, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

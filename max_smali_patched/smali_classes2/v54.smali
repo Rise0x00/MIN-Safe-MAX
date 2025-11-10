@@ -1,150 +1,100 @@
 .class public final Lv54;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final b:Lv54;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:La64;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(La64;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lv54;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lv54;-><init>(I)V
+
+    sput-object v0, Lv54;->b:Lv54;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lv54;->Y:La64;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lv54;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Le34;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lv54;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lv54;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lv54;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lv54;
-
-    iget-object v0, p0, Lv54;->Y:La64;
-
-    invoke-direct {p1, v0, p2}, Lv54;-><init>(La64;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lv54;->Y:La64;
-
-    iget-object v1, v0, La64;->z0:Lrt9;
-
-    iget v2, p0, Lv54;->X:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    sget-object v5, Lf34;->a:Lf34;
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v4, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lv54;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lv54;
 
-    goto :goto_0
+    iget v1, p0, Lv54;->a:I
+
+    iget p1, p1, Lv54;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    invoke-virtual {v0}, La64;->H()Lq5d;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    iget v0, p0, Lv54;->a:I
 
-    iput v4, p0, Lv54;->X:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v2, p1, Lq5d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    move-result v0
 
-    new-instance v4, Lkgb;
+    return v0
+.end method
 
-    const/16 v6, 0xe
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-direct {v4, v6, p1}, Lkgb;-><init>(ILjava/lang/Object;)V
+    const-string v0, "Counter(count="
 
-    invoke-static {v2, v4, p0}, Lbf0;->I(Lx5d;Lxe6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v1, ")"
 
-    move-result-object p1
+    iget v2, p0, Lv54;->a:I
 
-    if-ne p1, v5, :cond_3
+    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_3
-    :goto_0
-    invoke-virtual {v1}, Lrt9;->d()V
-
-    iget-object p1, v0, La64;->A0:Le8e;
-
-    iput v3, p0, Lv54;->X:I
-
-    invoke-virtual {p1, v1, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_4
-
-    :goto_1
-    return-object v5
-
-    :cond_4
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

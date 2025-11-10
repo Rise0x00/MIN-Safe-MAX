@@ -1,48 +1,78 @@
-.class public final Lvr3;
-.super Lnz3;
+.class public final synthetic Lvr3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lkz;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Lxr3;
 
 
 # direct methods
-.method public constructor <init>(Lkz;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lxr3;I)V
     .locals 0
 
-    iput-object p1, p0, Lvr3;->Y:Lkz;
+    iput p3, p0, Lvr3;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvr3;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Lvr3;->c:Lxr3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lvr3;->o:Ljava/lang/Object;
+    iget v0, p0, Lvr3;->a:I
 
-    iget p1, p0, Lvr3;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lvr3;->b:Landroid/content/Context;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lvr3;->c:Lxr3;
 
-    iput p1, p0, Lvr3;->X:I
+    invoke-static {v0, v1}, Lxr3;->v(Landroid/content/Context;Lxr3;)Landroid/widget/ImageView;
 
-    iget-object p1, p0, Lvr3;->Y:Lkz;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    return-object v0
 
-    invoke-virtual {p1, v0, p0}, Lkz;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lvr3;->b:Landroid/content/Context;
 
-    move-result-object p1
+    iget-object v1, p0, Lvr3;->c:Lxr3;
 
-    return-object p1
+    invoke-static {v0, v1}, Lxr3;->x(Landroid/content/Context;Lxr3;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lvr3;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Lvr3;->c:Lxr3;
+
+    invoke-static {v0, v1}, Lxr3;->w(Landroid/content/Context;Lxr3;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

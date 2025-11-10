@@ -1,188 +1,144 @@
-.class public final Lplf;
+.class public final synthetic Lplf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(IIIII)V
+.method public synthetic constructor <init>(I)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lplf;->a:I
 
-    iput p2, p0, Lplf;->b:I
-
-    iput p3, p0, Lplf;->c:I
-
-    iput p4, p0, Lplf;->d:I
-
-    iput p5, p0, Lplf;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lplf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lplf;
-
     iget v0, p0, Lplf;->a:I
 
-    iget v1, p1, Lplf;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v0, v1, :cond_2
+    check-cast p1, Ltkh;
 
-    goto :goto_0
+    check-cast p2, Ltkh;
 
-    :cond_2
-    iget v0, p0, Lplf;->b:I
+    iget-wide v0, p1, Ltkh;->b:J
 
-    iget v1, p1, Lplf;->b:I
+    iget-wide p1, p2, Ltkh;->b:J
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Long;->compare(JJ)I
 
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lplf;->c:I
-
-    iget v1, p1, Lplf;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lplf;->d:I
-
-    iget v1, p1, Lplf;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lplf;->e:I
-
-    iget p1, p1, Lplf;->e:I
-
-    if-eq v0, p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
+    move-result p1
 
     return p1
 
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
+    :pswitch_0
+    check-cast p1, Lskh;
+
+    check-cast p2, Lskh;
+
+    iget-wide v0, p1, Lskh;->b:J
+
+    iget-wide p1, p2, Lskh;->b:J
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p1
 
     return p1
-.end method
 
-.method public final hashCode()I
-    .locals 3
+    :pswitch_1
+    check-cast p1, Lvkh;
 
-    iget v0, p0, Lplf;->a:I
+    check-cast p2, Lvkh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object p1, p1, Lvkh;->a:Lxkh;
 
-    move-result v0
+    iget p1, p1, Lxkh;->b:I
 
-    const/16 v1, 0x1f
+    iget-object p2, p2, Lvkh;->a:Lxkh;
 
-    mul-int/2addr v0, v1
+    iget p2, p2, Lxkh;->b:I
 
-    iget v2, p0, Lplf;->b:I
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    move-result p1
 
-    move-result v0
+    return p1
 
-    iget v2, p0, Lplf;->c:I
+    :pswitch_2
+    check-cast p1, Lukh;
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    check-cast p2, Lukh;
 
-    move-result v0
+    iget-object p1, p1, Lukh;->a:Lwkh;
 
-    iget v2, p0, Lplf;->d:I
+    iget p1, p1, Lwkh;->b:I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    iget-object p2, p2, Lukh;->a:Lwkh;
 
-    move-result v0
+    iget p2, p2, Lwkh;->b:I
 
-    iget v1, p0, Lplf;->e:I
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    move-result p1
 
-    move-result v1
+    return p1
 
-    add-int/2addr v1, v0
+    :pswitch_3
+    check-cast p1, La1g;
 
-    return v1
-.end method
+    check-cast p2, La1g;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget p1, p1, La1g;->X:I
 
-    const-string v0, ", contrastStatic="
+    iget p2, p2, La1g;->X:I
 
-    const-string v1, ", primary="
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
 
-    const-string v2, "TopbarTextDisabledColors(contrast="
+    move-result p1
 
-    iget v3, p0, Lplf;->a:I
+    return p1
 
-    iget v4, p0, Lplf;->b:I
+    :pswitch_4
+    check-cast p1, Lbkb;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Lbkb;
 
-    move-result-object v0
+    invoke-virtual {p2}, Lbkb;->c()Ljava/lang/String;
 
-    const-string v1, ", secondary="
+    move-result-object p2
 
-    const-string v2, ", themed="
+    invoke-virtual {p1}, Lbkb;->c()Ljava/lang/String;
 
-    iget v3, p0, Lplf;->c:I
+    move-result-object p1
 
-    iget v4, p0, Lplf;->d:I
+    invoke-virtual {p2, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    move-result p1
 
-    const-string v1, ")"
+    return p1
 
-    iget v2, p0, Lplf;->e:I
+    nop
 
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

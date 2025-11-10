@@ -1,62 +1,213 @@
-.class public abstract Lpbc;
-.super Ljava/lang/Object;
+.class public final Lpbc;
+.super Lvbc;
+.source "SourceFile"
 
 
-# static fields
-.field public static activity_horizontal_margin:I = 0x7f070051
+# instance fields
+.field public final a:Lnrf;
 
-.field public static activity_vertical_margin:I = 0x7f070052
+.field public final b:Lnrf;
 
-.field public static avatar_large:I = 0x7f070057
+.field public final c:Ljava/util/List;
 
-.field public static avatar_medium:I = 0x7f070058
+.field public final d:Landroid/os/Bundle;
 
-.field public static avatar_small:I = 0x7f070059
 
-.field public static folder_filter_item_height:I = 0x7f0700fd
+# direct methods
+.method public constructor <init>(Lnrf;Lnrf;Ljava/util/List;Landroid/os/Bundle;)V
+    .locals 0
 
-.field public static font_large:I = 0x7f0700ff
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static font_larger:I = 0x7f070100
+    iput-object p1, p0, Lpbc;->a:Lnrf;
 
-.field public static font_medium:I = 0x7f070101
+    iput-object p2, p0, Lpbc;->b:Lnrf;
 
-.field public static font_normal:I = 0x7f070102
+    iput-object p3, p0, Lpbc;->c:Ljava/util/List;
 
-.field public static font_normal_subtitle:I = 0x7f070103
+    iput-object p4, p0, Lpbc;->d:Landroid/os/Bundle;
 
-.field public static font_only_emoji:I = 0x7f070104
+    return-void
+.end method
 
-.field public static font_small:I = 0x7f070105
 
-.field public static font_smaller:I = 0x7f070106
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static font_subtitle:I = 0x7f070107
+    const/4 v0, 0x1
 
-.field public static font_toolbar_subtitle:I = 0x7f070108
+    if-ne p0, p1, :cond_0
 
-.field public static font_toolbar_title:I = 0x7f070109
+    return v0
 
-.field public static font_very_small:I = 0x7f07010a
+    :cond_0
+    instance-of v1, p1, Lpbc;
 
-.field public static huge_horizontal_margin:I = 0x7f07011f
+    const/4 v2, 0x0
 
-.field public static match_parent:I = 0x7f0702aa
+    if-nez v1, :cond_1
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+    return v2
 
-.field public static progress_bar_small:I = 0x7f0703ef
+    :cond_1
+    check-cast p1, Lpbc;
 
-.field public static rounded_button_margin:I = 0x7f0703f6
+    iget-object v1, p0, Lpbc;->a:Lnrf;
 
-.field public static small_vertical_margin:I = 0x7f070400
+    iget-object v3, p1, Lpbc;->a:Lnrf;
 
-.field public static spacing_normal:I = 0x7f070401
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static spacing_small:I = 0x7f07040b
+    move-result v1
 
-.field public static spacing_tiny:I = 0x7f07040c
+    if-nez v1, :cond_2
 
-.field public static tiny_vertical_margin:I = 0x7f07041e
+    return v2
 
-.field public static wrap_content:I = 0x7f070429
+    :cond_2
+    iget-object v1, p0, Lpbc;->b:Lnrf;
+
+    iget-object v3, p1, Lpbc;->b:Lnrf;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lpbc;->c:Ljava/util/List;
+
+    iget-object v3, p1, Lpbc;->c:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lpbc;->d:Landroid/os/Bundle;
+
+    iget-object p1, p1, Lpbc;->d:Landroid/os/Bundle;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lpbc;->a:Lnrf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lpbc;->b:Lnrf;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lpbc;->c:Ljava/util/List;
+
+    invoke-static {v3, v0, v1}, Lijf;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lpbc;->d:Landroid/os/Bundle;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmationBottomSheet(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpbc;->a:Lnrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpbc;->b:Lnrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpbc;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", payload="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpbc;->d:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

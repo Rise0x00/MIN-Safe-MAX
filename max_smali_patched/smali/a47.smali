@@ -1,43 +1,244 @@
 .class public final La47;
-.super Lz37;
+.super Lpof;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Lv57;)Lt57;
+# instance fields
+.field public final synthetic e:I
+
+.field public final synthetic f:Ld47;
+
+.field public final synthetic g:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ld47;II)V
     .locals 0
 
-    invoke-interface {p1}, Lv57;->o()Lt57;
+    const/4 p4, 0x2
 
-    move-result-object p1
+    iput p4, p0, La47;->e:I
 
-    return-object p1
-.end method
+    iput-object p2, p0, La47;->f:Ld47;
 
-.method public final c()V
-    .locals 0
+    iput p3, p0, La47;->g:I
+
+    const/4 p2, 0x1
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lpof;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public final f(Lt57;)V
+.method public constructor <init>(Ljava/lang/String;Ld47;ILjava/util/List;)V
+    .locals 0
+
+    const/4 p4, 0x1
+
+    iput p4, p0, La47;->e:I
+
+    iput-object p2, p0, La47;->f:Ld47;
+
+    iput p3, p0, La47;->g:I
+
+    const/4 p2, 0x1
+
+    .line 2
+    invoke-direct {p0, p1, p2}, Lpof;-><init>(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ld47;ILjava/util/List;Z)V
+    .locals 0
+
+    const/4 p4, 0x0
+
+    iput p4, p0, La47;->e:I
+
+    iput-object p2, p0, La47;->f:Ld47;
+
+    iput p3, p0, La47;->g:I
+
+    const/4 p2, 0x1
+
+    .line 3
+    invoke-direct {p0, p1, p2}, Lpof;-><init>(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
     .locals 3
 
-    invoke-virtual {p0, p1}, Lz37;->b(Lt57;)Ljx7;
+    iget v0, p0, La47;->e:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lf7d;
+    iget-object v0, p0, La47;->f:Ld47;
 
-    const/16 v2, 0x12
+    iget-object v0, v0, Ld47;->u0:Lqtd;
 
-    invoke-direct {v1, v2, p1}, Lf7d;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lvb4;->j()Lgr4;
+    iget-object v0, p0, La47;->f:Ld47;
 
-    move-result-object p1
+    monitor-enter v0
 
-    invoke-static {v0, v1, p1}, Lpch;->b(Ljx7;Llg6;Ljava/util/concurrent/Executor;)V
+    :try_start_0
+    iget-object v1, p0, La47;->f:Ld47;
 
-    return-void
+    iget-object v1, v1, Ld47;->I0:Ljava/util/LinkedHashSet;
+
+    iget v2, p0, La47;->g:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, La47;->f:Ld47;
+
+    iget-object v0, v0, Ld47;->u0:Lqtd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_1
+    iget-object v0, p0, La47;->f:Ld47;
+
+    iget-object v0, v0, Ld47;->G0:Ll47;
+
+    iget v1, p0, La47;->g:I
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Ll47;->P(II)V
+
+    iget-object v0, p0, La47;->f:Ld47;
+
+    monitor-enter v0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :try_start_2
+    iget-object v1, p0, La47;->f:Ld47;
+
+    iget-object v1, v1, Ld47;->I0:Ljava/util/LinkedHashSet;
+
+    iget v2, p0, La47;->g:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    :catch_0
+    :goto_0
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :pswitch_1
+    iget-object v0, p0, La47;->f:Ld47;
+
+    iget-object v0, v0, Ld47;->u0:Lqtd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_4
+    iget-object v0, p0, La47;->f:Ld47;
+
+    iget-object v0, v0, Ld47;->G0:Ll47;
+
+    iget v1, p0, La47;->g:I
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Ll47;->P(II)V
+
+    iget-object v0, p0, La47;->f:Ld47;
+
+    monitor-enter v0
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+
+    :try_start_5
+    iget-object v1, p0, La47;->f:Ld47;
+
+    iget-object v1, v1, Ld47;->I0:Ljava/util/LinkedHashSet;
+
+    iget v2, p0, La47;->g:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :try_start_6
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
+
+    :catch_1
+    :goto_1
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

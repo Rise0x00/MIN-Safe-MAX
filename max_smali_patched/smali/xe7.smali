@@ -1,73 +1,213 @@
 .class public final Lxe7;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liyd;
 
 
 # instance fields
-.field public final synthetic X:Llf6;
+.field public final a:Lv25;
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public final b:Lv25;
 
-.field public o:I
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lw24;Llf6;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(J[J[J)V
+    .locals 6
 
-    iput-object p3, p0, Lxe7;->X:Llf6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lxe7;->Y:Ljava/lang/Object;
+    array-length v0, p3
 
-    invoke-direct {p0, p2, p1}, Lnz3;-><init>(Lw24;Lkotlin/coroutines/Continuation;)V
+    array-length v1, p4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {v0}, Ligi;->c(Z)V
+
+    array-length v0, p4
+
+    if-lez v0, :cond_1
+
+    aget-wide v1, p4, v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v1, v1, v4
+
+    if-lez v1, :cond_1
+
+    new-instance v1, Lv25;
+
+    add-int/2addr v0, v3
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, v2}, Lv25;-><init>(II)V
+
+    iput-object v1, p0, Lxe7;->a:Lv25;
+
+    new-instance v2, Lv25;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v3}, Lv25;-><init>(II)V
+
+    iput-object v2, p0, Lxe7;->b:Lv25;
+
+    invoke-virtual {v1, v4, v5}, Lv25;->a(J)V
+
+    invoke-virtual {v2, v4, v5}, Lv25;->a(J)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Lv25;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, v2}, Lv25;-><init>(II)V
+
+    iput-object v1, p0, Lxe7;->a:Lv25;
+
+    new-instance v1, Lv25;
+
+    invoke-direct {v1, v0, v2}, Lv25;-><init>(II)V
+
+    iput-object v1, p0, Lxe7;->b:Lv25;
+
+    :goto_1
+    iget-object v0, p0, Lxe7;->a:Lv25;
+
+    invoke-virtual {v0, p3}, Lv25;->b([J)V
+
+    iget-object p3, p0, Lxe7;->b:Lv25;
+
+    invoke-virtual {p3, p4}, Lv25;->b([J)V
+
+    iput-wide p1, p0, Lxe7;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final c()Z
+    .locals 1
 
-    iget v0, p0, Lxe7;->o:I
+    iget-object v0, p0, Lxe7;->b:Lv25;
 
-    const/4 v1, 0x2
+    iget v0, v0, Lv25;->b:I
 
-    const/4 v2, 0x1
+    if-lez v0, :cond_0
 
-    if-eqz v0, :cond_1
+    const/4 v0, 0x1
 
-    if-ne v0, v2, :cond_0
+    return v0
 
-    iput v1, p0, Lxe7;->o:I
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    return v0
+.end method
+
+.method public final e(J)Lgyd;
+    .locals 8
+
+    iget-object v0, p0, Lxe7;->b:Lv25;
+
+    iget v1, v0, Lv25;->b:I
+
+    if-nez v1, :cond_0
+
+    new-instance p1, Lgyd;
+
+    sget-object p2, Lmyd;->c:Lmyd;
+
+    invoke-direct {p1, p2, p2}, Lgyd;-><init>(Lmyd;Lmyd;)V
 
     return-object p1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, p1, p2}, Llig;->b(Lv25;J)I
 
-    const-string v0, "This coroutine had already completed"
+    move-result v1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v2, Lmyd;
 
-    throw p1
+    invoke-virtual {v0, v1}, Lv25;->c(I)J
+
+    move-result-wide v3
+
+    iget-object v5, p0, Lxe7;->a:Lv25;
+
+    invoke-virtual {v5, v1}, Lv25;->c(I)J
+
+    move-result-wide v6
+
+    invoke-direct {v2, v3, v4, v6, v7}, Lmyd;-><init>(JJ)V
+
+    cmp-long p1, v3, p1
+
+    if-eqz p1, :cond_2
+
+    iget p1, v0, Lv25;->b:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-ne v1, p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    iput v2, p0, Lxe7;->o:I
+    new-instance p1, Lmyd;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    add-int/lit8 v1, v1, 0x1
 
-    iget-object p1, p0, Lxe7;->X:Llf6;
+    invoke-virtual {v0, v1}, Lv25;->c(I)J
 
-    invoke-static {v1, p1}, Lhxf;->e(ILjava/lang/Object;)V
+    move-result-wide v3
 
-    iget-object v0, p0, Lxe7;->Y:Ljava/lang/Object;
+    invoke-virtual {v5, v1}, Lv25;->c(I)J
 
-    invoke-interface {p1, v0, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-wide v0
 
-    move-result-object p1
+    invoke-direct {p1, v3, v4, v0, v1}, Lmyd;-><init>(JJ)V
+
+    new-instance p2, Lgyd;
+
+    invoke-direct {p2, v2, p1}, Lgyd;-><init>(Lmyd;Lmyd;)V
+
+    return-object p2
+
+    :cond_2
+    :goto_0
+    new-instance p1, Lgyd;
+
+    invoke-direct {p1, v2, v2}, Lgyd;-><init>(Lmyd;Lmyd;)V
 
     return-object p1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lxe7;->c:J
+
+    return-wide v0
 .end method

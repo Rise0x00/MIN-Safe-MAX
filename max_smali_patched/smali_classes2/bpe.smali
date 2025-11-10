@@ -3,169 +3,307 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 0
+.method public static a(Ldd5;)Ljava/lang/String;
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Ldd5;->i:I
 
-    iput p1, p0, Lbpe;->a:I
+    iget-object v1, p0, Ldd5;->e:Ljava/lang/String;
 
-    iput p2, p0, Lbpe;->b:I
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    iput p3, p0, Lbpe;->c:I
+    move-result-object v1
 
-    iput p4, p0, Lbpe;->d:I
+    invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
-    return-void
-.end method
+    move-result-object v1
 
+    iget-object v2, p0, Ldd5;->c:Ljava/lang/String;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    if-eqz v2, :cond_0
 
-    if-ne p0, p1, :cond_0
+    const-string v3, "userId"
 
-    goto :goto_1
+    invoke-virtual {v1, v3, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     :cond_0
-    instance-of v0, p1, Lbpe;
+    iget-object v2, p0, Ldd5;->b:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    const-string v3, "token"
+
+    invoke-virtual {v1, v3, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Ldd5;->a:Ljava/lang/String;
+
+    const-string v4, "conversationId"
+
+    invoke-virtual {v2, v4, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    const/4 v2, 0x6
+
+    if-lt v0, v2, :cond_1
+
+    iget v2, p0, Ldd5;->d:I
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "deviceIdx"
+
+    invoke-virtual {v1, v3, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_1
+    iget-object v2, p0, Ldd5;->g:Ljava/lang/Long;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "peerId"
+
+    invoke-virtual {v1, v3, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_2
+    iget-object v2, p0, Ldd5;->o:Ljava/util/Locale;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "locale"
+
+    invoke-virtual {v1, v3, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_3
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "version"
+
+    invoke-virtual {v1, v2, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->j:Ljava/lang/String;
+
+    const-string v2, "capabilities"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "device"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    const-string v1, "platform"
+
+    const-string v2, "ANDROID"
+
+    invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->h:Ljava/lang/String;
+
+    const-string v2, "clientType"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->f:Ljava/lang/String;
+
+    const-string v2, "appVersion"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "osVersion"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->l:Ljava/lang/String;
+
+    const-string v2, "ispAsOrg"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->m:Ljava/lang/String;
+
+    const-string v2, "locCc"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->n:Ljava/lang/String;
+
+    const-string v2, "locReg"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ldd5;->k:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ispAsNo"
+
+    invoke-virtual {v0, v2, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_4
+    iget-object p0, p0, Ldd5;->p:Ljava/lang/String;
+
+    if-eqz p0, :cond_5
+
+    const-string v1, "compression"
+
+    invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    :cond_5
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1, v2, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lbpe;
+    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    iget v0, p0, Lbpe;->a:I
-
-    iget v1, p1, Lbpe;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
+    invoke-virtual {v1, p1, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     :cond_2
-    iget v0, p0, Lbpe;->b:I
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
-    iget v1, p1, Lbpe;->b:I
+    move-result-object p0
 
-    if-eq v0, v1, :cond_3
+    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_3
-    iget v0, p0, Lbpe;->c:I
-
-    iget v1, p1, Lbpe;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lbpe;->d:I
-
-    iget p1, p1, Lbpe;->d:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const v0, -0x444445
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lbpe;->a:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lbpe;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lbpe;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lbpe;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", neutralThemed="
-
-    const-string v1, ", primary="
-
-    const-string v2, "StatesTextActiveColors(contrastStatic=-4473925, negative="
-
-    iget v3, p0, Lbpe;->a:I
-
-    iget v4, p0, Lbpe;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", themed="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lbpe;->c:I
-
-    iget v4, p0, Lbpe;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

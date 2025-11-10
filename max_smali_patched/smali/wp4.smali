@@ -1,53 +1,31 @@
 .class public final Lwp4;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public d:J
-
-.field public e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public h:[I
-
-.field public final i:Ljava/util/TreeMap;
+.field public o:I
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JIII[ILjava/util/TreeMap;)V
-    .locals 0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwp4;->d:Ljava/lang/Object;
 
-    iput-object p1, p0, Lwp4;->a:Ljava/lang/String;
+    iget p1, p0, Lwp4;->o:I
 
-    iput-object p2, p0, Lwp4;->b:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    iput-wide p3, p0, Lwp4;->c:J
+    or-int/2addr p1, v0
 
-    const-wide/16 p1, 0x0
+    iput p1, p0, Lwp4;->o:I
 
-    iput-wide p1, p0, Lwp4;->d:J
+    invoke-static {p0}, Lxxi;->a(Lp14;)V
 
-    iput p5, p0, Lwp4;->e:I
+    sget-object p1, Lh54;->a:Lh54;
 
-    iput p6, p0, Lwp4;->f:I
-
-    iput p7, p0, Lwp4;->g:I
-
-    iput-object p8, p0, Lwp4;->h:[I
-
-    iput-object p9, p0, Lwp4;->i:Ljava/util/TreeMap;
-
-    return-void
+    return-object p1
 .end method

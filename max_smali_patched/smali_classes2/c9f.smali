@@ -1,23 +1,30 @@
 .class public final Lc9f;
-.super Ljava/lang/Object;
+.super Lup7;
 .source "SourceFile"
+
+# interfaces
+.implements Le9f;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final c:Ljava/lang/String;
 
-.field public final b:Lbp7;
+.field public final d:Ljava/lang/String;
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbp7;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lup7;-><init>()V
 
-    iput-object p1, p0, Lc9f;->a:Landroid/content/Context;
+    iput-object p1, p0, Lc9f;->c:Ljava/lang/String;
 
-    iput-object p2, p0, Lc9f;->b:Lbp7;
+    iput-object p2, p0, Lc9f;->d:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lc9f;->e:Z
 
     return-void
 .end method

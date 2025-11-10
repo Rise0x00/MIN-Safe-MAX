@@ -1,73 +1,88 @@
-.class public final synthetic Lihe;
-.super Ljava/lang/Object;
+.class public final Lihe;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ljhe;
 
-.field public final synthetic b:Lphe;
-
-.field public final synthetic c:I
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lphe;II)V
+.method public constructor <init>(Ljava/lang/String;Ljhe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lihe;->a:I
+    iput-object p1, p0, Lihe;->o:Ljava/lang/String;
 
-    iput-object p1, p0, Lihe;->b:Lphe;
+    iput-object p2, p0, Lihe;->X:Ljhe;
 
-    iput p2, p0, Lihe;->c:I
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lihe;->a:I
+    check-cast p1, Lg54;
 
-    check-cast p1, Lsb7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lihe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lihe;->b:Lphe;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lihe;
 
-    iget v0, p0, Lihe;->c:I
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-static {p1, v0}, Lphe;->a(Lsb7;I)V
+    invoke-virtual {p1, p2}, Lihe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lihe;
+
+    iget-object v0, p0, Lihe;->o:Ljava/lang/String;
+
+    iget-object v1, p0, Lihe;->X:Ljhe;
+
+    invoke-direct {p1, v0, v1, p2}, Lihe;-><init>(Ljava/lang/String;Ljhe;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lihe;->b:Lphe;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget v0, p0, Lihe;->c:I
+    sget-object p1, Lmc5;->a:Ltif;
 
-    invoke-static {p1, v0}, Lphe;->a(Lsb7;I)V
+    iget-object p1, p0, Lihe;->o:Ljava/lang/String;
 
-    goto :goto_0
+    invoke-static {p1}, Lmc5;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lihe;->X:Ljhe;
+
+    iget-object v0, v0, Ljhe;->o:Laf5;
+
+    invoke-static {v0, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

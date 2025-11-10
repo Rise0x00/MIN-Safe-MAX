@@ -1,67 +1,157 @@
-.class public abstract Lsja;
+.class public final Lsja;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltg3;
+.implements Luhc;
+.implements Lshc;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lgla;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+.field public b:Lzv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgla;)V
+    .locals 0
 
-    sget v0, Lric;->call_start_group_call_unavailable:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lsja;->a:I
-
-    sget v0, Lric;->call_start_new_dialog_action_cancel:I
-
-    sput v0, Lsja;->b:I
-
-    sget v0, Lric;->call_start_new_dialog_action_continue_audio:I
-
-    sput v0, Lsja;->c:I
-
-    sget v0, Lric;->call_start_new_dialog_action_continue_video:I
-
-    sput v0, Lsja;->d:I
-
-    sget v0, Lric;->call_start_new_dialog_subtitle:I
-
-    sput v0, Lsja;->e:I
-
-    sget v0, Lric;->call_start_new_dialog_title:I
-
-    sput v0, Lsja;->f:I
-
-    sget v0, Lric;->call_start_no_network_connection_neutral_button:I
-
-    sput v0, Lsja;->g:I
-
-    sget v0, Lric;->call_start_no_network_connection_subtitle:I
-
-    sput v0, Lsja;->h:I
-
-    sget v0, Lric;->call_start_no_network_connection_title:I
-
-    sput v0, Lsja;->i:I
+    iput-object p1, p0, Lsja;->a:Lgla;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final c()V
+    .locals 1
+
+    sget-object v0, Ldw4;->a:Ldw4;
+
+    iput-object v0, p0, Lsja;->b:Lzv4;
+
+    iget-object v0, p0, Lsja;->a:Lgla;
+
+    invoke-interface {v0}, Lgla;->c()V
+
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lzv4;)V
+    .locals 1
+
+    iget-object v0, p0, Lsja;->b:Lzv4;
+
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lsja;->b:Lzv4;
+
+    iget-object p1, p0, Lsja;->a:Lgla;
+
+    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget-object v0, p0, Lsja;->b:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->dispose()V
+
+    sget-object v0, Ldw4;->a:Ldw4;
+
+    iput-object v0, p0, Lsja;->b:Lzv4;
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Lsja;->b:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    sget-object v0, Ldw4;->a:Ldw4;
+
+    iput-object v0, p0, Lsja;->b:Lzv4;
+
+    iget-object v0, p0, Lsja;->a:Lgla;
+
+    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final q(I)I
+    .locals 0
+
+    const/4 p1, 0x2
+
+    return p1
 .end method

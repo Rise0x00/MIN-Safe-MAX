@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkfa;
+.implements Lwma;
 
 
 # instance fields

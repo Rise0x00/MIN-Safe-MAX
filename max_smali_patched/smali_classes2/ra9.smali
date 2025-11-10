@@ -1,26 +1,55 @@
-.class public final synthetic Lra9;
-.super Ln8;
+.class public final Lra9;
+.super Lp14;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
+
+# instance fields
+.field public X:Ljava/util/List;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lsa9;
+
+.field public d:Lsa9;
+
+.field public o:Ltf3;
+
+.field public s0:I
+
+
+# direct methods
+.method public constructor <init>(Lsa9;Lp14;)V
+    .locals 0
+
+    iput-object p1, p0, Lra9;->Z:Lsa9;
+
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lra9;->Y:Ljava/lang/Object;
 
-    check-cast v0, Lma9;
+    iget p1, p0, Lra9;->s0:I
 
-    const/4 v1, 0x0
+    const/high16 v0, -0x80000000
 
-    const/4 v2, 0x3
+    or-int/2addr p1, v0
 
-    invoke-static {v0, v1, v2}, Lma9;->y(Lma9;ZI)V
+    iput p1, p0, Lra9;->s0:I
 
-    sget-object v0, Loyf;->a:Loyf;
+    iget-object p1, p0, Lra9;->Z:Lsa9;
 
-    return-object v0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lsa9;->a(Ltf3;Ljava/util/List;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

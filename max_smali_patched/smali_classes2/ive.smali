@@ -1,51 +1,86 @@
 .class public final Live;
-.super Lnz3;
+.super Lnve;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Llve;
-
-.field public Z:I
-
-.field public o:Ljbe;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Llve;Lnz3;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput-object p1, p0, Live;->Y:Llve;
+    const/4 v0, 0x4
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2, v0}, Lnve;-><init>(JI)V
+
+    iput-wide p1, p0, Live;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Live;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Live;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Live;
 
-    iput p1, p0, Live;->Z:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Live;->Y:Llve;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Llve;->s(Lgue;Lnz3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Live;
 
-    move-result-object p1
+    iget-wide v3, p0, Live;->c:J
 
-    return-object p1
+    iget-wide v5, p1, Live;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Live;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChannelId(channelId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Live;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

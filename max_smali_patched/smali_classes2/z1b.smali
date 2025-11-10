@@ -1,59 +1,232 @@
-.class public abstract synthetic Lz1b;
+.class public final synthetic Lz1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lf2b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lf2b;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput p2, p0, Lz1b;->a:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    iput-object p1, p0, Lz1b;->b:Lf2b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
+
+    iget v0, p0, Lz1b;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    sub-float/2addr v0, p1
+
+    iget-object p1, p0, Lz1b;->b:Lf2b;
+
+    iget-object v1, p1, Lf2b;->A0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    array-length v1, v1
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
 
-    new-array v1, v1, [I
+    invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
 
-    const/4 v2, 0x1
+    move-result v2
 
-    const/4 v3, 0x0
+    mul-float/2addr v2, v0
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    :catch_0
-    const/4 v3, 0x2
+    iget-object v1, p1, Lf2b;->E0:Ljava/lang/Object;
 
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    :catch_1
-    const/4 v3, 0x3
+    move-result-object v1
 
-    :try_start_2
-    aput v3, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
 
-    :catch_2
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
 
-    :catch_3
-    sput-object v1, Lz1b;->$EnumSwitchMapping$0:[I
+    move-result v2
+
+    mul-float/2addr v2, v0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p1, Lf2b;->B0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    iput p1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lz1b;->b:Lf2b;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    iget-object v2, v0, Lf2b;->A0:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v2, v0, Lf2b;->E0:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, v0, Lf2b;->B0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v4, :cond_1
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    sub-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    mul-float/2addr v0, p1
+
+    float-to-int p1, v0
+
+    iput p1, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -207,7 +207,7 @@
 
     const-string p3, "Failed to create EGL context: 0x"
 
-    invoke-static {p3, p0}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -309,7 +309,7 @@
 
     const-string v2, "Failed to create window surface: 0x"
 
-    invoke-static {v2, v0}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
 
     const-string v0, "eglChooseConfig failed: 0x"
 
-    invoke-static {v0, p2}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -458,7 +458,7 @@
 
     const-string v2, "Unable to initialize EGL10: 0x"
 
-    invoke-static {v2, p0}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -483,7 +483,7 @@
 
     const-string v2, "Unable to get EGL10 display: 0x"
 
-    invoke-static {v2, p0}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -577,7 +577,7 @@
 
     const-string v5, "Failed to create pixel buffer surface with size "
 
-    invoke-static {v5, p1, v3, p2, v4}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, p1, v3, p2, v4}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

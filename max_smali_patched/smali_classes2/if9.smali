@@ -1,100 +1,141 @@
-.class public final Lif9;
-.super Lm3f;
+.class public final enum Lif9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final enum X:Lif9;
+
+.field public static final synthetic Y:[Lif9;
+
+.field public static final enum b:Lif9;
+
+.field public static final enum c:Lif9;
+
+.field public static final enum d:Lif9;
+
+.field public static final enum o:Lif9;
 
 
 # instance fields
-.field public final synthetic X:Lng9;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lng9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lif9;->X:Lng9;
+    new-instance v0, Lif9;
 
-    const/4 p1, 0x2
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, Lif9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lif9;->b:Lif9;
+
+    new-instance v1, Lif9;
+
+    const-string v2, "USER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lif9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lif9;->c:Lif9;
+
+    new-instance v2, Lif9;
+
+    const-string v3, "GROUP"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lif9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lif9;->d:Lif9;
+
+    new-instance v3, Lif9;
+
+    const-string v4, "CHANNEL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, Lif9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lif9;->o:Lif9;
+
+    new-instance v4, Lif9;
+
+    const-string v5, "CHANNEL_ADMIN"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, Lif9;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lif9;->X:Lif9;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lif9;
+
+    move-result-object v0
+
+    sput-object v0, Lif9;->Y:[Lif9;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p1, Le34;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lif9;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lif9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lif9;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lif9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static valueOf(Ljava/lang/String;)Lif9;
     .locals 1
 
-    new-instance p1, Lif9;
+    const-class v0, Lif9;
 
-    iget-object v0, p0, Lif9;->X:Lng9;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1, v0, p2}, Lif9;-><init>(Lng9;Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-object p1
+    check-cast p0, Lif9;
+
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public static values()[Lif9;
+    .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget-object v0, Lif9;->Y:[Lif9;
 
-    sget-object p1, Lng9;->T1:[Ltm7;
-
-    iget-object p1, p0, Lif9;->X:Lng9;
-
-    iget-object v0, p1, Lng9;->O0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lif9;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lava;
+    check-cast v0, [Lif9;
 
-    new-instance v1, Lova;
+    return-object v0
+.end method
 
-    sget v2, Lg9d;->Q1:I
 
-    invoke-direct {v1, v2}, Lova;-><init>(I)V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0, v1}, Lava;->e(Ltva;)V
+    const-string v0, "{value=\'"
 
-    sget v1, Loqa;->y0:I
+    const-string v1, "\'}"
 
-    new-instance v2, Ljef;
+    iget-object v2, p0, Lif9;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lava;->g(Loef;)V
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Lng9;->L(Lava;)V
-
-    invoke-virtual {v0}, Lava;->i()Lzua;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

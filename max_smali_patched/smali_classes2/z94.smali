@@ -1,240 +1,196 @@
 .class public final Lz94;
-.super Lv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Lru7;
 
-.field public final synthetic o:Laa4;
+.field public final b:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Laa4;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lz94;->c:I
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lz94;->o:Laa4;
-
-    const/16 p1, 0x9
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Laa4;I)V
+.method public constructor <init>(Lru7;Lru7;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Lz94;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz94;->o:Laa4;
+    iput-object p1, p0, Lz94;->a:Lru7;
 
-    const/4 p1, 0x0
-
-    const/16 p2, 0x9
-
-    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lz94;->b:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 8
+.method public final a(Lnve;I)V
+    .locals 13
 
-    iget v0, p0, Lz94;->c:I
+    iget-object v0, p0, Lz94;->a:Lru7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, Lhd;
 
-    if-nez v0, :cond_0
+    iget-wide v1, p1, Lnve;->a:J
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    check-cast p1, Ljava/lang/Boolean;
+    new-instance v2, Lvcb;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v3, "source_id"
 
-    iget-object p1, p0, Lz94;->o:Laa4;
+    invoke-direct {v2, v3, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object p2, p1, Laa4;->H0:Lqmg;
+    iget p1, p1, Lnve;->b:I
 
-    invoke-virtual {p1, p2}, Laa4;->e(Lqmg;)V
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    move-result-object p1
 
-    :cond_0
-    return-void
+    new-instance v1, Lvcb;
 
-    :pswitch_0
-    move-object v0, p2
+    const-string v3, "source_type"
 
-    check-cast v0, Ljava/lang/CharSequence;
+    invoke-direct {v1, v3, p1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/lang/CharSequence;
+    filled-new-array {v2, v1}, [Lvcb;
 
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
+    invoke-static {p1}, Lmfi;->a([Lvcb;)Lbt;
 
-    if-nez p1, :cond_2
+    move-result-object p1
 
-    iget-object p1, p0, Lz94;->o:Laa4;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-nez v0, :cond_1
+    move-result-wide v1
 
-    const/4 p2, 0x0
+    const/4 v3, 0x1
 
-    iput-object p2, p1, Laa4;->K0:Landroid/text/BoringLayout;
+    if-eq p2, v3, :cond_2
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    const/4 v3, 0x2
 
-    goto :goto_0
+    if-eq p2, v3, :cond_1
 
-    :cond_1
-    invoke-static {p1}, Laa4;->a(Laa4;)Landroid/text/BoringLayout$Metrics;
+    const/4 v3, 0x3
 
-    move-result-object v6
+    if-ne p2, v3, :cond_0
 
-    sget-object v1, Laa4;->Q0:Landroid/text/TextPaint;
+    const-string p2, "not_download_file"
 
-    const/4 p2, 0x0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, p2, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
-
-    move-result p2
-
-    invoke-static {p2}, Lv63;->r0(F)I
-
-    move-result p2
-
-    iput p2, v6, Landroid/text/BoringLayout$Metrics;->width:I
-
-    iget p2, p1, Laa4;->E0:I
-
-    invoke-virtual {v1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v2, v6, Landroid/text/BoringLayout$Metrics;->width:I
-
-    sget-object v3, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x0
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static/range {v0 .. v7}, Landroid/text/BoringLayout;->make(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFLandroid/text/BoringLayout$Metrics;Z)Landroid/text/BoringLayout;
-
-    move-result-object p2
-
-    iput-object p2, p1, Laa4;->K0:Landroid/text/BoringLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    :cond_2
     :goto_0
-    return-void
-
-    :pswitch_1
-    move-object v0, p2
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    check-cast p1, Ljava/lang/CharSequence;
-
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    move-object v11, p2
 
     goto :goto_1
 
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string p2, "download_file"
+
+    goto :goto_0
+
+    :cond_2
+    const-string p2, "modal_is_shown"
+
+    goto :goto_0
+
+    :goto_1
+    iget-object p2, p0, Lz94;->b:Lru7;
+
+    invoke-interface {p2}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ll83;
+
+    check-cast v3, Lztd;
+
+    invoke-virtual {v3}, Lztd;->s()J
+
+    move-result-wide v6
+
+    invoke-virtual {p1}, Llpe;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    const/4 p1, 0x0
+
+    move-object v12, p1
+
+    goto :goto_2
+
     :cond_3
-    iget-object p1, p0, Lz94;->o:Laa4;
+    new-instance v3, Lbt;
 
-    invoke-static {p1}, Laa4;->a(Laa4;)Landroid/text/BoringLayout$Metrics;
+    iget v4, p1, Llpe;->c:I
 
-    move-result-object v6
+    invoke-direct {v3, v4}, Llpe;-><init>(I)V
 
-    sget-object v1, Laa4;->Q0:Landroid/text/TextPaint;
+    invoke-virtual {v3, p1}, Lbt;->putAll(Ljava/util/Map;)V
 
-    const/4 p2, 0x0
+    move-object v12, v3
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    :goto_2
+    invoke-interface {p2}, Lru7;->getValue()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object p1
 
-    invoke-virtual {v1, v0, p2, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
+    check-cast p1, Ll83;
 
-    move-result p2
+    check-cast p1, Le78;
 
-    invoke-static {p2}, Lv63;->r0(F)I
+    invoke-virtual {p1}, Le78;->K()J
 
-    move-result p2
+    move-result-wide v8
 
-    iput p2, v6, Landroid/text/BoringLayout$Metrics;->width:I
+    invoke-virtual {v11}, Ljava/lang/String;->length()I
 
-    iget p2, p1, Laa4;->E0:I
+    move-result p1
 
-    invoke-virtual {v1, p2}, Landroid/graphics/Paint;->setColor(I)V
+    if-eqz p1, :cond_5
 
-    iget v2, v6, Landroid/text/BoringLayout$Metrics;->width:I
+    const-wide/16 p1, 0x0
 
-    sget-object v3, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+    cmp-long p1, v1, p1
 
-    const/4 v5, 0x0
+    if-nez p1, :cond_4
 
-    const/4 v7, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static/range {v0 .. v7}, Landroid/text/BoringLayout;->make(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFLandroid/text/BoringLayout$Metrics;Z)Landroid/text/BoringLayout;
-
-    move-result-object p2
-
-    iput-object p2, p1, Laa4;->J0:Landroid/text/BoringLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    move-result-wide v1
 
     :cond_4
-    :goto_1
+    move-wide v4, v1
+
+    new-instance v3, Lv88;
+
+    const-string v10, "DANGEROUS_FILE_ACTIONS"
+
+    invoke-direct/range {v3 .. v12}, Lv88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v0, v3}, Lhd;->i(Lv88;)Z
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "type or event can\'t be empty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

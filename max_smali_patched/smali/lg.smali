@@ -3,206 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ley0;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final a:Z
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:F
-
-.field public final synthetic d:F
-
-.field public final synthetic e:F
-
-.field public final synthetic f:F
-
-.field public final synthetic g:Z
-
-.field public final synthetic h:Lxe6;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFFFZLxe6;)V
-    .locals 1
-
-    sget v0, Lxja;->a:I
+.method public constructor <init>(IZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llg;->a:Landroid/view/View;
+    iput-boolean p2, p0, Llg;->a:Z
 
-    iput-object p2, p0, Llg;->b:Ljava/lang/String;
+    const-string p2, "anim://"
 
-    iput p3, p0, Llg;->c:F
+    invoke-static {p1, p2}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    iput p4, p0, Llg;->d:F
+    move-result-object p1
 
-    iput p5, p0, Llg;->e:F
-
-    iput p6, p0, Llg;->f:F
-
-    iput-boolean p7, p0, Llg;->g:Z
-
-    iput-object p8, p0, Llg;->h:Lxe6;
+    iput-object p1, p0, Llg;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.method public final a()Z
+    .locals 1
 
-    iget-object p1, p0, Llg;->a:Landroid/view/View;
+    const/4 v0, 0x0
 
-    iget v0, p0, Llg;->e:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
-
-    iget v0, p0, Llg;->f:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean v0, p0, Llg;->g:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Llg;->h:Lxe6;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget v0, Lxja;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget-object p1, p0, Llg;->a:Landroid/view/View;
-
-    iget v0, p0, Llg;->e:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
-
-    iget v0, p0, Llg;->f:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean v0, p0, Llg;->g:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Llg;->h:Lxe6;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    sget v0, Lxja;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    sget p1, Lxja;->m:I
+.method public final b()Ljava/lang/String;
+    .locals 1
 
     iget-object v0, p0, Llg;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Llg;->a:Landroid/view/View;
+    return-object v0
+.end method
 
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget p1, p0, Llg;->c:F
+    iget-boolean v0, p0, Llg;->a:Z
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleX(F)V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleY(F)V
+    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget p1, p0, Llg;->d:F
+    move-result p1
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+    return p1
 
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    if-eqz p1, :cond_3
+
+    const-class v0, Llg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    check-cast p1, Llg;
+
+    iget-object v0, p0, Llg;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Llg;->b:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    :goto_0
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+    return p1
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Llg;->a:Z
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Llg;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

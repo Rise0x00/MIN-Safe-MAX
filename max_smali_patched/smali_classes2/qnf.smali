@@ -3,234 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lqnf;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final c:Lqnf;
+.implements Lonf;
 
 
 # instance fields
-.field public final a:Lpnf;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Ly22;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ly22;)V
+    .locals 1
 
-    new-instance v0, Lqnf;
-
-    sget-object v1, Lpnf;->y0:Lpnf;
-
-    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-direct {v0, v1, v2}, Lqnf;-><init>(Lpnf;Ljava/util/List;)V
-
-    sput-object v0, Lqnf;->c:Lqnf;
-
-    new-instance v0, Ltdd;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Ltdd;-><init>(I)V
-
-    sput-object v0, Lqnf;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    const-class v0, Lpnf;
+    iput-object p1, p0, Lqnf;->b:Ly22;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    move-result-object v0
-
-    check-cast v0, Lpnf;
-
-    iput-object v0, p0, Lqnf;->a:Lpnf;
-
-    .line 6
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lqnf;->b:Ljava/util/List;
-
-    .line 7
-    sget-object v1, Lpnf;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->readTypedList(Ljava/util/List;Landroid/os/Parcelable$Creator;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpnf;Ljava/util/List;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lqnf;->a:Lpnf;
-
-    .line 3
-    iput-object p2, p0, Lqnf;->b:Ljava/util/List;
+    iput-object p1, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final e(Lmmf;)V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lqnf;->b:Ly22;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ly22;->r()Z
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    move-result v1
 
-    if-ne p0, p1, :cond_0
+    if-eqz v1, :cond_0
 
-    const/4 p1, 0x1
+    const/4 v1, 0x0
 
-    return p1
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p1}, Ly22;->resumeWith(Ljava/lang/Object;)V
 
     :cond_0
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    if-eqz p1, :cond_3
+.method public final j(Lxlf;)V
+    .locals 4
 
-    const-class v1, Lqnf;
+    iget-object v0, p0, Lqnf;->b:Ly22;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lqnf;
-
-    iget-object v1, p0, Lqnf;->a:Lpnf;
-
-    iget-object v2, p1, Lqnf;->a:Lpnf;
-
-    invoke-virtual {v1, v2}, Lpnf;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ly22;->r()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_0
 
-    return v0
+    const/4 v1, 0x0
 
-    :cond_2
-    iget-object v0, p0, Lqnf;->b:Ljava/util/List;
+    const/4 v2, 0x1
 
-    iget-object p1, p1, Lqnf;->b:Ljava/util/List;
+    iget-object v3, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lqnf;->a:Lpnf;
-
-    invoke-virtual {v0}, Lpnf;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqnf;->b:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
-.end method
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lxlf;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lfed;
 
-    const-string v1, "TrackContainer{videoTrack="
+    invoke-direct {p1, v1}, Lfed;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ly22;->resumeWith(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lqnf;->a:Lpnf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioTracks="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqnf;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lqnf;->a:Lpnf;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p2, p0, Lqnf;->b:Ljava/util/List;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
-
+    :cond_0
     return-void
 .end method

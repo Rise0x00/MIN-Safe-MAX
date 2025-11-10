@@ -4,493 +4,710 @@
 
 
 # static fields
-.field public static final a:Lxyc;
+.field public static final a:[Lhx6;
+
+.field public static final b:Ljava/util/Map;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 181
+    .locals 63
 
-    const-string v179, "Garage Rock"
+    new-instance v1, Lhx6;
 
-    const-string v180, "Psybient"
+    sget-object v0, Lhx6;->i:Ljx0;
 
-    const-string v1, "Other"
+    const-string v2, ""
 
-    const-string v2, "Pop"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v3, "R&B"
+    new-instance v0, Lhx6;
 
-    const-string v4, "Rap"
+    sget-object v3, Lhx6;->f:Ljx0;
 
-    const-string v5, "Reggae"
+    const-string v4, "GET"
 
-    const-string v6, "Rock"
+    invoke-direct {v0, v3, v4}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v7, "Techno"
+    new-instance v4, Lhx6;
 
-    const-string v8, "Industrial"
+    const-string v5, "POST"
 
-    const-string v9, "Alternative"
+    invoke-direct {v4, v3, v5}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v10, "Ska"
+    move-object v3, v4
 
-    const-string v11, "Death Metal"
+    new-instance v4, Lhx6;
 
-    const-string v12, "Pranks"
+    sget-object v5, Lhx6;->g:Ljx0;
 
-    const-string v13, "Soundtrack"
+    const-string v6, "/"
 
-    const-string v14, "Euro-Techno"
+    invoke-direct {v4, v5, v6}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v15, "Ambient"
+    new-instance v6, Lhx6;
 
-    const-string v16, "Trip-Hop"
+    const-string v7, "/index.html"
 
-    const-string v17, "Vocal"
+    invoke-direct {v6, v5, v7}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v18, "Jazz+Funk"
+    move-object v5, v6
 
-    const-string v19, "Fusion"
+    new-instance v6, Lhx6;
 
-    const-string v20, "Trance"
+    sget-object v7, Lhx6;->h:Ljx0;
 
-    const-string v21, "Classical"
+    const-string v8, "http"
 
-    const-string v22, "Instrumental"
+    invoke-direct {v6, v7, v8}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v23, "Acid"
+    new-instance v8, Lhx6;
 
-    const-string v24, "House"
+    const-string v9, "https"
 
-    const-string v25, "Game"
+    invoke-direct {v8, v7, v9}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v26, "Sound Clip"
+    move-object v7, v8
 
-    const-string v27, "Gospel"
+    new-instance v8, Lhx6;
 
-    const-string v28, "Noise"
+    sget-object v9, Lhx6;->e:Ljx0;
 
-    const-string v29, "AlternRock"
+    const-string v10, "200"
 
-    const-string v30, "Bass"
+    invoke-direct {v8, v9, v10}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v31, "Soul"
+    new-instance v10, Lhx6;
 
-    const-string v32, "Punk"
+    const-string v11, "204"
 
-    const-string v33, "Space"
+    invoke-direct {v10, v9, v11}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v34, "Meditative"
+    move-object v11, v10
 
-    const-string v35, "Instrumental Pop"
+    new-instance v10, Lhx6;
 
-    const-string v36, "Instrumental Rock"
+    const-string v12, "206"
 
-    const-string v37, "Ethnic"
+    invoke-direct {v10, v9, v12}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v38, "Gothic"
+    move-object v12, v11
 
-    const-string v39, "Darkwave"
+    new-instance v11, Lhx6;
 
-    const-string v40, "Techno-Industrial"
+    const-string v13, "304"
 
-    const-string v41, "Electronic"
+    invoke-direct {v11, v9, v13}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v42, "Pop-Folk"
+    move-object v13, v12
 
-    const-string v43, "Eurodance"
+    new-instance v12, Lhx6;
 
-    const-string v44, "Dream"
+    const-string v14, "400"
 
-    const-string v45, "Southern Rock"
+    invoke-direct {v12, v9, v14}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v46, "Comedy"
+    move-object v14, v13
 
-    const-string v47, "Cult"
+    new-instance v13, Lhx6;
 
-    const-string v48, "Gangsta"
+    const-string v15, "404"
 
-    const-string v49, "Top 40"
+    invoke-direct {v13, v9, v15}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v50, "Christian Rap"
+    move-object v15, v14
 
-    const-string v51, "Pop/Funk"
+    new-instance v14, Lhx6;
 
-    const-string v52, "Jungle"
+    move-object/from16 v16, v0
 
-    const-string v53, "Native American"
+    const-string v0, "500"
 
-    const-string v54, "Cabaret"
+    invoke-direct {v14, v9, v0}, Lhx6;-><init>(Ljx0;Ljava/lang/String;)V
 
-    const-string v55, "New Wave"
+    move-object v9, v15
 
-    const-string v56, "Psychadelic"
+    new-instance v15, Lhx6;
 
-    const-string v57, "Rave"
+    const-string v0, "accept-charset"
 
-    const-string v58, "Showtunes"
+    invoke-direct {v15, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v59, "Trailer"
+    new-instance v0, Lhx6;
 
-    const-string v60, "Lo-Fi"
+    move-object/from16 v17, v1
 
-    const-string v61, "Tribal"
+    const-string v1, "accept-encoding"
 
-    const-string v62, "Acid Punk"
+    move-object/from16 v18, v3
 
-    const-string v63, "Acid Jazz"
+    const-string v3, "gzip, deflate"
 
-    const-string v64, "Polka"
+    invoke-direct {v0, v1, v3}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v65, "Retro"
+    new-instance v1, Lhx6;
 
-    const-string v66, "Musical"
+    const-string v3, "accept-language"
 
-    const-string v67, "Rock & Roll"
+    invoke-direct {v1, v3, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v68, "Hard Rock"
+    new-instance v3, Lhx6;
 
-    const-string v69, "Folk"
+    move-object/from16 v19, v0
 
-    const-string v70, "Folk-Rock"
+    const-string v0, "accept-ranges"
 
-    const-string v71, "National Folk"
+    invoke-direct {v3, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v72, "Swing"
+    new-instance v0, Lhx6;
 
-    const-string v73, "Fast Fusion"
+    move-object/from16 v20, v1
 
-    const-string v74, "Bebob"
+    const-string v1, "accept"
 
-    const-string v75, "Latin"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v76, "Revival"
+    new-instance v1, Lhx6;
 
-    const-string v77, "Celtic"
+    move-object/from16 v21, v0
 
-    const-string v78, "Bluegrass"
+    const-string v0, "access-control-allow-origin"
 
-    const-string v79, "Avantgarde"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v80, "Gothic Rock"
+    new-instance v0, Lhx6;
 
-    const-string v81, "Progressive Rock"
+    move-object/from16 v22, v1
 
-    const-string v82, "Psychedelic Rock"
+    const-string v1, "age"
 
-    const-string v83, "Symphonic Rock"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v84, "Slow Rock"
+    new-instance v1, Lhx6;
 
-    const-string v85, "Big Band"
+    move-object/from16 v23, v0
 
-    const-string v86, "Chorus"
+    const-string v0, "allow"
 
-    const-string v87, "Easy Listening"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v88, "Acoustic"
+    new-instance v0, Lhx6;
 
-    const-string v89, "Humour"
+    move-object/from16 v24, v1
 
-    const-string v90, "Speech"
+    const-string v1, "authorization"
 
-    const-string v91, "Chanson"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v92, "Opera"
+    new-instance v1, Lhx6;
 
-    const-string v93, "Chamber Music"
+    move-object/from16 v25, v0
 
-    const-string v94, "Sonata"
+    const-string v0, "cache-control"
 
-    const-string v95, "Symphony"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v96, "Booty Bass"
+    new-instance v0, Lhx6;
 
-    const-string v97, "Primus"
+    move-object/from16 v26, v1
 
-    const-string v98, "Porn Groove"
+    const-string v1, "content-disposition"
 
-    const-string v99, "Satire"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v100, "Slow Jam"
+    new-instance v1, Lhx6;
 
-    const-string v101, "Club"
+    move-object/from16 v27, v0
 
-    const-string v102, "Tango"
+    const-string v0, "content-encoding"
 
-    const-string v103, "Samba"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v104, "Folklore"
+    new-instance v0, Lhx6;
 
-    const-string v105, "Ballad"
+    move-object/from16 v28, v1
 
-    const-string v106, "Power Ballad"
+    const-string v1, "content-language"
 
-    const-string v107, "Rhythmic Soul"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v108, "Freestyle"
+    new-instance v1, Lhx6;
 
-    const-string v109, "Duet"
+    move-object/from16 v29, v0
 
-    const-string v110, "Punk Rock"
+    const-string v0, "content-length"
 
-    const-string v111, "Drum Solo"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v112, "A capella"
+    new-instance v0, Lhx6;
 
-    const-string v113, "Euro-House"
+    move-object/from16 v30, v1
 
-    const-string v114, "Dance Hall"
+    const-string v1, "content-location"
 
-    const-string v115, "Goa"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v116, "Drum & Bass"
+    new-instance v1, Lhx6;
 
-    const-string v117, "Club-House"
+    move-object/from16 v31, v0
 
-    const-string v118, "Hardcore"
+    const-string v0, "content-range"
 
-    const-string v119, "Terror"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v120, "Indie"
+    new-instance v0, Lhx6;
 
-    const-string v121, "BritPop"
+    move-object/from16 v32, v1
 
-    const-string v122, "Afro-Punk"
+    const-string v1, "content-type"
 
-    const-string v123, "Polsk Punk"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v124, "Beat"
+    new-instance v1, Lhx6;
 
-    const-string v125, "Christian Gangsta Rap"
+    move-object/from16 v33, v0
 
-    const-string v126, "Heavy Metal"
+    const-string v0, "cookie"
 
-    const-string v127, "Black Metal"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v128, "Crossover"
+    new-instance v0, Lhx6;
 
-    const-string v129, "Contemporary Christian"
+    move-object/from16 v34, v1
 
-    const-string v130, "Christian Rock"
+    const-string v1, "date"
 
-    const-string v131, "Merengue"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v132, "Salsa"
+    new-instance v1, Lhx6;
 
-    const-string v133, "Thrash Metal"
+    move-object/from16 v35, v0
 
-    const-string v134, "Anime"
+    const-string v0, "etag"
 
-    const-string v135, "Jpop"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v136, "Synthpop"
+    new-instance v0, Lhx6;
 
-    const-string v137, "Abstract"
+    move-object/from16 v36, v1
 
-    const-string v138, "Art Rock"
+    const-string v1, "expect"
 
-    const-string v139, "Baroque"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v140, "Bhangra"
+    new-instance v1, Lhx6;
 
-    const-string v141, "Big beat"
+    move-object/from16 v37, v0
 
-    const-string v142, "Breakbeat"
+    const-string v0, "expires"
 
-    const-string v143, "Chillout"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v144, "Downtempo"
+    new-instance v0, Lhx6;
 
-    const-string v145, "Dub"
+    move-object/from16 v38, v1
 
-    const-string v146, "EBM"
+    const-string v1, "from"
 
-    const-string v147, "Eclectic"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v148, "Electro"
+    new-instance v1, Lhx6;
 
-    const-string v149, "Electroclash"
+    move-object/from16 v39, v0
 
-    const-string v150, "Emo"
+    const-string v0, "host"
 
-    const-string v151, "Experimental"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v152, "Garage"
+    new-instance v0, Lhx6;
 
-    const-string v153, "Global"
+    move-object/from16 v40, v1
 
-    const-string v154, "IDM"
+    const-string v1, "if-match"
 
-    const-string v155, "Illbient"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v156, "Industro-Goth"
+    new-instance v1, Lhx6;
 
-    const-string v157, "Jam Band"
+    move-object/from16 v41, v0
 
-    const-string v158, "Krautrock"
+    const-string v0, "if-modified-since"
 
-    const-string v159, "Leftfield"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v160, "Lounge"
+    new-instance v0, Lhx6;
 
-    const-string v161, "Math Rock"
+    move-object/from16 v42, v1
 
-    const-string v162, "New Romantic"
+    const-string v1, "if-none-match"
 
-    const-string v163, "Nu-Breakz"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v164, "Post-Punk"
+    new-instance v1, Lhx6;
 
-    const-string v165, "Post-Rock"
+    move-object/from16 v43, v0
 
-    const-string v166, "Psytrance"
+    const-string v0, "if-range"
 
-    const-string v167, "Shoegaze"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v168, "Space Rock"
+    new-instance v0, Lhx6;
 
-    const-string v169, "Trop Rock"
+    move-object/from16 v44, v1
 
-    const-string v170, "World Music"
+    const-string v1, "if-unmodified-since"
 
-    const-string v171, "Neoclassical"
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v172, "Audiobook"
+    new-instance v1, Lhx6;
 
-    const-string v173, "Audio theatre"
+    move-object/from16 v45, v0
 
-    const-string v174, "Neue Deutsche Welle"
+    const-string v0, "last-modified"
 
-    const-string v175, "Podcast"
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v176, "Indie-Rock"
+    new-instance v0, Lhx6;
 
-    const-string v177, "G-Funk"
+    move-object/from16 v46, v1
 
-    const-string v178, "Dubstep"
+    const-string v1, "link"
 
-    filled-new-array/range {v1 .. v180}, [Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v47, v0
+
+    const-string v0, "location"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v48, v1
+
+    const-string v1, "max-forwards"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v49, v0
+
+    const-string v0, "proxy-authenticate"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v50, v1
+
+    const-string v1, "proxy-authorization"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v51, v0
+
+    const-string v0, "range"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v52, v1
+
+    const-string v1, "referer"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v53, v0
+
+    const-string v0, "refresh"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v54, v1
+
+    const-string v1, "retry-after"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v55, v0
+
+    const-string v0, "server"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v56, v1
+
+    const-string v1, "set-cookie"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v57, v0
+
+    const-string v0, "strict-transport-security"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v58, v1
+
+    const-string v1, "transfer-encoding"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v59, v0
+
+    const-string v0, "user-agent"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v60, v1
+
+    const-string v1, "vary"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lhx6;
+
+    move-object/from16 v61, v0
+
+    const-string v0, "via"
+
+    invoke-direct {v1, v0, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lhx6;
+
+    move-object/from16 v62, v1
+
+    const-string v1, "www-authenticate"
+
+    invoke-direct {v0, v1, v2}, Lhx6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v1, v18
+
+    move-object/from16 v18, v3
+
+    move-object v3, v1
+
+    move-object/from16 v2, v16
+
+    move-object/from16 v1, v17
+
+    move-object/from16 v16, v19
+
+    move-object/from16 v17, v20
+
+    move-object/from16 v19, v21
+
+    move-object/from16 v20, v22
+
+    move-object/from16 v21, v23
+
+    move-object/from16 v22, v24
+
+    move-object/from16 v23, v25
+
+    move-object/from16 v24, v26
+
+    move-object/from16 v25, v27
+
+    move-object/from16 v26, v28
+
+    move-object/from16 v27, v29
+
+    move-object/from16 v28, v30
+
+    move-object/from16 v29, v31
+
+    move-object/from16 v30, v32
+
+    move-object/from16 v31, v33
+
+    move-object/from16 v32, v34
+
+    move-object/from16 v33, v35
+
+    move-object/from16 v34, v36
+
+    move-object/from16 v35, v37
+
+    move-object/from16 v36, v38
+
+    move-object/from16 v37, v39
+
+    move-object/from16 v38, v40
+
+    move-object/from16 v39, v41
+
+    move-object/from16 v40, v42
+
+    move-object/from16 v41, v43
+
+    move-object/from16 v42, v44
+
+    move-object/from16 v43, v45
+
+    move-object/from16 v44, v46
+
+    move-object/from16 v45, v47
+
+    move-object/from16 v46, v48
+
+    move-object/from16 v47, v49
+
+    move-object/from16 v48, v50
+
+    move-object/from16 v49, v51
+
+    move-object/from16 v50, v52
+
+    move-object/from16 v51, v53
+
+    move-object/from16 v52, v54
+
+    move-object/from16 v53, v55
+
+    move-object/from16 v54, v56
+
+    move-object/from16 v55, v57
+
+    move-object/from16 v56, v58
+
+    move-object/from16 v57, v59
+
+    move-object/from16 v58, v60
+
+    move-object/from16 v59, v61
+
+    move-object/from16 v60, v62
+
+    move-object/from16 v61, v0
+
+    filled-new-array/range {v1 .. v61}, [Lhx6;
 
     move-result-object v0
 
-    sget-object v1, Le77;->b:Ld06;
+    sput-object v0, Ln37;->a:[Lhx6;
 
-    const/16 v1, 0xc0
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    new-array v2, v1, [Ljava/lang/Object;
+    const/16 v2, 0x3d
+
+    invoke-direct {v1, v2}, Ljava/util/LinkedHashMap;-><init>(I)V
 
     const/4 v3, 0x0
 
-    const-string v4, "Blues"
+    :goto_0
+    if-ge v3, v2, :cond_1
 
-    aput-object v4, v2, v3
+    aget-object v4, v0, v3
 
-    const/4 v4, 0x1
+    iget-object v4, v4, Lhx6;->b:Ljx0;
 
-    const-string v5, "Classic Rock"
+    invoke-virtual {v1, v4}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
 
-    aput-object v5, v2, v4
+    move-result v4
 
-    const/4 v4, 0x2
+    if-nez v4, :cond_0
 
-    const-string v5, "Country"
+    aget-object v4, v0, v3
 
-    aput-object v5, v2, v4
+    iget-object v4, v4, Lhx6;->b:Ljx0;
 
-    const/4 v4, 0x3
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v5, "Dance"
+    move-result-object v5
 
-    aput-object v5, v2, v4
+    invoke-interface {v1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v4, 0x4
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
-    const-string v5, "Disco"
+    goto :goto_0
 
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x5
-
-    const-string v5, "Funk"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x6
-
-    const-string v5, "Grunge"
-
-    aput-object v5, v2, v4
-
-    const/4 v4, 0x7
-
-    const-string v5, "Hip-Hop"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0x8
-
-    const-string v5, "Jazz"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0x9
-
-    const-string v5, "Metal"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xa
-
-    const-string v5, "New Age"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xb
-
-    const-string v5, "Oldies"
-
-    aput-object v5, v2, v4
-
-    const/16 v4, 0xc
-
-    const/16 v5, 0xb4
-
-    invoke-static {v0, v3, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v1, v2}, Lnu3;->g(I[Ljava/lang/Object;)V
-
-    invoke-static {v1, v2}, Le77;->h(I[Ljava/lang/Object;)Lxyc;
+    :cond_1
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Ln37;->a:Lxyc;
+    sput-object v0, Ln37;->b:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static a(I)Ljava/lang/String;
-    .locals 2
+.method public static a(Ljx0;)V
+    .locals 5
 
-    if-ltz p0, :cond_0
+    invoke-virtual {p0}, Ljx0;->d()I
 
-    sget-object v0, Ln37;->a:Lxyc;
+    move-result v0
 
-    iget v1, v0, Lxyc;->o:I
+    const/4 v1, 0x0
 
-    if-ge p0, v1, :cond_0
+    :goto_0
+    if-ge v1, v0, :cond_2
 
-    invoke-virtual {v0, p0}, Lxyc;->get(I)Ljava/lang/Object;
+    const/16 v2, 0x41
+
+    int-to-byte v2, v2
+
+    const/16 v3, 0x5a
+
+    int-to-byte v3, v3
+
+    invoke-virtual {p0, v1}, Ljx0;->g(I)B
+
+    move-result v4
+
+    if-le v2, v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-ge v3, v4, :cond_1
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-virtual {p0}, Ljx0;->l()Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/String;
+    const-string v1, "PROTOCOL_ERROR response malformed: mixed case name: "
 
-    return-object p0
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object p0
 
-    return-object p0
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    return-void
 .end method

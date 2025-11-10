@@ -1,27 +1,64 @@
 .class public final Lg32;
-.super Ljava/lang/Object;
+.super Ldh3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
 # instance fields
-.field public final a:Lc29;
-
-.field public final b:Ln19;
-
-.field public final c:I
+.field private volatile synthetic _resumed$volatile:I
 
 
 # direct methods
-.method public constructor <init>(Lc29;Ln19;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lg32;
 
-    iput-object p1, p0, Lg32;->a:Lc29;
+    const-string v1, "_resumed$volatile"
 
-    iput-object p2, p0, Lg32;->b:Ln19;
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    iput p3, p0, Lg32;->c:I
+    move-result-object v0
+
+    sput-object v0, Lg32;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ly22;Ljava/lang/Throwable;Z)V
+    .locals 2
+
+    if-nez p2, :cond_0
+
+    new-instance p2, Ljava/util/concurrent/CancellationException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Continuation "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " was cancelled normally"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    :cond_0
+    invoke-direct {p0, p2, p3}, Ldh3;-><init>(Ljava/lang/Throwable;Z)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lg32;->_resumed$volatile:I
 
     return-void
 .end method

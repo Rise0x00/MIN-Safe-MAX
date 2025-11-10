@@ -17,7 +17,7 @@
     d2 = {
         "Lone/me/rlottie/NativeLibraryLoader;",
         "",
-        "Loyf;",
+        "Lybg;",
         "load",
         "()V",
         "",
@@ -72,11 +72,11 @@
     move-exception v0
 
     .line 2
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lp4a;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lwx9;->q(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lp4a;->u(Ljava/lang/Throwable;)V
 
     return-void
 .end method

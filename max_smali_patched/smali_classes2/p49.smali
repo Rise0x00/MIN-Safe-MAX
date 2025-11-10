@@ -2,294 +2,352 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lp49;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public A:Lq49;
+.field public final a:I
 
-.field public B:J
+.field public final b:Lnrf;
 
-.field public C:I
+.field public final c:Lcde;
 
-.field public D:J
+.field public final d:Ljava/lang/Integer;
 
-.field public E:Ljava/util/List;
-
-.field public F:Ly79;
-
-.field public G:Lin4;
-
-.field public H:I
-
-.field public I:I
-
-.field public a:J
-
-.field public b:J
-
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:Ljava/lang/String;
-
-.field public h:J
-
-.field public i:Lw49;
-
-.field public j:Lg89;
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Lfah;
-
-.field public o:I
-
-.field public p:I
-
-.field public q:J
-
-.field public r:Lq49;
-
-.field public s:Ljava/lang/String;
-
-.field public t:Ljava/lang/String;
-
-.field public u:Ljava/lang/String;
-
-.field public v:Z
-
-.field public w:I
-
-.field public x:I
-
-.field public y:J
-
-.field public z:J
+.field public final o:Lade;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
+    new-instance v0, Lui8;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lui8;-><init>(I)V
+
+    sput-object v0, Lp49;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILirf;Ljava/lang/Integer;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    sget-object v3, Lcde;->a:Lcde;
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    .line 1
+    invoke-direct/range {v0 .. v5}, Lp49;-><init>(ILnrf;Lcde;Ljava/lang/Integer;Lade;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ILnrf;Lcde;Ljava/lang/Integer;Lade;)V
+    .locals 0
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    .line 3
+    iput p1, p0, Lp49;->a:I
 
-    iput-object v0, p0, Lp49;->G:Lin4;
+    .line 4
+    iput-object p2, p0, Lp49;->b:Lnrf;
+
+    .line 5
+    iput-object p3, p0, Lp49;->c:Lcde;
+
+    .line 6
+    iput-object p4, p0, Lp49;->d:Ljava/lang/Integer;
+
+    .line 7
+    iput-object p5, p0, Lp49;->o:Lade;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lq49;
-    .locals 53
+.method public final describeContents()I
+    .locals 1
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x0
 
-    new-instance v1, Lq49;
+    return v0
+.end method
 
-    iget-wide v2, v0, Lp49;->a:J
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-wide v4, v0, Lp49;->b:J
+    const/4 v0, 0x1
 
-    iget-wide v6, v0, Lp49;->h:J
+    if-ne p0, p1, :cond_0
 
-    iget-wide v8, v0, Lp49;->c:J
+    return v0
 
-    iget-wide v10, v0, Lp49;->d:J
+    :cond_0
+    instance-of v1, p1, Lp49;
 
-    iget-wide v12, v0, Lp49;->e:J
+    const/4 v2, 0x0
 
-    iget-wide v14, v0, Lp49;->f:J
+    if-nez v1, :cond_1
 
-    move-object/from16 v16, v1
+    return v2
 
-    iget-object v1, v0, Lp49;->g:Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lp49;
 
-    move-object/from16 v17, v1
+    iget v1, p0, Lp49;->a:I
 
-    iget-object v1, v0, Lp49;->i:Lw49;
+    iget v3, p1, Lp49;->a:I
 
-    move-object/from16 v18, v1
+    if-eq v1, v3, :cond_2
 
-    iget-object v1, v0, Lp49;->j:Lg89;
+    return v2
 
-    move-wide/from16 v19, v2
+    :cond_2
+    iget-object v1, p0, Lp49;->b:Lnrf;
 
-    move-object v3, v1
+    iget-object v3, p1, Lp49;->b:Lnrf;
 
-    iget-wide v1, v0, Lp49;->k:J
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-wide/from16 v21, v1
+    move-result v1
 
-    iget-object v1, v0, Lp49;->l:Ljava/lang/String;
+    if-nez v1, :cond_3
 
-    iget-object v2, v0, Lp49;->m:Ljava/lang/String;
+    return v2
 
-    move-object/from16 v23, v1
+    :cond_3
+    iget-object v1, p0, Lp49;->c:Lcde;
 
-    iget-object v1, v0, Lp49;->n:Lfah;
+    iget-object v3, p1, Lp49;->c:Lcde;
 
-    move-object/from16 v24, v1
+    if-eq v1, v3, :cond_4
 
-    iget v1, v0, Lp49;->o:I
+    return v2
 
-    move/from16 v25, v1
+    :cond_4
+    iget-object v1, p0, Lp49;->d:Ljava/lang/Integer;
 
-    iget v1, v0, Lp49;->p:I
+    iget-object v3, p1, Lp49;->d:Ljava/lang/Integer;
 
-    move/from16 v27, v1
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-object/from16 v26, v2
+    move-result v1
 
-    iget-wide v1, v0, Lp49;->q:J
+    if-nez v1, :cond_5
 
-    move-wide/from16 v28, v1
+    return v2
 
-    iget-object v1, v0, Lp49;->r:Lq49;
+    :cond_5
+    iget-object v1, p0, Lp49;->o:Lade;
 
-    iget-object v2, v0, Lp49;->s:Ljava/lang/String;
+    iget-object p1, p1, Lp49;->o:Lade;
 
-    move-object/from16 v30, v1
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, v0, Lp49;->t:Ljava/lang/String;
+    move-result p1
 
-    move-object/from16 v31, v1
+    if-nez p1, :cond_6
 
-    iget-object v1, v0, Lp49;->u:Ljava/lang/String;
+    return v2
 
-    move-object/from16 v32, v1
+    :cond_6
+    return v0
+.end method
 
-    iget v1, v0, Lp49;->H:I
+.method public final hashCode()I
+    .locals 4
 
-    move/from16 v33, v1
+    iget v0, p0, Lp49;->a:I
 
-    iget-boolean v1, v0, Lp49;->v:Z
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move/from16 v34, v1
+    move-result v0
 
-    iget v1, v0, Lp49;->w:I
+    const/16 v1, 0x1f
 
-    move/from16 v35, v1
+    mul-int/2addr v0, v1
 
-    iget v1, v0, Lp49;->x:I
+    iget-object v2, p0, Lp49;->b:Lnrf;
 
-    move/from16 v36, v1
+    invoke-static {v0, v1, v2}, Lcd0;->c(IILnrf;)I
 
-    iget v1, v0, Lp49;->I:I
+    move-result v0
 
-    move/from16 v38, v1
+    iget-object v2, p0, Lp49;->c:Lcde;
 
-    move-object/from16 v37, v2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    iget-wide v1, v0, Lp49;->y:J
+    move-result v2
 
-    move-wide/from16 v39, v1
+    add-int/2addr v2, v0
 
-    iget-wide v1, v0, Lp49;->z:J
+    mul-int/2addr v2, v1
 
-    move-wide/from16 v41, v1
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Lp49;->A:Lq49;
+    iget-object v3, p0, Lp49;->d:Ljava/lang/Integer;
 
-    move-object/from16 v43, v1
+    if-nez v3, :cond_0
 
-    iget-wide v1, v0, Lp49;->B:J
+    move v3, v0
 
-    move-wide/from16 v44, v1
+    goto :goto_0
 
-    iget v1, v0, Lp49;->C:I
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    move/from16 v46, v1
+    move-result v3
 
-    iget-wide v1, v0, Lp49;->D:J
+    :goto_0
+    add-int/2addr v2, v3
 
-    move-wide/from16 v47, v1
+    mul-int/2addr v2, v1
 
-    iget-object v1, v0, Lp49;->E:Ljava/util/List;
+    iget-object v1, p0, Lp49;->o:Lade;
 
-    iget-object v2, v0, Lp49;->F:Ly79;
+    if-nez v1, :cond_1
 
-    move-object/from16 v49, v1
+    goto :goto_1
 
-    iget-object v1, v0, Lp49;->G:Lin4;
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-object/from16 v50, v49
+    move-result v0
 
-    move-object/from16 v49, v1
+    :goto_1
+    add-int/2addr v2, v0
 
-    move-object/from16 v1, v16
+    return v2
+.end method
 
-    move-object/from16 v16, v17
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-object/from16 v17, v18
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object/from16 v18, v3
+    const-string v1, "MemberListAction(id="
 
-    move-wide/from16 v51, v47
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object/from16 v48, v2
+    iget v1, p0, Lp49;->a:I
 
-    move-wide/from16 v2, v19
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v19, v21
+    const-string v1, ", text="
 
-    move-object/from16 v21, v23
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v23, v24
+    iget-object v1, p0, Lp49;->b:Lnrf;
 
-    move/from16 v24, v25
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v22, v26
+    const-string v1, ", type="
 
-    move/from16 v25, v27
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v26, v28
+    iget-object v1, p0, Lp49;->c:Lcde;
 
-    move-object/from16 v28, v30
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v30, v31
+    const-string v1, ", startIconRes="
 
-    move-object/from16 v31, v32
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v32, v33
+    iget-object v1, p0, Lp49;->d:Ljava/lang/Integer;
 
-    move/from16 v33, v34
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move/from16 v34, v35
+    const-string v1, ", endViewType="
 
-    move/from16 v35, v36
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v29, v37
+    iget-object v1, p0, Lp49;->o:Lade;
 
-    move/from16 v36, v38
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v37, v39
+    const-string v1, ")"
 
-    move-wide/from16 v39, v41
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v41, v43
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-wide/from16 v42, v44
+    move-result-object v0
 
-    move/from16 v44, v46
+    return-object v0
+.end method
 
-    move-wide/from16 v45, v51
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    move-object/from16 v47, v50
+    iget v0, p0, Lp49;->a:I
 
-    invoke-direct/range {v1 .. v49}, Lq49;-><init>(JJJJJJJLjava/lang/String;Lw49;Lg89;JLjava/lang/String;Ljava/lang/String;Lfah;IIJLq49;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZIIIJJLq49;JIJLjava/util/List;Ly79;Lin4;)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-object/from16 v16, v1
+    iget-object v0, p0, Lp49;->b:Lnrf;
 
-    return-object v16
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lp49;->c:Lcde;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lp49;->d:Ljava/lang/Integer;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v0, p0, Lp49;->o:Lade;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

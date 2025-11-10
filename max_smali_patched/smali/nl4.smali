@@ -1,43 +1,68 @@
-.class public abstract Lnl4;
+.class public final Lnl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lju8;
+
+
+# static fields
+.field public static final f:I
+
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lunf;
+.field public final b:I
 
-.field public final c:I
+.field public final c:Landroid/app/NotificationManager;
 
-.field public final o:Lr76;
+.field public d:Lae;
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(ILunf;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lbtc;->default_notification_channel_name:I
 
-    iput p1, p0, Lnl4;->a:I
-
-    iput-object p2, p0, Lnl4;->b:Lunf;
-
-    iput p3, p0, Lnl4;->c:I
-
-    iget-object p1, p2, Lunf;->c:[Lr76;
-
-    aget-object p1, p1, p3
-
-    iput-object p1, p0, Lnl4;->o:Lr76;
+    sput v0, Lnl4;->f:I
 
     return-void
 .end method
 
+.method public constructor <init>(Lis0;)V
+    .locals 1
 
-# virtual methods
-.method public abstract a()I
-.end method
+    iget-object v0, p1, Lis0;->d:Ljava/lang/Object;
 
-.method public abstract b(Lnl4;)Z
+    check-cast v0, Landroid/content/Context;
+
+    iget p1, p1, Lis0;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lnl4;->a:Landroid/content/Context;
+
+    iput p1, p0, Lnl4;->b:I
+
+    const-string p1, "notification"
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/NotificationManager;
+
+    invoke-static {p1}, Ligi;->i(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lnl4;->c:Landroid/app/NotificationManager;
+
+    sget p1, Llmc;->media3_notification_small_icon:I
+
+    iput p1, p0, Lnl4;->e:I
+
+    return-void
 .end method

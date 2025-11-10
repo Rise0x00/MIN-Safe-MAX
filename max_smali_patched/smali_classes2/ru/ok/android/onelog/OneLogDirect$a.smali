@@ -1,11 +1,11 @@
 .class public final Lru/ok/android/onelog/OneLogDirect$a;
-.super Ledh;
+.super Lhsh;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/onelog/OneLogDirect;->send(Lru/ok/android/onelog/OneLogItem;Llf6;)V
+    value = Lru/ok/android/onelog/OneLogDirect;->send(Lru/ok/android/onelog/OneLogItem;Lej6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,23 +24,23 @@
 
     iput-object p3, p0, Lru/ok/android/onelog/OneLogDirect$a;->h:Lru/ok/android/onelog/OneLogItem;
 
-    invoke-direct {p0, p4, p1, p2}, Ledh;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p4, p1, p2}, Lhsh;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcm7;)V
+.method public a(Lnr7;)V
     .locals 1
 
-    invoke-interface {p1}, Lcm7;->u()V
+    invoke-interface {p1}, Lnr7;->r()V
 
     iget-object v0, p0, Lru/ok/android/onelog/OneLogDirect$a;->h:Lru/ok/android/onelog/OneLogItem;
 
-    invoke-static {v0, p1}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Lcm7;)V
+    invoke-static {v0, p1}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Lnr7;)V
 
-    invoke-interface {p1}, Lcm7;->t()V
+    invoke-interface {p1}, Lnr7;->q()V
 
     return-void
 .end method
@@ -53,26 +53,26 @@
     return v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Ldl;
+.method public bridge synthetic getConfigExtractor()Lbm;
     .locals 1
 
-    sget-object v0, Ldl;->e:Lzu3;
+    sget-object v0, Lbm;->f:Ly1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lpl7;
+.method public bridge synthetic getFailParser()Lar7;
     .locals 1
 
-    sget-object v0, Lmf2;->b:Lmf2;
+    sget-object v0, Low3;->a:Low3;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lul;
+.method public bridge synthetic getScopeAfter()Lvm;
     .locals 1
 
-    sget-object v0, Lul;->a:Lul;
+    sget-object v0, Lvm;->a:Lvm;
 
     return-object v0
 .end method
@@ -93,7 +93,7 @@
     return v0
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lcm7;)V
+.method public bridge synthetic writeSupplyParams(Lnr7;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

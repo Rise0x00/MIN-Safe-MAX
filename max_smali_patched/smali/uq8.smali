@@ -1,89 +1,212 @@
-.class public final Luq8;
-.super Landroid/view/animation/Animation;
+.class public final synthetic Luq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld38;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
-
-.field public final synthetic c:I
-
-.field public final synthetic o:Landroid/view/View;
+.field public final synthetic b:Lu30;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;III)V
+.method public synthetic constructor <init>(Lu30;I)V
     .locals 0
 
-    iput p4, p0, Luq8;->a:I
+    iput p2, p0, Luq8;->a:I
 
-    iput p2, p0, Luq8;->b:I
+    iput-object p1, p0, Luq8;->b:Lu30;
 
-    iput p3, p0, Luq8;->c:I
-
-    iput-object p1, p0, Luq8;->o:Landroid/view/View;
-
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget p2, p0, Luq8;->a:I
+    iget v0, p0, Luq8;->a:I
 
-    iget-object v0, p0, Luq8;->o:Landroid/view/View;
+    check-cast p1, Lotb;
 
-    iget v1, p0, Luq8;->c:I
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Luq8;->b:I
+    iget-object v0, p0, Luq8;->b:Lu30;
 
-    packed-switch p2, :pswitch_data_0
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
 
-    sub-int/2addr v2, v1
+    check-cast v0, Lnub;
 
-    int-to-float p2, v2
+    iget-boolean v0, v0, Lnub;->i:Z
 
-    mul-float/2addr p2, p1
-
-    float-to-int p1, p2
-
-    add-int/2addr v1, p1
-
-    sget-boolean p1, Lor8;->i1:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {p1, v0}, Lotb;->U(Z)V
 
     return-void
 
     :pswitch_0
-    sub-int p2, v2, v1
+    iget-object v0, p0, Luq8;->b:Lu30;
 
-    int-to-float p2, p2
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
 
-    mul-float/2addr p2, p1
+    check-cast v0, Lnub;
 
-    float-to-int p1, p2
+    iget v0, v0, Lnub;->h:I
 
-    sub-int/2addr v2, p1
+    invoke-interface {p1, v0}, Lotb;->onRepeatModeChanged(I)V
 
-    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->n(Landroid/view/View;I)V
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-object v0, v0, Lnub;->g:Lzsb;
+
+    invoke-interface {p1, v0}, Lotb;->A0(Lzsb;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-boolean v0, v0, Lnub;->v:Z
+
+    invoke-interface {p1, v0}, Lotb;->q(Z)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-boolean v0, v0, Lnub;->t:Z
+
+    const/4 v1, 0x4
+
+    invoke-interface {p1, v1, v0}, Lotb;->i(IZ)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget v0, v0, Lnub;->y:I
+
+    invoke-interface {p1, v0}, Lotb;->k(I)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-object v0, v0, Lnub;->m:Ldu8;
+
+    invoke-interface {p1, v0}, Lotb;->k0(Ldu8;)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-object v1, v0, Lnub;->j:Lmvf;
+
+    iget v0, v0, Lnub;->k:I
+
+    invoke-interface {p1, v1, v0}, Lotb;->n0(Lmvf;I)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->a:Ljava/lang/Object;
+
+    check-cast v0, Lltb;
+
+    invoke-interface {p1, v0}, Lotb;->B0(Lltb;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget v1, v0, Lnub;->r:I
+
+    iget-boolean v0, v0, Lnub;->s:Z
+
+    invoke-interface {p1, v1, v0}, Lotb;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-object v0, v0, Lnub;->q:Lws4;
+
+    invoke-interface {p1, v0}, Lotb;->E0(Lws4;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Luq8;->b:Lu30;
+
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnub;
+
+    iget-object v0, v0, Lnub;->o:Ln20;
+
+    invoke-interface {p1, v0}, Lotb;->y(Ln20;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

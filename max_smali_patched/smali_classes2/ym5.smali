@@ -1,35 +1,81 @@
-.class public final Lym5;
+.class public final synthetic Lym5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+.field public final synthetic b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(IIIILjava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;I)V
     .locals 0
+
+    iput p2, p0, Lym5;->a:I
+
+    iput-object p1, p0, Lym5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lym5;->a:I
+    return-void
+.end method
 
-    iput-object p5, p0, Lym5;->b:Ljava/lang/String;
 
-    iput p2, p0, Lym5;->c:I
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    iput p3, p0, Lym5;->d:I
+    iget p1, p0, Lym5;->a:I
 
-    iput p4, p0, Lym5;->e:I
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lym5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+
+    packed-switch p1, :pswitch_data_0
+
+    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->K0:[Les7;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
 
     return-void
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->J0:Z
+
+    sget-object p1, Lwc7;->a:Lwc7;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lt5;->e()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lad7;
+
+    if-eqz p1, :cond_0
+
+    const/4 v2, 0x4
+
+    invoke-virtual {p1, v2}, Lad7;->b(I)V
+
+    :cond_0
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

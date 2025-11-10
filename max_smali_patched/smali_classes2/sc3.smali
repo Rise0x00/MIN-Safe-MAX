@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:[I
 
 .field public final b:I
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(I[I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lsc3;->a:I
+    iput-object p2, p0, Lsc3;->a:[I
 
-    iput p2, p0, Lsc3;->b:I
+    iput p1, p0, Lsc3;->b:I
 
     return-void
 .end method
@@ -41,11 +41,15 @@
     :cond_1
     check-cast p1, Lsc3;
 
-    iget v0, p0, Lsc3;->a:I
+    iget-object v0, p0, Lsc3;->a:[I
 
-    iget v1, p1, Lsc3;->a:I
+    iget-object v1, p1, Lsc3;->a:[I
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
@@ -71,9 +75,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget v0, p0, Lsc3;->a:I
+    iget-object v0, p0, Lsc3;->a:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
@@ -91,19 +95,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", themed="
+    iget-object v0, p0, Lsc3;->a:[I
 
-    const-string v1, ")"
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    const-string v2, "CommonStatesIconDisabledColors(negative="
+    move-result-object v0
 
-    iget v3, p0, Lsc3;->a:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lsc3;->b:I
+    const-string v2, "CommonBackgroundSkeletonBubbleGradientSecondaryColors(gradient="
 
-    invoke-static {v2, v3, v0, v4, v1}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", staticBackground="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lsc3;->b:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,94 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhi8;
+.implements Landroid/window/OnBackAnimationCallback;
 
 
 # instance fields
-.field public final a:Landroid/os/Messenger;
+.field public final synthetic a:Lgi8;
+
+.field public final synthetic b:Lji8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Messenger;)V
+.method public constructor <init>(Lji8;Lgi8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lii8;->a:Landroid/os/Messenger;
+    iput-object p1, p0, Lii8;->b:Lji8;
+
+    iput-object p2, p0, Lii8;->a:Lgi8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxs8;Landroid/os/Bundle;)V
-    .locals 3
+.method public final onBackCancelled()V
+    .locals 1
 
-    if-nez p2, :cond_0
+    iget-object v0, p0, Lii8;->b:Lji8;
 
-    new-instance p2, Landroid/os/Bundle;
+    iget-object v0, v0, Lhi8;->a:Landroid/window/OnBackInvokedCallback;
 
-    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lii8;->a:Lgi8;
+
+    invoke-interface {v0}, Lgi8;->d()V
 
     :cond_0
-    const-string v0, "extra_service_version"
+    return-void
+.end method
 
-    const/4 v1, 0x2
+.method public final onBackInvoked()V
+    .locals 1
 
-    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    iget-object v0, p0, Lii8;->a:Lgi8;
 
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "data_media_item_id"
-
-    const-string v2, "androidx.media3.session.MediaLibraryService"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, v1}, Liq7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    const-string v1, "data_media_session_token"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string p1, "data_root_hints"
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lii8;->b(ILandroid/os/Bundle;)V
+    invoke-interface {v0}, Lgi8;->a()V
 
     return-void
 .end method
 
-.method public final b(ILandroid/os/Bundle;)V
+.method public final onBackProgressed(Landroid/window/BackEvent;)V
     .locals 1
 
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+    iget-object v0, p0, Lii8;->b:Lji8;
 
-    move-result-object v0
+    iget-object v0, v0, Lhi8;->a:Landroid/window/OnBackInvokedCallback;
 
-    iput p1, v0, Landroid/os/Message;->what:I
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x2
+    new-instance v0, Lve0;
 
-    iput p1, v0, Landroid/os/Message;->arg1:I
+    invoke-direct {v0, p1}, Lve0;-><init>(Landroid/window/BackEvent;)V
 
-    if-eqz p2, :cond_0
+    iget-object p1, p0, Lii8;->a:Lgi8;
 
-    invoke-virtual {v0, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+    invoke-interface {p1, v0}, Lgi8;->b(Lve0;)V
 
     :cond_0
-    iget-object p1, p0, Lii8;->a:Landroid/os/Messenger;
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+.method public final onBackStarted(Landroid/window/BackEvent;)V
+    .locals 1
 
+    iget-object v0, p0, Lii8;->b:Lji8;
+
+    iget-object v0, v0, Lhi8;->a:Landroid/window/OnBackInvokedCallback;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lve0;
+
+    invoke-direct {v0, p1}, Lve0;-><init>(Landroid/window/BackEvent;)V
+
+    iget-object p1, p0, Lii8;->a:Lgi8;
+
+    invoke-interface {p1, v0}, Lgi8;->c(Lve0;)V
+
+    :cond_0
     return-void
 .end method

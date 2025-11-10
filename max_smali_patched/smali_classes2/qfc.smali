@@ -1,28 +1,480 @@
-.class public abstract Lqfc;
-.super Ljava/lang/Object;
+.class public final Lqfc;
+.super Llk5;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_stickers_sticker_first_frame:I = 0x7f0a08b3
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_stickers_sticker_lottie:I = 0x7f0a08b4
+.field public final b:Ljava/util/ArrayList;
 
-.field public static oneme_stickers_sticker_set_header_button:I = 0x7f0a08b5
 
-.field public static oneme_stickers_sticker_set_header_subtitle:I = 0x7f0a08b6
+# direct methods
+.method public constructor <init>(ILjava/nio/ByteBuffer;)V
+    .locals 5
 
-.field public static oneme_stickers_sticker_set_header_title:I = 0x7f0a08b7
+    iput p1, p0, Lqfc;->a:I
 
-.field public static oneme_stickers_sticker_set_list:I = 0x7f0a08b8
+    packed-switch p1, :pswitch_data_0
 
-.field public static oneme_stickers_sticker_webm:I = 0x7f0a08b9
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_view_type_sticker:I = 0x7f0a08ba
+    .line 2
+    new-instance p1, Ljava/util/ArrayList;
 
-.field public static oneme_stickers_view_type_sticker_lottie:I = 0x7f0a08bb
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-.field public static oneme_stickers_view_type_sticker_webm:I = 0x7f0a08bc
+    iput-object p1, p0, Lqfc;->b:Ljava/util/ArrayList;
 
-.field public static oneme_stickers_view_type_stickers_set:I = 0x7f0a08bd
+    .line 3
+    sget-object p1, Lfxf;->s0:Lfxf;
 
-.field public static oneme_stickers_view_type_stickers_set_showcase:I = 0x7f0a08be
+    const/4 v0, 0x2
+
+    .line 4
+    iget-short p1, p1, Lfxf;->a:S
+
+    invoke-virtual {p0, p2, p1, v0}, Llk5;->b(Ljava/nio/ByteBuffer;II)I
+
+    move-result p1
+
+    .line 5
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    add-int/lit8 v1, v0, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x0
+
+    :goto_0
+    if-ge p1, v0, :cond_0
+
+    .line 6
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v1
+
+    .line 7
+    invoke-static {}, Lixf;->values()[Lixf;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
+
+    move-result-object v2
+
+    new-instance v3, Lb83;
+
+    const/4 v4, 0x6
+
+    invoke-direct {v3, v1, v4}, Lb83;-><init>(II)V
+
+    .line 8
+    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    .line 9
+    invoke-interface {v1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
+
+    move-result-object v1
+
+    .line 10
+    new-instance v2, Li4;
+
+    const/16 v3, 0x11
+
+    invoke-direct {v2, v3, p0}, Li4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    .line 11
+    :cond_1
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "inconsistent length"
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 12
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 13
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    .line 14
+    sget-object p1, Lfxf;->c:Lfxf;
+
+    const/4 v0, 0x4
+
+    .line 15
+    iget-short p1, p1, Lfxf;->a:S
+
+    invoke-virtual {p0, p2, p1, v0}, Llk5;->b(Ljava/nio/ByteBuffer;II)I
+
+    move-result p1
+
+    .line 16
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    add-int/lit8 v1, v0, 0x2
+
+    if-ne p1, v1, :cond_4
+
+    .line 17
+    rem-int/lit8 p1, v0, 0x2
+
+    if-nez p1, :cond_3
+
+    const/4 p1, 0x0
+
+    :goto_1
+    if-ge p1, v0, :cond_2
+
+    .line 18
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v1
+
+    const v2, 0xffff
+
+    rem-int/2addr v1, v2
+
+    .line 19
+    invoke-static {}, Lhxf;->values()[Lhxf;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
+
+    move-result-object v2
+
+    new-instance v3, Lb83;
+
+    const/4 v4, 0x5
+
+    invoke-direct {v3, v1, v4}, Lb83;-><init>(II)V
+
+    .line 20
+    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    .line 21
+    invoke-interface {v1}, Ljava/util/stream/Stream;->findFirst()Ljava/util/Optional;
+
+    move-result-object v1
+
+    .line 22
+    new-instance v2, Li4;
+
+    const/16 v3, 0x17
+
+    invoke-direct {v2, v3, p0}, Li4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    add-int/lit8 p1, p1, 0x2
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+
+    .line 23
+    :cond_3
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "invalid group length"
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 24
+    :cond_4
+    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
+
+    const-string p2, "inconsistent length"
+
+    invoke-direct {p1, p2}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Lhxf;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lqfc;->a:I
+
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 26
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    .line 27
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lixf;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqfc;->a:I
+
+    .line 28
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 29
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    .line 30
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public constructor <init>([Lixf;)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqfc;->a:I
+
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 32
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    .line 33
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    aget-object v2, p1, v1
+
+    .line 34
+    iget-object v3, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()[B
+    .locals 4
+
+    iget v0, p0, Lqfc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x2
+
+    add-int/lit8 v2, v1, 0x2
+
+    add-int/lit8 v1, v1, 0x6
+
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    sget-object v3, Lfxf;->c:Lfxf;
+
+    iget-short v3, v3, Lfxf;->a:S
+
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x2
+
+    int-to-short v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lhxf;
+
+    iget-short v2, v2, Lhxf;->a:S
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    int-to-short v1, v1
+
+    add-int/lit8 v2, v1, 0x4
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    sget-object v3, Lfxf;->s0:Lfxf;
+
+    iget-short v3, v3, Lfxf;->a:S
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    int-to-byte v1, v1
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    new-instance v1, Lhs;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v1, v3, v2}, Lhs;-><init>(ILjava/nio/ByteBuffer;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lqfc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lqfc;->b:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "SupportedGroupsExtension"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method

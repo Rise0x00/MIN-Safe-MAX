@@ -1,48 +1,150 @@
 .class public final Lzdg;
-.super Lnz3;
+.super Lrj0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final b:J
 
-.field public final synthetic Y:Ldoa;
+.field public final c:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJZ)V
     .locals 0
 
-    iput-object p1, p0, Lzdg;->Y:Ldoa;
+    invoke-direct {p0}, Lrj0;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lzdg;->b:J
+
+    iput-wide p3, p0, Lzdg;->c:J
+
+    iput-boolean p5, p0, Lzdg;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Lzdg;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lzdg;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lzdg;
 
-    iput p1, p0, Lzdg;->X:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lzdg;->Y:Ldoa;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lzdg;
 
-    move-result-object p1
+    iget-wide v3, p0, Lzdg;->b:J
 
-    return-object p1
+    iget-wide v5, p1, Lzdg;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lzdg;->c:J
+
+    iget-wide v5, p1, Lzdg;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lzdg;->d:Z
+
+    iget-boolean p1, p1, Lzdg;->d:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lzdg;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lzdg;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lzdg;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "UpdateMessageEvent(chatId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lzdg;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lzdg;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", reactionsChanged="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lzdg;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

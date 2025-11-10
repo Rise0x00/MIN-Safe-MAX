@@ -2,50 +2,29 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz6g;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
 
-    const/4 v0, 0x1
+# instance fields
+.field public final a:Lirf;
 
-    if-ne p0, p1, :cond_0
+.field public final b:Lirf;
 
-    return v0
+.field public final c:Ljava/util/List;
 
-    :cond_0
-    instance-of v1, p1, Ly6g;
 
-    if-nez v1, :cond_1
+# direct methods
+.method public constructor <init>(Lirf;Lirf;Ljava/util/List;)V
+    .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
+    iput-object p1, p0, Ly6g;->a:Lirf;
 
-    :cond_1
-    check-cast p1, Ly6g;
+    iput-object p2, p0, Ly6g;->b:Lirf;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p3, p0, Ly6g;->c:Ljava/util/List;
 
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const/high16 v0, 0x29000000
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
-
-    return-object v0
+    return-void
 .end method

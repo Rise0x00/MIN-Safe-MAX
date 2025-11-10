@@ -1,109 +1,148 @@
-.class public final enum Lfy1;
-.super Ljava/lang/Enum;
+.class public final Lfy1;
+.super Lyy1;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lfy1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic Y:[Lfy1;
-
-.field public static final enum a:Lfy1;
-
-.field public static final enum b:Lfy1;
-
-.field public static final enum c:Lfy1;
-
-.field public static final enum o:Lfy1;
+.field public final synthetic b:Lqt1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lqt1;I)V
+    .locals 0
 
-    new-instance v0, Lfy1;
+    iput p2, p0, Lfy1;->a:I
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lfy1;->b:Lqt1;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfy1;->a:Lfy1;
-
-    new-instance v1, Lfy1;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfy1;->b:Lfy1;
-
-    new-instance v2, Lfy1;
-
-    const-string v3, "METERING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lfy1;->c:Lfy1;
-
-    new-instance v3, Lfy1;
-
-    const-string v4, "CONVERGED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lfy1;->o:Lfy1;
-
-    new-instance v4, Lfy1;
-
-    const-string v5, "LOCKED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lfy1;->X:Lfy1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lfy1;
-
-    move-result-object v0
-
-    sput-object v0, Lfy1;->Y:[Lfy1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfy1;
-    .locals 1
 
-    const-class v0, Lfy1;
+# virtual methods
+.method public final a(I)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lfy1;->a:I
 
-    move-result-object p0
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p0, Lfy1;
+    iget-object p1, p0, Lfy1;->b:Lqt1;
 
-    return-object p0
+    if-eqz p1, :cond_0
+
+    new-instance v0, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v1, "Camera is closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Lqt1;->d(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    new-instance p1, Landroidx/camera/core/ImageCaptureException;
+
+    const/4 v0, 0x0
+
+    const-string v1, "Capture request is cancelled because camera is closed"
+
+    invoke-direct {p1, v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lfy1;->b:Lqt1;
+
+    invoke-virtual {v0, p1}, Lqt1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lfy1;
+.method public final b(ILfz1;)V
+    .locals 0
+
+    iget p1, p0, Lfy1;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    const-string p1, "FocusMeteringControl"
+
+    const-string p2, "triggerAePrecapture: triggering capture request completed"
+
+    invoke-static {p1, p2}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iget-object p2, p0, Lfy1;->b:Lqt1;
+
+    invoke-virtual {p2, p1}, Lqt1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lfy1;->b:Lqt1;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lqt1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(ILrtd;)V
     .locals 1
 
-    sget-object v0, Lfy1;->Y:[Lfy1;
+    iget p1, p0, Lfy1;->a:I
 
-    invoke-virtual {v0}, [Lfy1;->clone()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    new-instance p1, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;
 
-    check-cast v0, [Lfy1;
+    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
 
-    return-object v0
+    iget-object p2, p0, Lfy1;->b:Lqt1;
+
+    invoke-virtual {p2, p1}, Lqt1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    :pswitch_0
+    const-string p1, "ERROR"
+
+    const-string p2, "Capture request failed with reason "
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Landroidx/camera/core/ImageCaptureException;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lfy1;->b:Lqt1;
+
+    invoke-virtual {p1, p2}, Lqt1;->d(Ljava/lang/Throwable;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

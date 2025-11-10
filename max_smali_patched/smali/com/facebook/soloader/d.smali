@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lu35;)[Ljava/lang/String;
+.method public static a(Ljava/lang/String;Lk75;)[Ljava/lang/String;
     .locals 3
 
     sget-boolean v0, Lcom/facebook/soloader/SoLoader;->a:Z
@@ -29,11 +29,11 @@
 
     :cond_0
     :try_start_0
-    invoke-static {p1}, Lpch;->o(Lu35;)[Ljava/lang/String;
+    invoke-static {p1}, Loli;->b(Lk75;)[Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
-    .catch Lkl9; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lds9; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_1
@@ -47,7 +47,7 @@
     move-exception p1
 
     :try_start_1
-    invoke-static {p0, p1}, Lvb4;->g(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Laie;
+    invoke-static {p0, p1}, Lyzi;->g(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Loue;
 
     move-result-object p0
 
@@ -68,10 +68,10 @@
     throw p0
 .end method
 
-.method public static b(Ljava/lang/String;Lv35;ILandroid/os/StrictMode$ThreadPolicy;)V
+.method public static b(Ljava/lang/String;Ll75;ILandroid/os/StrictMode$ThreadPolicy;)V
     .locals 4
 
-    invoke-static {p0, p1}, Lcom/facebook/soloader/d;->a(Ljava/lang/String;Lu35;)[Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/facebook/soloader/d;->a(Ljava/lang/String;Lk75;)[Ljava/lang/String;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
 
     const-string v1, "\'s dependencies: "
 
-    invoke-static {v0, p0, v1}, Lqw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p0, v1}, Lnx1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -95,7 +95,7 @@
 
     const-string v0, "SoLoader"
 
-    invoke-static {v0, p0}, Lv4b;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lwei;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     array-length p0, p1
 

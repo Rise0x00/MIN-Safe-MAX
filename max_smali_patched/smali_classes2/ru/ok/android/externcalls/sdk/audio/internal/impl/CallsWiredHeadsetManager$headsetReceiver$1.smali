@@ -24,7 +24,7 @@
         "context",
         "Landroid/content/Intent;",
         "intent",
-        "Loyf;",
+        "Lybg;",
         "onReceive",
         "(Landroid/content/Context;Landroid/content/Intent;)V",
         "calls-audiomanager_release"

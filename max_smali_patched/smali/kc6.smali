@@ -1,90 +1,68 @@
-.class public final Lkc6;
+.class public final synthetic Lkc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
+
 
 # instance fields
-.field public final a:Lt76;
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lpc6;
 
 
 # direct methods
-.method public constructor <init>(Lt76;J)V
-    .locals 7
+.method public synthetic constructor <init>(Lpc6;I)V
+    .locals 0
+
+    iput p2, p0, Lkc6;->a:I
+
+    iput-object p1, p0, Lkc6;->b:Lpc6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lt76;->B:Lp93;
+    return-void
+.end method
 
-    iget v1, p1, Lt76;->v:I
 
-    iget v2, p1, Lt76;->u:I
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v3, 0x0
+    iget v0, p0, Lkc6;->a:I
 
-    const/4 v4, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lkc6;->b:Lpc6;
 
-    move v0, v4
+    iget-object v0, v0, Lpc6;->f:Landroid/content/Context;
 
-    goto :goto_0
+    sget v1, Lyjd;->G1:I
 
-    :cond_0
-    move v0, v3
-
-    :goto_0
-    const-string v5, "format colorInfo must be set"
-
-    invoke-static {v5, v0}, Lpih;->h(Ljava/lang/Object;Z)V
-
-    if-lez v2, :cond_1
-
-    move v0, v4
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v3
-
-    :goto_1
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "format width must be positive, but is: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lpih;->h(Ljava/lang/Object;Z)V
-
-    if-lez v1, :cond_2
-
-    move v3, v4
-
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "format height must be positive, but is: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljvi;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lpih;->h(Ljava/lang/Object;Z)V
+    return-object v0
 
-    iput-object p1, p0, Lkc6;->a:Lt76;
+    :pswitch_0
+    iget-object v0, p0, Lkc6;->b:Lpc6;
 
-    iput-wide p2, p0, Lkc6;->b:J
+    iget-object v0, v0, Lpc6;->f:Landroid/content/Context;
 
-    return-void
+    sget v1, Lyjd;->F1:I
+
+    invoke-static {v0, v1}, Ljvi;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

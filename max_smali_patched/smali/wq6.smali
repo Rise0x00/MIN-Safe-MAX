@@ -1,23 +1,20 @@
-.class public final Lwq6;
+.class public interface abstract Lwq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:F
+# virtual methods
+.method public abstract i(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
+.end method
 
-.field public final b:I
+.method public abstract n(Landroid/opengl/EGLDisplay;Ljava/lang/Object;IZ)Landroid/opengl/EGLSurface;
+.end method
 
+.method public abstract p(III)Ldr6;
+.end method
 
-# direct methods
-.method public constructor <init>(IF)V
-    .locals 0
+.method public abstract q(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Lwq6;->a:F
-
-    iput p1, p0, Lwq6;->b:I
-
-    return-void
+.method public abstract s(Landroid/opengl/EGLDisplay;)V
 .end method

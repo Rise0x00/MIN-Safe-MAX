@@ -1,19 +1,61 @@
-.class public abstract Lgta;
-.super Ljava/lang/Object;
+.class public final Lgta;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Lone/me/messages/list/loader/MessageModel;
+
+.field public Y:Lone/me/messages/list/loader/MessageModel;
+
+.field public Z:Lone/me/messages/list/loader/MessageModel;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:I
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lhta;
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lhta;Lp14;)V
+    .locals 0
 
-    sget v0, Lmhc;->oneme_gallery_max_attach_count_error:I
+    iput-object p1, p0, Lgta;->u0:Lhta;
 
-    sput v0, Lgta;->a:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lgta;->t0:Ljava/lang/Object;
+
+    iget p1, p0, Lgta;->v0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lgta;->v0:I
+
+    iget-object p1, p0, Lgta;->u0:Lhta;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lhta;->e(Llg8;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

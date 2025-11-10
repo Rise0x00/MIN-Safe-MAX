@@ -1,78 +1,119 @@
 .class public final Lqh8;
-.super Lm3f;
+.super Lu55;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lcqd;
+.field public final Z:F
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lcqd;)V
-    .locals 0
+.method public constructor <init>(F)V
+    .locals 1
 
-    iput-object p2, p0, Lqh8;->Y:Lcqd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const v0, 0x3a83126f    # 0.001f
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sub-float/2addr p1, v0
+
+    iput p1, p0, Lqh8;->Z:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final g(FFFLyhe;)V
+    .locals 8
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lqh8;->Z:F
 
-    invoke-virtual {p0, p1, p2}, Lqh8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    float-to-double v0, p1
 
-    move-result-object p1
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    check-cast p1, Lqh8;
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-wide v4
 
-    invoke-virtual {p1, p2}, Lqh8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    mul-double/2addr v4, v0
 
-    return-object p2
-.end method
+    div-double/2addr v4, v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    double-to-float p1, v4
 
-    new-instance v0, Lqh8;
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    iget-object v1, p0, Lqh8;->Y:Lcqd;
+    move-result-wide v4
 
-    invoke-direct {v0, p2, v1}, Lqh8;-><init>(Lkotlin/coroutines/Continuation;Lcqd;)V
+    float-to-double v6, p1
 
-    iput-object p1, v0, Lqh8;->X:Ljava/lang/Object;
+    invoke-static {v6, v7, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    return-object v0
-.end method
+    move-result-wide v6
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    sub-double/2addr v4, v6
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
-    iget-object p1, p0, Lqh8;->X:Ljava/lang/Object;
+    move-result-wide v4
 
-    check-cast p1, Ljava/util/List;
+    double-to-float p3, v4
 
-    iget-object v0, p0, Lqh8;->Y:Lcqd;
+    sub-float v4, p2, p1
 
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-wide v5
 
-    return-object p1
+    mul-double/2addr v5, v0
+
+    sub-double/2addr v5, v0
+
+    neg-double v5, v5
+
+    double-to-float v5, v5
+
+    add-float/2addr v5, p3
+
+    const/high16 v6, 0x43870000    # 270.0f
+
+    const/4 v7, 0x0
+
+    invoke-virtual {p4, v4, v5, v6, v7}, Lyhe;->d(FFFF)V
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v0
+
+    sub-double/2addr v4, v0
+
+    neg-double v4, v4
+
+    double-to-float v4, v4
+
+    invoke-virtual {p4, p2, v4}, Lyhe;->c(FF)V
+
+    add-float/2addr p2, p1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v0
+
+    sub-double/2addr v2, v0
+
+    neg-double v0, v2
+
+    double-to-float p1, v0
+
+    add-float/2addr p1, p3
+
+    invoke-virtual {p4, p2, p1}, Lyhe;->c(FF)V
+
+    return-void
 .end method

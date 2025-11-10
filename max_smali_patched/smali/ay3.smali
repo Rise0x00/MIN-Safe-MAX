@@ -4,17 +4,11 @@
 
 
 # virtual methods
-.method public abstract build()Ldy3;
+.method public abstract A(I)V
 .end method
 
-.method public abstract e(Landroid/net/Uri;)V
-.end method
+.method public x()V
+    .locals 0
 
-.method public abstract i(Landroid/content/ClipData;)V
-.end method
-
-.method public abstract setExtras(Landroid/os/Bundle;)V
-.end method
-
-.method public abstract setFlags(I)V
+    return-void
 .end method

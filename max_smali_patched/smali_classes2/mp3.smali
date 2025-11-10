@@ -4,118 +4,76 @@
 
 
 # instance fields
-.field public final a:Lpmc;
+.field public final a:La1f;
 
 
 # direct methods
-.method public constructor <init>(Lpmc;)V
-    .locals 0
+.method public constructor <init>(Ltlf;Ln8e;)V
+    .locals 9
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lmp3;->a:Lpmc;
+    check-cast p1, Lsta;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Lsta;->a()La54;
 
-.method public constructor <init>(Lpmc;Lhl6;)V
-    .locals 0
+    move-result-object p1
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    .line 4
-    iput-object p1, p0, Lmp3;->a:Lpmc;
+    const-string v1, "conn-events"
 
-    return-void
-.end method
+    invoke-virtual {p1, v0, v1}, La54;->limitedParallelism(ILjava/lang/String;)La54;
 
-.method public static a(Lorg/json/JSONObject;)Lsce;
-    .locals 10
+    move-result-object p1
 
-    const-string v0, "initiator"
+    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
+
+    check-cast p2, Lp8e;
+
+    iget v0, p2, Lp8e;->h:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-static {v0}, Lxg1;->a(Ljava/lang/String;)Lxg1;
+    invoke-static {v0}, Lb1f;->a(Ljava/lang/Object;)La1f;
 
-    move-result-object v5
+    move-result-object v3
 
-    const-string v0, "recordMovieId"
+    iput-object v3, p0, Lmp3;->a:La1f;
 
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+    iget-object p2, p2, Lp8e;->e:Lmm0;
 
-    move-result-wide v2
+    invoke-static {p2}, Lqxi;->a(Lwka;)Lpt1;
 
-    const-string v0, "recordType"
+    move-result-object p2
 
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Luw;
 
-    move-result-object v0
+    const/4 v7, 0x0
 
-    const-string v1, "STREAM"
+    const/16 v8, 0x10
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x2
 
-    move-result v1
+    const-class v4, Lf1a;
 
-    if-eqz v1, :cond_0
+    const-string v5, "emit"
 
-    sget-object v0, Lxvc;->c:Lxvc;
+    const-string v6, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
 
-    :goto_0
-    move-object v4, v0
+    invoke-direct/range {v1 .. v8}, Luw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    goto :goto_1
+    new-instance v0, Ln16;
 
-    :cond_0
-    const-string v1, "RECORD"
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, p2, v1, v2}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    move-result v0
+    invoke-static {v0, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
 
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lxvc;->b:Lxvc;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lxvc;->a:Lxvc;
-
-    goto :goto_0
-
-    :goto_1
-    const-string v0, "recordExternalMovieId"
-
-    invoke-static {p0, v0}, Lqxd;->t(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v0, "recordExternalOwnerId"
-
-    invoke-static {p0, v0}, Lqxd;->t(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    const-string v6, "recordStartTime"
-
-    invoke-virtual {p0, v6, v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
-
-    move-result-wide v6
-
-    new-instance v1, Lsce;
-
-    invoke-direct/range {v1 .. v9}, Lsce;-><init>(JLxvc;Lxg1;JLjava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
+    return-void
 .end method

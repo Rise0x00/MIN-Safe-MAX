@@ -1,158 +1,94 @@
 .class public final Lj48;
-.super Lbf0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final h:Ljava/util/concurrent/atomic/AtomicLong;
+
+
 # instance fields
-.field public final n:I
+.field public final a:J
+
+.field public final b:Ldc4;
+
+.field public final c:Landroid/net/Uri;
+
+.field public final d:Ljava/util/Map;
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    sput-object v0, Lj48;->h:Ljava/util/concurrent/atomic/AtomicLong;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLdc4;J)V
+    .locals 12
+
+    .line 1
+    iget-object v4, p3, Ldc4;->a:Landroid/net/Uri;
+
+    .line 2
+    sget-object v5, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    const-wide/16 v8, 0x0
+
+    const-wide/16 v10, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v3, p3
+
+    move-wide/from16 v6, p4
+
+    .line 3
+    invoke-direct/range {v0 .. v11}, Lj48;-><init>(JLdc4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JLdc4;Landroid/net/Uri;Ljava/util/Map;JJJ)V
     .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lj48;->n:I
+    .line 5
+    iput-wide p1, p0, Lj48;->a:J
 
-    return-void
-.end method
+    .line 6
+    iput-object p3, p0, Lj48;->b:Ldc4;
 
+    .line 7
+    iput-object p4, p0, Lj48;->c:Landroid/net/Uri;
 
-# virtual methods
-.method public final E(Ljava/lang/String;)V
-    .locals 2
+    .line 8
+    iput-object p5, p0, Lj48;->d:Ljava/util/Map;
 
-    iget v0, p0, Lj48;->n:I
+    .line 9
+    iput-wide p6, p0, Lj48;->e:J
 
-    const/4 v1, 0x2
+    .line 10
+    iput-wide p8, p0, Lj48;->f:J
 
-    if-gt v0, v1, :cond_0
+    .line 11
+    iput-wide p10, p0, Lj48;->g:J
 
-    const-string v0, "Rescheduling alarm that keeps track of force-stops."
-
-    invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final F(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x5
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/RuntimeException;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x5
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x3
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x3
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final l(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x6
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x6
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final u(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x4
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-    .locals 2
-
-    iget v0, p0, Lj48;->n:I
-
-    const/4 v1, 0x4
-
-    if-gt v0, v1, :cond_0
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
     return-void
 .end method

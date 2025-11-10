@@ -3,87 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx36;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final b:J
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(JLcla;)V
+    .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lw36;->a:I
+
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw36;->a:Ljava/lang/String;
+    .line 5
+    iput-wide p1, p0, Lw36;->b:J
+
+    .line 6
+    iput-object p3, p0, Lw36;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLecf;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lw36;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p3, p0, Lw36;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-wide p1, p0, Lw36;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lw36;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lw36;->c:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lw36;
+    iget-wide v1, p0, Lw36;->b:J
 
-    const/4 v2, 0x0
+    invoke-interface {v0, v1, v2}, Lcla;->a(J)V
 
-    if-nez v1, :cond_1
+    return-void
 
-    return v2
+    :pswitch_0
+    iget-object v0, p0, Lw36;->c:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lw36;
+    check-cast v0, Lecf;
 
-    iget-object v1, p0, Lw36;->a:Ljava/lang/String;
+    iget-wide v1, p0, Lw36;->b:J
 
-    iget-object p1, p1, Lw36;->a:Ljava/lang/String;
+    invoke-interface {v0, v1, v2}, Lecf;->g(J)V
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
+    nop
 
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lw36;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenUrl(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lw36;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

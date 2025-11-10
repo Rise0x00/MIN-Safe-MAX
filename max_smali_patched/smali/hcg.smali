@@ -1,97 +1,86 @@
 .class public final Lhcg;
-.super Ljava/lang/Object;
+.super La54;
 .source "SourceFile"
 
-# interfaces
-.implements Licg;
 
-
-# instance fields
-.field public final a:F
+# static fields
+.field public static final a:Lhcg;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhcg;
 
-    iput p1, p0, Lhcg;->a:F
+    invoke-direct {v0}, La54;-><init>()V
+
+    sput-object v0, Lhcg;->a:Lhcg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final dispatch(Ly44;Ljava/lang/Runnable;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    sget-object p1, Lpm4;->b:Lpm4;
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lkpf;->h:Lvx5;
 
-    return v0
+    const/4 v1, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lhcg;
+    iget-object p1, p1, Lkpd;->a:Lf54;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, p2, v0, v1}, Lf54;->w(Ljava/lang/Runnable;Luof;Z)V
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhcg;
-
-    iget v1, p0, Lhcg;->a:F
-
-    iget p1, p1, Lhcg;->a:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final dispatchYield(Ly44;Ljava/lang/Runnable;)V
+    .locals 2
+
+    sget-object p1, Lpm4;->b:Lpm4;
+
+    sget-object v0, Lkpf;->h:Lvx5;
+
+    const/4 v1, 0x1
+
+    iget-object p1, p1, Lkpd;->a:Lf54;
+
+    invoke-virtual {p1, p2, v0, v1}, Lf54;->w(Ljava/lang/Runnable;Luof;Z)V
+
+    return-void
+.end method
+
+.method public final limitedParallelism(ILjava/lang/String;)La54;
     .locals 1
 
-    iget v0, p0, Lhcg;->a:F
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    sget v0, Lkpf;->d:I
 
-    move-result v0
+    if-lt p1, v0, :cond_0
 
-    return v0
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(La54;Ljava/lang/String;)La54;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-super {p0, p1, p2}, La54;->limitedParallelism(ILjava/lang/String;)La54;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SeekStart(progress="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lhcg;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Dispatchers.IO"
 
     return-object v0
 .end method

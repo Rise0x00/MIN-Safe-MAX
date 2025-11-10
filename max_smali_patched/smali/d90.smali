@@ -4,114 +4,100 @@
 
 
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:J
+.field public b:I
 
+.field public c:F
 
-# direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
+.field public d:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public e:J
 
-    iput p1, p0, Ld90;->a:I
+.field public f:J
 
-    iput-wide p2, p0, Ld90;->b:J
+.field public g:J
 
-    return-void
-.end method
+.field public h:F
+
+.field public i:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(J)F
+    .locals 8
 
-    const/4 v0, 0x1
+    iget-wide v0, p0, Ld90;->e:J
 
-    if-ne p1, p0, :cond_0
+    cmp-long v2, p1, v0
 
-    return v0
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_0
+
+    return v3
 
     :cond_0
-    instance-of v1, p1, Ld90;
+    iget-wide v4, p0, Ld90;->g:J
 
-    const/4 v2, 0x0
+    const-wide/16 v6, 0x0
 
-    if-eqz v1, :cond_1
+    cmp-long v2, v4, v6
 
-    check-cast p1, Ld90;
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    iget v1, p0, Ld90;->a:I
+    if-ltz v2, :cond_2
 
-    iget v3, p1, Ld90;->a:I
+    cmp-long v2, p1, v4
 
-    if-ne v1, v3, :cond_1
+    if-gez v2, :cond_1
 
-    iget-wide v3, p0, Ld90;->b:J
-
-    iget-wide v5, p1, Ld90;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_1
-
-    return v0
+    goto :goto_0
 
     :cond_1
-    return v2
-.end method
+    sub-long/2addr p1, v4
 
-.method public final hashCode()I
-    .locals 6
+    iget v0, p0, Ld90;->h:F
 
-    iget v0, p0, Ld90;->a:I
+    sub-float v1, v6, v0
 
-    const v1, 0xf4243
+    long-to-float p1, p1
 
-    xor-int/2addr v0, v1
+    iget p2, p0, Ld90;->i:I
 
-    mul-int/2addr v0, v1
+    int-to-float p2, p2
 
-    const/16 v1, 0x20
+    div-float/2addr p1, p2
 
-    iget-wide v2, p0, Ld90;->b:J
+    invoke-static {p1, v3, v6}, Ls28;->b(FFF)F
 
-    ushr-long v4, v2, v1
+    move-result p1
 
-    xor-long v1, v4, v2
+    mul-float/2addr p1, v0
 
-    long-to-int v1, v1
+    add-float/2addr p1, v1
 
-    xor-int/2addr v0, v1
+    return p1
 
-    return v0
-.end method
+    :cond_2
+    :goto_0
+    sub-long/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    long-to-float p1, p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p2, p0, Ld90;->a:I
 
-    const-string v1, "PacketInfo{sizeInBytes="
+    int-to-float p2, p2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    div-float/2addr p1, p2
 
-    iget v1, p0, Ld90;->a:I
+    invoke-static {p1, v3, v6}, Ls28;->b(FFF)F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", timestampNs="
+    const/high16 p2, 0x3f000000    # 0.5f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-float/2addr p1, p2
 
-    iget-wide v1, p0, Ld90;->b:J
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

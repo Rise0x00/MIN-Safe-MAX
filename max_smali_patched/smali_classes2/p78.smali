@@ -1,270 +1,179 @@
 .class public final Lp78;
-.super Ljava/lang/Object;
+.super Lzy;
 .source "SourceFile"
-
-# interfaces
-.implements Ltqe;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
 
-.field public final b:Lgse;
+.field public final Y:J
 
-.field public final c:Landroid/widget/FrameLayout;
+.field public final Z:Ljava/util/List;
+
+.field public final d:Lq78;
+
+.field public final o:J
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:F
+
+.field public final u0:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
-    .locals 0
+.method public constructor <init>(Lq78;JJJLjava/util/List;Ljava/lang/String;FZZZ)V
+    .locals 1
 
-    iput p2, p0, Lp78;->a:I
+    sget-object v0, Lv00;->y0:Lv00;
 
-    packed-switch p2, :pswitch_data_0
+    invoke-direct {p0, v0, p12, p13}, Lzy;-><init>(Lv00;ZZ)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp78;->d:Lq78;
 
-    new-instance p2, Ln78;
+    iput-wide p2, p0, Lp78;->o:J
 
-    invoke-direct {p2, p1}, Ln78;-><init>(Landroid/content/Context;)V
+    iput-wide p4, p0, Lp78;->X:J
 
-    iput-object p2, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    iput-wide p6, p0, Lp78;->Y:J
 
-    new-instance p1, Lgse;
+    iput-object p8, p0, Lp78;->Z:Ljava/util/List;
 
-    invoke-direct {p1, p2}, Lgse;-><init>(Landroid/view/View;)V
+    iput-object p9, p0, Lp78;->s0:Ljava/lang/String;
 
-    iput-object p1, p0, Lp78;->b:Lgse;
+    iput-boolean p11, p0, Lp78;->u0:Z
 
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p2, Lo5h;
-
-    invoke-direct {p2, p1}, Lo5h;-><init>(Landroid/content/Context;)V
-
-    iput-object p2, p0, Lp78;->c:Landroid/widget/FrameLayout;
-
-    new-instance p1, Lgse;
-
-    invoke-direct {p1, p2}, Lgse;-><init>(Landroid/view/View;)V
-
-    iput-object p1, p0, Lp78;->b:Lgse;
-
-    return-void
-
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p2, Liqe;
-
-    invoke-direct {p2, p1}, Liqe;-><init>(Landroid/content/Context;)V
-
-    iput-object p2, p0, Lp78;->c:Landroid/widget/FrameLayout;
-
-    new-instance p1, Lgse;
-
-    invoke-direct {p1, p2}, Lgse;-><init>(Landroid/view/View;)V
-
-    iput-object p1, p0, Lp78;->b:Lgse;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private final c(Ll78;)V
-    .locals 0
+    iput p10, p0, Lp78;->t0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzqe;)V
-    .locals 2
+.method public final a()Ljava/util/HashMap;
+    .locals 8
 
-    iget v0, p0, Lp78;->a:I
+    invoke-super {p0}, Lzy;->a()Ljava/util/HashMap;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lp78;->b:Lgse;
+    iget-object v1, p0, Lp78;->d:Lq78;
 
-    invoke-virtual {v0, p1}, Lgse;->b(Lzqe;)V
+    iget-wide v2, v1, Lq78;->a:D
 
-    invoke-virtual {v0}, Lgse;->c()V
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    const/16 v1, 0x15e
+    move-result-object v2
 
-    iget v0, v0, Lgse;->b:I
+    const-string v3, "latitude"
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    iget-wide v2, v1, Lq78;->b:D
 
-    iget-object v1, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    check-cast v1, Lo5h;
+    move-result-object v2
 
-    invoke-virtual {v1, p1, v0}, Lo5h;->a(Lzqe;I)V
+    const-string v3, "longitude"
 
-    return-void
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lp78;->b:Lgse;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, p1}, Lgse;->b(Lzqe;)V
+    iget-wide v4, p0, Lp78;->o:J
 
-    invoke-virtual {v0}, Lgse;->c()V
+    cmp-long v2, v4, v2
 
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    if-lez v2, :cond_0
 
-    check-cast v0, Liqe;
+    const-string v2, "livePeriod"
 
-    invoke-virtual {v0, p1}, Liqe;->a(Lzqe;)V
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v3
 
-    :pswitch_1
-    iget-object v0, p0, Lp78;->b:Lgse;
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lgse;->b(Lzqe;)V
+    :cond_0
+    iget v2, p0, Lp78;->t0:F
 
-    invoke-virtual {v0}, Lgse;->c()V
+    const/4 v3, 0x0
 
-    const/16 v1, 0x15e
+    cmpl-float v4, v2, v3
 
-    iget v0, v0, Lgse;->b:I
+    if-lez v4, :cond_1
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    const-string v4, "zoom"
 
-    move-result v0
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object v1, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    move-result-object v2
 
-    check-cast v1, Ln78;
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p1, v0}, Ln78;->a(Lzqe;I)V
+    :cond_1
+    iget-wide v4, v1, Lq78;->c:D
 
-    return-void
+    const-wide/16 v6, 0x0
 
-    nop
+    cmpl-double v2, v4, v6
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-eqz v2, :cond_2
 
-.method public final b(Ll78;)V
-    .locals 1
+    const-string v2, "alt"
 
-    iget v0, p0, Lp78;->a:I
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v4
 
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Lo5h;
+    :cond_2
+    iget v2, v1, Lq78;->d:F
 
-    invoke-virtual {v0, p1}, Lo5h;->b(Ll78;)V
+    cmpl-float v4, v2, v3
 
-    :pswitch_0
-    return-void
+    if-eqz v4, :cond_3
 
-    :pswitch_1
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    const-string v4, "epu"
 
-    check-cast v0, Ln78;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {v0, p1}, Ln78;->b(Ll78;)V
+    move-result-object v2
 
-    return-void
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    nop
+    :cond_3
+    iget v2, v1, Lq78;->o:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    cmpl-float v4, v2, v3
 
-.method public final setParent(Landroid/view/ViewGroup;)V
-    .locals 3
+    if-eqz v4, :cond_4
 
-    iget v0, p0, Lp78;->a:I
+    const-string v4, "hdn"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
+    move-result-object v2
 
-    check-cast v0, Lo5h;
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lp78;->b:Lgse;
+    :cond_4
+    iget v1, v1, Lq78;->X:F
 
-    invoke-virtual {v0, v1}, Lo5h;->setSizeConfigurator(Lgse;)V
+    cmpl-float v2, v1, v3
 
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+    if-eqz v2, :cond_5
 
-    const/4 v2, -0x1
+    const-string v2, "spd"
 
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
-
-    check-cast v0, Liqe;
-
-    iget-object v1, p0, Lp78;->b:Lgse;
-
-    invoke-virtual {v0, v1}, Liqe;->setSizeConfigurator(Lgse;)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lp78;->c:Landroid/widget/FrameLayout;
-
-    check-cast v0, Ln78;
-
-    iget-object v1, p0, Lp78;->b:Lgse;
-
-    invoke-virtual {v0, v1}, Ln78;->setSizeConfigurator(Lgse;)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    return-object v0
 .end method

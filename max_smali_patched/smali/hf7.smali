@@ -1,1061 +1,160 @@
-.class public final Lhf7;
+.class public final synthetic Lhf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final o:[Ljava/lang/String;
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public final a:Lx5d;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/HashMap;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public final c:Ljava/util/HashMap;
-
-.field public final d:Ljava/util/LinkedHashMap;
-
-.field public final e:[Ljava/lang/String;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public volatile g:Z
-
-.field public volatile h:Lh2f;
-
-.field public final i:Lmd6;
-
-.field public final j:Ls9h;
-
-.field public final k:Lwad;
-
-.field public final l:Ljava/lang/Object;
-
-.field public final m:Ljava/lang/Object;
-
-.field public final n:Lge;
+.field public final synthetic c:Ljf7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/content/Context;Ljf7;I)V
+    .locals 0
 
-    const-string v0, "DELETE"
+    iput p3, p0, Lhf7;->a:I
 
-    const-string v1, "INSERT"
+    iput-object p1, p0, Lhf7;->b:Landroid/content/Context;
 
-    const-string v2, "UPDATE"
-
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lhf7;->o:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public varargs constructor <init>(Lx5d;Ljava/util/HashMap;Ljava/util/HashMap;[Ljava/lang/String;)V
-    .locals 4
+    iput-object p2, p0, Lhf7;->c:Ljf7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhf7;->a:Lx5d;
-
-    iput-object p2, p0, Lhf7;->b:Ljava/util/HashMap;
-
-    iput-object p3, p0, Lhf7;->c:Ljava/util/HashMap;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p2, p0, Lhf7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance p2, Lmd6;
-
-    array-length v0, p4
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    new-array v1, v0, [J
-
-    iput-object v1, p2, Lmd6;->b:Ljava/lang/Object;
-
-    new-array v1, v0, [Z
-
-    iput-object v1, p2, Lmd6;->c:Ljava/lang/Object;
-
-    new-array v0, v0, [I
-
-    iput-object v0, p2, Lmd6;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lhf7;->i:Lmd6;
-
-    new-instance p2, Ls9h;
-
-    invoke-direct {p2, p1}, Ls9h;-><init>(Lx5d;)V
-
-    iput-object p2, p0, Lhf7;->j:Ls9h;
-
-    new-instance p1, Lwad;
-
-    invoke-direct {p1}, Lwad;-><init>()V
-
-    iput-object p1, p0, Lhf7;->k:Lwad;
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhf7;->l:Ljava/lang/Object;
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhf7;->m:Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Lhf7;->d:Ljava/util/LinkedHashMap;
-
-    array-length p1, p4
-
-    new-array p2, p1, [Ljava/lang/String;
-
-    :goto_0
-    if-ge p3, p1, :cond_2
-
-    aget-object v0, p4, p3
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lhf7;->d:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v3, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lhf7;->b:Ljava/util/HashMap;
-
-    aget-object v3, p4, p3
-
-    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_1
-    if-nez v1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    move-object v0, v1
-
-    :goto_2
-    aput-object v0, p2, p3
-
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput-object p2, p0, Lhf7;->e:[Ljava/lang/String;
-
-    iget-object p1, p0, Lhf7;->b:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_3
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/Map$Entry;
-
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/String;
-
-    sget-object p4, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {p3, p4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p3
-
-    iget-object v0, p0, Lhf7;->d:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v0, p3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-virtual {p2, p4}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p2
-
-    iget-object p4, p0, Lhf7;->d:Ljava/util/LinkedHashMap;
-
-    invoke-static {p4, p3}, Lwa8;->T(Ljava/util/Map;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    invoke-interface {p4, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_4
-    new-instance p1, Lge;
-
-    const/16 p2, 0x1b
-
-    invoke-direct {p1, p2, p0}, Lge;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lhf7;->n:Lge;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lef7;)V
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p1, Lef7;->a:[Ljava/lang/String;
+    iget v0, p0, Lhf7;->a:I
 
-    invoke-virtual {p0, v0}, Lhf7;->d([Ljava/lang/String;)[Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance v0, Landroid/widget/ImageView;
 
-    new-instance v1, Ljava/util/ArrayList;
+    iget-object v1, p0, Lhf7;->b:Landroid/content/Context;
 
-    array-length v2, v0
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    sget v1, Lyjd;->W1:I
 
-    array-length v2, v0
+    sget-object v2, Ly53;->s0:Lvh4;
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v0}, Lvh4;->l(Landroid/view/View;)Lewa;
 
-    move v4, v3
+    move-result-object v3
 
-    :goto_0
-    if-ge v4, v2, :cond_1
+    iget-object v3, v3, Lewa;->c:Lw5b;
 
-    aget-object v5, v0, v4
+    invoke-interface {v3}, Lw5b;->getIcon()Le77;
 
-    iget-object v6, p0, Lhf7;->d:Ljava/util/LinkedHashMap;
+    move-result-object v3
 
-    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
+    iget v3, v3, Le77;->f:I
 
-    invoke-virtual {v5, v7}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v7
+    move-result-object v4
 
-    invoke-virtual {v6, v7}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Integer;
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "There is no table with name "
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {v1}, Le93;->H0(Ljava/util/List;)[I
+    invoke-static {v4, v1}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    new-instance v2, Lff7;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v2, p1, v1, v0}, Lff7;-><init>(Lef7;[I[Ljava/lang/String;)V
+    move-result-object v1
 
-    iget-object v0, p0, Lhf7;->k:Lwad;
+    invoke-static {v1, v3}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
 
-    monitor-enter v0
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :try_start_0
-    iget-object v4, p0, Lhf7;->k:Lwad;
+    invoke-virtual {v2, v0}, Lvh4;->l(Landroid/view/View;)Lewa;
 
-    invoke-virtual {v4, p1, v2}, Lwad;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    iget-object v1, v1, Lewa;->c:Lw5b;
 
-    check-cast p1, Lff7;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-interface {v1}, Lw5b;->c()Lm1f;
 
-    monitor-exit v0
+    move-result-object v1
 
-    if-nez p1, :cond_6
+    iget-object v1, v1, Lm1f;->a:Lk1f;
 
-    iget-object p1, p0, Lhf7;->i:Lmd6;
+    iget-object v1, v1, Lk1f;->a:Lj1f;
 
-    array-length v0, v1
+    iget v1, v1, Lj1f;->i:I
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
 
-    move-result-object v0
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    monitor-enter p1
+    move-result-object v1
 
-    :try_start_1
-    array-length v1, v0
+    const/4 v3, 0x0
 
-    move v2, v3
+    invoke-direct {v2, v1, v3, v3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    :goto_1
-    if-ge v3, v1, :cond_3
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    aget v4, v0, v3
+    const/16 v1, 0x8
 
-    iget-object v5, p1, Lmd6;->b:Ljava/lang/Object;
+    int-to-float v1, v1
 
-    check-cast v5, [J
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    aget-wide v6, v5, v4
+    move-result-object v2
 
-    const-wide/16 v8, 0x1
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    add-long/2addr v8, v6
+    move-result-object v2
 
-    aput-wide v8, v5, v4
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    const-wide/16 v4, 0x0
+    mul-float/2addr v1, v2
 
-    cmp-long v4, v6, v4
+    invoke-static {v1}, Lkhi;->c(F)I
 
-    if-nez v4, :cond_2
+    move-result v1
+
+    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance v1, Lif7;
 
     const/4 v2, 0x1
 
-    iput-boolean v2, p1, Lmd6;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v3, p0, Lhf7;->c:Ljf7;
 
-    goto :goto_2
+    invoke-direct {v1, v3, v2}, Lif7;-><init>(Ljf7;I)V
 
-    :catchall_0
-    move-exception v0
+    invoke-static {v0, v1}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    goto :goto_3
+    return-object v0
 
-    :cond_2
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
+    :pswitch_0
+    new-instance v0, Lytb;
 
-    goto :goto_1
+    iget-object v1, p0, Lhf7;->b:Landroid/content/Context;
 
-    :cond_3
-    monitor-exit p1
+    invoke-direct {v0, v1}, Lytb;-><init>(Landroid/content/Context;)V
 
-    if-eqz v2, :cond_6
+    iget-object v1, p0, Lhf7;->c:Ljf7;
 
-    iget-object p1, p0, Lhf7;->a:Lx5d;
+    invoke-virtual {v0, v1}, Lytb;->setListener(Lxtb;)V
 
-    invoke-virtual {p1}, Lx5d;->m()Z
+    return-object v0
 
-    move-result v0
+    nop
 
-    if-nez v0, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    iget-object p1, p1, Lx5d;->d:Le2f;
-
-    if-nez p1, :cond_5
-
-    const/4 p1, 0x0
-
-    :cond_5
-    invoke-interface {p1}, Le2f;->getWritableDatabase()Lc2f;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhf7;->f(Lc2f;)V
-
-    return-void
-
-    :goto_3
-    monitor-exit p1
-
-    throw v0
-
-    :cond_6
-    :goto_4
-    return-void
-
-    :catchall_1
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final b()Z
-    .locals 3
-
-    iget-object v0, p0, Lhf7;->a:Lx5d;
-
-    invoke-virtual {v0}, Lx5d;->m()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    iget-boolean v0, p0, Lhf7;->g:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lhf7;->a:Lx5d;
-
-    iget-object v0, v0, Lx5d;->d:Le2f;
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_1
-    invoke-interface {v0}, Le2f;->getWritableDatabase()Lc2f;
-
-    :cond_2
-    iget-boolean v0, p0, Lhf7;->g:Z
-
-    if-nez v0, :cond_3
-
-    const-string v0, "ROOM"
-
-    const-string v2, "database is not initialized even though it is open"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_3
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c(Lef7;)V
-    .locals 12
-
-    iget-object v0, p0, Lhf7;->k:Lwad;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lhf7;->k:Lwad;
-
-    invoke-virtual {v1, p1}, Lwad;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lff7;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    monitor-exit v0
-
-    if-eqz p1, :cond_4
-
-    iget-object v0, p0, Lhf7;->i:Lmd6;
-
-    iget-object p1, p1, Lff7;->b:[I
-
-    array-length v1, p1
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p1
-
-    monitor-enter v0
-
-    :try_start_1
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget v4, p1, v2
-
-    iget-object v5, v0, Lmd6;->b:Ljava/lang/Object;
-
-    check-cast v5, [J
-
-    aget-wide v6, v5, v4
-
-    const-wide/16 v8, 0x1
-
-    sub-long v10, v6, v8
-
-    aput-wide v10, v5, v4
-
-    cmp-long v4, v6, v8
-
-    if-nez v4, :cond_0
-
-    const/4 v3, 0x1
-
-    iput-boolean v3, v0, Lmd6;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit v0
-
-    if-eqz v3, :cond_4
-
-    iget-object p1, p0, Lhf7;->a:Lx5d;
-
-    invoke-virtual {p1}, Lx5d;->m()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    iget-object p1, p1, Lx5d;->d:Le2f;
-
-    if-nez p1, :cond_3
-
-    const/4 p1, 0x0
-
-    :cond_3
-    invoke-interface {p1}, Le2f;->getWritableDatabase()Lc2f;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lhf7;->f(Lc2f;)V
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-
-    throw p1
-
-    :cond_4
-    :goto_3
-    return-void
-
-    :catchall_1
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final d([Ljava/lang/String;)[Ljava/lang/String;
-    .locals 8
-
-    new-instance v0, Llxd;
-
-    invoke-direct {v0}, Llxd;-><init>()V
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    if-ge v3, v1, :cond_1
-
-    aget-object v4, p1, v3
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v6
-
-    iget-object v7, p0, Lhf7;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v7, v6}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v7, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/Collection;
-
-    invoke-virtual {v0, v4}, Llxd;->addAll(Ljava/util/Collection;)Z
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0, v4}, Llxd;->add(Ljava/lang/Object;)Z
-
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0}, Lqxd;->f(Llxd;)Llxd;
-
-    move-result-object p1
-
-    new-array v0, v2, [Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ljava/lang/String;
-
-    return-object p1
-.end method
-
-.method public final e(Lc2f;I)V
-    .locals 7
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "INSERT OR IGNORE INTO room_table_modification_log VALUES("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", 0)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lc2f;->z(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lhf7;->e:[Ljava/lang/String;
-
-    aget-object v0, v0, p2
-
-    const/4 v1, 0x0
-
-    :goto_0
-    const/4 v2, 0x3
-
-    if-ge v1, v2, :cond_0
-
-    sget-object v2, Lhf7;->o:[Ljava/lang/String;
-
-    aget-object v2, v2, v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "CREATE TEMP TRIGGER IF NOT EXISTS "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "`room_table_modification_trigger_"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v5, 0x5f
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v5, 0x60
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, " AFTER "
-
-    const-string v6, " ON `"
-
-    invoke-static {v3, v4, v5, v2, v6}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "` BEGIN UPDATE room_table_modification_log SET invalidated = 1 WHERE table_id = "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " AND invalidated = 0; END"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lc2f;->z(Ljava/lang/String;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Lc2f;)V
-    .locals 14
-
-    invoke-interface {p1}, Lc2f;->c0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_a
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lhf7;->a:Lx5d;
-
-    iget-object v0, v0, Lx5d;->i:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v1, p0, Lhf7;->l:Ljava/lang/Object;
-
-    monitor-enter v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    iget-object v2, p0, Lhf7;->i:Lmd6;
-
-    invoke-virtual {v2}, Lmd6;->h()[I
-
-    move-result-object v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    if-nez v2, :cond_1
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_0
-    :try_start_4
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-    :try_end_4
-    .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_4 .. :try_end_4} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    goto/16 :goto_8
-
-    :catch_1
-    move-exception p1
-
-    goto/16 :goto_9
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_7
-
-    :cond_1
-    :try_start_5
-    invoke-interface {p1}, Lc2f;->f0()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {p1}, Lc2f;->I()V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {p1}, Lc2f;->v()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :goto_1
-    :try_start_6
-    array-length v3, v2
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    move v6, v5
-
-    :goto_2
-    if-ge v5, v3, :cond_6
-
-    aget v7, v2, v5
-
-    add-int/lit8 v8, v6, 0x1
-
-    const/4 v9, 0x1
-
-    if-eq v7, v9, :cond_4
-
-    const/4 v9, 0x2
-
-    if-eq v7, v9, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    iget-object v7, p0, Lhf7;->e:[Ljava/lang/String;
-
-    aget-object v6, v7, v6
-
-    sget-object v7, Lhf7;->o:[Ljava/lang/String;
-
-    move v9, v4
-
-    :goto_3
-    const/4 v10, 0x3
-
-    if-ge v9, v10, :cond_5
-
-    aget-object v10, v7, v9
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    const-string v12, "DROP TRIGGER IF EXISTS "
-
-    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    const-string v13, "`room_table_modification_trigger_"
-
-    invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v12, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v13, 0x5f
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v10, 0x60
-
-    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-interface {p1, v10}, Lc2f;->z(Ljava/lang/String;)V
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p0, p1, v6}, Lhf7;->e(Lc2f;I)V
-
-    :cond_5
-    :goto_4
-    add-int/lit8 v5, v5, 0x1
-
-    move v6, v8
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v2
-
-    goto :goto_5
-
-    :cond_6
-    invoke-interface {p1}, Lc2f;->G()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    :try_start_7
-    invoke-interface {p1}, Lc2f;->T()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :try_start_8
-    monitor-exit v1
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p1
-
-    goto :goto_6
-
-    :goto_5
-    :try_start_9
-    invoke-interface {p1}, Lc2f;->T()V
-
-    throw v2
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
-
-    :goto_6
-    :try_start_a
-    monitor-exit v1
-
-    throw p1
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_0
-
-    :goto_7
-    :try_start_b
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-    :try_end_b
-    .catch Ljava/lang/IllegalStateException; {:try_start_b .. :try_end_b} :catch_1
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_b .. :try_end_b} :catch_0
-
-    :goto_8
-    const-string v0, "ROOM"
-
-    const-string v1, "Cannot run invalidation tracker. Is the db closed?"
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_a
-
-    :goto_9
-    const-string v0, "ROOM"
-
-    const-string v1, "Cannot run invalidation tracker. Is the db closed?"
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_a
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

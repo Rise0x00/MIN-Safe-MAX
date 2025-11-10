@@ -1,373 +1,213 @@
-.class public abstract Lgi;
-.super Landroidx/appcompat/widget/AppCompatEditText;
+.class public final Lgi;
+.super Lf3;
 .source "SourceFile"
 
 
 # instance fields
-.field public y0:Z
-
-.field public z0:[Lwj;
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public synthetic constructor <init>(Lpgd;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput p2, p0, Lgi;->d:I
 
-    new-instance p1, Lfi;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Lfi;-><init>(ILjava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x1
-
-    invoke-super {p0, p2, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-direct {p0, p1}, Lf3;-><init>(Lpgd;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAnimojiEnabled()Z
+.method public final d()Ljava/lang/String;
     .locals 1
 
-    iget-boolean v0, p0, Lgi;->y0:Z
+    iget v0, p0, Lgi;->d:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getCachedSpans$animoji_release()[Lwj;
-    .locals 1
-
-    iget-object v0, p0, Lgi;->z0:[Lwj;
+    const-string v0, "UPDATE messages SET status = ? WHERE chat_id = ? AND time <= ?"
 
     return-object v0
-.end method
 
-.method public final onDetachedFromWindow()V
-    .locals 2
+    :pswitch_0
+    const-string v0, "UPDATE messages SET update_time = ? WHERE id = ?"
 
-    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatEditText;->onDetachedFromWindow()V
+    return-object v0
 
-    iget-object v0, p0, Lgi;->z0:[Lwj;
+    :pswitch_1
+    const-string v0, "UPDATE messages SET localized_error = ? WHERE id = ?"
 
-    if-eqz v0, :cond_1
+    return-object v0
 
-    array-length v1, v0
+    :pswitch_2
+    const-string v0, "UPDATE messages SET error = ? WHERE id = ?"
 
-    if-gtz v1, :cond_0
+    return-object v0
 
-    goto :goto_0
+    :pswitch_3
+    const-string v0, "UPDATE messages SET delivery_status = ? WHERE id = ?"
 
-    :cond_0
-    const/4 v1, 0x0
+    return-object v0
 
-    aget-object v0, v0, v1
+    :pswitch_4
+    const-string v0, "DELETE FROM message_uploads"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
 
-    const/4 v0, 0x0
+    :pswitch_5
+    const-string v0, "DELETE FROM message_uploads WHERE message_id=? AND chat_id=? AND attach_id=?"
 
-    throw v0
+    return-object v0
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    :pswitch_6
+    const-string v0, "DELETE FROM fcm_notifications_history"
 
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 3
+    return-object v0
 
-    sget-boolean v0, Llh;->b:Z
+    :pswitch_7
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE received_time<=?"
 
-    const-string v1, "AnimojiEditText"
+    return-object v0
 
-    if-eqz v0, :cond_0
+    :pswitch_8
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
 
-    const-string v2, "---> onDraw start"
+    return-object v0
 
-    invoke-static {v1, v2}, Llh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :pswitch_9
+    const-string v0, "DELETE FROM fcm_notifications_analytics"
 
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    return-object v0
 
-    if-eqz v0, :cond_1
+    :pswitch_a
+    const-string v0, "DELETE FROM favorite_stickers"
 
-    const-string p1, "<--- onDraw finish"
+    return-object v0
 
-    invoke-static {v1, p1}, Llh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :pswitch_b
+    const-string v0, "DELETE FROM favorite_sticker_sets"
 
-    :cond_1
-    return-void
-.end method
+    return-object v0
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 5
+    :pswitch_c
+    const-string v0, "DELETE FROM draft_uploads"
 
-    sget-object p2, Llh;->c:Ljj;
+    return-object v0
 
-    if-eqz p2, :cond_e
+    :pswitch_d
+    const-string v0, "DELETE FROM draft_uploads WHERE chat_id=? AND attach_id=?"
 
-    iget-boolean p2, p0, Lgi;->y0:Z
+    return-object v0
 
-    if-nez p2, :cond_0
+    :pswitch_e
+    const-string v0, "DELETE FROM default_emoji"
 
-    goto/16 :goto_7
+    return-object v0
 
-    :cond_0
-    instance-of p2, p1, Landroid/text/Spannable;
+    :pswitch_f
+    const-string v0, "DELETE FROM contact_title"
 
-    const/4 p3, 0x0
+    return-object v0
 
-    if-eqz p2, :cond_1
+    :pswitch_10
+    const-string v0, "DELETE FROM contact_title WHERE docid=?"
 
-    move-object p2, p1
+    return-object v0
 
-    check-cast p2, Landroid/text/Spannable;
+    :pswitch_11
+    const-string v0, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
 
-    goto :goto_0
+    return-object v0
 
-    :cond_1
-    move-object p2, p3
+    :pswitch_12
+    const-string v0, "DELETE FROM contacts"
 
-    :goto_0
-    const-class p4, Lwj;
+    return-object v0
 
-    const/4 v0, 0x0
+    :pswitch_13
+    const-string v0, "UPDATE contacts SET presence = ?, presence_type = ? WHERE server_id = ?"
 
-    if-eqz p2, :cond_4
+    return-object v0
 
-    iget-object v1, p0, Lgi;->z0:[Lwj;
+    :pswitch_14
+    const-string v0, "UPDATE contacts SET server_id = ?, data = ? WHERE id = ?"
 
-    if-eqz v1, :cond_3
+    return-object v0
 
-    array-length v2, v1
+    :pswitch_15
+    const-string v0, "DELETE FROM complain_reasons"
 
-    if-gtz v2, :cond_2
+    return-object v0
 
-    goto :goto_1
+    :pswitch_16
+    const-string v0, "DELETE FROM chat_title"
 
-    :cond_2
-    aget-object p1, v1, v0
+    return-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_17
+    const-string v0, "DELETE FROM chat_title WHERE docid=?"
 
-    throw p3
+    return-object v0
 
-    :cond_3
-    :goto_1
-    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+    :pswitch_18
+    const-string v0, "INSERT OR REPLACE INTO chat_title (docid, normalizedTitle, originalTitle, normalizedTitleWithoutEmoji, originalTitleWithoutEmoji, sortTime) VALUES(?, ?, ?, ?, ?, ?)"
 
-    move-result v1
+    return-object v0
 
-    invoke-static {p2, p4, v0, v1}, Lpih;->R(Landroid/text/Spannable;Ljava/lang/Class;II)V
+    :pswitch_19
+    const-string v0, "DELETE FROM chats"
 
-    :cond_4
-    :try_start_0
-    invoke-static {}, Ll45;->a()Ll45;
+    return-object v0
 
-    move-result-object p2
+    :pswitch_1a
+    const-string v0, "DELETE FROM chats WHERE id = ?"
 
-    invoke-virtual {p2, p1}, Ll45;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-object v0
 
-    goto :goto_2
+    :pswitch_1b
+    const-string v0, "DELETE FROM animoji_set"
 
-    :catchall_0
-    move-exception p2
+    return-object v0
 
-    const-string v1, "AnimojiEditText"
+    :pswitch_1c
+    const-string v0, "DELETE FROM animoji"
 
-    const-string v2, "fail to process emojis"
+    return-object v0
 
-    invoke-static {v1, v2, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    nop
 
-    :goto_2
-    sget-object p2, Llh;->c:Ljj;
-
-    if-eqz p1, :cond_9
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    instance-of v1, p1, Landroid/text/Spannable;
-
-    if-nez v1, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {p2, p1}, Ljj;->a(Ljava/lang/CharSequence;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    invoke-interface {p0}, Lm45;->a()Z
-
-    move-result v3
-
-    if-eq v3, v2, :cond_7
-
-    invoke-interface {p0, v2}, Lm45;->setEmojiCompatEnabled(Z)V
-
-    :cond_7
-    move-object v2, p1
-
-    check-cast v2, Landroid/text/Spannable;
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_8
-
-    invoke-static {v2, v3, p2}, Lkmc;->a(Landroid/text/Spannable;Ljava/util/ArrayList;Ljj;)V
-
-    invoke-static {p1}, Lkmc;->v(Ljava/lang/CharSequence;)V
-
-    goto :goto_3
-
-    :cond_8
-    invoke-static {v1}, Lnd5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_9
-    :goto_3
-    if-eqz p1, :cond_c
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p2
-
-    :try_start_1
-    instance-of v1, p1, Landroid/text/Spanned;
-
-    if-eqz v1, :cond_a
-
-    check-cast p1, Landroid/text/Spanned;
-
-    goto :goto_4
-
-    :cond_a
-    move-object p1, p3
-
-    :goto_4
-    if-eqz p1, :cond_b
-
-    invoke-interface {p1, v0, p2, p4}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_5
-
-    :catchall_1
-    :cond_b
-    move-object p1, p3
-
-    :goto_5
-    check-cast p1, [Lwj;
-
-    goto :goto_6
-
-    :cond_c
-    move-object p1, p3
-
-    :goto_6
-    iput-object p1, p0, Lgi;->z0:[Lwj;
-
-    if-eqz p1, :cond_e
-
-    array-length p2, p1
-
-    if-gtz p2, :cond_d
-
-    goto :goto_7
-
-    :cond_d
-    aget-object p1, p1, v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    throw p3
-
-    :cond_e
-    :goto_7
-    return-void
-.end method
-
-.method public final setAnimojiEnabled(Z)V
-    .locals 4
-
-    iget-boolean v0, p0, Lgi;->y0:Z
-
-    if-eq v0, p1, :cond_1
-
-    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatEditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v0, v3, v1, v2}, Lgi;->onTextChanged(Ljava/lang/CharSequence;III)V
-
-    :cond_0
-    iput-boolean p1, p0, Lgi;->y0:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final setCachedSpans$animoji_release([Lwj;)V
-    .locals 0
-
-    iput-object p1, p0, Lgi;->z0:[Lwj;
-
-    return-void
-.end method
-
-.method public final setLayerType(ILandroid/graphics/Paint;)V
-    .locals 0
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,3 +1,14 @@
-.class public abstract Li93;
-.super Lh93;
+.class public interface abstract Li93;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract c(Ljava/lang/String;)V
+.end method
+
+.method public abstract close()V
+.end method

@@ -1,147 +1,55 @@
-.class public final enum Lf8b;
-.super Ljava/lang/Enum;
+.class public final Lf8b;
+.super Lk9a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lf8b;
-
-.field public static final enum Y:Lf8b;
-
-.field public static final enum Z:Lf8b;
-
-.field public static final enum b:Lf8b;
-
-.field public static final enum c:Lf8b;
-
-.field public static final enum o:Lf8b;
-
-.field public static final synthetic w0:[Lf8b;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final Z:Lo7b;
+
+.field public final s0:Lo7b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lo7b;Lo7b;)V
+    .locals 1
 
-    new-instance v0, Lf8b;
+    const/4 v0, 0x6
 
-    const/4 v1, 0x0
+    invoke-direct {p0, v0}, Lk9a;-><init>(I)V
 
-    const-string v2, "app_init"
+    iput-object p1, p0, Lf8b;->Z:Lo7b;
 
-    const-string v3, "APP_INIT"
-
-    invoke-direct {v0, v3, v1, v2}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lf8b;->b:Lf8b;
-
-    new-instance v1, Lf8b;
-
-    const/4 v2, 0x1
-
-    const-string v3, "open_chats_to_render"
-
-    const-string v4, "EVENT_OPEN_CHATS"
-
-    invoke-direct {v1, v4, v2, v3}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lf8b;->c:Lf8b;
-
-    new-instance v2, Lf8b;
-
-    const/4 v3, 0x2
-
-    const-string v4, "open_chat_to_render"
-
-    const-string v5, "EVENT_OPEN_CHAT"
-
-    invoke-direct {v2, v5, v3, v4}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lf8b;->o:Lf8b;
-
-    new-instance v3, Lf8b;
-
-    const/4 v4, 0x3
-
-    const-string v5, "call_init"
-
-    const-string v6, "EVENT_CALL_INIT"
-
-    invoke-direct {v3, v6, v4, v5}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lf8b;->X:Lf8b;
-
-    new-instance v4, Lf8b;
-
-    const/4 v5, 0x4
-
-    const-string v6, "open_call_screen_to_render"
-
-    const-string v7, "EVENT_OPEN_CALL_SCREEN"
-
-    invoke-direct {v4, v7, v5, v6}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lf8b;->Y:Lf8b;
-
-    new-instance v5, Lf8b;
-
-    const/4 v6, 0x5
-
-    const-string v7, "incoming_call_processing_init"
-
-    const-string v8, "EVENT_INCOMING_CALL_PROCESSING_INIT"
-
-    invoke-direct {v5, v8, v6, v7}, Lf8b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lf8b;->Z:Lf8b;
-
-    filled-new-array/range {v0 .. v5}, [Lf8b;
-
-    move-result-object v0
-
-    sput-object v0, Lf8b;->w0:[Lf8b;
+    iput-object p2, p0, Lf8b;->s0:Lo7b;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final m(Lg1g;[ILah0;Lec7;)Li9;
+    .locals 7
 
-    iput-object p3, p0, Lf8b;->a:Ljava/lang/String;
+    new-instance v0, Lg8b;
 
-    return-void
-.end method
+    sget v1, La2g;->a:I
 
-.method public static valueOf(Ljava/lang/String;)Lf8b;
-    .locals 1
+    sget v1, La2g;->a:I
 
-    const-class v0, Lf8b;
+    iget-object v1, p1, Lg1g;->d:[Lub6;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v5, p0, Lf8b;->Z:Lo7b;
 
-    move-result-object p0
+    iget-object v6, p0, Lf8b;->s0:Lo7b;
 
-    check-cast p0, Lf8b;
+    move-object v1, p1
 
-    return-object p0
-.end method
+    move-object v2, p2
 
-.method public static values()[Lf8b;
-    .locals 1
+    move-object v3, p3
 
-    sget-object v0, Lf8b;->w0:[Lf8b;
+    move-object v4, p4
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lf8b;
+    invoke-direct/range {v0 .. v6}, Lg8b;-><init>(Lg1g;[ILah0;Lec7;Lo7b;Lo7b;)V
 
     return-object v0
 .end method

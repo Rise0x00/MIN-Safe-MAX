@@ -72,6 +72,16 @@
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    invoke-static {}, Lru/ok/android/onelog/OneLogImpl;->getInstance()Lru/ok/android/onelog/OneLogImpl;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lru/ok/android/onelog/OneLogImpl;->getForceFallbackLogs()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     invoke-static {v0}, Lru/ok/android/onelog/Files;->mkfile(Ljava/io/File;)V
 
     new-instance v1, Ljava/io/FileOutputStream;
@@ -101,23 +111,39 @@
     goto :goto_0
 
     :catchall_0
-    move-exception p1
+    move-exception v2
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_0
     :goto_0
-    invoke-static {p1, v1}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;Ljava/io/OutputStream;)V
+    new-instance v2, Lmsb;
+
+    new-instance v3, Lzab;
+
+    invoke-direct {v3, v1}, Lzab;-><init>(Ljava/io/OutputStream;)V
+
+    invoke-direct {v2, v3}, Lmsb;-><init>(Ljava/io/Writer;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    sget-object v3, Lru/ok/android/onelog/ItemSerializer;->INSTANCE:Lru/ok/android/onelog/ItemSerializer;
 
-    invoke-static {p1}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;)Ljava/lang/String;
+    invoke-virtual {v3, v2, p1}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lnr7;Lru/ok/android/onelog/OneLogItem;)V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :try_start_3
+    invoke-virtual {v2}, Lmsb;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     :goto_1
     invoke-virtual {v0}, Ljava/io/File;->length()J
@@ -135,26 +161,82 @@
     :catchall_1
     move-exception p1
 
-    goto :goto_3
-
-    :goto_2
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-
-    throw p1
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    goto :goto_6
 
     :catch_0
-    :try_start_4
+    move-exception v1
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception v3
+
+    :try_start_5
+    invoke-virtual {v2}, Lmsb;->close()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    goto :goto_2
+
+    :catchall_3
+    move-exception v2
+
+    :try_start_6
+    invoke-virtual {v3, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_2
+    throw v3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :goto_3
+    :try_start_7
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+
+    goto :goto_4
+
+    :catchall_4
+    move-exception v1
+
+    :try_start_8
+    invoke-virtual {v2, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_4
+    throw v2
+
+    :cond_1
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "Testing log fallback"
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_0
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    :goto_5
+    :try_start_9
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    invoke-static {}, Lru/ok/android/onelog/OneLogImpl;->getInstance()Lru/ok/android/onelog/OneLogImpl;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lru/ok/android/onelog/OneLogImpl;->getErrorHandler()Lru/ok/android/onelog/OneLogErrorHandler;
+
+    move-result-object v2
+
+    invoke-interface {v2, v1, p1}, Lru/ok/android/onelog/OneLogErrorHandler;->handleFailedItemStore(Ljava/lang/Exception;Lru/ok/android/onelog/OneLogItem;)V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
     goto :goto_1
 
-    :goto_3
+    :goto_6
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v0

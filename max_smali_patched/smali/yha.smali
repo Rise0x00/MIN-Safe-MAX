@@ -1,19 +1,31 @@
-.class public final Lyha;
+.class public abstract Lyha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:La5;
-
-
 # direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
+.method public static a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(TT;",
+            "Landroid/util/Property<",
+            "TT;TV;>;",
+            "Landroid/graphics/Path;",
+            ")",
+            "Landroid/animation/ObjectAnimator;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lyha;->a:La5;
+    invoke-static {p0, p1, v0, p2}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeConverter;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method

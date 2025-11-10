@@ -7,17 +7,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    sget v0, Ltac;->editTextPreferenceStyle:I
+    sget v0, Lekc;->editTextPreferenceStyle:I
 
     const v1, 0x1010092
 
-    invoke-static {v0, v1, p1}, Lid7;->p(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Ly0i;->b(IILandroid/content/Context;)I
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object v1, Lklc;->EditTextPreference:[I
+    sget-object v1, Lxuc;->EditTextPreference:[I
 
     const/4 v2, 0x0
 
@@ -25,7 +25,7 @@
 
     move-result-object p1
 
-    sget p2, Lklc;->EditTextPreference_useSimpleSummaryProvider:I
+    sget p2, Lxuc;->EditTextPreference_useSimpleSummaryProvider:I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -37,22 +37,22 @@
 
     if-eqz p2, :cond_1
 
-    sget-object p2, Lj2a;->z0:Lj2a;
+    sget-object p2, Lopd;->X:Lopd;
 
     if-nez p2, :cond_0
 
-    new-instance p2, Lj2a;
+    new-instance p2, Lopd;
 
-    const/16 v0, 0xb
+    const/16 v0, 0x9
 
-    invoke-direct {p2, v0}, Lj2a;-><init>(I)V
+    invoke-direct {p2, v0}, Lopd;-><init>(I)V
 
-    sput-object p2, Lj2a;->z0:Lj2a;
+    sput-object p2, Lopd;->X:Lopd;
 
     :cond_0
-    sget-object p2, Lj2a;->z0:Lj2a;
+    sget-object p2, Lopd;->X:Lopd;
 
-    iput-object p2, p0, Landroidx/preference/Preference;->Z:Lpob;
+    iput-object p2, p0, Landroidx/preference/Preference;->Y:Lkxb;
 
     :cond_1
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -62,7 +62,7 @@
 
 
 # virtual methods
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;

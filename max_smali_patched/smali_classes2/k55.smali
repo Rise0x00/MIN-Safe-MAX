@@ -1,250 +1,96 @@
 .class public final Lk55;
-.super Ljava/lang/Object;
+.super Llk5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lg65;
-
-
-# direct methods
-.method public constructor <init>(Lg65;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk55;->a:Lg65;
-
-    return-void
-.end method
+.field public a:Ljava/lang/Long;
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;II)Lh65;
-    .locals 21
+.method public final a()[B
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lk55;->a:Ljava/lang/Long;
 
-    iget-object v1, v0, Lk55;->a:Lg65;
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_a
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Lg65;->b:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    move/from16 v4, p2
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v8, -0x1
-
-    const/4 v9, -0x1
-
-    const/4 v10, -0x1
-
-    const/4 v11, 0x0
-
-    :goto_0
-    if-ltz v5, :cond_3
-
-    array-length v7, v1
-
-    if-ge v5, v7, :cond_3
-
-    move/from16 v7, p3
-
-    if-ge v4, v7, :cond_3
-
-    move-object/from16 v12, p1
-
-    invoke-interface {v12, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v13
-
-    add-int/lit8 v14, v5, 0x1
-
-    aget-wide v2, v1, v5
-
-    long-to-int v2, v2
-
-    add-int/2addr v2, v14
-
-    add-int/lit8 v2, v2, -0x1
-
-    :goto_1
-    const-wide/32 v15, 0xffff
-
-    if-gt v14, v2, :cond_1
-
-    sub-int v3, v2, v14
-
-    ushr-int/lit8 v3, v3, 0x1
-
-    add-int/2addr v3, v14
-
-    aget-wide v17, v1, v3
-
-    move-object v5, v1
-
-    and-long v0, v17, v15
-
-    long-to-int v0, v0
-
-    int-to-char v0, v0
-
-    if-ge v0, v13, :cond_0
-
-    add-int/lit8 v3, v3, 0x1
-
-    move v14, v3
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    if-le v0, v13, :cond_2
+    const/4 v1, 0x4
 
-    add-int/lit8 v3, v3, -0x1
+    :goto_0
+    add-int/lit8 v2, v1, 0x4
 
-    move v2, v3
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    :goto_2
-    move-object/from16 v0, p0
+    move-result-object v2
 
-    move-object v1, v5
+    sget-object v3, Lfxf;->Y:Lfxf;
 
-    goto :goto_1
+    iget-short v3, v3, Lfxf;->a:S
 
-    :cond_1
-    move-object v5, v1
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 v14, v14, 0x1
+    int-to-short v1, v1
 
-    neg-int v3, v14
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    :cond_2
-    if-gtz v3, :cond_4
+    if-eqz v0, :cond_1
 
-    :cond_3
-    const/4 v2, -0x1
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    goto :goto_3
-
-    :cond_4
-    add-int/lit8 v6, v6, 0x1
-
-    aget-wide v0, v5, v3
-
-    const/16 v2, 0x30
-
-    ushr-long v2, v0, v2
-
-    and-long/2addr v2, v15
-
-    long-to-int v2, v2
-
-    const v3, 0xffff
-
-    if-ne v2, v3, :cond_5
-
-    const/4 v2, -0x1
-
-    :cond_5
-    const/16 v3, 0x28
-
-    ushr-long v13, v0, v3
-
-    const-wide/16 v15, 0xff
-
-    and-long/2addr v13, v15
-
-    long-to-int v3, v13
-
-    const/16 v13, 0xff
-
-    if-ne v3, v13, :cond_6
-
-    const/4 v3, -0x1
-
-    :cond_6
-    const/16 v14, 0x20
-
-    ushr-long v17, v0, v14
-
-    move-wide/from16 v19, v0
-
-    and-long v0, v17, v15
+    move-result-wide v0
 
     long-to-int v0, v0
 
-    if-ne v0, v13, :cond_7
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    const/4 v0, -0x1
+    :cond_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
-    :cond_7
-    const/16 v1, 0x18
+    move-result-object v0
 
-    ushr-long v17, v19, v1
+    return-object v0
+.end method
 
-    move/from16 p2, v2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    and-long v1, v17, v15
+    iget-object v0, p0, Lk55;->a:Ljava/lang/Long;
 
-    long-to-int v1, v1
+    if-nez v0, :cond_0
 
-    if-ne v1, v13, :cond_8
+    const-string v0, "(empty)"
 
-    const/4 v1, -0x1
+    goto :goto_0
 
-    :cond_8
-    const/4 v2, -0x1
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-eq v3, v2, :cond_9
+    const-string v2, "["
 
-    if-eq v0, v2, :cond_9
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eq v1, v2, :cond_9
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v11, v6
+    const-string v0, "]"
 
-    move v9, v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v10, v1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move v8, v3
+    move-result-object v0
 
-    const/4 v6, 0x0
+    :goto_0
+    const-string v1, "EarlyDataExtension "
 
-    :cond_9
-    add-int/lit8 v4, v4, 0x1
+    invoke-static {v1, v0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-object/from16 v0, p0
-
-    move-object v1, v5
-
-    move/from16 v5, p2
-
-    goto/16 :goto_0
-
-    :goto_3
-    if-eq v8, v2, :cond_a
-
-    if-eq v9, v2, :cond_a
-
-    if-eq v10, v2, :cond_a
-
-    new-instance v7, Lh65;
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v7 .. v12}, Lh65;-><init>(IIIII)V
-
-    return-object v7
-
-    :cond_a
-    const/4 v0, 0x0
+    move-result-object v0
 
     return-object v0
 .end method

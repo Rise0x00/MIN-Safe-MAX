@@ -1,107 +1,127 @@
 .class public final Lhtf;
-.super Lm3f;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/text/style/UpdateAppearance;
+.implements Lqsf;
 
 
 # instance fields
-.field public final synthetic X:Ljtf;
+.field public final a:Lqi6;
+
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Ljtf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lw5b;Lqi6;)V
     .locals 0
 
-    iput-object p1, p0, Lhtf;->X:Ljtf;
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lhtf;->a:Lqi6;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-interface {p2, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lhtf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Le34;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lhtf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lhtf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    iget v1, p0, Lhtf;->b:I
 
     check-cast p1, Lhtf;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget p1, p1, Lhtf;->b:I
 
-    invoke-virtual {p1, p2}, Lhtf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v1, p1, :cond_2
 
-    return-object p2
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
+    .locals 2
+
+    const-class v0, Lhtf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    iget v1, p0, Lhtf;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final onThemeChanged(Lw5b;)V
     .locals 1
 
-    new-instance p1, Lhtf;
+    iget-object v0, p0, Lhtf;->a:Lqi6;
 
-    iget-object v0, p0, Lhtf;->X:Ljtf;
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Lhtf;-><init>(Ljtf;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lhtf;->b:I
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lhtf;->X:Ljtf;
+    iget v0, p0, Lhtf;->b:I
 
-    iget-object p1, p1, Ljtf;->B0:Lmoe;
-
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxwf;
-
-    instance-of v1, v0, Lswf;
-
-    sget-object v2, Loyf;->a:Loyf;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lswf;
-
-    iget-object v1, v0, Lswf;->c:Lvwf;
-
-    iget-object v3, v1, Lvwf;->c:Loef;
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_0
-    const/4 v3, 0x0
-
-    invoke-static {v1, v3}, Lvwf;->a(Lvwf;Loef;)Lvwf;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lswf;->c(Lswf;Lvwf;)Lswf;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v3, v0}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    return-object v2
+    return-void
 .end method

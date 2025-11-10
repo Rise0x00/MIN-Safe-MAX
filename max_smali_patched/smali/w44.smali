@@ -1,21 +1,11 @@
-.class public final Lw44;
-.super Ly44;
+.class public interface abstract Lw44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly44;
 
-# static fields
-.field public static final b:Lw44;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lw44;
-
-    invoke-direct {v0}, Ly44;-><init>()V
-
-    sput-object v0, Lw44;->b:Lw44;
-
-    return-void
+# virtual methods
+.method public abstract getKey()Lx44;
 .end method

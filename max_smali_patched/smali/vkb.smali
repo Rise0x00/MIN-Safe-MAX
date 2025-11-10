@@ -3,214 +3,232 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
+.implements Ljava/io/Externalizable;
 
 
 # instance fields
-.field public final X:I
+.field public X:Ljava/lang/String;
 
-.field public final Y:J
+.field public a:Z
 
-.field public final Z:J
+.field public b:Ljava/lang/String;
 
-.field public final a:Ljava/lang/Object;
+.field public final c:Ljava/util/ArrayList;
 
-.field public final b:I
+.field public final d:Ljava/util/ArrayList;
 
-.field public final c:Lpm8;
-
-.field public final o:Ljava/lang/Object;
-
-.field public final w0:I
-
-.field public final x0:I
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILpm8;Ljava/lang/Object;IJJII)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvkb;->a:Ljava/lang/Object;
+    const-string v0, ""
 
-    iput p2, p0, Lvkb;->b:I
+    iput-object v0, p0, Lvkb;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lvkb;->c:Lpm8;
+    new-instance v1, Ljava/util/ArrayList;
 
-    iput-object p4, p0, Lvkb;->o:Ljava/lang/Object;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput p5, p0, Lvkb;->X:I
+    iput-object v1, p0, Lvkb;->c:Ljava/util/ArrayList;
 
-    iput-wide p6, p0, Lvkb;->Y:J
+    new-instance v1, Ljava/util/ArrayList;
 
-    iput-wide p8, p0, Lvkb;->Z:J
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput p10, p0, Lvkb;->w0:I
+    iput-object v1, p0, Lvkb;->d:Ljava/util/ArrayList;
 
-    iput p11, p0, Lvkb;->x0:I
+    iput-object v0, p0, Lvkb;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final readExternal(Ljava/io/ObjectInput;)V
     .locals 6
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    return v0
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-boolean v1, p0, Lvkb;->a:Z
+
+    iput-object v0, p0, Lvkb;->b:Ljava/lang/String;
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
-    if-eqz p1, :cond_2
+    move-result v0
 
-    const-class v2, Lvkb;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move v3, v2
 
-    move-result-object v3
+    :goto_0
+    if-ge v3, v0, :cond_1
 
-    if-eq v2, v3, :cond_1
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lvkb;
-
-    iget v2, p0, Lvkb;->b:I
-
-    iget v3, p1, Lvkb;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lvkb;->X:I
-
-    iget v3, p1, Lvkb;->X:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Lvkb;->Y:J
-
-    iget-wide v4, p1, Lvkb;->Y:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lvkb;->Z:J
-
-    iget-wide v4, p1, Lvkb;->Z:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lvkb;->w0:I
-
-    iget v3, p1, Lvkb;->w0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lvkb;->x0:I
-
-    iget v3, p1, Lvkb;->x0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lvkb;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Lvkb;->a:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lvkb;->o:Ljava/lang/Object;
-
-    iget-object v3, p1, Lvkb;->o:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lvkb;->c:Lpm8;
-
-    iget-object p1, p1, Lvkb;->c:Lpm8;
-
-    invoke-static {v2, p1}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 10
-
-    iget v0, p0, Lvkb;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    iget v0, p0, Lvkb;->X:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    iget-wide v0, p0, Lvkb;->Y:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    iget-wide v0, p0, Lvkb;->Z:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    iget v0, p0, Lvkb;->w0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    iget v0, p0, Lvkb;->x0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    iget-object v1, p0, Lvkb;->a:Ljava/lang/Object;
-
-    iget-object v3, p0, Lvkb;->c:Lpm8;
-
-    iget-object v4, p0, Lvkb;->o:Ljava/lang/Object;
-
-    filled-new-array/range {v1 .. v9}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
 
     move-result v0
 
-    return v0
+    :goto_1
+    if-ge v2, v0, :cond_2
+
+    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lvkb;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-boolean v1, p0, Lvkb;->o:Z
+
+    iput-object p1, p0, Lvkb;->X:Ljava/lang/String;
+
+    :cond_3
+    return-void
+.end method
+
+.method public final writeExternal(Ljava/io/ObjectOutput;)V
+    .locals 4
+
+    iget-boolean v0, p0, Lvkb;->a:Z
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+
+    iget-boolean v0, p0, Lvkb;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvkb;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    iget-object v3, p0, Lvkb;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-interface {p1, v3}, Ljava/io/DataOutput;->writeInt(I)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lvkb;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-interface {p1, v2}, Ljava/io/DataOutput;->writeInt(I)V
+
+    :goto_1
+    if-ge v1, v2, :cond_2
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-interface {p1, v3}, Ljava/io/DataOutput;->writeInt(I)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, p0, Lvkb;->o:Z
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+
+    iget-boolean v0, p0, Lvkb;->o:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lvkb;->X:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+
+    :cond_3
+    return-void
 .end method

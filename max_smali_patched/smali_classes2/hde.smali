@@ -1,177 +1,121 @@
-.class public final Lhde;
-.super Landroid/widget/PopupWindow;
+.class public final synthetic Lhde;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:Lnde;
 
-.field public final b:Lbv7;
+.field public final synthetic b:Ljde;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZLjava/util/ArrayList;Lbv7;)V
-    .locals 11
+.method public synthetic constructor <init>(Lnde;Ljde;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/widget/PopupWindow;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lhde;->a:Ljava/util/ArrayList;
+    iput-object p1, p0, Lhde;->a:Lnde;
 
-    iput-object p4, p0, Lhde;->b:Lbv7;
+    iput-object p2, p0, Lhde;->b:Ljde;
 
-    const/4 p4, -0x2
+    return-void
+.end method
 
-    invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    const/16 v0, 0xfa
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    int-to-float v0, v0
+    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    move-result p1
 
-    move-result-object v1
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object p1, p0, Lhde;->a:Lnde;
 
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Lnde;->getModelItem()Ldde;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-interface {v0}, Ldde;->d()Lade;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    instance-of v0, v0, Lyce;
 
-    const/high16 v1, 0x41400000    # 12.0f
+    if-eqz v0, :cond_3
 
-    mul-float/2addr v0, v1
+    invoke-virtual {p1}, Lnde;->getModelItem()Ldde;
 
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setElevation(F)V
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Ldde;->d()Lade;
 
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+    instance-of v1, v0, Lyce;
 
-    new-instance v1, Lrnb;
+    const/4 v2, 0x0
 
-    invoke-direct {v1, p1, p2}, Lrnb;-><init>(Landroid/content/Context;Z)V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_1
-
-    :cond_0
-    move v9, v3
+    check-cast v0, Lyce;
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p3
-
-    :cond_2
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lgde;
-
-    iget-object v2, v2, Lgde;->d:Ljava/lang/Integer;
-
-    if-eqz v2, :cond_2
-
-    move v9, v0
+    :cond_0
+    move-object v0, v2
 
     :goto_0
-    iget-object p3, p0, Lhde;->a:Ljava/util/ArrayList;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-boolean v0, v0, Lyce;->a:Z
 
-    move-result-object p3
-
-    :goto_1
-    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lgde;
-
-    new-instance v4, Lqnb;
-
-    invoke-direct {v4, p1, p2}, Lqnb;-><init>(Landroid/content/Context;Z)V
-
-    iget-object v6, v2, Lgde;->b:Loef;
-
-    iget-object v10, v2, Lgde;->d:Ljava/lang/Integer;
-
-    iget-object v7, v2, Lgde;->c:Ljava/lang/Integer;
-
-    if-eqz v10, :cond_3
-
-    move v8, v0
-
-    goto :goto_2
-
-    :cond_3
-    move v8, v3
-
-    :goto_2
-    move-object v5, v4
-
-    invoke-virtual/range {v4 .. v9}, Lqnb;->c(Lqnb;Loef;Ljava/lang/Integer;ZZ)V
-
-    iget-object v5, v2, Lgde;->e:Ljava/lang/Integer;
-
-    invoke-virtual {v4, v10, v5}, Lqnb;->b(Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    new-instance v5, Ltrc;
-
-    const/16 v6, 0xc
-
-    invoke-direct {v5, p0, v6, v2}, Ltrc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v4, v5}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1, v4, v2, p4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+    if-ne v0, p2, :cond_1
 
     goto :goto_1
 
-    :cond_4
-    invoke-virtual {p0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
+    :cond_1
+    invoke-virtual {p1}, Lnde;->getModelItem()Ldde;
 
+    move-result-object v0
+
+    invoke-interface {v0}, Ldde;->d()Lade;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lyce;
+
+    if-eqz v1, :cond_2
+
+    move-object v2, v0
+
+    check-cast v2, Lyce;
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    iput-boolean p2, v2, Lyce;->a:Z
+
+    :cond_3
+    :goto_1
+    invoke-virtual {p1}, Lnde;->getModelItem()Ldde;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Li28;->getItemId()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lhde;->b:Ljde;
+
+    invoke-interface {p1, v0, v1, p2}, Ljde;->g(JZ)V
+
+    :cond_4
     return-void
 .end method

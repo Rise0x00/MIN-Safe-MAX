@@ -1,150 +1,83 @@
 .class public final Lquf;
-.super Lm3f;
+.super Lb28;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public X:J
-
-.field public Y:I
-
-.field public final synthetic Z:Lruf;
 
 
 # direct methods
-.method public constructor <init>(Lruf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lquf;->Z:Lruf;
+    sget-object v0, Lfd4;->d:Lfd4;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lb28;-><init>(Llyi;)V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lp6d;->A(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final k(I)J
+    .locals 2
+
+    invoke-virtual {p0, p1}, Lb28;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Louf;
+
+    iget p1, p1, Louf;->a:I
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public final r(Lm7d;I)V
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lpuf;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p1, p1, Lpuf;->E0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1, p2}, Lquf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p2
 
-    check-cast p1, Lquf;
+    check-cast p2, Louf;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object p2, p2, Louf;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lquf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final t(Landroid/view/ViewGroup;I)Lm7d;
+    .locals 2
 
-    new-instance p1, Lquf;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object v0, p0, Lquf;->Z:Lruf;
+    move-result-object p2
 
-    invoke-direct {p1, v0, p2}, Lquf;-><init>(Lruf;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    return-object p1
-.end method
+    move-result-object p2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Lquf;->Z:Lruf;
-
-    iget-object v0, v0, Lruf;->D0:Lmoe;
-
-    iget v1, p0, Lquf;->Y:I
-
-    const-wide/16 v2, -0x1
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v4, :cond_0
-
-    iget-wide v5, p0, Lquf;->X:J
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v5
-
-    :goto_0
-    cmp-long p1, v2, v5
-
-    if-gez p1, :cond_3
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v5, v6}, Ljava/lang/Long;-><init>(J)V
+    sget v0, Lrqc;->number_item:I
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iput-wide v5, p0, Lquf;->X:J
-
-    iput v4, p0, Lquf;->Y:I
-
-    const-wide/16 v7, 0x3e8
-
-    invoke-static {v7, v8, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    sget-object v1, Lf34;->a:Lf34;
+    new-instance p2, Lpuf;
 
-    if-ne p1, v1, :cond_2
+    invoke-direct {p2, p1}, Lpuf;-><init>(Landroid/view/View;)V
 
-    return-object v1
-
-    :cond_2
-    :goto_1
-    add-long/2addr v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object p2
 .end method

@@ -1,87 +1,113 @@
 .class public final Ly;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ls24;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:F
+.field public final synthetic o:Lb0;
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public constructor <init>(Lb0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly;->o:Lb0;
 
-    iput p1, p0, Ly;->a:F
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/RectF;)F
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p1, p0, Ly;->a:F
+    check-cast p1, Lg54;
 
-    return p1
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Ly;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ly;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ly;
 
-    iget v1, p0, Ly;->a:F
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget p1, p1, Ly;->a:F
+    invoke-virtual {p1, p2}, Ly;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmpl-float p1, v1, p1
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Ly;->a:F
+    new-instance p1, Ly;
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v0, p0, Ly;->o:Lb0;
+
+    invoke-direct {p1, v0, p2}, Ly;-><init>(Lb0;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly;->o:Lb0;
+
+    iget-object v0, p1, Lb0;->c:Lu23;
+
+    iget-object v1, p1, Lb0;->b:Lx4e;
+
+    check-cast v1, Ljud;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->user-debug-report:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {v1, v2, v3, v4}, Ljud;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v1
+
+    check-cast v0, Lw33;
+
+    invoke-virtual {v0, v1, v2}, Lw33;->R(J)Lt92;
 
     move-result-object v0
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    sget-object v1, Lybg;->a:Lybg;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {v0}, Lt92;->E()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lb0;->X:Laf5;
+
+    new-instance v0, Lv;
+
+    invoke-direct {v0, v1}, La5a;-><init>(Ljava/lang/Object;)V
+
+    invoke-static {p1, v0}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    invoke-virtual {p1}, Lb0;->v()V
+
+    return-object v1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/maps/model/LatLng;
-.super Lq3;
+.super Lh4;
 .source "SourceFile"
 
 # interfaces
@@ -28,11 +28,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lbhh;
+    new-instance v0, La1i;
 
-    const/16 v1, 0x1a
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
+    invoke-direct {v0, v1}, La1i;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/maps/model/LatLng;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -229,7 +229,7 @@
 
     const/16 p2, 0x4f45
 
-    invoke-static {p1, p2}, Lz84;->K(Landroid/os/Parcel;I)I
+    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
 
     move-result p2
 
@@ -237,7 +237,7 @@
 
     const/16 v1, 0x8
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
     iget-wide v2, p0, Lcom/google/android/gms/maps/model/LatLng;->a:D
 
@@ -245,13 +245,13 @@
 
     const/4 v0, 0x3
 
-    invoke-static {p1, v0, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
 
     iget-wide v0, p0, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    invoke-static {p1, p2}, Lz84;->L(Landroid/os/Parcel;I)V
+    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

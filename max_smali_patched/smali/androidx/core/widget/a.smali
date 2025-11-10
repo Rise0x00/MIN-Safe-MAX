@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Landroidx/appcompat/widget/AppCompatTextView;)Liob;
+.method public static a(Landroidx/appcompat/widget/AppCompatTextView;)Ldxb;
     .locals 8
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -13,13 +13,13 @@
 
     if-lt v0, v1, :cond_0
 
-    new-instance v0, Liob;
+    new-instance v0, Ldxb;
 
-    invoke-static {p0}, Lwef;->c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
+    invoke-static {p0}, Lvrf;->c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Liob;-><init>(Landroid/text/PrecomputedText$Params;)V
+    invoke-direct {v0, p0}, Ldxb;-><init>(Landroid/text/PrecomputedText$Params;)V
 
     return-object v0
 
@@ -34,11 +34,11 @@
 
     sget-object v3, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
-    invoke-static {p0}, Luef;->a(Landroid/widget/TextView;)I
+    invoke-static {p0}, Ltrf;->a(Landroid/widget/TextView;)I
 
     move-result v4
 
-    invoke-static {p0}, Luef;->d(Landroid/widget/TextView;)I
+    invoke-static {p0}, Ltrf;->d(Landroid/widget/TextView;)I
 
     move-result v5
 
@@ -75,11 +75,11 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lvef;->a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+    invoke-static {p0}, Lurf;->a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
 
     move-result-object p0
 
-    invoke-static {p0}, Lwef;->b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
+    invoke-static {p0}, Lvrf;->b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
 
     move-result-object p0
 
@@ -163,9 +163,9 @@
     :cond_6
     :goto_2
     :pswitch_5
-    new-instance p0, Liob;
+    new-instance p0, Ldxb;
 
-    invoke-direct {p0, v2, v3, v4, v5}, Liob;-><init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
+    invoke-direct {p0, v2, v3, v4, v5}, Ldxb;-><init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
 
     return-object p0
 
@@ -185,7 +185,7 @@
 .method public static b(Landroid/widget/TextView;I)V
     .locals 3
 
-    invoke-static {p1}, Ll74;->k(I)V
+    invoke-static {p1}, Loui;->d(I)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -193,7 +193,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Lwef;->d(Landroid/widget/TextView;I)V
+    invoke-static {p0, p1}, Lvrf;->d(Landroid/widget/TextView;I)V
 
     return-void
 
@@ -249,7 +249,7 @@
 .method public static c(Landroid/widget/TextView;I)V
     .locals 3
 
-    invoke-static {p1}, Ll74;->k(I)V
+    invoke-static {p1}, Loui;->d(I)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
@@ -302,7 +302,7 @@
 .method public static d(Landroid/widget/TextView;I)V
     .locals 2
 
-    invoke-static {p1}, Ll74;->k(I)V
+    invoke-static {p1}, Loui;->d(I)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 

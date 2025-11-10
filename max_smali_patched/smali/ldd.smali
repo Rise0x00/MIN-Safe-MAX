@@ -3,139 +3,253 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/RunnableFuture;
-.implements Ljava/util/concurrent/ScheduledFuture;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/FutureTask;
+.field public final X:Lox6;
+
+.field public final Y:Lndd;
+
+.field public final Z:Lldd;
+
+.field public final a:Lxbd;
+
+.field public final b:Lmec;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final o:Lkw6;
+
+.field public final s0:Lldd;
+
+.field public final t0:Lldd;
+
+.field public final u0:J
+
+.field public final v0:J
+
+.field public final w0:Le2e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lxbd;Lmec;Ljava/lang/String;ILkw6;Lox6;Lndd;Lldd;Lldd;Lldd;JJLe2e;)V
+    .locals 0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    iput-object p1, p0, Lldd;->a:Lxbd;
 
-    invoke-direct {v0, p1, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+    iput-object p2, p0, Lldd;->b:Lmec;
 
-    iput-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    iput-object p3, p0, Lldd;->c:Ljava/lang/String;
+
+    iput p4, p0, Lldd;->d:I
+
+    iput-object p5, p0, Lldd;->o:Lkw6;
+
+    iput-object p6, p0, Lldd;->X:Lox6;
+
+    iput-object p7, p0, Lldd;->Y:Lndd;
+
+    iput-object p8, p0, Lldd;->Z:Lldd;
+
+    iput-object p9, p0, Lldd;->s0:Lldd;
+
+    iput-object p10, p0, Lldd;->t0:Lldd;
+
+    iput-wide p11, p0, Lldd;->u0:J
+
+    iput-wide p13, p0, Lldd;->v0:J
+
+    iput-object p15, p0, Lldd;->w0:Le2e;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 1
+.method public static c(Lldd;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p0, p0, Lldd;->X:Lox6;
 
-    .line 2
-    new-instance v0, Ljava/util/concurrent/FutureTask;
+    invoke-virtual {p0, p1}, Lox6;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+    move-result-object p0
 
-    iput-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    if-eqz p0, :cond_0
 
-    return-void
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 1
+.method public final close()V
+    .locals 2
 
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    iget-object v0, p0, Lldd;->Y:Lndd;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+    if-eqz v0, :cond_0
 
-    move-result p1
+    invoke-virtual {v0}, Lndd;->close()V
 
-    return p1
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "response is not eligible for a body and must not be closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
+.method public final l()Z
+    .locals 2
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    const/16 v0, 0xc8
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget v1, p0, Lldd;->d:I
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    if-le v0, v1, :cond_0
 
-    throw p1
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x12b
+
+    if-lt v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 1
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+    const-string v1, "Response{protocol="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lldd;->b:Lmec;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", code="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lldd;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", message="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lldd;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lldd;->a:Lxbd;
+
+    iget-object v1, v1, Lxbd;->b:Lx57;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
+.method public final w()Lkdd;
+    .locals 3
 
-    .line 2
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    new-instance v0, Lkdd;
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iget-object v1, p0, Lldd;->a:Lxbd;
 
-    return-object p1
-.end method
+    iput-object v1, v0, Lkdd;->a:Lxbd;
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 0
+    iget-object v1, p0, Lldd;->b:Lmec;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iput-object v1, v0, Lkdd;->b:Lmec;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iget v1, p0, Lldd;->d:I
 
-    throw p1
-.end method
+    iput v1, v0, Lkdd;->c:I
 
-.method public final isCancelled()Z
-    .locals 1
+    iget-object v1, p0, Lldd;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    iput-object v1, v0, Lkdd;->d:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isCancelled()Z
+    iget-object v1, p0, Lldd;->o:Lkw6;
 
-    move-result v0
+    iput-object v1, v0, Lkdd;->e:Lkw6;
 
-    return v0
-.end method
+    iget-object v1, p0, Lldd;->X:Lox6;
 
-.method public final isDone()Z
-    .locals 1
+    invoke-virtual {v1}, Lox6;->d()Lnx6;
 
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->isDone()Z
+    iput-object v1, v0, Lkdd;->f:Lnx6;
 
-    move-result v0
+    iget-object v1, p0, Lldd;->Y:Lndd;
 
-    return v0
-.end method
+    iput-object v1, v0, Lkdd;->g:Lndd;
 
-.method public final run()V
-    .locals 1
+    iget-object v1, p0, Lldd;->Z:Lldd;
 
-    iget-object v0, p0, Lldd;->a:Ljava/util/concurrent/FutureTask;
+    iput-object v1, v0, Lkdd;->h:Lldd;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->run()V
+    iget-object v1, p0, Lldd;->s0:Lldd;
 
-    return-void
+    iput-object v1, v0, Lkdd;->i:Lldd;
+
+    iget-object v1, p0, Lldd;->t0:Lldd;
+
+    iput-object v1, v0, Lkdd;->j:Lldd;
+
+    iget-wide v1, p0, Lldd;->u0:J
+
+    iput-wide v1, v0, Lkdd;->k:J
+
+    iget-wide v1, p0, Lldd;->v0:J
+
+    iput-wide v1, v0, Lkdd;->l:J
+
+    iget-object v1, p0, Lldd;->w0:Le2e;
+
+    iput-object v1, v0, Lkdd;->m:Le2e;
+
+    return-object v0
 .end method

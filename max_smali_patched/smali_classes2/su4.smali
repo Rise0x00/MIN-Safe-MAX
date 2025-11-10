@@ -2,63 +2,175 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyu4;
 
-
-# static fields
-.field public static final a:Lsu4;
+# instance fields
+.field public final a:Lru7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru7;)V
+    .locals 0
 
-    new-instance v0, Lsu4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsu4;->a:Lsu4;
+    iput-object p1, p0, Lsu4;->a:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(JLjava/lang/Long;Ljava/lang/Long;)V
+    .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "execute: chatId="
 
-    return v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "su4"
+
+    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lsu4;->a:Lru7;
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    cmp-long v5, v5, v2
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lad2;
+
+    invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p4, v5, v6}, Lad2;->A(J)Lt92;
+
+    move-result-object p3
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lsu4;
+    if-eqz p4, :cond_1
 
-    if-nez p1, :cond_1
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
 
-    const/4 p1, 0x0
+    move-result-wide v5
 
-    return p1
+    cmp-long p3, v5, v2
+
+    if-eqz p3, :cond_1
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lad2;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {p3, v5, v6}, Lad2;->G(J)Lt92;
+
+    move-result-object p3
+
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    move-object p3, v4
 
-.method public final hashCode()I
-    .locals 1
+    :goto_0
+    if-nez p3, :cond_2
 
-    const v0, 0x488b885
+    const-string p1, "Chat is null. Ignore"
 
-    return v0
-.end method
+    invoke-static {v1, p1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    return-void
 
-    const-string v0, "Cancelled"
+    :cond_2
+    iget-object p4, p3, Lt92;->b:Lvd2;
 
-    return-object v0
+    iget-object p4, p4, Lvd2;->c0:Lqua;
+
+    if-nez p4, :cond_3
+
+    const-string p1, "draft is null, ignore"
+
+    invoke-static {v1, p1, v4}, Lcuh;->j(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p4}, Lqua;->b()Ljava/lang/Long;
+
+    move-result-object p4
+
+    if-eqz p4, :cond_4
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    :cond_4
+    cmp-long p1, v2, p1
+
+    if-lez p1, :cond_5
+
+    const-string p1, "try to rewrite draft by old, ignore it!"
+
+    invoke-static {v1, p1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_5
+    const-string p1, "Discard server draft"
+
+    invoke-static {v1, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lad2;
+
+    iget-wide p2, p3, Lt92;->a:J
+
+    invoke-virtual {p1, p2, p3}, Lad2;->p(J)V
+
+    return-void
 .end method

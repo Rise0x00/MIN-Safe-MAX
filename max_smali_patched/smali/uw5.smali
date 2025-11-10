@@ -1,281 +1,389 @@
-.class public final Luw5;
+.class public final synthetic Luw5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgv5;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lwxc;
-
-.field public final synthetic c:Lgv5;
+.field public final synthetic b:Lvw5;
 
 
 # direct methods
-.method public constructor <init>(Lgv5;Lwxc;)V
-    .locals 1
+.method public synthetic constructor <init>(Lvw5;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Luw5;->a:I
 
-    iput v0, p0, Luw5;->a:I
+    iput-object p1, p0, Luw5;->b:Lvw5;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luw5;->c:Lgv5;
-
-    iput-object p2, p0, Luw5;->b:Lwxc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwxc;Lgv5;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Luw5;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luw5;->b:Lwxc;
-
-    iput-object p2, p0, Luw5;->c:Lgv5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final run()V
+    .locals 8
 
     iget v0, p0, Luw5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    instance-of v0, p2, Lby5;
+    iget-object v0, p0, Luw5;->b:Lvw5;
 
-    if-eqz v0, :cond_0
+    sget-object v1, Lvw5;->m:Ljava/lang/Object;
 
-    move-object v0, p2
+    monitor-enter v1
 
-    check-cast v0, Lby5;
+    :try_start_0
+    iget-object v2, v0, Lvw5;->a:Lsw5;
 
-    iget v1, v0, Lby5;->Z:I
+    invoke-virtual {v2}, Lsw5;->a()V
 
-    const/high16 v2, -0x80000000
+    iget-object v2, v2, Lsw5;->a:Landroid/content/Context;
 
-    and-int v3, v1, v2
+    invoke-static {v2}, Lgr4;->o(Landroid/content/Context;)Lgr4;
 
-    if-eqz v3, :cond_0
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sub-int/2addr v1, v2
+    :try_start_1
+    iget-object v3, v0, Lvw5;->c:Lqoh;
 
-    iput v1, v0, Lby5;->Z:I
+    invoke-virtual {v3}, Lqoh;->T()Leb0;
+
+    move-result-object v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_5
+
+    if-eqz v2, :cond_0
+
+    :try_start_2
+    invoke-virtual {v2}, Lgr4;->z()V
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_c
+
     :cond_0
-    new-instance v0, Lby5;
-
-    invoke-direct {v0, p0, p2}, Lby5;-><init>(Luw5;Lkotlin/coroutines/Continuation;)V
-
     :goto_0
-    iget-object p2, v0, Lby5;->X:Ljava/lang/Object;
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget v1, v0, Lby5;->Z:I
+    :try_start_3
+    iget v2, v3, Leb0;->b:I
 
-    const/4 v2, 0x1
+    const/4 v4, 0x0
 
-    if-eqz v1, :cond_2
+    const/4 v5, 0x5
 
-    if-ne v1, v2, :cond_1
+    const/4 v6, 0x1
 
-    iget-object p1, v0, Lby5;->o:Luw5;
+    if-ne v2, v5, :cond_1
 
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    move v7, v6
 
     goto :goto_1
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move v7, v4
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_1
+    if-nez v7, :cond_4
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v7, 0x3
 
-    throw p1
+    if-ne v2, v7, :cond_2
+
+    move v4, v6
 
     :cond_2
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p2, p0, Luw5;->b:Lwxc;
-
-    iget-object v1, p2, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    const/16 v3, 0x14
-
-    if-nez v1, :cond_3
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v1, p2, Lwxc;->a:Ljava/lang/Object;
-
-    :cond_3
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    if-ne p1, v3, :cond_5
-
-    iput-object p0, v0, Lby5;->o:Luw5;
-
-    iput v2, v0, Lby5;->Z:I
-
-    iget-object p1, p0, Luw5;->c:Lgv5;
-
-    invoke-interface {p1, v1, v0}, Lgv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_4
+    if-eqz v4, :cond_3
 
     goto :goto_2
 
-    :cond_4
-    move-object p1, p0
+    :cond_3
+    iget-object v2, v0, Lvw5;->d:Lpig;
 
-    :goto_1
-    iget-object p1, p1, Luw5;->b:Lwxc;
+    invoke-virtual {v2, v3}, Lpig;->a(Leb0;)Z
 
-    const/4 p2, 0x0
+    move-result v2
 
-    iput-object p2, p1, Lwxc;->a:Ljava/lang/Object;
+    if-eqz v2, :cond_e
 
-    :cond_5
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-virtual {v0, v3}, Lvw5;->b(Leb0;)Leb0;
 
-    :goto_2
-    return-object p2
-
-    :pswitch_0
-    instance-of v0, p2, Ltw5;
-
-    if-eqz v0, :cond_6
-
-    move-object v0, p2
-
-    check-cast v0, Ltw5;
-
-    iget v1, v0, Ltw5;->Z:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_6
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Ltw5;->Z:I
+    move-result-object v2
 
     goto :goto_3
 
-    :cond_6
-    new-instance v0, Ltw5;
+    :catch_0
+    move-exception v1
 
-    invoke-direct {v0, p0, p2}, Ltw5;-><init>(Luw5;Lkotlin/coroutines/Continuation;)V
+    goto/16 :goto_a
+
+    :cond_4
+    :goto_2
+    invoke-virtual {v0, v3}, Lvw5;->g(Leb0;)Leb0;
+
+    move-result-object v2
+    :try_end_3
+    .catch Lcom/google/firebase/installations/FirebaseInstallationsException; {:try_start_3 .. :try_end_3} :catch_0
 
     :goto_3
-    iget-object p2, v0, Ltw5;->X:Ljava/lang/Object;
+    monitor-enter v1
 
-    iget v1, v0, Ltw5;->Z:I
+    :try_start_4
+    iget-object v4, v0, Lvw5;->a:Lsw5;
 
-    const/4 v2, 0x1
+    invoke-virtual {v4}, Lsw5;->a()V
 
-    if-eqz v1, :cond_8
+    iget-object v4, v4, Lsw5;->a:Landroid/content/Context;
 
-    if-ne v1, v2, :cond_7
+    invoke-static {v4}, Lgr4;->o(Landroid/content/Context;)Lgr4;
 
-    iget-object p1, v0, Ltw5;->o:Luw5;
+    move-result-object v4
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    :try_start_0
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_start_5
+    iget-object v7, v0, Lvw5;->c:Lqoh;
+
+    invoke-virtual {v7, v2}, Lqoh;->P(Leb0;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_4
+
+    if-eqz v4, :cond_5
+
+    :try_start_6
+    invoke-virtual {v4}, Lgr4;->z()V
 
     goto :goto_4
 
-    :catchall_0
-    move-exception p2
+    :catchall_1
+    move-exception v0
 
-    goto :goto_6
+    goto/16 :goto_9
 
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :cond_5
+    :goto_4
+    monitor-exit v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    monitor-enter v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :try_start_7
+    iget-object v1, v0, Lvw5;->k:Ljava/util/HashSet;
 
-    throw p1
+    invoke-virtual {v1}, Ljava/util/HashSet;->size()I
 
-    :cond_8
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    move-result v1
 
-    :try_start_1
-    iget-object p2, p0, Luw5;->c:Lgv5;
+    if-eqz v1, :cond_8
 
-    iput-object p0, v0, Ltw5;->o:Luw5;
+    iget-object v1, v3, Leb0;->a:Ljava/lang/String;
 
-    iput v2, v0, Ltw5;->Z:I
+    iget-object v3, v2, Leb0;->a:Ljava/lang/String;
 
-    invoke-interface {p2, p1, v0}, Lgv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    move-result v1
 
-    sget-object p2, Lf34;->a:Lf34;
+    if-nez v1, :cond_8
 
-    if-ne p1, p2, :cond_9
+    iget-object v1, v0, Lvw5;->k:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
 
     goto :goto_5
 
-    :cond_9
-    :goto_4
-    sget-object p2, Loyf;->a:Loyf;
+    :cond_6
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    move-result-object v1
+
+    if-nez v1, :cond_7
+
+    const/4 v1, 0x0
+
+    throw v1
+
+    :catchall_2
+    move-exception v1
+
+    goto :goto_8
+
+    :cond_7
+    new-instance v1, Ljava/lang/ClassCastException;
+
+    invoke-direct {v1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :cond_8
     :goto_5
-    return-object p2
+    monitor-exit v0
 
-    :catchall_1
-    move-exception p2
+    iget v1, v2, Leb0;->b:I
 
-    move-object p1, p0
+    const/4 v3, 0x4
 
+    if-ne v1, v3, :cond_9
+
+    iget-object v1, v2, Leb0;->a:Ljava/lang/String;
+
+    monitor-enter v0
+
+    :try_start_8
+    iput-object v1, v0, Lvw5;->j:Ljava/lang/String;
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    monitor-exit v0
+
+    goto :goto_6
+
+    :catchall_3
+    move-exception v1
+
+    :try_start_9
+    monitor-exit v0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    throw v1
+
+    :cond_9
     :goto_6
-    iget-object p1, p1, Luw5;->b:Lwxc;
+    iget v1, v2, Leb0;->b:I
 
-    iput-object p2, p1, Lwxc;->a:Ljava/lang/Object;
+    if-ne v1, v5, :cond_a
 
-    throw p2
+    new-instance v1, Lcom/google/firebase/installations/FirebaseInstallationsException;
+
+    invoke-direct {v1}, Lcom/google/firebase/FirebaseException;-><init>()V
+
+    invoke-virtual {v0, v1}, Lvw5;->h(Ljava/lang/Exception;)V
+
+    goto :goto_b
+
+    :cond_a
+    const/4 v3, 0x2
+
+    if-eq v1, v3, :cond_c
+
+    if-ne v1, v6, :cond_b
+
+    goto :goto_7
+
+    :cond_b
+    invoke-virtual {v0, v2}, Lvw5;->i(Leb0;)V
+
+    goto :goto_b
+
+    :cond_c
+    :goto_7
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "Installation ID could not be validated with the Firebase servers (maybe it was deleted). Firebase Installations will need to create a new Installation ID and auth token. Please retry your last request."
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lvw5;->h(Ljava/lang/Exception;)V
+
+    goto :goto_b
+
+    :goto_8
+    :try_start_a
+    monitor-exit v0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
+
+    throw v1
+
+    :catchall_4
+    move-exception v0
+
+    if-eqz v4, :cond_d
+
+    :try_start_b
+    invoke-virtual {v4}, Lgr4;->z()V
+
+    :cond_d
+    throw v0
+
+    :goto_9
+    monitor-exit v1
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_1
+
+    throw v0
+
+    :goto_a
+    invoke-virtual {v0, v1}, Lvw5;->h(Ljava/lang/Exception;)V
+
+    :cond_e
+    :goto_b
+    return-void
+
+    :catchall_5
+    move-exception v0
+
+    if-eqz v2, :cond_f
+
+    :try_start_c
+    invoke-virtual {v2}, Lgr4;->z()V
+
+    :cond_f
+    throw v0
+
+    :goto_c
+    monitor-exit v1
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_0
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Luw5;->b:Lvw5;
+
+    invoke-virtual {v0}, Lvw5;->a()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Luw5;->b:Lvw5;
+
+    invoke-virtual {v0}, Lvw5;->a()V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

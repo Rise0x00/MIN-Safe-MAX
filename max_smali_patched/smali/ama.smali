@@ -1,77 +1,157 @@
-.class public abstract synthetic Lama;
+.class public final Lama;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public a:Ln2f;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public b:Lk5;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public e:Lk9a;
+
+.field public f:Z
+
+.field public g:Li9a;
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:Lk9a;
+
+.field public k:Lyxi;
+
+.field public l:Ljava/net/ProxySelector;
+
+.field public m:Li9a;
+
+.field public n:Ljavax/net/SocketFactory;
+
+.field public o:Ljavax/net/ssl/SSLSocketFactory;
+
+.field public p:Ljavax/net/ssl/X509TrustManager;
+
+.field public q:Ljava/util/List;
+
+.field public r:Ljava/util/List;
+
+.field public s:Lzla;
+
+.field public t:Lq52;
+
+.field public u:Lrni;
+
+.field public v:I
+
+.field public w:I
+
+.field public x:I
+
+.field public y:J
+
+.field public z:Lvs6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 2
 
-    const/4 v0, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    new-instance v0, Ln2f;
 
-    move-result-object v1
+    invoke-direct {v0}, Ln2f;-><init>()V
 
-    array-length v1, v1
+    iput-object v0, p0, Lama;->a:Ln2f;
 
-    new-array v1, v1, [I
+    new-instance v0, Lk5;
 
-    const/4 v2, 0x1
+    const/16 v1, 0xa
 
-    const/4 v3, 0x2
+    invoke-direct {v0, v1}, Lk5;-><init>(I)V
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v0, p0, Lama;->b:Lk5;
 
-    :catch_0
-    sput-object v1, Lama;->$EnumSwitchMapping$0:[I
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v1
+    iput-object v0, p0, Lama;->c:Ljava/util/ArrayList;
 
-    array-length v1, v1
+    new-instance v0, Ljava/util/ArrayList;
 
-    new-array v1, v1, [I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v4, 0x0
+    iput-object v0, p0, Lama;->d:Ljava/util/ArrayList;
 
-    :try_start_1
-    aput v2, v1, v4
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance v0, Lk9a;
 
-    :catch_1
-    :try_start_2
-    aput v3, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    const/16 v1, 0xf
 
-    :catch_2
-    const/4 v3, 0x3
+    invoke-direct {v0, v1}, Lk9a;-><init>(I)V
 
-    :try_start_3
-    aput v3, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    iput-object v0, p0, Lama;->e:Lk9a;
 
-    :catch_3
-    :try_start_4
-    aput v0, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const/4 v0, 0x1
 
-    :catch_4
-    sput-object v1, Lama;->$EnumSwitchMapping$1:[I
+    iput-boolean v0, p0, Lama;->f:Z
+
+    sget-object v1, Li9a;->b:Li9a;
+
+    iput-object v1, p0, Lama;->g:Li9a;
+
+    iput-boolean v0, p0, Lama;->h:Z
+
+    iput-boolean v0, p0, Lama;->i:Z
+
+    sget-object v0, Lk9a;->d:Lk9a;
+
+    iput-object v0, p0, Lama;->j:Lk9a;
+
+    sget-object v0, Lyxi;->s0:Lyxi;
+
+    iput-object v0, p0, Lama;->k:Lyxi;
+
+    iput-object v1, p0, Lama;->m:Li9a;
+
+    invoke-static {}, Ljavax/net/SocketFactory;->getDefault()Ljavax/net/SocketFactory;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lama;->n:Ljavax/net/SocketFactory;
+
+    sget-object v0, Lbma;->L0:Ljava/util/List;
+
+    iput-object v0, p0, Lama;->q:Ljava/util/List;
+
+    sget-object v0, Lbma;->K0:Ljava/util/List;
+
+    iput-object v0, p0, Lama;->r:Ljava/util/List;
+
+    sget-object v0, Lzla;->a:Lzla;
+
+    iput-object v0, p0, Lama;->s:Lzla;
+
+    sget-object v0, Lq52;->c:Lq52;
+
+    iput-object v0, p0, Lama;->t:Lq52;
+
+    const/16 v0, 0x2710
+
+    iput v0, p0, Lama;->v:I
+
+    iput v0, p0, Lama;->w:I
+
+    iput v0, p0, Lama;->x:I
+
+    const-wide/16 v0, 0x400
+
+    iput-wide v0, p0, Lama;->y:J
 
     return-void
 .end method

@@ -2,39 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lolg;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lnm4;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lnm4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnm4;->a:Lnm4;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final c(Ll53;Lys9;)Ljlg;
+.method public constructor <init>(IIII)V
     .locals 0
 
-    invoke-interface {p1}, Lj53;->a()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput p1, p0, Lnm4;->a:I
 
-    invoke-static {p1}, Lo7;->f(Ljava/lang/Class;)Ljlg;
+    iput p2, p0, Lnm4;->b:I
 
-    move-result-object p1
+    iput p3, p0, Lnm4;->c:I
 
-    return-object p1
+    iput p4, p0, Lnm4;->d:I
+
+    return-void
 .end method

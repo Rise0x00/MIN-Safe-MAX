@@ -1,63 +1,146 @@
 .class public final Lri9;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvi9;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lsi9;
-
-.field public Z:I
-
-.field public o:Z
+.field public final b:Lepg;
 
 
 # direct methods
-.method public constructor <init>(Lsi9;Lnz3;)V
+.method public constructor <init>(JLepg;)V
     .locals 0
 
-    iput-object p1, p0, Lri9;->Y:Lsi9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lri9;->a:J
+
+    iput-object p3, p0, Lri9;->b:Lepg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final b()Lepg;
+    .locals 1
 
-    iput-object p1, p0, Lri9;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lri9;->b:Lepg;
 
-    iget p1, p0, Lri9;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lri9;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v8, 0x0
+    return v0
 
-    const/4 v9, 0x0
+    :cond_0
+    instance-of v1, p1, Lri9;
 
-    iget-object v0, p0, Lri9;->Y:Lsi9;
+    const/4 v2, 0x0
 
-    const-wide/16 v1, 0x0
+    if-nez v1, :cond_1
 
-    const-wide/16 v3, 0x0
+    return v2
 
-    const-wide/16 v5, 0x0
+    :cond_1
+    check-cast p1, Lri9;
 
-    const/4 v7, 0x0
+    iget-wide v3, p0, Lri9;->a:J
 
-    move-object v10, p0
+    iget-wide v5, p1, Lri9;->a:J
 
-    invoke-virtual/range {v0 .. v10}, Lsi9;->d(JJJZILhn4;Lnz3;)Ljava/lang/Object;
+    cmp-long v1, v3, v5
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    return-object p1
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lri9;->b:Lepg;
+
+    iget-object p1, p1, Lri9;->b:Lepg;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lri9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lri9;->b:Lepg;
+
+    invoke-virtual {v1}, Lepg;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lri9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OnPlayRequested(messageId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lri9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", model="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lri9;->b:Lepg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

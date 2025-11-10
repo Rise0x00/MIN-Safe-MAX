@@ -1,21 +1,48 @@
-.class public interface abstract Lou1;
+.class public final Lou1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lg54;
+
+
+# instance fields
+.field public final a:Ltif;
+
 
 # direct methods
-.method public static a(Lou1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-    .locals 0
+.method public constructor <init>(Lru7;Lru7;)V
+    .locals 2
 
-    check-cast p0, Lf71;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p0, p0, Lf71;->b:Ls5f;
+    new-instance v0, Lnu1;
 
-    invoke-virtual {p0}, Ls5f;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    invoke-direct {v0, p1, p2, v1}, Lnu1;-><init>(Lru7;Lru7;I)V
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
+    new-instance p1, Ltif;
 
-    return-object p0
+    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
+
+    iput-object p1, p0, Lou1;->a:Ltif;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCoroutineContext()Ly44;
+    .locals 1
+
+    iget-object v0, p0, Lou1;->a:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ly44;
+
+    return-object v0
 .end method

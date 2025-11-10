@@ -1,86 +1,184 @@
 .class public final Luie;
-.super Lxie;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic X:Lqjc;
+
+.field public final synthetic Y:Lone/me/sharedata/ShareDataPickerScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lqjc;Lone/me/sharedata/ShareDataPickerScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Luie;->X:Lqjc;
 
-    invoke-direct {p0, p1, p2, v0}, Lxie;-><init>(JI)V
+    iput-object p2, p0, Luie;->Y:Lone/me/sharedata/ShareDataPickerScreen;
 
-    iput-wide p1, p0, Luie;->c:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lhie;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Luie;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Luie;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Luie;
 
-    iget-wide v3, p0, Luie;->c:J
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-wide v5, p1, Luie;->c:J
+    invoke-virtual {p1, p2}, Luie;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-wide v0, p0, Luie;->c:J
+    new-instance v0, Luie;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Luie;->X:Lqjc;
 
-    move-result v0
+    iget-object v2, p0, Luie;->Y:Lone/me/sharedata/ShareDataPickerScreen;
 
-    return v0
+    invoke-direct {v0, v1, v2, p2}, Luie;-><init>(Lqjc;Lone/me/sharedata/ShareDataPickerScreen;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Luie;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const-string v0, "DialogBotId(botId="
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Luie;->o:Ljava/lang/Object;
 
-    iget-wide v2, p0, Luie;->c:J
+    check-cast p1, Lhie;
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v0, 0x8
+
+    iget-object v1, p0, Luie;->X:Lqjc;
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v2, p0, Luie;->Y:Lone/me/sharedata/ShareDataPickerScreen;
+
+    iget-boolean v3, v2, Lone/me/sharedata/ShareDataPickerScreen;->v0:Z
+
+    if-nez v3, :cond_1
+
+    invoke-virtual {v2}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lonb;->Y:Lj0d;
+
+    iget-object v2, v2, Lj0d;->a:Lt0f;
+
+    invoke-interface {v2}, Lt0f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Set;
+
+    invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v0, 0x0
+
+    :cond_1
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p1, Lhie;->a:Lnrf;
+
+    iget-object v2, p1, Lhie;->b:Lnrf;
+
+    iget-object v3, p1, Lhie;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lhie;->d:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v1, v0}, Lqjc;->setTitle(Ljava/lang/CharSequence;)V
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lqjc;->setBody(Ljava/lang/CharSequence;)V
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Lqjc;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZ)V
+
+    invoke-virtual {v1, p1}, Lqjc;->setCounter(Ljava/lang/Integer;)V
+
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

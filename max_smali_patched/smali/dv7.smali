@@ -1,154 +1,164 @@
 .class public final Ldv7;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lzx0;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/util/TreeSet;
 
-.field public final synthetic Z:Lhu7;
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Lhu7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput-object p1, p0, Ldv7;->Z:Lhu7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Ldv7;->a:J
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Ljava/util/TreeSet;
+
+    new-instance p2, Les5;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, v0}, Les5;-><init>(I)V
+
+    invoke-direct {p1, p2}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    iput-object p1, p0, Ldv7;->b:Ljava/util/TreeSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lnpe;Lqpe;)V
+    .locals 4
+
+    iget-object v0, p0, Ldv7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+
+    iget-wide v0, p0, Ldv7;->c:J
+
+    iget-wide v2, p2, Liy0;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ldv7;->c:J
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p0, p1, v0, v1}, Ldv7;->e(Lqx0;J)V
+
+    return-void
+.end method
+
+.method public final b(Lqx0;Ljava/lang/String;JJ)V
     .locals 0
 
-    check-cast p1, Lgv5;
+    const-wide/16 p2, -0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    cmp-long p2, p5, p2
 
-    invoke-virtual {p0, p1, p2}, Ldv7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz p2, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Ldv7;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ldv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ldv7;
-
-    iget-object v1, p0, Ldv7;->Z:Lhu7;
-
-    invoke-direct {v0, v1, p2}, Ldv7;-><init>(Lhu7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ldv7;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Ldv7;->X:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lf34;->a:Lf34;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_2
+    invoke-virtual {p0, p1, p5, p6}, Ldv7;->e(Lqx0;J)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final c(Lnpe;Lqpe;Lqpe;)V
+    .locals 0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Ldv7;->d(Lnpe;Liy0;)V
 
-    throw p1
+    invoke-virtual {p0, p1, p3}, Ldv7;->a(Lnpe;Lqpe;)V
 
-    :cond_1
-    iget-object v0, p0, Ldv7;->Y:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lgv5;
+.method public final d(Lnpe;Liy0;)V
+    .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object p1, p0, Ldv7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {p1, p2}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
+
+    iget-wide v0, p0, Ldv7;->c:J
+
+    iget-wide p1, p2, Liy0;->c:J
+
+    sub-long/2addr v0, p1
+
+    iput-wide v0, p0, Ldv7;->c:J
+
+    return-void
+.end method
+
+.method public final e(Lqx0;J)V
+    .locals 4
+
+    :goto_0
+    iget-wide v0, p0, Ldv7;->c:J
+
+    add-long/2addr v0, p2
+
+    iget-wide v2, p0, Ldv7;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Ldv7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ldv7;->b:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liy0;
+
+    move-object v1, p1
+
+    check-cast v1, Lnpe;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v1, v0}, Lnpe;->m(Liy0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :catchall_0
+    move-exception p1
 
-    iget-object p1, p0, Ldv7;->Y:Ljava/lang/Object;
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-object v0, p1
+    throw p1
 
-    check-cast v0, Lgv5;
-
-    iput-object v0, p0, Ldv7;->Y:Ljava/lang/Object;
-
-    iput v2, p0, Ldv7;->X:I
-
-    const-wide/16 v4, 0x12c
-
-    invoke-static {v4, v5, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ldv7;->Y:Ljava/lang/Object;
-
-    iput v1, p0, Ldv7;->X:I
-
-    iget-object p1, p0, Ldv7;->Z:Lhu7;
-
-    invoke-interface {v0, p1, p0}, Lgv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_4
-
-    :goto_1
-    return-object v3
-
-    :cond_4
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

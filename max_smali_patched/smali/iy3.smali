@@ -1,75 +1,124 @@
-.class public final Liy3;
+.class public final synthetic Liy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/ArrayList;
+.field public final synthetic b:Lcy3;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Lm7d;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lm7d;Lcy3;ZI)V
+    .locals 0
 
-    .line 4
+    iput p4, p0, Liy3;->a:I
+
+    iput-object p1, p0, Liy3;->d:Lm7d;
+
+    iput-object p2, p0, Liy3;->b:Lcy3;
+
+    iput-boolean p3, p0, Liy3;->c:Z
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Liy3;->a:Ljava/util/HashMap;
-
-    .line 6
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Liy3;->b:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public constructor <init>(Llo4;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iget-object v0, p1, Llo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashMap;
-
-    iput-object v0, p0, Liy3;->a:Ljava/util/HashMap;
-
-    .line 3
-    iget-object p1, p1, Llo4;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    iput-object p1, p0, Liy3;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p0, Liy3;->a:I
 
-    iget-object v0, p0, Liy3;->a:Ljava/util/HashMap;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Liy3;->d:Lm7d;
 
-    iget-object p1, p0, Liy3;->b:Ljava/util/ArrayList;
+    check-cast p1, Lwy3;
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iget-object v0, p1, Lwy3;->E0:Lay3;
+
+    iget-object v1, p0, Liy3;->b:Lcy3;
+
+    iget v1, v1, Lcy3;->a:I
+
+    invoke-interface {v0, v1}, Lay3;->A(I)V
+
+    iget-object p1, p1, Lwy3;->F0:Lfi0;
+
+    invoke-static {v1}, Lbvi;->b(I)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Liy3;->c:Z
+
+    const/4 v2, 0x2
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-virtual {p1, v0, v2, v1}, Lfi0;->a(III)V
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Liy3;->d:Lm7d;
+
+    check-cast p1, Ljy3;
+
+    iget-object v0, p1, Ljy3;->E0:Lay3;
+
+    iget-object v1, p0, Liy3;->b:Lcy3;
+
+    iget v1, v1, Lcy3;->a:I
+
+    invoke-interface {v0, v1}, Lay3;->A(I)V
+
+    iget-object p1, p1, Ljy3;->F0:Lfi0;
+
+    invoke-static {v1}, Lbvi;->b(I)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Liy3;->c:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x2
+
+    :goto_1
+    invoke-virtual {p1, v0, v2, v1}, Lfi0;->a(III)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1794,7 +1794,6 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
-    <attr name="icon_switch_start_drawable" format="reference" />
     <attr name="iconifiedByDefault" format="boolean" />
     <attr name="ifTagNotSet" format="reference" />
     <attr name="ifTagSet" format="reference" />

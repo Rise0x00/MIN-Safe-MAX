@@ -1,48 +1,124 @@
-.class public interface abstract Lys6;
-.super Ljava/lang/Object;
+.class public final Lys6;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
+
+
+# instance fields
+.field public final synthetic X:Lat6;
+
+.field public final synthetic Y:Landroid/os/Bundle;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lat6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lys6;->X:Lat6;
+
+    iput-object p2, p0, Lys6;->Y:Landroid/os/Bundle;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.method public b(Landroid/view/View;)V
-    .locals 2
+    check-cast p1, Lg54;
 
-    :try_start_0
-    invoke-static {p1, p0}, Lhxf;->K(Landroid/view/View;Lys6;)Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1, p2}, Lys6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    check-cast p1, Lys6;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lys6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lys6;
+
+    iget-object v0, p0, Lys6;->X:Lat6;
+
+    iget-object v1, p0, Lys6;->Y:Landroid/os/Bundle;
+
+    invoke-direct {p1, v0, v1, p2}, Lys6;-><init>(Lat6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lys6;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lv3d;
-
-    invoke-direct {v0, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_0
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    instance-of v1, p1, Lv3d;
-
-    if-eqz v1, :cond_0
-
-    move-object p1, v0
-
     :cond_0
-    check-cast p1, Ljava/lang/Boolean;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lys6;->Y:Landroid/os/Bundle;
+
+    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_SMS_MESSAGE"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput v1, p0, Lys6;->o:I
+
+    iget-object v0, p0, Lys6;->X:Lat6;
+
+    invoke-static {v0, p1, p0}, Lat6;->a(Lat6;Ljava/lang/String;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

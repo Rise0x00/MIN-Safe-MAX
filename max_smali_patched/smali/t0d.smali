@@ -1,332 +1,731 @@
 .class public final Lt0d;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lfth;
 
 
 # instance fields
-.field public X:Lwxc;
+.field public a:I
 
-.field public Y:Lwxc;
+.field public final b:I
 
-.field public Z:I
+.field public final c:I
 
-.field public final synthetic w0:Les7;
+.field public final d:I
 
-.field public final synthetic x0:Ler7;
+.field public final e:I
 
-.field public final synthetic y0:Le34;
+.field public final f:Ljava/lang/Object;
 
-.field public final synthetic z0:Lm3f;
+.field public final g:Ljava/lang/Object;
+
+.field public final h:Ljava/lang/Object;
+
+.field public final i:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Les7;Ler7;Le34;Llf6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(II[F[F)V
+    .locals 2
 
-    iput-object p1, p0, Lt0d;->w0:Les7;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lt0d;->x0:Ler7;
+    const/4 v0, 0x1
 
-    iput-object p3, p0, Lt0d;->y0:Le34;
+    .line 2
+    invoke-static {v0}, Ljava/nio/IntBuffer;->allocate(I)Ljava/nio/IntBuffer;
 
-    check-cast p4, Lm3f;
+    move-result-object v0
 
-    iput-object p4, p0, Lt0d;->z0:Lm3f;
+    iput-object v0, p0, Lt0d;->f:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    const/4 v0, 0x2
 
-    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    invoke-static {v0}, Ljava/nio/IntBuffer;->allocate(I)Ljava/nio/IntBuffer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lt0d;->g:Ljava/lang/Object;
+
+    .line 4
+    iput p1, p0, Lt0d;->a:I
+
+    .line 5
+    iput p2, p0, Lt0d;->b:I
+
+    .line 6
+    iput v0, p0, Lt0d;->c:I
+
+    const/4 p1, 0x5
+
+    .line 7
+    iput p1, p0, Lt0d;->e:I
+
+    const/4 p1, 0x4
+
+    .line 8
+    iput p1, p0, Lt0d;->d:I
+
+    .line 9
+    array-length p2, p3
+
+    mul-int/2addr p2, p1
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    .line 10
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 11
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p2
+
+    .line 12
+    invoke-virtual {p2, p3}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    const/4 p3, 0x0
+
+    .line 13
+    invoke-virtual {p2, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 14
+    iput-object p2, p0, Lt0d;->h:Ljava/lang/Object;
+
+    .line 15
+    array-length p2, p4
+
+    mul-int/2addr p2, p1
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    .line 16
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 17
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p1
+
+    .line 18
+    invoke-virtual {p1, p4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    .line 19
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 20
+    iput-object p1, p0, Lt0d;->i:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lo0d;Ljava/util/ArrayList;ILe2e;Lxbd;III)V
     .locals 0
 
-    check-cast p1, Le34;
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p1, p0, Lt0d;->f:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lt0d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p2, p0, Lt0d;->g:Ljava/lang/Object;
 
-    move-result-object p1
+    iput p3, p0, Lt0d;->b:I
 
-    check-cast p1, Lt0d;
+    iput-object p4, p0, Lt0d;->h:Ljava/lang/Object;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iput-object p5, p0, Lt0d;->i:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lt0d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p6, p0, Lt0d;->c:I
 
-    move-result-object p1
+    iput p7, p0, Lt0d;->d:I
 
-    return-object p1
+    iput p8, p0, Lt0d;->e:I
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+.method public static c(Lt0d;ILe2e;Lxbd;I)Lt0d;
+    .locals 9
+
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lt0d;->b:I
+
+    :cond_0
+    move v3, p1
+
+    and-int/lit8 p1, p4, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lt0d;->h:Ljava/lang/Object;
+
+    move-object p2, p1
+
+    check-cast p2, Le2e;
+
+    :cond_1
+    move-object v4, p2
+
+    and-int/lit8 p1, p4, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lt0d;->i:Ljava/lang/Object;
+
+    move-object p3, p1
+
+    check-cast p3, Lxbd;
+
+    :cond_2
+    move-object v5, p3
+
+    iget v6, p0, Lt0d;->c:I
+
+    iget v7, p0, Lt0d;->d:I
+
+    iget v8, p0, Lt0d;->e:I
 
     new-instance v0, Lt0d;
 
-    iget-object v3, p0, Lt0d;->y0:Le34;
+    iget-object p1, p0, Lt0d;->f:Ljava/lang/Object;
 
-    iget-object v4, p0, Lt0d;->z0:Lm3f;
+    move-object v1, p1
 
-    iget-object v1, p0, Lt0d;->w0:Les7;
+    check-cast v1, Lo0d;
 
-    iget-object v2, p0, Lt0d;->x0:Ler7;
+    iget-object p0, p0, Lt0d;->g:Ljava/lang/Object;
 
-    move-object v5, p2
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v5}, Lt0d;-><init>(Les7;Ler7;Le34;Llf6;Lkotlin/coroutines/Continuation;)V
+    check-cast v2, Ljava/util/ArrayList;
+
+    invoke-direct/range {v0 .. v8}, Lt0d;-><init>(Lo0d;Ljava/util/ArrayList;ILe2e;Lxbd;III)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
 
-    iget v0, p0, Lt0d;->Z:I
+# virtual methods
+.method public a()V
+    .locals 2
 
-    sget-object v1, Loyf;->a:Loyf;
+    iget-object v0, p0, Lt0d;->g:Ljava/lang/Object;
 
-    iget-object v2, p0, Lt0d;->w0:Les7;
+    check-cast v0, Ljava/nio/IntBuffer;
 
-    const/4 v3, 0x0
+    const/4 v1, 0x2
 
-    const/4 v4, 0x1
+    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glDeleteBuffers(ILjava/nio/IntBuffer;)V
 
-    if-eqz v0, :cond_1
+    const-string v0, "glDeleteBuffers"
 
-    if-ne v0, v4, :cond_0
+    invoke-static {v0}, Lzgi;->b(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lt0d;->Y:Lwxc;
+    iget-object v0, p0, Lt0d;->f:Ljava/lang/Object;
 
-    iget-object v5, p0, Lt0d;->X:Lwxc;
+    check-cast v0, Ljava/nio/IntBuffer;
 
-    :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x1
 
-    goto/16 :goto_3
+    invoke-static {v1, v0}, Landroid/opengl/GLES30;->glDeleteVertexArrays(ILjava/nio/IntBuffer;)V
 
-    :catchall_0
-    move-exception v0
+    const-string v0, "glDeleteVertexArrays"
 
-    move-object p1, v0
+    invoke-static {v0}, Lzgi;->b(Ljava/lang/String;)V
 
-    goto/16 :goto_5
+    return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+.method public b()V
+    .locals 17
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-object/from16 v0, p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v1, v0, Lt0d;->a:I
 
-    throw p1
+    iget-object v2, v0, Lt0d;->i:Ljava/lang/Object;
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast v2, Ljava/nio/FloatBuffer;
 
-    iget-object p1, v2, Les7;->d:Ler7;
+    iget-object v3, v0, Lt0d;->h:Ljava/lang/Object;
 
-    sget-object v0, Ler7;->a:Ler7;
+    check-cast v3, Ljava/nio/FloatBuffer;
 
-    if-ne p1, v0, :cond_2
+    iget-object v4, v0, Lt0d;->g:Ljava/lang/Object;
 
-    goto/16 :goto_4
+    check-cast v4, Ljava/nio/IntBuffer;
 
-    :cond_2
-    new-instance v7, Lwxc;
+    iget-object v5, v0, Lt0d;->f:Ljava/lang/Object;
 
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+    check-cast v5, Ljava/nio/IntBuffer;
 
-    new-instance p1, Lwxc;
+    const/4 v6, 0x0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v5, v6}, Ljava/nio/IntBuffer;->get(I)I
 
-    :try_start_1
-    iget-object v0, p0, Lt0d;->x0:Ler7;
+    move-result v7
 
-    iget-object v8, p0, Lt0d;->y0:Le34;
+    const-string v8, "glBindVertexArray"
 
-    iget-object v12, p0, Lt0d;->z0:Lm3f;
+    if-nez v7, :cond_1
 
-    iput-object v7, p0, Lt0d;->X:Lwxc;
+    if-eqz v3, :cond_0
 
-    iput-object p1, p0, Lt0d;->Y:Lwxc;
+    if-eqz v2, :cond_0
 
-    iput v4, p0, Lt0d;->Z:I
+    const/4 v7, 0x1
 
-    new-instance v10, Lz12;
-
-    invoke-static {p0}, La1b;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v5
-
-    invoke-direct {v10, v4, v5}, Lz12;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v10}, Lz12;->o()V
-
-    sget-object v4, Ldr7;->Companion:Lbr7;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v4
-
-    const/4 v5, 0x4
-
-    const/4 v6, 0x3
+    invoke-static {v7, v5}, Landroid/opengl/GLES30;->glGenVertexArrays(ILjava/nio/IntBuffer;)V
 
     const/4 v9, 0x2
 
-    if-eq v4, v9, :cond_5
+    invoke-static {v9, v4}, Landroid/opengl/GLES20;->glGenBuffers(ILjava/nio/IntBuffer;)V
 
-    if-eq v4, v6, :cond_4
+    invoke-virtual {v4, v6}, Ljava/nio/IntBuffer;->get(I)I
 
-    if-eq v4, v5, :cond_3
+    move-result v9
 
-    move-object v4, v3
+    const v10, 0x8892
+
+    invoke-static {v10, v9}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    const-string v9, "glBindBuffer"
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v11
+
+    mul-int/lit8 v11, v11, 0x4
+
+    const v12, 0x88e4
+
+    invoke-static {v10, v11, v3, v12}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+
+    const-string v3, "glBufferData"
+
+    invoke-static {v3}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v10, v6}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v7}, Ljava/nio/IntBuffer;->get(I)I
+
+    move-result v11
+
+    invoke-static {v10, v11}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v11
+
+    mul-int/lit8 v11, v11, 0x4
+
+    invoke-static {v10, v11, v2, v12}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+
+    invoke-static {v3}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v10, v6}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v6}, Ljava/nio/IntBuffer;->get(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
+
+    invoke-static {v8}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/nio/IntBuffer;->rewind()Ljava/nio/Buffer;
+
+    invoke-virtual {v4, v6}, Ljava/nio/IntBuffer;->get(I)I
+
+    move-result v2
+
+    invoke-static {v10, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    iget v11, v0, Lt0d;->a:I
+
+    iget v12, v0, Lt0d;->c:I
+
+    mul-int/lit8 v15, v12, 0x4
+
+    const/4 v14, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v13, 0x1406
+
+    invoke-static/range {v11 .. v16}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
+
+    const-string v2, "glVertexAttribPointer"
+
+    invoke-static {v2}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v10, v6}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/nio/IntBuffer;->rewind()Ljava/nio/Buffer;
+
+    invoke-virtual {v4, v7}, Ljava/nio/IntBuffer;->get(I)I
+
+    move-result v3
+
+    invoke-static {v10, v3}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    const/16 v15, 0x8
+
+    iget v11, v0, Lt0d;->b:I
+
+    const/4 v12, 0x2
+
+    invoke-static/range {v11 .. v16}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
+
+    invoke-static {v2}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v10, v6}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+
+    invoke-static {v9}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v6}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
+
+    invoke-static {v8}, Lzgi;->b(Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_3
-    sget-object v4, Ldr7;->ON_RESUME:Ldr7;
+    :cond_0
+    return-void
 
-    goto :goto_0
-
-    :cond_4
-    sget-object v4, Ldr7;->ON_START:Ldr7;
-
-    goto :goto_0
-
-    :cond_5
-    sget-object v4, Ldr7;->ON_CREATE:Ldr7;
-
+    :cond_1
     :goto_0
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v5, v6}, Ljava/nio/IntBuffer;->get(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
+
+    invoke-static {v8}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+
+    const-string v2, "glEnableVertexAttribArray"
+
+    invoke-static {v2}, Lzgi;->b(Ljava/lang/String;)V
+
+    iget v3, v0, Lt0d;->b:I
+
+    invoke-static {v3}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+
+    invoke-static {v2}, Lzgi;->b(Ljava/lang/String;)V
+
+    iget v2, v0, Lt0d;->e:I
+
+    iget v4, v0, Lt0d;->d:I
+
+    invoke-static {v2, v6, v4}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    const-string v2, "glDrawArrays"
+
+    invoke-static {v2}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    const-string v1, "glDisableVertexAttribArray"
+
+    invoke-static {v1}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v3}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    invoke-static {v1}, Lzgi;->b(Ljava/lang/String;)V
+
+    invoke-static {v6}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
+
+    invoke-static {v8}, Lzgi;->b(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public d(Lxbd;)Lldd;
+    .locals 10
+
+    iget-object v0, p0, Lt0d;->h:Ljava/lang/Object;
+
+    check-cast v0, Le2e;
+
+    iget-object v1, p0, Lt0d;->g:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    iget v3, p0, Lt0d;->b:I
+
+    if-ge v3, v2, :cond_7
+
+    iget v2, p0, Lt0d;->a:I
+
+    const/4 v4, 0x1
+
+    add-int/2addr v2, v4
+
+    iput v2, p0, Lt0d;->a:I
+
+    const-string v2, " must call proceed() exactly once"
+
+    const-string v5, "network interceptor "
+
+    if-eqz v0, :cond_2
+
+    iget-object v6, v0, Le2e;->c:Ljava/lang/Object;
+
+    check-cast v6, Lcg5;
+
+    iget-object v7, p1, Lxbd;->b:Lx57;
+
+    iget-object v6, v6, Lcg5;->h:Lea;
+
+    iget-object v6, v6, Lea;->a:Lx57;
+
+    iget v8, v7, Lx57;->f:I
+
+    iget v9, v6, Lx57;->f:I
+
+    if-ne v8, v9, :cond_1
+
+    iget-object v7, v7, Lx57;->e:Ljava/lang/String;
+
+    iget-object v6, v6, Lx57;->e:Ljava/lang/String;
+
+    invoke-static {v7, v6}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    iget v6, p0, Lt0d;->a:I
+
+    if-ne v6, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sub-int/2addr v3, v4
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhj7;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sub-int/2addr v3, v4
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhj7;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " must retain the same host and port"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_0
+    add-int/lit8 v6, v3, 0x1
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x3a
+
+    invoke-static {p0, v6, v7, p1, v8}, Lt0d;->c(Lt0d;ILe2e;Lxbd;I)Lt0d;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lhj7;
+
+    invoke-interface {v3, p1}, Lhj7;->a(Lt0d;)Lldd;
+
+    move-result-object v7
+
+    const-string v8, "interceptor "
+
+    if-eqz v7, :cond_6
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-eq v0, v9, :cond_8
+    if-ge v6, v0, :cond_4
 
-    if-eq v0, v6, :cond_7
+    iget p1, p1, Lt0d;->a:I
 
-    if-eq v0, v5, :cond_6
+    if-ne p1, v4, :cond_3
 
-    move-object v9, v3
+    goto :goto_1
 
-    goto :goto_2
+    :cond_3
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    :goto_1
+    iget-object p1, v7, Lldd;->Y:Lndd;
+
+    if-eqz p1, :cond_5
+
+    return-object v7
+
+    :cond_5
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " returned a response with no body"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_6
-    sget-object v0, Ldr7;->ON_PAUSE:Ldr7;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    :goto_1
-    move-object v9, v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_2
+    invoke-direct {v0, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_7
-    sget-object v0, Ldr7;->ON_STOP:Ldr7;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, " returned null"
 
-    :cond_8
-    sget-object v0, Ldr7;->ON_DESTROY:Ldr7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
-
-    :goto_2
-    sget-object v0, Lhu9;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v11, Lgu9;
-
-    invoke-direct {v11}, Lgu9;-><init>()V
-
-    new-instance v5, Ls0d;
-
-    move-object v6, v4
-
-    invoke-direct/range {v5 .. v12}, Ls0d;-><init>(Ldr7;Lwxc;Le34;Ldr7;Lz12;Lgu9;Llf6;)V
-
-    iput-object v5, p1, Lwxc;->a:Ljava/lang/Object;
-
-    invoke-virtual {v2, v5}, Les7;->a(Lyr7;)V
-
-    invoke-virtual {v10}, Lz12;->n()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    sget-object v4, Lf34;->a:Lf34;
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    if-ne v0, v4, :cond_9
+    throw p1
 
-    return-object v4
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :cond_9
-    move-object v4, p1
+    const-string v0, "Check failed."
 
-    move-object v5, v7
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_3
-    iget-object p1, v5, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast p1, Lji7;
-
-    if-eqz p1, :cond_a
-
-    invoke-interface {p1, v3}, Lji7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_a
-    iget-object p1, v4, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast p1, Lur7;
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {v2, p1}, Les7;->f(Lyr7;)V
-
-    :cond_b
-    :goto_4
-    return-object v1
-
-    :catchall_1
-    move-exception v0
-
-    move-object v4, p1
-
-    move-object p1, v0
-
-    move-object v5, v7
-
-    :goto_5
-    iget-object v0, v5, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast v0, Lji7;
-
-    if-eqz v0, :cond_c
-
-    invoke-interface {v0, v3}, Lji7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_c
-    iget-object v0, v4, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast v0, Lur7;
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {v2, v0}, Les7;->f(Lyr7;)V
-
-    :cond_d
     throw p1
 .end method

@@ -2,64 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic a:I
 
-.field public final b:Ls5f;
+.field public final synthetic b:Lapa;
 
-.field public final c:Ls5f;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 7
+.method public synthetic constructor <init>(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+    .locals 0
+
+    iput p6, p0, Lxoa;->a:I
+
+    iput-object p1, p0, Lxoa;->b:Lapa;
+
+    iput-object p2, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lxoa;->d:Ljava/lang/Runnable;
+
+    iput-wide p4, p0, Lxoa;->o:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p6, p0, Lxoa;->a:Lbp7;
+    return-void
+.end method
 
-    new-instance v0, Lsoa;
 
-    move-object v1, p1
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    move-object v2, p2
+    iget v0, p0, Lxoa;->a:I
 
-    move-object v3, p3
+    packed-switch v0, :pswitch_data_0
 
-    move-object v4, p4
+    iget-object v0, p0, Lxoa;->d:Ljava/lang/Runnable;
 
-    move-object v5, p5
+    iget-wide v1, p0, Lxoa;->o:J
 
-    move-object v6, p6
+    iget-object v3, p0, Lxoa;->b:Lapa;
 
-    invoke-direct/range {v0 .. v6}, Lsoa;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+    iget-object v4, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
 
-    move-object p2, v1
-
-    move-object p4, v3
-
-    move-object p5, v4
-
-    move-object p3, v6
-
-    new-instance p1, Ls5f;
-
-    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p1, p0, Lxoa;->b:Ls5f;
-
-    new-instance p1, Ltoa;
-
-    const/4 p6, 0x0
-
-    invoke-direct/range {p1 .. p6}, Ltoa;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;I)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lxoa;->c:Ls5f;
+    invoke-static {v3, v4, v0, v1, v2}, Lapa;->c(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxoa;->d:Ljava/lang/Runnable;
+
+    iget-wide v1, p0, Lxoa;->o:J
+
+    iget-object v3, p0, Lxoa;->b:Lapa;
+
+    iget-object v4, p0, Lxoa;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v3, v4, v0, v1, v2}, Lapa;->c(Lapa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

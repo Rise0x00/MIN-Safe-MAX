@@ -1,59 +1,33 @@
 .class public final Lz54;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lbe2;
+.field public final a:La1f;
 
-.field public Y:La64;
-
-.field public Z:J
-
-.field public o:La64;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:La64;
-
-.field public y0:I
+.field public final b:Lj0d;
 
 
 # direct methods
-.method public constructor <init>(La64;Lnz3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lz54;->x0:La64;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lna5;->a:Lna5;
+
+    invoke-static {v0}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz54;->a:La1f;
+
+    new-instance v1, Lj0d;
+
+    invoke-direct {v1, v0}, Lj0d;-><init>(Lf1a;)V
+
+    iput-object v1, p0, Lz54;->b:Lj0d;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iput-object p1, p0, Lz54;->w0:Ljava/lang/Object;
-
-    iget p1, p0, Lz54;->y0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lz54;->y0:I
-
-    const-wide/16 v0, 0x0
-
-    const/4 p1, 0x0
-
-    iget-object v2, p0, Lz54;->x0:La64;
-
-    invoke-virtual {v2, v0, v1, p1, p0}, La64;->l(JLbe2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

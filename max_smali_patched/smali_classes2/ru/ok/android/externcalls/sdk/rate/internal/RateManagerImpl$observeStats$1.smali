@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lir3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Lss4;
+    value = Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->observeStats()Lzv4;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lwo3;"
+        "Lir3;"
     }
 .end annotation
 
@@ -39,7 +39,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
-        "Loyf;",
+        "Lybg;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
         "<anonymous>"
@@ -111,15 +111,15 @@
     :cond_1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$observeStats$1;->this$0:Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->access$getCurrentTopology$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Lve6;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;->access$getCurrentTopology$p(Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl;)Loi6;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lwlf;
+    check-cast v0, Ljzf;
 
     sget-object v1, Lru/ok/android/externcalls/sdk/rate/internal/RateManagerImpl$observeStats$1$WhenMappings;->$EnumSwitchMapping$0:[I
 

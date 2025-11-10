@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpz0;
-.implements Llh1;
-.implements Lkn1;
+.implements Lf01;
+.implements Lgi1;
+.implements Lgo1;
 
 
 # annotations
@@ -22,9 +22,9 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;",
-        "Lpz0;",
-        "Llh1;",
-        "Lkn1;",
+        "Lf01;",
+        "Lgi1;",
+        "Lgo1;",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
         "listener",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
@@ -39,51 +39,51 @@
         "mappingUpdater",
         "Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;",
         "meChanger",
-        "Lwg1;",
+        "Lrh1;",
         "callParams",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lwg1;)V",
-        "Lhh1;",
+        "(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lrh1;)V",
+        "Lci1;",
         "params",
-        "Loyf;",
+        "Lybg;",
         "onCallParticipantsAdded",
-        "(Lhh1;)V",
-        "Lkz0;",
+        "(Lci1;)V",
+        "La01;",
         "onActiveParticipantsAdded",
-        "(Lkz0;)V",
-        "Lih1;",
+        "(La01;)V",
+        "Ldi1;",
         "onCallParticipantsChanged",
-        "(Lih1;)V",
-        "Llz0;",
+        "(Ldi1;)V",
+        "Lb01;",
         "onActiveParticipantsChanged",
-        "(Llz0;)V",
-        "Ljh1;",
+        "(Lb01;)V",
+        "Lei1;",
         "onCallParticipantsDeAnonimized",
-        "(Ljh1;)V",
-        "Lmz0;",
+        "(Lei1;)V",
+        "Lc01;",
         "onActiveParticipantsDeAnonimized",
-        "(Lmz0;)V",
-        "Lkh1;",
+        "(Lc01;)V",
+        "Lfi1;",
         "onCallParticipantsRemoved",
-        "(Lkh1;)V",
-        "Lnz0;",
+        "(Lfi1;)V",
+        "Ld01;",
         "onActiveParticipantsRemoved",
-        "(Lnz0;)V",
-        "Loz0;",
+        "(Ld01;)V",
+        "Le01;",
         "onActiveParticipantUpdated",
-        "(Loz0;)V",
-        "Lgn1;",
+        "(Le01;)V",
+        "Lco1;",
         "onCurrentParticipantActiveRoomChanged",
-        "(Lgn1;)V",
-        "Ljn1;",
+        "(Lco1;)V",
+        "Lfo1;",
         "onRoomUpdated",
-        "(Ljn1;)V",
-        "Lhn1;",
+        "(Lfo1;)V",
+        "Ldo1;",
         "onCurrentParticipantInvitedToRoom",
-        "(Lhn1;)V",
-        "Lin1;",
+        "(Ldo1;)V",
+        "Leo1;",
         "onRoomRemoved",
-        "(Lin1;)V",
+        "(Leo1;)V",
         "Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;",
@@ -91,7 +91,7 @@
         "Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;",
         "Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;",
         "Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;",
-        "Lwg1;",
+        "Lrh1;",
         "MappingUpdater",
         "MeChanger",
         "calls-sdk_release"
@@ -107,7 +107,7 @@
 
 
 # instance fields
-.field private final callParams:Lwg1;
+.field private final callParams:Lrh1;
 
 .field private final idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
@@ -125,7 +125,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lwg1;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;Lrh1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -144,29 +144,29 @@
 
     iput-object p7, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->meChanger:Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MeChanger;
 
-    iput-object p8, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->callParams:Lwg1;
+    iput-object p8, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->callParams:Lrh1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onActiveParticipantUpdated(Loz0;)V
+.method public onActiveParticipantUpdated(Le01;)V
     .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Loz0;->c:Lnwd;
+    iget-object v1, p1, Le01;->c:Lf8e;
 
-    iget-object v2, p1, Loz0;->d:Lhwd;
+    iget-object v2, p1, Le01;->d:Lz7e;
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lnwd;Lhwd;)V
+    invoke-virtual {v0, v1, v2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lf8e;Lz7e;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->listener:Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
-    iget-object p1, p1, Loz0;->b:Ljava/util/Collection;
+    iget-object p1, p1, Le01;->b:Ljava/util/Collection;
 
-    invoke-static {p1}, Lhxf;->b(Ljava/lang/Object;)Ljava/util/Collection;
+    invoke-static {p1}, Lsag;->a(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p1
 
@@ -175,34 +175,34 @@
     return-void
 .end method
 
-.method public onActiveParticipantsAdded(Lkz0;)V
+.method public onActiveParticipantsAdded(La01;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onActiveParticipantsChanged(Llz0;)V
+.method public onActiveParticipantsChanged(Lb01;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onActiveParticipantsDeAnonimized(Lmz0;)V
+.method public onActiveParticipantsDeAnonimized(Lc01;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onActiveParticipantsRemoved(Lnz0;)V
+.method public onActiveParticipantsRemoved(Ld01;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onCallParticipantsAdded(Lhh1;)V
+.method public onCallParticipantsAdded(Lci1;)V
     .locals 8
 
-    iget-object v0, p1, Lhh1;->b:Ljava/util/List;
+    iget-object v0, p1, Lci1;->b:Ljava/util/List;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -227,24 +227,24 @@
 
     move-result-object v3
 
-    check-cast v3, Lbh1;
+    check-cast v3, Lwh1;
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v5, v3, Lbh1;->a:Lxg1;
+    iget-object v5, v3, Lwh1;->a:Lsh1;
 
     if-nez v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v4, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v4, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v4
 
-    iget-object v5, v3, Lbh1;->p:Lz61;
+    iget-object v5, v3, Lwh1;->p:Lo71;
 
-    invoke-static {v5}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lz61;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v5}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lo71;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v5
 
@@ -252,9 +252,9 @@
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    iget-object v3, v3, Lbh1;->a:Lxg1;
+    iget-object v3, v3, Lwh1;->a:Lsh1;
 
-    invoke-virtual {v6, v5, v3}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lxg1;)V
+    invoke-virtual {v6, v5, v3}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->addMapping(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsh1;)V
 
     if-nez v4, :cond_1
 
@@ -295,7 +295,7 @@
 
     if-ltz v3, :cond_6
 
-    check-cast v5, Lbh1;
+    check-cast v5, Lwh1;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -307,32 +307,32 @@
 
     if-nez v3, :cond_3
 
-    iget-object v3, v5, Lbh1;->a:Lxg1;
+    iget-object v3, v5, Lwh1;->a:Lsh1;
 
     if-eqz v3, :cond_5
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->idMappingWrapper:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    invoke-static {v3, v2}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->createConversationParticipantFromInternal(Lxg1;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-static {v3, v2}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->createConversationParticipantFromInternal(Lsh1;Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v2
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v2, v5, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v2, v5, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v5, p1, Lhh1;->a:Lnwd;
+    iget-object v5, p1, Lci1;->a:Lf8e;
 
-    invoke-virtual {v3, v2, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V
+    invoke-virtual {v3, v2, v5}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lf8e;)V
 
     move v2, v7
 
     goto :goto_2
 
     :cond_3
-    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lwh1;
 
     move-result-object v4
 
@@ -340,7 +340,7 @@
 
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v3, v5, v4}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v3, v5, v4}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     :cond_4
     move v4, v7
@@ -352,7 +352,7 @@
     goto :goto_1
 
     :cond_6
-    invoke-static {}, Lf93;->U()V
+    invoke-static {}, Lbb3;->j()V
 
     const/4 p1, 0x0
 
@@ -376,14 +376,14 @@
     return-void
 .end method
 
-.method public onCallParticipantsChanged(Lih1;)V
+.method public onCallParticipantsChanged(Ldi1;)V
     .locals 4
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object p1, p1, Lih1;->a:Ljava/util/List;
+    iget-object p1, p1, Ldi1;->a:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -401,24 +401,24 @@
 
     move-result-object v1
 
-    check-cast v1, Lbh1;
+    check-cast v1, Lwh1;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v3, v1, Lbh1;->a:Lxg1;
+    iget-object v3, v1, Lwh1;->a:Lsh1;
 
     if-nez v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v2, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v2, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lwh1;
 
     move-result-object v3
 
@@ -426,7 +426,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v2, v1, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v2, v1, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     :cond_2
     invoke-static {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->isReportedExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Z
@@ -440,17 +440,17 @@
     goto :goto_0
 
     :cond_3
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->callParams:Lwg1;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->callParams:Lrh1;
 
-    iget-object v2, v2, Lwg1;->C:Lug1;
+    iget-object v2, v2, Lrh1;->z:Lph1;
 
-    iget-boolean v2, v2, Lug1;->i:Z
+    iget-boolean v2, v2, Lph1;->k:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v1, Lbh1;->p:Lz61;
+    iget-object v2, v1, Lwh1;->p:Lo71;
 
-    invoke-static {v2}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lz61;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v2}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lo71;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v2
 
@@ -466,7 +466,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v2, v1, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v2, v1, v3}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     goto :goto_0
 
@@ -485,7 +485,7 @@
     return-void
 .end method
 
-.method public onCallParticipantsDeAnonimized(Ljh1;)V
+.method public onCallParticipantsDeAnonimized(Lei1;)V
     .locals 7
 
     new-instance v0, Ljava/util/ArrayList;
@@ -496,7 +496,7 @@
 
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iget-object p1, p1, Ljh1;->a:Ljava/util/List;
+    iget-object p1, p1, Lei1;->a:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -514,28 +514,28 @@
 
     move-result-object v2
 
-    check-cast v2, Lbh1;
+    check-cast v2, Lwh1;
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v4, v2, Lbh1;->a:Lxg1;
+    iget-object v4, v2, Lwh1;->a:Lsh1;
 
     if-nez v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v3, v4}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v3, v4}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v3
 
-    iget-object v4, v2, Lbh1;->p:Lz61;
+    iget-object v4, v2, Lwh1;->p:Lo71;
 
     if-eqz v3, :cond_0
 
     if-eqz v4, :cond_0
 
-    iget-object v5, v4, Lz61;->a:Ljava/lang/String;
+    iget-object v5, v4, Lo71;->a:Ljava/lang/String;
 
     invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
@@ -543,7 +543,7 @@
 
     iget-object v6, v6, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -553,7 +553,7 @@
 
     move-result-object v5
 
-    invoke-static {v4}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lz61;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v4}, Lru/ok/android/externcalls/sdk/id/CallExternalIdConverter;->convert(Lo71;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v4
 
@@ -564,9 +564,9 @@
     :cond_2
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v3, v2, v5, v4, v6}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->deAnonymizeExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v3, v2, v5, v4, v6}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->deAnonymizeExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
-    iget-object v2, v2, Lbh1;->a:Lxg1;
+    iget-object v2, v2, Lwh1;->a:Lsh1;
 
     iget-object v6, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
@@ -576,7 +576,7 @@
 
     if-eqz v6, :cond_3
 
-    invoke-virtual {v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lxg1;
+    invoke-virtual {v6}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsh1;
 
     move-result-object v6
 
@@ -586,7 +586,7 @@
     const/4 v6, 0x0
 
     :goto_1
-    invoke-static {v2, v6}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v6}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -624,7 +624,7 @@
     return-void
 .end method
 
-.method public onCallParticipantsRemoved(Lkh1;)V
+.method public onCallParticipantsRemoved(Lfi1;)V
     .locals 6
 
     new-instance v0, Ljava/util/ArrayList;
@@ -635,7 +635,7 @@
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    iget-object p1, p1, Lkh1;->a:Ljava/util/List;
+    iget-object p1, p1, Lfi1;->a:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -653,9 +653,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lbh1;
+    check-cast v2, Lwh1;
 
-    iget-object v3, v2, Lbh1;->a:Lxg1;
+    iget-object v3, v2, Lwh1;->a:Lsh1;
 
     if-nez v3, :cond_1
 
@@ -664,13 +664,13 @@
     :cond_1
     iget-object v4, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v4, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {v4, v3}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsh1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
+    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lwh1;
 
     move-result-object v5
 
@@ -678,7 +678,7 @@
 
     iget-object v5, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-static {v4, v2, v5}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lbh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
+    invoke-static {v4, v2, v5}, Lru/ok/android/externcalls/sdk/ConversationParticipantExtensionsKt;->setCallParticipantExt(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lwh1;Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;)V
 
     :cond_2
     invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -716,16 +716,16 @@
     return-void
 .end method
 
-.method public onCurrentParticipantActiveRoomChanged(Lgn1;)V
+.method public onCurrentParticipantActiveRoomChanged(Lco1;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Lgn1;->a:Lnwd;
+    iget-object v1, p1, Lco1;->a:Lf8e;
 
-    iget-object p1, p1, Lgn1;->b:Lhwd;
+    iget-object p1, p1, Lco1;->b:Lz7e;
 
-    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lnwd;Lhwd;)V
+    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lf8e;Lz7e;)V
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->mappingUpdater:Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater$MappingUpdater;
 
@@ -734,53 +734,53 @@
     return-void
 .end method
 
-.method public onCurrentParticipantInvitedToRoom(Lhn1;)V
+.method public onCurrentParticipantInvitedToRoom(Ldo1;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object v1, p1, Lhn1;->b:Lnwd;
+    iget-object v1, p1, Ldo1;->b:Lf8e;
 
-    iget-object p1, p1, Lhn1;->c:Lhwd;
+    iget-object p1, p1, Ldo1;->c:Lz7e;
 
-    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setProposedSessionRoom(Lnwd;Lhwd;)V
+    invoke-virtual {v0, v1, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setProposedSessionRoom(Lf8e;Lz7e;)V
 
     return-void
 .end method
 
-.method public onRoomRemoved(Lin1;)V
+.method public onRoomRemoved(Leo1;)V
     .locals 3
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getProposedRoomId()Lnwd;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getProposedRoomId()Lf8e;
 
     move-result-object v0
 
-    iget-object p1, p1, Lin1;->a:Lnwd;
+    iget-object p1, p1, Leo1;->a:Lf8e;
 
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    sget-object v2, Llwd;->a:Llwd;
+    sget-object v2, Ld8e;->a:Ld8e;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0, v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setProposedSessionRoom(Lnwd;Lhwd;)V
+    invoke-virtual {v0, v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setProposedSessionRoom(Lf8e;Lz7e;)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lnwd;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getActiveRoomId()Lf8e;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -788,20 +788,20 @@
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {p1, v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lnwd;Lhwd;)V
+    invoke-virtual {p1, v2, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveSessionRoom(Lf8e;Lz7e;)V
 
     :cond_1
     return-void
 .end method
 
-.method public onRoomUpdated(Ljn1;)V
+.method public onRoomUpdated(Lfo1;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/ParticipantsUpdater;->store:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    iget-object p1, p1, Ljn1;->b:Lhwd;
+    iget-object p1, p1, Lfo1;->b:Lz7e;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->maybeUpdateRoom(Lhwd;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->maybeUpdateRoom(Lz7e;)V
 
     return-void
 .end method

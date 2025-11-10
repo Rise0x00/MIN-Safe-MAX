@@ -1,33 +1,27 @@
-.class public abstract Ll17;
+.class public final Ll17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static final b:Ljava/util/regex/Pattern;
+.field public final b:Lub6;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/net/Uri;Lub6;Ljava/lang/String;)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Ll17;->a:Landroid/net/Uri;
 
-    move-result-object v0
+    iput-object p2, p0, Ll17;->b:Lub6;
 
-    sput-object v0, Ll17;->a:Ljava/util/regex/Pattern;
-
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Ll17;->b:Ljava/util/regex/Pattern;
+    iput-object p3, p0, Ll17;->c:Ljava/lang/String;
 
     return-void
 .end method

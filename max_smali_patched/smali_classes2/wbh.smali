@@ -1,114 +1,222 @@
 .class public final Lwbh;
-.super Lvk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Layc;
+.field public static final Companion:Lvbh;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Lvbh;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Layc;
+    new-instance v0, Lvbh;
 
-    const-string v1, "\\p{Graph}+?"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Layc;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lwbh;->c:Layc;
+    sput-object v0, Lwbh;->Companion:Lvbh;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 0
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    and-int/lit8 v0, p2, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v2, v0, :cond_2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwbh;->a:Ljava/lang/String;
+    iput-object p1, p0, Lwbh;->a:Ljava/lang/String;
 
-    new-instance p2, Lvbh;
+    and-int/lit8 p1, p2, 0x2
 
-    invoke-direct {p2, p1}, Lvbh;-><init>(Landroid/content/Context;)V
+    if-nez p1, :cond_0
 
-    iput-object p2, p0, Lwbh;->b:Lvbh;
-
-    return-void
-.end method
-
-.method public static final b(Ljava/lang/String;)Z
-    .locals 1
-
-    sget-object v0, Lvbh;->j:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lvbh;->k:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lwbh;->c:Layc;
-
-    invoke-virtual {v0, p0}, Layc;->a(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
+    iput-object v1, p0, Lwbh;->b:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iput-object p3, p0, Lwbh;->b:Ljava/lang/String;
 
-    return p0
+    :goto_0
+    and-int/lit8 p1, p2, 0x4
+
+    if-nez p1, :cond_1
+
+    iput-object v1, p0, Lwbh;->c:Ljava/lang/String;
+
+    return-void
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    iput-object p4, p0, Lwbh;->c:Ljava/lang/String;
 
-    return p0
+    return-void
+
+    :cond_2
+    sget-object p1, Lubh;->a:Lubh;
+
+    invoke-virtual {p1}, Lubh;->d()Lo3e;
+
+    move-result-object p1
+
+    invoke-static {p2, v2, p1}, Lbi3;->b(IILo3e;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()Lude;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwbh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwbh;
+
+    iget-object v1, p0, Lwbh;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lwbh;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lwbh;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lwbh;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lwbh;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lwbh;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    new-instance v0, Lu8h;
+    iget-object v0, p0, Lwbh;->a:Ljava/lang/String;
 
-    const/4 v1, 0x3
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, v1, p0}, Lu8h;-><init>(ILjava/lang/Object;)V
+    move-result v0
 
-    new-instance v1, Lmda;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/4 v2, 0x1
+    const/4 v1, 0x0
 
-    invoke-direct {v1, v2, v0}, Lmda;-><init>(ILjava/lang/Object;)V
+    iget-object v2, p0, Lwbh;->b:Ljava/lang/String;
 
-    return-object v1
+    if-nez v2, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lwbh;->c:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_1
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", text="
+
+    const-string v1, ", link="
+
+    const-string v2, "WebAppMaxShareRequest(requestId="
+
+    iget-object v3, p0, Lwbh;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lwbh;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lwbh;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

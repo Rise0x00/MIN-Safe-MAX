@@ -1,49 +1,32 @@
 .class public final Lfi6;
-.super Lilg;
+.super Ltib;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lmoe;
-
-.field public final b:Lve6;
-
-.field public final c:Ljb5;
-
-.field public final o:Ljb5;
-
-
-# direct methods
-.method public constructor <init>(Lve6;)V
+# virtual methods
+.method public final j()Lrib;
     .locals 1
 
-    invoke-direct {p0}, Lilg;-><init>()V
+    iget-object v0, p0, Ltib;->b:Lru7;
 
-    iput-object p1, p0, Lfi6;->b:Lve6;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
-    new-instance p1, Ljb5;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Luib;
 
-    invoke-direct {p1, v0}, Ljb5;-><init>(I)V
+    invoke-virtual {v0}, Luib;->b()Z
 
-    iput-object p1, p0, Lfi6;->c:Ljb5;
+    move-result v0
 
-    new-instance p1, Ljb5;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, v0}, Ljb5;-><init>(I)V
+    sget-object v0, Lrib;->a:Lrib;
 
-    iput-object p1, p0, Lfi6;->o:Ljb5;
+    return-object v0
 
-    const/4 p1, 0x0
+    :cond_0
+    sget-object v0, Lrib;->b:Lrib;
 
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfi6;->X:Lmoe;
-
-    return-void
+    return-object v0
 .end method

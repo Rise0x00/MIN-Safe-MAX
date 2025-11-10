@@ -1,124 +1,340 @@
-.class public Lns8;
+.class public final Lns8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Ljava/util/HashMap;
+# interfaces
+.implements Lps8;
 
 
 # instance fields
-.field public final a:Lft8;
+.field public final X:J
+
+.field public final Y:I
+
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Lo00;
+
+.field public final d:Lzkg;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJLo00;Lzkg;)V
+    .locals 9
 
-    new-instance v0, Ljava/lang/Object;
+    .line 10
+    iget-object v0, p6, Lzkg;->g:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez v0, :cond_0
 
-    sput-object v0, Lns8;->b:Ljava/lang/Object;
+    .line 11
+    const-string v0, ""
 
-    new-instance v0, Ljava/util/HashMap;
+    :cond_0
+    move-object v1, p0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-wide v2, p1
 
-    sput-object v0, Lns8;->c:Ljava/util/HashMap;
+    move-wide v4, p3
+
+    move-object v6, p5
+
+    move-object v7, p6
+
+    move-object v8, v0
+
+    .line 12
+    invoke-direct/range {v1 .. v8}, Lns8;-><init>(JJLo00;Lzkg;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
-    .locals 11
+.method public constructor <init>(JJLo00;Lzkg;Ljava/lang/String;)V
+    .locals 0
 
-    const-string v0, ""
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v2, Lns8;->b:Ljava/lang/Object;
+    .line 2
+    iput-wide p1, p0, Lns8;->a:J
 
-    monitor-enter v2
+    .line 3
+    iput-wide p3, p0, Lns8;->b:J
 
-    :try_start_0
-    sget-object v3, Lns8;->c:Ljava/util/HashMap;
+    .line 4
+    iput-object p5, p0, Lns8;->c:Lo00;
 
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    .line 5
+    iput-object p6, p0, Lns8;->d:Lzkg;
 
-    move-result v4
+    .line 6
+    iput-object p7, p0, Lns8;->o:Ljava/lang/String;
 
-    if-nez v4, :cond_0
+    .line 7
+    iget-object p1, p6, Lzkg;->g:Ljava/lang/String;
 
-    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 8
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    new-instance v0, Lft8;
+    move-result p1
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    invoke-direct/range {v0 .. v10}, Lft8;-><init>(Lns8;Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
-
-    iput-object v0, p0, Lns8;->a:Lft8;
-
-    return-void
-
-    :catchall_0
-    move-exception v0
+    int-to-long p1, p1
 
     goto :goto_0
 
     :cond_0
-    :try_start_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Session ID must be unique. ID="
-
-    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    const-wide/16 p1, 0x0
 
     :goto_0
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput-wide p1, p0, Lns8;->X:J
 
-    throw v0
+    .line 9
+    sget p1, Lgsa;->o:I
+
+    iput p1, p0, Lns8;->Y:I
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lxkb;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lns8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lns8;
+
+    iget-wide v3, p0, Lns8;->a:J
+
+    iget-wide v5, p1, Lns8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lns8;->b:J
+
+    iget-wide v5, p1, Lns8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lns8;->c:Lo00;
+
+    iget-object v3, p1, Lns8;->c:Lo00;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lns8;->d:Lzkg;
+
+    iget-object v3, p1, Lns8;->d:Lzkg;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lns8;->o:Ljava/lang/String;
+
+    iget-object p1, p1, Lns8;->o:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lns8;->X:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lns8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lns8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lns8;->c:Lo00;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lns8;->d:Lzkg;
+
+    invoke-virtual {v0}, Lzkg;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lns8;->o:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lns8;->b:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lns8;->a:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iget-object v0, p0, Lns8;->a:Lft8;
+    iget v0, p0, Lns8;->Y:I
 
-    iget-object v0, v0, Lft8;->t:Lgmb;
+    return v0
+.end method
 
-    iget-object v0, v0, Lgmb;->a:Lif5;
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Video(messageId="
+
+    const-string v1, ", attachId="
+
+    iget-wide v2, p0, Lns8;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lns8;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lns8;->c:Lo00;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoAttachConfig="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lns8;->d:Lzkg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", localId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lns8;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final v()Lo00;
+    .locals 1
+
+    iget-object v0, p0, Lns8;->c:Lo00;
+
+    return-object v0
+.end method
+
+.method public final w()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lns8;->o:Ljava/lang/String;
 
     return-object v0
 .end method

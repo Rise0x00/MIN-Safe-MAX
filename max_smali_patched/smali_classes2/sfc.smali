@@ -1,66 +1,76 @@
-.class public abstract Lsfc;
+.class public final Lsfc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
-# static fields
-.field public static oneme_settings_media_audio_always:I = 0x7f0a07b5
+# instance fields
+.field public final a:Lu92;
 
-.field public static oneme_settings_media_audio_dont_load:I = 0x7f0a07b6
+.field public final b:Ljava/util/List;
 
-.field public static oneme_settings_media_audio_wifi:I = 0x7f0a07b7
+.field public final c:Lqx3;
 
-.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a07b8
 
-.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a07b9
+# direct methods
+.method public constructor <init>(Lu92;Luz;Lqx3;)V
+    .locals 0
 
-.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a07ba
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_media_gif_always:I = 0x7f0a07bb
+    iput-object p1, p0, Lsfc;->a:Lu92;
 
-.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a07bc
+    iput-object p2, p0, Lsfc;->b:Ljava/util/List;
 
-.field public static oneme_settings_media_gif_wifi:I = 0x7f0a07bd
+    iput-object p3, p0, Lsfc;->c:Lqx3;
 
-.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a07be
+    return-void
+.end method
 
-.field public static oneme_settings_media_item_audio:I = 0x7f0a07bf
 
-.field public static oneme_settings_media_item_gif:I = 0x7f0a07c0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-.field public static oneme_settings_media_item_gif_available:I = 0x7f0a07c1
+    iget-object v0, p0, Lsfc;->b:Ljava/util/List;
 
-.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a07c2
+    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
 
-.field public static oneme_settings_media_item_photo:I = 0x7f0a07c3
+    move-result v0
 
-.field public static oneme_settings_media_item_video:I = 0x7f0a07c4
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07c5
+    const-string v2, "{chat="
 
-.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07c6
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_settings_media_photo_always:I = 0x7f0a07c7
+    iget-object v2, p0, Lsfc;->a:Lu92;
 
-.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07c8
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07c9
+    const-string v2, ", highlights="
 
-.field public static oneme_settings_media_quality_1080:I = 0x7f0a07ca
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_quality_480:I = 0x7f0a07cb
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_quality_720:I = 0x7f0a07cc
+    const-string v0, ", contactSearchResult="
 
-.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07cd
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07ce
+    iget-object v0, p0, Lsfc;->c:Lqx3;
 
-.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07cf
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_screen_list:I = 0x7f0a07d0
+    const-string v0, "}"
 
-.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07d1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07d2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07d3
+    move-result-object v0
+
+    return-object v0
+.end method

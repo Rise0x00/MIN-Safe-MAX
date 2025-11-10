@@ -1,17 +1,48 @@
 .class public final Lrn1;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
-.source "SourceFile"
+.super Lp14;
 
 
 # instance fields
-.field public K0:Lqn1;
+.field public final synthetic X:Lqn1;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lqn1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lrn1;->X:Lqn1;
+
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final setListener(Lqn1;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lrn1;->K0:Lqn1;
+    iput-object p1, p0, Lrn1;->d:Ljava/lang/Object;
 
-    return-void
+    iget p1, p0, Lrn1;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrn1;->o:I
+
+    iget-object p1, p0, Lrn1;->X:Lqn1;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lqn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

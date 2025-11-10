@@ -1,348 +1,171 @@
 .class public final Lyka;
-.super Lbp;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lsg3;
+.implements Lgla;
+.implements Lzv4;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lyka;
+# instance fields
+.field public volatile X:Z
+
+.field public final a:Lv3e;
+
+.field public final b:J
+
+.field public final c:Ljava/util/concurrent/TimeUnit;
+
+.field public final d:Lepd;
+
+.field public o:Lzv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lv3e;JLepd;)V
     .locals 1
 
-    new-instance v0, Lyka;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput-object v0, Lyka;->a:Lyka;
+    iput-object p1, p0, Lyka;->a:Lv3e;
+
+    iput-wide p2, p0, Lyka;->b:J
+
+    iput-object v0, p0, Lyka;->c:Ljava/util/concurrent/TimeUnit;
+
+    iput-object p4, p0, Lyka;->d:Lepd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lqc;
-    .locals 2
+.method public final b(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-boolean v0, p0, Lyka;->X:Z
 
-    move-result-object v0
+    if-nez v0, :cond_1
 
-    const-class v1, Lqc;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iput-boolean v0, p0, Lyka;->X:Z
 
-    move-result-object v0
+    iget-object v0, p0, Lyka;->a:Lv3e;
 
-    check-cast v0, Lqc;
+    invoke-virtual {v0, p1}, Lv3e;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzv4;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lzv4;->dispose()V
+
+    :cond_0
+    iget-object p1, p0, Lyka;->d:Lepd;
+
+    iget-wide v0, p0, Lyka;->b:J
+
+    iget-object v2, p0, Lyka;->c:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p1, p0, v0, v1, v2}, Lepd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public final c()Log;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Log;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Log;
-
-    return-object v0
-.end method
-
-.method public final d()Lr10;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lr10;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr10;
-
-    return-object v0
-.end method
-
-.method public final e()Lub2;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lub2;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lub2;
-
-    return-object v0
-.end method
-
-.method public final f()Lop4;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lop4;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lop4;
-
-    return-object v0
-.end method
-
-.method public final g()Lec5;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lec5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lec5;
-
-    return-object v0
-.end method
-
-.method public final h()Lpr5;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lpr5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpr5;
-
-    return-object v0
-.end method
-
-.method public final i()Lb87;
+.method public final c()V
     .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lyka;->a:Lv3e;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lv3e;->c()V
 
-    invoke-virtual {v0}, La5;->e()Ljava/lang/Object;
+    iget-object v0, p0, Lyka;->d:Lepd;
 
-    move-result-object v0
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    check-cast v0, Lb87;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final j()Le18;
-    .locals 2
+.method public final d(Lzv4;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lyka;->o:Lzv4;
 
-    move-result-object v0
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
 
-    const-class v1, Le18;
+    move-result v0
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iput-object p1, p0, Lyka;->o:Lzv4;
 
-    check-cast v0, Le18;
+    iget-object p1, p0, Lyka;->a:Lv3e;
 
-    return-object v0
+    invoke-virtual {p1, p0}, Lv3e;->d(Lzv4;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final k()Lxp8;
-    .locals 2
+.method public final dispose()V
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lyka;->o:Lzv4;
 
-    move-result-object v0
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    const-class v1, Lxp8;
+    iget-object v0, p0, Lyka;->d:Lepd;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    move-result-object v0
-
-    check-cast v0, Lxp8;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final l()Lo49;
-    .locals 2
+.method public final f()Z
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lyka;->d:Lepd;
 
-    move-result-object v0
+    invoke-interface {v0}, Lzv4;->f()Z
 
-    const-class v1, Lo49;
+    move-result v0
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo49;
-
-    return-object v0
+    return v0
 .end method
 
-.method public final m()Lly9;
-    .locals 2
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lyka;->a:Lv3e;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lv3e;->onError(Ljava/lang/Throwable;)V
 
-    const-class v1, Lly9;
+    iget-object p1, p0, Lyka;->d:Lepd;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p1}, Lzv4;->dispose()V
 
-    move-result-object v0
-
-    check-cast v0, Lly9;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final n()Lzob;
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iput-boolean v0, p0, Lyka;->X:Z
 
-    const-class v1, Lzob;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzob;
-
-    return-object v0
-.end method
-
-.method public final o()Lhma;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lhma;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhma;
-
-    return-object v0
-.end method
-
-.method public final p()Lq8f;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lq8f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lq8f;
-
-    return-object v0
-.end method
-
-.method public final q()Lm9f;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lm9f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm9f;
-
-    return-object v0
-.end method
-
-.method public final r()Lj98;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lj98;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lj98;
-
-    return-object v0
-.end method
-
-.method public final s()Lpig;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lpig;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpig;
-
-    return-object v0
+    return-void
 .end method

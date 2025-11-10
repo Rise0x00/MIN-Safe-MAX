@@ -1,511 +1,682 @@
-.class public abstract Lsra;
+.class public final synthetic Lsra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final B:I
+.field public final synthetic b:Landroid/content/Context;
 
-.field public static final B0:I
-
-.field public static final C:I
-
-.field public static final C0:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final z:I
-
-.field public static final z0:I
+.field public final synthetic c:Lyra;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;Lyra;I)V
+    .locals 0
 
-    sget v0, Lbfc;->profile_avatar_select_screen:I
+    iput p3, p0, Lsra;->a:I
 
-    sput v0, Lsra;->a:I
+    iput-object p1, p0, Lsra;->b:Landroid/content/Context;
 
-    sget v0, Lbfc;->profile_change_inactive_ttl_delete_1_month:I
+    iput-object p2, p0, Lsra;->c:Lyra;
 
-    sput v0, Lsra;->b:I
-
-    sget v0, Lbfc;->profile_change_inactive_ttl_delete_3_month:I
-
-    sput v0, Lsra;->c:I
-
-    sget v0, Lbfc;->profile_change_inactive_ttl_delete_6_month:I
-
-    sput v0, Lsra;->d:I
-
-    sget v0, Lbfc;->profile_confirmation_sheet_cancel:I
-
-    sput v0, Lsra;->e:I
-
-    sget v0, Lbfc;->profile_delete_contact_confirmation_sheet_confirm:I
-
-    sput v0, Lsra;->f:I
-
-    sget v0, Lbfc;->profile_edit_admin_chat_type:I
-
-    sput v0, Lsra;->g:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_channel_history:I
-
-    sput v0, Lsra;->h:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_channel_history_cancel:I
-
-    sput v0, Lsra;->i:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_channel_history_confirm:I
-
-    sput v0, Lsra;->j:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_chat_history:I
-
-    sput v0, Lsra;->k:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_chat_history_cancel:I
-
-    sput v0, Lsra;->l:I
-
-    sget v0, Lbfc;->profile_edit_admin_clear_chat_history_confirm:I
-
-    sput v0, Lsra;->m:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_channel:I
-
-    sput v0, Lsra;->n:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_channel_cancel:I
-
-    sput v0, Lsra;->o:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_channel_certain_confirm:I
-
-    sput v0, Lsra;->p:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_channel_confirm:I
-
-    sput v0, Lsra;->q:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_chat:I
-
-    sput v0, Lsra;->r:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_chat_cancel:I
-
-    sput v0, Lsra;->s:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_chat_certain_confirm:I
-
-    sput v0, Lsra;->t:I
-
-    sget v0, Lbfc;->profile_edit_admin_close_chat_confirm:I
-
-    sput v0, Lsra;->u:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_channel:I
-
-    sput v0, Lsra;->v:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_channel_and_change_owner_confirm:I
-
-    sput v0, Lsra;->w:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_channel_cancel:I
-
-    sput v0, Lsra;->x:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_channel_confirm:I
-
-    sput v0, Lsra;->y:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_chat:I
-
-    sput v0, Lsra;->z:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_chat_and_change_owner_confirm:I
-
-    sput v0, Lsra;->A:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_chat_cancel:I
-
-    sput v0, Lsra;->B:I
-
-    sget v0, Lbfc;->profile_edit_admin_leave_chat_confirm:I
-
-    sput v0, Lsra;->C:I
-
-    sget v0, Lbfc;->profile_edit_admin_move_rights:I
-
-    sput v0, Lsra;->D:I
-
-    sget v0, Lbfc;->profile_edit_admin_participants_permission:I
-
-    sput v0, Lsra;->E:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_change_chat_info:I
-
-    sput v0, Lsra;->F:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_change_owner_cancel_action:I
-
-    sput v0, Lsra;->G:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_change_owner_change_action:I
-
-    sput v0, Lsra;->H:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_control_admin:I
-
-    sput v0, Lsra;->I:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_delete_from_admins_cancel_action:I
-
-    sput v0, Lsra;->J:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
-
-    sput v0, Lsra;->K:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_delete_messages:I
-
-    sput v0, Lsra;->L:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_edit_chat_link:I
-
-    sput v0, Lsra;->M:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_edit_chat_members:I
-
-    sput v0, Lsra;->N:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_edit_messages:I
-
-    sput v0, Lsra;->O:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_pin_messages:I
-
-    sput v0, Lsra;->P:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_recycler_view:I
-
-    sput v0, Lsra;->Q:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_send_messages:I
-
-    sput v0, Lsra;->R:I
-
-    sget v0, Lbfc;->profile_edit_admin_permissions_toolbar_view:I
-
-    sput v0, Lsra;->S:I
-
-    sget v0, Lbfc;->profile_edit_appbar_layout:I
-
-    sput v0, Lsra;->T:I
-
-    sget v0, Lbfc;->profile_edit_avatar:I
-
-    sput v0, Lsra;->U:I
-
-    sget v0, Lbfc;->profile_edit_change_avatar_cancel:I
-
-    sput v0, Lsra;->V:I
-
-    sget v0, Lbfc;->profile_edit_change_avatar_remove_current:I
-
-    sput v0, Lsra;->W:I
-
-    sget v0, Lbfc;->profile_edit_change_avatar_select_neuro_avatar:I
-
-    sput v0, Lsra;->X:I
-
-    sget v0, Lbfc;->profile_edit_change_avatar_upload_from_camera:I
-
-    sput v0, Lsra;->Y:I
-
-    sget v0, Lbfc;->profile_edit_change_avatar_upload_from_gallery:I
-
-    sput v0, Lsra;->Z:I
-
-    sget v0, Lbfc;->profile_edit_collapsible_container_layout:I
-
-    sput v0, Lsra;->a0:I
-
-    sget v0, Lbfc;->profile_edit_confirm_exit_button:I
-
-    sput v0, Lsra;->b0:I
-
-    sget v0, Lbfc;->profile_edit_confirm_save_button:I
-
-    sput v0, Lsra;->c0:I
-
-    sget v0, Lbfc;->profile_edit_contact_delete_action:I
-
-    sput v0, Lsra;->d0:I
-
-    sget v0, Lbfc;->profile_edit_delete_profile_button:I
-
-    sput v0, Lsra;->e0:I
-
-    sget v0, Lbfc;->profile_edit_delete_profile_cancel_button:I
-
-    sput v0, Lsra;->f0:I
-
-    sget v0, Lbfc;->profile_edit_invite_by_link:I
-
-    sput v0, Lsra;->g0:I
-
-    sget v0, Lbfc;->profile_edit_link_private:I
-
-    sput v0, Lsra;->h0:I
-
-    sget v0, Lbfc;->profile_edit_link_public:I
-
-    sput v0, Lsra;->i0:I
-
-    sget v0, Lbfc;->profile_edit_logout_confirm_action:I
-
-    sput v0, Lsra;->j0:I
-
-    sget v0, Lbfc;->profile_edit_member_permissions_add_user:I
-
-    sput v0, Lsra;->k0:I
-
-    sget v0, Lbfc;->profile_edit_member_permissions_call_to_chat:I
-
-    sput v0, Lsra;->l0:I
-
-    sget v0, Lbfc;->profile_edit_member_permissions_change_photo:I
-
-    sput v0, Lsra;->m0:I
-
-    sget v0, Lbfc;->profile_edit_member_permissions_pin_message:I
-
-    sput v0, Lsra;->n0:I
-
-    sget v0, Lbfc;->profile_edit_member_permissions_see_private_link:I
-
-    sput v0, Lsra;->o0:I
-
-    sget v0, Lbfc;->profile_edit_oneme_toolbar:I
-
-    sput v0, Lsra;->p0:I
-
-    sget v0, Lbfc;->profile_edit_recycler_view:I
-
-    sput v0, Lsra;->q0:I
-
-    sget v0, Lbfc;->profile_edit_selectable_item_checkbox:I
-
-    sput v0, Lsra;->r0:I
-
-    sget v0, Lbfc;->profile_edit_selectable_item_subtitle:I
-
-    sput v0, Lsra;->s0:I
-
-    sget v0, Lbfc;->profile_edit_selectable_item_title:I
-
-    sput v0, Lsra;->t0:I
-
-    sget v0, Lbfc;->profile_edit_short_link:I
-
-    sput v0, Lsra;->u0:I
-
-    sget v0, Lbfc;->profile_edit_short_link_input_button:I
-
-    sput v0, Lsra;->v0:I
-
-    sget v0, Lbfc;->profile_edit_short_link_recycler:I
-
-    sput v0, Lsra;->w0:I
-
-    sget v0, Lbfc;->profile_edit_short_link_toolbar:I
-
-    sput v0, Lsra;->x0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_action_copy:I
-
-    sput v0, Lsra;->y0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_action_qr_code:I
-
-    sput v0, Lsra;->z0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_action_refresh_link:I
-
-    sput v0, Lsra;->A0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_action_share:I
-
-    sput v0, Lsra;->B0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_action_share_external:I
-
-    sput v0, Lsra;->C0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_confirm_button:I
-
-    sput v0, Lsra;->D0:I
-
-    sget v0, Lbfc;->profile_edit_shortlink_confirm_update:I
-
-    sput v0, Lsra;->E0:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lsra;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->l:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->setSingleLine()V
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->g:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v1, Lcbg;->s:Lorf;
+
+    invoke-static {v1, v0}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
+
+    invoke-static {v0}, Lhfd;->c(Landroid/widget/TextView;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x14
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    iget-object v2, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v2, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->s:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->setSingleLine()V
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->g:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v1, Lcbg;->o:Lorf;
+
+    invoke-static {v1, v0}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
+
+    invoke-static {v0}, Lhfd;->c(Landroid/widget/TextView;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x14
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    const/4 v3, -0x2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    iget-object v2, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v2, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lsra;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Lsra;->c:Lyra;
+
+    invoke-static {v0, v1}, Lyra;->a(Landroid/content/Context;Lyra;)Landroidx/appcompat/widget/AppCompatCheckBox;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lapa;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lapa;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->n:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget-object v1, Lqoa;->a:Lqoa;
+
+    invoke-virtual {v0, v1}, Lapa;->setAvatarShape(Ltoa;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    iget-object v2, p0, Lsra;->c:Lyra;
+
+    iget v2, v2, Lyra;->K0:I
+
+    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->m:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget v1, Lfmc;->ic_audio_call_type_24:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    iget-object v1, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v1}, Lyra;->getCustomTheme()Lw5b;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    move-result-object v2
+
+    iget v2, v2, Le77;->f:I
+
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    const/16 v2, 0x8
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-interface {v1}, Lw5b;->c()Lm1f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lm1f;->a:Lk1f;
+
+    iget-object v1, v1, Lk1f;->a:Lj1f;
+
+    iget v1, v1, Lj1f;->d:I
+
+    new-instance v2, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v3, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v3}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v2, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v3
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v4, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x28
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->u:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    iget-object v1, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v1}, Lyra;->getCustomTheme()Lw5b;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    :cond_1
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    move-result-object v1
+
+    iget v1, v1, Le77;->j:I
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x14
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->q:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    iget-object v1, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v1}, Lyra;->getCustomTheme()Lw5b;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    :cond_2
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    move-result-object v1
+
+    iget v1, v1, Le77;->j:I
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x14
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lsra;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lzjd;->v:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    sget v1, Lfmc;->videocam_outline_24:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    iget-object v1, p0, Lsra;->c:Lyra;
+
+    invoke-virtual {v1}, Lyra;->getCustomTheme()Lw5b;
+
+    move-result-object v1
+
+    if-nez v1, :cond_3
+
+    sget-object v1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v1
+
+    :cond_3
+    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+
+    move-result-object v2
+
+    iget v2, v2, Le77;->f:I
+
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    const/16 v2, 0x8
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-interface {v1}, Lw5b;->c()Lm1f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lm1f;->a:Lk1f;
+
+    iget-object v1, v1, Lk1f;->a:Lj1f;
+
+    iget v1, v1, Lj1f;->d:I
+
+    new-instance v2, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v3, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v3}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v2, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v3
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v4, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v2, 0x28
+
+    int-to-float v2, v2
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lkhi;->c(F)I
+
+    move-result v2
+
+    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

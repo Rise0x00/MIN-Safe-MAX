@@ -24,7 +24,7 @@
         "()V",
         "Lru/ok/android/externcalls/sdk/ui/FrameDecorator;",
         "EMPTY$delegate",
-        "Lbp7;",
+        "Lru7;",
         "getEMPTY",
         "()Lru/ok/android/externcalls/sdk/ui/FrameDecorator;",
         "EMPTY",
@@ -43,10 +43,10 @@
 # static fields
 .field static final synthetic $$INSTANCE:Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion;
 
-.field private static final EMPTY$delegate:Lbp7;
+.field private static final EMPTY$delegate:Lru7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbp7;"
+            "Lru7;"
         }
     .end annotation
 .end field
@@ -64,11 +64,11 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;->INSTANCE:Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion$EMPTY$2;
 
-    new-instance v1, Ls5f;
+    new-instance v1, Ltif;
 
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion;->EMPTY$delegate:Lbp7;
+    sput-object v1, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion;->EMPTY$delegate:Lru7;
 
     return-void
 .end method
@@ -86,9 +86,9 @@
 .method public final getEMPTY()Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion;->EMPTY$delegate:Lbp7;
+    sget-object v0, Lru/ok/android/externcalls/sdk/ui/FrameDecorator$Companion;->EMPTY$delegate:Lru7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -1,573 +1,205 @@
 .class public final Luob;
-.super Lcxc;
+.super Logf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic m:[Ltm7;
-
-.field public static final n:Ljava/lang/String;
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lpg9;
+.field public final synthetic X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-.field public final b:I
+.field public final synthetic Y:Landroid/view/View;
 
-.field public final c:Z
-
-.field public final d:Lyo3;
-
-.field public final e:Lit9;
-
-.field public final f:Lit9;
-
-.field public g:Z
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public final k:Ljava/util/HashSet;
-
-.field public final l:Lck;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lut9;
-
-    const-string v1, "recyclerView"
-
-    const-string v2, "getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;"
-
-    const-class v3, Luob;
-
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lxxc;->a:Lyxc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltm7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Luob;->m:[Ltm7;
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Luob;->n:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpg9;IZLyo3;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Luob;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iput-object p1, p0, Luob;->a:Lpg9;
+    iput-object p3, p0, Luob;->Y:Landroid/view/View;
 
-    iput p2, p0, Luob;->b:I
+    const/4 p2, 0x2
 
-    iput-boolean p3, p0, Luob;->c:Z
-
-    iput-object p4, p0, Luob;->d:Lyo3;
-
-    new-instance p1, Lit9;
-
-    const/16 p3, 0xa
-
-    invoke-direct {p1, p3}, Lit9;-><init>(I)V
-
-    iput-object p1, p0, Luob;->e:Lit9;
-
-    new-instance p1, Lit9;
-
-    invoke-direct {p1, p3}, Lit9;-><init>(I)V
-
-    iput-object p1, p0, Luob;->f:Lit9;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Luob;->h:I
-
-    iput p1, p0, Luob;->i:I
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1, p2}, Ljava/util/HashSet;-><init>(I)V
-
-    iput-object p1, p0, Luob;->k:Ljava/util/HashSet;
-
-    new-instance p1, Lck;
-
-    const/16 p2, 0x16
-
-    invoke-direct {p1, p2, p0}, Lck;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Luob;->l:Lck;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object p2, Luob;->m:[Ltm7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1, p2}, Luob;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    aget-object p2, p2, v0
+    move-result-object p1
 
-    iget-object v0, p0, Luob;->l:Lck;
+    check-cast p1, Luob;
 
-    invoke-virtual {v0, p0, p2, p1}, Lv2;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    sget-object p2, Lybg;->a:Lybg;
 
-    return-void
+    invoke-virtual {p1, p2}, Luob;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object p2, p0, Luob;->k:Ljava/util/HashSet;
+    new-instance v0, Luob;
 
-    sget-object p3, Luob;->m:[Ltm7;
+    iget-object v1, p0, Luob;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Luob;->Y:Landroid/view/View;
 
-    aget-object p3, p3, v0
+    invoke-direct {v0, p2, v1, v2}, Luob;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
 
-    iget-object v0, p0, Luob;->l:Lck;
+    iput-object p1, v0, Luob;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0, p3, p1}, Lv2;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Luob;->c:Z
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, p0, Luob;->g:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Luob;->d:Lyo3;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {p2}, Ljava/util/HashSet;->clear()V
-
-    invoke-virtual {p0}, Luob;->c()V
-
-    invoke-virtual {p2}, Ljava/util/HashSet;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    sget-object p2, Luob;->n:Ljava/lang/String;
-
-    const-string p3, "tryToPrefetch failure!"
-
-    invoke-static {p2, p3, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object v0
 .end method
 
-.method public final c()V
-    .locals 13
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    sget-object v0, Luob;->m:[Ltm7;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Luob;->o:Ljava/lang/Object;
 
-    aget-object v0, v0, v1
+    check-cast p1, Ljava/util/List;
 
-    iget-object v0, p0, Luob;->l:Lck;
+    iget-object v0, p0, Luob;->X:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->t0:Lrn0;
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Y:Linb;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v2, p1}, Lb28;->E(Ljava/util/List;)V
 
-    goto/16 :goto_8
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0()Lonb;
 
-    :cond_0
-    const/4 v2, -0x1
+    move-result-object v2
 
-    move v3, v1
+    iget-object v2, v2, Lonb;->t0:Lj0d;
 
-    move v6, v3
+    iget-object v2, v2, Lj0d;->a:Lt0f;
 
-    move v4, v2
+    invoke-interface {v2}, Lt0f;->getValue()Ljava/lang/Object;
 
-    move v5, v4
+    move-result-object v2
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    check-cast v2, Ljava/lang/CharSequence;
 
-    move-result v7
-
-    const/4 v8, 0x1
-
-    if-ge v6, v7, :cond_1
-
-    move v7, v8
-
-    goto :goto_1
-
-    :cond_1
-    move v7, v1
-
-    :goto_1
-    iget-object v9, p0, Luob;->f:Lit9;
-
-    iget-object v10, p0, Luob;->k:Ljava/util/HashSet;
-
-    if-eqz v7, :cond_9
-
-    add-int/lit8 v7, v6, 0x1
-
-    invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_8
-
-    :try_start_0
-    invoke-virtual {v0, v6}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Lnxc;
-
-    move-result-object v6
-
-    instance-of v11, v6, Lq59;
-
-    if-eqz v11, :cond_2
-
-    check-cast v6, Lq59;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v6, 0x0
-
-    :goto_2
-    if-nez v6, :cond_3
-
-    goto :goto_5
-
-    :cond_3
-    move-object v11, v6
-
-    check-cast v11, Lz39;
-
-    iget-boolean v12, v11, Lz39;->S0:Z
-
-    if-eqz v12, :cond_7
-
-    iget-wide v11, v11, Lz39;->T0:J
-
-    invoke-virtual {v9, v11, v12}, Lit9;->a(J)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_4
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v11
-
-    invoke-virtual {v10, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    if-nez v3, :cond_6
-
-    if-eqz v9, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v3, v1
-
-    goto :goto_4
-
-    :cond_6
-    :goto_3
-    move v3, v8
-
-    :goto_4
-    if-eqz v3, :cond_7
-
-    check-cast v6, Lnxc;
-
-    invoke-virtual {v6}, Lnxc;->h()I
-
-    move-result v6
-
-    if-eq v6, v2, :cond_7
-
-    invoke-static {v4, v6}, Ljava/lang/Math;->min(II)I
-
-    move-result v4
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    :catchall_0
-    :cond_7
-    :goto_5
-    move v6, v7
-
-    goto :goto_0
-
-    :cond_8
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw v0
-
-    :cond_9
-    iget-object v6, p0, Luob;->e:Lit9;
-
-    invoke-virtual {v6}, Lit9;->j()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    invoke-static {v9, v6}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_a
-
-    move v1, v8
-
-    :cond_a
-    iput-boolean v1, p0, Luob;->g:Z
-
-    if-nez v3, :cond_b
-
-    goto/16 :goto_8
-
-    :cond_b
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
-
-    move-result-object v0
-
-    if-nez v0, :cond_c
-
-    goto/16 :goto_8
-
-    :cond_c
-    invoke-virtual {v10}, Ljava/util/HashSet;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_11
-
-    int-to-float v3, v1
-
-    const v7, 0x3f4ccccd    # 0.8f
-
-    iget v8, p0, Luob;->b:I
-
-    int-to-float v11, v8
-
-    mul-float/2addr v11, v7
-
-    cmpg-float v3, v3, v11
-
-    if-gez v3, :cond_11
-
-    iget v3, p0, Luob;->j:I
-
-    invoke-virtual {v0}, Lpwc;->j()I
-
-    move-result v7
-
-    if-eq v3, v7, :cond_d
-
-    invoke-virtual {v0}, Lpwc;->j()I
-
-    move-result v0
-
-    iput v0, p0, Luob;->j:I
-
-    iput v2, p0, Luob;->h:I
-
-    iput v2, p0, Luob;->i:I
-
-    :cond_d
-    sub-int/2addr v8, v1
-
-    div-int/lit8 v8, v8, 0x2
-
-    if-eqz v8, :cond_11
-
-    iget-object v0, p0, Luob;->a:Lpg9;
-
-    invoke-virtual {v0}, Lpg9;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    iget v1, p0, Luob;->h:I
-
-    if-eq v1, v4, :cond_f
-
-    iput v4, p0, Luob;->h:I
-
-    neg-int v1, v8
-
-    invoke-static {v0, v4, v1}, Ld93;->a(Ljava/util/List;II)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_e
-    :goto_6
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v2}, Lxaf;->J(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_f
+    const/4 v3, 0x0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v4, 0x4
 
-    move-result-object v2
+    if-nez v2, :cond_5
 
-    check-cast v2, Ljava/lang/Number;
+    iget-object v2, p0, Luob;->Y:Landroid/view/View;
 
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+    instance-of v5, v2, Landroid/view/ViewGroup;
 
-    move-result-wide v2
+    if-eqz v5, :cond_0
 
-    invoke-virtual {v9, v2, v3}, Lit9;->a(J)Z
+    check-cast v2, Landroid/view/ViewGroup;
 
-    move-result v4
+    goto :goto_0
 
-    if-eqz v4, :cond_e
+    :cond_0
+    const/4 v2, 0x0
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :goto_0
+    if-eqz v2, :cond_1
 
-    move-result-object v2
+    invoke-virtual {v1}, Lrn0;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v10, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    move-result-object v5
 
-    goto :goto_6
+    check-cast v5, Landroid/view/View;
 
-    :cond_f
-    iget v1, p0, Luob;->i:I
+    invoke-static {v5, v2}, Lwci;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    if-eq v1, v5, :cond_11
-
-    iput v5, p0, Luob;->i:I
-
-    invoke-static {v0, v5, v8}, Ld93;->a(Ljava/util/List;II)Ljava/util/List;
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->z0()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v4
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    move v2, v3
+
+    :goto_2
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v1}, Lrn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_10
-    :goto_7
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lxua;
 
-    move-result v1
+    if-eqz p1, :cond_4
 
-    if-eqz v1, :cond_11
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    check-cast v1, Ljava/lang/Number;
+    if-ne p1, v1, :cond_4
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    goto :goto_3
 
-    move-result-wide v1
+    :cond_4
+    move v3, v4
 
-    invoke-virtual {v9, v1, v2}, Lit9;->a(J)Z
+    :goto_3
+    invoke-virtual {v0, v3}, Lxua;->setVisibility(I)V
 
-    move-result v3
+    goto :goto_4
 
-    if-eqz v3, :cond_10
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->z0()Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v10, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lrn0;->getValue()Ljava/lang/Object;
 
-    goto :goto_7
+    move-result-object p1
 
-    :cond_11
-    invoke-virtual {v10}, Ljava/util/HashSet;->isEmpty()Z
+    check-cast p1, Lxua;
 
-    move-result v0
+    invoke-virtual {p1, v4}, Lxua;->setVisibility(I)V
 
-    if-nez v0, :cond_12
+    :goto_4
+    sget-object p1, Lybg;->a:Lybg;
 
-    iget-object v0, p0, Luob;->d:Lyo3;
-
-    if-eqz v0, :cond_12
-
-    invoke-static {v10}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lyo3;->accept(Ljava/lang/Object;)V
-
-    :cond_12
-    iget-boolean v0, p0, Luob;->g:Z
-
-    if-nez v0, :cond_13
-
-    sget-object v0, Luob;->n:Ljava/lang/String;
-
-    const-string v1, "clear"
-
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v10}, Ljava/util/HashSet;->clear()V
-
-    invoke-virtual {v9}, Lit9;->c()V
-
-    invoke-virtual {v6}, Lit9;->c()V
-
-    :cond_13
-    :goto_8
-    return-void
+    return-object p1
 .end method

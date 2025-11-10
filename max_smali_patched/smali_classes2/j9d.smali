@@ -1,25 +1,40 @@
-.class public abstract Lj9d;
+.class public interface abstract Lj9d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static synthetic f(Lj9d;JIJLp14;)Ljava/lang/Object;
+    .locals 10
 
-    sget v0, Lflc;->Theme_WebView_Dark:I
+    const/4 v4, 0x0
 
-    sput v0, Lj9d;->a:I
+    const-wide v7, 0x7fffffffffffffffL
 
-    sget v0, Lflc;->Theme_WebView_Light:I
+    move-object v0, p0
 
-    sput v0, Lj9d;->b:I
+    move-wide v1, p1
+
+    move v3, p3
+
+    move-wide v5, p4
+
+    move-object/from16 v9, p6
+
+    invoke-interface/range {v0 .. v9}, Lj9d;->e(JIIJJLp14;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public b(Lfz6;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public abstract e(JIIJJLp14;)Ljava/lang/Object;
 .end method

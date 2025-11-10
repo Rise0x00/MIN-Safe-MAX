@@ -1,64 +1,29 @@
-.class public final Lrca;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Lrca;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lss4;
-
-
-# instance fields
-.field public final a:Lxda;
 
 
 # direct methods
-.method public constructor <init>(Lxda;Lsca;)V
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lrca;->a:Lxda;
-
-    invoke-virtual {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method
 
+.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
+    .locals 0
 
-# virtual methods
-.method public final g()V
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsca;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p0}, Lsca;->a(Lrca;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final h()Z
-    .locals 1
+.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

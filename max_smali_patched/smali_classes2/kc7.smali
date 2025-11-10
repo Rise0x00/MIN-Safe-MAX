@@ -1,112 +1,33 @@
 .class public final Lkc7;
-.super Lm3f;
+.super Ljava/util/AbstractMap;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/inputphone/InputPhoneScreen;
+.field public final a:[Lwig;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
+.method public constructor <init>([Lwig;)V
     .locals 0
 
-    iput-object p2, p0, Lkc7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
+    invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkc7;->a:[Lwig;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkc7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkc7;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lkc7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final entrySet()Ljava/util/Set;
     .locals 2
 
-    new-instance v0, Lkc7;
+    new-instance v0, Lws;
 
-    iget-object v1, p0, Lkc7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
+    iget-object v1, p0, Lkc7;->a:[Lwig;
 
-    invoke-direct {v0, p2, v1}, Lkc7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputphone/InputPhoneScreen;)V
-
-    iput-object p1, v0, Lkc7;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lws;-><init>([Lwig;)V
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkc7;->X:Ljava/lang/Object;
-
-    check-cast p1, Loyf;
-
-    sget-object p1, Lone/me/login/inputphone/InputPhoneScreen;->I0:[Ltm7;
-
-    iget-object p1, p0, Lkc7;->Y:Lone/me/login/inputphone/InputPhoneScreen;
-
-    invoke-virtual {p1}, Lone/me/login/inputphone/InputPhoneScreen;->E0()Llra;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->hasWindowFocus()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Llra;->A0:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
-
-    new-instance v1, Lbt8;
-
-    const/16 v2, 0xf
-
-    invoke-direct {v1, p1, v2, v0}, Lbt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lt01;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lt01;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Llra;->setOnWindowFocusChanged(Lxe6;)V
-
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

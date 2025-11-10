@@ -1,125 +1,138 @@
-.class public final Ltuc;
-.super Lm3f;
-.source "SourceFile"
-
-# interfaces
-.implements Llf6;
+.class public abstract Ltuc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static ActionBarTheme:I = 0x7f140000
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static AttachButton:I = 0x7f14000c
 
+.field public static AttachButton_QuickCamera:I = 0x7f14000d
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-    .locals 0
+.field public static AttachButton_SmallQuickCameraButton:I = 0x7f14000e
 
-    iput-object p2, p0, Ltuc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static ComposeMessage:I = 0x7f140177
 
-    const/4 p2, 0x2
+.field public static ContactLastSeen:I = 0x7f140178
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static ContactName:I = 0x7f140179
 
-    return-void
-.end method
+.field public static DrawerArrowStyle:I = 0x7f14017b
 
+.field public static ExtraActionButton:I = 0x7f14019d
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static ExtraActionButton_Down:I = 0x7f14019e
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static ExtraActionButton_Up:I = 0x7f14019f
 
-    invoke-virtual {p0, p1, p2}, Ltuc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static LandscapeAttachButton:I = 0x7f1401e8
 
-    move-result-object p1
+.field public static LandscapeAttachButton_LandscapeQuickCamera:I = 0x7f1401e9
 
-    check-cast p1, Ltuc;
+.field public static LandscapeAttachButton_LandscapeSmallQuickCameraButton:I = 0x7f1401ea
 
-    sget-object p2, Loyf;->a:Loyf;
+.field public static LayoutPadding:I = 0x7f1401eb
 
-    invoke-virtual {p1, p2}, Ltuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static MenuActionButtonNoCaps:I = 0x7f140201
 
-    return-object p2
-.end method
+.field public static MenuOverflow:I = 0x7f140202
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.field public static MenuOverflowWhite:I = 0x7f140203
 
-    new-instance v0, Ltuc;
+.field public static MessageActionButton:I = 0x7f140204
 
-    iget-object v1, p0, Ltuc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static MessagesProgressBar:I = 0x7f140205
 
-    invoke-direct {v0, p2, v1}, Ltuc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static NavigationDrawerTheme:I = 0x7f140206
 
-    iput-object p1, v0, Ltuc;->X:Ljava/lang/Object;
+.field public static ProgressBarOrange:I = 0x7f14023c
 
-    return-object v0
-.end method
+.field public static ProgressBarWhite:I = 0x7f14023d
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.field public static RoundedButton24:I = 0x7f14023e
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+.field public static RoundedButton24_Blue:I = 0x7f14023f
 
-    iget-object p1, p0, Ltuc;->X:Ljava/lang/Object;
+.field public static RoundedButton24_Blue_DisabledDark:I = 0x7f140240
 
-    check-cast p1, Lcuc;
+.field public static RoundedButton24_Orange:I = 0x7f140241
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static RoundedButton24_Serif:I = 0x7f140242
 
-    iget-object v0, p0, Ltuc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static RoundedButton24_Transparent:I = 0x7f140243
 
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
+.field public static RoundedButton24_Transparent_WhiteText:I = 0x7f140244
 
-    move-result-object v1
+.field public static RoundedButton24_White:I = 0x7f140245
 
-    new-instance v2, Lqc1;
+.field public static RowPadding:I = 0x7f140246
 
-    const/4 v3, 0x5
+.field public static SearchTabText:I = 0x7f140260
 
-    invoke-direct {v2, p1, v3, v0}, Lqc1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.field public static SmallProgressBar:I = 0x7f14029f
 
-    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
+.field public static SpinnerDropDown:I = 0x7f1402a0
 
-    move-result p1
+.field public static SubtitleCollapsed:I = 0x7f1402a1
 
-    if-eqz p1, :cond_0
+.field public static SubtitleExpanded:I = 0x7f1402a2
 
-    invoke-virtual {v2}, Lqc1;->invoke()Ljava/lang/Object;
+.field public static TabText:I = 0x7f1402a3
 
-    goto :goto_0
+.field public static TamTamFab:I = 0x7f1402a4
 
-    :cond_0
-    invoke-virtual {v1}, Landroid/view/View;->isLaidOut()Z
+.field public static TamTamTheme:I = 0x7f1402a5
 
-    move-result p1
+.field public static TamTamTheme_Base:I = 0x7f1402a6
 
-    if-eqz p1, :cond_1
+.field public static TamTamTheme_Base_Dark:I = 0x7f1402a7
 
-    invoke-virtual {v1}, Landroid/view/View;->isLayoutRequested()Z
+.field public static TamTamTheme_Base_PopupNotification:I = 0x7f1402a8
 
-    move-result p1
+.field public static TamTamTheme_CloseMode:I = 0x7f1402a9
 
-    if-nez p1, :cond_1
+.field public static Text:I = 0x7f1402aa
 
-    invoke-virtual {v2}, Lqc1;->invoke()Ljava/lang/Object;
+.field public static TextInputLayoutHint:I = 0x7f140338
 
-    goto :goto_0
+.field public static Text_Attach:I = 0x7f1402ab
 
-    :cond_1
-    new-instance p1, Lbr0;
+.field public static Text_Large:I = 0x7f1402ac
 
-    const/16 v0, 0xd
+.field public static Text_Largest:I = 0x7f1402ad
 
-    invoke-direct {p1, v0, v2}, Lbr0;-><init>(ILjava/lang/Object;)V
+.field public static Text_LocalMediaCount:I = 0x7f1402ae
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+.field public static Text_LocalMediaCount_FullScreen:I = 0x7f1402af
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+.field public static Text_Normal:I = 0x7f1402b0
 
-    return-object p1
-.end method
+.field public static Text_Small:I = 0x7f1402b1
+
+.field public static Theme_Transparent:I = 0x7f1403aa
+
+.field public static Theme_Transparent_DarkMenuOverflow:I = 0x7f1403ab
+
+.field public static Theme_Transparent_WhiteMenuOverflow:I = 0x7f1403ac
+
+.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps:I = 0x7f1403ad
+
+.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps_Portrait:I = 0x7f1403ae
+
+.field public static TimePicker:I = 0x7f140425
+
+.field public static TimePickerShape:I = 0x7f140428
+
+.field public static TimePicker_Day:I = 0x7f140426
+
+.field public static TimePicker_Night:I = 0x7f140427
+
+.field public static TitleCollapsed:I = 0x7f140429
+
+.field public static TitleExpanded:I = 0x7f14042a
+
+.field public static TitleExpandedSmall:I = 0x7f14042b
+
+.field public static frg_auth_native_ok__common:I = 0x7f140679
+
+.field public static frg_auth_native_ok__et_login:I = 0x7f14067a

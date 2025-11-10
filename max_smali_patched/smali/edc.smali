@@ -1,46 +1,63 @@
-.class public abstract Ledc;
+.class public final synthetic Ledc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static common_full_open_on_phone:I = 0x7f08032c
+# instance fields
+.field public final synthetic a:I
 
-.field public static common_google_signin_btn_icon_dark:I = 0x7f08032d
+.field public final synthetic b:Lndc;
 
-.field public static common_google_signin_btn_icon_dark_focused:I = 0x7f08032e
 
-.field public static common_google_signin_btn_icon_dark_normal:I = 0x7f08032f
+# direct methods
+.method public synthetic constructor <init>(Lndc;I)V
+    .locals 0
 
-.field public static common_google_signin_btn_icon_dark_normal_background:I = 0x7f080330
+    iput p2, p0, Ledc;->a:I
 
-.field public static common_google_signin_btn_icon_disabled:I = 0x7f080331
+    iput-object p1, p0, Ledc;->b:Lndc;
 
-.field public static common_google_signin_btn_icon_light:I = 0x7f080332
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static common_google_signin_btn_icon_light_focused:I = 0x7f080333
+    return-void
+.end method
 
-.field public static common_google_signin_btn_icon_light_normal:I = 0x7f080334
 
-.field public static common_google_signin_btn_icon_light_normal_background:I = 0x7f080335
+# virtual methods
+.method public final run()V
+    .locals 2
 
-.field public static common_google_signin_btn_text_dark:I = 0x7f080336
+    iget v0, p0, Ledc;->a:I
 
-.field public static common_google_signin_btn_text_dark_focused:I = 0x7f080337
+    packed-switch v0, :pswitch_data_0
 
-.field public static common_google_signin_btn_text_dark_normal:I = 0x7f080338
+    iget-object v0, p0, Ledc;->b:Lndc;
 
-.field public static common_google_signin_btn_text_dark_normal_background:I = 0x7f080339
+    iget-boolean v1, v0, Lndc;->U0:Z
 
-.field public static common_google_signin_btn_text_disabled:I = 0x7f08033a
+    if-nez v1, :cond_0
 
-.field public static common_google_signin_btn_text_light:I = 0x7f08033b
+    iget-object v1, v0, Lndc;->z0:Luu8;
 
-.field public static common_google_signin_btn_text_light_focused:I = 0x7f08033c
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static common_google_signin_btn_text_light_normal:I = 0x7f08033d
+    invoke-interface {v1, v0}, Ld3e;->b(Lf3e;)V
 
-.field public static common_google_signin_btn_text_light_normal_background:I = 0x7f08033e
+    :cond_0
+    return-void
 
-.field public static googleg_disabled_color_18:I = 0x7f0804ef
+    :pswitch_0
+    iget-object v0, p0, Ledc;->b:Lndc;
 
-.field public static googleg_standard_color_18:I = 0x7f0804f0
+    invoke-virtual {v0}, Lndc;->v()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

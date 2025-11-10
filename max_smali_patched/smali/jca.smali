@@ -1,54 +1,61 @@
-.class public final Ljca;
-.super Lle3;
+.class public abstract Ljca;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lig6;
-
-
-# instance fields
-.field public final a:Lpca;
 
 
 # direct methods
-.method public constructor <init>(Lpca;)V
-    .locals 0
+.method public static a()Landroid/app/Notification$MediaStyle;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
-    iput-object p1, p0, Ljca;->a:Lpca;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d()Lraa;
-    .locals 3
-
-    new-instance v0, Lmba;
-
-    iget-object v1, p0, Ljca;->a:Lpca;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Lmba;-><init>(Lnda;I)V
+    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
 
     return-object v0
 .end method
 
-.method public final i(Lve3;)V
-    .locals 2
+.method public static b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+    .locals 0
 
-    new-instance v0, Lle8;
+    if-eqz p1, :cond_0
 
-    const/4 v1, 0x1
+    invoke-static {p0, p1}, Ljca;->e(Landroid/app/Notification$MediaStyle;[I)V
 
-    invoke-direct {v0, v1, p1}, Lle8;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    if-eqz p2, :cond_1
 
-    iget-object p1, p0, Ljca;->a:Lpca;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getToken()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lraa;->a(Lxda;)V
+    move-result-object p1
+
+    check-cast p1, Landroid/media/session/MediaSession$Token;
+
+    invoke-static {p0, p1}, Ljca;->c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public static c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
+
+    return-void
+.end method
+
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+
+    return-void
+.end method
+
+.method public static varargs e(Landroid/app/Notification$MediaStyle;[I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
     return-void
 .end method

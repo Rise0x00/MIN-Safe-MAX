@@ -1,192 +1,582 @@
-.class public final Lu01;
-.super Lm3f;
+.class public final synthetic Lu01;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Lu01;->Y:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    iput p2, p0, Lu01;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lu01;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lu01;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lu01;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lu01;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
 
-    check-cast p1, Lu01;
+    check-cast v0, Ljava/util/List;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lu01;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Lf6f;
 
-    return-object p2
-.end method
+    check-cast p1, Ljava/util/List;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance p1, Ljava/util/ArrayList;
 
-    new-instance v0, Lu01;
+    const/16 v2, 0xa
 
-    iget-object v1, p0, Lu01;->Y:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    invoke-static {v0, v2}, Lcb3;->k(Ljava/lang/Iterable;I)I
 
-    invoke-direct {v0, p2, v1}, Lu01;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    move-result v2
 
-    iput-object p1, v0, Lu01;->X:Ljava/lang/Object;
+    invoke-direct {p1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lu01;->X:Ljava/lang/Object;
-
-    check-cast p1, Lhy9;
-
-    instance-of v0, p1, Lzk1;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lu01;->Y:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    if-eqz v0, :cond_3
-
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    new-instance v5, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
-
-    sget-object p1, Lkvc;->b:Lkvc;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-direct {v5, p1, v0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;-><init>(Lkvc;Ljava/lang/Boolean;)V
-
-    invoke-virtual {v5, v3}, Lb04;->setTargetController(Lb04;)V
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object p1, v3
-
-    :goto_0
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+    move-result v2
 
-    move-result-object p1
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lp2f;
+
+    invoke-static {v1, v2}, Lf6f;->u(Lf6f;Lp2f;)Ll3f;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lo8d;
+    return-object p1
 
-    const/4 v4, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsoh;
+
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    check-cast p1, Ljava/util/Set;
+
+    iget-object p1, v0, Lsoh;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lo8d;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    new-instance v0, Ldpb;
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    invoke-direct {v0, v4, v5, v2, v3}, Ldpb;-><init>(IIJ)V
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_1
-    move-object p1, v4
+    return-object v1
 
-    :goto_1
+    :pswitch_1
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqp9;
+
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
+
+    check-cast v1, Lt92;
+
+    check-cast p1, Lrp9;
+
+    iget-boolean p1, v0, Lqp9;->b:Z
+
+    const/4 v2, 0x1
+
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lo8d;->f0()Li8d;
-
-    move-result-object v4
-
-    :cond_2
-    move-object p1, v4
-
-    invoke-virtual {v5, v3}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz p1, :cond_4
-
-    new-instance v4, Ll8d;
-
-    const/4 v9, 0x0
-
-    const/4 v10, -0x1
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v4 .. v10}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    const-string v0, "BottomSheetWidget"
-
-    invoke-static {v2, v4, v1, v0}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {p1, v4}, Li8d;->H(Ll8d;)V
+    move v5, v2
 
     goto :goto_2
 
+    :cond_2
+    const/4 v3, 0x4
+
+    move v5, v3
+
+    :goto_2
+    if-eqz p1, :cond_4
+
+    iget-object v1, v1, Lt92;->b:Lvd2;
+
+    iget v1, v1, Lvd2;->m:I
+
+    if-lez v1, :cond_3
+
+    goto :goto_3
+
     :cond_3
-    instance-of v0, p1, Lel1;
+    move v7, v2
 
-    if-eqz v0, :cond_4
+    goto :goto_4
 
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
+    :cond_4
+    :goto_3
+    const/4 v1, 0x0
 
-    iget-object v0, v3, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Y:Ljava/lang/Object;
+    move v7, v1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    :goto_4
+    xor-int/lit8 v6, p1, 0x1
+
+    iget-wide v10, v0, Lqp9;->a:J
+
+    new-instance v4, Lrp9;
+
+    const-wide/16 v8, 0x0
+
+    const/16 v12, 0x10
+
+    invoke-direct/range {v4 .. v12}, Lrp9;-><init>(IZZJJI)V
+
+    return-object v4
+
+    :pswitch_2
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhw8;
+
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    check-cast p1, Lhw8;
+
+    const-wide/16 v2, 0x0
+
+    const/4 p1, 0x1
+
+    invoke-static {v0, v2, v3, v1, p1}, Lhw8;->a(Lhw8;JLjava/util/LinkedHashSet;I)Lhw8;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
+
+    check-cast v1, Ls96;
+
+    check-cast p1, Ljava/util/Set;
+
+    new-instance p1, Lht;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v2, v0}, Lht;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lca2;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Lca2;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Li3e;->d(Ly2e;Lqi6;)Law5;
+
+    move-result-object p1
+
+    sget-object v0, Ln96;->a:Ln96;
+
+    invoke-interface {p1}, Ly2e;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    sget-object p1, Lxa5;->a:Lxa5;
+
+    goto :goto_6
+
+    :cond_5
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object p1
+
+    goto :goto_6
+
+    :cond_6
+    new-instance v2, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    :goto_5
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_5
+
+    :cond_7
+    move-object p1, v2
+
+    :goto_6
+    return-object p1
+
+    :pswitch_4
+    iget-object v0, p0, Lu01;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;
+
+    iget-object v1, p0, Lu01;->c:Ljava/lang/Object;
+
+    check-cast v1, Lf11;
+
+    check-cast p1, Let;
+
+    sget-object v2, La98;->d:La98;
+
+    iget-object v3, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->participantsIds:Ljava/util/List;
+
+    new-instance v4, Let;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Let;-><init>(I)V
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_7
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    invoke-static {v6}, Lwdb;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lxh1;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Let;->add(Ljava/lang/Object;)Z
+
+    goto :goto_7
+
+    :cond_8
+    iget-boolean v3, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasAdded:Z
+
+    const/4 v6, 0x0
+
+    const-string v7, "CallAdminSettingsController"
+
+    if-eqz v3, :cond_e
+
+    sget-object v0, Lcuh;->b:Lnxa;
+
+    if-nez v0, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    invoke-virtual {v0, v2}, Lnxa;->b(La98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_a
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v8, "Waiting room added new users="
+
+    invoke-direct {v3, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v7, v3, v6}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_a
+    :goto_8
+    iget-object v1, v1, Lf11;->s0:La1f;
+
+    :cond_b
+    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfbe;
+    move-object v6, v0
 
-    check-cast p1, Lel1;
+    check-cast v6, Lua;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v8, Let;
 
-    new-instance v0, Lia5;
+    invoke-direct {v8, v5}, Let;-><init>(I)V
 
-    invoke-direct {v0, p1, v3, v2, v1}, Lia5;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    new-instance v2, Lxs;
 
-    sget-object p1, Lmk1;->a:Lmk1;
+    invoke-direct {v2, v4}, Lxs;-><init>(Let;)V
 
-    invoke-static {p1, v0}, Lfbe;->b(Lmk1;Lve6;)V
+    :cond_c
+    :goto_9
+    invoke-virtual {v2}, Lxs;->hasNext()Z
 
-    :cond_4
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
+    move-result v3
 
+    if-eqz v3, :cond_d
+
+    invoke-virtual {v2}, Lxs;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v7, v3
+
+    check-cast v7, Lxh1;
+
+    iget-wide v9, v7, Lxh1;->a:J
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {p1, v7}, Let;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_c
+
+    invoke-virtual {v8, v3}, Let;->add(Ljava/lang/Object;)Z
+
+    goto :goto_9
+
+    :cond_d
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v9
+
+    const/4 v11, 0x1
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v6 .. v11}, Lua;->a(Lua;Ljava/util/LinkedHashMap;Let;JI)Lua;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    goto :goto_a
+
+    :cond_e
+    iget-boolean p1, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasRemoved:Z
+
+    if-eqz p1, :cond_10
+
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-nez p1, :cond_f
+
+    goto :goto_a
+
+    :cond_f
+    invoke-virtual {p1, v2}, Lnxa;->b(La98;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Waiting room remove users="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v7, v0, v6}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_a
+
+    :cond_10
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-nez p1, :cond_11
+
+    goto :goto_a
+
+    :cond_11
+    invoke-virtual {p1, v2}, Lnxa;->b(La98;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Waiting room update users="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v7, v0, v6}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_12
+    :goto_a
+    new-instance p1, Let;
+
+    invoke-direct {p1, v5}, Let;-><init>(I)V
+
+    new-instance v0, Lxs;
+
+    invoke-direct {v0, v4}, Lxs;-><init>(Let;)V
+
+    :goto_b
+    invoke-virtual {v0}, Lxs;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    invoke-virtual {v0}, Lxs;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lxh1;
+
+    iget-wide v1, v1, Lxh1;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Let;->add(Ljava/lang/Object;)Z
+
+    goto :goto_b
+
+    :cond_13
     return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

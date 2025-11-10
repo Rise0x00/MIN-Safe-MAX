@@ -1,79 +1,103 @@
-.class public final Lb2c;
-.super Lnz3;
+.class public final synthetic Lb2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public A0:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public B0:I
-
-.field public synthetic C0:Ljava/lang/Object;
-
-.field public final synthetic D0:Lf2c;
-
-.field public E0:I
-
-.field public X:Lap3;
-
-.field public Y:Lm82;
-
-.field public Z:Lcvb;
-
-.field public o:Lf2c;
-
-.field public w0:Levb;
-
-.field public x0:Ljava/lang/Object;
-
-.field public y0:Ljava/util/List;
-
-.field public z0:Ljava/io/Serializable;
+.field public final synthetic b:Lp76;
 
 
 # direct methods
-.method public constructor <init>(Lf2c;Lnz3;)V
+.method public synthetic constructor <init>(Lp76;I)V
     .locals 0
 
-    iput-object p1, p0, Lb2c;->D0:Lf2c;
+    iput p2, p0, Lb2c;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lb2c;->b:Lp76;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lb2c;->C0:Ljava/lang/Object;
+    iget v0, p0, Lb2c;->a:I
 
-    iget p1, p0, Lb2c;->E0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lb2c;->b:Lp76;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
 
-    iput p1, p0, Lb2c;->E0:I
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lb72;
 
-    const/4 v5, 0x0
+    move-result-object v0
 
-    iget-object v0, p0, Lb2c;->D0:Lf2c;
+    iget-object v0, v0, Lb72;->b:Lp62;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lp62;->e()V
 
-    const/4 v2, 0x0
+    :goto_0
+    sget-object v0, Lybg;->a:Lybg;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lb2c;->b:Lp76;
+
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lb72;
+
+    move-result-object v0
+
+    iget-object v1, v0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v2, Lz62;
 
     const/4 v3, 0x0
 
-    move-object v6, p0
+    invoke-direct {v2, v0, v3}, Lz62;-><init>(Lb72;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual/range {v0 .. v6}, Lf2c;->f(Lap3;Lm82;Lcvb;Levb;Ljava/lang/Long;Lnz3;)Ljava/io/Serializable;
+    const/4 v0, 0x3
 
-    move-result-object p1
+    invoke-static {v1, v3, v3, v2, v0}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
-    return-object p1
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lb2c;->b:Lp76;
+
+    iget-object v0, v0, Lp76;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lb72;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lb72;->b:Lp62;
+
+    invoke-virtual {v0}, Lp62;->a()V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

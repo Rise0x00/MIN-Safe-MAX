@@ -2,41 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loa7;
 
+# instance fields
+.field public a:Lklf;
 
-# static fields
-.field public static final synthetic a:Lna7;
+.field public final b:Landroid/content/Context;
 
-.field public static final b:Lhw2;
+.field public c:Lzz4;
+
+.field public d:Lp66;
+
+.field public e:Lch8;
+
+.field public f:Lxu4;
+
+.field public g:Ljmf;
+
+.field public h:Lqvb;
+
+.field public i:Ljava/util/Set;
+
+.field public j:Lxu4;
+
+.field public k:Lk04;
+
+.field public final l:Lxg6;
+
+.field public final m:Luea;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    new-instance v0, Lna7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lzz4;->b:Lzz4;
 
-    sput-object v0, Lna7;->a:Lna7;
+    iput-object v0, p0, Lna7;->c:Lzz4;
 
-    sget-object v0, Lhw2;->c:Lhw2;
+    new-instance v0, Lxg6;
 
-    sget-object v0, Lhw2;->c:Lhw2;
+    const/16 v1, 0xc
 
-    sput-object v0, Lna7;->b:Lhw2;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lxg6;-><init>(CI)V
+
+    const/16 v1, 0x800
+
+    iput v1, v0, Lxg6;->b:I
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    new-instance v2, Lvu4;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, v1}, Lvu4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v2, v0, Lxg6;->c:Ljava/lang/Object;
+
+    new-instance v1, Lbp6;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v0, Lxg6;->d:Ljava/lang/Object;
+
+    iput-object v0, p0, Lna7;->l:Lxg6;
+
+    new-instance v0, Luea;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Luea;-><init>(I)V
+
+    iput-object v0, p0, Lna7;->m:Luea;
+
+    iput-object p1, p0, Lna7;->b:Landroid/content/Context;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lhw2;
-    .locals 1
-
-    sget-object v0, Lna7;->b:Lhw2;
-
-    return-object v0
 .end method

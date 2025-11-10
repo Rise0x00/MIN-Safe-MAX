@@ -1,30 +1,21 @@
 .class public final Lik8;
-.super Lhk8;
+.super Lz2;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final q0(F)V
-    .locals 1
+.method public final f(Lgk8;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lhk8;
 
-    cmpl-float v0, p1, v0
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, p1}, Lhk8;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lhk8;->o:Landroid/media/session/MediaController$TransportControls;
+    iget-object p1, p0, Lz2;->a:Ltj8;
 
-    invoke-static {v0, p1}, Lqx4;->r(Landroid/media/session/MediaController$TransportControls;F)V
+    invoke-virtual {p1, v0}, Ltj8;->e(Lgk8;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "speed must not be zero"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

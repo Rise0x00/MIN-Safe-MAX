@@ -3,24 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbc9;
+.implements Lac9;
 
 
 # instance fields
 .field public final a:J
 
-.field public final b:Llbg;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(JLlbg;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lzb9;->a:J
 
-    iput-object p3, p0, Lzb9;->b:Llbg;
+    iput-wide p3, p0, Lzb9;->b:J
 
     return-void
 .end method
@@ -59,15 +59,13 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lzb9;->b:Llbg;
+    iget-wide v3, p0, Lzb9;->b:J
 
-    iget-object p1, p1, Lzb9;->b:Llbg;
+    iget-wide v5, p1, Lzb9;->b:J
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eqz p1, :cond_3
 
     return v2
 
@@ -76,7 +74,7 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
     iget-wide v0, p0, Lzb9;->a:J
 
@@ -86,9 +84,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lzb9;->b:Llbg;
+    iget-wide v1, p0, Lzb9;->b:J
 
-    invoke-virtual {v1}, Llbg;->hashCode()I
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
@@ -97,40 +95,24 @@
     return v1
 .end method
 
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lzb9;->a:J
-
-    return-wide v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "ByRange(startTime="
 
-    const-string v1, "OnSurfaceClick(messageId="
+    const-string v1, ", endTime="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lzb9;->a:J
 
-    iget-wide v1, p0, Lzb9;->a:J
+    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", model="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzb9;->b:Llbg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lzb9;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,103 +1,61 @@
 .class public final Licb;
-.super Lmy;
+.super Lmcb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ls5f;
-
-.field public d:Lww;
+# static fields
+.field public static final a:Licb;
 
 
 # direct methods
-.method public constructor <init>(Lo10;Ls5f;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lmy;-><init>(Lo10;)V
+    new-instance v0, Licb;
 
-    iput-object p2, p0, Licb;->c:Ls5f;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Licb;->a:Licb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Licb;->d:Lww;
+    const/4 v0, 0x1
 
-    new-instance v1, Ljava/lang/Throwable;
+    if-ne p0, p1, :cond_0
 
-    const-string v2, "cancelled"
-
-    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0, v1}, Lmy;->b(Lww;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final c()Lraa;
-    .locals 5
-
-    invoke-super {p0}, Lmy;->c()Lraa;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    return-object v0
+    return v0
 
     :cond_0
-    new-instance v0, Lwxc;
+    instance-of p1, p1, Licb;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez p1, :cond_1
 
-    iget-object v1, p0, Licb;->d:Lww;
+    const/4 p1, 0x0
 
-    iput-object v1, v0, Lwxc;->a:Ljava/lang/Object;
-
-    if-eqz v1, :cond_1
-
-    return-object v1
+    return p1
 
     :cond_1
-    new-instance v1, Lww;
+    return v0
+.end method
 
-    invoke-direct {v1}, Lww;-><init>()V
+.method public final hashCode()I
+    .locals 1
 
-    iput-object v1, p0, Licb;->d:Lww;
+    const v0, -0x599fa0b5
 
-    iput-object v1, v0, Lwxc;->a:Ljava/lang/Object;
+    return v0
+.end method
 
-    iget-object v1, p0, Licb;->c:Ls5f;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lj57;
-
-    iget-object v2, p0, Lmy;->a:Lo10;
-
-    iget-object v2, v2, Lo10;->b:Lc10;
-
-    invoke-virtual {v2}, Lc10;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lhcb;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p0, v4, v0}, Lhcb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2, v3}, Lj57;->a(Ljava/lang/String;Li57;)V
-
-    iget-object v0, v0, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast v0, Lraa;
+    const-string v0, "Error"
 
     return-object v0
 .end method

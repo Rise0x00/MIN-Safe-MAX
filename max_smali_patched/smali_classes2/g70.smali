@@ -1,49 +1,120 @@
 .class public final Lg70;
-.super Lnz3;
+.super Lmmf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lh70;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lf70;
 
 
 # direct methods
-.method public constructor <init>(Lh70;Lnz3;)V
+.method public constructor <init>(Lf70;)V
     .locals 0
 
-    iput-object p1, p0, Lg70;->X:Lh70;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lg70;->c:Lf70;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lg70;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lg70;
+
+    iget-object v1, p0, Lg70;->c:Lf70;
+
+    iget-object p1, p1, Lg70;->c:Lf70;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lg70;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lg70;->c:Lf70;
 
-    iget p1, p0, Lg70;->Y:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lg70;->Y:I
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p1, p0, Lg70;->X:Lh70;
+    iget-object v0, p0, Lg70;->c:Lf70;
 
-    const/4 v0, 0x0
+    iget-boolean v1, v0, Lf70;->a:Z
 
-    invoke-virtual {p1, v0, p0}, Lh70;->a(Lkyc;Lnz3;)Ljava/lang/Object;
+    iget-object v2, v0, Lf70;->b:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v0, v0, Lf70;->c:Ljava/lang/String;
 
-    return-object p1
+    invoke-static {v0}, Lxvc;->g(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response(enabled="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\n                |hint=\'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\',\n                |email=\'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\')\n                |"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lyaf;->i(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

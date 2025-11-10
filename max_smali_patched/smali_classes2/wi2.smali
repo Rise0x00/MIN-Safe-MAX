@@ -1,98 +1,234 @@
-.class public final synthetic Lwi2;
+.class public final Lwi2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lxi2;
+.field public final b:Lake;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxi2;I)V
+.method public constructor <init>(JLiw0;Ltlf;)V
     .locals 0
 
-    iput p2, p0, Lwi2;->a:I
-
-    iput-object p1, p0, Lwi2;->b:Lxi2;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lwi2;->a:J
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Lbke;->b(III)Lake;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwi2;->b:Lake;
+
+    check-cast p4, Lsta;
+
+    invoke-virtual {p4}, Lsta;->a()La54;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwi2;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p3, p0}, Liw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a(Lui2;)V
     .locals 3
 
-    iget v0, p0, Lwi2;->a:I
+    new-instance v0, Lvi2;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lwi2;->b:Lxi2;
+    invoke-direct {v0, p0, p1, v1}, Lvi2;-><init>(Lwi2;Lui2;Lkotlin/coroutines/Continuation;)V
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    const/4 p1, 0x3
 
-    invoke-virtual {v1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
+    iget-object v2, p0, Lwi2;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v0
+    invoke-static {v2, v1, v1, v0, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
 
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final onEvent(Lmab;)V
+    .locals 4
+    .annotation runtime Lxbf;
+    .end annotation
 
-    iget-object v0, v0, Lue0;->a:Lte0;
+    .line 11
+    iget-wide v0, p1, Lmab;->b:J
 
-    iget v0, v0, Lte0;->h:I
+    .line 12
+    iget-wide v2, p0, Lwi2;->a:J
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    cmp-long v0, v0, v2
 
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    if-eqz v0, :cond_0
 
-    return-object v1
+    return-void
 
-    :pswitch_0
-    sget v0, Lg9d;->V:I
+    .line 13
+    :cond_0
+    new-instance v0, Lpi2;
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    .line 14
+    iget-wide v1, p1, Lmab;->d:J
 
-    iget-object v2, p0, Lwi2;->b:Lxi2;
+    .line 15
+    invoke-direct {v0, v1, v2}, Lpi2;-><init>(J)V
 
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
+.method public final onEvent(Lme7;)V
+    .locals 4
+    .annotation runtime Lxbf;
+    .end annotation
 
-    move-result-object v1
+    .line 6
+    iget-wide v0, p1, Lme7;->b:J
 
-    iget v1, v1, Lk27;->h:I
+    .line 7
+    iget-wide v2, p0, Lwi2;->a:J
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    cmp-long v0, v0, v2
 
-    move-result-object v2
+    if-nez v0, :cond_1
 
-    invoke-static {v2, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    iget-boolean v0, p1, Lme7;->X:Z
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    goto :goto_0
 
-    move-result-object v0
+    .line 8
+    :cond_0
+    new-instance v0, Lpi2;
 
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    .line 9
+    iget-wide v1, p1, Lme7;->c:J
 
-    return-object v0
+    .line 10
+    invoke-direct {v0, v1, v2}, Lpi2;-><init>(J)V
 
-    nop
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onEvent(Lrw9;)V
+    .locals 4
+    .annotation runtime Lxbf;
+    .end annotation
+
+    .line 18
+    iget-wide v0, p1, Lrw9;->b:J
+
+    iget-wide v2, p0, Lwi2;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 19
+    :cond_0
+    new-instance v0, Lsi2;
+
+    iget-object p1, p1, Lrw9;->o:Ljava/util/List;
+
+    invoke-direct {v0, p1}, Lsi2;-><init>(Ljava/util/List;)V
+
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lvx4;)V
+    .locals 3
+    .annotation runtime Lxbf;
+    .end annotation
+
+    .line 16
+    new-instance v0, Lqi2;
+
+    iget-wide v1, p1, Lvx4;->o:J
+
+    iget-object p1, p1, Lvx4;->d:Ljava/lang/String;
+
+    invoke-direct {v0, v1, v2, p1}, Lqi2;-><init>(JLjava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lxx4;)V
+    .locals 3
+    .annotation runtime Lxbf;
+    .end annotation
+
+    .line 17
+    new-instance v0, Lri2;
+
+    iget-wide v1, p1, Lxx4;->d:J
+
+    invoke-direct {v0, v1, v2}, Lri2;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lzdg;)V
+    .locals 4
+    .annotation runtime Lxbf;
+    .end annotation
+
+    .line 1
+    iget-wide v0, p1, Lzdg;->b:J
+
+    .line 2
+    iget-wide v2, p0, Lwi2;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance v0, Lti2;
+
+    .line 4
+    iget-wide v1, p1, Lzdg;->c:J
+
+    .line 5
+    invoke-direct {v0, v1, v2}, Lti2;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lwi2;->a(Lui2;)V
+
+    return-void
 .end method

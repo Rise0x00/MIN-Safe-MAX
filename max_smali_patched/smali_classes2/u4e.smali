@@ -1,134 +1,41 @@
-.class public final synthetic Lu4e;
-.super Ljava/lang/Object;
+.class public final Lu4e;
+.super Lbxb;
 .source "SourceFile"
-
-# interfaces
-.implements Lid4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lu4e;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public a:I
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final a()[B
+    .locals 2
 
-    iget v0, p0, Lu4e;->a:I
+    const/4 v0, 0x6
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    new-instance v0, Lone/me/webview/FaqWebViewWidget;
+    move-result-object v0
 
-    invoke-direct {v0}, Lone/me/webview/FaqWebViewWidget;-><init>()V
+    sget-object v1, Lfxf;->X:Lfxf;
 
-    return-object v0
+    iget-short v1, v1, Lfxf;->a:S
 
-    :pswitch_0
-    new-instance v0, Lone/me/webapp/settings/WebAppsSettingScreen;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0}, Lone/me/webapp/settings/WebAppsSettingScreen;-><init>()V
+    const/4 v1, 0x2
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    :pswitch_1
-    new-instance v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iget v1, p0, Lu4e;->a:I
 
-    invoke-direct {v0}, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;-><init>()V
+    int-to-short v1, v1
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    :pswitch_2
-    new-instance v1, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
-    const/4 v5, 0x2
-
-    const/4 v6, 0x0
-
-    sget-object v2, Lete;->c:Lete;
-
-    const-wide/16 v3, 0x0
-
-    invoke-direct/range {v1 .. v6}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lete;JILof4;)V
-
-    return-object v1
-
-    :pswitch_3
-    new-instance v2, Lone/me/stickerssettings/stickersscreen/StickersScreen;
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x0
-
-    sget-object v3, Lete;->b:Lete;
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct/range {v2 .. v7}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lete;JILof4;)V
-
-    return-object v2
-
-    :pswitch_4
-    new-instance v0, Lone/me/stickerssettings/StickersSettingsScreen;
-
-    invoke-direct {v0}, Lone/me/stickerssettings/StickersSettingsScreen;-><init>()V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_5
-    new-instance v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Llme;->c:Llme;
-
-    invoke-direct {v0, v1, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLlme;)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lone/me/startconversation/chat/PickChatMembers;
-
-    invoke-direct {v0}, Lone/me/startconversation/chat/PickChatMembers;-><init>()V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lone/me/startconversation/StartConversationScreen;
-
-    invoke-direct {v0}, Lone/me/startconversation/StartConversationScreen;-><init>()V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lone/me/settings/storage/ui/SettingsStorageScreen;
-
-    invoke-direct {v0}, Lone/me/settings/storage/ui/SettingsStorageScreen;-><init>()V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

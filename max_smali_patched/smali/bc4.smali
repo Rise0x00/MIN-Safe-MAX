@@ -1,74 +1,56 @@
 .class public final Lbc4;
-.super Lec4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lref;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lbc4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Lw75;)I
-    .locals 0
-
-    invoke-virtual {p1}, Lw75;->o()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final o()Ln77;
-    .locals 2
-
-    new-instance v0, Ln77;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Ln77;->a:I
-
-    iput-boolean v1, v0, Ln77;->b:Z
-
-    iput-boolean v1, v0, Ln77;->c:Z
-
-    return-object v0
-.end method
-
-.method public final declared-synchronized s(Lw75;I)Z
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    monitor-enter p0
+    iget v0, p0, Lbc4;->a:I
 
-    :try_start_0
-    invoke-static {p2}, Lqi0;->b(I)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_0
+    return-object v0
 
-    const/4 p1, 0x0
+    :pswitch_0
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    goto :goto_0
+    return-object v0
 
-    :cond_0
-    iget-object v0, p0, Lec4;->g:Lzi7;
+    :pswitch_1
+    sget-object v0, Ly0;->k:Ljava/lang/NullPointerException;
 
-    invoke-virtual {v0, p1, p2}, Lzi7;->e(Lw75;I)Z
+    invoke-static {v0}, Lgxi;->a(Ljava/lang/Exception;)Ltpe;
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    :goto_0
-    monitor-exit p0
+    return-object v0
 
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

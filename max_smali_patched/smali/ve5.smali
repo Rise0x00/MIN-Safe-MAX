@@ -1,38 +1,34 @@
-.class public final synthetic Lve5;
+.class public final Lve5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrx7;
+.implements Lye5;
 
 
 # instance fields
-.field public final synthetic a:Lhf5;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lux4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhf5;)V
+.method public constructor <init>(JJLjava/lang/String;Lux4;)V
     .locals 0
-
-    iput-object p1, p0, Lve5;->a:Lhf5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-wide p1, p0, Lve5;->a:J
 
+    iput-wide p3, p0, Lve5;->b:J
 
-# virtual methods
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+    iput-object p5, p0, Lve5;->c:Ljava/lang/String;
 
-    check-cast p1, Ltkb;
-
-    iget-object v0, p0, Lve5;->a:Lhf5;
-
-    iget-object v0, v0, Lhf5;->Y0:Lqkb;
-
-    invoke-interface {p1, v0}, Ltkb;->E(Lqkb;)V
+    iput-object p6, p0, Lve5;->d:Lux4;
 
     return-void
 .end method

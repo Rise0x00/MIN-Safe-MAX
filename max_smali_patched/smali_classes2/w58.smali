@@ -1,117 +1,94 @@
 .class public final Lw58;
-.super Ljava/lang/Object;
+.super Lfg6;
 .source "SourceFile"
 
-# interfaces
-.implements Lnwb;
 
+# instance fields
+.field public final f:Lmm0;
 
-# static fields
-.field public static final a:Lw58;
+.field public g:Lcu7;
+
+.field public final h:Landroid/media/MediaMetadataRetriever;
+
+.field public final i:I
+
+.field public volatile j:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lnmf;Lvf5;Lvs4;)V
     .locals 1
 
-    new-instance v0, Lw58;
+    invoke-direct {p0, p1, p2}, Lfg6;-><init>(Lnmf;Lvf5;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Lmm0;
 
-    sput-object v0, Lw58;->a:Lw58;
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lmm0;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lw58;->f:Lmm0;
+
+    new-instance p1, Landroid/media/MediaMetadataRetriever;
+
+    invoke-direct {p1}, Landroid/media/MediaMetadataRetriever;-><init>()V
+
+    iput-object p1, p0, Lw58;->h:Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {p3}, Lts4;->b()Lxs4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 p3, 0x1
+
+    if-eq p2, p3, :cond_1
+
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_0
+
+    const/16 p1, 0x14
+
+    iput p1, p0, Lw58;->i:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
 
     :cond_0
-    instance-of p1, p1, Lw58;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
-    if-nez p1, :cond_1
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v0, "unknown performance class "
 
-    return p1
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     :cond_1
-    return v0
-.end method
+    const/16 p1, 0xa
 
-.method public final getItemId()J
-    .locals 2
+    iput p1, p0, Lw58;->i:I
 
-    const/16 v0, 0x200
+    return-void
 
-    int-to-long v0, v0
+    :cond_2
+    const/4 p1, 0x5
 
-    return-wide v0
-.end method
+    iput p1, p0, Lw58;->i:I
 
-.method public final h(Lww7;)Z
-    .locals 4
-
-    const/16 v0, 0x200
-
-    int-to-long v0, v0
-
-    invoke-interface {p1}, Lww7;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x5adaf6c
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0x200
-
-    return v0
-.end method
-
-.method public final q(Lww7;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lw58;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "LogoutItem"
-
-    return-object v0
+    return-void
 .end method

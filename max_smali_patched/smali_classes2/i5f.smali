@@ -3,21 +3,41 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnwd;
+# static fields
+.field public static final c:Li5f;
 
-.field public final b:Lxg1;
+
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lxg1;Lnwd;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Li5f;
+
+    sget-object v1, Lna5;->a:Lna5;
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct {v0, v2, v3, v1}, Li5f;-><init>(JLjava/util/List;)V
+
+    sput-object v0, Li5f;->c:Li5f;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Li5f;->a:Lnwd;
+    iput-object p3, p0, Li5f;->a:Ljava/util/List;
 
-    iput-object p1, p0, Li5f;->b:Lxg1;
+    iput-wide p1, p0, Li5f;->b:J
 
     return-void
 .end method

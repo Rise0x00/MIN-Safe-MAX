@@ -1,19 +1,8 @@
-.class public Laie;
-.super Ljava/lang/UnsatisfiedLinkError;
+.class public interface abstract Laie;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p2}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
-
-    iput-object p1, p0, Laie;->a:Ljava/lang/String;
-
-    return-void
+# virtual methods
+.method public abstract setShapeAppearanceModel(Lphe;)V
 .end method

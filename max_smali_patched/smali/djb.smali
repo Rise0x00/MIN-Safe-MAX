@@ -1,95 +1,83 @@
 .class public final Ldjb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/Iterator;
+.implements Ltr7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/ui/pip/PipScreen;
+.field public final a:Lbjb;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lajb;)V
+    .locals 4
 
-    iput-object p1, p0, Ldjb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const/16 v0, 0x8
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v1, v0, [Ls4g;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    new-instance v3, Lu4g;
+
+    invoke-direct {v3, p0}, Lu4g;-><init>(Ldjb;)V
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lbjb;
+
+    invoke-direct {v0, p1, v1}, Lbjb;-><init>(Lajb;[Ls4g;)V
+
+    iput-object v0, p0, Ldjb;->a:Lbjb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final hasNext()Z
+    .locals 1
 
-    check-cast p1, Lm1b;
+    iget-object v0, p0, Ldjb;->a:Lbjb;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-boolean v0, v0, Lzib;->c:Z
 
-    invoke-virtual {p0, p1, p2}, Ldjb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldjb;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ldjb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ldjb;
+    iget-object v0, p0, Ldjb;->a:Lbjb;
 
-    iget-object v1, p0, Ldjb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
+    invoke-virtual {v0}, Lbjb;->next()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p2}, Ldjb;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Ldjb;->X:Ljava/lang/Object;
+    check-cast v0, Ljava/util/Map$Entry;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final remove()V
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Ldjb;->a:Lbjb;
 
-    iget-object p1, p0, Ldjb;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Lbjb;->remove()V
 
-    check-cast p1, Lm1b;
-
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Ltm7;
-
-    iget-object v0, p0, Ldjb;->Y:Lone/me/calls/ui/ui/pip/PipScreen;
-
-    iget-object v0, v0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvib;
-
-    iget-object v0, v0, Lvib;->c:Lsh1;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lsh1;->d(Lm1b;)V
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

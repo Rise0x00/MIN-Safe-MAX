@@ -1,268 +1,75 @@
-.class public final Lsda;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.class public abstract Lsda;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lxda;
-.implements Lss4;
-.implements Ltda;
-
-
-# instance fields
-.field public final X:Lb22;
-
-.field public final Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final a:Lxda;
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-.field public final o:Lied;
 
 
 # direct methods
-.method public constructor <init>(Lxda;JLied;)V
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Notification$Builder;
     .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Landroid/app/Notification$Builder;
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    invoke-direct {v0, p0, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lsda;->a:Lxda;
-
-    iput-wide p2, p0, Lsda;->b:J
-
-    iput-object v0, p0, Lsda;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p4, p0, Lsda;->o:Lied;
-
-    new-instance p1, Lb22;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Lb22;-><init>(I)V
-
-    iput-object p1, p0, Lsda;->X:Lb22;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lsda;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
+    return-object v0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final a(J)V
-    .locals 2
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBadgeIconType(I)Landroid/app/Notification$Builder;
 
-    const-wide v0, 0x7fffffffffffffffL
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lsda;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {p1}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    new-instance p1, Ljava/util/concurrent/TimeoutException;
-
-    iget-wide v0, p0, Lsda;->b:J
-
-    iget-object p2, p0, Lsda;->c:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {v0, v1, p2}, Lgc5;->e(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lsda;->a:Lxda;
-
-    invoke-interface {p2, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lsda;->o:Lied;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final b()V
-    .locals 4
+.method public static c(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+    .locals 0
 
-    const-wide v0, 0x7fffffffffffffffL
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColorized(Z)Landroid/app/Notification$Builder;
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+    move-result-object p0
 
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lsda;->X:Lb22;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lsda;->a:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    iget-object v0, p0, Lsda;->o:Lied;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final c(Lss4;)V
-    .locals 1
+.method public static d(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget-object v0, p0, Lsda;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setGroupAlertBehavior(I)Landroid/app/Notification$Builder;
 
-    invoke-static {v0, p1}, Lws4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 5
+.method public static e(Landroid/app/Notification$Builder;Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setSettingsText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    move-result-wide v0
+    move-result-object p0
 
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_1
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v2, v0
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lsda;->X:Lb22;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lss4;
-
-    invoke-interface {v1}, Lss4;->g()V
-
-    iget-object v1, p0, Lsda;->a:Lxda;
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    new-instance p1, Lvz5;
-
-    invoke-direct {p1, v2, v3, p0}, Lvz5;-><init>(JLtda;)V
-
-    iget-wide v1, p0, Lsda;->b:J
-
-    iget-object v3, p0, Lsda;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v4, p0, Lsda;->o:Lied;
-
-    invoke-virtual {v4, p1, v1, v2, v3}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p0
 .end method
 
-.method public final g()V
-    .locals 1
+.method public static f(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget-object v0, p0, Lsda;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setShortcutId(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    invoke-static {v0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    move-result-object p0
 
-    iget-object v0, p0, Lsda;->o:Lied;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public final h()Z
-    .locals 1
+.method public static g(Landroid/app/Notification$Builder;J)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget-object v0, p0, Lsda;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setTimeoutAfter(J)Landroid/app/Notification$Builder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v0
-
-    check-cast v0, Lss4;
-
-    invoke-static {v0}, Lws4;->b(Lss4;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lsda;->X:Lb22;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lsda;->a:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lsda;->o:Lied;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p0
 .end method

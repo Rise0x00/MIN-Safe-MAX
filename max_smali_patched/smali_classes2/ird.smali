@@ -1,68 +1,75 @@
-.class public final Lird;
-.super Landroid/view/View;
+.class public abstract synthetic Lird;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/text/Layout;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public b:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    iget-object v0, p0, Lird;->a:Landroid/text/Layout;
+    const/4 v0, 0x3
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lnx1;->y(I)[I
 
-    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    move-result-object v1
 
-    :cond_0
-    return-void
-.end method
+    array-length v1, v1
 
-.method public final onMeasure(II)V
-    .locals 1
+    new-array v1, v1, [I
 
-    iget-object p1, p0, Lird;->a:Landroid/text/Layout;
+    const/4 v2, 0x1
 
-    const/4 p2, 0x0
+    const/4 v3, 0x0
 
-    if-eqz p1, :cond_1
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1}, Landroid/text/Layout;->getLineCount()I
+    :catch_0
+    const/4 v4, 0x2
 
-    move-result v0
+    :try_start_1
+    aput v4, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-lez v0, :cond_0
+    :catch_1
+    :try_start_2
+    aput v0, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p1, p2}, Landroid/text/Layout;->getLineMax(I)F
+    :catch_2
+    sput-object v1, Lird;->$EnumSwitchMapping$0:[I
 
-    move-result p2
+    invoke-static {v4}, Lnx1;->y(I)[I
 
-    float-to-int p2, p2
+    move-result-object v0
 
-    goto :goto_0
+    array-length v0, v0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
+    new-array v0, v0, [I
 
-    move-result p2
+    :try_start_3
+    aput v2, v0, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    :goto_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+    :catch_3
+    :try_start_4
+    aput v4, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    move p1, p2
-
-    :goto_1
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
+    :catch_4
+    sput-object v0, Lird;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

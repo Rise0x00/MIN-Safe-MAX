@@ -1,79 +1,68 @@
-.class public final Lizc;
-.super Lii0;
+.class public final synthetic Lizc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic a:Lvd8;
+.field public final synthetic a:Llzc;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lvd8;)V
+.method public synthetic constructor <init>(Llzc;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lizc;->a:Lvd8;
+    iput-object p1, p0, Lizc;->a:Llzc;
+
+    iput p2, p0, Lizc;->b:I
+
+    iput p3, p0, Lizc;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lg0;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lizc;->a:Lvd8;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Lvd8;->h()Z
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lizc;->a:Llzc;
 
-    invoke-virtual {p1}, Lg0;->c()Ljava/lang/Throwable;
+    iget v1, v0, Llzc;->t0:I
 
-    move-result-object p1
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, p1}, Lvd8;->d(Ljava/lang/Throwable;)Z
+    if-eq v1, v2, :cond_0
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    iget v1, p0, Lizc;->c:I
 
-.method public final g(Landroid/graphics/Bitmap;)V
-    .locals 2
+    sub-int/2addr v1, p1
 
-    iget-object v0, p0, Lizc;->a:Lvd8;
+    const/4 v2, -0x1
 
-    invoke-virtual {v0}, Lvd8;->h()Z
+    iget v3, p0, Lizc;->b:I
 
-    move-result v1
+    invoke-virtual {v0, v3, v1, v2, p1}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    if-eqz v1, :cond_1
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    if-nez p1, :cond_2
-
-    invoke-virtual {v0}, Lvd8;->b()V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {v0, p1}, Lvd8;->a(Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method

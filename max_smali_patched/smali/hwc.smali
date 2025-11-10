@@ -1,157 +1,193 @@
-.class public final enum Lhwc;
-.super Ljava/lang/Enum;
+.class public abstract Lhwc;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lhwc;
+# instance fields
+.field public final F0:Lfoa;
 
-.field public static final enum Y:Lhwc;
+.field public G0:I
 
-.field public static final enum Z:Lhwc;
-
-.field public static final enum a:Lhwc;
-
-.field public static final enum b:Lhwc;
-
-.field public static final enum c:Lhwc;
-
-.field public static final enum o:Lhwc;
-
-.field public static final enum w0:Lhwc;
-
-.field public static final enum x0:Lhwc;
-
-.field public static final synthetic y0:[Lhwc;
+.field public final H0:Lbj8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 3
 
-    new-instance v0, Lhwc;
+    invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const-string v1, "CONFIGURING"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lhwc;->a:Lhwc;
-
-    new-instance v1, Lhwc;
-
-    const-string v2, "PENDING_RECORDING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lhwc;->b:Lhwc;
-
-    new-instance v2, Lhwc;
-
-    const-string v3, "PENDING_PAUSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lhwc;->c:Lhwc;
-
-    new-instance v3, Lhwc;
-
-    const-string v4, "IDLING"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lhwc;->o:Lhwc;
-
-    new-instance v4, Lhwc;
-
-    const-string v5, "RECORDING"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lhwc;->X:Lhwc;
-
-    new-instance v5, Lhwc;
-
-    const-string v6, "PAUSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lhwc;->Y:Lhwc;
-
-    new-instance v6, Lhwc;
-
-    const-string v7, "STOPPING"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lhwc;->Z:Lhwc;
-
-    new-instance v7, Lhwc;
-
-    const-string v8, "RESETTING"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lhwc;->w0:Lhwc;
-
-    new-instance v8, Lhwc;
-
-    const-string v9, "ERROR"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lhwc;->x0:Lhwc;
-
-    filled-new-array/range {v0 .. v8}, [Lhwc;
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    sput-object v0, Lhwc;->y0:[Lhwc;
+    sget v1, Lnqc;->material_radial_view_group:I
+
+    invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    new-instance v0, Lbj8;
+
+    invoke-direct {v0}, Lbj8;-><init>()V
+
+    iput-object v0, p0, Lhwc;->H0:Lbj8;
+
+    new-instance v1, Lg9d;
+
+    const/high16 v2, 0x3f000000    # 0.5f
+
+    invoke-direct {v1, v2}, Lg9d;-><init>(F)V
+
+    iget-object v2, v0, Lbj8;->a:Laj8;
+
+    iget-object v2, v2, Laj8;->a:Lphe;
+
+    invoke-virtual {v2}, Lphe;->e()Lbph;
+
+    move-result-object v2
+
+    iput-object v1, v2, Lbph;->e:Ljava/lang/Object;
+
+    iput-object v1, v2, Lbph;->f:Ljava/lang/Object;
+
+    iput-object v1, v2, Lbph;->g:Ljava/lang/Object;
+
+    iput-object v1, v2, Lbph;->h:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Lbph;->g()Lphe;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lbj8;->setShapeAppearanceModel(Lphe;)V
+
+    iget-object v0, p0, Lhwc;->H0:Lbj8;
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lbj8;->k(Landroid/content/res/ColorStateList;)V
+
+    iget-object v0, p0, Lhwc;->H0:Lbj8;
+
+    sget-object v1, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v0, Ldvc;->RadialViewGroup:[I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget p2, Ldvc;->RadialViewGroup_materialCircleRadius:I
+
+    invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result p2
+
+    iput p2, p0, Lhwc;->G0:I
+
+    new-instance p2, Lfoa;
+
+    const/16 p3, 0xb
+
+    invoke-direct {p2, p3, p0}, Lfoa;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lhwc;->F0:Lfoa;
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhwc;
-    .locals 1
 
-    const-class v0, Lhwc;
+# virtual methods
+.method public final addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    check-cast p0, Lhwc;
+    move-result p2
 
-    return-object p0
+    const/4 p3, -0x1
+
+    if-ne p2, p3, :cond_0
+
+    sget-object p2, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {}, Landroid/view/View;->generateViewId()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, p0, Lhwc;->F0:Lfoa;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
 .end method
 
-.method public static values()[Lhwc;
+.method public final onFinishInflate()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
+
+    invoke-virtual {p0}, Lhwc;->v()V
+
+    return-void
+.end method
+
+.method public final onViewRemoved(Landroid/view/View;)V
     .locals 1
 
-    sget-object v0, Lhwc;->y0:[Lhwc;
+    invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->onViewRemoved(Landroid/view/View;)V
 
-    invoke-virtual {v0}, [Lhwc;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lhwc;
+    if-eqz p1, :cond_0
 
-    return-object v0
+    iget-object v0, p0, Lhwc;->F0:Lfoa;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setBackgroundColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lhwc;->H0:Lbj8;
+
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lbj8;->k(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public abstract v()V
 .end method

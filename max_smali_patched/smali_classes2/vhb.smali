@@ -1,78 +1,78 @@
 .class public final Lvhb;
-.super Lxl;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loaf;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final o:Z
+.field public final synthetic a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
+
+.field public final synthetic b:Landroid/widget/LinearLayout;
+
+.field public final synthetic c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public constructor <init>(Lone/me/sdk/permissionhost/PermissionBottomSheet;Landroid/widget/LinearLayout;Lone/me/sdk/permissionhost/PermissionBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p3, p0, Lvhb;->o:Z
+    iput-object p1, p0, Lvhb;->a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
+
+    iput-object p2, p0, Lvhb;->b:Landroid/widget/LinearLayout;
+
+    iput-object p3, p0, Lvhb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ll9f;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
-    return-void
-.end method
+    iget-object p1, p0, Lvhb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-.method public final e(Lv8f;)V
-    .locals 4
+    iget-object v0, p0, Lvhb;->a:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    iget-object v0, p0, Lxl;->c:Lyl;
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    iput-boolean v1, v0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->K0:Z
 
-    goto :goto_0
+    iget-object v0, p0, Lvhb;->b:Landroid/widget/LinearLayout;
 
-    :cond_0
-    const/4 v0, 0x0
+    :try_start_0
+    new-instance v2, Landroid/content/Intent;
 
-    :goto_0
-    invoke-virtual {v0}, Lyl;->b()Lov0;
+    const-string v3, "android.settings.APPLICATION_DETAILS_SETTINGS"
+
+    const-string v4, "package"
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    new-instance v1, Laj0;
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    iget-wide v2, p0, Lxl;->a:J
+    move-result-object v0
 
-    invoke-direct {v1, v2, v3, p1}, Laj0;-><init>(JLv8f;)V
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v1}, Lov0;->c(Ljava/lang/Object;)V
+    invoke-static {v4, v0, v5}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {p1, v2}, Lc24;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    invoke-virtual {p1, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
 
     return-void
-.end method
-
-.method public final i()Li9f;
-    .locals 3
-
-    new-instance v0, Ll38;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v1, v2}, Ll38;-><init>(Ln0b;I)V
-
-    const-string v1, "interactive"
-
-    iget-boolean v2, p0, Lvhb;->o:Z
-
-    invoke-virtual {v0, v1, v2}, Li9f;->e(Ljava/lang/String;Z)V
-
-    return-object v0
 .end method

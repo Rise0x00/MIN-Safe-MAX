@@ -2,170 +2,148 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj1e;
-
 
 # instance fields
-.field public final a:Llef;
+.field public final a:Lec0;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lkc5;
+
+.field public final d:Ld3g;
+
+.field public final e:Lj4g;
 
 
 # direct methods
-.method public constructor <init>(Llef;)V
+.method public constructor <init>(Lec0;Ljava/lang/String;Lkc5;Ld3g;Lj4g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg4g;->a:Llef;
+    iput-object p1, p0, Lg4g;->a:Lec0;
+
+    iput-object p2, p0, Lg4g;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lg4g;->c:Lkc5;
+
+    iput-object p4, p0, Lg4g;->d:Ld3g;
+
+    iput-object p5, p0, Lg4g;->e:Lj4g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loef;
-    .locals 1
+.method public final a(Lda0;)V
+    .locals 7
 
-    const/4 v0, 0x0
+    new-instance v0, Ljnf;
 
-    return-object v0
-.end method
+    const/16 v1, 0x1b
 
-.method public final b()Lz0e;
-    .locals 1
+    invoke-direct {v0, v1}, Ljnf;-><init>(I)V
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lg4g;->e:Lj4g;
 
-    return-object v0
-.end method
+    iget-object v2, v1, Lj4g;->c:Lfpd;
 
-.method public final c()Loef;
-    .locals 1
+    iget-object v3, p1, Lda0;->b:Lzyb;
 
-    const/4 v0, 0x0
+    invoke-static {}, Lec0;->a()Ldph;
 
-    return-object v0
-.end method
+    move-result-object v4
 
-.method public final d()Lg1e;
-    .locals 1
+    iget-object v5, p0, Lg4g;->a:Lec0;
 
-    sget-object v0, La1e;->a:La1e;
+    iget-object v6, v5, Lec0;->a:Ljava/lang/String;
 
-    return-object v0
-.end method
+    invoke-virtual {v4, v6}, Ldph;->v(Ljava/lang/String;)V
 
-.method public final e()Llp7;
-    .locals 1
+    iput-object v3, v4, Ldph;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    iget-object v3, v5, Lec0;->b:[B
 
-    return-object v0
-.end method
+    iput-object v3, v4, Ldph;->b:Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {v4}, Ldph;->c()Lec0;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v3
 
-    goto :goto_1
+    new-instance v4, Lqr9;
 
-    :cond_0
-    instance-of v0, p1, Lg4g;
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_1
+    new-instance v5, Ljava/util/HashMap;
 
-    goto :goto_0
+    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    :cond_1
-    check-cast p1, Lg4g;
+    iput-object v5, v4, Lqr9;->f:Ljava/lang/Object;
 
-    iget-object v0, p0, Lg4g;->a:Llef;
+    iget-object v5, v1, Lj4g;->a:Ld93;
 
-    iget-object p1, p1, Lg4g;->a:Llef;
+    invoke-interface {v5}, Ld93;->getTime()J
 
-    invoke-virtual {v0, p1}, Llef;->equals(Ljava/lang/Object;)Z
+    move-result-wide v5
 
-    move-result p1
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-nez p1, :cond_2
+    move-result-object v5
 
-    :goto_0
+    iput-object v5, v4, Lqr9;->d:Ljava/lang/Object;
+
+    iget-object v1, v1, Lj4g;->b:Ld93;
+
+    invoke-interface {v1}, Ld93;->getTime()J
+
+    move-result-wide v5
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iput-object v1, v4, Lqr9;->e:Ljava/lang/Object;
+
+    iget-object v1, p0, Lg4g;->b:Ljava/lang/String;
+
+    iput-object v1, v4, Lqr9;->a:Ljava/lang/Object;
+
+    new-instance v1, Ljb5;
+
+    iget-object p1, p1, Lda0;->a:Ljava/lang/Object;
+
+    iget-object v5, p0, Lg4g;->d:Ld3g;
+
+    invoke-interface {v5, p1}, Ld3g;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [B
+
+    iget-object v5, p0, Lg4g;->c:Lkc5;
+
+    invoke-direct {v1, v5, p1}, Ljb5;-><init>(Lkc5;[B)V
+
+    iput-object v1, v4, Lqr9;->c:Ljava/lang/Object;
+
     const/4 p1, 0x0
 
-    return p1
+    iput-object p1, v4, Lqr9;->b:Ljava/lang/Object;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {v4}, Lqr9;->c()Lea0;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final getItemId()J
-    .locals 2
+    check-cast v2, Lqm4;
 
-    const-wide/high16 v0, -0x8000000000000000L
+    iget-object v1, v2, Lqm4;->b:Ljava/util/concurrent/Executor;
 
-    return-wide v0
-.end method
+    new-instance v4, Lhj;
 
-.method public final getTitle()Loef;
-    .locals 1
+    invoke-direct {v4, v2, v3, v0, p1}, Lhj;-><init>(Lqm4;Lec0;Ljnf;Lea0;)V
 
-    iget-object v0, p0, Lg4g;->a:Llef;
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lg4g;->a:Llef;
-
-    invoke-virtual {v0}, Llef;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lxja;->P0:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UserInWaitingMore(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg4g;->a:Llef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

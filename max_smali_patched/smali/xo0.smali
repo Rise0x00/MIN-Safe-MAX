@@ -1,27 +1,55 @@
 .class public final Lxo0;
-.super Ljava/lang/Object;
+.super Lbf4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Bitmap;
+.field public final synthetic X:Lyo0;
 
-.field public final b:Lkc6;
-
-.field public final c:Lsn3;
+.field public o:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Lkc6;Lsn3;)V
-    .locals 0
+.method public constructor <init>(Lyo0;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lxo0;->a:Landroid/graphics/Bitmap;
+    invoke-direct {p0, v0}, Lqy;-><init>(I)V
 
-    iput-object p2, p0, Lxo0;->b:Lkc6;
+    iput-object p1, p0, Lxo0;->X:Lyo0;
 
-    iput-object p3, p0, Lxo0;->c:Lsn3;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final w()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lxo0;->o:Landroid/graphics/Bitmap;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqy;->b:I
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lbf4;->c:J
+
+    iput-boolean v0, p0, Lbf4;->d:Z
+
+    return-void
+.end method
+
+.method public final x()V
+    .locals 1
+
+    iget-object v0, p0, Lxo0;->X:Lyo0;
+
+    invoke-virtual {v0, p0}, Lupe;->m(Lbf4;)V
 
     return-void
 .end method

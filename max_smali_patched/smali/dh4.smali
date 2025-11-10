@@ -1,19 +1,28 @@
-.class public final Ldh4;
-.super Lr6d;
+.class public abstract Ldh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final o:Lv9g;
-
-
 # direct methods
-.method public constructor <init>(Landroid/media/MediaCodecInfo;Lt76;Lv9g;)V
-    .locals 0
+.method public static a(Landroid/media/AudioTrack;Ljub;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lr6d;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object p1, p1, Ljub;->a:Liub;
 
-    iput-object p3, p0, Ldh4;->o:Lv9g;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    iget-object p1, p1, Liub;->a:Landroid/media/metrics/LogSessionId;
+
+    invoke-static {}, Lgu8;->f()Landroid/media/metrics/LogSessionId;
+
+    invoke-static {p1}, Lgu8;->z(Landroid/media/metrics/LogSessionId;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p0, p1}, La04;->q(Landroid/media/AudioTrack;Landroid/media/metrics/LogSessionId;)V
+
+    :cond_0
     return-void
 .end method

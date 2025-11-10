@@ -1,45 +1,45 @@
 .class public final Ld46;
-.super Ljava/lang/Object;
+.super Le46;
 .source "SourceFile"
 
-# interfaces
-.implements Lbxc;
+
+# instance fields
+.field public final synthetic a:[Ljava/lang/Iterable;
+
+
+# direct methods
+.method public constructor <init>([Ljava/lang/Iterable;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld46;->a:[Ljava/lang/Iterable;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/view/MotionEvent;)V
-    .locals 0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    return-void
-.end method
+    new-instance v0, Lc46;
 
-.method public final c(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
-    .locals 1
+    iget-object v1, p0, Ld46;->a:[Ljava/lang/Iterable;
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    array-length v1, v1
 
-    move-result p2
+    invoke-direct {v0, p0, v1}, Lc46;-><init>(Ld46;I)V
 
-    const/4 v0, 0x2
+    new-instance v1, Lmn7;
 
-    if-ne p2, v0, :cond_0
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    sget-object v2, Lln7;->o:Lln7;
 
-    move-result-object p1
+    iput-object v2, v1, Lmn7;->b:Ljava/util/Iterator;
 
-    const/4 p2, 0x1
+    iput-object v0, v1, Lmn7;->c:Ljava/util/Iterator;
 
-    invoke-interface {p1, p2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(Z)V
-    .locals 0
-
-    return-void
+    return-object v1
 .end method

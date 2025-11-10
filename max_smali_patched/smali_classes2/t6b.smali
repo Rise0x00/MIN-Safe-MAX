@@ -1,27 +1,19 @@
 .class public final Lt6b;
-.super Li9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final o:Lt6b;
+# instance fields
+.field public final synthetic a:Lv6b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lv6b;)V
+    .locals 0
 
-    new-instance v0, Lt6b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
-
-    const/16 v2, 0x9
-
-    const-string v3, "strokeLineCap"
-
-    invoke-direct {v0, v3, v2, v1}, Li9f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sput-object v0, Lt6b;->o:Lt6b;
+    iput-object p1, p0, Lt6b;->a:Lv6b;
 
     return-void
 .end method

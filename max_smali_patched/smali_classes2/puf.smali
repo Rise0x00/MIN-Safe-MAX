@@ -1,48 +1,64 @@
 .class public final Lpuf;
-.super Lnz3;
+.super Lm7d;
+.source "SourceFile"
+
+# interfaces
+.implements Lznf;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ldoa;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final E0:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    iput-object p1, p0, Lpuf;->Y:Ldoa;
+    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-object v0, p1
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
+
+    iput-object v0, p0, Lpuf;->E0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lon4;->e0:Lon4;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v0, Lvnf;->a0:Ltif;
+
+    invoke-static {p1}, Lri7;->o(Landroid/content/Context;)Lvnf;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-virtual {p0, p1}, Lpuf;->k(Lvnf;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final k(Lvnf;)V
     .locals 1
 
-    iput-object p1, p0, Lpuf;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lpuf;->E0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget p1, p0, Lpuf;->X:I
+    iget p1, p1, Lvnf;->F:I
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lpuf;->X:I
-
-    iget-object p1, p0, Lpuf;->Y:Ldoa;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

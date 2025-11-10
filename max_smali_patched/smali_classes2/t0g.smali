@@ -3,114 +3,165 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final a:Lt0g;
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lbp7;
-
-.field public final e:Lbp7;
-
-.field public final f:Lbp7;
-
-.field public final g:Lbp7;
-
-.field public final h:Lbp7;
-
-.field public final i:Lbp7;
-
-.field public final j:Lbp7;
-
-.field public final k:Lbp7;
+.field public static volatile b:Ls0g;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lt0g;
 
-    iput-object p1, p0, Lt0g;->a:Lbp7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lt0g;->b:Lbp7;
+    sput-object v0, Lt0g;->a:Lt0g;
 
-    iput-object p3, p0, Lt0g;->c:Lbp7;
+    sget-object v0, Lpai;->X:Lpai;
 
-    iput-object p4, p0, Lt0g;->d:Lbp7;
-
-    iput-object p5, p0, Lt0g;->e:Lbp7;
-
-    iput-object p6, p0, Lt0g;->f:Lbp7;
-
-    iput-object p7, p0, Lt0g;->g:Lbp7;
-
-    iput-object p8, p0, Lt0g;->h:Lbp7;
-
-    iput-object p9, p0, Lt0g;->i:Lbp7;
-
-    iput-object p10, p0, Lt0g;->j:Lbp7;
-
-    iput-object p11, p0, Lt0g;->k:Lbp7;
+    sput-object v0, Lt0g;->b:Ls0g;
 
     return-void
 .end method
 
+.method public static varargs a(Ljava/lang/String;J[Lvcb;)V
+    .locals 9
 
-# virtual methods
-.method public final a(ZZLm3f;)Ljava/lang/Object;
-    .locals 3
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v0, p0, Lt0g;->d:Lbp7;
+    sget-object v1, Ljbg;->$EnumSwitchMapping$0:[I
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lktd;
-
-    check-cast v0, Lgjd;
-
-    invoke-virtual {v0}, Lgjd;->t()Z
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    aget v0, v1, v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :pswitch_0
+    const-string v0, "d"
+
+    :goto_0
+    move-object v7, v0
+
+    goto :goto_1
+
+    :pswitch_1
+    const-string v0, "h"
 
     goto :goto_0
 
+    :pswitch_2
+    const-string v0, "min"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v0, "s"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v0, "ms"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v0, "us"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v0, "ns"
+
+    goto :goto_0
+
+    :goto_1
+    array-length v0, p3
+
+    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Lvcb;
+
+    invoke-static {p3}, Lyg8;->h([Lvcb;)Ljava/util/Map;
+
+    move-result-object v8
+
+    sget-object p3, Lt0g;->b:Ls0g;
+
+    sget-object v0, Lpai;->X:Lpai;
+
+    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
     :cond_0
-    iget-object v0, p0, Lt0g;->f:Lbp7;
+    sget-object v0, Li0e;->X:Li0e;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p3
 
-    check-cast v0, Ldh7;
+    if-eqz p3, :cond_1
 
-    iget-object v0, v0, Ldh7;->a:Ly24;
-
-    new-instance v1, Ls0g;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, p2, p0, v2}, Ls0g;-><init>(ZZLt0g;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p3}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_1
-
-    return-object p1
+    return-void
 
     :cond_1
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance v1, Lrgb;
 
-    return-object p1
+    sget-wide v2, Lcxb;->a:J
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+
+    move-result-wide v4
+
+    add-long/2addr v4, v2
+
+    sget-wide v2, Lcxb;->b:J
+
+    sub-long v2, v4, v2
+
+    move-object v4, p0
+
+    move-wide v5, p1
+
+    invoke-direct/range {v1 .. v8}, Lrgb;-><init>(JLjava/lang/String;JLjava/lang/String;Ljava/util/Map;)V
+
+    new-instance p0, Ldke;
+
+    const/16 p1, 0x15
+
+    invoke-direct {p0, p1, v1}, Ldke;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p0}, Lw0g;->a(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

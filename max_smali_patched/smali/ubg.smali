@@ -1,58 +1,73 @@
-.class public final synthetic Lubg;
+.class public final Lubg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lw44;
+.implements Lx44;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lvbg;
+# static fields
+.field public static final a:Lubg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvbg;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lubg;->a:I
+    new-instance v0, Lubg;
 
-    iput-object p1, p0, Lubg;->b:Lvbg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lubg;->a:Lubg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final fold(Ljava/lang/Object;Lej6;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lubg;->a:I
+    invoke-interface {p2, p1, p0}, Lej6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lubg;->b:Lvbg;
+    return-object p1
+.end method
 
-    invoke-static {v0}, Lvbg;->a(Lvbg;)V
+.method public final get(Lx44;)Lw44;
+    .locals 0
 
-    return-void
+    invoke-static {p0, p1}, Lewi;->b(Lw44;Lx44;)Lw44;
 
-    :pswitch_0
-    iget-object v0, p0, Lubg;->b:Lvbg;
+    move-result-object p1
 
-    iget-object v0, v0, Lvbg;->w0:Lbqb;
+    return-object p1
+.end method
 
-    const/4 v1, 0x0
+.method public final getKey()Lx44;
+    .locals 0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    return-object p0
+.end method
 
-    return-void
+.method public final minusKey(Lx44;)Ly44;
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p0, p1}, Lewi;->c(Lw44;Lx44;)Ly44;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final plus(Ly44;)Ly44;
+    .locals 0
+
+    invoke-static {p0, p1}, Lqvi;->c(Ly44;Ly44;)Ly44;
+
+    move-result-object p1
+
+    return-object p1
 .end method

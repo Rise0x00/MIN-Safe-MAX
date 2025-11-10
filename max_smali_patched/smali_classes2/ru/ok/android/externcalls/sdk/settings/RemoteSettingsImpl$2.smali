@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmf6;
+.implements Lfj6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiService;Lpmc;)V
+    value = Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;-><init>(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lcwc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lmf6;"
+        "Lfj6;"
     }
 .end annotation
 
@@ -37,10 +37,10 @@
         "",
         "kotlin.jvm.PlatformType",
         "keys",
-        "Lffe;",
+        "Lure;",
         "",
         "apply",
-        "(Ljava/util/Set;)Lffe;",
+        "(Ljava/util/Set;)Lure;",
         "<anonymous>"
     }
     k = 0x3
@@ -69,7 +69,20 @@
 
 
 # virtual methods
-.method public final apply(Ljava/util/Set;)Lffe;
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    check-cast p1, Ljava/util/Set;
+
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->apply(Ljava/util/Set;)Lure;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final apply(Ljava/util/Set;)Lure;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,14 +90,14 @@
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;)",
-            "Lffe;"
+            "Lure;"
         }
     .end annotation
 
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lpmc;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getLog$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lcwc;
 
     move-result-object v0
 
@@ -102,29 +115,16 @@
 
     const-string v2, "RemoteSettings"
 
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->this$0:Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getOkApiService$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lru/ok/android/externcalls/sdk/api/OkApiService;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;->access$getOkApiService$p(Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl;)Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiService;->getSettings(Ljava/util/Set;)Lude;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    check-cast p1, Ljava/util/Set;
-
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$2;->apply(Ljava/util/Set;)Lffe;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getSettings(Ljava/util/Set;)Ljqe;
 
     move-result-object p1
 

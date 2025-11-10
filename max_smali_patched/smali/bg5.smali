@@ -1,23 +1,32 @@
-.class public final Lbg5;
+.class public interface abstract Lbg5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lunf;
+# virtual methods
+.method public abstract a(Lldd;)Lfve;
+.end method
 
-.field public final b:[I
+.method public abstract b()V
+.end method
 
+.method public abstract c(Lxbd;J)Ljse;
+.end method
 
-# direct methods
-.method public constructor <init>(ILunf;[I)V
-    .locals 0
+.method public abstract cancel()V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract d(Lldd;)J
+.end method
 
-    iput-object p2, p0, Lbg5;->a:Lunf;
+.method public abstract e(Z)Lkdd;
+.end method
 
-    iput-object p3, p0, Lbg5;->b:[I
+.method public abstract f()Ls0d;
+.end method
 
-    return-void
+.method public abstract g(Lxbd;)V
+.end method
+
+.method public abstract h()V
 .end method

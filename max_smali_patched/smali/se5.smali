@@ -1,70 +1,64 @@
-.class public final synthetic Lse5;
+.class public final Lse5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrx7;
+.implements Lye5;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ldkb;
-
-.field public final synthetic c:I
+# static fields
+.field public static final a:Lse5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldkb;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lse5;->a:I
+    new-instance v0, Lse5;
 
-    iput-object p1, p0, Lse5;->b:Ldkb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lse5;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lse5;->a:Lse5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lse5;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Ltkb;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object v0, p0, Lse5;->b:Ldkb;
+    :cond_0
+    instance-of p1, p1, Lse5;
 
-    iget-boolean v0, v0, Ldkb;->l:Z
+    if-nez p1, :cond_1
 
-    iget v1, p0, Lse5;->c:I
+    const/4 p1, 0x0
 
-    invoke-interface {p1, v1, v0}, Ltkb;->i(IZ)V
+    return p1
 
-    return-void
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lse5;->b:Ldkb;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v0, Ldkb;->a:Llif;
+    const v0, -0x78153065
 
-    iget v0, p0, Lse5;->c:I
+    return v0
+.end method
 
-    invoke-interface {p1, v0}, Ltkb;->y(I)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
+    const-string v0, "RequestStoragePermission"
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

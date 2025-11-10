@@ -1,97 +1,122 @@
 .class public final Le59;
-.super Landroid/text/style/ClickableSpan;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lb59;
+.field public final synthetic X:J
 
-.field public b:I
-
-.field public c:Lnv7;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lb59;I)V
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-wide p1, p0, Le59;->X:J
 
-    iput-object p1, p0, Le59;->a:Lb59;
+    const/4 p1, 0x2
 
-    iput p2, p0, Le59;->b:I
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lmr3;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Le59;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Le59;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Le59;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Le59;
+
+    iget-wide v1, p0, Le59;->X:J
+
+    invoke-direct {v0, v1, v2, p2}, Le59;-><init>(JLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Le59;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    iget-object v0, p0, Le59;->c:Lnv7;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_2
+    iget-object p1, p0, Le59;->o:Ljava/lang/Object;
 
-    iget-object v0, v0, Lnv7;->a:Lov7;
+    check-cast p1, Lmr3;
 
-    iget-object v1, v0, Lov7;->o:Lc7;
+    new-instance v0, Lpob;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p1}, Lmr3;->p()J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    iget-wide v4, v1, Lc7;->a:J
+    invoke-virtual {p1}, Lmr3;->e()Ljava/lang/String;
 
-    sub-long v4, v2, v4
+    move-result-object v1
 
-    const-wide/16 v6, 0x12c
+    const-string v2, ""
 
-    cmp-long v4, v4, v6
+    if-nez v1, :cond_0
 
-    if-lez v4, :cond_2
-
-    iput-wide v2, v1, Lc7;->a:J
-
-    iget-object v0, v0, Lov7;->a:Llv7;
-
-    if-nez v0, :cond_1
-
-    instance-of v0, p1, Llv7;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Llv7;
+    move-object v6, v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move-object v6, v1
+
+    :goto_0
+    sget-object v1, Lhl0;->a:Lhl0;
+
+    invoke-virtual {p1, v1}, Lmr3;->r(Lhl0;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    move-object v7, v2
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
+    move-object v7, v1
 
-    iget-object p1, p0, Le59;->a:Lb59;
+    :goto_1
+    invoke-virtual {p1}, Lmr3;->o()Ljava/lang/CharSequence;
 
-    invoke-interface {v0, p1}, Llv7;->a(Lb59;)V
+    move-result-object v5
 
-    :cond_2
-    return-void
-.end method
+    iget-wide v1, p0, Le59;->X:J
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    invoke-direct/range {v0 .. v7}, Lpob;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, p0, Le59;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
-
-    return-void
+    return-object v0
 .end method

@@ -138,7 +138,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingInfo;->url:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -151,7 +151,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingInfo;->initiatorId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

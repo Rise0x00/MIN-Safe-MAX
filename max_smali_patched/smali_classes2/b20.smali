@@ -1,96 +1,125 @@
-.class public final synthetic Lb20;
+.class public final Lb20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
-
-    iput p1, p0, Lb20;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lb20;->a:Ljava/lang/String;
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
+    iput-boolean p2, p0, Lb20;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lb20;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lb20;
+
+    iget-object v1, p0, Lb20;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lb20;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lb20;->b:Z
+
+    iget-boolean p1, p1, Lb20;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget p1, p0, Lb20;->a:I
+    iget-object v0, p0, Lb20;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    packed-switch p1, :pswitch_data_0
+    move-result v0
 
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    mul-int/lit8 v0, v0, 0x1f
 
-    :pswitch_0
-    return-void
+    iget-boolean v1, p0, Lb20;->b:Z
 
-    :pswitch_1
-    sget-object p1, Lone/me/keyboardmedia/MediaKeyboardWidget;->G0:[Ltm7;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    sget-object p1, Lln7;->c:Lln7;
+    move-result v1
 
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    add-int/2addr v1, v0
 
-    move-result-object p1
+    return v1
+.end method
 
-    const-string v1, ":stickers/settings"
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p1, v1, v0}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, "PreviewCacheKey(attachId="
 
-    :pswitch_2
-    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->F0:[Ltm7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Ln81;->c:Ln81;
+    iget-object v1, p0, Lb20;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", blurred="
 
-    const-string v1, ":call-contact"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1, v0}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    iget-boolean v1, p0, Lb20;->b:Z
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :pswitch_3
-    sget p1, Lru/ok/messages/media/audio/AudioListenView;->G0:I
+    const-string v1, ")"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_4
-    sget p1, Lru/ok/messages/media/attaches/AudioAttachView;->A0:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

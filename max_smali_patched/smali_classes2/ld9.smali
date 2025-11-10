@@ -1,113 +1,67 @@
-.class public interface abstract Lld9;
+.class public abstract synthetic Lld9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()Ljava/util/List;
-.end method
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.method public d(J)Lone/me/messages/list/loader/MessageModel;
-    .locals 4
 
-    invoke-interface {p0}, Lld9;->b()Ljava/util/List;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {}, Lkd9;->values()[Lkd9;
 
     move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    array-length v0, v0
 
-    move-result v1
+    new-array v0, v0, [I
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v2, v2, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    cmp-long v2, v2, p1
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
-
-    return-object v1
-.end method
-
-.method public g(J)I
-    .locals 6
-
-    invoke-interface {p0}, Lld9;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-static {v2, v1}, Lf93;->S(II)V
-
-    add-int/lit8 v1, v1, -0x1
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    :goto_0
-    if-gt v2, v1, :cond_1
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    add-int v3, v2, v1
+    :catch_0
+    const/4 v2, 0x2
 
-    ushr-int/lit8 v3, v3, 0x1
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :catch_1
+    const/4 v1, 0x3
 
-    move-result-object v4
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast v4, Lone/me/messages/list/loader/MessageModel;
+    :catch_2
+    const/4 v2, 0x4
 
-    iget-wide v4, v4, Lone/me/messages/list/loader/MessageModel;->c:J
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-static {v4, v5, p1, p2}, Lsx9;->l(JJ)I
+    :catch_3
+    const/4 v1, 0x5
 
-    move-result v4
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    if-gez v4, :cond_0
+    :catch_4
+    sput-object v0, Lld9;->$EnumSwitchMapping$0:[I
 
-    add-int/lit8 v2, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-lez v4, :cond_2
-
-    add-int/lit8 v1, v3, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    neg-int v3, v2
-
-    :cond_2
-    return v3
+    return-void
 .end method

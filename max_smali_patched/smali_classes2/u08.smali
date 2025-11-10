@@ -1,48 +1,44 @@
-.class public final Lu08;
-.super Lnz3;
+.class public final synthetic Lu08;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls08;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lz08;
 
-.field public final synthetic Y:Lca3;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lca3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lz08;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lu08;->Y:Lca3;
+    iput-object p1, p0, Lu08;->a:Lz08;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lu08;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public b(Landroid/view/View;Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Lu08;->o:Ljava/lang/Object;
+    sget-object v0, La18;->X:La18;
 
-    iget p1, p0, Lu08;->X:I
+    iget-object v1, p0, Lu08;->b:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast v1, Landroid/text/style/ClickableSpan;
 
-    or-int/2addr p1, v0
+    iget-object v2, p0, Lu08;->a:Lz08;
 
-    iput p1, p0, Lu08;->X:I
+    invoke-virtual {v2, p1, p2, v0, v1}, Lz08;->b(Landroid/view/View;Ljava/lang/String;La18;Landroid/text/style/ClickableSpan;)V
 
-    iget-object p1, p0, Lu08;->Y:Lca3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lca3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

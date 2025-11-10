@@ -1,48 +1,62 @@
 .class public final Lnc9;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg68;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lg68;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lnc9;->Y:Lg68;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lrc9;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnc9;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lnc9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lnc9;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lnc9;->X:I
+    invoke-static {v0}, Lnx1;->v(I)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lnc9;->X:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Lnc9;->Y:Lg68;
+    const-string v0, "MICROPHONE"
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0, p0}, Lg68;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v2, "Alternate(iconType="
 
-    move-result-object p1
+    invoke-static {v2, v0, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

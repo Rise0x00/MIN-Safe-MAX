@@ -1,16 +1,80 @@
-.class public abstract Lngc;
+.class public final synthetic Lngc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static cancel:I = 0x7f0a0236
+# instance fields
+.field public final synthetic a:I
 
-.field public static music_player_control_thumb_bg:I = 0x7f0a05f1
+.field public final synthetic b:Logc;
 
-.field public static music_player_control_thumb_circle:I = 0x7f0a05f2
 
-.field public static presense_accent:I = 0x7f0a0917
+# direct methods
+.method public synthetic constructor <init>(Logc;I)V
+    .locals 0
 
-.field public static presense_bg:I = 0x7f0a0918
+    iput p2, p0, Lngc;->a:I
 
-.field public static ripple_bg:I = 0x7f0a0a17
+    iput-object p1, p0, Lngc;->b:Logc;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
+
+    iget v0, p0, Lngc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lngc;->b:Logc;
+
+    iget-object v1, v0, Logc;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Lngc;->b:Logc;
+
+    iput p1, v0, Logc;->b:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

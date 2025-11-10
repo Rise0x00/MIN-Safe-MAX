@@ -12,21 +12,21 @@
         "Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;",
         "Lru/ok/android/externcalls/sdk/stat/api/ApiStats;",
         "apiStats",
-        "Luhf;",
+        "Ltuf;",
         "timeProvider",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Luhf;)V",
-        "Lnl;",
+        "(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Ltuf;)V",
+        "Lpm;",
         "request",
         "",
         "getMethod",
-        "(Lnl;)Ljava/lang/String;",
-        "Lmea;",
+        "(Lpm;)Ljava/lang/String;",
+        "Lvla;",
         "okApiChain",
-        "Loea;",
+        "Lyla;",
         "intercept",
-        "(Lmea;)Loea;",
-        "Loyf;",
+        "(Lvla;)Lyla;",
+        "Lybg;",
         "release",
         "()V",
         "Lru/ok/android/externcalls/sdk/stat/api/ApiStats;",
@@ -34,7 +34,7 @@
         "()Lru/ok/android/externcalls/sdk/stat/api/ApiStats;",
         "setApiStats",
         "(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;)V",
-        "Luhf;",
+        "Ltuf;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -50,7 +50,7 @@
 # instance fields
 .field private apiStats:Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
 
-.field private final timeProvider:Luhf;
+.field private final timeProvider:Ltuf;
 
 
 # direct methods
@@ -62,12 +62,12 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;-><init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Luhf;ILof4;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;-><init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Ltuf;ILfi4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Luhf;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Ltuf;)V
     .locals 0
 
     .line 5
@@ -77,12 +77,12 @@
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->apiStats:Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
 
     .line 7
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->timeProvider:Luhf;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->timeProvider:Ltuf;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Luhf;ILof4;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Ltuf;ILfi4;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -97,22 +97,22 @@
     if-eqz p3, :cond_1
 
     .line 2
-    new-instance p2, Lvhf;
+    new-instance p2, Luuf;
 
     .line 3
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;-><init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Luhf;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;-><init>(Lru/ok/android/externcalls/sdk/stat/api/ApiStats;Ltuf;)V
 
     return-void
 .end method
 
-.method private final getMethod(Lnl;)Ljava/lang/String;
+.method private final getMethod(Lpm;)Ljava/lang/String;
     .locals 1
 
-    instance-of v0, p1, Lll0;
+    instance-of v0, p1, Lbm0;
 
     if-eqz v0, :cond_0
 
@@ -121,11 +121,11 @@
     return-object p1
 
     :cond_0
-    invoke-interface {p1}, Lnl;->getUri()Landroid/net/Uri;
+    invoke-interface {p1}, Lpm;->getUri()Landroid/net/Uri;
 
     move-result-object p1
 
-    invoke-static {p1}, Lbm;->b(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p1}, Ldn;->b(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -142,46 +142,119 @@
     return-object v0
 .end method
 
-.method public intercept(Lmea;)Loea;
-    .locals 7
+.method public intercept(Lvla;)Lyla;
+    .locals 11
 
-    check-cast p1, Loz9;
+    check-cast p1, Lc0j;
 
-    iget-object v0, p1, Loz9;->e:Ljava/lang/Object;
+    iget-object v0, p1, Lc0j;->d:Ljava/lang/Object;
 
-    check-cast v0, Lnea;
+    move-object v3, v0
 
-    iget-object v1, v0, Lnea;->a:Lfl;
+    check-cast v3, Lxla;
 
-    invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->getMethod(Lnl;)Ljava/lang/String;
+    iget-object v1, v3, Lxla;->a:Lfm;
 
-    move-result-object v1
+    invoke-direct {p0, v1}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->getMethod(Lpm;)Ljava/lang/String;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->timeProvider:Luhf;
+    move-result-object v7
 
-    invoke-interface {v2}, Luhf;->getMsSinceBoot()J
+    iget-object v8, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->timeProvider:Ltuf;
 
-    move-result-wide v3
+    invoke-interface {v8}, Ltuf;->getMsSinceBoot()J
 
-    invoke-virtual {p1, v0}, Loz9;->n(Lnea;)Loea;
+    move-result-wide v9
 
-    move-result-object p1
+    iget-object v0, p1, Lc0j;->c:Ljava/lang/Object;
 
-    invoke-interface {v2}, Luhf;->getMsSinceBoot()J
+    move-object v2, v0
 
-    move-result-wide v5
+    check-cast v2, Lveb;
 
-    sub-long/2addr v5, v3
+    iget v0, p1, Lc0j;->b:I
 
-    if-eqz v1, :cond_0
+    iget-object v4, p1, Lc0j;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->apiStats:Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-lt v0, p1, :cond_1
+
+    :try_start_0
+    new-instance p1, Lyla;
+
+    iget-object v0, v3, Lxla;->b:Lam;
+
+    invoke-virtual {v2, v1, v0}, Lveb;->a(Lfm;Lam;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lyla;-><init>(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/io/InterruptedIOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    instance-of v0, v1, Lwla;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v5, v6}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->reportExecutionTime(Ljava/lang/String;J)V
+    new-instance p1, Lyla;
+
+    check-cast v1, Lwla;
+
+    invoke-interface {v1}, Lwla;->handleInterruptedIO()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lyla;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
+    throw p1
+
+    :cond_1
+    new-instance v1, Lc0j;
+
+    add-int/lit8 v5, v0, 0x1
+
+    const/4 v6, 0x6
+
+    invoke-direct/range {v1 .. v6}, Lc0j;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;
+
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->intercept(Lvla;)Lyla;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {v8}, Ltuf;->getMsSinceBoot()J
+
+    move-result-wide v0
+
+    sub-long/2addr v0, v9
+
+    if-eqz v7, :cond_2
+
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/ExecutionTimeInterceptor;->apiStats:Lru/ok/android/externcalls/sdk/stat/api/ApiStats;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v7, v0, v1}, Lru/ok/android/externcalls/sdk/stat/api/ApiStats;->reportExecutionTime(Ljava/lang/String;J)V
+
+    :cond_2
     return-object p1
 .end method
 

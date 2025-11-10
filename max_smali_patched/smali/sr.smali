@@ -1,56 +1,80 @@
 .class public final Lsr;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lox4;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Loq2;
 
-.field public final synthetic b:Lti5;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lti5;I)V
+.method public constructor <init>(Loq2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsr;->X:Loq2;
 
-    iput-object p1, p0, Lsr;->b:Lti5;
+    const/4 p1, 0x2
 
-    iput p2, p0, Lsr;->a:I
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lsr;->b:Lti5;
+    check-cast p1, Lnq2;
 
-    iget v1, p0, Lsr;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, p1, v1}, Lti5;->e(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, p2}, Lsr;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lsr;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lsr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final j()Landroid/graphics/drawable/Drawable;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lsr;->b:Lti5;
+    new-instance v0, Lsr;
 
-    iget v1, p0, Lsr;->a:I
+    iget-object v1, p0, Lsr;->X:Loq2;
 
-    invoke-virtual {v0, v1}, Lti5;->c(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v1, p2}, Lsr;-><init>(Loq2;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    iput-object p1, v0, Lsr;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsr;->o:Ljava/lang/Object;
+
+    check-cast p1, Lnq2;
+
+    iget-object v0, p0, Lsr;->X:Loq2;
+
+    invoke-virtual {v0, p1}, Loq2;->a(Lnq2;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

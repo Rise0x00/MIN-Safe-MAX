@@ -1,163 +1,117 @@
-.class public final Lbbh;
-.super Ljava/lang/Object;
+.class public final enum Lbbh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lbbh;",
+        ">;"
+    }
+.end annotation
 
-.field public final b:I
 
-.field public final c:I
+# static fields
+.field public static final Companion:Labh;
 
-.field public final d:I
+.field public static final a:Ljava/lang/Object;
+
+.field public static final enum b:Lbbh;
+
+.field public static final enum c:Lbbh;
+
+.field public static final enum d:Lbbh;
+
+.field public static final synthetic o:[Lbbh;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbbh;
 
-    iput p1, p0, Lbbh;->a:I
+    const-string v1, "IMPACT_OCCURED"
 
-    iput p2, p0, Lbbh;->b:I
+    const/4 v2, 0x0
 
-    iput p3, p0, Lbbh;->c:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p4, p0, Lbbh;->d:I
+    sput-object v0, Lbbh;->b:Lbbh;
+
+    new-instance v1, Lbbh;
+
+    const-string v2, "NOTIFICATION_OCCURED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbbh;->c:Lbbh;
+
+    new-instance v2, Lbbh;
+
+    const-string v3, "SELECTION_CHANGED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lbbh;->d:Lbbh;
+
+    filled-new-array {v0, v1, v2}, [Lbbh;
+
+    move-result-object v0
+
+    sput-object v0, Lbbh;->o:[Lbbh;
+
+    new-instance v0, Labh;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lbbh;->Companion:Labh;
+
+    new-instance v0, Ly8h;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ly8h;-><init>(I)V
+
+    invoke-static {v4, v0}, Llci;->i(ILoi6;)Lru7;
+
+    move-result-object v0
+
+    sput-object v0, Lbbh;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lbbh;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-class v0, Lbbh;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Lbbh;
+    check-cast p0, Lbbh;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lbbh;
-
-    iget v0, p0, Lbbh;->a:I
-
-    iget v1, p1, Lbbh;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lbbh;->b:I
-
-    iget v1, p1, Lbbh;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lbbh;->c:I
-
-    iget v1, p1, Lbbh;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lbbh;->d:I
-
-    iget p1, p1, Lbbh;->d:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Lbbh;
+    .locals 1
 
-    iget v0, p0, Lbbh;->a:I
+    sget-object v0, Lbbh;->o:[Lbbh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lbbh;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lbbh;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lbbh;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", input="
-
-    const-string v1, ", neutralFade="
-
-    const-string v2, "WritebarBackgroundColors(emojiArea="
-
-    iget v3, p0, Lbbh;->a:I
-
-    iget v4, p0, Lbbh;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", surface="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lbbh;->c:I
-
-    iget v4, p0, Lbbh;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lbbh;
 
     return-object v0
 .end method

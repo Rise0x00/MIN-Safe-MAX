@@ -1,109 +1,160 @@
-.class public final Lcnc;
+.class public abstract Lcnc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final a:B
+.field public static action_bar:I = 0x7f0a0096
 
-.field public static final b:B
+.field public static action_bar_activity_content:I = 0x7f0a0097
 
+.field public static action_bar_container:I = 0x7f0a0098
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static action_bar_root:I = 0x7f0a0099
 
-    const-string v0, "01110000"
+.field public static action_bar_spinner:I = 0x7f0a009a
 
-    const/4 v1, 0x2
+.field public static action_bar_subtitle:I = 0x7f0a009b
 
-    invoke-static {v0, v1}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;I)B
+.field public static action_bar_title:I = 0x7f0a009c
 
-    move-result v0
+.field public static action_context_bar:I = 0x7f0a009e
 
-    sput-byte v0, Lcnc;->a:B
+.field public static action_menu_divider:I = 0x7f0a00a1
 
-    const-string v0, "00001111"
+.field public static action_menu_presenter:I = 0x7f0a00a2
 
-    invoke-static {v0, v1}, Ljava/lang/Byte;->parseByte(Ljava/lang/String;I)B
+.field public static action_mode_bar:I = 0x7f0a00a3
 
-    move-result v0
+.field public static action_mode_bar_stub:I = 0x7f0a00a4
 
-    sput-byte v0, Lcnc;->b:B
+.field public static action_mode_close_button:I = 0x7f0a00a5
 
-    return-void
-.end method
+.field public static activity_chooser_view_content:I = 0x7f0a00a8
 
-.method public static a()Ljava/lang/String;
-    .locals 4
+.field public static add:I = 0x7f0a00a9
 
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+.field public static alertTitle:I = 0x7f0a00b0
 
-    move-result-object v0
+.field public static buttonPanel:I = 0x7f0a0102
 
-    const/16 v1, 0x11
+.field public static checkbox:I = 0x7f0a029c
 
-    new-array v1, v1, [B
+.field public static checked:I = 0x7f0a029d
 
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+.field public static content:I = 0x7f0a02d0
 
-    move-result-object v1
+.field public static contentPanel:I = 0x7f0a02d1
 
-    invoke-virtual {v0}, Ljava/util/UUID;->getMostSignificantBits()J
+.field public static custom:I = 0x7f0a02e1
 
-    move-result-wide v2
+.field public static customPanel:I = 0x7f0a02e2
 
-    invoke-virtual {v1, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+.field public static decor_content_parent:I = 0x7f0a02ed
 
-    invoke-virtual {v0}, Ljava/util/UUID;->getLeastSignificantBits()J
+.field public static default_activity_button:I = 0x7f0a02ef
 
-    move-result-wide v2
+.field public static edit_query:I = 0x7f0a0321
 
-    invoke-virtual {v1, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+.field public static expand_activities_button:I = 0x7f0a0365
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+.field public static expanded_menu:I = 0x7f0a0366
 
-    move-result-object v0
+.field public static group_divider:I = 0x7f0a03e3
 
-    const/4 v1, 0x0
+.field public static home:I = 0x7f0a03eb
 
-    aget-byte v2, v0, v1
+.field public static icon:I = 0x7f0a03f2
 
-    const/16 v3, 0x10
+.field public static image:I = 0x7f0a03f9
 
-    aput-byte v2, v0, v3
+.field public static listMode:I = 0x7f0a043e
 
-    sget-byte v3, Lcnc;->b:B
+.field public static list_item:I = 0x7f0a043f
 
-    and-int/2addr v2, v3
+.field public static message:I = 0x7f0a050b
 
-    sget-byte v3, Lcnc;->a:B
+.field public static multiply:I = 0x7f0a05c1
 
-    or-int/2addr v2, v3
+.field public static none:I = 0x7f0a05d3
 
-    int-to-byte v2, v2
+.field public static normal:I = 0x7f0a05d4
 
-    aput-byte v2, v0, v1
+.field public static off:I = 0x7f0a05dc
 
-    new-instance v2, Ljava/lang/String;
+.field public static on:I = 0x7f0a05de
 
-    const/16 v3, 0xb
+.field public static parentPanel:I = 0x7f0a08cd
 
-    invoke-static {v0, v3}, Landroid/util/Base64;->encode([BI)[B
+.field public static progress_circular:I = 0x7f0a09db
 
-    move-result-object v0
+.field public static progress_horizontal:I = 0x7f0a09dc
 
-    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+.field public static radio:I = 0x7f0a09e7
 
-    move-result-object v3
+.field public static screen:I = 0x7f0a0b07
 
-    invoke-direct {v2, v0, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+.field public static scrollIndicatorDown:I = 0x7f0a0b09
 
-    const/16 v0, 0x16
+.field public static scrollIndicatorUp:I = 0x7f0a0b0a
 
-    invoke-virtual {v2, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+.field public static scrollView:I = 0x7f0a0b0b
 
-    move-result-object v0
+.field public static search_badge:I = 0x7f0a0b0d
 
-    return-object v0
-.end method
+.field public static search_bar:I = 0x7f0a0b0e
+
+.field public static search_button:I = 0x7f0a0b0f
+
+.field public static search_close_btn:I = 0x7f0a0b12
+
+.field public static search_edit_frame:I = 0x7f0a0b14
+
+.field public static search_go_btn:I = 0x7f0a0b15
+
+.field public static search_mag_icon:I = 0x7f0a0b16
+
+.field public static search_plate:I = 0x7f0a0b18
+
+.field public static search_src_text:I = 0x7f0a0b19
+
+.field public static search_voice_btn:I = 0x7f0a0b1a
+
+.field public static select_dialog_listview:I = 0x7f0a0b23
+
+.field public static shortcut:I = 0x7f0a0b9a
+
+.field public static spacer:I = 0x7f0a0bb1
+
+.field public static split_action_bar:I = 0x7f0a0bb7
+
+.field public static src_atop:I = 0x7f0a0bbc
+
+.field public static src_in:I = 0x7f0a0bbd
+
+.field public static src_over:I = 0x7f0a0bbe
+
+.field public static submenuarrow:I = 0x7f0a0bca
+
+.field public static submit_area:I = 0x7f0a0bcb
+
+.field public static tabMode:I = 0x7f0a0bd1
+
+.field public static textSpacerNoButtons:I = 0x7f0a0be5
+
+.field public static textSpacerNoTitle:I = 0x7f0a0be6
+
+.field public static title:I = 0x7f0a0c03
+
+.field public static titleDividerNoCustom:I = 0x7f0a0c04
+
+.field public static title_template:I = 0x7f0a0c05
+
+.field public static topPanel:I = 0x7f0a0c19
+
+.field public static unchecked:I = 0x7f0a0c35
+
+.field public static uniform:I = 0x7f0a0c36
+
+.field public static up:I = 0x7f0a0c39
+
+.field public static wrap_content:I = 0x7f0a0d3d

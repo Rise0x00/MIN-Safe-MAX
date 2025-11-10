@@ -2,99 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfch;
+
+# static fields
+.field public static final f:Lfa0;
 
 
 # instance fields
-.field public final a:F
+.field public final a:J
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:F
+.field public final c:I
 
-.field public final d:F
+.field public final d:J
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfa0;
 
-    iput p1, p0, Lfa0;->a:F
+    const-wide/32 v5, 0x240c8400
 
-    iput p2, p0, Lfa0;->b:F
+    const v7, 0x14000
 
-    iput p3, p0, Lfa0;->c:F
+    const/16 v1, 0xc8
 
-    iput p4, p0, Lfa0;->d:F
+    const/16 v2, 0x2710
+
+    const-wide/32 v3, 0xa00000
+
+    invoke-direct/range {v0 .. v7}, Lfa0;-><init>(IIJJI)V
+
+    sput-object v0, Lfa0;->f:Lfa0;
 
     return-void
 .end method
 
-.method public static e(Lfch;)Lfa0;
-    .locals 4
+.method public constructor <init>(IIJJI)V
+    .locals 0
 
-    new-instance v0, Lfa0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Lfch;->c()F
+    iput-wide p3, p0, Lfa0;->a:J
 
-    move-result v1
+    iput p1, p0, Lfa0;->b:I
 
-    invoke-interface {p0}, Lfch;->a()F
+    iput p2, p0, Lfa0;->c:I
 
-    move-result v2
+    iput-wide p5, p0, Lfa0;->d:J
 
-    invoke-interface {p0}, Lfch;->b()F
+    iput p7, p0, Lfa0;->e:I
 
-    move-result v3
-
-    invoke-interface {p0}, Lfch;->d()F
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Lfa0;-><init>(FFFF)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->b:F
-
-    return v0
-.end method
-
-.method public final b()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->c:F
-
-    return v0
-.end method
-
-.method public final c()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->a:F
-
-    return v0
-.end method
-
-.method public final d()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->d:F
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -111,59 +80,37 @@
 
     check-cast p1, Lfa0;
 
-    iget v1, p0, Lfa0;->a:F
+    iget-wide v3, p0, Lfa0;->a:J
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v5, p1, Lfa0;->a:J
 
-    move-result v1
+    cmp-long v1, v3, v5
 
-    iget v3, p1, Lfa0;->a:F
+    if-nez v1, :cond_1
 
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget v1, p0, Lfa0;->b:I
 
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lfa0;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lfa0;->b:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
+    iget v3, p1, Lfa0;->b:I
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Lfa0;->c:F
+    iget v1, p0, Lfa0;->c:I
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lfa0;->c:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
+    iget v3, p1, Lfa0;->c:I
 
     if-ne v1, v3, :cond_1
 
-    iget v1, p0, Lfa0;->d:F
+    iget-wide v3, p0, Lfa0;->d:J
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v5, p1, Lfa0;->d:J
 
-    move-result v1
+    cmp-long v1, v3, v5
 
-    iget p1, p1, Lfa0;->d:F
+    if-nez v1, :cond_1
 
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget v1, p0, Lfa0;->e:I
 
-    move-result p1
+    iget p1, p1, Lfa0;->e:I
 
     if-ne v1, p1, :cond_1
 
@@ -174,13 +121,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 7
 
-    iget v0, p0, Lfa0;->a:F
+    iget-wide v0, p0, Lfa0;->a:J
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -188,31 +139,31 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lfa0;->b:F
+    iget v3, p0, Lfa0;->b:I
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    xor-int/2addr v0, v3
 
-    move-result v2
+    mul-int/2addr v0, v1
+
+    iget v3, p0, Lfa0;->c:I
+
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lfa0;->d:J
+
+    ushr-long v5, v3, v2
+
+    xor-long v2, v5, v3
+
+    long-to-int v2, v2
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lfa0;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lfa0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
+    iget v1, p0, Lfa0;->e:I
 
     xor-int/2addr v0, v1
 
@@ -220,47 +171,51 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableZoomState{zoomRatio="
+    const-string v1, "EventStoreConfig{maxStorageSizeInBytes="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lfa0;->a:F
+    iget-wide v1, p0, Lfa0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", maxZoomRatio="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfa0;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", minZoomRatio="
+    const-string v1, ", loadBatchSize="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lfa0;->c:F
+    iget v1, p0, Lfa0;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", linearZoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfa0;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
+    const-string v1, ", criticalSectionEnterTimeoutMs="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lfa0;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", eventCleanUpAge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lfa0;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxBlobByteSizePerRow="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lfa0;->e:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

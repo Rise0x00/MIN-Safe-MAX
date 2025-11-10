@@ -1,278 +1,295 @@
-.class public final Ls75;
-.super Lwe;
+.class public final enum Ls75;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Ls75;
+
+.field public static final enum Y:Ls75;
+
+.field public static final synthetic Z:[Ls75;
+
+.field public static final d:Li0e;
+
+.field public static final enum o:Ls75;
+
+.field public static final synthetic s0:Lce5;
+
+
 # instance fields
-.field public final l:Landroid/view/View;
+.field public final a:I
 
-.field public final m:Landroid/graphics/Rect;
+.field public final b:Lnrf;
 
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:Z
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lzi0;Landroid/view/View;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 16
 
-    new-instance v0, Led7;
+    new-instance v0, Ls75;
 
-    const/4 v1, 0x3
+    sget v1, Lxwa;->l:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, v1}, Lirf;-><init>(I)V
+
+    sget v5, Lyjd;->Y1:I
+
+    const-string v1, "RECENT"
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    invoke-direct {v0, v2, v3, v1}, Led7;-><init>(ILjr0;I)V
+    invoke-direct/range {v0 .. v5}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
 
-    const/16 v1, 0x38
+    sput-object v0, Ls75;->o:Ls75;
 
-    invoke-direct {p0, p1, v0, v3, v1}, Lwe;-><init>(Landroid/view/View;Led7;Lxe6;I)V
+    new-instance v1, Ls75;
 
-    iput-object p2, p0, Ls75;->l:Landroid/view/View;
+    sget v2, Lxwa;->b:I
 
-    new-instance p1, Landroid/graphics/Rect;
+    new-instance v5, Lirf;
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v5, v2}, Lirf;-><init>(I)V
 
-    iput-object p1, p0, Ls75;->m:Landroid/graphics/Rect;
+    sget v6, Lyjd;->T0:I
+
+    const-string v2, "CLASSIC"
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v1 .. v6}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    sput-object v1, Ls75;->X:Ls75;
+
+    new-instance v2, Ls75;
+
+    sget v3, Lxwa;->e:I
+
+    new-instance v6, Lirf;
+
+    invoke-direct {v6, v3}, Lirf;-><init>(I)V
+
+    sget v7, Lyjd;->T:I
+
+    const-string v3, "GESTURES_AND_PEOPLE"
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    invoke-direct/range {v2 .. v7}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v3, Ls75;
+
+    sget v4, Lxwa;->a:I
+
+    new-instance v7, Lirf;
+
+    invoke-direct {v7, v4}, Lirf;-><init>(I)V
+
+    sget v8, Lvwa;->h:I
+
+    const-string v4, "ANIMALS_AND_PLANTS"
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x2
+
+    invoke-direct/range {v3 .. v8}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v4, Ls75;
+
+    sget v5, Lxwa;->d:I
+
+    new-instance v8, Lirf;
+
+    invoke-direct {v8, v5}, Lirf;-><init>(I)V
+
+    sget v9, Lvwa;->b:I
+
+    const-string v5, "FOOD_AND_DRINK"
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x3
+
+    invoke-direct/range {v4 .. v9}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v5, Ls75;
+
+    sget v6, Lxwa;->g:I
+
+    new-instance v9, Lirf;
+
+    invoke-direct {v9, v6}, Lirf;-><init>(I)V
+
+    sget v10, Lvwa;->c:I
+
+    const-string v6, "SPORT_AND_ACTIVITY"
+
+    const/4 v7, 0x5
+
+    const/4 v8, 0x4
+
+    invoke-direct/range {v5 .. v10}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v6, Ls75;
+
+    sget v7, Lxwa;->i:I
+
+    new-instance v10, Lirf;
+
+    invoke-direct {v10, v7}, Lirf;-><init>(I)V
+
+    sget v11, Lvwa;->d:I
+
+    const-string v7, "TRAVELS_AND_TRANSPORT"
+
+    const/4 v8, 0x6
+
+    const/4 v9, 0x5
+
+    invoke-direct/range {v6 .. v11}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v7, Ls75;
+
+    sget v8, Lxwa;->f:I
+
+    new-instance v11, Lirf;
+
+    invoke-direct {v11, v8}, Lirf;-><init>(I)V
+
+    sget v12, Lvwa;->g:I
+
+    const-string v8, "OBJECTS"
+
+    const/4 v9, 0x7
+
+    const/4 v10, 0x6
+
+    invoke-direct/range {v7 .. v12}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v8, Ls75;
+
+    sget v9, Lxwa;->h:I
+
+    new-instance v12, Lirf;
+
+    invoke-direct {v12, v9}, Lirf;-><init>(I)V
+
+    sget v13, Lvwa;->j:I
+
+    const-string v9, "SYMBOLS"
+
+    const/16 v10, 0x8
+
+    const/4 v11, 0x7
+
+    invoke-direct/range {v8 .. v13}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v9, Ls75;
+
+    sget v10, Lxwa;->c:I
+
+    new-instance v13, Lirf;
+
+    invoke-direct {v13, v10}, Lirf;-><init>(I)V
+
+    sget v14, Lvwa;->f:I
+
+    const-string v10, "FLAGS"
+
+    const/16 v11, 0x9
+
+    const/16 v12, 0x8
+
+    invoke-direct/range {v9 .. v14}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    new-instance v10, Ls75;
+
+    sget-object v14, Lnrf;->b:Lmrf;
+
+    const/4 v15, 0x0
+
+    const-string v11, "ANIMOJI"
+
+    const/16 v12, 0xa
+
+    const/16 v13, 0x9
+
+    invoke-direct/range {v10 .. v15}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+
+    sput-object v10, Ls75;->Y:Ls75;
+
+    filled-new-array/range {v0 .. v10}, [Ls75;
+
+    move-result-object v0
+
+    sput-object v0, Ls75;->Z:[Ls75;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ls75;->s0:Lce5;
+
+    new-instance v0, Li0e;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Li0e;-><init>(I)V
+
+    sput-object v0, Ls75;->d:Li0e;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IILnrf;I)V
+    .locals 0
 
-# virtual methods
-.method public final g(Lq8h;Lhcb;)V
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object p1, p1, Lq8h;->a:Lo8h;
+    iput p3, p0, Ls75;->a:I
 
-    const/16 v0, 0x8
+    iput-object p4, p0, Ls75;->b:Lnrf;
 
-    invoke-virtual {p1, v0}, Lo8h;->f(I)Lcd7;
-
-    move-result-object v0
-
-    iget v0, v0, Lcd7;->d:I
-
-    const/4 v1, 0x7
-
-    invoke-virtual {p1, v1}, Lo8h;->f(I)Lcd7;
-
-    move-result-object p1
-
-    iget p1, p1, Lcd7;->d:I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object p2, p2, Lhcb;->c:Ljava/lang/Object;
-
-    check-cast p2, Lcd7;
-
-    iget p2, p2, Lcd7;->d:I
-
-    iput p2, p0, Ls75;->p:I
-
-    iget-object v1, p0, Ls75;->m:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_1
-
-    iget v0, v1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr v0, p1
-
-    sub-int/2addr v0, p2
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, v1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr v0, p2
-
-    sub-int/2addr v0, p1
-
-    :goto_1
-    iget p1, v1, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v0, p1
-
-    iget-object p1, p0, Lepe;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    add-int/2addr p1, v0
-
-    div-int/lit8 p1, p1, 0x2
-
-    iget p2, p0, Ls75;->n:I
-
-    sub-int/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    iput p1, p0, Ls75;->o:I
+    iput p5, p0, Ls75;->c:I
 
     return-void
 .end method
 
-.method public final h(Lq8h;)Lq8h;
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Ls75;
+    .locals 1
 
-    iget-object v0, p1, Lq8h;->a:Lo8h;
+    const-class v0, Ls75;
 
-    iget-boolean v1, p0, Ls75;->q:Z
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v1, :cond_0
+    move-result-object p0
 
-    return-object p1
+    check-cast p0, Ls75;
 
-    :cond_0
-    iget v1, p0, Lwe;->j:I
-
-    invoke-virtual {v0, v1}, Lo8h;->f(I)Lcd7;
-
-    move-result-object v1
-
-    iget v2, p0, Lepe;->d:I
-
-    invoke-virtual {v0, v2}, Lo8h;->f(I)Lcd7;
-
-    move-result-object v0
-
-    iget v2, v1, Lcd7;->a:I
-
-    iget v3, v0, Lcd7;->a:I
-
-    iget v4, v0, Lcd7;->d:I
-
-    sub-int/2addr v2, v3
-
-    iget v3, v1, Lcd7;->b:I
-
-    iget v5, v0, Lcd7;->b:I
-
-    sub-int/2addr v3, v5
-
-    iget v5, v1, Lcd7;->c:I
-
-    iget v0, v0, Lcd7;->c:I
-
-    sub-int/2addr v5, v0
-
-    iget v0, v1, Lcd7;->d:I
-
-    sub-int/2addr v0, v4
-
-    invoke-static {v2, v3, v5, v0}, Lcd7;->b(IIII)Lcd7;
-
-    move-result-object v0
-
-    iget v1, v0, Lcd7;->a:I
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    iget v3, v0, Lcd7;->b:I
-
-    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    iget v5, v0, Lcd7;->c:I
-
-    invoke-static {v5, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    iget v0, v0, Lcd7;->d:I
-
-    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    invoke-static {v1, v3, v5, v0}, Lcd7;->b(IIII)Lcd7;
-
-    move-result-object v0
-
-    iget v0, v0, Lcd7;->d:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Ls75;->p:I
-
-    sub-int/2addr v1, v4
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    iget v1, p0, Ls75;->o:I
-
-    int-to-float v1, v1
-
-    mul-float/2addr v0, v1
-
-    iget-object v1, p0, Lepe;->a:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final i()V
-    .locals 2
+.method public static values()[Ls75;
+    .locals 1
 
-    iget-object v0, p0, Lepe;->a:Landroid/view/View;
+    sget-object v0, Ls75;->Z:[Ls75;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, [Ls75;
 
-    iput-boolean v0, p0, Ls75;->q:Z
-
-    return-void
-.end method
-
-.method public final j()V
-    .locals 2
-
-    iget-object v0, p0, Ls75;->l:Landroid/view/View;
-
-    iget-object v1, p0, Ls75;->m:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
-
-    iget-object v0, p0, Lepe;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getBottom()I
-
-    move-result v0
-
-    iput v0, p0, Ls75;->n:I
-
-    return-void
+    return-object v0
 .end method

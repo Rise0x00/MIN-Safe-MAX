@@ -1,79 +1,62 @@
-.class public final Lc2c;
-.super Lnz3;
+.class public final synthetic Lc2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public A0:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public B0:I
-
-.field public synthetic C0:Ljava/lang/Object;
-
-.field public final synthetic D0:Lf2c;
-
-.field public E0:I
-
-.field public X:Lap3;
-
-.field public Y:Lm82;
-
-.field public Z:Lcvb;
-
-.field public o:Lf2c;
-
-.field public w0:Levb;
-
-.field public x0:Ljava/lang/Object;
-
-.field public y0:Ljava/util/List;
-
-.field public z0:Ljava/io/Serializable;
+.field public final synthetic b:Ldob;
 
 
 # direct methods
-.method public constructor <init>(Lf2c;Lnz3;)V
+.method public synthetic constructor <init>(Ldob;I)V
     .locals 0
 
-    iput-object p1, p0, Lc2c;->D0:Lf2c;
+    iput p2, p0, Lc2c;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lc2c;->b:Ldob;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lc2c;->C0:Ljava/lang/Object;
+    iget v0, p0, Lc2c;->a:I
 
-    iget p1, p0, Lc2c;->E0:I
+    sget-object v1, Lybg;->a:Lybg;
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lc2c;->b:Ldob;
 
-    or-int/2addr p1, v0
+    check-cast p1, Landroid/view/View;
 
-    iput p1, p0, Lc2c;->E0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v4, 0x0
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Les7;
 
-    const/4 v5, 0x0
+    invoke-virtual {v2, p1}, Ldob;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lc2c;->D0:Lf2c;
+    return-object v1
 
-    const/4 v1, 0x0
+    :pswitch_0
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Les7;
 
-    const/4 v2, 0x0
+    invoke-virtual {v2, p1}, Ldob;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    return-object v1
 
-    move-object v6, p0
+    nop
 
-    invoke-virtual/range {v0 .. v6}, Lf2c;->g(Lap3;Lm82;Lcvb;Levb;Ljava/lang/Long;Lnz3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

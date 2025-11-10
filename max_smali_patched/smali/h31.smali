@@ -1,104 +1,129 @@
 .class public final Lh31;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-.field public final b:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iput-object p1, p0, Lh31;->a:Landroid/content/Context;
+    const/4 p2, 0x2
 
-    new-instance p1, Lz5;
-
-    const/16 v0, 0x15
-
-    invoke-direct {p1, v0, p0}, Lz5;-><init>(ILjava/lang/Object;)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lh31;->b:Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lg31;)Lw31;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v1, p1, Lg31;->a:Ljava/lang/Long;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p1, Lg31;->e:Ljava/lang/Long;
+    invoke-virtual {p0, p1, p2}, Lh31;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p1, Lg31;->f:Ljava/lang/CharSequence;
+    move-result-object p1
 
-    const/4 v3, 0x0
+    check-cast p1, Lh31;
 
-    if-eqz v0, :cond_0
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1, p2}, Lh31;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    return-object p2
+.end method
 
-    move-result-wide v4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v0, Lh31;
 
-    move-result-object v0
+    iget-object v1, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    invoke-static {v2, v0}, Lgh5;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lhc0;
+    invoke-direct {v0, p2, v1}, Lh31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    move-result-object v0
+    iput-object p1, v0, Lh31;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lh31;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Les7;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Ls21;
+
+    move-result-object v1
+
+    iget-object v2, v1, Ls21;->S0:Lkyf;
+
+    iget-object v3, v1, Ls21;->L0:Ljid;
+
+    sget p1, Lpra;->e2:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, p1}, Lirf;-><init>(I)V
+
+    new-instance v5, Lo21;
+
+    const/4 p1, 0x3
+
+    invoke-direct {v5, v1, p1}, Lo21;-><init>(Ls21;I)V
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Ls21;->w(Lkyf;Ljid;Lirf;Loi6;Ljava/lang/Integer;)Lkyf;
+
+    move-result-object p1
+
+    iput-object p1, v1, Ls21;->S0:Lkyf;
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v3
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Les7;
 
-    :goto_0
-    iget-object v2, p1, Lg31;->d:Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Ls21;
 
-    move-object v4, v3
+    move-result-object p1
 
-    new-instance v3, Lqd0;
+    iget-object p1, p1, Ls21;->S0:Lkyf;
 
-    invoke-direct {v3, v0, v2}, Lqd0;-><init>(Lhc0;Ljava/lang/String;)V
+    if-eqz p1, :cond_1
 
-    iget-object v2, p1, Lg31;->c:Ljava/lang/CharSequence;
-
-    iget-boolean v0, p1, Lg31;->g:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lh31;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsd0;
-
-    move-object v4, v0
+    invoke-virtual {p1}, Lkyf;->a()V
 
     :cond_1
-    iget-boolean v5, p1, Lg31;->g:Z
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    new-instance v0, Lw31;
-
-    invoke-direct/range {v0 .. v5}, Lw31;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lqd0;Lsd0;Z)V
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,121 +1,161 @@
-.class public final Lrj3;
+.class public abstract Lrj3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
+# static fields
+.field public static final a:Leg5;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Ljava/lang/Object;
 
-.field public final synthetic b:Z
+.field public static final c:Ltif;
 
-.field public final c:Ljava/io/Serializable;
+.field public static final d:Ltif;
+
+.field public static final e:Leg5;
+
+.field public static final f:Ltif;
+
+.field public static final g:Ltif;
+
+.field public static final h:Ltif;
+
+.field public static final i:Ltif;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    const/4 v0, 0x1
+    new-instance v0, Leg5;
 
-    iput v0, p0, Lrj3;->a:I
+    const/4 v6, 0x1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v7, 0x40
 
-    iput-object p1, p0, Lrj3;->c:Ljava/io/Serializable;
+    const-string v1, "common"
 
-    iput-boolean p2, p0, Lrj3;->b:Z
+    const/4 v2, 0x1
 
-    return-void
-.end method
+    const-wide/16 v3, 0x1388
 
-.method public constructor <init>(Z)V
-    .locals 1
+    const/4 v5, 0x1
 
-    const/4 v0, 0x0
+    invoke-direct/range {v0 .. v7}, Leg5;-><init>(Ljava/lang/String;IJZZI)V
 
-    iput v0, p0, Lrj3;->a:I
+    sput-object v0, Lrj3;->a:Leg5;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldr2;
 
-    iput-boolean p1, p0, Lrj3;->b:Z
+    const/16 v1, 0x12
 
-    .line 3
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0, v1}, Ldr2;-><init>(I)V
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Lrj3;->c:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
-
-    iget v0, p0, Lrj3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/Thread;
-
-    iget-object v1, p0, Lrj3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    iget-boolean p1, p0, Lrj3;->b:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-boolean v0, p0, Lrj3;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "WM.task-"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "androidx.work-"
-
-    :goto_0
-    new-instance v1, Ljava/lang/Thread;
-
-    invoke-static {v0}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Llci;->i(ILoi6;)Lru7;
 
     move-result-object v0
 
-    iget-object v2, p0, Lrj3;->c:Ljava/io/Serializable;
+    sput-object v0, Lrj3;->b:Ljava/lang/Object;
 
-    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Ldr2;
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    const/16 v2, 0x13
 
-    move-result v2
+    invoke-direct {v0, v2}, Ldr2;-><init>(I)V
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v2, Ltif;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v2, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v2, Lrj3;->c:Ltif;
+
+    new-instance v0, Ldr2;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Ldr2;-><init>(I)V
+
+    new-instance v2, Ltif;
+
+    invoke-direct {v2, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v2, Lrj3;->d:Ltif;
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
 
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    return-object v1
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    mul-int/2addr v0, v1
+
+    add-int/lit8 v3, v0, -0x1
+
+    new-instance v1, Leg5;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x60
+
+    const-string v2, "computation"
+
+    const-wide/16 v4, 0x1388
+
+    invoke-direct/range {v1 .. v8}, Leg5;-><init>(Ljava/lang/String;IJZZI)V
+
+    sput-object v1, Lrj3;->e:Leg5;
+
+    new-instance v0, Ldr2;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Ldr2;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lrj3;->f:Ltif;
+
+    new-instance v0, Ldr2;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Ldr2;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lrj3;->g:Ltif;
+
+    new-instance v0, Ldr2;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Ldr2;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lrj3;->h:Ltif;
+
+    new-instance v0, Ldr2;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Ldr2;-><init>(I)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    sput-object v1, Lrj3;->i:Ltif;
+
+    return-void
 .end method

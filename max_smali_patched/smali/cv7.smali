@@ -1,78 +1,114 @@
-.class public final synthetic Lcv7;
+.class public final Lcv7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/TreeSet;
 
-.field public final synthetic b:Lone/me/android/deeplink/LinkInterceptorWidget;
+.field public b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
-    .locals 0
-
-    iput p2, p0, Lcv7;->a:I
-
-    iput-object p1, p0, Lcv7;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/TreeSet;
+
+    new-instance v1, Les5;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2}, Les5;-><init>(I)V
+
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    iput-object v0, p0, Lcv7;->a:Ljava/util/TreeSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final a(Lrx0;J)V
+    .locals 4
 
-    iget v0, p0, Lcv7;->a:I
+    :goto_0
+    iget-wide v0, p0, Lcv7;->b:J
 
-    iget-object v1, p0, Lcv7;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+    add-long/2addr v0, p2
 
-    packed-switch v0, :pswitch_data_0
+    const-wide/32 v2, 0x6400000
 
-    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->o:I
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcv7;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcv7;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lhy0;
 
-    :pswitch_0
-    sget v0, Lone/me/android/deeplink/LinkInterceptorWidget;->o:I
+    move-object v1, p1
 
-    new-instance v0, Lmh1;
+    check-cast v1, Lmpe;
 
-    new-instance v2, Lcv7;
+    monitor-enter v1
 
-    const/4 v3, 0x1
+    :try_start_0
+    invoke-virtual {v1, v0}, Lmpe;->j(Lhy0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v2, v1, v3}, Lcv7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
+    monitor-exit v1
 
-    new-instance v3, Ls5f;
+    goto :goto_0
 
-    invoke-direct {v3, v2}, Ls5f;-><init>(Lve6;)V
+    :catchall_0
+    move-exception p1
 
-    new-instance v2, Ld7h;
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/4 v4, 0x0
+    throw p1
 
-    invoke-direct {v2, v1, v4}, Ld7h;-><init>(Lone/me/sdk/arch/Widget;I)V
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v0, v3, v2}, Lmh1;-><init>(Ls5f;Ld7h;)V
+.method public final b(Lmpe;Lppe;)V
+    .locals 4
 
-    return-object v0
+    iget-object v0, p0, Lcv7;->a:Ljava/util/TreeSet;
 
-    nop
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v0, p0, Lcv7;->b:J
+
+    iget-wide v2, p2, Lhy0;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcv7;->b:J
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p0, p1, v0, v1}, Lcv7;->a(Lrx0;J)V
+
+    return-void
 .end method

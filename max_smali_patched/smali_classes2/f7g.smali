@@ -1,233 +1,89 @@
-.class public final Lf7g;
-.super Ljava/lang/Object;
+.class public final enum Lf7g;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpcb;
+# static fields
+.field public static final enum a:Lf7g;
 
-.field public final b:Lbp7;
+.field public static final enum b:Lf7g;
 
-.field public final c:Ls5f;
-
-.field public final d:Ls5f;
+.field public static final synthetic c:[Lf7g;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbp7;Lbp7;Lpcb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf7g;
 
-    iput-object p4, p0, Lf7g;->a:Lpcb;
+    const-string v1, "CREATE_PASSWORD"
 
-    iput-object p3, p0, Lf7g;->b:Lbp7;
+    const/4 v2, 0x0
 
-    new-instance p3, Locb;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p4, 0x2
+    sput-object v0, Lf7g;->a:Lf7g;
 
-    invoke-direct {p3, p2, p1, p4}, Locb;-><init>(Lbp7;Landroid/content/Context;I)V
+    new-instance v1, Lf7g;
 
-    new-instance p1, Ls5f;
+    const-string v2, "CREATE_HINT"
 
-    invoke-direct {p1, p3}, Ls5f;-><init>(Lve6;)V
+    const/4 v3, 0x1
 
-    iput-object p1, p0, Lf7g;->c:Ls5f;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Lwsf;
+    new-instance v2, Lf7g;
 
-    const/4 p2, 0x6
+    const-string v3, "ADD_EMAIL"
 
-    invoke-direct {p1, p2, p0}, Lwsf;-><init>(ILjava/lang/Object;)V
+    const/4 v4, 0x2
 
-    new-instance p2, Ls5f;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+    new-instance v3, Lf7g;
 
-    iput-object p2, p0, Lf7g;->d:Ls5f;
+    const-string v4, "VERIFY_EMAIL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lf7g;->b:Lf7g;
+
+    filled-new-array {v0, v1, v2, v3}, [Lf7g;
+
+    move-result-object v0
+
+    sput-object v0, Lf7g;->c:[Lf7g;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lf7g;
+    .locals 1
 
-# virtual methods
-.method public final a(Ln10;Lo10;Ljava/lang/String;)Le7g;
-    .locals 20
+    const-class v0, Lf7g;
 
-    move-object/from16 v0, p0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-object/from16 v1, p1
+    move-result-object p0
 
-    move-object/from16 v2, p2
+    check-cast p0, Lf7g;
 
-    iget v3, v1, Ln10;->f:I
+    return-object p0
+.end method
 
-    iget v4, v1, Ln10;->e:I
+.method public static values()[Lf7g;
+    .locals 1
 
-    iget-wide v5, v1, Ln10;->c:J
+    sget-object v0, Lf7g;->c:[Lf7g;
 
-    iget-object v7, v2, Lo10;->o:Lh10;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v8, v2, Lo10;->s:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v8}, Lhd6;->r(Ljava/lang/String;)Landroid/net/Uri;
+    check-cast v0, [Lf7g;
 
-    move-result-object v8
-
-    iget-object v9, v1, Ln10;->d:Ljava/lang/String;
-
-    invoke-static {v9}, Lhd6;->r(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v9
-
-    iget-object v10, v0, Lf7g;->b:Lbp7;
-
-    invoke-interface {v10}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, La00;
-
-    const/4 v11, 0x1
-
-    check-cast v10, Lr10;
-
-    invoke-virtual {v10, v2, v11}, Lr10;->c(Lo10;Z)Landroid/net/Uri;
-
-    move-result-object v17
-
-    if-nez v9, :cond_0
-
-    if-eqz v8, :cond_0
-
-    :goto_0
-    move-object v10, v8
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v9, :cond_1
-
-    move-object v10, v9
-
-    goto :goto_1
-
-    :cond_1
-    if-eqz v17, :cond_2
-
-    move-object/from16 v10, v17
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v8, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    iget-object v2, v0, Lf7g;->d:Ls5f;
-
-    iget-object v8, v0, Lf7g;->a:Lpcb;
-
-    if-nez v10, :cond_3
-
-    sget-object v9, Le7g;->k:Le7g;
-
-    iget-wide v10, v1, Ln10;->a:J
-
-    move-wide v12, v10
-
-    iget v11, v1, Ln10;->e:I
-
-    move-wide v13, v12
-
-    iget v12, v1, Ln10;->f:I
-
-    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    sget v2, Ln05;->o:I
-
-    sget-object v2, Ls05;->c:Ls05;
-
-    invoke-static {v5, v6, v2}, Lyhh;->P(JLs05;)J
-
-    move-result-wide v5
-
-    invoke-virtual {v8, v4, v3}, Lpcb;->a(II)Lo2d;
-
-    move-result-object v18
-
-    iget-object v10, v9, Le7g;->b:Landroid/net/Uri;
-
-    move-object/from16 v19, v7
-
-    new-instance v7, Le7g;
-
-    move-object/from16 v16, p3
-
-    move-wide v8, v13
-
-    move v13, v1
-
-    move-wide v14, v5
-
-    invoke-direct/range {v7 .. v19}, Le7g;-><init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lo2d;Lh10;)V
-
-    return-object v7
-
-    :cond_3
-    move-object/from16 v19, v7
-
-    new-instance v7, Le7g;
-
-    iget-wide v11, v1, Ln10;->a:J
-
-    move-wide v12, v11
-
-    iget v11, v1, Ln10;->e:I
-
-    iget v1, v1, Ln10;->f:I
-
-    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    sget v9, Ln05;->o:I
-
-    sget-object v9, Ls05;->c:Ls05;
-
-    invoke-static {v5, v6, v9}, Lyhh;->P(JLs05;)J
-
-    move-result-wide v14
-
-    invoke-virtual {v8, v4, v3}, Lpcb;->a(II)Lo2d;
-
-    move-result-object v18
-
-    move-object/from16 v16, p3
-
-    move-wide v8, v12
-
-    move v12, v1
-
-    move v13, v2
-
-    invoke-direct/range {v7 .. v19}, Le7g;-><init>(JLandroid/net/Uri;IIIJLjava/lang/String;Landroid/net/Uri;Lo2d;Lh10;)V
-
-    return-object v7
+    return-object v0
 .end method

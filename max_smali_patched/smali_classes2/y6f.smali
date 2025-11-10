@@ -1,118 +1,59 @@
 .class public final Ly6f;
-.super Lm3f;
+.super Ladi;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg7f;
-
-.field public final synthetic Z:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+# static fields
+.field public static final c:Ly6f;
 
 
 # direct methods
-.method public constructor <init>(Lg7f;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ly6f;->Y:Lg7f;
+    new-instance v0, Ly6f;
 
-    iput-object p2, p0, Ly6f;->Z:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+    const/16 v1, 0xb
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ly6f;->c:Ly6f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final R0(Landroid/content/Intent;Ljava/lang/String;)V
+    .locals 3
 
-    check-cast p1, Le34;
+    invoke-virtual {p0}, Ladi;->p0()Ltf4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Ly6f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lvcb;
 
-    move-result-object p1
+    const-string v2, "oneme:share:data"
 
-    check-cast p1, Ly6f;
+    invoke-direct {v1, v2, p1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    sget-object p2, Loyf;->a:Loyf;
+    new-instance p1, Lvcb;
 
-    invoke-virtual {p1, p2}, Ly6f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "tag"
 
-    move-result-object p1
+    invoke-direct {p1, v2, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ly6f;
-
-    iget-object v0, p0, Ly6f;->Y:Lg7f;
-
-    iget-object v1, p0, Ly6f;->Z:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-    invoke-direct {p1, v0, v1, p2}, Ly6f;-><init>(Lg7f;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ly6f;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Ly6f;->X:I
-
-    iget-object p1, p0, Ly6f;->Y:Lg7f;
-
-    iget-object v0, p0, Ly6f;->Z:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-    invoke-virtual {p1, v0, p0}, Lg7f;->I(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lnz3;)Ljava/lang/Object;
+    filled-new-array {v1, p1}, [Lvcb;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    invoke-static {p1}, Ltki;->b([Lvcb;)Landroid/os/Bundle;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p1
 
-    return-object v0
+    const-string p2, ":chats/share"
 
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, p2, p1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    return-object p1
+    return-void
 .end method

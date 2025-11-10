@@ -1,87 +1,148 @@
-.class public final Lbh2;
+.class public abstract Lbh2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhh2;
 
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-# instance fields
-.field public final a:J
+.field public static b:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-wide p1, p0, Lbh2;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lbh2;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static final a(Lez5;I)Lws0;
     .locals 7
 
-    const/4 v0, 0x1
+    sget-object v0, Lu72;->m:Lt72;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    sget v0, Lt72;->b:I
+
+    if-ge p1, v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lbh2;
+    move v0, p1
 
-    const/4 v2, 0x0
+    :goto_0
+    sub-int/2addr v0, p1
 
-    if-nez v1, :cond_1
+    instance-of v1, p0, La82;
 
-    return v2
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_5
+
+    move-object v1, p0
+
+    check-cast v1, La82;
+
+    invoke-virtual {v1}, La82;->l()Lez5;
+
+    move-result-object v3
+
+    iget v4, v1, La82;->c:I
+
+    if-eqz v3, :cond_5
+
+    new-instance p0, Lws0;
+
+    iget v5, v1, La82;->b:I
+
+    const/4 v6, -0x3
+
+    if-eq v5, v6, :cond_1
+
+    const/4 v6, -0x2
+
+    if-eq v5, v6, :cond_1
+
+    if-eqz v5, :cond_1
+
+    move v0, v5
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lbh2;
+    const/4 v6, 0x0
 
-    iget-wide v3, p0, Lbh2;->a:J
+    if-ne v4, v2, :cond_3
 
-    iget-wide v5, p1, Lbh2;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
+    if-nez v5, :cond_4
 
     :cond_2
-    return v0
+    move v0, v6
+
+    goto :goto_1
+
+    :cond_3
+    if-nez p1, :cond_2
+
+    move v0, v2
+
+    :cond_4
+    :goto_1
+    iget-object p1, v1, La82;->a:Ly44;
+
+    invoke-direct {p0, v0, v4, p1, v3}, Lws0;-><init>(IILy44;Lez5;)V
+
+    return-object p0
+
+    :cond_5
+    new-instance p1, Lws0;
+
+    sget-object v1, Lha5;->a:Lha5;
+
+    invoke-direct {p1, v0, v2, v1, p0}, Lws0;-><init>(IILy44;Lez5;)V
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static b(Lsef;)Lsef;
+    .locals 1
 
-    iget-wide v0, p0, Lbh2;->a:J
+    instance-of v0, p0, Lyef;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    if-nez v0, :cond_2
 
-    move-result v0
+    instance-of v0, p0, Lxef;
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    return-object p0
 
-    const-string v0, "Add(messageId="
+    :cond_0
+    instance-of v0, p0, Ljava/io/Serializable;
 
-    const-string v1, ")"
+    if-eqz v0, :cond_1
 
-    iget-wide v2, p0, Lbh2;->a:J
+    new-instance v0, Lxef;
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lxef;-><init>(Lsef;)V
 
     return-object v0
+
+    :cond_1
+    new-instance v0, Lyef;
+
+    invoke-direct {v0, p0}, Lyef;-><init>(Lsef;)V
+
+    return-object v0
+
+    :cond_2
+    return-object p0
 .end method

@@ -1,158 +1,166 @@
 .class public final Lt21;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lij6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public synthetic X:Lvb1;
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+.field public synthetic Y:Z
+
+.field public final synthetic Z:Le31;
+
+.field public synthetic o:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+.field public final synthetic s0:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+.method public constructor <init>(Le31;Lru7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lt21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iput-object p1, p0, Lt21;->Z:Le31;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lt21;->s0:Lru7;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x4
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    invoke-virtual {p0, p1, p2}, Lt21;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Lvb1;
 
-    move-result-object p1
+    check-cast p3, Ljava/lang/Boolean;
 
-    check-cast p1, Lt21;
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result p3
 
-    invoke-virtual {p1, p2}, Lt21;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
     new-instance v0, Lt21;
 
-    iget-object v1, p0, Lt21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iget-object v1, p0, Lt21;->Z:Le31;
 
-    invoke-direct {v0, p2, v1}, Lt21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    iget-object v2, p0, Lt21;->s0:Lru7;
 
-    iput-object p1, v0, Lt21;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, p4}, Lt21;-><init>(Le31;Lru7;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    iput-object p1, v0, Lt21;->o:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    iput-object p2, v0, Lt21;->X:Lvb1;
+
+    iput-boolean p3, v0, Lt21;->Y:Z
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {v0, p1}, Lt21;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 9
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lt21;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lt21;->o:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    check-cast p1, Lkr0;
+    iget-object v0, p0, Lt21;->X:Lvb1;
 
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->w0:[Ltm7;
+    iget-boolean v1, p0, Lt21;->Y:Z
 
-    iget-object v0, p0, Lt21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iget-object v2, p0, Lt21;->Z:Le31;
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->B0()Ld21;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->B0()Ld21;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
+    iget-object v2, v2, Le31;->s0:La1f;
 
     :cond_0
-    move-object v2, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p1, Lkr0;->b:Lve8;
-
-    iget-object v4, p1, Lkr0;->a:Lve8;
-
-    invoke-virtual {v1, v2}, Ld21;->setVideoEnabled(Lve8;)V
-
-    invoke-virtual {v1, v4}, Ld21;->setMicrophoneEnabled(Lve8;)V
-
-    iget-object v2, p1, Lkr0;->c:Lve8;
-
-    invoke-virtual {v1, v2}, Ld21;->setRaiseHand(Lve8;)V
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->B0()Ld21;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lkr0;->d:Lk51;
-
-    invoke-virtual {v1, p1}, Ld21;->setAudioInfo(Lk51;)V
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->B0()Ld21;
-
-    move-result-object p1
-
-    sget-object v1, Lve8;->b:Lve8;
-
-    if-ne v4, v1, :cond_1
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
-
-    move-result-object v1
-
-    new-instance v2, Lq21;
-
-    invoke-direct {v2, v0, p1, v3}, Lq21;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Ld21;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v1, v3, v3, v2, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {v2}, La1f;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
+    move-object v4, v3
+
+    check-cast v4, Les0;
+
+    iget-object v5, v0, Lvb1;->r:Lrk8;
+
+    iget-object v6, v0, Lvb1;->q:Lrk8;
+
+    iget-boolean v7, v0, Lvb1;->g:Z
+
+    sget-object v8, Lrk8;->d:Lrk8;
+
+    if-eqz v7, :cond_4
+
+    iget-object v7, v0, Lvb1;->e:Lwk5;
+
+    instance-of v7, v7, Lvk5;
+
+    if-eqz v7, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    iget-object p1, v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Lg65;
+    iget-object v7, p0, Lt21;->s0:Lru7;
 
-    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->w0:[Ltm7;
+    invoke-interface {v7}, Lru7;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v7
 
-    aget-object v1, v1, v2
+    check-cast v7, Lkq5;
 
-    invoke-virtual {p1, v0, v1, v3}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    check-cast v7, Luq5;
+
+    invoke-virtual {v7}, Luq5;->q()Z
+
+    move-result v7
+
+    if-nez v7, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    sget-object p1, Loyf;->a:Loyf;
+    if-eqz v1, :cond_3
+
+    sget-object v8, Lrk8;->b:Lrk8;
+
+    goto :goto_0
+
+    :cond_3
+    sget-object v8, Lrk8;->a:Lrk8;
+
+    :cond_4
+    :goto_0
+    invoke-static {p1}, Lpg8;->b(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)Lz51;
+
+    move-result-object v7
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v4, Les0;
+
+    invoke-direct {v4, v5, v6, v8, v7}, Les0;-><init>(Lrk8;Lrk8;Lrk8;Lz51;)V
+
+    invoke-virtual {v2, v3, v4}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

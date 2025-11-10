@@ -1,140 +1,114 @@
-.class public final Lev;
-.super Lm3f;
+.class public final synthetic Lev;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ldw;
+.field public final synthetic b:Lgj2;
 
-.field public final synthetic Z:J
-
-.field public final synthetic w0:Lqe3;
+.field public final synthetic c:Lr99;
 
 
 # direct methods
-.method public constructor <init>(Ldw;JLqe3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lgj2;Lr99;I)V
     .locals 0
 
-    iput-object p1, p0, Lev;->Y:Ldw;
+    iput p3, p0, Lev;->a:I
 
-    iput-wide p2, p0, Lev;->Z:J
+    iput-object p1, p0, Lev;->b:Lgj2;
 
-    iput-object p4, p0, Lev;->w0:Lqe3;
+    iput-object p2, p0, Lev;->c:Lr99;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Le34;
+    iget v0, p0, Lev;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lev;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lev;->b:Lgj2;
 
-    move-result-object p1
+    iget-object v1, p0, Lev;->c:Lr99;
 
-    check-cast p1, Lev;
+    :try_start_0
+    iget-object v2, v0, Lgj2;->b:Lb07;
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lev;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lev;
-
-    iget-wide v2, p0, Lev;->Z:J
-
-    iget-object v4, p0, Lev;->w0:Lqe3;
-
-    iget-object v1, p0, Lev;->Y:Ldw;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lev;-><init>(Ldw;JLqe3;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lev;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v2, v1}, Lb07;->r(Ljz6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v2, v0, Lgj2;->a:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v3, "updateHistoryItemSync: exception"
 
-    throw p1
+    invoke-static {v2, v3, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, v0, Lgj2;->X:Lvf5;
 
-    move p1, v1
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    iget-object v1, p0, Lev;->Y:Ldw;
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    iget-object v2, v1, Ldw;->j:Lfu;
+    invoke-interface {v0, v2}, Lvf5;->a(Ljava/lang/Throwable;)V
 
-    new-instance v5, Lzde;
-
-    iget-object v0, p0, Lev;->w0:Lqe3;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v5, v3, v0}, Lzde;-><init>(ILjava/lang/Object;)V
-
-    iput p1, p0, Lev;->X:I
-
-    iget-wide v3, p0, Lev;->Z:J
-
-    move-object v6, p0
-
-    invoke-virtual/range {v1 .. v6}, Ldw;->u(Lfu;JLtu;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    return-void
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lev;->b:Lgj2;
+
+    iget-object v1, p0, Lev;->c:Lr99;
+
+    :try_start_1
+    iget-object v2, v0, Lgj2;->b:Lb07;
+
+    invoke-virtual {v2, v1}, Lb07;->b(Ljz6;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    iget-object v2, v0, Lgj2;->a:Ljava/lang/String;
+
+    const-string v3, "addHistoryItem: exception"
+
+    invoke-static {v2, v3, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Lgj2;->X:Lvf5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lvf5;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,13 +1,11 @@
-.class public abstract La29;
+.class public interface abstract La29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/PopupWindow;Z)V
-    .locals 0
+# virtual methods
+.method public abstract a()Lmvf;
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setTouchModal(Z)V
-
-    return-void
+.method public abstract getUid()Ljava/lang/Object;
 .end method

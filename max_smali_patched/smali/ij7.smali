@@ -1,50 +1,113 @@
-.class public final synthetic Lij7;
-.super Lag6;
+.class public final Lij7;
+.super Ljava/util/concurrent/ConcurrentHashMap;
 .source "SourceFile"
-
-# interfaces
-.implements Lnf6;
 
 
 # static fields
-.field public static final a:Lij7;
+.field public static final b:Lij7;
+
+
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
     new-instance v0, Lij7;
 
-    const-string v4, "onAwaitInternalRegFunc(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+    invoke-direct {v0}, Lij7;-><init>()V
 
-    const/4 v5, 0x0
+    sput-object v0, Lij7;->b:Lij7;
 
-    const/4 v1, 0x3
+    return-void
+.end method
 
-    const-class v2, Llj7;
+.method public constructor <init>()V
+    .locals 3
 
-    const-string v3, "onAwaitInternalRegFunc"
+    const v0, 0x3f4ccccd    # 0.8f
 
-    invoke-direct/range {v0 .. v5}, Lag6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    const/4 v1, 0x4
 
-    sput-object v0, Lij7;->a:Lij7;
+    const/16 v2, 0xb4
+
+    invoke-direct {p0, v2, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lij7;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Llj7;
+    invoke-virtual {p0, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Lgpd;
+    move-result-object v0
 
-    invoke-static {p1, p2, p3}, Llj7;->access$onAwaitInternalRegFunc(Llj7;Lgpd;Ljava/lang/Object;)V
+    check-cast v0, Ljava/lang/String;
 
-    sget-object p1, Loyf;->a:Loyf;
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+
+    move-result v0
+
+    const/16 v1, 0xb4
+
+    if-lt v0, v1, :cond_2
+
+    iget-object v0, p0, Lij7;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+
+    move-result v2
+
+    if-lt v2, v1, :cond_1
+
+    invoke-virtual {p0}, Ljava/util/AbstractMap;->clear()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_2
+    :goto_2
+    invoke-virtual {p1}, Ljava/lang/String;->intern()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 .end method

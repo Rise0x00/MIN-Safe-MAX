@@ -1,48 +1,152 @@
 .class public final Lm7h;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lk7h;
-
-
-# static fields
-.field public static final d:Landroid/util/Size;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/util/Size;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Ln7h;
 
-.field public final c:Z
+.field public final synthetic Z:Lw6h;
+
+.field public o:I
+
+.field public final synthetic s0:Lz7h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ln7h;Lw6h;Lz7h;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Landroid/util/Size;
+    iput-object p1, p0, Lm7h;->Y:Ln7h;
 
-    const/16 v1, 0x28
+    iput-object p2, p0, Lm7h;->Z:Lw6h;
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+    iput-object p3, p0, Lm7h;->s0:Lz7h;
 
-    sput-object v0, Lm7h;->d:Landroid/util/Size;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/util/Size;Ljava/lang/String;Z)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Throwable;
 
-    iput-object p1, p0, Lm7h;->a:Landroid/util/Size;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lm7h;->b:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lm7h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-boolean p3, p0, Lm7h;->c:Z
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lm7h;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lm7h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    new-instance v0, Lm7h;
+
+    iget-object v1, p0, Lm7h;->Z:Lw6h;
+
+    iget-object v2, p0, Lm7h;->s0:Lz7h;
+
+    iget-object v3, p0, Lm7h;->Y:Ln7h;
+
+    invoke-direct {v0, v3, v1, v2, p2}, Lm7h;-><init>(Ln7h;Lw6h;Lz7h;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lm7h;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lm7h;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lm7h;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    sget-object v0, Ln7h;->h:Ljava/util/List;
+
+    iget-object v0, p0, Lm7h;->Y:Ln7h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Ln7h;->f(Ljava/lang/Throwable;)Leq7;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Ln7h;->g()Lbe3;
+
+    move-result-object v2
+
+    iget-object v3, v0, Ln7h;->f:Lfv0;
+
+    iget-object p1, p0, Lm7h;->s0:Lz7h;
+
+    iget-object v6, p1, Lz7h;->b:Ljava/lang/String;
+
+    iput v1, p0, Lm7h;->o:I
+
+    iget-object v5, p0, Lm7h;->Z:Lw6h;
+
+    move-object v7, p0
+
+    invoke-virtual/range {v2 .. v7}, Lbe3;->a(Lu72;Leq7;Lbch;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

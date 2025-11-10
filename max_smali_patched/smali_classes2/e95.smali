@@ -1,315 +1,406 @@
-.class public final synthetic Le95;
-.super Ljava/lang/Object;
+.class public final Le95;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lrve;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Landroid/graphics/drawable/Drawable;
 
-.field public final synthetic b:I
+.field public a:I
 
-.field public final synthetic c:Lf95;
+.field public b:I
 
-.field public final synthetic o:Ln95;
+.field public c:Landroid/graphics/Rect;
+
+.field public final d:Landroid/graphics/Paint$FontMetricsInt;
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(IILf95;Ln95;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+
+    new-instance v0, Landroid/graphics/Paint$FontMetricsInt;
+
+    invoke-direct {v0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
+
+    iput-object v0, p0, Le95;->d:Landroid/graphics/Paint$FontMetricsInt;
+
+    iput-object p1, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Le95;->o:I
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    iput-object p1, p0, Le95;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result p1
 
     iput p1, p0, Le95;->a:I
 
-    iput p2, p0, Le95;->b:I
+    iget-object p1, p0, Le95;->c:Landroid/graphics/Rect;
 
-    iput-object p3, p0, Le95;->c:Lf95;
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    iput-object p4, p0, Le95;->o:Ln95;
+    move-result p1
+
+    iput p1, p0, Le95;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 13
+.method public final a(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 2
 
-    iget-object v0, p0, Le95;->c:Lf95;
+    iget-object p2, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, v0, Lf95;->c:Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    check-cast v1, Lh95;
+    move-result-object p2
 
-    iget v2, p0, Le95;->a:I
+    iput-object p2, p0, Le95;->c:Landroid/graphics/Rect;
 
-    if-nez v2, :cond_0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    iget v2, p0, Le95;->b:I
+    move-result p2
+
+    iput p2, p0, Le95;->a:I
+
+    iget-object p2, p0, Le95;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result p2
+
+    iput p2, p0, Le95;->b:I
+
+    if-nez p5, :cond_0
+
+    iget p1, p0, Le95;->a:I
+
+    return p1
 
     :cond_0
-    iget-object v2, p0, Le95;->o:Ln95;
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    move-result-object p1
 
-    move-result-object v3
+    iget p3, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    instance-of v4, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    const/4 v5, -0x1
+    iget p4, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    const/4 v6, 0x0
+    iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    const/4 v7, 0x1
+    iget v0, p1, Landroid/graphics/Paint$FontMetricsInt;->leading:I
 
-    if-eqz v4, :cond_3
+    iput v0, p5, Landroid/graphics/Paint$FontMetricsInt;->leading:I
 
-    check-cast v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    iget v0, p0, Le95;->o:I
 
-    iget v4, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    if-eqz v0, :cond_2
 
-    new-array v8, v4, [I
+    const/4 v1, 0x2
 
-    move v9, v6
+    if-eq v0, v1, :cond_1
 
-    :goto_0
-    iget v10, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    neg-int p2, p2
 
-    if-ge v9, v10, :cond_2
+    if-le p3, p2, :cond_3
 
-    iget-object v10, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Llle;
+    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    aget-object v10, v10, v9
-
-    iget-object v11, v10, Llle;->e:Ljava/lang/Object;
-
-    check-cast v11, Ljava/util/ArrayList;
-
-    iget-object v12, v10, Llle;->f:Ljava/lang/Object;
-
-    check-cast v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    iget-boolean v12, v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
-
-    if-eqz v12, :cond_1
-
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
-
-    move-result v11
-
-    invoke-virtual {v10, v6, v11, v7, v6}, Llle;->g(IIZZ)I
-
-    move-result v10
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    sub-int/2addr p4, p3
 
-    move-result v11
+    if-ge p4, p2, :cond_3
 
-    sub-int/2addr v11, v7
+    sub-int p4, p2, p4
 
-    invoke-virtual {v10, v11, v5, v7, v6}, Llle;->g(IIZZ)I
+    div-int/2addr p4, v1
 
-    move-result v10
+    sub-int/2addr p3, p4
 
-    :goto_1
-    aput v10, v8, v9
+    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/2addr p3, p2
+
+    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     goto :goto_0
 
     :cond_2
-    sub-int/2addr v4, v7
+    sub-int/2addr p4, p2
 
-    aget v3, v8, v4
+    if-le p3, p4, :cond_3
 
-    goto :goto_2
+    iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
     :cond_3
-    instance-of v4, v3, Landroidx/recyclerview/widget/LinearLayoutManager;
+    :goto_0
+    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
-    if-eqz v4, :cond_4
+    iget p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    check-cast v3, Landroidx/recyclerview/widget/LinearLayoutManager;
+    invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
 
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
+    move-result p2
 
-    move-result v3
+    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
-    goto :goto_2
+    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    :cond_4
-    move v3, v6
+    iget p2, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    :goto_2
-    invoke-virtual {v2}, Ln95;->getAdapter()Lpwc;
+    invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
-    move-result-object v4
+    move-result p1
 
-    if-eqz v4, :cond_e
+    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    invoke-virtual {v4}, Lpwc;->j()I
+    iget p1, p0, Le95;->a:I
 
-    move-result v4
+    return p1
+.end method
 
-    sub-int/2addr v4, v3
+.method public final b()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    iget v3, v0, Lf95;->b:I
+    iget-object v0, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
 
-    if-gt v4, v3, :cond_7
+    return-object v0
+.end method
 
-    invoke-virtual {v2}, Ln95;->getIgnoreRefreshingFlagsForScrollEvent()Z
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
 
-    move-result v3
+    iget-object p2, p0, Le95;->d:Landroid/graphics/Paint$FontMetricsInt;
 
-    if-nez v3, :cond_5
+    invoke-virtual {p9, p2}, Landroid/graphics/Paint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
 
-    iget-boolean v3, v2, Ln95;->h2:Z
+    iget p3, p0, Le95;->b:I
 
-    if-nez v3, :cond_7
+    iget p4, p0, Le95;->o:I
 
-    :cond_5
-    invoke-interface {v1}, Lh95;->m()Z
+    if-eqz p4, :cond_1
 
-    move-result v3
+    const/4 p6, 0x2
 
-    if-eqz v3, :cond_7
+    if-eq p4, p6, :cond_0
 
-    iget-object v3, v2, Ln95;->k2:Ljava/lang/Integer;
+    neg-int p2, p3
 
-    if-eqz v3, :cond_6
+    goto :goto_0
 
-    invoke-virtual {v2}, Ln95;->getRefreshingNextDelegate()Lzxc;
+    :cond_0
+    iget p4, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    invoke-virtual {v2, v7}, Ln95;->setRefreshingNext(Z)V
+    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    :cond_6
-    invoke-interface {v1}, Lh95;->l()V
+    sub-int/2addr p4, p2
 
-    :cond_7
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    sub-int/2addr p4, p3
 
-    move-result-object v3
+    div-int/2addr p4, p6
 
-    instance-of v4, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    add-int/2addr p2, p4
 
-    if-eqz v4, :cond_a
+    goto :goto_0
 
-    check-cast v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+    :cond_1
+    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    iget v4, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    sub-int/2addr p2, p3
 
-    new-array v8, v4, [I
+    :goto_0
+    add-int/2addr p7, p2
 
-    move v9, v6
+    int-to-float p2, p7
 
-    :goto_3
-    iget v10, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->p:I
+    invoke-virtual {p1, p5, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    if-ge v9, v10, :cond_9
+    iget-object p2, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
 
-    iget-object v10, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->q:[Llle;
+    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    aget-object v10, v10, v9
+    neg-float p2, p5
 
-    iget-object v11, v10, Llle;->e:Ljava/lang/Object;
+    neg-int p3, p7
 
-    check-cast v11, Ljava/util/ArrayList;
+    int-to-float p3, p3
 
-    iget-object v12, v10, Llle;->f:Ljava/lang/Object;
+    invoke-virtual {p1, p2, p3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    check-cast v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    iget-boolean v12, v12, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
-
-    if-eqz v12, :cond_8
-
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
-
-    move-result v11
-
-    sub-int/2addr v11, v7
-
-    invoke-virtual {v10, v11, v5, v7, v6}, Llle;->g(IIZZ)I
-
-    move-result v10
-
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
-
-    move-result v11
-
-    invoke-virtual {v10, v6, v11, v7, v6}, Llle;->g(IIZZ)I
-
-    move-result v10
-
-    :goto_4
-    aput v10, v8, v9
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_3
-
-    :cond_9
-    sub-int/2addr v4, v7
-
-    aget v6, v8, v4
-
-    goto :goto_5
-
-    :cond_a
-    instance-of v4, v3, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v4, :cond_b
-
-    check-cast v3, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result v6
-
-    :cond_b
-    :goto_5
-    if-ltz v6, :cond_e
-
-    iget v0, v0, Lf95;->b:I
-
-    if-gt v6, v0, :cond_e
-
-    invoke-virtual {v2}, Ln95;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result v0
-
-    if-nez v0, :cond_c
-
-    iget-boolean v0, v2, Ln95;->i2:Z
-
-    if-nez v0, :cond_e
-
-    :cond_c
-    invoke-interface {v1}, Lh95;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, v2, Ln95;->k2:Ljava/lang/Integer;
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {v2, v7}, Ln95;->setRefreshingPrev(Z)V
-
-    :cond_d
-    invoke-interface {v1}, Lh95;->i()V
-
-    :cond_e
     return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Le95;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Le95;
+
+    iget v0, p0, Le95;->o:I
+
+    iget v1, p1, Le95;->o:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Le95;->c:Landroid/graphics/Rect;
+
+    iget-object v1, p1, Le95;->c:Landroid/graphics/Rect;
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
+
+    iget-object p1, p1, Le95;->X:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 4
+
+    iget-object v0, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
+
+    instance-of v1, v0, Lvwe;
+
+    if-eqz v1, :cond_3
+
+    check-cast v0, Lvwe;
+
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    move-object v1, p5
+
+    :cond_0
+    sget-object v2, Lvwe;->d:Landroid/graphics/Paint;
+
+    iget-object v2, v0, Lvwe;->a:Lwwe;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget v3, v1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+
+    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
+
+    move-result v3
+
+    iget v1, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v3
+
+    if-lez v1, :cond_3
+
+    iget v3, v2, Lwwe;->b:I
+
+    if-ne v3, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iput v1, v2, Lwwe;->b:I
+
+    iget-object v1, v0, Lvwe;->a:Lwwe;
+
+    iget v1, v1, Lwwe;->b:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v2, v1, v1}, Lvwe;->setBounds(IIII)V
+
+    invoke-virtual {v0}, Lvwe;->a()V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_3
+    :goto_0
+    invoke-virtual/range {p0 .. p5}, Le95;->a(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Le95;->c:Landroid/graphics/Rect;
+
+    iget v1, p0, Le95;->o:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, p0, Le95;->X:Landroid/graphics/drawable/Drawable;
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

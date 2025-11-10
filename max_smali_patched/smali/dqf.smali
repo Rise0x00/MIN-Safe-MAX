@@ -1,25 +1,50 @@
-.class public abstract Ldqf;
-.super Ljava/lang/Object;
+.class public final Ldqf;
+.super Ladi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ldqf;
+
+
 # direct methods
-.method public static a(Landroid/animation/Animator;)J
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->getTotalDuration()J
+    new-instance v0, Ldqf;
 
-    move-result-wide v0
+    const/4 v1, 0x0
 
-    return-wide v0
-.end method
+    const/16 v2, 0x10
 
-.method public static b(Landroid/animation/Animator;J)V
-    .locals 0
+    invoke-direct {v0, v2, v1}, Ladi;-><init>(ILjava/lang/Object;)V
 
-    check-cast p0, Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p0, p1, p2}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+    sput-object v0, Ldqf;->c:Ldqf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final i0()Z
+    .locals 2
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

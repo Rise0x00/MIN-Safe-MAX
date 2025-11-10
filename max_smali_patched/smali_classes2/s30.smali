@@ -1,142 +1,70 @@
-.class public final Ls30;
+.class public final synthetic Ls30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhl8;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
+.field public final synthetic b:Lu30;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lu30;I)V
     .locals 0
 
+    iput p2, p0, Ls30;->a:I
+
+    iput-object p1, p0, Ls30;->b:Lu30;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ls30;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ls30;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ls30;->c:Ljava/lang/String;
-
-    iput p4, p0, Ls30;->d:I
-
-    iput p5, p0, Ls30;->e:I
-
-    iput p6, p0, Ls30;->f:I
-
-    iput-object p7, p0, Ls30;->g:Ljava/lang/String;
-
-    iput-object p8, p0, Ls30;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Ls30;->b:Ljava/lang/String;
+    iget v0, p0, Ls30;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
+    iget-object v0, p0, Ls30;->b:Lu30;
 
-    const/4 p1, 0x0
+    iget-object v0, v0, Lu30;->b:Ljava/lang/Object;
 
-    return p1
-.end method
+    check-cast v0, Landroid/content/Context;
 
-.method public final hashCode()I
-    .locals 1
+    const-string v1, "audio"
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", sampleMimeType: "
-
-    const-string v1, ", codecs: "
-
-    const-string v2, "AudioFormat(id: "
-
-    iget-object v3, p0, Ls30;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Ls30;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Ls30;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitrate: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ls30;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", channelCount: "
-
-    const-string v2, ", label: "
-
-    iget v3, p0, Ls30;->e:I
-
-    iget v4, p0, Ls30;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget-object v1, p0, Ls30;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", language: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ls30;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, Landroid/media/AudioManager;
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Llo;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Ls30;->b:Lu30;
+
+    invoke-direct {v0, v1, v2}, Llo;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

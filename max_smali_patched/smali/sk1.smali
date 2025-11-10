@@ -1,61 +1,90 @@
 .class public final Lsk1;
-.super Lgl1;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final D:Lsk1;
+
+# instance fields
+.field public final synthetic X:Lone/me/calls/ui/ui/call/CallScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    new-instance v0, Lsk1;
+    iput-object p2, p0, Lsk1;->X:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-direct {v0}, Lgl1;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lsk1;->D:Lsk1;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lsk1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Lsk1;
+    check-cast p1, Lsk1;
 
-    if-nez p1, :cond_1
+    sget-object p2, Lybg;->a:Lybg;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Lsk1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, -0x3c04238b
+    new-instance v0, Lsk1;
 
-    return v0
-.end method
+    iget-object v1, p0, Lsk1;->X:Lone/me/calls/ui/ui/call/CallScreen;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lsk1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
 
-    const-string v0, "OpenCallProfile"
+    iput-object p1, v0, Lsk1;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsk1;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+
+    iget-object v0, p0, Lsk1;->X:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lf34;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lf34;->c(Z)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

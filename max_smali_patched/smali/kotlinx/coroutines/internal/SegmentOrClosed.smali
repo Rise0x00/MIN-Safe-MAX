@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -128,7 +128,7 @@
 .method public static final equals-impl0(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 

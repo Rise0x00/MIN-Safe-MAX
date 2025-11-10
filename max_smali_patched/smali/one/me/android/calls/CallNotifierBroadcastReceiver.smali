@@ -39,23 +39,23 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    sget-object v0, Lyka;->a:Lyka;
+    sget-object v0, Lusa;->a:Lusa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Ljz0;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
 
     move-result-object v0
 
-    check-cast v0, Ljz0;
+    const-class v1, Lzz0;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzz0;
 
     const-string v1, "CallNotifierBroadcastReceiver"
 
-    invoke-virtual {v0, p1, p2, v1}, Ljz0;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {v0, p1, p2, v1}, Lzz0;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     return-void
 .end method

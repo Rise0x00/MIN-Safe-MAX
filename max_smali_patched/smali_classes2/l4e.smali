@@ -1,39 +1,80 @@
 .class public final Ll4e;
-.super Lgd4;
+.super Logf;
 .source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static final b:Ll4e;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public final synthetic X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/tools/server/ServerHostBottomSheet;)V
+    .locals 0
+
+    iput-object p2, p0, Ll4e;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ll4e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ll4e;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ll4e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Ll4e;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iget-object v1, p0, Ll4e;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
 
-    sput-object v0, Ll4e;->b:Ll4e;
+    invoke-direct {v0, p2, v1}, Ll4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/tools/server/ServerHostBottomSheet;)V
 
-    const/4 v1, 0x0
+    iput-object p1, v0, Ll4e;->o:Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/16 v3, 0xe
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string v4, ":settings/ringtone"
+    iget-object p1, p0, Ll4e;->o:Ljava/lang/Object;
 
-    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    check-cast p1, Ljava/util/List;
 
-    move-result-object v0
+    iget-object v0, p0, Ll4e;->X:Lone/me/devmenu/tools/server/ServerHostBottomSheet;
 
-    sput-object v0, Ll4e;->c:Lbd4;
+    iget-object v0, v0, Lone/me/devmenu/tools/server/ServerHostBottomSheet;->D0:Ljjh;
 
-    return-void
+    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

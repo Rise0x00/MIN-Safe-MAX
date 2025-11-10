@@ -1,65 +1,23 @@
-.class public final La1;
-.super Ljava/lang/Object;
+.class public abstract La1;
+.super Lr26;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ltxd;
-
-.field public final b:Ljx7;
+.field public final b:Lr26;
 
 
 # direct methods
-.method public constructor <init>(Ltxd;Ljx7;)V
-    .locals 0
+.method public constructor <init>(Lr26;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La1;->a:Ltxd;
+    const-string v0, "source is null"
 
-    iput-object p2, p0, La1;->b:Ljx7;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-void
-.end method
+    iput-object p1, p0, La1;->b:Lr26;
 
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget-object v0, p0, La1;->a:Ltxd;
-
-    iget-object v0, v0, Ln1;->a:Ljava/lang/Object;
-
-    if-eq v0, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, La1;->b:Ljx7;
-
-    invoke-static {v0}, Ln1;->f(Ljx7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Ln1;->Y:Lnf2;
-
-    iget-object v2, p0, La1;->a:Ltxd;
-
-    invoke-virtual {v1, v2, p0, v0}, Lnf2;->l(Ln1;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, La1;->a:Ltxd;
-
-    invoke-static {v0}, Ln1;->b(Ln1;)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method

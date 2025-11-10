@@ -1,51 +1,148 @@
 .class public final Lw4a;
-.super Lnz3;
+.super Lx9b;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final b:Lw4a;
+
+.field public static final c:Lw4a;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:La5a;
-
-.field public Z:I
-
-.field public o:Lo57;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(La5a;Lnz3;)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lw4a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lw4a;-><init>(I)V
+
+    sput-object v0, Lw4a;->b:Lw4a;
+
+    new-instance v0, Lw4a;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lw4a;-><init>(I)V
+
+    sput-object v0, Lw4a;->c:Lw4a;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lw4a;->Y:La5a;
+    iput p1, p0, Lw4a;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Lx9b;
     .locals 1
 
-    iput-object p1, p0, Lw4a;->X:Ljava/lang/Object;
+    iget v0, p0, Lw4a;->a:I
 
-    iget p1, p0, Lw4a;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    sget-object v0, Lw4a;->b:Lw4a;
 
-    or-int/2addr p1, v0
+    return-object v0
 
-    iput p1, p0, Lw4a;->Z:I
+    :pswitch_0
+    sget-object v0, Lw4a;->c:Lw4a;
 
-    iget-object p1, p0, Lw4a;->Y:La5a;
+    return-object v0
 
-    const/4 v0, 0x0
+    nop
 
-    invoke-virtual {p1, v0, v0, p0}, La5a;->a(Lo57;Lb67;Lnz3;)Ljava/lang/Object;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    return-object p1
+    iget v0, p0, Lw4a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-ne p1, p2, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lw4a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "Ordering.natural().reverse()"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "Ordering.natural()"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

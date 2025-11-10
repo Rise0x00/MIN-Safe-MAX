@@ -1,8 +1,11 @@
-.class public abstract Lthc;
+.class public interface abstract Lthc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lbqe;
 
 
-# static fields
-.field public static call_users_in_wait_room_count:I = 0x7f110006
-
-.field public static call_users_info_count:I = 0x7f110007
+# virtual methods
+.method public abstract q(I)I
+.end method

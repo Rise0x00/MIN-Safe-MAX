@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public final c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
+.method public final d(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 1
 
     const/4 v0, 0x0

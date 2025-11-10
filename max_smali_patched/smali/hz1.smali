@@ -1,24 +1,64 @@
-.class public final Lhz1;
+.class public final synthetic Lhz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhy1;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Ldx1;
+
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
+
+.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
+
+.field public final synthetic d:J
+
+.field public final synthetic o:J
+
+
+# direct methods
+.method public synthetic constructor <init>(Ldx1;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhz1;->a:Ldx1;
+
+    iput-object p2, p0, Lhz1;->b:Landroid/hardware/camera2/CameraCaptureSession;
+
+    iput-object p3, p0, Lhz1;->c:Landroid/hardware/camera2/CaptureRequest;
+
+    iput-wide p4, p0, Lhz1;->d:J
+
+    iput-wide p6, p0, Lhz1;->o:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljx7;
-    .locals 1
+.method public final run()V
+    .locals 8
 
-    sget-object v0, Li67;->c:Li67;
+    iget-object v0, p0, Lhz1;->a:Ldx1;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Ldx1;->b:Ljava/lang/Object;
 
-.method public final b()Ljx7;
-    .locals 1
+    move-object v1, v0
 
-    sget-object v0, Li67;->c:Li67;
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-    return-object v0
+    iget-object v2, p0, Lhz1;->b:Landroid/hardware/camera2/CameraCaptureSession;
+
+    iget-object v3, p0, Lhz1;->c:Landroid/hardware/camera2/CaptureRequest;
+
+    iget-wide v4, p0, Lhz1;->d:J
+
+    iget-wide v6, p0, Lhz1;->o:J
+
+    invoke-virtual/range {v1 .. v7}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+
+    return-void
 .end method

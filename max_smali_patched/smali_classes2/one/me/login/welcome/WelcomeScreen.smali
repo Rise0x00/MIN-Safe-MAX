@@ -32,30 +32,30 @@
 
 
 # static fields
-.field public static final synthetic w0:[Ltm7;
+.field public static final synthetic Z:[Les7;
 
 
 # instance fields
 .field public final X:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/Object;
+.field public final Y:Lw5b;
 
-.field public final Z:Luxa;
+.field public final a:Lni7;
 
-.field public final a:Led7;
+.field public final b:Li78;
 
-.field public final b:Lfub;
+.field public final c:Lru7;
 
-.field public final c:Lbp7;
+.field public final d:Ld0d;
 
-.field public final o:Lmqc;
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lt5c;
+    new-instance v0, Lbec;
 
     const-class v1, Lone/me/login/welcome/WelcomeScreen;
 
@@ -65,21 +65,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lxxc;->a:Lyxc;
+    sget-object v2, Lv7d;->a:Lw7d;
 
     const-string v3, "termsTextView"
 
     const-string v5, "getTermsTextView()Landroid/widget/TextView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
+    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Ltm7;
+    new-array v2, v2, [Les7;
 
     aput-object v0, v2, v4
 
@@ -87,7 +87,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/login/welcome/WelcomeScreen;->w0:[Ltm7;
+    sput-object v2, Lone/me/login/welcome/WelcomeScreen;->Z:[Les7;
 
     return-void
 .end method
@@ -101,98 +101,100 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfi4;)V
 
-    new-instance v3, Led7;
+    new-instance v3, Lni7;
 
-    new-instance v4, Ljr0;
+    new-instance v4, Lds0;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v2, v5, v1}, Ljr0;-><init>(IIZ)V
+    invoke-direct {v4, v2, v5, v1}, Lds0;-><init>(IIZ)V
 
-    invoke-direct {v3, v1, v4, v5}, Led7;-><init>(ILjr0;I)V
+    const/4 v5, 0x7
 
-    iput-object v3, p0, Lone/me/login/welcome/WelcomeScreen;->a:Led7;
+    invoke-direct {v3, v1, v4, v5}, Lni7;-><init>(ILds0;I)V
 
-    new-instance v1, Lfub;
+    iput-object v3, p0, Lone/me/login/welcome/WelcomeScreen;->a:Lni7;
 
-    new-instance v3, Lgeg;
+    new-instance v1, Li78;
 
-    const/16 v4, 0x12
+    new-instance v3, Ly8h;
 
-    invoke-direct {v3, v4}, Lgeg;-><init>(I)V
+    const/16 v4, 0xd
+
+    invoke-direct {v3, v4}, Ly8h;-><init>(I)V
 
     const/4 v4, 0x6
 
-    invoke-direct {v1, v3, v0, v4}, Lfub;-><init>(Lve6;Lve6;I)V
+    invoke-direct {v1, v3, v0, v4}, Li78;-><init>(Loi6;Loi6;I)V
 
-    iput-object v1, p0, Lone/me/login/welcome/WelcomeScreen;->b:Lfub;
+    iput-object v1, p0, Lone/me/login/welcome/WelcomeScreen;->b:Li78;
 
     const-string v1, "LoginScope"
 
-    const-class v3, Lp58;
+    const-class v3, Lva8;
 
-    invoke-virtual {p0, v1, v3, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lve6;)Lbp7;
+    invoke-virtual {p0, v1, v3, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loi6;)Lru7;
 
-    sget-object v0, Lyid;->l:Lbp7;
+    sget-object v0, Laud;->l:Lru7;
 
-    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->c:Lbp7;
+    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->c:Lru7;
 
-    sget v0, Lrec;->oneme_login_welcome_placeholder:I
+    sget v0, Laoc;->oneme_login_welcome_placeholder:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
 
-    sget v0, Lrec;->oneme_login_welcome_terms:I
+    sget v0, Laoc;->oneme_login_welcome_terms:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->o:Lmqc;
+    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->d:Ld0d;
 
-    new-instance v0, Lwsf;
+    new-instance v0, Lqpf;
 
-    const/16 v1, 0xd
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1, p0}, Lwsf;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lqpf;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v2, v0}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->o:Ljava/lang/Object;
+
+    new-instance v0, Ly8h;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Ly8h;-><init>(I)V
+
+    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->X:Ljava/lang/Object;
 
-    new-instance v0, Lgeg;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lgeg;-><init>(I)V
-
-    invoke-static {v2, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->Y:Ljava/lang/Object;
-
-    sget-object v0, Lbx4;->y0:Lsed;
+    sget-object v0, Ly53;->s0:Lvh4;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lsed;->m(Landroid/content/Context;)Lloa;
+    invoke-virtual {v0, v1}, Lvh4;->k(Landroid/content/Context;)Lewa;
 
     move-result-object v0
 
-    iget-object v0, v0, Lloa;->c:Luxa;
+    iget-object v0, v0, Lewa;->c:Lw5b;
 
-    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->Z:Luxa;
+    iput-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->Y:Lw5b;
 
     return-void
 .end method
 
-.method public static final B0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
+.method public static final x0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
     .locals 2
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -208,7 +210,7 @@
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     :try_start_0
-    invoke-virtual {p0, v0}, Lb04;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lc24;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -221,81 +223,43 @@
 
     const-string v1, "WelcomeScreen"
 
-    invoke-static {v1, p1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, p1, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance p1, Lava;
+    new-instance p1, Lc3b;
 
-    invoke-direct {p1, p0}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {p1, p0}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    sget v0, Lt9d;->O1:I
+    sget v0, Lmkd;->G0:I
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lava;->h(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, p0}, Lc3b;->h(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1}, Lava;->i()Lzua;
+    invoke-virtual {p1}, Lc3b;->i()Lb3b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, p2, v0, v0, v1}, Lyxe;->o0(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
-
-    move-result p1
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    const/16 v0, 0x21
-
-    invoke-virtual {p3, p4, p1, p2, v0}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
-
-    new-instance p4, Landroid/text/style/ForegroundColorSpan;
-
-    iget-object v1, p0, Lone/me/login/welcome/WelcomeScreen;->Z:Luxa;
-
-    invoke-interface {v1}, Luxa;->getText()Lbdf;
-
-    move-result-object v1
-
-    iget v1, v1, Lbdf;->e:I
-
-    invoke-direct {p4, v1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
-
-    invoke-virtual {p3, p4, p1, p2, v0}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
-
-    return-void
-.end method
-
-.method public final getInsetsConfig()Led7;
+.method public final getInsetsConfig()Lni7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->a:Led7;
+    iget-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->a:Lni7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lmfd;
+.method public final getScreenDelegate()Liqd;
     .locals 1
 
-    iget-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->b:Lfub;
+    iget-object v0, p0, Lone/me/login/welcome/WelcomeScreen;->b:Li78;
 
     return-object v0
 .end method
@@ -311,29 +275,29 @@
 
     invoke-direct {p2, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p1, Lr5e;
+    new-instance p1, Lmhe;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p1, p3}, Lr5e;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p3}, Lmhe;-><init>(Landroid/content/Context;)V
 
-    new-instance p3, Lao3;
+    new-instance p3, Lmq3;
 
     const/4 v0, -0x1
 
-    invoke-direct {p3, v0, v0}, Lao3;-><init>(II)V
+    invoke-direct {p3, v0, v0}, Lmq3;-><init>(II)V
 
     const/4 v1, 0x0
 
-    iput v1, p3, Lao3;->i:I
+    iput v1, p3, Lmq3;->i:I
 
-    iput v1, p3, Lao3;->t:I
+    iput v1, p3, Lmq3;->t:I
 
-    iput v1, p3, Lao3;->v:I
+    iput v1, p3, Lmq3;->v:I
 
-    iput v1, p3, Lao3;->l:I
+    iput v1, p3, Lmq3;->l:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -347,17 +311,17 @@
 
     invoke-direct {p1, p3}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lrec;->oneme_login_welcome_toolbar:I
+    sget p3, Laoc;->oneme_login_welcome_toolbar:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setId(I)V
 
-    new-instance p3, Lao3;
+    new-instance p3, Lmq3;
 
     const/16 v2, 0x34
 
     int-to-float v2, v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -369,21 +333,21 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Lkhi;->c(F)I
 
     move-result v2
 
-    invoke-direct {p3, v1, v2}, Lao3;-><init>(II)V
+    invoke-direct {p3, v1, v2}, Lmq3;-><init>(II)V
 
-    iput v1, p3, Lao3;->i:I
+    iput v1, p3, Lmq3;->i:I
 
-    iput v1, p3, Lao3;->t:I
+    iput v1, p3, Lmq3;->t:I
 
-    iput v1, p3, Lao3;->v:I
+    iput v1, p3, Lmq3;->v:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {p1}, Lio7;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lu0i;->c(Landroid/view/View;)V
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -395,21 +359,21 @@
 
     invoke-direct {p1, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lrec;->oneme_login_welcome_title:I
+    sget p3, Laoc;->oneme_login_welcome_title:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setId(I)V
 
-    new-instance p3, Lao3;
+    new-instance p3, Lmq3;
 
     const/4 v2, -0x2
 
-    invoke-direct {p3, v2, v2}, Lao3;-><init>(II)V
+    invoke-direct {p3, v2, v2}, Lmq3;-><init>(II)V
 
     const/16 v3, 0x10
 
     int-to-float v3, v3
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -421,11 +385,11 @@
 
     mul-float/2addr v4, v3
 
-    invoke-static {v4}, Lv63;->r0(F)I
+    invoke-static {v4}, Lkhi;->c(F)I
 
     move-result v4
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -437,27 +401,27 @@
 
     mul-float/2addr v5, v3
 
-    invoke-static {v5}, Lv63;->r0(F)I
+    invoke-static {v5}, Lkhi;->c(F)I
 
     move-result v5
 
     invoke-virtual {p3, v4, v1, v5, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    sget v4, Lrec;->oneme_login_welcome_toolbar:I
+    sget v4, Laoc;->oneme_login_welcome_toolbar:I
 
-    iput v4, p3, Lao3;->j:I
+    iput v4, p3, Lmq3;->j:I
 
-    iput v1, p3, Lao3;->t:I
+    iput v1, p3, Lmq3;->t:I
 
-    iput v1, p3, Lao3;->v:I
+    iput v1, p3, Lmq3;->v:I
 
-    sget v4, Lrec;->oneme_login_welcome_description:I
+    sget v4, Laoc;->oneme_login_welcome_description:I
 
-    iput v4, p3, Lao3;->k:I
+    iput v4, p3, Lmq3;->k:I
 
     const/4 v4, 0x2
 
-    iput v4, p3, Lao3;->K:I
+    iput v4, p3, Lmq3;->K:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -465,31 +429,31 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setGravity(I)V
 
-    iget-object p3, p0, Lone/me/login/welcome/WelcomeScreen;->Z:Luxa;
+    iget-object p3, p0, Lone/me/login/welcome/WelcomeScreen;->Y:Lw5b;
 
-    invoke-interface {p3}, Luxa;->getText()Lbdf;
+    invoke-interface {p3}, Lw5b;->getText()Laqf;
 
     move-result-object v4
 
-    iget v4, v4, Lbdf;->e:I
+    iget v4, v4, Laqf;->e:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget-object v4, Lrxf;->z:Lpef;
+    sget-object v4, Lcbg;->z:Lorf;
 
-    invoke-static {v4, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
+    invoke-static {v4, p1}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
 
-    sget v4, Lkjc;->oneme_login_welcome_title:I
+    sget v4, Lwsc;->oneme_login_welcome_title:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setText(I)V
 
-    iget-object v4, p0, Lone/me/login/welcome/WelcomeScreen;->Y:Ljava/lang/Object;
+    iget-object v4, p0, Lone/me/login/welcome/WelcomeScreen;->X:Ljava/lang/Object;
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lsia;
+    check-cast v5, Lhqa;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -503,15 +467,15 @@
 
     invoke-direct {p1, v5}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v5, Lrec;->oneme_login_welcome_description:I
+    sget v5, Laoc;->oneme_login_welcome_description:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setId(I)V
 
-    new-instance v5, Lao3;
+    new-instance v5, Lmq3;
 
-    invoke-direct {v5, v2, v2}, Lao3;-><init>(II)V
+    invoke-direct {v5, v2, v2}, Lmq3;-><init>(II)V
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -523,7 +487,7 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Lv63;->r0(F)I
+    invoke-static {v6}, Lkhi;->c(F)I
 
     move-result v6
 
@@ -531,7 +495,7 @@
 
     int-to-float v7, v7
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -543,11 +507,11 @@
 
     mul-float/2addr v8, v7
 
-    invoke-static {v8}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
     move-result v8
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -559,71 +523,71 @@
 
     mul-float/2addr v9, v3
 
-    invoke-static {v9}, Lv63;->r0(F)I
+    invoke-static {v9}, Lkhi;->c(F)I
 
     move-result v9
 
     invoke-virtual {v5, v6, v8, v9, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    sget v6, Lrec;->oneme_login_welcome_title:I
+    sget v6, Laoc;->oneme_login_welcome_title:I
 
-    iput v6, v5, Lao3;->j:I
+    iput v6, v5, Lmq3;->j:I
 
-    iput v1, v5, Lao3;->t:I
+    iput v1, v5, Lmq3;->t:I
 
-    iput v1, v5, Lao3;->v:I
+    iput v1, v5, Lmq3;->v:I
 
-    sget v6, Lrec;->oneme_login_welcome_placeholder:I
+    sget v6, Laoc;->oneme_login_welcome_placeholder:I
 
-    iput v6, v5, Lao3;->k:I
+    iput v6, v5, Lmq3;->k:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-interface {p3}, Luxa;->getText()Lbdf;
+    invoke-interface {p3}, Lw5b;->getText()Laqf;
 
     move-result-object v5
 
-    iget v5, v5, Lbdf;->h:I
+    iget v5, v5, Laqf;->h:I
 
     invoke-virtual {p1, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget-object v5, Lrxf;->o:Lpef;
+    sget-object v5, Lcbg;->o:Lorf;
 
-    invoke-static {v5, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
+    invoke-static {v5, p1}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
 
-    sget v5, Lkjc;->oneme_login_welcome_description:I
+    sget v5, Lwsc;->oneme_login_welcome_description:I
 
     invoke-virtual {p1, v5}, Landroid/widget/TextView;->setText(I)V
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lsia;
+    check-cast v5, Lhqa;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lmn6;
+    new-instance p1, Lhr6;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-direct {p1, v5}, Lmn6;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v5}, Lhr6;-><init>(Landroid/content/Context;)V
 
-    sget v5, Lrec;->oneme_login_welcome_placeholder:I
+    sget v5, Laoc;->oneme_login_welcome_placeholder:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setId(I)V
 
-    new-instance v5, Lao3;
+    new-instance v5, Lmq3;
 
     const/16 v6, 0xea
 
     int-to-float v6, v6
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -635,11 +599,11 @@
 
     mul-float/2addr v8, v6
 
-    invoke-static {v8}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
     move-result v8
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -651,13 +615,13 @@
 
     mul-float/2addr v6, v9
 
-    invoke-static {v6}, Lv63;->r0(F)I
+    invoke-static {v6}, Lkhi;->c(F)I
 
     move-result v6
 
-    invoke-direct {v5, v8, v6}, Lao3;-><init>(II)V
+    invoke-direct {v5, v8, v6}, Lmq3;-><init>(II)V
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -669,11 +633,11 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Lv63;->r0(F)I
+    invoke-static {v6}, Lkhi;->c(F)I
 
     move-result v6
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -685,43 +649,43 @@
 
     mul-float/2addr v8, v3
 
-    invoke-static {v8}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
     move-result v8
 
     invoke-virtual {v5, v6, v1, v8, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    sget v6, Lrec;->oneme_login_welcome_title:I
+    sget v6, Laoc;->oneme_login_welcome_title:I
 
-    iput v6, v5, Lao3;->j:I
+    iput v6, v5, Lmq3;->j:I
 
-    sget v6, Lrec;->oneme_login_welcome_continue_btn:I
+    sget v6, Laoc;->oneme_login_welcome_continue_btn:I
 
-    iput v6, v5, Lao3;->k:I
+    iput v6, v5, Lmq3;->k:I
 
-    iput v1, v5, Lao3;->t:I
+    iput v1, v5, Lmq3;->t:I
 
-    iput v1, v5, Lao3;->v:I
+    iput v1, v5, Lmq3;->v:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v5, Ljcc;->welcome_logo:I
+    sget v5, Ltlc;->welcome_logo:I
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v6, v5}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
     invoke-virtual {p1, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lsia;
+    check-cast v4, Lhqa;
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -737,31 +701,31 @@
 
     invoke-direct {p1, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v4, Lrec;->oneme_login_welcome_continue_btn:I
+    sget v4, Laoc;->oneme_login_welcome_continue_btn:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setId(I)V
 
-    sget-object v4, Luia;->o:Luia;
+    sget-object v4, Ljqa;->d:Ljqa;
 
-    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
+    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ljqa;)V
 
-    sget-object v4, Lxia;->c:Lxia;
+    sget-object v4, Lmqa;->c:Lmqa;
 
-    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
+    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lmqa;)V
 
-    sget-object v4, Lwia;->a:Lwia;
+    sget-object v4, Llqa;->a:Llqa;
 
-    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
+    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Llqa;)V
 
-    sget v4, Lkjc;->oneme_login_welcome_continue_btn:I
+    sget v4, Lwsc;->oneme_login_welcome_continue_btn:I
 
     invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v4, Lao3;
+    new-instance v4, Lmq3;
 
-    invoke-direct {v4, v1, v2}, Lao3;-><init>(II)V
+    invoke-direct {v4, v1, v2}, Lmq3;-><init>(II)V
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -773,11 +737,11 @@
 
     mul-float/2addr v5, v7
 
-    invoke-static {v5}, Lv63;->r0(F)I
+    invoke-static {v5}, Lkhi;->c(F)I
 
     move-result v5
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -789,11 +753,11 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Lv63;->r0(F)I
+    invoke-static {v6}, Lkhi;->c(F)I
 
     move-result v6
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -805,31 +769,31 @@
 
     mul-float/2addr v8, v3
 
-    invoke-static {v8}, Lv63;->r0(F)I
+    invoke-static {v8}, Lkhi;->c(F)I
 
     move-result v8
 
     invoke-virtual {v4, v5, v1, v6, v8}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    sget v5, Lrec;->oneme_login_welcome_terms:I
+    sget v5, Laoc;->oneme_login_welcome_terms:I
 
-    iput v5, v4, Lao3;->k:I
+    iput v5, v4, Lmq3;->k:I
 
-    iput v1, v4, Lao3;->t:I
+    iput v1, v4, Lmq3;->t:I
 
-    iput v1, v4, Lao3;->v:I
+    iput v1, v4, Lmq3;->v:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v4, Lm9g;
+    new-instance v4, Ledh;
 
-    const/4 v5, 0x6
+    const/4 v5, 0x1
 
-    invoke-direct {v4, v5, p0}, Lm9g;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, p0, v5}, Ledh;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-static {p1, v4}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p1, v4}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {p1, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Luxa;)V
+    invoke-virtual {p1, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Lw5b;)V
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -841,7 +805,7 @@
 
     invoke-direct {p1, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v4, Lrec;->oneme_login_welcome_terms:I
+    sget v4, Laoc;->oneme_login_welcome_terms:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setId(I)V
 
@@ -849,11 +813,11 @@
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    new-instance v4, Lao3;
+    new-instance v4, Lmq3;
 
-    invoke-direct {v4, v0, v2}, Lao3;-><init>(II)V
+    invoke-direct {v4, v0, v2}, Lmq3;-><init>(II)V
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -865,11 +829,11 @@
 
     mul-float/2addr v0, v7
 
-    invoke-static {v0}, Lv63;->r0(F)I
+    invoke-static {v0}, Lkhi;->c(F)I
 
     move-result v0
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -881,11 +845,11 @@
 
     mul-float/2addr v3, v2
 
-    invoke-static {v3}, Lv63;->r0(F)I
+    invoke-static {v3}, Lkhi;->c(F)I
 
     move-result v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -897,29 +861,29 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Lv63;->r0(F)I
+    invoke-static {v7}, Lkhi;->c(F)I
 
     move-result v3
 
     invoke-virtual {v4, v0, v1, v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    iput v1, v4, Lao3;->l:I
+    iput v1, v4, Lmq3;->l:I
 
-    iput v1, v4, Lao3;->t:I
+    iput v1, v4, Lmq3;->t:I
 
-    iput v1, v4, Lao3;->v:I
+    iput v1, v4, Lmq3;->v:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v0, Lrxf;->r:Lpef;
+    sget-object v0, Lcbg;->r:Lorf;
 
-    invoke-static {v0, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
+    invoke-static {v0, p1}, Lorf;->d(Lorf;Landroid/widget/TextView;)V
 
-    invoke-interface {p3}, Luxa;->getText()Lbdf;
+    invoke-interface {p3}, Lw5b;->getText()Laqf;
 
     move-result-object p3
 
-    iget p3, p3, Lbdf;->g:I
+    iget p3, p3, Laqf;->g:I
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -933,47 +897,47 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    sget-object p1, Lone/me/login/welcome/WelcomeScreen;->w0:[Ltm7;
+    sget-object p1, Lone/me/login/welcome/WelcomeScreen;->Z:[Les7;
 
     const/4 v0, 0x1
 
     aget-object v1, p1, v0
 
-    iget-object v2, p0, Lone/me/login/welcome/WelcomeScreen;->o:Lmqc;
+    iget-object v2, p0, Lone/me/login/welcome/WelcomeScreen;->d:Ld0d;
 
-    invoke-interface {v2, p0, v1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    sget v3, Lkjc;->oneme_login_welcome_terms:I
+    sget v3, Lwsc;->oneme_login_welcome_terms:I
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lo7;->o(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v4, v3}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget v4, Lkjc;->oneme_login_welcome_privacy_policy_clickable_part:I
+    sget v4, Lwsc;->oneme_login_welcome_privacy_policy_clickable_part:I
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-static {v5, v4}, Lo7;->o(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v5, v4}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
-    sget v5, Lkjc;->oneme_login_welcome_user_agreement_clickable_part:I
+    sget v5, Lwsc;->oneme_login_welcome_user_agreement_clickable_part:I
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lo7;->o(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v6, v5}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -981,27 +945,27 @@
 
     invoke-direct {v6, v3}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    new-instance v7, Lp6h;
+    new-instance v7, Lmlh;
 
     const/4 v8, 0x0
 
-    invoke-direct {v7, p0, v8}, Lp6h;-><init>(Lone/me/login/welcome/WelcomeScreen;I)V
+    invoke-direct {v7, p0, v8}, Lmlh;-><init>(Lone/me/login/welcome/WelcomeScreen;I)V
 
-    invoke-virtual {p0, v3, v4, v6, v7}, Lone/me/login/welcome/WelcomeScreen;->C0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
+    invoke-virtual {p0, v3, v4, v6, v7}, Lone/me/login/welcome/WelcomeScreen;->y0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
 
-    new-instance v4, Lp6h;
+    new-instance v4, Lmlh;
 
     const/4 v7, 0x1
 
-    invoke-direct {v4, p0, v7}, Lp6h;-><init>(Lone/me/login/welcome/WelcomeScreen;I)V
+    invoke-direct {v4, p0, v7}, Lmlh;-><init>(Lone/me/login/welcome/WelcomeScreen;I)V
 
-    invoke-virtual {p0, v3, v5, v6, v4}, Lone/me/login/welcome/WelcomeScreen;->C0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
+    invoke-virtual {p0, v3, v5, v6, v4}, Lone/me/login/welcome/WelcomeScreen;->y0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     aget-object p1, p1, v0
 
-    invoke-interface {v2, p0, p1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v2, p0, p1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1012,6 +976,44 @@
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    return-void
+.end method
+
+.method public final y0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x6
+
+    invoke-static {p1, p2, v0, v0, v1}, Lxaf;->H(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result p1
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    add-int/2addr p2, p1
+
+    const/16 v0, 0x21
+
+    invoke-virtual {p3, p4, p1, p2, v0}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
+
+    new-instance p4, Landroid/text/style/ForegroundColorSpan;
+
+    iget-object v1, p0, Lone/me/login/welcome/WelcomeScreen;->Y:Lw5b;
+
+    invoke-interface {v1}, Lw5b;->getText()Laqf;
+
+    move-result-object v1
+
+    iget v1, v1, Laqf;->e:I
+
+    invoke-direct {p4, v1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    invoke-virtual {p3, p4, p1, p2, v0}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     return-void
 .end method

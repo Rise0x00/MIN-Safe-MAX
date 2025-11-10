@@ -1,134 +1,46 @@
-.class public final Lsq;
-.super Lm3f;
+.class public abstract Lsq;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public X:Ljp2;
-
-.field public Y:I
-
-.field public final synthetic Z:Ljp2;
-
-.field public final synthetic w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
 
 # direct methods
-.method public constructor <init>(Ljp2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
+.method public static a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
     .locals 0
 
-    iput-object p1, p0, Lsq;->Z:Ljp2;
+    if-nez p0, :cond_0
 
-    iput-object p2, p0, Lsq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    const/4 p0, 0x1
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lsq;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lsq;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lsq;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lsq;
-
-    iget-object v0, p0, Lsq;->Z:Ljp2;
-
-    iget-object v1, p0, Lsq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    invoke-direct {p1, v0, v1, p2}, Lsq;-><init>(Ljp2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lsq;->Y:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lsq;->X:Ljp2;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return p0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->checkOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result p0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return p0
+.end method
 
-    throw p1
+.method public static b(Landroid/content/Context;)Ljava/lang/String;
+    .locals 0
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->w0:[Ltm7;
+    move-result-object p0
 
-    iget-object p1, p0, Lsq;->w0:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->B0()Lhr;
+.method public static c(Landroid/content/Context;)Landroid/app/AppOpsManager;
+    .locals 1
 
-    move-result-object p1
+    const-class v0, Landroid/app/AppOpsManager;
 
-    iget-object v0, p0, Lsq;->Z:Ljp2;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-object v0, p0, Lsq;->X:Ljp2;
+    move-result-object p0
 
-    iput v1, p0, Lsq;->Y:I
+    check-cast p0, Landroid/app/AppOpsManager;
 
-    invoke-virtual {p1, p0}, Lhr;->s(Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v1, Lf34;->a:Lf34;
-
-    if-ne p1, v1, :cond_2
-
-    return-object v1
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lip2;
-
-    invoke-virtual {v0, p1}, Ljp2;->a(Lip2;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object p0
 .end method

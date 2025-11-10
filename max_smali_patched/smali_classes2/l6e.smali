@@ -1,51 +1,92 @@
 .class public final Ll6e;
-.super Lgd4;
+.super Le5e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ll6e;
-
-.field public static final c:Lbd4;
-
-.field public static final d:Lbd4;
+# instance fields
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Ll6e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iput-wide p1, p0, Ll6e;->b:J
 
-    sput-object v0, Ll6e;->b:Ll6e;
+    return-void
+.end method
 
-    const/4 v1, 0x0
 
-    new-array v2, v1, [Ljava/lang/String;
+# virtual methods
+.method public final w()V
+    .locals 5
 
-    const-string v3, ":chats/share"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Ll6e;->c:Lbd4;
-
-    const-string v2, ":share"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-virtual {p0}, Le5e;->b()Lad2;
 
     move-result-object v0
 
-    sput-object v0, Ll6e;->d:Lbd4;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "storeChatFromCache chatId = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Ll6e;->b:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "ad2"
+
+    invoke-static {v4, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v3}, Lad2;->B(J)Lwd2;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "storeChatFromCache, chatId = "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v4, v0, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iget-object v1, v1, Lwd2;->b:Lvd2;
+
+    iget-object v0, v0, Lad2;->k:Ltw4;
+
+    invoke-virtual {v0}, Ltw4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhc4;
+
+    check-cast v0, Lob4;
+
+    iget-object v0, v0, Lob4;->b:Lmgd;
+
+    invoke-virtual {v0, v2, v3, v1}, Lmgd;->h(JLvd2;)V
 
     return-void
 .end method

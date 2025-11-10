@@ -1,64 +1,93 @@
 .class public final Ldx8;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
-# interfaces
-.implements Lex8;
 
+# instance fields
+.field public final a:Landroid/content/Context;
 
-# static fields
-.field public static final a:Ldx8;
+.field public b:Z
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    new-instance v0, Ldx8;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Ldx8;->a:Ldx8;
+    iput-boolean v0, p0, Ldx8;->b:Z
+
+    iput-object p1, p0, Ldx8;->a:Landroid/content/Context;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Ldx8;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "noConnectivity"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-boolean p2, p0, Ldx8;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    iput-boolean p1, p0, Ldx8;->b:Z
+
+    iget-object p1, p0, Ldx8;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lgx8;
+
+    invoke-virtual {p2}, Lgx8;->c()V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Ldx8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x73235df3
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Money"
-
-    return-object v0
+    return-void
 .end method

@@ -1,78 +1,140 @@
 .class public final Lnfb;
-.super Lm3f;
+.super La54;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final a:Lkv4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Lnfb;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    invoke-direct {p0}, La54;-><init>()V
 
-    const/4 p2, 0x2
+    new-instance v0, Lkv4;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lkv4;-><init>()V
+
+    iput-object v0, p0, Lnfb;->a:Lkv4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final dispatch(Ly44;Ljava/lang/Runnable;)V
+    .locals 4
 
-    check-cast p1, Ljava/util/Set;
+    iget-object v0, p0, Lnfb;->a:Lkv4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1, p2}, Lnfb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v1, Lqv4;->a:Lpm4;
 
-    move-result-object p1
+    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lbe8;
 
-    check-cast p1, Lnfb;
+    invoke-virtual {v1}, Lbe8;->getImmediate()Lbe8;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Lnfb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, La54;->isDispatchNeeded(Ly44;)Z
 
-    return-object p2
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    iget-boolean v2, v0, Lkv4;->b:Z
+
+    if-nez v2, :cond_2
+
+    iget-boolean v2, v0, Lkv4;->a:Z
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, v0, Lkv4;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Lkv4;->a()V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "cannot enqueue any more runnables"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_0
+    new-instance v2, Lhn4;
+
+    const/4 v3, 0x6
+
+    invoke-direct {v2, v0, v3, p2}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, p1, v2}, La54;->dispatch(Ly44;Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final isDispatchNeeded(Ly44;)Z
+    .locals 2
 
-    new-instance p1, Lnfb;
+    sget-object v0, Lqv4;->a:Lpm4;
 
-    iget-object v0, p0, Lnfb;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lbe8;
 
-    invoke-direct {p1, p2, v0}, Lnfb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+    invoke-virtual {v0}, Lbe8;->getImmediate()Lbe8;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {v0, p1}, La54;->isDispatchNeeded(Ly44;)Z
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result p1
 
-    sget-object p1, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0:[Ltm7;
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lnfb;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    iget-object p1, p0, Lnfb;->a:Lkv4;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()V
+    iget-boolean v1, p1, Lkv4;->b:Z
 
-    sget-object p1, Loyf;->a:Loyf;
+    if-nez v1, :cond_2
 
-    return-object p1
+    iget-boolean p1, p1, Lkv4;->a:Z
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    move p1, v0
+
+    :goto_1
+    xor-int/2addr p1, v0
+
+    return p1
 .end method

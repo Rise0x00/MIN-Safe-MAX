@@ -3,470 +3,222 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leg5;
+.implements Luwb;
 
 
-# instance fields
-.field public final a:Lvnf;
+# static fields
+.field public static final a:Landroid/graphics/Bitmap$Config;
 
-.field public final b:I
-
-.field public final c:[I
-
-.field public final d:[Lt76;
-
-.field public final e:[J
-
-.field public f:I
+.field public static b:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>(Lvnf;[I)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    array-length v0, p2
-
-    const/4 v1, 0x0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    invoke-static {v0}, Lpih;->o(Z)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Llk0;->a:Lvnf;
-
-    array-length v0, p2
-
-    iput v0, p0, Llk0;->b:I
-
-    new-array v0, v0, [Lt76;
-
-    iput-object v0, p0, Llk0;->d:[Lt76;
-
-    move v0, v1
-
-    :goto_1
-    array-length v2, p2
-
-    if-ge v0, v2, :cond_1
-
-    iget-object v2, p0, Llk0;->d:[Lt76;
-
-    aget v3, p2, v0
-
-    iget-object v4, p1, Lvnf;->d:[Lt76;
-
-    aget-object v3, v4, v3
-
-    aput-object v3, v2, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p2, p0, Llk0;->d:[Lt76;
-
-    new-instance v0, Lc00;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lc00;-><init>(I)V
-
-    invoke-static {p2, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-
-    iget p2, p0, Llk0;->b:I
-
-    new-array p2, p2, [I
-
-    iput-object p2, p0, Llk0;->c:[I
-
-    :goto_2
-    iget p2, p0, Llk0;->b:I
-
-    if-ge v1, p2, :cond_2
-
-    iget-object p2, p0, Llk0;->c:[I
-
-    iget-object v0, p0, Llk0;->d:[Lt76;
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p1, v0}, Lvnf;->b(Lt76;)I
-
-    move-result v0
-
-    aput v0, p2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    new-array p1, p2, [J
-
-    iput-object p1, p0, Llk0;->e:[J
+    sput-object v0, Llk0;->a:Landroid/graphics/Bitmap$Config;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lvnf;
+.method public a(Landroid/graphics/Bitmap;Lpsb;)Lq93;
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Llk0;->a:Landroid/graphics/Bitmap$Config;
+
+    :goto_0
+    invoke-virtual {p2, v1, v2, v0}, Lpsb;->c(IILandroid/graphics/Bitmap$Config;)Lq93;
+
+    move-result-object p2
+
+    :try_start_0
+    invoke-virtual {p2}, Lq93;->Z()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0, v0, p1}, Llk0;->d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p2}, Lq93;->l()Lq93;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p2}, Lq93;->close()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p2}, Lq93;->close()V
+
+    throw p1
+.end method
+
+.method public b()Ley0;
     .locals 1
 
-    iget-object v0, p0, Llk0;->a:Lvnf;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final c(Z)V
+.method public c(Landroid/graphics/Bitmap;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final d(I)Lt76;
-    .locals 1
+.method public d(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+    .locals 5
 
-    iget-object v0, p0, Llk0;->d:[Lt76;
+    const-class v0, Landroid/graphics/Bitmap;
 
-    aget-object p1, v0, p1
+    const-string v1, "Wrong Native code setup, reflection failed."
 
-    return-object p1
-.end method
-
-.method public e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v3
 
-    if-eq v2, v3, :cond_1
+    const/4 v4, 0x0
 
-    goto :goto_0
+    if-ne v2, v3, :cond_1
 
-    :cond_1
-    check-cast p1, Llk0;
-
-    iget-object v2, p0, Llk0;->a:Lvnf;
-
-    iget-object v3, p1, Llk0;->a:Lvnf;
-
-    invoke-virtual {v2, v3}, Lvnf;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Llk0;->c:[I
-
-    iget-object p1, p1, Llk0;->c:[I
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final f(I)I
-    .locals 1
-
-    iget-object v0, p0, Llk0;->c:[I
-
-    aget p1, v0, p1
-
-    return p1
-.end method
-
-.method public g(JLjava/util/List;)I
-    .locals 0
-
-    invoke-interface {p3}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Llk0;->f:I
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Llk0;->a:Lvnf;
-
-    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Llk0;->c:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Llk0;->f:I
-
-    :cond_0
-    iget v0, p0, Llk0;->f:I
-
-    return v0
-.end method
-
-.method public final i()I
-    .locals 2
-
-    iget-object v0, p0, Llk0;->c:[I
-
-    invoke-interface {p0}, Leg5;->b()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    return v0
-.end method
-
-.method public final j()Lt76;
-    .locals 2
-
-    iget-object v0, p0, Llk0;->d:[Lt76;
-
-    invoke-interface {p0}, Leg5;->b()I
-
-    move-result v1
-
-    aget-object v0, v0, v1
-
-    return-object v0
-.end method
-
-.method public l(F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final length()I
-    .locals 1
-
-    iget-object v0, p0, Llk0;->c:[I
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public final p(I)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, Llk0;->b:I
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Llk0;->c:[I
-
-    aget v1, v1, v0
-
-    if-ne v1, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final q(IJ)Z
-    .locals 3
-
-    iget-object v0, p0, Llk0;->e:[J
-
-    aget-wide v1, v0, p1
-
-    cmp-long p1, v1, p2
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final s(Lt76;)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, Llk0;->b:I
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Llk0;->d:[Lt76;
-
-    aget-object v1, v1, v0
-
-    if-ne v1, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public final u(IJ)Z
-    .locals 9
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p1, v0, v1}, Llk0;->q(IJ)Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    iget v5, p0, Llk0;->b:I
-
-    const/4 v6, 0x1
-
-    if-ge v4, v5, :cond_1
-
-    if-nez v2, :cond_1
-
-    if-eq v4, p1, :cond_0
-
-    invoke-virtual {p0, v4, v0, v1}, Llk0;->q(IJ)Z
-
-    move-result v2
+    :try_start_0
+    sget-object v2, Llk0;->b:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_0
 
-    move v2, v6
+    const-class v2, Lcom/facebook/imagepipeline/nativecode/Bitmaps;
 
-    goto :goto_1
+    sget v3, Lcom/facebook/imagepipeline/nativecode/Bitmaps;->a:I
 
-    :cond_0
-    move v2, v3
+    const-string v3, "copyBitmap"
 
-    :goto_1
-    add-int/lit8 v4, v4, 0x1
+    filled-new-array {v0, v0}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v3, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Llk0;->b:Ljava/lang/reflect/Method;
 
     goto :goto_0
 
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_0
+    :goto_0
+    sget-object v0, Llk0;->b:Ljava/lang/reflect/Method;
+
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {v0, v4, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_5
+
+    :goto_1
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_2
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
     :cond_1
-    if-nez v2, :cond_2
+    new-instance v0, Landroid/graphics/Canvas;
 
-    return v3
+    invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    :cond_2
-    iget-object v2, p0, Llk0;->e:[J
+    const/4 v1, 0x0
 
-    aget-wide v3, v2, p1
+    invoke-virtual {v0, p2, v1, v1, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    sget v5, Lt4g;->a:I
+    :goto_5
+    invoke-virtual {p0, p1}, Llk0;->c(Landroid/graphics/Bitmap;)V
 
-    add-long v7, v0, p2
+    return-void
+.end method
 
-    xor-long/2addr v0, v7
+.method public getName()Ljava/lang/String;
+    .locals 1
 
-    xor-long/2addr p2, v7
+    const-string v0, "Unknown postprocessor"
 
-    and-long/2addr p2, v0
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p2, p2, v0
-
-    if-gez p2, :cond_3
-
-    const-wide v7, 0x7fffffffffffffffL
-
-    :cond_3
-    invoke-static {v3, v4, v7, v8}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p2
-
-    aput-wide p2, v2, p1
-
-    return v6
+    return-object v0
 .end method

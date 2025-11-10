@@ -1,8 +1,3 @@
-.class public interface abstract Ltu;
-.super Ljava/lang/Object;
+.class public final Ltu;
+.super Lrj0;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract I(JLjava/util/List;)V
-.end method

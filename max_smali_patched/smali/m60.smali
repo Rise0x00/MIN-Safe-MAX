@@ -16,7 +16,7 @@
 
 .field public F:J
 
-.field public final a:Leqd;
+.field public final a:Lvhd;
 
 .field public final b:[J
 
@@ -26,7 +26,7 @@
 
 .field public e:I
 
-.field public f:Lk60;
+.field public f:Lo10;
 
 .field public g:I
 
@@ -70,14 +70,14 @@
 
 
 # direct methods
-.method public constructor <init>(Leqd;)V
+.method public constructor <init>(Lvhd;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm60;->a:Leqd;
+    iput-object p1, p0, Lm60;->a:Lvhd;
 
-    sget p1, Lr4g;->a:I
+    sget p1, Ljig;->a:I
 
     const/16 v0, 0x12
 
@@ -206,7 +206,7 @@
     add-long/2addr v7, v9
 
     :cond_3
-    sget v0, Lr4g;->a:I
+    sget v0, Ljig;->a:I
 
     const/16 v2, 0x1d
 

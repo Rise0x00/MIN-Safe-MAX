@@ -1,33 +1,27 @@
-.class public final Lqy1;
-.super Lr6d;
+.class public final synthetic Lqy1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final N(Landroid/hardware/camera2/CaptureRequest;Lcsd;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+# direct methods
+.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Lsr8;
     .locals 1
 
-    iget-object v0, p0, Lr6d;->a:Ljava/lang/Object;
+    :try_start_0
+    new-instance v0, Lsr8;
 
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
+    invoke-direct {v0, p0, p1, p2}, Lsr8;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
+    :try_end_0
+    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->setSingleRepeatingRequest(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+    return-object v0
 
-    move-result p1
+    :catch_0
+    move-exception p0
 
-    return p1
-.end method
+    new-instance p1, Landroidx/camera/core/InitializationException;
 
-.method public final z(Ljava/util/ArrayList;Lcsd;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
-    .locals 1
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lr6d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->captureBurstRequests(Ljava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
-
-    move-result p1
-
-    return p1
+    throw p1
 .end method

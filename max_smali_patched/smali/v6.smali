@@ -1,168 +1,323 @@
 .class public final Lv6;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Lx6;
 
 
 # instance fields
-.field public final synthetic o:Lw6;
+.field public final synthetic a:I
+
+.field public final b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lw6;Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActionBarContainer;)V
     .locals 1
 
-    iput-object p1, p0, Lv6;->o:Lw6;
+    const/4 v0, 0x0
 
-    const/4 p1, 0x0
+    iput v0, p0, Lv6;->a:I
 
-    sget v0, Lxac;->actionOverflowButtonStyle:I
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    invoke-direct {p0, p2, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 2
+    iput-object p1, p0, Lv6;->b:Landroid/view/View;
 
-    const/4 p1, 0x1
+    return-void
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+.method public constructor <init>(Lru/ok/messages/settings/view/LedSeekBar;)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+    const/4 v0, 0x1
 
-    const/4 p2, 0x0
+    iput v0, p0, Lv6;->a:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
+    .line 3
+    iput-object p1, p0, Lv6;->b:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
+    return-void
+.end method
 
-    move-result-object p1
+.method private final a(I)V
+    .locals 0
 
-    invoke-static {p0, p1}, Lqkf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    return-void
+.end method
 
-    new-instance p1, Lr6;
+.method private final b(I)V
+    .locals 0
 
-    invoke-direct {p1, p0, p0}, Lr6;-><init>(Lv6;Lv6;)V
+    return-void
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+.method private final c(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/graphics/ColorFilter;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 1
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 11
 
-    const/4 v0, 0x0
+    iget v0, p0, Lv6;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final e()Z
-    .locals 1
+    iget-object v0, p0, Lv6;->b:Landroid/view/View;
 
-    const/4 v0, 0x0
+    check-cast v0, Lru/ok/messages/settings/view/LedSeekBar;
 
-    return v0
-.end method
-
-.method public final performClick()Z
-    .locals 2
-
-    invoke-super {p0}, Landroid/view/View;->performClick()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->playSoundEffect(I)V
-
-    iget-object v0, p0, Lv6;->o:Lw6;
-
-    invoke-virtual {v0}, Lw6;->k()Z
-
-    return v1
-.end method
-
-.method public final setFrame(IIII)Z
-    .locals 4
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->setFrame(IIII)Z
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    if-eqz p2, :cond_0
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p4
-
-    invoke-static {p2, p4}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    sub-int/2addr v1, v2
 
-    move-result v3
+    iget-object v2, v0, Lru/ok/messages/settings/view/LedSeekBar;->c:[I
+
+    array-length v2, v2
+
+    div-int/2addr v1, v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    div-int/lit8 v2, v2, 0x2
+
+    iget v3, v0, Lru/ok/messages/settings/view/LedSeekBar;->b:I
 
     sub-int/2addr v2, v3
 
-    add-int/2addr p2, v1
+    const/4 v3, 0x0
 
-    div-int/lit8 p2, p2, 0x2
+    :goto_0
+    iget-object v4, v0, Lru/ok/messages/settings/view/LedSeekBar;->c:[I
 
-    add-int/2addr p4, v2
+    array-length v4, v4
 
-    div-int/lit8 p4, p4, 0x2
+    if-ge v3, v4, :cond_0
 
-    sub-int v1, p2, v0
+    new-instance v10, Landroid/graphics/Paint;
 
-    sub-int v2, p4, v0
+    invoke-direct {v10}, Landroid/graphics/Paint;-><init>()V
 
-    add-int/2addr p2, v0
+    iget-object v4, v0, Lru/ok/messages/settings/view/LedSeekBar;->c:[I
 
-    add-int/2addr p4, v0
+    aget v4, v4, v3
 
-    invoke-static {p3, v1, v2, p2, p4}, Llx4;->f(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-virtual {v10, v4}, Landroid/graphics/Paint;->setColor(I)V
+
+    mul-int v4, v3, v1
+
+    int-to-float v6, v4
+
+    int-to-float v7, v2
+
+    add-int/2addr v4, v1
+
+    int-to-float v8, v4
+
+    iget v4, v0, Lru/ok/messages/settings/view/LedSeekBar;->b:I
+
+    add-int/2addr v4, v2
+
+    int-to-float v9, v4
+
+    move-object v5, p1
+
+    invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return p1
+    return-void
+
+    :pswitch_0
+    move-object v5, p1
+
+    iget-object p1, p0, Lv6;->b:Landroid/view/View;
+
+    check-cast p1, Landroidx/appcompat/widget/ActionBarContainer;
+
+    iget-boolean v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->t0:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->s0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->d:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_2
+    iget-object v0, p1, Landroidx/appcompat/widget/ActionBarContainer;->o:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    iget-boolean p1, p1, Landroidx/appcompat/widget/ActionBarContainer;->u0:Z
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public getIntrinsicHeight()I
+    .locals 1
+
+    iget v0, p0, Lv6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lv6;->b:Landroid/view/View;
+
+    check-cast v0, Lru/ok/messages/settings/view/LedSeekBar;
+
+    iget v0, v0, Lru/ok/messages/settings/view/LedSeekBar;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    iget v0, p0, Lv6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public getOutline(Landroid/graphics/Outline;)V
+    .locals 2
+
+    iget v0, p0, Lv6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv6;->b:Landroid/view/View;
+
+    check-cast v0, Landroidx/appcompat/widget/ActionBarContainer;
+
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->t0:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Landroidx/appcompat/widget/ActionBarContainer;->s0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionBarContainer;->d:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionBarContainer;->d:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    iget p1, p0, Lv6;->a:I
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    iget p1, p0, Lv6;->a:I
+
+    return-void
 .end method

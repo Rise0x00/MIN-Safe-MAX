@@ -1,143 +1,189 @@
-.class public abstract Lgd4;
-.super Ljava/lang/Object;
+.class public final Lgd4;
+.super Lvnf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+# static fields
+.field public static final e0:Lgd4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 41
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgd4;
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    new-instance v1, Lxb3;
 
-    const/4 v1, 0x1
+    const-wide v2, 0xff697cffL
 
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashSet;-><init>(I)V
+    long-to-int v2, v2
 
-    iput-object v0, p0, Lgd4;->a:Ljava/util/LinkedHashSet;
+    const-wide v3, 0xffffffffL
+
+    long-to-int v3, v3
+
+    const-wide v4, 0xff000000L
+
+    long-to-int v5, v4
+
+    const-wide v6, 0xff333344L
+
+    long-to-int v8, v6
+
+    const-wide v6, 0xff5b5b69L
+
+    long-to-int v13, v6
+
+    const-wide v6, 0xfff5f5f5L
+
+    long-to-int v15, v6
+
+    const-wide v6, 0xffff3f3fL
+
+    long-to-int v4, v6
+
+    const-wide v6, 0xfffbc03dL
+
+    long-to-int v6, v6
+
+    const-wide v9, 0xffecececL
+
+    long-to-int v7, v9
+
+    const-wide v9, 0xfff2f2f2L
+
+    long-to-int v9, v9
+
+    const-wide v10, 0xffe2e6ffL
+
+    long-to-int v10, v10
+
+    const-wide v11, 0xffd3d9fbL
+
+    long-to-int v11, v11
+
+    move-object/from16 v40, v0
+
+    move-object v12, v1
+
+    const-wide v0, 0xffe8e8e8L
+
+    long-to-int v0, v0
+
+    move/from16 v28, v0
+
+    const-wide v0, 0xffbdbfcdL
+
+    long-to-int v0, v0
+
+    move/from16 v29, v0
+
+    const-wide v0, 0xff84848eL
+
+    long-to-int v0, v0
+
+    move/from16 v30, v0
+
+    const-wide v0, 0xff10bc07L
+
+    long-to-int v0, v0
+
+    move/from16 v32, v0
+
+    const-wide v0, 0xff9da4afL
+
+    long-to-int v0, v0
+
+    move/from16 v33, v0
+
+    const-wide v0, 0xff5b5b68L
+
+    long-to-int v0, v0
+
+    move/from16 v37, v0
+
+    const-wide v0, 0xff474757L
+
+    long-to-int v0, v0
+
+    const/16 v39, 0x3e0
+
+    move/from16 v16, v4
+
+    move v4, v3
+
+    move/from16 v17, v6
+
+    move v6, v2
+
+    move/from16 v18, v7
+
+    move v7, v3
+
+    move/from16 v20, v9
+
+    move v9, v3
+
+    move/from16 v21, v10
+
+    move v10, v8
+
+    move/from16 v22, v11
+
+    move v11, v3
+
+    move-object v1, v12
+
+    move v12, v3
+
+    move v14, v13
+
+    move/from16 v19, v3
+
+    move/from16 v23, v8
+
+    move/from16 v24, v2
+
+    move/from16 v25, v15
+
+    move/from16 v26, v18
+
+    move/from16 v27, v13
+
+    move/from16 v31, v3
+
+    move/from16 v34, v3
+
+    move/from16 v35, v3
+
+    move/from16 v36, v8
+
+    move/from16 v38, v0
+
+    invoke-direct/range {v1 .. v39}, Lxb3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
+
+    sget-object v7, Lvh4;->o:Lot0;
+
+    sget-object v8, Lvh4;->d:Lot0;
+
+    const/4 v4, 0x1
+
+    const-string v5, "DAY"
+
+    move-object v6, v1
+
+    const-string v1, "TamTam Light"
+
+    const-string v2, "TamTam Team"
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v40
+
+    invoke-direct/range {v0 .. v8}, Lvnf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lxb3;Lot0;Lot0;)V
+
+    sput-object v0, Lgd4;->e0:Lgd4;
 
     return-void
-.end method
-
-.method public static a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-    .locals 6
-
-    and-int/lit8 v0, p4, 0x2
-
-    if-eqz v0, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    move-object v5, p3
-
-    and-int/lit8 p3, p4, 0x4
-
-    const/4 v0, 0x1
-
-    if-eqz p3, :cond_1
-
-    const/4 p3, 0x2
-
-    move v2, p3
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v0
-
-    :goto_0
-    and-int/lit8 p3, p4, 0x8
-
-    const/4 p4, 0x0
-
-    if-eqz p3, :cond_2
-
-    move v4, v0
-
-    goto :goto_1
-
-    :cond_2
-    move v4, p4
-
-    :goto_1
-    const/16 p3, 0x3a
-
-    invoke-static {p1, p3}, Lyxe;->F0(Ljava/lang/String;C)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_4
-
-    new-instance p3, Ljava/util/ArrayList;
-
-    array-length v0, p2
-
-    invoke-direct {p3, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    array-length v0, p2
-
-    :goto_2
-    if-ge p4, v0, :cond_3
-
-    aget-object v1, p2, p4
-
-    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 p4, p4, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    new-instance v3, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v3, p3}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    sget-object p2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lvb4;->b(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    new-instance v0, Lbd4;
-
-    invoke-direct/range {v0 .. v5}, Lbd4;-><init>(Landroid/net/Uri;ILjava/util/LinkedHashSet;ZLjava/util/Set;)V
-
-    iget-object p0, p0, Lgd4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-
-    :cond_4
-    const-string p0, "invalid route "
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

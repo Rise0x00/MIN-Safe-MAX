@@ -1,58 +1,56 @@
-.class public final Lsg;
-.super Li9f;
+.class public final synthetic Lsg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final o:Lsg;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzdi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lzdi;I)V
+    .locals 0
 
-    new-instance v0, Lsg;
+    iput p2, p0, Lsg;->a:I
 
-    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
+    iput-object p1, p0, Lsg;->b:Lzdi;
 
-    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lqg;->b:Lqg;
-
-    invoke-direct {v0, v3, v2, v1}, Li9f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sput-object v0, Lsg;->o:Lsg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final z(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lsg;->a:I
 
-    invoke-interface {p2, p3, v0}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p2
+    iget-object v0, p0, Lsg;->b:Lzdi;
 
-    if-eqz p2, :cond_0
+    invoke-virtual {v0}, Lzdi;->g()V
 
-    invoke-static {p1, p2}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Lsg;->b:Lzdi;
 
-    return-object p1
+    invoke-virtual {v0}, Lzdi;->h()V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string p2, "Can\'t parse interpolator"
+    nop
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

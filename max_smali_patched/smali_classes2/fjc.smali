@@ -1,36 +1,113 @@
-.class public abstract Lfjc;
-.super Ljava/lang/Object;
+.class public final Lfjc;
+.super Ljzg;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f130826
+# instance fields
+.field public final X:Lbqd;
 
-.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f130827
+.field public final Y:Lsw8;
 
-.field public static oneme_folder_list_toolbar_title:I = 0x7f130828
+.field public final Z:Ltlf;
 
-.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f130829
+.field public final b:Lgr4;
 
-.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f13082a
+.field public final c:Lsmd;
 
-.field public static oneme_folders_edit_add_chats_button:I = 0x7f13082b
+.field public final d:Lh68;
 
-.field public static oneme_folders_edit_create_button:I = 0x7f13082c
+.field public final o:Lfu5;
 
-.field public static oneme_folders_edit_delete_button:I = 0x7f13082d
+.field public final s0:Lkq5;
 
-.field public static oneme_folders_edit_name_hint:I = 0x7f13082e
+.field public final t0:La1f;
 
-.field public static oneme_folders_edit_toolbar_title_creation:I = 0x7f13082f
+.field public final u0:La1f;
 
-.field public static oneme_folders_edit_toolbar_title_edit:I = 0x7f130830
+.field public final v0:Laf5;
 
-.field public static oneme_folders_list_create_folder:I = 0x7f130831
+.field public final w0:Laf5;
 
-.field public static oneme_folders_list_menu_action_change:I = 0x7f130832
+.field public final x0:Ltib;
 
-.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f130833
+.field public final y0:Ltib;
 
-.field public static oneme_folders_picker_empty_title:I = 0x7f130834
 
-.field public static oneme_folders_picker_toolbar_title:I = 0x7f130835
+# direct methods
+.method public constructor <init>(Lgr4;Lsmd;Lh68;Lfu5;Lbqd;Lsw8;Ltlf;Lkq5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljzg;-><init>()V
+
+    iput-object p1, p0, Lfjc;->b:Lgr4;
+
+    iput-object p2, p0, Lfjc;->c:Lsmd;
+
+    iput-object p3, p0, Lfjc;->d:Lh68;
+
+    iput-object p4, p0, Lfjc;->o:Lfu5;
+
+    iput-object p5, p0, Lfjc;->X:Lbqd;
+
+    iput-object p6, p0, Lfjc;->Y:Lsw8;
+
+    iput-object p7, p0, Lfjc;->Z:Ltlf;
+
+    iput-object p8, p0, Lfjc;->s0:Lkq5;
+
+    sget-object p1, Lnic;->a:Lnic;
+
+    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfjc;->t0:La1f;
+
+    sget-object p1, Lwy1;->c:Lwy1;
+
+    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfjc;->u0:La1f;
+
+    new-instance p1, Laf5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Laf5;-><init>(I)V
+
+    iput-object p1, p0, Lfjc;->v0:Laf5;
+
+    new-instance p1, Laf5;
+
+    invoke-direct {p1, p2}, Laf5;-><init>(I)V
+
+    iput-object p1, p0, Lfjc;->w0:Laf5;
+
+    new-instance p1, Ltib;
+
+    const-string p2, "android.permission.RECORD_AUDIO"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ltib;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lfjc;->x0:Ltib;
+
+    new-instance p1, Ltib;
+
+    const-string p2, "android.permission.CAMERA"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ltib;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lfjc;->y0:Ltib;
+
+    return-void
+.end method

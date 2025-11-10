@@ -1,24 +1,26 @@
 .class public final Lc7f;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lg7f;
+.field public final synthetic X:Lone/me/stickerssettings/StickersSettingsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lg7f;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lc7f;->X:Lg7f;
+    iput-object p2, p0, Lc7f;->X:Lone/me/stickerssettings/StickersSettingsScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,109 +30,74 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lc7f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lc7f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lc7f;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lc7f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance p1, Lc7f;
+    new-instance v0, Lc7f;
 
-    iget-object v0, p0, Lc7f;->X:Lg7f;
+    iget-object v1, p0, Lc7f;->X:Lone/me/stickerssettings/StickersSettingsScreen;
 
-    invoke-direct {p1, v0, p2}, Lc7f;-><init>(Lg7f;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lc7f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lc7f;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lc7f;->X:Lg7f;
+    iget-object p1, p0, Lc7f;->o:Ljava/lang/Object;
 
-    iget-object v0, p1, Lg7f;->a:Landroid/content/Context;
+    check-cast p1, La5a;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->X:[Les7;
 
-    move-result-object v0
+    instance-of v0, p1, Lf93;
 
-    invoke-static {v0}, Lho8;->a(Landroid/content/pm/ApplicationInfo;)I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    iget-object p1, p0, Lc7f;->X:Lone/me/stickerssettings/StickersSettingsScreen;
 
-    const/16 v2, 0x23
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {v0}, Lho8;->m(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "15"
-
-    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    new-instance v1, Lone/me/sdk/vendor/CheckCompileSdkVersionException;
-
-    invoke-static {v0}, Lho8;->a(Landroid/content/pm/ApplicationInfo;)I
-
-    move-result v2
-
-    invoke-static {v0}, Lho8;->m(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "invalid compile sdk versions: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lg7f;->C()Lg44;
+    invoke-virtual {p1}, Lc24;->getRouter()Lyid;
 
     move-result-object p1
 
-    const-string v0, "20416"
+    invoke-virtual {p1}, Lyid;->C()Z
 
-    invoke-virtual {p1, v0, v1}, Lg44;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lpf4;
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Ly6f;->c:Ly6f;
+
+    check-cast p1, Lpf4;
+
+    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
 
     :cond_1
-    sget-object p1, Loyf;->a:Loyf;
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

@@ -1,50 +1,71 @@
-.class public final synthetic Ljv9;
+.class public abstract synthetic Ljv9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzo3;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:Z
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Liv9;->values()[Liv9;
 
-    iput-boolean p1, p0, Ljv9;->a:Z
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    const/4 v1, 0x1
 
-    check-cast p1, Ls28;
+    const/4 v2, 0x0
 
-    iget-boolean v0, p0, Ljv9;->a:Z
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-boolean v0, p1, Ls28;->b:Z
+    :catch_0
+    const/4 v2, 0x2
 
-    const/4 v0, 0x0
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iput-boolean v0, p1, Ls28;->m:Z
+    :catch_1
+    sput-object v0, Ljv9;->$EnumSwitchMapping$0:[I
 
-    iput-boolean v0, p1, Ls28;->n:Z
+    invoke-static {}, Lfxg;->values()[Lfxg;
 
-    const-wide/16 v1, 0x0
+    move-result-object v0
 
-    iput-wide v1, p1, Ls28;->p:J
+    array-length v0, v0
 
-    iput-wide v1, p1, Ls28;->q:J
+    new-array v0, v0, [I
 
-    iput-boolean v0, p1, Ls28;->r:Z
+    const/4 v3, 0x3
+
+    :try_start_2
+    aput v1, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v1, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Ljv9;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

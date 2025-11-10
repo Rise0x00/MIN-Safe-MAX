@@ -1,61 +1,49 @@
-.class public abstract Luua;
-.super Ljava/lang/Object;
+.class public final Luua;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
+.field public final synthetic o:Lwua;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lwua;Lp14;)V
+    .locals 0
 
-    sget v0, Lyfc;->oneme_picker_confirm_cancel:I
+    iput-object p1, p0, Luua;->o:Lwua;
 
-    sput v0, Luua;->a:I
-
-    sget v0, Lyfc;->oneme_picker_confirm_close:I
-
-    sput v0, Luua;->b:I
-
-    sget v0, Lyfc;->oneme_picker_input_view:I
-
-    sput v0, Luua;->c:I
-
-    sget v0, Lyfc;->oneme_picker_media_keyboard_container:I
-
-    sput v0, Luua;->d:I
-
-    sget v0, Lyfc;->oneme_picker_quote_view:I
-
-    sput v0, Luua;->e:I
-
-    sget v0, Lyfc;->oneme_picker_toolbar:I
-
-    sput v0, Luua;->f:I
-
-    sget v0, Lyfc;->oneme_picker_toolbar_action_cancel_selection:I
-
-    sput v0, Luua;->g:I
-
-    sget v0, Lyfc;->oneme_picker_toolbar_action_select:I
-
-    sput v0, Luua;->h:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Luua;->d:Ljava/lang/Object;
+
+    iget p1, p0, Luua;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Luua;->X:I
+
+    iget-object p1, p0, Luua;->o:Lwua;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lwua;->a(Landroid/content/Context;Ljh9;Lp14;)V
+
+    sget-object p1, Lh54;->a:Lh54;
+
+    return-object p1
 .end method

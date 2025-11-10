@@ -1,23 +1,47 @@
-.class public abstract Ltyb;
-.super Ljava/lang/Object;
+.class public final Ltyb;
+.super Lor9;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Landroid/graphics/PointF;
+
+
+# instance fields
+.field public final b:Lmyb;
+
+.field public c:Landroid/graphics/Rect;
+
+.field public d:Landroid/graphics/Matrix;
+
+
 # direct methods
-.method public static a(Ljava/lang/Runnable;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+    new-instance v0, Landroid/graphics/PointF;
 
-    move-result-object v0
+    const/high16 v1, 0x40000000    # 2.0f
 
-    new-instance v1, Lyf;
+    invoke-direct {v0, v1, v1}, Landroid/graphics/PointF;-><init>(FF)V
 
-    const/4 v2, 0x1
+    sput-object v0, Ltyb;->e:Landroid/graphics/PointF;
 
-    invoke-direct {v1, v2, p0}, Lyf;-><init>(ILjava/lang/Object;)V
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+.method public constructor <init>(Lmyb;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lor9;->a:Landroid/util/Rational;
+
+    iput-object v0, p0, Ltyb;->c:Landroid/graphics/Rect;
+
+    iput-object p1, p0, Ltyb;->b:Lmyb;
 
     return-void
 .end method

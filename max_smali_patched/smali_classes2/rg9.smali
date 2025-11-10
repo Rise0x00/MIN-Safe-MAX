@@ -1,226 +1,63 @@
-.class public final synthetic Lrg9;
-.super Ljava/lang/Object;
+.class public final Lrg9;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/messages/list/ui/MessagesListWidget;
+.field public Y:Ljava/lang/Long;
 
-.field public final synthetic c:Ljava/util/List;
+.field public Z:Z
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:Z
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Leh9;
+
+.field public v0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+.method public constructor <init>(Leh9;Lp14;)V
     .locals 0
 
-    iput p3, p0, Lrg9;->a:I
+    iput-object p1, p0, Lrg9;->u0:Leh9;
 
-    iput-object p1, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iput-object p2, p0, Lrg9;->c:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lrg9;->a:I
+    iput-object p1, p0, Lrg9;->t0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lrg9;->v0:I
 
-    iget-object v0, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lrg9;->c:Ljava/util/List;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+    iput p1, p0, Lrg9;->v0:I
 
-    sget-object v2, Lox9;->j:Lqpa;
+    const/4 p1, 0x0
 
-    if-nez v2, :cond_0
+    const/4 v0, 0x0
 
-    goto :goto_0
+    iget-object v1, p0, Lrg9;->u0:Leh9;
 
-    :cond_0
-    sget-object v3, Ly38;->o:Ly38;
+    invoke-static {v1, p1, p1, v0, p0}, Leh9;->u(Leh9;Leg9;Lhg9;ZLp14;)Ljava/lang/Object;
 
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
+    move-result-object p1
 
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const-string v4, "New messages submitted, size="
-
-    invoke-static {v1, v4}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Lrg9;->c:Ljava/util/List;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const-string v4, "New messages submitted (lifecycle scope), size="
-
-    invoke-static {v1, v4}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Lrg9;->c:Ljava/util/List;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    sget-object v3, Ly38;->Y:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const-string v4, "WARNING! Can\'t set new messages, size="
-
-    invoke-static {v1, v4}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_2
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Lrg9;->c:Ljava/util/List;
-
-    iget-object v2, v0, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lgd9;
-
-    new-instance v3, Lrg9;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, v0, v1, v4}, Lrg9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    invoke-virtual {v2, v1, v3}, Lgd9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lrg9;->b:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, p0, Lrg9;->c:Ljava/util/List;
-
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const-string v4, "New messages submitted (rv null), size="
-
-    invoke-static {v1, v4}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v0, v1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

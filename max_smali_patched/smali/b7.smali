@@ -1,100 +1,69 @@
-.class public abstract Lb7;
-.super Ljava/lang/Object;
+.class public final Lb7;
+.super Landroid/view/View;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public b:Lrxd;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lb7;->a:I
 
-    iput-object p1, p0, Lb7;->a:Landroid/content/Context;
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
+.method public getWindowSystemUiVisibility()I
     .locals 1
 
+    iget v0, p0, Lb7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Landroid/view/View;->getWindowSystemUiVisibility()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
     const/4 v0, 0x0
 
     return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract b()Z
-.end method
+.method public onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-.method public abstract c()Landroid/view/View;
-.end method
+    iget v0, p0, Lb7;->a:I
 
-.method public d(Lr19;)Landroid/view/View;
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lb7;->c()Landroid/view/View;
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result-object p1
+    move-result p1
 
-    return-object p1
-.end method
+    return p1
 
-.method public abstract e()Z
-.end method
+    :pswitch_0
+    const/4 p1, 0x1
 
-.method public f(Ltye;)V
-    .locals 0
+    return p1
 
-    return-void
-.end method
-
-.method public abstract g()Z
-.end method
-
-.method public h(Lrxd;)V
-    .locals 2
-
-    iget-object v0, p0, Lb7;->b:Lrxd;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " instance while it is still in use somewhere else?"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ActionProvider(support)"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iput-object p1, p0, Lb7;->b:Lrxd;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,6 +1,3 @@
-.class public interface abstract Lff6;
-.super Ljava/lang/Object;
+.class public final Lff6;
+.super Landroidx/fragment/app/c;
 .source "SourceFile"
-
-# interfaces
-.implements Lqf6;

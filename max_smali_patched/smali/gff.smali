@@ -1,27 +1,23 @@
-.class public final Lgff;
+.class public interface abstract Lgff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
+# interfaces
+.implements Ljava/io/Closeable;
 
 
-# direct methods
-.method public constructor <init>(IILjava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public abstract D(I[B)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract S(I)V
+.end method
 
-    iput p1, p0, Lgff;->a:I
+.method public abstract f(ILjava/lang/String;)V
+.end method
 
-    iput p2, p0, Lgff;->b:I
+.method public abstract g(ID)V
+.end method
 
-    iput-object p3, p0, Lgff;->c:Ljava/lang/String;
-
-    return-void
+.method public abstract k(IJ)V
 .end method

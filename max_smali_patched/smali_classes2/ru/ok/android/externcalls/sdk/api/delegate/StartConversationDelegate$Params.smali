@@ -281,7 +281,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->conversationId:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -294,7 +294,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->calleeIds:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -307,7 +307,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->chatId:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -329,7 +329,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->internalParams:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -396,7 +396,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->calleeIds:Ljava/util/List;
 
-    invoke-static {v2, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
+    invoke-static {v2, v0, v1}, Lijf;->n(Ljava/util/List;II)I
 
     move-result v0
 
@@ -420,7 +420,7 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;->isVideo:Z
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
 
     move-result v0
 
@@ -488,7 +488,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v5, v4, v0}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v4, v0}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,132 +1,132 @@
-.class public final Lntc;
+.class public abstract Lntc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lotc;
 
 
-# instance fields
-.field public final a:Ldtc;
+# static fields
+.field public static permission_fsi_request:I = 0x7f130aa9
 
-.field public final b:Ljef;
+.field public static permission_fsi_request_rationale:I = 0x7f130aaa
 
+.field public static permissions_allow_access:I = 0x7f130aab
 
-# direct methods
-.method public constructor <init>(Ldtc;Ljef;)V
-    .locals 0
+.field public static permissions_audio_denied_title:I = 0x7f130aac
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static permissions_audio_for_video_not_granted:I = 0x7f130aad
 
-    iput-object p1, p0, Lntc;->a:Ldtc;
+.field public static permissions_audio_for_video_request:I = 0x7f130aae
 
-    iput-object p2, p0, Lntc;->b:Ljef;
+.field public static permissions_audio_for_video_request_denied:I = 0x7f130aaf
 
-    return-void
-.end method
+.field public static permissions_audio_not_granted:I = 0x7f130ab0
 
+.field public static permissions_audio_request:I = 0x7f130ab1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static permissions_audio_request_denied:I = 0x7f130ab2
 
-    if-ne p0, p1, :cond_0
+.field public static permissions_audio_title:I = 0x7f130ab3
 
-    goto :goto_1
+.field public static permissions_background_location_denied:I = 0x7f130ab4
 
-    :cond_0
-    instance-of v0, p1, Lntc;
+.field public static permissions_calls_audio:I = 0x7f130ab5
 
-    if-nez v0, :cond_1
+.field public static permissions_calls_audio_denied:I = 0x7f130ab6
 
-    goto :goto_0
+.field public static permissions_calls_audio_not_granted:I = 0x7f130ab7
 
-    :cond_1
-    check-cast p1, Lntc;
+.field public static permissions_calls_audio_video_request:I = 0x7f130ab8
 
-    iget-object v0, p0, Lntc;->a:Ldtc;
+.field public static permissions_calls_audio_video_request_title:I = 0x7f130ab9
 
-    iget-object v1, p1, Lntc;->a:Ldtc;
+.field public static permissions_calls_only_audio:I = 0x7f130aba
 
-    if-eq v0, v1, :cond_2
+.field public static permissions_calls_only_calls:I = 0x7f130abb
 
-    goto :goto_0
+.field public static permissions_calls_only_video:I = 0x7f130abc
 
-    :cond_2
-    iget-object v0, p0, Lntc;->b:Ljef;
+.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130abd
 
-    iget-object p1, p1, Lntc;->b:Ljef;
+.field public static permissions_calls_video:I = 0x7f130abe
 
-    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
+.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130abf
 
-    move-result p1
+.field public static permissions_calls_video_denied:I = 0x7f130ac0
 
-    if-nez p1, :cond_3
+.field public static permissions_calls_video_not_granted:I = 0x7f130ac1
 
-    :goto_0
-    const/4 p1, 0x0
+.field public static permissions_calls_video_preview_request:I = 0x7f130ac2
 
-    return p1
+.field public static permissions_calls_video_request:I = 0x7f130ac3
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+.field public static permissions_calls_video_request_denied:I = 0x7f130ac4
 
-    return p1
-.end method
+.field public static permissions_calls_video_request_not_granted:I = 0x7f130ac5
 
-.method public final hashCode()I
-    .locals 2
+.field public static permissions_camera_and_storage_not_granted:I = 0x7f130ac6
 
-    iget-object v0, p0, Lntc;->a:Ldtc;
+.field public static permissions_camera_not_granted:I = 0x7f130ac7
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+.field public static permissions_camera_request_photo:I = 0x7f130ac8
 
-    move-result v0
+.field public static permissions_camera_request_photo_denied:I = 0x7f130ac9
 
-    mul-int/lit8 v0, v0, 0x1f
+.field public static permissions_camera_request_photo_with_storage:I = 0x7f130aca
 
-    iget-object v1, p0, Lntc;->b:Ljef;
+.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130acb
 
-    iget v1, v1, Ljef;->b:I
+.field public static permissions_camera_request_video:I = 0x7f130acc
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+.field public static permissions_camera_request_video_with_storage:I = 0x7f130acd
 
-    move-result v1
+.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130ace
 
-    add-int/2addr v1, v0
+.field public static permissions_contacts_not_granted:I = 0x7f130acf
 
-    return v1
-.end method
+.field public static permissions_contacts_request:I = 0x7f130ad0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.field public static permissions_contacts_request_denied:I = 0x7f130ad1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static permissions_contacts_request_rationale:I = 0x7f130ad2
 
-    const-string v1, "ShowTooltip(recordControlType="
+.field public static permissions_dialog_enable_access:I = 0x7f130ad3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static permissions_dialog_no:I = 0x7f130ad4
 
-    iget-object v1, p0, Lntc;->a:Ldtc;
+.field public static permissions_dialog_open_setting:I = 0x7f130ad5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.field public static permissions_dialog_yes:I = 0x7f130ad6
 
-    const-string v1, ", textSource="
+.field public static permissions_files_request_denied:I = 0x7f130ad7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static permissions_fsi_request_positive_button:I = 0x7f130ad8
 
-    iget-object v1, p0, Lntc;->b:Ljef;
+.field public static permissions_location_denied:I = 0x7f130ad9
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.field public static permissions_location_not_granted:I = 0x7f130ada
 
-    const-string v1, ")"
+.field public static permissions_location_rationale_live:I = 0x7f130adc
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static permissions_location_rationale_nearby:I = 0x7f130add
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static permissions_location_rationale_send:I = 0x7f130adf
 
-    move-result-object v0
+.field public static permissions_post_notification_request_positive_button:I = 0x7f130ae1
 
-    return-object v0
-.end method
+.field public static permissions_post_notification_request_rationale:I = 0x7f130ae2
+
+.field public static permissions_post_notification_request_title:I = 0x7f130ae3
+
+.field public static permissions_storage_not_granted:I = 0x7f130ae4
+
+.field public static permissions_storage_request:I = 0x7f130ae5
+
+.field public static permissions_storage_request_denied:I = 0x7f130ae6
+
+.field public static permissions_storage_video_save_request_denied:I = 0x7f130ae7
+
+.field public static permissions_storage_video_share_request_denied:I = 0x7f130ae8
+
+.field public static permissions_video_message_request:I = 0x7f130ae9
+
+.field public static permissions_video_message_request_only_camera_title:I = 0x7f130aea
+
+.field public static permissions_video_message_request_title:I = 0x7f130aeb

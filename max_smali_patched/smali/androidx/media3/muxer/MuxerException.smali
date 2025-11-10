@@ -9,7 +9,7 @@
 
     const-string v0, "media3.muxer"
 
-    invoke-static {v0}, Lln8;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lkt8;->a(Ljava/lang/String;)V
 
     return-void
 .end method

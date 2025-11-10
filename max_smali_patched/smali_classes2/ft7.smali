@@ -1,113 +1,90 @@
 .class public final Lft7;
-.super Lbj0;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final X:Lnr6;
+.field public final synthetic X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
-.field public final Y:Ln8g;
-
-.field public final Z:Ljava/lang/Long;
-
-.field public final b:Ljava/lang/Long;
-
-.field public final c:J
-
-.field public final o:Lpv3;
-
-.field public final w0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;JLpv3;Lnr6;Ln8g;Ljava/lang/Long;Ljava/lang/String;)V
+.method public constructor <init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+    iput-object p1, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
-    iput-object p3, p0, Lft7;->b:Ljava/lang/Long;
+    const/4 p1, 0x2
 
-    iput-wide p4, p0, Lft7;->c:J
-
-    iput-object p6, p0, Lft7;->o:Lpv3;
-
-    iput-object p7, p0, Lft7;->X:Lnr6;
-
-    iput-object p8, p0, Lft7;->Y:Ln8g;
-
-    iput-object p9, p0, Lft7;->Z:Ljava/lang/Long;
-
-    iput-object p10, p0, Lft7;->w0:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, La8f;
 
-    const-string v1, "LinkInfoEvent{chatId="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lft7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lft7;->b:Ljava/lang/Long;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p1, Lft7;
 
-    const-string v1, ", messageId="
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lft7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lft7;->c:J
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string v1, ", contactSearchResult="
+    new-instance v0, Lft7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
 
-    iget-object v1, p0, Lft7;->o:Lpv3;
+    invoke-direct {v0, v1, p2}, Lft7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", groupChatInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->X:Lnr6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoConference="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->Y:Ln8g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stickerSetId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->Z:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startPayload=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->w0:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lft7;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lft7;->o:Ljava/lang/Object;
+
+    check-cast p1, La8f;
+
+    iget-object v0, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+
+    iget-object v1, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lsx2;
+
+    iget-object v2, p1, La8f;->a:Ljava/util/List;
+
+    invoke-virtual {v1, v2}, Lb28;->E(Ljava/util/List;)V
+
+    iget-object v0, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lz4f;
+
+    iget-object p1, p1, La8f;->b:Ljava/util/List;
+
+    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

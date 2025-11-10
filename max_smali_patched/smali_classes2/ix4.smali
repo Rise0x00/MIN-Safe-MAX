@@ -1,38 +1,47 @@
 .class public final Lix4;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
-
-# interfaces
-.implements Lhx4;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public X:I
 
-.field public final b:Lzob;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:Lzqa;
-
-.field public final d:Lff4;
-
-.field public final e:Lub2;
+.field public final synthetic o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lzob;Lzqa;Lff4;Lub2;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lix4;->o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iput-object p1, p0, Lix4;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lix4;->b:Lzob;
-
-    iput-object p3, p0, Lix4;->c:Lzqa;
-
-    iput-object p4, p0, Lix4;->d:Lff4;
-
-    iput-object p5, p0, Lix4;->e:Lub2;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lix4;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lix4;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lix4;->X:I
+
+    iget-object p1, p0, Lix4;->o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

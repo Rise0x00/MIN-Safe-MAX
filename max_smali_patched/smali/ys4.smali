@@ -1,70 +1,37 @@
-.class public final Lys4;
+.class public abstract Lys4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Future;
 
-
-# instance fields
-.field public final a:Lss4;
+# static fields
+.field public static volatile a:Lnx6;
 
 
 # direct methods
-.method public constructor <init>(Lss4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljjc;->c:Ljjc;
 
-    iput-object p1, p0, Lys4;->a:Lss4;
+    invoke-static {}, Lcr7;->a()Lnu4;
+
+    move-result-object v1
+
+    new-instance v2, Ldk0;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3}, Ldk0;-><init>(I)V
+
+    iget-object v0, v0, Ljjc;->a:Lfy;
+
+    new-instance v3, Lijc;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4, v2}, Lijc;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1, v3}, Lfy;->f(Ljava/util/concurrent/Executor;Ldia;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final cancel(Z)Z
-    .locals 0
-
-    iget-object p1, p0, Lys4;->a:Lss4;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isDone()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

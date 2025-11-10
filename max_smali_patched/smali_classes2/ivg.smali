@@ -3,177 +3,99 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Lir3;
 
 
-# static fields
-.field public static final a:Livg;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Ldsd;
+.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    .locals 0
 
-    new-instance v0, Livg;
+    iput p2, p0, Livg;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Livg;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    sput-object v0, Livg;->a:Livg;
-
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "status"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Livg;->descriptor:Ldsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 9
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    sget-object v0, Livg;->descriptor:Ldsd;
+    iget v0, p0, Livg;->a:I
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    iget-object v1, p0, Livg;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x1
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    const/4 v2, 0x0
+    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
 
-    const/4 v3, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move v5, v1
+    move-result-wide v2
 
-    move v6, v2
+    iput-wide v2, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
 
-    move-object v4, v3
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lcu7;
 
-    :goto_0
-    if-eqz v5, :cond_3
+    invoke-static {v0}, Lzkd;->b(Lzv4;)V
 
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    move-result v7
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoFramePreview;->o:Landroidx/appcompat/widget/AppCompatImageView;
 
-    const/4 v8, -0x1
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    if-eq v7, v8, :cond_2
+    const/4 p1, 0x0
 
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance p1, Lkvg;
-
-    invoke-direct {p1, v6, v3, v4}, Lkvg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Le04;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Lkvg;
-
-    sget-object v0, Livg;->descriptor:Ldsd;
-
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
-
-    move-result-object p1
-
-    iget-object v1, p2, Lkvg;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-object p2, p2, Lkvg;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Le04;->m()V
+    invoke-virtual {v0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
 
     return-void
-.end method
 
-.method public final c()[Lum7;
-    .locals 3
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v0, 0x2
+    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
 
-    new-array v0, v0, [Lum7;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Luxe;->a:Luxe;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/4 v2, 0x0
+    move-result-wide v2
 
-    aput-object v1, v0, v2
+    iget-wide v4, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
 
-    const/4 v2, 0x1
+    sub-long/2addr v2, v4
 
-    aput-object v1, v0, v2
+    const-wide/16 v4, 0x3e8
 
-    return-object v0
-.end method
+    cmp-long p1, v2, v4
 
-.method public final d()Ldsd;
-    .locals 1
+    if-lez p1, :cond_0
 
-    sget-object v0, Livg;->descriptor:Ldsd;
+    iget-object p1, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    return-object v0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

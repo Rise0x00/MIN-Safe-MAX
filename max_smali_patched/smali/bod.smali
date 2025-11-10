@@ -1,25 +1,283 @@
 .class public final Lbod;
-.super Ldod;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Map;
+.implements Ltr7;
 
 
 # instance fields
-.field public final d:J
-
-.field public final e:J
+.field public final synthetic a:Lc1a;
 
 
 # direct methods
-.method public constructor <init>(Ldnc;JJJJ)V
+.method public constructor <init>(Lc1a;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Ldod;-><init>(Ljava/lang/Object;JJ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object p1, p0
-
-    iput-wide p6, p1, Lbod;->d:J
-
-    iput-wide p8, p1, Lbod;->e:J
+    iput-object p1, p0, Lbod;->a:Lc1a;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final computeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lbod;->a:Lc1a;
+
+    invoke-virtual {v0, p1}, Lc1a;->b(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final containsValue(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lbod;->a:Lc1a;
+
+    invoke-virtual {v0, p1}, Lc1a;->c(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final entrySet()Ljava/util/Set;
+    .locals 3
+
+    new-instance v0, Lynd;
+
+    iget-object v1, p0, Lbod;->a:Lc1a;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lynd;-><init>(Lc1a;I)V
+
+    return-object v0
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lbod;->a:Lc1a;
+
+    invoke-virtual {v0, p1}, Lc1a;->f(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lbod;->a:Lc1a;
+
+    invoke-virtual {v0}, Lc1a;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final keySet()Ljava/util/Set;
+    .locals 3
+
+    new-instance v0, Lynd;
+
+    iget-object v1, p0, Lbod;->a:Lc1a;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lynd;-><init>(Lc1a;I)V
+
+    return-object v0
+.end method
+
+.method public final merge(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final putAll(Ljava/util/Map;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final replaceAll(Ljava/util/function/BiFunction;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lbod;->a:Lc1a;
+
+    iget v0, v0, Lc1a;->e:I
+
+    return v0
+.end method
+
+.method public final values()Ljava/util/Collection;
+    .locals 2
+
+    new-instance v0, Lob6;
+
+    iget-object v1, p0, Lbod;->a:Lc1a;
+
+    invoke-direct {v0, v1}, Lob6;-><init>(Lc1a;)V
+
+    return-object v0
 .end method

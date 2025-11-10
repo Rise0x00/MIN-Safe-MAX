@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldb7;
+.implements Leg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ldb7;"
+        "Leg7;"
     }
 .end annotation
 
@@ -35,21 +35,27 @@
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    new-instance v0, Lvm;
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
-    invoke-direct {v0, p0, p1}, Lvm;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
+    move-result-object v0
 
-    invoke-static {v0}, Ltyb;->a(Ljava/lang/Runnable;)V
+    new-instance v1, Lng;
 
-    new-instance p1, Lhl6;
+    invoke-direct {v1, p0, p1}, Lng;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    new-instance p1, Le9a;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0}, Le9a;-><init>(I)V
 
     return-object p1
 .end method

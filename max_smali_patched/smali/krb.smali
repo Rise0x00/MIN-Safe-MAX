@@ -1,35 +1,79 @@
 .class public final Lkrb;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# direct methods
+.method public static final a(Lkrb;Landroid/view/View;Loi1;Landroid/graphics/RectF;)V
+    .locals 0
 
-.field public Y:I
+    iget p0, p3, Landroid/graphics/RectF;->top:F
 
-.field public o:Lve6;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
 
+    iget p0, p3, Landroid/graphics/RectF;->left:F
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
 
-    iput-object p1, p0, Lkrb;->X:Ljava/lang/Object;
+    iget p0, p3, Landroid/graphics/RectF;->top:F
 
-    iget p1, p0, Lkrb;->Y:I
+    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
 
-    const/high16 v0, -0x80000000
+    iget p0, p3, Landroid/graphics/RectF;->left:F
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
 
-    iput p1, p0, Lkrb;->Y:I
+    const/high16 p0, 0x3f800000    # 1.0f
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
 
-    invoke-static {p1, p1, p0}, Lhd6;->e(Lqrb;Lve6;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
 
-    move-result-object p1
+    const/4 p3, 0x0
 
-    return-object p1
+    invoke-static {p1, p3}, Lyyg;->p(Landroid/view/View;F)V
+
+    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method public static b()Z
+    .locals 3
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "huawei"
+
+    invoke-static {v0, v2, v1}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "honor"
+
+    invoke-static {v0, v2, v1}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    return v1
 .end method

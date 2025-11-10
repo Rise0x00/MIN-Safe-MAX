@@ -1,114 +1,179 @@
-.class public final synthetic Lfb2;
-.super Ljava/lang/Object;
+.class public final Lfb2;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lub2;
 
-.field public final synthetic b:Lub2;
+.field public final synthetic Y:Z
 
-.field public final synthetic c:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;JI)V
+.method public constructor <init>(Lub2;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p4, p0, Lfb2;->a:I
+    iput-object p1, p0, Lfb2;->X:Lub2;
 
-    iput-object p1, p0, Lfb2;->b:Lub2;
+    iput-boolean p2, p0, Lfb2;->Y:Z
 
-    iput-wide p2, p0, Lfb2;->c:J
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lfb2;->a:I
+    check-cast p1, Lg54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lfb2;->b:Lub2;
+    invoke-virtual {p0, p1, p2}, Lfb2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lub2;->g:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object p1
 
-    iget-wide v1, p0, Lfb2;->c:J
+    check-cast p1, Lfb2;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object v3
+    invoke-virtual {p1, p2}, Lfb2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p2
+.end method
 
-    move-result-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    check-cast v0, Lm82;
+    new-instance v0, Lfb2;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lfb2;->X:Lub2;
+
+    iget-boolean v2, p0, Lfb2;->Y:Z
+
+    invoke-direct {v0, v1, v2, p2}, Lfb2;-><init>(Lub2;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lfb2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfb2;->o:Ljava/lang/Object;
+
+    check-cast p1, Lg54;
+
+    iget-object v0, p0, Lfb2;->X:Lub2;
+
+    invoke-virtual {v0}, Lub2;->p()Lt92;
+
+    move-result-object v1
+
+    sget-object v2, Lybg;->a:Lybg;
+
+    if-nez v1, :cond_0
+
+    return-object v2
 
     :cond_0
-    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+    iget-object v3, v1, Lt92;->b:Lvd2;
 
-    const-string v3, "chat not found: "
+    iget-wide v4, v3, Lvd2;->a:J
 
-    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+    const-wide/16 v6, 0x0
 
-    move-result-object v1
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
+
+    invoke-static {p1, v1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Lub2;->r:Lru7;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lk64;
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ChatChangeLink"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    const-string v1, "ONEME-18920"
 
-    :pswitch_0
-    iget-object v0, p0, Lfb2;->b:Lub2;
+    invoke-virtual {p1, v1, v0}, Lk64;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, v0, Lub2;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-wide v1, p0, Lfb2;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm82;
-
-    if-eqz v0, :cond_1
-
-    return-object v0
+    return-object v2
 
     :cond_1
-    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+    iget-object p1, v0, Lub2;->q:Lru7;
 
-    const-string v3, "chat not found: "
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lml;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-wide v5, v1, Lt92;->a:J
 
-    throw v0
+    iget-wide v7, v3, Lvd2;->a:J
 
-    nop
+    move-object v4, p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast v4, Lona;
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    invoke-virtual/range {v4 .. v12}, Lona;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v3
+
+    iget-boolean p1, p0, Lfb2;->Y:Z
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, v0, Lub2;->y:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
+
+    :cond_2
+    iget-object p1, v0, Lub2;->z:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
 .end method

@@ -1,126 +1,16 @@
-.class public final Lztc;
+.class public abstract Lztc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcuc;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a5e
 
-.field public final b:Z
+.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a5f
 
+.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a60
 
-# direct methods
-.method public constructor <init>(ZZ)V
-    .locals 0
+.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a61
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a62
 
-    iput-boolean p1, p0, Lztc;->a:Z
-
-    iput-boolean p2, p0, Lztc;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lztc;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lztc;
-
-    iget-boolean v0, p0, Lztc;->a:Z
-
-    iget-boolean v1, p1, Lztc;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lztc;->b:Z
-
-    iget-boolean p1, p1, Lztc;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lztc;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lztc;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PauseWithoutResume(wasLocked="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lztc;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isForced="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lztc;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a63

@@ -1,41 +1,35 @@
-.class public final Lfm;
-.super Lcy;
+.class public interface abstract Lfm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
-
-.field public final w0:I
-
-.field public final x0:J
+# interfaces
+.implements Lpm;
 
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IJZZ)V
+# virtual methods
+.method public getConfigExtractor()Lbm;
     .locals 1
 
-    sget-object v0, Li00;->x0:Li00;
+    sget-object v0, Lbm;->f:Ly1j;
 
-    invoke-direct {p0, v0, p9, p10}, Lcy;-><init>(Li00;ZZ)V
+    return-object v0
+.end method
 
-    iput-wide p1, p0, Lfm;->o:J
+.method public getFailParser()Lar7;
+    .locals 1
 
-    iput-object p3, p0, Lfm;->X:Ljava/lang/String;
+    sget-object v0, Low3;->a:Low3;
 
-    iput-object p4, p0, Lfm;->Y:Ljava/lang/String;
+    return-object v0
+.end method
 
-    iput-object p5, p0, Lfm;->Z:Ljava/lang/String;
+.method public abstract getOkParser()Lar7;
+.end method
 
-    iput p6, p0, Lfm;->w0:I
+.method public getScopeAfter()Lvm;
+    .locals 1
 
-    iput-wide p7, p0, Lfm;->x0:J
+    sget-object v0, Lvm;->a:Lvm;
 
-    return-void
+    return-object v0
 .end method

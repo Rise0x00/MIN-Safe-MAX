@@ -1,14 +1,19 @@
-.class public interface abstract Ln0d;
-.super Ljava/lang/Object;
+.class public final Ln0d;
+.super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Lck0;)V
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lo0d;Ljava/lang/Object;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-.method public abstract b(Landroid/os/Handler;Lcf5;Lcf5;Lcf5;Lcf5;)[Lck0;
+    iput-object p2, p0, Ln0d;->a:Ljava/lang/Object;
+
+    return-void
 .end method

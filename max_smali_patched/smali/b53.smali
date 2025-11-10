@@ -1,135 +1,125 @@
-.class public final Lb53;
-.super Lq3;
+.class public final synthetic Lb53;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lb53;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public Y:F
-
-.field public Z:Z
-
-.field public a:Lcom/google/android/gms/maps/model/LatLng;
-
-.field public b:D
-
-.field public c:F
-
-.field public o:I
-
-.field public w0:Z
-
-.field public x0:Ljava/util/ArrayList;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lbhh;
+    iput p1, p0, Lb53;->a:I
 
-    const/16 v1, 0xc
+    iput-object p2, p0, Lb53;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
-
-    sput-object v0, Lb53;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    const/16 v0, 0x4f45
+    iget v0, p0, Lb53;->a:I
 
-    invoke-static {p1, v0}, Lz84;->K(Landroid/os/Parcel;I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object p1, p0, Lb53;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    check-cast p1, Lnde;
 
-    iget-object v2, p0, Lb53;->a:Lcom/google/android/gms/maps/model/LatLng;
+    if-eqz p2, :cond_0
 
-    invoke-static {p1, v1, v2, p2}, Lz84;->G(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-virtual {p1}, Landroid/view/View;->callOnClick()Z
 
-    iget-wide v1, p0, Lb53;->b:D
+    :cond_0
+    return-void
 
-    const/4 p2, 0x3
+    :pswitch_0
+    iget-object p1, p0, Lb53;->b:Ljava/lang/Object;
 
-    const/16 v3, 0x8
+    check-cast p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    invoke-static {p1, p2, v3}, Lz84;->M(Landroid/os/Parcel;II)V
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->A0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeDouble(D)V
+    move-result-object p1
 
-    iget p2, p0, Lb53;->c:F
+    iget-object v0, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Lbpd;
 
-    const/4 v1, 0x4
+    sget-object v1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Les7;
 
-    invoke-static {p1, v1, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+    aget-object v1, v1, v2
 
-    iget p2, p0, Lb53;->o:I
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v2, 0x5
+    move-result-object p2
 
-    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lb53;->X:I
-
-    const/4 v2, 0x6
-
-    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lb53;->Y:F
-
-    const/4 v2, 0x7
-
-    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-boolean p2, p0, Lb53;->Z:Z
-
-    invoke-static {p1, v3, v1}, Lz84;->M(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lb53;->w0:Z
-
-    const/16 v2, 0x9
-
-    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/16 p2, 0xa
-
-    iget-object v1, p0, Lb53;->x0:Ljava/util/ArrayList;
-
-    invoke-static {p1, v1, p2}, Lz84;->J(Landroid/os/Parcel;Ljava/util/List;I)V
-
-    invoke-static {p1, v0}, Lz84;->L(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p1, v1, p2}, Ladi;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lb53;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/google/android/material/chip/Chip;
+
+    iget-object v1, v0, Lcom/google/android/material/chip/Chip;->w0:Lxi8;
+
+    if-eqz v1, :cond_2
+
+    check-cast v1, Lcua;
+
+    iget-object v1, v1, Lcua;->b:Ljava/lang/Object;
+
+    check-cast v1, Ls43;
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {v1, v0}, Ls43;->a(Lyi8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v2, v1, Ls43;->b:Z
+
+    invoke-virtual {v1, v0, v2}, Ls43;->h(Lyi8;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :goto_0
+    invoke-virtual {v1}, Ls43;->g()V
+
+    :cond_2
+    iget-object v0, v0, Lcom/google/android/material/chip/Chip;->v0:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1, p2}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+
+    :cond_3
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

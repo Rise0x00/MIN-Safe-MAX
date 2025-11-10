@@ -1,76 +1,103 @@
 .class public final Lbpf;
-.super Lked;
+.super Lqof;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lbpf;
+# instance fields
+.field public final a:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Runnable;JLuof;)V
+    .locals 0
 
-    new-instance v0, Lbpf;
+    invoke-direct {p0, p2, p3, p4}, Lqof;-><init>(JLuof;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbpf;->c:Lbpf;
+    iput-object p1, p0, Lbpf;->a:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lied;
-    .locals 1
-
-    new-instance v0, Lapf;
-
-    invoke-direct {v0}, Lapf;-><init>()V
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/Runnable;)Lss4;
-    .locals 0
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    sget-object p1, Lw65;->a:Lw65;
-
-    return-object p1
-.end method
-
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 0
+.method public final run()V
+    .locals 2
 
     :try_start_0
-    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->sleep(J)V
+    iget-object v0, p0, Lbpf;->a:Ljava/lang/Runnable;
 
-    const-string p2, "run is null"
-
-    invoke-static {p1, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    iget-object v0, p0, Lqof;->taskContext:Luof;
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    return-void
 
-    move-result-object p2
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
+    iget-object v1, p0, Lqof;->taskContext:Luof;
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    sget-object p1, Lw65;->a:Lw65;
+    throw v0
+.end method
 
-    return-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Task["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbpf;->a:Ljava/lang/Runnable;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x40
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {v1}, Lle4;->b(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Lqof;->submissionTime:J
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqof;->taskContext:Luof;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -48,14 +48,14 @@
     iput p3, p0, Ll50;->c:I
 
     .line 6
-    invoke-static {p3}, Lt4g;->M(I)Z
+    invoke-static {p3}, Llig;->M(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 7
-    invoke-static {p3}, Lt4g;->u(I)I
+    invoke-static {p3}, Llig;->t(I)I
 
     move-result p1
 
@@ -73,15 +73,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lt76;)V
+.method public constructor <init>(Lub6;)V
     .locals 2
 
     .line 1
-    iget v0, p1, Lt76;->E:I
+    iget v0, p1, Lub6;->G:I
 
-    iget v1, p1, Lt76;->D:I
+    iget v1, p1, Lub6;->F:I
 
-    iget p1, p1, Lt76;->F:I
+    iget p1, p1, Lub6;->H:I
 
     invoke-direct {p0, v0, v1, p1}, Ll50;-><init>(III)V
 
@@ -196,7 +196,7 @@
 
     const/16 v2, 0x5d
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

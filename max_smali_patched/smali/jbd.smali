@@ -1,8 +1,78 @@
-.class public interface abstract Ljbd;
+.class public abstract Ljbd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()V
+# direct methods
+.method public static a(Landroid/app/Activity;Low7;)V
+    .locals 1
+
+    instance-of v0, p0, Lnx7;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lnx7;
+
+    invoke-interface {p0}, Lnx7;->p()Lpx7;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Lpx7;->d(Low7;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static b(Landroid/app/Activity;)V
+    .locals 3
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    sget-object v0, Llbd$a;->Companion:Lkbd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Llbd$a;
+
+    invoke-direct {v0}, Llbd$a;-><init>()V
+
+    invoke-static {p0, v0}, Ldad;->l(Landroid/app/Activity;Llbd$a;)V
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object p0
+
+    const-string v0, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
+
+    invoke-virtual {p0, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v1
+
+    new-instance v2, Llbd;
+
+    invoke-direct {v2}, Landroid/app/Fragment;-><init>()V
+
+    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
+
+    invoke-virtual {p0}, Landroid/app/FragmentManager;->executePendingTransactions()Z
+
+    :cond_1
+    return-void
 .end method

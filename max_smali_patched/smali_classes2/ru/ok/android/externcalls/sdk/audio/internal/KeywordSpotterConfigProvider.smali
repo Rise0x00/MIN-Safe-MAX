@@ -11,10 +11,10 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;",
         "",
-        "Lude;",
+        "Ljqe;",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;",
         "getConfig",
-        "()Lude;",
+        "()Ljqe;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -28,11 +28,11 @@
 
 
 # virtual methods
-.method public abstract getConfig()Lude;
+.method public abstract getConfig()Ljqe;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lude;"
+            "Ljqe;"
         }
     .end annotation
 .end method

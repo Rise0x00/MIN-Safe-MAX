@@ -3,12 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc69;
+.implements Ld69;
+
+
+# static fields
+.field public static final a:Ly59;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ly59;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ly59;->a:Ly59;
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -17,46 +35,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Ly59;
+    instance-of p1, p1, Ly59;
 
-    if-nez v1, :cond_1
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
     :cond_1
-    check-cast p1, Ly59;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lqw1;->u(I)I
-
-    move-result v0
+    const v0, -0x45112e64
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "MICROPHONE"
-
-    const-string v1, ")"
-
-    const-string v2, "Alternate(iconType="
-
-    invoke-static {v2, v0, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "OnDisableClicked"
 
     return-object v0
 .end method

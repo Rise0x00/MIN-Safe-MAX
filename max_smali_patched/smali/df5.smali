@@ -1,167 +1,61 @@
 .class public final Ldf5;
-.super Ljava/lang/Object;
+.super Lff5;
 .source "SourceFile"
-
-# interfaces
-.implements Liag;
-.implements Lp02;
-.implements Lylb;
 
 
 # instance fields
-.field public a:Liag;
+.field public final c:Lx22;
 
-.field public b:Lp02;
+.field public final synthetic d:Lhf5;
 
-.field public c:Liag;
 
-.field public o:Lp02;
+# direct methods
+.method public constructor <init>(Lhf5;JLx22;)V
+    .locals 0
+
+    iput-object p1, p0, Ldf5;->d:Lhf5;
+
+    invoke-direct {p0, p2, p3}, Lff5;-><init>(J)V
+
+    iput-object p4, p0, Ldf5;->c:Lx22;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x7
+    iget-object v0, p0, Ldf5;->c:Lx22;
 
-    if-eq p1, v0, :cond_3
+    iget-object v1, p0, Ldf5;->d:Lhf5;
 
-    const/16 v0, 0x8
-
-    if-eq p1, v0, :cond_2
-
-    const/16 v0, 0x2710
-
-    if-eq p1, v0, :cond_0
-
-    return-void
-
-    :cond_0
-    check-cast p2, Lpje;
-
-    if-nez p2, :cond_1
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ldf5;->c:Liag;
-
-    iput-object p1, p0, Ldf5;->o:Lp02;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p2}, Lpje;->getVideoFrameMetadataListener()Liag;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldf5;->c:Liag;
-
-    invoke-virtual {p2}, Lpje;->getCameraMotionListener()Lp02;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldf5;->o:Lp02;
-
-    return-void
-
-    :cond_2
-    check-cast p2, Lp02;
-
-    iput-object p2, p0, Ldf5;->b:Lp02;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Liag;
-
-    iput-object p2, p0, Ldf5;->a:Liag;
+    invoke-interface {v0, v1}, Lx22;->d(La54;)V
 
     return-void
 .end method
 
-.method public final b(J[F)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Ldf5;->o:Lp02;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-interface {v0, p1, p2, p3}, Lp02;->b(J[F)V
+    invoke-super {p0}, Lff5;->toString()Ljava/lang/String;
 
-    :cond_0
-    iget-object v0, p0, Ldf5;->b:Lp02;
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1, p2, p3}, Lp02;->b(J[F)V
+    iget-object v1, p0, Ldf5;->c:Lx22;
 
-    :cond_1
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final c()V
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Ldf5;->o:Lp02;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lp02;->c()V
-
-    :cond_0
-    iget-object v0, p0, Ldf5;->b:Lp02;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lp02;->c()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final d(JJLr76;Landroid/media/MediaFormat;)V
-    .locals 8
-
-    iget-object v0, p0, Ldf5;->c:Liag;
-
-    if-eqz v0, :cond_0
-
-    move-wide v1, p1
-
-    move-wide v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Liag;->d(JJLr76;Landroid/media/MediaFormat;)V
-
-    move-object v7, v6
-
-    move-object v6, v5
-
-    move-wide v4, v3
-
-    move-wide v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    move-object v6, p5
-
-    move-object v7, p6
-
-    :goto_0
-    iget-object v1, p0, Ldf5;->a:Liag;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface/range {v1 .. v7}, Liag;->d(JJLr76;Landroid/media/MediaFormat;)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

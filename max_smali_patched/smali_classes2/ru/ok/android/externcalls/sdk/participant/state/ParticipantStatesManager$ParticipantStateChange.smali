@@ -170,7 +170,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -233,7 +233,7 @@
 
     iget-boolean v2, p0, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn:Z
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
 
     move-result v0
 
@@ -285,7 +285,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v4, v2, v3, v0}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v2, v3, v0}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

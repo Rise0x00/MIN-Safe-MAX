@@ -1,292 +1,249 @@
 .class public final Lolb;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Handler$Callback;
+.implements Lej6;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
 
-.field public Y:Z
-
-.field public final Z:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final b:Landroid/os/Handler;
-
-.field public final c:Ljava/util/TreeMap;
-
-.field public o:Z
-
-.field public final w0:Ljava/lang/Object;
-
-.field public final x0:Ljava/lang/Object;
-
-.field public y0:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lv74;Lkbh;Lld4;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lolb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
 
-    iput v0, p0, Lolb;->a:I
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lolb;->y0:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lolb;->w0:Ljava/lang/Object;
-
-    .line 4
-    iput-object p3, p0, Lolb;->Z:Ljava/lang/Object;
-
-    .line 5
-    new-instance p1, Ljava/util/TreeMap;
-
-    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
-
-    iput-object p1, p0, Lolb;->c:Ljava/util/TreeMap;
-
-    .line 6
-    invoke-static {p0}, Lr4g;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lolb;->b:Landroid/os/Handler;
-
-    .line 7
-    new-instance p1, Lep;
-
-    const/4 p2, 0x1
-
-    .line 8
-    invoke-direct {p1, p2}, Lep;-><init>(I)V
-
-    .line 9
-    iput-object p1, p0, Lolb;->x0:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lw74;Lzlh;Lmd4;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lolb;->a:I
-
-    .line 10
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 11
-    iput-object p1, p0, Lolb;->y0:Ljava/lang/Object;
-
-    .line 12
-    iput-object p2, p0, Lolb;->w0:Ljava/lang/Object;
-
-    .line 13
-    iput-object p3, p0, Lolb;->Z:Ljava/lang/Object;
-
-    .line 14
-    new-instance p1, Ljava/util/TreeMap;
-
-    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
-
-    iput-object p1, p0, Lolb;->c:Ljava/util/TreeMap;
-
-    .line 15
-    invoke-static {p0}, Lt4g;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lolb;->b:Landroid/os/Handler;
-
-    .line 16
-    new-instance p1, Lfp;
-
-    const/4 p2, 0x1
-
-    .line 17
-    invoke-direct {p1, p2}, Lfp;-><init>(I)V
-
-    .line 18
-    iput-object p1, p0, Lolb;->x0:Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lolb;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lolb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v0, p0, Lolb;->Y:Z
+    move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lolb;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lolb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lolb;
+
+    iget-object v1, p0, Lolb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+
+    invoke-direct {v0, p2, v1}, Lolb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+
+    iput-object p1, v0, Lolb;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lolb;->o:Ljava/lang/Object;
+
+    check-cast p1, Lye5;
+
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:[Les7;
+
+    instance-of v0, p1, Lpe5;
+
+    iget-object v1, p0, Lolb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lpe5;
+
+    iget-object v0, p1, Lpe5;->a:Lps8;
+
+    invoke-interface {v0}, Lps8;->w()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->x0()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object p1, p1, Lpe5;->a:Lps8;
+
+    invoke-interface {p1}, Lps8;->j()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()J
+
+    move-result-wide v4
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lao2;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()J
+
+    move-result-wide v2
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->x0()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v3, v0}, Lao2;->G(JLjava/lang/String;)Lps8;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lhs8;
 
     if-eqz v0, :cond_0
+
+    check-cast p1, Lhs8;
 
     goto :goto_0
 
     :cond_0
-    iget v0, p1, Landroid/os/Message;->what:I
+    const/4 p1, 0x0
 
-    if-eq v0, v1, :cond_1
+    :goto_0
+    if-nez p1, :cond_1
 
-    const/4 v1, 0x0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Lmlb;
 
-    check-cast p1, Lllb;
+    move-result-object v0
 
-    iget-wide v2, p1, Lllb;->a:J
+    invoke-virtual {v0}, Lmlb;->getFailure()Z
 
-    iget-wide v4, p1, Lllb;->b:J
+    move-result v0
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lao2;
 
-    iget-object v0, p0, Lolb;->c:Ljava/util/TreeMap;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()J
 
-    move-result-object p1
+    move-result-wide v2
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->x0()Ljava/lang/String;
 
-    if-nez p1, :cond_2
+    move-result-object v4
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, v2, v3, v4}, Lao2;->J(JLjava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Lmlb;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object v2
+    iget-object p1, p1, Lhs8;->d:Le97;
 
-    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Lmlb;
 
-    goto :goto_0
+    move-result-object v1
+
+    invoke-virtual {v1}, Lmlb;->getFailure()Z
+
+    move-result v1
+
+    invoke-virtual {v0, p1, v1}, Lmlb;->k(Le97;Z)V
+
+    goto :goto_1
 
     :cond_2
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    cmp-long p1, v6, v2
-
-    if-lez p1, :cond_3
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lao2;
 
     move-result-object p1
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()J
 
-    move-result-object v2
+    move-result-wide v2
 
-    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->x0()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v3, v0}, Lao2;->K(JLjava/lang/String;)V
+
+    goto :goto_1
 
     :cond_3
-    :goto_0
-    return v1
-
-    :pswitch_0
-    iget-boolean v0, p0, Lolb;->Y:Z
-
-    const/4 v1, 0x1
+    instance-of v0, p1, Lre5;
 
     if-eqz v0, :cond_4
 
-    goto :goto_1
+    check-cast p1, Lre5;
+
+    iget-object p1, p1, Lre5;->a:Lhs8;
+
+    iget-object v0, p1, Lhs8;->X:Ljava/lang/String;
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->x0()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-wide v2, p1, Lhs8;->a:J
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()J
+
+    move-result-wide v4
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()Lmlb;
+
+    move-result-object v0
+
+    iget-object p1, p1, Lhs8;->d:Le97;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p1, v1}, Lmlb;->k(Le97;Z)V
 
     :cond_4
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    if-eq v0, v1, :cond_5
-
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_5
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lklb;
-
-    iget-wide v2, p1, Lklb;->a:J
-
-    iget-wide v4, p1, Lklb;->b:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lolb;->c:Ljava/util/TreeMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    if-nez p1, :cond_6
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v6
-
-    cmp-long p1, v6, v2
-
-    if-lez p1, :cond_7
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_7
     :goto_1
-    return v1
+    sget-object p1, Lybg;->a:Lybg;
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

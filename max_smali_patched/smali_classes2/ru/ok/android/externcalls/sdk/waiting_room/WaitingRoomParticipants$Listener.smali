@@ -22,7 +22,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;",
         "data",
-        "Loyf;",
+        "Lybg;",
         "onWaitingRoomParticipantsChanged",
         "(Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;)V",
         "",

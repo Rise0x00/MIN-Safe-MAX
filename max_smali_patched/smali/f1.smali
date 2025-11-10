@@ -1,31 +1,47 @@
-.class public abstract synthetic Lf1;
+.class public final Lf1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lf1;
+
+
+# instance fields
+.field public final a:Ljava/lang/Throwable;
+
+
 # direct methods
-.method public static synthetic a(Lsun/misc/Unsafe;Lm1;JLk1;Lk1;)Z
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lf1;
+
+    new-instance v1, Ld1;
+
+    const-string v2, "Failure occurred while trying to finish a future."
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ld1;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v0, v1}, Lf1;-><init>(Ljava/lang/Throwable;)V
+
+    sput-object v0, Lf1;->b:Lf1;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 1
 
-    :cond_0
-    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    sget-boolean v0, Ly1;->d:Z
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p0, 0x1
+    iput-object p1, p0, Lf1;->a:Ljava/lang/Throwable;
 
-    return p0
-
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p4, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

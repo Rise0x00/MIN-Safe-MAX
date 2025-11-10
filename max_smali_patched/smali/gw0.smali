@@ -1,171 +1,206 @@
-.class public abstract enum Lgw0;
-.super Ljava/lang/Enum;
+.class public final Lgw0;
+.super Ljava/lang/ThreadLocal;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[Lgw0;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Lgw0;
-
-    sput-object v0, Lgw0;->a:[Lgw0;
-
-    return-void
-.end method
-
-.method public static a(ILjava/nio/ByteBuffer;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    if-ltz p0, :cond_0
+    iput p1, p0, Lgw0;->a:I
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
-
-    move-result p1
-
-    if-ge p0, p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    invoke-direct {p1, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
-
-    throw p1
 .end method
 
-.method public static b(Ljava/nio/ByteBuffer;II)V
-    .locals 0
 
-    if-ltz p2, :cond_1
+# virtual methods
+.method public final initialValue()Ljava/lang/Object;
+    .locals 3
 
-    if-lez p2, :cond_0
+    iget v0, p0, Lgw0;->a:I
 
-    invoke-static {p1, p0}, Lgw0;->a(ILjava/nio/ByteBuffer;)V
+    packed-switch v0, :pswitch_data_0
 
-    add-int/2addr p1, p2
+    const-wide/16 v0, 0x0
 
-    add-int/lit8 p1, p1, -0x1
-
-    invoke-static {p1, p0}, Lgw0;->a(ILjava/nio/ByteBuffer;)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "lengths must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
-
-    sget-object v1, Lu4g;->a:Ljava/nio/ByteOrder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(ILjava/nio/ByteBuffer;)I
-    .locals 1
-
-    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    add-int/lit8 p0, p0, 0x1
-
-    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    shl-int/lit8 p0, p0, 0x8
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static e(Ljava/nio/ByteBuffer;II)V
-    .locals 1
-
-    int-to-byte v0, p2
-
-    invoke-virtual {p0, p1, v0}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 p1, p1, 0x1
-
-    ushr-int/lit8 p2, p2, 0x8
-
-    int-to-byte p2, p2
-
-    invoke-virtual {p0, p1, p2}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lgw0;
-    .locals 1
-
-    const-class v0, Lgw0;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lnd5;->n(Ljava/lang/Object;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static values()[Lgw0;
-    .locals 1
-
-    sget-object v0, Lgw0;->a:[Lgw0;
-
-    invoke-virtual {v0}, [Lgw0;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lgw0;
 
     return-object v0
+
+    :pswitch_0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v1, "#,##0.0"
+
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v1, "#,##0"
+
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_3
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcr7;->d()Lfw6;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance v1, Lfw6;
+
+    invoke-direct {v1, v0}, Lfw6;-><init>(Landroid/os/Handler;)V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyy:MM:dd HH:mm:ss"
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "HH:mm:ss"
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyy:MM:dd"
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    return-object v0
+
+    :pswitch_8
+    sget-object v0, Lqe4;->a:Lgw0;
+
+    const/16 v0, 0x4000
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "EEE, dd MMM yyyy HH:mm:ss \'GMT\'"
+
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setLenient(Z)V
+
+    sget-object v1, Lkig;->e:Ljava/util/TimeZone;
+
+    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    return-object v0
+
+    :pswitch_a
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object v0
+
+    :pswitch_b
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

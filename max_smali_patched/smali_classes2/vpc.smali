@@ -1,154 +1,60 @@
-.class public final Lvpc;
+.class public abstract Lvpc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static back:I = 0x7f0a00ea
 
-.field public final b:J
+.field public static copy:I = 0x7f0a02d9
 
-.field public final c:Ljava/util/List;
+.field public static cut:I = 0x7f0a02e3
 
+.field public static edit_menu_item:I = 0x7f0a0320
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;)V
-    .locals 0
+.field public static extendedMenu:I = 0x7f0a0367
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static markdown_badge_count_view:I = 0x7f0a0458
 
-    iput-object p3, p0, Lvpc;->a:Ljava/lang/String;
+.field public static markdown_bold:I = 0x7f0a0459
 
-    iput-wide p1, p0, Lvpc;->b:J
+.field public static markdown_group:I = 0x7f0a045a
 
-    iput-object p4, p0, Lvpc;->c:Ljava/util/List;
+.field public static markdown_heading:I = 0x7f0a045b
 
-    return-void
-.end method
+.field public static markdown_italic:I = 0x7f0a045c
 
+.field public static markdown_link:I = 0x7f0a045d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static markdown_menu_container:I = 0x7f0a045e
 
-    const/4 v0, 0x1
+.field public static markdown_message_bubble_view:I = 0x7f0a045f
 
-    if-ne p0, p1, :cond_0
+.field public static markdown_mono:I = 0x7f0a0460
 
-    return v0
+.field public static markdown_original:I = 0x7f0a0461
 
-    :cond_0
-    instance-of v1, p1, Lvpc;
+.field public static markdown_preview_send_as_scheduled_button:I = 0x7f0a0462
 
-    const/4 v2, 0x0
+.field public static markdown_preview_send_button:I = 0x7f0a0463
 
-    if-nez v1, :cond_1
+.field public static markdown_preview_send_button_guideline:I = 0x7f0a0464
 
-    return v2
+.field public static markdown_quote:I = 0x7f0a0465
 
-    :cond_1
-    check-cast p1, Lvpc;
+.field public static markdown_regular:I = 0x7f0a0466
 
-    iget-object v1, p0, Lvpc;->a:Ljava/lang/String;
+.field public static markdown_strikethrough:I = 0x7f0a0467
 
-    iget-object v3, p1, Lvpc;->a:Ljava/lang/String;
+.field public static markdown_underline:I = 0x7f0a0468
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static menu:I = 0x7f0a04c3
 
-    move-result v1
+.field public static menu_list:I = 0x7f0a04f1
 
-    if-nez v1, :cond_2
+.field public static paste:I = 0x7f0a08d1
 
-    return v2
+.field public static rect:I = 0x7f0a09f0
 
-    :cond_2
-    iget-wide v3, p0, Lvpc;->b:J
+.field public static root:I = 0x7f0a0a03
 
-    iget-wide v5, p1, Lvpc;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lvpc;->c:Ljava/util/List;
-
-    iget-object p1, p1, Lvpc;->c:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lvpc;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lvpc;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lvpc;->c:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ReactionsSectionEntity(id="
-
-    const-string v1, ", updateTime="
-
-    iget-wide v2, p0, Lvpc;->b:J
-
-    iget-object v4, p0, Lvpc;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lhqd;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", reactions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvpc;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static select_all:I = 0x7f0a0b22

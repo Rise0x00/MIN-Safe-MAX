@@ -1,92 +1,91 @@
-.class public final Lyxa;
+.class public abstract Lyxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final b:I
 
-.field public final a:Ljava/lang/String;
+.field public static final c:I
 
-.field public final b:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public static final d:I
 
-.field public final c:I
+.field public static final e:I
 
-.field public final o:Lpgf;
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Thread$UncaughtExceptionHandler;ILpgf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lcoc;->media_editor_bottom_background_id:I
 
-    iput-object p1, p0, Lyxa;->a:Ljava/lang/String;
+    sput v0, Lyxa;->a:I
 
-    iput-object p2, p0, Lyxa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    sget v0, Lcoc;->media_editor_close_id:I
 
-    iput p3, p0, Lyxa;->c:I
+    sput v0, Lyxa;->b:I
 
-    iput-object p4, p0, Lyxa;->o:Lpgf;
+    sget v0, Lcoc;->media_editor_content_id:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    sput v0, Lyxa;->c:I
 
-    const/4 p2, 0x1
+    sget v0, Lcoc;->media_editor_crop_id:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    sput v0, Lyxa;->d:I
 
-    iput-object p1, p0, Lyxa;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget v0, Lcoc;->media_editor_done_id:I
+
+    sput v0, Lyxa;->e:I
+
+    sget v0, Lcoc;->media_editor_flip_horizontally_id:I
+
+    sput v0, Lyxa;->f:I
+
+    sget v0, Lcoc;->media_editor_reset_id:I
+
+    sput v0, Lyxa;->g:I
+
+    sget v0, Lcoc;->media_editor_rotate_id:I
+
+    sput v0, Lyxa;->h:I
+
+    sget v0, Lcoc;->media_picker_album_container_id:I
+
+    sput v0, Lyxa;->i:I
+
+    sget v0, Lcoc;->media_picker_container_id:I
+
+    sput v0, Lyxa;->j:I
+
+    sget v0, Lcoc;->media_picker_content_id:I
+
+    sput v0, Lyxa;->k:I
+
+    sget v0, Lcoc;->media_picker_divider_id:I
+
+    sput v0, Lyxa;->l:I
+
+    sget v0, Lcoc;->media_picker_toolbar_id:I
+
+    sput v0, Lyxa;->m:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
-
-    iget-object v0, p0, Lyxa;->X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lyxa;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "-"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lxxa;
-
-    invoke-direct {v1, v0, p1}, Lxxa;-><init>(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    iget-object p1, p0, Lyxa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
-
-    iget p1, p0, Lyxa;->c:I
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
-
-    iget-object p1, p0, Lyxa;->o:Lpgf;
-
-    iput-object p1, v1, Lxxa;->b:Ljava/lang/Object;
-
-    return-object v1
 .end method

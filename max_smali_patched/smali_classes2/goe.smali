@@ -1,110 +1,72 @@
 .class public final Lgoe;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lfoe;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:J
+.field public final a:Ltr0;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ltr0;)V
     .locals 0
 
-    iput-wide p1, p0, Lgoe;->Y:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgoe;->a:Ltr0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lorg/json/JSONObject;
+    .locals 5
 
-    check-cast p1, Le34;
+    new-instance v0, Lorg/json/JSONObject;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Lgoe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, "command"
 
-    move-result-object p1
+    const-string v2, "update-media-modifiers"
 
-    check-cast p1, Lgoe;
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Lgoe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lgoe;->a:Ltr0;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
-.end method
+    new-instance v2, Lorg/json/JSONObject;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    new-instance p1, Lgoe;
+    :try_start_0
+    const-string v3, "denoise"
 
-    iget-wide v0, p0, Lgoe;->Y:J
+    iget-boolean v4, v1, Ltr0;->a:Z
 
-    invoke-direct {p1, v0, v1, p2}, Lgoe;-><init>(JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    return-object p1
-.end method
+    const-string v3, "denoiseAnn"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-boolean v1, v1, Ltr0;->b:Z
 
-    iget v0, p0, Lgoe;->X:I
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v1, 0x1
+    :catch_0
+    const-string v1, "mediaModifiers"
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Lgoe;->X:I
-
-    iget-wide v0, p0, Lgoe;->Y:J
-
-    invoke-static {v0, v1, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

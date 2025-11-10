@@ -1,79 +1,17 @@
-.class public final Lr1a;
-.super Lked;
+.class public interface abstract Lr1a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lgad;
-
-
-# instance fields
-.field public final c:Ljava/util/concurrent/ThreadFactory;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const-string v0, "rx3.newthread-priority"
-
-    const/4 v1, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    new-instance v1, Lgad;
-
-    const-string v2, "RxNewThreadScheduler"
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v0, v3}, Lgad;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v1, Lr1a;->d:Lgad;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lr1a;->d:Lgad;
-
-    iput-object v0, p0, Lr1a;->c:Ljava/util/concurrent/ThreadFactory;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
 # virtual methods
-.method public final a()Lied;
-    .locals 2
+.method public abstract A(Lwq9;)V
+.end method
 
-    new-instance v0, Ls1a;
+.method public abstract J(ILjava/nio/ByteBuffer;Lpu0;)V
+.end method
 
-    iget-object v1, p0, Lr1a;->c:Ljava/util/concurrent/ThreadFactory;
-
-    invoke-direct {v0, v1}, Ls1a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    return-object v0
+.method public abstract c0(Lub6;)I
 .end method

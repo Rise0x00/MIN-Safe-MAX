@@ -1,23 +1,15 @@
-.class public final Lf15;
+.class public abstract Lf15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-
 # direct methods
-.method public constructor <init>(II)V
+.method public static a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Insets;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getOpticalInsets()Landroid/graphics/Insets;
 
-    iput p1, p0, Lf15;->a:I
+    move-result-object p0
 
-    iput p2, p0, Lf15;->b:I
-
-    return-void
+    return-object p0
 .end method

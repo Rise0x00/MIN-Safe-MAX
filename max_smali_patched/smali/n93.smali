@@ -1,17 +1,34 @@
-.class public final Ln93;
+.class public interface abstract Ln93;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Lx97;
+.implements Lcom/facebook/fresco/middleware/HasExtraData;
 
-# instance fields
-.field public a:I
 
-.field public b:I
+# virtual methods
+.method public abstract close()V
+.end method
 
-.field public c:I
+.method public abstract getHeight()I
+.end method
 
-.field public d:[B
+.method public abstract getImageInfo()Lx97;
+.end method
 
-.field public e:I
+.method public abstract getQualityInfo()Lohc;
+.end method
 
-.field public f:I
+.method public abstract getSizeInBytes()I
+.end method
+
+.method public abstract getWidth()I
+.end method
+
+.method public abstract isClosed()Z
+.end method
+
+.method public abstract isStateful()Z
+.end method

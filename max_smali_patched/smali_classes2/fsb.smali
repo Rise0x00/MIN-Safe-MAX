@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhsb;
+.implements Lgsb;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lfsb;->a:I
+    iput-object p1, p0, Lfsb;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,11 +44,15 @@
     :cond_1
     check-cast p1, Lfsb;
 
-    iget v1, p0, Lfsb;->a:I
+    iget-object v1, p0, Lfsb;->a:Ljava/lang/String;
 
-    iget p1, p1, Lfsb;->a:I
+    iget-object p1, p1, Lfsb;->a:Ljava/lang/String;
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -59,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lfsb;->a:I
+    iget-object v0, p0, Lfsb;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -71,13 +75,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "SetMainPhoto(index="
+    const-string v0, "UserPhoto(url="
 
     const-string v1, ")"
 
-    iget v2, p0, Lfsb;->a:I
+    iget-object v2, p0, Lfsb;->a:Ljava/lang/String;
 
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

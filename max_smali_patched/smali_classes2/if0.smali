@@ -1,80 +1,140 @@
-.class public final synthetic Lif0;
+.class public final Lif0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lq65;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/graphics/drawable/Drawable;
 
-.field public final synthetic b:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public final b:Landroid/graphics/Rect;
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;I)V
-    .locals 0
-
-    iput p2, p0, Lif0;->a:I
-
-    iput-object p1, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lif0;->b:Landroid/graphics/Rect;
+
+    iput-object p1, p0, Lif0;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    iput v0, p0, Lif0;->c:I
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lif0;->d:I
+
+    return-void
+.end method
+
+.method public static a(Lif0;IILandroid/graphics/Rect;)V
+    .locals 4
+
+    int-to-float v0, p1
+
+    iget v1, p0, Lif0;->d:I
+
+    int-to-float v2, v1
+
+    iget p0, p0, Lif0;->c:I
+
+    int-to-float v3, p0
+
+    div-float/2addr v2, v3
+
+    mul-float/2addr v2, v0
+
+    float-to-int v0, v2
+
+    if-le v0, p2, :cond_0
+
+    int-to-float v0, p2
+
+    int-to-float p0, p0
+
+    int-to-float v1, v1
+
+    div-float/2addr p0, v1
+
+    mul-float/2addr p0, v0
+
+    float-to-int p0, p0
+
+    move v0, p2
+
+    goto :goto_0
+
+    :cond_0
+    move p0, p1
+
+    :goto_0
+    sub-int/2addr p2, v0
+
+    int-to-float p2, p2
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    sub-int/2addr p1, p0
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v1
+
+    float-to-int p1, p1
+
+    add-int/2addr p0, p1
+
+    add-int/2addr v0, p2
+
+    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
 
-    iget v0, p0, Lif0;->a:I
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
+    move-result v1
 
-    move-result-object v0
+    iget-object v2, p0, Lif0;->b:Landroid/graphics/Rect;
 
-    check-cast v0, Lzid;
+    invoke-static {p0, v0, v1, v2}, Lif0;->a(Lif0;IILandroid/graphics/Rect;)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    iget-object v0, p0, Lif0;->a:Landroid/graphics/drawable/Drawable;
 
-    move-result-object v0
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    const-class v1, Lq9h;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lq9h;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
-
-    move-result-object v0
-
-    check-cast v0, Lzid;
-
-    invoke-virtual {v0}, Lzid;->s()Lr8f;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

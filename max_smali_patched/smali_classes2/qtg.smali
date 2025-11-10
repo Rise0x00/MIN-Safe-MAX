@@ -1,119 +1,174 @@
-.class public final synthetic Lqtg;
-.super Ljava/lang/Object;
+.class public final Lqtg;
+.super Lrtg;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Limg;
 
-.field public final synthetic b:Lstg;
+.field public final b:Z
+
+.field public final c:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lstg;I)V
+.method public constructor <init>(Limg;ZLandroid/graphics/Bitmap;)V
     .locals 0
 
-    iput p2, p0, Lqtg;->a:I
-
-    iput-object p1, p0, Lqtg;->b:Lstg;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqtg;->a:Limg;
+
+    iput-boolean p2, p0, Lqtg;->b:Z
+
+    iput-object p3, p0, Lqtg;->c:Landroid/graphics/Bitmap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lqtg;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lnn0;
-
-    iget-object v1, p0, Lqtg;->b:Lstg;
-
-    iget-object v2, v1, Lstg;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroidx/fragment/app/b;
-
-    iget-object v1, v1, Lstg;->a:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrtg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz v2, :cond_2
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v2}, Landroidx/fragment/app/b;->D()Lfb6;
-
-    move-result-object v3
-
-    new-instance v4, Lu3f;
-
-    invoke-direct {v4, v2}, Lu3f;-><init>(Lrlg;)V
-
-    const-class v2, Landroidx/biometric/BiometricViewModel;
-
-    invoke-static {v2}, Lxxc;->a(Ljava/lang/Class;)Ll53;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2}, Lu3f;->a(Ll53;)Ljlg;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/biometric/BiometricViewModel;
-
-    iput-object v3, v0, Lnn0;->a:Lfb6;
-
-    if-eqz v2, :cond_0
-
-    iput-object v1, v2, Landroidx/biometric/BiometricViewModel;->b:Lox9;
+    return v0
 
     :cond_0
-    return-object v0
+    instance-of v1, p1, Lqtg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    check-cast p1, Lqtg;
 
-    const-string v1, "AuthenticationCallback must not be null."
+    iget-object v1, p0, Lqtg;->a:Limg;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v3, p1, Lqtg;->a:Limg;
 
-    throw v0
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-boolean v1, p0, Lqtg;->b:Z
 
-    const-string v1, "FragmentActivity must not be null."
+    iget-boolean v3, p1, Lqtg;->b:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eq v1, v3, :cond_3
 
-    throw v0
+    return v2
 
-    :pswitch_0
-    new-instance v0, Lrtg;
+    :cond_3
+    iget-object v1, p0, Lqtg;->c:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lqtg;->b:Lstg;
+    iget-object p1, p1, Lqtg;->c:Landroid/graphics/Bitmap;
 
-    invoke-direct {v0, v1}, Lrtg;-><init>(Lstg;)V
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lqtg;->a:Limg;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-boolean v3, p0, Lqtg;->b:Z
+
+    invoke-static {v1, v2, v3}, Lo3h;->d(IIZ)I
+
+    move-result v1
+
+    iget-object v2, p0, Lqtg;->c:Landroid/graphics/Bitmap;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Pause(videoContent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqtg;->a:Limg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isFirstFrameRendered="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqtg;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", timelinePreview="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtg;->c:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

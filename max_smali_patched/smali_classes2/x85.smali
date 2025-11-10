@@ -1,131 +1,250 @@
-.class public abstract Lx85;
+.class public final Lx85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ls5f;
+# instance fields
+.field public final a:Ls95;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ls95;)V
+    .locals 0
 
-    new-instance v0, Lik3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lik3;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lx85;->a:Ls5f;
+    iput-object p1, p0, Lx85;->a:Ls95;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
 
-    if-eqz p0, :cond_4
+# virtual methods
+.method public final a(Ljava/lang/CharSequence;II)Lt95;
+    .locals 21
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    move-object/from16 v0, p0
 
-    move-result v0
+    iget-object v1, v0, Lx85;->a:Ls95;
 
-    if-nez v0, :cond_0
+    if-eqz v1, :cond_a
+
+    iget-object v1, v1, Ls95;->a:Ljava/lang/Object;
+
+    check-cast v1, [J
+
+    move/from16 v4, p2
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v8, -0x1
+
+    const/4 v9, -0x1
+
+    const/4 v10, -0x1
+
+    const/4 v11, 0x0
+
+    :goto_0
+    if-ltz v5, :cond_3
+
+    array-length v7, v1
+
+    if-ge v5, v7, :cond_3
+
+    move/from16 v7, p3
+
+    if-ge v4, v7, :cond_3
+
+    move-object/from16 v12, p1
+
+    invoke-interface {v12, v4}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v13
+
+    add-int/lit8 v14, v5, 0x1
+
+    aget-wide v2, v1, v5
+
+    long-to-int v2, v2
+
+    add-int/2addr v2, v14
+
+    add-int/lit8 v2, v2, -0x1
+
+    :goto_1
+    const-wide/32 v15, 0xffff
+
+    if-gt v14, v2, :cond_1
+
+    sub-int v3, v2, v14
+
+    ushr-int/lit8 v3, v3, 0x1
+
+    add-int/2addr v3, v14
+
+    aget-wide v17, v1, v3
+
+    move-object v5, v1
+
+    and-long v0, v17, v15
+
+    long-to-int v0, v0
+
+    int-to-char v0, v0
+
+    if-ge v0, v13, :cond_0
+
+    add-int/lit8 v3, v3, 0x1
+
+    move v14, v3
 
     goto :goto_2
 
     :cond_0
-    sget-object v0, Lx85;->a:Ls5f;
+    if-le v0, v13, :cond_2
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    add-int/lit8 v3, v3, -0x1
 
-    move-result-object v0
+    move v2, v3
 
-    check-cast v0, Ljava/security/MessageDigest;
+    :goto_2
+    move-object/from16 v0, p0
 
-    if-eqz v0, :cond_3
-
-    sget-object v1, Li82;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
-
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    array-length v1, p0
-
-    :goto_0
-    if-ge v2, v1, :cond_2
-
-    aget-byte v3, p0, v2
-
-    and-int/lit16 v3, v3, 0xff
-
-    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-ne v4, v5, :cond_1
-
-    const/16 v4, 0x30
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v1, v5
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v5, v1
 
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v14, v14, 0x1
 
-    goto :goto_0
+    neg-int v3, v14
 
     :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
+    if-gtz v3, :cond_4
 
     :cond_3
-    return-object p0
+    const/4 v2, -0x1
+
+    goto :goto_3
 
     :cond_4
-    :goto_2
-    const-string p0, ""
+    add-int/lit8 v6, v6, 0x1
 
-    return-object p0
+    aget-wide v0, v5, v3
+
+    const/16 v2, 0x30
+
+    ushr-long v2, v0, v2
+
+    and-long/2addr v2, v15
+
+    long-to-int v2, v2
+
+    const v3, 0xffff
+
+    if-ne v2, v3, :cond_5
+
+    const/4 v2, -0x1
+
+    :cond_5
+    const/16 v3, 0x28
+
+    ushr-long v13, v0, v3
+
+    const-wide/16 v15, 0xff
+
+    and-long/2addr v13, v15
+
+    long-to-int v3, v13
+
+    const/16 v13, 0xff
+
+    if-ne v3, v13, :cond_6
+
+    const/4 v3, -0x1
+
+    :cond_6
+    const/16 v14, 0x20
+
+    ushr-long v17, v0, v14
+
+    move-wide/from16 v19, v0
+
+    and-long v0, v17, v15
+
+    long-to-int v0, v0
+
+    if-ne v0, v13, :cond_7
+
+    const/4 v0, -0x1
+
+    :cond_7
+    const/16 v1, 0x18
+
+    ushr-long v17, v19, v1
+
+    move/from16 p2, v2
+
+    and-long v1, v17, v15
+
+    long-to-int v1, v1
+
+    if-ne v1, v13, :cond_8
+
+    const/4 v1, -0x1
+
+    :cond_8
+    const/4 v2, -0x1
+
+    if-eq v3, v2, :cond_9
+
+    if-eq v0, v2, :cond_9
+
+    if-eq v1, v2, :cond_9
+
+    add-int/2addr v11, v6
+
+    move v9, v0
+
+    move v10, v1
+
+    move v8, v3
+
+    const/4 v6, 0x0
+
+    :cond_9
+    add-int/lit8 v4, v4, 0x1
+
+    move-object/from16 v0, p0
+
+    move-object v1, v5
+
+    move/from16 v5, p2
+
+    goto/16 :goto_0
+
+    :goto_3
+    if-eq v8, v2, :cond_a
+
+    if-eq v9, v2, :cond_a
+
+    if-eq v10, v2, :cond_a
+
+    new-instance v7, Lt95;
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v7 .. v12}, Lt95;-><init>(IIIII)V
+
+    return-object v7
+
+    :cond_a
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

@@ -1,49 +1,66 @@
-.class public abstract Llwa;
+.class public final synthetic Llwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic X:Lru7;
 
-.field public static final c:I
+.field public final synthetic a:Lru7;
 
-.field public static final d:I
+.field public final synthetic b:Lru7;
 
-.field public static final e:I
+.field public final synthetic c:Lru7;
 
-.field public static final f:I
+.field public final synthetic d:Lru7;
+
+.field public final synthetic o:Lru7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
+    .locals 0
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_favorite_title:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Llwa;->a:I
+    iput-object p1, p0, Llwa;->a:Lru7;
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_forward_title:I
+    iput-object p2, p0, Llwa;->b:Lru7;
 
-    sput v0, Llwa;->b:I
+    iput-object p3, p0, Llwa;->c:Lru7;
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_in_favorite_title:I
+    iput-object p4, p0, Llwa;->d:Lru7;
 
-    sput v0, Llwa;->c:I
+    iput-object p5, p0, Llwa;->o:Lru7;
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_send_title:I
-
-    sput v0, Llwa;->d:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_snackbar_favorite_added:I
-
-    sput v0, Llwa;->e:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_snackbar_favorite_removed:I
-
-    sput v0, Llwa;->f:I
+    iput-object p6, p0, Llwa;->X:Lru7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
+
+    new-instance v0, Lhs9;
+
+    iget-object v1, p0, Llwa;->a:Lru7;
+
+    iget-object v2, p0, Llwa;->b:Lru7;
+
+    iget-object v3, p0, Llwa;->c:Lru7;
+
+    iget-object v4, p0, Llwa;->d:Lru7;
+
+    iget-object v5, p0, Llwa;->o:Lru7;
+
+    iget-object v6, p0, Llwa;->X:Lru7;
+
+    invoke-direct/range {v0 .. v6}, Lhs9;-><init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
+
+    return-object v0
 .end method

@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingInfo;",
         "urlSharingInfo",
-        "Loyf;",
+        "Lybg;",
         "onUrlSharingStarted",
         "(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingInfo;)V",
         "onUrlSharingStopped",

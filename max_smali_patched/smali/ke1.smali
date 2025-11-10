@@ -1,80 +1,89 @@
-.class public final synthetic Lke1;
+.class public final Lke1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lme1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzde;
-
-.field public final synthetic c:Liz0;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzde;Liz0;I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lke1;->a:I
-
-    iput-object p1, p0, Lke1;->b:Lzde;
-
-    iput-object p2, p0, Lke1;->c:Liz0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lke1;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget p1, p0, Lke1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lke1;->c:Liz0;
+    return v0
 
-    iget-wide v0, p1, Liz0;->c:J
+    :cond_0
+    instance-of v1, p1, Lke1;
 
-    iget-object p1, p0, Lke1;->b:Lzde;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lzde;->M(J)V
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_0
-    iget-object p1, p0, Lke1;->c:Liz0;
+    :cond_1
+    check-cast p1, Lke1;
 
-    iget-wide v0, p1, Liz0;->c:J
+    iget-object v1, p0, Lke1;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lke1;->b:Lzde;
+    iget-object p1, p1, Lke1;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lzde;->M(J)V
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result p1
 
-    :pswitch_1
-    iget-object p1, p0, Lke1;->c:Liz0;
+    if-nez p1, :cond_2
 
-    iget-wide v0, p1, Liz0;->c:J
+    return v2
 
-    iget-object p1, p0, Lke1;->b:Lzde;
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {p1, v0, v1}, Lzde;->M(J)V
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lke1;->a:Ljava/lang/String;
 
-    nop
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Create(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lke1;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,274 +1,365 @@
-.class public final Ljsf;
+.class public abstract Ljsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:I
-
-.field public c:Z
-
-.field public d:I
-
-.field public e:Z
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public l:Ljava/lang/String;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:Landroid/text/Layout$Alignment;
-
-.field public p:Landroid/text/Layout$Alignment;
-
-.field public q:I
-
-.field public r:Ljdf;
-
-.field public s:F
-
-.field public t:Ljava/lang/String;
-
-.field public u:Ljava/lang/String;
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "#(?i)([\\p{L}0-9_]+)"
 
-    const/4 v0, -0x1
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput v0, p0, Ljsf;->f:I
+    move-result-object v0
 
-    iput v0, p0, Ljsf;->g:I
-
-    iput v0, p0, Ljsf;->h:I
-
-    iput v0, p0, Ljsf;->i:I
-
-    iput v0, p0, Ljsf;->j:I
-
-    iput v0, p0, Ljsf;->m:I
-
-    iput v0, p0, Ljsf;->n:I
-
-    iput v0, p0, Ljsf;->q:I
-
-    const v0, 0x7f7fffff    # Float.MAX_VALUE
-
-    iput v0, p0, Ljsf;->s:F
+    sput-object v0, Ljsf;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
+.method public static a(Landroid/text/Spannable;La18;ZI)V
+    .locals 6
 
-# virtual methods
-.method public final a(Ljsf;)V
-    .locals 4
+    new-instance v5, Ldy1;
 
-    if-eqz p1, :cond_10
+    const/16 v0, 0xa
 
-    iget-boolean v0, p0, Ljsf;->c:Z
+    invoke-direct {v5, p0, p1, p3, v0}, Ldy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
 
-    const/4 v1, 0x1
+    sget-object p3, La18;->d:La18;
 
-    if-nez v0, :cond_0
+    if-ne p1, p3, :cond_0
 
-    iget-boolean v0, p1, Ljsf;->c:Z
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    iget v0, p1, Ljsf;->b:I
+    invoke-static {p1, p2}, Ljsf;->b(La18;Z)Ljava/util/regex/Pattern;
 
-    iput v0, p0, Ljsf;->b:I
+    move-result-object v1
 
-    iput-boolean v1, p0, Ljsf;->c:Z
+    sget-object v2, Lmfb;->a:Ljava/util/regex/Pattern;
+
+    sget-object v3, Lmfb;->d:Ljava/util/regex/Pattern;
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Ljsf;->c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLir3;)V
+
+    return-void
 
     :cond_0
-    iget v0, p0, Ljsf;->h:I
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const/4 v2, -0x1
+    move-result-object v0
 
-    if-ne v0, v2, :cond_1
+    invoke-static {p1, p2}, Ljsf;->b(La18;Z)Ljava/util/regex/Pattern;
 
-    iget v0, p1, Ljsf;->h:I
+    move-result-object v1
 
-    iput v0, p0, Ljsf;->h:I
+    sget-object v2, Lmfb;->a:Ljava/util/regex/Pattern;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Ljsf;->c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLir3;)V
+
+    return-void
+.end method
+
+.method public static b(La18;Z)Ljava/util/regex/Pattern;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 p1, 0x3
+
+    if-eq p0, p1, :cond_0
+
+    sget-object p0, Lisf;->a:Ljava/util/regex/Pattern;
+
+    return-object p0
+
+    :cond_0
+    sget-object p0, Lisf;->a:Ljava/util/regex/Pattern;
+
+    return-object p0
 
     :cond_1
-    iget v0, p0, Ljsf;->i:I
+    if-eqz p1, :cond_2
 
-    if-ne v0, v2, :cond_2
+    sget-object p0, Lisf;->e:Ljava/util/regex/Pattern;
 
-    iget v0, p1, Ljsf;->i:I
-
-    iput v0, p0, Ljsf;->i:I
+    return-object p0
 
     :cond_2
-    iget-object v0, p0, Ljsf;->a:Ljava/lang/String;
+    sget-object p0, Lisf;->c:Ljava/util/regex/Pattern;
 
-    if-nez v0, :cond_3
-
-    iget-object v0, p1, Ljsf;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_3
-
-    iput-object v0, p0, Ljsf;->a:Ljava/lang/String;
+    return-object p0
 
     :cond_3
-    iget v0, p0, Ljsf;->f:I
+    sget-object p0, Ljsf;->a:Ljava/util/regex/Pattern;
 
-    if-ne v0, v2, :cond_4
+    return-object p0
+.end method
 
-    iget v0, p1, Ljsf;->f:I
+.method public static c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLir3;)V
+    .locals 5
 
-    iput v0, p0, Ljsf;->f:I
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    invoke-virtual {p2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_2
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-le v2, v3, :cond_0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-gt v2, v3, :cond_3
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_0
+
+    :cond_3
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-gt v2, v3, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_1
+
+    goto :goto_0
 
     :cond_4
-    iget v0, p0, Ljsf;->g:I
+    if-nez p4, :cond_7
 
-    if-ne v0, v2, :cond_5
+    sget-object v1, Lisf;->a:Ljava/util/regex/Pattern;
 
-    iget v0, p1, Ljsf;->g:I
+    if-eq p1, v1, :cond_5
 
-    iput v0, p0, Ljsf;->g:I
+    goto :goto_1
 
     :cond_5
-    iget v0, p0, Ljsf;->n:I
+    sget-object v1, Lisf;->e:Ljava/util/regex/Pattern;
 
-    if-ne v0, v2, :cond_6
+    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    iget v0, p1, Ljsf;->n:I
-
-    iput v0, p0, Ljsf;->n:I
+    move-result-object v1
 
     :cond_6
-    iget-object v0, p0, Ljsf;->o:Landroid/text/Layout$Alignment;
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
-    if-nez v0, :cond_7
+    move-result v2
 
-    iget-object v0, p1, Ljsf;->o:Landroid/text/Layout$Alignment;
+    if-eqz v2, :cond_7
 
-    if-eqz v0, :cond_7
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
-    iput-object v0, p0, Ljsf;->o:Landroid/text/Layout$Alignment;
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_7
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-gt v2, v3, :cond_7
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    goto/16 :goto_0
 
     :cond_7
-    iget-object v0, p0, Ljsf;->p:Landroid/text/Layout$Alignment;
+    :goto_1
+    if-nez p3, :cond_8
 
-    if-nez v0, :cond_8
-
-    iget-object v0, p1, Ljsf;->p:Landroid/text/Layout$Alignment;
-
-    if-eqz v0, :cond_8
-
-    iput-object v0, p0, Ljsf;->p:Landroid/text/Layout$Alignment;
+    goto :goto_2
 
     :cond_8
-    iget v0, p0, Ljsf;->q:I
+    invoke-virtual {p3, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    if-ne v0, v2, :cond_9
-
-    iget v0, p1, Ljsf;->q:I
-
-    iput v0, p0, Ljsf;->q:I
+    move-result-object v1
 
     :cond_9
-    iget v0, p0, Ljsf;->j:I
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
-    if-ne v0, v2, :cond_a
+    move-result v2
 
-    iget v0, p1, Ljsf;->j:I
+    if-eqz v2, :cond_a
 
-    iput v0, p0, Ljsf;->j:I
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
-    iget v0, p1, Ljsf;->k:F
+    move-result v2
 
-    iput v0, p0, Ljsf;->k:F
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_a
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    if-gt v2, v3, :cond_a
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    goto/16 :goto_0
 
     :cond_a
-    iget-object v0, p0, Ljsf;->r:Ljdf;
+    :goto_2
+    :try_start_0
+    new-instance v1, Lfsf;
 
-    if-nez v0, :cond_b
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
-    iget-object v0, p1, Ljsf;->r:Ljdf;
+    move-result v2
 
-    iput-object v0, p0, Ljsf;->r:Ljdf;
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v1, v2, v3, v4}, Lfsf;-><init>(IILjava/lang/String;)V
+
+    invoke-interface {p5, v1}, Lir3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    const-string v2, "jsf"
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_0
 
     :cond_b
-    iget v0, p0, Ljsf;->s:F
-
-    const v3, 0x7f7fffff    # Float.MAX_VALUE
-
-    cmpl-float v0, v0, v3
-
-    if-nez v0, :cond_c
-
-    iget v0, p1, Ljsf;->s:F
-
-    iput v0, p0, Ljsf;->s:F
-
-    :cond_c
-    iget-object v0, p0, Ljsf;->t:Ljava/lang/String;
-
-    if-nez v0, :cond_d
-
-    iget-object v0, p1, Ljsf;->t:Ljava/lang/String;
-
-    iput-object v0, p0, Ljsf;->t:Ljava/lang/String;
-
-    :cond_d
-    iget-object v0, p0, Ljsf;->u:Ljava/lang/String;
-
-    if-nez v0, :cond_e
-
-    iget-object v0, p1, Ljsf;->u:Ljava/lang/String;
-
-    iput-object v0, p0, Ljsf;->u:Ljava/lang/String;
-
-    :cond_e
-    iget-boolean v0, p0, Ljsf;->e:Z
-
-    if-nez v0, :cond_f
-
-    iget-boolean v0, p1, Ljsf;->e:Z
-
-    if-eqz v0, :cond_f
-
-    iget v0, p1, Ljsf;->d:I
-
-    iput v0, p0, Ljsf;->d:I
-
-    iput-boolean v1, p0, Ljsf;->e:Z
-
-    :cond_f
-    iget v0, p0, Ljsf;->m:I
-
-    if-ne v0, v2, :cond_10
-
-    iget p1, p1, Ljsf;->m:I
-
-    if-eq p1, v2, :cond_10
-
-    iput p1, p0, Ljsf;->m:I
-
-    :cond_10
     return-void
 .end method

@@ -3,21 +3,31 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Lkb5;
+# static fields
+.field public static final a:Lnv0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkb5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnv0;
 
-    iput-object p1, p0, Lnv0;->a:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lnv0;->b:Lkb5;
+    sput-object v0, Lnv0;->a:Lnv0;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)I
+    .locals 0
+
+    invoke-static {p1}, Landroid/os/ext/SdkExtensions;->getExtensionVersion(I)I
+
+    move-result p1
+
+    return p1
 .end method

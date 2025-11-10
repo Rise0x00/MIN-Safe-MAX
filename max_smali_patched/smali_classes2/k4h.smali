@@ -1,38 +1,102 @@
 .class public final Lk4h;
-.super Ltde;
+.super Lc92;
 .source "SourceFile"
 
 
 # instance fields
-.field public J0:Li4h;
+.field public final c:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1, v0}, Lc92;-><init>(Ljava/lang/Long;I)V
+
+    iput-wide p1, p0, Lk4h;->c:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final x(Lww7;)V
-    .locals 1
+.method public final a()Ljava/lang/Long;
+    .locals 2
 
-    instance-of v0, p1, Lg4h;
+    iget-wide v0, p0, Lk4h;->c:J
 
-    if-nez v0, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    move-object v0, p1
+    instance-of v1, p1, Lk4h;
 
-    check-cast v0, Li4h;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lk4h;->J0:Li4h;
+    if-nez v1, :cond_1
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    return v2
 
-    check-cast v0, Ls1e;
+    :cond_1
+    check-cast p1, Lk4h;
 
-    check-cast p1, Lg4h;
+    iget-wide v3, p0, Lk4h;->c:J
 
-    iget-object p1, p1, Lg4h;->a:Lt1e;
+    iget-wide v5, p1, Lk4h;->c:J
 
-    invoke-virtual {v0, p1}, Ls1e;->setModelItem(Lj1e;)V
+    cmp-long p1, v3, v5
 
-    return-void
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lk4h;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogUserId(sourceId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lk4h;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

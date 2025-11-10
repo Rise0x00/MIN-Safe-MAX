@@ -1,51 +1,34 @@
-.class public final Le33;
-.super Lnz3;
+.class public final synthetic Le33;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lf33;
-
-.field public Z:I
-
-.field public o:Lf33;
+.field public final synthetic a:Lqi6;
 
 
 # direct methods
-.method public constructor <init>(Lf33;Lnz3;)V
+.method public constructor <init>(Lqi6;)V
     .locals 0
 
-    iput-object p1, p0, Le33;->Y:Lf33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Le33;->a:Lqi6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Le33;->X:Ljava/lang/Object;
+    iget-object v0, p0, Le33;->a:Lqi6;
 
-    iget p1, p0, Le33;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Le33;->Z:I
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Le33;->Y:Lf33;
-
-    invoke-virtual {v1, p1, v0, p0}, Lf33;->a(Ljava/lang/String;ILnz3;)Ljava/io/Serializable;
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -29,7 +29,7 @@
         "profile",
         "Landroid/bluetooth/BluetoothProfile;",
         "proxy",
-        "Loyf;",
+        "Lybg;",
         "onServiceConnected",
         "(ILandroid/bluetooth/BluetoothProfile;)V",
         "onServiceDisconnected",
@@ -97,7 +97,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Lve6;Lxe6;Lve6;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Loi6;Lqi6;Loi6;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -131,7 +131,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Lve6;Lxe6;Lve6;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v7}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Loi6;Lqi6;Loi6;ILjava/lang/Object;)V
 
     return-void
 .end method

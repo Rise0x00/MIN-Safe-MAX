@@ -1,23 +1,35 @@
-.class public abstract Lgog;
+.class public interface abstract Lgog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/Long;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Long;I)V
+# virtual methods
+.method public F(F)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput p2, p0, Lgog;->a:I
+.method public L()V
+    .locals 0
 
-    iput-object p1, p0, Lgog;->b:Ljava/lang/Long;
+    return-void
+.end method
+
+.method public abstract O()V
+.end method
+
+.method public abstract a(Landroidx/media3/common/VideoFrameProcessingException;)V
+.end method
+
+.method public l(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public p(JZ)V
+    .locals 0
 
     return-void
 .end method

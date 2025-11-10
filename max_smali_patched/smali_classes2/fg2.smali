@@ -1,308 +1,120 @@
 .class public final Lfg2;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ltk;
+.field public final synthetic X:Lhg2;
 
-.field public final b:Lub2;
+.field public final synthetic Y:Leg2;
 
-.field public final c:Lo49;
-
-.field public final d:Lxob;
-
-.field public final e:Lpm3;
-
-.field public final f:Lo59;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ltk;Lub2;Lo49;Lxob;Lpm3;Lo59;)V
+.method public constructor <init>(Lhg2;Leg2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfg2;->X:Lhg2;
 
-    iput-object p1, p0, Lfg2;->a:Ltk;
+    iput-object p2, p0, Lfg2;->Y:Leg2;
 
-    iput-object p2, p0, Lfg2;->b:Lub2;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lfg2;->c:Lo49;
-
-    iput-object p4, p0, Lfg2;->d:Lxob;
-
-    iput-object p5, p0, Lfg2;->e:Lpm3;
-
-    iput-object p6, p0, Lfg2;->f:Lo59;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lm82;Lq49;ZLjava/util/Set;)J
-    .locals 18
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p1
+    check-cast p1, Lg54;
 
-    move-object/from16 v1, p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v3, v0, Lm82;->a:J
+    invoke-virtual {p0, p1, p2}, Lfg2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lm82;->b:Lpc2;
+    move-result-object p1
 
-    iget-wide v5, v0, Lpc2;->a:J
+    check-cast p1, Lfg2;
 
-    const-wide/16 v7, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, p2}, Lfg2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v9, v1, Lyi0;->a:J
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lfg2;
+
+    iget-object v0, p0, Lfg2;->X:Lhg2;
+
+    iget-object v1, p0, Lfg2;->Y:Leg2;
+
+    invoke-direct {p1, v0, v1, p2}, Lfg2;-><init>(Lhg2;Leg2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lfg2;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    move-wide v9, v7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    if-eqz v1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-wide v0, v1, Lq49;->b:J
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    throw p1
 
     :cond_1
-    move-wide v0, v7
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    :goto_1
-    const/16 v2, 0x64
+    iget-object p1, p0, Lfg2;->X:Lhg2;
 
-    const/4 v11, 0x0
+    iget-object p1, p1, Lhg2;->a:Lake;
 
-    move v12, v11
+    iput v1, p0, Lfg2;->o:I
 
-    if-eqz p3, :cond_2
+    iget-object v0, p0, Lfg2;->Y:Leg2;
 
-    move v11, v2
+    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    if-eqz p3, :cond_3
-
-    :goto_2
-    move-object/from16 v14, p0
-
-    goto :goto_3
-
-    :cond_3
-    move v12, v2
-
-    goto :goto_2
-
-    :goto_3
-    iget-object v2, v14, Lfg2;->a:Ltk;
-
-    move-object v15, v2
-
-    check-cast v15, Lbga;
-
-    invoke-virtual {v15, v3, v4}, Lbga;->n(J)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    return-wide v7
-
-    :cond_4
-    invoke-virtual {v15}, Lbga;->x()Lxob;
-
-    move-result-object v2
-
-    check-cast v2, Lzob;
-
-    iget-object v2, v2, Lzob;->a:Lt63;
-
-    invoke-virtual {v2}, Lxid;->l()J
-
-    move-result-wide v7
-
-    move-wide/from16 v16, v9
-
-    move-wide v9, v0
-
-    move-wide v1, v7
-
-    move-wide/from16 v7, v16
-
-    new-instance v0, Lqf2;
-
-    move-object/from16 v13, p4
-
-    invoke-direct/range {v0 .. v13}, Lqf2;-><init>(JJJJJIILjava/util/Set;)V
-
-    invoke-static {v15, v0}, Lbga;->u(Lbga;Lxl;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final b(Z)Z
-    .locals 3
-
-    iget-object v0, p0, Lfg2;->d:Lxob;
-
-    check-cast v0, Lzob;
-
-    iget-object v0, v0, Lzob;->c:Lsp;
-
-    iget-object v0, v0, Lh3;->g:Lep7;
-
-    const-string v1, "app.media.load.gif"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lep7;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, v0}, Lfg2;->c(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, -0x1
-
-    if-eq v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v2
-.end method
-
-.method public final c(I)Z
-    .locals 3
-
-    iget-object v0, p0, Lfg2;->e:Lpm3;
-
-    invoke-interface {v0}, Lpm3;->g()Z
-
-    move-result v1
-
-    invoke-interface {v0}, Lpm3;->b()Lfn3;
-
-    move-result-object v0
-
-    const/4 v2, -0x1
-
-    if-eq p1, v2, :cond_2
-
-    sget-object v2, Lfn3;->b:Lfn3;
-
-    if-eqz p1, :cond_0
-
-    if-ne v0, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_0
-    if-eq v0, v2, :cond_1
-
-    iget-object p1, p0, Lfg2;->d:Lxob;
-
-    check-cast p1, Lzob;
-
-    iget-object p1, p1, Lzob;->c:Lsp;
-
-    invoke-virtual {p1}, Lzhd;->k()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    if-nez v1, :cond_2
-
-    :cond_1
     :goto_0
-    const/4 p1, 0x1
+    sget-object p1, Lybg;->a:Lybg;
 
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final d()Z
-    .locals 3
-
-    iget-object v0, p0, Lfg2;->d:Lxob;
-
-    check-cast v0, Lzob;
-
-    iget-object v0, v0, Lzob;->c:Lsp;
-
-    const/4 v1, 0x0
-
-    iget-object v0, v0, Lh3;->g:Lep7;
-
-    const-string v2, "app.media.load.photo"
-
-    invoke-virtual {v0, v2, v1}, Lep7;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lfg2;->c(I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final e(Z)Z
-    .locals 3
-
-    iget-object v0, p0, Lfg2;->d:Lxob;
-
-    check-cast v0, Lzob;
-
-    iget-object v0, v0, Lzob;->c:Lsp;
-
-    iget-object v0, v0, Lh3;->g:Lep7;
-
-    const-string v1, "app.media.load.stickers"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lep7;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, v0}, Lfg2;->c(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, -0x1
-
-    if-eq v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    return v2
+    return-object p1
 .end method

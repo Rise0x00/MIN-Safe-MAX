@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final PARSER:Lpl7;
+.field public static final PARSER:Lar7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpl7;"
+            "Lar7;"
         }
     .end annotation
 .end field
@@ -19,7 +19,7 @@
         value = {
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lxg1;",
+            "Lsh1;",
             ">;"
         }
     .end annotation
@@ -30,13 +30,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Llx0;
+    new-instance v0, Lfy0;
 
-    const/16 v1, 0x17
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Llx0;-><init>(I)V
+    invoke-direct {v0, v1}, Lfy0;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->PARSER:Lpl7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->PARSER:Lar7;
 
     return-void
 .end method
@@ -48,7 +48,7 @@
             "(",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lxg1;",
+            "Lsh1;",
             ">;)V"
         }
     .end annotation
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public static parse(Lvl7;)Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;
+.method public static parse(Lgr7;)Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -73,16 +73,16 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-interface {p0}, Lvl7;->s()V
+    invoke-interface {p0}, Lgr7;->p()V
 
     :goto_0
-    invoke-interface {p0}, Lvl7;->hasNext()Z
+    invoke-interface {p0}, Lgr7;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {p0}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lgr7;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -94,17 +94,17 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {p0, v0}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readIdsArray(Lvl7;Ljava/util/Map;)V
+    invoke-static {p0, v0}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readIdsArray(Lgr7;Ljava/util/Map;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lvl7;->B()V
+    invoke-interface {p0}, Lgr7;->v()V
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {p0}, Lvl7;->q()V
+    invoke-interface {p0}, Lgr7;->n()V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;
 
@@ -113,7 +113,7 @@
     return-object p0
 .end method
 
-.method private static readExternalId(Lvl7;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+.method private static readExternalId(Lgr7;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -122,7 +122,7 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lvl7;->s()V
+    invoke-interface {p0}, Lgr7;->p()V
 
     const/4 v0, 0x0
 
@@ -131,13 +131,13 @@
     move-object v2, v1
 
     :goto_0
-    invoke-interface {p0}, Lvl7;->hasNext()Z
+    invoke-interface {p0}, Lgr7;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-interface {p0}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lgr7;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -159,12 +159,12 @@
 
     if-nez v3, :cond_0
 
-    invoke-interface {p0}, Lvl7;->B()V
+    invoke-interface {p0}, Lgr7;->v()V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lvl7;->e0()Z
+    invoke-interface {p0}, Lgr7;->W()Z
 
     move-result v2
 
@@ -175,14 +175,14 @@
     goto :goto_0
 
     :cond_1
-    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lgr7;->B()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {p0}, Lvl7;->q()V
+    invoke-interface {p0}, Lgr7;->n()V
 
     if-eqz v1, :cond_3
 
@@ -202,15 +202,15 @@
     return-object v0
 .end method
 
-.method private static readIdMapping(Lvl7;Ljava/util/Map;)V
+.method private static readIdMapping(Lgr7;Ljava/util/Map;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvl7;",
+            "Lgr7;",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lxg1;",
+            "Lsh1;",
             ">;)V"
         }
     .end annotation
@@ -222,20 +222,20 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lvl7;->s()V
+    invoke-interface {p0}, Lgr7;->p()V
 
     const/4 v0, 0x0
 
     move-object v1, v0
 
     :goto_0
-    invoke-interface {p0}, Lvl7;->hasNext()Z
+    invoke-interface {p0}, Lgr7;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-interface {p0}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lgr7;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -257,30 +257,30 @@
 
     if-nez v2, :cond_0
 
-    invoke-interface {p0}, Lvl7;->B()V
+    invoke-interface {p0}, Lgr7;->v()V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lgr7;->B()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lxg1;->a(Ljava/lang/String;)Lxg1;
+    invoke-static {v0}, Lsh1;->a(Ljava/lang/String;)Lsh1;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readExternalId(Lvl7;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readExternalId(Lgr7;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {p0}, Lvl7;->q()V
+    invoke-interface {p0}, Lgr7;->n()V
 
     if-eqz v0, :cond_3
 
@@ -292,15 +292,15 @@
     return-void
 .end method
 
-.method private static readIdsArray(Lvl7;Ljava/util/Map;)V
+.method private static readIdsArray(Lgr7;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lvl7;",
+            "Lgr7;",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lxg1;",
+            "Lsh1;",
             ">;)V"
         }
     .end annotation
@@ -312,21 +312,21 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lvl7;->u()V
+    invoke-interface {p0}, Lgr7;->r()V
 
     :goto_0
-    invoke-interface {p0}, Lvl7;->hasNext()Z
+    invoke-interface {p0}, Lgr7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readIdMapping(Lvl7;Ljava/util/Map;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/api/BatchInternalIdResponse;->readIdMapping(Lgr7;Ljava/util/Map;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lvl7;->t()V
+    invoke-interface {p0}, Lgr7;->q()V
 
     return-void
 .end method

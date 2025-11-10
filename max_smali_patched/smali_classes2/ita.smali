@@ -1,31 +1,61 @@
-.class public abstract Lita;
-.super Ljava/lang/Object;
+.class public final Lita;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Lnz;
 
-.field public static final b:I
+.field public Y:Lc10;
 
-.field public static final c:I
+.field public Z:Z
+
+.field public d:Lqta;
+
+.field public o:Lgb9;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lqta;
+
+.field public u0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqta;Lp14;)V
+    .locals 0
 
-    sget v0, Lxjc;->chat_media_photo:I
+    iput-object p1, p0, Lita;->t0:Lqta;
 
-    sput v0, Lita;->a:I
-
-    sget v0, Lxjc;->chat_media_video:I
-
-    sput v0, Lita;->b:I
-
-    sget v0, Lxjc;->media_photo_video:I
-
-    sput v0, Lita;->c:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lita;->s0:Ljava/lang/Object;
+
+    iget p1, p0, Lita;->u0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lita;->u0:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lita;->t0:Lqta;
+
+    invoke-virtual {v1, p1, p1, v0, p0}, Lqta;->b(Lgb9;Lnz;ZLp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,39 +1,23 @@
-.class public final synthetic Loig;
+.class public abstract Loig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmf6;
-.implements Lki5;
+
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
-# virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    check-cast p1, Lvk0;
-
-    invoke-virtual {p1}, Lvk0;->a()Lude;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public b()[Lfi5;
-    .locals 3
-
-    new-instance v0, Ltpg;
-
-    invoke-direct {v0}, Ltpg;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lfi5;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    const/4 v2, 0x0
+    sput-object v0, Loig;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    aput-object v0, v1, v2
-
-    return-object v1
+    return-void
 .end method

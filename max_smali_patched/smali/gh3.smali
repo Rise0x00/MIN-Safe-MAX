@@ -1,252 +1,273 @@
 .class public final Lgh3;
-.super Lc0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final h:I
+.field public final a:Ljava/lang/String;
 
-.field public final i:I
+.field public final b:Ljava/util/Set;
 
-.field public final j:[I
+.field public final c:Ljava/util/Set;
 
-.field public final k:[I
+.field public final d:I
 
-.field public final l:[Lmif;
+.field public final e:I
 
-.field public final m:[Ljava/lang/Object;
+.field public final f:Lvh3;
 
-.field public final n:Ljava/util/HashMap;
+.field public final g:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lqbe;)V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILvh3;Ljava/util/Set;)V
+    .locals 0
 
-    invoke-direct {p0, p2}, Lc0;-><init>(Lqbe;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    iput-object p1, p0, Lgh3;->a:Ljava/lang/String;
 
-    move-result p2
-
-    new-array v0, p2, [I
-
-    iput-object v0, p0, Lgh3;->j:[I
-
-    new-array v0, p2, [I
-
-    iput-object v0, p0, Lgh3;->k:[I
-
-    new-array v0, p2, [Lmif;
-
-    iput-object v0, p0, Lgh3;->l:[Lmif;
-
-    new-array p2, p2, [Ljava/lang/Object;
-
-    iput-object p2, p0, Lgh3;->m:[Ljava/lang/Object;
-
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lgh3;->n:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    iput-object p1, p0, Lgh3;->b:Ljava/util/Set;
 
-    move v0, p2
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    move v1, v0
+    move-result-object p1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iput-object p1, p0, Lgh3;->c:Ljava/util/Set;
 
-    move-result v2
+    iput p4, p0, Lgh3;->d:I
 
-    if-eqz v2, :cond_0
+    iput p5, p0, Lgh3;->e:I
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-object p6, p0, Lgh3;->f:Lvh3;
 
-    move-result-object v2
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    check-cast v2, Ljh3;
+    move-result-object p1
 
-    iget-object v3, p0, Lgh3;->l:[Lmif;
-
-    iget-object v4, v2, Ljh3;->a:Lzb8;
-
-    iget-object v4, v4, Lzb8;->o:Lvb8;
-
-    aput-object v4, v3, v1
-
-    iget-object v3, p0, Lgh3;->k:[I
-
-    aput p2, v3, v1
-
-    iget-object v3, p0, Lgh3;->j:[I
-
-    aput v0, v3, v1
-
-    iget-object v3, v4, Lia6;->e:Lmif;
-
-    invoke-virtual {v3}, Lmif;->o()I
-
-    move-result v3
-
-    add-int/2addr p2, v3
-
-    iget-object v3, p0, Lgh3;->l:[Lmif;
-
-    aget-object v3, v3, v1
-
-    invoke-virtual {v3}, Lmif;->h()I
-
-    move-result v3
-
-    add-int/2addr v0, v3
-
-    iget-object v3, p0, Lgh3;->m:[Ljava/lang/Object;
-
-    iget-object v2, v2, Ljh3;->b:Ljava/lang/Object;
-
-    aput-object v2, v3, v1
-
-    iget-object v3, p0, Lgh3;->n:Ljava/util/HashMap;
-
-    add-int/lit8 v4, v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move v1, v4
-
-    goto :goto_0
-
-    :cond_0
-    iput p2, p0, Lgh3;->h:I
-
-    iput v0, p0, Lgh3;->i:I
+    iput-object p1, p0, Lgh3;->g:Ljava/util/Set;
 
     return-void
 .end method
 
+.method public static a(Ljhc;)Lfh3;
+    .locals 5
 
-# virtual methods
-.method public final h()I
-    .locals 1
+    new-instance v0, Lfh3;
 
-    iget v0, p0, Lgh3;->i:I
+    const/4 v1, 0x0
 
-    return v0
+    new-array v1, v1, [Ljhc;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Lfh3;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v2, v0, Lfh3;->d:Ljava/lang/Object;
+
+    new-instance v3, Ljava/util/HashSet;
+
+    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v3, v0, Lfh3;->e:Ljava/io/Serializable;
+
+    const/4 v3, 0x0
+
+    iput v3, v0, Lfh3;->b:I
+
+    iput v3, v0, Lfh3;->c:I
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v4, v0, Lfh3;->f:Ljava/io/Serializable;
+
+    invoke-virtual {v2, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    array-length p0, v1
+
+    :goto_0
+    if-ge v3, p0, :cond_0
+
+    aget-object v2, v1, v3
+
+    const-string v4, "Null interface"
+
+    invoke-static {v2, v4}, Lmui;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, v0, Lfh3;->d:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/HashSet;
+
+    invoke-static {p0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    return-object v0
 .end method
 
-.method public final o()I
-    .locals 1
+.method public static b(Ljava/lang/Class;)Lfh3;
+    .locals 2
 
-    iget v0, p0, Lgh3;->h:I
+    new-instance v0, Lfh3;
 
-    return v0
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    invoke-direct {v0, p0, v1}, Lfh3;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
+
+    return-object v0
 .end method
 
-.method public final q(Ljava/lang/Object;)I
-    .locals 1
+.method public static varargs c(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lgh3;
+    .locals 10
 
-    iget-object v0, p0, Lgh3;->n:Ljava/util/HashMap;
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    new-instance v9, Ljava/util/HashSet;
+
+    invoke-direct {v9}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {p1}, Ljhc;->a(Ljava/lang/Class;)Ljhc;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    if-nez p1, :cond_0
+    array-length p1, p2
 
-    const/4 p1, -0x1
+    const/4 v6, 0x0
 
-    return p1
+    move v2, v6
+
+    :goto_0
+    if-ge v2, p1, :cond_0
+
+    aget-object v3, p2, v2
+
+    const-string v4, "Null interface"
+
+    invoke-static {v3, v4}, Lmui;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v3}, Ljhc;->a(Ljava/lang/Class;)Ljhc;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    new-instance v8, Lg52;
 
-    move-result p1
+    const/16 p1, 0xe
 
-    return p1
+    invoke-direct {v8, p1, p0}, Lg52;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lgh3;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v5, Ljava/util/HashSet;
+
+    invoke-direct {v5, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    const/4 v3, 0x0
+
+    move v7, v6
+
+    invoke-direct/range {v2 .. v9}, Lgh3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILvh3;Ljava/util/Set;)V
+
+    return-object v2
 .end method
 
-.method public final r(I)I
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    add-int/lit8 p1, p1, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "Component<"
 
-    iget-object v1, p0, Lgh3;->j:[I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, p1, v0, v0}, Lt4g;->d([IIZZ)I
+    iget-object v1, p0, Lgh3;->b:Ljava/util/Set;
 
-    move-result p1
+    invoke-interface {v1}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
-    return p1
-.end method
+    move-result-object v1
 
-.method public final s(I)I
-    .locals 2
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    add-int/lit8 p1, p1, 0x1
+    move-result-object v1
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lgh3;->k:[I
+    const-string v1, ">{"
 
-    invoke-static {v1, p1, v0, v0}, Lt4g;->d([IIZZ)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    iget v1, p0, Lgh3;->d:I
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final t(I)Ljava/lang/Object;
-    .locals 1
+    const-string v1, ", type="
 
-    iget-object v0, p0, Lgh3;->m:[Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object p1, v0, p1
+    iget v1, p0, Lgh3;->e:I
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final u(I)I
-    .locals 1
+    const-string v1, ", deps="
 
-    iget-object v0, p0, Lgh3;->j:[I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget p1, v0, p1
+    iget-object v1, p0, Lgh3;->c:Ljava/util/Set;
 
-    return p1
-.end method
+    invoke-interface {v1}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
 
-.method public final v(I)I
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lgh3;->k:[I
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    aget p1, v0, p1
+    move-result-object v1
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final y(I)Lmif;
-    .locals 1
+    const-string v1, "}"
 
-    iget-object v0, p0, Lgh3;->l:[Lmif;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object p1, v0, p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,42 +1,33 @@
-.class public final Lbdh;
+.class public abstract synthetic Lbdh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc9d;
-
-
-# instance fields
-.field public final synthetic a:Lt8d;
-
 
 # direct methods
-.method public constructor <init>(Lt8d;)V
+.method public static bridge synthetic a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
 
-    iput-object p1, p0, Lbdh;->a:Lt8d;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static bridge synthetic b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
+    .locals 0
 
-# virtual methods
-.method public final a(Lv84;Z)V
-    .locals 2
+    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
 
-    new-instance v0, Lri;
+    move-result-object p0
 
-    const/4 v1, 0x7
+    return-object p0
+.end method
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lri;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/os/VibratorManager;
+    .locals 0
 
-    iget-object p1, p0, Lbdh;->a:Lt8d;
+    check-cast p0, Landroid/os/VibratorManager;
 
-    iget-object p1, p1, Lt8d;->f:Landroid/os/Handler;
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object p0
 .end method

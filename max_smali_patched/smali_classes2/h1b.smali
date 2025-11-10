@@ -1,48 +1,31 @@
-.class public final Lh1b;
-.super Lnz3;
+.class public abstract Lh1b;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Ldoa;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lh1b;->Y:Ldoa;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lh1b;->o:Ljava/lang/Object;
+    sget v0, Lpqc;->oneme_ll_chat_media_progress:I
 
-    iget p1, p0, Lh1b;->X:I
+    sput v0, Lh1b;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lpqc;->oneme_row_gallery_camera:I
 
-    or-int/2addr p1, v0
+    sput v0, Lh1b;->b:I
 
-    iput p1, p0, Lh1b;->X:I
+    sget v0, Lpqc;->oneme_row_gallery_media:I
 
-    iget-object p1, p0, Lh1b;->Y:Ldoa;
+    sput v0, Lh1b;->c:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

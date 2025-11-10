@@ -471,7 +471,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v0}, Lho8;->u(Landroid/net/NetworkRequest$Builder;)V
+    invoke-static {v0}, Lgu8;->v(Landroid/net/NetworkRequest$Builder;)V
 
     :cond_1
     invoke-virtual {v0}, Landroid/net/NetworkRequest$Builder;->build()Landroid/net/NetworkRequest;

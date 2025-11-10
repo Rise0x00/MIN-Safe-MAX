@@ -1,218 +1,295 @@
-.class public final Lkya;
+.class public abstract Lkya;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final A:I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public static final B:I
 
-.field public final c:J
+.field public static final C:I
 
-.field public final d:Lsd0;
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
+
+.field public static final U:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;JLsd0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    and-int/lit8 p6, p6, 0x10
+    sget v0, Leoc;->chat_screen_message_send_error_delete_action:I
 
-    if-eqz p6, :cond_0
+    sput v0, Lkya;->a:I
 
-    const/4 p5, 0x0
+    sget v0, Leoc;->chat_screen_message_send_error_resend_action_multi:I
 
-    :cond_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lkya;->b:I
 
-    iput-object p1, p0, Lkya;->a:Ljava/lang/String;
+    sget v0, Leoc;->chat_screen_message_send_error_resend_action_solo:I
 
-    iput-object p2, p0, Lkya;->b:Ljava/lang/CharSequence;
+    sput v0, Lkya;->c:I
 
-    iput-wide p3, p0, Lkya;->c:J
+    sget v0, Leoc;->messages_list_chat_description_view_id:I
 
-    iput-object p5, p0, Lkya;->d:Lsd0;
+    sput v0, Lkya;->d:I
+
+    sget v0, Leoc;->messages_list_chat_description_view_type:I
+
+    sput v0, Lkya;->e:I
+
+    sget v0, Leoc;->messages_list_confirm_cancel:I
+
+    sput v0, Lkya;->f:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_extremism:I
+
+    sput v0, Lkya;->g:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_fake:I
+
+    sput v0, Lkya;->h:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_other:I
+
+    sput v0, Lkya;->i:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_porno:I
+
+    sput v0, Lkya;->j:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_spam:I
+
+    sput v0, Lkya;->k:I
+
+    sget v0, Leoc;->messages_list_confirm_complaint_threat:I
+
+    sput v0, Lkya;->l:I
+
+    sget v0, Leoc;->messages_list_confirm_delete:I
+
+    sput v0, Lkya;->m:I
+
+    sget v0, Leoc;->messages_list_confirm_delete_for_all:I
+
+    sput v0, Lkya;->n:I
+
+    sget v0, Leoc;->messages_list_confirm_pin_with_notify:I
+
+    sput v0, Lkya;->o:I
+
+    sget v0, Leoc;->messages_list_confirm_pin_without_notify:I
+
+    sput v0, Lkya;->p:I
+
+    sget v0, Leoc;->messages_list_context_action_copy:I
+
+    sput v0, Lkya;->q:I
+
+    sget v0, Leoc;->messages_list_context_action_copy_photo:I
+
+    sput v0, Lkya;->r:I
+
+    sget v0, Leoc;->messages_list_context_action_delete:I
+
+    sput v0, Lkya;->s:I
+
+    sget v0, Leoc;->messages_list_context_action_delete_for_all:I
+
+    sput v0, Lkya;->t:I
+
+    sget v0, Leoc;->messages_list_context_action_edit:I
+
+    sput v0, Lkya;->u:I
+
+    sget v0, Leoc;->messages_list_context_action_forward:I
+
+    sput v0, Lkya;->v:I
+
+    sget v0, Leoc;->messages_list_context_action_mark_as_unread:I
+
+    sput v0, Lkya;->w:I
+
+    sget v0, Leoc;->messages_list_context_action_pin:I
+
+    sput v0, Lkya;->x:I
+
+    sget v0, Leoc;->messages_list_context_action_reply:I
+
+    sput v0, Lkya;->y:I
+
+    sget v0, Leoc;->messages_list_context_action_report:I
+
+    sput v0, Lkya;->z:I
+
+    sget v0, Leoc;->messages_list_context_action_save_to_gallery:I
+
+    sput v0, Lkya;->A:I
+
+    sget v0, Leoc;->messages_list_context_action_select:I
+
+    sput v0, Lkya;->B:I
+
+    sget v0, Leoc;->messages_list_context_action_unpin:I
+
+    sput v0, Lkya;->C:I
+
+    sget v0, Leoc;->messages_list_context_actions_view_type:I
+
+    sput v0, Lkya;->D:I
+
+    sget v0, Leoc;->messages_list_context_content_container:I
+
+    sput v0, Lkya;->E:I
+
+    sget v0, Leoc;->messages_list_context_member_view_type:I
+
+    sput v0, Lkya;->F:I
+
+    sget v0, Leoc;->messages_list_context_members_member_cell:I
+
+    sput v0, Lkya;->G:I
+
+    sget v0, Leoc;->messages_list_context_members_member_reaction:I
+
+    sput v0, Lkya;->H:I
+
+    sget v0, Leoc;->messages_list_context_reactions_container:I
+
+    sput v0, Lkya;->I:I
+
+    sget v0, Leoc;->messages_list_item_alias:I
+
+    sput v0, Lkya;->J:I
+
+    sget v0, Leoc;->messages_list_item_date:I
+
+    sput v0, Lkya;->K:I
+
+    sget v0, Leoc;->messages_list_item_keyboard_buttons:I
+
+    sput v0, Lkya;->L:I
+
+    sget v0, Leoc;->messages_list_item_single_image:I
+
+    sput v0, Lkya;->M:I
+
+    sget v0, Leoc;->messages_list_item_text:I
+
+    sput v0, Lkya;->N:I
+
+    sget v0, Leoc;->messages_list_item_title:I
+
+    sput v0, Lkya;->O:I
+
+    sget v0, Leoc;->messages_list_item_video_duration:I
+
+    sput v0, Lkya;->P:I
+
+    sget v0, Leoc;->messages_list_recycler_view:I
+
+    sput v0, Lkya;->Q:I
+
+    sget v0, Leoc;->messages_list_scroll_btn:I
+
+    sput v0, Lkya;->R:I
+
+    sget v0, Leoc;->messages_list_share_contact_for_bot_action:I
+
+    sput v0, Lkya;->S:I
+
+    sget v0, Leoc;->messages_list_warning_link_subtitle:I
+
+    sput v0, Lkya;->T:I
+
+    sget v0, Leoc;->messages_list_warning_link_title:I
+
+    sput v0, Lkya;->U:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lkya;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lkya;
-
-    iget-object v0, p0, Lkya;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lkya;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lkya;->b:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lkya;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v0, p0, Lkya;->c:J
-
-    iget-wide v2, p1, Lkya;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lkya;->d:Lsd0;
-
-    iget-object p1, p1, Lkya;->d:Lsd0;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lkya;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lkya;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v3, v1, v2}, Lnd5;->e(Ljava/lang/CharSequence;II)I
-
-    move-result v1
-
-    iget-wide v2, p0, Lkya;->c:J
-
-    const/16 v4, 0x3c1
-
-    invoke-static {v1, v4, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v1
-
-    iget-object v2, p0, Lkya;->d:Lsd0;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AvatarParams(url="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkya;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviationName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkya;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lkya;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", placeholder=null, overlay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkya;->d:Lsd0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

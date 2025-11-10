@@ -1,57 +1,90 @@
 .class public final Ltd0;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic X:Landroid/graphics/Bitmap;
 
-.field public final b:Lod8;
+.field public final synthetic o:Lqi6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lqi6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltd0;->o:Lqi6;
 
-    new-instance v0, Landroid/text/TextPaint;
+    iput-object p2, p0, Ltd0;->X:Landroid/graphics/Bitmap;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
-
-    iput-object v0, p0, Ltd0;->a:Landroid/text/TextPaint;
-
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    const-string v1, "sans-serif-medium"
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v0, Lod8;
-
-    const/16 v1, 0x64
-
-    invoke-direct {v0, v1, v2}, Lod8;-><init>(II)V
-
-    iput-object v0, p0, Ltd0;->b:Lod8;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lg54;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ltd0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ltd0;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ltd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ltd0;
+
+    iget-object v0, p0, Ltd0;->o:Lqi6;
+
+    iget-object v1, p0, Ltd0;->X:Landroid/graphics/Bitmap;
+
+    invoke-direct {p1, v0, v1, p2}, Ltd0;-><init>(Lqi6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltd0;->X:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    new-instance v0, Ljava/lang/Integer;
+
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    iget-object p1, p0, Ltd0;->o:Lqi6;
+
+    invoke-interface {p1, v0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

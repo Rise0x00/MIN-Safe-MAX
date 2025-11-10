@@ -4,45 +4,40 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
+.field public final b:Lla0;
 
 
 # direct methods
-.method public constructor <init>(IIIIILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Lla0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ls90;->a:I
+    if-eqz p1, :cond_1
 
-    if-eqz p6, :cond_0
+    iput-object p1, p0, Ls90;->a:Ljava/lang/String;
 
-    iput-object p6, p0, Ls90;->b:Ljava/lang/String;
+    if-eqz p2, :cond_0
 
-    iput p2, p0, Ls90;->c:I
-
-    iput p3, p0, Ls90;->d:I
-
-    iput p4, p0, Ls90;->e:I
-
-    iput p5, p0, Ls90;->f:I
+    iput-object p2, p0, Ls90;->b:Lla0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null mediaType"
+    const-string p2, "Null cameraConfigId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraIdString"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -69,15 +64,9 @@
 
     check-cast p1, Ls90;
 
-    iget v1, p0, Ls90;->a:I
+    iget-object v1, p0, Ls90;->a:Ljava/lang/String;
 
-    iget v3, p1, Ls90;->a:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Ls90;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Ls90;->b:Ljava/lang/String;
+    iget-object v3, p1, Ls90;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -85,29 +74,15 @@
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Ls90;->c:I
+    iget-object v1, p0, Ls90;->b:Lla0;
 
-    iget v3, p1, Ls90;->c:I
+    iget-object p1, p1, Ls90;->b:Lla0;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v1, p1}, Lla0;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Ls90;->d:I
+    move-result p1
 
-    iget v3, p1, Ls90;->d:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Ls90;->e:I
-
-    iget v3, p1, Ls90;->e:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Ls90;->f:I
-
-    iget p1, p1, Ls90;->f:I
-
-    if-ne v1, p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -116,9 +91,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Ls90;->a:I
+    iget-object v0, p0, Ls90;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -126,35 +105,11 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ls90;->b:Ljava/lang/String;
+    iget-object v1, p0, Ls90;->b:Lla0;
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Lla0;->hashCode()I
 
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ls90;->c:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ls90;->d:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ls90;->e:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Ls90;->f:I
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -162,59 +117,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "AudioProfileProxy{codec="
+    const-string v1, "CameraId{cameraIdString="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Ls90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mediaType="
+    iget-object v1, p0, Ls90;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ls90;->b:Ljava/lang/String;
+    const-string v1, ", cameraConfigId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", bitrate="
+    iget-object v1, p0, Ls90;->b:Lla0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Ls90;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ls90;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", channels="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ls90;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ls90;->f:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,59 +1,86 @@
 .class public final Ljve;
-.super Lnz3;
+.super Lnve;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/Collection;
-
-.field public Y:Ljava/util/Iterator;
-
-.field public Z:Lmre;
-
-.field public o:Llve;
-
-.field public w0:Ljava/util/Collection;
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Llve;
-
-.field public z0:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Llve;Lnz3;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput-object p1, p0, Ljve;->y0:Llve;
+    const/4 v0, 0x3
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2, v0}, Lnve;-><init>(JI)V
+
+    iput-wide p1, p0, Ljve;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Ljve;->x0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ljve;->z0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Ljve;
 
-    iput p1, p0, Ljve;->z0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Ljve;->y0:Llve;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Llve;->t(Ljava/util/List;Lnz3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ljve;
 
-    move-result-object p1
+    iget-wide v3, p0, Ljve;->c:J
 
-    return-object p1
+    iget-wide v5, p1, Ljve;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ljve;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatId(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ljve;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

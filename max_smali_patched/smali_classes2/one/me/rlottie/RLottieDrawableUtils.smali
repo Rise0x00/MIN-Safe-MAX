@@ -12,19 +12,19 @@
         "Lone/me/rlottie/RLottieDrawable;",
         "",
         "networkFetchEnabled",
-        "Loyf;",
+        "Lybg;",
         "restartDownloadFromUrl",
         "(Lone/me/rlottie/RLottieDrawable;Z)V",
         "",
         "getFrameRate",
         "(Lone/me/rlottie/RLottieDrawable;)I",
         "frame",
-        "Llmc;",
+        "Lyvc;",
         "getLottieFrameAt",
-        "(Lone/me/rlottie/RLottieDrawable;I)Llmc;",
+        "(Lone/me/rlottie/RLottieDrawable;I)Lyvc;",
         "width",
         "height",
-        "(Lone/me/rlottie/RLottieDrawable;III)Llmc;",
+        "(Lone/me/rlottie/RLottieDrawable;III)Lyvc;",
         "rlottie_release"
     }
     k = 0x2
@@ -50,7 +50,7 @@
     return p0
 .end method
 
-.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;I)Llmc;
+.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;I)Lyvc;
     .locals 2
 
     .line 1
@@ -58,18 +58,18 @@
 
     iget v1, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    invoke-static {p0, p1, v0, v1}, Lone/me/rlottie/RLottieDrawableUtils;->getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Llmc;
+    invoke-static {p0, p1, v0, v1}, Lone/me/rlottie/RLottieDrawableUtils;->getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Lyvc;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Llmc;
+.method public static final getLottieFrameAt(Lone/me/rlottie/RLottieDrawable;III)Lyvc;
     .locals 10
 
     .line 2
-    new-instance v0, Llmc;
+    new-instance v0, Lyvc;
 
     .line 3
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -98,7 +98,7 @@
     if-eqz v5, :cond_0
 
     .line 5
-    iget-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
+    iget-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->c1:J
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getRowBytes()I
 
@@ -121,7 +121,7 @@
 .method public static final restartDownloadFromUrl(Lone/me/rlottie/RLottieDrawable;Z)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -130,11 +130,11 @@
     :cond_0
     const/4 v1, 0x1
 
-    invoke-static {v0, v1, p1}, Lzx9;->a(Ljava/lang/String;IZ)Lxx9;
+    invoke-static {v0, v1, p1}, Ls4a;->a(Ljava/lang/String;IZ)Lq4a;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lxx9;->e(Lyx9;)V
+    invoke-virtual {p1, p0}, Lq4a;->e(Lr4a;)V
 
     return-void
 .end method

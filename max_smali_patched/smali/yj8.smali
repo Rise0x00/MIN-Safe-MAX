@@ -1,38 +1,46 @@
-.class public interface abstract Lyj8;
-.super Ljava/lang/Object;
+.class public final Lyj8;
+.super Ltj8;
 .source "SourceFile"
+
+# interfaces
+.implements Llnd;
+
+
+# static fields
+.field public static final a:Lyj8;
 
 
 # direct methods
-.method public static a()Lj67;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    new-instance v0, Lgwd;
+    new-instance v0, Lyj8;
 
-    const/4 v1, -0x6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lgwd;-><init>(I)V
+    sput-object v0, Lyj8;->a:Lyj8;
 
-    invoke-static {v0}, Lio7;->o(Ljava/lang/Object;)Lj67;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
+.method public final f(Lgk8;)V
+    .locals 1
+
+    sget-object v0, Lia5;->a:Lia5;
+
+    invoke-interface {p1, v0}, Lgk8;->d(Lzv4;)V
+
+    invoke-interface {p1}, Lgk8;->c()V
 
     return-void
 .end method
 
-.method public c()V
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public abstract d(Lak8;)V
+    return-object v0
 .end method

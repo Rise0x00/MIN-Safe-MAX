@@ -32,16 +32,16 @@
 
 
 # virtual methods
-.method public abstract a()Ljava/nio/ByteBuffer;
+.method public abstract a()Z
 .end method
 
-.method public abstract b(Ljava/nio/ByteBuffer;)V
+.method public abstract b()Ljava/nio/ByteBuffer;
 .end method
 
-.method public abstract c()V
+.method public abstract c(Ljava/nio/ByteBuffer;)V
 .end method
 
-.method public abstract d()Z
+.method public abstract d()V
 .end method
 
 .method public abstract e(Ll50;)Ll50;

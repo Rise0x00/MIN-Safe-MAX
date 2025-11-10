@@ -1,21 +1,24 @@
-.class public final Lc7;
+.class public final synthetic Lc7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmf6;
-.implements Lgle;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Loi6;
 
 
 # direct methods
-.method public synthetic constructor <init>(J)V
+.method public synthetic constructor <init>(ILoi6;)V
     .locals 0
 
-    iput-wide p1, p0, Lc7;->a:J
+    iput p1, p0, Lc7;->a:I
+
+    iput-object p2, p0, Lc7;->b:Loi6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -24,42 +27,123 @@
 
 
 # virtual methods
-.method public a()Lfle;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    new-instance v0, Leab;
+    iget p1, p0, Lc7;->a:I
 
-    invoke-direct {v0, p0}, Leab;-><init>(Lc7;)V
+    iget-object v0, p0, Lc7;->b:Loi6;
 
-    return-object v0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    check-cast p1, Lex4;
+    return-void
 
-    iget-wide v0, p0, Lc7;->a:J
+    :pswitch_0
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    return-void
 
-    const-string v3, "SELECT * FROM draft_uploads WHERE chat_id = ?"
+    :pswitch_1
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lo6d;->c(ILjava/lang/String;)Lo6d;
+    return-void
 
-    move-result-object v3
+    :pswitch_2
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {v3, v2, v0, v1}, Lo6d;->k(IJ)V
+    return-void
 
-    new-instance v0, Ldx4;
+    :pswitch_3
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    return-void
 
-    invoke-direct {v0, p1, v3, v1}, Ldx4;-><init>(Lex4;Lo6d;I)V
+    :pswitch_4
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    new-instance p1, Lce8;
+    return-void
 
-    invoke-direct {p1, v0}, Lce8;-><init>(Ljava/util/concurrent/Callable;)V
+    :pswitch_5
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    return-object p1
+    return-void
+
+    :pswitch_6
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_7
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    return-void
+
+    :pswitch_8
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_9
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_a
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_b
+    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->o:I
+
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_c
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_d
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_e
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_f
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

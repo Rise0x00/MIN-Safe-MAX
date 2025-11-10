@@ -3,67 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvc9;
+.implements Lez5;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lphd;
+.field public final synthetic b:La1f;
+
+.field public final synthetic c:Leh9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Lphd;)V
+.method public synthetic constructor <init>(La1f;Leh9;I)V
     .locals 0
 
+    iput p3, p0, Lzg9;->a:I
+
+    iput-object p1, p0, Lzg9;->b:La1f;
+
+    iput-object p2, p0, Lzg9;->c:Leh9;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzg9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iput-object p2, p0, Lzg9;->b:Lphd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    iget v0, p0, Lzg9;->a:I
 
-    iget-object v0, p0, Lzg9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    new-instance v0, Lyg9;
 
-    move-result-object v1
+    iget-object v1, p0, Lzg9;->c:Leh9;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->w()I
+    const/4 v2, 0x1
 
-    move-result v1
+    invoke-direct {v0, p1, v1, v2}, Lyg9;-><init>(Lgz5;Leh9;I)V
 
-    if-eqz v1, :cond_0
+    iget-object p1, p0, Lzg9;->b:La1f;
 
-    iget-object v1, p0, Lzg9;->b:Lphd;
+    invoke-virtual {p1, v0, p2}, La1f;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->D0(Lone/me/messages/list/ui/MessagesListWidget;Lphd;)V
+    sget-object p1, Lh54;->a:Lh54;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    return-object p1
 
-    move-result-object v0
+    :pswitch_0
+    new-instance v0, Lyg9;
 
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lxt9;
+    iget-object v1, p0, Lzg9;->c:Leh9;
 
-    invoke-virtual {v0, p0}, Lxt9;->h(Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v0, p1, v1, v2}, Lyg9;-><init>(Lgz5;Leh9;I)V
 
-.method public final getTag()Ljava/lang/String;
-    .locals 1
+    iget-object p1, p0, Lzg9;->b:La1f;
 
-    const-string v0, "ScrollButton"
+    invoke-virtual {p1, v0, p2}, La1f;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v0
+    sget-object p1, Lh54;->a:Lh54;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,154 +1,138 @@
-.class public abstract Lzce;
-.super Lpw7;
+.class public final Lzce;
+.super Lade;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzce;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    new-instance v0, Lqa4;
+
+# instance fields
+.field public final a:Lnrf;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lzvd;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lqa4;-><init>(I)V
+    invoke-direct {v0, v1}, Lzvd;-><init>(I)V
 
-    new-instance v1, Llo4;
+    sput-object v0, Lzce;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v2, 0x4
+    return-void
+.end method
 
-    invoke-direct {v1, p1, v2, v0}, Llo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Lnrf;)V
+    .locals 0
 
-    invoke-direct {p0, v1}, Lpw7;-><init>(Llo4;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1}, Lpwc;->A(Z)V
+    iput-object p1, p0, Lzce;->a:Lnrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(I)Lww7;
+.method public final describeContents()I
     .locals 1
 
-    if-ltz p1, :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lpw7;->o:Lru;
+    return v0
+.end method
 
-    iget-object v0, v0, Lru;->f:Ljava/util/List;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    const/4 v0, 0x1
 
-    move-result v0
+    if-ne p0, p1, :cond_0
 
-    if-ge p1, v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lww7;
-
-    return-object p1
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lzce;
 
-    return-object p1
-.end method
+    const/4 v2, 0x0
 
-.method public H(Ltde;I)V
-    .locals 0
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object p2
+    :cond_1
+    check-cast p1, Lzce;
 
-    check-cast p2, Lww7;
+    iget-object v1, p0, Lzce;->a:Lnrf;
 
-    invoke-virtual {p1, p2}, Ltde;->x(Lww7;)V
+    iget-object p1, p1, Lzce;->a:Lnrf;
 
-    return-void
-.end method
-
-.method public I(Ltde;)V
-    .locals 0
-
-    invoke-virtual {p1}, Ltde;->D()V
-
-    return-void
-.end method
-
-.method public k(I)J
-    .locals 2
-
-    invoke-virtual {p0, p1}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lww7;
-
-    invoke-interface {p1}, Lww7;->getItemId()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lww7;
-
-    invoke-interface {p1}, Lww7;->m()I
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public bridge synthetic r(Lnxc;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    check-cast p1, Ltde;
+    iget-object v0, p0, Lzce;->a:Lnrf;
 
-    invoke-virtual {p0, p1, p2}, Lzce;->H(Ltde;I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public final w(Lnxc;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Ltde;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ltde;->B()V
+    const-string v1, "Text(text="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzce;->a:Lnrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final x(Lnxc;)V
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    check-cast p1, Ltde;
+    iget-object v0, p0, Lzce;->a:Lnrf;
 
-    invoke-virtual {p1}, Ltde;->C()V
-
-    return-void
-.end method
-
-.method public bridge synthetic y(Lnxc;)V
-    .locals 0
-
-    check-cast p1, Ltde;
-
-    invoke-virtual {p0, p1}, Lzce;->I(Ltde;)V
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
 .end method

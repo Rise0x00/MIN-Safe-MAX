@@ -1,102 +1,19 @@
 .class public final Layb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lfyb;
-
-.field public final synthetic Y:Landroid/graphics/RectF;
+.field public final a:Lru7;
 
 
 # direct methods
-.method public constructor <init>(Lfyb;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru7;)V
     .locals 0
 
-    iput-object p1, p0, Layb;->X:Lfyb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Layb;->Y:Landroid/graphics/RectF;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Layb;->a:Lru7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Layb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Layb;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Layb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Layb;
-
-    iget-object v0, p0, Layb;->X:Lfyb;
-
-    iget-object v1, p0, Layb;->Y:Landroid/graphics/RectF;
-
-    invoke-direct {p1, v0, v1, p2}, Layb;-><init>(Lfyb;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    sget-object p1, Lfyb;->F0:[Ltm7;
-
-    iget-object p1, p0, Layb;->X:Lfyb;
-
-    invoke-virtual {p1}, Lfyb;->r()Lpr5;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lfyb;->E0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lpr5;->r(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Layb;->Y:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, v1}, Lfyb;->s(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

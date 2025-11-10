@@ -1,87 +1,83 @@
-.class public final Lcwb;
+.class public final synthetic Lcwb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgwb;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkwb;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lkwb;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lcwb;->a:I
 
-    iput-wide p1, p0, Lcwb;->a:J
+    iput-object p1, p0, Lcwb;->b:Lkwb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcwb;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ljava/lang/Float;
 
-    return v0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    :cond_0
-    instance-of v1, p1, Lcwb;
+    move-result p1
 
-    const/4 v2, 0x0
+    check-cast p2, Ljava/lang/Float;
 
-    if-nez v1, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    return v2
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_1
-    check-cast p1, Lcwb;
+    iget-object p2, p0, Lcwb;->b:Lkwb;
 
-    iget-wide v3, p0, Lcwb;->a:J
+    invoke-static {p2, p1}, Lkwb;->a(Lkwb;F)V
 
-    iget-wide v5, p1, Lcwb;->a:J
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
-    cmp-long p1, v3, v5
+    return-object p1
 
-    if-eqz p1, :cond_2
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
-    return v2
+    move-result p2
 
-    :cond_2
-    return v0
-.end method
+    iget-object v0, p0, Lcwb;->b:Lkwb;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, p1, p2}, Lkwb;->c(Lkwb;FF)V
 
-    iget-wide v0, p0, Lcwb;->a:J
+    goto :goto_0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :pswitch_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    iget-object p2, p0, Lcwb;->b:Lkwb;
 
-    return v0
-.end method
+    invoke-static {p2, p1}, Lkwb;->b(Lkwb;F)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    goto :goto_0
 
-    const-string v0, "ChatUpdate(requestId="
+    nop
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lcwb;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

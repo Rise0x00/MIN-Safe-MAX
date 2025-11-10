@@ -4,32 +4,54 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lsff;
 
-.field public final b:J
+.field public final b:Lsff;
 
-.field public final c:Ljava/io/File;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/io/File;)V
+.method public constructor <init>(Lsff;Lsff;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lz90;->a:J
+    if-eqz p1, :cond_1
 
-    iput-wide p3, p0, Lz90;->b:J
+    iput-object p1, p0, Lz90;->a:Lsff;
 
-    iput-object p5, p0, Lz90;->c:Ljava/io/File;
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lz90;->b:Lsff;
+
+    iput-object p3, p0, Lz90;->c:Ljava/util/ArrayList;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null secondarySurfaceEdge"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null primarySurfaceEdge"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
@@ -42,27 +64,31 @@
 
     check-cast p1, Lz90;
 
-    iget-wide v0, p0, Lz90;->a:J
+    iget-object v0, p0, Lz90;->a:Lsff;
 
-    iget-wide v2, p1, Lz90;->a:J
+    iget-object v1, p1, Lz90;->a:Lsff;
 
-    cmp-long v0, v0, v2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_1
+    move-result v0
 
-    iget-wide v0, p0, Lz90;->b:J
+    if-eqz v0, :cond_1
 
-    iget-wide v2, p1, Lz90;->b:J
+    iget-object v0, p0, Lz90;->b:Lsff;
 
-    cmp-long v0, v0, v2
+    iget-object v1, p1, Lz90;->b:Lsff;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lz90;->c:Ljava/io/File;
+    move-result v0
 
-    iget-object p1, p1, Lz90;->c:Ljava/io/File;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lz90;->c:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lz90;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -80,17 +106,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 3
 
-    iget-wide v0, p0, Lz90;->a:J
+    iget-object v0, p0, Lz90;->a:Lsff;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -98,23 +120,19 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Lz90;->b:J
+    iget-object v2, p0, Lz90;->b:Lsff;
 
-    ushr-long v1, v3, v2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    xor-long/2addr v1, v3
+    move-result v2
 
-    long-to-int v1, v1
-
-    xor-int/2addr v0, v1
-
-    const v1, -0x2aff6277
+    xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lz90;->c:Ljava/io/File;
+    iget-object v1, p0, Lz90;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/io/File;->hashCode()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->hashCode()I
 
     move-result v1
 
@@ -124,31 +142,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FileOutputOptionsInternal{fileSizeLimit="
+    const-string v1, "In{primarySurfaceEdge="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lz90;->a:J
+    iget-object v1, p0, Lz90;->a:Lsff;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", durationLimitMillis="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lz90;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", location=null, file="
+    const-string v1, ", secondarySurfaceEdge="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lz90;->c:Ljava/io/File;
+    iget-object v1, p0, Lz90;->b:Lsff;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", outConfigs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lz90;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

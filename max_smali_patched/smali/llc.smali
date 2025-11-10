@@ -3,60 +3,54 @@
 
 
 # static fields
-.field public static RecyclerView:[I = null
+.field public static ic_call_16:I = 0x7f08054e
 
-.field public static RecyclerView_android_clipToPadding:I = 0x1
+.field public static ic_call_22:I = 0x7f08054f
 
-.field public static RecyclerView_android_descendantFocusability:I = 0x2
+.field public static ic_call_24:I = 0x7f080550
 
-.field public static RecyclerView_android_orientation:I = 0x0
+.field public static ic_call_contact_20:I = 0x7f080557
 
-.field public static RecyclerView_fastScrollEnabled:I = 0x3
+.field public static ic_call_link_preview_36:I = 0x7f080563
 
-.field public static RecyclerView_fastScrollHorizontalThumbDrawable:I = 0x4
+.field public static ic_checked_22:I = 0x7f08058c
 
-.field public static RecyclerView_fastScrollHorizontalTrackDrawable:I = 0x5
+.field public static ic_copy_20:I = 0x7f0805aa
 
-.field public static RecyclerView_fastScrollVerticalThumbDrawable:I = 0x6
+.field public static ic_copy_28:I = 0x7f0805ad
 
-.field public static RecyclerView_fastScrollVerticalTrackDrawable:I = 0x7
+.field public static ic_delete_22:I = 0x7f0805bc
 
-.field public static RecyclerView_layoutManager:I = 0x8
+.field public static ic_edit_22:I = 0x7f0805d7
 
-.field public static RecyclerView_reverseLayout:I = 0x9
+.field public static ic_incoming_audio_call_13:I = 0x7f08063c
 
-.field public static RecyclerView_spanCount:I = 0xa
+.field public static ic_incoming_video_call_15:I = 0x7f08063f
 
-.field public static RecyclerView_stackFromEnd:I = 0xb
+.field public static ic_link_16:I = 0x7f080650
 
+.field public static ic_link_22:I = 0x7f080652
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static ic_loading_16:I = 0x7f080656
 
-    const/16 v0, 0xc
+.field public static ic_more_14:I = 0x7f080693
 
-    new-array v0, v0, [I
+.field public static ic_open_call_chat_24:I = 0x7f080734
 
-    fill-array-data v0, :array_0
+.field public static ic_outgoing_audio_call_13:I = 0x7f080739
 
-    sput-object v0, Lllc;->RecyclerView:[I
+.field public static ic_outgoing_video_call_15:I = 0x7f08073b
 
-    return-void
+.field public static ic_reject_audio_call_12:I = 0x7f08076b
 
-    :array_0
-    .array-data 4
-        0x10100c4
-        0x10100eb
-        0x10100f1
-        0x7f0403b0
-        0x7f0403b1
-        0x7f0403b2
-        0x7f0403b3
-        0x7f0403b4
-        0x7f040597
-        0x7f04071e
-        0x7f040791
-        0x7f0407d6
-    .end array-data
-.end method
+.field public static ic_reject_video_call_15:I = 0x7f08076c
+
+.field public static ic_send_link_22:I = 0x7f08078b
+
+.field public static ic_share_link_20:I = 0x7f080799
+
+.field public static ic_uncheced_22:I = 0x7f0807c9
+
+.field public static illustration_empty_58:I = 0x7f080818
+
+.field public static illustration_placeholder_casper:I = 0x7f08081a

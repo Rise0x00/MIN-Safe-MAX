@@ -1,142 +1,102 @@
 .class public final Lf8a;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lx58;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lx5d;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lph;
-
-.field public final c:Lfc9;
-
-
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf8a;->a:Lx5d;
-
-    new-instance v0, Lph;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, p1, v1}, Lph;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lf8a;->b:Lph;
-
-    new-instance v0, Lfc9;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, p1, v1}, Lfc9;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lf8a;->c:Lfc9;
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final f()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Le8a;
+    check-cast p1, Lgz5;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, v1}, Le8a;-><init>(Lf8a;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0}, Lq9e;->y(Llf6;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final p(Ljava/util/List;Lnz3;)Ljava/lang/Object;
-    .locals 4
-
-    const-string v0, "SELECT * FROM notifications_read_marks WHERE chat_id IN ("
-
-    invoke-static {v0}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Loch;->h(Ljava/lang/StringBuilder;I)V
-
-    const-string v2, ")"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo6d;->c(ILjava/lang/String;)Lo6d;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lf8a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lf8a;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lf8a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lf8a;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lf8a;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lf8a;->o:I
 
     const/4 v1, 0x1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_1
 
-    move-result v2
+    if-ne v0, v1, :cond_0
 
-    if-eqz v2, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {v0, v1}, Lo6d;->Z(I)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v1, v2, v3}, Lo6d;->k(IJ)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    new-instance p1, Landroid/os/CancellationSignal;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    iget-object p1, p0, Lf8a;->X:Ljava/lang/Object;
 
-    new-instance v1, Lrh;
+    check-cast p1, Lgz5;
 
-    const/16 v2, 0x14
+    iput v1, p0, Lf8a;->o:I
 
-    invoke-direct {v1, p0, v2, v0}, Lrh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lf8a;->a:Lx5d;
-
-    invoke-static {v0, p1, v1, p2}, Lihf;->g(Lx5d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p0}, Lgz5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

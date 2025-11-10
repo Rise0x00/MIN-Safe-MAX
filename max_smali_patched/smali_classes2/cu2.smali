@@ -1,85 +1,139 @@
 .class public final Lcu2;
-.super Le0;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lz24;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lvu2;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv24;I)V
+.method public constructor <init>(Lvu2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lcu2;->a:I
+    iput-object p1, p0, Lcu2;->X:Lvu2;
 
-    invoke-direct {p0, p1}, Le0;-><init>(Lv24;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Lw24;Ljava/lang/Throwable;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcu2;->a:I
+    check-cast p1, Lg54;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    instance-of p1, p2, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p2
-
-    check-cast p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    new-instance p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    :cond_1
-    sget-object p2, Li6g;->a:Li6g;
-
-    invoke-virtual {p2}, Li6g;->c()Lg44;
-
-    move-result-object p2
-
-    const-string v0, "ONEME-8759"
-
-    invoke-virtual {p2, v0, p1}, Lg44;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    const-string v0, "fail in %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lcu2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const-string v1, "eu2"
+    check-cast p1, Lcu2;
 
-    invoke-static {v1, p2, v0, p1}, Lox9;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    sget-object p2, Lybg;->a:Lybg;
 
-    return-void
+    invoke-virtual {p1, p2}, Lcu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lcu2;
+
+    iget-object v0, p0, Lcu2;->X:Lvu2;
+
+    invoke-direct {p1, v0, p2}, Lcu2;-><init>(Lvu2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    sget-object v0, Lybg;->a:Lybg;
+
+    sget-object v1, Lh54;->a:Lh54;
+
+    iget v2, p0, Lcu2;->o:I
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v4
+
+    :goto_0
+    if-nez p1, :cond_3
+
+    return-object v0
+
+    :cond_3
+    iput v3, p0, Lcu2;->o:I
+
+    invoke-virtual {p1, p0}, Lnxa;->a(Lp14;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_4
+
+    return-object v1
+
+    :cond_4
+    :goto_1
+    check-cast p1, Ljava/nio/file/Path;
+
+    iget-object v1, p0, Lcu2;->X:Lvu2;
+
+    invoke-interface {p1}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1, v4, v4}, Lvu2;->E(Landroid/net/Uri;Ljava/lang/Long;Lic6;)V
+
+    return-object v0
 .end method

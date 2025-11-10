@@ -1,216 +1,245 @@
 .class public final Lzc6;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lc2f;
-
-
-# static fields
-.field public static final b:[Ljava/lang/String;
-
-.field public static final c:[Ljava/lang/String;
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/database/sqlite/SQLiteDatabase;
+.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+
+.field public final synthetic Y:Landroid/view/ViewGroup;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    const-string v4, " OR IGNORE "
-
-    const-string v5, " OR REPLACE "
-
-    const-string v0, ""
-
-    const-string v1, " OR ROLLBACK "
-
-    const-string v2, " OR ABORT "
-
-    const-string v3, " OR FAIL "
-
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lzc6;->b:[Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    sput-object v0, Lzc6;->c:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/database/sqlite/SQLiteDatabase;)V
+.method public constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzc6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput-object p1, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object p2, p0, Lzc6;->Y:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D(Ljava/lang/String;)Lh2f;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lfd6;
+    check-cast p1, Lzf9;
 
-    iget-object v1, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1, p1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+    invoke-virtual {p0, p1, p2}, Lzc6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lfd6;-><init>(Landroid/database/sqlite/SQLiteStatement;)V
+    check-cast p1, Lzc6;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lzc6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lzc6;
+
+    iget-object v1, p0, Lzc6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+
+    iget-object v2, p0, Lzc6;->Y:Landroid/view/ViewGroup;
+
+    invoke-direct {v0, v1, v2, p2}, Lzc6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lzc6;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final G()V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    iget-object p1, p0, Lzc6;->o:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast p1, Lzf9;
 
-.method public final I()V
-    .locals 1
+    iget-object v0, p0, Lzc6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, v0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Lyid;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransactionNonExclusive()V
+    if-nez v1, :cond_0
 
-    return-void
-.end method
+    goto/16 :goto_0
 
-.method public final P(Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 3
+    :cond_0
+    iget p1, p1, Lzf9;->a:I
 
-    new-instance v0, Lw7b;
+    invoke-static {p1}, Lnx1;->v(I)I
 
-    const/4 v1, 0x0
+    move-result p1
 
-    const/4 v2, 0x7
+    iget-object v2, p0, Lzc6;->Y:Landroid/view/ViewGroup;
 
-    invoke-direct {v0, p1, v2, v1}, Lw7b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v3, 0x1
 
-    invoke-virtual {p0, v0}, Lzc6;->x(Lg2f;)Landroid/database/Cursor;
+    const/4 v4, 0x0
+
+    if-eqz p1, :cond_6
+
+    if-eq p1, v3, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->F0:Lad6;
+
+    iget-object p1, p1, Lad6;->b:Lone/me/sdk/arch/Widget;
+
+    check-cast p1, Lone/me/chats/forward/ForwardPickerScreen;
+
+    iget-object p1, p1, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lrn0;
+
+    invoke-virtual {p1}, Lrn0;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Lrn0;->getValue()Ljava/lang/Object;
 
     move-result-object p1
+
+    check-cast p1, Lxc9;
+
+    invoke-virtual {p1, v3}, Lxc9;->e(Z)V
+
+    :cond_2
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->K0()Lxc9;
+
+    move-result-object p1
+
+    sget v1, Lyjd;->U0:I
+
+    invoke-virtual {p1, v1}, Lxc9;->setLeftIcon(I)V
+
+    sget-object p1, Lct7;->f:La1f;
+
+    new-instance v1, Lr13;
+
+    const/16 v5, 0xf
+
+    invoke-direct {v1, p1, v5}, Lr13;-><init>(Lez5;I)V
+
+    invoke-static {v1, v3}, Lqs0;->E(Lez5;I)Le16;
+
+    move-result-object p1
+
+    new-instance v1, Lcd6;
+
+    invoke-direct {v1, v2, v4}, Lcd6;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v2, Ln16;
+
+    invoke-direct {v2, p1, v1, v3}, Ln16;-><init>(Lez5;Lej6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v1}, Lyid;->n()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    new-instance v5, Lone/me/keyboardmedia/MediaKeyboardWidget;
+
+    iget-object v6, v0, Lone/me/chats/picker/AbstractPickerScreen;->b:Ljava/lang/String;
+
+    const/4 v10, 0x2
+
+    const/4 v11, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const/4 v9, 0x1
+
+    invoke-direct/range {v5 .. v11}, Lone/me/keyboardmedia/MediaKeyboardWidget;-><init>(Ljava/lang/String;JZILfi4;)V
+
+    invoke-static {v5, v4, v4}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lyid;->S(Lbjd;)V
+
+    :cond_4
+    sget-object p1, Ltyg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v2, v4}, Lhyg;->u(Landroid/view/View;Lima;)V
+
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Let8;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Let8;->f()V
+
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->K0()Lxc9;
+
+    move-result-object p1
+
+    sget v0, Lyjd;->Y0:I
+
+    invoke-virtual {p1, v0}, Lxc9;->setLeftIcon(I)V
+
+    goto :goto_0
+
+    :cond_6
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Let8;
+
+    if-eqz p1, :cond_7
+
+    sget-object v1, Let8;->m:[Les7;
+
+    invoke-virtual {p1, v3}, Let8;->e(Z)V
+
+    :cond_7
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->K0()Lxc9;
+
+    move-result-object p1
+
+    sget v0, Lyjd;->U0:I
+
+    invoke-virtual {p1, v0}, Lxc9;->setLeftIcon(I)V
+
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->J0:Lni7;
+
+    invoke-static {v2, p1, v4}, Lu0i;->b(Landroid/view/View;Lni7;Lqi6;)V
+
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
-.end method
-
-.method public final T()V
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    return-void
-.end method
-
-.method public final c(Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final c0()Z
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
-
-    return-void
-.end method
-
-.method public final f0()Z
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->isWriteAheadLoggingEnabled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final v()V
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    return-void
-.end method
-
-.method public final x(Lg2f;)Landroid/database/Cursor;
-    .locals 4
-
-    new-instance v0, Lyc6;
-
-    invoke-direct {v0, p1}, Lyc6;-><init>(Lg2f;)V
-
-    new-instance v1, Lxc6;
-
-    invoke-direct {v1, v0}, Lxc6;-><init>(Lyc6;)V
-
-    invoke-interface {p1}, Lg2f;->m()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lzc6;->c:[Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v3, v1, p1, v0, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final z(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lzc6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    return-void
 .end method

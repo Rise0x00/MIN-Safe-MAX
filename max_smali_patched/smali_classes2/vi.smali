@@ -1,55 +1,108 @@
 .class public final Lvi;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lone/me/rlottie/ImageReceiver;
 
 
 # instance fields
-.field public X:Ljava/util/Map;
+.field public final synthetic a:I
 
-.field public Y:Ljava/util/ArrayList;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lkj;
-
-.field public final synthetic w0:Lkj;
-
-.field public x0:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkj;Lnz3;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lvi;->w0:Lkj;
+    iput p1, p0, Lvi;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lvi;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invalidate()V
     .locals 1
 
-    iput-object p1, p0, Lvi;->Z:Ljava/lang/Object;
+    iget v0, p0, Lvi;->a:I
 
-    iget p1, p0, Lvi;->x0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Llkh;
 
-    iput p1, p0, Lvi;->x0:I
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    iget-object p1, p0, Lvi;->w0:Lkj;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0, p0}, Lkj;->a(Lkj;Ljava/util/Map;Lnz3;)Ljava/lang/Object;
+    check-cast v0, Lqyc;
 
-    move-result-object p1
+    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
 
-    return-object p1
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhf9;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnd9;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lq75;
+
+    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lvi;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwi;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,76 +3,150 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lln6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ljch;
 
-.field public final synthetic b:Llch;
+.field private static final descriptor:Lo3e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llch;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Ljch;->a:I
+    new-instance v0, Ljch;
 
-    iput-object p1, p0, Ljch;->b:Llch;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ljch;->a:Ljch;
+
+    new-instance v1, Lfvb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
+
+    const-string v0, "url"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Ljch;->descriptor:Lo3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Le9;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Ljch;->a:I
+    sget-object v0, Ljch;->descriptor:Lo3e;
 
-    iget-object v1, p0, Ljch;->b:Llch;
+    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget v0, Llch;->H0:I
+    const/4 v1, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 v2, 0x0
 
-    move-result v0
+    const/4 v3, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move v4, v1
 
-    move-result-object v0
+    move v5, v2
 
-    const-class v2, Llch;
+    :goto_0
+    if-eqz v4, :cond_2
 
-    const-string v3, "onRelease: view %x"
+    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
 
-    invoke-static {v2, v0, v3}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    move-result v6
 
-    iget-object v0, v1, Llch;->G0:Lich;
+    const/4 v7, -0x1
 
-    check-cast v0, Lpm4;
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-virtual {p1, v0, v2}, Le9;->w(Lo3e;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
+
+    new-instance p1, Llch;
+
+    invoke-direct {p1, v5, v3}, Llch;-><init>(ILjava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public final b(Lf24;Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p2, Llch;
+
+    sget-object v0, Ljch;->descriptor:Lo3e;
+
+    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
+
+    move-result-object p1
+
+    iget-object p2, p2, Llch;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lpm4;->c:Z
+    invoke-virtual {p1, v0, v1, p2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
 
-    invoke-virtual {v0}, Lpm4;->reset()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p1}, Lf24;->m()V
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final c()[Lfs7;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lfs7;
+
+    sget-object v1, Ltaf;->a:Ltaf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lo3e;
+    .locals 1
+
+    sget-object v0, Ljch;->descriptor:Lo3e;
+
+    return-object v0
 .end method

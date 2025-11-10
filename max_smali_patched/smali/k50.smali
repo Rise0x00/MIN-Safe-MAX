@@ -43,13 +43,13 @@
 
     iput p3, p0, Lk50;->c:I
 
-    invoke-static {p3}, Lr4g;->z(I)Z
+    invoke-static {p3}, Ljig;->z(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p3, p2}, Lr4g;->u(II)I
+    invoke-static {p3, p2}, Ljig;->u(II)I
 
     move-result p1
 

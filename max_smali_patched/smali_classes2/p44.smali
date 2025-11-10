@@ -2,86 +2,189 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/ListIterator;
+
 
 # instance fields
-.field public final a:Le8e;
+.field public final a:Ljava/util/ListIterator;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method public constructor <init>(Ljava/util/List;III)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p3, p0, Lp44;->b:I
 
-    const/4 v1, 0x7
+    iput p4, p0, Lp44;->c:I
 
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
+    add-int/2addr p2, p3
 
-    move-result-object v0
+    invoke-interface {p1, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
-    iput-object v0, p0, Lp44;->a:Le8e;
+    move-result-object p1
 
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->a()Ly24;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lp44;->a:Ljava/util/ListIterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Laj0;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
 
-    .line 2
-    new-instance v0, Lo44;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v1, 0x0
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-direct {v0, p0, p1, v1}, Lo44;-><init>(Lp44;Laj0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    throw p1
 .end method
 
-.method public final onEvent(Lp62;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final hasNext()Z
+    .locals 2
 
-    .line 1
-    new-instance v0, Ln44;
+    invoke-virtual {p0}, Lp44;->nextIndex()I
 
-    const/4 v1, 0x0
+    move-result v0
 
-    invoke-direct {v0, p0, p1, v1}, Ln44;-><init>(Lp44;Lp62;Lkotlin/coroutines/Continuation;)V
+    iget v1, p0, Lp44;->c:I
 
-    const/4 p1, 0x3
+    if-ge v0, v1, :cond_0
 
-    iget-object v2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v0, 0x1
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    return v0
 
-    return-void
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lp44;->previousIndex()I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lp44;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lp44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 2
+
+    iget-object v0, p0, Lp44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    iget v1, p0, Lp44;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lp44;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lp44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 2
+
+    iget-object v0, p0, Lp44;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
+
+    move-result v0
+
+    iget v1, p0, Lp44;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

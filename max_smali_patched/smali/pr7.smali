@@ -1,102 +1,41 @@
-.class public final Lpr7;
-.super Lm3f;
+.class public interface abstract Lpr7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lqr7;
-
-
-# direct methods
-.method public constructor <init>(Lqr7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lpr7;->Y:Lqr7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lor7;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpr7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpr7;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lpr7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+.method public varargs abstract call([Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lpr7;
-
-    iget-object v1, p0, Lpr7;->Y:Lqr7;
-
-    invoke-direct {v0, v1, p2}, Lpr7;-><init>(Lqr7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lpr7;->X:Ljava/lang/Object;
-
-    return-object v0
+.method public abstract callBy(Ljava/util/Map;)Ljava/lang/Object;
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+.method public abstract getParameters()Ljava/util/List;
+.end method
 
-    iget-object p1, p0, Lpr7;->X:Ljava/lang/Object;
+.method public abstract getReturnType()Lhs7;
+.end method
 
-    check-cast p1, Le34;
+.method public abstract getTypeParameters()Ljava/util/List;
+.end method
 
-    iget-object v0, p0, Lpr7;->Y:Lqr7;
+.method public abstract getVisibility()Lis7;
+.end method
 
-    iget-object v1, v0, Lqr7;->a:Les7;
+.method public abstract isAbstract()Z
+.end method
 
-    iget-object v2, v1, Les7;->d:Ler7;
+.method public abstract isFinal()Z
+.end method
 
-    sget-object v3, Ler7;->b:Ler7;
+.method public abstract isOpen()Z
+.end method
 
-    invoke-virtual {v2, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v2
-
-    if-ltz v2, :cond_0
-
-    invoke-virtual {v1, v0}, Les7;->a(Lyr7;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Le34;->getCoroutineContext()Lw24;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lhxf;->h(Lw24;)V
-
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+.method public abstract isSuspend()Z
 .end method

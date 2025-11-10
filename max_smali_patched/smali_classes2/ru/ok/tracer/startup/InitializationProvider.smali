@@ -75,7 +75,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lknf;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lv0g;->a(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 

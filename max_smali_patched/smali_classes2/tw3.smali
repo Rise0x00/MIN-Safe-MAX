@@ -1,94 +1,68 @@
-.class public final Ltw3;
-.super Ltde;
+.class public final synthetic Ltw3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Luw3;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/content/Context;Luw3;I)V
+    .locals 0
+
+    iput p3, p0, Ltw3;->a:I
+
+    iput-object p1, p0, Ltw3;->b:Landroid/content/Context;
+
+    iput-object p2, p0, Ltw3;->c:Luw3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final F(Lsw3;)V
-    .locals 3
-
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
-
-    check-cast v0, Lbna;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v1, Lg9d;->I0:I
-
-    invoke-virtual {v0, v1}, Lbna;->setIcon(I)V
-
-    sget v1, Lala;->p:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lbna;->setTitle(Loef;)V
-
-    iget p1, p1, Lsw3;->a:I
-
-    new-instance v1, Ljef;
-
-    invoke-direct {v1, p1}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lbna;->setSubtitle(Loef;)V
-
-    return-void
-.end method
-
-.method public final G(Ljava/lang/Integer;Lve6;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    iget v0, p0, Ltw3;->a:I
 
-    if-eqz p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Lbna;
+    iget-object v0, p0, Ltw3;->b:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v1, p0, Ltw3;->c:Luw3;
 
-    move-result-object v1
+    invoke-static {v0, v1}, Luw3;->b(Landroid/content/Context;Luw3;)Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result p1
+    return-object v0
 
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Ltw3;->b:Landroid/content/Context;
 
-    move-result-object p1
+    iget-object v1, p0, Ltw3;->c:Luw3;
 
-    new-instance v1, Lh5;
+    invoke-static {v0, v1}, Luw3;->a(Landroid/content/Context;Luw3;)Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-direct {v1, p2}, Lh5;-><init>(Lve6;)V
+    move-result-object v0
 
-    invoke-virtual {v0, p1, v1}, Lbna;->v(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    return-object v0
 
-    return-void
+    nop
 
-    :cond_0
-    check-cast v0, Lbna;
-
-    iget-object p1, v0, Lbna;->N0:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic x(Lww7;)V
-    .locals 0
-
-    check-cast p1, Lsw3;
-
-    invoke-virtual {p0, p1}, Ltw3;->F(Lsw3;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

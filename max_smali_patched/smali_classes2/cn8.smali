@@ -1,121 +1,160 @@
-.class public final synthetic Lcn8;
-.super Ljava/lang/Object;
+.class public final Lcn8;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public final synthetic b:Lfn8;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfn8;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
     .locals 0
 
-    iput p2, p0, Lcn8;->a:I
+    iput-object p2, p0, Lcn8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    iput-object p1, p0, Lcn8;->b:Lfn8;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcn8;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lcn8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lcn8;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lcn8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcn8;->b:Lfn8;
+    return-object p2
+.end method
 
-    iget-object v0, v0, Lfn8;->c:Landroid/view/View;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
+    new-instance v0, Lcn8;
 
-    move-result v1
+    iget-object v1, p0, Lcn8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+    invoke-direct {v0, p2, v1}, Lcn8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
 
-    move-result v2
+    iput-object p1, v0, Lcn8;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
+    return-object v0
+.end method
 
-    move-result v3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    invoke-virtual {v0, v1, v2, v3, p1}, Landroid/view/View;->setPadding(IIII)V
+    iget-object v0, p0, Lcn8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    return-void
+    iget-object v1, v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c:Lru7;
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-object p1, p0, Lcn8;->o:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Lvic;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    instance-of v2, p1, Lsic;
 
-    move-result p1
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcn8;->b:Lfn8;
+    check-cast p1, Lsic;
 
-    invoke-virtual {v0}, Lfn8;->d()Lone/me/keyboardmedia/MediaKeyboardWidget;
+    iget-object v1, p1, Lsic;->a:Le68;
 
-    move-result-object v0
+    iget p1, p1, Lsic;->b:I
 
-    if-eqz v0, :cond_1
+    sget-object v2, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
 
-    invoke-virtual {v0}, Lb04;->getView()Landroid/view/View;
+    const-string v2, "SELECTED_MEDIA_ALBUM"
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iput p1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v1, p1, v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->N0(Le68;ILjava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    instance-of v2, p1, Luic;
 
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    const/4 v3, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    if-eqz v2, :cond_1
 
-    throw p1
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luib;
+
+    new-instance v1, Lamh;
+
+    invoke-direct {v1, v0, v3}, Lamh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {p1, v1}, Luib;->k(Lamh;)V
+
+    goto :goto_0
 
     :cond_1
-    :goto_0
-    return-void
+    instance-of p1, p1, Ltic;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v4, p1
+
+    check-cast v4, Luib;
+
+    new-instance v5, Lamh;
+
+    invoke-direct {v5, v0, v3}, Lamh;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v6, Luib;->h:[Ljava/lang/String;
+
+    sget v8, Lntc;->permissions_audio_for_video_request:I
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x30
+
+    const/16 v7, 0xab
+
+    invoke-static/range {v4 .. v10}, Luib;->l(Luib;Lamh;[Ljava/lang/String;IIII)V
+
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

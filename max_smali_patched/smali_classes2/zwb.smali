@@ -1,63 +1,105 @@
 .class public final Lzwb;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lzwb;
+# instance fields
+.field public final a:Lru7;
+
+.field public final b:Lru7;
+
+.field public final c:Lru7;
+
+.field public final d:Lru7;
+
+.field public final e:Lru7;
+
+.field public final f:Lru7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
+    .locals 0
 
-    new-instance v0, Lzwb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xd
+    iput-object p1, p0, Lzwb;->a:Lru7;
 
-    invoke-direct {v0, v1}, Ldd0;-><init>(I)V
+    iput-object p2, p0, Lzwb;->b:Lru7;
 
-    sput-object v0, Lzwb;->b:Lzwb;
+    iput-object p3, p0, Lzwb;->c:Lru7;
+
+    iput-object p4, p0, Lzwb;->d:Lru7;
+
+    iput-object p5, p0, Lzwb;->e:Lru7;
+
+    iput-object p6, p0, Lzwb;->f:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lt92;Lgb9;)Lywb;
+    .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Lywb;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lzwb;->a:Lru7;
 
-    return v0
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of p1, p1, Lzwb;
+    move-result-object v1
 
-    if-nez p1, :cond_1
+    check-cast v1, Lgya;
 
-    const/4 p1, 0x0
+    iget-object v2, p0, Lzwb;->b:Lru7;
 
-    return p1
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object v2
 
-.method public final hashCode()I
-    .locals 1
+    check-cast v2, Lqs3;
 
-    const v0, 0x5dad53ff
+    iget-object v3, p0, Lzwb;->c:Lru7;
 
-    return v0
-.end method
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v3
 
-    const-string v0, "SelectPhotoFromGallery"
+    check-cast v3, Lqxb;
+
+    iget-object v4, p0, Lzwb;->d:Lru7;
+
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lts4;
+
+    iget-object v4, p0, Lzwb;->e:Lru7;
+
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lvf5;
+
+    iget-object v4, p0, Lzwb;->f:Lru7;
+
+    invoke-interface {v4}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v6, v4
+
+    check-cast v6, Lmk;
+
+    move-object v5, p1
+
+    move-object v4, p2
+
+    invoke-direct/range {v0 .. v6}, Lywb;-><init>(Lgya;Lqs3;Lqxb;Lgb9;Lt92;Lmk;)V
 
     return-object v0
 .end method

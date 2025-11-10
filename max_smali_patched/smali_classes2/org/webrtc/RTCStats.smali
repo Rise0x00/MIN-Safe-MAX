@@ -183,7 +183,7 @@
 
     const-string v0, "{ timestampUs: "
 
-    invoke-static {v0}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lnx1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

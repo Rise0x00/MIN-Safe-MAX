@@ -1,50 +1,86 @@
-.class public final synthetic Lxk5;
-.super Ljava/lang/Object;
+.class public final Lxk5;
+.super La5a;
 .source "SourceFile"
-
-# interfaces
-.implements Ls1f;
 
 
 # instance fields
-.field public final synthetic a:Lal5;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lal5;JJ)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lybg;->a:Lybg;
 
-    iput-object p1, p0, Lxk5;->a:Lal5;
+    invoke-direct {p0, v0}, La5a;-><init>(Ljava/lang/Object;)V
 
-    iput-wide p2, p0, Lxk5;->b:J
-
-    iput-wide p4, p0, Lxk5;->c:J
+    iput-object p1, p0, Lxk5;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Lzk5;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lxk5;->a:Lal5;
+    if-ne p0, p1, :cond_0
 
-    iget-wide v2, p0, Lxk5;->b:J
+    return v0
 
-    iget-wide v4, p0, Lxk5;->c:J
+    :cond_0
+    instance-of v1, p1, Lxk5;
 
-    invoke-direct/range {v0 .. v5}, Lzk5;-><init>(Lal5;JJ)V
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v0}, Lal5;->a(Ljava/util/concurrent/Callable;)Lhfe;
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxk5;
+
+    iget-object v1, p0, Lxk5;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lxk5;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lxk5;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ExternalCallback(params="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lxk5;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,72 +3,80 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu35;
+.implements Llp0;
 
 
 # instance fields
-.field public a:Ljava/io/File;
-
-.field public b:Ljava/io/FileInputStream;
-
-.field public c:Ljava/nio/channels/FileChannel;
+.field public final a:Ljava/util/Set;
 
 
-# virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)I
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    iget-object v0, p0, Lv35;->c:Ljava/nio/channels/FileChannel;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
+    new-instance v0, Ljava/util/IdentityHashMap;
 
-    move-result p1
+    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
 
-    return p1
-.end method
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
-.method public final close()V
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lv35;->b:Ljava/io/FileInputStream;
-
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    iput-object v0, p0, Lv35;->a:Ljava/util/Set;
 
     return-void
 .end method
 
-.method public final isOpen()Z
-    .locals 1
 
-    iget-object v0, p0, Lv35;->c:Ljava/nio/channels/FileChannel;
+# virtual methods
+.method public final a(Lc89;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public final read(Ljava/nio/ByteBuffer;)I
+.method public final e(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lv35;->c:Ljava/nio/channels/FileChannel;
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
+    iget-object v0, p0, Lv35;->a:Ljava/util/Set;
 
-    move-result p1
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    return p1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    return-void
 .end method
 
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 1
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lv35;->c:Ljava/nio/channels/FileChannel;
+    int-to-double v0, p1
 
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    move-result p1
+    div-double/2addr v0, v2
 
-    return p1
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lv35;->a:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-object p1
 .end method

@@ -1,68 +1,56 @@
-.class public final synthetic Lru3;
-.super Ljava/lang/Object;
+.class public final Lru3;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lsu3;
+.field public c:Ljava/util/List;
 
 
-# direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lsu3;I)V
-    .locals 0
+# virtual methods
+.method public final d(Ljf9;Ljava/lang/String;)V
+    .locals 1
 
-    iput p3, p0, Lru3;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lru3;->b:Landroid/content/Context;
+    const-string v0, "contacts"
 
-    iput-object p2, p0, Lru3;->c:Lsu3;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Ljf9;->v()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Luz;->d(Ljf9;)Luz;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru3;->c:Ljava/util/List;
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+    iget-object v0, p0, Lru3;->c:Ljava/util/List;
 
-    iget v0, p0, Lru3;->a:I
+    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lru3;->b:Landroid/content/Context;
+    const-string v1, "{contactInfos="
 
-    iget-object v1, p0, Lru3;->c:Lsu3;
+    const-string v2, "}"
 
-    invoke-static {v0, v1}, Lsu3;->b(Landroid/content/Context;Lsu3;)Landroidx/appcompat/widget/AppCompatImageView;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lru3;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lru3;->c:Lsu3;
-
-    invoke-static {v0, v1}, Lsu3;->a(Landroid/content/Context;Lsu3;)Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-static {v0, v1, v2}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

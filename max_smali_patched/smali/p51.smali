@@ -3,95 +3,66 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le61;
+.implements Loi6;
 
 
 # instance fields
-.field public final a:La33;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(La33;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lp51;->a:I
 
-    iput-object p1, p0, Lp51;->a:La33;
+    iput p1, p0, Lp51;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lp51;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lv31;
 
-    :cond_0
-    instance-of v1, p1, Lp51;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    if-nez v1, :cond_1
+    iget v3, p0, Lp51;->b:I
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lp51;
-
-    iget-object v1, p0, Lp51;->a:La33;
-
-    iget-object p1, p1, Lp51;->a:La33;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lp51;->a:La33;
-
-    invoke-virtual {v0}, La33;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatsUpdate(info="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lp51;->a:La33;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v3, v2, v1}, Lv31;-><init>(IIZ)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lv31;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    iget v3, p0, Lp51;->b:I
+
+    invoke-direct {v0, v3, v2, v1}, Lv31;-><init>(IIZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

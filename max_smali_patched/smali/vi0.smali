@@ -3,195 +3,250 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk94;
+.implements Lm50;
 
 
 # instance fields
-.field public final a:Z
+.field public b:Lk50;
 
-.field public final b:Ljava/util/ArrayList;
+.field public c:Lk50;
 
-.field public c:I
+.field public d:Lk50;
 
-.field public o:Lr94;
+.field public e:Lk50;
+
+.field public f:Ljava/nio/ByteBuffer;
+
+.field public g:Ljava/nio/ByteBuffer;
+
+.field public h:Z
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lvi0;->a:Z
+    sget-object v0, Lm50;->a:Ljava/nio/ByteBuffer;
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object v0, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
 
-    const/4 v0, 0x1
+    iput-object v0, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
 
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+    sget-object v0, Lk50;->e:Lk50;
 
-    iput-object p1, p0, Lvi0;->b:Ljava/util/ArrayList;
+    iput-object v0, p0, Lvi0;->d:Lk50;
+
+    iput-object v0, p0, Lvi0;->e:Lk50;
+
+    iput-object v0, p0, Lvi0;->b:Lk50;
+
+    iput-object v0, p0, Lvi0;->c:Lk50;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Lipf;)V
+.method public a()Z
     .locals 2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v0, p0, Lvi0;->h:Z
 
-    iget-object v0, p0, Lvi0;->b:Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
 
-    move-result v1
+    sget-object v1, Lm50;->a:Ljava/nio/ByteBuffer;
 
-    if-nez v1, :cond_0
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    iget p1, p0, Lvi0;->c:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lvi0;->c:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 4
-
-    iget-object v0, p0, Lvi0;->o:Lr94;
-
-    sget v1, Lt4g;->a:I
-
-    const/4 v1, 0x0
-
-    :goto_0
-    iget v2, p0, Lvi0;->c:I
-
-    if-ge v1, v2, :cond_0
-
-    iget-object v2, p0, Lvi0;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lipf;
-
-    iget-boolean v3, p0, Lvi0;->a:Z
-
-    invoke-interface {v2, p0, v0, v3, p1}, Lipf;->d(Lk94;Lr94;ZI)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 4
-
-    iget-object v0, p0, Lvi0;->o:Lr94;
-
-    sget v1, Lt4g;->a:I
-
-    const/4 v1, 0x0
-
-    :goto_0
-    iget v2, p0, Lvi0;->c:I
-
-    if-ge v1, v2, :cond_0
-
-    iget-object v2, p0, Lvi0;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lipf;
-
-    iget-boolean v3, p0, Lvi0;->a:Z
-
-    invoke-interface {v2, p0, v0, v3}, Lipf;->h(Lk94;Lr94;Z)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    return v0
 
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lvi0;->o:Lr94;
+    return v0
+.end method
+
+.method public b()Ljava/nio/ByteBuffer;
+    .locals 2
+
+    iget-object v0, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
+
+    sget-object v1, Lm50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v1, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
+
+    return-object v0
+.end method
+
+.method public final d()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvi0;->h:Z
+
+    invoke-virtual {p0}, Lvi0;->h()V
 
     return-void
 .end method
 
-.method public final e(Lr94;)V
-    .locals 3
+.method public final e(Lk50;)Lk50;
+    .locals 0
+
+    iput-object p1, p0, Lvi0;->d:Lk50;
+
+    invoke-virtual {p0, p1}, Lvi0;->f(Lk50;)Lk50;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvi0;->e:Lk50;
+
+    invoke-virtual {p0}, Lvi0;->isActive()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lvi0;->e:Lk50;
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lk50;->e:Lk50;
+
+    return-object p1
+.end method
+
+.method public abstract f(Lk50;)Lk50;
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    sget-object v0, Lm50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
 
     const/4 v0, 0x0
 
-    :goto_0
-    iget v1, p0, Lvi0;->c:I
+    iput-boolean v0, p0, Lvi0;->h:Z
 
-    if-ge v0, v1, :cond_0
+    iget-object v0, p0, Lvi0;->d:Lk50;
 
-    iget-object v1, p0, Lvi0;->b:Ljava/util/ArrayList;
+    iput-object v0, p0, Lvi0;->b:Lk50;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lvi0;->e:Lk50;
 
-    move-result-object v1
+    iput-object v0, p0, Lvi0;->c:Lk50;
 
-    check-cast v1, Lipf;
+    invoke-virtual {p0}, Lvi0;->g()V
 
-    iget-boolean v2, p0, Lvi0;->a:Z
-
-    invoke-interface {v1, p0, p1, v2}, Lipf;->c(Lk94;Lr94;Z)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public final f(Lr94;)V
-    .locals 3
+.method public g()V
+    .locals 0
 
-    iput-object p1, p0, Lvi0;->o:Lr94;
+    return-void
+.end method
 
+.method public h()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public isActive()Z
+    .locals 2
+
+    iget-object v0, p0, Lvi0;->e:Lk50;
+
+    sget-object v1, Lk50;->e:Lk50;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    iget v1, p0, Lvi0;->c:I
+    return v0
+.end method
 
-    if-ge v0, v1, :cond_0
+.method public final j(I)Ljava/nio/ByteBuffer;
+    .locals 1
 
-    iget-object v1, p0, Lvi0;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
 
-    move-result-object v1
+    move-result v0
 
-    check-cast v1, Lipf;
+    if-ge v0, p1, :cond_0
 
-    iget-boolean v2, p0, Lvi0;->a:Z
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    invoke-interface {v1, p0, p1, v2}, Lipf;->i(Lk94;Lr94;Z)V
+    move-result-object p1
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
     :cond_0
+    iget-object p1, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    :goto_0
+    iget-object p1, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
+
+    iput-object p1, p0, Lvi0;->g:Ljava/nio/ByteBuffer;
+
+    return-object p1
+.end method
+
+.method public final reset()V
+    .locals 1
+
+    invoke-virtual {p0}, Lvi0;->flush()V
+
+    sget-object v0, Lm50;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lvi0;->f:Ljava/nio/ByteBuffer;
+
+    sget-object v0, Lk50;->e:Lk50;
+
+    iput-object v0, p0, Lvi0;->d:Lk50;
+
+    iput-object v0, p0, Lvi0;->e:Lk50;
+
+    iput-object v0, p0, Lvi0;->b:Lk50;
+
+    iput-object v0, p0, Lvi0;->c:Lk50;
+
+    invoke-virtual {p0}, Lvi0;->i()V
+
     return-void
 .end method

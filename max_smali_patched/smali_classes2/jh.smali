@@ -1,43 +1,37 @@
 .class public final Ljh;
-.super Ljava/lang/Object;
+.super Lih;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final d:Ljh;
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:J
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
+.field public static final o:Ljh;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljh;
 
-    iput-wide p1, p0, Ljh;->a:J
+    const/4 v1, 0x0
 
-    iput-wide p3, p0, Ljh;->b:J
+    const/4 v2, 0x0
 
-    iput-object p5, p0, Ljh;->c:Ljava/lang/String;
+    sget-object v3, Lfh;->d:Lfh;
 
-    iput-wide p6, p0, Ljh;->d:J
+    invoke-direct {v0, v3, v2, v1}, Lkh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object p8, p0, Ljh;->e:Ljava/lang/String;
+    sput-object v0, Ljh;->d:Ljh;
 
-    iput-object p9, p0, Ljh;->f:Ljava/lang/String;
+    new-instance v0, Ljh;
 
-    iput-object p10, p0, Ljh;->g:Ljava/lang/String;
+    sget-object v3, Lfh;->o:Lfh;
+
+    invoke-direct {v0, v3, v2, v1}, Lkh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    sput-object v0, Ljh;->o:Ljh;
 
     return-void
 .end method

@@ -1,70 +1,295 @@
-.class public final synthetic Lqte;
+.class public final Lqte;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lrte;
 
-.field public final synthetic b:Lxse;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxse;I)V
+.method public constructor <init>(Lrte;I)V
     .locals 0
 
-    iput p2, p0, Lqte;->a:I
-
-    iput-object p1, p0, Lqte;->b:Lxse;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqte;->a:Lrte;
+
+    iput p2, p0, Lqte;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    iget v0, p0, Lqte;->a:I
+    return-void
+.end method
 
-    check-cast p1, Lpte;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lqte;->b:Lxse;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 5
 
-    iget-wide v0, v0, Lxse;->b:J
+    iget-object p3, p0, Lqte;->a:Lrte;
 
-    iget-object p1, p1, Lpte;->a:Ljava/lang/String;
+    iget-object p3, p3, Lrte;->F0:Lng7;
 
-    new-instance v2, Lpte;
+    const/4 v0, 0x0
 
-    invoke-direct {v2, p1, v0, v1}, Lpte;-><init>(Ljava/lang/String;J)V
+    if-eqz p1, :cond_0
 
-    return-object v2
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    :pswitch_0
-    iget-object v0, p0, Lqte;->b:Lxse;
+    move-result v1
 
-    iget-wide v0, v0, Lxse;->b:J
+    goto :goto_0
 
-    iget-object p1, p1, Lpte;->a:Ljava/lang/String;
+    :cond_0
+    move v1, v0
 
-    new-instance v2, Lpte;
+    :goto_0
+    if-eqz p1, :cond_1
 
-    invoke-direct {v2, p1, v0, v1}, Lpte;-><init>(Ljava/lang/String;J)V
+    add-int/2addr p4, p2
 
-    return-object v2
+    invoke-interface {p1, p2, p4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    nop
+    move-result-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p2, 0x0
+
+    :goto_1
+    const-string p4, ""
+
+    if-nez p2, :cond_2
+
+    move-object p2, p4
+
+    :cond_2
+    const/4 v2, 0x2
+
+    iget v3, p0, Lqte;->b:I
+
+    const/4 v4, 0x1
+
+    if-ne v1, v2, :cond_7
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_7
+
+    check-cast p3, Lrn3;
+
+    if-ltz v3, :cond_3
+
+    invoke-virtual {p3}, Lrn3;->getCountCells()I
+
+    move-result p1
+
+    if-gt v3, p1, :cond_4
+
+    move v0, v4
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_4
+    :goto_2
+    if-eqz v0, :cond_e
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eq p1, v4, :cond_5
+
+    goto/16 :goto_5
+
+    :cond_5
+    invoke-virtual {p3, v3}, Lrn3;->H0(I)Ltg7;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    check-cast p1, Lrte;
+
+    invoke-virtual {p1, p2}, Lrte;->A(Ljava/lang/String;)V
+
+    :cond_6
+    add-int/2addr v3, v4
+
+    invoke-virtual {p3, v3}, Lrn3;->H0(I)Ltg7;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_e
+
+    check-cast p1, Lrte;
+
+    iget-object p1, p1, Lrte;->G0:Lmn3;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
+
+    return-void
+
+    :cond_7
+    if-le v1, v4, :cond_8
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p3, Lrn3;
+
+    invoke-virtual {p3, v3, p1}, Lrn3;->I0(ILjava/lang/String;)V
+
+    return-void
+
+    :cond_8
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p3, Lrn3;
+
+    if-ltz v3, :cond_9
+
+    invoke-virtual {p3}, Lrn3;->getCountCells()I
+
+    move-result p2
+
+    if-gt v3, p2, :cond_a
+
+    move v0, v4
+
+    goto :goto_3
+
+    :cond_9
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_a
+    :goto_3
+    if-eqz v0, :cond_e
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eq p1, v4, :cond_b
+
+    goto :goto_5
+
+    :cond_b
+    invoke-virtual {p3}, Lrn3;->getCountCells()I
+
+    move-result p1
+
+    sub-int/2addr p1, v4
+
+    if-ge v3, p1, :cond_c
+
+    add-int/2addr v3, v4
+
+    invoke-virtual {p3, v3}, Lrn3;->H0(I)Ltg7;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_c
+
+    check-cast p1, Lrte;
+
+    iget-object p1, p1, Lrte;->G0:Lmn3;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
+
+    :cond_c
+    invoke-static {p3}, Lrn3;->G0(Lrn3;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_d
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ltg7;
+
+    check-cast p2, Lrte;
+
+    invoke-virtual {p2}, Lrte;->z()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p4, p2}, Lnx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p4
+
+    goto :goto_4
+
+    :cond_d
+    invoke-virtual {p4}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_e
+
+    invoke-virtual {p4}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    invoke-virtual {p3}, Lrn3;->getCountCells()I
+
+    move-result p2
+
+    if-ne p1, p2, :cond_e
+
+    invoke-static {p4}, Landroid/text/TextUtils;->isDigitsOnly(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_e
+
+    iget-object p1, p3, Lrn3;->V1:Lnn3;
+
+    if-eqz p1, :cond_e
+
+    invoke-interface {p1, p4}, Lnn3;->a(Ljava/lang/String;)V
+
+    :cond_e
+    :goto_5
+    return-void
 .end method

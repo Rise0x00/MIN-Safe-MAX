@@ -1,16 +1,16 @@
 .class public Lru/ok/messages/media/mediabar/LocalPhotoView;
-.super Llch;
+.super Ljrh;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic K0:I
+.field public static final synthetic F0:I
 
 
 # instance fields
-.field public final I0:Landroid/view/GestureDetector;
+.field public final D0:Landroid/view/GestureDetector;
 
-.field public J0:Ly18;
+.field public E0:Ld78;
 
 
 # direct methods
@@ -19,41 +19,41 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Llch;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Ljrh;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     new-instance p2, Landroid/view/GestureDetector;
 
-    new-instance v1, Lxz;
+    new-instance v1, Lzw0;
 
-    const/16 v2, 0xb
+    const/16 v2, 0x9
 
-    invoke-direct {v1, v2, p0}, Lxz;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lzw0;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p2, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object p2, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->I0:Landroid/view/GestureDetector;
+    iput-object p2, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->D0:Landroid/view/GestureDetector;
 
     invoke-virtual {p2, v0}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
 
-    new-instance p1, Lzj6;
+    new-instance p1, Lsn6;
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lzj6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {p1, p2}, Lsn6;-><init>(Landroid/content/res/Resources;)V
 
-    sget-object p2, Lzcd;->h:Lzcd;
+    sget-object p2, Lqnd;->f:Lqnd;
 
-    iput-object p2, p1, Lzj6;->l:Lycd;
+    iput-object p2, p1, Lsn6;->l:Lpnd;
 
-    iput v0, p1, Lzj6;->b:I
+    iput v0, p1, Lsn6;->b:I
 
-    invoke-virtual {p1}, Lzj6;->a()Lyj6;
+    invoke-virtual {p1}, Lsn6;->a()Lrn6;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljy4;->setHierarchy(Lgy4;)V
+    invoke-virtual {p0, p1}, Lt15;->setHierarchy(Lq15;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-super {p0, p1}, Llch;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Ljrh;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -87,21 +87,21 @@
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->I0:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->D0:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    invoke-super {p0, p1}, Llch;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Ljrh;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public setListener(Ly18;)V
+.method public setListener(Ld78;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->J0:Ly18;
+    iput-object p1, p0, Lru/ok/messages/media/mediabar/LocalPhotoView;->E0:Ld78;
 
     return-void
 .end method

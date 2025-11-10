@@ -1,68 +1,58 @@
-.class public interface abstract La27;
+.class public final synthetic La27;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IInterface;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lg27;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lg27;I)V
+    .locals 0
+
+    iput p2, p0, La27;->a:I
+
+    iput-object p1, p0, La27;->b:Lg27;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract B(Lu17;I)V
-.end method
+.method public final run()V
+    .locals 2
 
-.method public abstract E(Lu17;IJ)V
-.end method
+    iget v0, p0, La27;->a:I
 
-.method public abstract F(Lu17;I)V
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract H(Lu17;ILandroid/os/Bundle;)V
-.end method
+    const/4 v0, 0x1
 
-.method public abstract I(Lu17;I)V
-.end method
+    iget-object v1, p0, La27;->b:Lg27;
 
-.method public abstract M(Lu17;ILandroid/os/Bundle;)V
-.end method
+    iput-boolean v0, v1, Lg27;->M0:Z
 
-.method public abstract O(Lu17;ILandroid/os/Bundle;Z)V
-.end method
+    invoke-virtual {v1}, Lg27;->C()V
 
-.method public abstract P(Lu17;)V
-.end method
+    return-void
 
-.method public abstract R(Lu17;ILandroid/os/Bundle;Landroid/os/Bundle;)V
-.end method
+    :pswitch_0
+    iget-object v0, p0, La27;->b:Lg27;
 
-.method public abstract U(Lu17;I)V
-.end method
+    invoke-virtual {v0}, Lg27;->C()V
 
-.method public abstract a(Lu17;ILandroid/os/Bundle;)V
-.end method
+    return-void
 
-.method public abstract d(Lu17;ILandroid/os/Bundle;Z)V
-.end method
-
-.method public abstract e(Lu17;I)V
-.end method
-
-.method public abstract i(Lu17;ILandroid/os/Bundle;J)V
-.end method
-
-.method public abstract o(Lu17;I)V
-.end method
-
-.method public abstract r(Lu17;ILandroid/os/IBinder;IJ)V
-.end method
-
-.method public abstract s(Lu17;IF)V
-.end method
-
-.method public abstract t(Lu17;IF)V
-.end method
-
-.method public abstract x(Lu17;ILandroid/os/IBinder;Z)V
-.end method
-
-.method public abstract y(Lu17;II)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

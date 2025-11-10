@@ -1,19 +1,32 @@
-.class public final Lkr5;
-.super Lej0;
+.class public final synthetic Lkr5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
 
-# instance fields
-.field public final c:Lp07;
 
+# virtual methods
+.method public final load(Ljava/lang/String;)V
+    .locals 1
 
-# direct methods
-.method public constructor <init>(Lp07;)V
-    .locals 0
+    :try_start_0
+    const-string p1, "ffmpg"
 
-    invoke-direct {p0}, Lej0;-><init>()V
+    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object p1, p0, Lkr5;->c:Lp07;
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lp4a;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lp4a;->u(Ljava/lang/Throwable;)V
 
     return-void
 .end method

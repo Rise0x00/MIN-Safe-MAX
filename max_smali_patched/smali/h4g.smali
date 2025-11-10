@@ -2,254 +2,263 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgq1;
-
 
 # instance fields
-.field public final a:J
+.field public a:[B
 
-.field public final b:Ljava/lang/String;
+.field public b:J
 
-.field public final c:Ljava/lang/CharSequence;
+.field public c:J
 
-.field public final d:Z
+.field public d:J
 
-.field public final e:Ljava/lang/String;
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:I
+
+.field public j:Z
+
+.field public k:Lw48;
+
+.field public l:I
+
+.field public m:I
+
+.field public n:[B
+
+.field public o:[B
+
+.field public p:I
+
+.field public q:[B
+
+.field public r:Luoe;
+
+.field public s:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lh4g;->a:J
+    const/4 v0, 0x3
 
-    iput-object p3, p0, Lh4g;->b:Ljava/lang/String;
+    iput v0, p0, Lh4g;->i:I
 
-    iput-object p4, p0, Lh4g;->c:Ljava/lang/CharSequence;
+    const/16 v0, 0x19
 
-    iput-boolean p5, p0, Lh4g;->d:Z
+    iput v0, p0, Lh4g;->l:I
 
-    iput-object p6, p0, Lh4g;->e:Ljava/lang/String;
+    const/4 v0, 0x2
+
+    iput v0, p0, Lh4g;->m:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lh4g;->s:J
+
+    const/16 v0, 0x5dc
+
+    iput v0, p0, Lh4g;->p:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 28
 
-    iget-boolean v0, p0, Lh4g;->d:Z
+    move-object/from16 v0, p0
 
-    return v0
-.end method
+    iget-object v1, v0, Lh4g;->a:[B
 
-.method public final d()J
-    .locals 2
+    const-string v2, "null"
 
-    iget-wide v0, p0, Lh4g;->a:J
+    if-eqz v1, :cond_0
 
-    return-wide v0
-.end method
+    invoke-static {v1}, Loli;->a([B)Ljava/lang/String;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lh4g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lh4g;
-
-    iget-wide v3, p0, Lh4g;->a:J
-
-    iget-wide v5, p1, Lh4g;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lh4g;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lh4g;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lh4g;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lh4g;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lh4g;->d:Z
-
-    iget-boolean v3, p1, Lh4g;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lh4g;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Lh4g;->e:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lh4g;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lh4g;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lh4g;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh4g;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lnd5;->e(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lh4g;->d:Z
-
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lh4g;->e:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    move-result-object v1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    move-object v1, v2
 
     :goto_0
-    add-int/2addr v0, v1
+    iget-wide v3, v0, Lh4g;->b:J
 
-    return v0
-.end method
+    const-wide/16 v5, 0x3e8
 
-.method public final j()Ljava/lang/CharSequence;
-    .locals 1
+    div-long/2addr v3, v5
 
-    iget-object v0, p0, Lh4g;->c:Ljava/lang/CharSequence;
+    iget v5, v0, Lh4g;->p:I
 
-    return-object v0
-.end method
+    iget-wide v6, v0, Lh4g;->c:J
 
-.method public final q()Ljava/lang/String;
-    .locals 1
+    iget-wide v8, v0, Lh4g;->d:J
 
-    iget-object v0, p0, Lh4g;->e:Ljava/lang/String;
+    iget-wide v10, v0, Lh4g;->e:J
 
-    return-object v0
-.end method
+    iget-wide v12, v0, Lh4g;->f:J
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-wide v14, v0, Lh4g;->g:J
 
-    const-string v0, "UserInfo(serverId="
+    move-wide/from16 v16, v14
 
-    const-string v1, ", name="
+    iget-wide v14, v0, Lh4g;->h:J
 
-    iget-wide v2, p0, Lh4g;->a:J
+    move-object/from16 v18, v2
 
-    iget-object v4, p0, Lh4g;->b:Ljava/lang/String;
+    iget v2, v0, Lh4g;->i:I
 
-    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v19, v2
+
+    iget v2, v0, Lh4g;->l:I
+
+    move/from16 v20, v2
+
+    iget-boolean v2, v0, Lh4g;->j:Z
+
+    move/from16 v21, v2
+
+    iget v2, v0, Lh4g;->m:I
+
+    move/from16 v22, v2
+
+    iget-object v2, v0, Lh4g;->n:[B
+
+    if-eqz v2, :cond_1
+
+    invoke-static {v2}, Loli;->a([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v23, v2
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 v23, v18
+
+    :goto_1
+    iget-object v2, v0, Lh4g;->o:[B
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v2}, Loli;->a([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_2
+    move-wide/from16 v24, v14
+
+    goto :goto_3
+
+    :cond_2
+    move-object/from16 v2, v18
+
+    goto :goto_2
+
+    :goto_3
+    iget-wide v14, v0, Lh4g;->s:J
+
+    const-string v0, "\n- original destination connection id\t"
+
+    move-wide/from16 v26, v14
+
+    const-string v14, "\n- max idle timeout\t"
+
+    invoke-static {v0, v3, v4, v1, v14}, Lijf;->r(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, ", abbreviation="
+    const-string v1, "\n- max udp payload size\t"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lh4g;->c:Ljava/lang/CharSequence;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isUnknown="
+    const-string v1, "\n- initial max data\t\t\t"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lh4g;->d:Z
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n- initial max stream data bidi local\t"
+
+    const-string v3, "\n- initial max stream data bidi remote\t"
+
+    invoke-static {v8, v9, v1, v3, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n- initial max stream data uni\t\t"
+
+    const-string v3, "\n- initial max streams bidi\t\t"
+
+    invoke-static {v12, v13, v1, v3, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    move-wide/from16 v3, v16
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n- initial max streams uni\t\t"
+
+    const-string v3, "\n- ack delay exponent\t\t\t"
+
+    move-wide/from16 v4, v24
+
+    invoke-static {v4, v5, v1, v3, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, "\n- max ack delay\t\t\t\t"
+
+    const-string v3, "\n- disable migration\t\t\t"
+
+    move/from16 v4, v19
+
+    move/from16 v5, v20
+
+    invoke-static {v0, v4, v1, v5, v3}, Lmb3;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    move/from16 v1, v21
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", avatar="
+    const-string v1, "\n- active connection id limit\t\t"
 
-    const-string v2, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lh4g;->e:Ljava/lang/String;
+    move/from16 v1, v22
 
-    invoke-static {v0, v1, v3, v2}, Lhqd;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n- initial source connection id\t\t"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n- retry source connection id\t\t"
+
+    const-string v3, "\n- max datagram frame size\t\t"
+
+    move-object/from16 v4, v23
+
+    invoke-static {v0, v4, v1, v2, v3}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-wide/from16 v1, v26
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

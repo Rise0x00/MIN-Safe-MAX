@@ -1,1019 +1,688 @@
-.class public final Lruc;
+.class public abstract Lruc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static Chat:I = 0x7f14012f
 
-# instance fields
-.field public final synthetic a:I
+.field public static Chat_Bubble:I = 0x7f140130
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static Chat_Bubble_Background:I = 0x7f140131
 
+.field public static Chat_Bubble_Background_BotButton:I = 0x7f140132
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static Chat_Bubble_Background_BubbleGradient:I = 0x7f140133
 
-    iput p2, p0, Lruc;->a:I
+.field public static Chat_Bubble_Background_BubbleOldGradient:I = 0x7f140134
 
-    iput-object p1, p0, Lruc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static Chat_Bubble_Background_Focus:I = 0x7f140135
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static Chat_Bubble_Background_Focus_Regular:I = 0x7f140136
 
-    return-void
-.end method
+.field public static Chat_Bubble_Background_Focus_SingleMedia:I = 0x7f140137
 
-.method private final A(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Bubble_Background_Focus_Transparent:I = 0x7f140138
 
-    return-void
-.end method
+.field public static Chat_Bubble_Background_Reaction:I = 0x7f140139
 
-.method private final B(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Bubble_Background_SystemAssetGradient:I = 0x7f14013a
 
-    return-void
-.end method
+.field public static Chat_Bubble_Icon:I = 0x7f14013b
 
-.method private final C(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Bubble_Stroke:I = 0x7f14013c
 
-    return-void
-.end method
+.field public static Chat_Bubble_Text:I = 0x7f14013d
 
-.method private final D(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Bubble_Text_Reaction:I = 0x7f14013e
 
-    return-void
-.end method
+.field public static Chat_Common:I = 0x7f14013f
 
-.method private final E(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Action:I = 0x7f140140
 
-    return-void
-.end method
+.field public static Chat_Common_Action_Background:I = 0x7f140141
 
-.method private final F(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Action_Icon:I = 0x7f140142
 
-    return-void
-.end method
+.field public static Chat_Common_Background:I = 0x7f140143
 
-.method private final G(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_CapsuleGradient:I = 0x7f140144
 
-    return-void
-.end method
+.field public static Chat_Common_Background_CapsuleSecondaryGradient:I = 0x7f140145
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_ChatBackground:I = 0x7f140146
 
-    return-void
-.end method
+.field public static Chat_Common_Background_FileType:I = 0x7f140147
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_GlassLightGradient:I = 0x7f140148
 
-    return-void
-.end method
+.field public static Chat_Common_Background_Skeleton:I = 0x7f140149
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_Skeleton_BubbleGradientPrimary:I = 0x7f14014a
 
-    return-void
-.end method
+.field public static Chat_Common_Background_Skeleton_BubbleGradientSecondary:I = 0x7f14014b
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_Skeleton_StickerPrimary:I = 0x7f14014c
 
-    return-void
-.end method
+.field public static Chat_Common_Background_Skeleton_StickerPrimary_BaseGradient:I = 0x7f14014d
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_Skeleton_StickerPrimary_TongueGradient:I = 0x7f14014e
 
-    return-void
-.end method
+.field public static Chat_Common_Background_Skeleton_StickerSecondary:I = 0x7f14014f
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_Skeleton_StickerSecondary_BaseGradient:I = 0x7f140150
 
-    return-void
-.end method
+.field public static Chat_Common_Background_Skeleton_StickerSecondary_TongueGradient:I = 0x7f140151
 
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Background_SpaceThemeGradient:I = 0x7f140152
 
-    return-void
-.end method
+.field public static Chat_Common_Background_SystemBubbleGradient:I = 0x7f140153
 
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Icon:I = 0x7f140154
 
-    return-void
-.end method
+.field public static Chat_Common_Shadows:I = 0x7f140155
 
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Shadows_Elevation2:I = 0x7f140156
 
-    return-void
-.end method
+.field public static Chat_Common_Shadows_TopBar:I = 0x7f140157
 
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Shadows_WriteBar:I = 0x7f140158
 
-    return-void
-.end method
+.field public static Chat_Common_States:I = 0x7f140159
 
-.method private final k(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_States_Background:I = 0x7f14015a
 
-    return-void
-.end method
+.field public static Chat_Common_States_Background_Active:I = 0x7f14015b
 
-.method private final l(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_States_Background_Active_Action:I = 0x7f14015c
 
-    return-void
-.end method
+.field public static Chat_Common_States_Background_Disabled:I = 0x7f14015d
 
-.method private final m(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_States_Icon:I = 0x7f14015e
 
-    return-void
-.end method
+.field public static Chat_Common_States_Icon_Disabled:I = 0x7f14015f
 
-.method private final n(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_States_Text:I = 0x7f140160
 
-    return-void
-.end method
+.field public static Chat_Common_States_Text_Disabled:I = 0x7f140161
 
-.method private final o(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Stroke:I = 0x7f140162
 
-    return-void
-.end method
+.field public static Chat_Common_Stroke_Separator:I = 0x7f140163
 
-.method private final p(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Common_Text:I = 0x7f140164
 
-    return-void
-.end method
+.field public static Chat_Topbar:I = 0x7f140165
 
-.method private final q(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Background:I = 0x7f140166
 
-    return-void
-.end method
+.field public static Chat_Topbar_Background_Default:I = 0x7f140167
 
-.method private final r(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Background_Disabled:I = 0x7f140168
 
-    return-void
-.end method
+.field public static Chat_Topbar_Icon:I = 0x7f140169
 
-.method private final s(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Icon_Default:I = 0x7f14016a
 
-    return-void
-.end method
+.field public static Chat_Topbar_Icon_Disabled:I = 0x7f14016b
 
-.method private final t(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Stroke:I = 0x7f14016c
 
-    return-void
-.end method
+.field public static Chat_Topbar_Stroke_Separator:I = 0x7f14016d
 
-.method private final u(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Stroke_Separator_Default:I = 0x7f14016e
 
-    return-void
-.end method
+.field public static Chat_Topbar_Text:I = 0x7f14016f
 
-.method private final v(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Topbar_Text_Default:I = 0x7f140170
 
-    return-void
-.end method
+.field public static Chat_Topbar_Text_Disabled:I = 0x7f140171
 
-.method private final w(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Writebar:I = 0x7f140172
 
-    return-void
-.end method
+.field public static Chat_Writebar_Background:I = 0x7f140173
 
-.method private final x(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Writebar_Icon:I = 0x7f140174
 
-    return-void
-.end method
+.field public static Chat_Writebar_Stroke:I = 0x7f140175
 
-.method private final y(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Chat_Writebar_Text:I = 0x7f140176
 
-    return-void
-.end method
+.field public static Global:I = 0x7f1401a0
 
-.method private final z(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Global_Accent:I = 0x7f1401a1
 
-    return-void
-.end method
+.field public static Global_Background:I = 0x7f1401a2
 
+.field public static Global_Background_Accent:I = 0x7f1401a3
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Global_Background_Local:I = 0x7f1401a4
 
-    iget p1, p0, Lruc;->a:I
+.field public static Global_Background_Local_Chips:I = 0x7f1401a5
 
-    return-void
-.end method
+.field public static Global_Background_Local_FileType:I = 0x7f1401a6
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 6
+.field public static Global_Background_Local_TabBar:I = 0x7f1401a7
 
-    iget p1, p0, Lruc;->a:I
+.field public static Global_Background_Local_TopBar:I = 0x7f1401a8
 
-    const/4 v0, 0x1
+.field public static Global_Gradients:I = 0x7f1401a9
 
-    const/4 v1, 0x0
+.field public static Global_Gradients_BannerDK:I = 0x7f1401aa
 
-    const/4 v2, 0x0
+.field public static Global_Gradients_BannerDK_Background:I = 0x7f1401ab
 
-    const/high16 v3, 0x3f800000    # 1.0f
+.field public static Global_Gradients_BannerDK_Background_FantasyGradient:I = 0x7f1401ac
 
-    const/16 v4, 0x8
+.field public static Global_Gradients_BannerDK_Background_IconContainerGradient:I = 0x7f1401ad
 
-    iget-object v5, p0, Lruc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static Global_Gradients_BannerDK_Background_PaleBlueGradient:I = 0x7f1401ae
 
-    packed-switch p1, :pswitch_data_0
+.field public static Global_Gradients_BannerDK_Background_VibrantGradient:I = 0x7f1401af
 
-    :pswitch_0
-    return-void
+.field public static Global_Gradients_BannerDK_Stroke:I = 0x7f1401b0
 
-    :pswitch_1
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Global_Gradients_BannerDK_Stroke_IconContainerGradient:I = 0x7f1401b1
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+.field public static Global_Gradients_ButtonTextPromo:I = 0x7f1401b2
 
-    move-result-object p1
+.field public static Global_Gradients_ButtonTextPromo_DefaultGradient:I = 0x7f1401b3
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Global_Gradients_ButtonTextPromo_DisabledGradient:I = 0x7f1401b4
 
-    iget-object p1, v5, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
+.field public static Global_Gradients_ButtonTextPromo_PressedGradient:I = 0x7f1401b5
 
-    if-eqz p1, :cond_0
+.field public static Global_Gradients_Complex:I = 0x7f1401b6
 
-    invoke-virtual {p1}, Leqg;->f()V
+.field public static Global_Gradients_Complex_OverlayFloatingGradient:I = 0x7f1401b7
 
-    :cond_0
-    :pswitch_2
-    return-void
+.field public static Global_Gradients_EmptyBlockIconWrapper:I = 0x7f1401b8
 
-    :pswitch_3
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Global_Gradients_EmptyBlockIconWrapper_ShapeGradient:I = 0x7f1401b9
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+.field public static Global_Gradients_EmptyBlockIconWrapper_StrokeGradient:I = 0x7f1401ba
 
-    move-result-object p1
+.field public static Global_Gradients_LoadingIcon:I = 0x7f1401bb
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Global_Gradients_LoadingIcon_Contrast:I = 0x7f1401bc
 
-    :pswitch_4
-    return-void
+.field public static Global_Gradients_LoadingIcon_ContrastStatic:I = 0x7f1401bd
 
-    :pswitch_5
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Global_Gradients_LoadingIcon_Negative:I = 0x7f1401be
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+.field public static Global_Gradients_LoadingIcon_NeutralThemed:I = 0x7f1401bf
 
-    move-result-object p1
+.field public static Global_Gradients_LoadingIcon_Primary:I = 0x7f1401c0
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Global_Gradients_LoadingIcon_PrimaryStatic:I = 0x7f1401c1
 
-    iget-object p1, v5, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
+.field public static Global_Gradients_LoadingIcon_Themed:I = 0x7f1401c2
 
-    if-eqz p1, :cond_1
+.field public static Global_Gradients_Local:I = 0x7f1401c3
 
-    invoke-virtual {p1}, Leqg;->f()V
+.field public static Global_Gradients_Local_PromoTextGradient:I = 0x7f1401c4
 
-    :cond_1
-    return-void
+.field public static Global_Gradients_Overlay:I = 0x7f1401c5
 
-    :pswitch_6
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Global_Gradients_Overlay_SurfaceGroundGradient:I = 0x7f1401c6
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
+.field public static Global_Gradients_Overlay_SurfacePrimaryGradient:I = 0x7f1401c7
 
-    move-result-object p1
+.field public static Global_Gradients_SkeletonGradient:I = 0x7f1401c8
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Global_Gradients_SkeletonGradient_Cell:I = 0x7f1401c9
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
+.field public static Global_Gradients_SkeletonGradient_CellGradient:I = 0x7f1401ca
 
-    move-result-object p1
+.field public static Global_Gradients_SkeletonGradient_Grid:I = 0x7f1401cb
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Global_Gradients_SkeletonGradient_GridGradient:I = 0x7f1401cc
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
+.field public static Global_Icon:I = 0x7f1401cd
 
-    move-result-object p1
+.field public static Global_Icon_Local:I = 0x7f1401ce
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Global_Icon_Local_Category:I = 0x7f1401cf
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
+.field public static Global_Icon_Local_Promo:I = 0x7f1401d0
 
-    move-result-object p1
+.field public static Global_Icon_Local_Tabbar:I = 0x7f1401d1
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Global_States:I = 0x7f1401d2
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+.field public static Global_States_Background:I = 0x7f1401d3
 
-    move-result-object p1
+.field public static Global_States_Background_Active:I = 0x7f1401d4
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Global_States_Background_Disabled:I = 0x7f1401d5
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
+.field public static Global_States_Icon:I = 0x7f1401d6
 
-    move-result-object p1
+.field public static Global_States_Icon_Disabled:I = 0x7f1401d7
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Global_States_Text:I = 0x7f1401d8
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+.field public static Global_States_Text_Active:I = 0x7f1401d9
 
-    move-result-object p1
+.field public static Global_States_Text_Disabled:I = 0x7f1401da
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Global_Stroke:I = 0x7f1401db
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
+.field public static Global_Stroke_Local:I = 0x7f1401dc
 
-    move-result-object p1
+.field public static Global_Stroke_Local_Carver:I = 0x7f1401dd
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Global_Stroke_Local_TabBar:I = 0x7f1401de
 
-    iget-object p1, v5, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
+.field public static Global_Stroke_Local_TopBar:I = 0x7f1401df
 
-    if-eqz p1, :cond_2
+.field public static Global_Stroke_Separator:I = 0x7f1401e0
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Global_Text:I = 0x7f1401e1
 
-    invoke-virtual {p1, v1}, Leqg;->setBackgroundColor(Z)V
+.field public static Global_Vfx:I = 0x7f1401e2
 
-    invoke-virtual {p1, v1}, Leqg;->setDurationColor(Z)V
+.field public static Global_Vfx_ButtonIconOverlayPlain:I = 0x7f1401e3
 
-    invoke-virtual {p1, v1}, Leqg;->setVisiblePlayPauseButton(Z)V
+.field public static Global_Vfx_ButtonIconOverlayPlain_Elevation1:I = 0x7f1401e4
 
-    :cond_2
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Global_Vfx_ButtonIconOverlayPlain_Elevation2:I = 0x7f1401e5
 
-    move-result-object p1
+.field public static Global_Vfx_EmptyBlock:I = 0x7f1401e6
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Global_Vfx_EmptyBlock_Halo:I = 0x7f1401e7
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static OneMe:I = 0x7f140207
 
-    move-result-object p1
+.field public static OneMe_Theme:I = 0x7f14020a
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static OneMe_Theme_Dark:I = 0x7f14020b
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static OneMe_Theme_Light:I = 0x7f14020c
 
-    move-result-object p1
+.field public static OneMe_Theme_Transparent:I = 0x7f14020d
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography:I = 0x7f14042c
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
+.field public static Typography_Accent:I = 0x7f14042d
 
-    move-result-object p1
+.field public static Typography_Accent_Header1:I = 0x7f14042e
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Accent_Title1:I = 0x7f14042f
 
-    invoke-virtual {v5}, Lb04;->getParentController()Lb04;
+.field public static Typography_Accent_Title2:I = 0x7f140430
 
-    move-result-object p1
+.field public static Typography_Accent_Title3:I = 0x7f140431
 
-    instance-of v1, p1, Lu63;
+.field public static Typography_Accent_Title4:I = 0x7f140432
 
-    if-eqz v1, :cond_3
+.field public static Typography_Action1:I = 0x7f140433
 
-    check-cast p1, Lu63;
+.field public static Typography_Action2:I = 0x7f140434
 
-    goto :goto_0
+.field public static Typography_Action3:I = 0x7f140435
 
-    :cond_3
-    move-object p1, v2
+.field public static Typography_ActionLargeStrong:I = 0x7f140436
 
-    :goto_0
-    if-eqz p1, :cond_4
+.field public static Typography_ActionMediumStrong:I = 0x7f140437
 
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public static Typography_BodyLarge:I = 0x7f140438
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0(Z)V
+.field public static Typography_BodyMedium:I = 0x7f140439
 
-    :cond_4
-    invoke-static {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static Typography_BodySmall:I = 0x7f14043a
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()V
+.field public static Typography_Caption1:I = 0x7f14043b
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lkuc;
+.field public static Typography_Caption1_CAPS:I = 0x7f14043c
 
-    move-result-object p1
+.field public static Typography_Caption1_Medium:I = 0x7f14043d
 
-    iget-object p1, p1, Lkuc;->B0:Lmoe;
+.field public static Typography_Caption2:I = 0x7f14043e
 
-    invoke-virtual {p1, v2}, Lmoe;->setValue(Ljava/lang/Object;)V
+.field public static Typography_Caption2_CAPS:I = 0x7f14043f
 
-    return-void
+.field public static Typography_Caption3:I = 0x7f140440
 
-    :pswitch_7
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Typography_Caption3_CAPS:I = 0x7f140441
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat:I = 0x7f140442
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles:I = 0x7f140443
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Body:I = 0x7f140444
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/widget/ImageView;
+.field public static Typography_Chat_Bubbles_Body_Dynamic:I = 0x7f140445
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Body_Dynamic_LARGE:I = 0x7f140446
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Body_Dynamic_MEDIUM:I = 0x7f140447
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/widget/ImageView;
+.field public static Typography_Chat_Bubbles_Body_Dynamic_XLARGE:I = 0x7f140448
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Body_Dynamic_XXLARGE:I = 0x7f140449
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Bubbles_Body_Dynamic_XXXLARGE:I = 0x7f14044a
 
-    return-void
+.field public static Typography_Chat_Bubbles_Body_Dynamic_XXXXLARGE:I = 0x7f14044b
 
-    :pswitch_8
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Typography_Chat_Bubbles_Caption:I = 0x7f14044c
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption3:I = 0x7f14045c
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic:I = 0x7f14045d
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_LARGE:I = 0x7f14045e
 
-    invoke-static {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_MEDIUM:I = 0x7f14045f
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XLARGE:I = 0x7f140460
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXLARGE:I = 0x7f140461
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXXLARGE:I = 0x7f140462
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXXXLARGE:I = 0x7f140463
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Caption_Dynamic:I = 0x7f14044d
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_LARGE:I = 0x7f14044e
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_MEDIUM:I = 0x7f14044f
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_XLARGE:I = 0x7f140450
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXLARGE:I = 0x7f140451
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXXLARGE:I = 0x7f140452
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXXXLARGE:I = 0x7f140453
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption_Medium:I = 0x7f140454
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic:I = 0x7f140455
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_LARGE:I = 0x7f140456
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_MEDIUM:I = 0x7f140457
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XLARGE:I = 0x7f140458
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXLARGE:I = 0x7f140459
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/widget/ImageView;
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXXLARGE:I = 0x7f14045a
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXXXLARGE:I = 0x7f14045b
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Bubbles_Duration:I = 0x7f140464
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/widget/ImageView;
+.field public static Typography_Chat_Bubbles_Emoji:I = 0x7f140465
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_FileFormat:I = 0x7f140466
 
-    const/4 v1, 0x0
+.field public static Typography_Chat_Bubbles_Footnote:I = 0x7f140467
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic:I = 0x7f140468
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->U0()Landroid/widget/ImageView;
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_LARGE:I = 0x7f140469
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_MEDIUM:I = 0x7f14046a
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XLARGE:I = 0x7f14046b
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXLARGE:I = 0x7f14046c
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXXLARGE:I = 0x7f14046d
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXXXLARGE:I = 0x7f14046e
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name1:I = 0x7f14046f
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Name1_Dynamic:I = 0x7f140470
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_LARGE:I = 0x7f140471
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_MEDIUM:I = 0x7f140472
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_XLARGE:I = 0x7f140473
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXLARGE:I = 0x7f140474
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXXLARGE:I = 0x7f140475
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXXXLARGE:I = 0x7f140476
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Bubbles_Name2:I = 0x7f140477
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name2_Dynamic:I = 0x7f140478
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_LARGE:I = 0x7f140479
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_MEDIUM:I = 0x7f14047a
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_XLARGE:I = 0x7f14047b
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXLARGE:I = 0x7f14047c
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXXLARGE:I = 0x7f14047d
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXXXLARGE:I = 0x7f14047e
 
-    move-result-object p1
+.field public static Typography_Chat_Bubbles_Reaction:I = 0x7f14047f
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Bubbles_Time:I = 0x7f140480
 
-    invoke-virtual {v5}, Lb04;->getParentController()Lb04;
+.field public static Typography_Chat_Markdown:I = 0x7f140481
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Bold:I = 0x7f140482
 
-    instance-of v1, p1, Lu63;
+.field public static Typography_Chat_Markdown_Bold_Dynamic:I = 0x7f140483
 
-    if-eqz v1, :cond_5
+.field public static Typography_Chat_Markdown_Bold_Dynamic_LARGE:I = 0x7f140484
 
-    check-cast p1, Lu63;
+.field public static Typography_Chat_Markdown_Bold_Dynamic_MEDIUM:I = 0x7f140485
 
-    goto :goto_1
+.field public static Typography_Chat_Markdown_Bold_Dynamic_XLARGE:I = 0x7f140486
 
-    :cond_5
-    move-object p1, v2
+.field public static Typography_Chat_Markdown_Bold_Dynamic_XXLARGE:I = 0x7f140487
 
-    :goto_1
-    if-eqz p1, :cond_6
+.field public static Typography_Chat_Markdown_Bold_Dynamic_XXXLARGE:I = 0x7f140488
 
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public static Typography_Chat_Markdown_Bold_Dynamic_XXXXLARGE:I = 0x7f140489
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0(Z)V
+.field public static Typography_Chat_Markdown_Italic:I = 0x7f14048a
 
-    :cond_6
-    invoke-static {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static Typography_Chat_Markdown_Italic_Dynamic:I = 0x7f14048b
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()V
+.field public static Typography_Chat_Markdown_Italic_Dynamic_LARGE:I = 0x7f14048c
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lkuc;
+.field public static Typography_Chat_Markdown_Italic_Dynamic_MEDIUM:I = 0x7f14048d
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Italic_Dynamic_XLARGE:I = 0x7f14048e
 
-    iget-object p1, p1, Lkuc;->B0:Lmoe;
+.field public static Typography_Chat_Markdown_Italic_Dynamic_XXLARGE:I = 0x7f14048f
 
-    invoke-virtual {p1, v2}, Lmoe;->setValue(Ljava/lang/Object;)V
+.field public static Typography_Chat_Markdown_Italic_Dynamic_XXXLARGE:I = 0x7f140490
 
-    return-void
+.field public static Typography_Chat_Markdown_Italic_Dynamic_XXXXLARGE:I = 0x7f140491
 
-    :pswitch_9
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Typography_Chat_Markdown_Link:I = 0x7f140492
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
+.field public static Typography_Chat_Markdown_Link_Dynamic:I = 0x7f140493
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Link_Dynamic_LARGE:I = 0x7f140494
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Markdown_Link_Dynamic_MEDIUM:I = 0x7f140495
 
-    invoke-static {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
+.field public static Typography_Chat_Markdown_Link_Dynamic_XLARGE:I = 0x7f140496
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Link_Dynamic_XXLARGE:I = 0x7f140497
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static Typography_Chat_Markdown_Link_Dynamic_XXXLARGE:I = 0x7f140498
 
-    iget-object p1, v5, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
+.field public static Typography_Chat_Markdown_Link_Dynamic_XXXXLARGE:I = 0x7f140499
 
-    if-eqz p1, :cond_7
+.field public static Typography_Chat_Markdown_Monospace:I = 0x7f14049a
 
-    invoke-virtual {p1, v2}, Leqg;->setDurationText(Ljava/lang/String;)V
+.field public static Typography_Chat_Markdown_Monospace_Dynamic:I = 0x7f14049b
 
-    :cond_7
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_LARGE:I = 0x7f14049c
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_MEDIUM:I = 0x7f14049d
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_XLARGE:I = 0x7f14049e
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXLARGE:I = 0x7f14049f
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXXLARGE:I = 0x7f1404a0
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXXXLARGE:I = 0x7f1404a1
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_Chat_Markdown_Normal:I = 0x7f1404a2
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Normal_Dynamic:I = 0x7f1404a3
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Chat_Markdown_Normal_Dynamic_LARGE:I = 0x7f1404a4
 
-    invoke-virtual {v5}, Lb04;->getParentController()Lb04;
+.field public static Typography_Chat_Markdown_Normal_Dynamic_MEDIUM:I = 0x7f1404a5
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Normal_Dynamic_XLARGE:I = 0x7f1404a6
 
-    instance-of v1, p1, Lu63;
+.field public static Typography_Chat_Markdown_Normal_Dynamic_XXLARGE:I = 0x7f1404a7
 
-    if-eqz v1, :cond_8
+.field public static Typography_Chat_Markdown_Normal_Dynamic_XXXLARGE:I = 0x7f1404a8
 
-    check-cast p1, Lu63;
+.field public static Typography_Chat_Markdown_Normal_Dynamic_XXXXLARGE:I = 0x7f1404a9
 
-    goto :goto_2
+.field public static Typography_Chat_Markdown_Red:I = 0x7f1404aa
 
-    :cond_8
-    move-object p1, v2
+.field public static Typography_Chat_Markdown_Red_Dynamic:I = 0x7f1404ab
 
-    :goto_2
-    if-eqz p1, :cond_9
+.field public static Typography_Chat_Markdown_Red_Dynamic_LARGE:I = 0x7f1404ac
 
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public static Typography_Chat_Markdown_Red_Dynamic_MEDIUM:I = 0x7f1404ad
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0(Z)V
+.field public static Typography_Chat_Markdown_Red_Dynamic_XLARGE:I = 0x7f1404ae
 
-    :cond_9
-    invoke-static {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static Typography_Chat_Markdown_Red_Dynamic_XXLARGE:I = 0x7f1404af
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()V
+.field public static Typography_Chat_Markdown_Red_Dynamic_XXXLARGE:I = 0x7f1404b0
 
-    invoke-virtual {v5}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lkuc;
+.field public static Typography_Chat_Markdown_Red_Dynamic_XXXXLARGE:I = 0x7f1404b1
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Strikethrough:I = 0x7f1404b2
 
-    iget-object p1, p1, Lkuc;->B0:Lmoe;
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic:I = 0x7f1404b3
 
-    invoke-virtual {p1, v2}, Lmoe;->setValue(Ljava/lang/Object;)V
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_LARGE:I = 0x7f1404b4
 
-    return-void
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_MEDIUM:I = 0x7f1404b5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XLARGE:I = 0x7f1404b6
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXLARGE:I = 0x7f1404b7
 
-    iget p1, p0, Lruc;->a:I
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXXLARGE:I = 0x7f1404b8
 
-    return-void
-.end method
+.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXXXLARGE:I = 0x7f1404b9
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 5
+.field public static Typography_Chat_Markdown_Title:I = 0x7f1404ba
 
-    iget p1, p0, Lruc;->a:I
+.field public static Typography_Chat_Markdown_Underlined:I = 0x7f1404bb
 
-    const/16 v0, 0x8
+.field public static Typography_Chat_Markdown_Underlined_Dynamic:I = 0x7f1404bc
 
-    const/4 v1, 0x0
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_LARGE:I = 0x7f1404bd
 
-    iget-object v2, p0, Lruc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_MEDIUM:I = 0x7f1404be
 
-    packed-switch p1, :pswitch_data_0
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_XLARGE:I = 0x7f1404bf
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXLARGE:I = 0x7f1404c0
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXXLARGE:I = 0x7f1404c1
 
-    move-result-object p1
+.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXXXLARGE:I = 0x7f1404c2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+.field public static Typography_Footnote:I = 0x7f1404c3
 
-    move-result-object v0
+.field public static Typography_Footnote_CAPS:I = 0x7f1404c4
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static Typography_Footnote_Dynamic:I = 0x7f1404c5
 
-    move-result-object v0
+.field public static Typography_Footnote_Dynamic_LARGE:I = 0x7f1404c6
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+.field public static Typography_Footnote_Dynamic_MEDIUM:I = 0x7f1404c7
 
-    const/high16 v3, 0x42900000    # 72.0f
+.field public static Typography_Footnote_Dynamic_XLARGE:I = 0x7f1404c8
 
-    mul-float/2addr v0, v3
+.field public static Typography_Footnote_Dynamic_XXLARGE:I = 0x7f1404c9
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+.field public static Typography_Footnote_Dynamic_XXXLARGE:I = 0x7f1404ca
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/view/View;
+.field public static Typography_Footnote_Dynamic_XXXXLARGE:I = 0x7f1404cb
 
-    move-result-object p1
+.field public static Typography_Footnote_Medium:I = 0x7f1404cc
 
-    const/4 v0, 0x0
+.field public static Typography_Headline1:I = 0x7f1404cd
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Headline1_Dynamic:I = 0x7f1404ce
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+.field public static Typography_Headline1_Dynamic_LARGE:I = 0x7f1404cf
 
-    move-result-object p1
+.field public static Typography_Headline1_Dynamic_MEDIUM:I = 0x7f1404d0
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+.field public static Typography_Headline1_Dynamic_XLARGE:I = 0x7f1404d1
 
-    move-result-object v4
+.field public static Typography_Headline1_Dynamic_XXLARGE:I = 0x7f1404d2
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static Typography_Headline1_Dynamic_XXXLARGE:I = 0x7f1404d3
 
-    move-result-object v4
+.field public static Typography_Headline1_Dynamic_XXXXLARGE:I = 0x7f1404d4
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static Typography_Headline2:I = 0x7f1404d5
 
-    mul-float/2addr v4, v3
+.field public static Typography_HeadlineLarge:I = 0x7f1404d6
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
+.field public static Typography_HeadlineMediumStrong:I = 0x7f1404d7
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+.field public static Typography_Paragraph:I = 0x7f1404d8
 
-    move-result-object p1
+.field public static Typography_Paragraph_Dynamic:I = 0x7f1404d9
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Paragraph_Dynamic_LARGE:I = 0x7f1404da
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+.field public static Typography_Paragraph_Dynamic_MEDIUM:I = 0x7f1404db
 
-    move-result-object p1
+.field public static Typography_Paragraph_Dynamic_XLARGE:I = 0x7f1404dc
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+.field public static Typography_Paragraph_Dynamic_XXLARGE:I = 0x7f1404dd
 
-    move-result-object v3
+.field public static Typography_Paragraph_Dynamic_XXXLARGE:I = 0x7f1404de
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static Typography_Paragraph_Dynamic_XXXXLARGE:I = 0x7f1404df
 
-    move-result-object v3
+.field public static Typography_Subaction:I = 0x7f1404e0
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+.field public static Typography_Subhead:I = 0x7f1404e1
 
-    const/high16 v4, 0x428c0000    # 70.0f
+.field public static Typography_Subhead_Medium:I = 0x7f1404e2
 
-    mul-float/2addr v3, v4
+.field public static Typography_Text:I = 0x7f1404e3
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setTranslationX(F)V
+.field public static Typography_Title1:I = 0x7f1404e4
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/widget/TextView;
+.field public static Typography_Title2:I = 0x7f1404e5
 
-    move-result-object p1
+.field public static Typography_Title2_Regular:I = 0x7f1404e6
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_Title3:I = 0x7f1404e7
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
+.field public static Typography_Title3_Regular:I = 0x7f1404e8
 
-    move-result-object p1
+.field public static Typography_TitleLarge:I = 0x7f1404e9
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+.field public static Typography_TitleLargeStrong:I = 0x7f1404ea
 
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
+.field public static Typography_TitleSmall:I = 0x7f1404eb
 
-    move-result-object p1
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-static {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lb04;->getParentController()Lb04;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lu63;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lu63;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1, v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0(Z)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    iget-object v0, v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object p1, v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Leqg;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_1
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
-
-    if-eqz p1, :cond_3
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Leqg;->setVisiblePlayPauseButton(Z)V
-
-    invoke-virtual {p1}, Leqg;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Leqg;->d()V
-
-    :cond_3
-    :pswitch_3
-    return-void
-
-    :pswitch_4
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    iget-object v3, v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object p1, v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Leqg;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Leqg;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_4
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_5
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static Typography_TitleSmallStrong:I = 0x7f1404ec

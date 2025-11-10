@@ -1,59 +1,77 @@
-.class public abstract Li82;
-.super Ljava/lang/Object;
+.class public final Li82;
+.super Lh82;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
-
-.field public static final b:Ljava/nio/charset/Charset;
-
-.field public static final c:Ljava/nio/charset/Charset;
-
-.field public static volatile d:Ljava/nio/charset/Charset;
-
-.field public static volatile e:Ljava/nio/charset/Charset;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(IIILy44;Lez5;)V
     .locals 1
 
-    const-string v0, "UTF-8"
+    and-int/lit8 v0, p3, 0x2
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    sget-object p4, Lha5;->a:Lha5;
 
-    sput-object v0, Li82;->a:Ljava/nio/charset/Charset;
+    :cond_0
+    and-int/lit8 v0, p3, 0x4
 
-    const-string v0, "UTF-16"
+    if-eqz v0, :cond_1
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    const/4 p1, -0x3
 
-    move-result-object v0
+    :cond_1
+    and-int/lit8 p3, p3, 0x8
 
-    sput-object v0, Li82;->b:Ljava/nio/charset/Charset;
+    if-eqz p3, :cond_2
 
-    const-string v0, "UTF-16BE"
+    const/4 p2, 0x1
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Li82;->c:Ljava/nio/charset/Charset;
+    :cond_2
+    invoke-direct {p0, p1, p2, p4, p5}, Lh82;-><init>(IILy44;Lez5;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final k(Ly44;II)La82;
+    .locals 2
+
+    new-instance v0, Li82;
+
+    iget-object v1, p0, Lh82;->d:Lez5;
+
+    invoke-direct {v0, p2, p3, p1, v1}, Lh82;-><init>(IILy44;Lez5;)V
+
+    return-object v0
+.end method
+
+.method public final l()Lez5;
+    .locals 1
+
+    iget-object v0, p0, Lh82;->d:Lez5;
+
+    return-object v0
+.end method
+
+.method public final n(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lh82;->d:Lez5;
+
+    invoke-interface {v0, p1, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lh54;->a:Lh54;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

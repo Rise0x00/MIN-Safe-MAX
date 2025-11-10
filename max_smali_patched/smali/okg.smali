@@ -1,78 +1,270 @@
-.class public abstract Lokg;
-.super Ljava/lang/Object;
+.class public final Lokg;
+.super Lnkg;
 .source "SourceFile"
 
 
+# instance fields
+.field public final d:Landroid/util/SparseIntArray;
+
+.field public final e:Landroid/os/Parcel;
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Ljava/lang/String;
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+
 # direct methods
-.method public static a(Landroid/view/View;)[Ljava/lang/String;
-    .locals 0
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 8
 
-    invoke-virtual {p0}, Landroid/view/View;->getReceiveContentMimeTypes()[Ljava/lang/String;
+    .line 1
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result-object p0
+    move-result v2
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataSize()I
 
-.method public static b(Landroid/view/View;Ldy3;)Ldy3;
-    .locals 1
+    move-result v3
 
-    iget-object v0, p1, Ldy3;->a:Lcy3;
+    new-instance v5, Lbt;
 
-    invoke-interface {v0}, Lcy3;->h()Landroid/view/ContentInfo;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    .line 2
+    invoke-direct {v5, v0}, Llpe;-><init>(I)V
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    new-instance v6, Lbt;
 
-    invoke-static {v0}, Lo20;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
+    .line 4
+    invoke-direct {v6, v0}, Llpe;-><init>(I)V
 
-    move-result-object v0
+    .line 5
+    new-instance v7, Lbt;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->performReceiveContent(Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
+    .line 6
+    invoke-direct {v7, v0}, Llpe;-><init>(I)V
 
-    move-result-object p0
+    .line 7
+    const-string v4, ""
 
-    if-nez p0, :cond_0
+    move-object v0, p0
 
-    const/4 p0, 0x0
+    move-object v1, p1
 
-    return-object p0
-
-    :cond_0
-    if-ne p0, v0, :cond_1
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ldy3;
-
-    new-instance v0, Lkbh;
-
-    invoke-direct {v0, p0}, Lkbh;-><init>(Landroid/view/ContentInfo;)V
-
-    invoke-direct {p1, v0}, Ldy3;-><init>(Lcy3;)V
-
-    return-object p1
-.end method
-
-.method public static c(Landroid/view/View;[Ljava/lang/String;Lqfa;)V
-    .locals 1
-
-    if-nez p2, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
+    invoke-direct/range {v0 .. v7}, Lokg;-><init>(Landroid/os/Parcel;IILjava/lang/String;Lbt;Lbt;Lbt;)V
 
     return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;IILjava/lang/String;Lbt;Lbt;Lbt;)V
+    .locals 0
+
+    .line 8
+    invoke-direct {p0, p5, p6, p7}, Lnkg;-><init>(Lbt;Lbt;Lbt;)V
+
+    .line 9
+    new-instance p5, Landroid/util/SparseIntArray;
+
+    invoke-direct {p5}, Landroid/util/SparseIntArray;-><init>()V
+
+    iput-object p5, p0, Lokg;->d:Landroid/util/SparseIntArray;
+
+    const/4 p5, -0x1
+
+    .line 10
+    iput p5, p0, Lokg;->i:I
+
+    .line 11
+    iput p5, p0, Lokg;->k:I
+
+    .line 12
+    iput-object p1, p0, Lokg;->e:Landroid/os/Parcel;
+
+    .line 13
+    iput p2, p0, Lokg;->f:I
+
+    .line 14
+    iput p3, p0, Lokg;->g:I
+
+    .line 15
+    iput p2, p0, Lokg;->j:I
+
+    .line 16
+    iput-object p4, p0, Lokg;->h:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lokg;
+    .locals 8
+
+    new-instance v0, Lokg;
+
+    iget-object v1, p0, Lokg;->e:Landroid/os/Parcel;
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v2
+
+    iget v3, p0, Lokg;->j:I
+
+    iget v4, p0, Lokg;->f:I
+
+    if-ne v3, v4, :cond_0
+
+    iget v3, p0, Lokg;->g:I
 
     :cond_0
-    new-instance v0, Lpkg;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p2}, Lpkg;-><init>(Lqfa;)V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
+    iget-object v5, p0, Lokg;->h:Ljava/lang/String;
+
+    const-string v6, "  "
+
+    invoke-static {v4, v5, v6}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v6, p0, Lnkg;->b:Lbt;
+
+    iget-object v7, p0, Lnkg;->c:Lbt;
+
+    iget-object v5, p0, Lnkg;->a:Lbt;
+
+    invoke-direct/range {v0 .. v7}, Lokg;-><init>(Landroid/os/Parcel;IILjava/lang/String;Lbt;Lbt;Lbt;)V
+
+    return-object v0
+.end method
+
+.method public final e(I)Z
+    .locals 2
+
+    :goto_0
+    iget v0, p0, Lokg;->j:I
+
+    iget v1, p0, Lokg;->g:I
+
+    if-ge v0, v1, :cond_2
+
+    iget v0, p0, Lokg;->k:I
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget v0, p0, Lokg;->j:I
+
+    iget-object v1, p0, Lokg;->e:Landroid/os/Parcel;
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    iput v1, p0, Lokg;->k:I
+
+    iget v1, p0, Lokg;->j:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lokg;->j:I
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lokg;->k:I
+
+    if-ne v0, p1, :cond_3
+
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_3
+    :goto_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final i(I)V
+    .locals 5
+
+    iget v0, p0, Lokg;->i:I
+
+    iget-object v1, p0, Lokg;->d:Landroid/util/SparseIntArray;
+
+    iget-object v2, p0, Lokg;->e:Landroid/os/Parcel;
+
+    if-ltz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->get(I)I
+
+    move-result v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v3
+
+    sub-int v4, v3, v0
+
+    invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v2, v3}, Landroid/os/Parcel;->setDataPosition(I)V
+
+    :cond_0
+    iput p1, p0, Lokg;->i:I
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v0
+
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

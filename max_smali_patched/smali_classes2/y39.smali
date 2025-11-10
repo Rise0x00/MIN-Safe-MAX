@@ -2,135 +2,75 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llv7;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
-
-    iput p2, p0, Ly39;->a:I
-
-    iput-object p1, p0, Ly39;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Ly39;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Lb59;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ly39;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Ly39;->b:Ljava/lang/Object;
+    :cond_0
+    instance-of v0, p1, Ly39;
 
-    check-cast v0, Lgd9;
+    if-nez v0, :cond_1
 
-    iget-object v0, v0, Lgd9;->X:Ldh9;
+    goto :goto_0
 
-    iget-object v1, p0, Ly39;->c:Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ly39;
 
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
+    sget-object p1, Lu39;->a:Lu39;
 
-    iget-object v0, v0, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-virtual {p1, p1}, Lu39;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Lb59;J)V
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_2
 
-    :pswitch_0
-    iget-object v0, p0, Ly39;->b:Ljava/lang/Object;
+    :goto_0
+    const/4 p1, 0x0
 
-    check-cast v0, Lq39;
+    return p1
 
-    iget-object v1, p0, Ly39;->c:Ljava/lang/Object;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    check-cast v1, Lz39;
-
-    iget-wide v1, v1, Lz39;->N0:J
-
-    check-cast v0, Ldh9;
-
-    iget-object v0, v0, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Lb59;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method
 
-.method public final b(Ljava/lang/String;Lpv7;Landroid/text/style/ClickableSpan;)V
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x72d9d95f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget p3, p0, Ly39;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch p3, :pswitch_data_0
+    const-string v1, "MediaTypePickerViewState(selectedButton="
 
-    iget-object p3, p0, Ly39;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p3, Lgd9;
+    sget-object v1, Lu39;->a:Lu39;
 
-    iget-object p3, p3, Lgd9;->X:Ldh9;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ly39;->c:Ljava/lang/Object;
+    const-string v1, ")"
 
-    check-cast v0, Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, v0, Lone/me/messages/list/loader/MessageModel;->a:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p3, p3, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    move-result-object v0
 
-    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->B0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lpv7;J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p3, p0, Ly39;->b:Ljava/lang/Object;
-
-    check-cast p3, Lq39;
-
-    iget-object v0, p0, Ly39;->c:Ljava/lang/Object;
-
-    check-cast v0, Lz39;
-
-    iget-wide v0, v0, Lz39;->N0:J
-
-    check-cast p3, Ldh9;
-
-    iget-object p3, p3, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->B0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lpv7;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

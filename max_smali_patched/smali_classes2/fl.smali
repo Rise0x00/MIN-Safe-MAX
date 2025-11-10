@@ -1,27 +1,43 @@
-.class public interface abstract Lfl;
+.class public final Lfl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnl;
+
+# static fields
+.field public static final b:Ly7d;
 
 
-# virtual methods
-.method public getFailParser()Lpl7;
-    .locals 1
+# instance fields
+.field public final a:Landroid/content/Context;
 
-    sget-object v0, Lmf2;->b:Lmf2;
 
-    return-object v0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ly7d;
+
+    const-string v1, "main-([0-9]+)\\.txt"
+
+    invoke-direct {v0, v1}, Ly7d;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lfl;->b:Ly7d;
+
+    return-void
 .end method
 
-.method public abstract getOkParser()Lpl7;
-.end method
-
-.method public getScopeAfter()Lul;
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    sget-object v0, Lul;->a:Lul;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
+    iput-object p1, p0, Lfl;->a:Landroid/content/Context;
+
+    const/4 p1, 0x1
+
+    const/16 v0, 0x64
+
+    invoke-static {p2, p1, v0}, Liwi;->c(III)I
+
+    return-void
 .end method

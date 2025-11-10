@@ -1,55 +1,74 @@
-.class public final synthetic Lre4;
-.super Ljava/lang/Object;
+.class public final Lre4;
+.super Lue4;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/media/AudioRouting$OnRoutingChangedListener;
-
-
-# instance fields
-.field public final synthetic a:Ltz7;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ltz7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lre4;->a:Ltz7;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final onRoutingChanged(Landroid/media/AudioRouting;)V
+.method public final n(Lib5;)I
+    .locals 0
+
+    invoke-virtual {p1}, Lib5;->y()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final o()Lnc7;
     .locals 2
 
-    iget-object v0, p0, Lre4;->a:Ltz7;
+    new-instance v0, Lnc7;
 
-    iget-object v1, v0, Ltz7;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v1, Lre4;
+    const/4 v1, 0x0
 
-    if-nez v1, :cond_0
+    iput v1, v0, Lnc7;->a:I
+
+    iput-boolean v1, v0, Lnc7;->b:Z
+
+    iput-boolean v1, v0, Lnc7;->c:Z
+
+    return-object v0
+.end method
+
+.method public final declared-synchronized s(Lib5;I)Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-static {p2}, Lgj0;->b(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Landroid/media/AudioRouting;->getRoutedDevice()Landroid/media/AudioDeviceInfo;
+    iget-object v0, p0, Lue4;->g:Lmo7;
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2}, Lmo7;->e(Lib5;I)Z
 
-    if-eqz p1, :cond_1
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, v0, Ltz7;->b:Ljava/lang/Object;
-
-    check-cast v0, Lv20;
-
-    invoke-virtual {v0, p1}, Lv20;->c(Landroid/media/AudioDeviceInfo;)V
-
-    :cond_1
     :goto_0
-    return-void
+    monitor-exit p0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

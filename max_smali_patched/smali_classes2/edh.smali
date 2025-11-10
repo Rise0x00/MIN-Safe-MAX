@@ -1,163 +1,104 @@
-.class public abstract Ledh;
+.class public final synthetic Ledh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfl;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field private final b:Ljava/lang/String;
-
-.field private final c:Ljava/lang/String;
-
-.field private final d:Lpl7;
-
-.field private final e:Landroid/net/Uri;
-
-.field private final f:Ltl;
-
-.field private final g:I
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
     .locals 0
 
+    iput p2, p0, Ledh;->a:I
+
+    iput-object p1, p0, Ledh;->b:Lone/me/sdk/arch/Widget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ledh;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ledh;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ledh;->c:Ljava/lang/String;
-
-    sget-object p1, Lsl7;->a:Lj2a;
-
-    iput-object p1, p0, Ledh;->d:Lpl7;
-
-    const-string p1, "log.externalLog"
-
-    invoke-static {p1}, Lbm;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ledh;->e:Landroid/net/Uri;
-
-    sget-object p1, Ltl;->c:Ltl;
-
-    iput-object p1, p0, Ledh;->f:Ltl;
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Ledh;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lcm7;)V
-.end method
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-.method public getOkParser()Lpl7;
-    .locals 1
-
-    iget-object v0, p0, Ledh;->d:Lpl7;
-
-    return-object v0
-.end method
-
-.method public getPriority()I
-    .locals 1
-
-    iget v0, p0, Ledh;->g:I
-
-    return v0
-.end method
-
-.method public getScope()Ltl;
-    .locals 1
-
-    iget-object v0, p0, Ledh;->f:Ltl;
-
-    return-object v0
-.end method
-
-.method public getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Ledh;->e:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public shouldGzip()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public shouldPost()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public shouldReport()Z
-    .locals 1
+    iget p1, p0, Ledh;->a:I
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    iget-object v1, p0, Ledh;->b:Lone/me/sdk/arch/Widget;
 
-.method public writeParams(Lcm7;)V
-    .locals 1
+    packed-switch p1, :pswitch_data_0
 
-    const-string v0, "collector"
+    check-cast v1, Lone/me/login/welcome/WelcomeScreen;
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    iget-object p1, v1, Lone/me/login/welcome/WelcomeScreen;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Ledh;->a:Ljava/lang/String;
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
+    move-result-object p1
 
-    const-string v0, "data"
+    check-cast p1, Lpj7;
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Lcm7;->s()V
+    new-instance v1, Lone/me/login/inputphone/InputPhoneScreen;
 
-    const-string v0, "application"
+    invoke-direct {v1}, Lone/me/login/inputphone/InputPhoneScreen;-><init>()V
 
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
+    invoke-static {v1, v0, v0}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
 
-    iget-object v0, p0, Ledh;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
+    const-string v1, "InputPhoneScreen"
 
-    const-string v0, "platform"
-
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
-
-    iget-object v0, p0, Ledh;->c:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Lcm7;->h(Ljava/lang/String;)V
-
-    const-string v0, "items"
-
-    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
-
-    invoke-virtual {p0, p1}, Ledh;->a(Lcm7;)V
-
-    invoke-interface {p1}, Lcm7;->q()V
+    invoke-virtual {p1, v0, v1}, Lpj7;->b(Lbjd;Ljava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    check-cast v1, Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Les7;
+
+    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->M0()Ldfh;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lteh;
+
+    invoke-direct {v1, p1, v0}, Lteh;-><init>(Ldfh;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x1
+
+    invoke-static {p1, v0, v1, v2}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
+
+    move-result-object v0
+
+    iget-object v1, p1, Ldfh;->H0:Lpqe;
+
+    sget-object v2, Ldfh;->n1:[Les7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2, v0}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

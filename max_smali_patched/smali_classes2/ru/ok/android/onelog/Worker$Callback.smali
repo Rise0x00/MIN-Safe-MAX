@@ -45,73 +45,43 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)Z
-    .locals 3
+    .locals 2
 
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_3
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_2
 
-    const/16 v2, 0x10
+    const/16 p1, 0x10
 
-    if-eq v0, v2, :cond_3
+    if-eq v0, p1, :cond_1
 
-    const/16 v2, 0x11
+    const/16 p1, 0x11
 
-    if-eq v0, v2, :cond_2
-
-    const/16 v2, 0x20
-
-    if-eq v0, v2, :cond_1
-
-    const/16 v2, 0x21
-
-    if-eq v0, v2, :cond_0
+    if-eq v0, p1, :cond_0
 
     const/4 p1, 0x0
 
     return p1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/android/onelog/OneLogAgent;
-
-    invoke-static {v0, p1}, Lru/ok/android/onelog/Worker;->access$600(Lru/ok/android/onelog/Worker;Lru/ok/android/onelog/OneLogAgent;)V
-
-    return v1
-
-    :cond_1
-    iget-object v0, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/android/onelog/OneLogAgent;
-
-    invoke-static {v0, p1}, Lru/ok/android/onelog/Worker;->access$500(Lru/ok/android/onelog/Worker;Lru/ok/android/onelog/OneLogAgent;)V
-
-    return v1
-
-    :cond_2
     iget-object p1, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
 
     invoke-static {p1}, Lru/ok/android/onelog/Worker;->access$400(Lru/ok/android/onelog/Worker;)V
 
     return v1
 
-    :cond_3
+    :cond_1
     iget-object p1, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
 
     invoke-static {p1}, Lru/ok/android/onelog/Worker;->access$300(Lru/ok/android/onelog/Worker;)V
 
     return v1
 
-    :cond_4
+    :cond_2
     iget-object v0, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -122,7 +92,7 @@
 
     return v1
 
-    :cond_5
+    :cond_3
     iget-object v0, p0, Lru/ok/android/onelog/Worker$Callback;->this$0:Lru/ok/android/onelog/Worker;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;

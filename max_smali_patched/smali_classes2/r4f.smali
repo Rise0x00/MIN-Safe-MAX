@@ -1,35 +1,25 @@
-.class public abstract synthetic Lr4f;
-.super Ljava/lang/Object;
+.class public final Lr4f;
+.super Lzwd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final c:Ljava/util/List;
+
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    invoke-direct {p0, v0, p3}, Lzwd;-><init>(ILjava/lang/String;)V
 
-    move-result-object v1
+    iput-object p4, p0, Lr4f;->c:Ljava/util/List;
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v0, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v1, Lr4f;->$EnumSwitchMapping$0:[I
+    iput-wide p1, p0, Lr4f;->d:J
 
     return-void
 .end method

@@ -1,48 +1,80 @@
 .class public final Li5e;
-.super Lnz3;
+.super Ld6e;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic g:I
 
-.field public final synthetic Y:Lwe9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final h:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JLjava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Li5e;->Y:Lwe9;
+    .line 1
+    iput p4, p0, Li5e;->g:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ld6e;-><init>(J)V
+
+    iput-object p3, p0, Li5e;->h:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr99;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Li5e;->g:I
+
+    const-wide/16 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, v0, v1}, Ld6e;-><init>(J)V
+
+    .line 3
+    iput-object p1, p0, Li5e;->h:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Le6e;
+    .locals 2
 
-    iput-object p1, p0, Li5e;->o:Ljava/lang/Object;
+    iget v0, p0, Li5e;->g:I
 
-    iget p1, p0, Li5e;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lf6e;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, p0}, Lf6e;-><init>(Li5e;)V
 
-    iput p1, p0, Li5e;->X:I
+    return-object v0
 
-    iget-object p1, p0, Li5e;->Y:Lwe9;
+    :pswitch_0
+    new-instance v0, Lj5e;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lwe9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, p0, v1}, Lj5e;-><init>(Li5e;B)V
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
+    :pswitch_1
+    new-instance v0, Lj5e;
+
+    invoke-direct {v0, p0}, Lj5e;-><init>(Li5e;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

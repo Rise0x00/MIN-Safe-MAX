@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lir3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lwo3;"
+        "Lir3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "it",
-        "Loyf;",
+        "Lybg;",
         "accept",
         "(J)V",
         "<anonymous>"
@@ -84,7 +84,7 @@
     .line 2
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$scheduleTurnOff$1;->this$0:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lpmc;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lcwc;
 
     move-result-object p1
 
@@ -92,17 +92,17 @@
 
     const-string v0, "Turning wordspotter off"
 
-    invoke-interface {p1, p2, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, p2, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$scheduleTurnOff$1;->this$0:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getCall$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lfz0;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getCall$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lvz0;
 
     move-result-object p1
 
     .line 4
-    new-instance p2, Lfo7;
+    new-instance p2, Ltt7;
 
     .line 5
     new-instance v0, Lru/ok/android/externcalls/sdk/audio/a;
@@ -114,10 +114,10 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {p2, v1, v2, v0}, Lfo7;-><init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
+    invoke-direct {p2, v1, v2, v0}, Ltt7;-><init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
 
     .line 7
-    iget-object v0, p1, Lfz0;->b0:Lk8e;
+    iget-object v0, p1, Lvz0;->e0:Ljke;
 
     if-nez v0, :cond_0
 
@@ -125,13 +125,13 @@
 
     .line 8
     :cond_0
-    sget-object v1, Lfz0;->f1:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, p1, Lvz0;->c:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lk5;
+    new-instance v2, Lhj;
 
-    const/16 v3, 0x8
+    const/4 v3, 0x7
 
-    invoke-direct {v2, p1, v0, p2, v3}, Lk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p1, v0, p2, v3}, Lhj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

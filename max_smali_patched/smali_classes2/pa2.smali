@@ -1,266 +1,138 @@
 .class public final Lpa2;
-.super Lxl;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Loaf;
-.implements Lcab;
 
 
 # instance fields
-.field public final X:J
+.field public c:Ljava/util/List;
 
-.field public final o:J
+.field public d:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
+.method public constructor <init>(Ljf9;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
 
-    iput-wide p3, p0, Lpa2;->o:J
+    iget-object p1, p0, Lpa2;->c:Ljava/util/List;
 
-    iput-wide p5, p0, Lpa2;->X:J
+    if-nez p1, :cond_0
 
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p1, p0, Lpa2;->c:Ljava/util/List;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 3
+.method public final d(Ljf9;Ljava/lang/String;)V
+    .locals 5
 
-    invoke-virtual {p0}, Lxl;->m()Lub2;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    const-string v0, "commands"
 
-    iget-wide v1, p0, Lpa2;->o:J
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_2
 
-    if-eqz v0, :cond_1
+    const-string v0, "contacts"
 
-    iget-object v0, v0, Lm82;->b:Lpc2;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lpc2;->c:Lnc2;
+    move-result p2
 
-    sget-object v1, Lnc2;->o:Lnc2;
+    if-nez p2, :cond_0
 
-    if-eq v0, v1, :cond_0
+    invoke-virtual {p1}, Ljf9;->v()V
 
-    sget-object v1, Lnc2;->X:Lnc2;
-
-    if-ne v0, v1, :cond_1
+    return-void
 
     :cond_0
-    const/4 v0, 0x3
+    new-instance p2, Ljava/util/HashMap;
 
-    return v0
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Lpa2;->d:Ljava/util/HashMap;
+
+    invoke-static {p1}, Le0i;->r(Ljf9;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_1
+
+    invoke-virtual {p1}, Ljf9;->r0()J
+
+    move-result-wide v1
+
+    invoke-static {p1}, Lgu3;->g(Ljf9;)Lgu3;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lpa2;->d:Ljava/util/HashMap;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_1
-    const/4 v0, 0x1
+    return-void
 
-    return v0
-.end method
+    :cond_2
+    new-instance p2, Le9a;
 
-.method public final d(Ll9f;)V
-    .locals 7
+    const/4 v0, 0x7
 
-    invoke-virtual {p0}, Lxl;->l()Lov0;
+    invoke-direct {p2, v0}, Le9a;-><init>(I)V
+
+    invoke-static {p1, p2}, Le0i;->w(Ljf9;Lhx9;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    new-instance v0, La33;
-
-    iget-wide v1, p0, Lpa2;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x7c
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, La33;-><init>(Ljava/util/Collection;ZZLhn4;Lrqb;I)V
-
-    invoke-virtual {p1, v0}, Lov0;->c(Ljava/lang/Object;)V
+    iput-object p1, p0, Lpa2;->c:Ljava/util/List;
 
     return-void
 .end method
 
-.method public final e(Lv8f;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p1, p1, Lv8f;->b:Ljava/lang/String;
+    iget-object v0, p0, Lpa2;->c:Ljava/util/List;
 
-    invoke-static {p1}, Lgh5;->v(Ljava/lang/String;)Z
+    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
 
-    move-result p1
+    move-result v0
 
-    if-nez p1, :cond_0
+    iget-object v1, p0, Lpa2;->d:Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Lpa2;->f()V
+    invoke-static {v1}, Lqyh;->e(Ljava/util/Map;)I
 
-    :cond_0
-    return-void
-.end method
+    move-result v1
 
-.method public final f()V
-    .locals 10
+    const-string v2, ", contacts="
 
-    invoke-virtual {p0}, Lxl;->s()Licf;
+    const-string v3, "}"
 
-    move-result-object v0
+    const-string v4, "{commands="
 
-    iget-wide v1, p0, Lxl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Licf;->d(J)V
-
-    invoke-virtual {p0}, Lxl;->m()Lub2;
+    invoke-static {v4, v0, v2, v1, v3}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    iget-wide v1, p0, Lpa2;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-object v0, v0, Lpc2;->c:Lnc2;
-
-    sget-object v3, Lnc2;->o:Lnc2;
-
-    if-eq v0, v3, :cond_0
-
-    sget-object v3, Lnc2;->X:Lnc2;
-
-    if-ne v0, v3, :cond_1
-
-    :cond_0
-    invoke-virtual {p0}, Lxl;->m()Lub2;
-
-    move-result-object v0
-
-    sget-object v3, Lnc2;->a:Lnc2;
-
-    invoke-virtual {v0, v1, v2, v3}, Lub2;->i(JLnc2;)Lm82;
-
-    :cond_1
-    invoke-virtual {p0}, Lxl;->l()Lov0;
-
-    move-result-object v0
-
-    new-instance v3, La33;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x7c
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v3 .. v9}, La33;-><init>(Ljava/util/Collection;ZZLhn4;Lrqb;I)V
-
-    invoke-virtual {v0, v3}, Lov0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatClose;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatClose;-><init>()V
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClose;->requestId:J
-
-    iget-wide v1, p0, Lpa2;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClose;->chatId:J
-
-    iget-wide v1, p0, Lpa2;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatClose;->chatServerId:J
-
-    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lxl;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Ldab;
-    .locals 1
-
-    sget-object v0, Ldab;->E0:Ldab;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Li9f;
-    .locals 4
-
-    new-instance v0, Llt;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v1, v2}, Llt;-><init>(Ln0b;I)V
-
-    const-string v1, "chatId"
-
-    iget-wide v2, p0, Lpa2;->X:J
-
-    invoke-virtual {v0, v2, v3, v1}, Li9f;->j(JLjava/lang/String;)V
 
     return-object v0
 .end method

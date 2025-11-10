@@ -1,103 +1,86 @@
-.class public abstract synthetic Lon8;
+.class public final Lon8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/MediaBarWidget;I)V
+    .locals 0
 
-    invoke-static {}, Lnj2;->values()[Lnj2;
+    iput p2, p0, Lon8;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Lon8;->b:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v3, 0x2
-
-    :try_start_1
-    aput v3, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v4, 0x3
-
-    :try_start_2
-    aput v4, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v5, 0x4
-
-    :try_start_3
-    aput v5, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lon8;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Lh10;->values()[Lh10;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v3, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    aput v4, v0, v4
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    aput v5, v0, v3
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    const/4 v1, 0x5
-
-    :try_start_8
-    aput v1, v0, v5
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    sput-object v0, Lon8;->$EnumSwitchMapping$1:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
+
+    iget p2, p0, Lon8;->a:I
+
+    iget-object p3, p0, Lon8;->b:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
+
+    invoke-virtual {p3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lsm8;->w()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->I0()Lkwb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lkwb;->k()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->I0()Lkwb;
+
+    move-result-object p1
+
+    sget p2, Lkwb;->v0:I
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lkwb;->setHalfScreen(Lej6;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    invoke-static {p3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->z0(Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

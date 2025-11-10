@@ -1,127 +1,53 @@
 .class public final Lrp7;
-.super Lnxc;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final J0:Lru/ok/messages/settings/view/LedSeekBar;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final K0:Lru/ok/messages/settings/FrgBaseSettings;
+.field public final synthetic Y:Lup7;
 
-.field public final L0:Landroidx/appcompat/widget/SwitchCompat;
+.field public Z:I
 
-.field public final M0:Landroid/view/View;
+.field public d:Ljava/lang/Object;
 
-.field public final N0:Landroid/view/View;
-
-.field public final O0:Landroid/widget/TextView;
-
-.field public P0:Lwxd;
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-    .locals 4
+.method public constructor <init>(Lup7;Lp14;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lnxc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lrp7;->Y:Lup7;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    sget-object v1, Lvaf;->a0:Ls5f;
 
-    invoke-static {v0}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object v0
+    iput-object p1, p0, Lrp7;->X:Ljava/lang/Object;
 
-    iput-object p2, p0, Lrp7;->K0:Lru/ok/messages/settings/FrgBaseSettings;
+    iget p1, p0, Lrp7;->Z:I
 
-    sget v1, Ljgc;->row_setting_led__ls_seekbar:I
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    or-int/2addr p1, v0
 
-    move-result-object v1
+    iput p1, p0, Lrp7;->Z:I
 
-    check-cast v1, Lru/ok/messages/settings/view/LedSeekBar;
+    iget-object p1, p0, Lrp7;->Y:Lup7;
 
-    iput-object v1, p0, Lrp7;->J0:Lru/ok/messages/settings/view/LedSeekBar;
+    const/4 v0, 0x0
 
-    sget v2, Ljgc;->row_setting_led__title:I
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lrp7;->O0:Landroid/widget/TextView;
-
-    iget v3, v0, Lvaf;->F:I
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget v2, Ljgc;->row_setting_led__cb_check:I
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/appcompat/widget/SwitchCompat;
-
-    iput-object v2, p0, Lrp7;->L0:Landroidx/appcompat/widget/SwitchCompat;
-
-    invoke-static {v0, v2}, Lv4b;->d(Lvaf;Landroidx/appcompat/widget/SwitchCompat;)V
-
-    sget v2, Ljgc;->row_setting__separator:I
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lrp7;->M0:Landroid/view/View;
-
-    iget v3, v0, Lvaf;->H:I
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget v2, Ljgc;->row_setting_led__separator_small:I
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    iget v0, v0, Lvaf;->K:I
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget v0, Ljgc;->row_setting_led__ll_led_container:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lrp7;->N0:Landroid/view/View;
-
-    new-instance v0, Llk4;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, p0, v2, p2}, Llk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v0}, Lru/ok/messages/settings/view/LedSeekBar;->setListener(Lqp7;)V
-
-    sget p2, Ljgc;->row_setting_led__ll_root:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0, p0}, Lup7;->d(Lej6;Lp14;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance p2, Lt16;
-
-    invoke-direct {p2, v2, p0}, Lt16;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
+    return-object p1
 .end method

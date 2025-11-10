@@ -1,23 +1,23 @@
 .class public final Lm8g;
-.super Ljava/lang/Object;
+.super Ladi;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lds3;
+# static fields
+.field public static final c:Lm8g;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public d:Ljava/lang/String;
+    new-instance v0, Lm8g;
 
-.field public e:I
+    const/16 v1, 0xb
 
-.field public f:J
+    invoke-direct {v0, v1}, Ladi;-><init>(I)V
 
-.field public g:Ljava/util/List;
+    sput-object v0, Lm8g;->c:Lm8g;
 
-.field public h:B
-
-.field public i:J
+    return-void
+.end method

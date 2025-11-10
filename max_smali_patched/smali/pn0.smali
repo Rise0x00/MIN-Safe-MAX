@@ -1,156 +1,717 @@
-.class public final Lpn0;
-.super La80;
+.class public abstract Lpn0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final synthetic a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;)V
+.method public constructor <init>(Lkn0;Lnn0;JJJJJI)V
     .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lpn0;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    .line 2
+    iput-object p2, p0, Lpn0;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    .line 3
+    iput p13, p0, Lpn0;->b:I
 
-    iput-object v0, p0, Lpn0;->a:Ljava/lang/ref/WeakReference;
+    move-object p2, p1
+
+    .line 4
+    new-instance p1, Lhn0;
+
+    invoke-direct/range {p1 .. p12}, Lhn0;-><init>(Lkn0;JJJJJ)V
+
+    iput-object p1, p0, Lpn0;->c:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Lln0;Lon0;JJJJJI)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lpn0;->a:I
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p2, p0, Lpn0;->d:Ljava/lang/Object;
+
+    .line 7
+    iput p13, p0, Lpn0;->b:I
+
+    move-object p2, p1
+
+    .line 8
+    new-instance p1, Lin0;
+
+    invoke-direct/range {p1 .. p12}, Lin0;-><init>(Lln0;JJJJJ)V
+
+    iput-object p1, p0, Lpn0;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static c(Lzl5;JLs7;)I
+    .locals 2
+
+    invoke-interface {p0}, Lzl5;->getPosition()J
+
+    move-result-wide v0
+
+    cmp-long p0, p1, v0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    iput-wide p1, p3, Ls7;->a:J
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static d(Lam5;JLs7;)I
+    .locals 2
+
+    invoke-interface {p0}, Lam5;->getPosition()J
+
+    move-result-wide v0
+
+    cmp-long p0, p1, v0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    iput-wide p1, p3, Ls7;->a:J
+
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/CharSequence;)V
-    .locals 2
+.method public a(Lzl5;Ls7;)I
+    .locals 27
 
-    iget-object v0, p0, Lpn0;->a:Ljava/lang/ref/WeakReference;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    move-object/from16 v1, p1
 
-    move-result-object v1
+    move-object/from16 v2, p2
+
+    iget-object v3, v0, Lpn0;->d:Ljava/lang/Object;
+
+    check-cast v3, Lnn0;
+
+    :goto_0
+    iget-object v4, v0, Lpn0;->e:Ljava/lang/Object;
+
+    check-cast v4, Ljn0;
+
+    invoke-static {v4}, Lggi;->f(Ljava/lang/Object;)V
+
+    iget-wide v5, v4, Ljn0;->f:J
+
+    iget-wide v7, v4, Ljn0;->g:J
+
+    iget-wide v9, v4, Ljn0;->h:J
+
+    sub-long/2addr v7, v5
+
+    iget v11, v0, Lpn0;->b:I
+
+    int-to-long v11, v11
+
+    cmp-long v7, v7, v11
+
+    const/4 v8, 0x0
+
+    if-gtz v7, :cond_0
+
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lnn0;->n()V
+
+    invoke-static {v1, v5, v6, v2}, Lpn0;->c(Lzl5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_0
+    invoke-interface {v1}, Lzl5;->getPosition()J
+
+    move-result-wide v5
+
+    sub-long v5, v9, v5
+
+    const-wide/16 v11, 0x0
+
+    cmp-long v7, v5, v11
+
+    if-ltz v7, :cond_6
+
+    const-wide/32 v13, 0x40000
+
+    cmp-long v7, v5, v13
+
+    if-gtz v7, :cond_6
+
+    long-to-int v5, v5
+
+    invoke-interface {v1, v5}, Lzl5;->z(I)V
+
+    invoke-interface {v1}, Lzl5;->y()V
+
+    iget-wide v5, v4, Ljn0;->b:J
+
+    invoke-interface {v3, v1, v5, v6}, Lnn0;->o(Lzl5;J)Lmn0;
+
+    move-result-object v5
+
+    iget v6, v5, Lmn0;->a:I
+
+    move-wide v15, v11
+
+    iget-wide v11, v5, Lmn0;->b:J
+
+    move-wide/from16 v17, v13
+
+    iget-wide v13, v5, Lmn0;->c:J
+
+    const/4 v5, -0x3
+
+    if-eq v6, v5, :cond_5
+
+    const/4 v5, -0x2
+
+    if-eq v6, v5, :cond_4
+
+    const/4 v5, -0x1
+
+    if-eq v6, v5, :cond_3
+
+    if-nez v6, :cond_2
+
+    invoke-interface {v1}, Lzl5;->getPosition()J
+
+    move-result-wide v4
+
+    sub-long v4, v13, v4
+
+    cmp-long v6, v4, v15
+
+    if-ltz v6, :cond_1
+
+    cmp-long v6, v4, v17
+
+    if-gtz v6, :cond_1
+
+    long-to-int v4, v4
+
+    invoke-interface {v1, v4}, Lzl5;->z(I)V
+
+    :cond_1
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lnn0;->n()V
+
+    invoke-static {v1, v13, v14, v2}, Lpn0;->c(Lzl5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_2
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Invalid case"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_3
+    iput-wide v11, v4, Ljn0;->e:J
+
+    iput-wide v13, v4, Ljn0;->g:J
+
+    iget-wide v5, v4, Ljn0;->b:J
+
+    iget-wide v7, v4, Ljn0;->d:J
+
+    iget-wide v9, v4, Ljn0;->f:J
+
+    move-wide v15, v5
+
+    iget-wide v5, v4, Ljn0;->c:J
+
+    move-wide/from16 v25, v5
+
+    move-wide/from16 v17, v7
+
+    move-wide/from16 v21, v9
+
+    move-wide/from16 v19, v11
+
+    move-wide/from16 v23, v13
+
+    invoke-static/range {v15 .. v26}, Ljn0;->a(JJJJJJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Ljn0;->h:J
+
+    goto/16 :goto_0
+
+    :cond_4
+    move-wide v5, v11
+
+    move-wide v7, v13
+
+    iput-wide v5, v4, Ljn0;->d:J
+
+    iput-wide v7, v4, Ljn0;->f:J
+
+    iget-wide v9, v4, Ljn0;->b:J
+
+    iget-wide v11, v4, Ljn0;->e:J
+
+    iget-wide v13, v4, Ljn0;->g:J
+
+    move-wide/from16 v19, v5
+
+    iget-wide v5, v4, Ljn0;->c:J
+
+    move-wide/from16 v25, v5
+
+    move-wide/from16 v21, v7
+
+    move-wide v15, v9
+
+    move-wide/from16 v23, v13
+
+    move-wide/from16 v17, v19
+
+    move-wide/from16 v19, v11
+
+    invoke-static/range {v15 .. v26}, Ljn0;->a(JJJJJJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Ljn0;->h:J
+
+    goto/16 :goto_0
+
+    :cond_5
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lnn0;->n()V
+
+    invoke-static {v1, v9, v10, v2}, Lpn0;->c(Lzl5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_6
+    invoke-static {v1, v9, v10, v2}, Lpn0;->c(Lzl5;JLs7;)I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public b(Lam5;Ls7;)I
+    .locals 27
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    iget-object v3, v0, Lpn0;->d:Ljava/lang/Object;
+
+    check-cast v3, Lon0;
+
+    :goto_0
+    iget-object v4, v0, Lpn0;->e:Ljava/lang/Object;
+
+    check-cast v4, Ljn0;
+
+    invoke-static {v4}, Ligi;->i(Ljava/lang/Object;)V
+
+    iget-wide v5, v4, Ljn0;->f:J
+
+    iget-wide v7, v4, Ljn0;->g:J
+
+    iget-wide v9, v4, Ljn0;->h:J
+
+    sub-long/2addr v7, v5
+
+    iget v11, v0, Lpn0;->b:I
+
+    int-to-long v11, v11
+
+    cmp-long v7, v7, v11
+
+    const/4 v8, 0x0
+
+    if-gtz v7, :cond_0
+
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lon0;->n()V
+
+    invoke-static {v1, v5, v6, v2}, Lpn0;->d(Lam5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_0
+    invoke-interface {v1}, Lam5;->getPosition()J
+
+    move-result-wide v5
+
+    sub-long v5, v9, v5
+
+    const-wide/16 v11, 0x0
+
+    cmp-long v7, v5, v11
+
+    if-ltz v7, :cond_6
+
+    const-wide/32 v13, 0x40000
+
+    cmp-long v7, v5, v13
+
+    if-gtz v7, :cond_6
+
+    long-to-int v5, v5
+
+    invoke-interface {v1, v5}, Lam5;->z(I)V
+
+    invoke-interface {v1}, Lam5;->y()V
+
+    iget-wide v5, v4, Ljn0;->b:J
+
+    invoke-interface {v3, v1, v5, v6}, Lon0;->p(Lam5;J)Lmn0;
+
+    move-result-object v5
+
+    iget v6, v5, Lmn0;->a:I
+
+    move-wide v15, v11
+
+    iget-wide v11, v5, Lmn0;->b:J
+
+    move-wide/from16 v17, v13
+
+    iget-wide v13, v5, Lmn0;->c:J
+
+    const/4 v5, -0x3
+
+    if-eq v6, v5, :cond_5
+
+    const/4 v5, -0x2
+
+    if-eq v6, v5, :cond_4
+
+    const/4 v5, -0x1
+
+    if-eq v6, v5, :cond_3
+
+    if-nez v6, :cond_2
+
+    invoke-interface {v1}, Lam5;->getPosition()J
+
+    move-result-wide v4
+
+    sub-long v4, v13, v4
+
+    cmp-long v6, v4, v15
+
+    if-ltz v6, :cond_1
+
+    cmp-long v6, v4, v17
+
+    if-gtz v6, :cond_1
+
+    long-to-int v4, v4
+
+    invoke-interface {v1, v4}, Lam5;->z(I)V
+
+    :cond_1
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lon0;->n()V
+
+    invoke-static {v1, v13, v14, v2}, Lpn0;->d(Lam5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_2
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Invalid case"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_3
+    iput-wide v11, v4, Ljn0;->e:J
+
+    iput-wide v13, v4, Ljn0;->g:J
+
+    iget-wide v5, v4, Ljn0;->b:J
+
+    iget-wide v7, v4, Ljn0;->d:J
+
+    iget-wide v9, v4, Ljn0;->f:J
+
+    move-wide v15, v5
+
+    iget-wide v5, v4, Ljn0;->c:J
+
+    move-wide/from16 v25, v5
+
+    move-wide/from16 v17, v7
+
+    move-wide/from16 v21, v9
+
+    move-wide/from16 v19, v11
+
+    move-wide/from16 v23, v13
+
+    invoke-static/range {v15 .. v26}, Ljn0;->b(JJJJJJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Ljn0;->h:J
+
+    goto/16 :goto_0
+
+    :cond_4
+    move-wide v5, v11
+
+    move-wide v7, v13
+
+    iput-wide v5, v4, Ljn0;->d:J
+
+    iput-wide v7, v4, Ljn0;->f:J
+
+    iget-wide v9, v4, Ljn0;->b:J
+
+    iget-wide v11, v4, Ljn0;->e:J
+
+    iget-wide v13, v4, Ljn0;->g:J
+
+    move-wide/from16 v19, v5
+
+    iget-wide v5, v4, Ljn0;->c:J
+
+    move-wide/from16 v25, v5
+
+    move-wide/from16 v21, v7
+
+    move-wide v15, v9
+
+    move-wide/from16 v23, v13
+
+    move-wide/from16 v17, v19
+
+    move-wide/from16 v19, v11
+
+    invoke-static/range {v15 .. v26}, Ljn0;->b(JJJJJJ)J
+
+    move-result-wide v5
+
+    iput-wide v5, v4, Ljn0;->h:J
+
+    goto/16 :goto_0
+
+    :cond_5
+    iput-object v8, v0, Lpn0;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lon0;->n()V
+
+    invoke-static {v1, v9, v10, v2}, Lpn0;->d(Lam5;JLs7;)I
+
+    move-result v1
+
+    return v1
+
+    :cond_6
+    invoke-static {v1, v9, v10, v2}, Lpn0;->d(Lam5;JLs7;)I
+
+    move-result v1
+
+    return v1
+.end method
+
+.method public final e(J)V
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    move-wide/from16 v2, p1
+
+    iget v1, v0, Lpn0;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    iget-object v1, v0, Lpn0;->e:Ljava/lang/Object;
+
+    check-cast v1, Ljn0;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-wide v4, v1, Ljn0;->a:J
 
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->l:Z
+    cmp-long v1, v4, v2
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    new-instance v1, Lbn0;
-
-    invoke-direct {v1, p1, p2}, Lbn0;-><init>(ILjava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v1}, Landroidx/biometric/BiometricViewModel;->f(Lbn0;)V
+    goto :goto_0
 
     :cond_0
+    new-instance v1, Ljn0;
+
+    iget-object v4, v0, Lpn0;->c:Ljava/lang/Object;
+
+    check-cast v4, Lin0;
+
+    iget-object v5, v4, Lin0;->a:Lln0;
+
+    invoke-interface {v5, v2, v3}, Lln0;->b(J)J
+
+    move-result-wide v5
+
+    move-wide v8, v5
+
+    iget-wide v6, v4, Lin0;->c:J
+
+    move-wide v10, v8
+
+    iget-wide v8, v4, Lin0;->d:J
+
+    move-wide v12, v10
+
+    iget-wide v10, v4, Lin0;->o:J
+
+    iget-wide v4, v4, Lin0;->X:J
+
+    const/4 v14, 0x1
+
+    move-wide v15, v12
+
+    move-wide v12, v4
+
+    move-wide v4, v15
+
+    invoke-direct/range {v1 .. v14}, Ljn0;-><init>(JJJJJJI)V
+
+    iput-object v1, v0, Lpn0;->e:Ljava/lang/Object;
+
+    :goto_0
     return-void
-.end method
 
-.method public final b(Lmn0;)V
-    .locals 5
+    :pswitch_0
+    iget-object v1, v0, Lpn0;->e:Ljava/lang/Object;
 
-    iget-object v0, p0, Lpn0;->a:Ljava/lang/ref/WeakReference;
+    check-cast v1, Ljn0;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v1
+    iget-wide v4, v1, Ljn0;->a:J
 
-    if-eqz v1, :cond_3
+    cmp-long v1, v4, v2
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object v1
-
-    check-cast v1, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
-
-    if-eqz v1, :cond_3
-
-    iget v1, p1, Lmn0;->b:I
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_1
-
-    new-instance v1, Lmn0;
-
-    iget-object p1, p1, Lmn0;->a:Lrtd;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/biometric/BiometricViewModel;
-
-    invoke-virtual {v3}, Landroidx/biometric/BiometricViewModel;->e()I
-
-    move-result v3
-
-    and-int/lit16 v4, v3, 0x7fff
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v3}, Ll74;->y(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const/4 v2, 0x2
-
-    :cond_0
-    invoke-direct {v1, p1, v2}, Lmn0;-><init>(Lrtd;I)V
-
-    move-object p1, v1
+    goto :goto_1
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    new-instance v1, Ljn0;
 
-    move-result-object v0
+    iget-object v4, v0, Lpn0;->c:Ljava/lang/Object;
 
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
+    check-cast v4, Lhn0;
 
-    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->o:Let9;
+    iget-object v5, v4, Lhn0;->a:Lkn0;
 
-    if-nez v1, :cond_2
+    invoke-interface {v5, v2, v3}, Lkn0;->b(J)J
 
-    new-instance v1, Let9;
+    move-result-wide v5
 
-    invoke-direct {v1}, Lfy7;-><init>()V
+    move-wide v8, v5
 
-    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->o:Let9;
+    iget-wide v6, v4, Lhn0;->c:J
 
-    :cond_2
-    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->o:Let9;
+    move-wide v10, v8
 
-    invoke-static {v0, p1}, Landroidx/biometric/BiometricViewModel;->j(Let9;Ljava/lang/Object;)V
+    iget-wide v8, v4, Lhn0;->d:J
 
-    :cond_3
+    move-wide v12, v10
+
+    iget-wide v10, v4, Lhn0;->e:J
+
+    iget-wide v4, v4, Lhn0;->f:J
+
+    const/4 v14, 0x0
+
+    move-wide v15, v12
+
+    move-wide v12, v4
+
+    move-wide v4, v15
+
+    invoke-direct/range {v1 .. v14}, Ljn0;-><init>(JJJJJJI)V
+
+    iput-object v1, v0, Lpn0;->e:Ljava/lang/Object;
+
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

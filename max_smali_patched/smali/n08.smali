@@ -1,143 +1,232 @@
 .class public final Ln08;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lu47;
+.implements Lgj6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public X:I
 
-.field public final b:Le88;
+.field public synthetic Y:Lgz5;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Le88;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ln08;->o:I
 
-    iput-object p1, p0, Ln08;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Ln08;->b:Le88;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lw75;ILh8c;Ls47;)Lq73;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object p2, p0, Ln08;->a:Landroid/content/Context;
+    iget v0, p0, Ln08;->o:I
 
-    const/4 p3, 0x0
+    check-cast p1, Lgz5;
 
-    :try_start_0
-    iget-object p1, p1, Lw75;->y0:Ljava/lang/String;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-eqz p1, :cond_3
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    new-instance v0, Ln08;
 
-    move-result-object p1
+    const/4 v1, 0x3
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+    const/4 v2, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v1, p3, v2}, Ln08;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const/4 p4, 0x0
+    iput-object p1, v0, Ln08;->Y:Lgz5;
 
-    invoke-interface {p1, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-object p2, v0, Ln08;->Z:Ljava/lang/Object;
 
-    move-result-object p1
+    sget-object p1, Lybg;->a:Lybg;
 
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-static {p2, p1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1}, Ln08;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    instance-of p4, p1, Lrff;
+    return-object p1
 
-    if-eqz p4, :cond_0
+    :pswitch_0
+    new-instance v0, Ln08;
 
-    move-object p4, p1
+    const/4 v1, 0x3
 
-    check-cast p4, Lrff;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Ln08;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Ln08;->Y:Lgz5;
+
+    iput-object p2, v0, Ln08;->Z:Ljava/lang/Object;
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {v0, p1}, Ln08;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Ln08;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Ln08;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ln08;->Y:Lgz5;
+
+    iget-object v0, p0, Ln08;->Z:Ljava/lang/Object;
+
+    check-cast v0, Lase;
+
+    iget-object v0, v0, Lase;->d:Lj0d;
+
+    iput v1, p0, Ln08;->X:I
+
+    invoke-static {p0, v0, p1}, Lqs0;->m(Lp14;Lez5;Lgz5;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
 
     goto :goto_1
 
-    :cond_0
-    move-object p4, p3
-
-    :goto_0
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    if-eqz p4, :cond_1
-
-    :try_start_1
-    invoke-virtual {v0, p2}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lbx4;->h()Luxa;
-
-    move-result-object v1
-
-    invoke-interface {p4, v1}, Lrff;->onThemeChanged(Luxa;)V
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    new-instance p4, Ljf4;
-
-    invoke-virtual {v0, p2}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lbx4;->x0:Ljava/lang/Object;
-
-    check-cast p2, Lsqc;
-
-    iget-object v0, p0, Ln08;->b:Le88;
-
-    invoke-direct {p4, p1, p2, v0}, Ljf4;-><init>(Landroid/graphics/drawable/Drawable;Lfoe;Le88;)V
-
-    return-object p4
-
     :cond_2
-    return-object p3
+    :goto_0
+    sget-object v0, Lybg;->a:Lybg;
+
+    :goto_1
+    return-object v0
+
+    :pswitch_0
+    iget v0, p0, Ln08;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_4
+
+    if-ne v0, v1, :cond_3
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_3
 
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p2, "No source in encoded image"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :goto_1
-    const-string p2, "DrawableImageDecoder"
+    :cond_4
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    const-string p4, "Cannot decode drawable"
+    iget-object p1, p0, Ln08;->Y:Lgz5;
 
-    invoke-static {p2, p4, p1}, Lni5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v0, p0, Ln08;->Z:Ljava/lang/Object;
 
-    return-object p3
+    check-cast v0, Lsz7;
+
+    instance-of v2, v0, Ljz7;
+
+    if-eqz v2, :cond_5
+
+    new-instance v2, Lo08;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3}, Lo08;-><init>(Lsz7;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v0, Ljld;
+
+    invoke-direct {v0, v2}, Ljld;-><init>(Lej6;)V
+
+    goto :goto_2
+
+    :cond_5
+    new-instance v2, Lw01;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v2, v3, v0}, Lw01;-><init>(ILjava/lang/Object;)V
+
+    move-object v0, v2
+
+    :goto_2
+    iput v1, p0, Ln08;->X:I
+
+    invoke-static {p0, v0, p1}, Lqs0;->m(Lp14;Lez5;Lgz5;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    sget-object v0, Lybg;->a:Lybg;
+
+    :goto_4
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

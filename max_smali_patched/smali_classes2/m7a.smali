@@ -1,362 +1,82 @@
 .class public final Lm7a;
-.super Lvwc;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lm7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    const/16 v0, 0x18
+    const/4 p2, 0x2
 
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    iput v0, p0, Lm7a;->a:I
-
-    const/16 v0, 0x10
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    iput v0, p0, Lm7a;->b:I
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    iput v0, p0, Lm7a;->c:I
-
-    const/4 v0, 0x6
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    iput v1, p0, Lm7a;->o:I
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    iput v0, p0, Lm7a;->X:I
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Ljxc;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
+    check-cast p1, Ljava/util/List;
 
-    move-result p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
+    invoke-virtual {p0, p1, p2}, Lm7a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p3
+    move-result-object p1
 
-    instance-of p4, p3, Lbh3;
+    check-cast p1, Lm7a;
 
-    const/4 v0, 0x0
+    sget-object p2, Lybg;->a:Lybg;
 
-    if-eqz p4, :cond_0
+    invoke-virtual {p1, p2}, Lm7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p3, Lbh3;
+    return-object p2
+.end method
 
-    goto :goto_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :cond_0
-    move-object p3, v0
+    new-instance v0, Lm7a;
 
-    :goto_0
-    if-nez p3, :cond_1
+    iget-object v1, p0, Lm7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    goto/16 :goto_9
+    invoke-direct {v0, p2, v1}, Lm7a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
 
-    :cond_1
-    invoke-virtual {p3, p2}, Lbh3;->D(I)Landroid/util/Pair;
+    iput-object p1, v0, Lm7a;->o:Ljava/lang/Object;
 
-    move-result-object p3
+    return-object v0
+.end method
 
-    iget-object p4, p3, Landroid/util/Pair;->first:Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    instance-of p4, p4, Lr8a;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    if-eqz p4, :cond_2
+    iget-object p1, p0, Lm7a;->o:Ljava/lang/Object;
 
-    iget-object p4, p3, Landroid/util/Pair;->second:Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    check-cast p4, Ljava/lang/Integer;
+    iget-object v0, p0, Lm7a;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    goto :goto_1
+    iget-object v0, v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->G0:Ljjh;
 
-    :cond_2
-    const/4 p4, -0x1
+    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
 
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object p1, Lybg;->a:Lybg;
 
-    move-result-object p4
-
-    :goto_1
-    iget-object p3, p3, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    instance-of v1, p3, Lr8a;
-
-    if-eqz v1, :cond_3
-
-    if-eqz p3, :cond_3
-
-    check-cast p3, Lr8a;
-
-    goto :goto_2
-
-    :cond_3
-    move-object p3, v0
-
-    :goto_2
-    if-nez p3, :cond_4
-
-    goto/16 :goto_9
-
-    :cond_4
-    invoke-virtual {p3}, Lpw7;->j()I
-
-    move-result v1
-
-    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    if-ltz v2, :cond_e
-
-    if-ge v2, v1, :cond_e
-
-    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {p3, v1}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lww7;
-
-    instance-of v2, v1, Lj8a;
-
-    if-eqz v2, :cond_5
-
-    check-cast v1, Lj8a;
-
-    goto :goto_3
-
-    :cond_5
-    move-object v1, v0
-
-    :goto_3
-    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {p3, v2}, Lzce;->G(I)Lww7;
-
-    move-result-object p3
-
-    instance-of v2, p3, Lj8a;
-
-    if-eqz v2, :cond_6
-
-    check-cast p3, Lj8a;
-
-    goto :goto_4
-
-    :cond_6
-    move-object p3, v0
-
-    :goto_4
-    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
-
-    move-result p4
-
-    const/4 v2, 0x0
-
-    if-nez p4, :cond_7
-
-    if-nez p2, :cond_7
-
-    goto :goto_5
-
-    :cond_7
-    move v3, v2
-
-    :goto_5
-    iget p2, p0, Lm7a;->c:I
-
-    iput p2, p1, Landroid/graphics/Rect;->left:I
-
-    iput p2, p1, Landroid/graphics/Rect;->right:I
-
-    if-eqz v3, :cond_8
-
-    iget p2, p0, Lm7a;->a:I
-
-    goto :goto_6
-
-    :cond_8
-    instance-of p2, v1, Lh8a;
-
-    if-eqz p2, :cond_9
-
-    iget p2, p0, Lm7a;->X:I
-
-    goto :goto_6
-
-    :cond_9
-    move p2, v2
-
-    :goto_6
-    iput p2, p1, Landroid/graphics/Rect;->top:I
-
-    instance-of p2, v1, Lh8a;
-
-    if-eqz p2, :cond_a
-
-    iget v2, p0, Lm7a;->o:I
-
-    goto :goto_8
-
-    :cond_a
-    if-eqz v1, :cond_b
-
-    invoke-interface {v1}, Lj1e;->t()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    goto :goto_7
-
-    :cond_b
-    move-object p2, v0
-
-    :goto_7
-    if-eqz p3, :cond_c
-
-    invoke-interface {p3}, Lj1e;->t()I
-
-    move-result p3
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    :cond_c
-    invoke-static {p2, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_d
-
-    iget v2, p0, Lm7a;->b:I
-
-    :cond_d
-    :goto_8
-    iput v2, p1, Landroid/graphics/Rect;->bottom:I
-
-    :cond_e
-    :goto_9
-    return-void
+    return-object p1
 .end method

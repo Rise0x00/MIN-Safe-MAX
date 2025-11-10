@@ -1,119 +1,90 @@
 .class public final Lgad;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+
+# static fields
+.field public static final b:Lgad;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Z
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x5
+    new-instance v0, Lgad;
 
     const/4 v1, 0x0
 
-    .line 1
-    invoke-direct {p0, p1, v0, v1}, Lgad;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v0, v1}, Lgad;-><init>(Z)V
+
+    sput-object v0, Lgad;->b:Lgad;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IZ)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p1, p0, Lgad;->a:Ljava/lang/String;
-
-    .line 4
-    iput p2, p0, Lgad;->b:I
-
-    .line 5
-    iput-boolean p3, p0, Lgad;->c:Z
+    iput-boolean p1, p0, Lgad;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgad;->a:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x2d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lgad;->c:Z
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Lyw;
-
-    invoke-direct {v1, v0, p1}, Lyw;-><init>(Ljava/lang/String;Ljava/lang/Runnable;)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/Thread;
+    if-eqz p1, :cond_2
 
-    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    const-class v0, Lgad;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lgad;
+
+    iget-boolean v0, p0, Lgad;->a:Z
+
+    iget-boolean p1, p1, Lgad;->a:Z
+
+    if-ne v0, p1, :cond_2
 
     :goto_0
-    iget p1, p0, Lgad;->b:I
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
-
     const/4 p1, 0x1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setDaemon(Z)V
+    return p1
 
-    return-object v1
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lgad;->a:Z
 
-    const-string v1, "RxThreadFactory["
+    xor-int/lit8 v0, v0, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgad;->a:Ljava/lang/String;
-
-    const-string v2, "]"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

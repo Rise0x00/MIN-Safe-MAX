@@ -1,174 +1,94 @@
 .class public final Lnib;
-.super Landroid/content/BroadcastReceiver;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic X:Lqib;
 
-.field public final b:Lrib;
-
-.field public final c:Landroid/content/IntentFilter;
-
-.field public d:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lrib;)V
+.method public constructor <init>(Lqib;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    iput-object p1, p0, Lnib;->X:Lqib;
 
-    iput-object p1, p0, Lnib;->a:Landroid/content/Context;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lnib;->b:Lrib;
-
-    new-instance p1, Landroid/content/IntentFilter;
-
-    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
-
-    iput-object p1, p0, Lnib;->c:Landroid/content/IntentFilter;
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lnib;->d:Z
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    check-cast p1, Lrib;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnib;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_4
+    check-cast p1, Lnib;
 
-    iget-object p2, p0, Lnib;->c:Landroid/content/IntentFilter;
+    sget-object p2, Lybg;->a:Lybg;
 
-    invoke-virtual {p2, p1}, Landroid/content/IntentFilter;->hasAction(Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Lnib;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p2
+    return-object p2
+.end method
 
-    if-nez p2, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    goto :goto_1
+    new-instance v0, Lnib;
+
+    iget-object v1, p0, Lnib;->X:Lqib;
+
+    invoke-direct {v0, v1, p2}, Lnib;-><init>(Lqib;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lnib;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnib;->o:Ljava/lang/Object;
+
+    check-cast p1, Lrib;
+
+    sget-object v0, Lrib;->a:Lrib;
+
+    if-ne p1, v0, :cond_0
+
+    const-string p1, "allowed"
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result p2
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x1
-
-    const/4 v2, -0x1
-
-    sparse-switch p2, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v0
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x0
+    const-string p1, "denied"
 
     :goto_0
-    iget-object p1, p0, Lnib;->b:Lrib;
+    iget-object v0, p0, Lnib;->X:Lqib;
 
-    packed-switch v2, :pswitch_data_0
+    const-string v1, "camera"
 
-    goto :goto_1
+    invoke-static {v0, v1, p1}, Lqib;->a(Lqib;Ljava/lang/String;Ljava/lang/String;)V
 
-    :pswitch_0
-    invoke-virtual {p1, v0}, Lrib;->b(I)V
+    sget-object p1, Lybg;->a:Lybg;
 
-    return-void
-
-    :pswitch_1
-    const/4 p2, 0x3
-
-    invoke-virtual {p1, p2}, Lrib;->b(I)V
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1, v1}, Lrib;->b(I)V
-
-    :cond_4
-    :goto_1
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x610323f9 -> :sswitch_2
-        -0x6101a72b -> :sswitch_1
-        0x4099ef63 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

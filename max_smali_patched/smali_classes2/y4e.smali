@@ -1,172 +1,133 @@
 .class public final Ly4e;
-.super Ldd0;
+.super Lex5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Loef;
+.field public final g:Z
 
-.field public final c:Ljava/util/List;
+.field public final h:Loi6;
 
-.field public final d:Loef;
+.field public final i:Lyoa;
 
 
 # direct methods
-.method public constructor <init>(Ljef;Loef;Ljava/util/List;)V
-    .locals 1
+.method public constructor <init>(ZLoi6;Lyoa;Ltuf;Lm71;Lcwc;)V
+    .locals 0
 
-    const/16 v0, 0x14
+    invoke-direct {p0, p4, p5, p6}, Lex5;-><init>(Ltuf;Lm71;Lcwc;)V
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
+    iput-boolean p1, p0, Ly4e;->g:Z
 
-    iput-object p2, p0, Ly4e;->b:Loef;
+    iput-object p2, p0, Ly4e;->h:Loi6;
 
-    iput-object p3, p0, Ly4e;->c:Ljava/util/List;
-
-    iput-object p1, p0, Ly4e;->d:Loef;
+    iput-object p3, p0, Ly4e;->i:Lyoa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Ly4e;->g:Z
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ly4e;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ly4e;
-
-    iget-object v1, p0, Ly4e;->b:Loef;
-
-    iget-object v3, p1, Ly4e;->b:Loef;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ly4e;->c:Ljava/util/List;
-
-    iget-object v3, p1, Ly4e;->c:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ly4e;->d:Loef;
-
-    iget-object p1, p1, Ly4e;->d:Loef;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Ly4e;->b:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ly4e;->c:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Ly4e;->d:Loef;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Lex5;->h()V
 
-    move-result v1
+    const/4 v0, 0x6
 
-    :goto_0
-    add-int/2addr v0, v1
+    iput v0, p0, Lex5;->e:I
 
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final c()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lex5;->h()V
 
-    const-string v1, "OpenConfirmationDialog(title="
+    const/4 v0, 0x5
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Lex5;->e:I
 
-    iget-object v1, p0, Ly4e;->b:Loef;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final d(Lb2f;)V
+    .locals 1
 
-    const-string v1, ", buttons="
+    iget-object v0, p0, Ly4e;->i:Lyoa;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly4e;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", desc="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ly4e;->d:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lyoa;->invoke()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Ly4e;->h:Loi6;
+
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lex5;->d:Z
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1}, Lex5;->d(Lb2f;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget-boolean v0, p0, Ly4e;->g:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lex5;->h()V
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lex5;->e:I
+
+    return-void
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ServerTopologyFirstDataStat"
 
     return-object v0
 .end method

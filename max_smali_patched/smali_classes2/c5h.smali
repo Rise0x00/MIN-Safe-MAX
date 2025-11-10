@@ -1,28 +1,28 @@
-.class public final synthetic Lc5h;
+.class public final Lc5h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lw00;
+.field public final synthetic b:Lh6h;
 
-.field public final synthetic c:Lktd;
+.field public final synthetic c:Ld5h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw00;Lktd;I)V
+.method public synthetic constructor <init>(Ld5h;Lh6h;I)V
     .locals 0
 
     iput p3, p0, Lc5h;->a:I
 
-    iput-object p1, p0, Lc5h;->b:Lw00;
+    iput-object p1, p0, Lc5h;->c:Ld5h;
 
-    iput-object p2, p0, Lc5h;->c:Lktd;
+    iput-object p2, p0, Lc5h;->b:Lh6h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,53 +31,73 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final call()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lc5h;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lw4h;
+    iget-object v0, p0, Lc5h;->c:Ld5h;
 
-    iget-object v0, p0, Lc5h;->b:Lw00;
+    iget-object v1, v0, Ld5h;->a:Lpgd;
 
-    iget-wide v2, v0, Lw00;->a:J
+    invoke-virtual {v1}, Lpgd;->c()V
 
-    iget-wide v4, v0, Lw00;->b:J
+    :try_start_0
+    iget-object v0, v0, Ld5h;->c:Lnj4;
 
-    iget-object v0, v0, Lw00;->c:Ljava/lang/Object;
+    iget-object v2, p0, Lc5h;->b:Lh6h;
 
-    move-object v6, v0
+    invoke-virtual {v0, v2}, Lxd5;->A(Ljava/lang/Object;)I
 
-    check-cast v6, Landroid/content/Context;
+    invoke-virtual {v1}, Lpgd;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v7, p0, Lc5h;->c:Lktd;
+    invoke-virtual {v1}, Lpgd;->k()V
 
-    invoke-direct/range {v1 .. v7}, Lw4h;-><init>(JJLandroid/content/Context;Lktd;)V
+    sget-object v0, Lybg;->a:Lybg;
 
-    return-object v1
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Lpgd;->k()V
+
+    throw v0
 
     :pswitch_0
-    new-instance v2, Lu4h;
+    iget-object v0, p0, Lc5h;->c:Ld5h;
 
-    iget-object v0, p0, Lc5h;->b:Lw00;
+    iget-object v1, v0, Ld5h;->a:Lpgd;
 
-    iget-wide v3, v0, Lw00;->a:J
+    invoke-virtual {v1}, Lpgd;->c()V
 
-    iget-wide v5, v0, Lw00;->b:J
+    :try_start_1
+    iget-object v0, v0, Ld5h;->b:Lb5h;
 
-    iget-object v0, v0, Lw00;->c:Ljava/lang/Object;
+    iget-object v2, p0, Lc5h;->b:Lh6h;
 
-    move-object v7, v0
+    invoke-virtual {v0, v2}, Lyd5;->B(Ljava/lang/Object;)V
 
-    check-cast v7, Landroid/content/Context;
+    invoke-virtual {v1}, Lpgd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    iget-object v8, p0, Lc5h;->c:Lktd;
+    invoke-virtual {v1}, Lpgd;->k()V
 
-    invoke-direct/range {v2 .. v8}, Lu4h;-><init>(JJLandroid/content/Context;Lktd;)V
+    sget-object v0, Lybg;->a:Lybg;
 
-    return-object v2
+    return-object v0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {v1}, Lpgd;->k()V
+
+    throw v0
 
     nop
 

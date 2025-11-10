@@ -1,168 +1,176 @@
 .class public final Lci4;
-.super Ljava/lang/Object;
+.super Lq93;
 .source "SourceFile"
-
-# interfaces
-.implements Lu47;
-
-
-# instance fields
-.field public final a:Lu47;
-
-.field public final b:Lu47;
-
-.field public final c:Lxjb;
-
-.field public final d:Loe;
-
-.field public final e:Ljava/util/Map;
-
-
-# direct methods
-.method public constructor <init>(Loe;Lme;Lxjb;Ljava/util/HashMap;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Loe;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Loe;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lci4;->d:Loe;
-
-    iput-object p1, p0, Lci4;->a:Lu47;
-
-    iput-object p2, p0, Lci4;->b:Lu47;
-
-    iput-object p3, p0, Lci4;->c:Lxjb;
-
-    iput-object p4, p0, Lci4;->e:Ljava/util/Map;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a(Lw75;ILh8c;Ls47;)Lq73;
-    .locals 2
+.method public final bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lci4;->l()Lq93;
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    move-result-object v0
 
-    iget-object v0, p1, Lw75;->b:Lx47;
+    return-object v0
+.end method
+
+.method public final finalize()V
+    .locals 5
+
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-boolean v0, p0, Lq93;->a:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lx47;->c:Lx47;
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-ne v0, v1, :cond_1
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
 
     :cond_0
-    invoke-virtual {p1}, Lw75;->n()Ljava/io/InputStream;
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result-object v1
+    :try_start_3
+    iget-object v0, p0, Lq93;->b:Lnke;
 
-    if-eqz v1, :cond_1
-
-    sget-object v0, Ly47;->d:Ljava/lang/Object;
-
-    :try_start_0
-    invoke-static {v1}, Lnf2;->v(Ljava/io/InputStream;)Lx47;
+    invoke-virtual {v0}, Lnke;->a()Ljava/lang/Object;
 
     move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p1, Lw75;->b:Lx47;
+    const-string v1, "DefaultCloseableReference"
+
+    const-string v2, "Finalized without closing: %x %x (type = %s)"
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lq93;->b:Lnke;
+
+    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
-
-    invoke-static {p1}, Lipe;->w(Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-
     :cond_1
-    :goto_0
-    iget-object v1, p0, Lci4;->e:Ljava/util/Map;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    check-cast v0, Lu47;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v2, v0}, Lgm5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lq93;->c:Lp93;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lu47;->a(Lw75;ILh8c;Ls47;)Lq73;
+    iget-object v1, p0, Lq93;->b:Lnke;
 
-    move-result-object p1
+    iget-object v2, p0, Lq93;->d:Ljava/lang/Throwable;
 
-    return-object p1
+    invoke-interface {v0, v1, v2}, Lp93;->F(Lnke;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
 
     :cond_2
-    iget-object v0, p0, Lci4;->d:Loe;
+    :goto_1
+    invoke-virtual {p0}, Lq93;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Loe;->a(Lw75;ILh8c;Ls47;)Lq73;
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :goto_2
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :goto_3
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    throw v0
 .end method
 
-.method public final b(Lw75;Ls47;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-    .locals 2
+.method public final l()Lq93;
+    .locals 4
 
-    iget-object v0, p0, Lci4;->c:Lxjb;
+    invoke-virtual {p0}, Lq93;->h0()Z
 
-    iget-object p2, p2, Ls47;->a:Landroid/graphics/Bitmap$Config;
+    move-result v0
 
-    invoke-interface {v0, p1, p2}, Lxjb;->a(Lw75;Landroid/graphics/Bitmap$Config;)Lt73;
+    invoke-static {v0}, Ljui;->h(Z)V
 
-    move-result-object p2
+    new-instance v0, Lci4;
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lq93;->d:Ljava/lang/Throwable;
 
-    sget-object v0, Ln77;->d:Ln77;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    new-instance v1, Ljava/lang/Throwable;
 
-    iget v1, p1, Lw75;->c:I
+    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    goto :goto_0
 
-    iget p1, p1, Lw75;->o:I
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-static {p2, v0, v1, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lt73;Lh8c;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    :goto_0
+    iget-object v2, p0, Lq93;->b:Lnke;
 
-    move-result-object p1
+    iget-object v3, p0, Lq93;->c:Lp93;
 
-    const-string v0, "is_rounded"
+    invoke-direct {v0, v2, v3, v1}, Lq93;-><init>(Lnke;Lp93;Ljava/lang/Throwable;)V
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0, v1}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p2}, Lt73;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p2}, Lt73;->W(Lt73;)V
-
-    throw p1
+    return-object v0
 .end method

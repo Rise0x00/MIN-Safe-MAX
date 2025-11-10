@@ -1,85 +1,43 @@
 .class public final Lw1;
-.super Lx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/RandomAccess;
+
+# static fields
+.field public static final c:Lw1;
 
 
 # instance fields
-.field public final a:Lx1;
+.field public volatile a:Ljava/lang/Thread;
 
-.field public final b:I
-
-.field public final c:I
+.field public volatile b:Lw1;
 
 
 # direct methods
-.method public constructor <init>(Lx1;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw1;
 
-    iput-object p1, p0, Lw1;->a:Lx1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lw1;->b:I
-
-    invoke-virtual {p1}, Lb0;->getSize()I
-
-    move-result p1
-
-    invoke-static {p2, p3, p1}, Lk74;->h(III)V
-
-    sub-int/2addr p3, p2
-
-    iput p3, p0, Lw1;->c:I
+    sput-object v0, Lw1;->c:Lw1;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 2
 
-# virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lw1;->c:I
+    sget-object v0, Ly1;->X:Llci;
 
-    if-ltz p1, :cond_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    if-ge p1, v0, :cond_0
+    move-result-object v1
 
-    iget v0, p0, Lw1;->b:I
+    invoke-virtual {v0, p0, v1}, Llci;->l(Lw1;Ljava/lang/Thread;)V
 
-    add-int/2addr v0, p1
-
-    iget-object p1, p0, Lw1;->a:Lx1;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, "index: "
-
-    const-string v3, ", size: "
-
-    invoke-static {v2, p1, v0, v3}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final getSize()I
-    .locals 1
-
-    iget v0, p0, Lw1;->c:I
-
-    return v0
+    return-void
 .end method

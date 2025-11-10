@@ -4,282 +4,60 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public c:I
+.field public final c:Leff;
 
-.field public d:I
+.field public final d:Ltr6;
 
-.field public e:I
+.field public final e:Ljava/util/List;
 
-.field public f:I
+.field public final f:Z
 
-.field public g:I
+.field public final g:I
 
-.field public h:I
+.field public final h:Ljava/util/concurrent/Executor;
 
-.field public i:I
+.field public final i:Ljava/util/concurrent/Executor;
 
-.field public j:I
+.field public final j:Z
 
-.field public k:I
+.field public final k:Z
 
-.field public l:J
-
-.field public m:I
+.field public final l:Ljava/util/Set;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Leff;Ltr6;Ljava/util/ArrayList;ZILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZLjava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
-
-    iput p1, p0, Lic4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lic4;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lic4;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lic4;->c:Leff;
+
+    iput-object p4, p0, Lic4;->d:Ltr6;
+
+    iput-object p5, p0, Lic4;->e:Ljava/util/List;
+
+    iput-boolean p6, p0, Lic4;->f:Z
+
+    iput p7, p0, Lic4;->g:I
+
+    iput-object p8, p0, Lic4;->h:Ljava/util/concurrent/Executor;
+
+    iput-object p9, p0, Lic4;->i:Ljava/util/concurrent/Executor;
+
+    iput-boolean p10, p0, Lic4;->j:Z
+
+    iput-boolean p11, p0, Lic4;->k:Z
+
+    iput-object p12, p0, Lic4;->l:Ljava/util/Set;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 28
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Lic4;->a:I
-
-    const-string v2, "\n}"
-
-    const-string v3, "\n videoFrameProcessingOffsetCount="
-
-    const-string v4, "\n totalVideoFrameProcessingOffsetUs="
-
-    const-string v5, "\n droppedToKeyframeEvents="
-
-    const-string v6, "\n maxConsecutiveDroppedBuffers="
-
-    const-string v7, "\n droppedInputBuffers="
-
-    const-string v8, "\n droppedBuffers="
-
-    const-string v9, "\n skippedOutputBuffers="
-
-    const-string v10, "\n renderedOutputBuffers="
-
-    const-string v11, "\n skippedInputBuffers="
-
-    const-string v12, "\n queuedInputBuffers="
-
-    const-string v13, ",\n decoderReleases="
-
-    const-string v14, "DecoderCounters {\n decoderInits="
-
-    packed-switch v1, :pswitch_data_0
-
-    iget v1, v0, Lic4;->b:I
-
-    iget v15, v0, Lic4;->c:I
-
-    move-object/from16 v16, v2
-
-    iget v2, v0, Lic4;->d:I
-
-    move-object/from16 v17, v3
-
-    iget v3, v0, Lic4;->e:I
-
-    move-object/from16 v18, v4
-
-    iget v4, v0, Lic4;->f:I
-
-    move-object/from16 v19, v5
-
-    iget v5, v0, Lic4;->g:I
-
-    move-object/from16 v20, v6
-
-    iget v6, v0, Lic4;->h:I
-
-    move/from16 v21, v6
-
-    iget v6, v0, Lic4;->i:I
-
-    move/from16 v22, v6
-
-    iget v6, v0, Lic4;->j:I
-
-    move/from16 v23, v6
-
-    iget v6, v0, Lic4;->k:I
-
-    move/from16 v25, v6
-
-    move-object/from16 v24, v7
-
-    iget-wide v6, v0, Lic4;->l:J
-
-    move-wide/from16 v26, v6
-
-    iget v6, v0, Lic4;->m:I
-
-    sget v7, Lt4g;->a:I
-
-    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v14, v1, v13, v15, v12}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-static {v1, v2, v11, v3, v10}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-static {v1, v4, v9, v5, v8}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v4, v20
-
-    move/from16 v2, v21
-
-    move/from16 v3, v22
-
-    move-object/from16 v5, v24
-
-    invoke-static {v1, v2, v5, v3, v4}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v7, v18
-
-    move-object/from16 v15, v19
-
-    move/from16 v2, v23
-
-    move/from16 v3, v25
-
-    invoke-static {v1, v2, v15, v3, v7}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v4, v17
-
-    move-wide/from16 v2, v26
-
-    invoke-static {v1, v2, v3, v4, v6}, Lvl3;->n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v2, v16
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_0
-    move-object v1, v3
-
-    move-object v15, v5
-
-    move-object v5, v7
-
-    move-object v7, v4
-
-    move-object v4, v6
-
-    iget v3, v0, Lic4;->b:I
-
-    iget v6, v0, Lic4;->c:I
-
-    move-object/from16 v16, v2
-
-    iget v2, v0, Lic4;->d:I
-
-    move-object/from16 v17, v1
-
-    iget v1, v0, Lic4;->e:I
-
-    move-object/from16 v18, v7
-
-    iget v7, v0, Lic4;->f:I
-
-    move-object/from16 v19, v15
-
-    iget v15, v0, Lic4;->g:I
-
-    move-object/from16 v20, v4
-
-    iget v4, v0, Lic4;->h:I
-
-    move/from16 v21, v4
-
-    iget v4, v0, Lic4;->i:I
-
-    move/from16 v22, v4
-
-    iget v4, v0, Lic4;->j:I
-
-    move/from16 v23, v4
-
-    iget v4, v0, Lic4;->k:I
-
-    move/from16 v25, v4
-
-    move-object/from16 v24, v5
-
-    iget-wide v4, v0, Lic4;->l:J
-
-    move-wide/from16 v26, v4
-
-    iget v4, v0, Lic4;->m:I
-
-    sget v5, Lr4g;->a:I
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v14, v3, v13, v6, v12}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {v3, v2, v11, v1, v10}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-static {v3, v7, v9, v15, v8}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v5, v20
-
-    move/from16 v1, v21
-
-    move/from16 v2, v22
-
-    move-object/from16 v6, v24
-
-    invoke-static {v3, v1, v6, v2, v5}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v7, v18
-
-    move-object/from16 v15, v19
-
-    move/from16 v1, v23
-
-    move/from16 v2, v25
-
-    invoke-static {v3, v1, v15, v2, v7}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v5, v17
-
-    move-wide/from16 v1, v26
-
-    invoke-static {v3, v1, v2, v5, v4}, Lvl3;->n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    move-object/from16 v2, v16
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

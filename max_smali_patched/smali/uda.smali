@@ -1,154 +1,47 @@
-.class public final Luda;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Luda;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lss4;
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public static a(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
     .locals 0
 
-    iput p1, p0, Luda;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    move-result-object p0
 
-    iput-object p2, p0, Luda;->b:Ljava/lang/Object;
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final g()V
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
 
-    iget v0, p0, Luda;->a:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final h()Z
-    .locals 2
+.method public static c(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    iget v0, p0, Luda;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lss4;
-
-    invoke-static {v0}, Lws4;->b(Lss4;)Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lws4;->a:Lws4;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final run()V
-    .locals 3
+.method public static d(Landroid/app/Notification$Builder;Ljava/lang/Object;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    iget v0, p0, Luda;->a:I
+    check-cast p1, Landroid/content/LocusId;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/app/Notification$Builder;
 
-    iget-object v0, p0, Luda;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Lnee;
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Luda;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxda;
-
-    invoke-virtual {p0}, Luda;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lxda;->f(Ljava/lang/Object;)V
-
-    sget-object v1, Lw65;->a:Lw65;
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

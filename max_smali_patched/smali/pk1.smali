@@ -1,61 +1,22 @@
 .class public final Lpk1;
-.super Lgl1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li81;
 
-# static fields
-.field public static final D:Lpk1;
+
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    new-instance v0, Lpk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lgl1;-><init>()V
-
-    sput-object v0, Lpk1;->D:Lpk1;
+    iput-object p1, p0, Lpk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lpk1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x377eee04
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "InviteToP2PCall"
-
-    return-object v0
 .end method

@@ -1,37 +1,23 @@
-.class public abstract Luta;
-.super Ljava/lang/Object;
+.class public final Luta;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lckc;->oneme_stickers_set_add_button:I
-
-    sput v0, Luta;->a:I
-
-    sget v0, Lckc;->oneme_stickers_set_remove_button:I
-
-    sput v0, Luta;->b:I
-
-    sget v0, Lckc;->oneme_stickers_set_snackbar_favorite_added:I
-
-    sput v0, Luta;->c:I
-
-    sget v0, Lckc;->oneme_stickers_set_snackbar_favorite_removed:I
-
-    sput v0, Luta;->d:I
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    return p1
 .end method

@@ -1,120 +1,215 @@
-.class public final synthetic Leq7;
+.class public abstract Leq7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lid4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:J
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic c:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJ)V
+.method public constructor <init>(Landroidx/recyclerview/widget/a;)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Leq7;->a:I
-
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Leq7;->c:I
+    const/high16 v0, -0x80000000
 
-    iput-wide p2, p0, Leq7;->b:J
+    .line 6
+    iput v0, p0, Leq7;->a:I
+
+    .line 7
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Leq7;->c:Ljava/lang/Object;
+
+    .line 8
+    iput-object p1, p0, Leq7;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(JI)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;ILfq7;)V
+    .locals 0
 
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Leq7;->a:I
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Leq7;->b:J
+    .line 2
+    iput-object p1, p0, Leq7;->b:Ljava/lang/Object;
 
-    iput p3, p0, Leq7;->c:I
+    .line 3
+    iput p2, p0, Leq7;->a:I
+
+    .line 4
+    iput-object p3, p0, Leq7;->c:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static b(Landroidx/recyclerview/widget/a;I)Leq7;
+    .locals 1
+
+    if-eqz p1, :cond_1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    new-instance p1, Ly9b;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, p0, v0}, Ly9b;-><init>(Landroidx/recyclerview/widget/a;I)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "invalid orientation"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p1, Ly9b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Ly9b;-><init>(Landroidx/recyclerview/widget/a;I)V
+
+    return-object p1
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Leq7;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v0, Lone/me/location/map/pick/PickLocationScreen;
+    iget-object v1, p0, Leq7;->b:Ljava/lang/Object;
 
-    iget-wide v1, p0, Leq7;->b:J
+    check-cast v1, Ljava/lang/String;
 
-    iget v3, p0, Leq7;->c:I
+    const-string v2, "."
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/location/map/pick/PickLocationScreen;-><init>(JI)V
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Leq7;->l()Lfq7;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lfq7;->a:Ljava/lang/String;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract c(Landroid/view/View;)I
+.end method
+
+.method public abstract d(Landroid/view/View;)I
+.end method
+
+.method public abstract e(Landroid/view/View;)I
+.end method
+
+.method public abstract f(Landroid/view/View;)I
+.end method
+
+.method public abstract g()I
+.end method
+
+.method public abstract h()I
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract j()I
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public l()Lfq7;
+    .locals 1
+
+    iget-object v0, p0, Leq7;->c:Ljava/lang/Object;
+
+    check-cast v0, Lfq7;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+.method public abstract m()I
+.end method
 
-    iget v1, p0, Leq7;->c:I
+.method public abstract n()I
+.end method
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public o()I
+    .locals 2
 
-    move-result-object v1
+    const/high16 v0, -0x80000000
 
-    new-instance v2, Ln4b;
+    iget v1, p0, Leq7;->a:I
 
-    const-string v3, "ru.ok.tamtam.extra.REQUEST_CODE"
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v2, v3, v1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-wide v3, p0, Leq7;->b:J
+    return v0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_0
+    invoke-virtual {p0}, Leq7;->n()I
 
-    move-result-object v1
+    move-result v0
 
-    new-instance v3, Ln4b;
+    iget v1, p0, Leq7;->a:I
 
-    const-string v4, "ru.ok.tamtam.extra.CHAT_ID"
+    sub-int/2addr v0, v1
 
-    invoke-direct {v3, v4, v1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    return v0
+.end method
 
-    filled-new-array {v2, v3}, [Ln4b;
+.method public abstract p(Landroid/view/View;)I
+.end method
 
-    move-result-object v1
+.method public abstract q(Landroid/view/View;)I
+.end method
 
-    invoke-static {v1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const v2, 0x7a3a1dca
-
-    const-class v3, Lru/ok/messages/location/FrgLocationMap;
-
-    const-string v4, "ru.ok.messages.location.FrgLocationMap"
-
-    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract r(I)V
 .end method

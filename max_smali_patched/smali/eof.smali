@@ -3,150 +3,225 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Leof;
+
+.field public static final e:Leof;
+
+.field public static final f:Leof;
+
+.field public static final g:Leof;
+
+.field public static final h:Leof;
+
+.field public static final i:Leof;
+
+
 # instance fields
-.field public final a:Lonf;
+.field public final a:[F
 
-.field public final b:I
+.field public final b:[F
 
-.field public final c:[J
-
-.field public final d:[I
-
-.field public final e:I
-
-.field public final f:[J
-
-.field public final g:[I
-
-.field public final h:J
+.field public final c:[F
 
 
 # direct methods
-.method public constructor <init>(Lonf;[J[II[J[IJ)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 14
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Leof;
 
-    array-length v0, p3
+    invoke-direct {v0}, Leof;-><init>()V
 
-    array-length v1, p5
+    sput-object v0, Leof;->d:Leof;
+
+    iget-object v1, v0, Leof;->b:[F
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    const v3, 0x3f0ccccd    # 0.55f
 
-    if-ne v0, v1, :cond_0
+    aput v3, v1, v2
 
-    move v0, v3
+    const/4 v4, 0x1
 
-    goto :goto_0
+    const v5, 0x3f3d70a4    # 0.74f
 
-    :cond_0
-    move v0, v2
+    aput v5, v1, v4
 
-    :goto_0
-    invoke-static {v0}, Lpih;->i(Z)V
+    iget-object v0, v0, Leof;->a:[F
 
-    array-length v0, p2
+    const v1, 0x3eb33333    # 0.35f
 
-    array-length v1, p5
+    aput v1, v0, v2
 
-    if-ne v0, v1, :cond_1
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    move v0, v3
+    aput v6, v0, v4
 
-    goto :goto_1
+    new-instance v0, Leof;
 
-    :cond_1
-    move v0, v2
+    invoke-direct {v0}, Leof;-><init>()V
 
-    :goto_1
-    invoke-static {v0}, Lpih;->i(Z)V
+    sput-object v0, Leof;->e:Leof;
 
-    array-length v0, p6
+    iget-object v7, v0, Leof;->b:[F
 
-    array-length v1, p5
+    const v8, 0x3e99999a    # 0.3f
 
-    if-ne v0, v1, :cond_2
+    aput v8, v7, v2
 
-    move v2, v3
+    const/high16 v9, 0x3f000000    # 0.5f
 
-    :cond_2
-    invoke-static {v2}, Lpih;->i(Z)V
+    aput v9, v7, v4
 
-    iput-object p1, p0, Leof;->a:Lonf;
+    const/4 v10, 0x2
 
-    iput-object p2, p0, Leof;->c:[J
+    const v11, 0x3f333333    # 0.7f
 
-    iput-object p3, p0, Leof;->d:[I
+    aput v11, v7, v10
 
-    iput p4, p0, Leof;->e:I
+    iget-object v0, v0, Leof;->a:[F
 
-    iput-object p5, p0, Leof;->f:[J
+    aput v1, v0, v2
 
-    iput-object p6, p0, Leof;->g:[I
+    aput v6, v0, v4
 
-    iput-wide p7, p0, Leof;->h:J
+    new-instance v0, Leof;
 
-    array-length p1, p2
+    invoke-direct {v0}, Leof;-><init>()V
 
-    iput p1, p0, Leof;->b:I
+    sput-object v0, Leof;->f:Leof;
 
-    array-length p1, p6
+    iget-object v7, v0, Leof;->b:[F
 
-    if-lez p1, :cond_3
+    const v12, 0x3e851eb8    # 0.26f
 
-    array-length p1, p6
+    aput v12, v7, v4
 
-    sub-int/2addr p1, v3
+    const v13, 0x3ee66666    # 0.45f
 
-    aget p2, p6, p1
+    aput v13, v7, v10
 
-    const/high16 p3, 0x20000000
+    iget-object v0, v0, Leof;->a:[F
 
-    or-int/2addr p2, p3
+    aput v1, v0, v2
 
-    aput p2, p6, p1
+    aput v6, v0, v4
 
-    :cond_3
+    new-instance v0, Leof;
+
+    invoke-direct {v0}, Leof;-><init>()V
+
+    sput-object v0, Leof;->g:Leof;
+
+    iget-object v1, v0, Leof;->b:[F
+
+    aput v3, v1, v2
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Leof;->a:[F
+
+    aput v8, v0, v4
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    aput v1, v0, v10
+
+    new-instance v0, Leof;
+
+    invoke-direct {v0}, Leof;-><init>()V
+
+    sput-object v0, Leof;->h:Leof;
+
+    iget-object v3, v0, Leof;->b:[F
+
+    aput v8, v3, v2
+
+    aput v9, v3, v4
+
+    aput v11, v3, v10
+
+    iget-object v0, v0, Leof;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
+
+    new-instance v0, Leof;
+
+    invoke-direct {v0}, Leof;-><init>()V
+
+    sput-object v0, Leof;->i:Leof;
+
+    iget-object v2, v0, Leof;->b:[F
+
+    aput v12, v2, v4
+
+    aput v13, v2, v10
+
+    iget-object v0, v0, Leof;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
+
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 9
 
-# virtual methods
-.method public final a(J)I
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Leof;->f:[J
+    const/4 v0, 0x3
 
-    const/4 v1, 0x1
+    new-array v1, v0, [F
 
-    invoke-static {v0, p1, p2, v1}, Lt4g;->a([JJZ)I
+    iput-object v1, p0, Leof;->a:[F
 
-    move-result p1
+    new-array v2, v0, [F
 
-    :goto_0
-    array-length p2, v0
+    iput-object v2, p0, Leof;->b:[F
 
-    if-ge p1, p2, :cond_1
+    new-array v0, v0, [F
 
-    iget-object p2, p0, Leof;->g:[I
+    iput-object v0, p0, Leof;->c:[F
 
-    aget p2, p2, p1
+    const/4 v3, 0x0
 
-    and-int/2addr p2, v1
+    const/4 v4, 0x0
 
-    if-eqz p2, :cond_0
+    aput v4, v1, v3
 
-    return p1
+    const/4 v5, 0x1
 
-    :cond_0
-    add-int/lit8 p1, p1, 0x1
+    const/high16 v6, 0x3f000000    # 0.5f
 
-    goto :goto_0
+    aput v6, v1, v5
 
-    :cond_1
-    const/4 p1, -0x1
+    const/4 v7, 0x2
 
-    return p1
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    aput v8, v1, v7
+
+    aput v4, v2, v3
+
+    aput v6, v2, v5
+
+    aput v8, v2, v7
+
+    const v1, 0x3e75c28f    # 0.24f
+
+    aput v1, v0, v3
+
+    const v2, 0x3f051eb8    # 0.52f
+
+    aput v2, v0, v5
+
+    aput v1, v0, v7
+
+    return-void
 .end method

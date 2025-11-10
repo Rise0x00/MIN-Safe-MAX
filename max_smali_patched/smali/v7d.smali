@@ -1,85 +1,64 @@
 .class public abstract Lv7d;
-.super Landroid/graphics/drawable/Drawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:D
+.field public static final a:Lw7d;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    const-wide v0, 0x4046800000000000L    # 45.0
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    :try_start_0
+    const-string v1, "kotlin.reflect.jvm.internal.ReflectionFactoryImpl"
 
-    move-result-wide v0
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
+    move-result-object v1
 
-    move-result-wide v0
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
-    sput-wide v0, Lv7d;->a:D
+    move-result-object v1
+
+    check-cast v1, Lw7d;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v1
+
+    :catch_0
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lw7d;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    :goto_0
+    sput-object v0, Lv7d;->a:Lw7d;
 
     return-void
 .end method
 
-.method public static a(FFZ)F
-    .locals 6
+.method public static a(Ljava/lang/Class;)La73;
+    .locals 1
 
-    if-eqz p2, :cond_0
+    sget-object v0, Lv7d;->a:Lw7d;
 
-    float-to-double v0, p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    new-instance v0, La73;
 
-    sget-wide v4, Lv7d;->a:D
+    invoke-direct {v0, p0}, La73;-><init>(Ljava/lang/Class;)V
 
-    sub-double/2addr v2, v4
-
-    float-to-double p0, p1
-
-    mul-double/2addr v2, p0
-
-    add-double/2addr v2, v0
-
-    double-to-float p0, v2
-
-    :cond_0
-    return p0
-.end method
-
-.method public static b(FFZ)F
-    .locals 6
-
-    const/high16 v0, 0x3fc00000    # 1.5f
-
-    if-eqz p2, :cond_0
-
-    mul-float/2addr p0, v0
-
-    float-to-double v0, p0
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    sget-wide v4, Lv7d;->a:D
-
-    sub-double/2addr v2, v4
-
-    float-to-double p0, p1
-
-    mul-double/2addr v2, p0
-
-    add-double/2addr v2, v0
-
-    double-to-float p0, v2
-
-    return p0
-
-    :cond_0
-    mul-float/2addr p0, v0
-
-    return p0
+    return-object v0
 .end method

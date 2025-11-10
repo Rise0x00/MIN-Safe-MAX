@@ -1,146 +1,324 @@
 .class public final Ly7a;
-.super Lm3f;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lz7a;
-
-
-# direct methods
-.method public constructor <init>(Lz7a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ly7a;->Y:Lz7a;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ly7a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ly7a;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ly7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ly7a;
-
-    iget-object v0, p0, Ly7a;->Y:Lz7a;
-
-    invoke-direct {p1, v0, p2}, Ly7a;-><init>(Lz7a;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onDetachedFromWindow()V
     .locals 3
 
-    iget v0, p0, Ly7a;->X:I
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_1
+    move v1, v0
 
-    if-ne v0, v1, :cond_0
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    const/4 v2, 0x1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    move v2, v0
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    check-cast v1, Lwke;
+
+    iget-object v1, v1, Lwke;->b:Lvke;
+
+    invoke-virtual {v1}, Lvke;->d()V
+
+    move v1, v2
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_1
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final setTabs(I)V
+    .locals 6
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p1, :cond_0
+
+    new-instance v1, Lwke;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lwke;-><init>(Landroid/content/Context;)V
+
+    new-instance v2, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/16 v3, 0x56
+
+    int-to-float v3, v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    const/16 v4, 0x28
+
+    int-to-float v4, v4
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Lkhi;->c(F)I
+
+    move-result v4
+
+    invoke-direct {v2, v3, v4}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    const/4 v3, 0x4
+
+    int-to-float v3, v3
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v3
+
+    invoke-static {v4}, Lkhi;->c(F)I
+
+    move-result v4
+
+    invoke-virtual {v2, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lkhi;->c(F)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v2, Lv44;
+
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v4, 0x41000000    # 8.0f
+
+    mul-float/2addr v3, v4
+
+    invoke-direct {v2, v3}, Lv44;-><init>(F)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    sget-object v2, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v2, v1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lw5b;->b()Lcf0;
+
+    move-result-object v2
+
+    iget v2, v2, Lcf0;->l:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
+
+    new-instance v2, Lpd0;
+
+    const/4 v3, 0x3
+
+    const/16 v4, 0x1d
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, v3, v5, v4}, Lpd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v2, v1}, Ludi;->e(Lgj6;Landroid/view/View;)V
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto/16 :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public setVisibility(I)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_2
+
+    move p1, v1
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge p1, v2, :cond_0
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_0
+    move v2, v1
+
+    :goto_1
+    if-eqz v2, :cond_5
+
+    add-int/lit8 v2, p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lwke;
+
+    iget-object p1, p1, Lwke;->b:Lvke;
+
+    invoke-virtual {p1}, Lvke;->c()V
+
+    move p1, v2
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    move p1, v1
+
+    :goto_2
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge p1, v2, :cond_3
+
+    move v2, v0
+
+    goto :goto_3
+
+    :cond_3
+    move v2, v1
+
+    :goto_3
+    if-eqz v2, :cond_5
+
+    add-int/lit8 v2, p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    check-cast p1, Lwke;
+
+    iget-object p1, p1, Lwke;->b:Lvke;
+
+    invoke-virtual {p1}, Lvke;->d()V
+
+    move p1, v2
 
     goto :goto_2
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :cond_4
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw p1
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ly7a;->Y:Lz7a;
-
-    :try_start_1
-    iput v1, p0, Ly7a;->X:I
-
-    iget-object v0, p1, Lz7a;->a:Lx5d;
-
-    new-instance v1, Lwg4;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2, p1}, Lwg4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :goto_0
-    const-string v0, "NotificationsDao"
-
-    const-string v1, "fail to clear on logout"
-
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :goto_2
-    throw p1
+    :cond_5
+    return-void
 .end method

@@ -1,262 +1,551 @@
 .class public final Lynd;
-.super Lund;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Set;
+.implements Ltr7;
 
 
 # instance fields
-.field public final j:Lkw8;
+.field public final synthetic a:I
 
-.field public final k:Lkw8;
-
-.field public final l:J
+.field public final synthetic b:Lc1a;
 
 
 # direct methods
-.method public constructor <init>(Lenc;JJJJJLjava/util/List;JLkw8;Lkw8;JJ)V
-    .locals 17
+.method public synthetic constructor <init>(Lc1a;I)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    iput p2, p0, Lynd;->a:I
 
-    move-object/from16 v1, p1
+    iput-object p1, p0, Lynd;->b:Lc1a;
 
-    move-wide/from16 v2, p2
-
-    move-wide/from16 v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p10
-
-    move-object/from16 v10, p12
-
-    move-wide/from16 v11, p13
-
-    move-wide/from16 v13, p17
-
-    move-wide/from16 v15, p19
-
-    invoke-direct/range {v0 .. v16}, Lund;-><init>(Lenc;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p15
-
-    iput-object v1, v0, Lynd;->j:Lkw8;
-
-    move-object/from16 v1, p16
-
-    iput-object v1, v0, Lynd;->k:Lkw8;
-
-    move-wide/from16 v1, p8
-
-    iput-wide v1, v0, Lynd;->l:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lp1d;)Lenc;
-    .locals 13
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lynd;->j:Lkw8;
+    iget p1, p0, Lynd;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p1, p1, Lp1d;->a:Lt76;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v6, p1, Lt76;->a:Ljava/lang/String;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    iget v1, p1, Lt76;->j:I
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v4, 0x0
+    throw p1
 
-    const-wide/16 v2, 0x0
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual/range {v0 .. v6}, Lkw8;->f(IJJLjava/lang/String;)Ljava/lang/String;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    move-result-object v10
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    new-instance v7, Lenc;
+    throw p1
 
-    const-wide/16 v8, 0x0
+    nop
 
-    const-wide/16 v11, -0x1
-
-    invoke-direct/range {v7 .. v12}, Lenc;-><init>(JLjava/lang/String;J)V
-
-    return-object v7
-
-    :cond_0
-    iget-object p1, p0, Ldod;->c:Ljava/lang/Object;
-
-    check-cast p1, Lenc;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final e(J)J
-    .locals 5
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    iget-object v0, p0, Lund;->f:Ljava/util/List;
+    iget p1, p0, Lynd;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 2
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lynd;->b:Lc1a;
+
+    invoke-virtual {v0, p1}, Lc1a;->b(Ljava/lang/Object;)Z
 
     move-result p1
 
-    int-to-long p1, p1
+    return p1
 
-    return-wide p1
+    :pswitch_0
+    instance-of v0, p1, Ljava/util/Map$Entry;
 
-    :cond_0
-    iget-wide v0, p0, Lynd;->l:J
+    if-nez v0, :cond_0
 
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide p1, p0, Lund;->d:J
-
-    sub-long/2addr v0, p1
-
-    const-wide/16 p1, 0x1
-
-    add-long/2addr v0, p1
-
-    return-wide v0
-
-    :cond_1
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Ldod;->a:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Lund;->e:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    const-wide/32 v0, 0xf4240
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
-
-    sget v1, Lnm0;->a:I
-
-    new-instance v1, Ljava/math/BigDecimal;
-
-    invoke-direct {v1, p1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    new-instance p1, Ljava/math/BigDecimal;
-
-    invoke-direct {p1, p2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v1, p1, p2, v0}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toBigIntegerExact()Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_2
-    return-wide v2
-.end method
-
-.method public final i(Ll1d;J)Lenc;
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    iget-wide v1, v0, Lund;->d:J
-
-    iget-object v3, v0, Lund;->f:Ljava/util/List;
-
-    if-eqz v3, :cond_0
-
-    sub-long v1, p2, v1
-
-    long-to-int v1, v1
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Laod;
-
-    iget-wide v1, v1, Laod;->a:J
-
-    :goto_0
-    move-wide v7, v1
-
-    move-object/from16 v1, p1
-
-    goto :goto_1
-
-    :cond_0
-    sub-long v1, p2, v1
-
-    iget-wide v3, v0, Lund;->e:J
-
-    mul-long/2addr v1, v3
+    const/4 p1, 0x0
 
     goto :goto_0
 
+    :cond_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    iget-object v0, p0, Lynd;->b:Lc1a;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lc1a;->f(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 4
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lynd;->b:Lc1a;
+
+    invoke-virtual {v2, v0}, Lc1a;->b(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v1, 0x0
+
+    :cond_2
+    :goto_0
+    return v1
+
+    :pswitch_0
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lynd;->b:Lc1a;
+
+    invoke-virtual {v3, v2}, Lc1a;->f(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const/4 v1, 0x0
+
+    :cond_5
     :goto_1
-    iget-object v1, v1, Lp1d;->a:Lt76;
+    return v1
 
-    iget-object v9, v1, Lt76;->a:Ljava/lang/String;
+    nop
 
-    iget v4, v1, Lt76;->j:I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-object v3, v0, Lynd;->k:Lkw8;
+.method public final isEmpty()Z
+    .locals 1
 
-    move-wide/from16 v5, p2
+    iget v0, p0, Lynd;->a:I
 
-    invoke-virtual/range {v3 .. v9}, Lkw8;->f(IJJLjava/lang/String;)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v13
+    iget-object v0, p0, Lynd;->b:Lc1a;
 
-    new-instance v10, Lenc;
+    invoke-virtual {v0}, Lc1a;->h()Z
 
-    const-wide/16 v11, 0x0
+    move-result v0
 
-    const-wide/16 v14, -0x1
+    return v0
 
-    invoke-direct/range {v10 .. v15}, Lenc;-><init>(JLjava/lang/String;J)V
+    :pswitch_0
+    iget-object v0, p0, Lynd;->b:Lc1a;
 
-    return-object v10
+    invoke-virtual {v0}, Lc1a;->h()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lznd;
+
+    iget-object v1, p0, Lynd;->b:Lc1a;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lznd;-><init>(Lc1a;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Lj3e;->a(Lej6;)Lc3e;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lxnd;
+
+    iget-object v1, p0, Lynd;->b:Lc1a;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lxnd;-><init>(Lc1a;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Lj3e;->a(Lej6;)Lc3e;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget p1, p0, Lynd;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget p1, p0, Lynd;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget p1, p0, Lynd;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lynd;->b:Lc1a;
+
+    iget v0, v0, Lc1a;->e:I
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lynd;->b:Lc1a;
+
+    iget v0, v0, Lc1a;->e:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1
+    invoke-static {p0}, Lle4;->f(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 2
+    :pswitch_0
+    invoke-static {p0}, Lle4;->f(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lynd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    invoke-static {p0, p1}, Lle4;->g(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 4
+    :pswitch_0
+    invoke-static {p0, p1}, Lle4;->g(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

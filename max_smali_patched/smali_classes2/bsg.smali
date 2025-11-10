@@ -1,214 +1,207 @@
 .class public final Lbsg;
-.super Lm3f;
+.super Landroid/os/HandlerThread;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Landroid/util/Size;
 
-.field public final synthetic Y:Lfsg;
+.field public final b:Ly45;
 
-.field public final synthetic Z:Lwn0;
+.field public final c:J
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final synthetic o:Lesg;
 
 
 # direct methods
-.method public constructor <init>(Lfsg;Lwn0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lesg;Landroid/util/Size;Ly45;)V
     .locals 0
 
-    iput-object p1, p0, Lbsg;->Y:Lfsg;
+    iput-object p1, p0, Lbsg;->o:Lesg;
 
-    iput-object p2, p0, Lbsg;->Z:Lwn0;
+    const-string p1, "videomsg-gl-thread"
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbsg;->a:Landroid/util/Size;
+
+    iput-object p3, p0, Lbsg;->b:Ly45;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lbsg;->c:J
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lbsg;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onLooperPrepared()V
+    .locals 7
 
-    check-cast p1, Le34;
+    iget-object v0, p0, Lbsg;->o:Lesg;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lesg;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lbsg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v1, Lcuh;->b:Lnxa;
 
-    move-result-object p1
-
-    check-cast p1, Lbsg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lbsg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lbsg;
-
-    iget-object v0, p0, Lbsg;->Y:Lfsg;
-
-    iget-object v1, p0, Lbsg;->Z:Lwn0;
-
-    invoke-direct {p1, v0, v1, p2}, Lbsg;-><init>(Lfsg;Lwn0;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget-object v0, p0, Lbsg;->Y:Lfsg;
-
-    iget-object v1, v0, Lfsg;->h:Lbp7;
-
-    iget v2, p0, Lbsg;->X:I
-
-    sget-object v3, Loyf;->a:Loyf;
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lf34;->a:Lf34;
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v5, :cond_1
-
-    if-ne v2, v4, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object v12, p0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :cond_0
+    sget-object v2, La98;->d:La98;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
 
-    move-result-object p1
+    move-result v3
 
-    move-object v7, p1
+    if-eqz v3, :cond_1
 
-    check-cast v7, Lcrg;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget-wide v8, v0, Lfsg;->a:J
+    move-result-wide v3
 
-    iget-wide v10, v0, Lfsg;->b:J
+    iget-wide v5, p0, Lbsg;->c:J
 
-    iput v5, p0, Lbsg;->X:I
+    sub-long/2addr v3, v5
 
-    move-object v12, p0
+    const-string v5, "onLooperPrepared, GL thread startup took="
 
-    invoke-virtual/range {v7 .. v12}, Lcrg;->a(JJLm3f;)Ljava/lang/Object;
+    const-string v6, " ms"
 
-    move-result-object p1
+    invoke-static {v3, v4, v5, v6}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-ne p1, v6, :cond_3
+    move-result-object v3
 
-    goto :goto_2
+    const/4 v4, 0x0
 
-    :cond_3
+    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    check-cast p1, Lgsg;
+    return-void
+.end method
 
-    if-eqz p1, :cond_4
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p1, Lgsg;->d:Ljava/lang/String;
+    iget-object v0, p0, Lbsg;->o:Lesg;
 
-    goto :goto_1
+    iget-object v0, v0, Lesg;->a:Ljava/lang/String;
 
-    :cond_4
-    const/4 v0, 0x0
+    iget-object v1, p0, Lbsg;->a:Landroid/util/Size;
 
-    :goto_1
-    if-eqz v0, :cond_7
+    iget-object v2, p0, Lbsg;->b:Ly45;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v4, "run, previewSize="
 
-    if-nez v0, :cond_5
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_3
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_5
-    if-eqz p1, :cond_6
+    const-string v1, ", dynamicRange="
 
-    const/16 v0, 0x37
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v2, v0}, Lgsg;->a(Lgsg;ZZI)Lgsg;
+    invoke-static {v0, v1, v2}, Lcuh;->j(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    move-result-object p1
+    iget-object v0, p0, Lbsg;->o:Lesg;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lesg;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    check-cast v0, Lcrg;
+    move-result v0
 
-    iput v4, v12, Lbsg;->X:I
+    if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcrg;->a:Lx5d;
+    iget-object v0, p0, Lbsg;->o:Lesg;
 
-    new-instance v2, Lbrg;
+    iget-object v0, v0, Lesg;->a:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    const-string v1, "run, video message processor was requested to exit during startup GL thread, skip GL initialization!"
 
-    invoke-direct {v2, v0, p1, v4}, Lbrg;-><init>(Lcrg;Lgsg;I)V
+    invoke-static {v0, v1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1, v2, p0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lbsg;->o:Lesg;
 
-    if-ne p1, v6, :cond_6
+    iget-object v1, p0, Lbsg;->a:Landroid/util/Size;
 
-    :goto_2
-    return-object v6
+    iget-object v3, p0, Lbsg;->b:Ly45;
 
-    :cond_6
-    return-object v3
+    invoke-static {v0, v1, v3}, Lesg;->d(Lesg;Landroid/util/Size;Ly45;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_7
-    :goto_3
-    new-instance p1, Lmsg;
+    goto :goto_0
 
-    invoke-direct {p1}, Ljava/lang/Throwable;-><init>()V
+    :catch_0
+    move-exception v0
 
-    iget-object v0, v12, Lbsg;->Z:Lwn0;
+    iget-object v1, p0, Lbsg;->o:Lesg;
 
-    invoke-virtual {v0, p1}, Lik7;->b(Ljava/lang/Throwable;)V
+    iget-object v1, v1, Lesg;->a:Ljava/lang/String;
 
-    return-object v3
+    const-string v3, "GL initialization failed"
+
+    invoke-static {v1, v3, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, p0, Lbsg;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    :goto_0
+    invoke-super {p0}, Landroid/os/HandlerThread;->run()V
+
+    iget-object v0, p0, Lbsg;->o:Lesg;
+
+    iget-object v0, v0, Lesg;->a:Ljava/lang/String;
+
+    sget-object v1, Lcuh;->b:Lnxa;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v3, La98;->X:La98;
+
+    invoke-virtual {v1, v3}, Lnxa;->b(La98;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const-string v4, "run, GL thread finished"
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return-void
 .end method

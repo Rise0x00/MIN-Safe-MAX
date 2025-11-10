@@ -1,20 +1,29 @@
-.class public abstract Lqdc;
-.super Ljava/lang/Object;
+.class public final Lqdc;
+.super Lie6;
+.source "SourceFile"
 
 
-# static fields
-.field public static join_widget_confirm_button:I = 0x7f0a042e
+# virtual methods
+.method public final f(ILhvf;Z)Lhvf;
+    .locals 0
 
-.field public static join_widget_root:I = 0x7f0a042f
+    invoke-super {p0, p1, p2, p3}, Lie6;->f(ILhvf;Z)Lhvf;
 
-.field public static link_interceptor_widget_view:I = 0x7f0a0464
+    const/4 p1, 0x1
 
-.field public static root:I = 0x7f0a0a1d
+    iput-boolean p1, p2, Lhvf;->f:Z
 
-.field public static root_dialogs_container:I = 0x7f0a0a1e
+    return-object p2
+.end method
 
-.field public static root_screen:I = 0x7f0a0a1f
+.method public final m(ILkvf;J)Lkvf;
+    .locals 0
 
-.field public static root_top_indicator:I = 0x7f0a0a20
+    invoke-super {p0, p1, p2, p3, p4}, Lie6;->m(ILkvf;J)Lkvf;
 
-.field public static root_view_group:I = 0x7f0a0a21
+    const/4 p1, 0x1
+
+    iput-boolean p1, p2, Lkvf;->k:Z
+
+    return-object p2
+.end method

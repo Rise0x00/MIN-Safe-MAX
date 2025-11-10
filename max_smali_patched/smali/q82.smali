@@ -1,195 +1,136 @@
-.class public abstract synthetic Lq82;
-.super Ljava/lang/Object;
+.class public final Lq82;
+.super Lwi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final i:Landroid/util/SparseArray;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-static {}, Lo82;->values()[Lo82;
+    invoke-direct {p0}, Lwi0;-><init>()V
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lq82;->i:Landroid/util/SparseArray;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 8
+
+    iget-object v0, p0, Lwi0;->b:Ll50;
+
+    iget v0, v0, Ll50;->b:I
+
+    iget-object v1, p0, Lq82;->i:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    move-object v5, v0
 
-    new-array v0, v0, [I
+    check-cast v5, Lr82;
 
-    const/4 v1, 0x1
+    invoke-static {v5}, Ligi;->i(Ljava/lang/Object;)V
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    :catch_0
-    const/4 v2, 0x2
+    iget-object v1, p0, Lwi0;->b:Ll50;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget v1, v1, Ll50;->d:I
 
-    :catch_1
-    const/4 v1, 0x3
+    div-int v6, v0, v1
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v0, p0, Lwi0;->c:Ll50;
 
-    :catch_2
-    const/4 v2, 0x4
+    iget v0, v0, Ll50;->d:I
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    mul-int/2addr v0, v6
 
-    :catch_3
-    const/4 v1, 0x5
+    invoke-virtual {p0, v0}, Lwi0;->k(I)Ljava/nio/ByteBuffer;
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result-object v3
 
-    :catch_4
-    const/4 v2, 0x6
+    iget-object v2, p0, Lwi0;->b:Ll50;
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    iget-object v4, p0, Lwi0;->c:Ll50;
 
-    :catch_5
-    const/4 v1, 0x7
+    const/4 v7, 0x0
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    move-object v1, p1
 
-    :catch_6
-    const/16 v2, 0x8
+    invoke-static/range {v1 .. v7}, Lzgi;->k(Ljava/nio/ByteBuffer;Ll50;Ljava/nio/ByteBuffer;Ll50;Lr82;IZ)V
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    const/16 v1, 0x9
-
-    :try_start_8
-    aput v1, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    const/16 v1, 0xa
-
-    :try_start_9
-    aput v1, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    const/16 v1, 0xb
-
-    :try_start_a
-    aput v1, v0, v2
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    const/16 v2, 0xc
-
-    :try_start_b
-    aput v2, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    const/16 v2, 0xd
-
-    :try_start_c
-    aput v2, v0, v2
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
-
-    :catch_c
-    const/16 v2, 0xe
-
-    :try_start_d
-    aput v2, v0, v1
-    :try_end_d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
-
-    :catch_d
-    const/16 v1, 0xf
-
-    :try_start_e
-    aput v1, v0, v2
-    :try_end_e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
-
-    :catch_e
-    const/16 v2, 0x10
-
-    :try_start_f
-    aput v2, v0, v1
-    :try_end_f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
-
-    :catch_f
-    const/16 v1, 0x11
-
-    :try_start_10
-    aput v1, v0, v2
-    :try_end_10
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
-
-    :catch_10
-    const/16 v2, 0x12
-
-    :try_start_11
-    aput v2, v0, v1
-    :try_end_11
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
-
-    :catch_11
-    const/16 v1, 0x13
-
-    :try_start_12
-    aput v1, v0, v2
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
-
-    :catch_12
-    const/16 v2, 0x14
-
-    :try_start_13
-    aput v2, v0, v1
-    :try_end_13
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
-
-    :catch_13
-    const/16 v1, 0x15
-
-    :try_start_14
-    aput v1, v0, v2
-    :try_end_14
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
-
-    :catch_14
-    sput-object v0, Lq82;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-void
+.end method
+
+.method public final g(Ll50;)Ll50;
+    .locals 3
+
+    iget v0, p1, Ll50;->c:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lq82;->i:Landroid/util/SparseArray;
+
+    iget v2, p1, Ll50;->b:I
+
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr82;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v2, v0, Lr82;->e:Z
+
+    if-eqz v2, :cond_0
+
+    sget-object p1, Ll50;->e:Ll50;
+
+    return-object p1
+
+    :cond_0
+    new-instance v2, Ll50;
+
+    iget p1, p1, Ll50;->a:I
+
+    iget v0, v0, Lr82;->b:I
+
+    invoke-direct {v2, p1, v0, v1}, Ll50;-><init>(III)V
+
+    return-object v2
+
+    :cond_1
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    const-string v1, "No mixing matrix for input channel count"
+
+    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Ll50;)V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ll50;)V
+
+    throw v0
 .end method

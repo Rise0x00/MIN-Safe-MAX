@@ -1,169 +1,215 @@
-.class public abstract Lmja;
-.super Ljava/lang/Object;
+.class public final Lmja;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Lzv4;
+.implements Lgla;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public volatile X:Z
 
-.field public static final c:I
+.field public final a:Ltg3;
 
-.field public static final d:I
+.field public final b:Lyy;
 
-.field public static final e:I
+.field public final c:Lfj6;
 
-.field public static final f:I
+.field public final d:Lai3;
 
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public o:Lzv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ltg3;Lfj6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Lmja;->a:Ltg3;
+
+    iput-object p2, p0, Lmja;->c:Lfj6;
+
+    new-instance p1, Lyy;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lmja;->b:Lyy;
+
+    new-instance p1, Lai3;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmja;->d:Lai3;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lmja;->c:Lfj6;
+
+    invoke-interface {v0, p1}, Lfj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null CompletableSource"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Ljg3;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    new-instance v0, Llg3;
+
+    invoke-direct {v0, p0}, Llg3;-><init>(Lmja;)V
+
+    iget-boolean v1, p0, Lmja;->X:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lmja;->d:Lai3;
+
+    invoke-virtual {v1, v0}, Lai3;->a(Lzv4;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1, v0}, Ljg3;->h(Ltg3;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lmja;->o:Lzv4;
+
+    invoke-interface {v0}, Lzv4;->dispose()V
+
+    invoke-virtual {p0, p1}, Lmja;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lmja;->b:Lyy;
+
+    iget-object v1, p0, Lmja;->a:Ltg3;
+
+    invoke-virtual {v0, v1}, Lyy;->d(Ltg3;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Lzv4;)V
     .locals 1
 
-    sget v0, Lvdc;->call_history_info_copy_link:I
+    iget-object v0, p0, Lmja;->o:Lzv4;
 
-    sput v0, Lmja;->a:I
+    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
 
-    sget v0, Lvdc;->call_history_info_open_chat_call:I
+    move-result v0
 
-    sput v0, Lmja;->b:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lvdc;->call_history_info_recreate:I
+    iput-object p1, p0, Lmja;->o:Lzv4;
 
-    sput v0, Lmja;->c:I
+    iget-object p1, p0, Lmja;->a:Ltg3;
 
-    sget v0, Lvdc;->call_history_info_send_to_chat:I
+    invoke-interface {p1, p0}, Ltg3;->d(Lzv4;)V
 
-    sput v0, Lmja;->d:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lvdc;->call_history_info_share_link:I
+.method public final dispose()V
+    .locals 1
 
-    sput v0, Lmja;->e:I
+    const/4 v0, 0x1
 
-    sget v0, Lvdc;->call_history_info_start_call:I
+    iput-boolean v0, p0, Lmja;->X:Z
 
-    sput v0, Lmja;->f:I
+    iget-object v0, p0, Lmja;->o:Lzv4;
 
-    sget v0, Lvdc;->call_history_screen_banner:I
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    sput v0, Lmja;->g:I
+    iget-object v0, p0, Lmja;->d:Lai3;
 
-    sget v0, Lvdc;->call_history_screen_contact_call:I
+    invoke-virtual {v0}, Lai3;->dispose()V
 
-    sput v0, Lmja;->h:I
+    iget-object v0, p0, Lmja;->b:Lyy;
 
-    sget v0, Lvdc;->call_history_screen_container:I
+    invoke-virtual {v0}, Lyy;->c()V
 
-    sput v0, Lmja;->i:I
+    return-void
+.end method
 
-    sget v0, Lvdc;->call_history_screen_group_call:I
+.method public final f()Z
+    .locals 1
 
-    sput v0, Lmja;->j:I
+    iget-object v0, p0, Lmja;->o:Lzv4;
 
-    sget v0, Lvdc;->call_history_screen_toolbar:I
+    invoke-interface {v0}, Lzv4;->f()Z
 
-    sput v0, Lmja;->k:I
+    move-result v0
 
-    sget v0, Lvdc;->call_info_action_list:I
+    return v0
+.end method
 
-    sput v0, Lmja;->l:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sget v0, Lvdc;->call_info_action_vh:I
+    iget-object v0, p0, Lmja;->b:Lyy;
 
-    sput v0, Lmja;->m:I
+    invoke-virtual {v0, p1}, Lyy;->b(Ljava/lang/Throwable;)Z
 
-    sget v0, Lvdc;->call_info_appbarlayout:I
+    move-result p1
 
-    sput v0, Lmja;->n:I
+    if-eqz p1, :cond_0
 
-    sget v0, Lvdc;->call_info_button:I
+    const/4 p1, 0x1
 
-    sput v0, Lmja;->o:I
+    iput-boolean p1, p0, Lmja;->X:Z
 
-    sget v0, Lvdc;->call_info_collapsiblecontainerlinearlayout:I
+    iget-object p1, p0, Lmja;->o:Lzv4;
 
-    sput v0, Lmja;->p:I
+    invoke-interface {p1}, Lzv4;->dispose()V
 
-    sget v0, Lvdc;->call_info_coordinator_layout:I
+    iget-object p1, p0, Lmja;->d:Lai3;
 
-    sput v0, Lmja;->q:I
+    invoke-virtual {p1}, Lai3;->dispose()V
 
-    sget v0, Lvdc;->call_info_icon:I
+    iget-object p1, p0, Lmja;->b:Lyy;
 
-    sput v0, Lmja;->r:I
+    iget-object v0, p0, Lmja;->a:Ltg3;
 
-    sget v0, Lvdc;->call_info_link_state:I
+    invoke-virtual {p1, v0}, Lyy;->d(Ltg3;)V
 
-    sput v0, Lmja;->s:I
-
-    sget v0, Lvdc;->call_info_onemetoolbar:I
-
-    sput v0, Lmja;->t:I
-
-    sget v0, Lvdc;->call_info_presettings_action_list:I
-
-    sput v0, Lmja;->u:I
-
-    sget v0, Lvdc;->call_info_presettings_change_name_vh:I
-
-    sput v0, Lmja;->v:I
-
-    sget v0, Lvdc;->call_info_presettings_item_vh:I
-
-    sput v0, Lmja;->w:I
-
-    sget v0, Lvdc;->call_info_presettings_toolbar:I
-
-    sput v0, Lmja;->x:I
-
-    sget v0, Lvdc;->call_info_title:I
-
-    sput v0, Lmja;->y:I
-
-    sget v0, Lvdc;->call_presettings_call_save_changes:I
-
-    sput v0, Lmja;->z:I
-
+    :cond_0
     return-void
 .end method

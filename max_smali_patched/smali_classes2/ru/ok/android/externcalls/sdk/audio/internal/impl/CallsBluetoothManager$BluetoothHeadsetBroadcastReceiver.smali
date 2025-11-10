@@ -26,7 +26,7 @@
         "context",
         "Landroid/content/Intent;",
         "intent",
-        "Loyf;",
+        "Lybg;",
         "onReceive",
         "(Landroid/content/Context;Landroid/content/Intent;)V",
         "calls-audiomanager_release"
@@ -88,7 +88,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Lve6;Lxe6;Lve6;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->doOnOwnThread$calls_audiomanager_release$default(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Ljava/lang/String;Loi6;Lqi6;Loi6;ILjava/lang/Object;)V
 
     return-void
 .end method

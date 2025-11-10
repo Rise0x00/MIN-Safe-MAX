@@ -1,108 +1,96 @@
 .class public final Lwv2;
-.super Ljava/lang/Object;
+.super Lmd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Le8e;
-
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    const/4 v0, 0x0
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwv2;->a:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->a()Ly24;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lwv2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lwv2;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(La33;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
-    .annotation runtime Lxye;
-    .end annotation
 
-    .line 1
-    new-instance p1, Lvv2;
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lvv2;-><init>(Lwv2;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lwv2;
 
-    iget-object v2, p0, Lwv2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lwv2;
+
+    iget-object v1, p0, Lwv2;->b:Landroid/content/Intent;
+
+    iget-object p1, p1, Lwv2;->b:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onEvent(Lp97;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final hashCode()I
+    .locals 1
 
-    .line 2
-    new-instance p1, Lvv2;
+    iget-object v0, p0, Lwv2;->b:Landroid/content/Intent;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {p1, p0, v0}, Lvv2;-><init>(Lwv2;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lwv2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    return v0
 .end method
 
-.method public final onEvent(Ly48;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 3
-    new-instance p1, Lvv2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "PickPhotoFromCamera(data="
 
-    invoke-direct {p1, p0, v0}, Lvv2;-><init>(Lwv2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lwv2;->b:Landroid/content/Intent;
 
-    iget-object v2, p0, Lwv2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    const-string v1, ")"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

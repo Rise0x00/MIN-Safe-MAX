@@ -1,135 +1,86 @@
 .class public final Lsee;
-.super Ljava/lang/Object;
+.super Lmd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lplb;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
-
-.field public final b:Lec5;
-
-.field public final c:Lfe5;
-
-.field public final d:Lbp7;
-
-.field public final e:Lwlb;
-
-.field public final f:Lbp7;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Lk2d;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lec5;Lfe5;Lbp7;Lwlb;Lbp7;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x12
 
-    iput-object p1, p0, Lsee;->a:Landroid/app/Application;
+    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
 
-    iput-object p2, p0, Lsee;->b:Lec5;
-
-    iput-object p3, p0, Lsee;->c:Lfe5;
-
-    iput-object p4, p0, Lsee;->d:Lbp7;
-
-    iput-object p5, p0, Lsee;->e:Lwlb;
-
-    iput-object p6, p0, Lsee;->f:Lbp7;
-
-    const-class p1, Lsee;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsee;->g:Ljava/lang/String;
-
-    new-instance p1, Lm6d;
-
-    const/16 p2, 0xe
-
-    invoke-direct {p1, p2, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lk2d;
-
-    invoke-direct {p2, p1}, Lk2d;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lsee;->h:Lk2d;
+    iput-wide p1, p0, Lsee;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llhg;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lsee;->g:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    const-string v1, "Single player handler. Free player"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Llhg;->stop()V
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Llhg;->Z(Landroid/view/Surface;)V
-
-    return-void
-.end method
-
-.method public final get()Llhg;
-    .locals 5
-
-    iget-object v0, p0, Lsee;->g:Ljava/lang/String;
-
-    sget-object v1, Lox9;->j:Lqpa;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v2, Ly38;->o:Ly38;
+    instance-of v1, p1, Lsee;
 
-    invoke-virtual {v1, v2}, Lqpa;->b(Ly38;)Z
+    const/4 v2, 0x0
 
-    move-result v3
+    if-nez v1, :cond_1
 
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lsee;->h:Lk2d;
-
-    invoke-virtual {v3}, Lk2d;->a()Z
-
-    move-result v3
-
-    const-string v4, "Single player handler. Player exist: "
-
-    invoke-static {v4, v3}, Lq89;->j(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lsee;->h:Lk2d;
+    check-cast p1, Lsee;
 
-    invoke-virtual {v0}, Lk2d;->getValue()Ljava/lang/Object;
+    iget-wide v3, p0, Lsee;->b:J
+
+    iget-wide v5, p1, Lsee;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lsee;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ProfileAvatars(id="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lsee;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, Llhg;
 
     return-object v0
 .end method

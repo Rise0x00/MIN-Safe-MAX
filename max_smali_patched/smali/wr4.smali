@@ -1,113 +1,39 @@
 .class public final Lwr4;
-.super Ljava/lang/Object;
+.super Lm40;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
-
-.field public final f:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lxr4;)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lur4;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lur4;-><init>(Lxr4;I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwr4;->a:Ljava/lang/Object;
-
-    new-instance v0, Lvr4;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2}, Lvr4;-><init>(Lwr4;Lxr4;I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwr4;->b:Ljava/lang/Object;
-
-    new-instance v0, Lur4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p1, v2}, Lur4;-><init>(Lxr4;I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwr4;->c:Ljava/lang/Object;
-
-    new-instance v0, Lvr4;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p0, p1, v2}, Lvr4;-><init>(Lwr4;Lxr4;I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwr4;->d:Ljava/lang/Object;
-
-    new-instance v0, Lik3;
-
-    invoke-direct {v0, p1, p0}, Lik3;-><init>(Lxr4;Lwr4;)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwr4;->e:Ljava/lang/Object;
-
-    new-instance v0, Lvr4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, p0, p1, v2}, Lvr4;-><init>(Lwr4;Lxr4;I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwr4;->f:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a()Lpu0;
+.method public final c(Ljava/lang/Object;)F
     .locals 1
 
-    iget-object v0, p0, Lwr4;->b:Ljava/lang/Object;
+    check-cast p1, Lxr4;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lxr4;->y0:Lu15;
 
-    move-result-object v0
+    iget p1, p1, Lu15;->b:F
 
-    check-cast v0, Lpu0;
+    const v0, 0x461c4000    # 10000.0f
 
-    return-object v0
+    mul-float/2addr p1, v0
+
+    return p1
+.end method
+
+.method public final d(Ljava/lang/Object;F)V
+    .locals 1
+
+    check-cast p1, Lxr4;
+
+    const v0, 0x461c4000    # 10000.0f
+
+    div-float/2addr p2, v0
+
+    iget-object v0, p1, Lxr4;->y0:Lu15;
+
+    iput p2, v0, Lu15;->b:F
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method

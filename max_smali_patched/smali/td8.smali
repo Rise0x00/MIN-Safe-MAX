@@ -1,247 +1,135 @@
 .class public final Ltd8;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Lke8;
-.implements Leze;
+.implements Lej6;
 
 
 # instance fields
-.field public final X:[Lpe8;
+.field public final synthetic X:Lone/me/android/MainActivity;
 
-.field public Y:I
-
-.field public Z:J
-
-.field public final a:Lcze;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final o:Lb22;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcze;[Lpe8;)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iput-object p1, p0, Ltd8;->X:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Ltd8;->a:Lcze;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Ltd8;->X:[Lpe8;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Ltd8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance p1, Lb22;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p1, p2}, Lb22;-><init>(I)V
-
-    iput-object p1, p0, Ltd8;->o:Lb22;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object p2, La7a;->a:La7a;
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Ltd8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ltd8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p1, Landroid/net/Uri;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Ltd8;->d()V
+    invoke-virtual {p0, p1, p2}, Ltd8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
+
+    check-cast p1, Ltd8;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Ltd8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Ltd8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v0, Ltd8;
 
-    sget-object v1, La7a;->a:La7a;
+    iget-object v1, p0, Ltd8;->X:Lone/me/android/MainActivity;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p2}, Ltd8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Ltd8;->d()V
+    iput-object p1, v0, Ltd8;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
 .end method
 
-.method public final c(Lss4;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Ltd8;->o:Lb22;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Ltd8;->o:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    check-cast p1, Landroid/net/Uri;
 
-    return-void
-.end method
+    const-class v0, Lone/me/android/MainActivity;
 
-.method public final cancel()V
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object v0, p0, Ltd8;->o:Lb22;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v1, Lcuh;->b:Lnxa;
 
-    invoke-static {v0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-.end method
-
-.method public final d()V
-    .locals 10
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Ltd8;->o:Lb22;
-
-    invoke-virtual {v0}, Lb22;->h()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ltd8;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    sget-object v4, La7a;->a:La7a;
-
-    iget-object v5, p0, Ltd8;->a:Lcze;
-
-    if-eq v1, v4, :cond_2
-
-    iget-wide v6, p0, Ltd8;->Z:J
-
-    iget-object v4, p0, Ltd8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v8
-
-    cmp-long v4, v6, v8
-
-    if-eqz v4, :cond_4
-
-    const-wide/16 v8, 0x1
-
-    add-long/2addr v6, v8
-
-    iput-wide v6, p0, Ltd8;->Z:J
-
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v5, v1}, Lcze;->f(Ljava/lang/Object;)V
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {v0}, Lb22;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget v0, p0, Ltd8;->Y:I
-
-    iget-object v1, p0, Ltd8;->X:[Lpe8;
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_3
-
-    invoke-interface {v5}, Lcze;->b()V
-
-    return-void
-
-    :cond_3
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Ltd8;->Y:I
-
-    aget-object v0, v1, v0
-
-    invoke-interface {v0, p0}, Lpe8;->a(Lke8;)V
-
-    :cond_4
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :goto_1
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 1
-
-    invoke-static {p1, p2}, Lgze;->e(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ltd8;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v0, p1, p2}, Lid7;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    invoke-virtual {p0}, Ltd8;->d()V
-
     :cond_0
-    return-void
-.end method
+    sget-object v2, La98;->d:La98;
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
 
-    iget-object v0, p0, Ltd8;->a:Lcze;
+    move-result v3
 
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
+    if-eqz v3, :cond_1
 
-    return-void
+    const-string v3, "handle mytracker link "
+
+    invoke-static {p1, v3}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sget-object v0, Lusa;->a:Lusa;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+
+    move-result-object v0
+
+    const-class v1, Ll08;
+
+    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll08;
+
+    iget-object v0, v0, Ll08;->b:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lk08;
+
+    invoke-virtual {v0, p1}, Lk08;->e(Landroid/net/Uri;)Ltz5;
+
+    move-result-object p1
+
+    return-object p1
 .end method

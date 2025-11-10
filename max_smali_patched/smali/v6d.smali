@@ -1,37 +1,37 @@
-.class public final Lv6d;
+.class public abstract Lv6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lv6d;
+# virtual methods
+.method public f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Li7d;)V
+    .locals 0
 
-.field public static final b:Ljava/util/Set;
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
+    move-result-object p2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    check-cast p2, Lx6d;
 
-    new-instance v0, Lv6d;
+    iget-object p2, p2, Lx6d;->a:Lm7d;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2}, Lm7d;->h()I
 
-    sput-object v0, Lv6d;->a:Lv6d;
+    const/4 p2, 0x0
 
-    const-string v0, "android.intent.action.SEND_MULTIPLE"
+    invoke-virtual {p1, p2, p2, p2, p2}, Landroid/graphics/Rect;->set(IIII)V
 
-    const-string v1, "android.intent.action.SEND"
+    return-void
+.end method
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+.method public g(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Li7d;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-static {v0}, Lqxd;->x([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lv6d;->b:Ljava/util/Set;
+.method public h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 0
 
     return-void
 .end method

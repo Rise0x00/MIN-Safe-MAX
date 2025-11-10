@@ -2,241 +2,134 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltb4;
+
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:J
+.field public final b:Lt2g;
 
-.field public final c:J
+.field public final c:Ljava/lang/Object;
 
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
-
-.field public i:J
-
-.field public j:F
-
-.field public k:F
-
-.field public l:F
-
-.field public m:J
-
-.field public n:J
-
-.field public o:J
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJJ)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Loh4;)V
+    .locals 1
 
-    iput p1, p0, Lqi4;->a:I
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Lqi4;->b:J
+    iput v0, p0, Lqi4;->a:I
 
-    iput-wide p4, p0, Lqi4;->c:J
+    .line 1
+    new-instance v0, Lpk4;
 
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-direct {v0}, Lpk4;-><init>()V
 
-    iput-wide p1, p0, Lqi4;->d:J
+    .line 2
+    iput-object p2, v0, Lpk4;->b:Ljava/lang/String;
 
-    iput-wide p1, p0, Lqi4;->e:J
-
-    iput-wide p1, p0, Lqi4;->g:J
-
-    iput-wide p1, p0, Lqi4;->h:J
-
-    const p1, 0x3f7851ec    # 0.97f
-
-    iput p1, p0, Lqi4;->k:F
-
-    const p1, 0x3f83d70a    # 1.03f
-
-    iput p1, p0, Lqi4;->j:F
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    iput p1, p0, Lqi4;->l:F
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Lqi4;->m:J
-
-    iput-wide p1, p0, Lqi4;->f:J
-
-    iput-wide p1, p0, Lqi4;->i:J
-
-    iput-wide p1, p0, Lqi4;->n:J
-
-    iput-wide p1, p0, Lqi4;->o:J
-
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lqi4;->c:Ljava/lang/Object;
+
+    .line 5
+    iput-object p3, p0, Lqi4;->b:Lt2g;
+
+    .line 6
+    iput-object v0, p0, Lqi4;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lbma;Loh4;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lqi4;->a:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Lqi4;->c:Ljava/lang/Object;
+
+    .line 10
+    const-string p1, "ExoPlayer"
+
+    iput-object p1, p0, Lqi4;->d:Ljava/lang/Object;
+
+    .line 11
+    iput-object p2, p0, Lqi4;->b:Lt2g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 7
+.method public final a()Lvb4;
+    .locals 4
 
     iget v0, p0, Lqi4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Lqi4;->d:J
+    new-instance v0, Ldmf;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v1, p0, Lqi4;->c:Ljava/lang/Object;
 
-    cmp-long v4, v0, v2
+    check-cast v1, Lsz0;
 
-    if-eqz v4, :cond_3
+    iget-object v2, p0, Lqi4;->d:Ljava/lang/Object;
 
-    iget-wide v4, p0, Lqi4;->e:J
+    check-cast v2, Ljava/lang/String;
 
-    cmp-long v6, v4, v2
+    iget-object v3, p0, Lqi4;->b:Lt2g;
 
-    if-eqz v6, :cond_0
+    invoke-direct {v0, v1, v2, v3}, Ldmf;-><init>(Lsz0;Ljava/lang/String;Lt2g;)V
 
-    goto :goto_0
-
-    :cond_0
-    iget-wide v4, p0, Lqi4;->g:J
-
-    cmp-long v6, v4, v2
-
-    if-eqz v6, :cond_1
-
-    cmp-long v6, v0, v4
-
-    if-gez v6, :cond_1
-
-    move-wide v0, v4
-
-    :cond_1
-    iget-wide v4, p0, Lqi4;->h:J
-
-    cmp-long v6, v4, v2
-
-    if-eqz v6, :cond_2
-
-    cmp-long v6, v0, v4
-
-    if-lez v6, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-wide v4, v0
-
-    goto :goto_0
-
-    :cond_3
-    move-wide v4, v2
-
-    :goto_0
-    iget-wide v0, p0, Lqi4;->f:J
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iput-wide v4, p0, Lqi4;->f:J
-
-    iput-wide v4, p0, Lqi4;->i:J
-
-    iput-wide v2, p0, Lqi4;->n:J
-
-    iput-wide v2, p0, Lqi4;->o:J
-
-    iput-wide v2, p0, Lqi4;->m:J
-
-    :goto_1
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-wide v0, p0, Lqi4;->d:J
+    new-instance v0, Loi4;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v1, p0, Lqi4;->c:Ljava/lang/Object;
 
-    cmp-long v4, v0, v2
+    check-cast v1, Landroid/content/Context;
 
-    if-eqz v4, :cond_7
+    iget-object v2, p0, Lqi4;->d:Ljava/lang/Object;
 
-    iget-wide v4, p0, Lqi4;->e:J
+    check-cast v2, Lpk4;
 
-    cmp-long v6, v4, v2
+    invoke-virtual {v2}, Lpk4;->a()Lvb4;
 
-    if-eqz v6, :cond_5
+    move-result-object v2
 
-    move-wide v0, v4
+    invoke-direct {v0, v1, v2}, Loi4;-><init>(Landroid/content/Context;Lvb4;)V
 
-    :cond_5
-    iget-wide v4, p0, Lqi4;->g:J
+    iget-object v1, p0, Lqi4;->b:Lt2g;
 
-    cmp-long v6, v4, v2
+    if-eqz v1, :cond_0
 
-    if-eqz v6, :cond_6
+    invoke-virtual {v0, v1}, Loi4;->S(Lt2g;)V
 
-    cmp-long v6, v0, v4
-
-    if-gez v6, :cond_6
-
-    move-wide v0, v4
-
-    :cond_6
-    iget-wide v4, p0, Lqi4;->h:J
-
-    cmp-long v6, v4, v2
-
-    if-eqz v6, :cond_8
-
-    cmp-long v6, v0, v4
-
-    if-lez v6, :cond_8
-
-    move-wide v0, v4
-
-    goto :goto_2
-
-    :cond_7
-    move-wide v0, v2
-
-    :cond_8
-    :goto_2
-    iget-wide v4, p0, Lqi4;->f:J
-
-    cmp-long v4, v4, v0
-
-    if-nez v4, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    iput-wide v0, p0, Lqi4;->f:J
-
-    iput-wide v0, p0, Lqi4;->i:J
-
-    iput-wide v2, p0, Lqi4;->n:J
-
-    iput-wide v2, p0, Lqi4;->o:J
-
-    iput-wide v2, p0, Lqi4;->m:J
-
-    :goto_3
-    return-void
+    :cond_0
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -3,22 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lir4;
+.implements Loo6;
 
 
-# static fields
-.field public static final a:Lmo6;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lmo6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmo6;->a:Lmo6;
+    iput-wide p1, p0, Lmo6;->a:J
 
     return-void
 .end method

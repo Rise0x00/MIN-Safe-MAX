@@ -3,85 +3,132 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ludb;
+.implements Lorg/webrtc/VideoSink;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
+
+.field public b:J
+
+.field public final synthetic c:Ludb;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ludb;Ljava/lang/String;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ltdb;->a:J
+    iput-object p1, p0, Ltdb;->c:Ludb;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Ltdb;->b:J
+
+    iput-object p2, p0, Ltdb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    const-wide/16 v0, -0x1
+
+    if-nez p1, :cond_0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
 
     :cond_0
-    instance-of v1, p1, Ltdb;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    const/4 v2, 0x0
+    move-result-wide v2
 
-    if-nez v1, :cond_1
+    iget-wide v4, p0, Ltdb;->b:J
 
-    return v2
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Ltdb;->b:J
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long v0, v2, v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
 
     :cond_1
-    check-cast p1, Ltdb;
+    iget-object v0, p0, Ltdb;->c:Ludb;
 
-    iget-wide v3, p0, Ltdb;->a:J
+    iget-object v1, v0, Ludb;->k:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v5, p1, Ltdb;->a:J
+    iget-object v2, v0, Ludb;->l:Ljava/util/concurrent/ConcurrentHashMap;
 
-    cmp-long p1, v3, v5
+    iget-object v3, p0, Ltdb;->a:Ljava/lang/String;
 
-    if-eqz p1, :cond_2
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v2
+    move-result-object v4
+
+    check-cast v4, Lks1;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_2
-    return v0
-.end method
+    if-eqz p1, :cond_3
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v0, v0, Lxq3;->e:Ljava/lang/Object;
 
-    iget-wide v0, p0, Ltdb;->a:J
+    check-cast v0, Lcye;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result v0
+    move-result-wide v4
 
-    return v0
-.end method
+    long-to-int p1, v4
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object v0, v0, Lcye;->b:Ljava/lang/Object;
 
-    const-string v0, "OpenChat(chatId="
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    const-string v1, ")"
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-wide v2, p0, Ltdb;->a:J
+    move-result-object p1
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    check-cast p1, Lks1;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v1, v3, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    return-void
 .end method

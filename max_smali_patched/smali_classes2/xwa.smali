@@ -1,51 +1,121 @@
-.class public final Lxwa;
-.super Lnz3;
+.class public abstract Lxwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Ldxa;
+.field public static final b:I
 
-.field public Z:I
+.field public static final c:I
 
-.field public o:Ljava/util/Iterator;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
-.method public constructor <init>(Ldxa;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lxwa;->Y:Ldxa;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lxwa;->X:Ljava/lang/Object;
+    sget v0, Lusc;->oneme_media_keyboard_emoji_animals_and_plants:I
 
-    iget p1, p0, Lxwa;->Z:I
+    sput v0, Lxwa;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lusc;->oneme_media_keyboard_emoji_classic:I
 
-    or-int/2addr p1, v0
+    sput v0, Lxwa;->b:I
 
-    iput p1, p0, Lxwa;->Z:I
+    sget v0, Lusc;->oneme_media_keyboard_emoji_flags:I
 
-    iget-object p1, p0, Lxwa;->Y:Ldxa;
+    sput v0, Lxwa;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lusc;->oneme_media_keyboard_emoji_food_and_drink:I
 
-    invoke-virtual {p1, v0, v0, p0}, Ldxa;->a(Ljava/io/File;Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+    sput v0, Lxwa;->d:I
 
-    move-result-object p1
+    sget v0, Lusc;->oneme_media_keyboard_emoji_gestures_and_people:I
 
-    return-object p1
+    sput v0, Lxwa;->e:I
+
+    sget v0, Lusc;->oneme_media_keyboard_emoji_objects:I
+
+    sput v0, Lxwa;->f:I
+
+    sget v0, Lusc;->oneme_media_keyboard_emoji_sport_and_activity:I
+
+    sput v0, Lxwa;->g:I
+
+    sget v0, Lusc;->oneme_media_keyboard_emoji_symbols:I
+
+    sput v0, Lxwa;->h:I
+
+    sget v0, Lusc;->oneme_media_keyboard_emoji_travels_and_transport:I
+
+    sput v0, Lxwa;->i:I
+
+    sget v0, Lusc;->oneme_media_keyboard_favorite:I
+
+    sput v0, Lxwa;->j:I
+
+    sget v0, Lusc;->oneme_media_keyboard_popular:I
+
+    sput v0, Lxwa;->k:I
+
+    sget v0, Lusc;->oneme_media_keyboard_recent:I
+
+    sput v0, Lxwa;->l:I
+
+    sget v0, Lusc;->oneme_media_keyboard_recent_clear_action:I
+
+    sput v0, Lxwa;->m:I
+
+    sget v0, Lusc;->oneme_media_keyboard_recent_clear_cancel:I
+
+    sput v0, Lxwa;->n:I
+
+    sget v0, Lusc;->oneme_media_keyboard_recent_clear_title:I
+
+    sput v0, Lxwa;->o:I
+
+    sget v0, Lusc;->oneme_media_keyboard_tab_emoji:I
+
+    sput v0, Lxwa;->p:I
+
+    sget v0, Lusc;->oneme_media_keyboard_tab_gifs:I
+
+    sput v0, Lxwa;->q:I
+
+    sget v0, Lusc;->oneme_media_keyboard_tab_stickers:I
+
+    sput v0, Lxwa;->r:I
+
+    return-void
 .end method

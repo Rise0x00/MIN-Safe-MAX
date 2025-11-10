@@ -1,19 +1,36 @@
-.class public interface abstract Lz1a;
+.class public final synthetic Lz1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpj6;
 
-# static fields
-.field public static final a:Lh2a;
+
+# instance fields
+.field public final synthetic a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Z)V
+    .locals 0
 
-    sget-object v0, Lh2a;->A0:Lh2a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lz1a;->a:Lh2a;
+    iput-boolean p1, p0, Lz1a;->a:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, La78;
+
+    iget-boolean v0, p0, Lz1a;->a:Z
+
+    iput-boolean v0, p1, La78;->n:Z
+
+    return-object p1
 .end method

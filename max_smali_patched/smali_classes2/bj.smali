@@ -1,53 +1,22 @@
 .class public final Lbj;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldj;
 
 
 # instance fields
-.field public X:Lvpc;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lkj;
-
-.field public o:Lkj;
-
-.field public w0:I
+.field public final a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lkj;Lnz3;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    iput-object p1, p0, Lbj;->Z:Lkj;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbj;->a:Landroid/graphics/drawable/Drawable;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lbj;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lbj;->w0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lbj;->w0:I
-
-    iget-object p1, p0, Lbj;->Z:Lkj;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lkj;->f(Lvpc;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

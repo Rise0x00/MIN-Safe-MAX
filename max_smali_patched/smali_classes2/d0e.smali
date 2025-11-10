@@ -1,424 +1,226 @@
-.class public final Ld0e;
-.super Lpwc;
+.class public final synthetic Ld0e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public final X:Landroid/view/LayoutInflater;
+.field public final synthetic a:I
 
-.field public final Y:Lru/ok/messages/settings/FrgBaseSettings;
-
-.field public final o:Ljava/util/List;
+.field public final synthetic b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/b;Ljava/util/List;Lru/ok/messages/settings/FrgBaseSettings;)V
+.method public synthetic constructor <init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Lpwc;-><init>()V
+    iput p2, p0, Ld0e;->a:I
 
-    iput-object p2, p0, Ld0e;->o:Ljava/util/List;
+    iput-object p1, p0, Ld0e;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ld0e;->X:Landroid/view/LayoutInflater;
-
-    iput-object p3, p0, Ld0e;->Y:Lru/ok/messages/settings/FrgBaseSettings;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    iget-object v0, p0, Ld0e;->o:Ljava/util/List;
+    iget v0, p0, Ld0e;->a:I
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/4 v1, 0x1
 
-    move-result v0
+    const/4 v2, 0x3
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method public final l(I)I
-    .locals 1
+    const/4 v4, 0x0
 
-    iget-object v0, p0, Ld0e;->o:Ljava/util/List;
+    iget-object v5, p0, Ld0e;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
 
-    check-cast p1, Lwxd;
+    new-instance v0, Lkwb;
 
-    iget p1, p1, Lwxd;->Y:I
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    return p1
-.end method
+    move-result-object v1
 
-.method public final r(Lnxc;I)V
-    .locals 6
+    invoke-direct {v0, v1}, Lkwb;-><init>(Landroid/content/Context;)V
 
-    iget v0, p1, Lnxc;->Y:I
+    invoke-virtual {v0, v3}, Lkwb;->setStackFromBottom(Z)V
 
-    const/4 v1, 0x4
+    new-instance v1, Lz9;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x5
 
-    const/4 v3, 0x1
+    invoke-direct {v1, v5, v3}, Lz9;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    iget-object v4, p0, Ld0e;->o:Ljava/util/List;
+    invoke-virtual {v0, v1}, Lkwb;->setCallback(Lewb;)V
 
-    if-ne v0, v1, :cond_5
+    invoke-virtual {v5}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->x0()Lt0e;
 
-    check-cast p1, Lrp7;
+    move-result-object v1
 
-    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    move-result-object p2
+    new-instance v1, Lnr;
 
-    check-cast p2, Lwxd;
+    const/16 v3, 0xc
 
-    iput-object p2, p1, Lrp7;->P0:Lwxd;
+    invoke-direct {v1, v2, v4, v3}, Lnr;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object v0, p1, Lrp7;->O0:Landroid/widget/TextView;
+    invoke-static {v1, v0}, Ludi;->e(Lgj6;Landroid/view/View;)V
 
-    iget-object p2, p2, Lwxd;->b:Ljava/lang/CharSequence;
+    return-object v0
 
-    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
 
-    iget-object p2, p1, Lrp7;->L0:Landroidx/appcompat/widget/SwitchCompat;
+    new-instance v0, Lt0e;
 
-    const/4 v0, 0x0
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p2, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    move-result-object v6
 
-    iget-object v0, p1, Lrp7;->P0:Lwxd;
+    invoke-direct {v0, v6, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iget-object v0, v0, Lwxd;->X:Ljava/lang/Object;
+    sget v6, Lg1b;->d:I
 
-    check-cast v0, Ljava/lang/Integer;
+    invoke-virtual {v0, v6}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    new-instance v6, Landroid/widget/FrameLayout$LayoutParams;
 
-    move-result v0
+    const/4 v7, -0x1
 
-    if-eqz v0, :cond_0
+    const/4 v8, -0x2
 
-    move v0, v3
+    invoke-direct {v6, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    goto :goto_0
+    invoke-virtual {v0, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_0
-    move v0, v2
+    new-instance v6, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    :goto_0
-    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    new-instance v0, Lb33;
+    invoke-direct {v6}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, v6}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    invoke-direct {v0, v1, p1}, Lb33;-><init>(ILjava/lang/Object;)V
+    iget-object v5, v5, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->c:Lrn0;
 
-    invoke-virtual {p2, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    sget-object v6, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
 
-    iget-object v0, p1, Lrp7;->P0:Lwxd;
+    aget-object v1, v6, v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v5}, Lrn0;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
+    move-result-object v1
 
-    iget-object p2, p1, Lrp7;->P0:Lwxd;
+    check-cast v1, Ls0e;
 
-    iget-object p2, p2, Lwxd;->X:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
 
-    check-cast p2, Ljava/lang/Integer;
+    new-instance v1, Lcs0;
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    move-result p2
+    move-result-object v5
 
-    if-eqz p2, :cond_1
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move v0, v3
+    move-result-object v5
 
-    goto :goto_1
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_1
-    move v0, v2
+    const/high16 v6, 0x41a00000    # 20.0f
 
-    :goto_1
-    iget-object v1, p1, Lrp7;->N0:Landroid/view/View;
+    mul-float/2addr v5, v6
 
-    const/16 v4, 0x8
+    invoke-direct {v1, v3, v5}, Lcs0;-><init>(IF)V
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    move v5, v2
+    new-instance v1, Lg8a;
 
-    goto :goto_2
+    const/16 v3, 0x17
 
-    :cond_2
-    move v5, v4
+    invoke-direct {v1, v2, v4, v3}, Lg8a;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    :goto_2
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v1, v0}, Ludi;->e(Lgj6;Landroid/view/View;)V
 
-    if-eqz v0, :cond_3
+    return-object v0
 
-    iget-object v0, p1, Lrp7;->J0:Lru/ok/messages/settings/view/LedSeekBar;
+    :pswitch_1
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
 
-    invoke-virtual {v0, p2}, Lru/ok/messages/settings/view/LedSeekBar;->setColor(I)V
+    new-instance v0, Ls0e;
 
-    :cond_3
-    iget-object p2, p1, Lnxc;->a:Landroid/view/View;
+    new-instance v2, Lc2d;
 
-    iget-object v0, p1, Lrp7;->P0:Lwxd;
+    const/16 v3, 0x8
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v2, v3, v5}, Lc2d;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
+    iget-object v3, v5, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->b:Lru7;
 
-    iget-object v0, p1, Lrp7;->P0:Lwxd;
+    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v3
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    check-cast v3, Lfva;
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v3}, Lfva;->a()Ljava/util/concurrent/ExecutorService;
 
-    iget-object p2, p1, Lrp7;->M0:Landroid/view/View;
+    move-result-object v3
 
-    iget-object p1, p1, Lrp7;->P0:Lwxd;
+    invoke-direct {v0, v2, v3}, Ls0e;-><init>(Lc2d;Ljava/util/concurrent/ExecutorService;)V
 
-    iget-boolean p1, p1, Lwxd;->Z:Z
+    invoke-virtual {v5}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Lc0e;
 
-    if-eqz p1, :cond_4
+    move-result-object v2
 
-    goto :goto_3
+    iget-object v2, v2, Lc0e;->Z:Lj0d;
 
-    :cond_4
-    move v2, v4
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lnx7;
 
-    :goto_3
-    invoke-virtual {p2, v2}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v3
 
-    return-void
+    invoke-interface {v3}, Lnx7;->p()Lpx7;
 
-    :cond_5
-    const/16 v1, 0x9
+    move-result-object v3
 
-    if-ne v0, v1, :cond_7
+    sget-object v6, Lpw7;->d:Lpw7;
 
-    check-cast p1, Ljs0;
+    invoke-static {v2, v3, v6}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
 
-    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p2
+    new-instance v3, Le0e;
 
-    check-cast p2, Lwxd;
+    invoke-direct {v3, v4, v0}, Le0e;-><init>(Lkotlin/coroutines/Continuation;Ls0e;)V
 
-    iput-object p2, p1, Ljs0;->K0:Lwxd;
+    new-instance v4, Ln16;
 
-    iget-boolean v0, p1, Ljs0;->L0:Z
+    invoke-direct {v4, v2, v3, v1}, Ln16;-><init>(Lez5;Lej6;I)V
 
-    if-nez v0, :cond_6
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
 
-    iget-object v0, p2, Lwxd;->X:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast v0, Ljava/lang/Integer;
+    invoke-static {v4, v1}, Lqs0;->v(Lez5;Lg54;)Lgye;
 
-    iget-object p1, p1, Ljs0;->J0:Lru/ok/messages/settings/view/BrightnessSeekBar;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lru/ok/messages/settings/view/BrightnessSeekBar;->setProgress(I)V
-
-    :cond_6
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :cond_7
-    check-cast p1, Lzxd;
-
-    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwxd;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    sub-int/2addr v1, v3
-
-    if-ne p2, v1, :cond_8
-
-    move v2, v3
-
-    :cond_8
-    invoke-virtual {p1, v0, v2}, Lzxd;->x(Lwxd;Z)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
-    .locals 4
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ld0e;->X:Landroid/view/LayoutInflater;
-
-    if-ne p2, v0, :cond_0
-
-    sget p2, Lghc;->row_setting_header:I
-
-    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Lzxd;
-
-    invoke-direct {p2, p1, v1}, Lzxd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_0
-    const/4 v0, 0x6
-
-    if-ne p2, v0, :cond_1
-
-    sget p2, Lghc;->row_setting_progress:I
-
-    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Lt4c;
-
-    invoke-direct {p2, p1, v1}, Lzxd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_1
-    const/4 v0, 0x4
-
-    iget-object v1, p0, Ld0e;->Y:Lru/ok/messages/settings/FrgBaseSettings;
-
-    if-ne p2, v0, :cond_2
-
-    sget p2, Lghc;->row_setting_led:I
-
-    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Lrp7;
-
-    invoke-direct {p2, p1, v1}, Lrp7;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_2
-    const/4 v0, 0x7
-
-    if-ne p2, v0, :cond_3
-
-    sget p2, Lghc;->row_setting_contact:I
-
-    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Lc33;
-
-    invoke-direct {p2, p1, v1}, Lc33;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_3
-    const/16 v0, 0x9
-
-    if-ne p2, v0, :cond_4
-
-    sget p2, Lghc;->row_setting_brightness:I
-
-    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance p2, Ljs0;
-
-    invoke-direct {p2, p1, v1}, Ljs0;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_4
-    sget v0, Lghc;->row_setting:I
-
-    invoke-virtual {v3, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p1
-
-    const/4 v0, 0x2
-
-    if-ne p2, v0, :cond_5
-
-    new-instance p2, Lc33;
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p1, v3, v1, v0}, Lc33;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;I)V
-
-    return-object p2
-
-    :cond_5
-    const/4 v0, 0x1
-
-    if-ne p2, v0, :cond_6
-
-    new-instance p2, Ldef;
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    invoke-direct {p2, p1, v3, v1}, Ldef;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
-
-    :cond_6
-    const/16 v0, 0xa
-
-    if-ne p2, v0, :cond_7
-
-    new-instance p2, Lc33;
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, p1, v3, v1, v0}, Lc33;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;I)V
-
-    return-object p2
-
-    :cond_7
-    new-instance p2, Lzxd;
-
-    invoke-direct {p2, p1, v1}, Lzxd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
-
-    return-object p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

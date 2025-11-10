@@ -1,59 +1,57 @@
 .class public final Lzd2;
-.super Lnz3;
+.super Lwf4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/Comparator;
+# static fields
+.field public static final b:Lzd2;
 
-.field public Y:Ljava/util/Collection;
+.field public static final c:Lrf4;
 
-.field public Z:Ljava/util/Iterator;
-
-.field public o:Lae2;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Lae2;
-
-.field public y0:I
+.field public static final d:Lrf4;
 
 
 # direct methods
-.method public constructor <init>(Lae2;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lzd2;->x0:Lae2;
+    new-instance v0, Lzd2;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lwf4;-><init>()V
+
+    sput-object v0, Lzd2;->b:Lzd2;
+
+    const-string v1, "id"
+
+    const-string v2, "type"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":chats"
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xe
+
+    invoke-static {v0, v2, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v1
+
+    sput-object v1, Lzd2;->c:Lrf4;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, ":saved-messages"
+
+    invoke-static {v0, v2, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+
+    move-result-object v0
+
+    sput-object v0, Lzd2;->d:Lrf4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Lzd2;->w0:Ljava/lang/Object;
-
-    iget p1, p0, Lzd2;->y0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lzd2;->y0:I
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lzd2;->x0:Lae2;
-
-    invoke-virtual {v1, p0, p1, v0}, Lae2;->h(Lnz3;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

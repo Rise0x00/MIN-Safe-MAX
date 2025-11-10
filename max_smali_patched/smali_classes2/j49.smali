@@ -1,134 +1,64 @@
-.class public final synthetic Lj49;
+.class public abstract Lj49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhy9;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lhy9;I)V
-    .locals 0
-
-    .line 1
-    iput p2, p0, Lj49;->a:I
-
-    iput-object p1, p0, Lj49;->b:Lhy9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Lhy9;)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    iput p1, p0, Lj49;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lj49;->b:Lhy9;
-
-    return-void
-.end method
+.implements Li28;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final h(Li28;)Z
+    .locals 4
 
-    iget v0, p0, Lj49;->a:I
+    instance-of v0, p1, Lj49;
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_0
 
-    sget-object v2, Loyf;->a:Loyf;
+    goto :goto_0
 
-    iget-object v3, p0, Lj49;->b:Lhy9;
+    :cond_0
+    invoke-virtual {p0}, Lj49;->j()J
 
-    packed-switch v0, :pswitch_data_0
+    move-result-wide v0
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    check-cast p1, Lj49;
 
-    sget-object v0, Lpd9;->c:Lpd9;
+    invoke-virtual {p1}, Lj49;->j()J
 
-    check-cast v3, Lp0b;
+    move-result-wide v2
 
-    iget-object v3, v3, Lp0b;->d:Ljava/lang/String;
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v0}, Lv2;->K0()Ldd4;
+    if-nez v0, :cond_1
 
-    move-result-object v0
+    invoke-virtual {p0}, Lj49;->i()J
 
-    const-string v4, ":call-join-link?link="
+    move-result-wide v0
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Lj49;->i()J
 
-    move-result-object v3
+    move-result-wide v2
 
-    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    cmp-long p1, v0, v2
 
-    return-object v2
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    const/4 p1, 0x1
 
-    sget-object v0, Lpd9;->c:Lpd9;
+    return p1
 
-    check-cast v3, Lc1b;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
 
-    iget-wide v4, v3, Lc1b;->b:J
+    return p1
+.end method
 
-    iget-boolean v3, v3, Lc1b;->c:Z
+.method public abstract i()J
+.end method
 
-    invoke-virtual {v0}, Lv2;->K0()Ldd4;
+.method public abstract j()J
+.end method
 
-    move-result-object v0
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, ":call-user?opponent_id="
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, "&video_enabled="
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    sget-object v0, Lpd9;->c:Lpd9;
-
-    check-cast v3, Lzc4;
-
-    invoke-virtual {v0, v3}, Lv2;->N0(Lzc4;)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract l()Z
 .end method

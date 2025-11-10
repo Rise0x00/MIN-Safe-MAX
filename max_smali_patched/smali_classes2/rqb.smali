@@ -1,79 +1,139 @@
 .class public final Lrqb;
-.super Laj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:Lv8f;
-
-
 # instance fields
-.field public final c:J
+.field public final a:Lru7;
 
-.field public final o:Ljava/util/List;
+.field public final b:Lru7;
+
+.field public final c:Lru7;
+
+.field public final d:Lru7;
+
+.field public final e:Ltif;
+
+.field public volatile f:Lzv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;Ltif;)V
+    .locals 0
 
-    new-instance v0, Lv8f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "privacy.restricted"
+    iput-object p1, p0, Lrqb;->a:Lru7;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lrqb;->b:Lru7;
 
-    invoke-direct {v0, v1, v2, v2}, Lv8f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p3, p0, Lrqb;->c:Lru7;
 
-    sput-object v0, Lrqb;->X:Lv8f;
+    iput-object p4, p0, Lrqb;->d:Lru7;
 
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 1
-
-    sget-object v0, Lrqb;->X:Lv8f;
-
-    invoke-direct {p0, v0}, Laj0;-><init>(Lv8f;)V
-
-    iput-wide p1, p0, Lrqb;->c:J
-
-    iput-object p3, p0, Lrqb;->o:Ljava/util/List;
+    iput-object p5, p0, Lrqb;->e:Ltif;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a()V
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "rqb"
 
-    const-string v1, "PrivacyRestrictedError{chatId="
+    const-string v1, "schedulePing"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lrqb;->c:J
+    iget-object v0, p0, Lrqb;->f:Lzv4;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    const-string v1, ", contactIds="
+    invoke-interface {v0}, Lzv4;->f()Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget-object v1, p0, Lrqb;->o:Ljava/util/List;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lrqb;->f:Lzv4;
 
-    const/16 v1, 0x7d
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lzv4;->dispose()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    iget-object v0, p0, Lrqb;->e:Ltif;
+
+    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lgpd;
+
+    invoke-virtual {v0}, Lgpd;->a()Lepd;
+
+    move-result-object v0
+
+    new-instance v1, Lfoa;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, p0}, Lfoa;-><init>(ILjava/lang/Object;)V
+
+    const-wide/16 v2, 0x7148
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lepd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrqb;->f:Lzv4;
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 2
+
+    const-string v0, "rqb"
+
+    const-string v1, "startInteractivePings"
+
+    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lrqb;->c:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lloa;
+
+    invoke-virtual {v0}, Lloa;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lrqb;->a:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lml;
+
+    const/4 v1, 0x1
+
+    check-cast v0, Lona;
+
+    invoke-virtual {v0, v1}, Lona;->F(Z)J
+
+    :cond_0
+    invoke-virtual {p0}, Lrqb;->a()V
+
+    return-void
 .end method

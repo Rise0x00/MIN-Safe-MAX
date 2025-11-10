@@ -1,297 +1,72 @@
-.class public final Lenc;
+.class public abstract Lenc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static call_history_empty:I = 0x7f0a014e
 
-.field public final b:J
+.field public static call_history_info_copy_link:I = 0x7f0a014f
 
-.field public final c:Ljava/lang/String;
+.field public static call_history_info_open_chat_call:I = 0x7f0a0150
 
-.field public d:I
+.field public static call_history_info_recreate:I = 0x7f0a0151
 
+.field public static call_history_info_send_to_chat:I = 0x7f0a0152
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;J)V
-    .locals 0
+.field public static call_history_info_share_link:I = 0x7f0a0153
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_history_info_start_call:I = 0x7f0a0154
 
-    if-nez p3, :cond_0
+.field public static call_history_list:I = 0x7f0a0155
 
-    const-string p3, ""
+.field public static call_history_page_empty:I = 0x7f0a0156
 
-    :cond_0
-    iput-object p3, p0, Lenc;->c:Ljava/lang/String;
+.field public static call_history_pager:I = 0x7f0a0157
 
-    iput-wide p1, p0, Lenc;->a:J
+.field public static call_history_screen_banner:I = 0x7f0a0158
 
-    iput-wide p4, p0, Lenc;->b:J
+.field public static call_history_screen_contact_call:I = 0x7f0a0159
 
-    return-void
-.end method
+.field public static call_history_screen_container:I = 0x7f0a015a
 
+.field public static call_history_screen_group_call:I = 0x7f0a015b
 
-# virtual methods
-.method public final a(Lenc;Ljava/lang/String;)Lenc;
-    .locals 16
+.field public static call_history_screen_toolbar:I = 0x7f0a015c
 
-    move-object/from16 v0, p0
+.field public static call_history_tabs:I = 0x7f0a015d
 
-    move-object/from16 v1, p1
+.field public static call_info_action_list:I = 0x7f0a0169
 
-    move-object/from16 v2, p2
+.field public static call_info_action_vh:I = 0x7f0a016a
 
-    iget-object v3, v0, Lenc;->c:Ljava/lang/String;
+.field public static call_info_appbarlayout:I = 0x7f0a016d
 
-    invoke-static {v2, v3}, Lkmc;->w(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.field public static call_info_button:I = 0x7f0a016e
 
-    move-result-object v7
+.field public static call_info_collapsiblecontainerlinearlayout:I = 0x7f0a016f
 
-    if-eqz v1, :cond_0
+.field public static call_info_coordinator_layout:I = 0x7f0a0170
 
-    iget-wide v4, v1, Lenc;->b:J
+.field public static call_info_description:I = 0x7f0a0171
 
-    iget-object v6, v1, Lenc;->c:Ljava/lang/String;
+.field public static call_info_icon:I = 0x7f0a0172
 
-    invoke-static {v2, v6}, Lkmc;->w(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.field public static call_info_link_state:I = 0x7f0a0173
 
-    move-result-object v2
+.field public static call_info_onemetoolbar:I = 0x7f0a0174
 
-    invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static call_info_presettings_action_list:I = 0x7f0a0175
 
-    move-result v2
+.field public static call_info_presettings_change_name_vh:I = 0x7f0a0176
 
-    if-nez v2, :cond_1
+.field public static call_info_presettings_item_vh:I = 0x7f0a0177
 
-    :cond_0
-    const/4 v2, 0x0
+.field public static call_info_presettings_toolbar:I = 0x7f0a0178
 
-    goto :goto_4
+.field public static call_info_title:I = 0x7f0a0179
 
-    :cond_1
-    iget-wide v8, v0, Lenc;->b:J
+.field public static call_presettings_call_permissions_item:I = 0x7f0a01a1
 
-    const-wide/16 v10, -0x1
+.field public static call_presettings_call_save_changes:I = 0x7f0a01a2
 
-    cmp-long v2, v8, v10
-
-    move-wide v12, v4
-
-    if-eqz v2, :cond_3
-
-    iget-wide v5, v0, Lenc;->a:J
-
-    add-long v14, v5, v8
-
-    const/4 v2, 0x0
-
-    iget-wide v3, v1, Lenc;->a:J
-
-    cmp-long v3, v14, v3
-
-    if-nez v3, :cond_4
-
-    new-instance v4, Lenc;
-
-    cmp-long v1, v12, v10
-
-    if-nez v1, :cond_2
-
-    :goto_0
-    move-wide v8, v10
-
-    goto :goto_1
-
-    :cond_2
-    add-long v10, v8, v12
-
-    goto :goto_0
-
-    :goto_1
-    invoke-direct/range {v4 .. v9}, Lenc;-><init>(JLjava/lang/String;J)V
-
-    return-object v4
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :cond_4
-    cmp-long v3, v12, v10
-
-    if-eqz v3, :cond_6
-
-    iget-wide v5, v1, Lenc;->a:J
-
-    add-long v3, v5, v12
-
-    iget-wide v14, v0, Lenc;->a:J
-
-    cmp-long v1, v3, v14
-
-    if-nez v1, :cond_6
-
-    new-instance v4, Lenc;
-
-    cmp-long v1, v8, v10
-
-    if-nez v1, :cond_5
-
-    :goto_2
-    move-wide v8, v10
-
-    goto :goto_3
-
-    :cond_5
-    add-long v10, v12, v8
-
-    goto :goto_2
-
-    :goto_3
-    invoke-direct/range {v4 .. v9}, Lenc;-><init>(JLjava/lang/String;J)V
-
-    return-object v4
-
-    :cond_6
-    :goto_4
-    return-object v2
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lenc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lenc;
-
-    iget-wide v2, p0, Lenc;->a:J
-
-    iget-wide v4, p1, Lenc;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lenc;->b:J
-
-    iget-wide v4, p1, Lenc;->b:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Lenc;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lenc;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lenc;->d:I
-
-    if-nez v0, :cond_0
-
-    iget-wide v0, p0, Lenc;->a:J
-
-    long-to-int v0, v0
-
-    const/16 v1, 0x20f
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lenc;->b:J
-
-    long-to-int v0, v2
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lenc;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lenc;->d:I
-
-    :cond_0
-    iget v0, p0, Lenc;->d:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RangedUri(referenceUri="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lenc;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", start="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lenc;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", length="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lenc;->b:J
-
-    const-string v3, ")"
-
-    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_calllist_fragment_container:I = 0x7f0a0601

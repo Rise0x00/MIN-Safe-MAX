@@ -1,318 +1,458 @@
 .class public final Loj9;
-.super Lm3f;
+.super Lgy7;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic A0:Lh86;
+.field public final q:Z
 
-.field public X:Ljava/lang/Object;
+.field public final r:Lnj9;
 
-.field public Y:I
-
-.field public final synthetic Z:Lpj9;
-
-.field public final synthetic w0:J
-
-.field public final synthetic x0:Ljava/lang/CharSequence;
-
-.field public final synthetic y0:Ljava/lang/Long;
-
-.field public final synthetic z0:Z
+.field public volatile s:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lpj9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLh86;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;IZLnj9;)V
     .locals 0
 
-    iput-object p1, p0, Loj9;->Z:Lpj9;
+    invoke-direct {p0, p1}, Lgy7;-><init>(Landroid/content/Context;)V
 
-    iput-wide p2, p0, Loj9;->w0:J
+    iput-boolean p3, p0, Loj9;->q:Z
 
-    iput-object p4, p0, Loj9;->x0:Ljava/lang/CharSequence;
+    iput-object p4, p0, Loj9;->r:Lnj9;
 
-    iput-object p5, p0, Loj9;->y0:Ljava/lang/Long;
+    if-ltz p2, :cond_0
 
-    iput-boolean p6, p0, Loj9;->z0:Z
+    iput p2, p0, Lgy7;->a:I
 
-    iput-object p7, p0, Loj9;->A0:Lh86;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p8}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final j(IILi7d;Lg7d;)V
+    .locals 10
 
-    check-cast p1, Le34;
+    sget-object v0, La98;->d:La98;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Loj9;->s:Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1, p2}, Loj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-class v2, La73;
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    check-cast p1, Loj9;
+    const-class v4, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-    sget-object p2, Loyf;->a:Loyf;
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1, p2}, Loj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    move-result-object p1
+    move-result v1
 
-    return-object p1
-.end method
+    invoke-static {v4}, Lv7d;->a(Ljava/lang/Class;)La73;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    new-instance v0, Loj9;
+    move-result-object v5
 
-    iget-boolean v6, p0, Loj9;->z0:Z
+    sget-object v6, Lcuh;->b:Lnxa;
 
-    iget-object v7, p0, Loj9;->A0:Lh86;
-
-    iget-object v1, p0, Loj9;->Z:Lpj9;
-
-    iget-wide v2, p0, Loj9;->w0:J
-
-    iget-object v4, p0, Loj9;->x0:Ljava/lang/CharSequence;
-
-    iget-object v5, p0, Loj9;->y0:Ljava/lang/Long;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Loj9;-><init>(Lpj9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLh86;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Loj9;->Z:Lpj9;
-
-    iget-object v2, v1, Lpj9;->b:Lbp7;
-
-    iget v3, v0, Loj9;->Y:I
-
-    iget-boolean v4, v0, Loj9;->z0:Z
-
-    iget-object v5, v0, Loj9;->x0:Ljava/lang/CharSequence;
-
-    const/4 v6, 0x2
-
-    iget-wide v7, v0, Loj9;->w0:J
-
-    const/4 v9, 0x1
-
-    sget-object v10, Lf34;->a:Lf34;
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v9, :cond_1
-
-    if-ne v3, v6, :cond_0
-
-    iget-object v1, v0, Loj9;->X:Ljava/lang/Object;
-
-    check-cast v1, Lwud;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object v3, v1
-
-    move-object/from16 v1, p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    iget-object v3, v0, Loj9;->X:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/List;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    move-object/from16 v9, p1
+    if-nez v6, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {v6, v0}, Lnxa;->b(La98;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    const-string v7, "LM SmoothScroller onSeekTargetStep pendingJumpToPos="
+
+    invoke-static {v1, v7}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v0, v5, v7, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iput v1, p4, Lg7d;->d:I
+
+    iput-object v3, p0, Loj9;->s:Ljava/lang/Integer;
+
     :cond_2
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3, p4}, Lgy7;->j(IILi7d;Lg7d;)V
 
-    iget-object v3, v1, Lpj9;->e:Lbp7;
+    invoke-static {v4}, Lv7d;->a(Ljava/lang/Class;)La73;
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, Lwl6;
+    sget-object v2, Lcuh;->b:Lnxa;
 
-    invoke-virtual {v3, v5, v7, v8}, Lwl6;->b(Ljava/lang/CharSequence;J)Ljava/util/List;
-
-    move-result-object v3
-
-    iget-object v11, v1, Lpj9;->d:Lbp7;
-
-    invoke-interface {v11}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lsc9;
-
-    iput-object v3, v0, Loj9;->X:Ljava/lang/Object;
-
-    iput v9, v0, Loj9;->Y:I
-
-    iget-object v9, v0, Loj9;->y0:Ljava/lang/Long;
-
-    invoke-virtual {v11, v7, v8, v9, v0}, Lsc9;->a(JLjava/lang/Long;Lm3f;)Ljava/lang/Object;
-
-    move-result-object v9
-
-    if-ne v9, v10, :cond_3
+    if-nez v2, :cond_3
 
     goto :goto_1
 
     :cond_3
-    :goto_0
-    check-cast v9, Lr69;
+    invoke-virtual {v2, v0}, Lnxa;->b(La98;)Z
 
-    invoke-static {v5}, Lyxe;->M0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    move-result v4
 
-    move-result-object v5
+    if-eqz v4, :cond_4
 
-    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget v4, p4, Lg7d;->a:I
 
-    move-result-object v14
+    iget v5, p4, Lg7d;->b:I
 
-    new-instance v11, Luud;
+    iget v6, p4, Lg7d;->c:I
 
-    if-nez v3, :cond_4
+    iget-object p4, p4, Lg7d;->e:Landroid/view/animation/Interpolator;
 
-    sget-object v3, Lb75;->a:Lb75;
+    const-string v7, " dy="
+
+    const-string v8, " action.dx="
+
+    const-string v9, "LM SmoothScroller onSeekTargetStep dx="
+
+    invoke-static {v9, p1, v7, p2, v8}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string p2, " action.dy="
+
+    const-string v7, " action.duration="
+
+    invoke-static {p1, v4, p2, v5, v7}, Lmb3;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {p1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, " action.interpolator="
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, " recyclerView.state="
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, v0, v1, p1, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_4
-    move-object/from16 v16, v3
-
-    iget-wide v12, v0, Loj9;->w0:J
-
-    const/4 v15, 0x1
-
-    invoke-direct/range {v11 .. v16}, Luud;-><init>(JLjava/lang/String;ZLjava/util/List;)V
-
-    iput-object v9, v11, Lrud;->b:Lr69;
-
-    xor-int/lit8 v3, v4, 0x1
-
-    iput-boolean v3, v11, Lrud;->d:Z
-
-    new-instance v3, Lwud;
-
-    invoke-direct {v3, v11}, Lwud;-><init>(Luud;)V
-
-    iget-object v1, v1, Lpj9;->c:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lql6;
-
-    iput-object v3, v0, Loj9;->X:Ljava/lang/Object;
-
-    iput v6, v0, Loj9;->Y:I
-
-    iget-object v5, v0, Loj9;->A0:Lh86;
-
-    invoke-virtual {v1, v5, v0}, Lql6;->b(Lh86;Lm3f;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v10, :cond_5
-
     :goto_1
-    return-object v10
+    return-void
+.end method
 
-    :cond_5
-    :goto_2
-    check-cast v1, Ljava/util/List;
+.method public final k()V
+    .locals 2
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    iget v0, p0, Lgy7;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Loj9;->r:Lnj9;
+
+    invoke-virtual {v1, v0}, Lnj9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-super {p0}, Lgy7;->k()V
+
+    return-void
+.end method
+
+.method public final l(Landroid/view/View;Li7d;Lg7d;)V
+    .locals 7
+
+    iget-boolean p2, p2, Li7d;->h:Z
+
+    if-eqz p2, :cond_0
+
+    move-object v0, p0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {p0}, Lgy7;->h()I
 
     move-result v5
 
-    sget-object v6, Loyf;->a:Loyf;
+    iget-object p2, p0, Lgy7;->c:Landroidx/recyclerview/widget/a;
 
-    if-eqz v5, :cond_6
+    const/4 v6, 0x0
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz p2, :cond_1
 
-    move-result-object v1
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/a;->f()Z
 
-    check-cast v1, Lnah;
+    move-result v0
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v1, v3}, Lnah;->b(Lstd;)V
+    :cond_1
+    move-object v0, p0
 
-    return-object v6
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Lx6d;
+
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->F(Landroid/view/View;)I
+
+    move-result v1
+
+    iget v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    sub-int/2addr v1, v2
+
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->z(Landroid/view/View;)I
+
+    move-result p1
+
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    add-int v2, p1, v0
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/a;->L()I
+
+    move-result v3
+
+    iget p1, p2, Landroidx/recyclerview/widget/a;->o:I
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/a;->I()I
+
+    move-result p2
+
+    sub-int v4, p1, p2
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Loj9;->n(IIIII)I
+
+    move-result p1
+
+    goto :goto_1
+
+    :goto_0
+    move p1, v6
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Lgy7;->e(I)I
+
+    move-result p2
+
+    if-lez p2, :cond_4
+
+    neg-int p1, p1
+
+    const/16 v1, 0x12c
+
+    if-le p2, v1, :cond_3
+
+    move p2, v1
+
+    :cond_3
+    iget-object v1, v0, Lgy7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, v6, p1, p2, v1}, Lg7d;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_4
+    :goto_2
+    return-void
+.end method
+
+.method public final n(IIIII)I
+    .locals 6
+
+    const/4 v0, -0x1
+
+    if-eq p5, v0, :cond_6
+
+    iget-boolean v0, p0, Loj9;->q:Z
+
+    if-eqz p5, :cond_2
+
+    const/4 v1, 0x1
+
+    if-ne p5, v1, :cond_1
+
+    sub-int/2addr p4, p2
+
+    sub-int/2addr p2, p1
+
+    sub-int p2, p4, p2
+
+    if-ge p2, p3, :cond_0
+
+    if-nez v0, :cond_0
+
+    sub-int/2addr p3, p1
+
+    return p3
+
+    :cond_0
+    return p4
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "snap preference should be one of the constants defined in SmoothScroller, starting with SNAP_"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    if-nez v0, :cond_3
+
+    const/4 v5, -0x1
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    invoke-virtual/range {v0 .. v5}, Loj9;->n(IIIII)I
+
+    move-result p1
+
+    if-lez p1, :cond_4
+
+    return p1
+
+    :cond_3
+    move v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    :cond_4
+    const/4 v5, 0x1
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Loj9;->n(IIIII)I
+
+    move-result p1
+
+    if-gez p1, :cond_5
+
+    return p1
+
+    :cond_5
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_6
-    invoke-static {}, Lvhh;->p()Lsw7;
+    move v1, p1
 
-    move-result-object v5
+    move v3, p3
 
-    invoke-virtual {v5, v3}, Lsw7;->add(Ljava/lang/Object;)Z
+    sub-int p3, v3, v1
 
-    invoke-virtual {v5, v1}, Lsw7;->addAll(Ljava/util/Collection;)Z
+    const/16 p1, 0x1e
 
-    invoke-static {v5}, Lvhh;->e(Ljava/util/List;)Lsw7;
+    int-to-float p1, p1
 
-    move-result-object v1
+    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
 
-    new-instance v3, Ljava/util/LinkedList;
+    move-result-object p2
 
-    invoke-direct {v3, v1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    new-instance v1, Lwtd;
+    move-result-object p2
 
-    const/4 v5, 0x2
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct {v1, v7, v8, v3, v5}, Lwtd;-><init>(JLjava/lang/Object;I)V
+    invoke-static {p1, p2, p3}, Lm65;->c(FFI)I
 
-    iput-boolean v4, v1, Lrud;->d:Z
+    move-result p1
 
-    new-instance v3, Ltud;
+    return p1
+.end method
 
-    invoke-direct {v3, v1}, Ltud;-><init>(Lwtd;)V
+.method public final o(I)V
+    .locals 5
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v0, -0x1
 
-    move-result-object v1
+    if-ne p1, v0, :cond_0
 
-    check-cast v1, Lnah;
+    return-void
 
-    invoke-virtual {v1, v3}, Lnah;->b(Lstd;)V
+    :cond_0
+    const-class v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-    return-object v6
+    invoke-static {v0}, Lv7d;->a(Ljava/lang/Class;)La73;
+
+    const-class v0, La73;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lcuh;->b:Lnxa;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, La98;->d:La98;
+
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "LM SmoothScroller replanTo="
+
+    invoke-static {p1, v3}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iput p1, p0, Lgy7;->a:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Loj9;->s:Ljava/lang/Integer;
+
+    return-void
 .end method

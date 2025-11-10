@@ -4,163 +4,256 @@
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lbp7;
+.field public final b:Lifc;
 
-.field public final c:Lbp7;
+.field public volatile c:Z
+
+.field public final d:Landroid/content/Context;
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Ljava/lang/Object;
+
+.field public final g:Lead;
+
+.field public final h:Lzm7;
+
+.field public final i:Ldph;
+
+.field public final j:Loje;
+
+.field public final k:Ljfc;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lifc;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm0g;->a:Lbp7;
+    iput-object p2, p0, Lm0g;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lm0g;->b:Lbp7;
+    iput-object p3, p0, Lm0g;->b:Lifc;
 
-    iput-object p3, p0, Lm0g;->c:Lbp7;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lm0g;->d:Landroid/content/Context;
+
+    new-instance p3, Ll0g;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p3, p0, v0}, Ll0g;-><init>(Lm0g;I)V
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, p3}, Llci;->i(ILoi6;)Lru7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lm0g;->e:Ljava/lang/Object;
+
+    new-instance p3, Ll0g;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p3, p0, v1}, Ll0g;-><init>(Lm0g;I)V
+
+    invoke-static {v0, p3}, Llci;->i(ILoi6;)Lru7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lm0g;->f:Ljava/lang/Object;
+
+    new-instance p3, Lead;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p3, v0}, Lead;-><init>(I)V
+
+    iput-object p3, p0, Lm0g;->g:Lead;
+
+    new-instance p3, Lzm7;
+
+    invoke-direct {p3, p1, p2}, Lzm7;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-object p3, p0, Lm0g;->h:Lzm7;
+
+    new-instance p3, Ldph;
+
+    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p3, Ldph;->a:Ljava/lang/Object;
+
+    iput-object p2, p3, Ldph;->b:Ljava/lang/Object;
+
+    new-instance v0, Loe;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1, p3}, Loe;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Ltif;
+
+    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+
+    iput-object v1, p3, Ldph;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lm0g;->i:Ldph;
+
+    new-instance p3, Loje;
+
+    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    new-instance v1, Lh0g;
+
+    invoke-direct {v1, v0, p2}, Lh0g;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
+
+    invoke-static {v1}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p3, Loje;->a:Ljava/lang/Object;
+
+    iput-object p3, p0, Lm0g;->j:Loje;
+
+    new-instance p3, Ljfc;
+
+    const/16 v0, 0x9
+
+    const/4 v1, 0x0
+
+    invoke-direct {p3, p1, p2, v1, v0}, Ljfc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iput-object p3, p0, Lm0g;->k:Ljfc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJLjava/lang/String;Lh10;Lnz3;)Ljava/lang/Object;
-    .locals 10
+.method public final a()Lo0g;
+    .locals 1
 
-    move-object/from16 v0, p7
+    iget-object v0, p0, Lm0g;->e:Ljava/lang/Object;
 
-    instance-of v1, v0, Ll0g;
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v0
-
-    check-cast v1, Ll0g;
-
-    iget v2, v1, Ll0g;->x0:I
-
-    const/high16 v3, -0x80000000
-
-    and-int v4, v2, v3
-
-    if-eqz v4, :cond_0
-
-    sub-int/2addr v2, v3
-
-    iput v2, v1, Ll0g;->x0:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ll0g;
-
-    invoke-direct {v1, p0, v0}, Ll0g;-><init>(Lm0g;Lnz3;)V
-
-    :goto_0
-    iget-object v0, v1, Ll0g;->Z:Ljava/lang/Object;
-
-    iget v2, v1, Ll0g;->x0:I
-
-    sget-object v3, Loyf;->a:Loyf;
-
-    const/4 v4, 0x1
-
-    if-eqz v2, :cond_2
-
-    if-ne v2, v4, :cond_1
-
-    iget-wide p3, v1, Ll0g;->Y:J
-
-    iget-wide p1, v1, Ll0g;->X:J
-
-    iget-object p5, v1, Ll0g;->o:Lm0g;
-
-    invoke-static {v0}, Lps;->L(Ljava/lang/Object;)V
-
-    :goto_1
-    move-wide v6, p1
-
-    move-wide v8, p3
-
-    goto :goto_2
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-static {v0}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lm0g;->a:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lsi9;
+    check-cast v0, Lo0g;
 
-    new-instance v2, Lbob;
+    return-object v0
+.end method
 
-    const/16 v5, 0xd
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 4
 
-    move-object/from16 v6, p6
+    iget-boolean v0, p0, Lm0g;->c:Z
 
-    invoke-direct {v2, v6, v5, p0}, Lbob;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    iput-object p0, v1, Ll0g;->o:Lm0g;
+    const-string p1, "Tracer"
 
-    iput-wide p1, v1, Ll0g;->X:J
+    const-string p2, "Tracer is disabled"
 
-    iput-wide p3, v1, Ll0g;->Y:J
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput v4, v1, Ll0g;->x0:I
+    return-void
 
-    iget-object v0, v0, Lsi9;->a:Ll6d;
+    :cond_0
+    iget-object v0, p0, Lm0g;->g:Lead;
 
-    new-instance v1, Lbv8;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v4, 0x6
+    const/16 v1, 0x1f
 
-    invoke-direct {v1, p5, v4, v2}, Lbv8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p3, p4, v1}, Ll6d;->o(JLwo3;)V
-
-    sget-object p5, Lf34;->a:Lf34;
-
-    if-ne v3, p5, :cond_3
-
-    return-object p5
-
-    :cond_3
-    move-object p5, p0
-
-    goto :goto_1
-
-    :goto_2
-    iget-object p1, p5, Lm0g;->b:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {v1, p1}, Lxaf;->d0(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lov0;
+    invoke-static {v1, p2}, Lxaf;->d0(ILjava/lang/String;)Ljava/lang/String;
 
-    new-instance v4, Ln0g;
+    move-result-object p2
 
-    const/4 v5, 0x0
+    iget-object v1, v0, Lead;->a:Ljava/lang/Object;
 
-    invoke-direct/range {v4 .. v9}, Ln0g;-><init>(IJJ)V
+    check-cast v1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p1, v4}, Lov0;->c(Ljava/lang/Object;)V
+    monitor-enter v1
 
-    return-object v3
+    :try_start_0
+    iget-object v2, v0, Lead;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object v3, v0, Lead;->a:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v3, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-nez v2, :cond_1
+
+    iget-object p1, v0, Lead;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+
+    move-result p1
+
+    const/16 p2, 0x1e
+
+    if-le p1, p2, :cond_1
+
+    iget-object p1, v0, Lead;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+
+    throw p1
 .end method

@@ -1,167 +1,320 @@
 .class public final Lgh0;
-.super Ljava/lang/Object;
+.super Lfa5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final synthetic a:I
 
-.field public final b:Le8e;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Ly9b;
-
-.field public final e:Ly9b;
-
-.field public final f:Lxg0;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lov0;Lr8f;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lgh0;->a:I
+
+    iput-object p2, p0, Lgh0;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgh0;->a:Landroid/app/Application;
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x7
-
-    invoke-static {p1, p1, v0}, Lf8e;->b(III)Le8e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgh0;->b:Le8e;
-
-    check-cast p3, Lwla;
-
-    invoke-virtual {p3}, Lwla;->c()Le88;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Le88;->getImmediate()Le88;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Ly9b;
-
-    sget-object p3, Lz9b;->f:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Ly9b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lgh0;->d:Ly9b;
-
-    new-instance p1, Ly9b;
-
-    sget-object p3, Lz9b;->l:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Ly9b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lgh0;->e:Ly9b;
-
-    new-instance p1, Lxg0;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Lxg0;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lgh0;->f:Lxg0;
-
-    invoke-virtual {p2, p0}, Lov0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lc0g;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 7
 
-    .line 4
-    new-instance p1, Lbh0;
+    iget p1, p0, Lgh0;->a:I
 
-    const/4 v0, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p1, p0, v0}, Lbh0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    check-cast p1, Le2h;
 
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iget-boolean p1, p1, Le2h;->k:Z
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    iget-object v0, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v0, Le2h;
+
+    iget-boolean v0, v0, Le2h;->k:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const-string v4, "e2h"
+
+    if-nez v0, :cond_0
+
+    new-array v0, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v5, "set visible=true on onActivityResumed"
+
+    invoke-static {v4, v1, v5, v0}, Lcuh;->p(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v0, Le2h;
+
+    iput-boolean v2, v0, Le2h;->k:Z
+
+    :cond_0
+    iget-object v0, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v0, Le2h;
+
+    iget-boolean v0, v0, Le2h;->l:Z
+
+    iget-object v5, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v5, Le2h;
+
+    iget-boolean v5, v5, Le2h;->l:Z
+
+    if-nez v5, :cond_1
+
+    new-array v5, v3, [Ljava/lang/Object;
+
+    invoke-static {v5, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v5
+
+    const-string v6, "set screenOn=true on onActivityResumed"
+
+    invoke-static {v4, v1, v6, v5}, Lcuh;->p(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v5, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v5, Le2h;
+
+    iput-boolean v2, v5, Le2h;->l:Z
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    new-array p1, v3, [Ljava/lang/Object;
+
+    invoke-static {p1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "crutch! call onAppGoesForeground"
+
+    invoke-static {v4, v1, v0, p1}, Lcuh;->p(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Le2h;
+
+    invoke-virtual {p1}, Le2h;->b()V
+
+    :cond_3
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Lph0;
+
+    iget-object v0, p1, Lph0;->d:Ltib;
+
+    invoke-virtual {v0}, Ltib;->f()V
+
+    iget-object p1, p1, Lph0;->e:Ltib;
+
+    invoke-virtual {p1}, Ltib;->f()V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onEvent(Ldcb;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public onActivityStarted(Landroid/app/Activity;)V
+    .locals 4
 
-    .line 2
-    new-instance p1, Lzg0;
+    iget p1, p0, Lgh0;->a:I
 
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lzg0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    packed-switch p1, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Le2h;
+
+    iget v0, p1, Le2h;->f:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p1, Le2h;->f:I
+
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, La98;->d:La98;
+
+    invoke-virtual {p1, v0}, Lnxa;->b(La98;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onActivityStarted, visibleActivitiesCount: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v2, Le2h;
+
+    iget v2, v2, Le2h;->f:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "e2h"
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onEvent(Lrx3;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public onActivityStopped(Landroid/app/Activity;)V
+    .locals 4
 
-    .line 3
-    new-instance p1, Lah0;
+    iget p1, p0, Lgh0;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Le2h;
+
+    iget v0, p1, Le2h;->f:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p1, Le2h;->f:I
+
+    sget-object p1, Lcuh;->b:Lnxa;
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, La98;->d:La98;
+
+    invoke-virtual {p1, v0}, Lnxa;->b(La98;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "onActivityStopped, visibleActivitiesCount: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast v2, Le2h;
+
+    iget v2, v2, Le2h;->f:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "e2h"
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Le2h;
+
+    iget-boolean p1, p1, Le2h;->k:Z
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
+
+    check-cast p1, Le2h;
+
+    iget v0, p1, Le2h;->f:I
+
+    if-nez v0, :cond_2
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lah0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
+    iput-boolean v0, p1, Le2h;->k:Z
 
-    const/4 v1, 0x3
+    iget-object p1, p0, Lgh0;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p1, Le2h;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {p1}, Le2h;->a()V
 
+    :cond_2
     return-void
-.end method
 
-.method public final onEvent(Ly48;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    nop
 
-    .line 1
-    new-instance p1, Lyg0;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lyg0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

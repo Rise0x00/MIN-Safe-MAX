@@ -1,8 +1,23 @@
-.class public interface abstract Lk45;
+.class public final Lk45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d(Lvr0;)V
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lk45;->a:I
+
+    iput p2, p0, Lk45;->b:I
+
+    return-void
 .end method

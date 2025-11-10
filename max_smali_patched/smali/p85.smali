@@ -1,339 +1,150 @@
 .class public final Lp85;
-.super Landroid/media/MediaCodec$Callback;
+.super Ly75;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lmt8;
+.field public final a:Ljava/lang/ref/WeakReference;
 
-.field public final b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:J
-
-.field public g:J
-
-.field public h:Z
-
-.field public i:Z
-
-.field public j:Z
-
-.field public final synthetic k:Lr85;
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Lr85;)V
-    .locals 7
+.method public constructor <init>(Landroid/widget/TextView;Lq85;)V
+    .locals 1
 
-    iput-object p1, p0, Lp85;->k:Lr85;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Lp85;->b:Z
+    iput-object v0, p0, Lp85;->a:Ljava/lang/ref/WeakReference;
 
-    const/4 v0, 0x0
+    new-instance p1, Ljava/lang/ref/WeakReference;
 
-    iput-boolean v0, p0, Lp85;->c:Z
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-boolean v0, p0, Lp85;->d:Z
+    iput-object p1, p0, Lp85;->b:Ljava/lang/ref/WeakReference;
 
-    iput-boolean v0, p0, Lp85;->e:Z
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, p0, Lp85;->f:J
-
-    iput-wide v1, p0, Lp85;->g:J
-
-    iput-boolean v0, p0, Lp85;->h:Z
-
-    iput-boolean v0, p0, Lp85;->i:Z
-
-    iput-boolean v0, p0, Lp85;->j:Z
-
-    iget-boolean v1, p1, Lr85;->c:Z
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Lmt8;
-
-    iget-object v2, p1, Lr85;->q:Lza8;
-
-    iget-object v3, p1, Lr85;->p:Lbif;
-
-    const-class v4, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;
-
-    sget-object v5, Lsp4;->a:Lot6;
-
-    invoke-virtual {v5, v4}, Lot6;->e(Ljava/lang/Class;)Lt9c;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/camera/video/internal/compat/quirk/CameraUseInconsistentTimebaseQuirk;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v5, -0x1
-
-    iput-wide v5, v1, Lmt8;->o:J
-
-    iput-object v2, v1, Lmt8;->a:Ljava/lang/Object;
-
-    iput-object v3, v1, Lmt8;->b:Ljava/lang/Object;
-
-    iput-object v4, v1, Lmt8;->c:Ljava/lang/Object;
-
-    iput-object v1, p0, Lp85;->a:Lmt8;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lp85;->a:Lmt8;
-
-    :goto_0
-    const-class v1, Landroidx/camera/video/internal/compat/quirk/CodecStuckOnFlushQuirk;
-
-    sget-object v2, Lsp4;->a:Lot6;
-
-    invoke-virtual {v2, v1}, Lot6;->e(Ljava/lang/Class;)Lt9c;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/video/internal/compat/quirk/CodecStuckOnFlushQuirk;
-
-    if-eqz v1, :cond_1
-
-    iget-object p1, p1, Lr85;->d:Landroid/media/MediaFormat;
-
-    const-string v1, "mime"
-
-    invoke-virtual {p1, v1}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "video/mp4v-es"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iput-boolean v0, p0, Lp85;->b:Z
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final i()V
     .locals 5
 
-    iget-boolean v0, p0, Lp85;->e:Z
+    iget-object v0, p0, Lp85;->a:Ljava/lang/ref/WeakReference;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    const/4 v0, 0x1
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-boolean v0, p0, Lp85;->e:Z
+    iget-object v1, p0, Lp85;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lp85;->k:Lr85;
-
-    iget-object v0, v0, Lr85;->C:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iget-object v0, p0, Lp85;->k:Lr85;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lr85;->C:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_1
-    iget-object v0, p0, Lp85;->k:Lr85;
-
-    iget-object v0, v0, Lr85;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lp85;->k:Lr85;
-
-    iget-object v2, v1, Lr85;->r:Ld85;
-
-    iget-object v3, v1, Lr85;->s:Ljava/util/concurrent/Executor;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v0, Lb05;
-
-    const/4 v4, 0x7
-
-    invoke-direct {v0, p0, v3, v2, v4}, Lb05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v0}, Lr85;->l(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-.method public final b(Lu75;Ld85;Ljava/util/concurrent/Executor;)V
-    .locals 4
-
-    iget-object v0, p0, Lp85;->k:Lr85;
-
-    iget-object v1, v0, Lr85;->n:Ljava/util/HashSet;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p1, Lu75;->X:Lws1;
-
-    invoke-static {v1}, Lpch;->F(Ljx7;)Ljx7;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Lr6d;
+    check-cast v1, Landroid/text/InputFilter;
 
+    if-eqz v1, :cond_6
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, p1, v3}, Lr6d;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
+    :goto_0
+    array-length v4, v2
 
-    iget-object v3, v0, Lr85;->h:Lcsd;
+    if-ge v3, v4, :cond_6
 
-    invoke-static {v1, v2, v3}, Lpch;->b(Ljx7;Llg6;Ljava/util/concurrent/Executor;)V
+    aget-object v4, v2, v3
 
-    :try_start_0
-    new-instance v1, Lnk4;
+    if-ne v4, v1, :cond_5
 
-    const/16 v2, 0x17
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    invoke-direct {v1, p2, v2, p1}, Lnk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result v1
 
-    invoke-interface {p3, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-static {}, La85;->a()La85;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, La85;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+
+    move-result v1
+
+    invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+
+    move-result v3
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    instance-of v0, v2, Landroid/text/Spannable;
+
+    if-eqz v0, :cond_6
+
+    check-cast v2, Landroid/text/Spannable;
+
+    if-ltz v1, :cond_3
+
+    if-ltz v3, :cond_3
+
+    invoke-static {v2, v1, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    return-void
+
+    :cond_3
+    if-ltz v1, :cond_4
+
+    invoke-static {v2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
     return-void
 
-    :catch_0
-    move-exception p2
+    :cond_4
+    if-ltz v3, :cond_6
 
-    iget-object p3, v0, Lr85;->a:Ljava/lang/String;
-
-    const-string v0, "Unable to post to the supplied executor."
-
-    invoke-static {p3, v0, p2}, Ls4d;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1}, Lu75;->close()V
+    invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
 
     return-void
-.end method
 
-.method public final onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
-    .locals 2
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
 
-    iget-object p1, p0, Lp85;->k:Lr85;
+    goto :goto_0
 
-    iget-object p1, p1, Lr85;->h:Lcsd;
-
-    new-instance v0, Lnk4;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p0, v1, p2}, Lnk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lcsd;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final onInputBufferAvailable(Landroid/media/MediaCodec;I)V
-    .locals 2
-
-    iget-object p1, p0, Lp85;->k:Lr85;
-
-    iget-object p1, p1, Lr85;->h:Lcsd;
-
-    new-instance v0, Lj30;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, p0, p2, v1}, Lj30;-><init>(Ljava/lang/Object;II)V
-
-    invoke-virtual {p1, v0}, Lcsd;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final onOutputBufferAvailable(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
-    .locals 7
-
-    iget-object v0, p0, Lp85;->k:Lr85;
-
-    iget-object v0, v0, Lr85;->h:Lcsd;
-
-    new-instance v1, Li85;
-
-    const/4 v6, 0x1
-
-    move-object v2, p0
-
-    move-object v4, p1
-
-    move v5, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v1 .. v6}, Li85;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v0, v1}, Lcsd;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
-    .locals 2
-
-    iget-object p1, p0, Lp85;->k:Lr85;
-
-    iget-object p1, p1, Lr85;->h:Lcsd;
-
-    new-instance v0, Lnk4;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p0, v1, p2}, Lnk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lcsd;->execute(Ljava/lang/Runnable;)V
-
+    :cond_6
+    :goto_1
     return-void
 .end method

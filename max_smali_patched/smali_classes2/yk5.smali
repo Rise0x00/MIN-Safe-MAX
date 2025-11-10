@@ -1,154 +1,145 @@
-.class public final synthetic Lyk5;
-.super Ljava/lang/Object;
+.class public final Lyk5;
+.super Lmmf;
 .source "SourceFile"
-
-# interfaces
-.implements Ls1f;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Ljava/lang/Long;
 
-.field public final synthetic b:Ljava/io/Serializable;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/io/Serializable;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 0
 
-    iput p3, p0, Lyk5;->a:I
-
-    iput-object p1, p0, Lyk5;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lyk5;->b:Ljava/io/Serializable;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lyk5;->c:Ljava/lang/Long;
+
+    iput-object p1, p0, Lyk5;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lyk5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lyk5;->c:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lu8f;
+    :cond_0
+    instance-of v1, p1, Lyk5;
 
-    iget-object v1, p0, Lyk5;->b:Ljava/io/Serializable;
+    const/4 v2, 0x0
 
-    check-cast v1, Ljava/io/File;
+    if-nez v1, :cond_1
 
-    iget-object v2, v0, Lu8f;->b:Lbp7;
+    return v2
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lyk5;
 
-    move-result-object v2
+    iget-object v1, p0, Lyk5;->c:Ljava/lang/Long;
 
-    check-cast v2, Lcaf;
+    iget-object v3, p1, Lyk5;->c:Ljava/lang/Long;
 
-    iget-object v3, v0, Lu8f;->c:Lbp7;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v3
+    if-nez v1, :cond_2
 
-    check-cast v3, Lxob;
+    return v2
 
-    check-cast v3, Lzob;
+    :cond_2
+    iget-object v1, p0, Lyk5;->d:Ljava/lang/String;
 
-    iget-object v3, v3, Lzob;->b:Lltd;
+    iget-object p1, p1, Lyk5;->d:Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lu8f;->X:Lbp7;
+    move-result p1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_3
 
-    move-result-object v0
+    return v2
 
-    check-cast v0, Lm9f;
+    :cond_3
+    return v0
+.end method
 
-    check-cast v0, Ln9f;
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {v0}, Ln9f;->b()Lked;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iget-object v1, p0, Lyk5;->c:Ljava/lang/Long;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v1, :cond_0
 
-    new-instance v3, Lo07;
+    move v1, v0
 
-    iget-object v2, v2, Lcaf;->a:Ls5f;
+    goto :goto_0
 
-    invoke-direct {v3, v2, v1, v0}, Lo07;-><init>(Ls5f;Ljava/io/File;Lked;)V
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return-object v3
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Lyk5;->c:Ljava/lang/Object;
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    check-cast v0, Ldl5;
+    iget-object v2, p0, Lyk5;->d:Ljava/lang/String;
 
-    iget-object v1, p0, Lyk5;->b:Ljava/io/Serializable;
+    if-nez v2, :cond_1
 
-    check-cast v1, [J
+    goto :goto_1
 
-    new-instance v2, Lhfe;
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v2}, Lhfe;-><init>()V
+    move-result v0
 
-    iget-object v3, v0, Ldl5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    :goto_1
+    add-int/2addr v1, v0
 
-    iget-object v0, v0, Ldl5;->a:Ltk;
+    return v1
+.end method
 
-    const/4 v4, 0x4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast v0, Lbga;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4, v1}, Lbga;->e(I[J)J
+    const-string v1, "Response(botId="
 
-    move-result-wide v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v1, p0, Lyk5;->c:Ljava/lang/Long;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", startParam="
 
-    return-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    iget-object v0, p0, Lyk5;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lyk5;->d:Ljava/lang/String;
 
-    check-cast v0, Lal5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lyk5;->b:Ljava/io/Serializable;
+    const-string v1, ")"
 
-    check-cast v1, [J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lu14;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v2, v0, v3, v1}, Lu14;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lal5;->a(Ljava/util/concurrent/Callable;)Lhfe;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

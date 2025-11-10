@@ -1,78 +1,99 @@
 .class public final Lbl4;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lm7d;
 
-.field public final b:Z
+.field public final synthetic b:I
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:I
+
+.field public final synthetic e:Landroid/view/ViewPropertyAnimator;
+
+.field public final synthetic f:Lfl4;
 
 
 # direct methods
-.method public constructor <init>(Lr76;I)V
-    .locals 2
+.method public constructor <init>(Lfl4;Lm7d;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbl4;->f:Lfl4;
 
-    iget p1, p1, Lr76;->o:I
+    iput-object p2, p0, Lbl4;->a:Lm7d;
 
-    const/4 v0, 0x1
+    iput p3, p0, Lbl4;->b:I
 
-    and-int/2addr p1, v0
+    iput-object p4, p0, Lbl4;->c:Landroid/view/View;
 
-    const/4 v1, 0x0
+    iput p5, p0, Lbl4;->d:I
 
-    if-eqz p1, :cond_0
+    iput-object p6, p0, Lbl4;->e:Landroid/view/ViewPropertyAnimator;
 
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, Lbl4;->a:Z
-
-    invoke-static {p2, v1}, Lsl4;->c(IZ)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lbl4;->b:Z
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 3
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    check-cast p1, Lbl4;
+    iget p1, p0, Lbl4;->b:I
 
-    iget-boolean v0, p0, Lbl4;->b:Z
+    const/4 v0, 0x0
 
-    iget-boolean v1, p1, Lbl4;->b:Z
+    iget-object v1, p0, Lbl4;->c:Landroid/view/View;
 
-    sget-object v2, Lgd3;->a:Led3;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v2, v0, v1}, Led3;->d(ZZ)Lgd3;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    move-result-object v0
+    :cond_0
+    iget p1, p0, Lbl4;->d:I
 
-    iget-boolean v1, p0, Lbl4;->a:Z
+    if-eqz p1, :cond_1
 
-    iget-boolean p1, p1, Lbl4;->a:Z
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-virtual {v0, v1, p1}, Lgd3;->d(ZZ)Lgd3;
+    :cond_1
+    return-void
+.end method
 
-    move-result-object p1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    invoke-virtual {p1}, Lgd3;->f()I
+    iget-object p1, p0, Lbl4;->e:Landroid/view/ViewPropertyAnimator;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    return p1
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    iget-object p1, p0, Lbl4;->f:Lfl4;
+
+    iget-object v0, p0, Lbl4;->a:Lm7d;
+
+    invoke-virtual {p1, v0}, Lu6d;->c(Lm7d;)V
+
+    iget-object v1, p1, Lfl4;->p:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {p1}, Lfl4;->j()V
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget-object p1, p0, Lbl4;->f:Lfl4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
 .end method

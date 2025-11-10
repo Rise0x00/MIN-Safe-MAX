@@ -1,23 +1,11 @@
-.class public final La15;
+.class public interface abstract La15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract a(Ln93;)Landroid/graphics/drawable/Drawable;
+.end method
 
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, La15;->a:I
-
-    iput p2, p0, La15;->b:I
-
-    return-void
+.method public abstract b(Ln93;)Z
 .end method

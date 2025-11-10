@@ -22,19 +22,19 @@
         "",
         "",
         "key",
-        "Lbee;",
+        "Lrqe;",
         "emitter",
         "<init>",
-        "(Ljava/lang/String;Lbee;)V",
+        "(Ljava/lang/String;Lrqe;)V",
         "",
         "values",
-        "Loyf;",
+        "Lybg;",
         "emit",
         "(Ljava/util/Map;)V",
         "Ljava/lang/String;",
         "getKey",
         "()Ljava/lang/String;",
-        "Lbee;",
+        "Lrqe;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -48,10 +48,10 @@
 
 
 # instance fields
-.field private final emitter:Lbee;
+.field private final emitter:Lrqe;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lbee;"
+            "Lrqe;"
         }
     .end annotation
 .end field
@@ -60,13 +60,13 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lbee;)V
+.method public constructor <init>(Ljava/lang/String;Lrqe;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lbee;",
+            "Lrqe;",
             ")V"
         }
     .end annotation
@@ -75,7 +75,7 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->key:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lbee;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lrqe;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lbee;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->emitter:Lrqe;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/settings/RemoteSettingsImpl$KeyListener;->key:Ljava/lang/String;
 
@@ -109,9 +109,9 @@
     const-string p1, ""
 
     :cond_0
-    check-cast v0, Lxde;
+    check-cast v0, Lnqe;
 
-    invoke-virtual {v0, p1}, Lxde;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lnqe;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

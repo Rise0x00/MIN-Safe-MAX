@@ -1,152 +1,185 @@
 .class public final Lrsf;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/DrawableWrapper;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqsf;
+.implements Landroid/graphics/drawable/Animatable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltya;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltya;Landroid/widget/ScrollView;I)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    .locals 1
 
-    iput p3, p0, Lrsf;->a:I
+    sget v0, Lw0b;->S:I
 
-    iput-object p1, p0, Lrsf;->b:Ltya;
+    invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    iput-object p2, p0, Lrsf;->c:Landroid/widget/ScrollView;
+    iput v0, p0, Lrsf;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p2, :cond_0
 
+    sget-object p1, Ly53;->s0:Lvh4;
+
+    invoke-virtual {p1, p2}, Lvh4;->h(Landroid/content/Context;)Ly53;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ly53;->h()Lw5b;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Lw5b;->e(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final isRunning()Z
+    .locals 2
 
-    iget v0, p0, Lrsf;->a:I
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lrsf;->b:Ltya;
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    if-eqz v1, :cond_0
 
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    check-cast v0, Landroid/graphics/drawable/Animatable;
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
 
-    goto :goto_1
+    move-result v0
+
+    return v0
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    return v0
+.end method
 
-    move-result v0
+.method public final onThemeChanged(Lw5b;)V
+    .locals 2
 
-    add-int/2addr v0, v1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lrsf;->c:Landroid/widget/ScrollView;
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+    instance-of v0, v0, Lqsf;
 
-    move-result v2
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result v3
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
+    instance-of v1, v0, Lqsf;
 
-    move-result v4
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
+    check-cast v0, Lqsf;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lqsf;->onThemeChanged(Lw5b;)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lrsf;->b:Ltya;
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result-object v0
 
-    move-result-object v1
+    if-eqz v0, :cond_2
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    iget v1, p0, Lrsf;->a:I
 
-    if-eqz v2, :cond_2
+    invoke-interface {p1, v1}, Lw5b;->e(I)I
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    move-result p1
 
-    goto :goto_2
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_3
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lrsf;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
-
     return-void
+.end method
 
-    nop
+.method public final start()V
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/Animatable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/Animatable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
+
+    :cond_1
+    return-void
 .end method

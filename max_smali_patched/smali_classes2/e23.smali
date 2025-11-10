@@ -1,90 +1,62 @@
-.class public final Le23;
-.super Lm3f;
+.class public final synthetic Le23;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ld3b;
 
 
 # instance fields
-.field public final synthetic X:Lm23;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyle;
 
 
 # direct methods
-.method public constructor <init>(Lm23;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lyle;I)V
     .locals 0
 
-    iput-object p1, p0, Le23;->X:Lm23;
+    iput p2, p0, Le23;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Le23;->b:Lyle;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le23;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Le23;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Le23;
-
-    iget-object v0, p0, Le23;->X:Lm23;
-
-    invoke-direct {p1, v0, p2}, Le23;-><init>(Lm23;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final q(Le3b;)V
     .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Le23;->a:I
 
-    iget-object p1, p0, Le23;->X:Lm23;
+    iget-object v1, p0, Le23;->b:Lyle;
 
-    invoke-virtual {p1}, Lm23;->M()Lub2;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Les7;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v1, Lyle;->b:Lqi6;
 
-    new-instance v0, Leb2;
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    return-void
 
-    invoke-direct {v0, p1, v1}, Leb2;-><init>(Lub2;I)V
+    :pswitch_0
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->K0:[Les7;
 
-    const-string v1, "create-saved-messages"
+    iget-object v0, v1, Lyle;->b:Lqi6;
 
-    invoke-virtual {p1, v1, v0}, Lub2;->d0(Ljava/lang/String;Lt1f;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    return-void
 
-    check-cast p1, Lm82;
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

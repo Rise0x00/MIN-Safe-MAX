@@ -1,21 +1,15 @@
-.class public final Ldo0;
+.class public abstract Ldo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lh27;
-
-
 # direct methods
-.method public constructor <init>(Lh27;)V
+.method public static a(Landroid/hardware/biometrics/BiometricManager;I)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/hardware/biometrics/BiometricManager;->canAuthenticate(I)I
 
-    invoke-static {p1}, Lhv0;->n(Ljava/lang/Object;)V
+    move-result p0
 
-    iput-object p1, p0, Ldo0;->a:Lh27;
-
-    return-void
+    return p0
 .end method

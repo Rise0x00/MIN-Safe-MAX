@@ -1,66 +1,160 @@
-.class public final synthetic Ls6h;
+.class public final Ls6h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final Companion:Lr6h;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Ls6h;->a:I
+    new-instance v0, Lr6h;
 
-    iput-object p1, p0, Ls6h;->b:Lone/me/sdk/arch/Widget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ls6h;->Companion:Lr6h;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Ls6h;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Ls6h;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lq6h;->a:Lq6h;
+
+    invoke-virtual {p2}, Lq6h;->d()Lo3e;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lbi3;->b(IILo3e;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Ls6h;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Ls6h;->b:Lone/me/sdk/arch/Widget;
+    return v0
 
-    check-cast p2, Lp53;
+    :cond_0
+    instance-of v1, p1, Ls6h;
 
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->A0(Lone/me/sdk/arch/Widget;Ljava/lang/Object;Lp53;)Loyf;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    return-object p1
+    return v2
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    :cond_1
+    check-cast p1, Ls6h;
 
-    check-cast p2, Lp53;
+    iget-object v1, p0, Ls6h;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Ls6h;->b:Lone/me/sdk/arch/Widget;
+    iget-object v3, p1, Ls6h;->a:Ljava/lang/String;
 
-    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->y0(Lone/me/sdk/arch/Widget;Landroid/view/View;Lp53;)Loyf;
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v1
 
-    return-object p1
+    if-nez v1, :cond_2
 
-    nop
+    return v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    iget-object v1, p0, Ls6h;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Ls6h;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ls6h;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ls6h;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", requestId="
+
+    const-string v1, ")"
+
+    const-string v2, "WebAppBiometryGetInfoRequest(queryId="
+
+    iget-object v3, p0, Ls6h;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Ls6h;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

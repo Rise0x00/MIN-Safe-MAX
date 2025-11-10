@@ -1,206 +1,136 @@
-.class public final Lxbb;
+.class public abstract Lxbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Externalizable;
 
-
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Z
-
-.field public Z:Z
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public o:Z
-
-.field public w0:Ljava/lang/String;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "PackageManagerHelper"
 
-    const-string v0, ""
+    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object v0, p0, Lxbb;->a:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object v0, p0, Lxbb;->b:Ljava/lang/String;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lxbb;->c:Ljava/util/ArrayList;
-
-    iput-object v0, p0, Lxbb;->X:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lxbb;->Y:Z
-
-    iput-object v0, p0, Lxbb;->w0:Ljava/lang/String;
+    sput-object v0, Lxbb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/Class;Z)V
+    .locals 6
 
-# virtual methods
-.method public final readExternal(Ljava/io/ObjectInput;)V
-    .locals 4
+    const-string v0, "disabled"
 
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
+    const-string v1, "enabled"
 
-    move-result-object v0
+    sget-object v2, Lxbb;->a:Ljava/lang/String;
 
-    iput-object v0, p0, Lxbb;->a:Ljava/lang/String;
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxbb;->b:Ljava/lang/String;
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readInt()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    iget-object v2, p0, Lxbb;->c:Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v4, Landroid/content/ComponentName;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, p0, v5}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    if-eqz p2, :cond_0
+
+    move v5, p0
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lxbb;->o:Z
-
-    iput-object v0, p0, Lxbb;->X:Ljava/lang/String;
-
-    :cond_1
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/io/DataInput;->readUTF()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-boolean v1, p0, Lxbb;->Z:Z
-
-    iput-object v0, p0, Lxbb;->w0:Ljava/lang/String;
-
-    :cond_2
-    invoke-interface {p1}, Ljava/io/DataInput;->readBoolean()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lxbb;->Y:Z
-
-    return-void
-.end method
-
-.method public final writeExternal(Ljava/io/ObjectOutput;)V
-    .locals 3
-
-    iget-object v0, p0, Lxbb;->a:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lxbb;->b:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lxbb;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeInt(I)V
-
-    const/4 v1, 0x0
+    const/4 v5, 0x2
 
     :goto_0
-    if-ge v1, v0, :cond_0
+    invoke-virtual {v3, v4, v5, p0}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
-    iget-object v2, p0, Lxbb;->c:Ljava/util/ArrayList;
+    invoke-static {}, Luyh;->e()Luyh;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    check-cast v2, Ljava/lang/String;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-interface {p1, v2}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v4
 
-    goto :goto_0
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iget-boolean v0, p0, Lxbb;->o:Z
+    const-string v4, " "
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lxbb;->o:Z
+    if-eqz p2, :cond_1
 
-    if-eqz v0, :cond_1
+    move-object v4, v1
 
-    iget-object v0, p0, Lxbb;->X:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    goto :goto_1
 
     :cond_1
-    iget-boolean v0, p0, Lxbb;->Z:Z
+    move-object v4, v0
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    :goto_1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lxbb;->Z:Z
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    move-result-object v3
 
-    iget-object v0, p0, Lxbb;->w0:Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    invoke-static {}, Luyh;->e()Luyh;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "could not be "
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-eqz p2, :cond_2
+
+    move-object v0, v1
 
     :cond_2
-    iget-boolean v0, p0, Lxbb;->Y:Z
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v3, v2, p1, p0}, Luyh;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

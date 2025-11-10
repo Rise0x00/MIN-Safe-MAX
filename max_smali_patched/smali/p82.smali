@@ -1,894 +1,766 @@
-.class public abstract Lp82;
-.super Ljava/lang/Object;
+.class public final Lp82;
+.super Lwi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ltl3;
+# instance fields
+.field public final synthetic i:I
 
-.field public static final b:Ls5f;
+.field public j:Ljava/io/Serializable;
+
+.field public k:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ltl3;
+    iput p1, p0, Lp82;->i:I
 
-    sget v1, Loka;->R:I
+    packed-switch p1, :pswitch_data_0
 
-    sget v2, Lqka;->a:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v2}, Ljef;-><init>(I)V
-
-    const/4 v2, 0x2
-
-    const/16 v4, 0x38
-
-    invoke-direct {v0, v1, v3, v2, v4}, Ltl3;-><init>(ILoef;II)V
-
-    sput-object v0, Lp82;->a:Ltl3;
-
-    new-instance v0, Llj1;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Llj1;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lp82;->b:Ls5f;
+    invoke-direct {p0}, Lwi0;-><init>()V
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Lwi0;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    iput-object p1, p0, Lp82;->j:Ljava/io/Serializable;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lp82;->k:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static a(Lm82;)Laae;
-    .locals 9
 
-    new-instance v0, Laae;
+# virtual methods
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 17
 
-    iget-wide v1, p0, Lm82;->a:J
+    move-object/from16 v1, p0
 
-    sget v3, Lqka;->B:I
+    move-object/from16 v0, p1
 
-    invoke-virtual {p0}, Lm82;->l()Lap3;
+    iget v2, v1, Lp82;->i:I
 
-    move-result-object p0
+    const/4 v3, 0x1
 
-    if-eqz p0, :cond_0
+    const/4 v4, 0x0
 
-    invoke-virtual {p0}, Lap3;->d()Ljava/lang/String;
+    packed-switch v2, :pswitch_data_0
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result v5
+
+    sub-int/2addr v5, v2
+
+    if-nez v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {v1, v5}, Lwi0;->k(I)Ljava/nio/ByteBuffer;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    move-result-object v2
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    iget-object v6, v1, Lp82;->j:Ljava/io/Serializable;
 
-    move-result-object p0
+    check-cast v6, Ljava/util/concurrent/locks/ReentrantLock;
 
-    move v4, v3
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    new-instance v3, Llef;
+    :try_start_0
+    iget-object v7, v1, Lp82;->k:Ljava/lang/Object;
 
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
+    check-cast v7, Ljava/util/ArrayList;
 
-    move-result-object p0
+    new-instance v8, Ljava/util/ArrayList;
 
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    sget p0, Lt9d;->T:I
+    invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    new-instance v4, Ljef;
+    move-result-object v7
 
-    invoke-direct {v4, p0}, Ljef;-><init>(I)V
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance p0, Ltl3;
+    move-result v9
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget v5, Loka;->Q:I
+    if-nez v9, :cond_4
 
-    sget v6, Lqka;->x:I
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    new-instance v7, Ljef;
+    invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-direct {v7, v6}, Ljef;-><init>(I)V
+    move-result v6
 
-    const/4 v6, 0x1
+    if-eqz v6, :cond_1
 
-    const/16 v8, 0x38
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    invoke-direct {p0, v5, v7, v6, v8}, Ltl3;-><init>(ILoef;II)V
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    sget-object v5, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v5}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    sget-object v0, Lqfb;->a:Lyib;
 
-    const-string v0, "Required value was null."
+    iget-object v0, v1, Lwi0;->b:Ll50;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget v0, v0, Ll50;->c:I
 
-    throw p0
+    sget-object v2, Lqfb;->a:Lyib;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lyib;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpfb;
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-eq v0, v3, :cond_3
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+
+    invoke-static {v5}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    :goto_0
+    return-void
+
+    :cond_2
+    invoke-static {v8, v4}, Lijf;->o(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_3
+    invoke-static {v8, v4}, Lijf;->o(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_4
+    :try_start_1
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_5
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_5
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    invoke-virtual {v6}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v2, v1, Lp82;->k:Ljava/lang/Object;
+
+    check-cast v2, [I
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result v6
+
+    sub-int v7, v6, v5
+
+    iget-object v8, v1, Lwi0;->b:Ll50;
+
+    iget v8, v8, Ll50;->d:I
+
+    div-int/2addr v7, v8
+
+    iget-object v8, v1, Lwi0;->c:Ll50;
+
+    iget v8, v8, Ll50;->d:I
+
+    mul-int/2addr v7, v8
+
+    invoke-virtual {v1, v7}, Lwi0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v7
+
+    :goto_2
+    if-ge v5, v6, :cond_14
+
+    array-length v8, v2
+
+    move v9, v4
+
+    :goto_3
+    if-ge v9, v8, :cond_13
+
+    aget v10, v2, v9
+
+    iget-object v11, v1, Lwi0;->b:Ll50;
+
+    iget v11, v11, Ll50;->c:I
+
+    invoke-static {v11}, Llig;->t(I)I
+
+    move-result v11
+
+    mul-int/2addr v11, v10
+
+    add-int/2addr v11, v5
+
+    iget-object v10, v1, Lwi0;->b:Ll50;
+
+    iget v10, v10, Ll50;->c:I
+
+    const/4 v12, 0x2
+
+    if-eq v10, v12, :cond_12
+
+    const/4 v12, 0x3
+
+    if-eq v10, v12, :cond_11
+
+    const/4 v13, 0x4
+
+    if-eq v10, v13, :cond_10
+
+    const/16 v13, 0x15
+
+    if-eq v10, v13, :cond_8
+
+    const/16 v13, 0x16
+
+    if-eq v10, v13, :cond_7
+
+    const/high16 v13, 0x10000000
+
+    if-eq v10, v13, :cond_12
+
+    const/high16 v13, 0x50000000
+
+    if-eq v10, v13, :cond_8
+
+    const/high16 v12, 0x60000000
+
+    if-ne v10, v12, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unexpected encoding: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, v1, Lwi0;->b:Ll50;
+
+    iget v3, v3, Ll50;->c:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    :goto_4
+    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v10
+
+    invoke-virtual {v7, v10}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    goto/16 :goto_d
+
+    :cond_8
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v10
+
+    sget-object v13, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    if-ne v10, v13, :cond_9
+
+    move v10, v11
+
+    goto :goto_5
+
+    :cond_9
+    add-int/lit8 v10, v11, 0x2
+
+    :goto_5
+    invoke-virtual {v0, v10}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v10
+
+    add-int/lit8 v14, v11, 0x1
+
+    invoke-virtual {v0, v14}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v14
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v15
+
+    if-ne v15, v13, :cond_a
+
+    add-int/lit8 v11, v11, 0x2
+
+    :cond_a
+    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v11
+
+    shl-int/lit8 v10, v10, 0x18
+
+    const/high16 v15, -0x1000000
+
+    and-int/2addr v10, v15
+
+    shl-int/lit8 v14, v14, 0x10
+
+    const/high16 v16, 0xff0000
+
+    and-int v14, v14, v16
+
+    or-int/2addr v10, v14
+
+    shl-int/lit8 v11, v11, 0x8
+
+    const v14, 0xff00
+
+    and-int/2addr v11, v14
+
+    or-int/2addr v10, v11
+
+    shr-int/lit8 v10, v10, 0x8
+
+    and-int v11, v10, v15
+
+    if-eqz v11, :cond_c
+
+    const/high16 v11, -0x800000    # Float.NEGATIVE_INFINITY
+
+    and-int v15, v10, v11
+
+    if-ne v15, v11, :cond_b
+
+    goto :goto_6
+
+    :cond_b
+    move v11, v4
+
+    goto :goto_7
+
+    :cond_c
+    :goto_6
+    move v11, v3
+
+    :goto_7
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    const-string v3, "Value out of range of 24-bit integer: "
+
+    invoke-direct {v15, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v10}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v15, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3, v11}, Ligi;->b(Ljava/lang/Object;Z)V
+
+    invoke-virtual {v7}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v3
+
+    if-lt v3, v12, :cond_d
+
+    const/4 v3, 0x1
+
+    goto :goto_8
+
+    :cond_d
+    move v3, v4
+
+    :goto_8
+    invoke-static {v3}, Ligi;->c(Z)V
+
+    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v3
+
+    if-ne v3, v13, :cond_e
+
+    and-int v3, v10, v16
+
+    shr-int/lit8 v3, v3, 0x10
+
+    :goto_9
+    int-to-byte v3, v3
+
+    goto :goto_a
+
+    :cond_e
+    and-int/lit16 v3, v10, 0xff
+
+    goto :goto_9
+
+    :goto_a
+    and-int v11, v10, v14
+
+    shr-int/lit8 v11, v11, 0x8
+
+    int-to-byte v11, v11
+
+    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v12
+
+    if-ne v12, v13, :cond_f
+
+    and-int/lit16 v10, v10, 0xff
+
+    :goto_b
+    int-to-byte v10, v10
+
+    goto :goto_c
+
+    :cond_f
+    and-int v10, v10, v16
+
+    shr-int/lit8 v10, v10, 0x10
+
+    goto :goto_b
+
+    :goto_c
+    invoke-virtual {v7, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v11}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v10}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    goto :goto_d
+
+    :cond_10
+    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->getFloat(I)F
+
+    move-result v3
+
+    invoke-virtual {v7, v3}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
+
+    goto :goto_d
+
+    :cond_11
+    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v7, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    goto :goto_d
+
+    :cond_12
+    invoke-virtual {v0, v11}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v3
+
+    invoke-virtual {v7, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    :goto_d
+    add-int/lit8 v9, v9, 0x1
+
+    const/4 v3, 0x1
+
+    goto/16 :goto_3
+
+    :cond_13
+    iget-object v3, v1, Lwi0;->b:Ll50;
+
+    iget v3, v3, Ll50;->d:I
+
+    add-int/2addr v5, v3
+
+    const/4 v3, 0x1
+
+    goto/16 :goto_2
+
+    :cond_14
+    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static b(J)Laae;
-    .locals 7
+.method public final g(Ll50;)Ll50;
+    .locals 8
 
-    new-instance v0, Laae;
+    iget v0, p0, Lp82;->i:I
 
-    sget v1, Lqka;->b:I
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v3, Ljef;
+    return-object p1
 
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
+    :pswitch_0
+    iget v0, p1, Ll50;->c:I
 
-    new-instance v1, Ltl3;
+    iget-object v1, p0, Lp82;->j:Ljava/io/Serializable;
 
-    sget v2, Loka;->T:I
+    check-cast v1, [I
 
-    sget v4, Lqka;->y:I
+    if-nez v1, :cond_0
 
-    new-instance v5, Ljef;
+    sget-object p1, Ll50;->e:Ll50;
 
-    invoke-direct {v5, v4}, Ljef;-><init>(I)V
+    goto :goto_3
 
-    const/4 v4, 0x1
+    :cond_0
+    iget v2, p1, Ll50;->b:I
 
-    const/16 v6, 0x38
+    invoke-static {v0}, Llig;->M(I)Z
 
-    invoke-direct {v1, v2, v5, v4, v6}, Ltl3;-><init>(ILoef;II)V
+    move-result v3
 
-    sget-object v2, Lp82;->a:Ltl3;
+    if-eqz v3, :cond_6
 
-    filled-new-array {v1, v2}, [Ltl3;
+    array-length v3, v1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eq v2, v3, :cond_1
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v4
+
+    :goto_0
+    move v6, v4
+
+    :goto_1
+    array-length v7, v1
+
+    if-ge v6, v7, :cond_4
+
+    aget v7, v1, v6
+
+    if-ge v7, v2, :cond_3
+
+    if-eq v7, v6, :cond_2
+
+    move v7, v5
+
+    goto :goto_2
+
+    :cond_2
+    move v7, v4
+
+    :goto_2
+    or-int/2addr v3, v7
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Channel map ("
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    const-string v1, ") trying to access non-existent input channel."
 
-    const/4 v4, 0x0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-wide v1, p0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static c(J)Laae;
-    .locals 7
-
-    new-instance v0, Laae;
-
-    sget v1, Lqka;->j:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
-
-    new-instance v1, Ltl3;
-
-    sget v2, Loka;->T:I
-
-    sget v4, Lqka;->i:I
-
-    new-instance v5, Ljef;
-
-    invoke-direct {v5, v4}, Ljef;-><init>(I)V
-
-    const/4 v4, 0x1
-
-    const/16 v6, 0x38
-
-    invoke-direct {v1, v2, v5, v4, v6}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v2, Lp82;->a:Ltl3;
-
-    filled-new-array {v1, v2}, [Ltl3;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Ll50;)V
 
-    move-result-object v5
+    throw v0
 
-    const/4 v4, 0x0
+    :cond_4
+    if-eqz v3, :cond_5
 
-    move-wide v1, p0
+    new-instance v2, Ll50;
 
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
+    iget p1, p1, Ll50;->a:I
 
-    return-object v0
+    array-length v1, v1
+
+    invoke-direct {v2, p1, v1, v0}, Ll50;-><init>(III)V
+
+    move-object p1, v2
+
+    goto :goto_3
+
+    :cond_5
+    sget-object p1, Ll50;->e:Ll50;
+
+    :goto_3
+    return-object p1
+
+    :cond_6
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ll50;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static d(Lm82;)Laae;
-    .locals 11
+.method public h()V
+    .locals 1
 
-    new-instance v0, Laae;
+    iget v0, p0, Lp82;->i:I
 
-    iget-wide v1, p0, Lm82;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    sget v3, Lqka;->d:I
+    return-void
 
-    invoke-virtual {p0}, Lm82;->k0()V
+    :pswitch_0
+    iget-object v0, p0, Lp82;->j:Ljava/io/Serializable;
 
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
+    check-cast v0, [I
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    iput-object v0, p0, Lp82;->k:Ljava/lang/Object;
 
-    move-result-object p0
+    return-void
 
-    move v4, v3
+    nop
 
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    sget p0, Lt9d;->y:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, p0}, Ljef;-><init>(I)V
-
-    new-instance p0, Ltl3;
-
-    sget v5, Loka;->I:I
-
-    sget v6, Lqka;->f:I
-
-    new-instance v7, Ljef;
-
-    invoke-direct {v7, v6}, Ljef;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v5, Ltl3;
-
-    sget v7, Loka;->B:I
-
-    sget v9, Lqka;->c:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v6, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v5, v6}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static e(Lm82;)Laae;
-    .locals 8
+.method public j()V
+    .locals 1
 
-    new-instance v0, Laae;
+    iget v0, p0, Lp82;->i:I
 
-    iget-wide v1, p0, Lm82;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    sget v3, Lqka;->m:I
+    return-void
 
-    invoke-virtual {p0}, Lm82;->k0()V
+    :pswitch_0
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lp82;->k:Ljava/lang/Object;
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    iput-object v0, p0, Lp82;->j:Ljava/io/Serializable;
 
-    move-result-object p0
+    return-void
 
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->S:I
-
-    sget v5, Lqka;->h:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v4, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v4}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static f(Lm82;)Laae;
-    .locals 11
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->m:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    sget p0, Lt9d;->G:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, p0}, Ljef;-><init>(I)V
-
-    new-instance p0, Ltl3;
-
-    sget v5, Loka;->I:I
-
-    sget v6, Lqka;->r:I
-
-    new-instance v7, Ljef;
-
-    invoke-direct {v7, v6}, Ljef;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v5, Ltl3;
-
-    sget v7, Loka;->C:I
-
-    sget v9, Lqka;->k:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v6, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v5, v6}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static g(Lm82;)Laae;
-    .locals 11
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->H:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    sget p0, Lt9d;->A:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, p0}, Ljef;-><init>(I)V
-
-    new-instance p0, Ltl3;
-
-    sget v5, Loka;->S:I
-
-    sget v6, Lqka;->l:I
-
-    new-instance v7, Ljef;
-
-    invoke-direct {v7, v6}, Ljef;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v5, Ltl3;
-
-    sget v7, Loka;->T:I
-
-    sget v9, Lqka;->k:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v6, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v5, v6}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static h(Lm82;)Laae;
-    .locals 8
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->e:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->U:I
-
-    sget v5, Lqka;->z:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v4, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v4}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static i(Lm82;)Laae;
-    .locals 8
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->e:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->I:I
-
-    sget v5, Lqka;->f:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v4, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v4}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static j(Lm82;)Laae;
-    .locals 8
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->o:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->U:I
-
-    sget v5, Lqka;->A:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v4, Lp82;->b:Ls5f;
-
-    invoke-virtual {v4}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ltl3;
-
-    filled-new-array {p0, v4}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static k(Lm82;)Laae;
-    .locals 8
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget v3, Lqka;->o:I
-
-    invoke-virtual {p0}, Lm82;->k0()V
-
-    iget-object p0, p0, Lm82;->y0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Llef;
-
-    invoke-static {p0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Llef;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->I:I
-
-    sget v5, Lqka;->r:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v4, Lp82;->b:Ls5f;
-
-    invoke-virtual {v4}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ltl3;
-
-    filled-new-array {p0, v4}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static l(Lm82;)Laae;
-    .locals 11
-
-    new-instance v0, Laae;
-
-    iget-wide v1, p0, Lm82;->a:J
-
-    sget p0, Lqka;->L:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, p0}, Ljef;-><init>(I)V
-
-    new-instance p0, Ltl3;
-
-    sget v4, Loka;->W:I
-
-    sget v5, Lqka;->J:I
-
-    new-instance v6, Ljef;
-
-    invoke-direct {v6, v5}, Ljef;-><init>(I)V
-
-    const/4 v5, 0x3
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v4, Ltl3;
-
-    sget v6, Loka;->X:I
-
-    sget v8, Lqka;->K:I
-
-    new-instance v9, Ljef;
-
-    invoke-direct {v9, v8}, Ljef;-><init>(I)V
-
-    invoke-direct {v4, v6, v9, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v6, Ltl3;
-
-    sget v8, Loka;->V:I
-
-    sget v9, Lqka;->I:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    invoke-direct {v6, v8, v10, v5, v7}, Ltl3;-><init>(ILoef;II)V
-
-    new-instance v5, Ltl3;
-
-    sget v8, Loka;->Y:I
-
-    sget v9, Lqka;->M:I
-
-    new-instance v10, Ljef;
-
-    invoke-direct {v10, v9}, Ljef;-><init>(I)V
-
-    const/4 v9, 0x1
-
-    invoke-direct {v5, v8, v10, v9, v7}, Ltl3;-><init>(ILoef;II)V
-
-    sget-object v7, Lp82;->a:Ltl3;
-
-    filled-new-array {p0, v4, v6, v5, v7}, [Ltl3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static m()Laae;
-    .locals 8
-
-    new-instance v0, Laae;
-
-    new-instance v3, Lnef;
-
-    const-string v1, "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435!"
-
-    invoke-direct {v3, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v4, Lnef;
-
-    const-string v1, "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435\u0441\u044c \u043f\u043e\u0437\u0436\u0435 :)"
-
-    invoke-direct {v4, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Ltl3;
-
-    new-instance v2, Lnef;
-
-    const-string v5, "\u0412\u0435\u0440\u043d\u0443\u0441\u044c \u043f\u043e\u0437\u0436\u0435"
-
-    invoke-direct {v2, v5}, Lnef;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v5, 0x3
-
-    const/16 v6, 0x38
-
-    const/high16 v7, -0x80000000
-
-    invoke-direct {v1, v7, v2, v5, v6}, Ltl3;-><init>(ILoef;II)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    invoke-direct/range {v0 .. v5}, Laae;-><init>(JLoef;Loef;Ljava/util/List;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

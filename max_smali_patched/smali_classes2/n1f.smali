@@ -4,20 +4,16 @@
 
 
 # instance fields
-.field public final a:Lh0f;
-
-.field public final b:Z
+.field public final a:Lo1f;
 
 
 # direct methods
-.method public constructor <init>(Lh0f;Z)V
+.method public constructor <init>(Lo1f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln1f;->a:Lh0f;
-
-    iput-boolean p2, p0, Ln1f;->b:Z
+    iput-object p1, p0, Ln1f;->a:Lo1f;
 
     return-void
 .end method
@@ -25,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -45,51 +41,32 @@
     :cond_1
     check-cast p1, Ln1f;
 
-    iget-object v1, p0, Ln1f;->a:Lh0f;
+    iget-object v1, p0, Ln1f;->a:Lo1f;
 
-    iget-object v3, p1, Ln1f;->a:Lh0f;
+    iget-object p1, p1, Ln1f;->a:Lo1f;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-boolean v1, p0, Ln1f;->b:Z
-
-    iget-boolean p1, p1, Ln1f;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Ln1f;->a:Lh0f;
+    iget-object v0, p0, Ln1f;->a:Lo1f;
 
-    invoke-virtual {v0}, Lh0f;->hashCode()I
+    invoke-virtual {v0}, Lo1f;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Ln1f;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -97,21 +74,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Item(suggest="
+    const-string v1, "StatesIconColors(disabled="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ln1f;->a:Lh0f;
+    iget-object v1, p0, Ln1f;->a:Lo1f;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromContacts="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ln1f;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

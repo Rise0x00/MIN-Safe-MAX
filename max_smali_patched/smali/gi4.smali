@@ -3,210 +3,424 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lh04;
+
+
+# static fields
+.field public static final c:Lgi4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Ljava/util/ArrayList;
-
-.field public final synthetic c:Lmi4;
+.field public final b:Ljava/util/Map;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmi4;Ljava/util/ArrayList;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lgi4;->a:I
+    new-instance v0, Lgi4;
 
-    iput-object p1, p0, Lgi4;->c:Lmi4;
+    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    iput-object p2, p0, Lgi4;->b:Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lgi4;-><init>(Ljava/util/Map;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lgi4;->c:Lgi4;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/Map;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lgi4;->a:I
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lgi4;->b:Ljava/util/ArrayList;
+    iput-object p1, p0, Lgi4;->b:Ljava/util/Map;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-void
+.end method
+
+.method public static c(Ljava/util/Map;Ljava/util/Map;)Z
+    .locals 3
+
+    invoke-interface {p0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_0
+
+    return v2
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
+    check-cast v1, [B
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return v2
+
+    :cond_2
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final b(Lj04;)Lgi4;
+    .locals 7
+
+    new-instance v0, Ljava/util/HashMap;
+
+    iget-object v1, p0, Lgi4;->b:Ljava/util/Map;
+
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    iget-object v3, p1, Lj04;->b:Ljava/util/ArrayList;
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result v2
+    move-result v4
 
-    iget-object v3, p0, Lgi4;->c:Lmi4;
+    if-ge v3, v4, :cond_0
 
-    if-eqz v2, :cond_0
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v2
+    invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v2, Lnxc;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v4, v2, Lnxc;->a:Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v5
-
-    iget-object v6, v3, Lmi4;->o:Ljava/util/ArrayList;
-
-    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    invoke-virtual {v5, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    iget-wide v7, v3, Luwc;->c:J
-
-    invoke-virtual {v6, v7, v8}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    new-instance v7, Lhi4;
-
-    invoke-direct {v7, v3, v2, v4, v5}, Lhi4;-><init>(Lmi4;Lnxc;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
-
-    invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    new-instance v2, Ljava/util/HashMap;
 
-    iget-object v1, v3, Lmi4;->l:Ljava/util/ArrayList;
+    iget-object p1, p1, Lj04;->a:Ljava/util/HashMap;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-direct {v2, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    return-void
+    invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    :pswitch_0
-    iget-object v0, p0, Lgi4;->b:Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    iget-object v4, p0, Lgi4;->c:Lmi4;
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lli4;
-
-    iget-object v5, v2, Lli4;->a:Lnxc;
-
-    iget v3, v2, Lli4;->b:I
-
-    iget v6, v2, Lli4;->c:I
-
-    iget v7, v2, Lli4;->d:I
-
-    iget v2, v2, Lli4;->e:I
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move v8, v7
-
-    iget-object v7, v5, Lnxc;->a:Landroid/view/View;
-
-    sub-int v3, v8, v3
-
-    sub-int v8, v2, v6
-
-    const/4 v2, 0x0
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+    move-result-object p1
 
     :cond_1
-    if-eqz v8, :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    move-result v3
 
-    move-result-object v6
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :cond_2
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    move-result-object v3
 
-    move-result-object v9
+    check-cast v3, Ljava/util/Map$Entry;
 
-    iget-object v2, v4, Lmi4;->p:Ljava/util/ArrayList;
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    invoke-virtual {v4}, Luwc;->f()J
+    instance-of v5, v4, [B
 
-    move-result-wide v10
+    if-eqz v5, :cond_1
 
-    invoke-virtual {v9, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    check-cast v4, [B
 
-    move-result-object v2
+    array-length v5, v4
 
-    move v6, v3
+    invoke-static {v4, v5}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    new-instance v3, Lii4;
+    move-result-object v4
 
-    invoke-direct/range {v3 .. v9}, Lii4;-><init>(Lmi4;Lnxc;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
-
-    invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
+    invoke-interface {v3, v4}, Ljava/util/Map$Entry;->setValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
+    :cond_2
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v4, v2, Ljava/lang/Long;
+
+    if-eqz v4, :cond_3
+
+    const/16 v4, 0x8
+
+    invoke-static {v4}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v4
+
+    check-cast v2, Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    invoke-virtual {v4, v5, v6}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v2
+
+    goto :goto_3
+
     :cond_3
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    instance-of v4, v2, Ljava/lang/String;
 
-    iget-object v1, v4, Lmi4;->m:Ljava/util/ArrayList;
+    if-eqz v4, :cond_4
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    check-cast v2, Ljava/lang/String;
 
-    return-void
+    sget-object v4, Lq92;->c:Ljava/nio/charset/Charset;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v2, v4}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v2
+
+    goto :goto_3
+
+    :cond_4
+    instance-of v4, v2, [B
+
+    if-eqz v4, :cond_5
+
+    check-cast v2, [B
+
+    :goto_3
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :cond_6
+    invoke-static {v1, v0}, Lgi4;->c(Ljava/util/Map;Ljava/util/Map;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    return-object p0
+
+    :cond_7
+    new-instance p1, Lgi4;
+
+    invoke-direct {p1, v0}, Lgi4;-><init>(Ljava/util/Map;)V
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    const-class v0, Lgi4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lgi4;
+
+    iget-object p1, p1, Lgi4;->b:Ljava/util/Map;
+
+    iget-object v0, p0, Lgi4;->b:Ljava/util/Map;
+
+    invoke-static {v0, p1}, Lgi4;->c(Ljava/util/Map;Ljava/util/Map;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lgi4;->a:I
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lgi4;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [B
+
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v2
+
+    xor-int/2addr v2, v3
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, p0, Lgi4;->a:I
+
+    :cond_1
+    iget v0, p0, Lgi4;->a:I
+
+    return v0
 .end method

@@ -2,93 +2,92 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx8d;
-
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public a:F
+
+.field public b:F
+
+.field public c:Lkhc;
+
+.field public d:Z
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x1
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
+    .line 7
+    sget-object p1, Lkhc;->X:Lkhc;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iput-object p1, p0, Lx10;->c:Lkhc;
 
-    const-class v0, Lx10;
+    return-void
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 8
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    .line 9
+    sget-object p1, Lkhc;->X:Lkhc;
 
-    if-eq v0, v1, :cond_1
+    iput-object p1, p0, Lx10;->c:Lkhc;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lx10;
-
-    iget-object v0, p0, Lx10;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lx10;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
+    .line 10
+    iput p1, p0, Lx10;->a:F
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 11
+    iput p1, p0, Lx10;->b:F
+
+    const/4 p1, 0x0
+
+    .line 12
+    iput-boolean p1, p0, Lx10;->d:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public constructor <init>(Lx10;)V
     .locals 1
 
-    iget-object v0, p0, Lx10;->a:Ljava/util/ArrayList;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    .line 2
+    iget v0, p1, Lx10;->a:F
 
-    move-result-object v0
+    iput v0, p0, Lx10;->a:F
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    .line 3
+    iget v0, p1, Lx10;->b:F
 
-    move-result v0
+    iput v0, p0, Lx10;->b:F
 
-    return v0
-.end method
+    .line 4
+    iget-object v0, p1, Lx10;->c:Lkhc;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iput-object v0, p0, Lx10;->c:Lkhc;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 5
+    iget-boolean p1, p1, Lx10;->d:Z
 
-    const-string v1, "AudioActivityNotification{participantIds="
+    iput-boolean p1, p0, Lx10;->d:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lx10;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

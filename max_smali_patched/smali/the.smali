@@ -1,453 +1,185 @@
 .class public final Lthe;
-.super Ljava/lang/Object;
+.super Lxhe;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Handler$Callback;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lvhe;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final d:F
+
+.field public final e:F
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lvhe;FF)V
     .locals 0
 
-    iput p1, p0, Lthe;->a:I
+    invoke-direct {p0}, Lxhe;-><init>()V
 
-    iput-object p2, p0, Lthe;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lthe;->c:Lvhe;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lthe;->d:F
+
+    iput p3, p0, Lthe;->e:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 6
+.method public final a(Landroid/graphics/Matrix;Lnhe;ILandroid/graphics/Canvas;)V
+    .locals 17
 
-    iget v0, p0, Lthe;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    move-object/from16 v1, p2
 
-    const-string v0, "Timeout waiting for ServiceConnection callback "
+    move/from16 v2, p3
 
-    iget v1, p1, Landroid/os/Message;->what:I
+    move-object/from16 v3, p4
+
+    iget-object v4, v0, Lthe;->c:Lvhe;
+
+    iget v5, v4, Lvhe;->c:F
+
+    iget v6, v0, Lthe;->e:F
+
+    sub-float/2addr v5, v6
+
+    iget v4, v4, Lvhe;->b:F
+
+    iget v7, v0, Lthe;->d:F
+
+    sub-float/2addr v4, v7
+
+    new-instance v8, Landroid/graphics/RectF;
+
+    float-to-double v9, v5
+
+    float-to-double v4, v4
+
+    invoke-static {v9, v10, v4, v5}, Ljava/lang/Math;->hypot(DD)D
+
+    move-result-wide v4
+
+    double-to-float v4, v4
+
+    const/4 v5, 0x0
+
+    invoke-direct {v8, v5, v5, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iget-object v4, v0, Lxhe;->a:Landroid/graphics/Matrix;
+
+    move-object/from16 v9, p1
+
+    invoke-virtual {v4, v9}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v4, v7, v6}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    invoke-virtual {v0}, Lthe;->b()F
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Landroid/graphics/Matrix;->preRotate(F)Z
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v6, v8, Landroid/graphics/RectF;->bottom:F
+
+    int-to-float v7, v2
+
+    add-float/2addr v6, v7
+
+    iput v6, v8, Landroid/graphics/RectF;->bottom:F
+
+    neg-int v2, v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v8, v5, v2}, Landroid/graphics/RectF;->offset(FF)V
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    iget v5, v1, Lnhe;->f:I
 
-    if-eqz v1, :cond_4
+    sget-object v14, Lnhe;->i:[I
 
-    if-eq v1, v3, :cond_0
+    aput v5, v14, v2
 
-    goto/16 :goto_4
+    const/4 v2, 0x1
 
-    :cond_0
-    iget-object v1, p0, Lthe;->b:Ljava/lang/Object;
+    iget v5, v1, Lnhe;->e:I
 
-    check-cast v1, Lhmh;
-
-    iget-object v1, v1, Lhmh;->a:Ljava/util/HashMap;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lplh;
-
-    iget-object v2, p0, Lthe;->b:Ljava/lang/Object;
-
-    check-cast v2, Lhmh;
-
-    iget-object v2, v2, Lhmh;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqlh;
-
-    if-eqz v2, :cond_3
-
-    iget v4, v2, Lqlh;->b:I
-
-    const/4 v5, 0x3
-
-    if-ne v4, v5, :cond_3
-
-    const-string v4, "GmsClientSupervisor"
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v5, Ljava/lang/Exception;
-
-    invoke-direct {v5}, Ljava/lang/Exception;-><init>()V
-
-    invoke-static {v4, v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    iget-object v0, v2, Lqlh;->Y:Landroid/content/ComponentName;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    :goto_0
-    if-nez v0, :cond_2
-
-    new-instance v0, Landroid/content/ComponentName;
-
-    iget-object p1, p1, Lplh;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lhv0;->n(Ljava/lang/Object;)V
-
-    const-string v4, "unknown"
-
-    invoke-direct {v0, p1, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    invoke-virtual {v2, v0}, Lqlh;->onServiceDisconnected(Landroid/content/ComponentName;)V
-
-    :cond_3
-    monitor-exit v1
-
-    :goto_1
-    move v2, v3
-
-    goto :goto_4
-
-    :goto_2
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    :cond_4
-    iget-object v0, p0, Lthe;->b:Ljava/lang/Object;
-
-    check-cast v0, Lhmh;
-
-    iget-object v0, v0, Lhmh;->a:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lplh;
-
-    iget-object v1, p0, Lthe;->b:Ljava/lang/Object;
-
-    check-cast v1, Lhmh;
-
-    iget-object v1, v1, Lhmh;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqlh;
-
-    if-eqz v1, :cond_6
-
-    iget-object v4, v1, Lqlh;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v4}, Ljava/util/HashMap;->isEmpty()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    iget-boolean v4, v1, Lqlh;->c:Z
-
-    if-eqz v4, :cond_5
-
-    iget-object v4, v1, Lqlh;->X:Lplh;
-
-    iget-object v5, v1, Lqlh;->Z:Lhmh;
-
-    iget-object v5, v5, Lhmh;->c:Len9;
-
-    invoke-virtual {v5, v3, v4}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
-
-    iget-object v4, v1, Lqlh;->Z:Lhmh;
-
-    iget-object v5, v4, Lhmh;->d:Lf7d;
-
-    iget-object v4, v4, Lhmh;->b:Landroid/content/Context;
-
-    invoke-virtual {v5, v4, v1}, Lf7d;->x(Landroid/content/Context;Landroid/content/ServiceConnection;)V
-
-    iput-boolean v2, v1, Lqlh;->c:Z
+    aput v5, v14, v2
 
     const/4 v2, 0x2
 
-    iput v2, v1, Lqlh;->b:I
+    iget v5, v1, Lnhe;->d:I
 
-    :cond_5
-    iget-object v1, p0, Lthe;->b:Ljava/lang/Object;
+    aput v5, v14, v2
 
-    check-cast v1, Lhmh;
+    iget-object v1, v1, Lnhe;->c:Landroid/graphics/Paint;
 
-    iget-object v1, v1, Lhmh;->a:Ljava/util/HashMap;
+    new-instance v9, Landroid/graphics/LinearGradient;
 
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v10, v8, Landroid/graphics/RectF;->left:F
 
-    goto :goto_3
+    iget v11, v8, Landroid/graphics/RectF;->top:F
 
-    :catchall_1
-    move-exception p1
+    iget v13, v8, Landroid/graphics/RectF;->bottom:F
 
-    goto :goto_5
+    sget-object v15, Lnhe;->j:[F
 
-    :cond_6
-    :goto_3
-    monitor-exit v0
+    sget-object v16, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    goto :goto_1
+    move v12, v10
 
-    :goto_4
-    return v2
+    invoke-direct/range {v9 .. v16}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    :goto_5
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-virtual {v1, v9}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    throw p1
+    invoke-virtual {v3}, Landroid/graphics/Canvas;->save()I
 
-    :pswitch_0
-    const-string v0, "Received response for unknown request: "
+    invoke-virtual {v3, v4}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
-    const-string v1, "MessengerIpcClient"
+    invoke-virtual {v3, v8, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    iget v2, p1, Landroid/os/Message;->arg1:I
+    invoke-virtual {v3}, Landroid/graphics/Canvas;->restore()V
 
-    const/4 v3, 0x3
+    return-void
+.end method
 
-    invoke-static {v1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+.method public final b()F
+    .locals 3
 
-    move-result v1
+    iget-object v0, p0, Lthe;->c:Lvhe;
 
-    if-eqz v1, :cond_7
+    iget v1, v0, Lvhe;->c:F
 
-    const-string v1, "Received response to request: "
+    iget v2, p0, Lthe;->e:F
 
-    const-string v3, "MessengerIpcClient"
+    sub-float/2addr v1, v2
 
-    invoke-static {v2, v1, v3}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+    iget v0, v0, Lvhe;->b:F
 
-    :cond_7
-    iget-object v1, p0, Lthe;->b:Ljava/lang/Object;
+    iget v2, p0, Lthe;->d:F
 
-    check-cast v1, Ltlh;
+    sub-float/2addr v0, v2
 
-    monitor-enter v1
+    div-float/2addr v1, v0
 
-    :try_start_2
-    iget-object v3, v1, Ltlh;->X:Landroid/util/SparseArray;
+    float-to-double v0, v1
 
-    invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Math;->atan(D)D
 
-    move-result-object v3
+    move-result-wide v0
 
-    check-cast v3, Lamh;
+    invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
 
-    if-nez v3, :cond_8
+    move-result-wide v0
 
-    const-string p1, "MessengerIpcClient"
+    double-to-float v0, v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    monitor-exit v1
-
-    goto :goto_6
-
-    :catchall_2
-    move-exception p1
-
-    goto :goto_7
-
-    :cond_8
-    iget-object v0, v1, Ltlh;->X:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->remove(I)V
-
-    invoke-virtual {v1}, Ltlh;->c()V
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string v0, "unsupported"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    const-string p1, "Not supported by GmsCore"
-
-    new-instance v0, Lcom/google/android/gms/cloudmessaging/zzt;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v3, v0}, Lamh;->b(Lcom/google/android/gms/cloudmessaging/zzt;)V
-
-    goto :goto_6
-
-    :cond_9
-    iget v0, v3, Lamh;->e:I
-
-    packed-switch v0, :pswitch_data_1
-
-    const-string v0, "data"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    if-nez p1, :cond_a
-
-    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    :cond_a
-    invoke-virtual {v3, p1}, Lamh;->c(Landroid/os/Bundle;)V
-
-    goto :goto_6
-
-    :pswitch_1
-    const-string v0, "ack"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {v3, v0}, Lamh;->c(Landroid/os/Bundle;)V
-
-    goto :goto_6
-
-    :cond_b
-    const-string p1, "Invalid response to one way request"
-
-    new-instance v1, Lcom/google/android/gms/cloudmessaging/zzt;
-
-    invoke-direct {v1, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v3, v1}, Lamh;->b(Lcom/google/android/gms/cloudmessaging/zzt;)V
-
-    :goto_6
-    const/4 p1, 0x1
-
-    return p1
-
-    :goto_7
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    throw p1
-
-    :pswitch_2
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    if-eqz v0, :cond_c
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_c
-    iget-object v0, p0, Lthe;->b:Ljava/lang/Object;
-
-    check-cast v0, Lzo6;
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    if-nez p1, :cond_d
-
-    iget-object p1, v0, Lzo6;->b:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    const/4 v0, 0x0
-
-    :try_start_4
-    throw v0
-
-    :catchall_3
-    move-exception v0
-
-    monitor-exit p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    throw v0
-
-    :cond_d
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_1
-    .end packed-switch
+    return v0
 .end method

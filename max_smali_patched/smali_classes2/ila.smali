@@ -1,51 +1,100 @@
-.class public final Lila;
-.super Lnz3;
+.class public Lila;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Llla;
-
-.field public Z:I
-
-.field public o:Lja8;
+.field public a:Lvzg;
 
 
 # direct methods
-.method public constructor <init>(Llla;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Lila;->Y:Llla;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getObserverSpanListener()Lvzg;
     .locals 1
 
-    iput-object p1, p0, Lila;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lila;->a:Lvzg;
 
-    iget p1, p0, Lila;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
 
-    or-int/2addr p1, v0
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
 
-    iput p1, p0, Lila;->Z:I
+    if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lila;->Y:Llla;
+    const/16 v0, 0x8
 
-    const/4 v0, 0x0
+    if-eq p1, v0, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Llla;->a(Lka8;Lnz3;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    iget-object p1, p0, Lila;->a:Lvzg;
 
-    return-object p1
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Lvzg;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lila;->a:Lvzg;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Lvzg;->a(Landroid/widget/TextView;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final setObserverSpanListener(Lvzg;)V
+    .locals 0
+
+    iput-object p1, p0, Lila;->a:Lvzg;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

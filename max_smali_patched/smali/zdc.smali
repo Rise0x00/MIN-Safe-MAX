@@ -1,46 +1,72 @@
 .class public abstract Lzdc;
-.super Ljava/lang/Object;
+.super Lcec;
+.source "SourceFile"
+
+# interfaces
+.implements Lcs7;
 
 
-# static fields
-.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a0647
+# virtual methods
+.method public computeReflected()Lpr7;
+    .locals 1
 
-.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a0648
+    sget-object v0, Lv7d;->a:Lw7d;
 
-.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0649
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a064a
+    return-object p0
+.end method
 
-.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a064b
+.method public getDelegate()Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a064c
+    invoke-virtual {p0}, Lcec;->getReflected()Les7;
 
-.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a064d
+    move-result-object v0
 
-.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a064e
+    check-cast v0, Lcs7;
 
-.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a064f
+    invoke-interface {v0}, Lcs7;->getDelegate()Ljava/lang/Object;
 
-.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a0650
+    move-result-object v0
 
-.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a0651
+    return-object v0
+.end method
 
-.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a0652
+.method public bridge synthetic getGetter()Las7;
+    .locals 1
 
-.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a0653
+    .line 1
+    invoke-virtual {p0}, Lzdc;->getGetter()Lbs7;
 
-.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a0654
+    const/4 v0, 0x0
 
-.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a0655
+    return-object v0
+.end method
 
-.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a0656
+.method public getGetter()Lbs7;
+    .locals 1
 
-.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a0657
+    .line 2
+    invoke-virtual {p0}, Lcec;->getReflected()Les7;
 
-.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0658
+    move-result-object v0
 
-.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0659
+    check-cast v0, Lcs7;
 
-.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a065a
+    invoke-interface {v0}, Lcs7;->getGetter()Lbs7;
 
-.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a065b
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public invoke()Ljava/lang/Object;
+    .locals 1
+
+    invoke-interface {p0}, Lcs7;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method

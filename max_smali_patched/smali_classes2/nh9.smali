@@ -1,26 +1,26 @@
 .class public final Lnh9;
-.super Lm3f;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    iput-object p2, p0, Lnh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p2, p0, Lnh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,29 +32,29 @@
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lnh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lnh9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lnh9;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Lybg;->a:Lybg;
 
     invoke-virtual {p1, p2}, Lnh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance v0, Lnh9;
 
-    iget-object v1, p0, Lnh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v1, p0, Lnh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {v0, p2, v1}, Lnh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v0, p2, v1}, Lnh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    iput-object p1, v0, Lnh9;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lnh9;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -62,36 +62,36 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lnh9;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lnh9;->o:Ljava/lang/Object;
 
-    check-cast p1, Loyf;
+    check-cast p1, Ljava/lang/Boolean;
 
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object p1, p0, Lnh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    move-result p1
 
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:[Les7;
+
+    iget-object v0, p0, Lnh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-virtual {v0}, Lc24;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
+    xor-int/lit8 p1, p1, 0x1
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lo7g;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lo7g;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    invoke-virtual {v0, p1}, Lxc9;->setInputEnabled(Z)V
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

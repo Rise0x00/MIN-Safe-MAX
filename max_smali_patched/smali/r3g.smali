@@ -1,107 +1,182 @@
-.class public final Lr3g;
-.super Ljava/lang/Object;
+.class public abstract Lr3g;
+.super Lh24;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lrvd;
+.field public X:Lf24;
 
-.field public final b:Lu3g;
+.field public d:Z
 
-.field public final c:Ljb0;
-
-.field public final d:Ljava/util/List;
-
-.field public e:Z
-
-.field public f:Z
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lrvd;Lu3g;Ljb0;Ljava/util/List;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lr3g;->e:Z
-
-    iput-boolean v0, p0, Lr3g;->f:Z
-
-    iput-object p1, p0, Lr3g;->a:Lrvd;
-
-    iput-object p2, p0, Lr3g;->b:Lu3g;
-
-    iput-object p3, p0, Lr3g;->c:Ljb0;
-
-    iput-object p4, p0, Lr3g;->d:Ljava/util/List;
+    invoke-direct {p0}, Lh24;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "UseCaseAttachInfo{mSessionConfig="
+    iput-boolean v0, p0, Lr3g;->o:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lr3g;->a:Lrvd;
+.method public final d()Z
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, ", mUseCaseConfig="
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public f(Lh24;Lc24;)V
+    .locals 0
 
-    iget-object v1, p0, Lr3g;->b:Lu3g;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-boolean p1, p0, Lr3g;->d:Z
 
-    const-string v1, ", mStreamSpec="
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf24;)V
+    .locals 10
 
-    iget-object v1, p0, Lr3g;->c:Ljb0;
+    iput-object p5, p0, Lr3g;->X:Lf24;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lr3g;->d:Z
 
-    const-string v1, ", mCaptureTypes="
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p5}, Lf24;->n()V
 
-    iget-object v1, p0, Lr3g;->d:Ljava/util/List;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    iget-boolean v1, p0, Lr3g;->o:Z
 
-    const-string v1, ", mAttached="
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    iget-boolean v1, p0, Lr3g;->e:Z
+    move-object v0, p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-object v1, p1
 
-    const-string v1, ", mActive="
+    move-object v2, p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v3, p3
 
-    iget-boolean v1, p0, Lr3g;->f:Z
+    move v5, p4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v0 .. v5}, Lr3g;->k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lp3g;Z)V
 
-    const/16 v1, 0x7d
+    invoke-virtual {p5}, Lf24;->n()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_1
+    new-instance v7, Lsxf;
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    return-object v0
+    invoke-direct {v7, v1, p5}, Lsxf;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual/range {p0 .. p4}, Lr3g;->l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Z)Lx3g;
+
+    move-result-object v3
+
+    new-instance v1, Lq3g;
+
+    invoke-direct {v1, p0, p1, v7}, Lq3g;-><init>(Lr3g;Landroid/view/ViewGroup;Lsxf;)V
+
+    invoke-virtual {v3, v1}, Lp3g;->a(Lo3g;)V
+
+    new-instance v6, Ll40;
+
+    const/4 v8, 0x7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v0, v6
+
+    move v6, p4
+
+    invoke-direct/range {v0 .. v8}, Ll40;-><init>(Lr3g;Landroid/view/ViewGroup;Ljava/lang/Object;Landroid/view/View;Ljava/lang/Object;ZLjava/lang/Object;I)V
+
+    move v9, v6
+
+    move-object v6, v0
+
+    move-object v0, v1
+
+    move-object v1, v2
+
+    move-object v2, v4
+
+    move-object v4, v3
+
+    move-object v3, v5
+
+    move v5, v9
+
+    invoke-virtual/range {v0 .. v6}, Lr3g;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lp3g;ZLl40;)V
+
+    return-void
+.end method
+
+.method public k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lp3g;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p4
+
+    if-ne p4, p1, :cond_0
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_0
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public abstract l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Z)Lx3g;
+.end method
+
+.method public m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lp3g;ZLl40;)V
+    .locals 0
+
+    invoke-virtual {p6}, Ll40;->f()V
+
+    return-void
 .end method

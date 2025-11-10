@@ -2,107 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic b:Lgsg;
-
-.field public final synthetic c:Lcrg;
+.field public b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcrg;Lgsg;I)V
+.method public constructor <init>(Landroid/net/Uri;Z)V
     .locals 0
 
-    iput p3, p0, Lbrg;->a:I
-
-    iput-object p1, p0, Lbrg;->c:Lcrg;
-
-    iput-object p2, p0, Lbrg;->b:Lgsg;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbrg;->a:Landroid/net/Uri;
+
+    iput-boolean p2, p0, Lbrg;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lbrg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lbrg;
+
+    iget-object v1, p0, Lbrg;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Lbrg;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lbrg;->b:Z
+
+    iget-boolean p1, p1, Lbrg;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lbrg;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lbrg;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Lbrg;->a:I
+    iget-boolean v0, p0, Lbrg;->b:Z
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lbrg;->c:Lcrg;
+    const-string v2, "PendingFragment(uri="
 
-    iget-object v1, v0, Lcrg;->a:Lx5d;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    iget-object v2, p0, Lbrg;->a:Landroid/net/Uri;
 
-    :try_start_0
-    iget-object v0, v0, Lcrg;->c:Lvg4;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lbrg;->b:Lgsg;
+    const-string v2, ", finalized="
 
-    invoke-virtual {v0, v2}, Lga5;->C(Ljava/lang/Object;)I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lx5d;->k()V
+    const-string v0, ")"
 
-    sget-object v0, Loyf;->a:Loyf;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lbrg;->c:Lcrg;
-
-    iget-object v1, v0, Lcrg;->a:Lx5d;
-
-    invoke-virtual {v1}, Lx5d;->c()V
-
-    :try_start_1
-    iget-object v0, v0, Lcrg;->b:Ly8g;
-
-    iget-object v2, p0, Lbrg;->b:Lgsg;
-
-    invoke-virtual {v0, v2}, Lha5;->D(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    sget-object v0, Loyf;->a:Loyf;
+    move-result-object v0
 
     return-object v0
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

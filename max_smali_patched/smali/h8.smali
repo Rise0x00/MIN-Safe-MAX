@@ -3,278 +3,186 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
-
-
-# static fields
-.field public static final w0:Llx0;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public final X:[J
+.field public X:Z
 
-.field public final Y:J
+.field public a:Ljava/lang/Object;
 
-.field public final Z:Z
+.field public b:Landroid/app/Activity;
 
-.field public final a:J
+.field public final c:I
 
-.field public final b:I
+.field public d:Z
 
-.field public final c:[Landroid/net/Uri;
-
-.field public final o:[I
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Llx0;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Llx0;-><init>(I)V
-
-    sput-object v0, Lh8;->w0:Llx0;
-
-    return-void
-.end method
-
-.method public constructor <init>(JI[I[Landroid/net/Uri;[JJZ)V
-    .locals 2
+.method public constructor <init>(Landroid/app/Activity;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, p4
-
-    array-length v1, p5
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    invoke-static {v0}, Lyhh;->e(Z)V
+    iput-boolean v0, p0, Lh8;->d:Z
 
-    iput-wide p1, p0, Lh8;->a:J
+    iput-boolean v0, p0, Lh8;->o:Z
 
-    iput p3, p0, Lh8;->b:I
+    iput-boolean v0, p0, Lh8;->X:Z
 
-    iput-object p4, p0, Lh8;->o:[I
+    iput-object p1, p0, Lh8;->b:Landroid/app/Activity;
 
-    iput-object p5, p0, Lh8;->c:[Landroid/net/Uri;
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    iput-object p6, p0, Lh8;->X:[J
+    move-result p1
 
-    iput-wide p7, p0, Lh8;->Y:J
-
-    iput-boolean p9, p0, Lh8;->Z:Z
+    iput p1, p0, Lh8;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 3
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    add-int/2addr p1, v0
-
-    :goto_0
-    iget-object v1, p0, Lh8;->o:[I
-
-    array-length v2, v1
-
-    if-ge p1, v2, :cond_1
-
-    iget-boolean v2, p0, Lh8;->Z:Z
-
-    if-nez v2, :cond_1
-
-    aget v1, v1, p1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return p1
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lh8;->b:Landroid/app/Activity;
 
-    if-ne p0, p1, :cond_0
+    if-ne v0, p1, :cond_0
 
-    return v0
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lh8;->b:Landroid/app/Activity;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh8;->o:Z
 
     :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lh8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh8;
-
-    iget-wide v2, p0, Lh8;->a:J
-
-    iget-wide v4, p1, Lh8;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lh8;->b:I
-
-    iget v3, p1, Lh8;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lh8;->c:[Landroid/net/Uri;
-
-    iget-object v3, p1, Lh8;->c:[Landroid/net/Uri;
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lh8;->o:[I
-
-    iget-object v3, p1, Lh8;->o:[I
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lh8;->X:[J
-
-    iget-object v3, p1, Lh8;->X:[J
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([J[J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-wide v2, p0, Lh8;->Y:J
-
-    iget-wide v4, p1, Lh8;->Y:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-boolean v2, p0, Lh8;->Z:Z
-
-    iget-boolean p1, p1, Lh8;->Z:Z
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 6
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 4
 
-    iget v0, p0, Lh8;->b:I
+    iget-boolean v0, p0, Lh8;->o:Z
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_1
 
-    iget-wide v1, p0, Lh8;->a:J
+    iget-boolean v0, p0, Lh8;->X:Z
 
-    const/16 v3, 0x20
+    if-nez v0, :cond_1
 
-    ushr-long v4, v1, v3
+    iget-boolean v0, p0, Lh8;->d:Z
 
-    xor-long/2addr v1, v4
+    if-nez v0, :cond_1
 
-    long-to-int v1, v1
+    iget-object v0, p0, Lh8;->a:Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    :try_start_0
+    sget-object v1, Li8;->c:Ljava/lang/reflect/Field;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v1, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lh8;->c:[Landroid/net/Uri;
+    move-result-object v1
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    if-ne v1, v0, :cond_1
 
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lh8;->o:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lh8;->X:[J
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-int/2addr v0, v1
+    iget v2, p0, Lh8;->c:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eq v0, v2, :cond_0
 
-    iget-wide v1, p0, Lh8;->Y:J
+    goto :goto_0
 
-    ushr-long v3, v1, v3
+    :cond_0
+    :try_start_1
+    sget-object v0, Li8;->b:Ljava/lang/reflect/Field;
 
-    xor-long/2addr v1, v3
+    invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    long-to-int v1, v1
+    move-result-object p1
 
-    add-int/2addr v0, v1
+    sget-object v0, Li8;->g:Landroid/os/Handler;
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v2, Lkk6;
 
-    iget-boolean v1, p0, Lh8;->Z:Z
+    const/4 v3, 0x3
 
-    add-int/2addr v0, v1
+    invoke-direct {v2, p1, v3, v1}, Lkk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return v0
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh8;->X:Z
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lh8;->a:Ljava/lang/Object;
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    const-string v0, "ActivityRecreator"
+
+    const-string v1, "Exception while fetching field values"
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 1
+
+    iget-object v0, p0, Lh8;->b:Landroid/app/Activity;
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lh8;->d:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method

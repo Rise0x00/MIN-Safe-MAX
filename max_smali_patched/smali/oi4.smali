@@ -1,123 +1,568 @@
-.class public abstract synthetic Loi4;
+.class public final Loi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvb4;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public X:Lxz3;
+
+.field public Y:Lvb4;
+
+.field public Z:Lkbg;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:Lvb4;
+
+.field public d:Lms5;
+
+.field public o:Lbu;
+
+.field public s0:Lrb4;
+
+.field public t0:Lqxc;
+
+.field public u0:Lvb4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Lvb4;)V
+    .locals 0
 
-    invoke-static {}, Ldr7;->values()[Ldr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Loi4;->a:Landroid/content/Context;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Loi4;->c:Lvb4;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Loi4;->b:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public static b(Lvb4;Lt2g;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lvb4;->S(Lt2g;)V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final R(Ldc4;)J
+    .locals 6
+
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Lggi;->e(Z)V
+
+    iget-object v0, p1, Ldc4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Ljig;->a:I
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    iget-object v5, p0, Loi4;->a:Landroid/content/Context;
+
+    if-nez v4, :cond_f
+
+    const-string v4, "file"
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    const-string v0, "asset"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Loi4;->o:Lbu;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lbu;
+
+    invoke-direct {v0, v5}, Lbu;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Loi4;->o:Lbu;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_2
+    iget-object v0, p0, Loi4;->o:Lbu;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    goto/16 :goto_4
+
+    :cond_3
+    const-string v0, "content"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Loi4;->X:Lxz3;
+
+    if-nez v0, :cond_4
+
+    new-instance v0, Lxz3;
+
+    invoke-direct {v0, v5}, Lxz3;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Loi4;->X:Lxz3;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_4
+    iget-object v0, p0, Loi4;->X:Lxz3;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    goto/16 :goto_4
+
+    :cond_5
+    const-string v0, "rtmp"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v3, p0, Loi4;->c:Lvb4;
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Loi4;->Y:Lvb4;
+
+    if-nez v0, :cond_6
+
+    :try_start_0
+    const-string v0, "com.google.android.exoplayer2.ext.rtmp.RtmpDataSource"
+
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    array-length v0, v0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    :try_start_0
-    sget-object v1, Ldr7;->ON_CREATE:Ldr7;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    check-cast v0, Lvb4;
 
-    aput v2, v0, v1
+    iput-object v0, p0, Loi4;->Y:Lvb4;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
 
     :catch_0
-    :try_start_1
-    sget-object v1, Ldr7;->ON_START:Ldr7;
+    move-exception p1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    move-result v1
+    const-string v1, "Error instantiating RTMP extension"
 
-    const/4 v2, 0x2
+    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    throw v0
 
     :catch_1
-    :try_start_2
-    sget-object v1, Ldr7;->ON_RESUME:Ldr7;
+    const-string v0, "DefaultDataSource"
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    const-string v1, "Attempting to play RTMP stream without depending on the RTMP extension"
 
-    move-result v1
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v2, 0x3
+    :goto_1
+    iget-object v0, p0, Loi4;->Y:Lvb4;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    if-nez v0, :cond_6
 
-    :catch_2
-    :try_start_3
-    sget-object v1, Ldr7;->ON_PAUSE:Ldr7;
+    iput-object v3, p0, Loi4;->Y:Lvb4;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    :cond_6
+    iget-object v0, p0, Loi4;->Y:Lvb4;
 
-    move-result v1
+    iput-object v0, p0, Loi4;->u0:Lvb4;
 
-    const/4 v2, 0x4
+    goto/16 :goto_4
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    :cond_7
+    const-string v0, "udp"
 
-    :catch_3
-    :try_start_4
-    sget-object v1, Ldr7;->ON_STOP:Ldr7;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result v0
 
-    move-result v1
+    if-eqz v0, :cond_9
 
-    const/4 v2, 0x5
+    iget-object v0, p0, Loi4;->Z:Lkbg;
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    if-nez v0, :cond_8
 
-    :catch_4
-    :try_start_5
-    sget-object v1, Ldr7;->ON_DESTROY:Ldr7;
+    new-instance v0, Lkbg;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0}, Lkbg;-><init>()V
 
-    move-result v1
+    iput-object v0, p0, Loi4;->Z:Lkbg;
 
-    const/4 v2, 0x6
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
 
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    :cond_8
+    iget-object v0, p0, Loi4;->Z:Lkbg;
 
-    :catch_5
-    :try_start_6
-    sget-object v1, Ldr7;->ON_ANY:Ldr7;
+    iput-object v0, p0, Loi4;->u0:Lvb4;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    goto/16 :goto_4
 
-    move-result v1
+    :cond_9
+    const-string v0, "data"
 
-    const/4 v2, 0x7
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    move-result v0
 
-    :catch_6
-    sput-object v0, Loi4;->$EnumSwitchMapping$0:[I
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Loi4;->s0:Lrb4;
+
+    if-nez v0, :cond_a
+
+    new-instance v0, Lrb4;
+
+    invoke-direct {v0, v1}, Lkj0;-><init>(Z)V
+
+    iput-object v0, p0, Loi4;->s0:Lrb4;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_a
+    iget-object v0, p0, Loi4;->s0:Lrb4;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    goto :goto_4
+
+    :cond_b
+    const-string v0, "rawresource"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    const-string v0, "android.resource"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    goto :goto_2
+
+    :cond_c
+    iput-object v3, p0, Loi4;->u0:Lvb4;
+
+    goto :goto_4
+
+    :cond_d
+    :goto_2
+    iget-object v0, p0, Loi4;->t0:Lqxc;
+
+    if-nez v0, :cond_e
+
+    new-instance v0, Lqxc;
+
+    invoke-direct {v0, v5}, Lqxc;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Loi4;->t0:Lqxc;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_e
+    iget-object v0, p0, Loi4;->t0:Lqxc;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    goto :goto_4
+
+    :cond_f
+    :goto_3
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_11
+
+    const-string v2, "/android_asset/"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    iget-object v0, p0, Loi4;->o:Lbu;
+
+    if-nez v0, :cond_10
+
+    new-instance v0, Lbu;
+
+    invoke-direct {v0, v5}, Lbu;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Loi4;->o:Lbu;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_10
+    iget-object v0, p0, Loi4;->o:Lbu;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    goto :goto_4
+
+    :cond_11
+    iget-object v0, p0, Loi4;->d:Lms5;
+
+    if-nez v0, :cond_12
+
+    new-instance v0, Lms5;
+
+    invoke-direct {v0, v1}, Lkj0;-><init>(Z)V
+
+    iput-object v0, p0, Loi4;->d:Lms5;
+
+    invoke-virtual {p0, v0}, Loi4;->a(Lvb4;)V
+
+    :cond_12
+    iget-object v0, p0, Loi4;->d:Lms5;
+
+    iput-object v0, p0, Loi4;->u0:Lvb4;
+
+    :goto_4
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    invoke-interface {v0, p1}, Lvb4;->R(Ldc4;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final S(Lt2g;)V
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Loi4;->c:Lvb4;
+
+    invoke-interface {v0, p1}, Lvb4;->S(Lt2g;)V
+
+    iget-object v0, p0, Loi4;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Loi4;->d:Lms5;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->o:Lbu;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->X:Lxz3;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->Y:Lvb4;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->Z:Lkbg;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->s0:Lrb4;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
+
+    iget-object v0, p0, Loi4;->t0:Lqxc;
+
+    invoke-static {v0, p1}, Loi4;->b(Lvb4;Lt2g;)V
 
     return-void
+.end method
+
+.method public final a(Lvb4;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Loi4;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lt2g;
+
+    invoke-interface {p1, v1}, Lvb4;->S(Lt2g;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-interface {v0}, Lvb4;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-object v1, p0, Loi4;->u0:Lvb4;
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    iput-object v1, p0, Loi4;->u0:Lvb4;
+
+    throw v0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {v0}, Lvb4;->getUri()Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 1
+
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v0, p1, p2, p3}, Lpb4;->read([BII)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final x()Ljava/util/Map;
+    .locals 1
+
+    iget-object v0, p0, Loi4;->u0:Lvb4;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {v0}, Lvb4;->x()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
 .end method

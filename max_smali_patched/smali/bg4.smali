@@ -4,65 +4,153 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
 
-.field public final b:Lzn5;
+.field public final b:I
 
-.field public c:J
+.field public c:I
 
-.field public d:J
+.field public d:I
+
+.field public e:I
+
+.field public f:[Lcd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lbg4;->a:Ljava/lang/String;
+    iput-boolean v0, p0, Lbg4;->a:Z
 
-    new-instance p2, Lzn5;
+    const/high16 v0, 0x10000
 
-    invoke-direct {p2, p1}, Lzn5;-><init>(Ljava/io/File;)V
+    iput v0, p0, Lbg4;->b:I
 
-    iput-object p2, p0, Lbg4;->b:Lzn5;
+    const/4 v0, 0x0
 
-    const-wide/16 p1, -0x1
+    iput v0, p0, Lbg4;->e:I
 
-    iput-wide p1, p0, Lbg4;->c:J
+    const/16 v0, 0x64
 
-    iput-wide p1, p0, Lbg4;->d:J
+    new-array v0, v0, [Lcd;
+
+    iput-object v0, p0, Lbg4;->f:[Lcd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public final declared-synchronized a(I)V
+    .locals 1
 
-    iget-wide v0, p0, Lbg4;->d:J
+    monitor-enter p0
 
-    const-wide/16 v2, 0x0
+    :try_start_0
+    iget v0, p0, Lbg4;->c:I
 
-    cmp-long v0, v0, v2
+    if-ge p1, v0, :cond_0
 
-    if-gez v0, :cond_0
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lbg4;->b:Lzn5;
-
-    iget-object v0, v0, Lzn5;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lbg4;->d:J
+    goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Lbg4;->d:J
+    const/4 v0, 0x0
 
-    return-wide v0
+    :goto_0
+    iput p1, p0, Lbg4;->c:I
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lbg4;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    monitor-exit p0
+
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized b()V
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Lbg4;->c:I
+
+    iget v1, p0, Lbg4;->b:I
+
+    invoke-static {v0, v1}, Ljig;->f(II)I
+
+    move-result v0
+
+    iget v1, p0, Lbg4;->d:I
+
+    sub-int/2addr v0, v1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iget v1, p0, Lbg4;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-lt v0, v1, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    iget-object v2, p0, Lbg4;->f:[Lcd;
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v0, v1, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
+
+    iput v0, p0, Lbg4;->e:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method

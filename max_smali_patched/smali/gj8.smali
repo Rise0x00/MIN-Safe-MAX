@@ -1,28 +1,49 @@
-.class public interface abstract Lgj8;
-.super Ljava/lang/Object;
+.class public final Lgj8;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
-# static fields
-.field public static final M:Lz88;
+# instance fields
+.field public final synthetic a:Z
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Lhj8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lhj8;ZI)V
+    .locals 0
 
-    new-instance v0, Lz88;
+    iput-object p1, p0, Lgj8;->c:Lhj8;
 
-    const/16 v1, 0xd
+    iput-boolean p2, p0, Lgj8;->a:Z
 
-    invoke-direct {v0, v1}, Lz88;-><init>(I)V
+    iput p3, p0, Lgj8;->b:I
 
-    sput-object v0, Lgj8;->M:Lz88;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract p(Ljava/lang/String;ZZ)Ljava/util/List;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget-object p1, p0, Lgj8;->c:Lhj8;
+
+    iget-object v0, p1, Lfi8;->b:Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-boolean v0, p0, Lgj8;->a:Z
+
+    iget v2, p0, Lgj8;->b:I
+
+    invoke-virtual {p1, v1, v0, v2}, Lhj8;->a(FZI)V
+
+    return-void
 .end method

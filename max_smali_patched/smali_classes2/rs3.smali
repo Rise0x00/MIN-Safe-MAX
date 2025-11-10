@@ -1,61 +1,121 @@
 .class public final Lrs3;
-.super Lbj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:I
+.field public a:J
 
-.field public final c:Ljava/lang/Object;
+.field public b:Ljava/lang/String;
 
+.field public c:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(IJLjava/util/List;)V
-    .locals 0
+.field public d:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p3}, Lbj0;-><init>(J)V
+.field public e:J
 
-    iput p1, p0, Lrs3;->b:I
+.field public f:Ljava/util/List;
 
-    iput-object p4, p0, Lrs3;->c:Ljava/lang/Object;
+.field public g:J
 
-    return-void
-.end method
+.field public h:J
+
+.field public i:Lxs3;
+
+.field public j:I
+
+.field public k:Lys3;
+
+.field public l:I
+
+.field public m:I
+
+.field public n:Ljava/util/List;
+
+.field public o:Ljava/lang/String;
+
+.field public p:Ljava/lang/String;
+
+.field public q:Ljava/lang/String;
+
+.field public r:J
+
+.field public s:J
+
+.field public t:J
+
+.field public u:Lus3;
+
+.field public v:[I
+
+.field public w:Lws3;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a()Lzs3;
+    .locals 1
 
-    const-string v0, "BLOCKED"
+    iget-object v0, p0, Lrs3;->k:Lys3;
 
-    const-string v1, ", from="
+    if-nez v0, :cond_0
 
-    const-string v2, "ContactListEvent{status="
+    sget-object v0, Lys3;->b:Lys3;
 
-    invoke-static {v2, v0, v1}, Lqw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lrs3;->k:Lys3;
+
+    :cond_0
+    iget v0, p0, Lrs3;->l:I
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lrs3;->l:I
+
+    :cond_1
+    iget-object v0, p0, Lrs3;->n:Ljava/util/List;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lrs3;->n:Ljava/util/List;
+
+    :cond_2
+    iget-object v0, p0, Lrs3;->f:Ljava/util/List;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_3
+    sget-object v0, Lts3;->e:Lts3;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    iget v1, p0, Lrs3;->b:I
+    iput-object v0, p0, Lrs3;->f:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_4
+    iget-object v0, p0, Lrs3;->v:[I
 
-    const-string v1, ", count=40, contactIds="
+    if-nez v0, :cond_5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lrs3;->c:Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lrs3;->v:[I
 
-    const/16 v1, 0x7d
+    :cond_5
+    new-instance v0, Lzs3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lzs3;-><init>(Lrs3;)V
 
     return-object v0
 .end method

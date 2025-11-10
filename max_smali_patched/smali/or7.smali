@@ -1,6 +1,8 @@
-.class public abstract Lor7;
+.class public interface abstract Lor7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le34;
+
+# virtual methods
+.method public abstract getAnnotations()Ljava/util/List;
+.end method

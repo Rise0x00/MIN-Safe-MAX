@@ -1,53 +1,73 @@
-.class public final Ljqd;
-.super Lnz3;
+.class public final enum Ljqd;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/LinkedHashSet;
+# static fields
+.field public static final enum a:Ljqd;
 
-.field public Y:Ljava/util/Iterator;
+.field public static final enum b:Ljqd;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lu9h;
-
-.field public final synthetic w0:Lu9h;
-
-.field public x0:I
+.field public static final synthetic c:[Ljqd;
 
 
 # direct methods
-.method public constructor <init>(Lu9h;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Ljqd;->w0:Lu9h;
+    new-instance v0, Ljqd;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "PREVIEW_VIEW"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljqd;->a:Ljqd;
+
+    new-instance v1, Ljqd;
+
+    const-string v2, "SCREEN_FLASH_VIEW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ljqd;->b:Ljqd;
+
+    filled-new-array {v0, v1}, [Ljqd;
+
+    move-result-object v0
+
+    sput-object v0, Ljqd;->c:[Ljqd;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Ljqd;
     .locals 1
 
-    iput-object p1, p0, Ljqd;->Z:Ljava/lang/Object;
+    const-class v0, Ljqd;
 
-    iget p1, p0, Ljqd;->x0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Ljqd;
 
-    iput p1, p0, Ljqd;->x0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Ljqd;->w0:Lu9h;
+.method public static values()[Ljqd;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Lu9h;->k(Lnz3;)Ljava/io/Serializable;
+    sget-object v0, Ljqd;->c:[Ljqd;
 
-    move-result-object p1
+    invoke-virtual {v0}, [Ljqd;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, [Ljqd;
+
+    return-object v0
 .end method

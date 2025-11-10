@@ -1,17 +1,8 @@
-.class public abstract Llc4;
-.super Lsx;
+.class public interface abstract Llc4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:J
-
-.field public o:Z
-
-
 # virtual methods
-.method public abstract u()V
-.end method
-
-.method public abstract v()V
+.method public abstract createSocket()Ljava/net/DatagramSocket;
 .end method

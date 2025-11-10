@@ -1,49 +1,102 @@
-.class public final Lj1c;
-.super Lnz3;
+.class public final synthetic Lj1c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lk1c;
-
-.field public Z:I
-
-.field public o:Lk1c;
+.field public final synthetic b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lk1c;Lnz3;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lj1c;->Y:Lk1c;
+    iput p2, p0, Lj1c;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lj1c;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lj1c;->X:Ljava/lang/Object;
+    iget v0, p0, Lj1c;->a:I
 
-    iget p1, p0, Lj1c;->Z:I
+    iget-object v1, p0, Lj1c;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Les7;
 
-    iput p1, p0, Lj1c;->Z:I
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireResources()Landroid/content/res/Resources;
 
-    iget-object p1, p0, Lj1c;->Y:Lk1c;
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lk1c;->a(Lnz3;)Ljava/lang/Object;
+    sget v1, Lguc;->tt_of:I
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Les7;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Lsn;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v2, Lrnh;
+
+    invoke-direct {v2, v1, v0}, Lrnh;-><init>(Landroid/view/Window;Landroid/view/View;)V
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Les7;
+
+    sget-object v0, Ly53;->s0:Lvh4;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lvh4;->k(Landroid/content/Context;)Lewa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lewa;->c:Lw5b;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

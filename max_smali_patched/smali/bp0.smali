@@ -1,301 +1,166 @@
-.class public abstract Lbp0;
+.class public final Lbp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ls5f;
+.field public static final c:Lihd;
+
+
+# instance fields
+.field public final a:Ljava/util/LinkedList;
+
+.field public b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ll;
+    new-instance v0, Lihd;
 
-    const/16 v1, 0x17
+    const-string v1, "StreamingFormatChecker"
 
-    invoke-direct {v0, v1}, Ll;-><init>(I)V
+    const-string v2, ""
 
-    new-instance v1, Ls5f;
+    invoke-direct {v0, v1, v2}, Lihd;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lbp0;->a:Ls5f;
+    sput-object v0, Lbp0;->c:Lihd;
 
     return-void
 .end method
 
-.method public static final a(Ljava/io/InputStream;)Lgx0;
-    .locals 5
-
-    if-eqz p0, :cond_1
-
-    sget-object v0, Lbp0;->a:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfnb;
-
-    invoke-virtual {v1}, Lfnb;->j()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/nio/ByteBuffer;
-
-    if-nez v1, :cond_0
-
-    sget-object v1, Lac4;->a:Lmv0;
-
-    const/16 v1, 0x4000
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    :cond_0
-    new-instance v2, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    const/4 v3, 0x1
-
-    iput-boolean v3, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    :try_start_0
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v3
-
-    iput-object v3, v2, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
-
-    const/4 v3, 0x0
-
-    invoke-static {p0, v3, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    iget-object p0, v2, Landroid/graphics/BitmapFactory$Options;->outColorSpace:Landroid/graphics/ColorSpace;
-
-    new-instance v3, Lgx0;
-
-    iget v4, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v2, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    invoke-direct {v3, v4, v2, p0}, Lgx0;-><init>(IILandroid/graphics/ColorSpace;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lfnb;
-
-    invoke-virtual {p0, v1}, Lfnb;->i(Ljava/lang/Object;)Z
-
-    return-object v3
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfnb;
-
-    invoke-virtual {v0, v1}, Lfnb;->i(Ljava/lang/Object;)Z
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final b(Landroid/graphics/Bitmap$Config;)I
+.method public constructor <init>()V
     .locals 2
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p0, -0x1
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lbp0;->a:Ljava/util/LinkedList;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lbp0;->b:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lvg7;)V
+    .locals 8
+
+    iget p1, p1, Lvg7;->f:I
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lap0;->$EnumSwitchMapping$0:[I
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    move-result-wide v0
 
-    move-result p0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    aget p0, v0, p0
+    move-result-object p1
 
-    :goto_0
-    const/4 v0, 0x2
+    iget-object v2, p0, Lbp0;->a:Ljava/util/LinkedList;
 
-    const/4 v1, 0x4
+    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    packed-switch p0, :pswitch_data_0
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    move-result p1
 
-    const-string v0, "The provided Bitmap.Config is not supported"
+    const/4 v3, 0x5
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-le p1, v3, :cond_1
 
-    throw p0
-
-    :pswitch_0
-    return v1
-
-    :pswitch_1
-    const/16 p0, 0x8
-
-    return p0
-
-    :pswitch_2
-    return v0
-
-    :pswitch_3
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_4
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static final c(IILandroid/graphics/Bitmap$Config;)I
-    .locals 4
-
-    if-lez p0, :cond_2
-
-    if-lez p1, :cond_1
-
-    invoke-static {p2}, Lbp0;->b(Landroid/graphics/Bitmap$Config;)I
-
-    move-result p2
-
-    mul-int v0, p0, p1
-
-    mul-int/2addr v0, p2
-
-    if-lez v0, :cond_0
-
-    return v0
-
-    :cond_0
-    const-string v1, ", width: "
-
-    const-string v2, ", height: "
-
-    const-string v3, "size must be > 0: size: "
-
-    invoke-static {v3, v0, v1, p0, v2}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", pixelSize: "
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {v2}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
     :cond_1
-    const-string p0, "height must be > 0, height is: "
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
-    invoke-static {p1, p0}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object p0
+    if-ne p1, v3, :cond_3
 
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->peekFirst()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lkui;->g(Ljava/lang/Object;)V
 
-    throw p1
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    sub-long v4, v0, v4
+
+    const-wide/16 v6, 0x1388
+
+    cmp-long p1, v4, v6
+
+    if-gez p1, :cond_3
+
+    iget-wide v4, p0, Lbp0;->b:J
+
+    const-wide/16 v6, -0x1
+
+    cmp-long p1, v4, v6
+
+    if-eqz p1, :cond_2
+
+    sub-long v4, v0, v4
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v6, 0x5
+
+    invoke-virtual {p1, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v6
+
+    cmp-long p1, v4, v6
+
+    if-gez p1, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    const-string p1, "width must be > 0, width is: "
+    iput-wide v0, p0, Lbp0;->b:J
 
-    invoke-static {p0, p1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    sget-object p1, Lbp0;->c:Lihd;
 
-    move-result-object p0
+    iget-object v0, p1, Lihd;->a:Ljava/lang/Object;
 
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    move-result-object p0
+    move-result v0
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
-    throw p1
-.end method
+    const-string v0, "ML Kit has detected that you seem to pass camera frames to the detector as a Bitmap object. This is inefficient. Please use YUV_420_888 format for camera2 API or NV21 format for (legacy) camera API and directly pass down the byte array to ML Kit."
 
-.method public static final d(Landroid/graphics/Bitmap;)I
-    .locals 0
+    invoke-virtual {p1, v0}, Lihd;->z(Ljava/lang/String;)Ljava/lang/String;
 
-    if-nez p0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x0
+    const-string v0, "StreamingFormatChecker"
 
-    return p0
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getByteCount()I
-
-    move-result p0
-
-    return p0
+    :cond_3
+    :goto_0
+    return-void
 .end method

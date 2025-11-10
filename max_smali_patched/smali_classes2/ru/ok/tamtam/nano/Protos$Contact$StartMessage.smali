@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
-.super Lg79;
+.super Lud9;
 .source "SourceFile"
 
 
@@ -30,7 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    invoke-direct {p0}, Lud9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->clear()Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
 
@@ -44,7 +44,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lfe7;->b:Ljava/lang/Object;
+    sget-object v0, Lqj7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -86,7 +86,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+.method public static parseFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -99,7 +99,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
 
     move-result-object p0
 
@@ -119,7 +119,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;-><init>()V
 
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
 
     move-result-object p0
 
@@ -149,7 +149,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lg79;->cachedSize:I
+    iput v0, p0, Lud9;->cachedSize:I
 
     return-object p0
 .end method
@@ -165,7 +165,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v2, v0}, Le83;->i(ILg79;)I
+    invoke-static {v2, v0}, Lca3;->i(ILud9;)I
 
     move-result v0
 
@@ -189,7 +189,7 @@
 
     iget-object v3, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->text:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Le83;->l(ILjava/lang/String;)I
+    invoke-static {v2, v3}, Lca3;->l(ILjava/lang/String;)I
 
     move-result v2
 
@@ -217,7 +217,7 @@
 
     const/4 v3, 0x3
 
-    invoke-static {v3, v2}, Le83;->i(ILg79;)I
+    invoke-static {v3, v2}, Lca3;->i(ILud9;)I
 
     move-result v2
 
@@ -234,23 +234,7 @@
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Ld83;)Lg79;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+.method public mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -261,7 +245,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
+    invoke-virtual {p1}, Lba3;->s()I
 
     move-result v0
 
@@ -280,7 +264,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
 
     move-result v0
 
@@ -290,7 +274,7 @@
 
     .line 4
     :cond_1
-    invoke-static {p1, v1}, Lo7;->m(Ld83;I)I
+    invoke-static {p1, v1}, Lqbi;->b(Lba3;I)I
 
     move-result v0
 
@@ -333,10 +317,10 @@
     aput-object v1, v4, v3
 
     .line 9
-    invoke-virtual {p1, v1}, Ld83;->j(Lg79;)V
+    invoke-virtual {p1, v1}, Lba3;->j(Lud9;)V
 
     .line 10
-    invoke-virtual {p1}, Ld83;->s()I
+    invoke-virtual {p1}, Lba3;->s()I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -351,7 +335,7 @@
     aput-object v0, v4, v3
 
     .line 12
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
 
     .line 13
     iput-object v4, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
@@ -360,7 +344,7 @@
 
     .line 14
     :cond_5
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lba3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -385,7 +369,7 @@
     :cond_7
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->media:Lru/ok/tamtam/nano/Protos$Attaches$Attach;
 
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
 
     goto :goto_0
 
@@ -394,7 +378,23 @@
     return-object p0
 .end method
 
-.method public writeTo(Le83;)V
+.method public bridge synthetic mergeFrom(Lba3;)Lud9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Contact$StartMessage;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public writeTo(Lca3;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -408,7 +408,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->text:Ljava/lang/String;
@@ -425,7 +425,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->text:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lca3;->E(ILjava/lang/String;)V
 
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Contact$StartMessage;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
@@ -451,7 +451,7 @@
 
     const/4 v2, 0x3
 
-    invoke-virtual {p1, v2, v1}, Le83;->y(ILg79;)V
+    invoke-virtual {p1, v2, v1}, Lca3;->y(ILud9;)V
 
     :cond_2
     add-int/lit8 v0, v0, 0x1

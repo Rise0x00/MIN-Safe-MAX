@@ -19,7 +19,7 @@
         "",
         "tag",
         "message",
-        "Loyf;",
+        "Lybg;",
         "d",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "i",

@@ -3,18 +3,24 @@
 
 
 # static fields
-.field public static UiUtils:I = 0x7f1404f4
+.field public static size_border_radius_new_banner:I = 0x7f0703fe
 
-.field public static UiUtils_BottomSheet:I = 0x7f1404f5
+.field public static size_border_radius_semantic_border_radius_card:I = 0x7f0703ff
 
-.field public static UiUtils_DarkBottomSheetDialog:I = 0x7f1404f6
+.field public static spacing_size_2xl:I = 0x7f070402
 
-.field public static UiUtils_LightBottomSheetDialog:I = 0x7f1404f7
+.field public static spacing_size_2xs:I = 0x7f070403
 
-.field public static UiUtils_TextAppearance:I = 0x7f1404f8
+.field public static spacing_size_3xl:I = 0x7f070404
 
-.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton:I = 0x7f1404f9
+.field public static spacing_size_4xl:I = 0x7f070405
 
-.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I = 0x7f1404fa
+.field public static spacing_size_l:I = 0x7f070406
 
-.field public static UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I = 0x7f1404fb
+.field public static spacing_size_m:I = 0x7f070407
+
+.field public static spacing_size_s:I = 0x7f070408
+
+.field public static spacing_size_xl:I = 0x7f070409
+
+.field public static spacing_size_xs:I = 0x7f07040a

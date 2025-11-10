@@ -1,195 +1,191 @@
-.class public Lxm4;
-.super Lfl0;
+.class public final Lxm4;
+.super Lbwe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lxda;
-
-.field public b:Ljava/lang/Object;
+.field public final c:Lym4;
 
 
 # direct methods
-.method public constructor <init>(Lxda;)V
+.method public constructor <init>(Lym4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxm4;->a:Lxda;
+    iput-object p1, p0, Lxm4;->c:Lym4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lxm4;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    const/16 v0, 0x20
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lxm4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
+.method public final a(Landroid/view/ViewGroup;)V
     .locals 3
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    iget-object v0, p0, Lxm4;->c:Lym4;
 
-    move-result v0
+    iget-object v1, v0, Ladi;->b:Ljava/lang/Object;
 
-    and-int/lit8 v1, v0, 0x36
+    check-cast v1, Lcwe;
 
-    if-eqz v1, :cond_0
+    iget-object v2, v1, Lcwe;->c:Landroidx/fragment/app/a;
 
-    goto :goto_1
+    iget-object v2, v2, Landroidx/fragment/app/a;->S0:Landroid/view/View;
 
-    :cond_0
-    const/16 v1, 0x8
+    invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    iget-object v2, p0, Lxm4;->a:Lxda;
+    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
 
-    if-ne v0, v1, :cond_1
+    iget-object p1, v0, Ladi;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lxm4;->b:Ljava/lang/Object;
+    check-cast p1, Lcwe;
 
-    const/16 p1, 0x10
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    const/4 p1, 0x0
-
-    invoke-interface {v2, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    invoke-interface {v2, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p1
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_2
-
-    invoke-interface {v2}, Lxda;->b()V
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public g()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lxm4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final l(I)I
-    .locals 0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    invoke-virtual {p1, p0}, Lcwe;->c(Lbwe;)V
 
     const/4 p1, 0x2
 
-    return p1
-.end method
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
 
-.method public final poll()Ljava/lang/Object;
-    .locals 3
+    move-result p1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    if-eqz p1, :cond_0
 
-    move-result v0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x10
+    const-string v0, "Animation from operation "
 
-    const/4 v2, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxm4;->b:Ljava/lang/Object;
+    const-string v0, " has been cancelled."
 
-    iput-object v2, p0, Lxm4;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x20
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    move-result-object p1
 
-    return-object v0
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    return-object v2
+    return-void
+.end method
+
+.method public final b(Landroid/view/ViewGroup;)V
+    .locals 5
+
+    iget-object v0, p0, Lxm4;->c:Lym4;
+
+    iget-object v1, v0, Ladi;->b:Ljava/lang/Object;
+
+    check-cast v1, Lcwe;
+
+    invoke-virtual {v0}, Ladi;->B0()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, p0}, Lcwe;->c(Lbwe;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lcwe;->c:Landroidx/fragment/app/a;
+
+    iget-object v3, v3, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Lym4;->R0(Landroid/content/Context;)Lihd;
+
+    move-result-object v0
+
+    const-string v2, "Required value was null."
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v0, Lihd;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/animation/Animation;
+
+    if-eqz v0, :cond_3
+
+    iget v2, v1, Lcwe;->a:I
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {v1, p0}, Lcwe;->c(Lbwe;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
+
+    new-instance v2, Lre6;
+
+    invoke-direct {v2, v0, p1, v3}, Lre6;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+
+    new-instance v0, Lwm4;
+
+    invoke-direct {v0, v1, p1, v3, p0}, Lwm4;-><init>(Lcwe;Landroid/view/ViewGroup;Landroid/view/View;Lxm4;)V
+
+    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Animation from operation "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has started."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

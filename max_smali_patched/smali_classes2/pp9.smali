@@ -1,274 +1,90 @@
-.class public final Lpp9;
-.super Lxl;
+.class public final synthetic Lpp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loaf;
-.implements Lcab;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:I
 
-.field public final Y:J
+.field public final synthetic b:I
 
-.field public final Z:Lhn4;
+.field public final synthetic c:Z
 
-.field public final o:J
-
-.field public w0:J
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(JJJJLhn4;)V
+.method public synthetic constructor <init>(JIIZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    iput p4, p0, Lpp9;->a:I
 
-    iput-wide p3, p0, Lpp9;->o:J
+    iput p3, p0, Lpp9;->b:I
 
-    iput-wide p5, p0, Lpp9;->X:J
+    iput-boolean p5, p0, Lpp9;->c:Z
 
-    iput-wide p7, p0, Lpp9;->Y:J
+    iput-wide p1, p0, Lpp9;->d:J
 
-    iput-object p9, p0, Lpp9;->Z:Lhn4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 3
-
-    iget-object v0, p0, Lxl;->c:Lyl;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0}, Lyl;->c()Lub2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lpp9;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x3
-
-    return v0
-
-    :cond_1
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-wide v0, v0, Lpc2;->a:J
-
-    iput-wide v0, p0, Lpp9;->w0:J
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final d(Ll9f;)V
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
 
-    check-cast p1, Lqp9;
+    iget v0, p0, Lpp9;->a:I
 
-    iget-object v0, p0, Lxl;->c:Lyl;
+    check-cast p1, Lrp9;
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    new-instance v0, Lrp9;
 
-    goto :goto_0
+    const-wide/16 v4, 0x0
 
-    :cond_0
-    move-object v0, v1
+    const/16 v8, 0x16
 
-    :goto_0
-    invoke-virtual {v0}, Lyl;->d()Lo49;
+    iget v1, p0, Lpp9;->b:I
 
-    move-result-object v2
+    const/4 v2, 0x0
 
-    iget-wide v5, p0, Lpp9;->X:J
+    iget-boolean v3, p0, Lpp9;->c:Z
 
-    iget-wide v7, p0, Lpp9;->Y:J
+    iget-wide v6, p0, Lpp9;->d:J
 
-    iget-wide v3, p0, Lpp9;->o:J
-
-    invoke-virtual/range {v2 .. v8}, Lo49;->b(JJJ)V
-
-    iget-object v0, p0, Lxl;->c:Lyl;
-
-    if-eqz v0, :cond_1
-
-    move-object v1, v0
-
-    :cond_1
-    invoke-virtual {v1}, Lyl;->c()Lub2;
-
-    move-result-object v0
-
-    iget-object p1, p1, Lqp9;->c:Ln82;
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lub2;->c0(Ljava/util/List;)Lit9;
-
-    return-void
-.end method
-
-.method public final e(Lv8f;)V
-    .locals 0
-
-    iget-object p1, p1, Lv8f;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lgh5;->v(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lpp9;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    iget-object v0, p0, Lxl;->c:Lyl;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0}, Lyl;->e()Licf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Licf;->d(J)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;-><init>()V
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->requestId:J
-
-    iget-wide v1, p0, Lpp9;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->chatId:J
-
-    iget-wide v1, p0, Lpp9;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->startTime:J
-
-    iget-wide v1, p0, Lpp9;->Y:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->endTime:J
-
-    iget-object v1, p0, Lpp9;->Z:Lhn4;
-
-    iget-byte v1, v1, Lhn4;->a:B
-
-    iput v1, v0, Lru/ok/tamtam/nano/Tasks$MsgDeleteRange;->itemTypeId:I
-
-    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
 
     return-object v0
-.end method
 
-.method public final getId()J
-    .locals 2
+    :pswitch_0
+    new-instance v0, Lrp9;
 
-    iget-wide v0, p0, Lxl;->a:J
+    const-wide/16 v4, 0x0
 
-    return-wide v0
-.end method
+    const/16 v8, 0x16
 
-.method public final getType()Ldab;
-    .locals 1
+    iget v1, p0, Lpp9;->b:I
 
-    sget-object v0, Ldab;->M0:Ldab;
+    const/4 v2, 0x0
 
-    return-object v0
-.end method
+    iget-boolean v3, p0, Lpp9;->c:Z
 
-.method public final h()I
-    .locals 1
+    iget-wide v6, p0, Lpp9;->d:J
 
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Li9f;
-    .locals 5
-
-    new-instance v0, Ll38;
-
-    iget-wide v1, p0, Lpp9;->w0:J
-
-    sget-object v3, Ln0b;->x1:Ln0b;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v0, v3, v4}, Ll38;-><init>(Ln0b;I)V
-
-    const-string v3, "chatId"
-
-    invoke-virtual {v0, v1, v2, v3}, Li9f;->j(JLjava/lang/String;)V
-
-    const-string v1, "startTime"
-
-    iget-wide v2, p0, Lpp9;->X:J
-
-    invoke-virtual {v0, v2, v3, v1}, Li9f;->j(JLjava/lang/String;)V
-
-    const-string v1, "endTime"
-
-    iget-wide v2, p0, Lpp9;->Y:J
-
-    invoke-virtual {v0, v2, v3, v1}, Li9f;->j(JLjava/lang/String;)V
-
-    const-string v1, "itemType"
-
-    iget-object v2, p0, Lpp9;->Z:Lhn4;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

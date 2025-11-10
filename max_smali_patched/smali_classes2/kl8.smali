@@ -1,80 +1,64 @@
-.class public final synthetic Lkl8;
+.class public final Lkl8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lol8;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/gallery/MediaGalleryWidget;
+# static fields
+.field public static final a:Lkl8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/gallery/MediaGalleryWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lkl8;->a:I
+    new-instance v0, Lkl8;
 
-    iput-object p1, p0, Lkl8;->b:Lone/me/sdk/gallery/MediaGalleryWidget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lkl8;->a:Lkl8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lkl8;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lkl8;->b:Lone/me/sdk/gallery/MediaGalleryWidget;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget-object v0, Lone/me/sdk/gallery/MediaGalleryWidget;->Z:[Ltm7;
+    :cond_0
+    instance-of p1, p1, Lkl8;
 
-    new-instance v0, Ln95;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 p1, 0x0
 
-    move-result-object v1
+    return p1
 
-    const/4 v2, 0x0
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct {v0, v1, v2}, Ln95;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    const v0, -0x47b51b69
 
-    const/4 v2, -0x1
+    return v0
+.end method
 
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/gallery/MediaGalleryWidget;->Z:[Ltm7;
-
-    new-instance v0, Lbh6;
-
-    invoke-virtual {v1}, Lone/me/sdk/gallery/MediaGalleryWidget;->D0()Lmj6;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lbh6;-><init>(Lmj6;)V
+    const-string v0, "ShowFilesModeSnack"
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

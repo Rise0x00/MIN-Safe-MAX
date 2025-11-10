@@ -1,150 +1,199 @@
 .class public final Lf80;
-.super Ljava/lang/Object;
+.super Landroid/hardware/biometrics/BiometricPrompt$AuthenticationCallback;
 .source "SourceFile"
 
-# interfaces
-.implements Lmaa;
 
-
-# static fields
-.field public static final a:Lf80;
-
-.field public static final b:Lfn5;
-
-.field public static final c:Lfn5;
-
-.field public static final d:Lfn5;
-
-.field public static final e:Lfn5;
-
-.field public static final f:Lfn5;
-
-.field public static final g:Lfn5;
-
-.field public static final h:Lfn5;
+# instance fields
+.field public final synthetic a:Li80;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Li80;)V
+    .locals 0
 
-    new-instance v0, Lf80;
+    iput-object p1, p0, Lf80;->a:Li80;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lf80;->a:Lf80;
-
-    const-string v0, "eventTimeMs"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->b:Lfn5;
-
-    const-string v0, "eventCode"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->c:Lfn5;
-
-    const-string v0, "eventUptimeMs"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->d:Lfn5;
-
-    const-string v0, "sourceExtension"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->e:Lfn5;
-
-    const-string v0, "sourceExtensionJsonProto3"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->f:Lfn5;
-
-    const-string v0, "timezoneOffsetSeconds"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->g:Lfn5;
-
-    const-string v0, "networkConnectionInfo"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
-
-    move-result-object v0
-
-    sput-object v0, Lf80;->h:Lfn5;
+    invoke-direct {p0}, Landroid/hardware/biometrics/BiometricPrompt$AuthenticationCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public onAuthenticationError(ILjava/lang/CharSequence;)V
+    .locals 1
 
-    check-cast p1, Lu38;
+    iget-object v0, p0, Lf80;->a:Li80;
 
-    check-cast p2, Lnaa;
+    invoke-virtual {v0, p1, p2}, Li80;->a(ILjava/lang/CharSequence;)V
 
-    check-cast p1, Lka0;
+    return-void
+.end method
 
-    iget-wide v0, p1, Lka0;->a:J
+.method public onAuthenticationFailed()V
+    .locals 2
 
-    sget-object v2, Lf80;->b:Lfn5;
+    iget-object v0, p0, Lf80;->a:Li80;
 
-    invoke-interface {p2, v2, v0, v1}, Lnaa;->e(Lfn5;J)Lnaa;
+    check-cast v0, Lio0;
 
-    sget-object v0, Lf80;->c:Lfn5;
+    iget-object v0, v0, Lio0;->a:Ljava/lang/ref/WeakReference;
 
-    iget-object v1, p1, Lka0;->b:Ljava/lang/Integer;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    move-result-object v1
 
-    sget-object v0, Lf80;->d:Lfn5;
+    if-eqz v1, :cond_1
 
-    iget-wide v1, p1, Lka0;->c:J
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
+    move-result-object v1
 
-    sget-object v0, Lf80;->e:Lfn5;
+    check-cast v1, Landroidx/biometric/BiometricViewModel;
 
-    iget-object v1, p1, Lka0;->d:[B
+    iget-boolean v1, v1, Landroidx/biometric/BiometricViewModel;->k:Z
 
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    if-eqz v1, :cond_1
 
-    sget-object v0, Lf80;->f:Lfn5;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object v1, p1, Lka0;->e:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
 
-    sget-object v0, Lf80;->g:Lfn5;
+    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lk0a;
 
-    iget-wide v1, p1, Lka0;->f:J
+    if-nez v1, :cond_0
 
-    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
+    new-instance v1, Lk0a;
 
-    sget-object v0, Lf80;->h:Lfn5;
+    invoke-direct {v1}, Lq38;-><init>()V
 
-    iget-object p1, p1, Lka0;->g:Lbz9;
+    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->r:Lk0a;
 
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    :cond_0
+    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->r:Lk0a;
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0, v1}, Landroidx/biometric/BiometricViewModel;->j(Lk0a;Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onAuthenticationHelp(ILjava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAuthenticationSucceeded(Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;)V
+    .locals 4
+
+    const/16 v0, 0x1e
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;->getCryptoObject()Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v2}, Ll84;->d(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Cipher;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    new-instance v1, Lfo0;
+
+    invoke-direct {v1, v3}, Lfo0;-><init>(Ljavax/crypto/Cipher;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v2}, Ll84;->f(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljava/security/Signature;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v1, Lfo0;
+
+    invoke-direct {v1, v3}, Lfo0;-><init>(Ljava/security/Signature;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v2}, Ll84;->e(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Mac;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    new-instance v1, Lfo0;
+
+    invoke-direct {v1, v3}, Lfo0;-><init>(Ljavax/crypto/Mac;)V
+
+    goto :goto_0
+
+    :cond_3
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v3, v0, :cond_4
+
+    invoke-static {v2}, Lm84;->b(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Landroid/security/identity/IdentityCredential;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_4
+
+    new-instance v1, Lfo0;
+
+    invoke-direct {v1, v2}, Lfo0;-><init>(Landroid/security/identity/IdentityCredential;)V
+
+    :cond_4
+    :goto_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v3, -0x1
+
+    if-lt v2, v0, :cond_5
+
+    if-eqz p1, :cond_7
+
+    invoke-static {p1}, Lh80;->a(Landroid/hardware/biometrics/BiometricPrompt$AuthenticationResult;)I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_5
+    const/16 p1, 0x1d
+
+    if-ne v2, p1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v3, 0x2
+
+    :cond_7
+    :goto_1
+    new-instance p1, Leo0;
+
+    invoke-direct {p1, v1, v3}, Leo0;-><init>(Lfo0;I)V
+
+    iget-object v0, p0, Lf80;->a:Li80;
+
+    invoke-virtual {v0, p1}, Li80;->b(Leo0;)V
 
     return-void
 .end method

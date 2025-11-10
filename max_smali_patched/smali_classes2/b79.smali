@@ -1,53 +1,148 @@
 .class public final Lb79;
-.super Lnz3;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public X:Lq49;
+.field public final synthetic X:Lbph;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public final synthetic Z:Lc79;
-
-.field public o:Lc79;
-
-.field public w0:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lc79;Lnz3;)V
+.method public constructor <init>(Lbph;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lb79;->Z:Lc79;
+    iput-object p1, p0, Lb79;->X:Lbph;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lb79;->Y:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lb79;->Y:Ljava/lang/Object;
+    check-cast p1, Lg54;
 
-    iget p1, p0, Lb79;->w0:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lb79;->w0:I
-
-    iget-object p1, p0, Lb79;->Z:Lc79;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lc79;->a(JLnz3;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lb79;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Lb79;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lb79;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lb79;
+
+    iget-object v0, p0, Lb79;->X:Lbph;
+
+    iget-object v1, p0, Lb79;->Y:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Lb79;-><init>(Lbph;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lb79;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lb79;->X:Lbph;
+
+    iget-object v0, p1, Lbph;->i:Ljava/lang/Object;
+
+    check-cast v0, La1f;
+
+    new-instance v2, Lr13;
+
+    const/16 v3, 0x14
+
+    invoke-direct {v2, v0, v3}, Lr13;-><init>(Lez5;I)V
+
+    iget-object v0, p1, Lbph;->h:Ljava/lang/Object;
+
+    check-cast v0, La1f;
+
+    new-instance v3, Ltg1;
+
+    iget-object v4, p0, Lb79;->Y:Ljava/lang/String;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    invoke-direct {v3, p1, v4, v6, v5}, Ltg1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance v4, Li41;
+
+    invoke-direct {v4, v2, v0, v3, v5}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance v0, Lz69;
+
+    invoke-direct {v0, p1, v6}, Lz69;-><init>(Lbph;Lkotlin/coroutines/Continuation;)V
+
+    iput v1, p0, Lb79;->o:I
+
+    invoke-static {v4, v0, p0}, Lqs0;->g(Lez5;Lej6;Logf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

@@ -1,19 +1,20 @@
-.class public final Lkxg;
+.class public interface abstract Lkxg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
+.method public abstract B()I
+.end method
 
-    sget-object v0, Ljxg;->a:Ljxg;
+.method public abstract b()I
+.end method
 
-    return-object v0
+.method public abstract i(Landroid/view/Surface;Lcng;)V
+.end method
+
+.method public abstract onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
+.end method
+
+.method public abstract z()I
 .end method

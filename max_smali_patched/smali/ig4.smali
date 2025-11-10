@@ -1,153 +1,48 @@
-.class public final Lig4;
+.class public final synthetic Lig4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnx4;
+.implements Ld38;
 
 
 # instance fields
-.field public final a:Landroid/content/res/Resources;
+.field public final synthetic a:Lnd;
 
-.field public final b:Lnx4;
+.field public final synthetic b:Z
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;Lnx4;)V
+.method public synthetic constructor <init>(Lnd;ZI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lig4;->a:Landroid/content/res/Resources;
+    iput-object p1, p0, Lig4;->a:Lnd;
 
-    iput-object p2, p0, Lig4;->b:Lnx4;
+    iput-boolean p2, p0, Lig4;->b:Z
+
+    iput p3, p0, Lig4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq73;)Landroid/graphics/drawable/Drawable;
+.method public final invoke(Ljava/lang/Object;)V
     .locals 3
 
-    :try_start_0
-    invoke-static {}, Lud6;->s()Ltd6;
+    iget v0, p0, Lig4;->c:I
 
-    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    check-cast p1, Lod;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lig4;->a:Lnd;
 
-    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    iget-boolean v2, p0, Lig4;->b:Z
 
-    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
+    invoke-interface {p1, v1, v2, v0}, Lod;->N0(Lnd;ZI)V
 
-    iget-object v1, p0, Lig4;->a:Landroid/content/res/Resources;
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    new-instance v1, Lc2b;
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result v2
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result p1
-
-    invoke-direct {v1, v0, v2, p1}, Lc2b;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    return-object v0
-
-    :cond_2
-    iget-object v0, p0, Lig4;->b:Lnx4;
-
-    if-eqz v0, :cond_3
-
-    :try_start_1
-    invoke-interface {v0, p1}, Lnx4;->b(Lq73;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0, p1}, Lnx4;->a(Lq73;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    return-object p1
-
-    :cond_3
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :goto_1
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    throw p1
-.end method
-
-.method public final b(Lq73;)Z
-    .locals 0
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

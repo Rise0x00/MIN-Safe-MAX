@@ -1,345 +1,1174 @@
 .class public final Lr83;
-.super Lz39;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X0:I
-
-.field public final Y0:Lxe6;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lrn7;I)V
-    .locals 0
+.method public static final a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    .locals 2
 
-    iput p3, p0, Lr83;->X0:I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch p3, :pswitch_data_0
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
-    new-instance p3, Lq83;
+    move-result p0
 
-    invoke-direct {p3, p1}, Lq83;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+    :goto_0
+    if-ge v0, p0, :cond_1
 
-    iput-object p2, p0, Lr83;->Y0:Lxe6;
+    invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public static final f(Lvcg;)V
+    .locals 2
+
+    new-instance v0, Lctd;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lctd;-><init>(I)V
+
+    const-class v1, Lof4;
+
+    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
 
     return-void
-
-    :pswitch_0
-    new-instance p3, Liee;
-
-    invoke-direct {p3, p1}, Liee;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
-
-    iput-object p2, p0, Lr83;->Y0:Lxe6;
-
-    return-void
-
-    :pswitch_1
-    new-instance p3, Lgee;
-
-    invoke-direct {p3, p1}, Lgee;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
-
-    iput-object p2, p0, Lr83;->Y0:Lxe6;
-
-    return-void
-
-    :pswitch_2
-    new-instance p3, Lw83;
-
-    invoke-direct {p3, p1}, Lw83;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
-
-    iput-object p2, p0, Lr83;->Y0:Lxe6;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final M(Lone/me/messages/list/loader/MessageModel;)V
+.method public b(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
     .locals 4
 
-    iget v0, p0, Lr83;->X0:I
+    const-string v0, "name"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p0, p1, v0}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+    move-result v0
 
-    iget-object v0, v0, Luy;->b:Lvz;
+    const/4 v1, 0x0
 
-    instance-of v1, v0, Leee;
+    const/4 v2, -0x1
 
-    if-eqz v1, :cond_0
+    if-eq v0, v2, :cond_0
 
-    check-cast v0, Leee;
+    invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move-object v0, v1
 
     :goto_0
-    if-nez v0, :cond_1
+    const-string v3, "pathData"
+
+    invoke-static {p0, p1, v3}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-eq v3, v2, :cond_1
+
+    invoke-interface {p1, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_1
+    new-instance p1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+
+    invoke-direct {p1, v0, v1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public c(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    const-string v4, "name"
+
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    if-eq v4, v5, :cond_0
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    :goto_0
+    move-object v7, v4
 
     goto :goto_1
 
-    :cond_1
-    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    :cond_0
+    const/4 v4, 0x0
 
-    check-cast v1, Liee;
-
-    invoke-virtual {v1, v0}, Lxv8;->setModel(Lgf8;)V
-
-    new-instance v2, Lar;
-
-    const/16 v3, 0xc
-
-    invoke-direct {v2, p0, v0, p1, v3}, Lar;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iget-object p1, v1, Liee;->H0:Lff8;
-
-    invoke-virtual {p1, v2}, Lff8;->setOnFinalImageSetCallback(Lve6;)V
+    goto :goto_0
 
     :goto_1
-    return-void
+    const-string v4, "pivotX"
 
-    :pswitch_0
-    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    iget-object v0, v0, Luy;->b:Lvz;
+    move-result v4
 
-    instance-of v1, v0, Leee;
+    if-eq v4, v5, :cond_1
 
-    if-eqz v1, :cond_2
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    check-cast v0, Leee;
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
 
     goto :goto_2
 
-    :cond_2
-    const/4 v0, 0x0
+    :cond_1
+    move-object v4, v3
 
     :goto_2
-    if-nez v0, :cond_3
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+
+    move-result v8
+
+    const-string v4, "pivotY"
+
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-eq v4, v5, :cond_2
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
 
     goto :goto_3
 
-    :cond_3
-    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
-
-    check-cast v1, Lgee;
-
-    invoke-virtual {v1, v0}, Lzn8;->setModel(Lgf8;)V
-
-    new-instance v2, Lar;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v2, p0, v0, p1, v3}, Lar;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iget-object p1, v1, Lgee;->B0:Lff8;
-
-    invoke-virtual {p1, v2}, Lff8;->setOnFinalImageSetCallback(Lve6;)V
+    :cond_2
+    move-object v4, v3
 
     :goto_3
-    return-void
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
-    :pswitch_1
-    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+    move-result v9
 
-    iget-object v0, v0, Luy;->b:Lvz;
+    const-string v4, "rotation"
 
-    instance-of v1, v0, Ll83;
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    if-eqz v1, :cond_4
+    move-result v4
 
-    check-cast v0, Ll83;
+    if-eq v4, v5, :cond_3
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
 
     goto :goto_4
 
-    :cond_4
-    const/4 v0, 0x0
+    :cond_3
+    move-object v4, v3
 
     :goto_4
-    if-nez v0, :cond_5
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+
+    move-result v10
+
+    const-string v4, "scaleX"
+
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-eq v4, v5, :cond_4
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
 
     goto :goto_5
 
-    :cond_5
-    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
-
-    check-cast v1, Lw83;
-
-    invoke-virtual {v1, v0}, Lxv8;->setModel(Lgf8;)V
-
-    new-instance v2, Ltt1;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, p0, v0, p1, v3}, Ltt1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v2}, Lw83;->setOnFinalImageSetCallback(Lxe6;)V
+    :cond_4
+    move-object v4, v2
 
     :goto_5
-    return-void
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
 
-    :pswitch_2
-    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+    move-result v11
 
-    iget-object v0, v0, Luy;->b:Lvz;
+    const-string v4, "scaleY"
 
-    instance-of v1, v0, Ll83;
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    if-eqz v1, :cond_6
+    move-result v4
 
-    check-cast v0, Ll83;
+    if-eq v4, v5, :cond_5
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    :cond_5
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+
+    move-result v12
+
+    const-string v2, "translateX"
+
+    invoke-static {v0, v1, v2}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eq v2, v5, :cond_6
+
+    invoke-interface {v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
 
     goto :goto_6
 
     :cond_6
-    const/4 v0, 0x0
+    move-object v2, v3
 
     :goto_6
-    if-nez v0, :cond_7
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+
+    move-result v13
+
+    const-string v2, "translateY"
+
+    invoke-static {v0, v1, v2}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eq v2, v5, :cond_7
+
+    invoke-interface {v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    :cond_7
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+
+    move-result v14
+
+    new-instance v6, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    const/16 v17, 0x300
+
+    const/16 v18, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v6 .. v18}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILfi4;)V
+
+    return-object v6
+.end method
+
+.method public d(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
+    .locals 23
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
+
+    const-string v5, "name"
+
+    invoke-static {v0, v1, v5}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    if-eq v5, v7, :cond_0
+
+    invoke-interface {v1, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object v9, v5
+
+    goto :goto_0
+
+    :cond_0
+    move-object v9, v6
+
+    :goto_0
+    const-string v5, "fillAlpha"
+
+    invoke-static {v0, v1, v5}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v5
+
+    if-eq v5, v7, :cond_1
+
+    invoke-interface {v1, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v5
+
+    goto :goto_1
+
+    :cond_1
+    move-object v5, v4
+
+    :goto_1
+    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
+
+    move-result v5
+
+    const/16 v8, 0xff
+
+    int-to-float v10, v8
+
+    mul-float/2addr v5, v10
+
+    float-to-int v5, v5
+
+    invoke-static {v8, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    const-string v11, "fillColor"
+
+    invoke-static {v0, v1, v11}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v11
+
+    if-eq v11, v7, :cond_2
+
+    invoke-interface {v1, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v11}, Lrzi;->d(Ljava/lang/String;)I
+
+    move-result v11
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    goto :goto_2
+
+    :cond_2
+    move-object v11, v2
+
+    :goto_2
+    invoke-virtual {v11}, Ljava/lang/Number;->intValue()I
+
+    move-result v11
+
+    sget-object v12, Ldfb;->d:Ldfb;
+
+    iget-object v13, v12, Lkh;->b:Ljava/lang/Object;
+
+    check-cast v13, Ljava/lang/String;
+
+    invoke-static {v0, v1, v13}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v13
+
+    const-string v14, "1"
+
+    const-string v15, "2"
+
+    if-eq v13, v7, :cond_6
+
+    invoke-interface {v1, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/String;->hashCode()I
+
+    move-result v13
+
+    packed-switch v13, :pswitch_data_0
+
+    goto :goto_3
+
+    :pswitch_0
+    const-string v13, "3"
+
+    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object v12, Landroid/graphics/Path$FillType;->INVERSE_EVEN_ODD:Landroid/graphics/Path$FillType;
+
+    goto :goto_4
+
+    :pswitch_1
+    invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    sget-object v12, Landroid/graphics/Path$FillType;->INVERSE_WINDING:Landroid/graphics/Path$FillType;
+
+    goto :goto_4
+
+    :pswitch_2
+    invoke-virtual {v12, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_5
+
+    :goto_3
+    sget-object v12, Landroid/graphics/Path$FillType;->WINDING:Landroid/graphics/Path$FillType;
+
+    goto :goto_4
+
+    :cond_5
+    sget-object v12, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
+
+    goto :goto_4
+
+    :cond_6
+    iget-object v12, v12, Lkh;->c:Ljava/lang/Object;
+
+    :goto_4
+    check-cast v12, Landroid/graphics/Path$FillType;
+
+    const-string v13, "pathData"
+
+    invoke-static {v0, v1, v13}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v13
+
+    if-eq v13, v7, :cond_7
+
+    invoke-interface {v1, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    :cond_7
+    move-object v13, v6
+
+    const-string v6, "strokeAlpha"
+
+    invoke-static {v0, v1, v6}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v6
+
+    if-eq v6, v7, :cond_8
+
+    invoke-interface {v1, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v6
+
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v6
+
+    goto :goto_5
+
+    :cond_8
+    move-object v6, v4
+
+    :goto_5
+    invoke-virtual {v6}, Ljava/lang/Number;->floatValue()F
+
+    move-result v6
+
+    mul-float/2addr v6, v10
+
+    float-to-int v6, v6
+
+    invoke-static {v8, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    const-string v8, "strokeColor"
+
+    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v8
+
+    if-eq v8, v7, :cond_9
+
+    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lrzi;->d(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    :cond_9
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
+
+    sget-object v8, Lefb;->d:Lefb;
+
+    iget-object v10, v8, Lkh;->b:Ljava/lang/Object;
+
+    check-cast v10, Ljava/lang/String;
+
+    invoke-static {v0, v1, v10}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v10
+
+    if-eq v10, v7, :cond_c
+
+    invoke-interface {v1, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8, v14}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_a
+
+    sget-object v8, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+
+    goto :goto_6
+
+    :cond_a
+    invoke-static {v8, v15}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_b
+
+    sget-object v8, Landroid/graphics/Paint$Cap;->SQUARE:Landroid/graphics/Paint$Cap;
+
+    goto :goto_6
+
+    :cond_b
+    sget-object v8, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
+
+    goto :goto_6
+
+    :cond_c
+    iget-object v8, v8, Lkh;->c:Ljava/lang/Object;
+
+    :goto_6
+    move-object/from16 v16, v8
+
+    check-cast v16, Landroid/graphics/Paint$Cap;
+
+    sget-object v8, Lffb;->d:Lffb;
+
+    iget-object v10, v8, Lkh;->b:Ljava/lang/Object;
+
+    check-cast v10, Ljava/lang/String;
+
+    invoke-static {v0, v1, v10}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v10
+
+    if-eq v10, v7, :cond_f
+
+    invoke-interface {v1, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8, v14}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_d
+
+    sget-object v8, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     goto :goto_7
 
-    :cond_7
-    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    :cond_d
+    invoke-static {v8, v15}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v1, Lq83;
+    move-result v8
 
-    invoke-virtual {v1, v0}, Lzn8;->setModel(Lgf8;)V
+    if-eqz v8, :cond_e
 
-    new-instance v2, Ltt1;
+    sget-object v8, Landroid/graphics/Paint$Join;->BEVEL:Landroid/graphics/Paint$Join;
 
-    const/4 v3, 0x2
+    goto :goto_7
 
-    invoke-direct {v2, p0, v0, p1, v3}, Ltt1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    :cond_e
+    sget-object v8, Landroid/graphics/Paint$Join;->MITER:Landroid/graphics/Paint$Join;
 
-    invoke-virtual {v1, v2}, Lq83;->setOnFinalImageSetCallback(Lxe6;)V
+    goto :goto_7
+
+    :cond_f
+    iget-object v8, v8, Lkh;->c:Ljava/lang/Object;
 
     :goto_7
-    return-void
+    move-object/from16 v17, v8
+
+    check-cast v17, Landroid/graphics/Paint$Join;
+
+    const-string v8, "strokeMiterLimit"
+
+    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v8
+
+    if-eq v8, v7, :cond_10
+
+    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    goto :goto_8
+
+    :cond_10
+    const/high16 v8, 0x40800000    # 4.0f
+
+    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    :goto_8
+    invoke-virtual {v8}, Ljava/lang/Number;->floatValue()F
+
+    move-result v18
+
+    const-string v8, "strokeWidth"
+
+    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v8
+
+    if-eq v8, v7, :cond_11
+
+    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    goto :goto_9
+
+    :cond_11
+    move-object v8, v3
+
+    :goto_9
+    invoke-virtual {v8}, Ljava/lang/Number;->floatValue()F
+
+    move-result v19
+
+    const-string v8, "trimPathEnd"
+
+    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v8
+
+    if-eq v8, v7, :cond_12
+
+    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
+
+    :cond_12
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+
+    move-result v20
+
+    const-string v4, "trimPathOffset"
+
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-eq v4, v7, :cond_13
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
+
+    goto :goto_a
+
+    :cond_13
+    move-object v4, v3
+
+    :goto_a
+    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+
+    move-result v21
+
+    const-string v4, "trimPathStart"
+
+    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-eq v4, v7, :cond_14
+
+    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    :cond_14
+    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+
+    move-result v22
+
+    new-instance v8, Lone/me/sdk/richvector/internal/element/PathElement;
+
+    move v15, v2
+
+    move v10, v5
+
+    move v14, v6
+
+    invoke-direct/range {v8 .. v22}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Ljava/lang/String;IILandroid/graphics/Path$FillType;Ljava/lang/String;IILandroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FFFFF)V
+
+    return-object v8
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x31
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public N(Lvs0;)V
-    .locals 1
+.method public e(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
+    .locals 13
 
-    iget v0, p0, Lr83;->X0:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    :pswitch_0
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    const-string v1, "viewportWidth"
 
-    check-cast v0, Liee;
+    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    invoke-virtual {v0, p1}, Lxv8;->x(Lvs0;)V
+    move-result v1
 
-    return-void
+    const/4 v2, -0x1
 
-    :pswitch_2
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    if-eq v1, v2, :cond_0
 
-    check-cast v0, Lw83;
+    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lxv8;->x(Lvs0;)V
+    move-result-object v1
 
-    return-void
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
+    move-result v1
 
-.method public final O(Lbc3;)V
-    .locals 1
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget v0, p0, Lr83;->X0:I
+    move-result-object v1
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_0
 
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    :cond_0
+    move-object v1, v0
 
-    check-cast v0, Liee;
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
-    invoke-virtual {v0, p1}, Lxv8;->y(Lbc3;)V
+    move-result v5
 
-    return-void
+    const-string v1, "viewportHeight"
 
-    :pswitch_0
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    check-cast v0, Lgee;
+    move-result v1
 
-    invoke-virtual {v0, p1}, Lzn8;->f(Lbc3;)V
+    if-eq v1, v2, :cond_1
 
-    return-void
+    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    :pswitch_1
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    move-result-object v1
 
-    check-cast v0, Lw83;
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    invoke-virtual {v0, p1}, Lxv8;->y(Lbc3;)V
+    move-result v1
 
-    iget-object p1, v0, Lw83;->G0:Lk83;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-virtual {p1}, Lk83;->f()V
+    move-result-object v1
 
-    return-void
+    goto :goto_1
 
-    :pswitch_2
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    :cond_1
+    move-object v1, v0
 
-    check-cast v0, Lq83;
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
 
-    invoke-virtual {v0, p1}, Lzn8;->f(Lbc3;)V
+    move-result v6
 
-    iget-object p1, v0, Lq83;->A0:Lk83;
+    const-string v1, "alpha"
 
-    invoke-virtual {p1}, Lk83;->f()V
+    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
 
-    return-void
+    move-result v1
 
-    nop
+    if-eq v1, v2, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_2
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+
+    move-result v1
+
+    const/16 v3, 0xff
+
+    int-to-float v4, v3
+
+    mul-float/2addr v4, v1
+
+    float-to-int v1, v4
+
+    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
+    const-string v1, "name"
+
+    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v1
+
+    if-eq v1, v2, :cond_3
+
+    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_3
+    move-object v4, v1
+
+    goto :goto_4
+
+    :cond_3
+    const/4 v1, 0x0
+
+    goto :goto_3
+
+    :goto_4
+    const-string v1, "width"
+
+    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v1
+
+    const/4 v3, 0x3
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x0
+
+    const-string v10, "dip"
+
+    if-eq v1, v2, :cond_5
+
+    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_4
+
+    move v11, v3
+
+    goto :goto_5
+
+    :cond_4
+    move v11, v8
+
+    :goto_5
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v12
+
+    sub-int/2addr v12, v11
+
+    invoke-virtual {v1, v9, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    goto :goto_6
+
+    :cond_5
+    move-object v1, v0
+
+    :goto_6
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+
+    move-result v1
+
+    const-string v11, "height"
+
+    invoke-static {p0, p1, v11}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+
+    move-result v11
+
+    if-eq v11, v2, :cond_7
+
+    invoke-interface {p1, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    goto :goto_7
+
+    :cond_6
+    move v3, v8
+
+    :goto_7
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr v0, v3
+
+    invoke-virtual {p1, v9, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v9
+
+    new-instance v3, Lone/me/sdk/richvector/internal/element/Shape;
+
+    const/16 v11, 0x40
+
+    const/4 v12, 0x0
+
+    const/4 v10, 0x0
+
+    move v8, v1
+
+    invoke-direct/range {v3 .. v12}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILfi4;)V
+
+    return-object v3
 .end method

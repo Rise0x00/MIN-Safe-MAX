@@ -1,82 +1,83 @@
 .class public final Lr52;
-.super Lm3f;
+.super Lmw6;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lu52;
+.field public b:[B
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lu52;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lr52;->Y:Lu52;
+    iput p1, p0, Lr52;->a:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Laub;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lr52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lr52;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lr52;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lr52;
-
-    iget-object v1, p0, Lr52;->Y:Lu52;
-
-    invoke-direct {v0, v1, p2}, Lr52;-><init>(Lu52;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lr52;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()[B
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Lr52;->a:I
 
-    iget-object p1, p0, Lr52;->X:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Laub;
+    iget-object v0, p0, Lr52;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lr52;->Y:Lu52;
+    check-cast v0, [B
 
-    iget-object v0, v0, Lu52;->w0:Ljb5;
+    return-object v0
 
-    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object v0, p0, Lr52;->b:[B
 
-    sget-object p1, Loyf;->a:Loyf;
+    return-object v0
 
-    return-object p1
+    :pswitch_1
+    iget-object v0, p0, Lr52;->b:[B
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Lgxf;
+    .locals 1
+
+    iget v0, p0, Lr52;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lgxf;->s0:Lgxf;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lgxf;->o:Lgxf;
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lgxf;->Y:Lgxf;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

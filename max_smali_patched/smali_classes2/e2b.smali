@@ -1,80 +1,244 @@
 .class public final Le2b;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+.field public final synthetic b:Lf2b;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
+.method public synthetic constructor <init>(Lf2b;I)V
     .locals 0
 
-    iput-object p2, p0, Le2b;->Y:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+    iput p2, p0, Le2b;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Le2b;->b:Lf2b;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Le2b;->a:I
 
-    invoke-virtual {p0, p1, p2}, Le2b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget p1, p0, Le2b;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Le2b;->b:Lf2b;
+
+    iget-object v0, p1, Lf2b;->B0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatEditText;
+
+    iget-object v1, p1, Lf2b;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+
+    sget-object v0, Ld2b;->c:Ld2b;
+
+    iput-object v0, p1, Lf2b;->z0:Ld2b;
+
+    iget-object p1, p1, Lf2b;->t0:Lc2b;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lc2b;->k()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Le2b;->b:Lf2b;
+
+    iget-object p1, p1, Lf2b;->B0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Le2b;
+    check-cast p1, Landroid/view/View;
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-static {p1}, Ldci;->e(Landroid/view/View;)V
 
-    invoke-virtual {p1, p2}, Le2b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
-    return-object p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    new-instance v0, Le2b;
+    iget p1, p0, Le2b;->a:I
 
-    iget-object v1, p0, Le2b;->Y:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
-
-    invoke-direct {v0, p2, v1}, Le2b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
-
-    iput-object p1, v0, Le2b;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 5
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget p1, p0, Le2b;->a:I
 
-    iget-object p1, p0, Le2b;->X:Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p1, Ljava/util/List;
+    iget-object p1, p0, Le2b;->b:Lf2b;
 
-    iget-object v0, p0, Le2b;->Y:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
+    iget-object v0, p1, Lf2b;->B0:Ljava/lang/Object;
 
-    iget-object v0, v0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Ll1e;
+    iget-object v1, p1, Lf2b;->D0:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+    invoke-interface {v1}, Lru7;->e()Z
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result v2
 
-    return-object p1
+    const/16 v3, 0x8
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    iget-object v1, p1, Lf2b;->C0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lru7;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    iget-object v1, p1, Lf2b;->A0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, p1, Lf2b;->E0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-virtual {v4}, Landroidx/appcompat/widget/AppCompatEditText;->getText()Landroid/text/Editable;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v2
+
+    :cond_3
+    :goto_0
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object v0, Ld2b;->d:Ld2b;
+
+    iput-object v0, p1, Lf2b;->z0:Ld2b;
+
+    :pswitch_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

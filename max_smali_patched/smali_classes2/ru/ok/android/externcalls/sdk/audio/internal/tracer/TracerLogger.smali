@@ -22,7 +22,7 @@
         "",
         "tag",
         "message",
-        "Loyf;",
+        "Lybg;",
         "v",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",

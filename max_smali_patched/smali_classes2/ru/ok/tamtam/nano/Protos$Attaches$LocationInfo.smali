@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
-.super Lg79;
+.super Lud9;
 .source "SourceFile"
 
 
@@ -38,7 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    invoke-direct {p0}, Lud9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->clear()Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
@@ -52,7 +52,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lfe7;->b:Ljava/lang/Object;
+    sget-object v0, Lqj7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -94,7 +94,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+.method public static parseFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -107,7 +107,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
 
     move-result-object p0
 
@@ -127,7 +127,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;-><init>()V
 
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
 
     move-result-object p0
 
@@ -163,7 +163,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lg79;->cachedSize:I
+    iput v0, p0, Lud9;->cachedSize:I
 
     return-object p0
 .end method
@@ -189,7 +189,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Le83;->c(I)I
+    invoke-static {v0}, Lca3;->c(I)I
 
     move-result v0
 
@@ -215,7 +215,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1}, Le83;->c(I)I
+    invoke-static {v1}, Lca3;->c(I)I
 
     move-result v1
 
@@ -232,7 +232,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v4, v5}, Le83;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lca3;->h(IJ)I
 
     move-result v1
 
@@ -255,7 +255,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1}, Le83;->c(I)I
+    invoke-static {v1}, Lca3;->c(I)I
 
     move-result v1
 
@@ -278,7 +278,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1}, Le83;->e(I)I
+    invoke-static {v1}, Lca3;->e(I)I
 
     move-result v1
 
@@ -299,7 +299,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {v1}, Le83;->e(I)I
+    invoke-static {v1}, Lca3;->e(I)I
 
     move-result v1
 
@@ -320,7 +320,7 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v1}, Le83;->e(I)I
+    invoke-static {v1}, Lca3;->e(I)I
 
     move-result v1
 
@@ -332,23 +332,7 @@
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Ld83;)Lg79;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+.method public mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -359,7 +343,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
+    invoke-virtual {p1}, Lba3;->s()I
 
     move-result v0
 
@@ -394,7 +378,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
 
     move-result v0
 
@@ -404,7 +388,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Ld83;->i()F
+    invoke-virtual {p1}, Lba3;->i()F
 
     move-result v0
 
@@ -414,7 +398,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Ld83;->i()F
+    invoke-virtual {p1}, Lba3;->i()F
 
     move-result v0
 
@@ -424,7 +408,7 @@
 
     .line 6
     :cond_3
-    invoke-virtual {p1}, Ld83;->i()F
+    invoke-virtual {p1}, Lba3;->i()F
 
     move-result v0
 
@@ -434,7 +418,7 @@
 
     .line 7
     :cond_4
-    invoke-virtual {p1}, Ld83;->h()D
+    invoke-virtual {p1}, Lba3;->h()D
 
     move-result-wide v0
 
@@ -444,7 +428,7 @@
 
     .line 8
     :cond_5
-    invoke-virtual {p1}, Ld83;->q()J
+    invoke-virtual {p1}, Lba3;->q()J
 
     move-result-wide v0
 
@@ -455,7 +439,7 @@
 
     .line 10
     :cond_6
-    invoke-virtual {p1}, Ld83;->h()D
+    invoke-virtual {p1}, Lba3;->h()D
 
     move-result-wide v0
 
@@ -465,7 +449,7 @@
 
     .line 11
     :cond_7
-    invoke-virtual {p1}, Ld83;->h()D
+    invoke-virtual {p1}, Lba3;->h()D
 
     move-result-wide v0
 
@@ -478,7 +462,23 @@
     return-object p0
 .end method
 
-.method public writeTo(Le83;)V
+.method public bridge synthetic mergeFrom(Lba3;)Lud9;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->mergeFrom(Lba3;)Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public writeTo(Lca3;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -506,7 +506,7 @@
 
     iget-wide v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->latitude:D
 
-    invoke-virtual {p1, v0, v4, v5}, Le83;->t(ID)V
+    invoke-virtual {p1, v0, v4, v5}, Lca3;->t(ID)V
 
     :cond_0
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->longitude:D
@@ -527,7 +527,7 @@
 
     iget-wide v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->longitude:D
 
-    invoke-virtual {p1, v0, v4, v5}, Le83;->t(ID)V
+    invoke-virtual {p1, v0, v4, v5}, Lca3;->t(ID)V
 
     :cond_1
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->time:J
@@ -540,7 +540,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lca3;->x(IJ)V
 
     :cond_2
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->altitude:D
@@ -561,7 +561,7 @@
 
     iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->altitude:D
 
-    invoke-virtual {p1, v0, v1, v2}, Le83;->t(ID)V
+    invoke-virtual {p1, v0, v1, v2}, Lca3;->t(ID)V
 
     :cond_3
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->accuracy:F
@@ -582,7 +582,7 @@
 
     iget v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->accuracy:F
 
-    invoke-virtual {p1, v0, v2}, Le83;->v(IF)V
+    invoke-virtual {p1, v0, v2}, Lca3;->v(IF)V
 
     :cond_4
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->bearing:F
@@ -601,7 +601,7 @@
 
     iget v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->bearing:F
 
-    invoke-virtual {p1, v0, v2}, Le83;->v(IF)V
+    invoke-virtual {p1, v0, v2}, Lca3;->v(IF)V
 
     :cond_5
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->speed:F
@@ -620,7 +620,7 @@
 
     iget v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$LocationInfo;->speed:F
 
-    invoke-virtual {p1, v0, v1}, Le83;->v(IF)V
+    invoke-virtual {p1, v0, v1}, Lca3;->v(IF)V
 
     :cond_6
     return-void

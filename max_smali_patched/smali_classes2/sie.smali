@@ -1,86 +1,167 @@
-.class public final Lsie;
-.super Lxie;
+.class public final synthetic Lsie;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqi6;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sharedata/ShareDataPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput p2, p0, Lsie;->a:I
 
-    invoke-direct {p0, p1, p2, v0}, Lxie;-><init>(JI)V
+    iput-object p1, p0, Lsie;->b:Lone/me/sharedata/ShareDataPickerScreen;
 
-    iput-wide p1, p0, Lsie;->c:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lsie;->a:I
+
+    sget-object v1, Lybg;->a:Lybg;
+
+    iget-object v2, p0, Lsie;->b:Lone/me/sharedata/ShareDataPickerScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/sharedata/ShareDataPickerScreen;->I0:[Les7;
+
+    invoke-virtual {v2}, Lc24;->getOnBackPressedDispatcher()Lsma;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lsma;->d()V
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->I0:[Les7;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsie;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsie;
-
-    iget-wide v3, p0, Lsie;->c:J
-
-    iget-wide v5, p1, Lsie;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lsie;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ChannelId(channelId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lsie;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Llvi;->a(I)Lx04;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {v0, p1}, Lx04;->j(Landroid/view/View;)Lx04;
+
+    move-result-object p1
+
+    iget-boolean v0, v2, Lone/me/sharedata/ShareDataPickerScreen;->G0:Z
+
+    if-eqz v0, :cond_1
+
+    new-instance v3, La14;
+
+    sget v4, Lw2b;->h:I
+
+    sget v0, Lx2b;->g:I
+
+    new-instance v5, Lirf;
+
+    invoke-direct {v5, v0}, Lirf;-><init>(I)V
+
+    sget v0, Lyjd;->p1:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    invoke-direct/range {v3 .. v8}, La14;-><init>(ILnrf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, La14;
+
+    sget v4, Lw2b;->i:I
+
+    sget v0, Lx2b;->h:I
+
+    new-instance v5, Lirf;
+
+    invoke-direct {v5, v0}, Lirf;-><init>(I)V
+
+    sget v0, Lyjd;->o1:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    invoke-direct/range {v3 .. v8}, La14;-><init>(ILnrf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {p1, v0}, Lx04;->e(Ljava/util/Collection;)Lx04;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lx04;->b()Lx04;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lx04;->build()Ly04;
+
+    move-result-object p1
+
+    invoke-interface {p1, v2}, Ly04;->t(Lone/me/sdk/arch/Widget;)V
+
+    return-object v1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->I0:[Les7;
+
+    invoke-virtual {v2, p1}, Lone/me/sharedata/ShareDataPickerScreen;->K0(Z)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

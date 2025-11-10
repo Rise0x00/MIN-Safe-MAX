@@ -4,50 +4,70 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Lca0;
+.field public final b:D
+
+.field public final c:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lca0;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Ljava/util/HashSet;
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x4
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    return-void
+.end method
+
+.method public constructor <init>(IDLjava/lang/Throwable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput p1, p0, Lk90;->a:I
 
-    iput-object p1, p0, Lk90;->a:Ljava/lang/String;
+    iput-wide p2, p0, Lk90;->b:D
 
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lk90;->b:Lca0;
+    iput-object p4, p0, Lk90;->c:Ljava/lang/Throwable;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraConfigId"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraIdString"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 8
 
     const/4 v0, 0x1
 
@@ -60,44 +80,60 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     check-cast p1, Lk90;
 
-    iget-object v1, p0, Lk90;->a:Ljava/lang/String;
+    iget v1, p1, Lk90;->a:I
 
-    iget-object v3, p1, Lk90;->a:Ljava/lang/String;
+    iget-object v3, p1, Lk90;->c:Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v4, p0, Lk90;->a:I
 
-    move-result v1
+    if-ne v4, v1, :cond_2
 
-    if-eqz v1, :cond_1
+    iget-wide v4, p0, Lk90;->b:D
 
-    iget-object v1, p0, Lk90;->b:Lca0;
+    invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    iget-object p1, p1, Lk90;->b:Lca0;
+    move-result-wide v4
 
-    invoke-virtual {v1, p1}, Lca0;->equals(Ljava/lang/Object;)Z
+    iget-wide v6, p1, Lk90;->b:D
+
+    invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v6
+
+    cmp-long p1, v4, v6
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lk90;->c:Ljava/lang/Throwable;
+
+    if-nez p1, :cond_1
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
+    :goto_0
     return v0
 
-    :cond_1
+    :cond_2
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 7
 
-    iget-object v0, p0, Lk90;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lk90;->a:I
 
     const v1, 0xf4243
 
@@ -105,35 +141,73 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lk90;->b:Lca0;
+    iget-wide v2, p0, Lk90;->b:D
 
-    invoke-virtual {v1}, Lca0;->hashCode()I
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v4
+
+    const/16 v6, 0x20
+
+    ushr-long/2addr v4, v6
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v2
+
+    xor-long/2addr v2, v4
+
+    long-to-int v2, v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lk90;->c:Ljava/lang/Throwable;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CameraId{cameraIdString="
+    const-string v1, "AudioStats{audioState="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lk90;->a:Ljava/lang/String;
+    iget v1, p0, Lk90;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioAmplitudeInternal="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", cameraConfigId="
+    iget-wide v1, p0, Lk90;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorCause="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lk90;->b:Lca0;
+    iget-object v1, p0, Lk90;->c:Ljava/lang/Throwable;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

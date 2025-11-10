@@ -1,211 +1,34 @@
-.class public final Lopc;
+.class public abstract Lopc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d26
 
-# instance fields
-.field public final synthetic X:Lmpc;
+.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d27
 
-.field public final synthetic Y:Z
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d28
 
-.field public final synthetic a:Landroid/view/View;
+.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d29
 
-.field public final synthetic b:Lqpc;
+.field public static webapp_root_content_container:I = 0x7f0a0d2a
 
-.field public final synthetic c:Lnxc;
+.field public static webapp_root_error_container:I = 0x7f0a0d2b
 
-.field public final synthetic o:J
+.field public static webapp_root_frame:I = 0x7f0a0d2c
 
+.field public static webapp_root_progressbar:I = 0x7f0a0d2d
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;Lqpc;Lnxc;JLmpc;Z)V
-    .locals 0
+.field public static webapp_root_settings_header:I = 0x7f0a0d2e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d2f
 
-    iput-object p1, p0, Lopc;->a:Landroid/view/View;
+.field public static webapp_root_settings_switcher:I = 0x7f0a0d30
 
-    iput-object p2, p0, Lopc;->b:Lqpc;
+.field public static webapp_root_settings_toolbar:I = 0x7f0a0d31
 
-    iput-object p3, p0, Lopc;->c:Lnxc;
+.field public static webapp_root_settings_transition:I = 0x7f0a0d32
 
-    iput-wide p4, p0, Lopc;->o:J
+.field public static webapp_root_toolbar:I = 0x7f0a0d33
 
-    iput-object p6, p0, Lopc;->X:Lmpc;
-
-    iput-boolean p7, p0, Lopc;->Y:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 9
-
-    iget-object v0, p0, Lopc;->b:Lqpc;
-
-    iget-object v1, p0, Lopc;->c:Lnxc;
-
-    invoke-virtual {v1}, Lnxc;->h()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lqpc;->e(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v0, p0, Lopc;->b:Lqpc;
-
-    iget-object v0, v0, Lqpc;->f:Ljava/util/LinkedList;
-
-    iget-wide v1, p0, Lopc;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lopc;->b:Lqpc;
-
-    iget-object v0, v0, Lqpc;->e:Ljava/util/LinkedHashSet;
-
-    iget-object v1, p0, Lopc;->X:Lmpc;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lopc;->c:Lnxc;
-
-    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
-
-    iget-object v1, p0, Lopc;->X:Lmpc;
-
-    iget-object v1, v1, Lmpc;->c:Lkoc;
-
-    iget-object v1, v1, Lkoc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lopc;->b:Lqpc;
-
-    iget-object v1, v1, Lqpc;->c:Lzf7;
-
-    iget-object v1, v1, Lzf7;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0, v1}, Lcng;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v3, p0, Lopc;->b:Lqpc;
-
-    iget-object v3, v3, Lqpc;->d:Ljava/lang/String;
-
-    sget-object v4, Lox9;->j:Lqpa;
-
-    if-nez v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v5, Ly38;->o:Ly38;
-
-    invoke-virtual {v4, v5}, Lqpa;->b(Ly38;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    iget-boolean v6, p0, Lopc;->Y:Z
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "Play pending reaction effect, by place:"
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, ", onCreation:"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v5, v3, v6, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_1
-    iget-object v2, p0, Lopc;->b:Lqpc;
-
-    iget-object v3, p0, Lopc;->X:Lmpc;
-
-    iget-object v4, v3, Lmpc;->b:Ljava/lang/String;
-
-    iget-wide v5, v3, Lmpc;->a:J
-
-    invoke-static {v2, v4, v5, v6, v1}, Lqpc;->c(Lqpc;Ljava/lang/String;JLandroid/graphics/Rect;)V
-
-    iget-boolean v1, p0, Lopc;->Y:Z
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, p0, Lopc;->c:Lnxc;
-
-    iget-object v1, v1, Lnxc;->a:Landroid/view/View;
-
-    new-instance v2, Lppc;
-
-    iget-object v3, p0, Lopc;->b:Lqpc;
-
-    iget-wide v4, p0, Lopc;->o:J
-
-    invoke-direct {v2, v3, v0, v4, v5}, Lppc;-><init>(Lqpc;Landroid/view/View;J)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
-    :cond_5
-    :goto_2
-    return-void
-.end method
+.field public static webapp_root_webview:I = 0x7f0a0d34

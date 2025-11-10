@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Lfi4;)V
     .locals 0
 
     .line 1
@@ -61,7 +61,7 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;
 
-    sget-object v1, Ll75;->a:Ll75;
+    sget-object v1, Lxa5;->a:Lxa5;
 
     invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;-><init>(Ljava/util/Set;)V
 

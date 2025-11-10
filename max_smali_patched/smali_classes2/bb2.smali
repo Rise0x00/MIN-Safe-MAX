@@ -1,80 +1,111 @@
-.class public final synthetic Lbb2;
-.super Ljava/lang/Object;
+.class public final Lbb2;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Lej6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lub2;
 
-.field public final synthetic b:Lub2;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;JJI)V
+.method public constructor <init>(Lub2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p6, p0, Lbb2;->a:I
+    iput-object p1, p0, Lbb2;->X:Lub2;
 
-    iput-object p1, p0, Lbb2;->b:Lub2;
+    const/4 p1, 0x2
 
-    iput-wide p2, p0, Lbb2;->c:J
-
-    iput-wide p4, p0, Lbb2;->d:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lbb2;->a:I
+    check-cast p1, Le72;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lbb2;->b:Lub2;
+    invoke-virtual {p0, p1, p2}, Lbb2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, p0, Lbb2;->c:J
+    move-result-object p1
 
-    invoke-virtual {v1, v2, v3}, Lub2;->A(J)Lqc2;
+    check-cast p1, Lbb2;
 
-    move-result-object v0
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-wide v2, v0, Lyi0;->a:J
+    invoke-virtual {p1, p2}, Lbb2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v4, v0, Lqc2;->b:Lpc2;
+    return-object p2
+.end method
 
-    iget-wide v5, p0, Lbb2;->d:J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual/range {v1 .. v6}, Lub2;->i0(JLpc2;J)V
+    new-instance v0, Lbb2;
 
-    return-void
+    iget-object v1, p0, Lbb2;->X:Lub2;
 
-    :pswitch_0
-    iget-wide v0, p0, Lbb2;->c:J
+    invoke-direct {v0, v1, p2}, Lbb2;-><init>(Lub2;Lkotlin/coroutines/Continuation;)V
 
-    iget-wide v2, p0, Lbb2;->d:J
+    iput-object p1, v0, Lbb2;->o:Ljava/lang/Object;
 
-    iget-object v4, p0, Lbb2;->b:Lub2;
+    return-object v0
+.end method
 
-    invoke-virtual {v4, v0, v1, v2, v3}, Lub2;->h0(JJ)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-void
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    nop
+    iget-object p1, p0, Lbb2;->o:Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast p1, Le72;
+
+    iget-object v0, p0, Lbb2;->X:Lub2;
+
+    iget-object v1, v0, Lp62;->i:La1f;
+
+    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le72;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v2, Le72;->b:Ld72;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    sget-object v3, Ld72;->b:Ld72;
+
+    if-ne v2, v3, :cond_1
+
+    invoke-virtual {v1, p1}, La1f;->setValue(Ljava/lang/Object;)V
+
+    :cond_1
+    sget-object p1, Lub2;->B:[Les7;
+
+    invoke-virtual {v0}, Lub2;->u()Lo62;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lp62;->d(Lo62;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

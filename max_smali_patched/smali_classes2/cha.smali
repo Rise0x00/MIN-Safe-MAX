@@ -1,61 +1,21 @@
 .class public final Lcha;
-.super Lfha;
+.super Leha;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lcha;
+# instance fields
+.field public final d:Lb35;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJJLb35;)V
+    .locals 0
 
-    new-instance v0, Lcha;
+    invoke-direct/range {p0 .. p6}, Leha;-><init>(JJJ)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object p1, p0
 
-    sput-object v0, Lcha;->a:Lcha;
+    iput-object p7, p1, Lcha;->d:Lb35;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lcha;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x21b20048
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Circle"
-
-    return-object v0
 .end method

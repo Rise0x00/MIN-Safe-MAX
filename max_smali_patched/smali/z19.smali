@@ -1,21 +1,11 @@
-.class public abstract Lz19;
+.class public interface abstract Lz19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/PopupWindow;Landroid/transition/Transition;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
-
-    return-void
+# virtual methods
+.method public abstract a()Llvf;
 .end method
 
-.method public static b(Landroid/widget/PopupWindow;Landroid/transition/Transition;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
-
-    return-void
+.method public abstract getUid()Ljava/lang/Object;
 .end method

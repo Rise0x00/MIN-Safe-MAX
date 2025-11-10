@@ -1,129 +1,232 @@
 .class public final Lmh7;
-.super Lsh7;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lgj6;
 
 
 # instance fields
-.field public final Y:Lfk;
+.field public synthetic X:Landroid/widget/TextView;
 
-.field public final Z:Lpue;
+.field public synthetic Y:Lw5b;
+
+.field public final synthetic Z:Lone/me/login/inputphone/InputPhoneScreen;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lfk;Lpue;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/login/inputphone/InputPhoneScreen;Lkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p3, p0, Lmh7;->o:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lmh7;->Z:Lone/me/login/inputphone/InputPhoneScreen;
 
-    invoke-direct {p0, v0, v1}, Lsh7;-><init>(II)V
+    const/4 p1, 0x3
 
-    iput-object p1, p0, Lmh7;->Y:Lfk;
-
-    iput-object p2, p0, Lmh7;->Z:Lpue;
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Lnxc;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-super {p0, p1, p2}, Lsh7;->a(Landroidx/recyclerview/widget/RecyclerView;Lnxc;)V
+    iget v0, p0, Lmh7;->o:I
 
-    instance-of p1, p2, Lkx4;
+    check-cast p1, Landroid/widget/TextView;
 
-    if-eqz p1, :cond_0
+    check-cast p2, Lw5b;
 
-    move-object p1, p2
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lkx4;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lsre;
+    new-instance v0, Lmh7;
 
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
+    iget-object v1, p0, Lmh7;->Z:Lone/me/login/inputphone/InputPhoneScreen;
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    const/4 v2, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v1, p3, v2}, Lmh7;-><init>(Lone/me/login/inputphone/InputPhoneScreen;Lkotlin/coroutines/Continuation;I)V
 
-    const/4 v0, 0x0
+    iput-object p1, v0, Lmh7;->X:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+    iput-object p2, v0, Lmh7;->Y:Lw5b;
 
-    iget-object p1, p0, Lmh7;->Z:Lpue;
+    sget-object p1, Lybg;->a:Lybg;
 
-    invoke-virtual {p1, p2}, Lpue;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lmh7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    return-void
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lmh7;
+
+    iget-object v1, p0, Lmh7;->Z:Lone/me/login/inputphone/InputPhoneScreen;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2}, Lmh7;-><init>(Lone/me/login/inputphone/InputPhoneScreen;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lmh7;->X:Landroid/widget/TextView;
+
+    iput-object p2, v0, Lmh7;->Y:Lw5b;
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    invoke-virtual {v0, p1}, Lmh7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final i(Lnxc;Lnxc;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    invoke-virtual {p1}, Lnxc;->g()I
+    iget v0, p0, Lmh7;->o:I
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
+    iget-object p1, p0, Lmh7;->X:Landroid/widget/TextView;
 
-    invoke-virtual {p2}, Lnxc;->g()I
+    iget-object v0, p0, Lmh7;->Y:Lw5b;
 
-    move-result p2
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v1
 
-    move-result-object p2
+    iget v1, v1, Laqf;->g:I
 
-    iget-object v0, p0, Lmh7;->Y:Lfk;
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v0, p1, p2}, Lfk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lmh7;->Z:Lone/me/login/inputphone/InputPhoneScreen;
 
-    const/4 p1, 0x1
+    sget-object v1, Lone/me/login/inputphone/InputPhoneScreen;->C0:[Les7;
 
-    return p1
-.end method
+    iget-object v1, p1, Lone/me/login/inputphone/InputPhoneScreen;->v0:Ld0d;
 
-.method public final j(Lnxc;I)V
-    .locals 1
+    sget-object v2, Lone/me/login/inputphone/InputPhoneScreen;->C0:[Les7;
 
-    if-eqz p2, :cond_0
+    const/4 v3, 0x5
 
-    instance-of p2, p1, Lkx4;
+    aget-object v2, v2, v3
 
-    if-eqz p2, :cond_0
+    invoke-interface {v1, p1, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
 
-    check-cast p1, Lkx4;
+    move-result-object v1
 
-    check-cast p1, Lsre;
+    check-cast v1, Landroid/widget/TextView;
 
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
+    sget v2, Lwsc;->oneme_login_welcome_terms:I
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {v3, v2}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v2
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    sget v3, Lwsc;->oneme_login_welcome_privacy_policy_clickable_part:I
 
-    move-result-object p2
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    move-result-object v4
 
-    const/high16 v0, 0x41a00000    # 20.0f
+    invoke-static {v4, v3}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
 
-    mul-float/2addr p2, v0
+    move-result-object v3
 
-    invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+    sget v4, Lwsc;->oneme_login_welcome_user_agreement_clickable_part:I
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-static {v5, v4}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Landroid/text/SpannableString;
+
+    invoke-direct {v5, v2}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v6, Lrh7;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v6, v7, p1}, Lrh7;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2, v3, v5, v6, v0}, Lone/me/login/inputphone/InputPhoneScreen;->D0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;Lw5b;)V
+
+    new-instance v3, Lrh7;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v3, v6, p1}, Lrh7;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v2, v4, v5, v3, v0}, Lone/me/login/inputphone/InputPhoneScreen;->D0(Ljava/lang/String;Ljava/lang/String;Landroid/text/SpannableString;Landroid/text/style/ClickableSpan;Lw5b;)V
+
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmh7;->X:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lmh7;->Y:Lw5b;
+
+    iget-object v1, p0, Lmh7;->Z:Lone/me/login/inputphone/InputPhoneScreen;
+
+    sget-object v2, Lone/me/login/inputphone/InputPhoneScreen;->C0:[Les7;
+
+    invoke-virtual {v1}, Lone/me/login/inputphone/InputPhoneScreen;->C0()Lhi7;
+
+    move-result-object v1
+
+    iget-boolean v1, v1, Lhi7;->A0:Z
+
+    invoke-interface {v0}, Lw5b;->getText()Laqf;
+
+    move-result-object v0
+
+    if-eqz v1, :cond_0
+
+    iget v0, v0, Laqf;->b:I
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    iget v0, v0, Laqf;->i:I
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

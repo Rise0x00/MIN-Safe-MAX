@@ -1,130 +1,136 @@
 .class public final Lvv7;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbqd;
 
 
 # instance fields
-.field public final X:Lmoe;
+.field public final b:Landroid/content/Context;
 
-.field public final Y:Ljava/lang/Object;
+.field public final c:Lgfb;
 
-.field public final b:Lmoe;
-
-.field public final c:Lsqc;
-
-.field public final o:Lbp7;
+.field public final d:Ljv7;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Ljava/lang/String;)V
-    .locals 9
+.method public constructor <init>(Landroid/content/Context;Lgfb;Ljv7;)V
+    .locals 0
 
-    invoke-direct {p0}, Lilg;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lqv7;
+    iput-object p1, p0, Lvv7;->b:Landroid/content/Context;
 
-    sget-object v1, Loef;->a:Lnef;
+    iput-object p2, p0, Lvv7;->c:Lgfb;
 
-    const-string v2, ""
+    iput-object p3, p0, Lvv7;->d:Ljv7;
 
-    invoke-direct {v0, v1, v2}, Lqv7;-><init>(Loef;Ljava/lang/String;)V
+    return-void
+.end method
 
-    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
-    move-result-object v0
+# virtual methods
+.method public final a(Lcqd;Ljava/lang/String;)Landroid/net/Uri;
+    .locals 4
 
-    iput-object v0, p0, Lvv7;->b:Lmoe;
+    new-instance v0, Ljava/io/File;
 
-    new-instance v1, Lsqc;
+    sget-object v1, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
-    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object v1, p0, Lvv7;->c:Lsqc;
-
-    iput-object p1, p0, Lvv7;->o:Lbp7;
-
-    invoke-static {v2}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvv7;->X:Lmoe;
-
-    new-instance v1, Lpf7;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v1, v2}, Lpf7;-><init>(I)V
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v1}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-static {v1}, Landroid/os/Environment;->getExternalStoragePublicDirectory(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 
-    iput-object v1, p0, Lvv7;->Y:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    new-instance v1, Lg13;
+    new-instance v2, Ljava/io/File;
 
-    const/4 v2, 0x6
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    invoke-direct {v1, p1, v2}, Lg13;-><init>(Lev5;I)V
+    move-result-object v1
 
-    const-wide/16 v2, 0x12c
+    const-string v3, "MAX"
 
-    invoke-static {v1, v2, v3}, Ltp;->r(Lev5;J)Lev5;
+    invoke-direct {v2, v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
-    new-instance v1, Lwq0;
+    move-result v1
 
-    const/4 v7, 0x4
+    if-nez v1, :cond_1
 
-    const/16 v8, 0x13
+    invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
-    const/4 v2, 0x2
+    move-result v1
 
-    const-class v4, Lvv7;
-
-    const-string v5, "validateText"
-
-    const-string v6, "validateText(Ljava/lang/String;)V"
-
-    move-object v3, p0
-
-    invoke-direct/range {v1 .. v8}, Lwq0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Ljx5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, p1, v1, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, v3, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, p1}, Lpih;->L(Lev5;Le34;)V
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqv7;
-
-    iget-object p1, p1, Lqv7;->b:Loef;
-
-    new-instance v1, Lqv7;
-
-    invoke-direct {v1, p1, p2}, Lqv7;-><init>(Loef;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
 
     :cond_0
-    return-void
+    const/4 v2, 0x0
+
+    :cond_1
+    invoke-direct {v0, v2, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-interface {p1, v0}, Lcqd;->n(Ljava/io/File;)V
+
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lvv7;->b:Landroid/content/Context;
+
+    invoke-static {p2, p1}, Lbqd;->e(Landroid/content/Context;Landroid/net/Uri;)V
+
+    return-object p1
+.end method
+
+.method public final b(Lcqd;Ljava/lang/String;)Landroid/net/Uri;
+    .locals 3
+
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lvv7;->c:Lgfb;
+
+    invoke-virtual {v1}, Lgfb;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, p2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {p1, v0}, Lcqd;->n(Ljava/io/File;)V
+
+    iget-object p1, v1, Lgfb;->a:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, ".provider"
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, v0, p2}, Landroidx/core/content/FileProvider;->d(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Ljv7;
+    .locals 1
+
+    iget-object v0, p0, Lvv7;->d:Ljv7;
+
+    return-object v0
 .end method

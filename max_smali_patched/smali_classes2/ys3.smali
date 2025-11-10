@@ -1,105 +1,73 @@
-.class public final Lys3;
-.super Lm3f;
+.class public final enum Lys3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lys3;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum b:Lys3;
 
-.field public final synthetic Y:Lft3;
+.field public static final synthetic c:[Lys3;
 
 
 # direct methods
-.method public constructor <init>(Lft3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lys3;->Y:Lft3;
+    new-instance v0, Lys3;
 
-    const/4 p1, 0x2
+    const-string v1, "USER_LIST"
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lys3;->a:Lys3;
+
+    new-instance v1, Lys3;
+
+    const-string v2, "EXTERNAL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lys3;->b:Lys3;
+
+    filled-new-array {v0, v1}, [Lys3;
+
+    move-result-object v0
+
+    sput-object v0, Lys3;->c:[Lys3;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lys3;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lys3;
 
-    check-cast p1, Lur3;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lys3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lys3;
 
-    move-result-object p1
-
-    check-cast p1, Lys3;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lys3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lys3;
+    .locals 1
 
-    new-instance v0, Lys3;
+    sget-object v0, Lys3;->c:[Lys3;
 
-    iget-object v1, p0, Lys3;->Y:Lft3;
+    invoke-virtual {v0}, [Lys3;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p2}, Lys3;-><init>(Lft3;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lys3;->X:Ljava/lang/Object;
+    check-cast v0, [Lys3;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lys3;->X:Ljava/lang/Object;
-
-    check-cast p1, Lur3;
-
-    sget-object v0, Lsr3;->a:Lsr3;
-
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iget-object v1, p0, Lys3;->Y:Lft3;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lft3;->b()V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, p1, Ltr3;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v1}, Lft3;->b()V
-
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

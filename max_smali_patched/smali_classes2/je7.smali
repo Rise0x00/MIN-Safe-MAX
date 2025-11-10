@@ -1,73 +1,152 @@
-.class public final enum Lje7;
-.super Ljava/lang/Enum;
+.class public final Lje7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld5c;
 
-# static fields
-.field public static final enum a:Lje7;
 
-.field public static final enum b:Lje7;
-
-.field public static final synthetic c:[Lje7;
+# instance fields
+.field public final a:Lgrf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lgrf;)V
+    .locals 0
 
-    new-instance v0, Lje7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "AUTH"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lje7;->a:Lje7;
-
-    new-instance v1, Lje7;
-
-    const-string v2, "SETTINGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lje7;->b:Lje7;
-
-    filled-new-array {v0, v1}, [Lje7;
-
-    move-result-object v0
-
-    sput-object v0, Lje7;->c:[Lje7;
+    iput-object p1, p0, Lje7;->a:Lgrf;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lje7;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const-class v0, Lje7;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_0
+    instance-of v0, p1, Lje7;
 
-    check-cast p0, Lje7;
+    if-nez v0, :cond_1
 
-    return-object p0
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lje7;
+
+    iget-object v0, p0, Lje7;->a:Lgrf;
+
+    iget-object p1, p1, Lje7;->a:Lgrf;
+
+    invoke-virtual {v0, p1}, Lgrf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static values()[Lje7;
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x40
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Li28;)Z
+    .locals 4
+
+    const/16 v0, 0x40
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Li28;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lje7;->c:[Lje7;
+    iget-object v0, p0, Lje7;->a:Lgrf;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lgrf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0x40
+
+    return v0
+.end method
+
+.method public final q(Li28;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lje7;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "InactiveTimeDeleteProfileItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lje7;->a:Lgrf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lje7;
 
     return-object v0
 .end method

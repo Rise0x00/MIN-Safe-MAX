@@ -1,147 +1,89 @@
-.class public final Lwp;
-.super Lg44;
+.class public abstract Lwp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lwp;
-
-.field public static b:Lbp7;
-
-.field public static final c:Ls5f;
-
-.field public static final d:Ls5f;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;IILandroid/widget/TextView;Landroid/text/TextPaint;Lzp;)Landroid/text/StaticLayout;
     .locals 2
 
-    new-instance v0, Lwp;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
-    sput-object v0, Lwp;->a:Lwp;
+    move-result v1
 
-    new-instance v0, Ll;
+    invoke-static {p0, v0, v1, p5, p2}, Landroid/text/StaticLayout$Builder;->obtain(Ljava/lang/CharSequence;IILandroid/text/TextPaint;I)Landroid/text/StaticLayout$Builder;
 
-    const/4 v1, 0x7
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ll;-><init>(I)V
+    invoke-virtual {p0, p1}, Landroid/text/StaticLayout$Builder;->setAlignment(Landroid/text/Layout$Alignment;)Landroid/text/StaticLayout$Builder;
 
-    new-instance v1, Ls5f;
+    move-result-object p1
 
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingExtra()F
 
-    sput-object v1, Lwp;->c:Ls5f;
+    move-result p2
 
-    new-instance v0, Ll;
+    invoke-virtual {p4}, Landroid/widget/TextView;->getLineSpacingMultiplier()F
 
-    const/16 v1, 0x8
+    move-result p5
 
-    invoke-direct {v0, v1}, Ll;-><init>(I)V
+    invoke-virtual {p1, p2, p5}, Landroid/text/StaticLayout$Builder;->setLineSpacing(FF)Landroid/text/StaticLayout$Builder;
 
-    new-instance v1, Ls5f;
+    move-result-object p1
 
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+    invoke-virtual {p4}, Landroid/widget/TextView;->getIncludeFontPadding()Z
 
-    sput-object v1, Lwp;->d:Ls5f;
+    move-result p2
 
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setIncludePad(Z)Landroid/text/StaticLayout$Builder;
 
+    move-result-object p1
 
-# virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 4
+    invoke-virtual {p4}, Landroid/widget/TextView;->getBreakStrategy()I
 
-    sget-object v0, Lwp;->d:Ls5f;
+    move-result p2
 
-    const/4 v1, 0x0
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setBreakStrategy(I)Landroid/text/StaticLayout$Builder;
 
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p4}, Landroid/widget/TextView;->getHyphenationFrequency()I
 
-    move-result v2
+    move-result p2
 
-    if-nez v2, :cond_0
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setHyphenationFrequency(I)Landroid/text/StaticLayout$Builder;
+
+    move-result-object p1
+
+    const/4 p2, -0x1
+
+    if-ne p3, p2, :cond_0
+
+    const p3, 0x7fffffff
+
+    :cond_0
+    invoke-virtual {p1, p3}, Landroid/text/StaticLayout$Builder;->setMaxLines(I)Landroid/text/StaticLayout$Builder;
+
+    :try_start_0
+    invoke-virtual {p6, p0, p4}, Lzp;->a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    :catch_0
+    const-string p1, "ACTVAutoSizeHelper"
 
-    move-result-object v0
+    const-string p2, "Failed to obtain TextDirectionHeuristic, auto size may be incorrect"
 
-    check-cast v0, Ltmf;
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_3
-
-    invoke-static {v1, p2, p1}, Ltmf;->b(Lp5e;Ljava/lang/Throwable;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
     :goto_0
-    instance-of p1, p2, Ljava/lang/Error;
+    invoke-virtual {p0}, Landroid/text/StaticLayout$Builder;->build()Landroid/text/StaticLayout;
 
-    if-nez p1, :cond_2
+    move-result-object p0
 
-    sget-object p1, Lwp;->b:Lbp7;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lltd;
-
-    if-eqz p1, :cond_3
-
-    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->tracer-non-fatal-crashed-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v2, v3}, Lgjd;->k(Ljava/lang/Enum;Z)Z
-
-    move-result p1
-
-    const/4 v2, 0x1
-
-    if-ne p1, v2, :cond_3
-
-    :cond_2
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltmf;
-
-    if-eqz p1, :cond_3
-
-    invoke-static {v1, p2, v1}, Ltmf;->b(Lp5e;Ljava/lang/Throwable;Ljava/lang/String;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    sget-object v0, Lwp;->c:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lomf;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2}, Lomf;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

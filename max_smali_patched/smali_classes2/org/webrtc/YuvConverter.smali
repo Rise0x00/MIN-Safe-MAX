@@ -335,11 +335,11 @@
 
     invoke-interface {v3}, Lorg/webrtc/VideoFrame$Buffer;->release()V
 
-    new-instance v12, Lfi7;
+    new-instance v12, Lsn7;
 
     const/4 v2, 0x1
 
-    invoke-direct {v12, v2, v4}, Lfi7;-><init>(ILjava/nio/ByteBuffer;)V
+    invoke-direct {v12, v2, v4}, Lsn7;-><init>(ILjava/nio/ByteBuffer;)V
 
     move v9, v1
 

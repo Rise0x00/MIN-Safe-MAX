@@ -1,331 +1,180 @@
 .class public final Lpmb;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lsmb;
 
-.field public final b:I
+.field public final synthetic Y:Lt92;
 
-.field public final c:Landroid/graphics/Paint;
+.field public final synthetic Z:[J
 
-.field public final d:Landroid/graphics/Paint;
-
-.field public final e:Landroid/graphics/Paint;
-
-.field public final f:I
-
-.field public final g:Landroid/graphics/RectF;
-
-.field public h:F
-
-.field public final i:Landroid/graphics/RectF;
-
-.field public final j:Landroid/graphics/RectF;
-
-.field public final k:Landroid/graphics/RectF;
-
-.field public final l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(ILandroid/content/Context;Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;)V
-    .locals 7
+.method public constructor <init>(Lsmb;Lt92;[JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpmb;->X:Lsmb;
 
-    iput-object p3, p0, Lpmb;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    iput-object p2, p0, Lpmb;->Y:Lt92;
 
-    invoke-static {}, Ltq4;->a()Ltq4;
+    iput-object p3, p0, Lpmb;->Z:[J
 
-    move-result-object p3
+    const/4 p1, 0x2
 
-    iget v0, p3, Ltq4;->i:I
-
-    iget v1, p3, Ltq4;->b:I
-
-    iget v2, p3, Ltq4;->a:I
-
-    iput v2, p0, Lpmb;->a:I
-
-    iget p3, p3, Ltq4;->h:I
-
-    iput p3, p0, Lpmb;->b:I
-
-    sget-object v3, Lvaf;->a0:Ls5f;
-
-    invoke-static {p2}, Lnf2;->J(Landroid/content/Context;)Lvaf;
-
-    move-result-object p2
-
-    new-instance v3, Landroid/graphics/Paint;
-
-    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v3, p0, Lpmb;->c:Landroid/graphics/Paint;
-
-    iget v4, p2, Lvaf;->w:I
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iput-object v3, p0, Lpmb;->d:Landroid/graphics/Paint;
-
-    new-instance v3, Landroid/graphics/Paint;
-
-    invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v3, p0, Lpmb;->e:Landroid/graphics/Paint;
-
-    iget p2, p2, Lvaf;->m:I
-
-    const v6, 0x3f19999a    # 0.6f
-
-    invoke-static {p2, v6}, Lyhh;->R(IF)I
-
-    move-result p2
-
-    invoke-virtual {v3, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    sub-int/2addr p1, p3
-
-    iput p1, p0, Lpmb;->f:I
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    neg-int v3, p3
-
-    mul-int/lit8 v3, v3, 0x2
-
-    int-to-float v3, v3
-
-    int-to-float v1, v1
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v4
-
-    add-float/2addr v3, v1
-
-    int-to-float v2, v2
-
-    add-float/2addr v3, v2
-
-    sub-int v4, p1, p3
-
-    int-to-float v4, v4
-
-    mul-int/lit8 v5, p3, 0x2
-
-    int-to-float v5, v5
-
-    add-float/2addr v5, v1
-
-    add-float/2addr v5, v2
-
-    add-int/2addr p3, p1
-
-    add-int/2addr p3, v0
-
-    int-to-float p3, p3
-
-    invoke-direct {p2, v3, v4, v5, p3}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Lpmb;->g:Landroid/graphics/RectF;
-
-    new-instance p3, Landroid/graphics/RectF;
-
-    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v0
-
-    sub-float/2addr v0, v1
-
-    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
-
-    move-result p2
-
-    add-float/2addr p2, v1
-
-    int-to-float p1, p1
-
-    const/high16 v1, -0x3ee00000    # -10.0f
-
-    invoke-direct {p3, v0, v1, p2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p3, p0, Lpmb;->i:Landroid/graphics/RectF;
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    iget v0, p3, Landroid/graphics/RectF;->left:F
-
-    sub-float v1, v0, v2
-
-    const/4 v3, 0x0
-
-    invoke-direct {p2, v1, v3, v0, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Lpmb;->j:Landroid/graphics/RectF;
-
-    new-instance p2, Landroid/graphics/RectF;
-
-    iget p3, p3, Landroid/graphics/RectF;->right:F
-
-    add-float/2addr v2, p3
-
-    invoke-direct {p2, p3, v3, v2, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iput-object p2, p0, Lpmb;->k:Landroid/graphics/RectF;
+    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lpmb;->i:Landroid/graphics/RectF;
+    check-cast p1, Lg54;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lpmb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lpmb;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
+    check-cast p1, Lpmb;
 
-    move-result v0
+    sget-object p2, Lybg;->a:Lybg;
 
-    return v0
+    invoke-virtual {p1, p2}, Lpmb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(Landroid/view/MotionEvent;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    new-instance p1, Lpmb;
 
-    move-result v0
+    iget-object v0, p0, Lpmb;->Y:Lt92;
 
-    iget-object v1, p0, Lpmb;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    iget-object v1, p0, Lpmb;->Z:[J
+
+    iget-object v2, p0, Lpmb;->X:Lsmb;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lpmb;-><init>(Lsmb;Lt92;[JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    iget v0, p0, Lpmb;->o:I
+
+    sget-object v1, Lybg;->a:Lybg;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    const/4 v2, 0x2
+    if-ne v0, v2, :cond_0
 
-    if-eq v0, v2, :cond_0
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    return-void
+    return-object v1
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result p1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget v0, p0, Lpmb;->h:F
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    add-float/2addr p1, v0
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->c(F)F
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lpmb;->c(F)V
-
-    return-void
+    throw p1
 
     :cond_1
-    invoke-virtual {p0}, Lpmb;->a()F
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lsmb;->l:[Les7;
+
+    iget-object p1, p0, Lpmb;->X:Lsmb;
+
+    iget-object v0, p1, Lsmb;->f:Lru7;
+
+    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwo3;
+
+    invoke-interface {v0}, Lwo3;->f()Z
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
+    if-nez v0, :cond_3
 
-    move-result v0
+    iget-object p1, p1, Lsmb;->g:Lake;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    iput v2, p0, Lpmb;->o:I
 
-    move-result p1
+    sget-object v0, Lmmb;->a:Lmmb;
 
-    sub-float/2addr v0, p1
+    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iput v0, p0, Lpmb;->h:F
+    move-result-object p1
 
-    return-void
-.end method
+    sget-object v0, Lh54;->a:Lh54;
 
-.method public final c(F)V
-    .locals 3
+    if-ne p1, v0, :cond_2
 
-    iget-object v0, p0, Lpmb;->l:Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;
+    return-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/messages/media/trim/rangeSeekBar/RangeSeekBarView;->b(F)F
+    :cond_2
+    return-object v1
 
-    move-result p1
+    :cond_3
+    iget-object v0, p1, Lsmb;->i:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iget-object v0, p0, Lpmb;->g:Landroid/graphics/RectF;
+    iget-object v2, p1, Lsmb;->b:Lru7;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v2
 
-    const/high16 v2, 0x40000000    # 2.0f
+    check-cast v2, Lml;
 
-    div-float/2addr v1, v2
+    iget-wide v4, p1, Lsmb;->a:J
 
-    sub-float/2addr p1, v1
+    iget-object p1, p0, Lpmb;->Y:Lt92;
 
-    iget v1, v0, Landroid/graphics/RectF;->top:F
+    iget-object p1, p1, Lt92;->b:Lvd2;
 
-    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
+    iget-wide v6, p1, Lvd2;->a:J
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+    iget-object p1, p0, Lpmb;->Z:[J
 
-    move-result p1
+    invoke-static {p1}, Lft;->A([J)Ljava/util/List;
 
-    iget-object v0, p0, Lpmb;->i:Landroid/graphics/RectF;
+    move-result-object v8
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+    const/4 v9, 0x1
 
-    move-result v1
+    move-object v3, v2
 
-    div-float/2addr v1, v2
+    check-cast v3, Lona;
 
-    sub-float/2addr p1, v1
+    invoke-virtual/range {v3 .. v9}, Lona;->d(JJLjava/util/List;Z)J
 
-    const/4 v1, 0x0
+    move-result-wide v2
 
-    invoke-virtual {v0, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
+    invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    iget p1, v0, Landroid/graphics/RectF;->left:F
-
-    iget v2, p0, Lpmb;->a:I
-
-    int-to-float v2, v2
-
-    sub-float/2addr p1, v2
-
-    iget-object v2, p0, Lpmb;->j:Landroid/graphics/RectF;
-
-    invoke-virtual {v2, p1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
-
-    iget-object p1, p0, Lpmb;->k:Landroid/graphics/RectF;
-
-    iget v0, v0, Landroid/graphics/RectF;->right:F
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
-
-    return-void
+    return-object v1
 .end method

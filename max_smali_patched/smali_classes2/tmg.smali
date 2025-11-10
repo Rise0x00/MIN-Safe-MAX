@@ -1,87 +1,179 @@
-.class public final Ltmg;
-.super Lm3f;
+.class public final synthetic Ltmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lir3;
+.implements Lfj6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Landroid/widget/TextView;
+.field public final synthetic b:Lnmg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lnmg;I)V
     .locals 0
 
-    iput-object p1, p0, Ltmg;->Y:Landroid/widget/TextView;
+    iput p2, p0, Ltmg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltmg;->b:Lnmg;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Luxa;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltmg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltmg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ltmg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public accept(Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Ltmg;
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v1, p0, Ltmg;->Y:Landroid/widget/TextView;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-direct {v0, v1, p2}, Ltmg;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Ltmg;->X:Ljava/lang/Object;
+    const-string v1, "removeFromRepository: failed conversionData = "
 
-    return-object v0
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v1, p0, Ltmg;->b:Lnmg;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Ltmg;->X:Ljava/lang/Object;
-
-    check-cast p1, Luxa;
-
-    iget-object v0, p0, Ltmg;->Y:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "wmg"
 
-    invoke-static {v0, p1}, Lsx9;->i(Ljava/lang/CharSequence;Luxa;)V
+    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Ltmg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Lrmg;
+
+    iget-object p1, p0, Ltmg;->b:Lnmg;
+
+    iget-object v3, p1, Lnmg;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lnmg;->b:Lsmg;
+
+    iget-object v4, p1, Lsmg;->a:Lkhc;
+
+    iget v5, p1, Lsmg;->b:F
+
+    iget v6, p1, Lsmg;->c:F
+
+    iget-boolean v7, p1, Lsmg;->d:Z
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lqmg;
+
+    invoke-direct/range {v1 .. v7}, Lqmg;-><init>(Lrmg;Ljava/lang/String;Lkhc;FFZ)V
+
+    new-instance p1, Lmg3;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Lrmg;
+
+    iget-object v0, p0, Ltmg;->b:Lnmg;
+
+    iget-object v1, v0, Lnmg;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lnmg;->b:Lsmg;
+
+    iget-object v2, v0, Lsmg;->a:Lkhc;
+
+    iget v3, v0, Lsmg;->b:F
+
+    iget v4, v0, Lsmg;->c:F
+
+    iget-boolean v0, v0, Lsmg;->d:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v5, 0x5
+
+    const-string v6, "SELECT * FROM video_conversions WHERE source_uri=? AND quality=? AND start_trim_position=? AND end_trim_position=? AND mute=?"
+
+    invoke-static {v5, v6}, Lfhd;->c(ILjava/lang/String;)Lfhd;
+
+    move-result-object v6
+
+    const/4 v7, 0x1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v6, v7}, Lfhd;->S(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v6, v7, v1}, Lfhd;->f(ILjava/lang/String;)V
+
+    :goto_0
+    iget v1, v2, Lkhc;->b:I
+
+    int-to-long v1, v1
+
+    const/4 v7, 0x2
+
+    invoke-virtual {v6, v7, v1, v2}, Lfhd;->k(IJ)V
+
+    const/4 v1, 0x3
+
+    float-to-double v2, v3
+
+    invoke-virtual {v6, v1, v2, v3}, Lfhd;->g(ID)V
+
+    const/4 v1, 0x4
+
+    float-to-double v2, v4
+
+    invoke-virtual {v6, v1, v2, v3}, Lfhd;->g(ID)V
+
+    int-to-long v0, v0
+
+    invoke-virtual {v6, v5, v0, v1}, Lfhd;->k(IJ)V
+
+    new-instance v0, Lcgd;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p1, v1, v6}, Lcgd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ldk8;
+
+    invoke-direct {p1, v0}, Ldk8;-><init>(Ljava/util/concurrent/Callable;)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

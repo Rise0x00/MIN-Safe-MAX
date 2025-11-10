@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcb7;
+.implements Ldg7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcb7;"
+        "Ldg7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/utils/LoggerInitializer;",
-        "Lcb7;",
-        "Lzu3;",
+        "Ldg7;",
+        "Lvh4;",
         "<init>",
         "()V",
         "tracer-commons_release"
@@ -59,17 +59,17 @@
     .locals 1
 
     :try_start_0
-    instance-of v0, p1, Let6;
+    instance-of v0, p1, Lcx6;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Let6;
+    check-cast p1, Lcx6;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     :cond_0
-    sget-object p1, Lzu3;->y0:Lzu3;
+    sget-object p1, Lvh4;->u0:Lvh4;
 
     return-object p1
 .end method

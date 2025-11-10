@@ -1,76 +1,342 @@
-.class public final Lkda;
-.super Lx2;
+.class public abstract Lkda;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Z
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-.field public final o:Lked;
-
-
 # direct methods
-.method public constructor <init>(Lnda;JLjava/util/concurrent/TimeUnit;Lked;Z)V
+.method public static a(Landroid/app/Notification$Action$Builder;Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    invoke-direct {p0, p1}, Lx2;-><init>(Lnda;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
 
-    iput-wide p2, p0, Lkda;->b:J
+    move-result-object p0
 
-    iput-object p4, p0, Lkda;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p5, p0, Lkda;->o:Lked;
-
-    iput-boolean p6, p0, Lkda;->X:Z
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Action$Builder;Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-# virtual methods
-.method public final p(Lxda;)V
-    .locals 7
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
 
-    new-instance v1, Lksd;
+    move-result-object p0
 
-    invoke-direct {v1, p1}, Lksd;-><init>(Lxda;)V
+    return-object p0
+.end method
 
-    iget-boolean p1, p0, Lkda;->X:Z
+.method public static c(Landroid/app/Notification$Action$Builder;)Landroid/app/Notification$Action;
+    .locals 0
 
-    iget-object v6, p0, Lx2;->a:Lnda;
+    invoke-virtual {p0}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
-    if-eqz p1, :cond_0
+    move-result-object p0
 
-    new-instance v0, Lhda;
+    return-object p0
+.end method
 
-    iget-object v4, p0, Lkda;->c:Ljava/util/concurrent/TimeUnit;
+.method public static d(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
+    .locals 1
 
-    iget-object v5, p0, Lkda;->o:Lked;
+    new-instance v0, Landroid/app/Notification$Action$Builder;
 
-    iget-wide v2, p0, Lkda;->b:J
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    invoke-direct/range {v0 .. v5}, Lhda;-><init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
+    return-object v0
+.end method
 
-    invoke-interface {v6, v0}, Lnda;->a(Lxda;)V
+.method public static e(Ljava/util/ArrayList;I)Lhca;
+    .locals 19
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Landroid/os/Parcelable;",
+            ">;I)",
+            "Lhca;"
+        }
+    .end annotation
 
-    return-void
+    invoke-virtual/range {p0 .. p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Notification$Action;
+
+    invoke-static {v0}, Lica;->g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
+
+    move-result-object v1
+
+    const/16 v2, 0x1d
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    if-nez v1, :cond_0
+
+    move-object v12, v3
+
+    goto :goto_2
 
     :cond_0
-    new-instance v0, Lida;
+    array-length v5, v1
 
-    iget-object v4, p0, Lkda;->c:Ljava/util/concurrent/TimeUnit;
+    new-array v5, v5, [Lp9d;
 
-    iget-object v5, p0, Lkda;->o:Lked;
+    move v6, v4
 
-    iget-wide v2, p0, Lkda;->b:J
+    :goto_0
+    array-length v7, v1
 
-    invoke-direct/range {v0 .. v5}, Ljda;-><init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
+    if-ge v6, v7, :cond_2
 
-    invoke-interface {v6, v0}, Lnda;->a(Lxda;)V
+    aget-object v7, v1, v6
 
-    return-void
+    new-instance v8, Lp9d;
+
+    invoke-static {v7}, Lica;->h(Landroid/app/RemoteInput;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v7}, Lica;->f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
+
+    move-result-object v10
+
+    invoke-static {v7}, Lica;->b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
+
+    move-result-object v11
+
+    invoke-static {v7}, Lica;->a(Landroid/app/RemoteInput;)Z
+
+    move-result v12
+
+    sget v13, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v13, v2, :cond_1
+
+    invoke-static {v7}, Lnca;->c(Landroid/app/RemoteInput;)I
+
+    move-result v13
+
+    goto :goto_1
+
+    :cond_1
+    move v13, v4
+
+    :goto_1
+    invoke-static {v7}, Lica;->d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
+
+    move-result-object v14
+
+    const/4 v15, 0x0
+
+    invoke-direct/range {v8 .. v15}, Lp9d;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
+
+    aput-object v8, v5, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move-object v12, v5
+
+    :goto_2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-static {v0}, Lica;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    const-string v6, "android.support.allowGeneratedReplies"
+
+    invoke-virtual {v5, v6}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-nez v5, :cond_4
+
+    invoke-static {v0}, Llca;->a(Landroid/app/Notification$Action;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move v14, v4
+
+    goto :goto_4
+
+    :cond_4
+    :goto_3
+    move v14, v6
+
+    :goto_4
+    invoke-static {v0}, Lica;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    const-string v7, "android.support.action.showsUserInterface"
+
+    invoke-virtual {v5, v7, v6}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v16
+
+    const/16 v5, 0x1c
+
+    if-lt v1, v5, :cond_5
+
+    invoke-static {v0}, Lmca;->a(Landroid/app/Notification$Action;)I
+
+    move-result v5
+
+    :goto_5
+    move v15, v5
+
+    goto :goto_6
+
+    :cond_5
+    invoke-static {v0}, Lica;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    const-string v6, "android.support.action.semanticAction"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v5
+
+    goto :goto_5
+
+    :goto_6
+    if-lt v1, v2, :cond_6
+
+    invoke-static {v0}, Lnca;->e(Landroid/app/Notification$Action;)Z
+
+    move-result v2
+
+    move/from16 v17, v2
+
+    goto :goto_7
+
+    :cond_6
+    move/from16 v17, v4
+
+    :goto_7
+    const/16 v2, 0x1f
+
+    if-lt v1, v2, :cond_7
+
+    invoke-static {v0}, Loca;->a(Landroid/app/Notification$Action;)Z
+
+    move-result v4
+
+    :cond_7
+    move/from16 v18, v4
+
+    invoke-static {v0}, Lkca;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
+
+    move-result-object v1
+
+    if-nez v1, :cond_9
+
+    iget v1, v0, Landroid/app/Notification$Action;->icon:I
+
+    if-eqz v1, :cond_9
+
+    new-instance v7, Lhca;
+
+    iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
+
+    iget-object v10, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
+
+    invoke-static {v0}, Lica;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+
+    move-result-object v11
+
+    if-nez v1, :cond_8
+
+    :goto_8
+    move-object v8, v3
+
+    goto :goto_9
+
+    :cond_8
+    const-string v0, ""
+
+    invoke-static {v3, v0, v1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
+
+    move-result-object v3
+
+    goto :goto_8
+
+    :goto_9
+    const/4 v13, 0x0
+
+    invoke-direct/range {v7 .. v18}, Lhca;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lp9d;[Lp9d;ZIZZZ)V
+
+    return-object v7
+
+    :cond_9
+    invoke-static {v0}, Lkca;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
+
+    move-result-object v1
+
+    if-nez v1, :cond_a
+
+    :goto_a
+    move-object v8, v3
+
+    goto :goto_b
+
+    :cond_a
+    invoke-static {v0}, Lkca;->a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
+
+    move-result-object v1
+
+    sget-object v2, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {v1}, Lf77;->d(Ljava/lang/Object;)I
+
+    move-result v2
+
+    const/4 v4, 0x2
+
+    if-ne v2, v4, :cond_b
+
+    invoke-static {v1}, Lf77;->b(Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    goto :goto_a
+
+    :cond_b
+    invoke-static {v1}, Lf77;->a(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
+
+    move-result-object v3
+
+    goto :goto_a
+
+    :goto_b
+    new-instance v7, Lhca;
+
+    iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
+
+    iget-object v10, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
+
+    invoke-static {v0}, Lica;->c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+
+    move-result-object v11
+
+    const/4 v13, 0x0
+
+    invoke-direct/range {v7 .. v18}, Lhca;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lp9d;[Lp9d;ZIZZZ)V
+
+    return-object v7
 .end method

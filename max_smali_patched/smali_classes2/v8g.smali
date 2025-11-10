@@ -1,170 +1,85 @@
 .class public final Lv8g;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-.field public final b:Lb9g;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbjb;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lv8g;->X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    iget-object v0, p1, Lbjb;->b:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lv8g;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lbjb;->c:Ljava/lang/Object;
-
-    check-cast p1, Lb9g;
-
-    iput-object p1, p0, Lv8g;->b:Lb9g;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lv8g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_5
-
-    const-class v2, Lv8g;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
     check-cast p1, Lv8g;
 
-    iget-object v2, p1, Lv8g;->b:Lb9g;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-object p1, p1, Lv8g;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lv8g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, p0, Lv8g;->a:Ljava/lang/String;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p1, p0, Lv8g;->b:Lb9g;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v2}, Lb9g;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lv8g;->a:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lv8g;->b:Lb9g;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Lb9g;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lv8g;
 
-    const-string v1, "VideoConversionData{sourceUri=\'"
+    iget-object v1, p0, Lv8g;->X:Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Lv8g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/onboarding/TwoFAOnboardingScreen;)V
 
-    iget-object v1, p0, Lv8g;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', convertOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lv8g;->b:Lb9g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lv8g;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lv8g;->o:Ljava/lang/Object;
+
+    check-cast p1, La5a;
+
+    instance-of v0, p1, Lpf4;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lm8g;->c:Lm8g;
+
+    check-cast p1, Lpf4;
+
+    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
+
+    :cond_0
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

@@ -1,97 +1,32 @@
-.class public final synthetic Lspc;
+.class public abstract Lspc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# instance fields
-.field public final synthetic a:Lkpc;
+# static fields
+.field public static one_chat_react_default_react_anim_view:I = 0x7f0a05e1
 
-.field public final synthetic b:Landroid/view/ViewGroup;
+.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a05e2
 
-.field public final synthetic c:Lxe6;
+.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a05e3
 
+.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a05e4
 
-# direct methods
-.method public synthetic constructor <init>(Lkpc;Landroid/view/ViewGroup;Lxe6;)V
-    .locals 0
+.field public static one_chat_react_panel_layout:I = 0x7f0a05e5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static one_chat_reactions_expand_view_type:I = 0x7f0a05e6
 
-    iput-object p1, p0, Lspc;->a:Lkpc;
+.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a05e7
 
-    iput-object p2, p0, Lspc;->b:Landroid/view/ViewGroup;
+.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a05e8
 
-    iput-object p3, p0, Lspc;->c:Lxe6;
+.field public static onechat_react_badge_container:I = 0x7f0a05ea
 
-    return-void
-.end method
+.field public static onechat_react_bubble:I = 0x7f0a05eb
 
+.field public static onechat_react_bubble_counter:I = 0x7f0a05ec
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.field public static onechat_react_bubble_counter_container:I = 0x7f0a05ed
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+.field public static onechat_react_message_reaction_bubble:I = 0x7f0a05ee
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lspc;->a:Lkpc;
-
-    iget-object v1, v1, Lkpc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    if-eqz v2, :cond_2
-
-    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v1, p0, Lspc;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v0, p0, Lspc;->c:Lxe6;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public static tag_reaction_effects_view:I = 0x7f0a0bd9

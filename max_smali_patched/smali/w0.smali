@@ -1,43 +1,16 @@
 .class public final Lw0;
-.super Ljava/lang/Object;
+.super Ljj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lw0;
-
-
-# instance fields
-.field public final a:Ljava/lang/Runnable;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public c:Lw0;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lw0;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Lw0;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    sput-object v0, Lw0;->d:Lw0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+# virtual methods
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p3, :cond_0
 
-    iput-object p1, p0, Lw0;->a:Ljava/lang/Runnable;
+    invoke-interface {p3}, Landroid/graphics/drawable/Animatable;->start()V
 
-    iput-object p2, p0, Lw0;->b:Ljava/util/concurrent/Executor;
-
+    :cond_0
     return-void
 .end method

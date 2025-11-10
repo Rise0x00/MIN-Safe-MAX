@@ -1,162 +1,57 @@
 .class public final Lp1a;
-.super Lz39;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X0:Lbk6;
+.field public final a:I
 
-.field public Y0:Lkbh;
+.field public final b:Ljava/nio/ByteBuffer;
+
+.field public final c:Landroid/media/MediaCodec$BufferInfo;
 
 
-# virtual methods
-.method public final M(Lone/me/messages/list/loader/MessageModel;)V
-    .locals 3
+# direct methods
+.method public constructor <init>(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    .locals 6
 
-    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Luy;->b:Lvz;
+    iput p1, p0, Lp1a;->a:I
 
-    instance-of v0, p1, Lbk6;
+    invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
-    const/4 v1, 0x0
+    move-result p1
 
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lbk6;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lp1a;->X0:Lbk6;
-
-    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
-
-    check-cast v0, Lo1a;
-
-    invoke-virtual {v0, p1}, Lo1a;->a(Lbk6;)V
-
-    iget-object v2, p0, Lp1a;->Y0:Lkbh;
-
-    if-eqz v2, :cond_2
-
-    new-instance v1, Lx9;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, p0, v2, p1}, Lx9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Lt16;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {p1, v2, v1}, Lt16;-><init>(ILjava/lang/Object;)V
-
-    move-object v1, p1
-
-    :cond_2
-    invoke-virtual {v0, v1}, Lo1a;->setExternalMapButtonClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    sget v1, Loqa;->Z0:I
+    iput-object p1, p0, Lp1a;->b:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    move-result-object p1
+    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
 
-    invoke-virtual {v0, p1}, Lo1a;->setExternalMapButtonText(Ljava/lang/CharSequence;)V
+    move-result p2
 
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-.method public final N(Lvs0;)V
-    .locals 4
+    new-instance v0, Landroid/media/MediaCodec$BufferInfo;
 
-    iget-object v0, p0, Lp1a;->X0:Lbk6;
+    invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lp1a;->c:Landroid/media/MediaCodec$BufferInfo;
 
-    if-eqz v0, :cond_0
+    iget v1, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
-    move-object v2, v1
+    iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    check-cast v2, Lo1a;
+    iget-wide v3, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    invoke-virtual {v2, v0}, Lo1a;->a(Lbk6;)V
+    iget v5, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
-    :cond_0
-    check-cast v1, Lo1a;
-
-    iget-object v0, v1, Lo1a;->J0:Laa4;
-
-    iget-object v2, p1, Lvs0;->d:Lys0;
-
-    iget v3, v2, Lys0;->m:I
-
-    invoke-virtual {v0, v3}, Laa4;->setTextColor$message_list_release(I)V
-
-    invoke-virtual {v0, v3}, Laa4;->setDateViewStatusColor(I)V
-
-    iget-object v0, v1, Lo1a;->H0:Lpia;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v1, v2, Lys0;->i:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v1, v0, Lpia;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/graphics/drawable/GradientDrawable;
-
-    iget-object v2, p1, Lvs0;->a:Los0;
-
-    iget v2, v2, Los0;->m:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    const/4 v2, 0x1
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    iget-object p1, p1, Lvs0;->c:Lxs0;
-
-    iget p1, p1, Lxs0;->b:I
-
-    invoke-virtual {v1, v2, p1}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
     return-void
 .end method

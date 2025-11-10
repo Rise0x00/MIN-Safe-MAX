@@ -4,20 +4,24 @@
 
 
 # instance fields
-.field public final a:Lmc3;
+.field public final a:I
 
 .field public final b:I
 
+.field public final c:I
+
 
 # direct methods
-.method public constructor <init>(Lmc3;I)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnc3;->a:Lmc3;
+    iput p1, p0, Lnc3;->a:I
 
     iput p2, p0, Lnc3;->b:I
+
+    iput p3, p0, Lnc3;->c:I
 
     return-void
 .end method
@@ -41,31 +45,38 @@
     :cond_1
     check-cast p1, Lnc3;
 
-    iget-object v0, p0, Lnc3;->a:Lmc3;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p1, Lnc3;->a:Lmc3;
+    iget v0, p0, Lnc3;->a:I
 
-    invoke-virtual {v0, v1}, Lmc3;->equals(Ljava/lang/Object;)Z
+    iget v1, p1, Lnc3;->a:I
 
-    move-result v0
-
-    if-nez v0, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
     iget v0, p0, Lnc3;->b:I
 
-    iget p1, p1, Lnc3;->b:I
+    iget v1, p1, Lnc3;->b:I
 
-    if-eq v0, p1, :cond_3
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lnc3;->c:I
+
+    iget p1, p1, Lnc3;->c:I
+
+    if-eq v0, p1, :cond_4
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
+    :cond_4
     :goto_1
     const/4 p1, 0x1
 
@@ -73,19 +84,31 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lnc3;->a:Lmc3;
-
-    iget v0, v0, Lmc3;->a:I
+    const/4 v0, -0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget v1, p0, Lnc3;->b:I
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lnc3;->a:I
+
+    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnc3;->b:I
+
+    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+
+    move-result v0
+
+    iget v1, p0, Lnc3;->c:I
 
     invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -97,31 +120,27 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", neutralSecondary="
 
-    const-string v1, "CommonStatesBackgroundActiveColors(action="
+    const-string v1, ", themedFade="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "CommonActionIconColors(contrastStatic=-1, neutral="
 
-    iget-object v1, p0, Lnc3;->a:Lmc3;
+    iget v3, p0, Lnc3;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v4, p0, Lnc3;->b:I
 
-    const-string v1, ", neutralFadeTertiary="
+    invoke-static {v2, v3, v0, v4, v1}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lnc3;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lnc3;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,70 +1,29 @@
 .class public final Lcjd;
-.super Lmo7;
+.super Lm7d;
 .source "SourceFile"
 
-# interfaces
-.implements Lxe6;
+
+# static fields
+.field public static final synthetic I0:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final E0:Lm62;
 
-.field public final synthetic b:Ljx7;
+.field public F0:Lyid;
+
+.field public G0:J
+
+.field public H0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljx7;I)V
+.method public constructor <init>(Lm62;)V
     .locals 0
 
-    iput p2, p0, Lcjd;->a:I
+    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lcjd;->b:Ljx7;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    iput-object p1, p0, Lcjd;->E0:Lm62;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lcjd;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lcjd;->b:Ljx7;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object p1, p0, Lcjd;->b:Ljx7;
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

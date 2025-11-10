@@ -1,32 +1,14 @@
-.class public interface abstract Lxsc;
+.class public abstract Lxsc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# static fields
+.field public static oneme_main_calls_title:I = 0x7f13089e
 
-.method public abstract b()V
-.end method
+.field public static oneme_main_chats_title:I = 0x7f13089f
 
-.method public abstract c(Z)V
-.end method
+.field public static oneme_main_contacts_title:I = 0x7f1308a0
 
-.method public abstract clear()V
-.end method
+.field public static oneme_main_profile_title:I = 0x7f1308a1
 
-.method public abstract d()V
-.end method
-
-.method public abstract e()V
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public abstract g(Ljava/lang/Long;)V
-.end method
-
-.method public abstract h(Lbtc;)V
-.end method
+.field public static oneme_main_settings_title:I = 0x7f1308a2

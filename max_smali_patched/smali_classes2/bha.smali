@@ -1,154 +1,192 @@
-.class public final synthetic Lbha;
+.class public final Lbha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
+
+# static fields
+.field public static final synthetic c:[Les7;
+
+.field public static final d:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ltw4;
 
-.field public final synthetic b:Llha;
+.field public final b:Ltw4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llha;I)V
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lbec;
+
+    const-class v1, Lbha;
+
+    const-string v2, "exceptionHandler"
+
+    const-string v3, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lv7d;->a:Lw7d;
+
+    const-string v3, "analytics"
+
+    const-string v5, "getAnalytics()Lru/ok/tamtam/stats/Analytics;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
+
+    move-result-object v2
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Les7;
+
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v3, v0
+
+    sput-object v3, Lbha;->c:[Les7;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lbha;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ltw4;Ltw4;)V
     .locals 0
-
-    iput p2, p0, Lbha;->a:I
-
-    iput-object p1, p0, Lbha;->b:Llha;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p2, p0, Lbha;->a:Ltw4;
+
+    iput-object p1, p0, Lbha;->b:Ltw4;
+
+    return-void
+.end method
+
+.method public static a(Ljava/util/Map;Lnp5;)V
+    .locals 5
+
+    iget-wide v0, p1, Lnp5;->a:J
+
+    iget-object v2, p1, Lnp5;->g:Ljava/lang/Long;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "trid"
+
+    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p1, Lnp5;->h:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "eKey"
+
+    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    if-eqz v2, :cond_1
+
+    const-string v0, "ttime"
+
+    invoke-interface {p0, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide v0, p1, Lnp5;->j:J
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    sub-long/2addr v0, v3
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "dtime"
+
+    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-wide v0, p1, Lnp5;->i:J
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    sub-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    const-string v1, "fcmdtime"
+
+    invoke-interface {p0, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    iget-object p1, p1, Lnp5;->e:Ljava/lang/Long;
+
+    if-eqz p1, :cond_2
+
+    const-string v0, "suid"
+
+    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final b()Lhd;
+    .locals 2
 
-    iget v0, p0, Lbha;->a:I
+    sget-object v0, Lbha;->c:[Les7;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lbha;->b:Llha;
+    aget-object v0, v0, v1
 
-    invoke-static {v0}, Llha;->a(Llha;)Landroid/graphics/drawable/LayerDrawable;
+    iget-object v0, p0, Lbha;->b:Ltw4;
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    sget v0, Locc;->call_fill_16:I
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    iget-object v2, p0, Lbha;->b:Llha;
-
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Ltw4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    check-cast v0, Lhd;
+
+    return-object v0
+.end method
+
+.method public final c()Lvf5;
+    .locals 2
+
+    sget-object v0, Lbha;->c:[Les7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lbha;->a:Ltw4;
+
+    invoke-virtual {v0}, Ltw4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, -0x1
-
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    check-cast v0, Lvf5;
 
     return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    const/4 v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    sget-object v2, Lbx4;->y0:Lsed;
-
-    iget-object v3, p0, Lbha;->b:Llha;
-
-    invoke-virtual {v2, v3}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Luxa;->b()Lue0;
-
-    move-result-object v4
-
-    iget v4, v4, Lue0;->l:I
-
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
-
-    invoke-virtual {v2, v3}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->k:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x42000000    # 32.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

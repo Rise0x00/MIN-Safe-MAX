@@ -1,125 +1,339 @@
-.class public final Ld7g;
-.super Lcy;
+.class public final synthetic Ld7g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final A0:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final B0:[B
-
-.field public final C0:Ljava/lang/Long;
-
-.field public final D0:Ljava/lang/String;
-
-.field public final E0:Lh8g;
-
-.field public final X:Ljava/lang/Integer;
-
-.field public final Y:Ljava/lang/Long;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:Ljava/lang/Long;
-
-.field public final w0:Ljava/lang/Integer;
-
-.field public final x0:Ljava/lang/Integer;
-
-.field public final y0:Z
-
-.field public final z0:Ljava/lang/String;
+.field public final synthetic b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
 
 # direct methods
-.method public constructor <init>(JILjava/lang/Long;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ZLjava/lang/String;Ljava/lang/String;[BLjava/lang/Long;ZLjava/lang/String;Lh8g;Z)V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/settings/twofa/creation/TwoFACreationScreen;I)V
+    .locals 0
 
-    sget-object v0, Li00;->X:Li00;
+    iput p2, p0, Ld7g;->a:I
 
-    move/from16 v1, p13
+    iput-object p1, p0, Ld7g;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    move/from16 v2, p16
-
-    invoke-direct {p0, v0, v1, v2}, Lcy;-><init>(Li00;ZZ)V
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ld7g;->o:Ljava/lang/Long;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ld7g;->X:Ljava/lang/Integer;
-
-    iput-object p4, p0, Ld7g;->Y:Ljava/lang/Long;
-
-    iput-object p5, p0, Ld7g;->Z:Ljava/lang/String;
-
-    iput-object p6, p0, Ld7g;->w0:Ljava/lang/Integer;
-
-    iput-object p7, p0, Ld7g;->x0:Ljava/lang/Integer;
-
-    iput-boolean p8, p0, Ld7g;->y0:Z
-
-    iput-object p9, p0, Ld7g;->z0:Ljava/lang/String;
-
-    iput-object p10, p0, Ld7g;->A0:Ljava/lang/String;
-
-    iput-object p12, p0, Ld7g;->C0:Ljava/lang/Long;
-
-    iput-object p11, p0, Ld7g;->B0:[B
-
-    move-object/from16 p1, p14
-
-    iput-object p1, p0, Ld7g;->D0:Ljava/lang/String;
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Ld7g;->E0:Lh8g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 17
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    move-object/from16 v0, p0
 
-    move-result-object v0
+    iget v1, v0, Ld7g;->a:I
 
-    iget-object v1, p0, Ld7g;->D0:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    sget-object v3, Lj54;->b:Lj54;
 
-    move-result v2
+    iget-object v4, v0, Ld7g;->b:Lone/me/settings/twofa/creation/TwoFACreationScreen;
 
-    if-nez v2, :cond_0
+    packed-switch v1, :pswitch_data_0
 
-    const-string v2, "token"
+    sget-object v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Les7;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0()Lc8g;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lc8g;->x()Ltlf;
+
+    move-result-object v4
+
+    check-cast v4, Lsta;
+
+    invoke-virtual {v4}, Lsta;->b()La54;
+
+    move-result-object v4
+
+    new-instance v5, Lz7g;
+
+    invoke-direct {v5, v1, v2}, Lz7g;-><init>(Lc8g;Lkotlin/coroutines/Continuation;)V
+
+    iget-object v2, v1, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v4, v3, v5}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lc8g;->I0:Lpqe;
+
+    sget-object v4, Lc8g;->M0:[Les7;
+
+    const/4 v5, 0x4
+
+    aget-object v4, v4, v5
+
+    invoke-virtual {v3, v1, v4, v2}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Les7;
+
+    invoke-virtual {v4}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0()Lc8g;
+
+    move-result-object v1
+
+    invoke-virtual {v4}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->z0()Lnag;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lnag;->getInputTexts()Lvcb;
+
+    move-result-object v4
+
+    sget-object v5, Lc8g;->M0:[Les7;
+
+    iget-object v6, v1, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v7, v4, Lvcb;->a:Ljava/lang/Object;
+
+    check-cast v7, Ljava/lang/CharSequence;
+
+    iget-object v4, v4, Lvcb;->b:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/CharSequence;
+
+    iget-object v8, v1, Lc8g;->c:Lf7g;
+
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    const/4 v4, 0x1
+
+    const/4 v9, 0x2
+
+    if-eq v8, v4, :cond_5
+
+    const/4 v4, 0x3
+
+    if-eq v8, v9, :cond_1
+
+    if-ne v8, v4, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
+
+    :cond_1
+    if-eqz v7, :cond_3
+
+    invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    const-string v1, "videoId"
+    :cond_2
+    invoke-virtual {v1}, Lc8g;->x()Ltlf;
 
-    iget-object v2, p0, Ld7g;->o:Ljava/lang/Long;
+    move-result-object v8
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v8, Lsta;
 
+    invoke-virtual {v8}, Lsta;->b()La54;
+
+    move-result-object v8
+
+    new-instance v9, Lw7g;
+
+    invoke-direct {v9, v1, v7, v2}, Lw7g;-><init>(Lc8g;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v6, v8, v3, v9}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lc8g;->H0:Lpqe;
+
+    aget-object v4, v5, v4
+
+    invoke-virtual {v3, v1, v4, v2}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    goto/16 :goto_3
+
+    :cond_3
     :goto_0
-    const-string v1, "videoType"
+    iget-object v3, v1, Lc8g;->b:Lg7g;
 
-    iget-object v2, p0, Ld7g;->X:Ljava/lang/Integer;
+    sget-object v4, Lg7g;->a:Lg7g;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v3, v4, :cond_4
 
-    return-object v0
+    goto/16 :goto_3
+
+    :cond_4
+    sget v3, Lvtc;->oneme_settings_twofa_creation_email_empty_confirmation_title:I
+
+    new-instance v4, Lirf;
+
+    invoke-direct {v4, v3}, Lirf;-><init>(I)V
+
+    sget v3, Lvtc;->oneme_settings_twofa_creation_email_empty_confirmation_description:I
+
+    new-instance v5, Lirf;
+
+    invoke-direct {v5, v3}, Lirf;-><init>(I)V
+
+    new-instance v10, Lun3;
+
+    sget v11, Lhpc;->oneme_settings_twofa_empty_email_confirmation_action:I
+
+    sget v3, Lvtc;->oneme_settings_twofa_creation_email_empty_confirmation_email_action:I
+
+    new-instance v12, Lirf;
+
+    invoke-direct {v12, v3}, Lirf;-><init>(I)V
+
+    const/4 v15, 0x3
+
+    const/16 v16, 0x3
+
+    const/4 v13, 0x3
+
+    const/4 v14, 0x1
+
+    invoke-direct/range {v10 .. v16}, Lun3;-><init>(ILnrf;IZII)V
+
+    new-instance v3, Lun3;
+
+    sget v6, Lhpc;->oneme_settings_twofa_empty_email_confirmation_skip:I
+
+    sget v7, Lvtc;->oneme_settings_twofa_creation_email_empty_confirmation_skip_action:I
+
+    new-instance v8, Lirf;
+
+    invoke-direct {v8, v7}, Lirf;-><init>(I)V
+
+    const/16 v7, 0x20
+
+    invoke-direct {v3, v6, v8, v9, v7}, Lun3;-><init>(ILnrf;II)V
+
+    filled-new-array {v10, v3}, [Lun3;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    iget-object v1, v1, Lc8g;->A0:Laf5;
+
+    new-instance v6, Li8g;
+
+    invoke-direct {v6, v4, v5, v3, v2}, Li8g;-><init>(Lirf;Lirf;Ljava/util/List;Ldqd;)V
+
+    invoke-static {v1, v6}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v1}, Lc8g;->x()Ltlf;
+
+    move-result-object v4
+
+    check-cast v4, Lsta;
+
+    invoke-virtual {v4}, Lsta;->b()La54;
+
+    move-result-object v4
+
+    new-instance v8, Lx7g;
+
+    invoke-direct {v8, v1, v7, v2}, Lx7g;-><init>(Lc8g;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v6, v4, v3, v8}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lc8g;->G0:Lpqe;
+
+    aget-object v4, v5, v9
+
+    invoke-virtual {v3, v1, v4, v2}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_6
+    if-eqz v7, :cond_7
+
+    invoke-static {v7}, Lxaf;->g0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    goto :goto_1
+
+    :cond_7
+    move-object v7, v2
+
+    :goto_1
+    if-eqz v4, :cond_8
+
+    invoke-static {v4}, Lxaf;->g0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    goto :goto_2
+
+    :cond_8
+    move-object v4, v2
+
+    :goto_2
+    invoke-virtual {v1}, Lc8g;->x()Ltlf;
+
+    move-result-object v8
+
+    check-cast v8, Lsta;
+
+    invoke-virtual {v8}, Lsta;->b()La54;
+
+    move-result-object v8
+
+    new-instance v9, Ly7g;
+
+    invoke-direct {v9, v7, v1, v4, v2}, Ly7g;-><init>(Ljava/lang/CharSequence;Lc8g;Ljava/lang/CharSequence;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v6, v8, v3, v9}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lc8g;->E0:Lpqe;
+
+    const/4 v4, 0x0
+
+    aget-object v4, v5, v4
+
+    invoke-virtual {v3, v1, v4, v2}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+
+    :goto_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

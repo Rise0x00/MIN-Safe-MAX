@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le2f;
-.implements Lpn4;
+
+# virtual methods
+.method public abstract a(ILjava/lang/CharSequence;)V
+.end method
+
+.method public abstract b(Leo0;)V
+.end method

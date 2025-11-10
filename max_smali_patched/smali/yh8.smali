@@ -1,43 +1,151 @@
 .class public final Lyh8;
-.super Ljava/lang/Object;
+.super Lmvf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Z
-
-
 # instance fields
-.field public final a:Lwh8;
+.field public final e:Lqs8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lqs8;)V
+    .locals 0
 
-    const-string v0, "MediaBrowserCompat"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x3
-
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    sput-boolean v0, Lyh8;->b:Z
+    iput-object p1, p0, Lyh8;->e:Lqs8;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lalh;Landroid/os/Bundle;)V
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)I
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lwh8;->h:Ljava/lang/Object;
 
-    new-instance v0, Lwh8;
+    if-ne p1, v0, :cond_0
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lwh8;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Lalh;Landroid/os/Bundle;)V
+    const/4 p1, 0x0
 
-    iput-object v0, p0, Lyh8;->a:Lwh8;
+    return p1
 
-    return-void
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final f(ILhvf;Z)Lhvf;
+    .locals 11
+
+    const/4 p1, 0x0
+
+    if-eqz p3, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, p1
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget-object p1, Lwh8;->h:Ljava/lang/Object;
+
+    :cond_1
+    move-object v3, p1
+
+    sget-object v9, Lz8;->f:Lz8;
+
+    const/4 v10, 0x1
+
+    const/4 v4, 0x0
+
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide/16 v7, 0x0
+
+    move-object v1, p2
+
+    invoke-virtual/range {v1 .. v10}, Lhvf;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLz8;Z)V
+
+    return-object v1
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final l(I)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lwh8;->h:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(ILkvf;J)Lkvf;
+    .locals 21
+
+    sget-object v1, Lkvf;->q:Ljava/lang/Object;
+
+    const/16 v18, 0x0
+
+    const-wide/16 v19, 0x0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lyh8;->e:Lqs8;
+
+    const/4 v3, 0x0
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-wide v15, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/16 v17, 0x0
+
+    move-object/from16 v0, p2
+
+    invoke-virtual/range {v0 .. v20}, Lkvf;->b(Ljava/lang/Object;Lqs8;Ljava/lang/Object;JJJZZLfs8;JJIIJ)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lkvf;->k:Z
+
+    return-object v0
+.end method
+
+.method public final o()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

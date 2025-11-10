@@ -1,142 +1,114 @@
-.class public final Lwsc;
-.super Ll9f;
-.source "SourceFile"
+.class public abstract Lwsc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public c:Ljava/lang/String;
+# static fields
+.field public static oneme_login_confirm_description:I = 0x7f13086b
 
-.field public o:Z
+.field public static oneme_login_confirm_info_loading_1:I = 0x7f13086c
 
+.field public static oneme_login_confirm_info_loading_2:I = 0x7f13086d
 
-# direct methods
-.method public constructor <init>(Ls89;)V
-    .locals 0
+.field public static oneme_login_confirm_info_loading_3:I = 0x7f13086e
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+.field public static oneme_login_confirm_resend:I = 0x7f13086f
 
-    const/4 p1, 0x1
+.field public static oneme_login_confirm_timer:I = 0x7f130870
 
-    iput-boolean p1, p0, Lwsc;->o:Z
+.field public static oneme_login_confirm_title:I = 0x7f130871
 
-    return-void
-.end method
+.field public static oneme_login_error_connection_description:I = 0x7f130872
 
+.field public static oneme_login_error_connection_title:I = 0x7f130873
 
-# virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+.field public static oneme_login_input_continue:I = 0x7f130874
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_login_input_default_phone_hint:I = 0x7f130875
 
-    const-string v0, "tls"
+.field public static oneme_login_input_description:I = 0x7f130876
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f130877
 
-    move-result v0
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130878
 
-    if-nez v0, :cond_1
+.field public static oneme_login_input_name_confirmation_description:I = 0x7f130879
 
-    const-string v0, "redirectHost"
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f13087a
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static oneme_login_input_name_confirmation_title:I = 0x7f13087b
 
-    move-result p2
+.field public static oneme_login_input_name_contact_permission_description:I = 0x7f13087c
 
-    if-nez p2, :cond_0
+.field public static oneme_login_input_name_contact_permission_title:I = 0x7f13087d
 
-    invoke-virtual {p1}, Ls89;->B()V
+.field public static oneme_login_input_name_continue_button_active:I = 0x7f13087e
 
-    return-void
+.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f13087f
 
-    :cond_0
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+.field public static oneme_login_input_name_description:I = 0x7f130880
 
-    move-result-object p1
+.field public static oneme_login_input_name_hint_name:I = 0x7f130881
 
-    iput-object p1, p0, Lwsc;->c:Ljava/lang/String;
+.field public static oneme_login_input_name_hint_surname:I = 0x7f130882
 
-    return-void
+.field public static oneme_login_input_name_hint_surname_short:I = 0x7f130883
 
-    :cond_1
-    invoke-virtual {p1}, Ls89;->y0()Z
+.field public static oneme_login_input_name_surname_placeholder:I = 0x7f130884
 
-    move-result p1
+.field public static oneme_login_input_name_title:I = 0x7f130885
 
-    iput-boolean p1, p0, Lwsc;->o:Z
+.field public static oneme_login_input_need_help:I = 0x7f130886
 
-    return-void
-.end method
+.field public static oneme_login_input_need_help_email_title:I = 0x7f130887
 
-.method public final d()Ljava/lang/String;
-    .locals 3
+.field public static oneme_login_input_select_country_info:I = 0x7f130888
 
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
+.field public static oneme_login_input_title:I = 0x7f130889
 
-    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
+.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f13088a
 
-    move-result v0
+.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f13088b
 
-    if-nez v0, :cond_0
+.field public static oneme_login_neuro_avatars_continue_without_avatar_button:I = 0x7f13088c
 
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
+.field public static oneme_login_neuro_avatars_description:I = 0x7f13088d
 
-    const-string v1, ":"
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f13088e
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f13088f
 
-    move-result v0
+.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f130890
 
-    if-lez v0, :cond_0
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f130891
 
-    iget-object v1, p0, Lwsc;->c:Ljava/lang/String;
+.field public static oneme_login_neuro_avatars_save_button:I = 0x7f130892
 
-    add-int/lit8 v0, v0, 0x1
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f130893
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+.field public static oneme_login_neuro_avatars_title:I = 0x7f130894
 
-    move-result v2
+.field public static oneme_login_sms_count_exceeded_description:I = 0x7f130895
 
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+.field public static oneme_login_sms_count_exceeded_title:I = 0x7f130896
 
-    move-result-object v0
+.field public static oneme_login_welcome_continue_btn:I = 0x7f130897
 
-    return-object v0
+.field public static oneme_login_welcome_description:I = 0x7f130898
 
-    :cond_0
-    const/4 v0, 0x0
+.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130899
 
-    return-object v0
-.end method
+.field public static oneme_login_welcome_switch_btn:I = 0x7f13089a
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.field public static oneme_login_welcome_terms:I = 0x7f13089b
 
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
+.field public static oneme_login_welcome_title:I = 0x7f13089c
 
-    iget-boolean v1, p0, Lwsc;->o:Z
+.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f13089d
 
-    new-instance v2, Ljava/lang/StringBuilder;
+.field public static oneme_registration_neuro_avatars_change_photo:I = 0x7f130961
 
-    const-string v3, "{redirectHost=\'"
+.field public static oneme_registration_neuro_avatars_choose_avatar:I = 0x7f130962
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static oneme_registration_neuro_avatars_choose_photo:I = 0x7f130963
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', tls="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_registration_neuro_avatars_or:I = 0x7f130964

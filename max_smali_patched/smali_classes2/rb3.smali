@@ -1,57 +1,91 @@
 .class public final Lrb3;
-.super Lnz3;
+.super Landroid/view/View;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lit9;
+.field public a:Landroid/graphics/Paint;
 
-.field public Y:Ljava/util/LinkedHashSet;
+.field public b:Landroid/graphics/Paint;
 
-.field public Z:Ljava/util/Iterator;
-
-.field public o:Lsb3;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Lsb3;
-
-.field public y0:I
+.field public c:I
 
 
-# direct methods
-.method public constructor <init>(Lsb3;Lnz3;)V
-    .locals 0
+# virtual methods
+.method public getColor()I
+    .locals 1
 
-    iput-object p1, p0, Lrb3;->x0:Lsb3;
+    iget-object v0, p0, Lrb3;->a:Landroid/graphics/Paint;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v0, v0
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lrb3;->b:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    iget v3, p0, Lrb3;->c:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    sub-int/2addr v2, v3
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lrb3;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public setColor(I)V
     .locals 1
 
-    iput-object p1, p0, Lrb3;->w0:Ljava/lang/Object;
+    iget-object v0, p0, Lrb3;->a:Landroid/graphics/Paint;
 
-    iget p1, p0, Lrb3;->y0:I
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrb3;->y0:I
-
-    iget-object p1, p0, Lrb3;->x0:Lsb3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lsb3;->c(Ljava/util/List;Lnz3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,72 +1,59 @@
-.class public final synthetic Lvo0;
+.class public abstract Lvo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmag;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lyo0;
+.field public static final b:I
 
-.field public final synthetic b:Landroid/graphics/Bitmap;
-
-.field public final synthetic c:Lkc6;
-
-.field public final synthetic d:Lsn3;
+.field public static volatile c:Luo0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyo0;Landroid/graphics/Bitmap;Lkc6;Lsn3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    iput-object p1, p0, Lvo0;->a:Lyo0;
+    move-result-object v0
 
-    iput-object p2, p0, Lvo0;->b:Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
 
-    iput-object p3, p0, Lvo0;->c:Lkc6;
+    move-result-wide v0
 
-    iput-object p4, p0, Lvo0;->d:Lsn3;
+    const-wide/32 v2, 0x7fffffff
 
-    return-void
-.end method
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
+    move-result-wide v0
 
-# virtual methods
-.method public final run()V
-    .locals 6
+    long-to-int v0, v0
 
-    iget-object v0, p0, Lvo0;->d:Lsn3;
+    int-to-long v1, v0
 
-    invoke-virtual {v0}, Lsn3;->a()Z
+    const-wide/32 v3, 0x1000000
 
-    move-result v1
+    cmp-long v1, v1, v3
 
-    const-string v2, "Bitmap queued but no timestamps provided."
+    if-lez v1, :cond_0
 
-    invoke-static {v2, v1}, Lpih;->h(Ljava/lang/Object;Z)V
+    div-int/lit8 v0, v0, 0x4
 
-    iget-object v1, p0, Lvo0;->a:Lyo0;
+    mul-int/lit8 v0, v0, 0x3
 
-    iget-object v2, v1, Lyo0;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+    goto :goto_0
 
-    new-instance v3, Lxo0;
+    :cond_0
+    div-int/lit8 v0, v0, 0x2
 
-    iget-object v4, p0, Lvo0;->b:Landroid/graphics/Bitmap;
+    :goto_0
+    sput v0, Lvo0;->a:I
 
-    iget-object v5, p0, Lvo0;->c:Lkc6;
+    const/16 v0, 0x180
 
-    invoke-direct {v3, v4, v5, v0}, Lxo0;-><init>(Landroid/graphics/Bitmap;Lkc6;Lsn3;)V
-
-    invoke-interface {v2, v3}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v1}, Lyo0;->B()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v1, Lyo0;->y0:Z
+    sput v0, Lvo0;->b:I
 
     return-void
 .end method

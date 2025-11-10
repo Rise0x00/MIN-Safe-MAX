@@ -1,199 +1,174 @@
-.class public final Lcbh;
-.super Ljava/lang/Object;
+.class public final enum Lcbh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lbch;
+
+
+# static fields
+.field public static final enum X:Lcbh;
+
+.field public static final synthetic Y:[Lcbh;
+
+.field public static final synthetic Z:Lce5;
+
+.field public static final enum d:Lcbh;
+
+.field public static final enum o:Lcbh;
 
 
 # instance fields
-.field public final a:Lbbh;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ldbh;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lebh;
-
-.field public final d:Lfbh;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lbbh;Ldbh;Lebh;Lfbh;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcbh;
 
-    iput-object p1, p0, Lcbh;->a:Lbbh;
+    const/16 v1, 0x8
 
-    iput-object p2, p0, Lcbh;->b:Ldbh;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p3, p0, Lcbh;->c:Lebh;
+    move-result-object v5
 
-    iput-object p4, p0, Lcbh;->d:Lfbh;
+    const-string v1, "HAPTIC_FEEDBACK_IMPACT"
+
+    const/4 v2, 0x0
+
+    const-string v3, "WebAppHapticFeedbackImpact"
+
+    const-string v4, "haptic_feedback_impact"
+
+    invoke-direct/range {v0 .. v5}, Lcbh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v0, Lcbh;->d:Lcbh;
+
+    new-instance v1, Lcbh;
+
+    const/16 v2, 0x14
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v2, "HAPTIC_FEEDBACK_NOTIFICATION"
+
+    const/4 v3, 0x1
+
+    const-string v4, "WebAppHapticFeedbackNotification"
+
+    const-string v5, "haptic_feedback_notification"
+
+    invoke-direct/range {v1 .. v6}, Lcbh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v1, Lcbh;->o:Lcbh;
+
+    new-instance v2, Lcbh;
+
+    const/16 v3, 0x10
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const-string v3, "HAPTIC_FEEDBACK_SELECTION_CHANGE"
+
+    const/4 v4, 0x2
+
+    const-string v5, "WebAppHapticFeedbackSelectionChange"
+
+    const-string v6, "haptic_feedback_selection_change"
+
+    invoke-direct/range {v2 .. v7}, Lcbh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+
+    sput-object v2, Lcbh;->X:Lcbh;
+
+    filled-new-array {v0, v1, v2}, [Lcbh;
+
+    move-result-object v0
+
+    sput-object v0, Lcbh;->Y:[Lcbh;
+
+    new-instance v1, Lce5;
+
+    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lcbh;->Z:Lce5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lcbh;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    iput-object p4, p0, Lcbh;->b:Ljava/lang/String;
 
-    return v0
+    iput-object p5, p0, Lcbh;->c:Ljava/lang/Integer;
 
-    :cond_0
-    instance-of v1, p1, Lcbh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lcbh;
-
-    iget-object v1, p0, Lcbh;->a:Lbbh;
-
-    iget-object v3, p1, Lcbh;->a:Lbbh;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lcbh;->b:Ldbh;
-
-    iget-object v3, p1, Lcbh;->b:Ldbh;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lcbh;->c:Lebh;
-
-    iget-object v3, p1, Lcbh;->c:Lebh;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lcbh;->d:Lfbh;
-
-    iget-object p1, p1, Lcbh;->d:Lfbh;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lcbh;
+    .locals 1
 
-    iget-object v0, p0, Lcbh;->a:Lbbh;
+    const-class v0, Lcbh;
 
-    invoke-virtual {v0}, Lbbh;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p0, Lcbh;
 
-    iget-object v1, p0, Lcbh;->b:Ldbh;
-
-    invoke-virtual {v1}, Ldbh;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lcbh;->c:Lebh;
-
-    invoke-virtual {v0}, Lebh;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lcbh;->d:Lfbh;
-
-    invoke-virtual {v1}, Lfbh;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static values()[Lcbh;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lcbh;->Y:[Lcbh;
 
-    const-string v1, "WritebarColors(background="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcbh;->a:Lbbh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcbh;->b:Ldbh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stroke="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcbh;->c:Lebh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcbh;->d:Lfbh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lcbh;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcbh;->c:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcbh;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcbh;->b:Ljava/lang/String;
 
     return-object v0
 .end method

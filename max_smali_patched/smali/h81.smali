@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Loi6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Lj81;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public synthetic constructor <init>(Lj81;I)V
     .locals 0
 
-    iput p3, p0, Lh81;->a:I
+    iput p2, p0, Lh81;->a:I
 
-    iput-wide p1, p0, Lh81;->b:J
+    iput-object p1, p0, Lh81;->b:Lj81;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,110 +27,36 @@
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lh81;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
+    iget-object v0, p0, Lh81;->b:Lj81;
 
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
+    iget-object v0, v0, Lj81;->M0:Landroidx/recyclerview/widget/b;
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    iget-object v0, p0, Lh81;->b:Lj81;
 
-    sget-object v1, Lete;->o:Lete;
-
-    iget-wide v2, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lete;J)V
+    iget-object v0, v0, Lj81;->O0:Lapg;
 
     return-object v0
 
     :pswitch_1
-    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
+    new-instance v0, Lsu6;
 
-    iget-wide v1, p0, Lh81;->b:J
+    iget-object v1, p0, Lh81;->b:Lj81;
 
-    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
+    iget-object v2, v1, Lj81;->I0:Landroidx/viewpager2/widget/ViewPager2;
 
-    return-object v0
+    iget-object v1, v1, Lj81;->J0:Lwu6;
 
-    :pswitch_2
-    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
-
-    iget-wide v1, p0, Lh81;->b:J
-
-    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
+    invoke-direct {v0, v2, v1}, Lsu6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lwu6;)V
 
     return-object v0
 
@@ -138,14 +64,6 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

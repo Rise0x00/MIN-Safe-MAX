@@ -1,54 +1,129 @@
-.class public abstract Lpcc;
-.super Ljava/lang/Object;
+.class public final Lpcc;
+.super Logf;
+.source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f080371
+# instance fields
+.field public final synthetic X:Lycc;
 
-.field public static emoji_sprite_1:I = 0x7f080372
+.field public final synthetic o:Landroid/content/Intent;
 
-.field public static emoji_sprite_10:I = 0x7f080373
 
-.field public static emoji_sprite_11:I = 0x7f080374
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;Lycc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static emoji_sprite_12:I = 0x7f080375
+    iput-object p1, p0, Lpcc;->o:Landroid/content/Intent;
 
-.field public static emoji_sprite_13:I = 0x7f080376
+    iput-object p2, p0, Lpcc;->X:Lycc;
 
-.field public static emoji_sprite_14:I = 0x7f080377
+    const/4 p1, 0x2
 
-.field public static emoji_sprite_15:I = 0x7f080378
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static emoji_sprite_16:I = 0x7f080379
+    return-void
+.end method
 
-.field public static emoji_sprite_17:I = 0x7f08037a
 
-.field public static emoji_sprite_18:I = 0x7f08037b
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static emoji_sprite_19:I = 0x7f08037c
+    check-cast p1, Lg54;
 
-.field public static emoji_sprite_2:I = 0x7f08037d
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static emoji_sprite_20:I = 0x7f08037e
+    invoke-virtual {p0, p1, p2}, Lpcc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static emoji_sprite_21:I = 0x7f08037f
+    move-result-object p1
 
-.field public static emoji_sprite_22:I = 0x7f080380
+    check-cast p1, Lpcc;
 
-.field public static emoji_sprite_23:I = 0x7f080381
+    sget-object p2, Lybg;->a:Lybg;
 
-.field public static emoji_sprite_24:I = 0x7f080382
+    invoke-virtual {p1, p2}, Lpcc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static emoji_sprite_3:I = 0x7f080383
+    move-result-object p1
 
-.field public static emoji_sprite_4:I = 0x7f080384
+    return-object p1
+.end method
 
-.field public static emoji_sprite_5:I = 0x7f080385
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static emoji_sprite_6:I = 0x7f080386
+    new-instance p1, Lpcc;
 
-.field public static emoji_sprite_7:I = 0x7f080387
+    iget-object v0, p0, Lpcc;->o:Landroid/content/Intent;
 
-.field public static emoji_sprite_8:I = 0x7f080388
+    iget-object v1, p0, Lpcc;->X:Lycc;
 
-.field public static emoji_sprite_9:I = 0x7f080389
+    invoke-direct {p1, v0, v1, p2}, Lpcc;-><init>(Landroid/content/Intent;Lycc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpcc;->o:Landroid/content/Intent;
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-class v0, Landroid/graphics/RectF;
+
+    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
+
+    invoke-static {p1, v1, v0}, Lh9i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Parcelable;
+
+    :goto_0
+    check-cast p1, Landroid/graphics/RectF;
+
+    sget-object v0, Lybg;->a:Lybg;
+
+    if-nez p1, :cond_1
+
+    return-object v0
+
+    :cond_1
+    sget-object v1, Lycc;->V0:[Les7;
+
+    iget-object v1, p0, Lpcc;->X:Lycc;
+
+    invoke-virtual {v1}, Lycc;->z()Luv5;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lycc;->S0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Luv5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, p1}, Lycc;->C(Ljava/lang/String;Landroid/graphics/RectF;)V
+
+    return-object v0
+.end method

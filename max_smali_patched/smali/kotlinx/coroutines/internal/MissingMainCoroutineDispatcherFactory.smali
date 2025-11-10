@@ -18,9 +18,9 @@
         "()V",
         "",
         "allFactories",
-        "Le88;",
+        "Lbe8;",
         "createDispatcher",
-        "(Ljava/util/List;)Le88;",
+        "(Ljava/util/List;)Lbe8;",
         "",
         "getLoadPriority",
         "()I",
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public createDispatcher(Ljava/util/List;)Le88;
+.method public createDispatcher(Ljava/util/List;)Lbe8;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,7 +73,7 @@
             "+",
             "Lkotlinx/coroutines/internal/MainDispatcherFactory;",
             ">;)",
-            "Le88;"
+            "Lbe8;"
         }
     .end annotation
 
@@ -83,7 +83,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, v0, v0, v1, v0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;-><init>(Ljava/lang/Throwable;Ljava/lang/String;ILof4;)V
+    invoke-direct {p1, v0, v0, v1, v0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;-><init>(Ljava/lang/Throwable;Ljava/lang/String;ILfi4;)V
 
     return-object p1
 .end method

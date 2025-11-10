@@ -1,56 +1,131 @@
-.class public final Los3;
-.super Ll9f;
+.class public final synthetic Los3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lu6;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p1, p0, Los3;->a:I
 
-    const-string v0, "contacts"
+    iput-object p6, p0, Los3;->d:Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-wide p2, p0, Los3;->b:J
 
-    move-result p2
+    iput-wide p4, p0, Los3;->c:J
 
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ls89;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lbz;->c(Ls89;)Lbz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Los3;->c:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
 
-    iget-object v0, p0, Los3;->c:Ljava/util/List;
+# virtual methods
+.method public final run()V
+    .locals 7
 
-    invoke-static {v0}, Lkmc;->e(Ljava/util/Collection;)I
+    iget v0, p0, Los3;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "{contactInfos="
+    iget-object v0, p0, Los3;->d:Ljava/lang/Object;
 
-    const-string v2, "}"
+    check-cast v0, Lyo5;
 
-    invoke-static {v0, v1, v2}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-wide v1, p0, Los3;->b:J
 
-    move-result-object v0
+    iget-wide v3, p0, Los3;->c:J
 
-    return-object v0
+    iget-object v5, v0, Lyo5;->a:Lpgd;
+
+    invoke-virtual {v5}, Lpgd;->c()V
+
+    :try_start_0
+    invoke-virtual {v0}, Lyo5;->c()Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-ltz v1, :cond_0
+
+    if-ltz v2, :cond_0
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v6, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v6}, Lyo5;->a(Ljava/util/List;)V
+
+    :cond_0
+    invoke-virtual {v5}, Lpgd;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v5}, Lpgd;->k()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v5}, Lpgd;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Los3;->d:Ljava/lang/Object;
+
+    check-cast v0, Lqs3;
+
+    new-instance v1, Lw00;
+
+    const/16 v2, 0xc
+
+    iget-wide v3, p0, Los3;->c:J
+
+    invoke-direct {v1, v3, v4, v2}, Lw00;-><init>(JI)V
+
+    iget-wide v2, p0, Los3;->b:J
+
+    invoke-virtual {v0, v2, v3, v1}, Lqs3;->c(JLir3;)Lmr3;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

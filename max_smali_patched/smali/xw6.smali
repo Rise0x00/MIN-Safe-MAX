@@ -1,27 +1,11 @@
-.class public final Lxw6;
+.class public interface abstract Lxw6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/net/Uri;
+# virtual methods
+.method public abstract c()Lpzg;
+.end method
 
-.field public final b:J
-
-.field public final c:I
-
-
-# direct methods
-.method public constructor <init>(Landroid/net/Uri;JI)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxw6;->a:Landroid/net/Uri;
-
-    iput-wide p2, p0, Lxw6;->b:J
-
-    iput p4, p0, Lxw6;->c:I
-
-    return-void
+.method public abstract e()Le0a;
 .end method

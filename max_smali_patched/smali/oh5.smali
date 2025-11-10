@@ -1,86 +1,59 @@
 .class public final Loh5;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljb5;
+.field public final a:I
 
-.field public Y:Lqle;
+.field public final b:Ljava/lang/String;
 
-.field public final b:Lbp7;
+.field public final c:I
 
-.field public final c:Lbp7;
-
-.field public final o:Ljava/lang/String;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
 
-    sget-object v0, Lfh5;->a:Lfh5;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    .line 7
+    iput-object p2, p0, Loh5;->b:Ljava/lang/String;
 
-    move-result-object v1
+    .line 8
+    iput p1, p0, Loh5;->a:I
 
-    const-class v2, Lraf;
+    .line 9
+    iput p3, p0, Loh5;->c:I
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v2, Lr8f;
-
-    invoke-virtual {v0, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lilg;-><init>()V
-
-    iput-object v1, p0, Loh5;->b:Lbp7;
-
-    iput-object v0, p0, Loh5;->c:Lbp7;
-
-    const-class v0, Loh5;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Loh5;->o:Ljava/lang/String;
-
-    new-instance v0, Ljb5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljb5;-><init>(I)V
-
-    iput-object v0, p0, Loh5;->X:Ljb5;
+    .line 10
+    iput p4, p0, Loh5;->d:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final p()V
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Loh5;->Y:Lqle;
+    .line 2
+    iput-object p1, p0, Loh5;->b:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    .line 3
+    iput p2, p0, Loh5;->a:I
 
-    if-eqz v0, :cond_0
+    .line 4
+    iput p3, p0, Loh5;->c:I
 
-    invoke-virtual {v0, v1}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    const/4 p1, -0x1
 
-    :cond_0
-    iput-object v1, p0, Loh5;->Y:Lqle;
+    .line 5
+    iput p1, p0, Loh5;->d:I
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lru/ok/messages/video/widgets/VideoPlayerSeekBar;
-.super Lvn;
+.super Lzo;
 .source "SourceFile"
 
 
@@ -10,10 +10,10 @@
     }
     d2 = {
         "Lru/ok/messages/video/widgets/VideoPlayerSeekBar;",
-        "Lvn;",
+        "Lzo;",
         "",
         "color",
-        "Loyf;",
+        "Lybg;",
         "setProgressColor",
         "(I)V",
         "setThumbColor",
@@ -41,75 +41,47 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x4
+    sget v0, Likc;->seekBarStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lzo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    return-void
-.end method
+    if-eqz p2, :cond_0
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    sget-object v0, Lfvc;->VideoPlayerSeekBar:[I
 
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_0
-
-    const/4 p2, 0x0
-
-    .line 2
-    :cond_0
-    sget p3, Lxac;->seekBarStyle:I
-
-    .line 3
-    invoke-direct {p0, p1, p2, p3}, Lvn;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    if-eqz p2, :cond_1
-
-    .line 4
-    sget-object p3, Lslc;->VideoPlayerSeekBar:[I
-
-    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    .line 5
-    sget p2, Lslc;->VideoPlayerSeekBar_seekBarEnable:I
+    sget p2, Lfvc;->VideoPlayerSeekBar_seekBarEnable:I
 
-    const/4 p3, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
     iput-boolean p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->b:Z
 
-    .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    :cond_1
+    :cond_0
     const/4 p1, -0x1
 
-    .line 7
     invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->setProgressColor(I)V
 
-    .line 8
     invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->setThumbColor(I)V
 
-    .line 9
     invoke-virtual {p0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    .line 10
     iget-boolean p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->b:Z
 
-    if-nez p2, :cond_2
+    if-nez p2, :cond_1
 
-    .line 11
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -118,10 +90,9 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 12
     invoke-virtual {p0, p2}, Landroid/widget/AbsSeekBar;->setSplitTrack(Z)V
 
-    :cond_2
+    :cond_1
     return-void
 .end method
 

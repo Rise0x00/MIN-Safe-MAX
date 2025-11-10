@@ -1,47 +1,56 @@
-.class public abstract Lale;
-.super Lele;
+.class public final synthetic Lale;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final h:Ljava/math/BigInteger;
+.field public final synthetic a:I
 
-.field public final i:Ljava/math/BigInteger;
-
-.field public final j:Ljava/math/BigInteger;
-
-.field public final k:J
+.field public final synthetic b:Lele;
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Lkw8;)V
-    .locals 8
+.method public synthetic constructor <init>(Lele;I)V
+    .locals 0
 
-    const/4 v2, 0x1
+    iput p2, p0, Lale;->a:I
 
-    move-object v0, p0
+    iput-object p1, p0, Lale;->b:Lele;
 
-    move v1, p1
-
-    move-wide v3, p2
-
-    move-object v5, p4
-
-    move-object/from16 v6, p10
-
-    move-object/from16 v7, p11
-
-    invoke-direct/range {v0 .. v7}, Lele;-><init>(IIJLjava/lang/String;Ljava/lang/String;Lkw8;)V
-
-    iput-object p5, p0, Lale;->h:Ljava/math/BigInteger;
-
-    iput-object p6, p0, Lale;->i:Ljava/math/BigInteger;
-
-    iput-object p7, p0, Lale;->j:Ljava/math/BigInteger;
-
-    move-wide/from16 p1, p8
-
-    iput-wide p1, p0, Lale;->k:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    iget p1, p0, Lale;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lale;->b:Lele;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lale;->b:Lele;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

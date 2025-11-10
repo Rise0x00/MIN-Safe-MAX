@@ -1,110 +1,58 @@
 .class public final Lqzf;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lpzf;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Luzf;
-
-.field public final synthetic Z:J
-
-.field public final synthetic w0:Ljava/util/List;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lqzf;->Y:Luzf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lqzf;->Z:J
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object p4, p0, Lqzf;->w0:Ljava/util/List;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lqzf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Llzf;)V
+    .locals 2
 
-    check-cast p1, Le34;
+    iget-object v0, p0, Lqzf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0, p1, p2}, Lqzf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast p1, Lqzf;
+    move-result v1
 
-    sget-object p2, Loyf;->a:Loyf;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p2}, Lqzf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p2
-.end method
+    move-result-object v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+    check-cast v1, Lpzf;
 
-    new-instance v0, Lqzf;
+    invoke-interface {v1, p1}, Lpzf;->a(Llzf;)V
 
-    iget-wide v2, p0, Lqzf;->Z:J
+    goto :goto_0
 
-    iget-object v4, p0, Lqzf;->w0:Ljava/util/List;
-
-    iget-object v1, p0, Lqzf;->Y:Luzf;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lqzf;-><init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lqzf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqzf;->X:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    iget-object v1, p0, Lqzf;->Y:Luzf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lmzf;
-
-    const/4 v5, 0x0
-
-    iget-wide v2, p0, Lqzf;->Z:J
-
-    iget-object v4, p0, Lqzf;->w0:Ljava/util/List;
-
-    invoke-direct/range {v0 .. v5}, Lmzf;-><init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2, v0, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

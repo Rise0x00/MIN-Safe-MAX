@@ -1,44 +1,298 @@
-.class public abstract Loec;
-.super Ljava/lang/Object;
+.class public final Loec;
+.super Lud9;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_media_keyboard:I = 0x7f0a0732
+# instance fields
+.field public a:Ltec;
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a0733
+.field public b:F
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a0734
+.field public c:[F
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0735
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0736
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0737
+    iget-object v0, p0, Loec;->a:Ltec;
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a0738
+    if-eqz v0, :cond_0
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0739
+    const/4 v1, 0x1
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a073a
+    invoke-static {v1, v0}, Lca3;->i(ILud9;)I
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a073b
+    move-result v0
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a073c
+    goto :goto_0
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a073d
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a073e
+    :goto_0
+    iget v1, p0, Loec;->b:F
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a073f
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a0740
+    move-result v1
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a0741
+    const/4 v2, 0x0
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a0742
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a0743
+    move-result v2
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a0744
+    if-eq v1, v2, :cond_1
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0745
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Lca3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget-object v1, p0, Loec;->c:[F
+
+    array-length v2, v1
+
+    if-lez v2, :cond_2
+
+    array-length v2, v1
+
+    mul-int/lit8 v2, v2, 0x4
+
+    add-int/2addr v2, v0
+
+    array-length v0, v1
+
+    add-int/2addr v2, v0
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final mergeFrom(Lba3;)Lud9;
+    .locals 6
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lba3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_8
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_7
+
+    const/16 v1, 0x1a
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x1d
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lba3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    :cond_1
+    invoke-static {p1, v1}, Lqbi;->b(Lba3;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Loec;->c:[F
+
+    array-length v3, v1
+
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [F
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_3
+
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v1
+
+    aput v1, v4, v3
+
+    invoke-virtual {p1}, Lba3;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    aput v0, v4, v3
+
+    iput-object v4, p0, Loec;->c:[F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lba3;->p()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lba3;->e(I)I
+
+    move-result v1
+
+    div-int/lit8 v0, v0, 0x4
+
+    iget-object v3, p0, Loec;->c:[F
+
+    array-length v4, v3
+
+    add-int/2addr v0, v4
+
+    new-array v5, v0, [F
+
+    if-eqz v4, :cond_5
+
+    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_5
+    :goto_2
+    if-ge v4, v0, :cond_6
+
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v2
+
+    aput v2, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    iput-object v5, p0, Loec;->c:[F
+
+    invoke-virtual {p1, v1}, Lba3;->d(I)V
+
+    goto :goto_0
+
+    :cond_7
+    invoke-virtual {p1}, Lba3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Loec;->b:F
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v0, p0, Loec;->a:Ltec;
+
+    if-nez v0, :cond_9
+
+    new-instance v0, Ltec;
+
+    invoke-direct {v0}, Ltec;-><init>()V
+
+    iput-object v0, p0, Loec;->a:Ltec;
+
+    :cond_9
+    iget-object v0, p0, Loec;->a:Ltec;
+
+    invoke-virtual {p1, v0}, Lba3;->j(Lud9;)V
+
+    goto/16 :goto_0
+
+    :cond_a
+    :goto_3
+    return-object p0
+.end method
+
+.method public final writeTo(Lca3;)V
+    .locals 3
+
+    iget-object v0, p0, Loec;->a:Ltec;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lca3;->y(ILud9;)V
+
+    :cond_0
+    iget v0, p0, Loec;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v1, p0, Loec;->b:F
+
+    invoke-virtual {p1, v0, v1}, Lca3;->v(IF)V
+
+    :cond_1
+    iget-object v0, p0, Loec;->c:[F
+
+    array-length v0, v0
+
+    if-lez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Loec;->c:[F
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    aget v1, v1, v0
+
+    invoke-virtual {p1, v2, v1}, Lca3;->v(IF)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method

@@ -1,87 +1,52 @@
-.class public final Lytc;
+.class public abstract Lytc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcuc;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a46
 
+.field public static oneme_startconversation_channel_create_error:I = 0x7f130a47
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f130a48
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a49
 
-    iput-boolean p1, p0, Lytc;->a:Z
+.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a4a
 
-    return-void
-.end method
+.field public static oneme_startconversation_title:I = 0x7f130a4b
 
+.field public static oneme_startconversations_chat_members:I = 0x7f130a4c
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a4d
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a4e
 
-    goto :goto_1
+.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a4f
 
-    :cond_0
-    instance-of v0, p1, Lytc;
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a50
 
-    if-nez v0, :cond_1
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a51
 
-    goto :goto_0
+.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130a52
 
-    :cond_1
-    check-cast p1, Lytc;
+.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130a53
 
-    iget-boolean v0, p0, Lytc;->a:Z
+.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130a54
 
-    iget-boolean p1, p1, Lytc;->a:Z
+.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130a55
 
-    if-eq v0, p1, :cond_2
+.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130a56
 
-    :goto_0
-    const/4 p1, 0x0
+.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130a57
 
-    return p1
+.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130a58
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+.field public static oneme_startconversations_continue_create_chat:I = 0x7f130a59
 
-    return p1
-.end method
+.field public static oneme_startconversations_create_empty_chat:I = 0x7f130a5a
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_startconversations_member_search_hint:I = 0x7f130a5b
 
-    iget-boolean v0, p0, Lytc;->a:Z
+.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130a5c
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Pause(isForced="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lytc;->a:Z
-
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_startconversations_search_hint:I = 0x7f130a5d

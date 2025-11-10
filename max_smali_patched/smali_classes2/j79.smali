@@ -1,47 +1,57 @@
 .class public final Lj79;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Cloneable;
+
+# instance fields
+.field public X:Le28;
+
+.field public Y:Le28;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lt79;
+
+.field public o:Ljava/lang/Object;
+
+.field public final synthetic s0:Lt79;
+
+.field public t0:I
+
+
+# direct methods
+.method public constructor <init>(Lt79;Lp14;)V
+    .locals 0
+
+    iput-object p1, p0, Lj79;->s0:Lt79;
+
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lj79;
+    iput-object p1, p0, Lj79;->Z:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget p1, p0, Lj79;->t0:I
 
-    return-object v0
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    or-int/2addr p1, v0
 
-    instance-of v0, p1, Lj79;
+    iput p1, p0, Lj79;->t0:I
 
-    if-nez v0, :cond_0
+    iget-object p1, p0, Lj79;->s0:Lt79;
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return p1
+    invoke-virtual {p1, v0, p0, v0}, Lt79;->z(Lt92;Lp14;Lgb9;)Ljava/io/Serializable;
 
-    :cond_0
-    check-cast p1, Lj79;
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x164be01
-
-    return v0
+    return-object p1
 .end method

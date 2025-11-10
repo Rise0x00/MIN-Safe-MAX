@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static read(Lq6g;)Landroidx/core/app/RemoteActionCompat;
+.method public static read(Lnkg;)Landroidx/core/app/RemoteActionCompat;
     .locals 5
 
     new-instance v0, Landroidx/core/app/RemoteActionCompat;
@@ -23,7 +23,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lq6g;->e(I)Z
+    invoke-virtual {p0, v2}, Lnkg;->e(I)Z
 
     move-result v3
 
@@ -32,7 +32,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lq6g;->h()Ls6g;
+    invoke-virtual {p0}, Lnkg;->h()Lpkg;
 
     move-result-object v1
 
@@ -45,7 +45,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v3}, Lq6g;->e(I)Z
+    invoke-virtual {p0, v3}, Lnkg;->e(I)Z
 
     move-result v3
 
@@ -56,11 +56,11 @@
     :cond_1
     move-object v1, p0
 
-    check-cast v1, Lr6g;
+    check-cast v1, Lokg;
 
     sget-object v3, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
-    iget-object v1, v1, Lr6g;->e:Landroid/os/Parcel;
+    iget-object v1, v1, Lokg;->e:Landroid/os/Parcel;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
@@ -75,7 +75,7 @@
 
     const/4 v3, 0x3
 
-    invoke-virtual {p0, v3}, Lq6g;->e(I)Z
+    invoke-virtual {p0, v3}, Lnkg;->e(I)Z
 
     move-result v3
 
@@ -86,11 +86,11 @@
     :cond_2
     move-object v1, p0
 
-    check-cast v1, Lr6g;
+    check-cast v1, Lokg;
 
     sget-object v3, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
-    iget-object v1, v1, Lr6g;->e:Landroid/os/Parcel;
+    iget-object v1, v1, Lokg;->e:Landroid/os/Parcel;
 
     invoke-interface {v3, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
@@ -105,7 +105,7 @@
 
     const/4 v3, 0x4
 
-    invoke-virtual {p0, v1, v3}, Lq6g;->g(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v3}, Lnkg;->g(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -117,7 +117,7 @@
 
     const/4 v3, 0x5
 
-    invoke-virtual {p0, v3}, Lq6g;->e(I)Z
+    invoke-virtual {p0, v3}, Lnkg;->e(I)Z
 
     move-result v3
 
@@ -130,9 +130,9 @@
     :cond_3
     move-object v1, p0
 
-    check-cast v1, Lr6g;
+    check-cast v1, Lokg;
 
-    iget-object v1, v1, Lr6g;->e:Landroid/os/Parcel;
+    iget-object v1, v1, Lokg;->e:Landroid/os/Parcel;
 
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
@@ -154,7 +154,7 @@
 
     const/4 v3, 0x6
 
-    invoke-virtual {p0, v3}, Lq6g;->e(I)Z
+    invoke-virtual {p0, v3}, Lnkg;->e(I)Z
 
     move-result v3
 
@@ -165,9 +165,9 @@
     goto :goto_4
 
     :cond_5
-    check-cast p0, Lr6g;
+    check-cast p0, Lokg;
 
-    iget-object p0, p0, Lr6g;->e:Landroid/os/Parcel;
+    iget-object p0, p0, Lokg;->e:Landroid/os/Parcel;
 
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
@@ -186,7 +186,7 @@
     return-object v0
 .end method
 
-.method public static write(Landroidx/core/app/RemoteActionCompat;Lq6g;)V
+.method public static write(Landroidx/core/app/RemoteActionCompat;Lnkg;)V
     .locals 4
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -195,21 +195,21 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1}, Lq6g;->i(I)V
+    invoke-virtual {p1, v1}, Lnkg;->i(I)V
 
-    invoke-virtual {p1, v0}, Lq6g;->l(Ls6g;)V
+    invoke-virtual {p1, v0}, Lnkg;->l(Lpkg;)V
 
     iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1}, Lq6g;->i(I)V
+    invoke-virtual {p1, v1}, Lnkg;->i(I)V
 
     move-object v1, p1
 
-    check-cast v1, Lr6g;
+    check-cast v1, Lokg;
 
-    iget-object v1, v1, Lr6g;->e:Landroid/os/Parcel;
+    iget-object v1, v1, Lokg;->e:Landroid/os/Parcel;
 
     const/4 v2, 0x0
 
@@ -219,7 +219,7 @@
 
     const/4 v3, 0x3
 
-    invoke-virtual {p1, v3}, Lq6g;->i(I)V
+    invoke-virtual {p1, v3}, Lnkg;->i(I)V
 
     invoke-static {v0, v1, v2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
@@ -227,13 +227,13 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {p1, v0, v2}, Lq6g;->k(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0, v2}, Lnkg;->k(Landroid/os/Parcelable;I)V
 
     iget-boolean v0, p0, Landroidx/core/app/RemoteActionCompat;->e:Z
 
     const/4 v2, 0x5
 
-    invoke-virtual {p1, v2}, Lq6g;->i(I)V
+    invoke-virtual {p1, v2}, Lnkg;->i(I)V
 
     invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -241,7 +241,7 @@
 
     const/4 v0, 0x6
 
-    invoke-virtual {p1, v0}, Lq6g;->i(I)V
+    invoke-virtual {p1, v0}, Lnkg;->i(I)V
 
     invoke-virtual {v1, p0}, Landroid/os/Parcel;->writeInt(I)V
 

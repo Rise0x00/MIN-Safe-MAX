@@ -1,61 +1,60 @@
-.class public abstract Lnja;
-.super Ljava/lang/Object;
+.class public final Lnja;
+.super Ljg3;
 .source "SourceFile"
 
+# interfaces
+.implements Lak6;
 
-# static fields
-.field public static final a:J
 
-.field public static final b:J
+# instance fields
+.field public final a:Leia;
 
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
+.field public final b:Lfj6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Leia;Lfj6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnja;->a:Leia;
+
+    iput-object p2, p0, Lnja;->b:Lfj6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Leia;
+    .locals 4
+
+    new-instance v0, Lxia;
+
+    iget-object v1, p0, Lnja;->b:Lfj6;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lnja;->a:Leia;
+
+    invoke-direct {v0, v3, v1, v2}, Lxia;-><init>(Leia;Lfj6;I)V
+
+    return-object v0
+.end method
+
+.method public final i(Ltg3;)V
     .locals 2
 
-    sget v0, Lvdc;->call_history_info_copy_link:I
+    new-instance v0, Lmja;
 
-    int-to-long v0, v0
+    iget-object v1, p0, Lnja;->b:Lfj6;
 
-    sput-wide v0, Lnja;->a:J
+    invoke-direct {v0, p1, v1}, Lmja;-><init>(Ltg3;Lfj6;)V
 
-    sget v0, Lvdc;->call_history_info_open_chat_call:I
+    iget-object p1, p0, Lnja;->a:Leia;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lnja;->b:J
-
-    sget v0, Lvdc;->call_history_info_recreate:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnja;->c:J
-
-    sget v0, Lvdc;->call_history_info_send_to_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnja;->d:J
-
-    sget v0, Lvdc;->call_history_info_share_link:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnja;->e:J
-
-    sget v0, Lvdc;->call_history_info_start_call:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnja;->f:J
+    invoke-virtual {p1, v0}, Leia;->a(Lgla;)V
 
     return-void
 .end method

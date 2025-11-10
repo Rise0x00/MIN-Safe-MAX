@@ -1,210 +1,88 @@
 .class public final Lwqg;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lvqg;
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lyqg;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lepg;
 
-.field public final c:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyqg;Lepg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lvqg;
+    iput-object p1, p0, Lwqg;->X:Lyqg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lwqg;->Y:Lepg;
 
-    sput-object v0, Lwqg;->Companion:Lvqg;
+    const/4 p1, 0x2
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    and-int/lit8 v0, p2, 0x3
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x3
-
-    if-ne v2, v0, :cond_1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwqg;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lwqg;->b:Ljava/lang/String;
-
-    and-int/lit8 p1, p2, 0x4
-
-    if-nez p1, :cond_0
-
-    iput-object v1, p0, Lwqg;->c:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :cond_0
-    iput-object p4, p0, Lwqg;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_1
-    sget-object p1, Luqg;->a:Luqg;
-
-    invoke-virtual {p1}, Luqg;->d()Ldsd;
-
-    move-result-object p1
-
-    invoke-static {p2, v2, p1}, Lv63;->y0(IILdsd;)V
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lbtg;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lwqg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lwqg;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lwqg;
 
-    iget-object v1, p0, Lwqg;->a:Ljava/lang/String;
+    sget-object p2, Lybg;->a:Lybg;
 
-    iget-object v3, p1, Lwqg;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lwqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lwqg;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lwqg;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lwqg;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lwqg;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lwqg;
 
-    iget-object v1, p0, Lwqg;->a:Ljava/lang/String;
+    iget-object v1, p0, Lwqg;->X:Lyqg;
 
-    if-nez v1, :cond_0
+    iget-object v2, p0, Lwqg;->Y:Lepg;
 
-    move v1, v0
+    invoke-direct {v0, v1, v2, p2}, Lwqg;-><init>(Lyqg;Lepg;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lwqg;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v2, p0, Lwqg;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", requestId="
-
-    const-string v1, ", reason="
-
-    const-string v2, "WebAppBiometryAuthRequest(queryId="
-
-    iget-object v3, p0, Lwqg;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lwqg;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lwqg;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lwqg;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwqg;->o:Ljava/lang/Object;
+
+    check-cast p1, Lbtg;
+
+    iget-object v0, p0, Lwqg;->X:Lyqg;
+
+    iget-object v1, p0, Lwqg;->Y:Lepg;
+
+    invoke-static {v0, v1, p1}, Lyqg;->j(Lyqg;Lepg;Lbtg;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

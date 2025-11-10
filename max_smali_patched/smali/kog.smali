@@ -1,41 +1,41 @@
-.class public final Lkog;
+.class public abstract Lkog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/view/Surface;F)V
+    .locals 1
 
-    sget v0, Lt4g;->a:I
+    const/4 v0, 0x0
 
-    const/16 v0, 0x24
+    cmpl-float v0, p1, v0
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_0
 
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    goto :goto_0
 
-    sput-object v0, Lkog;->b:Ljava/lang/String;
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    :try_start_0
+    invoke-static {p0, p1, v0}, Lwy8;->u(Landroid/view/Surface;FI)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    :catch_0
+    move-exception p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p1, "VideoFrameReleaseHelper"
 
-    iput-object p1, p0, Lkog;->a:Ljava/lang/String;
+    const-string v0, "Failed to call Surface.setFrameRate"
+
+    invoke-static {p1, v0, p0}, Lnei;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

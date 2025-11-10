@@ -1,385 +1,219 @@
-.class public final Lcca;
+.class public abstract Lcca;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxda;
-.implements Lss4;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lxda;
-
-.field public final c:Lmf6;
-
-.field public o:Lss4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lxda;Lmf6;I)V
+.method public static a(Landroid/app/NotificationChannel;)Z
     .locals 0
 
-    iput p3, p0, Lcca;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBypassDnd()Z
 
-    iput-object p1, p0, Lcca;->b:Lxda;
+    move-result p0
 
-    iput-object p2, p0, Lcca;->c:Lmf6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/app/NotificationChannel;)Z
+    .locals 0
 
-# virtual methods
-.method public final b()V
-    .locals 2
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canShowBadge()Z
 
-    iget v0, p0, Lcca;->a:I
+    move-result p0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcca;->b:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    sget-object v1, Lws4;->a:Lws4;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iput-object v1, p0, Lcca;->o:Lss4;
-
-    iget-object v0, p0, Lcca;->b:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public final c(Lss4;)V
+.method public static c(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/app/NotificationChannel;
     .locals 1
 
-    iget v0, p0, Lcca;->a:I
+    new-instance v0, Landroid/app/NotificationChannel;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lcca;->o:Lss4;
-
-    iget-object p1, p0, Lcca;->b:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lcca;->o:Lss4;
-
-    iget-object p1, p0, Lcca;->b:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+.method public static d(Landroid/app/NotificationChannel;Z)V
+    .locals 0
 
-    iget v0, p0, Lcca;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcca;->b:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    sget-object v1, Lws4;->a:Lws4;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcca;->c:Lmf6;
-
-    invoke-interface {v0, p1}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Iterable;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    :goto_0
-    :try_start_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-eqz v0, :cond_1
-
-    :try_start_2
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "The iterator returned a null value"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    iget-object v1, p0, Lcca;->b:Lxda;
-
-    invoke-interface {v1, v0}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lcca;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lcca;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lcca;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final g()V
-    .locals 1
+.method public static e(Landroid/app/NotificationChannel;Z)V
+    .locals 0
 
-    iget v0, p0, Lcca;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableVibration(Z)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    sget-object v0, Lws4;->a:Lws4;
-
-    iput-object v0, p0, Lcca;->o:Lss4;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final h()Z
-    .locals 1
+.method public static f(Landroid/app/NotificationChannel;)Landroid/media/AudioAttributes;
+    .locals 0
 
-    iget v0, p0, Lcca;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getAudioAttributes()Landroid/media/AudioAttributes;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 3
+.method public static g(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    iget v0, p0, Lcca;->a:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getDescription()Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lcca;->b:Lxda;
+    return-object p0
+.end method
 
-    :try_start_0
-    iget-object v1, p0, Lcca;->c:Lmf6;
+.method public static h(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    invoke-interface {v1, p1}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p0
 
-    if-nez v1, :cond_0
+    return-object p0
+.end method
 
-    new-instance v1, Ljava/lang/NullPointerException;
+.method public static i(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    const-string v2, "The supplied value is null"
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    invoke-virtual {v1, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    return-object p0
+.end method
 
-    invoke-interface {v0, v1}, Lxda;->onError(Ljava/lang/Throwable;)V
+.method public static j(Landroid/app/NotificationChannel;)I
+    .locals 0
 
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getImportance()I
 
-    :cond_0
-    invoke-interface {v0, v1}, Lxda;->f(Ljava/lang/Object;)V
+    move-result p0
 
-    invoke-interface {v0}, Lxda;->b()V
+    return p0
+.end method
 
-    goto :goto_0
+.method public static k(Landroid/app/NotificationChannel;)I
+    .locals 0
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLightColor()I
 
-    invoke-static {v1}, Lhd6;->X(Ljava/lang/Throwable;)V
+    move-result p0
 
-    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+    return p0
+.end method
 
-    filled-new-array {p1, v1}, [Ljava/lang/Throwable;
+.method public static l(Landroid/app/NotificationChannel;)I
+    .locals 0
 
-    move-result-object p1
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
 
-    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    move-result p0
 
-    invoke-interface {v0, v2}, Lxda;->onError(Ljava/lang/Throwable;)V
+    return p0
+.end method
 
-    :goto_0
+.method public static m(Landroid/app/NotificationChannel;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static n(Landroid/app/NotificationChannel;)Landroid/net/Uri;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getSound()Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static o(Landroid/app/NotificationChannel;)[J
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getVibrationPattern()[J
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static p(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
+
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lcca;->o:Lss4;
+.method public static q(Landroid/app/NotificationChannel;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object v1, Lws4;->a:Lws4;
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_1
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    iput-object v1, p0, Lcca;->o:Lss4;
-
-    iget-object v0, p0, Lcca;->b:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
     return-void
+.end method
 
-    nop
+.method public static r(Landroid/app/NotificationChannel;I)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setLightColor(I)V
+
+    return-void
+.end method
+
+.method public static s(Landroid/app/NotificationChannel;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
+
+    return-void
+.end method
+
+.method public static t(Landroid/app/NotificationChannel;Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
+
+    return-void
+.end method
+
+.method public static u(Landroid/app/NotificationChannel;[J)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setVibrationPattern([J)V
+
+    return-void
+.end method
+
+.method public static v(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldShowLights()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static w(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldVibrate()Z
+
+    move-result p0
+
+    return p0
 .end method

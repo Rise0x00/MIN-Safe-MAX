@@ -287,7 +287,7 @@
 
     iget-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
-    new-instance v3, Lvt8;
+    new-instance v3, Ln09;
 
     const-string v4, "data_calling_pkg"
 
@@ -307,9 +307,9 @@
 
     move-result v6
 
-    invoke-direct {v3, v4, v5, v6}, Lvt8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v3, v4, v5, v6}, Ln09;-><init>(Ljava/lang/String;II)V
 
-    invoke-virtual {v2, v3}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Lvt8;)V
+    invoke-virtual {v2, v3}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Ln09;)V
 
     const-string v2, "data_extras"
 
@@ -659,14 +659,14 @@
     :goto_1
     iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
-    invoke-virtual {p1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Lvt8;)V
+    invoke-virtual {p1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Ln09;)V
 
     return-void
 
     :goto_2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Lvt8;)V
+    invoke-virtual {v0, v2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->setCurrentControllerInfo(Ln09;)V
 
     throw p1
 

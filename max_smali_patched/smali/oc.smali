@@ -1,666 +1,1333 @@
-.class public final Loc;
+.class public Loc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lei5;
+.implements Llc;
 
 
 # static fields
-.field public static final n:[I
-
-.field public static final o:[I
-
-.field public static final p:[B
-
-.field public static final q:[B
-
-.field public static final r:I
+.field public static final s:Ljava/nio/charset/Charset;
 
 
 # instance fields
-.field public final a:[B
+.field public final a:I
 
-.field public b:Z
+.field public final b:Lq98;
 
-.field public c:J
+.field public final c:Likg;
 
-.field public d:I
+.field public d:[B
 
-.field public e:I
+.field public e:[B
 
-.field public f:Z
+.field public f:[B
 
-.field public g:I
+.field public g:[B
 
-.field public h:I
+.field public h:[B
 
-.field public i:J
+.field public i:[B
 
-.field public j:Lii5;
+.field public j:[B
 
-.field public k:Lbof;
+.field public k:Ljavax/crypto/Cipher;
 
-.field public l:Ldnd;
+.field public l:Ljavax/crypto/spec/SecretKeySpec;
 
-.field public m:Z
+.field public m:Ljavax/crypto/spec/SecretKeySpec;
+
+.field public n:Ljavax/crypto/Cipher;
+
+.field public o:I
+
+.field public p:Z
+
+.field public volatile q:Loc;
+
+.field public final synthetic r:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
-
-    const/16 v0, 0x10
-
-    new-array v1, v0, [I
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Loc;->n:[I
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Loc;->o:[I
-
-    sget v1, Lr4g;->a:I
-
-    sget-object v1, Lj82;->c:Ljava/nio/charset/Charset;
-
-    const-string v2, "#!AMR\n"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v2
-
-    sput-object v2, Loc;->p:[B
-
-    const-string v2, "#!AMR-WB\n"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v1
-
-    sput-object v1, Loc;->q:[B
-
-    const/16 v1, 0x8
-
-    aget v0, v0, v1
-
-    sput v0, Loc;->r:I
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0xd
-        0xe
-        0x10
-        0x12
-        0x14
-        0x15
-        0x1b
-        0x20
-        0x6
-        0x7
-        0x6
-        0x6
-        0x1
-        0x1
-        0x1
-        0x1
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x12
-        0x18
-        0x21
-        0x25
-        0x29
-        0x2f
-        0x33
-        0x3b
-        0x3d
-        0x6
-        0x1
-        0x1
-        0x1
-        0x1
-        0x1
-        0x1
-    .end array-data
-.end method
-
-.method public constructor <init>()V
     .locals 1
 
+    const-string v0, "ISO-8859-1"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    sput-object v0, Loc;->s:Ljava/nio/charset/Charset;
+
+    return-void
+.end method
+
+.method public constructor <init>(Likg;ILq98;I)V
+    .locals 0
+
+    iput p4, p0, Loc;->r:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 p4, 0x0
 
-    new-array v0, v0, [B
+    .line 2
+    iput p4, p0, Loc;->o:I
 
-    iput-object v0, p0, Loc;->a:[B
+    .line 3
+    iput-boolean p4, p0, Loc;->p:Z
 
-    const/4 v0, -0x1
+    .line 4
+    iput p2, p0, Loc;->a:I
 
-    iput v0, p0, Loc;->g:I
+    .line 5
+    iput-object p3, p0, Loc;->b:Lq98;
+
+    .line 6
+    iput-object p1, p0, Loc;->c:Likg;
+
+    return-void
+.end method
+
+.method public constructor <init>(Likg;[BILq98;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Loc;->r:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput v0, p0, Loc;->o:I
+
+    .line 9
+    iput-boolean v0, p0, Loc;->p:Z
+
+    .line 10
+    iput p3, p0, Loc;->a:I
+
+    .line 11
+    iput-object p4, p0, Loc;->b:Lq98;
+
+    .line 12
+    iput-object p1, p0, Loc;->c:Likg;
+
+    const/4 p1, 0x1
+
+    if-ne p3, p1, :cond_0
+
+    .line 13
+    const-string v0, "client in"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "server in"
+
+    :goto_0
+    invoke-virtual {p0}, Loc;->i()S
+
+    move-result v1
+
+    invoke-virtual {p0, p2, v0, v1}, Loc;->m([BLjava/lang/String;S)[B
+
+    move-result-object p2
+
+    .line 14
+    invoke-static {p3}, Lsfd;->k(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string v0, " initial secret"
+
+    invoke-virtual {p3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-interface {p4, p3, p2}, Lq98;->secret(Ljava/lang/String;[B)V
+
+    .line 15
+    invoke-virtual {p0, p2, p1, p1}, Loc;->f([BZZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lgi5;)I
-    .locals 4
+.method public final a([B)[B
+    .locals 11
 
-    invoke-interface {p1}, Lgi5;->x()V
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Loc;->a:[B
-
-    invoke-interface {p1, v1, v2, v0}, Lgi5;->d(I[BI)V
-
-    aget-byte p1, v2, v1
-
-    and-int/lit16 v0, p1, 0x83
-
-    const/4 v1, 0x0
-
-    if-gtz v0, :cond_5
-
-    shr-int/lit8 p1, p1, 0x3
-
-    const/16 v0, 0xf
-
-    and-int/2addr p1, v0
-
-    if-ltz p1, :cond_3
-
-    if-gt p1, v0, :cond_3
-
-    iget-boolean v0, p0, Loc;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const/16 v2, 0xa
-
-    if-lt p1, v2, :cond_1
-
-    const/16 v2, 0xd
-
-    if-le p1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-nez v0, :cond_3
-
-    const/16 v2, 0xc
-
-    if-lt p1, v2, :cond_1
-
-    const/16 v2, 0xe
-
-    if-le p1, v2, :cond_3
-
-    :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
-
-    sget-object v0, Loc;->o:[I
-
-    aget p1, v0, p1
-
-    return p1
-
-    :cond_2
-    sget-object v0, Loc;->n:[I
-
-    aget p1, v0, p1
-
-    return p1
-
-    :cond_3
-    iget-boolean v0, p0, Loc;->b:Z
-
-    if-eqz v0, :cond_4
-
-    const-string v0, "WB"
-
-    goto :goto_1
-
-    :cond_4
-    const-string v0, "NB"
-
-    :goto_1
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x23
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Illegal AMR "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " frame type "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_5
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x2a
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Invalid padding bits for frame header "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public final b(Lgi5;)Z
-    .locals 5
-
-    invoke-interface {p1}, Lgi5;->x()V
-
-    sget-object v0, Loc;->p:[B
-
-    array-length v1, v0
-
-    new-array v1, v1, [B
-
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v3, v1, v2}, Lgi5;->d(I[BI)V
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
-
-    iput-boolean v3, p0, Loc;->b:Z
-
-    array-length v0, v0
-
-    invoke-interface {p1, v0}, Lgi5;->y(I)V
-
-    return v2
-
-    :cond_0
-    invoke-interface {p1}, Lgi5;->x()V
-
-    sget-object v0, Loc;->q:[B
-
-    array-length v1, v0
-
-    new-array v1, v1, [B
-
-    array-length v4, v0
-
-    invoke-interface {p1, v3, v1, v4}, Lgi5;->d(I[BI)V
-
-    invoke-static {v1, v0}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iput-boolean v2, p0, Loc;->b:Z
-
-    array-length v0, v0
-
-    invoke-interface {p1, v0}, Lgi5;->y(I)V
-
-    return v2
-
-    :cond_1
-    return v3
-.end method
-
-.method public final d(JJ)V
-    .locals 3
-
-    const-wide/16 p3, 0x0
-
-    iput-wide p3, p0, Loc;->c:J
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Loc;->d:I
-
-    iput v0, p0, Loc;->e:I
-
-    cmp-long v0, p1, p3
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Loc;->l:Ldnd;
-
-    instance-of v1, v0, Lpn3;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lpn3;
-
-    iget-wide v1, v0, Lpn3;->b:J
-
-    iget v0, v0, Lpn3;->e:I
-
-    sub-long/2addr p1, v1
-
-    invoke-static {p3, p4, p1, p2}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p1
-
-    const-wide/32 p3, 0x7a1200
-
-    mul-long/2addr p1, p3
-
-    int-to-long p3, v0
-
-    div-long/2addr p1, p3
-
-    iput-wide p1, p0, Loc;->i:J
-
-    return-void
-
-    :cond_0
-    iput-wide p3, p0, Loc;->i:J
-
-    return-void
-.end method
-
-.method public final g(Lii5;)V
-    .locals 2
-
-    iput-object p1, p0, Loc;->j:Lii5;
-
-    const/4 v0, 0x0
+    iget v0, p0, Loc;->r:I
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v0, v1}, Lii5;->A(II)Lbof;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    const-string v0, "ChaCha20"
 
-    iput-object v0, p0, Loc;->k:Lbof;
+    :try_start_0
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
-    invoke-interface {p1}, Lii5;->v()V
+    move-result-object v2
 
-    return-void
-.end method
+    const/16 v3, 0x10
 
-.method public final h(Lgi5;)Z
-    .locals 0
+    const/4 v4, 0x4
 
-    invoke-virtual {p0, p1}, Loc;->b(Lgi5;)Z
+    invoke-static {p1, v4, v3}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v3
+
+    const/4 v5, 0x3
+
+    aget-byte v6, p1, v5
+
+    const/4 v7, 0x2
+
+    aget-byte v8, p1, v7
+
+    aget-byte v9, p1, v1
+
+    const/4 v10, 0x0
+
+    aget-byte p1, p1, v10
+
+    new-array v4, v4, [B
+
+    aput-byte v6, v4, v10
+
+    aput-byte v8, v4, v1
+
+    aput-byte v9, v4, v7
+
+    aput-byte p1, v4, v5
+
+    invoke-static {v4}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result p1
 
-    return p1
+    invoke-static {}, Lzx;->j()V
+
+    invoke-static {p1, v3}, Lzx;->i(I[B)Ljavax/crypto/spec/ChaCha20ParameterSpec;
+
+    move-result-object p1
+
+    new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v4, p0, Loc;->j:[B
+
+    invoke-direct {v3, v4, v0}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    invoke-virtual {v2, v1, v3, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    const/4 p1, 0x5
+
+    new-array p1, p1, [B
+
+    fill-array-data p1, :array_0
+
+    invoke-virtual {v2, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_2
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_2
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :catch_3
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :catch_4
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :catch_5
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :goto_0
+    new-instance v0, Ltech/kwik/core/impl/QuicRuntimeException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Loc;->k:Ljavax/crypto/Cipher;
+
+    if-nez v0, :cond_0
+
+    :try_start_1
+    const-string v0, "AES/ECB/NoPadding"
+
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loc;->k:Ljavax/crypto/Cipher;
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v2, p0, Loc;->j:[B
+
+    const-string v3, "AES"
+
+    invoke-direct {v0, v2, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    iget-object v2, p0, Loc;->k:Ljavax/crypto/Cipher;
+
+    invoke-virtual {v2, v1, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+    :try_end_1
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_7
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_1 .. :try_end_1} :catch_6
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_8
+
+    goto :goto_2
+
+    :catch_6
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_7
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_8
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :goto_1
+    new-instance v0, Ltech/kwik/core/impl/QuicRuntimeException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    :goto_2
+    iget-object v0, p0, Loc;->k:Ljavax/crypto/Cipher;
+
+    :try_start_2
+    invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_2
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_2 .. :try_end_2} :catch_9
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_2 .. :try_end_2} :catch_9
+
+    return-object p1
+
+    :catch_9
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+        0x0t
+    .end array-data
 .end method
 
-.method public final i(Lgi5;Lc7;)I
-    .locals 9
+.method public final b([B[B[B)[B
+    .locals 4
 
-    iget-object p2, p0, Loc;->k:Lbof;
+    iget v0, p0, Loc;->r:I
 
-    invoke-static {p2}, Lyhh;->h(Ljava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
 
-    sget p2, Lr4g;->a:I
+    :try_start_0
+    invoke-virtual {p0}, Loc;->k()Ljavax/crypto/Cipher;
 
-    move-object p2, p1
+    move-result-object v0
 
-    check-cast p2, Lgh4;
+    new-instance v1, Ljavax/crypto/spec/IvParameterSpec;
 
-    iget-wide v0, p2, Lgh4;->o:J
+    invoke-direct {v1, p3}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p0}, Loc;->l()Ljavax/crypto/spec/SecretKeySpec;
 
-    cmp-long p2, v0, v2
+    move-result-object p3
 
-    if-nez p2, :cond_1
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, p1}, Loc;->b(Lgi5;)Z
+    invoke-virtual {v0, v2, p3, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    move-result p2
+    invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->updateAAD([B)V
 
-    if-eqz p2, :cond_0
+    invoke-virtual {v0, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljavax/crypto/AEADBadTagException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :catch_1
+    new-instance p1, Ltech/kwik/core/impl/DecryptionException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/DecryptionException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    array-length v0, p2
+
+    const/16 v1, 0x10
+
+    if-le v0, v1, :cond_0
+
+    invoke-virtual {p0}, Loc;->l()Ljavax/crypto/spec/SecretKeySpec;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Loc;->k()Ljavax/crypto/Cipher;
+
+    move-result-object v1
+
+    :try_start_1
+    new-instance v2, Ljavax/crypto/spec/GCMParameterSpec;
+
+    const/16 v3, 0x80
+
+    invoke-direct {v2, v3, p3}, Ljavax/crypto/spec/GCMParameterSpec;-><init>(I[B)V
+
+    const/4 p3, 0x2
+
+    invoke-virtual {v1, p3, v0, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    invoke-virtual {v1, p1}, Ljavax/crypto/Cipher;->updateAAD([B)V
+
+    invoke-virtual {v1, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljavax/crypto/AEADBadTagException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_1 .. :try_end_1} :catch_2
+
+    return-object p1
+
+    :catch_2
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :catch_3
+    new-instance p1, Ltech/kwik/core/impl/DecryptionException;
+
+    invoke-direct {p1}, Ltech/kwik/core/impl/DecryptionException;-><init>()V
+
+    throw p1
+
+    :cond_0
+    new-instance p1, Ltech/kwik/core/impl/DecryptionException;
+
+    const-string p2, "ciphertext must be longer than 16 bytes"
+
+    invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c([B[B[B)[B
+    .locals 4
+
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    invoke-virtual {p0}, Loc;->k()Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    new-instance v1, Ljavax/crypto/spec/IvParameterSpec;
+
+    invoke-direct {v1, p3}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
+
+    invoke-virtual {p0}, Loc;->l()Ljavax/crypto/spec/SecretKeySpec;
+
+    move-result-object p3
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2, p3, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->updateAAD([B)V
+
+    invoke-virtual {v0, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    invoke-virtual {p0}, Loc;->k()Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Loc;->l()Ljavax/crypto/spec/SecretKeySpec;
+
+    move-result-object v1
+
+    :try_start_1
+    new-instance v2, Ljavax/crypto/spec/GCMParameterSpec;
+
+    const/16 v3, 0x80
+
+    invoke-direct {v2, v3, p3}, Ljavax/crypto/spec/GCMParameterSpec;-><init>(I[B)V
+
+    const/4 p3, 0x1
+
+    invoke-virtual {v0, p3, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->updateAAD([B)V
+
+    invoke-virtual {v0, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_1 .. :try_end_1} :catch_1
+
+    return-object p1
+
+    :catch_1
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final declared-synchronized d(Z)V
+    .locals 4
+
+    const-string v0, "Updated ApplicationTrafficSecret ("
+
+    const-string v1, "ku"
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v2, p0, Loc;->c:Likg;
+
+    invoke-virtual {v2}, Likg;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "quicv2 "
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    const-string v2, "quic "
+
+    :goto_0
+    iget-object v3, p0, Loc;->d:[B
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Loc;->i()S
+
+    move-result v2
+
+    invoke-virtual {p0, v3, v1, v2}, Loc;->m([BLjava/lang/String;S)[B
+
+    move-result-object v1
+
+    iput-object v1, p0, Loc;->e:[B
+
+    iget-object v1, p0, Loc;->b:Lq98;
+
+    if-eqz p1, :cond_1
+
+    const-string v2, "self"
+
+    goto :goto_1
+
+    :cond_1
+    const-string v2, "peer"
+
+    :goto_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "): "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Loc;->e:[B
+
+    invoke-interface {v1, v0, v2}, Lq98;->secret(Ljava/lang/String;[B)V
+
+    iget-object v0, p0, Loc;->e:[B
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1, p1}, Loc;->f([BZZ)V
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Loc;->e:[B
+
+    iput-object p1, p0, Loc;->d:[B
+
+    iget p1, p0, Loc;->o:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Loc;->o:I
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Loc;->e:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_2
+    monitor-exit p0
+
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized e([B)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-object p1, p0, Loc;->d:[B
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0, v0}, Loc;->f([BZZ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final f([BZZ)V
+    .locals 5
+
+    iget-object v0, p0, Loc;->c:Likg;
+
+    invoke-virtual {v0}, Likg;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "quicv2 "
 
     goto :goto_0
 
     :cond_0
-    const-string p1, "Could not find AMR header."
+    const-string v0, "quic "
 
-    const/4 p2, 0x0
-
-    invoke-static {p2, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_1
     :goto_0
-    iget-boolean p2, p0, Loc;->m:Z
+    const-string v1, "key"
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-nez p2, :cond_4
+    move-result-object v1
 
-    iput-boolean v0, p0, Loc;->m:Z
+    invoke-virtual {p0}, Loc;->j()S
 
-    iget-boolean p2, p0, Loc;->b:Z
+    move-result v2
 
-    if-eqz p2, :cond_2
+    invoke-virtual {p0, p1, v1, v2}, Loc;->m([BLjava/lang/String;S)[B
 
-    const-string v1, "audio/amr-wb"
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    if-eqz p3, :cond_1
+
+    iput-object v1, p0, Loc;->f:[B
+
+    iput-object v2, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
 
     goto :goto_1
 
-    :cond_2
-    const-string v1, "audio/3gpp"
+    :cond_1
+    iput-object v1, p0, Loc;->g:[B
+
+    iput-object v2, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
 
     :goto_1
-    if-eqz p2, :cond_3
+    iget v2, p0, Loc;->a:I
 
-    const/16 p2, 0x3e80
+    invoke-static {v2}, Lsfd;->k(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, " key"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Loc;->b:Lq98;
+
+    invoke-interface {v4, v3, v1}, Lq98;->secret(Ljava/lang/String;[B)V
+
+    const-string v1, "iv"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v3, 0xc
+
+    invoke-virtual {p0, p1, v1, v3}, Loc;->m([BLjava/lang/String;S)[B
+
+    move-result-object v1
+
+    if-eqz p3, :cond_2
+
+    iput-object v1, p0, Loc;->h:[B
 
     goto :goto_2
 
-    :cond_3
-    const/16 p2, 0x1f40
+    :cond_2
+    iput-object v1, p0, Loc;->i:[B
 
     :goto_2
-    iget-object v2, p0, Loc;->k:Lbof;
+    invoke-static {v2}, Lsfd;->k(I)Ljava/lang/String;
 
-    new-instance v3, Lp76;
+    move-result-object p3
 
-    invoke-direct {v3}, Lp76;-><init>()V
+    const-string v3, " iv"
 
-    iput-object v1, v3, Lp76;->k:Ljava/lang/String;
+    invoke-virtual {p3, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    sget v1, Loc;->r:I
+    move-result-object p3
 
-    iput v1, v3, Lp76;->l:I
+    invoke-interface {v4, p3, v1}, Lq98;->secret(Ljava/lang/String;[B)V
 
-    iput v0, v3, Lp76;->x:I
+    if-eqz p2, :cond_3
 
-    iput p2, v3, Lp76;->y:I
+    const-string p2, "hp"
 
-    new-instance p2, Lr76;
+    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p2, v3}, Lr76;-><init>(Lp76;)V
+    move-result-object p2
 
-    invoke-interface {v2, p2}, Lbof;->d(Lr76;)V
+    invoke-virtual {p0}, Loc;->j()S
 
-    :cond_4
-    iget p2, p0, Loc;->e:I
+    move-result p3
 
-    const/4 v1, -0x1
+    invoke-virtual {p0, p1, p2, p3}, Loc;->m([BLjava/lang/String;S)[B
 
-    if-nez p2, :cond_6
+    move-result-object p1
+
+    iput-object p1, p0, Loc;->j:[B
+
+    invoke-static {v2}, Lsfd;->k(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, " hp"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Loc;->j:[B
+
+    invoke-interface {v4, p1, p2}, Lq98;->secret(Ljava/lang/String;[B)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final declared-synchronized g()V
+    .locals 3
+
+    monitor-enter p0
 
     :try_start_0
-    invoke-virtual {p0, p1}, Loc;->a(Lgi5;)I
+    iget-boolean v0, p0, Loc;->p:Z
 
-    move-result p2
+    if-eqz v0, :cond_0
 
-    iput p2, p0, Loc;->d:I
-    :try_end_0
-    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Loc;->b:Lq98;
 
-    iput p2, p0, Loc;->e:I
+    const-string v1, "Installing updated keys (initiated by peer)"
 
-    iget v2, p0, Loc;->g:I
+    invoke-interface {v0, v1}, Lq98;->info(Ljava/lang/String;)V
 
-    if-ne v2, v1, :cond_5
+    iget-object v0, p0, Loc;->e:[B
 
-    move-object v2, p1
+    iput-object v0, p0, Loc;->d:[B
 
-    check-cast v2, Lgh4;
+    iget-object v0, p0, Loc;->g:[B
 
-    iget-wide v2, v2, Lgh4;->o:J
+    iput-object v0, p0, Loc;->f:[B
 
-    iput p2, p0, Loc;->g:I
+    const/4 v0, 0x0
 
-    :cond_5
-    iget v2, p0, Loc;->g:I
+    iput-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
 
-    if-ne v2, p2, :cond_6
+    iget-object v1, p0, Loc;->i:[B
 
-    iget p2, p0, Loc;->h:I
+    iput-object v1, p0, Loc;->h:[B
 
-    add-int/2addr p2, v0
+    iget v1, p0, Loc;->o:I
 
-    iput p2, p0, Loc;->h:I
+    const/4 v2, 0x1
 
-    :cond_6
-    iget-object p2, p0, Loc;->k:Lbof;
+    add-int/2addr v1, v2
 
-    iget v2, p0, Loc;->e:I
+    iput v1, p0, Loc;->o:I
 
-    invoke-interface {p2, p1, v2, v0}, Lbof;->a(Lc94;IZ)I
-
-    move-result p1
-
-    if-ne p1, v1, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    iget p2, p0, Loc;->e:I
-
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Loc;->e:I
+    iput-object v0, p0, Loc;->e:[B
 
     const/4 v1, 0x0
 
-    if-lez p2, :cond_8
+    iput-boolean v1, p0, Loc;->p:Z
+
+    iput-object v0, p0, Loc;->g:[B
+
+    iput-object v0, p0, Loc;->i:[B
+
+    iget-object v0, p0, Loc;->q:Loc;
+
+    iget v0, v0, Loc;->o:I
+
+    iget v1, p0, Loc;->o:I
+
+    if-ge v0, v1, :cond_0
+
+    iget-object v0, p0, Loc;->b:Lq98;
+
+    const-string v1, "Keys out of sync; updating keys for peer"
+
+    invoke-interface {v0, v1}, Lq98;->debug(Ljava/lang/String;)V
+
+    iget-object v0, p0, Loc;->q:Loc;
+
+    invoke-virtual {v0, v2}, Loc;->d(Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public h()Ltr6;
+    .locals 1
+
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {}, Ltr6;->w()Ltr6;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    invoke-static {}, Ltr6;->w()Ltr6;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public i()S
+    .locals 1
+
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/16 v0, 0x20
+
+    return v0
+
+    :pswitch_0
+    const/16 v0, 0x20
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j()S
+    .locals 1
+
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/16 v0, 0x20
+
+    return v0
+
+    :pswitch_0
+    const/16 v0, 0x10
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final k()Ljavax/crypto/Cipher;
+    .locals 2
+
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    const-string v0, "ChaCha20-Poly1305"
+
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    :goto_0
+    new-instance v1, Ltech/kwik/core/impl/QuicRuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_0
+    :goto_1
+    iget-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
+
+    if-nez v0, :cond_1
+
+    :try_start_1
+    const-string v0, "AES/GCM/NoPadding"
+
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
+    :try_end_1
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_3
 
-    :cond_8
-    iget-object v2, p0, Loc;->k:Lbof;
+    :catch_2
+    move-exception v0
 
-    iget-wide p1, p0, Loc;->i:J
+    goto :goto_2
 
-    iget-wide v3, p0, Loc;->c:J
+    :catch_3
+    move-exception v0
 
-    add-long/2addr v3, p1
+    :goto_2
+    new-instance v1, Ltech/kwik/core/impl/QuicRuntimeException;
 
-    iget v6, p0, Loc;->d:I
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    const/4 v7, 0x0
+    throw v1
 
-    const/4 v8, 0x0
-
-    const/4 v5, 0x1
-
-    invoke-interface/range {v2 .. v8}, Lbof;->b(JIIILznf;)V
-
-    iget-wide p1, p0, Loc;->c:J
-
-    const-wide/16 v2, 0x4e20
-
-    add-long/2addr p1, v2
-
-    iput-wide p1, p0, Loc;->c:J
-
-    :catch_0
+    :cond_1
     :goto_3
-    iget-boolean p1, p0, Loc;->f:Z
+    iget-object v0, p0, Loc;->n:Ljavax/crypto/Cipher;
 
-    if-eqz p1, :cond_9
+    return-object v0
 
-    goto :goto_4
+    nop
 
-    :cond_9
-    new-instance p1, Ldu5;
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {p1, v2, v3}, Ldu5;-><init>(J)V
-
-    iput-object p1, p0, Loc;->l:Ldnd;
-
-    iget-object p2, p0, Loc;->j:Lii5;
-
-    invoke-interface {p2, p1}, Lii5;->L(Ldnd;)V
-
-    iput-boolean v0, p0, Loc;->f:Z
-
-    :goto_4
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final release()V
-    .locals 0
+.method public final l()Ljavax/crypto/spec/SecretKeySpec;
+    .locals 3
 
-    return-void
+    iget v0, p0, Loc;->r:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Loc;->p:Z
+
+    const-string v1, "ChaCha20-Poly1305"
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v2, p0, Loc;->g:[B
+
+    invoke-direct {v0, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    iput-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    :cond_0
+    iget-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v2, p0, Loc;->f:[B
+
+    invoke-direct {v0, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    iput-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    :cond_2
+    iget-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    :goto_0
+    return-object v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Loc;->p:Z
+
+    const-string v1, "AES"
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v2, p0, Loc;->g:[B
+
+    invoke-direct {v0, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    iput-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    :cond_3
+    iget-object v0, p0, Loc;->m:Ljavax/crypto/spec/SecretKeySpec;
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    if-nez v0, :cond_5
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v2, p0, Loc;->f:[B
+
+    invoke-direct {v0, v2, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    iput-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    :cond_5
+    iget-object v0, p0, Loc;->l:Ljavax/crypto/spec/SecretKeySpec;
+
+    :goto_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m([BLjava/lang/String;S)[B
+    .locals 6
+
+    const-string v0, "tls13 "
+
+    sget-object v1, Loc;->s:Ljava/nio/charset/Charset;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, 0x3
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v3
+
+    array-length v3, v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v2, v2, 0x1
+
+    const-string v3, ""
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v4
+
+    array-length v4, v4
+
+    add-int/2addr v2, v4
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    array-length v4, v0
+
+    invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v5
+
+    array-length v5, v5
+
+    add-int/2addr v4, v5
+
+    int-to-byte v4, v4
+
+    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    array-length p2, p2
+
+    int-to-byte p2, p2
+
+    invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p0}, Loc;->h()Ltr6;
+
+    move-result-object p2
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v0
+
+    invoke-virtual {p2, p1, v0, p3}, Ltr6;->o([B[BI)[B
+
+    move-result-object p1
+
+    return-object p1
 .end method

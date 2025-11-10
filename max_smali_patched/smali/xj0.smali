@@ -1,114 +1,63 @@
-.class public final Lxj0;
-.super Ljava/lang/Object;
+.class public abstract Lxj0;
+.super Lho8;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final u0:J
 
-.field public final synthetic b:Lzj0;
+.field public final v0:J
+
+.field public w0:Lsr8;
+
+.field public x0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzj0;I)V
-    .locals 0
+.method public constructor <init>(Lxb4;Lec4;Lub6;ILjava/lang/Object;JJJJJ)V
+    .locals 12
 
-    iput p2, p0, Lxj0;->a:I
+    move-object v0, p0
 
-    iput-object p1, p0, Lxj0;->b:Lzj0;
+    move-object v1, p1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move/from16 v4, p4
+
+    move-object/from16 v5, p5
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-wide/from16 v10, p14
+
+    invoke-direct/range {v0 .. v11}, Lho8;-><init>(Lxb4;Lec4;Lub6;ILjava/lang/Object;JJJ)V
+
+    move-wide/from16 p1, p10
+
+    iput-wide p1, p0, Lxj0;->u0:J
+
+    move-wide/from16 p1, p12
+
+    iput-wide p1, p0, Lxj0;->v0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final d(I)I
+    .locals 1
 
-    iget v0, p0, Lxj0;->a:I
+    iget-object v0, p0, Lxj0;->x0:[I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ligi;->i(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lxj0;->b:Lzj0;
+    aget p1, v0, p1
 
-    invoke-virtual {v0}, Lzj0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    check-cast v1, Lxx4;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v2, v3}, Lxx4;->c(ZZZ)Z
-
-    invoke-virtual {v0}, Lzj0;->getProgressDrawable()Lzo4;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lzj0;->getProgressDrawable()Lzo4;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    :cond_0
-    invoke-virtual {v0}, Lzj0;->getIndeterminateDrawable()Lz97;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lzj0;->getIndeterminateDrawable()Lz97;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    :cond_1
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxj0;->b:Lzj0;
-
-    iget v1, v0, Lzj0;->o:I
-
-    if-lez v1, :cond_3
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    :cond_3
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

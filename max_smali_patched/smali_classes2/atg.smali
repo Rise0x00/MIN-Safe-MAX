@@ -1,57 +1,121 @@
-.class public final Latg;
-.super Lnz3;
+.class public final enum Latg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lrsg;
+# static fields
+.field public static final enum X:Latg;
 
-.field public Y:Lvsg;
+.field public static final synthetic Y:[Latg;
 
-.field public Z:Lun0;
+.field public static final enum a:Latg;
 
-.field public o:Lmtg;
+.field public static final enum b:Latg;
 
-.field public synthetic w0:Ljava/lang/Object;
+.field public static final enum c:Latg;
 
-.field public final synthetic x0:Lmtg;
+.field public static final enum d:Latg;
 
-.field public y0:I
+.field public static final enum o:Latg;
 
 
 # direct methods
-.method public constructor <init>(Lmtg;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Latg;->x0:Lmtg;
+    new-instance v0, Latg;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "PREPARE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Latg;->a:Latg;
+
+    new-instance v1, Latg;
+
+    const-string v2, "PLAY"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Latg;->b:Latg;
+
+    new-instance v2, Latg;
+
+    const-string v3, "IN_PROGRESS"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Latg;->c:Latg;
+
+    new-instance v3, Latg;
+
+    const-string v4, "PAUSE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Latg;->d:Latg;
+
+    new-instance v4, Latg;
+
+    const-string v5, "STOP"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Latg;->o:Latg;
+
+    new-instance v5, Latg;
+
+    const-string v6, "END"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Latg;->X:Latg;
+
+    filled-new-array/range {v0 .. v5}, [Latg;
+
+    move-result-object v0
+
+    sput-object v0, Latg;->Y:[Latg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Latg;
     .locals 1
 
-    iput-object p1, p0, Latg;->w0:Ljava/lang/Object;
+    const-class v0, Latg;
 
-    iget p1, p0, Latg;->y0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Latg;
 
-    iput p1, p0, Latg;->y0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Latg;->x0:Lmtg;
+.method public static values()[Latg;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Latg;->Y:[Latg;
 
-    invoke-virtual {p1, v0, p0}, Lmtg;->i(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Latg;
+
+    return-object v0
 .end method

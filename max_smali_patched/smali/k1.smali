@@ -2,42 +2,66 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lk1;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public volatile a:Ljava/lang/Thread;
+.field public final a:Li9e;
 
-.field public volatile b:Lk1;
+.field public final b:Lv28;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Li9e;Lv28;)V
+    .locals 0
 
-    new-instance v0, Lk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk1;->a:Li9e;
 
-    sput-object v0, Lk1;->c:Lk1;
+    iput-object p2, p0, Lk1;->b:Lv28;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    sget-object v0, Lm1;->Y:Lhv0;
+    iget-object v0, p0, Lk1;->a:Li9e;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget-object v0, v0, Lx1;->a:Ljava/lang/Object;
 
-    move-result-object v1
+    if-eq v0, p0, :cond_0
 
-    invoke-virtual {v0, p0, v1}, Lhv0;->L(Lk1;Ljava/lang/Thread;)V
+    goto :goto_0
 
+    :cond_0
+    iget-object v0, p0, Lk1;->b:Lv28;
+
+    invoke-static {v0}, Lx1;->h(Lv28;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lx1;->X:Ljci;
+
+    iget-object v2, p0, Lk1;->a:Li9e;
+
+    invoke-virtual {v1, v2, p0, v0}, Ljci;->b(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lk1;->a:Li9e;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lx1;->d(Lx1;Z)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

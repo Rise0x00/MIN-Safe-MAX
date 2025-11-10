@@ -3,95 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lur3;
+.implements Lo00;
 
 
 # instance fields
-.field public final a:Lit9;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:I
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Landroid/graphics/drawable/Drawable;
+
+.field public final i:Landroid/graphics/drawable/Drawable;
+
+.field public final j:J
 
 
 # direct methods
-.method public constructor <init>(Lit9;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ILjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltr3;->a:Lit9;
+    iput-wide p1, p0, Ltr3;->a:J
+
+    iput-object p3, p0, Ltr3;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Ltr3;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Ltr3;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Ltr3;->e:Ljava/lang/CharSequence;
+
+    iput p7, p0, Ltr3;->f:I
+
+    iput-object p8, p0, Ltr3;->g:Ljava/lang/String;
+
+    iput-object p9, p0, Ltr3;->h:Landroid/graphics/drawable/Drawable;
+
+    iput-object p10, p0, Ltr3;->i:Landroid/graphics/drawable/Drawable;
+
+    iput-wide p11, p0, Ltr3;->j:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltr3;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ltr3;
-
-    iget-object v1, p0, Ltr3;->a:Lit9;
-
-    iget-object p1, p1, Ltr3;->a:Lit9;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ltr3;->a:Lit9;
-
-    invoke-virtual {v0}, Lit9;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Update(contactIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltr3;->a:Lit9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

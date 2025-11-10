@@ -2,67 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgwd;
 
-# instance fields
-.field public a:Ljava/lang/String;
 
-.field public volatile b:I
+# static fields
+.field public static final a:Ldwd;
 
-.field public c:J
 
-.field public d:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public e:Ljava/lang/String;
+    new-instance v0, Ldwd;
 
-.field public f:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public g:J
+    sput-object v0, Ldwd;->a:Ldwd;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lrt5;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-wide v0, p0, Ldwd;->f:J
+    const/4 v0, 0x1
 
-    const-wide/16 v2, 0x0
+    if-ne p0, p1, :cond_0
 
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iget-wide v4, p0, Ldwd;->g:J
-
-    cmp-long v2, v4, v2
-
-    if-eqz v2, :cond_0
-
-    cmp-long v2, v4, v0
-
-    if-lez v2, :cond_0
-
-    sub-long/2addr v4, v0
-
-    long-to-int v0, v4
-
-    int-to-long v0, v0
-
-    iput-wide v0, p0, Ldwd;->c:J
+    return v0
 
     :cond_0
-    new-instance v2, Lrt5;
+    instance-of p1, p1, Ldwd;
 
-    iget-object v6, p0, Ldwd;->a:Ljava/lang/String;
+    if-nez p1, :cond_1
 
-    iget v3, p0, Ldwd;->b:I
+    const/4 p1, 0x0
 
-    iget-wide v4, p0, Ldwd;->c:J
+    return p1
 
-    iget-boolean v8, p0, Ldwd;->d:Z
+    :cond_1
+    return v0
+.end method
 
-    iget-object v7, p0, Ldwd;->e:Ljava/lang/String;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-direct/range {v2 .. v8}, Lrt5;-><init>(IJLjava/lang/String;Ljava/lang/String;Z)V
+    const v0, 0x24f68a67
 
-    return-object v2
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "None"
+
+    return-object v0
 .end method

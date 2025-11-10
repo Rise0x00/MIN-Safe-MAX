@@ -1,128 +1,172 @@
 .class public final Ln44;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public X:I
+.field public final a:[Ljava/lang/Object;
 
-.field public final synthetic Y:Lp44;
-
-.field public final synthetic Z:Lp62;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lp44;Lp62;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Ln44;->Y:Lp44;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln44;->Z:Lp62;
+    iput p1, p0, Ln44;->b:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ln44;->a:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final add(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Le34;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln44;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ln44;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ln44;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ln44;
-
-    iget-object v0, p0, Ln44;->Y:Lp44;
-
-    iget-object v1, p0, Ln44;->Z:Lp62;
-
-    invoke-direct {p1, v0, v1, p2}, Ln44;-><init>(Lp44;Lp62;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Ln44;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
+.end method
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+.method public final hasNext()Z
+    .locals 2
 
-    iget-object p1, p0, Ln44;->Y:Lp44;
+    iget v0, p0, Ln44;->b:I
 
-    iget-object p1, p1, Lp44;->a:Le8e;
+    iget-object v1, p0, Ln44;->a:[Ljava/lang/Object;
 
-    new-instance v0, Ll44;
+    array-length v1, v1
 
-    iget-object v2, p0, Ln44;->Z:Lp62;
+    if-ge v0, v1, :cond_0
 
-    iget-wide v3, v2, Lbj0;->a:J
+    const/4 v0, 0x1
 
-    iget-wide v5, v2, Lp62;->b:J
+    return v0
 
-    invoke-direct {v0, v3, v4, v5, v6}, Ll44;-><init>(JJ)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iput v1, p0, Ln44;->X:I
+    return v0
+.end method
 
-    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final hasPrevious()Z
+    .locals 1
 
-    move-result-object p1
+    iget v0, p0, Ln44;->b:I
 
-    sget-object v0, Lf34;->a:Lf34;
+    if-lez v0, :cond_0
 
-    if-ne p1, v0, :cond_2
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Ln44;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Ln44;->b:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Ln44;->b:I
+
+    iget-object v1, p0, Ln44;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    return-object p1
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    iget v0, p0, Ln44;->b:I
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Ln44;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Ln44;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ln44;->b:I
+
+    iget-object v1, p0, Ln44;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    iget v0, p0, Ln44;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

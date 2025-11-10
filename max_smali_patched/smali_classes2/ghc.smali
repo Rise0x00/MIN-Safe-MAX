@@ -1,458 +1,487 @@
-.class public abstract Lghc;
-.super Ljava/lang/Object;
+.class public final Lghc;
+.super Logf;
+.source "SourceFile"
 
+# interfaces
+.implements Lej6;
 
-# static fields
-.field public static act_attachments_view:I = 0x7f0d001c
 
-.field public static act_avatar_crop:I = 0x7f0d001d
+# instance fields
+.field public final synthetic X:Landroid/view/View;
 
-.field public static act_chat_media:I = 0x7f0d001e
+.field public final synthetic Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static act_contact_avatars:I = 0x7f0d001f
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static act_local_medias:I = 0x7f0d0020
 
-.field public static act_photo_editor:I = 0x7f0d0021
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/qrscanner/QrScannerWidget;)V
+    .locals 0
 
-.field public static act_settings:I = 0x7f0d0022
+    iput-object p2, p0, Lghc;->X:Landroid/view/View;
 
-.field public static act_single_fragment:I = 0x7f0d0023
+    iput-object p3, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static act_tam_crop_image:I = 0x7f0d0024
+    const/4 p2, 0x2
 
-.field public static act_trim_video:I = 0x7f0d0025
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static actionbar_menu_progress:I = 0x7f0d0026
+    return-void
+.end method
 
-.field public static add_or_block_contact_panel:I = 0x7f0d0027
 
-.field public static call_attach_view:I = 0x7f0d002a
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static call_notification_big:I = 0x7f0d002c
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static call_notification_big_rtl:I = 0x7f0d002d
+    invoke-virtual {p0, p1, p2}, Lghc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static call_notification_small:I = 0x7f0d002e
+    move-result-object p1
 
-.field public static call_notification_small_rtl:I = 0x7f0d002f
+    check-cast p1, Lghc;
 
-.field public static chat_msg_search_result_view:I = 0x7f0d0030
+    sget-object p2, Lybg;->a:Lybg;
 
-.field public static cl_extra_text_size_view:I = 0x7f0d0031
+    invoke-virtual {p1, p2}, Lghc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static cl_local_media_toolbox:I = 0x7f0d0032
+    return-object p2
+.end method
 
-.field public static cl_media_bar_preview_layout:I = 0x7f0d0033
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-.field public static cl_search_result_panel:I = 0x7f0d0034
+    new-instance v0, Lghc;
 
-.field public static cl_trim_video:I = 0x7f0d0035
+    iget-object v1, p0, Lghc;->X:Landroid/view/View;
 
-.field public static dialog_context_menu:I = 0x7f0d0048
+    iget-object v2, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static dialog_input:I = 0x7f0d0049
+    invoke-direct {v0, p2, v1, v2}, Lghc;-><init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/qrscanner/QrScannerWidget;)V
 
-.field public static dialog_progress_horizontal:I = 0x7f0d004a
+    iput-object p1, v0, Lghc;->o:Ljava/lang/Object;
 
-.field public static dialog_progress_with_text:I = 0x7f0d004b
+    return-object v0
+.end method
 
-.field public static dialog_with_checkbox:I = 0x7f0d004c
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-.field public static draft_gif_viewer_fragment:I = 0x7f0d004d
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-.field public static fl_chat_multi_picker_call_link_buttons:I = 0x7f0d0061
+    iget-object p1, p0, Lghc;->o:Ljava/lang/Object;
 
-.field public static fl_empty_search:I = 0x7f0d0062
+    check-cast p1, Lsgc;
 
-.field public static frg_chat_media:I = 0x7f0d0064
+    sget-object v0, Lpgc;->a:Lpgc;
 
-.field public static frg_live_location_settings:I = 0x7f0d0065
+    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static frg_local_gif:I = 0x7f0d0066
+    move-result v0
 
-.field public static frg_local_photo:I = 0x7f0d0067
+    if-eqz v0, :cond_0
 
-.field public static frg_local_video:I = 0x7f0d0068
+    iget-object v0, p0, Lghc;->X:Landroid/view/View;
 
-.field public static frg_location_map:I = 0x7f0d0069
+    sget-object v1, Lvw6;->c:Lvw6;
 
-.field public static frg_nearby_contacts:I = 0x7f0d006a
+    invoke-static {v0, v1}, Lbmh;->u(Landroid/view/View;Lww6;)Z
 
-.field public static frg_photo_view:I = 0x7f0d006b
+    new-instance v0, Lc3b;
 
-.field public static frg_settings_base:I = 0x7f0d006c
+    iget-object v1, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static frg_tam_crop_image:I = 0x7f0d006d
+    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
 
-.field public static frg_unknown_attach_view:I = 0x7f0d006e
+    new-instance v1, Lq3b;
 
-.field public static frg_video_view:I = 0x7f0d006f
+    sget v2, Likd;->f1:I
 
-.field public static ib_extra_actions_button:I = 0x7f0d0071
+    invoke-direct {v1, v2}, Lq3b;-><init>(I)V
 
-.field public static item_folder_filter:I = 0x7f0d0078
+    invoke-virtual {v0, v1}, Lc3b;->e(Lu3b;)V
 
-.field public static item_no_sticker_sets:I = 0x7f0d007b
+    sget v1, Lo0b;->d:I
 
-.field public static item_scheduled_messages_panel:I = 0x7f0d007c
+    new-instance v2, Lirf;
 
-.field public static layout_audio_listen:I = 0x7f0d007e
+    invoke-direct {v2, v1}, Lirf;-><init>(I)V
 
-.field public static layout_audio_record:I = 0x7f0d007f
+    invoke-virtual {v0, v2}, Lc3b;->g(Lnrf;)V
 
-.field public static layout_contact_location:I = 0x7f0d0081
+    sget v1, Lo0b;->c:I
 
-.field public static layout_frg_call_message_reply:I = 0x7f0d0082
+    new-instance v2, Lirf;
 
-.field public static layout_member_menu_radio:I = 0x7f0d0084
+    invoke-direct {v2, v1}, Lirf;-><init>(I)V
 
-.field public static layout_message_link:I = 0x7f0d0085
+    invoke-virtual {v0, v2}, Lc3b;->a(Lnrf;)V
 
-.field public static layout_quick_camera_api_view:I = 0x7f0d0087
+    invoke-virtual {v0}, Lc3b;->i()Lb3b;
 
-.field public static layout_search_view:I = 0x7f0d0089
+    goto/16 :goto_0
 
-.field public static layout_send_location:I = 0x7f0d008a
+    :cond_0
+    sget-object v0, Lqgc;->a:Lqgc;
 
-.field public static ll_call_grid:I = 0x7f0d008c
+    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static ll_chat_media_progress:I = 0x7f0d008d
+    move-result v0
 
-.field public static ll_chat_media_progress_horizontal:I = 0x7f0d008e
+    const/16 v1, 0x8
 
-.field public static ll_contact:I = 0x7f0d008f
+    if-eqz v0, :cond_2
 
-.field public static ll_full_renderer:I = 0x7f0d0090
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static ll_header_nearby_separetor:I = 0x7f0d0091
+    sget-object v2, Lone/me/qrscanner/QrScannerWidget;->z0:[Les7;
 
-.field public static ll_hearer_all_contacts:I = 0x7f0d0092
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->y0()Luib;
 
-.field public static ll_media_bar_view_create_scroll:I = 0x7f0d0094
+    move-result-object v0
 
-.field public static ll_media_empty_view:I = 0x7f0d0095
+    sget-object v2, Luib;->m:[Ljava/lang/String;
 
-.field public static ll_pinned_msg:I = 0x7f0d0096
+    invoke-virtual {v0, v2}, Luib;->c([Ljava/lang/String;)Z
 
-.field public static ll_pip_indicators:I = 0x7f0d0097
+    move-result v0
 
-.field public static ll_server_search_progress:I = 0x7f0d0098
+    if-nez v0, :cond_1
 
-.field public static ll_stickers_progress:I = 0x7f0d0099
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static ll_view_file_attach__message_attachments_layout_view:I = 0x7f0d009a
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static ll_view_file_attach__sticker_view:I = 0x7f0d009b
+    move-result-object v0
 
-.field public static local_media_progress_background:I = 0x7f0d009c
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-.field public static local_media_progressbar:I = 0x7f0d009d
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static lw_chat_multi_picker_create_chat:I = 0x7f0d009e
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static member_menu_content:I = 0x7f0d00ba
+    move-result-object v0
 
-.field public static menu_chat_avatar:I = 0x7f0d00bb
+    iget-object v0, v0, Logc;->c:Landroid/animation/ValueAnimator;
 
-.field public static menu_constructor:I = 0x7f0d00bc
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-.field public static popup_suggest_name_picker:I = 0x7f0d0108
+    goto/16 :goto_0
 
-.field public static row_attach_bar__media:I = 0x7f0d011a
+    :cond_1
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static row_background_select:I = 0x7f0d011b
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static row_bot_command:I = 0x7f0d011c
+    move-result-object v0
 
-.field public static row_call_member:I = 0x7f0d011d
+    const/4 v1, 0x0
 
-.field public static row_call_rate_item:I = 0x7f0d011e
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-.field public static row_channel_people:I = 0x7f0d011f
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static row_channels_search_promo:I = 0x7f0d0120
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static row_chat_extra_actions:I = 0x7f0d0121
+    move-result-object v0
 
-.field public static row_chat_location:I = 0x7f0d0122
+    invoke-virtual {v0}, Logc;->a()V
 
-.field public static row_chat_media:I = 0x7f0d0123
+    goto/16 :goto_0
 
-.field public static row_chat_media__audio:I = 0x7f0d0124
+    :cond_2
+    instance-of v0, p1, Lrgc;
 
-.field public static row_chat_media__file:I = 0x7f0d0125
+    if-eqz v0, :cond_a
 
-.field public static row_chat_media__music:I = 0x7f0d0126
+    iget-object v0, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static row_chat_media__photo_video:I = 0x7f0d0127
+    iget-object v2, v0, Lone/me/qrscanner/QrScannerWidget;->v0:Ld0d;
 
-.field public static row_chat_media__share:I = 0x7f0d0128
+    sget-object v3, Lone/me/qrscanner/QrScannerWidget;->z0:[Les7;
 
-.field public static row_chat_media_date:I = 0x7f0d0129
+    const/4 v4, 0x5
 
-.field public static row_chat_picker:I = 0x7f0d012a
+    aget-object v3, v3, v4
 
-.field public static row_chats_folder:I = 0x7f0d012b
+    invoke-interface {v2, v0, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
 
-.field public static row_chats_folder_more:I = 0x7f0d012c
+    move-result-object v0
 
-.field public static row_common_chat:I = 0x7f0d012d
+    check-cast v0, Landroid/widget/TextView;
 
-.field public static row_common_chat_empty:I = 0x7f0d012e
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-.field public static row_common_chats_title:I = 0x7f0d012f
+    move-object v0, p1
 
-.field public static row_constructor:I = 0x7f0d0130
+    check-cast v0, Lrgc;
 
-.field public static row_contact_avatar_left:I = 0x7f0d0131
+    iget-object v1, v0, Lrgc;->a:Ljava/util/ArrayList;
 
-.field public static row_contact_black_list:I = 0x7f0d0132
+    invoke-static {v1}, Lab3;->C(Ljava/util/List;)Ljava/lang/Object;
 
-.field public static row_contact_call:I = 0x7f0d0133
+    move-result-object v1
 
-.field public static row_contact_divider:I = 0x7f0d0134
+    check-cast v1, Lfgc;
 
-.field public static row_contact_header_alphabet:I = 0x7f0d0135
+    if-eqz v1, :cond_7
 
-.field public static row_contact_header_section_with_dot:I = 0x7f0d0136
+    iget-object v2, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
 
-.field public static row_contact_location:I = 0x7f0d0137
+    iget-boolean v0, v0, Lrgc;->b:Z
 
-.field public static row_contact_ok_subscribe:I = 0x7f0d0138
+    iget-object v3, v2, Lone/me/qrscanner/QrScannerWidget;->w0:Landroid/graphics/RectF;
 
-.field public static row_contact_phonebook:I = 0x7f0d0139
+    if-eqz v0, :cond_3
 
-.field public static row_contact_picker:I = 0x7f0d013a
+    iget-object v0, v1, Lfgc;->a:Ljava/lang/String;
 
-.field public static row_contact_promo:I = 0x7f0d013b
+    invoke-virtual {v2, v0}, Lone/me/qrscanner/QrScannerWidget;->B0(Ljava/lang/String;)V
 
-.field public static row_contact_promo_all:I = 0x7f0d013c
+    goto/16 :goto_0
 
-.field public static row_contact_search:I = 0x7f0d013d
+    :cond_3
+    iget-object v0, v1, Lfgc;->b:Landroid/graphics/Rect;
 
-.field public static row_context_menu_action:I = 0x7f0d013e
+    invoke-virtual {v3, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-.field public static row_context_menu_list_action:I = 0x7f0d013f
+    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static row_divider:I = 0x7f0d0140
+    move-result-object v0
 
-.field public static row_folder:I = 0x7f0d0141
+    new-instance v4, Lb6b;
 
-.field public static row_folder_chat:I = 0x7f0d0142
+    const/16 v5, 0xa
 
-.field public static row_folder_chat_button:I = 0x7f0d0143
+    invoke-direct {v4, v2, v5, v1}, Lb6b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static row_folder_picker:I = 0x7f0d0144
+    invoke-virtual {v0, v4}, Logc;->setOnQrAnimationCompleteListener(Loi6;)V
 
-.field public static row_folder_popup:I = 0x7f0d0145
+    invoke-virtual {v2}, Lone/me/qrscanner/QrScannerWidget;->x0()Logc;
 
-.field public static row_gallery_camera:I = 0x7f0d0146
+    move-result-object v0
 
-.field public static row_gallery_media:I = 0x7f0d0147
+    iget-boolean v1, v0, Logc;->y0:Z
 
-.field public static row_gallery_media_check_button_layout:I = 0x7f0d0148
+    if-nez v1, :cond_6
 
-.field public static row_language:I = 0x7f0d0149
+    iget-object v1, v0, Logc;->c:Landroid/animation/ValueAnimator;
 
-.field public static row_list_extra_action:I = 0x7f0d014a
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-.field public static row_live_location_debug_event:I = 0x7f0d014b
+    iput-object v3, v0, Logc;->o:Landroid/graphics/RectF;
 
-.field public static row_local_media_photo_album:I = 0x7f0d014c
+    iget-object v1, v0, Logc;->u0:Landroid/animation/ValueAnimator;
 
-.field public static row_log_entry:I = 0x7f0d014d
+    if-eqz v1, :cond_4
 
-.field public static row_main_setting:I = 0x7f0d014e
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-.field public static row_main_setting_checkbox:I = 0x7f0d014f
+    :cond_4
+    new-instance v1, Landroid/animation/ArgbEvaluator;
 
-.field public static row_main_setting_separator:I = 0x7f0d0150
+    invoke-direct {v1}, Landroid/animation/ArgbEvaluator;-><init>()V
 
-.field public static row_media_bar_extra_actions:I = 0x7f0d0151
+    iget v2, v0, Logc;->x0:I
 
-.field public static row_media_bar_selected:I = 0x7f0d0152
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.field public static row_message_control:I = 0x7f0d0153
+    move-result-object v2
 
-.field public static row_message_control__tv:I = 0x7f0d0154
+    iget v4, v0, Logc;->w0:I
 
-.field public static row_message_control_with_action:I = 0x7f0d0155
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.field public static row_message_date:I = 0x7f0d0156
+    move-result-object v4
 
-.field public static row_message_new_divider:I = 0x7f0d0157
+    filled-new-array {v2, v4}, [Ljava/lang/Object;
 
-.field public static row_participant:I = 0x7f0d0158
+    move-result-object v2
 
-.field public static row_phone_picker:I = 0x7f0d0159
+    invoke-static {v1, v2}, Landroid/animation/ValueAnimator;->ofObject(Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/ValueAnimator;
 
-.field public static row_profile:I = 0x7f0d015a
+    move-result-object v1
 
-.field public static row_profile_contact_name_and_type:I = 0x7f0d015b
+    const-wide/16 v4, 0xc8
 
-.field public static row_profile_info__descr:I = 0x7f0d015c
+    invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-.field public static row_profile_info__link:I = 0x7f0d015d
+    new-instance v2, Lngc;
 
-.field public static row_profile_live_location:I = 0x7f0d015e
+    const/4 v6, 0x1
 
-.field public static row_profile_scheduled_messages:I = 0x7f0d015f
+    invoke-direct {v2, v0, v6}, Lngc;-><init>(Logc;I)V
 
-.field public static row_profile_setting:I = 0x7f0d0160
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-.field public static row_profile_setting_notifications:I = 0x7f0d0161
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
-.field public static row_promo:I = 0x7f0d0162
+    iput-object v1, v0, Logc;->u0:Landroid/animation/ValueAnimator;
 
-.field public static row_promo_content:I = 0x7f0d0163
+    iget-object v1, v0, Logc;->t0:Landroid/graphics/RectF;
 
-.field public static row_search_contact:I = 0x7f0d0164
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-.field public static row_selected_contact:I = 0x7f0d0165
+    move-result v2
 
-.field public static row_setting:I = 0x7f0d0166
+    int-to-float v2, v2
 
-.field public static row_setting_brightness:I = 0x7f0d0167
+    iget v7, v0, Logc;->b:F
 
-.field public static row_setting_checkbox:I = 0x7f0d0168
+    sub-float/2addr v2, v7
 
-.field public static row_setting_contact:I = 0x7f0d0169
+    const/high16 v7, 0x40000000    # 2.0f
 
-.field public static row_setting_header:I = 0x7f0d016a
+    div-float/2addr v2, v7
 
-.field public static row_setting_led:I = 0x7f0d016b
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-.field public static row_setting_online:I = 0x7f0d016c
+    move-result v8
 
-.field public static row_setting_progress:I = 0x7f0d016d
+    int-to-float v8, v8
 
-.field public static row_setting_text:I = 0x7f0d016e
+    iget v9, v0, Logc;->b:F
 
-.field public static row_setting_warning:I = 0x7f0d016f
+    sub-float/2addr v8, v9
 
-.field public static row_settings_folder:I = 0x7f0d0170
+    div-float/2addr v8, v7
 
-.field public static row_settings_folders_new_folder:I = 0x7f0d0171
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-.field public static row_share_preview:I = 0x7f0d0172
+    move-result v9
 
-.field public static row_sticker_section_footer:I = 0x7f0d0173
+    int-to-float v9, v9
 
-.field public static row_sticker_section_header:I = 0x7f0d0174
+    iget v10, v0, Logc;->b:F
 
-.field public static row_sticker_set:I = 0x7f0d0175
+    add-float/2addr v9, v10
 
-.field public static row_sticker_set_showcase:I = 0x7f0d0176
+    div-float/2addr v9, v7
 
-.field public static row_suggest:I = 0x7f0d0177
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-.field public static row_suggests_search_contacts:I = 0x7f0d0178
+    move-result v10
 
-.field public static row_text_one_line:I = 0x7f0d0179
+    int-to-float v10, v10
 
-.field public static secret_mode_view:I = 0x7f0d017b
+    iget v11, v0, Logc;->b:F
 
-.field public static toolbar:I = 0x7f0d0183
+    add-float/2addr v10, v11
 
-.field public static toolbar_calls_select_options:I = 0x7f0d0184
+    div-float/2addr v10, v7
 
-.field public static toolbar_chats_select_options:I = 0x7f0d0185
+    invoke-virtual {v1, v2, v8, v9, v10}, Landroid/graphics/RectF;->set(FFFF)V
 
-.field public static toolbar_constructor:I = 0x7f0d0186
+    iget-object v1, v0, Logc;->v0:Landroid/animation/ValueAnimator;
 
-.field public static toolbar_popup:I = 0x7f0d0187
+    if-eqz v1, :cond_5
 
-.field public static toolbar_progress:I = 0x7f0d0188
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-.field public static toolbar_spinner:I = 0x7f0d0189
+    :cond_5
+    const/4 v1, 0x2
 
-.field public static toolbar_with_icon:I = 0x7f0d018a
+    new-array v1, v1, [F
 
-.field public static unknown_person_view:I = 0x7f0d018b
+    fill-array-data v1, :array_0
 
-.field public static view_audio_listen:I = 0x7f0d018c
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-.field public static view_audio_record:I = 0x7f0d018d
+    move-result-object v1
 
-.field public static view_auto_play_video_player:I = 0x7f0d018e
+    invoke-virtual {v1, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-.field public static view_call_controls:I = 0x7f0d018f
+    new-instance v2, Landroid/view/animation/LinearInterpolator;
 
-.field public static view_call_debug:I = 0x7f0d0190
+    invoke-direct {v2}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-.field public static view_call_link_created:I = 0x7f0d0191
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-.field public static view_call_rate_controls:I = 0x7f0d0192
+    new-instance v2, Lwg;
 
-.field public static view_call_renderer:I = 0x7f0d0193
+    const/4 v4, 0x6
 
-.field public static view_channel_forward:I = 0x7f0d0194
+    invoke-direct {v2, v0, v4, v3}, Lwg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-.field public static view_channel_message_status:I = 0x7f0d0195
+    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-.field public static view_constructor_video_player:I = 0x7f0d0196
+    new-instance v2, Ltf;
 
-.field public static view_context_menu:I = 0x7f0d0197
+    invoke-direct {v2, v4, v0}, Ltf;-><init>(ILjava/lang/Object;)V
 
-.field public static view_failed_call_controls:I = 0x7f0d0198
+    invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-.field public static view_file_attach:I = 0x7f0d0199
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
-.field public static view_finished_call_controls:I = 0x7f0d019a
+    iput-object v1, v0, Logc;->v0:Landroid/animation/ValueAnimator;
 
-.field public static view_floating_video_trash:I = 0x7f0d019b
+    iput-boolean v6, v0, Logc;->y0:Z
 
-.field public static view_full_screen_video_player:I = 0x7f0d019c
+    goto :goto_0
 
-.field public static view_incoming_call_controls:I = 0x7f0d019d
+    :cond_6
+    iget-object v1, v0, Logc;->d:Landroid/graphics/RectF;
 
-.field public static view_list_extra_actions:I = 0x7f0d019e
+    invoke-virtual {v1, v3}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-.field public static view_live_location_panel:I = 0x7f0d019f
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-.field public static view_media_permissions:I = 0x7f0d01a1
+    :cond_7
+    :goto_0
+    const-class v0, Lone/me/qrscanner/QrScannerWidget;
 
-.field public static view_message_compose:I = 0x7f0d01a2
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-.field public static view_message_deleted:I = 0x7f0d01a3
+    move-result-object v0
 
-.field public static view_message_forward:I = 0x7f0d01a4
+    sget-object v1, Lcuh;->b:Lnxa;
 
-.field public static view_message_link:I = 0x7f0d01a5
+    if-nez v1, :cond_8
 
-.field public static view_messages:I = 0x7f0d01a6
+    goto :goto_1
 
-.field public static view_mini_player:I = 0x7f0d01a7
+    :cond_8
+    sget-object v2, La98;->d:La98;
 
-.field public static view_music_attach:I = 0x7f0d01a8
+    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
 
-.field public static view_pinned_message:I = 0x7f0d01a9
+    move-result v3
 
-.field public static view_profile_description:I = 0x7f0d01aa
+    if-eqz v3, :cond_9
 
-.field public static view_profile_top_part:I = 0x7f0d01ab
+    new-instance v3, Ljava/lang/StringBuilder;
 
-.field public static view_raw_video_player:I = 0x7f0d01ac
+    const-string v4, "SCAN_RESULT = "
 
-.field public static view_reply_share_attach:I = 0x7f0d01ad
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static view_share_attach:I = 0x7f0d01ae
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static view_share_preview:I = 0x7f0d01af
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static view_small_video_player:I = 0x7f0d01b0
+    move-result-object p1
 
-.field public static view_stickers:I = 0x7f0d01b1
+    const/4 v3, 0x0
 
-.field public static view_stickers_grid:I = 0x7f0d01b2
+    invoke-virtual {v1, v2, v0, p1, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-.field public static view_suggests:I = 0x7f0d01b3
+    :cond_9
+    :goto_1
+    sget-object p1, Lybg;->a:Lybg;
 
-.field public static view_top_call_controls:I = 0x7f0d01b4
+    return-object p1
 
-.field public static view_video_player:I = 0x7f0d01b5
+    :cond_a
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-.field public static view_video_player_controls:I = 0x7f0d01b6
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.field public static view_video_player_seekbar_preview:I = 0x7f0d01b7
+    throw p1
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method

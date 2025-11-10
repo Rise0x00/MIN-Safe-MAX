@@ -1,108 +1,113 @@
-.class public final synthetic Lpy7;
-.super Ljava/lang/Object;
+.class public final Lpy7;
+.super Lrj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Lfmg;
 
-.field public final synthetic b:Lru/ok/tamtam/location/live/LiveLocationWorker;
+.field public final Y:Ljava/lang/Long;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final b:Ljava/lang/Long;
+
+.field public final c:J
+
+.field public final d:Lqx3;
+
+.field public final o:Lkv6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
+.method public constructor <init>(JLjava/lang/Long;JLqx3;Lkv6;Lfmg;Ljava/lang/Long;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lpy7;->a:I
+    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
 
-    iput-object p1, p0, Lpy7;->b:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    iput-object p3, p0, Lpy7;->b:Ljava/lang/Long;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p4, p0, Lpy7;->c:J
+
+    iput-object p6, p0, Lpy7;->d:Lqx3;
+
+    iput-object p7, p0, Lpy7;->o:Lkv6;
+
+    iput-object p8, p0, Lpy7;->X:Lfmg;
+
+    iput-object p9, p0, Lpy7;->Y:Ljava/lang/Long;
+
+    iput-object p10, p0, Lpy7;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lpy7;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "LinkInfoEvent{chatId="
 
-    iget-object v0, p0, Lpy7;->b:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
+    iget-object v1, p0, Lpy7;->b:Ljava/lang/Long;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lzid;
+    const-string v1, ", messageId="
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-wide v1, p0, Lpy7;->c:J
 
-    const-class v1, Lky7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v1, ", contactSearchResult="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lky7;
+    iget-object v1, p0, Lpy7;->d:Lqx3;
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lpy7;->b:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    const-string v1, ", groupChatInfo="
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object v1, p0, Lpy7;->o:Lkv6;
 
-    check-cast v0, Lzid;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    const-string v1, ", videoConference="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-class v1, Loy7;
+    iget-object v1, p0, Lpy7;->X:Lfmg;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", stickerSetId="
 
-    check-cast v0, Loy7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    iget-object v1, p0, Lpy7;->Y:Ljava/lang/Long;
 
-    :pswitch_1
-    iget-object v0, p0, Lpy7;->b:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lox7;->getInputData()Lu84;
+    const-string v1, ", startPayload=\'"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "chatId"
+    iget-object v1, p0, Lpy7;->Z:Ljava/lang/String;
 
-    const-wide/16 v2, -0x1
+    const-string v2, "\'}"
 
-    invoke-virtual {v0, v1, v2, v3}, Lu84;->d(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

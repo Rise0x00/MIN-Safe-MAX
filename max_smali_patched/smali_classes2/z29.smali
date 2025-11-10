@@ -3,31 +3,43 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ltl3;
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ls29;
+
+.field public final d:La39;
+
+.field public final e:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JJLs29;La39;)V
+    .locals 0
 
-    new-instance v0, Ltl3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lmqa;->f:I
+    iput-wide p1, p0, Lz29;->a:J
 
-    sget v2, Lt9d;->r:I
+    iput-wide p3, p0, Lz29;->b:J
 
-    new-instance v3, Ljef;
+    iput-object p5, p0, Lz29;->c:Ls29;
 
-    invoke-direct {v3, v2}, Ljef;-><init>(I)V
+    iput-object p6, p0, Lz29;->d:La39;
 
-    const/4 v2, 0x2
+    new-instance p1, Ljava/io/File;
 
-    const/16 v4, 0x38
+    iget-object p2, p5, Ls29;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v3, v2, v4}, Ltl3;-><init>(ILoef;II)V
+    invoke-direct {p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lz29;->a:Ltl3;
+    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz29;->e:Landroid/net/Uri;
 
     return-void
 .end method

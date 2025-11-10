@@ -2,26 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls0g;
+
 
 # instance fields
-.field public final a:Lmwd;
-
-.field public final b:Ljava/util/Collection;
-
-.field public final c:Ljava/util/Collection;
+.field public final a:Ljava/util/LinkedList;
 
 
 # direct methods
-.method public constructor <init>(Lmwd;Ljava/util/Collection;Ljava/util/Collection;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq0g;->a:Lmwd;
+    new-instance v0, Ljava/util/LinkedList;
 
-    iput-object p2, p0, Lq0g;->b:Ljava/util/Collection;
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object p3, p0, Lq0g;->c:Ljava/util/Collection;
+    iput-object v0, p0, Lq0g;->a:Ljava/util/LinkedList;
 
     return-void
 .end method

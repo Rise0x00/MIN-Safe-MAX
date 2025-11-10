@@ -1,140 +1,55 @@
 .class public final Loye;
-.super Ljava/lang/Object;
+.super Lp14;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:I
+.field public final synthetic Y:Lpye;
 
-.field public final c:I
+.field public Z:I
+
+.field public d:Lpye;
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Lpye;Lp14;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Loye;->Y:Lpye;
 
-    iput p1, p0, Loye;->a:I
-
-    iput p2, p0, Loye;->b:I
-
-    iput p3, p0, Loye;->c:I
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Loye;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Loye;
-
-    iget v0, p0, Loye;->a:I
-
-    iget v1, p1, Loye;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Loye;->b:I
-
-    iget v1, p1, Loye;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Loye;->c:I
-
-    iget p1, p1, Loye;->c:I
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Loye;->a:I
+    iput-object p1, p0, Loye;->X:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget p1, p0, Loye;->Z:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    const/16 v1, 0x1f
+    or-int/2addr p1, v0
 
-    mul-int/2addr v0, v1
+    iput p1, p0, Loye;->Z:I
 
-    iget v2, p0, Loye;->b:I
+    const-wide/16 v0, 0x0
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    const/4 p1, 0x0
 
-    move-result v0
+    iget-object v2, p0, Loye;->Y:Lpye;
 
-    iget v1, p0, Loye;->c:I
+    invoke-virtual {v2, v0, v1, p0, p1}, Lpye;->a(JLp14;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object p1
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", primary="
-
-    const-string v1, ", secondary="
-
-    const-string v2, "StrokeSeparatorColors(contrast="
-
-    iget v3, p0, Loye;->a:I
-
-    iget v4, p0, Loye;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Loye;->c:I
-
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,73 +1,53 @@
-.class public abstract Ll79;
-.super Ljava/lang/Object;
+.class public final Ll79;
+.super Lp14;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:Lj79;
+.field public final synthetic Y:Lt79;
 
-.field public static final c:Lk79;
+.field public Z:I
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Lt92;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lt79;Lp14;)V
+    .locals 0
 
-    const-string v0, "UTF-8"
+    iput-object p1, p0, Ll79;->Y:Lt79;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Ll79;->a:Ljava/nio/charset/Charset;
-
-    new-instance v0, Lj79;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll79;->b:Lj79;
-
-    new-instance v0, Lk79;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
-
-    const v1, 0x7fffffff
-
-    iput v1, v0, Lk79;->c:I
-
-    const/16 v1, 0x2000
-
-    iput v1, v0, Lk79;->o:I
-
-    iput v1, v0, Lk79;->X:I
-
-    sput-object v0, Ll79;->c:Lk79;
+    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a([B)Ls89;
-    .locals 2
 
-    sget-object v0, Ll79;->c:Lk79;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Ll79;->X:Ljava/lang/Object;
 
-    new-instance v1, Lorg/msgpack/core/buffer/ArrayBufferInput;
+    iget p1, p0, Ll79;->Z:I
 
-    invoke-direct {v1, p0}, Lorg/msgpack/core/buffer/ArrayBufferInput;-><init>([B)V
+    const/high16 v0, -0x80000000
 
-    new-instance p0, Ls89;
+    or-int/2addr p1, v0
 
-    invoke-direct {p0, v1, v0}, Ls89;-><init>(Lorg/msgpack/core/buffer/ArrayBufferInput;Lk79;)V
+    iput p1, p0, Ll79;->Z:I
 
-    return-object p0
+    iget-object p1, p0, Ll79;->Y:Lt79;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lt79;->v(Lt79;Lt92;Lp14;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

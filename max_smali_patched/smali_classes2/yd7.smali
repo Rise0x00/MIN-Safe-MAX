@@ -1,200 +1,137 @@
 .class public final Lyd7;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lej6;
 
 
 # instance fields
-.field public final X:F
+.field public final synthetic X:Lhe7;
 
-.field public final Y:F
-
-.field public final Z:F
-
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:F
-
-.field public final w0:F
-
-.field public final x0:F
-
-.field public final y0:Z
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lae7;FFFFFFZ)V
-    .locals 2
+.method public constructor <init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyd7;->X:Lhe7;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/4 p1, 0x2
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lyd7;->a:Ljava/lang/ref/WeakReference;
-
-    const-wide/16 v0, 0x1f4
-
-    iput-wide v0, p0, Lyd7;->b:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lyd7;->c:J
-
-    iput p2, p0, Lyd7;->o:F
-
-    iput p3, p0, Lyd7;->X:F
-
-    iput p4, p0, Lyd7;->Y:F
-
-    iput p5, p0, Lyd7;->Z:F
-
-    iput p6, p0, Lyd7;->w0:F
-
-    iput p7, p0, Lyd7;->x0:F
-
-    iput-boolean p8, p0, Lyd7;->y0:Z
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyd7;->a:Ljava/lang/ref/WeakReference;
+    check-cast p1, Lg54;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lyd7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lae7;
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    check-cast p1, Lyd7;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lyd7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lyd7;
+
+    iget-object v0, p0, Lyd7;->X:Lhe7;
+
+    invoke-direct {p1, v0, p2}, Lyd7;-><init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lyd7;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lae7;->G0:Landroid/graphics/RectF;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-wide v2
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-wide v4, p0, Lyd7;->c:J
-
-    sub-long/2addr v2, v4
-
-    iget-wide v4, p0, Lyd7;->b:J
-
-    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v2
-
-    long-to-float v2, v2
-
-    long-to-float v3, v4
-
-    div-float v4, v2, v3
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    sub-float/2addr v4, v5
-
-    mul-float v6, v4, v4
-
-    mul-float/2addr v6, v4
-
-    add-float/2addr v6, v5
-
-    iget v4, p0, Lyd7;->Y:F
-
-    mul-float/2addr v4, v6
-
-    const/4 v5, 0x0
-
-    add-float/2addr v4, v5
-
-    iget v7, p0, Lyd7;->Z:F
-
-    mul-float/2addr v6, v7
-
-    add-float/2addr v6, v5
-
-    iget v5, p0, Lyd7;->x0:F
-
-    invoke-static {v2, v5, v3}, Loch;->k(FFF)F
-
-    move-result v5
-
-    cmpg-float v2, v2, v3
-
-    if-gez v2, :cond_2
-
-    iget-object v2, v0, Lmpf;->w0:[F
-
-    const/4 v3, 0x0
-
-    aget v3, v2, v3
-
-    iget v7, p0, Lyd7;->o:F
-
-    sub-float/2addr v3, v7
-
-    sub-float/2addr v4, v3
-
-    const/4 v3, 0x1
-
-    aget v2, v2, v3
-
-    iget v3, p0, Lyd7;->X:F
-
-    sub-float/2addr v2, v3
-
-    sub-float/2addr v6, v2
-
-    invoke-virtual {v0, v4, v6}, Lmpf;->g(FF)V
-
-    iget-boolean v2, p0, Lyd7;->y0:Z
-
-    if-nez v2, :cond_1
-
-    iget v2, p0, Lyd7;->w0:F
-
-    add-float/2addr v2, v5
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v1
-
-    invoke-virtual {v0, v2, v3, v1}, Lae7;->j(FFF)V
+    throw p1
 
     :cond_1
-    iget-object v1, v0, Lmpf;->o:[F
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lae7;->i([F)Z
+    iget-object p1, p0, Lyd7;->X:Lhe7;
 
-    move-result v1
+    iget-object v0, p1, Lhe7;->u0:La1f;
 
-    if-nez v1, :cond_2
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v2}, La1f;->setValue(Ljava/lang/Object;)V
+
+    sget-object v0, Lhe7;->D0:Ljava/lang/String;
+
+    const-string v3, "cancel prefetchJob"
+
+    invoke-static {v0, v3}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Lhe7;->x0:Lgye;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, v2}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_2
+    iput-object v2, p1, Lhe7;->x0:Lgye;
+
+    invoke-virtual {p1}, Lhe7;->e()V
+
+    iget-object p1, p1, Lhe7;->x0:Lgye;
+
+    if-eqz p1, :cond_3
+
+    iput v1, p0, Lyd7;->o:I
+
+    invoke-virtual {p1, p0}, Lyo7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
     :goto_0
-    return-void
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

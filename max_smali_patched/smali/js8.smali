@@ -4,192 +4,219 @@
 
 
 # static fields
-.field public static final e:Llvd;
+.field public static final d:Ljs8;
 
-.field public static final f:Lrkb;
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Llvd;
+.field public final a:Landroid/net/Uri;
 
-.field public final b:Lrkb;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Le77;
-
-.field public final d:Le77;
+.field public final c:Landroid/os/Bundle;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 2
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Ld39;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lkvd;->d:Lxyc;
+    new-instance v1, Ljs8;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, v0}, Ljs8;-><init>(Ld39;)V
 
-    move v3, v2
+    sput-object v1, Ljs8;->d:Ljs8;
 
-    :goto_0
-    iget v4, v1, Lxyc;->o:I
+    sget-object v0, Llig;->a:Ljava/lang/String;
 
-    if-ge v3, v4, :cond_0
+    const/4 v0, 0x0
 
-    new-instance v4, Lkvd;
+    const/16 v1, 0x24
 
-    invoke-virtual {v1, v3}, Lxyc;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v0
 
-    check-cast v5, Ljava/lang/Integer;
+    sput-object v0, Ljs8;->e:Ljava/lang/String;
 
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+    const/4 v0, 0x1
 
-    move-result v5
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    invoke-direct {v4, v5}, Lkvd;-><init>(I)V
+    move-result-object v0
 
-    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    sput-object v0, Ljs8;->f:Ljava/lang/String;
 
-    add-int/lit8 v3, v3, 0x1
+    const/4 v0, 0x2
 
-    goto :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    :cond_0
-    new-instance v3, Llvd;
+    move-result-object v0
 
-    invoke-direct {v3, v0}, Llvd;-><init>(Ljava/util/HashSet;)V
-
-    sput-object v3, Ljs8;->e:Llvd;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sget-object v3, Lkvd;->e:Lxyc;
-
-    move v4, v2
-
-    :goto_1
-    iget v5, v3, Lxyc;->o:I
-
-    if-ge v4, v5, :cond_1
-
-    new-instance v5, Lkvd;
-
-    invoke-virtual {v3, v4}, Lxyc;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Integer;
-
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
-
-    move-result v6
-
-    invoke-direct {v5, v6}, Lkvd;-><init>(I)V
-
-    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v2
-
-    :goto_2
-    iget v4, v1, Lxyc;->o:I
-
-    if-ge v3, v4, :cond_2
-
-    new-instance v4, Lkvd;
-
-    invoke-virtual {v1, v3}, Lxyc;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Integer;
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Lkvd;-><init>(I)V
-
-    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v1, Llvd;
-
-    invoke-direct {v1, v0}, Llvd;-><init>(Ljava/util/HashSet;)V
-
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    sget-object v1, Lzo6;->o:[I
-
-    array-length v3, v1
-
-    move v4, v2
-
-    :goto_3
-    const/4 v5, 0x1
-
-    if-ge v4, v3, :cond_3
-
-    aget v6, v1, v4
-
-    const/4 v7, 0x0
-
-    xor-int/2addr v7, v5
-
-    invoke-static {v7}, Lpih;->o(Z)V
-
-    invoke-virtual {v0, v6, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    new-instance v1, Lrkb;
-
-    xor-int/2addr v2, v5
-
-    invoke-static {v2}, Lpih;->o(Z)V
-
-    new-instance v2, Lhu5;
-
-    invoke-direct {v2, v0}, Lhu5;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    invoke-direct {v1, v2}, Lrkb;-><init>(Lhu5;)V
-
-    sput-object v1, Ljs8;->f:Lrkb;
+    sput-object v0, Ljs8;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Llvd;Lrkb;Le77;Le77;)V
-    .locals 0
+.method public constructor <init>(Ld39;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljs8;->a:Llvd;
+    iget-object v0, p1, Ld39;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Ljs8;->b:Lrkb;
+    check-cast v0, Landroid/net/Uri;
 
-    iput-object p3, p0, Ljs8;->c:Le77;
+    iput-object v0, p0, Ljs8;->a:Landroid/net/Uri;
 
-    iput-object p4, p0, Ljs8;->d:Le77;
+    iget-object v0, p1, Ld39;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Ljs8;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Ld39;->c:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Bundle;
+
+    iput-object p1, p0, Ljs8;->c:Landroid/os/Bundle;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljs8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljs8;
+
+    iget-object v1, p0, Ljs8;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Ljs8;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Ljs8;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Ljs8;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Ljs8;->c:Landroid/os/Bundle;
+
+    if-nez v1, :cond_2
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    :goto_0
+    iget-object p1, p1, Ljs8;->c:Landroid/os/Bundle;
+
+    if-nez p1, :cond_3
+
+    move p1, v0
+
+    goto :goto_1
+
+    :cond_3
+    move p1, v2
+
+    :goto_1
+    if-ne v1, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Ljs8;->a:Landroid/net/Uri;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Ljs8;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Ljs8;->c:Landroid/os/Bundle;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x1
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    return v1
 .end method

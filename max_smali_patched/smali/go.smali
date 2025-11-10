@@ -1,51 +1,90 @@
-.class public final Lgo;
-.super Landroid/view/View$BaseSavedState;
+.class public abstract Lgo;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lgo;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+    .locals 1
 
-    new-instance v0, Lt7;
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
-    const/4 v1, 0x3
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Lt7;-><init>(I)V
+    invoke-virtual {p1}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
-    sput-object v0, Lgo;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/os/LocaleList;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-virtual {p2, v0}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
+
+    iget-object p0, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    iput-object p0, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    :cond_0
+    return-void
+.end method
+
+.method public static b(Landroid/content/res/Configuration;)Ll78;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ll78;->a(Ljava/lang/String;)Ll78;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ll78;)V
+    .locals 0
+
+    iget-object p0, p0, Ll78;->a:Lm78;
+
+    iget-object p0, p0, Lm78;->a:Landroid/os/LocaleList;
+
+    invoke-virtual {p0}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/os/LocaleList;->setDefault(Landroid/os/LocaleList;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static d(Landroid/content/res/Configuration;Ll78;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object p1, p1, Ll78;->a:Lm78;
 
-    iget-boolean p2, p0, Lgo;->a:Z
+    iget-object p1, p1, Lm78;->a:Landroid/os/LocaleList;
 
-    int-to-byte p2, p2
+    invoke-virtual {p1}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
 
     return-void
 .end method

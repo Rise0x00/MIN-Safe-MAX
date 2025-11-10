@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lir3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;-><init>(Lfz0;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Luhf;Lpmc;)V
+    value = Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;-><init>(Lvz0;Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;Ltuf;Lcwc;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lwo3;"
+        "Lir3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "ex",
-        "Loyf;",
+        "Lybg;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -81,7 +81,7 @@
     .line 2
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl$initDisposable$2;->this$0:Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lpmc;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;->access$getLogger$p(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManagerImpl;)Lcwc;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     const-string v2, "Error getting wordspotter control config"
 
-    invoke-interface {v0, v1, v2, p1}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lcwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

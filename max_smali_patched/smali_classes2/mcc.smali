@@ -1,36 +1,121 @@
-.class public abstract Lmcc;
-.super Ljava/lang/Object;
+.class public final Lmcc;
+.super Logf;
+.source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
-# static fields
-.field public static contact_icon_corner:I = 0x7f080343
+# instance fields
+.field public final synthetic X:Lycc;
 
-.field public static done_superelips_fill_40:I = 0x7f080361
+.field public o:I
 
-.field public static geo_icon_corner:I = 0x7f0804e8
 
-.field public static ic_call_incoming_audio_24:I = 0x7f08055f
+# direct methods
+.method public constructor <init>(Lycc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static ic_call_incoming_audio_missed_24:I = 0x7f080560
+    iput-object p1, p0, Lmcc;->X:Lycc;
 
-.field public static ic_call_incoming_video_missed_24:I = 0x7f080562
+    const/4 p1, 0x2
 
-.field public static ic_call_incomnig_video_24:I = 0x7f080563
+    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static ic_call_outgoing_audio_24:I = 0x7f080569
+    return-void
+.end method
 
-.field public static ic_call_outgoing_video_24:I = 0x7f08056a
 
-.field public static ic_chat_16:I = 0x7f080581
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static ic_contact_16:I = 0x7f0805a8
+    check-cast p1, Lg54;
 
-.field public static ic_geolocation_filled_28:I = 0x7f080609
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static ic_reply_outline_12:I = 0x7f080774
+    invoke-virtual {p0, p1, p2}, Lmcc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static link_icon_corner:I = 0x7f08082a
+    move-result-object p1
 
-.field public static miniapp_icon_corner:I = 0x7f0808a4
+    check-cast p1, Lmcc;
 
-.field public static wallet_fill_40:I = 0x7f08098f
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, Lmcc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lmcc;
+
+    iget-object v0, p0, Lmcc;->X:Lycc;
+
+    invoke-direct {p1, v0, p2}, Lmcc;-><init>(Lycc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lmcc;->o:I
+
+    iget-object v1, p0, Lmcc;->X:Lycc;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lycc;->R0:Ll0c;
+
+    iput v2, p0, Lmcc;->o:I
+
+    invoke-virtual {p1, p0}, Ll0c;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lh54;->a:Lh54;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lvbc;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v1, Lycc;->C0:Laf5;
+
+    invoke-static {v0, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+
+    :cond_3
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
+.end method

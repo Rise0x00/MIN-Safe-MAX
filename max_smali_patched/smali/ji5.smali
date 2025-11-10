@@ -1,34 +1,70 @@
-.class public interface abstract Lji5;
+.class public final synthetic Lji5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lc38;
 
-# static fields
-.field public static final s:Llu3;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lwsb;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lwsb;II)V
+    .locals 0
 
-    new-instance v0, Llu3;
+    iput p3, p0, Lji5;->a:I
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Lji5;->b:Lwsb;
 
-    invoke-direct {v0, v1}, Llu3;-><init>(I)V
+    iput p2, p0, Lji5;->c:I
 
-    sput-object v0, Lji5;->s:Llu3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A(II)Lcof;
-.end method
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-.method public abstract O(Lend;)V
-.end method
+    iget v0, p0, Lji5;->a:I
 
-.method public abstract v()V
+    check-cast p1, Lntb;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lji5;->b:Lwsb;
+
+    iget-boolean v0, v0, Lwsb;->l:Z
+
+    iget v1, p0, Lji5;->c:I
+
+    invoke-interface {p1, v1, v0}, Lntb;->i(IZ)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lji5;->b:Lwsb;
+
+    iget-object v0, v0, Lwsb;->a:Llvf;
+
+    iget v0, p0, Lji5;->c:I
+
+    invoke-interface {p1, v0}, Lntb;->z(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

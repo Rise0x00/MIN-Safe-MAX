@@ -1,64 +1,20 @@
-.class public final Lgtc;
+.class public abstract Lgtc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lhtc;
 
 
 # static fields
-.field public static final a:Lgtc;
+.field public static oneme_qrscanner_camera_request_description:I = 0x7f130959
 
+.field public static oneme_qrscanner_context_menu_title:I = 0x7f13095a
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_qrscanner_error_snackbar_description:I = 0x7f13095b
 
-    new-instance v0, Lgtc;
+.field public static oneme_qrscanner_error_snackbar_title:I = 0x7f13095c
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_qrscanner_hint_with_gallery:I = 0x7f13095d
 
-    sput-object v0, Lgtc;->a:Lgtc;
+.field public static oneme_qrscanner_hint_without_gallery:I = 0x7f13095e
 
-    return-void
-.end method
+.field public static oneme_qrscanner_storage_request_description:I = 0x7f13095f
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lgtc;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x18d35279
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Stop"
-
-    return-object v0
-.end method
+.field public static oneme_qrscanner_toolbar_title:I = 0x7f130960

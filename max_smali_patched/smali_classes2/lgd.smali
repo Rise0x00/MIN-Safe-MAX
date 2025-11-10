@@ -1,75 +1,60 @@
-.class public abstract synthetic Llgd;
+.class public final synthetic Llgd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Loi6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(ILoi6;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p1, p0, Llgd;->a:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    iput-object p2, p0, Llgd;->b:Loi6;
 
-    move-result-object v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v1, v1
+    return-void
+.end method
 
-    new-array v1, v1, [I
 
-    const/4 v2, 0x1
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 1
 
-    const/4 v3, 0x0
+    iget v0, p0, Llgd;->a:I
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    packed-switch v0, :pswitch_data_0
 
-    :catch_0
-    const/4 v4, 0x2
+    iget-object v0, p0, Llgd;->b:Loi6;
 
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v1, Llgd;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v4}, Lqw1;->y(I)[I
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
 
-    new-array v0, v0, [I
+    :pswitch_0
+    iget-object v0, p0, Llgd;->b:Loi6;
 
-    :try_start_3
-    aput v2, v0, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
 
-    :catch_3
-    :try_start_4
-    aput v4, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result-object v0
 
-    :catch_4
-    sput-object v0, Llgd;->$EnumSwitchMapping$1:[I
+    return-object v0
 
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

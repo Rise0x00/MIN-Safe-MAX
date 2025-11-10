@@ -1,246 +1,282 @@
-.class public abstract Lk28;
+.class public final Lk28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz89;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+
+# instance fields
+.field public X:Ly89;
+
+.field public Y:Lj28;
+
+.field public a:Landroid/content/Context;
+
+.field public b:Landroid/view/LayoutInflater;
+
+.field public c:Li89;
+
+.field public d:Landroidx/appcompat/view/menu/ExpandedMenuView;
+
+.field public final o:I
+
 
 # direct methods
-.method public static a(Landroid/location/Location;)F
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/location/Location;->getBearingAccuracyDegrees()F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p2, p0, Lk28;->o:I
 
-    return p0
+    iput-object p1, p0, Lk28;->a:Landroid/content/Context;
+
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk28;->b:Landroid/view/LayoutInflater;
+
+    return-void
 .end method
 
-.method public static b(Landroid/location/Location;)F
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/location/Location;->getSpeedAccuracyMetersPerSecond()F
+# virtual methods
+.method public final b(Lsbf;)Z
+    .locals 6
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/location/Location;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/location/Location;->getVerticalAccuracyMeters()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/location/Location;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/location/Location;->hasBearingAccuracy()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(Landroid/location/Location;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/location/Location;->hasSpeedAccuracy()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/location/Location;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/location/Location;->hasVerticalAccuracy()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static g(Landroid/location/Location;)V
-    .locals 2
-
-    :try_start_0
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getByte(Ljava/lang/Object;)B
+    invoke-virtual {p1}, Li89;->hasVisibleItems()Z
 
     move-result v0
 
-    invoke-static {}, Lk98;->j()I
+    iget-object v1, p1, Li89;->a:Landroid/content/Context;
 
-    move-result v1
+    if-nez v0, :cond_0
 
-    not-int v1, v1
+    const/4 p1, 0x0
 
-    and-int/2addr v0, v1
+    return p1
 
-    int-to-byte v0, v0
+    :cond_0
+    new-instance v0, Lj89;
 
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    iput-object p1, v0, Lj89;->a:Lsbf;
 
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->setByte(Ljava/lang/Object;B)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v2, Lyc;
 
-    return-void
+    invoke-direct {v2, v1}, Lyc;-><init>(Landroid/content/Context;)V
 
-    :catch_0
-    move-exception p0
+    new-instance v3, Lk28;
 
-    new-instance v0, Ljava/lang/IllegalAccessError;
+    invoke-virtual {v2}, Lyc;->getContext()Landroid/content/Context;
 
-    invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
+    move-result-object v4
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    sget v5, Lsqc;->abc_list_menu_item_layout:I
 
-    throw v0
+    invoke-direct {v3, v4, v5}, Lk28;-><init>(Landroid/content/Context;I)V
 
-    :catch_1
-    move-exception p0
+    iput-object v3, v0, Lj89;->c:Lk28;
 
-    new-instance v0, Ljava/lang/NoSuchFieldError;
+    iput-object v0, v3, Lk28;->X:Ly89;
 
-    invoke-direct {v0}, Ljava/lang/NoSuchFieldError;-><init>()V
+    invoke-virtual {p1, v3, v1}, Li89;->b(Lz89;Landroid/content/Context;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    iget-object v1, v0, Lj89;->c:Lk28;
 
-    throw v0
-.end method
+    iget-object v3, v1, Lk28;->Y:Lj28;
 
-.method public static h(Landroid/location/Location;)V
-    .locals 2
+    if-nez v3, :cond_1
 
-    :try_start_0
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
+    new-instance v3, Lj28;
 
-    move-result-object v0
+    invoke-direct {v3, v1}, Lj28;-><init>(Lk28;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getByte(Ljava/lang/Object;)B
+    iput-object v3, v1, Lk28;->Y:Lj28;
 
-    move-result v0
+    :cond_1
+    iget-object v1, v1, Lk28;->Y:Lj28;
 
-    invoke-static {}, Lk98;->k()I
+    iget-object v3, v2, Lyc;->a:Luc;
 
-    move-result v1
+    iput-object v1, v3, Luc;->p:Landroid/widget/ListAdapter;
 
-    not-int v1, v1
+    iput-object v0, v3, Luc;->q:Landroid/content/DialogInterface$OnClickListener;
 
-    and-int/2addr v0, v1
+    iget-object v1, p1, Li89;->y0:Landroid/view/View;
 
-    int-to-byte v0, v0
+    if-eqz v1, :cond_2
 
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
+    iput-object v1, v3, Luc;->e:Landroid/view/View;
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->setByte(Ljava/lang/Object;B)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_2
+    iget-object v1, p1, Li89;->x0:Landroid/graphics/drawable/Drawable;
 
-    return-void
+    iput-object v1, v3, Luc;->c:Landroid/graphics/drawable/Drawable;
 
-    :catch_0
-    move-exception p0
+    iget-object v1, p1, Li89;->w0:Ljava/lang/CharSequence;
 
-    new-instance v0, Ljava/lang/IllegalAccessError;
+    invoke-virtual {v2, v1}, Lyc;->setTitle(Ljava/lang/CharSequence;)Lyc;
 
-    invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
+    :goto_0
+    iput-object v0, v3, Luc;->n:Lj89;
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_1
-    move-exception p0
-
-    new-instance v0, Ljava/lang/NoSuchFieldError;
-
-    invoke-direct {v0}, Ljava/lang/NoSuchFieldError;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-.end method
-
-.method public static i(Landroid/location/Location;)V
-    .locals 2
-
-    :try_start_0
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getByte(Ljava/lang/Object;)B
-
-    move-result v0
-
-    invoke-static {}, Lk98;->l()I
-
-    move-result v1
-
-    not-int v1, v1
-
-    and-int/2addr v0, v1
-
-    int-to-byte v0, v0
-
-    invoke-static {}, Lk98;->i()Ljava/lang/reflect/Field;
+    invoke-virtual {v2}, Lyc;->create()Lzc;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Field;->setByte(Ljava/lang/Object;B)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v1, v0, Lj89;->b:Lzc;
 
-    return-void
+    invoke-virtual {v1, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    :catch_0
-    move-exception p0
+    iget-object v1, v0, Lj89;->b:Lzc;
 
-    new-instance v0, Ljava/lang/IllegalAccessError;
+    invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
-    invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-    throw v0
+    move-result-object v1
+
+    const/16 v2, 0x3eb
+
+    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v3, 0x20000
+
+    or-int/2addr v2, v3
+
+    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    iget-object v0, v0, Lj89;->b:Lzc;
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    iget-object v0, p0, Lk28;->X:Ly89;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1}, Ly89;->C(Li89;)Z
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static j(Landroid/location/Location;F)V
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final d(Lm89;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/location/Location;->setBearingAccuracyDegrees(F)V
+    const/4 p1, 0x0
 
+    return p1
+.end method
+
+.method public final e(Ly89;)V
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final f(Lm89;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final h()V
+    .locals 1
+
+    iget-object v0, p0, Lk28;->Y:Lj28;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lj28;->notifyDataSetChanged()V
+
+    :cond_0
     return-void
 .end method
 
-.method public static k(Landroid/location/Location;F)V
-    .locals 0
+.method public final i(Li89;Z)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/location/Location;->setSpeedAccuracyMetersPerSecond(F)V
+    iget-object v0, p0, Lk28;->X:Ly89;
 
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2}, Ly89;->i(Li89;Z)V
+
+    :cond_0
     return-void
 .end method
 
-.method public static l(Landroid/location/Location;F)V
+.method public final k(Landroid/content/Context;Li89;)V
+    .locals 1
+
+    iget-object v0, p0, Lk28;->a:Landroid/content/Context;
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lk28;->a:Landroid/content/Context;
+
+    iget-object v0, p0, Lk28;->b:Landroid/view/LayoutInflater;
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk28;->b:Landroid/view/LayoutInflater;
+
+    :cond_0
+    iput-object p2, p0, Lk28;->c:Li89;
+
+    iget-object p1, p0, Lk28;->Y:Lj28;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lj28;->notifyDataSetChanged()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/location/Location;->setVerticalAccuracyMeters(F)V
+    iget-object p1, p0, Lk28;->c:Li89;
+
+    iget-object p2, p0, Lk28;->Y:Lj28;
+
+    invoke-virtual {p2, p3}, Lj28;->b(I)Lm89;
+
+    move-result-object p2
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p2, p0, p3}, Li89;->q(Landroid/view/MenuItem;Lz89;I)Z
 
     return-void
 .end method

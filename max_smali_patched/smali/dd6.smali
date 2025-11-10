@@ -1,144 +1,98 @@
 .class public final Ldd6;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
 
 # interfaces
-.implements Le2f;
+.implements Lej6;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
 
-.field public final Y:Ls5f;
-
-.field public Z:Z
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lqof;
-
-.field public final o:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lqof;ZZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ldd6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput-object p1, p0, Ldd6;->a:Landroid/content/Context;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Ldd6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ldd6;->c:Lqof;
-
-    iput-boolean p4, p0, Ldd6;->o:Z
-
-    iput-boolean p5, p0, Ldd6;->X:Z
-
-    new-instance p1, Lxd;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p2, p0}, Lxd;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Ldd6;->Y:Ls5f;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ldd6;->Y:Ls5f;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ls5f;->a()Z
+    invoke-virtual {p0, p1, p2}, Ldd6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    check-cast p1, Ldd6;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    sget-object p2, Lybg;->a:Lybg;
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Ldd6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Lcd6;
-
-    invoke-virtual {v0}, Lcd6;->close()V
-
-    :cond_0
-    return-void
+    return-object p2
 .end method
 
-.method public final getReadableDatabase()Lc2f;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Ldd6;->Y:Ls5f;
+    new-instance v0, Ldd6;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Ldd6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Ldd6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
 
-    check-cast v0, Lcd6;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcd6;->c(Z)Lc2f;
-
-    move-result-object v0
+    iput-object p1, v0, Ldd6;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getWritableDatabase()Lc2f;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ldd6;->Y:Ls5f;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Ldd6;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    check-cast v0, Lcd6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x1
+    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Les7;
 
-    invoke-virtual {v0, v1}, Lcd6;->c(Z)Lc2f;
+    iget-object p1, p0, Ldd6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final setWriteAheadLoggingEnabled(Z)V
-    .locals 2
-
-    iget-object v0, p0, Ldd6;->Y:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->L0()Lqjc;
 
     move-result-object v0
 
-    check-cast v0, Lcd6;
+    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
 
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->setWriteAheadLoggingEnabled(Z)V
+    move-result-object p1
 
-    :cond_0
-    iput-boolean p1, p0, Ldd6;->Z:Z
+    iget-object p1, p1, Lonb;->c:Lnpb;
 
-    return-void
+    check-cast p1, Lpc6;
+
+    invoke-virtual {p1}, Lpc6;->g()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lqjc;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object p1, Lybg;->a:Lybg;
+
+    return-object p1
 .end method

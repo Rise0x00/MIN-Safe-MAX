@@ -2,28 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxvb;
 
-# instance fields
-.field public final a:Lgkb;
 
-.field public final b:J
-
-.field public final c:J
-
-.field public d:J
+# static fields
+.field public static final a:Lgw0;
 
 
 # direct methods
-.method public constructor <init>(Lgkb;JJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgw0;
 
-    iput-object p1, p0, Lqe4;->a:Lgkb;
+    const/4 v1, 0x3
 
-    iput-wide p2, p0, Lqe4;->b:J
+    invoke-direct {v0, v1}, Lgw0;-><init>(I)V
 
-    iput-wide p4, p0, Lqe4;->c:J
+    sput-object v0, Lqe4;->a:Lgw0;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 1
+
+    sget-object v0, Lqe4;->a:Lgw0;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/nio/ByteBuffer;
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic e(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

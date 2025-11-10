@@ -1,110 +1,65 @@
 .class public final Le50;
-.super Lm3f;
+.super Lrj0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final b:J
 
-.field public final synthetic Y:Lg50;
+.field public final c:I
+
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Lg50;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IJJ)V
     .locals 0
 
-    iput-object p1, p0, Le50;->Y:Lg50;
+    invoke-direct {p0}, Lrj0;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Le50;->c:I
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Le50;->b:J
+
+    iput-wide p4, p0, Le50;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Le34;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "AudioPlaybackEvent{type="
 
-    invoke-virtual {p0, p1, p2}, Le50;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget v1, p0, Le50;->c:I
 
-    check-cast p1, Le50;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object p2, Loyf;->a:Loyf;
+    const-string v1, ", messageId="
 
-    invoke-virtual {p1, p2}, Le50;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-wide v1, p0, Le50;->b:J
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    const-string v1, ", chatId="
 
-    new-instance p1, Le50;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Le50;->Y:Lg50;
+    iget-wide v1, p0, Le50;->d:J
 
-    invoke-direct {p1, v0, p2}, Le50;-><init>(Lg50;Lkotlin/coroutines/Continuation;)V
+    const/16 v3, 0x7d
 
-    return-object p1
-.end method
+    invoke-static {v0, v1, v2, v3}, Lxjb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Le50;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Le50;->X:I
-
-    iget-object p1, p0, Le50;->Y:Lg50;
-
-    invoke-static {p1, p0}, Lg50;->e(Lg50;Lm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

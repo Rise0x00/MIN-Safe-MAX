@@ -1,224 +1,218 @@
-.class public final Lar8;
+.class public final synthetic Lar8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr8;
+.implements Lyz8;
+
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
-
-.field public b:Lur8;
+.field public final synthetic a:Lltb;
 
 
 # direct methods
-.method public constructor <init>(Lur8;Z)V
-    .locals 2
+.method public synthetic constructor <init>(Lltb;)V
+    .locals 0
+
+    iput-object p1, p0, Lar8;->a:Lltb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iput-object v0, p0, Lar8;->a:Landroid/os/Bundle;
-
-    iput-object p1, p0, Lar8;->b:Lur8;
-
-    const-string v1, "selector"
-
-    iget-object p1, p1, Lur8;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const-string p1, "activeScan"
-
-    invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "selector must not be null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public a(Lfz8;I)V
+    .locals 1
 
-    iget-object v0, p0, Lar8;->b:Lur8;
+    iget-object v0, p0, Lar8;->a:Lltb;
 
-    if-nez v0, :cond_1
+    invoke-interface {p1, p2, v0}, Lfz8;->h(ILltb;)V
 
-    iget-object v0, p0, Lar8;->a:Landroid/os/Bundle;
-
-    const-string v1, "selector"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v2, Lur8;
-
-    invoke-direct {v2, v0, v1}, Lur8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Lur8;->c:Lur8;
-
-    :goto_0
-    iput-object v1, p0, Lar8;->b:Lur8;
-
-    if-nez v1, :cond_1
-
-    sget-object v0, Lur8;->c:Lur8;
-
-    iput-object v0, p0, Lar8;->b:Lur8;
-
-    :cond_1
     return-void
 .end method
 
-.method public final b()Z
-    .locals 2
+.method public c(Ltq8;)V
+    .locals 10
 
-    iget-object v0, p0, Lar8;->a:Landroid/os/Bundle;
+    iget-object v0, p1, Ltq8;->a:Lxp8;
 
-    const-string v1, "activeScan"
+    invoke-virtual {p1}, Ltq8;->isConnected()Z
 
-    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    move-result v1
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    instance-of v0, p1, Lar8;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lar8;
-
-    invoke-virtual {p0}, Lar8;->a()V
-
-    iget-object v0, p0, Lar8;->b:Lur8;
-
-    invoke-virtual {p1}, Lar8;->a()V
-
-    iget-object v2, p1, Lar8;->b:Lur8;
-
-    invoke-virtual {v0, v2}, Lur8;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lar8;->b()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lar8;->b()Z
-
-    move-result p1
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    goto/16 :goto_3
 
     :cond_0
-    return v1
-.end method
+    iget-object v1, p1, Ltq8;->w:Lltb;
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v2, p0, Lar8;->a:Lltb;
 
-    invoke-virtual {p0}, Lar8;->a()V
-
-    iget-object v0, p0, Lar8;->b:Lur8;
-
-    invoke-virtual {v0}, Lur8;->hashCode()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lar8;->b()Z
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    xor-int/2addr v0, v1
+    if-eqz v1, :cond_1
 
-    return v0
-.end method
+    goto/16 :goto_3
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_1
+    iput-object v2, p1, Ltq8;->w:Lltb;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v1, p1, Ltq8;->x:Lltb;
 
-    const-string v1, "DiscoveryRequest{ selector="
+    iget-object v3, p1, Ltq8;->v:Lltb;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v3, v2}, Ltq8;->n(Lltb;Lltb;)Lltb;
 
-    invoke-virtual {p0}, Lar8;->a()V
+    move-result-object v2
 
-    iget-object v1, p0, Lar8;->b:Lur8;
+    iput-object v2, p1, Ltq8;->x:Lltb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", activeScan="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lar8;->b()Z
+    invoke-virtual {v2, v1}, Lltb;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const-string v1, ", isValid="
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_2
 
-    invoke-virtual {p0}, Lar8;->a()V
+    iget-object v1, p1, Ltq8;->s:Lz8d;
 
-    iget-object v1, p0, Lar8;->b:Lur8;
+    iget-object v4, p1, Ltq8;->t:Lz8d;
 
-    invoke-virtual {v1}, Lur8;->a()V
+    iget-object v5, p1, Ltq8;->r:Lec7;
 
-    iget-object v1, v1, Lur8;->b:Ljava/util/List;
+    iget-object v6, p1, Ltq8;->q:Lec7;
 
-    const/4 v2, 0x0
+    iget-object v7, p1, Ltq8;->u:Ly6e;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    iget-object v8, p1, Ltq8;->x:Lltb;
+
+    iget-object v9, p1, Ltq8;->D:Landroid/os/Bundle;
+
+    invoke-static {v5, v6, v7, v8, v9}, Ltq8;->X(Ljava/util/List;Ljava/util/List;Ly6e;Lltb;Landroid/os/Bundle;)Lz8d;
+
+    move-result-object v5
+
+    iput-object v5, p1, Ltq8;->s:Lz8d;
+
+    iget-object v6, p1, Ltq8;->q:Lec7;
+
+    iget-object v7, p1, Ltq8;->D:Landroid/os/Bundle;
+
+    iget-object v8, p1, Ltq8;->u:Ly6e;
+
+    iget-object v9, p1, Ltq8;->x:Lltb;
+
+    invoke-static {v5, v6, v7, v8, v9}, Ltq8;->W(Lz8d;Ljava/util/List;Landroid/os/Bundle;Ly6e;Lltb;)Lz8d;
+
+    move-result-object v5
+
+    iput-object v5, p1, Ltq8;->t:Lz8d;
+
+    iget-object v5, p1, Ltq8;->s:Lz8d;
+
+    invoke-virtual {v5, v1}, Lec7;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    xor-int/lit8 v1, v1, 0x1
+    xor-int/2addr v1, v2
 
-    const-string v2, " }"
+    iget-object v5, p1, Ltq8;->t:Lz8d;
 
-    invoke-static {v0, v1, v2}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v4}, Lec7;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v4
 
-    return-object v0
+    xor-int/2addr v4, v2
+
+    iget-object v5, p1, Ltq8;->h:Li38;
+
+    new-instance v6, Lhq8;
+
+    const/4 v7, 0x4
+
+    invoke-direct {v6, p1, v7}, Lhq8;-><init>(Ltq8;I)V
+
+    const/16 p1, 0xd
+
+    invoke-virtual {v5, p1, v6}, Li38;->f(ILd38;)V
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v3
+
+    move v4, v1
+
+    :goto_0
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iget-object v4, v0, Lxp8;->o:Landroid/os/Handler;
+
+    invoke-virtual {v4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    if-ne p1, v4, :cond_3
+
+    move p1, v2
+
+    goto :goto_1
+
+    :cond_3
+    move p1, v3
+
+    :goto_1
+    invoke-static {p1}, Ligi;->h(Z)V
+
+    iget-object p1, v0, Lxp8;->d:Lvp8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_4
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iget-object v1, v0, Lxp8;->o:Landroid/os/Handler;
+
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne p1, v1, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v2, v3
+
+    :goto_2
+    invoke-static {v2}, Ligi;->h(Z)V
+
+    iget-object p1, v0, Lxp8;->d:Lvp8;
+
+    invoke-interface {p1}, Lvp8;->v()V
+
+    :cond_6
+    :goto_3
+    return-void
 .end method

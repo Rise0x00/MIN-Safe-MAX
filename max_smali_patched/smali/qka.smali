@@ -1,397 +1,181 @@
-.class public abstract Lqka;
-.super Ljava/lang/Object;
+.class public final Lqka;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Lgla;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final a:Lgla;
 
-.field public static final C:I
+.field public final b:La32;
 
-.field public static final D:I
+.field public final c:Lwka;
 
-.field public static final E:I
+.field public final d:Lgxb;
 
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lgla;JLgxb;La32;Lwka;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Lqka;->a:Lgla;
+
+    iput-object p5, p0, Lqka;->b:La32;
+
+    iput-object p6, p0, Lqka;->c:Lwka;
+
+    iput-object p4, p0, Lqka;->d:Lgxb;
+
+    iput-wide p2, p0, Lqka;->o:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :cond_0
+    iget-object v1, p0, Lqka;->b:La32;
+
+    invoke-virtual {v1}, La32;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lqka;->c:Lwka;
+
+    invoke-interface {v1, p0}, Lwka;->a(Lgla;)V
+
+    neg-int v0, v0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Lxic;->cancel:I
+    iget-object v0, p0, Lqka;->a:Lgla;
 
-    sput v0, Lqka;->a:I
+    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
 
-    sget v0, Lxic;->channel_close_title:I
+    return-void
+.end method
 
-    sput v0, Lqka;->b:I
+.method public final c()V
+    .locals 1
 
-    sget v0, Lxic;->channel_delete_for_all:I
+    iget-object v0, p0, Lqka;->a:Lgla;
 
-    sput v0, Lqka;->c:I
+    invoke-interface {v0}, Lgla;->c()V
 
-    sget v0, Lxic;->channel_delete_title:I
+    return-void
+.end method
 
-    sput v0, Lqka;->d:I
+.method public final d(Lzv4;)V
+    .locals 1
 
-    sget v0, Lxic;->channel_leave_title:I
+    iget-object v0, p0, Lqka;->b:La32;
 
-    sput v0, Lqka;->e:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lxic;->channel_move_rights_and_leave:I
+    invoke-static {v0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
 
-    sput v0, Lqka;->f:I
+    return-void
+.end method
 
-    sget v0, Lxic;->chat_clear_history_snackbar_title:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
 
-    sput v0, Lqka;->g:I
+    iget-wide v0, p0, Lqka;->o:J
 
-    sget v0, Lxic;->chat_delete_confirm:I
+    const-wide v2, 0x7fffffffffffffffL
 
-    sput v0, Lqka;->h:I
+    cmp-long v2, v0, v2
 
-    sget v0, Lxic;->chat_delete_for_all:I
+    if-eqz v2, :cond_0
 
-    sput v0, Lqka;->i:I
+    const-wide/16 v2, 0x1
 
-    sget v0, Lxic;->chat_delete_for_all_title:I
+    sub-long v2, v0, v2
 
-    sput v0, Lqka;->j:I
+    iput-wide v2, p0, Lqka;->o:J
 
-    sget v0, Lxic;->chat_delete_for_both:I
+    :cond_0
+    const-wide/16 v2, 0x0
 
-    sput v0, Lqka;->k:I
+    cmp-long v0, v0, v2
 
-    sget v0, Lxic;->chat_delete_for_self:I
+    iget-object v1, p0, Lqka;->a:Lgla;
 
-    sput v0, Lqka;->l:I
+    if-nez v0, :cond_1
 
-    sget v0, Lxic;->chat_delete_title:I
+    invoke-interface {v1, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Lqka;->m:I
+    return-void
 
-    sget v0, Lxic;->chat_leave_cancel:I
+    :cond_1
+    :try_start_0
+    iget-object v0, p0, Lqka;->d:Lgxb;
 
-    sput v0, Lqka;->n:I
+    invoke-interface {v0, p1}, Lgxb;->test(Ljava/lang/Object;)Z
 
-    sget v0, Lxic;->chat_leave_title:I
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lqka;->o:I
+    if-nez v0, :cond_2
 
-    sget v0, Lxic;->chat_list_toolbar_title:I
+    invoke-interface {v1, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Lqka;->p:I
+    return-void
 
-    sget v0, Lxic;->chat_list_toolbar_transition_name:I
+    :cond_2
+    invoke-virtual {p0}, Lqka;->a()V
 
-    sput v0, Lqka;->q:I
+    return-void
 
-    sget v0, Lxic;->chat_move_rights_and_leave:I
+    :catchall_0
+    move-exception v0
 
-    sput v0, Lqka;->r:I
+    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
 
-    sget v0, Lxic;->chats_list_search_clear_recent_dialog_confirm_text:I
+    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
 
-    sput v0, Lqka;->s:I
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
 
-    sget v0, Lxic;->chats_list_search_clear_recent_dialog_title:I
+    move-result-object p1
 
-    sput v0, Lqka;->t:I
+    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    sget v0, Lxic;->chats_list_search_contacts_header:I
-
-    sput v0, Lqka;->u:I
-
-    sget v0, Lxic;->chats_list_search_hint:I
-
-    sput v0, Lqka;->v:I
-
-    sget v0, Lxic;->chats_list_search_messages_header:I
-
-    sput v0, Lqka;->w:I
-
-    sget v0, Lxic;->confirmation_block:I
-
-    sput v0, Lqka;->x:I
-
-    sget v0, Lxic;->confirmation_close_channel:I
-
-    sput v0, Lqka;->y:I
-
-    sget v0, Lxic;->confirmation_leave_channel:I
-
-    sput v0, Lqka;->z:I
-
-    sget v0, Lxic;->confirmation_leave_chat:I
-
-    sput v0, Lqka;->A:I
-
-    sget v0, Lxic;->contact_block_title:I
-
-    sput v0, Lqka;->B:I
-
-    sget v0, Lxic;->contact_blocked_snackbar_title:I
-
-    sput v0, Lqka;->C:I
-
-    sget v0, Lxic;->contact_empty_last_seen:I
-
-    sput v0, Lqka;->D:I
-
-    sget v0, Lxic;->contacts_picker_search_hint:I
-
-    sput v0, Lqka;->E:I
-
-    sget v0, Lxic;->contacts_picker_send_btn_title:I
-
-    sput v0, Lqka;->F:I
-
-    sget v0, Lxic;->contacts_picker_toolbar_title:I
-
-    sput v0, Lqka;->G:I
-
-    sget v0, Lxic;->dialog_delete_title:I
-
-    sput v0, Lqka;->H:I
-
-    sget v0, Lxic;->notifications_1_day:I
-
-    sput v0, Lqka;->I:I
-
-    sget v0, Lxic;->notifications_1_hour:I
-
-    sput v0, Lqka;->J:I
-
-    sget v0, Lxic;->notifications_4_hour:I
-
-    sput v0, Lqka;->K:I
-
-    sget v0, Lxic;->notifications_disable:I
-
-    sput v0, Lqka;->L:I
-
-    sget v0, Lxic;->notifications_infinite:I
-
-    sput v0, Lqka;->M:I
-
-    sget v0, Lxic;->picker_chats_add_button:I
-
-    sput v0, Lqka;->N:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_bot:I
-
-    sput v0, Lqka;->O:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_bot_official:I
-
-    sput v0, Lqka;->P:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_default:I
-
-    sput v0, Lqka;->Q:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_to_channel_bot:I
-
-    sput v0, Lqka;->R:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_to_channel_bot_official:I
-
-    sput v0, Lqka;->S:I
-
-    sget v0, Lxic;->picker_chats_adding_disabled_to_channel_default:I
-
-    sput v0, Lqka;->T:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_bot:I
-
-    sput v0, Lqka;->U:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_bot_official:I
-
-    sput v0, Lqka;->V:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_channel_bot:I
-
-    sput v0, Lqka;->W:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_channel_bot_official:I
-
-    sput v0, Lqka;->X:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_channel_default:I
-
-    sput v0, Lqka;->Y:I
-
-    sget v0, Lxic;->picker_chats_creating_disabled_default:I
-
-    sput v0, Lqka;->Z:I
-
-    sget v0, Lxic;->picker_chats_forward_disabled_bot:I
-
-    sput v0, Lqka;->a0:I
-
-    sget v0, Lxic;->picker_chats_forward_disabled_bot_official:I
-
-    sput v0, Lqka;->b0:I
-
-    sget v0, Lxic;->picker_chats_forward_disabled_channel:I
-
-    sput v0, Lqka;->c0:I
-
-    sget v0, Lxic;->picker_chats_forward_disabled_default:I
-
-    sput v0, Lqka;->d0:I
-
-    sget v0, Lxic;->picker_chats_forward_from_self:I
-
-    sput v0, Lqka;->e0:I
-
-    sget v0, Lxic;->picker_chats_forward_from_somebody:I
-
-    sput v0, Lqka;->f0:I
-
-    sget v0, Lxic;->picker_chats_forward_quote_title:I
-
-    sput v0, Lqka;->g0:I
-
-    sget v0, Lxic;->picker_chats_forward_title:I
-
-    sput v0, Lqka;->h0:I
-
-    sget v0, Lxic;->picker_chats_list_share_contact:I
-
-    sput v0, Lqka;->i0:I
-
-    sget v0, Lxic;->picker_chats_list_share_link:I
-
-    sput v0, Lqka;->j0:I
-
-    sget v0, Lxic;->picker_chats_search_hint:I
-
-    sput v0, Lqka;->k0:I
-
-    sget v0, Lxic;->picker_chats_toolbar_title:I
-
-    sput v0, Lqka;->l0:I
+    invoke-interface {v1, v2}, Lgla;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

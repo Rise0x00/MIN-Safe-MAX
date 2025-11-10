@@ -14,7 +14,7 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "initiator",
-        "Lxvc;",
+        "Lp5d;",
         "type",
         "",
         "start",
@@ -23,13 +23,13 @@
         "externalMovieId",
         "externalOwnerId",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lxvc;JJLjava/lang/String;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lp5d;JJLjava/lang/String;Ljava/lang/String;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getInitiator",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-        "Lxvc;",
+        "Lp5d;",
         "getType",
-        "()Lxvc;",
+        "()Lp5d;",
         "J",
         "getStart",
         "()J",
@@ -61,18 +61,18 @@
 
 .field private final start:J
 
-.field private final type:Lxvc;
+.field private final type:Lp5d;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lxvc;JJLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lp5d;JJLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->initiator:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lxvc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lp5d;
 
     iput-wide p3, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->start:J
 
@@ -127,10 +127,10 @@
     return-wide v0
 .end method
 
-.method public final getType()Lxvc;
+.method public final getType()Lp5d;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lxvc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/record/RecordDescription;->type:Lp5d;
 
     return-object v0
 .end method

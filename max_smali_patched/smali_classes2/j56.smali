@@ -1,33 +1,27 @@
-.class public abstract synthetic Lj56;
-.super Ljava/lang/Object;
+.class public final Lj56;
+.super Liqe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final E()V
     .locals 2
 
-    invoke-static {}, Lb4g;->values()[Lb4g;
+    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
 
-    move-result-object v0
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    array-length v0, v0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.method public final bridge synthetic z(Li28;)V
+    .locals 0
 
-    :catch_0
-    sput-object v0, Lj56;->$EnumSwitchMapping$0:[I
+    check-cast p1, Li56;
 
     return-void
 .end method

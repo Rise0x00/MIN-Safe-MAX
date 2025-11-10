@@ -1,8 +1,11 @@
-.class public abstract Lcfc;
+.class public interface abstract Lcfc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static arch_activity_wrapper_view_id:I = 0x7f0a00e1
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public static arch_child_widget_wrapper_id:I = 0x7f0a00e2
+.method public abstract b()V
+.end method

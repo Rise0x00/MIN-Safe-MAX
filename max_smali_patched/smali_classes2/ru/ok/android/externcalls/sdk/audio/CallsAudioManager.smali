@@ -25,7 +25,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnAudioDeviceInfoChangeListener;",
         "listener",
-        "Loyf;",
+        "Lybg;",
         "setOnAudioDeviceChangeListener",
         "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnAudioDeviceInfoChangeListener;)V",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;",
@@ -36,26 +36,26 @@
         "",
         "onError",
         "changeStateAsync",
-        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Loi6;Lqi6;)V",
         "notifyBluetoothPermissionGranted",
         "()V",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;",
         "audioDevice",
         "setAudioDeviceAsync",
-        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Loi6;Lqi6;)V",
         "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;",
         "setAudioDeviceTypeAsync",
-        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Lve6;Lxe6;)V",
+        "(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Loi6;Lqi6;)V",
         "",
         "enabled",
         "byVideoTurnedOn",
         "setSpeakerEnabledAsync",
-        "(ZZLve6;Lxe6;)V",
+        "(ZZLoi6;Lqi6;)V",
         "releaseAsync",
-        "(Lve6;Lxe6;)V",
+        "(Loi6;Lqi6;)V",
         "onSuccess",
         "hasWiredHeadsetAsync",
-        "(Lxe6;Lxe6;)V",
+        "(Lqi6;Lqi6;)V",
         "hasBluetoothHeadsetAsync",
         "requestAudioFocusAsync",
         "getCurrentDevice",
@@ -87,7 +87,7 @@
 
 
 # direct methods
-.method public static synthetic changeStateAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lve6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic changeStateAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Loi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -108,7 +108,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->changeStateAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lve6;Lxe6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->changeStateAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Loi6;Lqi6;)V
 
     return-void
 
@@ -122,7 +122,7 @@
     throw p0
 .end method
 
-.method public static synthetic releaseAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lve6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic releaseAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Loi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p4, :cond_2
@@ -143,7 +143,7 @@
     move-object p2, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->releaseAsync(Lve6;Lxe6;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->releaseAsync(Loi6;Lqi6;)V
 
     return-void
 
@@ -157,7 +157,7 @@
     throw p0
 .end method
 
-.method public static synthetic setAudioDeviceAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lve6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic setAudioDeviceAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Loi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -178,7 +178,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setAudioDeviceAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lve6;Lxe6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setAudioDeviceAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Loi6;Lqi6;)V
 
     return-void
 
@@ -192,7 +192,7 @@
     throw p0
 .end method
 
-.method public static synthetic setAudioDeviceTypeAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Lve6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic setAudioDeviceTypeAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Loi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -213,7 +213,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Lve6;Lxe6;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Loi6;Lqi6;)V
 
     return-void
 
@@ -227,7 +227,7 @@
     throw p0
 .end method
 
-.method public static synthetic setSpeakerEnabledAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;ZZLve6;Lxe6;ILjava/lang/Object;)V
+.method public static synthetic setSpeakerEnabledAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;ZZLoi6;Lqi6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_3
@@ -255,7 +255,7 @@
     move-object p4, v0
 
     :cond_2
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setSpeakerEnabledAsync(ZZLve6;Lxe6;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setSpeakerEnabledAsync(ZZLoi6;Lqi6;)V
 
     return-void
 
@@ -271,13 +271,13 @@
 
 
 # virtual methods
-.method public abstract changeStateAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lve6;Lxe6;)V
+.method public abstract changeStateAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
@@ -297,23 +297,23 @@
 .method public abstract getCurrentDevice()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 .end method
 
-.method public abstract hasBluetoothHeadsetAsync(Lxe6;Lxe6;)V
+.method public abstract hasBluetoothHeadsetAsync(Lqi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxe6;",
-            "Lxe6;",
+            "Lqi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract hasWiredHeadsetAsync(Lxe6;Lxe6;)V
+.method public abstract hasWiredHeadsetAsync(Lqi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxe6;",
-            "Lxe6;",
+            "Lqi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
@@ -325,12 +325,12 @@
 .method public abstract notifyBluetoothPermissionGranted()V
 .end method
 
-.method public abstract releaseAsync(Lve6;Lxe6;)V
+.method public abstract releaseAsync(Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
@@ -339,25 +339,25 @@
 .method public abstract requestAudioFocusAsync()V
 .end method
 
-.method public abstract setAudioDeviceAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Lve6;Lxe6;)V
+.method public abstract setAudioDeviceAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Lve6;Lxe6;)V
+.method public abstract setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Loi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation
@@ -366,12 +366,12 @@
 .method public abstract setOnAudioDeviceChangeListener(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnAudioDeviceInfoChangeListener;)V
 .end method
 
-.method public abstract setSpeakerEnabledAsync(ZZLve6;Lxe6;)V
+.method public abstract setSpeakerEnabledAsync(ZZLoi6;Lqi6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
-            "Lve6;",
-            "Lxe6;",
+            "Loi6;",
+            "Lqi6;",
             ")V"
         }
     .end annotation

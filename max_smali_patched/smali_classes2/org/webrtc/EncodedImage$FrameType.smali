@@ -151,7 +151,7 @@
 
     const-string v1, "Unknown native frame type: "
 
-    invoke-static {p0, v1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

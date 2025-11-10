@@ -1,231 +1,98 @@
 .class public final La49;
-.super Ljava/lang/Object;
+.super Logf;
 .source "SourceFile"
+
+# interfaces
+.implements Lej6;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-.field public final b:Lbp7;
-
-.field public volatile c:Z
-
-.field public volatile d:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, La49;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    iput-object p1, p0, La49;->a:Lbp7;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, La49;->b:Lbp7;
+    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JILxie;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, La49;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, La49;
+
+    sget-object p2, Lybg;->a:Lybg;
+
+    invoke-virtual {p1, p2}, La49;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, La49;
+
+    iget-object v1, p0, La49;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
+    invoke-direct {v0, p2, v1}, La49;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+
+    iput-object p1, v0, La49;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, La49;->a:Lbp7;
+    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, La49;->o:Ljava/lang/Object;
+
+    check-cast p1, Ly39;
+
+    sget-object v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->X:[Les7;
+
+    iget-object v0, p0, La49;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
+    iget-object v0, v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->d:Lrn0;
+
+    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->X:[Les7;
+
+    const/4 v2, 0x2
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0}, Lrn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqc;
+    check-cast v0, Lh39;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    sget-object p1, Lu39;->a:Lu39;
 
-    new-instance p2, Ln4b;
+    invoke-virtual {v0, p1}, Lh39;->setSelected(Lx39;)V
 
-    const-string v1, "message_id"
+    sget-object p1, Lybg;->a:Lybg;
 
-    invoke-direct {p2, v1, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    if-eq p3, p1, :cond_1
-
-    const/4 p1, 0x2
-
-    if-eq p3, p1, :cond_1
-
-    const/4 p1, 0x3
-
-    if-eq p3, p1, :cond_1
-
-    const/4 p1, 0x4
-
-    if-eq p3, p1, :cond_1
-
-    const/4 p1, 0x5
-
-    if-ne p3, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-instance p3, Ln4b;
-
-    const-string v1, "element_type"
-
-    invoke-direct {p3, v1, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v1, p4, Lxie;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    new-instance v1, Ln4b;
-
-    const-string v2, "source_id"
-
-    invoke-direct {v1, v2, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget p1, p4, Lxie;->b:I
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    new-instance p4, Ln4b;
-
-    const-string v2, "source_type"
-
-    invoke-direct {p4, v2, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {p2, p3, v1, p4}, [Ln4b;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ly6b;->d([Ln4b;)Lds;
-
-    move-result-object p1
-
-    new-instance p2, Lqe7;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p3
-
-    iput-wide p3, p2, Lqe7;->a:J
-
-    const-string p3, "MESSAGE_CLICKABLE_ELEMENT_ACTIONS"
-
-    iput-object p3, p2, Lqe7;->c:Ljava/lang/String;
-
-    packed-switch p5, :pswitch_data_0
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :pswitch_0
-    const-string p3, "clicked_update_app"
-
-    goto :goto_1
-
-    :pswitch_1
-    const-string p3, "shown_update_app"
-
-    goto :goto_1
-
-    :pswitch_2
-    const-string p3, "clicked_call"
-
-    goto :goto_1
-
-    :pswitch_3
-    const-string p3, "clicked_open_mail"
-
-    goto :goto_1
-
-    :pswitch_4
-    const-string p3, "clicked_open_link"
-
-    goto :goto_1
-
-    :pswitch_5
-    const-string p3, "clicked_copy"
-
-    goto :goto_1
-
-    :pswitch_6
-    const-string p3, "clicked_clickable_element"
-
-    :goto_1
-    iput-object p3, p2, Lqe7;->o:Ljava/lang/String;
-
-    iget-object p3, p0, La49;->b:Lbp7;
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lr63;
-
-    check-cast p4, Lxid;
-
-    invoke-virtual {p4}, Lxid;->p()J
-
-    move-result-wide p4
-
-    iput-wide p4, p2, Lqe7;->b:J
-
-    invoke-virtual {p2, p1}, Lqe7;->c(Ljava/util/Map;)V
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr63;
-
-    check-cast p1, Lt63;
-
-    invoke-virtual {p1}, Lt63;->A()J
-
-    move-result-wide p3
-
-    iput-wide p3, p2, Lqe7;->X:J
-
-    invoke-virtual {p2}, Lqe7;->d()Lt38;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lqc;->i(Lt38;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,13 +1,6 @@
-.class public final Lze7;
-.super Lnz3;
+.class public abstract Lze7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
-.end method
+# interfaces
+.implements Lqyd;
